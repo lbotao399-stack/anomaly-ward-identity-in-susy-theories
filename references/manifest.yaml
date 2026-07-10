@@ -4,12 +4,14 @@
     {
       "id": "WORKFLOW-PROPOSAL-2026-07-10",
       "path": "proposals/gpt-pro-workflow-draft-2026-07-10.md",
-      "classification": "NON_AUTHORITY_PROPOSAL"
+      "classification": "NON_AUTHORITY_PROPOSAL",
+      "sha256": "1ece3c442a914e9729e9ec70ba60d8181ed822216161e955bada5895256293d6"
     },
     {
       "id": "FOUNDATION-SUSY-COMMUTATOR-001",
       "path": "contracts/foundations/step-01-supersymmetry-commutator.md",
-      "classification": "BOOTSTRAP_CONTRACT_CANDIDATE"
+      "classification": "BOOTSTRAP_CONTRACT_CANDIDATE",
+      "sha256": "a73d8017c2d07de578f4f98ea25054033b0384ebffb6b426650a22f404c3231b"
     }
   ]
 }

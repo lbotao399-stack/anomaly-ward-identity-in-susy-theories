@@ -1,7 +1,7 @@
 {
   "id": "AUTHORITY-REPAIR-001",
   "type": "AUTHORITY_REPAIR",
-  "status": "IN_PROGRESS",
+  "status": "ACCEPTED",
   "outcome": "Create a clean GitHub authority, isolate legacy attempts, migrate Step 1, and establish one-way Git-to-Notion mirroring.",
   "allowed_inputs": [
     "AUTHORITY.md",

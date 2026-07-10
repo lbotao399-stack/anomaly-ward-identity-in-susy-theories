@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "action": "ARCHIVE_NOT_DELETE",
+  "content_imported": false,
+  "replacement": "lbotao399-stack/anomaly-ward-identity-in-susy-theories",
+  "repositories": [
+    {
+      "name": "lbotao399-stack/loop-corrected-supersymmetry-transformation-anomaly-ward-identity",
+      "archived": true,
+      "classification": "FORBIDDEN_LEGACY_INPUT"
+    },
+    {
+      "name": "lbotao399-stack/explicit-qft-calculation-of-loop-correction",
+      "archived": true,
+      "classification": "FORBIDDEN_LEGACY_INPUT"
+    },
+    {
+      "name": "lbotao399-stack/SUSY-theory-from-the-very-begining",
+      "archived": true,
+      "classification": "FORBIDDEN_LEGACY_INPUT"
+    },
+    {
+      "name": "lbotao399-stack/holomorphic-theory",
+      "archived": true,
+      "classification": "FORBIDDEN_LEGACY_INPUT"
+    }
+  ]
+}

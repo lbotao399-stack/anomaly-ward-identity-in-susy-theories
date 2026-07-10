@@ -8,6 +8,8 @@ Canonical proof repository for the AWI program.
 - Contract registry: [`contracts/manifest.yaml`](contracts/manifest.yaml)
 - Notion mirror map: [`mirror/page_map.yaml`](mirror/page_map.yaml)
 
-Current stage: `AUTHORITY_REPAIR`.
+Authority repair: `ACCEPTED`.
+
+Current mathematical stage: `SPECIFIED`; Step 1 is `DERIVED_UNFROZEN`.
 
 No historical repository, Notion page, local note, chat transcript, or external file is a computational input.

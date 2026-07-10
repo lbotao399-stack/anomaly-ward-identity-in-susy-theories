@@ -37,10 +37,30 @@ class RepositoryPolicyTest(unittest.TestCase):
             self.assertRegex(entry["sha256"] or "", r"^[0-9a-f]{64}$")
             self.assertEqual(entry["sha256"], digest)
 
+    def test_reference_hashes(self) -> None:
+        manifest = json.loads((ROOT / "references/manifest.yaml").read_text(encoding="utf-8"))
+        for entry in manifest["entries"]:
+            path = (ROOT / entry["path"]).resolve()
+            path.relative_to(ROOT)
+            digest = hashlib.sha256(path.read_bytes()).hexdigest()
+            self.assertEqual(entry["sha256"], digest)
+
     def test_notion_is_output_only(self) -> None:
         page_map = json.loads((ROOT / "mirror/page_map.yaml").read_text(encoding="utf-8"))
         self.assertEqual(page_map["direction"], "GIT_TO_NOTION_ONLY")
         self.assertEqual(page_map["notion_content_read_policy"], "FORBIDDEN")
+        receipt = json.loads((ROOT / "audits/notion_write_receipt.json").read_text(encoding="utf-8"))
+        self.assertFalse(receipt["content_readback_performed"])
+
+    def test_authority_repair_is_accepted(self) -> None:
+        task = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
+        quarantine = json.loads((ROOT / "audits/legacy_quarantine.json").read_text(encoding="utf-8"))
+        self.assertEqual(task["id"], "AUTHORITY-REPAIR-001")
+        self.assertEqual(task["status"], "ACCEPTED")
+        self.assertEqual(quarantine["action"], "ARCHIVE_NOT_DELETE")
+        self.assertFalse(quarantine["content_imported"])
+        self.assertEqual(len(quarantine["repositories"]), 4)
+        self.assertTrue(all(item["archived"] for item in quarantine["repositories"]))
 
     def test_step_1_formula_surface(self) -> None:
         text = (ROOT / "contracts/foundations/step-01-supersymmetry-commutator.md").read_text(encoding="utf-8")
