@@ -1,0 +1,29 @@
+{
+  "id": "AUTHORITY-REPAIR-001",
+  "type": "AUTHORITY_REPAIR",
+  "status": "IN_PROGRESS",
+  "outcome": "Create a clean GitHub authority, isolate legacy attempts, migrate Step 1, and establish one-way Git-to-Notion mirroring.",
+  "allowed_inputs": [
+    "AUTHORITY.md",
+    "AGENTS.md",
+    "proposals/gpt-pro-workflow-draft-2026-07-10.md",
+    "contracts/foundations/step-01-supersymmetry-commutator.md",
+    "contracts/manifest.yaml",
+    "mirror/page_map.yaml"
+  ],
+  "forbidden_inputs": [
+    "Notion content",
+    "legacy repositories",
+    "other local files",
+    "Codex memory as mathematical evidence",
+    "other calculation channels"
+  ],
+  "acceptance": [
+    "new private GitHub repository exists",
+    "default branch contains no legacy history",
+    "Step-1 contract hash passes",
+    "repository policy tests pass",
+    "clearly obsolete AWI remotes are archived, not deleted",
+    "Notion receives a Git-authority banner and Git-generated Step-1 payload without content fetch"
+  ]
+}

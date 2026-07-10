@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "state": "SPECIFIED",
+  "bootstrap_exception": "STEP_01_ONLY",
+  "contracts": [
+    {
+      "id": "FOUNDATION-SUSY-COMMUTATOR-001",
+      "path": "contracts/foundations/step-01-supersymmetry-commutator.md",
+      "status": "DERIVED_UNFROZEN",
+      "sha256": "a73d8017c2d07de578f4f98ea25054033b0384ebffb6b426650a22f404c3231b"
+    }
+  ]
+}

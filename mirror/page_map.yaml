@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "direction": "GIT_TO_NOTION_ONLY",
+  "notion_content_read_policy": "FORBIDDEN",
+  "root_page_id": "39e80ed3-e584-4b17-b3cc-f2579e2a64ca",
+  "pages": [
+    {
+      "id": "FOUNDATION-SUSY-COMMUTATOR-001",
+      "source": "contracts/foundations/step-01-supersymmetry-commutator.md",
+      "notion_page_id": "399ee2b7-4b3f-8158-9f75-f4a148e431fb",
+      "title": "00 3+1d SUSY QFT — Convention Lock"
+    }
+  ]
+}

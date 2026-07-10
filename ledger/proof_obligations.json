@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "proof_obligations": [
+    {
+      "id": "AUTHORITY-REPAIR-001",
+      "state": "IN_PROGRESS",
+      "blocking_reason": null,
+      "task": "tasks/CURRENT.yaml"
+    }
+  ]
+}
