@@ -3,7 +3,8 @@
 ## Authority
 
 - Read `AUTHORITY.md` first.
-- Only files reachable from `origin/main` are authoritative.
+- Only files reachable from `origin/main` with a successful `verify` workflow are authoritative.
+- Direct pushes after the bootstrap commits are forbidden; use one proof-obligation branch and review.
 - An unpushed local commit is a proposal.
 - Do not read outside this repository except runtime executables required by repository code.
 - Do not read Notion, chat history, Codex memory, attachments, Desktop notes, other repositories, or web pages as calculation input.

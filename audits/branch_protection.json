@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "repository_visibility": "private",
+  "requested": true,
+  "enabled": false,
+  "blocker": "BLOCKED_GITHUB_PLAN_BRANCH_PROTECTION",
+  "http_status": 403,
+  "resolution_not_taken": "repository was not made public",
+  "replacement_gate": "origin/main commit plus successful verify workflow"
+}

@@ -4,8 +4,9 @@ Effective: 2026-07-10.
 
 ## Sole authority
 
-Only Git objects reachable from the protected default branch `origin/main` of
-`lbotao399-stack/anomaly-ward-identity-in-susy-theories` are admissible computational evidence.
+Only Git objects reachable from the default branch `origin/main` of
+`lbotao399-stack/anomaly-ward-identity-in-susy-theories` **and** carrying a successful `verify`
+workflow result are admissible computational evidence.
 
 Local uncommitted changes, unpushed commits, branches, pull requests, chats, memories, attachments,
 Notion pages, and other repositories are proposals or transport surfaces. They cannot settle a
@@ -43,3 +44,10 @@ repository is imported. After the bootstrap commit, this exception closes perman
 
 No legacy file or Git history is imported into this repository. Historical AWI remotes may be archived
 for provenance, but calculation agents must not clone, search, or read them.
+
+## Enforcement limitation
+
+Server-side branch protection for this private repository is unavailable on the current GitHub plan.
+The exact infrastructure state is `BLOCKED_GITHUB_PLAN_BRANCH_PROTECTION`. Until the account plan
+changes, direct pushes are forbidden by project law, and the successful `verify` workflow is the
+mandatory authority gate.

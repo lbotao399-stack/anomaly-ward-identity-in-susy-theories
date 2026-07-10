@@ -55,12 +55,15 @@ class RepositoryPolicyTest(unittest.TestCase):
     def test_authority_repair_is_accepted(self) -> None:
         task = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
         quarantine = json.loads((ROOT / "audits/legacy_quarantine.json").read_text(encoding="utf-8"))
+        protection = json.loads((ROOT / "audits/branch_protection.json").read_text(encoding="utf-8"))
         self.assertEqual(task["id"], "AUTHORITY-REPAIR-001")
         self.assertEqual(task["status"], "ACCEPTED")
         self.assertEqual(quarantine["action"], "ARCHIVE_NOT_DELETE")
         self.assertFalse(quarantine["content_imported"])
         self.assertEqual(len(quarantine["repositories"]), 4)
         self.assertTrue(all(item["archived"] for item in quarantine["repositories"]))
+        self.assertEqual(protection["blocker"], "BLOCKED_GITHUB_PLAN_BRANCH_PROTECTION")
+        self.assertEqual(protection["replacement_gate"], "origin/main commit plus successful verify workflow")
 
     def test_step_1_formula_surface(self) -> None:
         text = (ROOT / "contracts/foundations/step-01-supersymmetry-commutator.md").read_text(encoding="utf-8")

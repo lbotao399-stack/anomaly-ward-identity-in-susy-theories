@@ -4,5 +4,8 @@
   "current_task": "AUTHORITY-REPAIR-001",
   "authority": "origin/main",
   "notion_direction": "GIT_TO_NOTION_ONLY",
-  "legacy_imported": false
+  "legacy_imported": false,
+  "infrastructure_blockers": [
+    "BLOCKED_GITHUB_PLAN_BRANCH_PROTECTION"
+  ]
 }
