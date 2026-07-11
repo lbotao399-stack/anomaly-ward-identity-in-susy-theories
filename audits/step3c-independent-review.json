@@ -31,7 +31,7 @@
   ],
   "exact_verification": {
     "verifier": "scripts/verify_step3c_gauge_vector_representation.py",
-    "verifier_sha256": "4c7575474f0d7b21526ebc97594c536ff4432f7b822f9b962a248238243ddde5",
+    "verifier_sha256": "f3121e3baa64f61251c197c77dedb571f7e45f459c8a3fee34c0c662074336af",
     "exact_checks": 106,
     "failed_checks": 0,
     "status": "PASS"

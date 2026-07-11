@@ -502,13 +502,13 @@
       "expected": true
     },
     {
-      "name": "proof obligation points to current task",
+      "name": "proof obligation points to archived task",
       "category": "provenance",
       "passed": true,
-      "actual_sha256": "6420b0d2b4a0d5d31a3a7037dff7a8f3f13e2a3e0484bb7c0a44c9be7dc1617d",
-      "expected_sha256": "6420b0d2b4a0d5d31a3a7037dff7a8f3f13e2a3e0484bb7c0a44c9be7dc1617d",
-      "actual": "tasks/CURRENT.yaml",
-      "expected": "tasks/CURRENT.yaml"
+      "actual_sha256": "6a728a4d1aac0f31459b3baf3db8ae074441683e988c48b6048a8c95f4e136f9",
+      "expected_sha256": "6a728a4d1aac0f31459b3baf3db8ae074441683e988c48b6048a8c95f4e136f9",
+      "actual": "tasks/archive/CONTRACT-STEP-03C-GAUGE-VECTOR-REPRESENTATION-001.yaml",
+      "expected": "tasks/archive/CONTRACT-STEP-03C-GAUGE-VECTOR-REPRESENTATION-001.yaml"
     },
     {
       "name": "forbidden loose token absent: \\sim",
