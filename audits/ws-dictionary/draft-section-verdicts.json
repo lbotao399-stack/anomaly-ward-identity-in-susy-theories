@@ -1,0 +1,1587 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-WEINBERG-SREDNICKI-CODEX-DICTIONARY-001",
+  "section_range": {
+    "first": 0,
+    "last": 54,
+    "count": 55
+  },
+  "allowed_statuses": [
+    "CORRECTED",
+    "FALSE",
+    "NOT_IN_SCOPE",
+    "SOURCE_INSUFFICIENT",
+    "VERIFIED"
+  ],
+  "source_registry": {
+    "P1": {
+      "source": "PROJECT",
+      "path": "contracts/foundations/step-01-supersymmetry-commutator.md"
+    },
+    "P2A": {
+      "source": "PROJECT",
+      "path": "contracts/foundations/step-02a-flat-superspace.md"
+    },
+    "P2B": {
+      "source": "PROJECT",
+      "path": "contracts/foundations/step-02b-superconformal-superspace.md"
+    },
+    "W54": {
+      "source": "WEINBERG",
+      "path": "references/vendor/notion/weinberg/05-04-dirac-formalism-34cee2b74b3f8115a5a1fac623c31862.md",
+      "page_id": "34cee2b74b3f8115a5a1fac623c31862",
+      "url": "https://app.notion.com/p/34cee2b74b3f8115a5a1fac623c31862"
+    },
+    "W261": {
+      "source": "WEINBERG",
+      "path": "references/vendor/notion/weinberg/26-01-direct-field-supermultiplets-34cee2b74b3f81efaf28fa4031d4303e.md",
+      "page_id": "34cee2b74b3f81efaf28fa4031d4303e",
+      "url": "https://app.notion.com/p/34cee2b74b3f81efaf28fa4031d4303e"
+    },
+    "W26.1": {
+      "source": "WEINBERG",
+      "path": "references/vendor/notion/weinberg/26-01-direct-field-supermultiplets-34cee2b74b3f81efaf28fa4031d4303e.md",
+      "page_id": "34cee2b74b3f81efaf28fa4031d4303e",
+      "url": "https://app.notion.com/p/34cee2b74b3f81efaf28fa4031d4303e"
+    },
+    "W26.2": {
+      "source": "WEINBERG",
+      "path": "references/vendor/notion/weinberg/26-02-general-superfields-34cee2b74b3f8182a538e629f277c1e7.md",
+      "page_id": "34cee2b74b3f8182a538e629f277c1e7",
+      "url": "https://app.notion.com/p/34cee2b74b3f8182a538e629f277c1e7"
+    },
+    "W26.3": {
+      "source": "WEINBERG",
+      "path": "references/vendor/notion/weinberg/26-03-chiral-linear-superfields-34cee2b74b3f8163b3b3fa265e1815b0.md",
+      "page_id": "34cee2b74b3f8163b3b3fa265e1815b0",
+      "url": "https://app.notion.com/p/34cee2b74b3f8163b3b3fa265e1815b0"
+    },
+    "W26.4": {
+      "source": "WEINBERG",
+      "path": "references/vendor/notion/weinberg/26-04-renormalizable-chiral-theories-34cee2b74b3f81f6bba1c92f1c61727b.md",
+      "page_id": "34cee2b74b3f81f6bba1c92f1c61727b",
+      "url": "https://app.notion.com/p/34cee2b74b3f81f6bba1c92f1c61727b"
+    },
+    "W26A": {
+      "source": "WEINBERG",
+      "path": "references/vendor/notion/weinberg/26-appendix-majorana-spinors-34cee2b74b3f81349f82dd4d257ba62c.md",
+      "page_id": "34cee2b74b3f81349f82dd4d257ba62c",
+      "url": "https://app.notion.com/p/34cee2b74b3f81349f82dd4d257ba62c"
+    },
+    "W27.1": {
+      "source": "WEINBERG",
+      "path": "references/vendor/notion/weinberg/27-01-gauge-invariant-chiral-action-34cee2b74b3f81b6b72bd47d34df4d88.md",
+      "page_id": "34cee2b74b3f81b6b72bd47d34df4d88",
+      "url": "https://app.notion.com/p/34cee2b74b3f81b6b72bd47d34df4d88"
+    },
+    "W27.2": {
+      "source": "WEINBERG",
+      "path": "references/vendor/notion/weinberg/27-02-abelian-gauge-superfield-action-34cee2b74b3f8131b10edd7a1dad0172.md",
+      "page_id": "34cee2b74b3f8131b10edd7a1dad0172",
+      "url": "https://app.notion.com/p/34cee2b74b3f8131b10edd7a1dad0172"
+    },
+    "W27.3": {
+      "source": "WEINBERG",
+      "path": "references/vendor/notion/weinberg/27-03-general-gauge-superfield-action-34cee2b74b3f812f97c2d0aa902aba5d.md",
+      "page_id": "34cee2b74b3f812f97c2d0aa902aba5d",
+      "url": "https://app.notion.com/p/34cee2b74b3f812f97c2d0aa902aba5d"
+    },
+    "W27.4": {
+      "source": "WEINBERG",
+      "path": "references/vendor/notion/weinberg/27-04-renormalizable-gauge-theory-34cee2b74b3f81949500f3f35884f580.md",
+      "page_id": "34cee2b74b3f81949500f3f35884f580",
+      "url": "https://app.notion.com/p/34cee2b74b3f81949500f3f35884f580"
+    },
+    "S34": {
+      "source": "SREDNICKI",
+      "path": "references/vendor/notion/srednicki/34-left-right-spinor-fields-812622be5c2d466faeb4a613eabad116.md",
+      "page_id": "812622be5c2d466faeb4a613eabad116",
+      "url": "https://app.notion.com/p/812622be5c2d466faeb4a613eabad116"
+    },
+    "S35": {
+      "source": "SREDNICKI",
+      "path": "references/vendor/notion/srednicki/35-spinor-indices-1da2841c4cda42669598313359e3d07d.md",
+      "page_id": "1da2841c4cda42669598313359e3d07d",
+      "url": "https://app.notion.com/p/1da2841c4cda42669598313359e3d07d"
+    },
+    "S36": {
+      "source": "SREDNICKI",
+      "path": "references/vendor/notion/srednicki/36-spinor-lagrangians-b41fbf43fd9247d280fe27cace58ea52.md",
+      "page_id": "b41fbf43fd9247d280fe27cace58ea52",
+      "url": "https://app.notion.com/p/b41fbf43fd9247d280fe27cace58ea52"
+    },
+    "S38": {
+      "source": "SREDNICKI",
+      "path": "references/vendor/notion/srednicki/38-spinor-technology-19f10ddaf77242df946f54f8c3f99be6.md",
+      "page_id": "19f10ddaf77242df946f54f8c3f99be6",
+      "url": "https://app.notion.com/p/19f10ddaf77242df946f54f8c3f99be6"
+    },
+    "S47": {
+      "source": "SREDNICKI",
+      "path": "references/vendor/notion/srednicki/47-gamma-matrix-technology-22607397de1a4af2bc9610b320426208.md",
+      "page_id": "22607397de1a4af2bc9610b320426208",
+      "url": "https://app.notion.com/p/22607397de1a4af2bc9610b320426208"
+    },
+    "S49": {
+      "source": "SREDNICKI",
+      "path": "references/vendor/notion/srednicki/49-majorana-feynman-rules-1707531df3dd440bbd490a9e2b963de8.md",
+      "page_id": "1707531df3dd440bbd490a9e2b963de8",
+      "url": "https://app.notion.com/p/1707531df3dd440bbd490a9e2b963de8"
+    },
+    "S95": {
+      "source": "SREDNICKI",
+      "path": "references/vendor/notion/srednicki/95-supersymmetry-0151805c7e85457a9928fcfd0e83da2a.md",
+      "page_id": "0151805c7e85457a9928fcfd0e83da2a",
+      "url": "https://app.notion.com/p/0151805c7e85457a9928fcfd0e83da2a"
+    }
+  },
+  "sections": [
+    {
+      "section": 0,
+      "title": "Symbols",
+      "status": "CORRECTED",
+      "audit_path": "audits/ws-dictionary/sections-00-25-spinor-gamma.md",
+      "audit_heading_line": 107,
+      "citations": [
+        {
+          "source_key": "W54",
+          "first_line": 46,
+          "last_line": 55
+        },
+        {
+          "source_key": "S36",
+          "first_line": 77,
+          "last_line": 87
+        },
+        {
+          "source_key": "W54",
+          "first_line": 156,
+          "last_line": 180
+        }
+      ]
+    },
+    {
+      "section": 1,
+      "title": "Metric and spacetime epsilon",
+      "status": "VERIFIED",
+      "audit_path": "audits/ws-dictionary/sections-00-25-spinor-gamma.md",
+      "audit_heading_line": 145,
+      "citations": [
+        {
+          "source_key": "S35",
+          "first_line": 20,
+          "last_line": 29
+        },
+        {
+          "source_key": "S35",
+          "first_line": 175,
+          "last_line": 185
+        },
+        {
+          "source_key": "S36",
+          "first_line": 77,
+          "last_line": 86
+        },
+        {
+          "source_key": "W54",
+          "first_line": 46,
+          "last_line": 55
+        },
+        {
+          "source_key": "W54",
+          "first_line": 238,
+          "last_line": 250
+        },
+        {
+          "source_key": "W54",
+          "first_line": 292,
+          "last_line": 308
+        },
+        {
+          "source_key": "S47",
+          "first_line": 151,
+          "last_line": 164
+        },
+        {
+          "source_key": "P1",
+          "first_line": 14,
+          "last_line": 18
+        }
+      ]
+    },
+    {
+      "section": 2,
+      "title": "Pauli and sigma matrices",
+      "status": "VERIFIED",
+      "audit_path": "audits/ws-dictionary/sections-00-25-spinor-gamma.md",
+      "audit_heading_line": 180,
+      "citations": [
+        {
+          "source_key": "S35",
+          "first_line": 20,
+          "last_line": 29
+        },
+        {
+          "source_key": "S35",
+          "first_line": 175,
+          "last_line": 185
+        },
+        {
+          "source_key": "S36",
+          "first_line": 77,
+          "last_line": 86
+        },
+        {
+          "source_key": "W54",
+          "first_line": 238,
+          "last_line": 250
+        },
+        {
+          "source_key": "P1",
+          "first_line": 63,
+          "last_line": 104
+        }
+      ]
+    },
+    {
+      "section": 3,
+      "title": "Srednicki gamma matrices",
+      "status": "VERIFIED",
+      "audit_path": "audits/ws-dictionary/sections-00-25-spinor-gamma.md",
+      "audit_heading_line": 195,
+      "citations": [
+        {
+          "source_key": "S36",
+          "first_line": 71,
+          "last_line": 87
+        }
+      ]
+    },
+    {
+      "section": 4,
+      "title": "Weinberg gamma matrices",
+      "status": "VERIFIED",
+      "audit_path": "audits/ws-dictionary/sections-00-25-spinor-gamma.md",
+      "audit_heading_line": 214,
+      "citations": [
+        {
+          "source_key": "W54",
+          "first_line": 238,
+          "last_line": 250
+        },
+        {
+          "source_key": "S36",
+          "first_line": 71,
+          "last_line": 87
+        }
+      ]
+    },
+    {
+      "section": 5,
+      "title": "Gamma five",
+      "status": "VERIFIED",
+      "audit_path": "audits/ws-dictionary/sections-00-25-spinor-gamma.md",
+      "audit_heading_line": 245,
+      "citations": [
+        {
+          "source_key": "W54",
+          "first_line": 305,
+          "last_line": 308
+        },
+        {
+          "source_key": "W54",
+          "first_line": 354,
+          "last_line": 365
+        },
+        {
+          "source_key": "S36",
+          "first_line": 441,
+          "last_line": 468
+        },
+        {
+          "source_key": "W54",
+          "first_line": 324,
+          "last_line": 345
+        },
+        {
+          "source_key": "S47",
+          "first_line": 13,
+          "last_line": 18
+        }
+      ]
+    },
+    {
+      "section": 6,
+      "title": "Chirality projectors",
+      "status": "VERIFIED",
+      "audit_path": "audits/ws-dictionary/sections-00-25-spinor-gamma.md",
+      "audit_heading_line": 273,
+      "citations": [
+        {
+          "source_key": "W26A",
+          "first_line": 134,
+          "last_line": 140
+        },
+        {
+          "source_key": "S36",
+          "first_line": 441,
+          "last_line": 460
+        }
+      ]
+    },
+    {
+      "section": 7,
+      "title": "Beta and Hermiticity",
+      "status": "CORRECTED",
+      "audit_path": "audits/ws-dictionary/sections-00-25-spinor-gamma.md",
+      "audit_heading_line": 291,
+      "citations": [
+        {
+          "source_key": "W54",
+          "first_line": 379,
+          "last_line": 395
+        },
+        {
+          "source_key": "S36",
+          "first_line": 201,
+          "last_line": 210
+        },
+        {
+          "source_key": "W54",
+          "first_line": 397,
+          "last_line": 407
+        },
+        {
+          "source_key": "S38",
+          "first_line": 113,
+          "last_line": 122
+        }
+      ]
+    },
+    {
+      "section": 8,
+      "title": "Lorentz generators",
+      "status": "VERIFIED",
+      "audit_path": "audits/ws-dictionary/sections-00-25-spinor-gamma.md",
+      "audit_heading_line": 327,
+      "citations": [
+        {
+          "source_key": "W54",
+          "first_line": 52,
+          "last_line": 56
+        },
+        {
+          "source_key": "S36",
+          "first_line": 487,
+          "last_line": 509
+        },
+        {
+          "source_key": "S35",
+          "first_line": 175,
+          "last_line": 203
+        },
+        {
+          "source_key": "P1",
+          "first_line": 106,
+          "last_line": 126
+        }
+      ]
+    },
+    {
+      "section": 9,
+      "title": "Two-component epsilon",
+      "status": "VERIFIED",
+      "audit_path": "audits/ws-dictionary/sections-00-25-spinor-gamma.md",
+      "audit_heading_line": 373,
+      "citations": [
+        {
+          "source_key": "S34",
+          "first_line": 183,
+          "last_line": 204
+        },
+        {
+          "source_key": "S35",
+          "first_line": 12,
+          "last_line": 18
+        },
+        {
+          "source_key": "P1",
+          "first_line": 21,
+          "last_line": 44
+        },
+        {
+          "source_key": "W26A",
+          "first_line": 13,
+          "last_line": 22
+        }
+      ]
+    },
+    {
+      "section": 10,
+      "title": "Grassmann contractions",
+      "status": "VERIFIED",
+      "audit_path": "audits/ws-dictionary/sections-00-25-spinor-gamma.md",
+      "audit_heading_line": 397,
+      "citations": [
+        {
+          "source_key": "S35",
+          "first_line": 213,
+          "last_line": 252
+        },
+        {
+          "source_key": "S95",
+          "first_line": 155,
+          "last_line": 178
+        },
+        {
+          "source_key": "S35",
+          "first_line": 31,
+          "last_line": 54
+        },
+        {
+          "source_key": "P1",
+          "first_line": 46,
+          "last_line": 61
+        },
+        {
+          "source_key": "P1",
+          "first_line": 90,
+          "last_line": 104
+        }
+      ]
+    },
+    {
+      "section": 11,
+      "title": "Charge-conjugation matrix",
+      "status": "CORRECTED",
+      "audit_path": "audits/ws-dictionary/sections-00-25-spinor-gamma.md",
+      "audit_heading_line": 430,
+      "citations": [
+        {
+          "source_key": "S36",
+          "first_line": 300,
+          "last_line": 322
+        },
+        {
+          "source_key": "W54",
+          "first_line": 448,
+          "last_line": 457
+        },
+        {
+          "source_key": "S36",
+          "first_line": 320,
+          "last_line": 368
+        },
+        {
+          "source_key": "W54",
+          "first_line": 448,
+          "last_line": 467
+        },
+        {
+          "source_key": "S36",
+          "first_line": 358,
+          "last_line": 383
+        },
+        {
+          "source_key": "S38",
+          "first_line": 357,
+          "last_line": 375
+        }
+      ]
+    },
+    {
+      "section": 12,
+      "title": "Srednicki Dirac spinor",
+      "status": "CORRECTED",
+      "audit_path": "audits/ws-dictionary/sections-00-25-spinor-gamma.md",
+      "audit_heading_line": 461,
+      "citations": [
+        {
+          "source_key": "S36",
+          "first_line": 169,
+          "last_line": 210
+        },
+        {
+          "source_key": "S36",
+          "first_line": 307,
+          "last_line": 343
+        }
+      ]
+    },
+    {
+      "section": 13,
+      "title": "Srednicki Majorana spinor",
+      "status": "VERIFIED",
+      "audit_path": "audits/ws-dictionary/sections-00-25-spinor-gamma.md",
+      "audit_heading_line": 479,
+      "citations": [
+        {
+          "source_key": "S36",
+          "first_line": 89,
+          "last_line": 105
+        },
+        {
+          "source_key": "S36",
+          "first_line": 386,
+          "last_line": 422
+        },
+        {
+          "source_key": "S36",
+          "first_line": 358,
+          "last_line": 422
+        },
+        {
+          "source_key": "S38",
+          "first_line": 357,
+          "last_line": 375
+        }
+      ]
+    },
+    {
+      "section": 14,
+      "title": "Weinberg Majorana condition and phase",
+      "status": "CORRECTED",
+      "audit_path": "audits/ws-dictionary/sections-00-25-spinor-gamma.md",
+      "audit_heading_line": 515,
+      "citations": [
+        {
+          "source_key": "W26A",
+          "first_line": 23,
+          "last_line": 52
+        },
+        {
+          "source_key": "W26A",
+          "first_line": 68,
+          "last_line": 78
+        }
+      ]
+    },
+    {
+      "section": 15,
+      "title": "Dirac Lagrangian dictionary",
+      "status": "SOURCE_INSUFFICIENT",
+      "audit_path": "audits/ws-dictionary/sections-00-25-spinor-gamma.md",
+      "audit_heading_line": 557,
+      "citations": [
+        {
+          "source_key": "S36",
+          "first_line": 264,
+          "last_line": 274
+        }
+      ]
+    },
+    {
+      "section": 16,
+      "title": "Majorana Lagrangian",
+      "status": "VERIFIED",
+      "audit_path": "audits/ws-dictionary/sections-00-25-spinor-gamma.md",
+      "audit_heading_line": 592,
+      "citations": [
+        {
+          "source_key": "W261",
+          "first_line": 235,
+          "last_line": 242
+        },
+        {
+          "source_key": "S36",
+          "first_line": 394,
+          "last_line": 437
+        }
+      ]
+    },
+    {
+      "section": 17,
+      "title": "Dirac spinor into two Weinberg-Majorana spinors",
+      "status": "VERIFIED",
+      "audit_path": "audits/ws-dictionary/sections-00-25-spinor-gamma.md",
+      "audit_heading_line": 614,
+      "citations": [
+        {
+          "source_key": "W26A",
+          "first_line": 23,
+          "last_line": 52
+        },
+        {
+          "source_key": "W26A",
+          "first_line": 68,
+          "last_line": 78
+        }
+      ]
+    },
+    {
+      "section": 18,
+      "title": "Bilinear dictionary",
+      "status": "VERIFIED",
+      "audit_path": "audits/ws-dictionary/sections-00-25-spinor-gamma.md",
+      "audit_heading_line": 655,
+      "citations": [
+        {
+          "source_key": "W54",
+          "first_line": 238,
+          "last_line": 250
+        },
+        {
+          "source_key": "W54",
+          "first_line": 305,
+          "last_line": 365
+        },
+        {
+          "source_key": "S36",
+          "first_line": 71,
+          "last_line": 87
+        },
+        {
+          "source_key": "S36",
+          "first_line": 441,
+          "last_line": 468
+        }
+      ]
+    },
+    {
+      "section": 19,
+      "title": "Majorana bilinear exchange",
+      "status": "VERIFIED",
+      "audit_path": "audits/ws-dictionary/sections-00-25-spinor-gamma.md",
+      "audit_heading_line": 692,
+      "citations": [
+        {
+          "source_key": "W26A",
+          "first_line": 68,
+          "last_line": 84
+        },
+        {
+          "source_key": "S36",
+          "first_line": 370,
+          "last_line": 383
+        },
+        {
+          "source_key": "S47",
+          "first_line": 213,
+          "last_line": 214
+        },
+        {
+          "source_key": "W26A",
+          "first_line": 80,
+          "last_line": 92
+        }
+      ]
+    },
+    {
+      "section": 20,
+      "title": "Two gamma matrices",
+      "status": "CORRECTED",
+      "audit_path": "audits/ws-dictionary/sections-00-25-spinor-gamma.md",
+      "audit_heading_line": 731,
+      "citations": [
+        {
+          "source_key": "W54",
+          "first_line": 46,
+          "last_line": 55
+        },
+        {
+          "source_key": "S47",
+          "first_line": 13,
+          "last_line": 18
+        },
+        {
+          "source_key": "W54",
+          "first_line": 156,
+          "last_line": 180
+        }
+      ]
+    },
+    {
+      "section": 21,
+      "title": "Three gamma matrices",
+      "status": "CORRECTED",
+      "audit_path": "audits/ws-dictionary/sections-00-25-spinor-gamma.md",
+      "audit_heading_line": 758,
+      "citations": [
+        {
+          "source_key": "W54",
+          "first_line": 46,
+          "last_line": 55
+        },
+        {
+          "source_key": "S47",
+          "first_line": 13,
+          "last_line": 18
+        },
+        {
+          "source_key": "W54",
+          "first_line": 156,
+          "last_line": 180
+        }
+      ]
+    },
+    {
+      "section": 22,
+      "title": "Contracted identities",
+      "status": "VERIFIED",
+      "audit_path": "audits/ws-dictionary/sections-00-25-spinor-gamma.md",
+      "audit_heading_line": 783,
+      "citations": [
+        {
+          "source_key": "S47",
+          "first_line": 165,
+          "last_line": 185
+        },
+        {
+          "source_key": "W54",
+          "first_line": 46,
+          "last_line": 55
+        }
+      ]
+    },
+    {
+      "section": 23,
+      "title": "Trace identities",
+      "status": "VERIFIED",
+      "audit_path": "audits/ws-dictionary/sections-00-25-spinor-gamma.md",
+      "audit_heading_line": 815,
+      "citations": [
+        {
+          "source_key": "S47",
+          "first_line": 13,
+          "last_line": 55
+        },
+        {
+          "source_key": "S47",
+          "first_line": 90,
+          "last_line": 116
+        },
+        {
+          "source_key": "S47",
+          "first_line": 126,
+          "last_line": 164
+        }
+      ]
+    },
+    {
+      "section": 24,
+      "title": "Duality identities",
+      "status": "CORRECTED",
+      "audit_path": "audits/ws-dictionary/sections-00-25-spinor-gamma.md",
+      "audit_heading_line": 867,
+      "citations": [
+        {
+          "source_key": "W54",
+          "first_line": 292,
+          "last_line": 320
+        },
+        {
+          "source_key": "S47",
+          "first_line": 126,
+          "last_line": 130
+        },
+        {
+          "source_key": "W54",
+          "first_line": 156,
+          "last_line": 180
+        }
+      ]
+    },
+    {
+      "section": 25,
+      "title": "Majorana Fierz identity",
+      "status": "CORRECTED",
+      "audit_path": "audits/ws-dictionary/sections-00-25-spinor-gamma.md",
+      "audit_heading_line": 915,
+      "citations": [
+        {
+          "source_key": "W26A",
+          "first_line": 93,
+          "last_line": 131
+        },
+        {
+          "source_key": "S36",
+          "first_line": 358,
+          "last_line": 422
+        },
+        {
+          "source_key": "S47",
+          "first_line": 213,
+          "last_line": 214
+        },
+        {
+          "source_key": "S49",
+          "first_line": 13,
+          "last_line": 18
+        }
+      ]
+    },
+    {
+      "section": 26,
+      "title": "Weinberg four-component notation",
+      "status": "CORRECTED",
+      "audit_path": "audits/ws-dictionary/sections-26-39-superspace-chiral.md",
+      "audit_heading_line": 63,
+      "citations": [
+        {
+          "source_key": "W26.2",
+          "first_line": 88,
+          "last_line": 93
+        },
+        {
+          "source_key": "P2A",
+          "first_line": 168,
+          "last_line": 219
+        },
+        {
+          "source_key": "W26.2",
+          "first_line": 18,
+          "last_line": 72
+        },
+        {
+          "source_key": "W26.2",
+          "first_line": 355,
+          "last_line": 394
+        }
+      ]
+    },
+    {
+      "section": 27,
+      "title": "Srednicki two-component notation",
+      "status": "CORRECTED",
+      "audit_path": "audits/ws-dictionary/sections-26-39-superspace-chiral.md",
+      "audit_heading_line": 79,
+      "citations": [
+        {
+          "source_key": "S95",
+          "first_line": 54,
+          "last_line": 107
+        },
+        {
+          "source_key": "P2A",
+          "first_line": 30,
+          "last_line": 85
+        },
+        {
+          "source_key": "P2A",
+          "first_line": 240,
+          "last_line": 398
+        }
+      ]
+    },
+    {
+      "section": 28,
+      "title": "Superspace-coordinate bridge",
+      "status": "CORRECTED",
+      "audit_path": "audits/ws-dictionary/sections-26-39-superspace-chiral.md",
+      "audit_heading_line": 103,
+      "citations": [
+        {
+          "source_key": "S95",
+          "first_line": 27,
+          "last_line": 43
+        },
+        {
+          "source_key": "W26A",
+          "first_line": 23,
+          "last_line": 78
+        },
+        {
+          "source_key": "S36",
+          "first_line": 358,
+          "last_line": 422
+        }
+      ]
+    },
+    {
+      "section": 29,
+      "title": "Chiral constraint",
+      "status": "VERIFIED",
+      "audit_path": "audits/ws-dictionary/sections-26-39-superspace-chiral.md",
+      "audit_heading_line": 133,
+      "citations": [
+        {
+          "source_key": "W26.3",
+          "first_line": 226,
+          "last_line": 249
+        },
+        {
+          "source_key": "S95",
+          "first_line": 110,
+          "last_line": 154
+        },
+        {
+          "source_key": "P2A",
+          "first_line": 352,
+          "last_line": 398
+        }
+      ]
+    },
+    {
+      "section": 30,
+      "title": "Chiral coordinates",
+      "status": "VERIFIED",
+      "audit_path": "audits/ws-dictionary/sections-26-39-superspace-chiral.md",
+      "audit_heading_line": 155,
+      "citations": [
+        {
+          "source_key": "W26.3",
+          "first_line": 196,
+          "last_line": 205
+        },
+        {
+          "source_key": "S95",
+          "first_line": 135,
+          "last_line": 161
+        },
+        {
+          "source_key": "P2A",
+          "first_line": 400,
+          "last_line": 429
+        }
+      ]
+    },
+    {
+      "section": 31,
+      "title": "Weinberg chiral superfield",
+      "status": "CORRECTED",
+      "audit_path": "audits/ws-dictionary/sections-26-39-superspace-chiral.md",
+      "audit_heading_line": 186,
+      "citations": [
+        {
+          "source_key": "W26.3",
+          "first_line": 196,
+          "last_line": 205
+        },
+        {
+          "source_key": "S95",
+          "first_line": 155,
+          "last_line": 161
+        }
+      ]
+    },
+    {
+      "section": 32,
+      "title": "Srednicki chiral expansion",
+      "status": "VERIFIED",
+      "audit_path": "audits/ws-dictionary/sections-26-39-superspace-chiral.md",
+      "audit_heading_line": 218,
+      "citations": [
+        {
+          "source_key": "S95",
+          "first_line": 155,
+          "last_line": 185
+        }
+      ]
+    },
+    {
+      "section": 33,
+      "title": "Weinberg expansion at fixed x",
+      "status": "VERIFIED",
+      "audit_path": "audits/ws-dictionary/sections-26-39-superspace-chiral.md",
+      "audit_heading_line": 244,
+      "citations": [
+        {
+          "source_key": "W26.3",
+          "first_line": 129,
+          "last_line": 165
+        }
+      ]
+    },
+    {
+      "section": 34,
+      "title": "D-component conversion",
+      "status": "CORRECTED",
+      "audit_path": "audits/ws-dictionary/sections-26-39-superspace-chiral.md",
+      "audit_heading_line": 282,
+      "citations": [
+        {
+          "source_key": "W26.2",
+          "first_line": 135,
+          "last_line": 142
+        },
+        {
+          "source_key": "W26.3",
+          "first_line": 196,
+          "last_line": 205
+        },
+        {
+          "source_key": "W26.3",
+          "first_line": 275,
+          "last_line": 300
+        },
+        {
+          "source_key": "S95",
+          "first_line": 155,
+          "last_line": 161
+        },
+        {
+          "source_key": "S95",
+          "first_line": 253,
+          "last_line": 279
+        },
+        {
+          "source_key": "S95",
+          "first_line": 293,
+          "last_line": 321
+        }
+      ]
+    },
+    {
+      "section": 35,
+      "title": "Product of chiral superfields",
+      "status": "VERIFIED",
+      "audit_path": "audits/ws-dictionary/sections-26-39-superspace-chiral.md",
+      "audit_heading_line": 322,
+      "citations": [
+        {
+          "source_key": "W26.3",
+          "first_line": 252,
+          "last_line": 265
+        },
+        {
+          "source_key": "S95",
+          "first_line": 233,
+          "last_line": 250
+        }
+      ]
+    },
+    {
+      "section": 36,
+      "title": "Superpotential notation",
+      "status": "VERIFIED",
+      "audit_path": "audits/ws-dictionary/sections-26-39-superspace-chiral.md",
+      "audit_heading_line": 342,
+      "citations": [
+        {
+          "source_key": "W26.3",
+          "first_line": 275,
+          "last_line": 304
+        },
+        {
+          "source_key": "W26.4",
+          "first_line": 132,
+          "last_line": 151
+        },
+        {
+          "source_key": "S95",
+          "first_line": 246,
+          "last_line": 252
+        }
+      ]
+    },
+    {
+      "section": 37,
+      "title": "General superspace action",
+      "status": "CORRECTED",
+      "audit_path": "audits/ws-dictionary/sections-26-39-superspace-chiral.md",
+      "audit_heading_line": 350,
+      "citations": [
+        {
+          "source_key": "W26.3",
+          "first_line": 275,
+          "last_line": 304
+        },
+        {
+          "source_key": "S95",
+          "first_line": 280,
+          "last_line": 335
+        }
+      ]
+    },
+    {
+      "section": 38,
+      "title": "Superpotential component expansion",
+      "status": "VERIFIED",
+      "audit_path": "audits/ws-dictionary/sections-26-39-superspace-chiral.md",
+      "audit_heading_line": 377,
+      "citations": [
+        {
+          "source_key": "W26.4",
+          "first_line": 132,
+          "last_line": 151
+        },
+        {
+          "source_key": "S95",
+          "first_line": 246,
+          "last_line": 252
+        }
+      ]
+    },
+    {
+      "section": 39,
+      "title": "Canonical Kahler term",
+      "status": "CORRECTED",
+      "audit_path": "audits/ws-dictionary/sections-26-39-superspace-chiral.md",
+      "audit_heading_line": 390,
+      "citations": [
+        {
+          "source_key": "S95",
+          "first_line": 280,
+          "last_line": 335
+        },
+        {
+          "source_key": "W26.4",
+          "first_line": 40,
+          "last_line": 104
+        },
+        {
+          "source_key": "W26.4",
+          "first_line": 139,
+          "last_line": 168
+        },
+        {
+          "source_key": "S95",
+          "first_line": 318,
+          "last_line": 335
+        }
+      ]
+    },
+    {
+      "section": 40,
+      "title": "Srednicki Wess--Zumino gauge",
+      "status": "VERIFIED",
+      "audit_path": "audits/ws-dictionary/sections-40-54-gauge-action.md",
+      "audit_heading_line": 181,
+      "citations": [
+        {
+          "source_key": "S95",
+          "first_line": 253,
+          "last_line": 265
+        },
+        {
+          "source_key": "S95",
+          "first_line": 388,
+          "last_line": 423
+        }
+      ]
+    },
+    {
+      "section": 41,
+      "title": "Weinberg Wess--Zumino gauge",
+      "status": "CORRECTED",
+      "audit_path": "audits/ws-dictionary/sections-40-54-gauge-action.md",
+      "audit_heading_line": 219,
+      "citations": [
+        {
+          "source_key": "W26.2",
+          "first_line": 135,
+          "last_line": 142
+        },
+        {
+          "source_key": "W27.1",
+          "first_line": 266,
+          "last_line": 277
+        },
+        {
+          "source_key": "W27.1",
+          "first_line": 208,
+          "last_line": 218
+        },
+        {
+          "source_key": "W27.1",
+          "first_line": 419,
+          "last_line": 421
+        },
+        {
+          "source_key": "S95",
+          "first_line": 259,
+          "last_line": 265
+        }
+      ]
+    },
+    {
+      "section": 42,
+      "title": "Srednicki Abelian transformations",
+      "status": "VERIFIED",
+      "audit_path": "audits/ws-dictionary/sections-40-54-gauge-action.md",
+      "audit_heading_line": 261,
+      "citations": [
+        {
+          "source_key": "S95",
+          "first_line": 436,
+          "last_line": 447
+        },
+        {
+          "source_key": "S95",
+          "first_line": 645,
+          "last_line": 666
+        }
+      ]
+    },
+    {
+      "section": 43,
+      "title": "Weinberg Abelian transformations",
+      "status": "CORRECTED",
+      "audit_path": "audits/ws-dictionary/sections-40-54-gauge-action.md",
+      "audit_heading_line": 292,
+      "citations": [
+        {
+          "source_key": "W27.1",
+          "first_line": 150,
+          "last_line": 165
+        },
+        {
+          "source_key": "W27.2",
+          "first_line": 305,
+          "last_line": 323
+        },
+        {
+          "source_key": "W27.1",
+          "first_line": 483,
+          "last_line": 493
+        },
+        {
+          "source_key": "S95",
+          "first_line": 506,
+          "last_line": 511
+        }
+      ]
+    },
+    {
+      "section": 44,
+      "title": "Gauge-coupling normalization",
+      "status": "CORRECTED",
+      "audit_path": "audits/ws-dictionary/sections-40-54-gauge-action.md",
+      "audit_heading_line": 360,
+      "citations": [
+        {
+          "source_key": "W27.2",
+          "first_line": 41,
+          "last_line": 92
+        },
+        {
+          "source_key": "S95",
+          "first_line": 638,
+          "last_line": 644
+        },
+        {
+          "source_key": "W27.1",
+          "first_line": 483,
+          "last_line": 493
+        },
+        {
+          "source_key": "S95",
+          "first_line": 506,
+          "last_line": 511
+        },
+        {
+          "source_key": "W27.3",
+          "first_line": 287,
+          "last_line": 320
+        }
+      ]
+    },
+    {
+      "section": 45,
+      "title": "Srednicki Abelian field strength",
+      "status": "CORRECTED",
+      "audit_path": "audits/ws-dictionary/sections-40-54-gauge-action.md",
+      "audit_heading_line": 423,
+      "citations": [
+        {
+          "source_key": "S95",
+          "first_line": 512,
+          "last_line": 518
+        },
+        {
+          "source_key": "S95",
+          "first_line": 583,
+          "last_line": 618
+        },
+        {
+          "source_key": "S95",
+          "first_line": 620,
+          "last_line": 637
+        },
+        {
+          "source_key": "S95",
+          "first_line": 638,
+          "last_line": 644
+        },
+        {
+          "source_key": "S95",
+          "first_line": 674,
+          "last_line": 686
+        }
+      ]
+    },
+    {
+      "section": 46,
+      "title": "Weinberg Abelian field strength",
+      "status": "VERIFIED",
+      "audit_path": "audits/ws-dictionary/sections-40-54-gauge-action.md",
+      "audit_heading_line": 478,
+      "citations": [
+        {
+          "source_key": "W27.2",
+          "first_line": 260,
+          "last_line": 304
+        },
+        {
+          "source_key": "W26A",
+          "first_line": 29,
+          "last_line": 40
+        },
+        {
+          "source_key": "W26A",
+          "first_line": 74,
+          "last_line": 78
+        },
+        {
+          "source_key": "W26A",
+          "first_line": 135,
+          "last_line": 140
+        },
+        {
+          "source_key": "W27.2",
+          "first_line": 193,
+          "last_line": 199
+        }
+      ]
+    },
+    {
+      "section": 47,
+      "title": "Srednicki nonabelian field strength",
+      "status": "VERIFIED",
+      "audit_path": "audits/ws-dictionary/sections-40-54-gauge-action.md",
+      "audit_heading_line": 538,
+      "citations": [
+        {
+          "source_key": "S95",
+          "first_line": 645,
+          "last_line": 685
+        },
+        {
+          "source_key": "S95",
+          "first_line": 512,
+          "last_line": 518
+        }
+      ]
+    },
+    {
+      "section": 48,
+      "title": "Weinberg nonabelian field strength",
+      "status": "FALSE",
+      "audit_path": "audits/ws-dictionary/sections-40-54-gauge-action.md",
+      "audit_heading_line": 609,
+      "citations": [
+        {
+          "source_key": "W27.3",
+          "first_line": 183,
+          "last_line": 209
+        },
+        {
+          "source_key": "W27.3",
+          "first_line": 211,
+          "last_line": 224
+        },
+        {
+          "source_key": "W27.2",
+          "first_line": 299,
+          "last_line": 304
+        }
+      ]
+    },
+    {
+      "section": 49,
+      "title": "Matter coupled to a vector multiplet",
+      "status": "CORRECTED",
+      "audit_path": "audits/ws-dictionary/sections-40-54-gauge-action.md",
+      "audit_heading_line": 654,
+      "citations": [
+        {
+          "source_key": "S95",
+          "first_line": 436,
+          "last_line": 447
+        },
+        {
+          "source_key": "S95",
+          "first_line": 448,
+          "last_line": 473
+        },
+        {
+          "source_key": "S95",
+          "first_line": 474,
+          "last_line": 511
+        },
+        {
+          "source_key": "S95",
+          "first_line": 645,
+          "last_line": 666
+        },
+        {
+          "source_key": "W27.1",
+          "first_line": 141,
+          "last_line": 147
+        },
+        {
+          "source_key": "W27.1",
+          "first_line": 483,
+          "last_line": 493
+        }
+      ]
+    },
+    {
+      "section": 50,
+      "title": "Weinberg full gauge action",
+      "status": "CORRECTED",
+      "audit_path": "audits/ws-dictionary/sections-40-54-gauge-action.md",
+      "audit_heading_line": 739,
+      "citations": [
+        {
+          "source_key": "W27.4",
+          "first_line": 627,
+          "last_line": 639
+        },
+        {
+          "source_key": "W27.3",
+          "first_line": 287,
+          "last_line": 320
+        }
+      ]
+    },
+    {
+      "section": 51,
+      "title": "Srednicki full action",
+      "status": "SOURCE_INSUFFICIENT",
+      "audit_path": "audits/ws-dictionary/sections-40-54-gauge-action.md",
+      "audit_heading_line": 801,
+      "citations": [
+        {
+          "source_key": "S95",
+          "first_line": 246,
+          "last_line": 252
+        },
+        {
+          "source_key": "S95",
+          "first_line": 436,
+          "last_line": 447
+        },
+        {
+          "source_key": "S95",
+          "first_line": 638,
+          "last_line": 686
+        },
+        {
+          "source_key": "W27.4",
+          "first_line": 34,
+          "last_line": 51
+        }
+      ]
+    },
+    {
+      "section": 52,
+      "title": "Topological term under canonical normalization",
+      "status": "CORRECTED",
+      "audit_path": "audits/ws-dictionary/sections-40-54-gauge-action.md",
+      "audit_heading_line": 829,
+      "citations": [
+        {
+          "source_key": "W27.3",
+          "first_line": 261,
+          "last_line": 299
+        }
+      ]
+    },
+    {
+      "section": 53,
+      "title": "Canonical component action in representations",
+      "status": "SOURCE_INSUFFICIENT",
+      "audit_path": "audits/ws-dictionary/sections-40-54-gauge-action.md",
+      "audit_heading_line": 877,
+      "citations": [
+        {
+          "source_key": "S95",
+          "first_line": 506,
+          "last_line": 511
+        },
+        {
+          "source_key": "S95",
+          "first_line": 638,
+          "last_line": 644
+        },
+        {
+          "source_key": "S95",
+          "first_line": 645,
+          "last_line": 686
+        },
+        {
+          "source_key": "W27.4",
+          "first_line": 34,
+          "last_line": 66
+        }
+      ]
+    },
+    {
+      "section": 54,
+      "title": "Elimination of auxiliary fields",
+      "status": "CORRECTED",
+      "audit_path": "audits/ws-dictionary/sections-40-54-gauge-action.md",
+      "audit_heading_line": 900,
+      "citations": [
+        {
+          "source_key": "S95",
+          "first_line": 246,
+          "last_line": 252
+        },
+        {
+          "source_key": "S95",
+          "first_line": 318,
+          "last_line": 335
+        },
+        {
+          "source_key": "S95",
+          "first_line": 506,
+          "last_line": 511
+        },
+        {
+          "source_key": "S95",
+          "first_line": 638,
+          "last_line": 686
+        },
+        {
+          "source_key": "W27.4",
+          "first_line": 34,
+          "last_line": 75
+        },
+        {
+          "source_key": "W27.1",
+          "first_line": 141,
+          "last_line": 165
+        },
+        {
+          "source_key": "W27.1",
+          "first_line": 483,
+          "last_line": 493
+        },
+        {
+          "source_key": "W27.3",
+          "first_line": 287,
+          "last_line": 320
+        },
+        {
+          "source_key": "S95",
+          "first_line": 436,
+          "last_line": 447
+        },
+        {
+          "source_key": "W27.2",
+          "first_line": 260,
+          "last_line": 304
+        },
+        {
+          "source_key": "W27.3",
+          "first_line": 183,
+          "last_line": 224
+        },
+        {
+          "source_key": "S95",
+          "first_line": 512,
+          "last_line": 518
+        },
+        {
+          "source_key": "S95",
+          "first_line": 645,
+          "last_line": 685
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "result": "PASS"
+}

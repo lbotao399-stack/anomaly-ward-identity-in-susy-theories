@@ -1,0 +1,110 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-WEINBERG-SREDNICKI-CODEX-DICTIONARY-001",
+  "result": "PASS",
+  "reviewers": [
+    {
+      "scope": "draft sections 0-25: spinors and Clifford algebra",
+      "audit": "audits/ws-dictionary/sections-00-25-spinor-gamma.md"
+    },
+    {
+      "scope": "draft sections 26-39: superspace, chiral fields, projections",
+      "audit": "audits/ws-dictionary/sections-26-39-superspace-chiral.md"
+    },
+    {
+      "scope": "draft sections 40-54: gauge superfields and actions",
+      "audit": "audits/ws-dictionary/sections-40-54-gauge-action.md"
+    },
+    {
+      "scope": "exact Q(i) and exterior-algebra implementation",
+      "audit": "audits/ws-dictionary/exact-verification.json"
+    },
+    {
+      "scope": "book-page provenance and author-versus-derived boundary",
+      "audit": "references/weinberg-srednicki-notation-source-ledger.json"
+    }
+  ],
+  "resolved_findings": [
+    {
+      "severity": "P0",
+      "finding": "Weinberg unnormalized antisymmetrization was treated as normalized.",
+      "resolution": "Introduced normalized Gamma products and retained Weinberg brackets with factors r!.",
+      "status": "RESOLVED"
+    },
+    {
+      "severity": "P0",
+      "finding": "The Majorana Fierz formula was presented as convention-independent.",
+      "resolution": "Derived and exact-checked separate Weinberg and Srednicki indexed identities.",
+      "status": "RESOLVED"
+    },
+    {
+      "severity": "P0",
+      "finding": "Noether charges, coordinate differential generators, and Srednicki differential operators were conflated.",
+      "resolution": "Separated all three representation surfaces and verified their operator maps on the full exterior basis.",
+      "status": "RESOLVED"
+    },
+    {
+      "severity": "P0",
+      "finding": "The pointwise D-projection rule omitted the Weinberg Box C term.",
+      "resolution": "Replaced it by [X]^S_D=1/2 [X]^W_D+1/4 Box C_X and restricted the factor-two rule to the integrated action with a vanishing boundary term.",
+      "status": "RESOLVED"
+    },
+    {
+      "severity": "P0",
+      "finding": "Weinberg canonical and rescaled gauge bases were merged.",
+      "resolution": "Separated (t_A,V_c,Omega_c) from (T_A,Vhat,Omegahat) and derived both maps.",
+      "status": "RESOLVED"
+    },
+    {
+      "severity": "P0",
+      "finding": "The draft Weinberg nonabelian field-strength definition omitted 2t_A and used incorrect exponentials.",
+      "resolution": "Marked draft section 48 FALSE and inserted Weinberg equation 27.3.13 with its Abelian limit.",
+      "status": "RESOLVED"
+    },
+    {
+      "severity": "P1",
+      "finding": "Cross-book Majorana and superspace phases were stated as unique.",
+      "resolution": "Retained s=plus-or-minus-one branch freedom and declared the working component/coordinate pair jointly.",
+      "status": "RESOLVED"
+    },
+    {
+      "severity": "P1",
+      "finding": "Generic real-scalar D projections and chiral F projections leaked into one domain.",
+      "resolution": "Separated paired-real and paired-left-chiral statements and their source anchors.",
+      "status": "RESOLVED"
+    },
+    {
+      "severity": "P1",
+      "finding": "Integrated-by-parts kinetic expressions were labelled as local coefficients.",
+      "resolution": "Displayed both exact local coefficients and integrated formulas with the boundary hypothesis.",
+      "status": "RESOLVED"
+    },
+    {
+      "severity": "P1",
+      "finding": "Derived four-component Srednicki packages were over-attributed to the author.",
+      "resolution": "Labelled package assembly and phase equations as dictionary derivations; retained only direct coordinate and matrix claims as author statements.",
+      "status": "RESOLVED"
+    },
+    {
+      "severity": "P1",
+      "finding": "The exact verifier used coefficient tautologies for superspace operators.",
+      "resolution": "Independently constructed Srednicki operators and checked all Q, D, brackets, and chiral coordinates on all 16 odd monomials.",
+      "status": "RESOLVED"
+    }
+  ],
+  "post_resolution": {
+    "P0": [],
+    "P1": []
+  },
+  "exact_verification": {
+    "checks": 1953,
+    "failed": 0,
+    "status": "PASS"
+  },
+  "section_verdicts": {
+    "first": 0,
+    "last": 54,
+    "count": 55,
+    "status": "PASS"
+  }
+}
