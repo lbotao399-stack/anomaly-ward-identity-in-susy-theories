@@ -1,0 +1,42 @@
+{
+  "id": "CONTRACT-STEP-02C-COMPLETE-SUPERCONFORMAL-COVARIANCE-001",
+  "type": "CONTRACT_CHANGE",
+  "status": "ACCEPTED",
+  "outcome": "Derive from superspace inversion the complete Lorentzian and Euclidean coordinate realizations of K, S, and bar S; state the full N=1 superconformal graded algebra; and prove that diagonal coordinate-Noether covariance transfers the identical structure constants to Hilbert-space charges.",
+  "allowed_inputs": [
+    "AUTHORITY.md",
+    "AGENTS.md",
+    "contracts/manifest.yaml",
+    "contracts/foundations/step-01-supersymmetry-commutator.md",
+    "contracts/foundations/step-02a-flat-superspace.md",
+    "contracts/foundations/step-02b-superconformal-superspace.md",
+    "audits/step2b-lorentzian-superconformal-verification.json",
+    "audits/step2b-euclidean-superconformal-verification.json",
+    "audits/step2b-independent-review.json",
+    "audits/step2b-notation-ledger.json",
+    "scripts/verify_step2b_chiral_superconformal.py",
+    "scripts/verify_step2b_euclidean_superconformal.py",
+    "ledger/proof_obligations.json",
+    "tests/test_repository_policy.py"
+  ],
+  "forbidden_inputs": [
+    "Notion content",
+    "Notion fetch, search, page read, block read, or content readback",
+    "web pages or URLs",
+    "attachments",
+    "legacy repositories",
+    "other local files",
+    "unstated textbook conventions"
+  ],
+  "acceptance": [
+    "Lorentzian P coordinate is fixed as -i partial and every full-superspace coordinate generator is written with all spinor indices and operator order explicit",
+    "K, S, and bar S are derived by conjugation with the involutive superspace inversion rather than quoted",
+    "the complete Lorentzian N=1 superconformal graded commutator table includes every nonzero bracket and all vanishing bracket families",
+    "diagonal covariance [coordinate generator plus Hilbert generator, multiplication by Phi] graded-equals zero is proved to transfer identical structure constants, modulo an explicitly excluded central operator commuting with all local multiplication operators",
+    "the Euclidean coordinate realization and complete Euclidean algebra are obtained by the locked Wick map with no Euclidean Hermitian identification of the two Weyl sectors",
+    "all changed symbols pass the local notation ledger, free-index, grading, conjugation, and operator-order audits",
+    "exact symbolic verification checks the Lorentzian and Euclidean generator brackets on a finite complete Grassmann-monomial basis with zero failures",
+    "independent reviewers report no unresolved P0 or P1 defect",
+    "contract manifest hashes are valid and repository-policy passes"
+  ]
+}
