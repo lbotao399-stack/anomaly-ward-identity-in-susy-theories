@@ -1,0 +1,99 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-03A-GAUGE-CHIRAL-ACTION-001",
+  "reviewers": [
+    "lorentz_component_reverse_review_agent",
+    "euclidean_wick_reverse_review_agent",
+    "gauge_bridge_and_notation_reverse_review_agent"
+  ],
+  "resolved_findings": [
+    {
+      "priority": "P1",
+      "equation": "3A.55",
+      "issue": "the first antichiral auxiliary projector contracted a lower barD index with an upper field-strength index but retained the sign of the raised-derivative form",
+      "resolution": "fixed the projector to +1/2 barD^dot a tildeW_dot a vertical bar and added direct bridge-derived antichiral tests",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equation": "3A.63-3A.64",
+      "issue": "the first W_A W_B formula wrote twice the A-to-B gaugino term, which is valid only after diagonal color identification or symmetric contraction",
+      "resolution": "displayed the A-to-B and B-to-A ordered terms separately and added exact distinct-color products in both signatures",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equation": "3A.2-3A.72",
+      "issue": "f_AB^C denoted structure constants while f_AB(Phi) denoted the gauge-kinetic matrix",
+      "resolution": "renamed all structure constants c_AB^C and retained f_AB exclusively for the holomorphic kinetic matrix",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equation": "3A.34a-3A.50b",
+      "issue": "the first off-Wess-Zumino statement assigned the chiral-frame barD derivative to the dual antichiral row",
+      "resolution": "defined the antichiral-frame row connection and its right-acting covariant derivative, while restricting flat-D coefficient projections to Wess-Zumino gauge",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equation": "3A.50c-3A.59",
+      "issue": "the first verifier assumed the field-strength component expansion instead of deriving it from the bridge",
+      "resolution": "added exact full-superderivative construction from V through both connections and field strengths to A, lambda, tilde lambda, D, nonabelian F, and the adjoint covariant gaugino derivative",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equation": "3A.65-3A.67",
+      "issue": "the first general-action statement omitted an explicit exhaustive definition of the two-derivative superspace truncation and Lorentzian reality conditions",
+      "resolution": "defined the truncation, classified D and F densities, and fixed K, U, f, and xi reality",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equation": "3A.73",
+      "issue": "constant f_AB alone did not ensure gauge invariance or allow the positive Euclidean inverse",
+      "resolution": "required a symmetric invariant constant form with positive real part",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equation": "3A.92",
+      "issue": "the first Wick-action formula omitted the ordered time-contour measure Jacobian",
+      "resolution": "fixed d4x_L=-i d4x_E separately from the Euclidean epsilon orientation",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equation": "3A.99-3A.103",
+      "issue": "the first positive-contour statement did not declare xi_A real",
+      "resolution": "fixed xi_A in R in the Lorentzian data and retained the Abelian-quotient constraint",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P2",
+      "equation": "3A.85",
+      "issue": "an intermediate edit introduced a renderer-breaking form-feed in an unused Hodge-dual symbol",
+      "resolution": "removed the unused symbol and verified that the contract contains no control character",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P2",
+      "equation": "3A.102",
+      "issue": "the first contour equation suppressed the matter index on shifted auxiliary fields",
+      "resolution": "wrote tildeG_I=-(G^I)^dagger and all contour identifications with explicit indices",
+      "status": "RESOLVED"
+    }
+  ],
+  "exact_verification": {
+    "identities": 88,
+    "component_coefficients": 336,
+    "failed": 0,
+    "status": "PASS"
+  },
+  "post_resolution": {
+    "P0": [],
+    "P1": []
+  },
+  "result": "PASS"
+}

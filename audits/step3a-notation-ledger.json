@@ -1,0 +1,83 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-03A-GAUGE-CHIRAL-ACTION-001",
+  "contract": "contracts/foundations/step-03a-gauge-chiral-action.md",
+  "scope": "Lorentzian and Euclidean gauge-chiral superspace action, Wess-Zumino projections, component reductions, Wick continuation, and Euclidean contour",
+  "checks": [
+    {
+      "id": "SIGNATURE_AND_INDEX_DOMAINS",
+      "result": "PASS",
+      "locked": "R labels L or E; mu labels 0 through 3; m labels 1 through 4; a and dot a are Weyl indices; I,J are matter indices; A,B are adjoint indices"
+    },
+    {
+      "id": "STRUCTURE_CONSTANT_VERSUS_KINETIC_MATRIX",
+      "result": "PASS",
+      "locked": "c_AB^C denotes real Lie-algebra structure constants; f_AB(Phi) denotes the symmetric holomorphic gauge-kinetic matrix"
+    },
+    {
+      "id": "BRIDGE_EXPONENT_VERSUS_BRIDGE",
+      "result": "PASS",
+      "locked": "mathcal V is the bridge exponent and mathcal E=exp(mathcal V) is the bridge; no undeclared exp(2V) normalization occurs"
+    },
+    {
+      "id": "FLAT_VERSUS_GAUGE_COVARIANT_SPINOR_DERIVATIVE",
+      "result": "PASS",
+      "locked": "D and barD are Step-2A flat derivatives; nabla is the chiral-frame covariant derivative; the dual row uses the separately defined antichiral-frame row derivative"
+    },
+    {
+      "id": "WZ_COMPONENT_PROJECTION_SCOPE",
+      "result": "PASS",
+      "locked": "flat-D coefficient projections are taken in Wess-Zumino gauge, where Gamma| and D^a Gamma_a| vanish; only the residual ordinary gauge group acts on those components"
+    },
+    {
+      "id": "AUXILIARY_VERSUS_CURVATURE",
+      "result": "PASS",
+      "locked": "F^I and tildeF_I are chiral auxiliaries; F_MN is gauge curvature; mathscr D^A is the vector auxiliary and mathcal D_M is the ordinary gauge-covariant derivative"
+    },
+    {
+      "id": "SUPERPOTENTIAL_VERSUS_GAUGE_STRENGTH",
+      "result": "PASS",
+      "locked": "mathscr U denotes the superpotential; mathcal W_a denotes the gauge field-strength superfield"
+    },
+    {
+      "id": "BEREZIN_OPERATOR_ORDER",
+      "result": "PASS",
+      "locked": "D^2 and barD^2 index order is explicit; barD^2 acts first in the D-projector; all vertical-bar projections are ordered"
+    },
+    {
+      "id": "ANTICHIRAL_AUXILIARY_INDEX_PLACEMENT",
+      "result": "PASS",
+      "locked": "mathscr D=+1/2 barD^dot a tildeW_dot a|; the equivalent lower-derivative raised-field form would carry the opposite sign"
+    },
+    {
+      "id": "CROSS_COLOR_GAUGINO_ORDER",
+      "result": "PASS",
+      "locked": "W_A W_B contains lambda_A D barlambda_B plus lambda_B D barlambda_A before contraction with symmetric f_AB"
+    },
+    {
+      "id": "LORENTZ_REALITY_VERSUS_EUCLIDEAN_INDEPENDENCE",
+      "result": "PASS",
+      "locked": "Lorentzian barred variables are adjoints and the action data obey the stated reality conditions; Euclidean tilded variables remain independent until the contour is chosen"
+    },
+    {
+      "id": "WICK_MEASURE_VERSUS_EPSILON_ORIENTATION",
+      "result": "PASS",
+      "locked": "d4x_L=-i d4x_E follows from the ordered time contour, while epsilon_E^1234=+1 is an independently fixed tensor orientation"
+    },
+    {
+      "id": "CANONICAL_GAUGE_FORM",
+      "result": "PASS",
+      "locked": "constant f_AB is symmetric and invariant; Re f is positive; the absorbed-coupling connection is exactly partial_M-i A_M"
+    },
+    {
+      "id": "STRICT_EQUALITY_NOTATION",
+      "result": "PASS",
+      "locked": "the contract contains no sim, approx, or propto relation"
+    }
+  ],
+  "findings": {
+    "P0": [],
+    "P1": []
+  },
+  "result": "PASS"
+}
