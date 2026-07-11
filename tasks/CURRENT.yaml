@@ -1,32 +1,39 @@
 {
-  "id": "MIRROR-STEP-02C-NOTION-001",
+  "id": "CONTRACT-STEP-03A-GAUGE-CHIRAL-ACTION-001",
   "type": "CONTRACT_CHANGE",
-  "status": "ACCEPTED",
-  "outcome": "Publish the accepted Step-2C complete superconformal covariance contract from origin/main commit 3d6d99102753c152a5a4eb0f9be1a1f6dc121834 to one Notion child page under the fixed AWI root without reading any Notion content.",
+  "status": "SPECIFIED",
+  "outcome": "Derive in parallel Lorentzian and Euclidean signatures the general rigid four-dimensional N=1 local two-derivative gauge-chiral action in chiral representation, define every component by superspace projection, and prove that the canonical specialization gives the standard component kinetic terms with gauge coupling absorbed into A and covariant derivative partial minus i A.",
   "allowed_inputs": [
     "AUTHORITY.md",
     "AGENTS.md",
-    "contracts/foundations/step-02c-complete-superconformal-covariance.md",
     "contracts/manifest.yaml",
-    "mirror/page_map.yaml",
-    "mirror/README.md",
-    "scripts/build_notion_payload.py",
-    "audits/notion_write_receipt.json"
+    "contracts/foundations/step-01-supersymmetry-commutator.md",
+    "contracts/foundations/step-02a-flat-superspace.md",
+    "audits/step2a-symbolic-verification.json",
+    "scripts/verify_step2a_flat_superspace.py",
+    "ledger/proof_obligations.json",
+    "tests/test_repository_policy.py"
   ],
   "forbidden_inputs": [
     "Notion content",
     "Notion fetch, search, page read, block read, or content readback",
+    "web pages or URLs",
+    "attachments",
     "legacy repositories",
     "other local files",
     "unmerged branches",
-    "manual mathematical edits on the Notion side"
+    "unstated textbook conventions"
   ],
   "acceptance": [
-    "the published mathematical source is exactly the Step-2C contract at origin/main commit 3d6d99102753c152a5a4eb0f9be1a1f6dc121834",
-    "the Notion child page is created only through a write operation under root page 39e80ed3e5844b17b3ccf2579e2a64ca",
-    "the payload contains the Git authority header, exact source path, commit, and SHA-256",
-    "mirror page map records the Notion page id, source path, source commit, and source sha256",
-    "write receipt states content_readback_performed=false",
-    "repository-policy passes after the mirror metadata update"
+    "the Lorentzian and Euclidean superspace measures are defined by explicit ordered Berezin derivatives and their projection formulas are checked",
+    "the gauge Lie algebra, representation indices, bridge, chiral-representation covariant derivatives, gauge transformations, and field strengths are derived with all operator order and spinor indices explicit",
+    "the gauge coupling is absorbed into the Hermitian connection A and the Lorentzian component derivative is exactly partial_mu minus i A_mu",
+    "chiral, antichiral, and vector-multiplet components are defined only by vertical-bar superspace projections, including phi equals Phi vertical bar, psi_a equals one over square-root two D_a Phi vertical bar, and the resulting F projection",
+    "the general local rigid N=1 two-derivative action is expressed by a gauge-invariant Kahler potential, holomorphic superpotential, holomorphic gauge-kinetic matrix, and optional Fayet-Iliopoulos term only when the gauge algebra permits it",
+    "direct Grassmann expansion of the canonical matter D-term, gauge F-term, and superpotential F-term yields every standard Lorentzian component coefficient and sign, including scalar, Weyl-fermion, gauge-field, gaugino, and auxiliary kinetic or algebraic terms",
+    "the locked Wick map produces the Euclidean action with independent chiral and antichiral variables before a contour is chosen, and its bosonic kinetic operators are positive on the stated real contour",
+    "an exact symbolic verifier checks the projection identities and canonical component expansions with zero failures",
+    "the notation ledger and independent reverse-order review report no unresolved P0 or P1 defect",
+    "contract manifest hashes are valid and repository-policy passes"
   ]
 }
