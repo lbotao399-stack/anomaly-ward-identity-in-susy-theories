@@ -1,0 +1,1183 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-03C-GAUGE-VECTOR-REPRESENTATION-001",
+  "status": "PASS",
+  "arithmetic": {
+    "coefficient_field": "Q(i)",
+    "floating_point": false,
+    "external_cas": false,
+    "matrix_witness_dimension": 2,
+    "component_exterior_generators": [
+      "theta^1",
+      "theta^2"
+    ],
+    "component_operator_dimension": 8
+  },
+  "categories": {
+    "document": {
+      "checks": 34,
+      "failed": 0
+    },
+    "provenance": {
+      "checks": 11,
+      "failed": 0
+    },
+    "bridge": {
+      "checks": 8,
+      "failed": 0
+    },
+    "reality": {
+      "checks": 5,
+      "failed": 0
+    },
+    "connection": {
+      "checks": 8,
+      "failed": 0
+    },
+    "chirality": {
+      "checks": 4,
+      "failed": 0
+    },
+    "field_strength": {
+      "checks": 2,
+      "failed": 0
+    },
+    "action": {
+      "checks": 5,
+      "failed": 0
+    },
+    "matter": {
+      "checks": 2,
+      "failed": 0
+    },
+    "component": {
+      "checks": 15,
+      "failed": 0
+    },
+    "jacobi": {
+      "checks": 6,
+      "failed": 0
+    },
+    "wick": {
+      "checks": 3,
+      "failed": 0
+    },
+    "bianchi": {
+      "checks": 3,
+      "failed": 0
+    }
+  },
+  "totals": {
+    "exact_checks": 106,
+    "failed_checks": 0
+  },
+  "checks": [
+    {
+      "name": "equation tags exact ordered surface",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "cd0037c4acc2933e577cf3f0a0b91768b2606810d8a61550ebd0290a38cd7a4f",
+      "expected_sha256": "cd0037c4acc2933e577cf3f0a0b91768b2606810d8a61550ebd0290a38cd7a4f",
+      "actual": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "39a",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "60a",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73",
+        "74",
+        "75",
+        "76",
+        "77",
+        "78",
+        "79",
+        "80",
+        "81"
+      ],
+      "expected": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "39a",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "60a",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73",
+        "74",
+        "75",
+        "76",
+        "77",
+        "78",
+        "79",
+        "80",
+        "81"
+      ]
+    },
+    {
+      "name": "equation tags unique",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "bbb965ab0c80d6538cf2184babad2a564a010376712012bd07b0af92dcd3097d",
+      "expected_sha256": "bbb965ab0c80d6538cf2184babad2a564a010376712012bd07b0af92dcd3097d",
+      "actual": 83,
+      "expected": 83
+    },
+    {
+      "name": "contract binding: relative bridge multiplication order",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: B finite transformation order",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: Btilde finite transformation order",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: vector undotted bridge solution",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: vector dotted bridge solution",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: chiral similarity order",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: chiral strength transport order",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: antichiral strength transport order",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: column matter frame map",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: row matter frame map",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract coefficient binding: \\kappa_L:=2i",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract coefficient binding: \\kappa_E:=-2",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract coefficient binding: u_R:=\\frac4{\\kappa_R}",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract coefficient binding: \\rho_R:=\\frac4{\\kappa_R^2}",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract coefficient binding: (u_L,\\rho_L)=(-2i,-1)",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract coefficient binding: (u_E,\\rho_E)=(-2,+1)",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Step-3B s_R collision absent",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "expected_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "task id",
+      "category": "provenance",
+      "passed": true,
+      "actual_sha256": "6dacf411b4412f8d79a610254aeb86e83b145924808d2881042777b0834ee36b",
+      "expected_sha256": "6dacf411b4412f8d79a610254aeb86e83b145924808d2881042777b0834ee36b",
+      "actual": "CONTRACT-STEP-03C-GAUGE-VECTOR-REPRESENTATION-001",
+      "expected": "CONTRACT-STEP-03C-GAUGE-VECTOR-REPRESENTATION-001"
+    },
+    {
+      "name": "task type",
+      "category": "provenance",
+      "passed": true,
+      "actual_sha256": "640557e001d216f000f7679f67c21240cada1a35f75108ce16d6f5e19d740c20",
+      "expected_sha256": "640557e001d216f000f7679f67c21240cada1a35f75108ce16d6f5e19d740c20",
+      "actual": "CONTRACT_CHANGE",
+      "expected": "CONTRACT_CHANGE"
+    },
+    {
+      "name": "reference audit status",
+      "category": "provenance",
+      "passed": true,
+      "actual_sha256": "727e9bd17b077ba162e13ba877135cc6fbc6b30f83da0b34b3e20233f1cc885f",
+      "expected_sha256": "727e9bd17b077ba162e13ba877135cc6fbc6b30f83da0b34b3e20233f1cc885f",
+      "actual": "PASS",
+      "expected": "PASS"
+    },
+    {
+      "name": "scoped subset sha256",
+      "category": "provenance",
+      "passed": true,
+      "actual_sha256": "d267d8273a92e9184fea76719f048c108d8ba4b3552eec8539dbacbf1ea5fd2d",
+      "expected_sha256": "d267d8273a92e9184fea76719f048c108d8ba4b3552eec8539dbacbf1ea5fd2d",
+      "actual": "57d71bcf95fb84dabb4f5e85cfb9290ba52031e031a062cf7b0e5dad93a2d87e",
+      "expected": "57d71bcf95fb84dabb4f5e85cfb9290ba52031e031a062cf7b0e5dad93a2d87e"
+    },
+    {
+      "name": "source ledger subset sha256",
+      "category": "provenance",
+      "passed": true,
+      "actual_sha256": "d267d8273a92e9184fea76719f048c108d8ba4b3552eec8539dbacbf1ea5fd2d",
+      "expected_sha256": "d267d8273a92e9184fea76719f048c108d8ba4b3552eec8539dbacbf1ea5fd2d",
+      "actual": "57d71bcf95fb84dabb4f5e85cfb9290ba52031e031a062cf7b0e5dad93a2d87e",
+      "expected": "57d71bcf95fb84dabb4f5e85cfb9290ba52031e031a062cf7b0e5dad93a2d87e"
+    },
+    {
+      "name": "source translation was deferred",
+      "category": "provenance",
+      "passed": true,
+      "actual_sha256": "8c1c8c529e6451999204c2c0bb7f08189d549f4441fad035229258823ef781c7",
+      "expected_sha256": "8c1c8c529e6451999204c2c0bb7f08189d549f4441fad035229258823ef781c7",
+      "actual": "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+      "expected": "NOT_PERFORMED_IN_REFERENCE_IMPORT"
+    },
+    {
+      "name": "claim admitted: SUPERSPACE-1001-GAUGE-CHIRAL-REPRESENTATION-EVIDENCE",
+      "category": "provenance",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "claim admitted: SUPERSPACE-1001-VECTOR-BRIDGE-EVIDENCE",
+      "category": "provenance",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "claim admitted: SUPERSPACE-1001-VECTOR-BIANCHI-EVIDENCE",
+      "category": "provenance",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "claim admitted: SUPERSPACE-1001-VECTOR-ACTION-COMPARISON-EVIDENCE",
+      "category": "provenance",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "proof obligation points to current task",
+      "category": "provenance",
+      "passed": true,
+      "actual_sha256": "6420b0d2b4a0d5d31a3a7037dff7a8f3f13e2a3e0484bb7c0a44c9be7dc1617d",
+      "expected_sha256": "6420b0d2b4a0d5d31a3a7037dff7a8f3f13e2a3e0484bb7c0a44c9be7dc1617d",
+      "actual": "tasks/CURRENT.yaml",
+      "expected": "tasks/CURRENT.yaml"
+    },
+    {
+      "name": "forbidden loose token absent: \\sim",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "expected_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "forbidden loose token absent: \\approx",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "expected_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "forbidden loose token absent: \\propto",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "expected_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "raw Phi_R typo absent",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "expected_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "gauge-frame distinction explicit",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "intrinsic Euclidean independence explicit",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "source FI equation excluded",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Project W coefficient -1/8",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Project Wtilde coefficient +1/8",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "component fermion coefficient",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "component auxiliary coefficient",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "general component transport defines C-frame projections",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "WZ pure-spinor second jet fixed",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "frame labels use mathsf V/C/A",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "FI covector annihilates the derived algebra and uses the logarithm chart",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "bridge inverse B",
+      "category": "bridge",
+      "passed": true,
+      "actual_sha256": "4cab747021c2d4aa17429ff6b299d8245975d1f48035ac44dfa288add1321a94",
+      "expected_sha256": "4cab747021c2d4aa17429ff6b299d8245975d1f48035ac44dfa288add1321a94"
+    },
+    {
+      "name": "bridge inverse Btilde",
+      "category": "bridge",
+      "passed": true,
+      "actual_sha256": "4cab747021c2d4aa17429ff6b299d8245975d1f48035ac44dfa288add1321a94",
+      "expected_sha256": "4cab747021c2d4aa17429ff6b299d8245975d1f48035ac44dfa288add1321a94"
+    },
+    {
+      "name": "relative bridge order",
+      "category": "bridge",
+      "passed": true,
+      "actual_sha256": "4f2dac43e14bdcf8c1609012759544455e3eb34d4a1da593bdaccac9fe910be7",
+      "expected_sha256": "4f2dac43e14bdcf8c1609012759544455e3eb34d4a1da593bdaccac9fe910be7"
+    },
+    {
+      "name": "finite relative-bridge covariance",
+      "category": "bridge",
+      "passed": true,
+      "actual_sha256": "09b19d9e43bbb37c420c90f2c51717952e6d8c035458796d6811341c3d33668e",
+      "expected_sha256": "09b19d9e43bbb37c420c90f2c51717952e6d8c035458796d6811341c3d33668e"
+    },
+    {
+      "name": "noncommuting order witness",
+      "category": "bridge",
+      "passed": true,
+      "actual_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "expected_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "intrinsic Euclidean bridges need not be adjoints",
+      "category": "reality",
+      "passed": true,
+      "actual_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "expected_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Lorentz k dagger equals k inverse",
+      "category": "reality",
+      "passed": true,
+      "actual_sha256": "278afeda1ea822f72378cdf4cc211f57baaa17de01c87fa2fe5c396027169d12",
+      "expected_sha256": "278afeda1ea822f72378cdf4cc211f57baaa17de01c87fa2fe5c396027169d12"
+    },
+    {
+      "name": "Lorentz h dagger equals htilde inverse",
+      "category": "reality",
+      "passed": true,
+      "actual_sha256": "371762724400104b15089619d755eb7098e3c09f7a448184237e84b6e9439395",
+      "expected_sha256": "371762724400104b15089619d755eb7098e3c09f7a448184237e84b6e9439395"
+    },
+    {
+      "name": "Lorentz bridge dagger relation is preserved",
+      "category": "reality",
+      "passed": true,
+      "actual_sha256": "833aff96402b2dc963deb3ea0f3340345859c36dae06ff9d022133da167509fb",
+      "expected_sha256": "833aff96402b2dc963deb3ea0f3340345859c36dae06ff9d022133da167509fb"
+    },
+    {
+      "name": "Lorentz relative bridge is Hermitian",
+      "category": "reality",
+      "passed": true,
+      "actual_sha256": "a7a772474a7e21545ad0e8684984b21cf5c8ef53e424861abf2420ba9952c87a",
+      "expected_sha256": "a7a772474a7e21545ad0e8684984b21cf5c8ef53e424861abf2420ba9952c87a"
+    },
+    {
+      "name": "symmetric compensator inverse",
+      "category": "bridge",
+      "passed": true,
+      "actual_sha256": "591bed4d1fbf737dc7800d22f786fca0aae6607d7a72e3bbe65d4e30b74e012d",
+      "expected_sha256": "591bed4d1fbf737dc7800d22f786fca0aae6607d7a72e3bbe65d4e30b74e012d"
+    },
+    {
+      "name": "symmetric B transform",
+      "category": "bridge",
+      "passed": true,
+      "actual_sha256": "8f9b9f3929204aa9fbb59680e5bf4ec4a4203dd26199b8baa2c3b174fa205801",
+      "expected_sha256": "8f9b9f3929204aa9fbb59680e5bf4ec4a4203dd26199b8baa2c3b174fa205801"
+    },
+    {
+      "name": "symmetric Btilde transform",
+      "category": "bridge",
+      "passed": true,
+      "actual_sha256": "8f9b9f3929204aa9fbb59680e5bf4ec4a4203dd26199b8baa2c3b174fa205801",
+      "expected_sha256": "8f9b9f3929204aa9fbb59680e5bf4ec4a4203dd26199b8baa2c3b174fa205801"
+    },
+    {
+      "name": "D vector-connection gauge covariance",
+      "category": "connection",
+      "passed": true,
+      "actual_sha256": "8a4915729b1a8864239b399d17a5a9755fc948fa6a6948f0b6c17f0eb20c2db8",
+      "expected_sha256": "8a4915729b1a8864239b399d17a5a9755fc948fa6a6948f0b6c17f0eb20c2db8"
+    },
+    {
+      "name": "D chiral similarity connection",
+      "category": "connection",
+      "passed": true,
+      "actual_sha256": "c7a0a85141a9470b88a0f8adfd2dde33bde9813e57787fe32ab3e180d56b98b3",
+      "expected_sha256": "c7a0a85141a9470b88a0f8adfd2dde33bde9813e57787fe32ab3e180d56b98b3"
+    },
+    {
+      "name": "D chiral-frame gauge covariance",
+      "category": "connection",
+      "passed": true,
+      "actual_sha256": "93a6a8186aba13c5240a2c45f03888b45c64cad7cbd3988fb403339a9903f18a",
+      "expected_sha256": "93a6a8186aba13c5240a2c45f03888b45c64cad7cbd3988fb403339a9903f18a"
+    },
+    {
+      "name": "D antichiral connection vanishes",
+      "category": "connection",
+      "passed": true,
+      "actual_sha256": "700382fad18d53c6164213694f6147dfb4092f7f8fccd03fdfaa8b12383a2c48",
+      "expected_sha256": "700382fad18d53c6164213694f6147dfb4092f7f8fccd03fdfaa8b12383a2c48"
+    },
+    {
+      "name": "barD vector-connection gauge covariance",
+      "category": "connection",
+      "passed": true,
+      "actual_sha256": "1b8db01447678c07e23d763a5835a4c562e1511de0349466176341ee14fe19f1",
+      "expected_sha256": "1b8db01447678c07e23d763a5835a4c562e1511de0349466176341ee14fe19f1"
+    },
+    {
+      "name": "barD chiral connection vanishes",
+      "category": "connection",
+      "passed": true,
+      "actual_sha256": "700382fad18d53c6164213694f6147dfb4092f7f8fccd03fdfaa8b12383a2c48",
+      "expected_sha256": "700382fad18d53c6164213694f6147dfb4092f7f8fccd03fdfaa8b12383a2c48"
+    },
+    {
+      "name": "barD antichiral similarity connection",
+      "category": "connection",
+      "passed": true,
+      "actual_sha256": "4bdaee0347c6d0908355d4f4de4429e628f1e279eb1cf6c895587cf95f005220",
+      "expected_sha256": "4bdaee0347c6d0908355d4f4de4429e628f1e279eb1cf6c895587cf95f005220"
+    },
+    {
+      "name": "barD antichiral-frame gauge covariance",
+      "category": "connection",
+      "passed": true,
+      "actual_sha256": "aac116ad2cbade04095883ce39c7b764775060c03aebe6d04ebf2fddc0235710",
+      "expected_sha256": "aac116ad2cbade04095883ce39c7b764775060c03aebe6d04ebf2fddc0235710"
+    },
+    {
+      "name": "vector-frame covariant chirality of W",
+      "category": "chirality",
+      "passed": true,
+      "actual_sha256": "700382fad18d53c6164213694f6147dfb4092f7f8fccd03fdfaa8b12383a2c48",
+      "expected_sha256": "700382fad18d53c6164213694f6147dfb4092f7f8fccd03fdfaa8b12383a2c48"
+    },
+    {
+      "name": "vector-frame covariant antichirality of Wtilde",
+      "category": "chirality",
+      "passed": true,
+      "actual_sha256": "700382fad18d53c6164213694f6147dfb4092f7f8fccd03fdfaa8b12383a2c48",
+      "expected_sha256": "700382fad18d53c6164213694f6147dfb4092f7f8fccd03fdfaa8b12383a2c48"
+    },
+    {
+      "name": "W field-strength gauge covariance",
+      "category": "field_strength",
+      "passed": true,
+      "actual_sha256": "cfa4d963814ac30073c0ff0a0fd88fc5fe81d9800bf5648dd34981fee0ee75ae",
+      "expected_sha256": "cfa4d963814ac30073c0ff0a0fd88fc5fe81d9800bf5648dd34981fee0ee75ae"
+    },
+    {
+      "name": "Wtilde field-strength gauge covariance",
+      "category": "field_strength",
+      "passed": true,
+      "actual_sha256": "8ee29c319238d7294f19900fc880ea55eef9950a1c30fadc2ee2dabad018dd6d",
+      "expected_sha256": "8ee29c319238d7294f19900fc880ea55eef9950a1c30fadc2ee2dabad018dd6d"
+    },
+    {
+      "name": "matter bilinear frame equality",
+      "category": "action",
+      "passed": true,
+      "actual_sha256": "2a4ce103a8d22d2363445e39bb8f4535452c503fb55168d4602ab440828966fe",
+      "expected_sha256": "2a4ce103a8d22d2363445e39bb8f4535452c503fb55168d4602ab440828966fe",
+      "actual": "-4",
+      "expected": "-4"
+    },
+    {
+      "name": "column matter gauge covariance",
+      "category": "matter",
+      "passed": true,
+      "actual_sha256": "01721ed92f6596727cfff4a5b682b52d823929b0ec6a7cb5767aa5f0e4dd24fc",
+      "expected_sha256": "01721ed92f6596727cfff4a5b682b52d823929b0ec6a7cb5767aa5f0e4dd24fc"
+    },
+    {
+      "name": "row matter gauge covariance",
+      "category": "matter",
+      "passed": true,
+      "actual_sha256": "bd77eb728b362f7d1f6ebbd18b5428b535062552a64e7146b8765b5ecb5661ad",
+      "expected_sha256": "bd77eb728b362f7d1f6ebbd18b5428b535062552a64e7146b8765b5ecb5661ad"
+    },
+    {
+      "name": "column matter covariant chirality",
+      "category": "chirality",
+      "passed": true,
+      "actual_sha256": "8e147ba0f2afe0a8b672d20efb51c71770c7aa8db0c9598d918aba5b731384e4",
+      "expected_sha256": "8e147ba0f2afe0a8b672d20efb51c71770c7aa8db0c9598d918aba5b731384e4"
+    },
+    {
+      "name": "row matter covariant antichirality",
+      "category": "chirality",
+      "passed": true,
+      "actual_sha256": "8e147ba0f2afe0a8b672d20efb51c71770c7aa8db0c9598d918aba5b731384e4",
+      "expected_sha256": "8e147ba0f2afe0a8b672d20efb51c71770c7aa8db0c9598d918aba5b731384e4"
+    },
+    {
+      "name": "chiral kinetic trace similarity",
+      "category": "action",
+      "passed": true,
+      "actual_sha256": "199ca7b8a8fd85fc22965dc9d4bbda340b57045314e2669384679d98c1bdd1d1",
+      "expected_sha256": "199ca7b8a8fd85fc22965dc9d4bbda340b57045314e2669384679d98c1bdd1d1",
+      "actual": "-3",
+      "expected": "-3"
+    },
+    {
+      "name": "flat-barD chirality of invariant chiral kinetic scalar",
+      "category": "action",
+      "passed": true,
+      "actual_sha256": "98089e6d36f78e9766c9ea34d5acb3611f3a92cd81c5eb102095d924ffc7d08b",
+      "expected_sha256": "98089e6d36f78e9766c9ea34d5acb3611f3a92cd81c5eb102095d924ffc7d08b",
+      "actual": "0",
+      "expected": "0"
+    },
+    {
+      "name": "antichiral kinetic trace similarity",
+      "category": "action",
+      "passed": true,
+      "actual_sha256": "ade1a1c2a61af0f279a4978dfddcdb6acd33f5a8b61e62c5fd881e8a88a387bc",
+      "expected_sha256": "ade1a1c2a61af0f279a4978dfddcdb6acd33f5a8b61e62c5fd881e8a88a387bc",
+      "actual": "8",
+      "expected": "8"
+    },
+    {
+      "name": "flat-D antichirality of invariant antichiral kinetic scalar",
+      "category": "action",
+      "passed": true,
+      "actual_sha256": "98089e6d36f78e9766c9ea34d5acb3611f3a92cd81c5eb102095d924ffc7d08b",
+      "expected_sha256": "98089e6d36f78e9766c9ea34d5acb3611f3a92cd81c5eb102095d924ffc7d08b",
+      "actual": "0",
+      "expected": "0"
+    },
+    {
+      "name": "D_1 nilpotence",
+      "category": "component",
+      "passed": true,
+      "actual_sha256": "9009a060079728fd6541cd7e14b139cf3d3c0cdc26871185a22d0e38b9e75129",
+      "expected_sha256": "9009a060079728fd6541cd7e14b139cf3d3c0cdc26871185a22d0e38b9e75129"
+    },
+    {
+      "name": "D_2 nilpotence",
+      "category": "component",
+      "passed": true,
+      "actual_sha256": "9009a060079728fd6541cd7e14b139cf3d3c0cdc26871185a22d0e38b9e75129",
+      "expected_sha256": "9009a060079728fd6541cd7e14b139cf3d3c0cdc26871185a22d0e38b9e75129"
+    },
+    {
+      "name": "D_1 D_2 anticommutation",
+      "category": "component",
+      "passed": true,
+      "actual_sha256": "9009a060079728fd6541cd7e14b139cf3d3c0cdc26871185a22d0e38b9e75129",
+      "expected_sha256": "9009a060079728fd6541cd7e14b139cf3d3c0cdc26871185a22d0e38b9e75129"
+    },
+    {
+      "name": "operator chiral similarity a=1",
+      "category": "component",
+      "passed": true,
+      "actual_sha256": "65979d512188fea0fb6abed51cf82bab37e51eba5eca308f7facec9dae872435",
+      "expected_sha256": "65979d512188fea0fb6abed51cf82bab37e51eba5eca308f7facec9dae872435"
+    },
+    {
+      "name": "matter first covariant projection a=1",
+      "category": "component",
+      "passed": true,
+      "actual_sha256": "0329b2ebcb776c96c90bab2dc441045b58850bda9f4d5279b59d22e8c07fb294",
+      "expected_sha256": "0329b2ebcb776c96c90bab2dc441045b58850bda9f4d5279b59d22e8c07fb294"
+    },
+    {
+      "name": "operator chiral similarity a=2",
+      "category": "component",
+      "passed": true,
+      "actual_sha256": "55f2edbba9ecaec81e55ba3deb683f3850f4134e0faa1bab9cefa10a04aeb0f9",
+      "expected_sha256": "55f2edbba9ecaec81e55ba3deb683f3850f4134e0faa1bab9cefa10a04aeb0f9"
+    },
+    {
+      "name": "matter first covariant projection a=2",
+      "category": "component",
+      "passed": true,
+      "actual_sha256": "53d7f4a048bd0daee134c84d46a9de1de3d4c71942f740eb4f964d3fccbeecf3",
+      "expected_sha256": "53d7f4a048bd0daee134c84d46a9de1de3d4c71942f740eb4f964d3fccbeecf3"
+    },
+    {
+      "name": "matter ordered D-squared covariant projection",
+      "category": "component",
+      "passed": true,
+      "actual_sha256": "04eb88286adfc8993675eadb7a8ec7858f9b26fd46316e53cdbd35e265d8f2e6",
+      "expected_sha256": "04eb88286adfc8993675eadb7a8ec7858f9b26fd46316e53cdbd35e265d8f2e6"
+    },
+    {
+      "name": "dual-row first frame transport dot a=1",
+      "category": "component",
+      "passed": true,
+      "actual_sha256": "e54610e842e40a799e3a494b669f6e356ab47c9d66bd5303e30b81dcc4f3eadf",
+      "expected_sha256": "e54610e842e40a799e3a494b669f6e356ab47c9d66bd5303e30b81dcc4f3eadf"
+    },
+    {
+      "name": "dual-row first frame transport dot a=2",
+      "category": "component",
+      "passed": true,
+      "actual_sha256": "c5c8d4a7303f716ba8b912629c1b059b8bfd2519bca9d196d74846819982cf87",
+      "expected_sha256": "c5c8d4a7303f716ba8b912629c1b059b8bfd2519bca9d196d74846819982cf87"
+    },
+    {
+      "name": "dual-row ordered barD-squared frame transport",
+      "category": "component",
+      "passed": true,
+      "actual_sha256": "814cf3bcedd3cae9949a34d57037babb1c029b34cc57d2283c78bab214fe2fd8",
+      "expected_sha256": "814cf3bcedd3cae9949a34d57037babb1c029b34cc57d2283c78bab214fe2fd8"
+    },
+    {
+      "name": "WZ chiral a=1 projection reduces to flat D_1",
+      "category": "component",
+      "passed": true,
+      "actual_sha256": "81407cef59d11345a40d303f887c5fb564619d5db8ba4233a845755134e88962",
+      "expected_sha256": "81407cef59d11345a40d303f887c5fb564619d5db8ba4233a845755134e88962"
+    },
+    {
+      "name": "WZ chiral a=2 projection reduces to flat D_2",
+      "category": "component",
+      "passed": true,
+      "actual_sha256": "3307ecb21ab18a2ddbd3b1dcd65d635cffcd5903a4f1841b39bf6e4f35e0c134",
+      "expected_sha256": "3307ecb21ab18a2ddbd3b1dcd65d635cffcd5903a4f1841b39bf6e4f35e0c134"
+    },
+    {
+      "name": "WZ chiral auxiliary projection reduces to flat -D^2/4",
+      "category": "component",
+      "passed": true,
+      "actual_sha256": "be30abf6764e6c8e3ff66c979cc50dbae8f89865f15559d46b7864999634fde4",
+      "expected_sha256": "be30abf6764e6c8e3ff66c979cc50dbae8f89865f15559d46b7864999634fde4"
+    },
+    {
+      "name": "WZ antichiral auxiliary projection reduces to flat -barD^2/4",
+      "category": "component",
+      "passed": true,
+      "actual_sha256": "869bd55fcce06f3e1fd7d7a9670509ee7252d82ecf194371a3e200fa92fcb11e",
+      "expected_sha256": "869bd55fcce06f3e1fd7d7a9670509ee7252d82ecf194371a3e200fa92fcb11e"
+    },
+    {
+      "name": "Lorentz u=4/kappa",
+      "category": "jacobi",
+      "passed": true,
+      "actual_sha256": "e284ced384077831aea223674ad94d35b4dc528ef8d9d12ebea4fca5d63a37c8",
+      "expected_sha256": "e284ced384077831aea223674ad94d35b4dc528ef8d9d12ebea4fca5d63a37c8",
+      "actual": "-2i",
+      "expected": "-2i"
+    },
+    {
+      "name": "Euclidean u=4/kappa",
+      "category": "jacobi",
+      "passed": true,
+      "actual_sha256": "f5b482b6880c0e22d43532f5e6cf442839f9469acc7f373b7c45c82c183a9b9d",
+      "expected_sha256": "f5b482b6880c0e22d43532f5e6cf442839f9469acc7f373b7c45c82c183a9b9d",
+      "actual": "-2",
+      "expected": "-2"
+    },
+    {
+      "name": "Lorentz rho=4/kappa^2",
+      "category": "jacobi",
+      "passed": true,
+      "actual_sha256": "6b54ef0f2b5a5ef8e655f3ee42f1630f4f098d1007decc5ca13855879dd63657",
+      "expected_sha256": "6b54ef0f2b5a5ef8e655f3ee42f1630f4f098d1007decc5ca13855879dd63657",
+      "actual": "-1",
+      "expected": "-1"
+    },
+    {
+      "name": "Euclidean rho=4/kappa^2",
+      "category": "jacobi",
+      "passed": true,
+      "actual_sha256": "391552c099c101b131feaf24c5795a6a15bc8ec82015424e0d2b4274a369a0bf",
+      "expected_sha256": "391552c099c101b131feaf24c5795a6a15bc8ec82015424e0d2b4274a369a0bf",
+      "actual": "1",
+      "expected": "1"
+    },
+    {
+      "name": "Jacobi coefficient rho=u/kappa in L",
+      "category": "jacobi",
+      "passed": true,
+      "actual_sha256": "6b54ef0f2b5a5ef8e655f3ee42f1630f4f098d1007decc5ca13855879dd63657",
+      "expected_sha256": "6b54ef0f2b5a5ef8e655f3ee42f1630f4f098d1007decc5ca13855879dd63657",
+      "actual": "-1",
+      "expected": "-1"
+    },
+    {
+      "name": "Jacobi coefficient rho=u/kappa in E",
+      "category": "jacobi",
+      "passed": true,
+      "actual_sha256": "391552c099c101b131feaf24c5795a6a15bc8ec82015424e0d2b4274a369a0bf",
+      "expected_sha256": "391552c099c101b131feaf24c5795a6a15bc8ec82015424e0d2b4274a369a0bf",
+      "actual": "1",
+      "expected": "1"
+    },
+    {
+      "name": "Wick mixed algebra kappa_L i=kappa_E",
+      "category": "wick",
+      "passed": true,
+      "actual_sha256": "f5b482b6880c0e22d43532f5e6cf442839f9469acc7f373b7c45c82c183a9b9d",
+      "expected_sha256": "f5b482b6880c0e22d43532f5e6cf442839f9469acc7f373b7c45c82c183a9b9d",
+      "actual": "-2",
+      "expected": "-2"
+    },
+    {
+      "name": "Wick spinor-vector coefficient u_L/i=u_E",
+      "category": "wick",
+      "passed": true,
+      "actual_sha256": "f5b482b6880c0e22d43532f5e6cf442839f9469acc7f373b7c45c82c183a9b9d",
+      "expected_sha256": "f5b482b6880c0e22d43532f5e6cf442839f9469acc7f373b7c45c82c183a9b9d",
+      "actual": "-2",
+      "expected": "-2"
+    },
+    {
+      "name": "Wick vector commutator flips rho",
+      "category": "wick",
+      "passed": true,
+      "actual_sha256": "391552c099c101b131feaf24c5795a6a15bc8ec82015424e0d2b4274a369a0bf",
+      "expected_sha256": "391552c099c101b131feaf24c5795a6a15bc8ec82015424e0d2b4274a369a0bf",
+      "actual": "1",
+      "expected": "1"
+    },
+    {
+      "name": "contracted Bianchi divergence",
+      "category": "bianchi",
+      "passed": true,
+      "actual_sha256": "98089e6d36f78e9766c9ea34d5acb3611f3a92cd81c5eb102095d924ffc7d08b",
+      "expected_sha256": "98089e6d36f78e9766c9ea34d5acb3611f3a92cd81c5eb102095d924ffc7d08b",
+      "actual": "0",
+      "expected": "0"
+    },
+    {
+      "name": "vector-curvature antisymmetry from contracted Bianchi",
+      "category": "bianchi",
+      "passed": true,
+      "actual_sha256": "d161f44e869830458c892296de2d8cfccc6e506b0d2b001764fe4e71c411476b",
+      "expected_sha256": "d161f44e869830458c892296de2d8cfccc6e506b0d2b001764fe4e71c411476b",
+      "actual": {
+        "(0, 0, 0, 0)": "0",
+        "(0, 0, 0, 1)": "0",
+        "(0, 0, 1, 0)": "0",
+        "(0, 0, 1, 1)": "0",
+        "(0, 1, 0, 0)": "0",
+        "(0, 1, 0, 1)": "0",
+        "(0, 1, 1, 0)": "0",
+        "(0, 1, 1, 1)": "0",
+        "(1, 0, 0, 0)": "0",
+        "(1, 0, 0, 1)": "0",
+        "(1, 0, 1, 0)": "0",
+        "(1, 0, 1, 1)": "0",
+        "(1, 1, 0, 0)": "0",
+        "(1, 1, 0, 1)": "0",
+        "(1, 1, 1, 0)": "0",
+        "(1, 1, 1, 1)": "0"
+      },
+      "expected": {
+        "(0, 0, 0, 0)": "0",
+        "(0, 0, 0, 1)": "0",
+        "(0, 0, 1, 0)": "0",
+        "(0, 0, 1, 1)": "0",
+        "(0, 1, 0, 0)": "0",
+        "(0, 1, 0, 1)": "0",
+        "(0, 1, 1, 0)": "0",
+        "(0, 1, 1, 1)": "0",
+        "(1, 0, 0, 0)": "0",
+        "(1, 0, 0, 1)": "0",
+        "(1, 0, 1, 0)": "0",
+        "(1, 0, 1, 1)": "0",
+        "(1, 1, 0, 0)": "0",
+        "(1, 1, 0, 1)": "0",
+        "(1, 1, 1, 0)": "0",
+        "(1, 1, 1, 1)": "0"
+      }
+    },
+    {
+      "name": "unsymmetrized Jacobi curvature equals symmetric form",
+      "category": "bianchi",
+      "passed": true,
+      "actual_sha256": "fe30246442550a0eb5996bb801c5852aa43b013f287d5d07cdb857f4715a3d12",
+      "expected_sha256": "fe30246442550a0eb5996bb801c5852aa43b013f287d5d07cdb857f4715a3d12",
+      "actual": {
+        "(0, 0, 0, 0)": "0",
+        "(0, 0, 0, 1)": "-3",
+        "(0, 0, 1, 0)": "-21",
+        "(0, 0, 1, 1)": "-21",
+        "(0, 1, 0, 0)": "3",
+        "(0, 1, 0, 1)": "0",
+        "(0, 1, 1, 0)": "-6",
+        "(0, 1, 1, 1)": "6",
+        "(1, 0, 0, 0)": "21",
+        "(1, 0, 0, 1)": "6",
+        "(1, 0, 1, 0)": "0",
+        "(1, 0, 1, 1)": "-12",
+        "(1, 1, 0, 0)": "21",
+        "(1, 1, 0, 1)": "-6",
+        "(1, 1, 1, 0)": "12",
+        "(1, 1, 1, 1)": "0"
+      },
+      "expected": {
+        "(0, 0, 0, 0)": "0",
+        "(0, 0, 0, 1)": "-3",
+        "(0, 0, 1, 0)": "-21",
+        "(0, 0, 1, 1)": "-21",
+        "(0, 1, 0, 0)": "3",
+        "(0, 1, 0, 1)": "0",
+        "(0, 1, 1, 0)": "-6",
+        "(0, 1, 1, 1)": "6",
+        "(1, 0, 0, 0)": "21",
+        "(1, 0, 0, 1)": "6",
+        "(1, 0, 1, 0)": "0",
+        "(1, 0, 1, 1)": "-12",
+        "(1, 1, 0, 0)": "21",
+        "(1, 1, 0, 1)": "-6",
+        "(1, 1, 1, 0)": "12",
+        "(1, 1, 1, 1)": "0"
+      }
+    }
+  ],
+  "failures": []
+}

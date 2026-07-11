@@ -1,0 +1,986 @@
+#!/usr/bin/env python3
+"""Exact Step-3C gauge-vector representation verifier.
+
+Only Python's standard library is used.  All numerical witnesses live in the
+Gaussian-rational field Q(i); no floating-point arithmetic and no external CAS
+enter the calculation.  Noncommuting bridge order is tested with exact matrix
+witnesses.  Spinor projection transport is tested on the two-generator
+exterior algebra, where the two left derivatives anticommute exactly.
+"""
+
+from __future__ import annotations
+
+from dataclasses import dataclass
+from fractions import Fraction
+import hashlib
+import json
+import re
+from pathlib import Path
+from typing import Any, Iterable
+
+
+ROOT = Path(__file__).resolve().parents[1]
+CONTRACT = ROOT / "contracts" / "foundations" / "step-03c-gauge-vector-representation.md"
+TASK = ROOT / "tasks" / "CURRENT.yaml"
+OBLIGATIONS = ROOT / "ledger" / "proof_obligations.json"
+CLAIM_MAP = ROOT / "references" / "claim-map.yaml"
+SOURCE_LEDGER = ROOT / "references" / "superspace-1001-gauge-representation-source-ledger.json"
+SUBSET = ROOT / "references" / "vendor" / "local" / "superspace-1001-gauge-representations-pages.pdf"
+REFERENCE_AUDIT = ROOT / "audits" / "superspace-1001-reference-import-verification.json"
+AUDIT = ROOT / "audits" / "step3c-vector-representation-verification.json"
+
+TASK_ID = "CONTRACT-STEP-03C-GAUGE-VECTOR-REPRESENTATION-001"
+SUBSET_SHA = "57d71bcf95fb84dabb4f5e85cfb9290ba52031e031a062cf7b0e5dad93a2d87e"
+
+
+@dataclass(frozen=True)
+class Gaussian:
+    """Exact a+b i with a,b in Q."""
+
+    real: Fraction = Fraction(0)
+    imag: Fraction = Fraction(0)
+
+    @staticmethod
+    def from_int(value: int) -> "Gaussian":
+        return Gaussian(Fraction(value), Fraction(0))
+
+    def __add__(self, other: "Gaussian") -> "Gaussian":
+        return Gaussian(self.real + other.real, self.imag + other.imag)
+
+    def __neg__(self) -> "Gaussian":
+        return Gaussian(-self.real, -self.imag)
+
+    def __sub__(self, other: "Gaussian") -> "Gaussian":
+        return self + (-other)
+
+    def __mul__(self, other: "Gaussian") -> "Gaussian":
+        return Gaussian(
+            self.real * other.real - self.imag * other.imag,
+            self.real * other.imag + self.imag * other.real,
+        )
+
+    def inverse(self) -> "Gaussian":
+        denominator = self.real * self.real + self.imag * self.imag
+        if denominator == 0:
+            raise ZeroDivisionError("zero Gaussian rational")
+        return Gaussian(self.real / denominator, -self.imag / denominator)
+
+    def __truediv__(self, other: "Gaussian") -> "Gaussian":
+        return self * other.inverse()
+
+    def is_zero(self) -> bool:
+        return self.real == 0 and self.imag == 0
+
+    def text(self) -> str:
+        if self.imag == 0:
+            return str(self.real)
+        if self.real == 0:
+            if self.imag == 1:
+                return "i"
+            if self.imag == -1:
+                return "-i"
+            return f"{self.imag}i"
+        sign = "+" if self.imag > 0 else "-"
+        magnitude = abs(self.imag)
+        imag = "i" if magnitude == 1 else f"{magnitude}i"
+        return f"{self.real}{sign}{imag}"
+
+
+ZERO = Gaussian()
+ONE = Gaussian.from_int(1)
+TWO = Gaussian.from_int(2)
+FOUR = Gaussian.from_int(4)
+MINUS_ONE = Gaussian.from_int(-1)
+I = Gaussian(Fraction(0), Fraction(1))
+
+
+Matrix = tuple[tuple[Gaussian, ...], ...]
+Vector = tuple[Gaussian, ...]
+
+
+def q(value: int | Fraction) -> Gaussian:
+    return Gaussian(Fraction(value), Fraction(0))
+
+
+def matrix(rows: Iterable[Iterable[int | Fraction | Gaussian]]) -> Matrix:
+    return tuple(
+        tuple(value if isinstance(value, Gaussian) else q(value) for value in row)
+        for row in rows
+    )
+
+
+def shape(value: Matrix) -> tuple[int, int]:
+    return len(value), len(value[0]) if value else 0
+
+
+def zero_matrix(rows: int, columns: int) -> Matrix:
+    return tuple(tuple(ZERO for _ in range(columns)) for _ in range(rows))
+
+
+def identity(size: int) -> Matrix:
+    return tuple(
+        tuple(ONE if row == column else ZERO for column in range(size))
+        for row in range(size)
+    )
+
+
+def mat_add(left: Matrix, right: Matrix) -> Matrix:
+    return tuple(
+        tuple(left[row][column] + right[row][column] for column in range(len(left[0])))
+        for row in range(len(left))
+    )
+
+
+def mat_neg(value: Matrix) -> Matrix:
+    return tuple(tuple(-entry for entry in row) for row in value)
+
+
+def mat_sub(left: Matrix, right: Matrix) -> Matrix:
+    return mat_add(left, mat_neg(right))
+
+
+def mat_scale(coefficient: Gaussian, value: Matrix) -> Matrix:
+    return tuple(tuple(coefficient * entry for entry in row) for row in value)
+
+
+def mat_mul(left: Matrix, right: Matrix) -> Matrix:
+    if len(left[0]) != len(right):
+        raise ValueError((shape(left), shape(right)))
+    return tuple(
+        tuple(
+            sum(
+                (left[row][middle] * right[middle][column] for middle in range(len(right))),
+                ZERO,
+            )
+            for column in range(len(right[0]))
+        )
+        for row in range(len(left))
+    )
+
+
+def mat_inverse(value: Matrix) -> Matrix:
+    rows, columns = shape(value)
+    if rows != columns:
+        raise ValueError(shape(value))
+    augmented = [list(value[row]) + list(identity(rows)[row]) for row in range(rows)]
+    for column in range(rows):
+        pivot = next((row for row in range(column, rows) if not augmented[row][column].is_zero()), None)
+        if pivot is None:
+            raise ZeroDivisionError("singular exact matrix")
+        if pivot != column:
+            augmented[column], augmented[pivot] = augmented[pivot], augmented[column]
+        inverse_pivot = augmented[column][column].inverse()
+        augmented[column] = [inverse_pivot * entry for entry in augmented[column]]
+        for row in range(rows):
+            if row == column:
+                continue
+            factor = augmented[row][column]
+            if factor.is_zero():
+                continue
+            augmented[row] = [
+                entry - factor * pivot_entry
+                for entry, pivot_entry in zip(augmented[row], augmented[column])
+            ]
+    return tuple(tuple(row[rows:]) for row in augmented)
+
+
+def mat_trace(value: Matrix) -> Gaussian:
+    return sum((value[index][index] for index in range(len(value))), ZERO)
+
+
+def mat_transpose(value: Matrix) -> Matrix:
+    return tuple(
+        tuple(value[row][column] for row in range(len(value)))
+        for column in range(len(value[0]))
+    )
+
+
+def mat_vec(value: Matrix, vector: Vector) -> Vector:
+    return tuple(
+        sum((entry * component for entry, component in zip(row, vector)), ZERO)
+        for row in value
+    )
+
+
+def row_mat(vector: Vector, value: Matrix) -> Vector:
+    return tuple(
+        sum((vector[row] * value[row][column] for row in range(len(vector))), ZERO)
+        for column in range(len(value[0]))
+    )
+
+
+def vec_scale(coefficient: Gaussian, vector: Vector) -> Vector:
+    return tuple(coefficient * entry for entry in vector)
+
+
+def serialize(value: Any) -> Any:
+    if isinstance(value, Gaussian):
+        return value.text()
+    if isinstance(value, tuple):
+        return [serialize(item) for item in value]
+    if isinstance(value, list):
+        return [serialize(item) for item in value]
+    if isinstance(value, dict):
+        return {str(key): serialize(item) for key, item in value.items()}
+    return value
+
+
+def fingerprint(value: Any) -> str:
+    payload = json.dumps(serialize(value), sort_keys=True, separators=(",", ":"))
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
+
+
+@dataclass(frozen=True)
+class Jet:
+    """Value and one exact derivative of an even matrix superfield."""
+
+    value: Matrix
+    derivative: Matrix
+
+
+def jet_product(left: Jet, right: Jet) -> Jet:
+    return Jet(
+        mat_mul(left.value, right.value),
+        mat_add(mat_mul(left.derivative, right.value), mat_mul(left.value, right.derivative)),
+    )
+
+
+def jet_inverse(value: Jet) -> Jet:
+    inverse = mat_inverse(value.value)
+    return Jet(inverse, mat_neg(mat_mul(mat_mul(inverse, value.derivative), inverse)))
+
+
+def jet_many(*values: Jet) -> Jet:
+    result = Jet(identity(len(values[0].value)), zero_matrix(*shape(values[0].value)))
+    for value in values:
+        result = jet_product(result, value)
+    return result
+
+
+class Recorder:
+    def __init__(self) -> None:
+        self.checks: list[dict[str, Any]] = []
+        self.failures: list[dict[str, Any]] = []
+
+    def check(self, name: str, actual: Any, expected: Any, category: str) -> None:
+        passed = actual == expected
+        actual_serial = serialize(actual)
+        expected_serial = serialize(expected)
+        row = {
+            "name": name,
+            "category": category,
+            "passed": passed,
+            "actual_sha256": fingerprint(actual),
+            "expected_sha256": fingerprint(expected),
+        }
+        if not isinstance(actual, tuple):
+            row["actual"] = actual_serial
+            row["expected"] = expected_serial
+        self.checks.append(row)
+        if not passed:
+            self.failures.append(
+                {
+                    "name": name,
+                    "category": category,
+                    "actual": actual_serial,
+                    "expected": expected_serial,
+                }
+            )
+
+
+def bridge_witnesses(recorder: Recorder) -> dict[str, Matrix]:
+    b = matrix(((1, 2), (1, 3)))
+    bt = matrix(((2, 1), (1, 1)))
+    k = matrix(((3, 2), (1, 1)))
+    h = matrix(((1, 1), (0, 1)))
+    ht = matrix(((1, 0), (2, 1)))
+
+    bi, bti, ki, hi, hti = map(mat_inverse, (b, bt, k, h, ht))
+    e = mat_mul(bt, b)
+    bp = mat_mul(mat_mul(k, b), hi)
+    btp = mat_mul(mat_mul(ht, bt), ki)
+    ep = mat_mul(btp, bp)
+
+    recorder.check("bridge inverse B", mat_mul(b, bi), identity(2), "bridge")
+    recorder.check("bridge inverse Btilde", mat_mul(bt, bti), identity(2), "bridge")
+    recorder.check("relative bridge order", e, mat_mul(bt, b), "bridge")
+    recorder.check("finite relative-bridge covariance", ep, mat_mul(mat_mul(ht, e), hi), "bridge")
+    recorder.check(
+        "noncommuting order witness",
+        mat_mul(bt, b) == mat_mul(b, bt),
+        False,
+        "bridge",
+    )
+    recorder.check(
+        "intrinsic Euclidean bridges need not be adjoints",
+        bt == mat_transpose(b),
+        False,
+        "reality",
+    )
+
+    b_l = matrix(((1, 1), (0, 1)))
+    bt_l = mat_transpose(b_l)
+    k_l = matrix(((0, 1), (-1, 0)))
+    h_l = matrix(((1, 2), (0, 1)))
+    ht_l = mat_inverse(mat_transpose(h_l))
+    bp_l = mat_mul(mat_mul(k_l, b_l), mat_inverse(h_l))
+    btp_l = mat_mul(mat_mul(ht_l, bt_l), mat_inverse(k_l))
+    e_l = mat_mul(bt_l, b_l)
+    recorder.check("Lorentz k dagger equals k inverse", mat_transpose(k_l), mat_inverse(k_l), "reality")
+    recorder.check("Lorentz h dagger equals htilde inverse", mat_transpose(h_l), mat_inverse(ht_l), "reality")
+    recorder.check("Lorentz bridge dagger relation is preserved", btp_l, mat_transpose(bp_l), "reality")
+    recorder.check("Lorentz relative bridge is Hermitian", mat_transpose(e_l), e_l, "reality")
+
+    s = matrix(((1, 1), (0, 1)))
+    sp = matrix(((1, 0), (1, 1)))
+    hs = matrix(((2, 1), (1, 1)))
+    es = mat_mul(s, s)
+    esp = mat_mul(sp, sp)
+    hts = mat_mul(mat_mul(esp, hs), mat_inverse(es))
+    ks = mat_mul(mat_mul(sp, hs), mat_inverse(s))
+    ksi = mat_inverse(ks)
+    alternate_ksi = mat_mul(mat_mul(mat_inverse(s), mat_inverse(hts)), sp)
+    recorder.check("symmetric compensator inverse", ksi, alternate_ksi, "bridge")
+    recorder.check("symmetric B transform", mat_mul(mat_mul(ks, s), mat_inverse(hs)), sp, "bridge")
+    recorder.check("symmetric Btilde transform", mat_mul(mat_mul(hts, s), ksi), sp, "bridge")
+
+    return {"B": b, "Bt": bt, "k": k, "h": h, "ht": ht, "E": e}
+
+
+def connection_witnesses(recorder: Recorder, data: dict[str, Matrix]) -> None:
+    b, bt, k, h, ht = (data[name] for name in ("B", "Bt", "k", "h", "ht"))
+    z = zero_matrix(2, 2)
+
+    # Untilded spinor derivative: D htilde=0.
+    jb = Jet(b, matrix(((1, 0), (2, -1))))
+    jbt = Jet(bt, matrix(((0, 2), (-1, 1))))
+    jk = Jet(k, matrix(((1, -1), (0, 2))))
+    jh = Jet(h, matrix(((0, 1), (0, 0))))
+    jht = Jet(ht, z)
+    je = jet_product(jbt, jb)
+    jbp = jet_many(jk, jb, jet_inverse(jh))
+    jbtp = jet_many(jht, jbt, jet_inverse(jk))
+
+    cv = mat_mul(mat_inverse(bt), jbt.derivative)
+    cvp = mat_mul(mat_inverse(jbtp.value), jbtp.derivative)
+    expected_cvp = mat_add(
+        mat_neg(mat_mul(jk.derivative, mat_inverse(k))),
+        mat_mul(mat_mul(k, cv), mat_inverse(k)),
+    )
+    recorder.check("D vector-connection gauge covariance", cvp, expected_cvp, "connection")
+
+    cc = mat_add(
+        mat_mul(mat_inverse(b), jb.derivative),
+        mat_mul(mat_mul(mat_inverse(b), cv), b),
+    )
+    expected_cc = mat_mul(mat_inverse(je.value), je.derivative)
+    recorder.check("D chiral similarity connection", cc, expected_cc, "connection")
+    jep = jet_product(jbtp, jbp)
+    ccp = mat_mul(mat_inverse(jep.value), jep.derivative)
+    expected_ccp = mat_add(
+        mat_neg(mat_mul(jh.derivative, mat_inverse(h))),
+        mat_mul(mat_mul(h, cc), mat_inverse(h)),
+    )
+    recorder.check("D chiral-frame gauge covariance", ccp, expected_ccp, "connection")
+
+    ai = jet_inverse(jbt)
+    ca = mat_add(mat_mul(bt, ai.derivative), mat_mul(mat_mul(bt, cv), mat_inverse(bt)))
+    recorder.check("D antichiral connection vanishes", ca, z, "connection")
+
+    # Tilded spinor derivative: barD h=0.
+    jb_bar = Jet(b, matrix(((2, -1), (1, 0))))
+    jbt_bar = Jet(bt, matrix(((-1, 0), (2, 1))))
+    jk_bar = Jet(k, matrix(((0, 1), (-1, 1))))
+    jh_bar = Jet(h, z)
+    jht_bar = Jet(ht, matrix(((0, 0), (1, -1))))
+    je_bar = jet_product(jbt_bar, jb_bar)
+    jbp_bar = jet_many(jk_bar, jb_bar, jet_inverse(jh_bar))
+    jbtp_bar = jet_many(jht_bar, jbt_bar, jet_inverse(jk_bar))
+
+    cbar = mat_mul(b, jet_inverse(jb_bar).derivative)
+    cbarp = mat_mul(jbp_bar.value, jet_inverse(jbp_bar).derivative)
+    expected_cbarp = mat_add(
+        mat_neg(mat_mul(jk_bar.derivative, mat_inverse(k))),
+        mat_mul(mat_mul(k, cbar), mat_inverse(k)),
+    )
+    recorder.check("barD vector-connection gauge covariance", cbarp, expected_cbarp, "connection")
+
+    cc_bar = mat_add(
+        mat_mul(mat_inverse(b), jb_bar.derivative),
+        mat_mul(mat_mul(mat_inverse(b), cbar), b),
+    )
+    recorder.check("barD chiral connection vanishes", cc_bar, z, "connection")
+
+    bti_bar = jet_inverse(jbt_bar)
+    ca_bar = mat_add(
+        mat_mul(bt, bti_bar.derivative),
+        mat_mul(mat_mul(bt, cbar), mat_inverse(bt)),
+    )
+    expected_ca_bar = mat_mul(je_bar.value, jet_inverse(je_bar).derivative)
+    recorder.check("barD antichiral similarity connection", ca_bar, expected_ca_bar, "connection")
+    jep_bar = jet_product(jbtp_bar, jbp_bar)
+    cap_bar = mat_mul(jep_bar.value, jet_inverse(jep_bar).derivative)
+    expected_cap_bar = mat_add(
+        mat_neg(mat_mul(jht_bar.derivative, mat_inverse(ht))),
+        mat_mul(mat_mul(ht, ca_bar), mat_inverse(ht)),
+    )
+    recorder.check("barD antichiral-frame gauge covariance", cap_bar, expected_cap_bar, "connection")
+
+
+def chirality_and_action_witnesses(recorder: Recorder, data: dict[str, Matrix]) -> None:
+    b, bt, k, h, ht = (data[name] for name in ("B", "Bt", "k", "h", "ht"))
+    bi, bti, ki, hi, hti = map(mat_inverse, (b, bt, k, h, ht))
+
+    # Chiral strength: barD W^C=0.
+    db = matrix(((2, -1), (1, 0)))
+    jb = Jet(b, db)
+    wc = matrix(((1, 2), (3, -1)))
+    wc2 = matrix(((2, -1), (1, 4)))
+    jbi = jet_inverse(jb)
+    wv = mat_mul(mat_mul(b, wc), bi)
+    wv2 = mat_mul(mat_mul(b, wc2), bi)
+    # W_a is odd.  For an odd X and even B,
+    # barD(B X B^-1)=(barD B)X B^-1-B X(barD B^-1).
+    dwv = mat_sub(mat_mul(mat_mul(db, wc), bi), mat_mul(mat_mul(b, wc), jbi.derivative))
+    dwv2 = mat_sub(mat_mul(mat_mul(db, wc2), bi), mat_mul(mat_mul(b, wc2), jbi.derivative))
+    cbar = mat_mul(b, jet_inverse(jb).derivative)
+    covariant_bar = mat_add(dwv, mat_add(mat_mul(cbar, wv), mat_mul(wv, cbar)))
+    recorder.check("vector-frame covariant chirality of W", covariant_bar, zero_matrix(2, 2), "chirality")
+
+    # Antichiral strength: D Wtilde^A=0.
+    dbt = matrix(((0, 2), (-1, 1)))
+    jbt = Jet(bt, dbt)
+    wa = matrix(((0, 1), (-2, 3)))
+    wa2 = matrix(((3, -2), (1, 1)))
+    jbti = jet_inverse(jbt)
+    wtv = mat_mul(mat_mul(bti, wa), bt)
+    wtv2 = mat_mul(mat_mul(bti, wa2), bt)
+    dwtv = mat_sub(
+        mat_mul(mat_mul(jbti.derivative, wa), bt),
+        mat_mul(mat_mul(bti, wa), dbt),
+    )
+    dwtv2 = mat_sub(
+        mat_mul(mat_mul(jbti.derivative, wa2), bt),
+        mat_mul(mat_mul(bti, wa2), dbt),
+    )
+    cv = mat_mul(bti, dbt)
+    covariant_d = mat_add(dwtv, mat_add(mat_mul(cv, wtv), mat_mul(wtv, cv)))
+    recorder.check("vector-frame covariant antichirality of Wtilde", covariant_d, zero_matrix(2, 2), "chirality")
+
+    bp = mat_mul(mat_mul(k, b), hi)
+    btp = mat_mul(mat_mul(ht, bt), ki)
+    wcp = mat_mul(mat_mul(h, wc), hi)
+    wap = mat_mul(mat_mul(ht, wa), hti)
+    recorder.check(
+        "W field-strength gauge covariance",
+        mat_mul(mat_mul(bp, wcp), mat_inverse(bp)),
+        mat_mul(mat_mul(k, wv), ki),
+        "field_strength",
+    )
+    recorder.check(
+        "Wtilde field-strength gauge covariance",
+        mat_mul(mat_mul(mat_inverse(btp), wap), btp),
+        mat_mul(mat_mul(k, wtv), ki),
+        "field_strength",
+    )
+
+    phi = (q(2), q(-1))
+    phit = (q(3), q(1))
+    phiv = mat_vec(b, phi)
+    phitv = row_mat(phit, bt)
+    recorder.check(
+        "matter bilinear frame equality",
+        sum((left * right for left, right in zip(phitv, phiv)), ZERO),
+        sum((left * right for left, right in zip(phit, mat_vec(mat_mul(bt, b), phi))), ZERO),
+        "action",
+    )
+    recorder.check(
+        "column matter gauge covariance",
+        mat_vec(bp, mat_vec(h, phi)),
+        mat_vec(k, phiv),
+        "matter",
+    )
+    recorder.check(
+        "row matter gauge covariance",
+        row_mat(row_mat(phit, hti), btp),
+        row_mat(phitv, ki),
+        "matter",
+    )
+
+    # Fundamental covariant chirality and its dual-row partner.
+    dphiv = mat_vec(db, phi)
+    recorder.check(
+        "column matter covariant chirality",
+        tuple(left + right for left, right in zip(dphiv, mat_vec(cbar, phiv))),
+        (ZERO, ZERO),
+        "chirality",
+    )
+    dphitv = row_mat(phit, dbt)
+    recorder.check(
+        "row matter covariant antichirality",
+        tuple(left - right for left, right in zip(dphitv, row_mat(phitv, cv))),
+        (ZERO, ZERO),
+        "chirality",
+    )
+
+    recorder.check(
+        "chiral kinetic trace similarity",
+        mat_trace(mat_mul(wv, wv2)),
+        mat_trace(mat_mul(wc, wc2)),
+        "action",
+    )
+    recorder.check(
+        "flat-barD chirality of invariant chiral kinetic scalar",
+        mat_trace(
+            mat_sub(mat_mul(dwv, wv2), mat_mul(wv, dwv2))
+        ),
+        ZERO,
+        "action",
+    )
+    recorder.check(
+        "antichiral kinetic trace similarity",
+        mat_trace(mat_mul(wtv, wtv2)),
+        mat_trace(mat_mul(wa, wa2)),
+        "action",
+    )
+    recorder.check(
+        "flat-D antichirality of invariant antichiral kinetic scalar",
+        mat_trace(
+            mat_sub(mat_mul(dwtv, wtv2), mat_mul(wtv, dwtv2))
+        ),
+        ZERO,
+        "action",
+    )
+
+
+def wedge_sign(left_mask: int, right_mask: int) -> int:
+    inversions = 0
+    for left_index in range(2):
+        if not left_mask & (1 << left_index):
+            continue
+        for right_index in range(2):
+            if right_mask & (1 << right_index) and left_index > right_index:
+                inversions += 1
+    return -1 if inversions % 2 else 1
+
+
+def exterior_left_multiplication(mask: int) -> Matrix:
+    result = [[ZERO for _ in range(4)] for _ in range(4)]
+    for input_mask in range(4):
+        if mask & input_mask:
+            continue
+        result[mask | input_mask][input_mask] = q(wedge_sign(mask, input_mask))
+    return tuple(tuple(row) for row in result)
+
+
+def exterior_left_derivative(index: int) -> Matrix:
+    result = [[ZERO for _ in range(4)] for _ in range(4)]
+    bit = 1 << index
+    for input_mask in range(4):
+        if not input_mask & bit:
+            continue
+        sign = -1 if (input_mask & (bit - 1)).bit_count() % 2 else 1
+        result[input_mask ^ bit][input_mask] = q(sign)
+    return tuple(tuple(row) for row in result)
+
+
+def kronecker(left: Matrix, right: Matrix) -> Matrix:
+    return tuple(
+        tuple(
+            left[g_out][g_in] * right[m_out][m_in]
+            for g_in in range(len(left[0]))
+            for m_in in range(len(right[0]))
+        )
+        for g_out in range(len(left))
+        for m_out in range(len(right))
+    )
+
+
+def multiplication_operator(bottom: Matrix, theta_squared: Matrix) -> Matrix:
+    return mat_add(
+        kronecker(bottom, identity(4)),
+        kronecker(theta_squared, exterior_left_multiplication(0b11)),
+    )
+
+
+def extract_column_bottom(vector: Vector) -> Vector:
+    return tuple(vector[gauge * 4] for gauge in range(2))
+
+
+def component_projection_witnesses(recorder: Recorder) -> None:
+    d1 = kronecker(identity(2), exterior_left_derivative(0))
+    d2 = kronecker(identity(2), exterior_left_derivative(1))
+    z8 = zero_matrix(8, 8)
+    recorder.check("D_1 nilpotence", mat_mul(d1, d1), z8, "component")
+    recorder.check("D_2 nilpotence", mat_mul(d2, d2), z8, "component")
+    recorder.check(
+        "D_1 D_2 anticommutation",
+        mat_add(mat_mul(d1, d2), mat_mul(d2, d1)),
+        z8,
+        "component",
+    )
+
+    b0 = matrix(((1, 1), (0, 1)))
+    bt0 = matrix(((1, 0), (2, 1)))
+    b12 = matrix(((0, 1), (-1, 0)))
+    bt12 = matrix(((1, -1), (0, 2)))
+    bop = multiplication_operator(b0, b12)
+    btop = multiplication_operator(bt0, bt12)
+    eop = mat_mul(btop, bop)
+    bopi = mat_inverse(bop)
+    btopi = mat_inverse(btop)
+    eopi = mat_inverse(eop)
+
+    phi = tuple(q(value) for value in (1, 2, -1, 3, 2, 0, 1, -2))
+    phiv = mat_vec(bop, phi)
+    ov = (mat_mul(mat_mul(btopi, d1), btop), mat_mul(mat_mul(btopi, d2), btop))
+    oc = (mat_mul(mat_mul(eopi, d1), eop), mat_mul(mat_mul(eopi, d2), eop))
+    for index in range(2):
+        recorder.check(
+            f"operator chiral similarity a={index + 1}",
+            mat_mul(mat_mul(bopi, ov[index]), bop),
+            oc[index],
+            "component",
+        )
+        recorder.check(
+            f"matter first covariant projection a={index + 1}",
+            extract_column_bottom(mat_vec(ov[index], phiv)),
+            mat_vec(b0, extract_column_bottom(mat_vec(oc[index], phi))),
+            "component",
+        )
+
+    ov_squared = mat_scale(TWO, mat_mul(ov[1], ov[0]))
+    oc_squared = mat_scale(TWO, mat_mul(oc[1], oc[0]))
+    recorder.check(
+        "matter ordered D-squared covariant projection",
+        vec_scale(q(Fraction(-1, 4)), extract_column_bottom(mat_vec(ov_squared, phiv))),
+        mat_vec(
+            b0,
+            vec_scale(q(Fraction(-1, 4)), extract_column_bottom(mat_vec(oc_squared, phi))),
+        ),
+        "component",
+    )
+
+    # Dual-row frame transport is an independent right-module calculation.
+    row = tuple(q(value) for value in (2, -1, 0, 1, 3, 2, -2, 1))
+    row_v = row_mat(row, btop)
+    ra = (d1, d2)
+    rv = (mat_mul(mat_mul(btopi, d1), btop), mat_mul(mat_mul(btopi, d2), btop))
+    for index in range(2):
+        recorder.check(
+            f"dual-row first frame transport dot a={index + 1}",
+            row_mat(row_v, rv[index]),
+            row_mat(row_mat(row, ra[index]), btop),
+            "component",
+        )
+
+    rv_squared = mat_scale(TWO, mat_mul(rv[0], rv[1]))
+    ra_squared = mat_scale(TWO, mat_mul(ra[0], ra[1]))
+    recorder.check(
+        "dual-row ordered barD-squared frame transport",
+        vec_scale(q(Fraction(-1, 4)), row_mat(row_v, rv_squared)),
+        vec_scale(q(Fraction(-1, 4)), row_mat(row_mat(row, ra_squared), btop)),
+        "component",
+    )
+
+    # Wess--Zumino pure-undotted projection surface: bridges have identity bottom
+    # and no pure theta or theta-squared jet, hence the covariant C projections
+    # reduce exactly to the Step-3B flat-D definitions.
+    wz = multiplication_operator(identity(2), zero_matrix(2, 2))
+    wz_e = mat_mul(wz, wz)
+    wz_oc = (
+        mat_mul(mat_mul(mat_inverse(wz_e), d1), wz_e),
+        mat_mul(mat_mul(mat_inverse(wz_e), d2), wz_e),
+    )
+    recorder.check("WZ chiral a=1 projection reduces to flat D_1", wz_oc[0], d1, "component")
+    recorder.check("WZ chiral a=2 projection reduces to flat D_2", wz_oc[1], d2, "component")
+    recorder.check(
+        "WZ chiral auxiliary projection reduces to flat -D^2/4",
+        mat_scale(q(Fraction(-1, 2)), mat_mul(wz_oc[1], wz_oc[0])),
+        mat_scale(q(Fraction(-1, 2)), mat_mul(d2, d1)),
+        "component",
+    )
+    recorder.check(
+        "WZ antichiral auxiliary projection reduces to flat -barD^2/4",
+        mat_scale(q(Fraction(-1, 2)), mat_mul(wz_oc[0], wz_oc[1])),
+        mat_scale(q(Fraction(-1, 2)), mat_mul(d1, d2)),
+        "component",
+    )
+
+
+def coefficient_witnesses(recorder: Recorder) -> None:
+    kappa_l = TWO * I
+    kappa_e = q(-2)
+    u_l = FOUR / kappa_l
+    u_e = FOUR / kappa_e
+    rho_l = FOUR / (kappa_l * kappa_l)
+    rho_e = FOUR / (kappa_e * kappa_e)
+
+    recorder.check("Lorentz u=4/kappa", u_l, q(-2) * I, "jacobi")
+    recorder.check("Euclidean u=4/kappa", u_e, q(-2), "jacobi")
+    recorder.check("Lorentz rho=4/kappa^2", rho_l, MINUS_ONE, "jacobi")
+    recorder.check("Euclidean rho=4/kappa^2", rho_e, ONE, "jacobi")
+    recorder.check("Jacobi coefficient rho=u/kappa in L", u_l / kappa_l, rho_l, "jacobi")
+    recorder.check("Jacobi coefficient rho=u/kappa in E", u_e / kappa_e, rho_e, "jacobi")
+    recorder.check("Wick mixed algebra kappa_L i=kappa_E", kappa_l * I, kappa_e, "wick")
+    recorder.check("Wick spinor-vector coefficient u_L/i=u_E", u_l / I, u_e, "wick")
+    recorder.check("Wick vector commutator flips rho", -rho_l, rho_e, "wick")
+
+
+def bianchi_witnesses(recorder: Recorder) -> None:
+    epsilon_upper = ((ZERO, ONE), (MINUS_ONE, ZERO))
+    epsilon_lower = ((ZERO, MINUS_ONE), (ONE, ZERO))
+    x = matrix(((1, 2), (3, 4)))
+    y = matrix(((7, 5), (4, -2)))
+
+    div_x = sum(
+        (epsilon_upper[a][b] * x[b][a] for a in range(2) for b in range(2)),
+        ZERO,
+    )
+    div_y = sum(
+        (epsilon_upper[a][b] * y[b][a] for a in range(2) for b in range(2)),
+        ZERO,
+    )
+    recorder.check("contracted Bianchi divergence", div_x + div_y, ZERO, "bianchi")
+
+    rho = q(3)
+    curvature: dict[tuple[int, int, int, int], Gaussian] = {}
+    curvature_symmetric: dict[tuple[int, int, int, int], Gaussian] = {}
+    for a in range(2):
+        for dotted_a in range(2):
+            for b in range(2):
+                for dotted_b in range(2):
+                    key = (a, dotted_a, b, dotted_b)
+                    curvature[key] = rho * (
+                        epsilon_lower[dotted_a][dotted_b] * x[a][b]
+                        + epsilon_lower[a][b] * y[dotted_a][dotted_b]
+                    )
+                    x_symmetric = q(Fraction(1, 2)) * (x[a][b] + x[b][a])
+                    y_symmetric = q(Fraction(1, 2)) * (
+                        y[dotted_a][dotted_b] + y[dotted_b][dotted_a]
+                    )
+                    curvature_symmetric[key] = rho * (
+                        epsilon_lower[dotted_a][dotted_b] * x_symmetric
+                        + epsilon_lower[a][b] * y_symmetric
+                    )
+
+    antisymmetry_residual = {
+        str(key): value
+        + curvature[(key[2], key[3], key[0], key[1])]
+        for key, value in curvature.items()
+    }
+    recorder.check(
+        "vector-curvature antisymmetry from contracted Bianchi",
+        antisymmetry_residual,
+        {key: ZERO for key in antisymmetry_residual},
+        "bianchi",
+    )
+    recorder.check(
+        "unsymmetrized Jacobi curvature equals symmetric form",
+        curvature,
+        curvature_symmetric,
+        "bianchi",
+    )
+
+
+def document_and_provenance_checks(recorder: Recorder) -> None:
+    contract = CONTRACT.read_text(encoding="utf-8")
+    compact = re.sub(r"\s+", "", contract)
+    task = json.loads(TASK.read_text(encoding="utf-8"))
+    obligations = json.loads(OBLIGATIONS.read_text(encoding="utf-8"))
+    claim_map = json.loads(CLAIM_MAP.read_text(encoding="utf-8"))
+    source_ledger = json.loads(SOURCE_LEDGER.read_text(encoding="utf-8"))
+    reference_audit = json.loads(REFERENCE_AUDIT.read_text(encoding="utf-8"))
+
+    tags = re.findall(r"\\tag\{3C\.([^}]+)\}", contract)
+    expected_tags = [str(value) for value in range(1, 40)] + ["39a"] + [
+        str(value) for value in range(40, 61)
+    ] + ["60a"] + [
+        str(value) for value in range(61, 82)
+    ]
+    recorder.check("equation tags exact ordered surface", tags, expected_tags, "document")
+    recorder.check("equation tags unique", len(tags), len(set(tags)), "document")
+    contract_bindings = {
+        "relative bridge multiplication order": (
+            r"\mathcalE_R:=\widetilde{\mathcalB}_R\mathcalB_R=e^{\mathcalV_R}"
+        ),
+        "B finite transformation order": r"\mathcalB_R'=k_R\mathcalB_Rh_R^{-1}",
+        "Btilde finite transformation order": (
+            r"\widetilde{\mathcalB}_R'=\widetildeh_R\widetilde{\mathcalB}_Rk_R^{-1}"
+        ),
+        "vector undotted bridge solution": (
+            r"\boldsymbol\nabla^{\mathsfV}_{Ra}&=\widetilde{\mathcalB}_R^{-1}"
+            r"\circD_{Ra}\circ\widetilde{\mathcalB}_R"
+        ),
+        "vector dotted bridge solution": (
+            r"\bar{\boldsymbol\nabla}^{\mathsfV}_{R\dota}&=\mathcalB_R"
+            r"\circ\barD_{R\dota}\circ\mathcalB_R^{-1}"
+        ),
+        "chiral similarity order": (
+            r"\nabla^{\mathsfC}_{Ra}&:=\mathcalB_R^{-1}"
+            r"\boldsymbol\nabla^{\mathsfV}_{Ra}\mathcalB_R"
+        ),
+        "chiral strength transport order": (
+            r"\boldsymbol{\mathcalW}^{\mathsfV}_{Ra}"
+            r"&:=\mathcalB_R\mathcalW^{\mathsfC}_{Ra}\mathcalB_R^{-1}"
+        ),
+        "antichiral strength transport order": (
+            r"\widetilde{\boldsymbol{\mathcalW}}^{\mathsfV}_{R\dota}"
+            r"&:=\widetilde{\mathcalB}_R^{-1}"
+            r"\widetilde{\mathcalW}^{\mathsfA}_{R\dota}\widetilde{\mathcalB}_R"
+        ),
+        "column matter frame map": (
+            r"\Phi_R:=\mathcalB_R^{-1}\boldsymbol\Phi_R^{\mathsfV}"
+        ),
+        "row matter frame map": (
+            r"\widetilde\Phi_R:=\widetilde{\boldsymbol\Phi}_R^{\mathsfV}"
+            r"\widetilde{\mathcalB}_R^{-1}"
+        ),
+    }
+    for name, binding in contract_bindings.items():
+        recorder.check(f"contract binding: {name}", binding in compact, True, "document")
+
+    coefficient_bindings = (
+        r"\kappa_L:=2i",
+        r"\kappa_E:=-2",
+        r"u_R:=\frac4{\kappa_R}",
+        r"\rho_R:=\frac4{\kappa_R^2}",
+        r"(u_L,\rho_L)=(-2i,-1)",
+        r"(u_E,\rho_E)=(-2,+1)",
+    )
+    for binding in coefficient_bindings:
+        recorder.check(f"contract coefficient binding: {binding}", binding in compact, True, "document")
+    recorder.check("Step-3B s_R collision absent", "s_R" in contract, False, "document")
+    recorder.check("task id", task["id"], TASK_ID, "provenance")
+    recorder.check("task type", task["type"], "CONTRACT_CHANGE", "provenance")
+    recorder.check("reference audit status", reference_audit["status"], "PASS", "provenance")
+    recorder.check("scoped subset sha256", hashlib.sha256(SUBSET.read_bytes()).hexdigest(), SUBSET_SHA, "provenance")
+    recorder.check("source ledger subset sha256", source_ledger["scoped_artifact"]["sha256"], SUBSET_SHA, "provenance")
+    recorder.check("source translation was deferred", source_ledger["source_scope"]["translation_status"], "NOT_PERFORMED_IN_REFERENCE_IMPORT", "provenance")
+
+    claims = {item["id"] for item in claim_map["claims"]}
+    for claim in (
+        "SUPERSPACE-1001-GAUGE-CHIRAL-REPRESENTATION-EVIDENCE",
+        "SUPERSPACE-1001-VECTOR-BRIDGE-EVIDENCE",
+        "SUPERSPACE-1001-VECTOR-BIANCHI-EVIDENCE",
+        "SUPERSPACE-1001-VECTOR-ACTION-COMPARISON-EVIDENCE",
+    ):
+        recorder.check(f"claim admitted: {claim}", claim in claims, True, "provenance")
+
+    obligation = next(item for item in obligations["proof_obligations"] if item["id"] == TASK_ID)
+    recorder.check("proof obligation points to current task", obligation["task"], "tasks/CURRENT.yaml", "provenance")
+
+    for token in (r"\sim", r"\approx", r"\propto"):
+        recorder.check(f"forbidden loose token absent: {token}", token in contract, False, "document")
+    recorder.check(
+        "raw Phi_R typo absent",
+        re.search(r"(?<!\\)Phi_R", contract) is not None,
+        False,
+        "document",
+    )
+    recorder.check("gauge-frame distinction explicit", "gauge-vector frame" in contract and "gauge-chiral frame" in contract, True, "document")
+    recorder.check("intrinsic Euclidean independence explicit", "independent complexified data" in contract, True, "document")
+    recorder.check(
+        "source FI equation excluded",
+        re.search(r"\(4\.3\.3\).*?not\s+inputs", contract, flags=re.DOTALL) is not None,
+        True,
+        "document",
+    )
+    recorder.check("Project W coefficient -1/8", r"-\frac18\bar D_R^2" in contract, True, "document")
+    recorder.check("Project Wtilde coefficient +1/8", r"+\frac18D_R^2" in contract, True, "document")
+    recorder.check("component fermion coefficient", r"\frac1{\sqrt2}" in contract, True, "document")
+    recorder.check("component auxiliary coefficient", r"-\frac14" in contract, True, "document")
+    recorder.check(
+        "general component transport defines C-frame projections",
+        r"\psi_{Ra}^{\mathsf C}" in contract and r"F_R^{\mathsf C}" in contract,
+        True,
+        "document",
+    )
+    recorder.check(
+        "WZ pure-spinor second jet fixed",
+        (
+            (r"D_R^2\mathcal E_R|=0" in contract or r"D_R^2\mathcal B_R|=0" in contract)
+            and (
+                r"\bar D_R^2\mathcal E_R|=0" in contract
+                or r"\bar D_R^2\widetilde{\mathcal B}_R|=0" in contract
+            )
+        ),
+        True,
+        "document",
+    )
+    bare_frame_patterns = (
+        r"\boldsymbol\nabla_R^{V",
+        r"\bar{\boldsymbol\nabla}_R^{V",
+        r"\boldsymbol{\mathcal W}_R^{V",
+        r"\widetilde{\boldsymbol{\mathcal W}}_R^{V",
+        r"\mathcal W_R^{C",
+        r"\widetilde{\mathcal W}_R^{A",
+    )
+    recorder.check(
+        "frame labels use mathsf V/C/A",
+        [pattern for pattern in bare_frame_patterns if pattern in contract],
+        [],
+        "document",
+    )
+    recorder.check(
+        "FI covector annihilates the derived algebra and uses the logarithm chart",
+        re.search(r"\\xi_A\s*c_\{BC\}\{\}\^\{?A\}?\s*=\s*0", contract) is not None
+        and r"\mathcalV_R:=\log(\widetilde{\mathcalB}_R\mathcalB_R)" in compact,
+        True,
+        "document",
+    )
+
+
+def build_audit() -> dict[str, Any]:
+    recorder = Recorder()
+    document_and_provenance_checks(recorder)
+    data = bridge_witnesses(recorder)
+    connection_witnesses(recorder, data)
+    chirality_and_action_witnesses(recorder, data)
+    component_projection_witnesses(recorder)
+    coefficient_witnesses(recorder)
+    bianchi_witnesses(recorder)
+
+    categories: dict[str, dict[str, int]] = {}
+    for check in recorder.checks:
+        row = categories.setdefault(check["category"], {"checks": 0, "failed": 0})
+        row["checks"] += 1
+        if not check["passed"]:
+            row["failed"] += 1
+
+    return {
+        "schema": 1,
+        "task": TASK_ID,
+        "status": "PASS" if not recorder.failures else "FAIL",
+        "arithmetic": {
+            "coefficient_field": "Q(i)",
+            "floating_point": False,
+            "external_cas": False,
+            "matrix_witness_dimension": 2,
+            "component_exterior_generators": ["theta^1", "theta^2"],
+            "component_operator_dimension": 8,
+        },
+        "categories": categories,
+        "totals": {
+            "exact_checks": len(recorder.checks),
+            "failed_checks": len(recorder.failures),
+        },
+        "checks": recorder.checks,
+        "failures": recorder.failures,
+    }
+
+
+def main() -> None:
+    audit = build_audit()
+    AUDIT.write_text(json.dumps(audit, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    if audit["status"] != "PASS":
+        print(json.dumps(audit["failures"], indent=2, ensure_ascii=False))
+        raise SystemExit(1)
+    print(
+        "Step-3C exact verification: "
+        f"{audit['totals']['exact_checks']} exact checks, 0 failures"
+    )
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,115 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-03C-GAUGE-VECTOR-REPRESENTATION-001",
+  "contract": "contracts/foundations/step-03c-gauge-vector-representation.md",
+  "contract_sha256": "90e5211557e0a12e444ee91a174beaf7ddea9039e6f9b987eb0861f0a9ef2461",
+  "scope": "All 83 tagged equation groups in Step 3C, checked in reverse order against only the accepted Project contracts and approved source subset",
+  "checked_equation_groups": 83,
+  "proof_obligations": [
+    {
+      "id": "FRAME_AND_BRIDGE_ORDER",
+      "equations": "3C.1-3C.12",
+      "result": "PASS"
+    },
+    {
+      "id": "COMPLETE_CONNECTION_AND_CONSTRAINTS",
+      "equations": "3C.13-3C.24",
+      "result": "PASS"
+    },
+    {
+      "id": "CHIRAL_ANTICHIRAL_SIMILARITIES",
+      "equations": "3C.25-3C.32",
+      "result": "PASS"
+    },
+    {
+      "id": "FIELD_STRENGTHS_JACOBI_BIANCHI",
+      "equations": "3C.33-3C.47",
+      "result": "PASS"
+    },
+    {
+      "id": "MATTER_AND_ACTION_EQUIVALENCE",
+      "equations": "3C.48-3C.64",
+      "result": "PASS"
+    },
+    {
+      "id": "COVARIANT_COMPONENT_EQUIVALENCE",
+      "equations": "3C.65-3C.72",
+      "result": "PASS"
+    },
+    {
+      "id": "WICK_TRANSPORT_WITHOUT_EUCLIDEAN_DAGGER",
+      "equations": "3C.73-3C.76",
+      "result": "PASS"
+    },
+    {
+      "id": "SOURCE_DICTIONARY_AND_VERIFICATION_SURFACE",
+      "equations": "3C.77-3C.81",
+      "result": "PASS"
+    }
+  ],
+  "spot_checks": [
+    {
+      "equations": "3C.25-3C.31",
+      "check": "preserved noncommuting bridge order through both similarities and the symmetric-frame compensator",
+      "result": "PASS"
+    },
+    {
+      "equations": "3C.38-3C.45",
+      "check": "rederived u_R=4/kappa_R and rho_R=4/kappa_R^2, then contracted the antisymmetric spinor slots to obtain the Bianchi identity",
+      "result": "PASS"
+    },
+    {
+      "equations": "3C.55-3C.64",
+      "check": "followed each full-, chiral-, antichiral-, gauge-kinetic-, and FI-density through the frame map without commuting bridge factors",
+      "result": "PASS"
+    },
+    {
+      "equations": "3C.65-3C.76",
+      "check": "checked rightmost-first row derivatives, second projections, Wess-Zumino bridge jets, and the Lorentz-to-Euclidean coefficient map",
+      "result": "PASS"
+    }
+  ],
+  "gap_types_checked": [
+    "G-DEF",
+    "G-IDX",
+    "G-SIGN",
+    "G-ALG",
+    "G-OP",
+    "G-THM",
+    "G-PROJ",
+    "G-NORM",
+    "G-SCOPE"
+  ],
+  "resolved_findings": [
+    {
+      "id": "G1[G-OP]",
+      "priority": "P1",
+      "location": "3C.45",
+      "resolution": "protected bracketed commutator rows from array optional-spacing parsing",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "G2[G-PROJ]",
+      "priority": "P1",
+      "location": "3C.60a and 3C.71",
+      "resolution": "made flat-projector chirality and the pure first and second bridge jets explicit",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "G3[G-SCOPE]",
+      "priority": "P1",
+      "location": "3C.62-3C.63 and 3C.77-3C.80",
+      "resolution": "separated the Project FI derivation and Project field-strength normalization from excluded source formulas",
+      "status": "RESOLVED"
+    }
+  ],
+  "verification": {
+    "exact_checks": 106,
+    "exact_failures": 0,
+    "lualatex_display_blocks": 83,
+    "lualatex_failures": 0,
+    "post_resolution_P0": [],
+    "post_resolution_P1": []
+  },
+  "result": "PASS"
+}

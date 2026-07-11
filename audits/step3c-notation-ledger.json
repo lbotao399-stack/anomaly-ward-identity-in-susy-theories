@@ -1,0 +1,93 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-03C-GAUGE-VECTOR-REPRESENTATION-001",
+  "contract": "contracts/foundations/step-03c-gauge-vector-representation.md",
+  "contract_sha256": "90e5211557e0a12e444ee91a174beaf7ddea9039e6f9b987eb0861f0a9ef2461",
+  "checks": [
+    {
+      "id": "SIGNATURE_AND_INDEX_DOMAINS",
+      "result": "PASS",
+      "locked": "R is L or E; mu is Lorentz; m is Euclidean; M is the signature-dependent vector slot; a and dot a are Weyl slots; mathfrak A is a graded superspace slot; A, B, C are adjoint gauge slots"
+    },
+    {
+      "id": "FRAME_LABELS",
+      "result": "PASS",
+      "locked": "mathsf V, mathsf C, and mathsf A denote gauge-vector, gauge-chiral, and gauge-antichiral frames and are never supersymmetry chiral-coordinate labels"
+    },
+    {
+      "id": "BRIDGE_ORDER",
+      "result": "PASS",
+      "locked": "mathcal E_R=widetilde mathcal B_R mathcal B_R; no equation reverses this noncommuting order"
+    },
+    {
+      "id": "GAUGE_REDUNDANCIES",
+      "result": "PASS",
+      "locked": "k_R acts in the vector frame; h_R is chiral; widetilde h_R is antichiral; their left and right actions agree with every derivative, matter, and strength transformation"
+    },
+    {
+      "id": "DERIVATIVE_FAMILIES",
+      "result": "PASS",
+      "locked": "boldsymbol nabla is the gauge-vector derivative; nabla superscript mathsf C or mathsf A is its similarity image; mathcal D is the constrained vector derivative; D and bar D remain flat"
+    },
+    {
+      "id": "CONNECTION_AND_CURVATURE",
+      "result": "PASS",
+      "locked": "boldsymbol mathcal A is the connection in D-iA; boldsymbol Gamma is the same connection in D+Gamma; boldsymbol mathcal F is superspace curvature; F without mathcal is a projected component"
+    },
+    {
+      "id": "COEFFICIENTS",
+      "result": "PASS",
+      "locked": "kappa_L=2i, kappa_E=-2, u_R=4/kappa_R, rho_R=4/kappa_R^2; rho does not collide with the Step-3B action-sign notation"
+    },
+    {
+      "id": "COLUMN_AND_DUAL_ROW_MODULES",
+      "result": "PASS",
+      "locked": "untilded matter is a column; tilded matter is a dual row; the row derivative contains the parity sign and every squared row derivative states rightmost acts first"
+    },
+    {
+      "id": "FIELD_STRENGTHS",
+      "result": "PASS",
+      "locked": "boldsymbol mathcal W superscript mathsf V and its tilded partner are vector-frame strengths; mathcal W superscript mathsf C and tilded mathcal W superscript mathsf A are their similarity images with Project coefficients -1/8 and +1/8"
+    },
+    {
+      "id": "COMPONENT_DOMAINS",
+      "result": "PASS",
+      "locked": "phi, psi, and F are matter components; lambda and widetilde lambda are gaugini; mathscr D is the vector auxiliary; F_RMN is the gauge curvature component"
+    },
+    {
+      "id": "ACTION_DATA",
+      "result": "PASS",
+      "locked": "mathscr K superscript mathsf V is the full-superspace density; mathscr U and f are holomorphic data; mathcal I and widetilde mathcal I are the gauge-scalar kinetic integrands; varsigma_L=+1 and varsigma_E=-1 are the action signs"
+    },
+    {
+      "id": "FI_LOCAL_CHART",
+      "result": "PASS",
+      "locked": "mathcal V_R=log(widetilde mathcal B_R mathcal B_R) only in the chosen local chart and xi_A c_BC^A=0 restricts xi to the Abelian quotient"
+    },
+    {
+      "id": "LORENTZ_REALITY_EUCLIDEAN_INDEPENDENCE",
+      "result": "PASS",
+      "locked": "ddagger_L relates Lorentz bridges, strengths, and matter; intrinsic Euclidean tilded and untilded data remain independent until the explicitly named Wick contour"
+    },
+    {
+      "id": "SOURCE_DICTIONARY_BOUNDARY",
+      "result": "PASS",
+      "locked": "the source bridge dictionary is structural only; Project signs, spinor raising, field-strength coefficients, measures, action signs, and FI normalization come only from accepted Project contracts"
+    },
+    {
+      "id": "EQUATION_AND_LATEX_SURFACE",
+      "result": "PASS",
+      "locked": "83 display blocks and 83 unique tags compile; all local references resolve; no unsafe row break followed by a bare left bracket remains"
+    },
+    {
+      "id": "STRICT_EQUALITY_NOTATION",
+      "result": "PASS",
+      "locked": "the contract contains no sim, approx, or propto relation"
+    }
+  ],
+  "post_resolution": {
+    "P0": [],
+    "P1": []
+  },
+  "result": "PASS"
+}
