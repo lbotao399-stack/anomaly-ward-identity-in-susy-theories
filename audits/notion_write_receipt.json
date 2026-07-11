@@ -24,13 +24,14 @@
     {
       "id": "CONTRACT-WEINBERG-SREDNICKI-CODEX-DICTIONARY-001",
       "source": "contracts/dictionaries/weinberg-srednicki-project-notation-dictionary.md",
-      "source_commit": "77d64328d96d5a61ba95e06c56b3ab7e9b5f4ff8",
-      "source_sha256": "6c93d657271a4899d0058137fba4c4052fbef35d278f25d925c87beab72756f0",
+      "source_commit": "b9849ce2b35cf5e02c7af80e5abf623b874e6808",
+      "source_sha256": "8160df012d8a65b4e0f8fdb387591e42e3d3e2b70a33e0d21408e5ccc483f4ab",
       "page_id": "39aee2b7-4b3f-8119-807f-e8cbc16b0b60",
-      "mutation": "create_pages",
-      "async_task_id": "task_f81fb72770e8449b9a2feba4fe1de900",
-      "request_id": "828f8fcb-eaed-4a9c-8eea-e99599719b92",
-      "write_response": "accepted"
+      "mutation": "replace_content",
+      "async_task_id": "task_29eaf4d3a301441abd3a9248d1633603",
+      "request_id": "86fa521f-fab2-422b-9f3e-30e76bc648da",
+      "completion_request_id": "a93b9271-40d9-44a8-b832-602f5d99d9b1",
+      "write_response": "succeeded"
     },
     {
       "id": "FOUNDATION-COMPLETE-SUPERCONFORMAL-COVARIANCE-002C",
@@ -46,13 +47,26 @@
     {
       "id": "FOUNDATION-GAUGE-CHIRAL-ACTION-003A",
       "source": "contracts/foundations/step-03a-gauge-chiral-action.md",
-      "source_commit": "9bbf59c478b15b856a88c88e2f2246cebc144321",
-      "source_sha256": "12677258dfc852730e8a346ca12e9980e575a08cb4ecc49a21b81da23cb3d3c1",
+      "source_commit": "b9849ce2b35cf5e02c7af80e5abf623b874e6808",
+      "source_sha256": "1021c4efb4f046a4063da78a080cb15aba8e85f7c6bc815423cb3b367c96bd0b",
       "page_id": "39aee2b7-4b3f-8101-bfc7-c6d5b986029d",
+      "mutation": "replace_content",
+      "async_task_id": "task_aee99ddadc87435080b856716488ecc0",
+      "request_id": "af917779-5f7f-428a-b639-c130ff809636",
+      "completion_request_id": "37d33aef-67e8-47b2-bc64-cf63c6252322",
+      "write_response": "succeeded"
+    },
+    {
+      "id": "FOUNDATION-COMPONENT-RECONSTRUCTION-003B",
+      "source": "contracts/foundations/step-03b-component-reconstruction.md",
+      "source_commit": "b9849ce2b35cf5e02c7af80e5abf623b874e6808",
+      "source_sha256": "4b3ae678463747cc78d3c7e594904647620d919eae769c5b5bfd16d5b556a75b",
+      "page_id": "39aee2b7-4b3f-81af-aedf-cf0a51d2b372",
       "mutation": "create_pages",
-      "async_task_id": "task_3926aea487cd4a1fab127b6f994499e0",
-      "request_id": "7760966c-d57a-41fb-9e9f-4df1728d83a1",
-      "write_response": "accepted"
+      "async_task_id": "task_c60e3dde027c4de19fe62d463d6a0e6e",
+      "request_id": "136f20fa-0b41-41af-b8f3-7fb4940fe0c4",
+      "completion_request_id": "0950e88b-66be-467b-a829-47812d1b3dfb",
+      "write_response": "succeeded"
     }
   ],
   "previous_receipt": {
@@ -61,5 +75,5 @@
     "page_id": "399ee2b7-4b3f-8158-9f75-f4a148e431fb",
     "published_at": "2026-07-10T23:46:35Z"
   },
-  "published_at": "2026-07-11T08:07:43Z"
+  "published_at": "2026-07-11T10:16:12Z"
 }

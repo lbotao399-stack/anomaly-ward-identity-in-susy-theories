@@ -29,8 +29,8 @@
     {
       "id": "CONTRACT-WEINBERG-SREDNICKI-CODEX-DICTIONARY-001",
       "source": "contracts/dictionaries/weinberg-srednicki-project-notation-dictionary.md",
-      "source_commit": "77d64328d96d5a61ba95e06c56b3ab7e9b5f4ff8",
-      "source_sha256": "6c93d657271a4899d0058137fba4c4052fbef35d278f25d925c87beab72756f0",
+      "source_commit": "b9849ce2b35cf5e02c7af80e5abf623b874e6808",
+      "source_sha256": "8160df012d8a65b4e0f8fdb387591e42e3d3e2b70a33e0d21408e5ccc483f4ab",
       "notion_page_id": "39aee2b7-4b3f-8119-807f-e8cbc16b0b60",
       "title": "Weinberg–Srednicki–Project Notation Dictionary"
     },
@@ -45,10 +45,18 @@
     {
       "id": "FOUNDATION-GAUGE-CHIRAL-ACTION-003A",
       "source": "contracts/foundations/step-03a-gauge-chiral-action.md",
-      "source_commit": "9bbf59c478b15b856a88c88e2f2246cebc144321",
-      "source_sha256": "12677258dfc852730e8a346ca12e9980e575a08cb4ecc49a21b81da23cb3d3c1",
+      "source_commit": "b9849ce2b35cf5e02c7af80e5abf623b874e6808",
+      "source_sha256": "1021c4efb4f046a4063da78a080cb15aba8e85f7c6bc815423cb3b367c96bd0b",
       "notion_page_id": "39aee2b7-4b3f-8101-bfc7-c6d5b986029d",
       "title": "Step 3A — Gauge–chiral action in chiral representation"
+    },
+    {
+      "id": "FOUNDATION-COMPONENT-RECONSTRUCTION-003B",
+      "source": "contracts/foundations/step-03b-component-reconstruction.md",
+      "source_commit": "b9849ce2b35cf5e02c7af80e5abf623b874e6808",
+      "source_sha256": "4b3ae678463747cc78d3c7e594904647620d919eae769c5b5bfd16d5b556a75b",
+      "notion_page_id": "39aee2b7-4b3f-81af-aedf-cf0a51d2b372",
+      "title": "Step 3B — Component reconstruction of the general gauge–chiral action"
     }
   ]
 }
