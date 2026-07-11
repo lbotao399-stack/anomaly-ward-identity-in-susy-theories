@@ -1,0 +1,32 @@
+{
+  "id": "MIRROR-WEINBERG-SREDNICKI-DICTIONARY-NOTION-001",
+  "type": "CONTRACT_CHANGE",
+  "status": "ACCEPTED",
+  "outcome": "Publish the accepted Weinberg-Srednicki-project notation dictionary from origin/main commit 77d64328d96d5a61ba95e06c56b3ab7e9b5f4ff8 to one Notion child page under the fixed AWI root without reading any Notion content.",
+  "allowed_inputs": [
+    "AUTHORITY.md",
+    "AGENTS.md",
+    "contracts/dictionaries/weinberg-srednicki-project-notation-dictionary.md",
+    "contracts/manifest.yaml",
+    "mirror/page_map.yaml",
+    "mirror/README.md",
+    "scripts/build_notion_payload.py",
+    "audits/notion_write_receipt.json"
+  ],
+  "forbidden_inputs": [
+    "Notion content",
+    "Notion fetch, search, page read, block read, or content readback",
+    "legacy repositories",
+    "other local files",
+    "unmerged branches",
+    "manual mathematical edits on the Notion side"
+  ],
+  "acceptance": [
+    "the published mathematical source is exactly the dictionary at origin/main commit 77d64328d96d5a61ba95e06c56b3ab7e9b5f4ff8",
+    "the Notion child page is created only through a write operation under root page 39e80ed3e5844b17b3ccf2579e2a64ca",
+    "the payload contains the Git authority header, exact source path, commit, and SHA-256",
+    "mirror page map records the Notion page id, source path, source commit, and source sha256",
+    "write receipt states content_readback_performed=false",
+    "repository-policy passes after the mirror metadata update"
+  ]
+}

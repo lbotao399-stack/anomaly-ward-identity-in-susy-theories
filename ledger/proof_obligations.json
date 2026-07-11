@@ -47,6 +47,12 @@
       "id": "MIRROR-WEINBERG-SREDNICKI-DICTIONARY-NOTION-001",
       "state": "ACCEPTED",
       "blocking_reason": null,
+      "task": "tasks/archive/MIRROR-WEINBERG-SREDNICKI-DICTIONARY-NOTION-001.yaml"
+    },
+    {
+      "id": "CONTRACT-STEP-02C-COMPLETE-SUPERCONFORMAL-COVARIANCE-001",
+      "state": "ACCEPTED",
+      "blocking_reason": null,
       "task": "tasks/CURRENT.yaml"
     }
   ]

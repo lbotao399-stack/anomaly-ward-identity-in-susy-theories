@@ -1,0 +1,73 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-02C-COMPLETE-SUPERCONFORMAL-COVARIANCE-001",
+  "contract": "contracts/foundations/step-02c-complete-superconformal-covariance.md",
+  "scope": "full Lorentzian and Euclidean 4|4 coordinate realizations, complete graded algebras, typed coordinate-Noether covariance, Wick phases, and exact verification",
+  "checks": [
+    {
+      "id": "COORDINATE_VERSUS_NOETHER",
+      "result": "PASS",
+      "locked": "sans-serif generators are coordinate operators; unsans-serif generators are Noether charges; P_coordinate=-i partial and the typed diagonal sum annihilates each local multiplication morphism"
+    },
+    {
+      "id": "WEIGHT_ZERO_VERSUS_TYPED_MODULE",
+      "result": "PASS",
+      "locked": "the explicit 4|4 vector fields act on F_0; chiral primary shifts act on F_(Delta,r)_ch and use the restricted (0,0)_ch operator, never the unrestricted F_0 operator"
+    },
+    {
+      "id": "BARRED_COORDINATE_DERIVATIVE",
+      "result": "PASS",
+      "locked": "barvartheta^dot a is the barred coordinate and tildebarpartial_dot a=-barpartial_dot a is its left derivative"
+    },
+    {
+      "id": "SUPERINVERSION_CONJUGATION",
+      "result": "PASS",
+      "locked": "K, S, and barS are obtained from the phi=0 involution; the even and odd Jacobian blocks precede the full differential operators"
+    },
+    {
+      "id": "FULL_SUPERSPACE_SCOPE",
+      "result": "PASS",
+      "locked": "K, S, and barS contain both theta and bartheta derivative coefficients and act on arbitrary F(x,theta,bartheta), not only on the chiral chart"
+    },
+    {
+      "id": "COMPLETE_LORENTZ_ALGEBRA",
+      "result": "PASS",
+      "locked": "all nonzero brackets and every independent zero family are displayed with Lorentzian -+++ sigma and index conventions"
+    },
+    {
+      "id": "TYPED_COVARIANT_FUNCTORIALITY",
+      "result": "PASS",
+      "locked": "local multiplication operators are morphisms F_lambda to F_lambda_prime; the block-diagonal coordinate representation closes with the same numerical structure constants"
+    },
+    {
+      "id": "LOCAL_SUPERCOMMUTANT_DEFECT",
+      "result": "PASS",
+      "locked": "covariance first places the Hilbert algebra defect in the typed local supercommutant; the explicit type-M scalar commutant and invariant-vacuum normalization remove it"
+    },
+    {
+      "id": "EUCLIDEAN_WICK_PHASES",
+      "result": "PASS",
+      "locked": "the exponent-normalized Euclidean modules and generators are the componentwise Wick image; the i-rescaled basis has transformed structure constants h_A h_B over h_C"
+    },
+    {
+      "id": "INTRINSIC_EUCLIDEAN_REALITY",
+      "result": "PASS",
+      "locked": "the Euclidean Weyl sectors are independent; only -i partial_m is asserted L2-Hermitian without a Berezin pairing"
+    },
+    {
+      "id": "EXACT_FIRST_ORDER_SEPARATION",
+      "result": "PASS",
+      "locked": "all 16 Grassmann monomials tensored with 1 and the four bosonic coordinates form an exact separating set for the first-order bracket differences"
+    },
+    {
+      "id": "STRICT_EQUALITY_NOTATION",
+      "result": "PASS",
+      "locked": "the contract contains no sim, approx, or propto relation"
+    }
+  ],
+  "findings": {
+    "P0": [],
+    "P1": []
+  },
+  "result": "PASS"
+}

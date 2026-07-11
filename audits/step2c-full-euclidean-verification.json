@@ -1,0 +1,105 @@
+{
+  "arithmetic": "Q(i) polynomial coefficients and exact exterior algebra; no floating point; no CAS",
+  "basis": {
+    "bosonic_test_monomials": [
+      "1",
+      "x_E^1",
+      "x_E^2",
+      "x_E^3",
+      "x_E^4"
+    ],
+    "completeness": "Every tested bracket is first order. Equality on 1 and all eight coordinate generators fixes every zeroth- and first-order coefficient; that determining subset is contained in the 80 exact inputs.",
+    "grassmann_generators": 4,
+    "grassmann_monomials": 16,
+    "total_inputs": 80
+  },
+  "chart": "full superspace (x_E^m,vartheta^a,barvartheta^dot_a)",
+  "failed_cases": 0,
+  "failures": [],
+  "families": {
+    "euclidean_bosonic_conformal": {
+      "failed_cases": 0,
+      "input_cases": 1920,
+      "operator_identities": 24,
+      "passed_cases": 1920
+    },
+    "euclidean_dilation_r": {
+      "failed_cases": 0,
+      "input_cases": 1280,
+      "operator_identities": 16,
+      "passed_cases": 1280
+    },
+    "euclidean_graded_algebra": {
+      "failed_cases": 0,
+      "input_cases": 1280,
+      "operator_identities": 16,
+      "passed_cases": 1280
+    },
+    "euclidean_mixed_even_odd": {
+      "failed_cases": 0,
+      "input_cases": 2560,
+      "operator_identities": 32,
+      "passed_cases": 2560
+    },
+    "euclidean_spin4": {
+      "failed_cases": 0,
+      "input_cases": 43520,
+      "operator_identities": 544,
+      "passed_cases": 43520
+    },
+    "euclidean_zero_even_mixed": {
+      "failed_cases": 0,
+      "input_cases": 5840,
+      "operator_identities": 73,
+      "passed_cases": 5840
+    },
+    "euclidean_zero_odd": {
+      "failed_cases": 0,
+      "input_cases": 1920,
+      "operator_identities": 24,
+      "passed_cases": 1920
+    },
+    "full_coordinate_actions": {
+      "failed_cases": 0,
+      "input_cases": 384,
+      "operator_identities": 384,
+      "passed_cases": 384
+    },
+    "wick_coordinate_relations": {
+      "failed_cases": 0,
+      "input_cases": 1280,
+      "operator_identities": 16,
+      "passed_cases": 1280
+    },
+    "wick_generator_phases": {
+      "failed_cases": 0,
+      "input_cases": 2720,
+      "operator_identities": 34,
+      "passed_cases": 2720
+    }
+  },
+  "input_cases": 62704,
+  "operator_definitions": {
+    "D": "-(x_E.partial_E+N_vartheta/2+N_barvartheta/2)",
+    "J_mn": "-i(x_m partial_n-x_n partial_m)-i vartheta sigma_E_mn partial_vartheta+i barsigma_E_mn barvartheta tildebarpartial",
+    "K_m": "-1/2[V_m(y)+V_m(bar y)]partial_x+vartheta sigma_E_m tildeY partial_vartheta+barvartheta tildebarY sigma_E_m tildebarpartial",
+    "P_m": "-partial_m",
+    "Q_a": "-partial_a+sigma_E^m[a,dot] barvartheta^dot partial_m",
+    "R": "-i(N_vartheta-N_barvartheta)",
+    "S^a": "-vartheta sigma_E^m tildeY^a partial_m-2 vartheta^2 epsilon^(ab)partial_b+tildebarY^(dot b a)tildebarpartial_dot b",
+    "barQ_dot_a": "+tildebarpartial_dot_a-vartheta^b sigma_E^m[b,dot_a] partial_m",
+    "barS^dot_a": "-barvartheta tildebarY sigma_E^m partial_m+tildeY^(dot a b)partial_b+2 barvartheta^2 epsilon^(dot a dot b)tildebarpartial_dot b"
+  },
+  "operator_identities": 1163,
+  "schema": 1,
+  "signature": "Euclidean",
+  "status": "PASS",
+  "task_id": "CONTRACT-STEP-02C-COMPLETE-SUPERCONFORMAL-COVARIANCE-001",
+  "wick_transport": {
+    "bispinors": "Y_L=iY_E; tildeY_L=i tildeY_E; barY_L=i barY_E; tildebarY_L=i tildebarY_E",
+    "coordinates": "x_L^0=-i x_E^4; x_L^i=x_E^i; vartheta_L=vartheta_E; barvartheta_L=barvartheta_E",
+    "rotation_phases": "J_Eij=W(J_Lij) and J_E4i=-i W(J_L0i)",
+    "scalar_and_spinor_phases": "G_E=-i W(G_L) for G=D,R,Q,barQ,S,barS",
+    "vector_phases": "G_Ei=-i W(G_Li) and G_E4=-W(G_L0) for G=P,K"
+  }
+}
