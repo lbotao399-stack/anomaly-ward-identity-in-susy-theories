@@ -8,7 +8,10 @@
     "AGENTS.md",
     "contracts/foundations/step-01-supersymmetry-commutator.md",
     "contracts/manifest.yaml",
-    "references/manifest.yaml"
+    "references/manifest.yaml",
+    "https://arxiv.org/abs/hep-th/0108200",
+    "https://arxiv.org/abs/hep-th/9808041",
+    "https://arxiv.org/abs/hep-th/9903230"
   ],
   "forbidden_inputs": [
     "Notion content",
@@ -20,6 +23,7 @@
   ],
   "acceptance": [
     "only public primary sources are selected",
+    "network acquisition is restricted to the three explicit arXiv locators in allowed_inputs",
     "each imported source is stored inside references/vendor with SHA-256",
     "references/claim-map.yaml states exactly which structural claim each source may support",
     "no imported convention overrides Step 1",
