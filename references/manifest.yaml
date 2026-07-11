@@ -14,10 +14,10 @@
       "sha256": "a73d8017c2d07de578f4f98ea25054033b0384ebffb6b426650a22f404c3231b"
     },
     {
-      "id": "STEP-2-CLAIM-MAP",
+      "id": "REFERENCE-CLAIM-MAP",
       "path": "references/claim-map.yaml",
       "classification": "REFERENCE_CLAIM_BOUNDARY",
-      "sha256": "0407a608173538404e2cd4f0320a9aaeda827cd5e98c4b2ac17ad48affe68d45"
+      "sha256": "cde3fa9f6ee08e93c06ce466404fb6451296f23fa892a28796481793984a6fe7"
     },
     {
       "id": "ARXIV-HEP-TH-0108200-V1",
@@ -48,6 +48,210 @@
       "path": "references/vendor/hep-th-9903230v3.pdf",
       "classification": "PRIMARY_REFERENCE_STRUCTURE_ONLY",
       "sha256": "1b1a659e231aa2d31e8c2a34caa8a03d7df3ffeacd1107d85dbae054195f10eb"
+    },
+    {
+      "id": "WS-DICTIONARY-DRAFT-ATTACHMENT",
+      "path": "references/vendor/drafts/weinberg-srednicki-dictionary-draft.txt",
+      "classification": "UNVERIFIED_CANDIDATE_DICTIONARY",
+      "sha256": "747c4a4a5091e078e4ba87288542b746ee1529641e01d31c6e8bab22e07fedac"
+    },
+    {
+      "id": "WEINBERG-NOTION-ROOT",
+      "path": "references/vendor/notion/weinberg/root-310ee2b74b3f8065a3acdbdac27f3b2b.md",
+      "classification": "WEINBERG_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "c483e184025eafca84083bbf3623f3d13a6bd6fd01abbb1cb27ec6aadbae6b74"
+    },
+    {
+      "id": "WEINBERG-NOTION-CHAPTER-05-INDEX",
+      "path": "references/vendor/notion/weinberg/chapter-05-index-34cee2b74b3f8140bf34e882f5601e5d.md",
+      "classification": "WEINBERG_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "fb6a619bc2bac2b1f723f611c454acf833d330f1877533d6ead6aa155e2b8e6b"
+    },
+    {
+      "id": "WEINBERG-NOTION-CHAPTER-25-INDEX",
+      "path": "references/vendor/notion/weinberg/chapter-25-index-34cee2b74b3f815fb0b0e5db189e0b88.md",
+      "classification": "WEINBERG_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "9cef0d9f3203cf66aac2645357e834a545bdc4a678ea6dc6e453d080517446ea"
+    },
+    {
+      "id": "WEINBERG-NOTION-CHAPTER-26-INDEX",
+      "path": "references/vendor/notion/weinberg/chapter-26-index-34cee2b74b3f814e8d69d0e3182b91ec.md",
+      "classification": "WEINBERG_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "593934afd70cdc45cc58e23c2f9c07a85c2013826af288d9c962bf54faa20390"
+    },
+    {
+      "id": "WEINBERG-NOTION-CHAPTER-27-INDEX",
+      "path": "references/vendor/notion/weinberg/chapter-27-index-34cee2b74b3f811990e7cea413acedf0.md",
+      "classification": "WEINBERG_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "bab595ca41e14a9389abb375a6c219d3b8e26bf67a29a8296dd78c10fe2094f4"
+    },
+    {
+      "id": "WEINBERG-NOTION-05-04-DIRAC-FORMALISM",
+      "path": "references/vendor/notion/weinberg/05-04-dirac-formalism-34cee2b74b3f8115a5a1fac623c31862.md",
+      "classification": "WEINBERG_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "025f0553a077e2aade0f61f56805c7c6c7e7c2369e87b39dc2c20543e9c500c9"
+    },
+    {
+      "id": "WEINBERG-NOTION-25-01-GRADED-LIE-ALGEBRAS",
+      "path": "references/vendor/notion/weinberg/25-01-graded-lie-algebras-34cee2b74b3f81ea804ed1024d19375b.md",
+      "classification": "WEINBERG_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "4b7340c347d695ae94f0930d9b954ecb75d32b71b0f878cffa3738c3ca1c28b5"
+    },
+    {
+      "id": "WEINBERG-NOTION-25-02-SUPERSYMMETRY-ALGEBRA",
+      "path": "references/vendor/notion/weinberg/25-02-supersymmetry-algebra-34cee2b74b3f81edb24ed794dd04feb5.md",
+      "classification": "WEINBERG_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "34bb855488dd345c1981677dc0e11e6581babf6c4ebe07fbcefa32a1b0889e33"
+    },
+    {
+      "id": "WEINBERG-NOTION-25-03-PARITY",
+      "path": "references/vendor/notion/weinberg/25-03-parity-34cee2b74b3f81e6aec2d86de3184c84.md",
+      "classification": "WEINBERG_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "8ca968bcc8c1a0f8530e9f8a9725edb4c1465ad07ddcaa08eec4b77539a2599e"
+    },
+    {
+      "id": "WEINBERG-NOTION-26-01-DIRECT-FIELD-SUPERMULTIPLETS",
+      "path": "references/vendor/notion/weinberg/26-01-direct-field-supermultiplets-34cee2b74b3f81efaf28fa4031d4303e.md",
+      "classification": "WEINBERG_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "e8d2de2f6a6fe4491542a3cb424b2c8515f2690e49885e442faf1c51b8317a69"
+    },
+    {
+      "id": "WEINBERG-NOTION-26-02-GENERAL-SUPERFIELDS",
+      "path": "references/vendor/notion/weinberg/26-02-general-superfields-34cee2b74b3f8182a538e629f277c1e7.md",
+      "classification": "WEINBERG_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "fe37d07ad93a10cec063a3d68a41c70c0772a27052c6adeb4390b1e9808a02e5"
+    },
+    {
+      "id": "WEINBERG-NOTION-26-03-CHIRAL-LINEAR-SUPERFIELDS",
+      "path": "references/vendor/notion/weinberg/26-03-chiral-linear-superfields-34cee2b74b3f8163b3b3fa265e1815b0.md",
+      "classification": "WEINBERG_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "dd3b94fc1d71595599afa15d21bdebb76169aa23208041663eb0db9a84bb67d3"
+    },
+    {
+      "id": "WEINBERG-NOTION-26-04-RENORMALIZABLE-CHIRAL-THEORIES",
+      "path": "references/vendor/notion/weinberg/26-04-renormalizable-chiral-theories-34cee2b74b3f81f6bba1c92f1c61727b.md",
+      "classification": "WEINBERG_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "2a30c36abfe79068f302e739d5e84d324748b04c3094ddaa5cc8dfef9aa9bf2f"
+    },
+    {
+      "id": "WEINBERG-NOTION-26-06-INTEGRALS-EOM-CURRENT-SUPERFIELDS",
+      "path": "references/vendor/notion/weinberg/26-06-integrals-eom-current-superfields-34cee2b74b3f8128a678dc890332e79d.md",
+      "classification": "WEINBERG_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "054d5e451ae6929285bac2fb78811cadf6613be5caa73a018691d9da66e650db"
+    },
+    {
+      "id": "WEINBERG-NOTION-26-08-GENERAL-KAHLER-POTENTIAL",
+      "path": "references/vendor/notion/weinberg/26-08-general-kahler-potential-34cee2b74b3f816280f7c5e18852c958.md",
+      "classification": "WEINBERG_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "bfdd548740c6ab93e1579636d4efe707a6755e76e04ec718147bec9dc067c486"
+    },
+    {
+      "id": "WEINBERG-NOTION-26-APPENDIX-MAJORANA-SPINORS",
+      "path": "references/vendor/notion/weinberg/26-appendix-majorana-spinors-34cee2b74b3f81349f82dd4d257ba62c.md",
+      "classification": "WEINBERG_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "e99e262bb1a0e5877f6b04f79e5ccc25fe5e9d588e66c977f70fcd90a107eb1a"
+    },
+    {
+      "id": "WEINBERG-NOTION-27-01-GAUGE-INVARIANT-CHIRAL-ACTION",
+      "path": "references/vendor/notion/weinberg/27-01-gauge-invariant-chiral-action-34cee2b74b3f81b6b72bd47d34df4d88.md",
+      "classification": "WEINBERG_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "7db567328703a80feda625db49cb19589292010ea42dafacc1d767efc15ac06c"
+    },
+    {
+      "id": "WEINBERG-NOTION-27-02-ABELIAN-GAUGE-SUPERFIELD-ACTION",
+      "path": "references/vendor/notion/weinberg/27-02-abelian-gauge-superfield-action-34cee2b74b3f8131b10edd7a1dad0172.md",
+      "classification": "WEINBERG_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "90c91d5b3d4ef0e12eee82208621f5f1cc60820e93fa7941913cbfc487d098ff"
+    },
+    {
+      "id": "WEINBERG-NOTION-27-03-GENERAL-GAUGE-SUPERFIELD-ACTION",
+      "path": "references/vendor/notion/weinberg/27-03-general-gauge-superfield-action-34cee2b74b3f812f97c2d0aa902aba5d.md",
+      "classification": "WEINBERG_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "4767da0702f1faa82017f581708bc702a3d43b15260763f468fb9429942fec12"
+    },
+    {
+      "id": "WEINBERG-NOTION-27-04-RENORMALIZABLE-GAUGE-THEORY",
+      "path": "references/vendor/notion/weinberg/27-04-renormalizable-gauge-theory-34cee2b74b3f81949500f3f35884f580.md",
+      "classification": "WEINBERG_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "83b239e9742077e910a16067b5334958d0e29ee3b362627d738af64bd72cf022"
+    },
+    {
+      "id": "SREDNICKI-NOTION-ROOT",
+      "path": "references/vendor/notion/srednicki/root-34fee2b74b3f80adaaa4e3113787083b.md",
+      "classification": "SREDNICKI_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "663e2f49bb8f3f10c4cea369aab5e06b0eefe820a8d851da58738c1973310d22"
+    },
+    {
+      "id": "SREDNICKI-NOTION-PART-II-INDEX",
+      "path": "references/vendor/notion/srednicki/part-ii-index-f8967ce7283b4557b4cd9553bc6faae1.md",
+      "classification": "SREDNICKI_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "79bce9141243ba57b246b23b0c1838e5efe13d7ad08f61f3e85168958469b416"
+    },
+    {
+      "id": "SREDNICKI-NOTION-PART-III-INDEX",
+      "path": "references/vendor/notion/srednicki/part-iii-index-a7bfa00c3bf745b393bdba34b5dbfa3f.md",
+      "classification": "SREDNICKI_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "a7ae6094f8bef668d73890604b0860ac75658409ed95bc5907766759bc081be5"
+    },
+    {
+      "id": "SREDNICKI-NOTION-33-LORENTZ-GROUP-REPRESENTATIONS",
+      "path": "references/vendor/notion/srednicki/33-lorentz-group-representations-019f6db67ebe48249715e9c33b64f6f8.md",
+      "classification": "SREDNICKI_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "e69adb2ba193666481c4c99874f486d0723d7e038204b0a77a0d3494783fec4c"
+    },
+    {
+      "id": "SREDNICKI-NOTION-34-LEFT-RIGHT-SPINOR-FIELDS",
+      "path": "references/vendor/notion/srednicki/34-left-right-spinor-fields-812622be5c2d466faeb4a613eabad116.md",
+      "classification": "SREDNICKI_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "06a3f1a92793711eee23bada8f33fe88b5e755ebaf7fc16fa3e5d1e7559e8fad"
+    },
+    {
+      "id": "SREDNICKI-NOTION-35-SPINOR-INDICES",
+      "path": "references/vendor/notion/srednicki/35-spinor-indices-1da2841c4cda42669598313359e3d07d.md",
+      "classification": "SREDNICKI_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "e2460a11fc45e2b11c4fbf740500c052e30cf4d53d6f11cffb7866a8d4dff3c8"
+    },
+    {
+      "id": "SREDNICKI-NOTION-36-SPINOR-LAGRANGIANS",
+      "path": "references/vendor/notion/srednicki/36-spinor-lagrangians-b41fbf43fd9247d280fe27cace58ea52.md",
+      "classification": "SREDNICKI_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "c1b2ac02d783dfb078544a1f0205d337d08a6d6ff82543db3be902e4264d9485"
+    },
+    {
+      "id": "SREDNICKI-NOTION-38-SPINOR-TECHNOLOGY",
+      "path": "references/vendor/notion/srednicki/38-spinor-technology-19f10ddaf77242df946f54f8c3f99be6.md",
+      "classification": "SREDNICKI_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "06be8da64d026f170a99da324cf6c8fadbba5adab1a4f3599a53859dfc451a5d"
+    },
+    {
+      "id": "SREDNICKI-NOTION-40-P-T-C",
+      "path": "references/vendor/notion/srednicki/40-p-t-c-c9cbde61fce8474281189008cfa39813.md",
+      "classification": "SREDNICKI_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "b4ff8e5578d06073712f33aa2ef17ce42c3fe4b4da5bc1f6605a74cb1f90bf66"
+    },
+    {
+      "id": "SREDNICKI-NOTION-47-GAMMA-MATRIX-TECHNOLOGY",
+      "path": "references/vendor/notion/srednicki/47-gamma-matrix-technology-22607397de1a4af2bc9610b320426208.md",
+      "classification": "SREDNICKI_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "0bdf1293c6af375076f62d06ae4fcbea681b5ffb6282d65e3dabfb05d16379c4"
+    },
+    {
+      "id": "SREDNICKI-NOTION-49-MAJORANA-FEYNMAN-RULES",
+      "path": "references/vendor/notion/srednicki/49-majorana-feynman-rules-1707531df3dd440bbd490a9e2b963de8.md",
+      "classification": "SREDNICKI_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "799fb389f1cc29df06cfdbf96f572f67c0a180d8d74d47c64d8909f23c6ce0b9"
+    },
+    {
+      "id": "SREDNICKI-NOTION-95-SUPERSYMMETRY",
+      "path": "references/vendor/notion/srednicki/95-supersymmetry-0151805c7e85457a9928fcfd0e83da2a.md",
+      "classification": "SREDNICKI_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "0e46576099fb2d877f193a187629764956dbae65f0592ae05751e4a9b97080fb"
+    },
+    {
+      "id": "WS-NOTATION-SOURCE-LEDGER",
+      "path": "references/weinberg-srednicki-notation-source-ledger.json",
+      "classification": "REFERENCE_SOURCE_LEDGER",
+      "sha256": "e4ecac3a6122fa021501388e94d58c7e24d38292e599df04742443a1a5ef0600"
     }
   ]
 }

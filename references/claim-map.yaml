@@ -1,31 +1,104 @@
 {
   "schema": 1,
-  "task": "REFERENCE-IMPORT-SUPERSPACE-001",
-  "policy": "STRUCTURE_ONLY_STEP_1_CONVENTIONS_DOMINATE",
+  "task": "MULTI_REFERENCE_BOUNDARIES",
+  "policy": "PROJECT_CONTRACTS_DOMINATE_REFERENCE_SOURCES",
   "claims": [
     {
       "id": "FLAT-SUPERSPACE-GROUP-STRUCTURE",
-      "sources": ["ARXIV-HEP-TH-0108200-V1", "ARXIV-HEP-TH-9903230-V3-SOURCE", "ARXIV-HEP-TH-9903230-V3-PDF"],
+      "sources": [
+        "ARXIV-HEP-TH-0108200-V1",
+        "ARXIV-HEP-TH-9903230-V3-SOURCE",
+        "ARXIV-HEP-TH-9903230-V3-PDF"
+      ],
       "allowed_use": "Cross-check that flat superspace admits supertranslation coordinate generators and opposite-invariant spinor derivatives whose mixed graded brackets close on translations.",
       "forbidden_use": "Importing any sign, factor of i, metric signature, sigma convention, index placement, or Hermitian rule."
     },
     {
       "id": "CHIRAL-SUBSPACE-STRUCTURE",
-      "sources": ["ARXIV-HEP-TH-9808041-V4-SOURCE", "ARXIV-HEP-TH-9808041-V4-PDF", "ARXIV-HEP-TH-9903230-V3-SOURCE", "ARXIV-HEP-TH-9903230-V3-PDF"],
+      "sources": [
+        "ARXIV-HEP-TH-9808041-V4-SOURCE",
+        "ARXIV-HEP-TH-9808041-V4-PDF",
+        "ARXIV-HEP-TH-9903230-V3-SOURCE",
+        "ARXIV-HEP-TH-9903230-V3-PDF"
+      ],
       "allowed_use": "Cross-check that chiral and antichiral coordinates are annihilated by opposite spinor covariant derivatives and are preserved by superconformal diffeomorphisms.",
       "forbidden_use": "Copying either source's chiral-coordinate sign before deriving it from the locked Step-1 algebra."
     },
     {
       "id": "SUPERCONFORMAL-KILLING-STRUCTURE",
-      "sources": ["ARXIV-HEP-TH-9808041-V4-SOURCE", "ARXIV-HEP-TH-9808041-V4-PDF", "ARXIV-HEP-TH-9903230-V3-SOURCE", "ARXIV-HEP-TH-9903230-V3-PDF"],
+      "sources": [
+        "ARXIV-HEP-TH-9808041-V4-SOURCE",
+        "ARXIV-HEP-TH-9808041-V4-PDF",
+        "ARXIV-HEP-TH-9903230-V3-SOURCE",
+        "ARXIV-HEP-TH-9903230-V3-PDF"
+      ],
       "allowed_use": "Cross-check that superconformal coordinate vector fields preserve the supersymmetric one-form up to local Lorentz and scale transformations and satisfy a superspace Killing constraint.",
       "forbidden_use": "Treating a source differential generator as the Hilbert-space Noether charge or importing its active/passive sign."
     },
     {
       "id": "SUPERINVERSION-DUALITY-STRUCTURE",
-      "sources": ["ARXIV-HEP-TH-9808041-V4-SOURCE", "ARXIV-HEP-TH-9808041-V4-PDF", "ARXIV-HEP-TH-9903230-V3-SOURCE", "ARXIV-HEP-TH-9903230-V3-PDF"],
+      "sources": [
+        "ARXIV-HEP-TH-9808041-V4-SOURCE",
+        "ARXIV-HEP-TH-9808041-V4-PDF",
+        "ARXIV-HEP-TH-9903230-V3-SOURCE",
+        "ARXIV-HEP-TH-9903230-V3-PDF"
+      ],
       "allowed_use": "Cross-check that a superinversion exchanges translations with special conformal transformations and supertranslations with special supersymmetries.",
       "forbidden_use": "Admitting K or S coordinate generators without deriving their normalization and signs from the project's active transformation and Noether conventions."
+    },
+    {
+      "id": "WEINBERG-NOTION-NOTATION-EVIDENCE",
+      "sources": [
+        "WEINBERG-NOTION-ROOT",
+        "WEINBERG-NOTION-CHAPTER-05-INDEX",
+        "WEINBERG-NOTION-CHAPTER-25-INDEX",
+        "WEINBERG-NOTION-CHAPTER-26-INDEX",
+        "WEINBERG-NOTION-CHAPTER-27-INDEX",
+        "WEINBERG-NOTION-05-04-DIRAC-FORMALISM",
+        "WEINBERG-NOTION-25-01-GRADED-LIE-ALGEBRAS",
+        "WEINBERG-NOTION-25-02-SUPERSYMMETRY-ALGEBRA",
+        "WEINBERG-NOTION-25-03-PARITY",
+        "WEINBERG-NOTION-26-01-DIRECT-FIELD-SUPERMULTIPLETS",
+        "WEINBERG-NOTION-26-02-GENERAL-SUPERFIELDS",
+        "WEINBERG-NOTION-26-03-CHIRAL-LINEAR-SUPERFIELDS",
+        "WEINBERG-NOTION-26-04-RENORMALIZABLE-CHIRAL-THEORIES",
+        "WEINBERG-NOTION-26-06-INTEGRALS-EOM-CURRENT-SUPERFIELDS",
+        "WEINBERG-NOTION-26-08-GENERAL-KAHLER-POTENTIAL",
+        "WEINBERG-NOTION-26-APPENDIX-MAJORANA-SPINORS",
+        "WEINBERG-NOTION-27-01-GAUGE-INVARIANT-CHIRAL-ACTION",
+        "WEINBERG-NOTION-27-02-ABELIAN-GAUGE-SUPERFIELD-ACTION",
+        "WEINBERG-NOTION-27-03-GENERAL-GAUGE-SUPERFIELD-ACTION",
+        "WEINBERG-NOTION-27-04-RENORMALIZABLE-GAUGE-THEORY"
+      ],
+      "allowed_use": "A later registered contract-change task may cite these exact Notion page snapshots to reconstruct Weinberg's own convention system before deriving a translation to the project contracts.",
+      "forbidden_use": "Treating a Weinberg convention as project authority, silently correcting the source, or making any translation decision during this reference-import task."
+    },
+    {
+      "id": "SREDNICKI-NOTION-NOTATION-EVIDENCE",
+      "sources": [
+        "SREDNICKI-NOTION-ROOT",
+        "SREDNICKI-NOTION-PART-II-INDEX",
+        "SREDNICKI-NOTION-PART-III-INDEX",
+        "SREDNICKI-NOTION-33-LORENTZ-GROUP-REPRESENTATIONS",
+        "SREDNICKI-NOTION-34-LEFT-RIGHT-SPINOR-FIELDS",
+        "SREDNICKI-NOTION-35-SPINOR-INDICES",
+        "SREDNICKI-NOTION-36-SPINOR-LAGRANGIANS",
+        "SREDNICKI-NOTION-38-SPINOR-TECHNOLOGY",
+        "SREDNICKI-NOTION-40-P-T-C",
+        "SREDNICKI-NOTION-47-GAMMA-MATRIX-TECHNOLOGY",
+        "SREDNICKI-NOTION-49-MAJORANA-FEYNMAN-RULES",
+        "SREDNICKI-NOTION-95-SUPERSYMMETRY"
+      ],
+      "allowed_use": "A later registered contract-change task may cite these exact Notion page snapshots to reconstruct Srednicki's own convention system before deriving a translation to the project contracts.",
+      "forbidden_use": "Treating a Srednicki convention as project authority, silently correcting the source, or making any translation decision during this reference-import task."
+    },
+    {
+      "id": "WS-ATTACHED-DRAFT-CANDIDATE-CLAIMS",
+      "sources": [
+        "WS-DICTIONARY-DRAFT-ATTACHMENT"
+      ],
+      "allowed_use": "A later registered contract-change task may use the draft only as a checklist of candidate dictionary claims that must each be independently proved or rejected from the book snapshots and project contracts.",
+      "forbidden_use": "Citing the draft as evidence, adopting any draft formula without derivation, or using URLs and sources embedded in the draft."
     }
   ]
 }
