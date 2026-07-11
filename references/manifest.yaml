@@ -12,6 +12,42 @@
       "path": "contracts/foundations/step-01-supersymmetry-commutator.md",
       "classification": "BOOTSTRAP_CONTRACT_CANDIDATE",
       "sha256": "a73d8017c2d07de578f4f98ea25054033b0384ebffb6b426650a22f404c3231b"
+    },
+    {
+      "id": "STEP-2-CLAIM-MAP",
+      "path": "references/claim-map.yaml",
+      "classification": "REFERENCE_CLAIM_BOUNDARY",
+      "sha256": "0407a608173538404e2cd4f0320a9aaeda827cd5e98c4b2ac17ad48affe68d45"
+    },
+    {
+      "id": "ARXIV-HEP-TH-0108200-V1",
+      "path": "references/vendor/hep-th-0108200v1.pdf",
+      "classification": "PRIMARY_REFERENCE_STRUCTURE_ONLY",
+      "sha256": "3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99"
+    },
+    {
+      "id": "ARXIV-HEP-TH-9808041-V4-SOURCE",
+      "path": "references/vendor/hep-th-9808041v4-source.tex.gz",
+      "classification": "PRIMARY_REFERENCE_STRUCTURE_ONLY",
+      "sha256": "66068db5f9f7044c57c81076f6221655c8fe1643089ada2d9f2dbae5e2389e08"
+    },
+    {
+      "id": "ARXIV-HEP-TH-9808041-V4-PDF",
+      "path": "references/vendor/hep-th-9808041v4.pdf",
+      "classification": "PRIMARY_REFERENCE_STRUCTURE_ONLY",
+      "sha256": "3bd6a23bceec5b982be3110ce595ad5fc658069fa0ac35369581d444f495edb9"
+    },
+    {
+      "id": "ARXIV-HEP-TH-9903230-V3-SOURCE",
+      "path": "references/vendor/hep-th-9903230v3-source.tar",
+      "classification": "PRIMARY_REFERENCE_STRUCTURE_ONLY",
+      "sha256": "65b94def3061b61f29286f6deefd2bbadde87cb4e69840695e9bb59c484c2337"
+    },
+    {
+      "id": "ARXIV-HEP-TH-9903230-V3-PDF",
+      "path": "references/vendor/hep-th-9903230v3.pdf",
+      "classification": "PRIMARY_REFERENCE_STRUCTURE_ONLY",
+      "sha256": "1b1a659e231aa2d31e8c2a34caa8a03d7df3ffeacd1107d85dbae054195f10eb"
     }
   ]
 }

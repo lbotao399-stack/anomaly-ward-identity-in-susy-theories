@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "task": "REFERENCE-IMPORT-SUPERSPACE-001",
+  "metadata_records_checked": 3,
+  "primary_sources_vendored": 3,
+  "vendored_files": 5,
+  "rendered_pages_checked": [
+    {
+      "source": "ARXIV-HEP-TH-0108200-V1",
+      "pdf_page": 94,
+      "printed_page": 84,
+      "surface": "flat spinor covariant derivatives and their graded algebra"
+    },
+    {
+      "source": "ARXIV-HEP-TH-9808041-V4",
+      "pdf_page": 5,
+      "surface": "superconformal differential vector fields and Killing constraints"
+    },
+    {
+      "source": "ARXIV-HEP-TH-9903230-V3",
+      "pdf_page": 5,
+      "surface": "supertranslation group coordinates and invariant one-forms"
+    },
+    {
+      "source": "ARXIV-HEP-TH-9903230-V3",
+      "pdf_page": 10,
+      "surface": "special transformations and superinversion"
+    }
+  ],
+  "source_text_checked": [
+    "hep-th-9808041v4-source.tex.gz: gzip-compressed TeX source; superconformal transformations and inversion definitions",
+    "hep-th-9903230v3-source.tar: superspace, Killing equation, special transformations, superinversion"
+  ],
+  "convention_imported": false,
+  "formula_imported_into_contracts": false
+}
