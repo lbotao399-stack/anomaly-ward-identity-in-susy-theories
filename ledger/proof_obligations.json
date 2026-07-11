@@ -39,7 +39,13 @@
     },
     {
       "id": "CONTRACT-WEINBERG-SREDNICKI-CODEX-DICTIONARY-001",
-      "state": "SPECIFIED",
+      "state": "ACCEPTED",
+      "blocking_reason": null,
+      "task": "tasks/archive/CONTRACT-WEINBERG-SREDNICKI-CODEX-DICTIONARY-001.yaml"
+    },
+    {
+      "id": "MIRROR-WEINBERG-SREDNICKI-DICTIONARY-NOTION-001",
+      "state": "ACCEPTED",
       "blocking_reason": null,
       "task": "tasks/CURRENT.yaml"
     }
