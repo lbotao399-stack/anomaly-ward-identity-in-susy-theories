@@ -84,7 +84,7 @@
       "state": "SPECIFIED",
       "blocking_reason": null,
       "task_sha256": "f76e1975617e6a703efda4413a67760bf55d84e22fb3a7a6289d3b890ff3eb6e",
-      "task": "tasks/CURRENT.yaml"
+      "task": "tasks/pending/CONTRACT-STEP-04-EXTENDED-SUPER-YANG-MILLS-001.yaml"
     },
     {
       "id": "REFERENCE-IMPORT-SUPERSPACE-1001-VECTOR-REPRESENTATION-001",
@@ -103,6 +103,12 @@
       "state": "ACCEPTED",
       "blocking_reason": null,
       "task": "tasks/archive/MIRROR-STEP-03C-NOTION-001.yaml"
+    },
+    {
+      "id": "CONTRACT-STEP-03D-N1-SUPERFIELD-PATH-INTEGRAL-BV-BRST-001",
+      "state": "SPECIFIED",
+      "blocking_reason": null,
+      "task": "tasks/CURRENT.yaml"
     }
   ]
 }
