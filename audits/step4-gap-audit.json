@@ -1,0 +1,91 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-04-EXTENDED-SUPER-YANG-MILLS-001",
+  "scope": "Pure N=1, N=2, and N=4 super Yang-Mills in Lorentzian and Euclidean signatures, in N=1 superspace and components, including supersymmetry closure and Noether currents",
+  "proof_obligations": [
+    {
+      "id": "COMMON_NOTATION",
+      "equations": "4.1-4.42",
+      "result": "PASS"
+    },
+    {
+      "id": "N1_ACTION_TRANSFORMATIONS_CLOSURE",
+      "equations": "4A.1-4A.32",
+      "result": "PASS"
+    },
+    {
+      "id": "N1_NOETHER_BOTH_SIGNATURES",
+      "equations": "4A.33-4A.56e",
+      "result": "PASS"
+    },
+    {
+      "id": "N2_ACTION_AND_EIGHT_COMPONENT_RULES",
+      "equations": "4B.0-4B.35c",
+      "result": "PASS"
+    },
+    {
+      "id": "N2_FREE_AND_NONABELIAN_CLOSURE",
+      "equations": "4B.42-4B.46c",
+      "result": "PASS"
+    },
+    {
+      "id": "N2_OFFSHELL_SU2_R_TRIPLET",
+      "equations": "4B.33L1-4B.33L7",
+      "result": "BLOCKED_OFFSHELL_SU2_R_PACKAGING",
+      "reason": "Within the declared linear invertible doublet/triplet ansatz, the manifest gaugino slots require gamma c=-i s while the symmetric auxiliary derivative slots require gamma c=+i s for invertible s; nonlinear or field-dependent alternatives are outside this gate."
+    },
+    {
+      "id": "N2_ONSHELL_SU2_R_BOUNDARY",
+      "equations": "4B.33L7a-4B.33L7b",
+      "result": "PASS",
+      "scope": "componentwise SU(2)_R-covariant rewriting only; on-shell algebra closure is not claimed"
+    },
+    {
+      "id": "N2_NOETHER_BOTH_SIGNATURES",
+      "equations": "4B.47-4B.58",
+      "result": "PASS"
+    },
+    {
+      "id": "N4_ACTION_TRANSFORMATIONS_CLOSURE",
+      "equations": "4C.1-4C.57",
+      "result": "PASS"
+    },
+    {
+      "id": "N4_NOETHER_BOTH_SIGNATURES",
+      "equations": "4C.58-4C.71",
+      "result": "PASS"
+    },
+    {
+      "id": "THREE_WAY_DICTIONARY",
+      "equations": "D4.1-D4.6",
+      "result": "PASS"
+    }
+  ],
+  "resolved_findings": [
+    {
+      "priority": "P1",
+      "issue": "N1 initially lacked the Euclidean Euler and current-divergence surface.",
+      "resolution": "Added the compact Euclidean density, Euler operators, Bianchi reduction, and both current divergences.",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "issue": "N2 initially asserted relative-metric equations and Noether reduction without the generating monomials.",
+      "resolution": "Displayed the linear closure monomial, both kinetic cancellation monomials, the complete product-rule divergence, and its sigma, Bianchi, trace, and Jacobi reductions.",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "issue": "N4 initially defined boundary coefficients through the desired current and skipped the fermion EOM reduction.",
+      "resolution": "Derived all four boundary coefficients sector by sector and added the two-chirality closure reduction ledger plus exact coefficient checks.",
+      "status": "RESOLVED"
+    }
+  ],
+  "post_resolution": {
+    "P0": [],
+    "P1": [
+      "N2_OFFSHELL_SU2_R_TRIPLET"
+    ]
+  },
+  "result": "BLOCKED_OFFSHELL_SU2_R_PACKAGING"
+}

@@ -1,0 +1,77 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-04-EXTENDED-SUPER-YANG-MILLS-001",
+  "contracts": [
+    "contracts/foundations/step-04-extended-sym-notation.md",
+    "contracts/foundations/step-04a-n1-super-yang-mills.md",
+    "contracts/foundations/step-04b-n2-super-yang-mills.md",
+    "contracts/foundations/step-04c-n4-super-yang-mills.md"
+  ],
+  "checks": [
+    {
+      "id": "SIGNATURE_AND_SPINOR_DOMAINS",
+      "result": "PASS",
+      "locked": "mu,nu are Lorentzian; m,n are Euclidean; a,dot a are Weyl slots; every Wick phase is typed by signature"
+    },
+    {
+      "id": "ADJOINT_VARIANCE",
+      "result": "PASS",
+      "locked": "mu_A=tildephi_B(T_A^ad)^B_C phi^C, mu^A=kappa^{AB}mu_B, and H^A=D^A+mu^A"
+    },
+    {
+      "id": "GAUGE_BRACKETS",
+      "result": "PASS",
+      "locked": "double bracket=i times cross product; D_M=partial_M-i double bracket(A_M,.)"
+    },
+    {
+      "id": "N2_PARAMETER_BASIS",
+      "result": "PASS",
+      "locked": "i=1,2 labels manifest and hidden parameters off shell; no SU(2)_R tensor claim survives the exact triplet no-go"
+    },
+    {
+      "id": "N2_REALITY_AND_AUXILIARIES",
+      "result": "PASS",
+      "locked": "Lorentz tilded fields are daggers; Euclidean tilded fields are independent; F,tildeF,H are displayed separately"
+    },
+    {
+      "id": "N4_SU4_PACKAGING",
+      "result": "PASS",
+      "locked": "Lambda^4=lambda, Lambda^r=psi_r, barLambda_L and tildeLambda_E slots are explicit, and tildevarphi is the Hodge dual of varphi"
+    },
+    {
+      "id": "NOETHER_LABEL_TYPE",
+      "result": "PASS",
+      "locked": "mathsf s labels a supersymmetry generator and is disjoint from adjoint indices A,B,C"
+    },
+    {
+      "id": "STRICT_EQUALITY_AND_RENDERING",
+      "result": "PASS",
+      "locked": "equation tags are unique; display delimiters are balanced; no sim, approx, propto, or control character occurs"
+    }
+  ],
+  "resolved_findings": [
+    {
+      "priority": "P1",
+      "issue": "The first common ledger assigned an upper adjoint label to a lower-index moment-map definition.",
+      "resolution": "Defined mu_A first and raised it only with kappa^{AB}.",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "issue": "The first N4 ledger omitted the N=1-component map of the right-handed SU(4) fermion slots.",
+      "resolution": "Added explicit Lorentzian barLambda and Euclidean tildeLambda component maps.",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P2",
+      "issue": "The generic Noether label reused the adjoint index A.",
+      "resolution": "Renamed the generic supersymmetry-generator label to mathsf s.",
+      "status": "RESOLVED"
+    }
+  ],
+  "post_resolution": {
+    "P0": [],
+    "P1": []
+  },
+  "result": "PASS"
+}

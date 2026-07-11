@@ -1,0 +1,887 @@
+{
+  "checks": {
+    "constant_su2_nonabelian_interaction_closure": {
+      "passed": true,
+      "residual_classification": {
+        "failed_color_entries_by_object": {},
+        "parameter_monomials_by_sector": {},
+        "residual_monomial_count": 0
+      },
+      "residual_count": 0,
+      "residuals": [],
+      "scope": "Exact c_AB^C=epsilon_AB^C, A_mu=partial_mu(field)=0 covariant-jet gate.  It retains delta(D_mu X)=(delta A_mu) cross X and checks A_mu, phi, tildephi, all fermions, F, tildeF, D, mu, H, and Y_ij."
+    },
+    "euclidean_free_all_field_closure": {
+      "passed": true,
+      "residual_count": 0,
+      "residuals": []
+    },
+    "lorentz_free_all_field_closure": {
+      "passed": true,
+      "residual_count": 0,
+      "residuals": []
+    },
+    "offshell_su2_r_triplet_gate": {
+      "ansatz": {
+        "auxiliary": "Y_11=a F, Y_22=b tildeF, Y_12=c H",
+        "doublet": "chi_1=psi, chi_2=s lambda, zeta^1=epsilon, zeta^2=s^(-1) eta",
+        "invertibility": "s != 0 and a b c != 0"
+      },
+      "conclusion": "residual*s=0 contradicts s!=0",
+      "derived_exact_coefficients": {
+        "gamma_c_over_s_from_triplet": "i",
+        "residual_coefficient_of_s": "2i"
+      },
+      "equations": {
+        "gaugino": "gamma*c/s=-i",
+        "symmetric_triplet": "gamma*c/s=i"
+      },
+      "extracted_exact_slot_coefficients": {
+        "A_over_a_from_delta_F": "i sqrt(2)",
+        "Dlambda_field_first": "-1",
+        "Dlambda_parameter_first": "1",
+        "c_over_A_s_from_symmetric_Y12": "-1/2",
+        "gamma_c_over_s_from_gaugino": "-i",
+        "gamma_times_a": "-sqrt(2)"
+      },
+      "extraction_handles": {
+        "D_from_lambda0": "1b0,p1000",
+        "F_from_psi0": "1b0,p1000",
+        "lambda0_from_D": "1e0,p0000",
+        "psi0_from_F": "1e0,p0000"
+      },
+      "on_shell_boundary": "After F=tildeF=H=0 the displayed physical-field rules admit a componentwise SU(2)_R-covariant rewriting.  On-shell algebra closure was not machine-checked and is not claimed.",
+      "passed": false,
+      "residual_count": 1,
+      "scope_boundary": "This gate excludes only the declared linear invertible doublet/triplet packaging.  It does not exclude nonlinear or field-dependent alternatives."
+    },
+    "omega_sign_and_normalization_solution": {
+      "all_solution_branches": [
+        {
+          "dotted_term_multiplier": "1",
+          "undotted_term_multiplier": "1"
+        }
+      ],
+      "inconsistent": false,
+      "interpretation": "Scalar closure independently fixes both terms of Omega_12 to their displayed sign and normalization.",
+      "passed": true,
+      "rank": 2,
+      "residual_count": 0,
+      "solution_branch_count": 1
+    },
+    "simultaneous_nonlinear_coefficient_solution": {
+      "all_solution_branches": [
+        {
+          "hidden_D_left_over_sqrt2": "2",
+          "hidden_D_right_over_sqrt2": "2",
+          "hidden_F_over_i": "2",
+          "hidden_tF_over_i": "2",
+          "manifest_F_over_i": "-2",
+          "manifest_tF_over_i": "-2",
+          "psi_mu_over_i": "-2",
+          "tpsi_mu_over_i": "2"
+        }
+      ],
+      "equation_count_after_exact_deduplication": 36,
+      "full_field_candidate_residual_count": 0,
+      "inconsistent": false,
+      "interpretation": "The fermion subsystem has full rank eight.  Its unique candidate is the displayed coefficient vector, and that candidate has zero residual on A_mu, scalars, all fermions, F, tildeF, D, mu, H, and Y_ij.",
+      "passed": true,
+      "rank": 8,
+      "residual_count": 0,
+      "solution_branch_count": 1
+    }
+  },
+  "constant_su2_interaction_closure_claimed": true,
+  "diagnostics": {
+    "parameter_gauge_covariance": {
+      "additional_compensator_action_on_parameters": "rejected",
+      "reason": "The exact rank-eight solution already fixes the Wess-Zumino compensator-induced nonlinear coefficients; a gauge action on the constant supersymmetry parameters would violate their singlet type.",
+      "supersymmetry_parameters_are_gauge_singlets": true
+    },
+    "rejected_noncovariant_constant_quotient": {
+      "classification": {
+        "failed_color_entries_by_object": {
+          "D": 3,
+          "F": 3,
+          "H": 3,
+          "Y11": 3,
+          "Y12": 3,
+          "Y22": 3,
+          "lambda0": 3,
+          "lambda1": 3,
+          "psi0": 3,
+          "psi1": 3,
+          "tF": 3,
+          "tlambda0": 3,
+          "tlambda1": 3,
+          "tpsi0": 3,
+          "tpsi1": 3
+        },
+        "parameter_monomials_by_sector": {
+          "b1*e2": 144,
+          "b1*m2": 48,
+          "b1*n2": 216,
+          "b2*e1": 144,
+          "b2*m1": 48,
+          "b2*n1": 216,
+          "e1*m2": 216,
+          "e1*n2": 48,
+          "e2*m1": 216,
+          "e2*n1": 48,
+          "m1*n2": 144,
+          "m2*n1": 144
+        },
+        "residual_monomial_count": 1632
+      },
+      "failed_color_entry_count": 45,
+      "reason": "The quotient D_mu X=0 is not invariant under supersymmetry: delta(D_mu X)=(delta A_mu) cross X remains nonzero.  These residuals are therefore not closure obstructions.",
+      "rejected": true
+    },
+    "rejected_odd_leibniz_rule": {
+      "classification": {
+        "failed_color_entries_by_object": {
+          "D": 3,
+          "F": 3,
+          "H": 3,
+          "Y11": 3,
+          "Y12": 3,
+          "Y22": 3,
+          "lambda0": 3,
+          "lambda1": 3,
+          "mu": 3,
+          "phi": 3,
+          "psi0": 3,
+          "psi1": 3,
+          "tF": 3,
+          "tphi": 3,
+          "tpsi0": 3,
+          "tpsi1": 3
+        },
+        "parameter_monomials_by_sector": {
+          "b1*e2": 192,
+          "b1*m2": 288,
+          "b1*n2": 144,
+          "b2*e1": 192,
+          "b2*m1": 288,
+          "b2*n1": 144,
+          "e1*m2": 168,
+          "e1*n2": 222,
+          "e2*m1": 168,
+          "e2*n1": 222,
+          "m1*m2": 36,
+          "m1*n2": 216,
+          "m2*n1": 216,
+          "n1*n2": 36
+        },
+        "residual_monomial_count": 2532
+      },
+      "failed_color_entry_count": 48,
+      "reason": "The component transformation already includes its Grassmann-odd parameter and is therefore even.  Ordinary Leibniz is required; adding an odd-derivation sign destroys scalar and fermion closure.",
+      "rejected": true
+    },
+    "rejected_old_sign": {
+      "constant_covariant_interaction_classification": {
+        "failed_color_entries_by_object": {
+          "Y22": 3,
+          "tF": 3
+        },
+        "parameter_monomials_by_sector": {
+          "b1*e2": 48,
+          "b2*e1": 48,
+          "e1*m2": 48,
+          "e2*m1": 48
+        },
+        "residual_monomial_count": 192
+      },
+      "constant_covariant_interaction_residual_count": 6,
+      "constant_covariant_interaction_residuals": [
+        {
+          "color": 0,
+          "object": "tF",
+          "residual": {
+            "b10 e20 lambda1c1 tpsi1c2": "4sqrt(2)",
+            "b10 e20 lambda1c2 tpsi1c1": "-4sqrt(2)",
+            "b10 e21 lambda0c1 tpsi1c2": "-4sqrt(2)",
+            "b10 e21 lambda0c2 tpsi1c1": "4sqrt(2)",
+            "b11 e20 lambda1c1 tpsi0c2": "-4sqrt(2)",
+            "b11 e20 lambda1c2 tpsi0c1": "4sqrt(2)",
+            "b11 e21 lambda0c1 tpsi0c2": "4sqrt(2)",
+            "b11 e21 lambda0c2 tpsi0c1": "-4sqrt(2)",
+            "b20 e10 lambda1c1 tpsi1c2": "-4sqrt(2)",
+            "b20 e10 lambda1c2 tpsi1c1": "4sqrt(2)",
+            "b20 e11 lambda0c1 tpsi1c2": "4sqrt(2)",
+            "b20 e11 lambda0c2 tpsi1c1": "-4sqrt(2)",
+            "b21 e10 lambda1c1 tpsi0c2": "4sqrt(2)",
+            "b21 e10 lambda1c2 tpsi0c1": "-4sqrt(2)",
+            "b21 e11 lambda0c1 tpsi0c2": "-4sqrt(2)",
+            "b21 e11 lambda0c2 tpsi0c1": "4sqrt(2)",
+            "e10 m20 psi1c1 tpsi1c2": "-4sqrt(2)",
+            "e10 m20 psi1c2 tpsi1c1": "4sqrt(2)",
+            "e10 m21 psi1c1 tpsi0c2": "4sqrt(2)",
+            "e10 m21 psi1c2 tpsi0c1": "-4sqrt(2)",
+            "e11 m20 psi0c1 tpsi1c2": "4sqrt(2)",
+            "e11 m20 psi0c2 tpsi1c1": "-4sqrt(2)",
+            "e11 m21 psi0c1 tpsi0c2": "-4sqrt(2)",
+            "e11 m21 psi0c2 tpsi0c1": "4sqrt(2)",
+            "e20 m10 psi1c1 tpsi1c2": "4sqrt(2)",
+            "e20 m10 psi1c2 tpsi1c1": "-4sqrt(2)",
+            "e20 m11 psi1c1 tpsi0c2": "-4sqrt(2)",
+            "e20 m11 psi1c2 tpsi0c1": "4sqrt(2)",
+            "e21 m10 psi0c1 tpsi1c2": "-4sqrt(2)",
+            "e21 m10 psi0c2 tpsi1c1": "4sqrt(2)",
+            "e21 m11 psi0c1 tpsi0c2": "4sqrt(2)",
+            "e21 m11 psi0c2 tpsi0c1": "-4sqrt(2)"
+          }
+        },
+        {
+          "color": 1,
+          "object": "tF",
+          "residual": {
+            "b10 e20 lambda1c0 tpsi1c2": "-4sqrt(2)",
+            "b10 e20 lambda1c2 tpsi1c0": "4sqrt(2)",
+            "b10 e21 lambda0c0 tpsi1c2": "4sqrt(2)",
+            "b10 e21 lambda0c2 tpsi1c0": "-4sqrt(2)",
+            "b11 e20 lambda1c0 tpsi0c2": "4sqrt(2)",
+            "b11 e20 lambda1c2 tpsi0c0": "-4sqrt(2)",
+            "b11 e21 lambda0c0 tpsi0c2": "-4sqrt(2)",
+            "b11 e21 lambda0c2 tpsi0c0": "4sqrt(2)",
+            "b20 e10 lambda1c0 tpsi1c2": "4sqrt(2)",
+            "b20 e10 lambda1c2 tpsi1c0": "-4sqrt(2)",
+            "b20 e11 lambda0c0 tpsi1c2": "-4sqrt(2)",
+            "b20 e11 lambda0c2 tpsi1c0": "4sqrt(2)",
+            "b21 e10 lambda1c0 tpsi0c2": "-4sqrt(2)",
+            "b21 e10 lambda1c2 tpsi0c0": "4sqrt(2)",
+            "b21 e11 lambda0c0 tpsi0c2": "4sqrt(2)",
+            "b21 e11 lambda0c2 tpsi0c0": "-4sqrt(2)",
+            "e10 m20 psi1c0 tpsi1c2": "4sqrt(2)",
+            "e10 m20 psi1c2 tpsi1c0": "-4sqrt(2)",
+            "e10 m21 psi1c0 tpsi0c2": "-4sqrt(2)",
+            "e10 m21 psi1c2 tpsi0c0": "4sqrt(2)",
+            "e11 m20 psi0c0 tpsi1c2": "-4sqrt(2)",
+            "e11 m20 psi0c2 tpsi1c0": "4sqrt(2)",
+            "e11 m21 psi0c0 tpsi0c2": "4sqrt(2)",
+            "e11 m21 psi0c2 tpsi0c0": "-4sqrt(2)",
+            "e20 m10 psi1c0 tpsi1c2": "-4sqrt(2)",
+            "e20 m10 psi1c2 tpsi1c0": "4sqrt(2)",
+            "e20 m11 psi1c0 tpsi0c2": "4sqrt(2)",
+            "e20 m11 psi1c2 tpsi0c0": "-4sqrt(2)",
+            "e21 m10 psi0c0 tpsi1c2": "4sqrt(2)",
+            "e21 m10 psi0c2 tpsi1c0": "-4sqrt(2)",
+            "e21 m11 psi0c0 tpsi0c2": "-4sqrt(2)",
+            "e21 m11 psi0c2 tpsi0c0": "4sqrt(2)"
+          }
+        },
+        {
+          "color": 2,
+          "object": "tF",
+          "residual": {
+            "b10 e20 lambda1c0 tpsi1c1": "4sqrt(2)",
+            "b10 e20 lambda1c1 tpsi1c0": "-4sqrt(2)",
+            "b10 e21 lambda0c0 tpsi1c1": "-4sqrt(2)",
+            "b10 e21 lambda0c1 tpsi1c0": "4sqrt(2)",
+            "b11 e20 lambda1c0 tpsi0c1": "-4sqrt(2)",
+            "b11 e20 lambda1c1 tpsi0c0": "4sqrt(2)",
+            "b11 e21 lambda0c0 tpsi0c1": "4sqrt(2)",
+            "b11 e21 lambda0c1 tpsi0c0": "-4sqrt(2)",
+            "b20 e10 lambda1c0 tpsi1c1": "-4sqrt(2)",
+            "b20 e10 lambda1c1 tpsi1c0": "4sqrt(2)",
+            "b20 e11 lambda0c0 tpsi1c1": "4sqrt(2)",
+            "b20 e11 lambda0c1 tpsi1c0": "-4sqrt(2)",
+            "b21 e10 lambda1c0 tpsi0c1": "4sqrt(2)",
+            "b21 e10 lambda1c1 tpsi0c0": "-4sqrt(2)",
+            "b21 e11 lambda0c0 tpsi0c1": "-4sqrt(2)",
+            "b21 e11 lambda0c1 tpsi0c0": "4sqrt(2)",
+            "e10 m20 psi1c0 tpsi1c1": "-4sqrt(2)",
+            "e10 m20 psi1c1 tpsi1c0": "4sqrt(2)",
+            "e10 m21 psi1c0 tpsi0c1": "4sqrt(2)",
+            "e10 m21 psi1c1 tpsi0c0": "-4sqrt(2)",
+            "e11 m20 psi0c0 tpsi1c1": "4sqrt(2)",
+            "e11 m20 psi0c1 tpsi1c0": "-4sqrt(2)",
+            "e11 m21 psi0c0 tpsi0c1": "-4sqrt(2)",
+            "e11 m21 psi0c1 tpsi0c0": "4sqrt(2)",
+            "e20 m10 psi1c0 tpsi1c1": "4sqrt(2)",
+            "e20 m10 psi1c1 tpsi1c0": "-4sqrt(2)",
+            "e20 m11 psi1c0 tpsi0c1": "-4sqrt(2)",
+            "e20 m11 psi1c1 tpsi0c0": "4sqrt(2)",
+            "e21 m10 psi0c0 tpsi1c1": "-4sqrt(2)",
+            "e21 m10 psi0c1 tpsi1c0": "4sqrt(2)",
+            "e21 m11 psi0c0 tpsi0c1": "4sqrt(2)",
+            "e21 m11 psi0c1 tpsi0c0": "-4sqrt(2)"
+          }
+        },
+        {
+          "color": 0,
+          "object": "Y22",
+          "residual": {
+            "b10 e20 lambda1c1 tpsi1c2": "-8",
+            "b10 e20 lambda1c2 tpsi1c1": "8",
+            "b10 e21 lambda0c1 tpsi1c2": "8",
+            "b10 e21 lambda0c2 tpsi1c1": "-8",
+            "b11 e20 lambda1c1 tpsi0c2": "8",
+            "b11 e20 lambda1c2 tpsi0c1": "-8",
+            "b11 e21 lambda0c1 tpsi0c2": "-8",
+            "b11 e21 lambda0c2 tpsi0c1": "8",
+            "b20 e10 lambda1c1 tpsi1c2": "8",
+            "b20 e10 lambda1c2 tpsi1c1": "-8",
+            "b20 e11 lambda0c1 tpsi1c2": "-8",
+            "b20 e11 lambda0c2 tpsi1c1": "8",
+            "b21 e10 lambda1c1 tpsi0c2": "-8",
+            "b21 e10 lambda1c2 tpsi0c1": "8",
+            "b21 e11 lambda0c1 tpsi0c2": "8",
+            "b21 e11 lambda0c2 tpsi0c1": "-8",
+            "e10 m20 psi1c1 tpsi1c2": "8",
+            "e10 m20 psi1c2 tpsi1c1": "-8",
+            "e10 m21 psi1c1 tpsi0c2": "-8",
+            "e10 m21 psi1c2 tpsi0c1": "8",
+            "e11 m20 psi0c1 tpsi1c2": "-8",
+            "e11 m20 psi0c2 tpsi1c1": "8",
+            "e11 m21 psi0c1 tpsi0c2": "8",
+            "e11 m21 psi0c2 tpsi0c1": "-8",
+            "e20 m10 psi1c1 tpsi1c2": "-8",
+            "e20 m10 psi1c2 tpsi1c1": "8",
+            "e20 m11 psi1c1 tpsi0c2": "8",
+            "e20 m11 psi1c2 tpsi0c1": "-8",
+            "e21 m10 psi0c1 tpsi1c2": "8",
+            "e21 m10 psi0c2 tpsi1c1": "-8",
+            "e21 m11 psi0c1 tpsi0c2": "-8",
+            "e21 m11 psi0c2 tpsi0c1": "8"
+          }
+        },
+        {
+          "color": 1,
+          "object": "Y22",
+          "residual": {
+            "b10 e20 lambda1c0 tpsi1c2": "8",
+            "b10 e20 lambda1c2 tpsi1c0": "-8",
+            "b10 e21 lambda0c0 tpsi1c2": "-8",
+            "b10 e21 lambda0c2 tpsi1c0": "8",
+            "b11 e20 lambda1c0 tpsi0c2": "-8",
+            "b11 e20 lambda1c2 tpsi0c0": "8",
+            "b11 e21 lambda0c0 tpsi0c2": "8",
+            "b11 e21 lambda0c2 tpsi0c0": "-8",
+            "b20 e10 lambda1c0 tpsi1c2": "-8",
+            "b20 e10 lambda1c2 tpsi1c0": "8",
+            "b20 e11 lambda0c0 tpsi1c2": "8",
+            "b20 e11 lambda0c2 tpsi1c0": "-8",
+            "b21 e10 lambda1c0 tpsi0c2": "8",
+            "b21 e10 lambda1c2 tpsi0c0": "-8",
+            "b21 e11 lambda0c0 tpsi0c2": "-8",
+            "b21 e11 lambda0c2 tpsi0c0": "8",
+            "e10 m20 psi1c0 tpsi1c2": "-8",
+            "e10 m20 psi1c2 tpsi1c0": "8",
+            "e10 m21 psi1c0 tpsi0c2": "8",
+            "e10 m21 psi1c2 tpsi0c0": "-8",
+            "e11 m20 psi0c0 tpsi1c2": "8",
+            "e11 m20 psi0c2 tpsi1c0": "-8",
+            "e11 m21 psi0c0 tpsi0c2": "-8",
+            "e11 m21 psi0c2 tpsi0c0": "8",
+            "e20 m10 psi1c0 tpsi1c2": "8",
+            "e20 m10 psi1c2 tpsi1c0": "-8",
+            "e20 m11 psi1c0 tpsi0c2": "-8",
+            "e20 m11 psi1c2 tpsi0c0": "8",
+            "e21 m10 psi0c0 tpsi1c2": "-8",
+            "e21 m10 psi0c2 tpsi1c0": "8",
+            "e21 m11 psi0c0 tpsi0c2": "8",
+            "e21 m11 psi0c2 tpsi0c0": "-8"
+          }
+        },
+        {
+          "color": 2,
+          "object": "Y22",
+          "residual": {
+            "b10 e20 lambda1c0 tpsi1c1": "-8",
+            "b10 e20 lambda1c1 tpsi1c0": "8",
+            "b10 e21 lambda0c0 tpsi1c1": "8",
+            "b10 e21 lambda0c1 tpsi1c0": "-8",
+            "b11 e20 lambda1c0 tpsi0c1": "8",
+            "b11 e20 lambda1c1 tpsi0c0": "-8",
+            "b11 e21 lambda0c0 tpsi0c1": "-8",
+            "b11 e21 lambda0c1 tpsi0c0": "8",
+            "b20 e10 lambda1c0 tpsi1c1": "8",
+            "b20 e10 lambda1c1 tpsi1c0": "-8",
+            "b20 e11 lambda0c0 tpsi1c1": "-8",
+            "b20 e11 lambda0c1 tpsi1c0": "8",
+            "b21 e10 lambda1c0 tpsi0c1": "-8",
+            "b21 e10 lambda1c1 tpsi0c0": "8",
+            "b21 e11 lambda0c0 tpsi0c1": "8",
+            "b21 e11 lambda0c1 tpsi0c0": "-8",
+            "e10 m20 psi1c0 tpsi1c1": "8",
+            "e10 m20 psi1c1 tpsi1c0": "-8",
+            "e10 m21 psi1c0 tpsi0c1": "-8",
+            "e10 m21 psi1c1 tpsi0c0": "8",
+            "e11 m20 psi0c0 tpsi1c1": "-8",
+            "e11 m20 psi0c1 tpsi1c0": "8",
+            "e11 m21 psi0c0 tpsi0c1": "8",
+            "e11 m21 psi0c1 tpsi0c0": "-8",
+            "e20 m10 psi1c0 tpsi1c1": "-8",
+            "e20 m10 psi1c1 tpsi1c0": "8",
+            "e20 m11 psi1c0 tpsi0c1": "8",
+            "e20 m11 psi1c1 tpsi0c0": "-8",
+            "e21 m10 psi0c0 tpsi1c1": "8",
+            "e21 m10 psi0c1 tpsi1c0": "-8",
+            "e21 m11 psi0c0 tpsi0c1": "-8",
+            "e21 m11 psi0c1 tpsi0c0": "8"
+          }
+        }
+      ],
+      "interpretation": "The accepted correction is required: restoring the old sign reproduces both the exact free-closure obstruction and a tildeF/Y22 interaction obstruction.",
+      "passed": false,
+      "replacement": "restore the rejected old coefficient delta_1 tildeF = -i sqrt(2) epsilon sigma_L^mu D_mu tildepsi",
+      "residual_count": 14,
+      "residuals": [
+        {
+          "input": "tpsi0",
+          "output": "lambda0",
+          "residual": {
+            "1e0 2n0": {
+              "p0001": "4i",
+              "p1000": "-4i"
+            },
+            "1e1 2n0": {
+              "p0010": "4",
+              "p0100": "4i"
+            },
+            "1n0 2e0": {
+              "p0001": "4i",
+              "p1000": "-4i"
+            },
+            "1n0 2e1": {
+              "p0010": "4",
+              "p0100": "4i"
+            }
+          }
+        },
+        {
+          "input": "tpsi1",
+          "output": "lambda0",
+          "residual": {
+            "1e0 2n0": {
+              "p0010": "-4",
+              "p0100": "4i"
+            },
+            "1e1 2n0": {
+              "p0001": "-4i",
+              "p1000": "-4i"
+            },
+            "1n0 2e0": {
+              "p0010": "-4",
+              "p0100": "4i"
+            },
+            "1n0 2e1": {
+              "p0001": "-4i",
+              "p1000": "-4i"
+            }
+          }
+        },
+        {
+          "input": "tpsi0",
+          "output": "lambda1",
+          "residual": {
+            "1e0 2n1": {
+              "p0001": "4i",
+              "p1000": "-4i"
+            },
+            "1e1 2n1": {
+              "p0010": "4",
+              "p0100": "4i"
+            },
+            "1n1 2e0": {
+              "p0001": "4i",
+              "p1000": "-4i"
+            },
+            "1n1 2e1": {
+              "p0010": "4",
+              "p0100": "4i"
+            }
+          }
+        },
+        {
+          "input": "tpsi1",
+          "output": "lambda1",
+          "residual": {
+            "1e0 2n1": {
+              "p0010": "-4",
+              "p0100": "4i"
+            },
+            "1e1 2n1": {
+              "p0001": "-4i",
+              "p1000": "-4i"
+            },
+            "1n1 2e0": {
+              "p0010": "-4",
+              "p0100": "4i"
+            },
+            "1n1 2e1": {
+              "p0001": "-4i",
+              "p1000": "-4i"
+            }
+          }
+        },
+        {
+          "input": "tpsi0",
+          "output": "tpsi0",
+          "residual": {
+            "1b0 2e0": {
+              "p0001": "4i",
+              "p1000": "-4i"
+            },
+            "1b0 2e1": {
+              "p0010": "4",
+              "p0100": "4i"
+            },
+            "1e0 2b0": {
+              "p0001": "4i",
+              "p1000": "-4i"
+            },
+            "1e1 2b0": {
+              "p0010": "4",
+              "p0100": "4i"
+            }
+          }
+        },
+        {
+          "input": "tpsi1",
+          "output": "tpsi0",
+          "residual": {
+            "1b0 2e0": {
+              "p0010": "-4",
+              "p0100": "4i"
+            },
+            "1b0 2e1": {
+              "p0001": "-4i",
+              "p1000": "-4i"
+            },
+            "1e0 2b0": {
+              "p0010": "-4",
+              "p0100": "4i"
+            },
+            "1e1 2b0": {
+              "p0001": "-4i",
+              "p1000": "-4i"
+            }
+          }
+        },
+        {
+          "input": "tpsi0",
+          "output": "tpsi1",
+          "residual": {
+            "1b1 2e0": {
+              "p0001": "4i",
+              "p1000": "-4i"
+            },
+            "1b1 2e1": {
+              "p0010": "4",
+              "p0100": "4i"
+            },
+            "1e0 2b1": {
+              "p0001": "4i",
+              "p1000": "-4i"
+            },
+            "1e1 2b1": {
+              "p0010": "4",
+              "p0100": "4i"
+            }
+          }
+        },
+        {
+          "input": "tpsi1",
+          "output": "tpsi1",
+          "residual": {
+            "1b1 2e0": {
+              "p0010": "-4",
+              "p0100": "4i"
+            },
+            "1b1 2e1": {
+              "p0001": "-4i",
+              "p1000": "-4i"
+            },
+            "1e0 2b1": {
+              "p0010": "-4",
+              "p0100": "4i"
+            },
+            "1e1 2b1": {
+              "p0001": "-4i",
+              "p1000": "-4i"
+            }
+          }
+        },
+        {
+          "input": "A0",
+          "output": "tF",
+          "residual": {
+            "1e0 2m0": {
+              "p0002": "2i sqrt(2)",
+              "p0020": "2i sqrt(2)",
+              "p0200": "2i sqrt(2)",
+              "p1001": "-2i sqrt(2)"
+            },
+            "1e0 2m1": {
+              "p1010": "2sqrt(2)",
+              "p1100": "-2i sqrt(2)"
+            },
+            "1e1 2m0": {
+              "p1010": "-2sqrt(2)",
+              "p1100": "-2i sqrt(2)"
+            },
+            "1e1 2m1": {
+              "p0002": "2i sqrt(2)",
+              "p0020": "2i sqrt(2)",
+              "p0200": "2i sqrt(2)",
+              "p1001": "2i sqrt(2)"
+            },
+            "1m0 2e0": {
+              "p0002": "2i sqrt(2)",
+              "p0020": "2i sqrt(2)",
+              "p0200": "2i sqrt(2)",
+              "p1001": "-2i sqrt(2)"
+            },
+            "1m0 2e1": {
+              "p1010": "-2sqrt(2)",
+              "p1100": "-2i sqrt(2)"
+            },
+            "1m1 2e0": {
+              "p1010": "2sqrt(2)",
+              "p1100": "-2i sqrt(2)"
+            },
+            "1m1 2e1": {
+              "p0002": "2i sqrt(2)",
+              "p0020": "2i sqrt(2)",
+              "p0200": "2i sqrt(2)",
+              "p1001": "2i sqrt(2)"
+            }
+          }
+        },
+        {
+          "input": "A1",
+          "output": "tF",
+          "residual": {
+            "1e0 2m0": {
+              "p0101": "2i sqrt(2)",
+              "p1100": "-2i sqrt(2)"
+            },
+            "1e0 2m1": {
+              "p0002": "-2i sqrt(2)",
+              "p0020": "-2i sqrt(2)",
+              "p0110": "-2sqrt(2)",
+              "p2000": "2i sqrt(2)"
+            },
+            "1e1 2m0": {
+              "p0002": "-2i sqrt(2)",
+              "p0020": "-2i sqrt(2)",
+              "p0110": "2sqrt(2)",
+              "p2000": "2i sqrt(2)"
+            },
+            "1e1 2m1": {
+              "p0101": "-2i sqrt(2)",
+              "p1100": "-2i sqrt(2)"
+            },
+            "1m0 2e0": {
+              "p0101": "2i sqrt(2)",
+              "p1100": "-2i sqrt(2)"
+            },
+            "1m0 2e1": {
+              "p0002": "-2i sqrt(2)",
+              "p0020": "-2i sqrt(2)",
+              "p0110": "2sqrt(2)",
+              "p2000": "2i sqrt(2)"
+            },
+            "1m1 2e0": {
+              "p0002": "-2i sqrt(2)",
+              "p0020": "-2i sqrt(2)",
+              "p0110": "-2sqrt(2)",
+              "p2000": "2i sqrt(2)"
+            },
+            "1m1 2e1": {
+              "p0101": "-2i sqrt(2)",
+              "p1100": "-2i sqrt(2)"
+            }
+          }
+        },
+        {
+          "input": "A2",
+          "output": "tF",
+          "residual": {
+            "1e0 2m0": {
+              "p0011": "2i sqrt(2)",
+              "p1010": "-2i sqrt(2)"
+            },
+            "1e0 2m1": {
+              "p0002": "2sqrt(2)",
+              "p0110": "2i sqrt(2)",
+              "p0200": "2sqrt(2)",
+              "p2000": "-2sqrt(2)"
+            },
+            "1e1 2m0": {
+              "p0002": "-2sqrt(2)",
+              "p0110": "2i sqrt(2)",
+              "p0200": "-2sqrt(2)",
+              "p2000": "2sqrt(2)"
+            },
+            "1e1 2m1": {
+              "p0011": "-2i sqrt(2)",
+              "p1010": "-2i sqrt(2)"
+            },
+            "1m0 2e0": {
+              "p0011": "2i sqrt(2)",
+              "p1010": "-2i sqrt(2)"
+            },
+            "1m0 2e1": {
+              "p0002": "-2sqrt(2)",
+              "p0110": "2i sqrt(2)",
+              "p0200": "-2sqrt(2)",
+              "p2000": "2sqrt(2)"
+            },
+            "1m1 2e0": {
+              "p0002": "2sqrt(2)",
+              "p0110": "2i sqrt(2)",
+              "p0200": "2sqrt(2)",
+              "p2000": "-2sqrt(2)"
+            },
+            "1m1 2e1": {
+              "p0011": "-2i sqrt(2)",
+              "p1010": "-2i sqrt(2)"
+            }
+          }
+        },
+        {
+          "input": "A3",
+          "output": "tF",
+          "residual": {
+            "1e0 2m0": {
+              "p0020": "-2i sqrt(2)",
+              "p0200": "-2i sqrt(2)",
+              "p1001": "-2i sqrt(2)",
+              "p2000": "2i sqrt(2)"
+            },
+            "1e0 2m1": {
+              "p0011": "-2sqrt(2)",
+              "p0101": "2i sqrt(2)"
+            },
+            "1e1 2m0": {
+              "p0011": "2sqrt(2)",
+              "p0101": "2i sqrt(2)"
+            },
+            "1e1 2m1": {
+              "p0020": "2i sqrt(2)",
+              "p0200": "2i sqrt(2)",
+              "p1001": "-2i sqrt(2)",
+              "p2000": "-2i sqrt(2)"
+            },
+            "1m0 2e0": {
+              "p0020": "-2i sqrt(2)",
+              "p0200": "-2i sqrt(2)",
+              "p1001": "-2i sqrt(2)",
+              "p2000": "2i sqrt(2)"
+            },
+            "1m0 2e1": {
+              "p0011": "2sqrt(2)",
+              "p0101": "2i sqrt(2)"
+            },
+            "1m1 2e0": {
+              "p0011": "-2sqrt(2)",
+              "p0101": "2i sqrt(2)"
+            },
+            "1m1 2e1": {
+              "p0020": "2i sqrt(2)",
+              "p0200": "2i sqrt(2)",
+              "p1001": "-2i sqrt(2)",
+              "p2000": "-2i sqrt(2)"
+            }
+          }
+        },
+        {
+          "input": "tF",
+          "output": "tF",
+          "residual": {
+            "1b0 2e0": {
+              "p0001": "4i",
+              "p1000": "-4i"
+            },
+            "1b0 2e1": {
+              "p0010": "4",
+              "p0100": "4i"
+            },
+            "1b1 2e0": {
+              "p0010": "-4",
+              "p0100": "4i"
+            },
+            "1b1 2e1": {
+              "p0001": "-4i",
+              "p1000": "-4i"
+            },
+            "1e0 2b0": {
+              "p0001": "4i",
+              "p1000": "-4i"
+            },
+            "1e0 2b1": {
+              "p0010": "-4",
+              "p0100": "4i"
+            },
+            "1e1 2b0": {
+              "p0010": "4",
+              "p0100": "4i"
+            },
+            "1e1 2b1": {
+              "p0001": "-4i",
+              "p1000": "-4i"
+            }
+          }
+        },
+        {
+          "input": "D",
+          "output": "tF",
+          "residual": {
+            "1e0 2m0": {
+              "p0001": "2sqrt(2)",
+              "p1000": "-2sqrt(2)"
+            },
+            "1e0 2m1": {
+              "p0010": "2i sqrt(2)",
+              "p0100": "2sqrt(2)"
+            },
+            "1e1 2m0": {
+              "p0010": "-2i sqrt(2)",
+              "p0100": "2sqrt(2)"
+            },
+            "1e1 2m1": {
+              "p0001": "-2sqrt(2)",
+              "p1000": "-2sqrt(2)"
+            },
+            "1m0 2e0": {
+              "p0001": "2sqrt(2)",
+              "p1000": "-2sqrt(2)"
+            },
+            "1m0 2e1": {
+              "p0010": "-2i sqrt(2)",
+              "p0100": "2sqrt(2)"
+            },
+            "1m1 2e0": {
+              "p0010": "2i sqrt(2)",
+              "p0100": "2sqrt(2)"
+            },
+            "1m1 2e1": {
+              "p0001": "-2sqrt(2)",
+              "p1000": "-2sqrt(2)"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "euclidean_free_closure_claimed": true,
+  "exact_rings": {
+    "free": "Q(i,sqrt(2))[p0,p1,p2,p3] tensor exterior(parameters)",
+    "interaction": "Q(i,sqrt(2))[commuting adjoint bosons] tensor exterior(parameters, adjoint fermions)"
+  },
+  "failure_count": 1,
+  "failures": [
+    "offshell_su2_r_triplet:manifest_slot_no_go"
+  ],
+  "nonabelian_full_covariant_closure_claimed": false,
+  "schema": 2,
+  "scope": "Exact free all-field Lorentzian/Euclidean closure plus exact Lorentzian constant-background SU(2) covariant-first-jet interaction closure.",
+  "status": "BLOCKED_OFFSHELL_SU2_R_PACKAGING",
+  "task": "CONTRACT-STEP-04-EXTENDED-SUPER-YANG-MILLS-001",
+  "unchecked_scope": "General-Lie-algebra non-Abelian closure with simultaneous covariant derivatives, field strength, and Jacobi reductions is not claimed by this verifier."
+}

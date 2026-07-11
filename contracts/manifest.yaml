@@ -44,6 +44,36 @@
       "path": "contracts/foundations/step-03b-component-reconstruction.md",
       "status": "DERIVED_UNFROZEN",
       "sha256": "4b3ae678463747cc78d3c7e594904647620d919eae769c5b5bfd16d5b556a75b"
+    },
+    {
+      "id": "FOUNDATION-EXTENDED-SYM-NOTATION-004",
+      "path": "contracts/foundations/step-04-extended-sym-notation.md",
+      "status": "DERIVED_UNFROZEN",
+      "sha256": "8212691c56fd8d10e3d6308c8b45115f633c907da09855512ea02a55a0989ef6"
+    },
+    {
+      "id": "FOUNDATION-N1-SUPER-YANG-MILLS-004A",
+      "path": "contracts/foundations/step-04a-n1-super-yang-mills.md",
+      "status": "DERIVED_UNFROZEN",
+      "sha256": "b2495f6a98c8cffe21ab2583b1955c81f5bb06af9b0edfb677fc0a3a3ee1fbc1"
+    },
+    {
+      "id": "FOUNDATION-N2-SUPER-YANG-MILLS-004B",
+      "path": "contracts/foundations/step-04b-n2-super-yang-mills.md",
+      "status": "BLOCKED_OFFSHELL_SU2_R_PACKAGING",
+      "sha256": "d1b5cfef297aebe5a8d569eaf1341b8b3f0f49c499f219d1d63740568ac8c8ae"
+    },
+    {
+      "id": "FOUNDATION-N4-SUPER-YANG-MILLS-004C",
+      "path": "contracts/foundations/step-04c-n4-super-yang-mills.md",
+      "status": "DERIVED_UNFROZEN",
+      "sha256": "890715bc3fc1bcdf81185a08ac2f6607ed3070414671d1bd290d63fef67991b7"
+    },
+    {
+      "id": "CONTRACT-STEP-04-EXTENDED-SYM-DICTIONARY-001",
+      "path": "contracts/dictionaries/step-04-extended-sym-weinberg-srednicki-dictionary.md",
+      "status": "DERIVED_UNFROZEN",
+      "sha256": "49a008e36906d1bbcee468ff1eb55bfcdcc05bb44fcc89320f9c9a811c98ae74"
     }
   ]
 }

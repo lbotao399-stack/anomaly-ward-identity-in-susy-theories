@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-04-EXTENDED-SUPER-YANG-MILLS-001",
+  "contracts": [
+    "contracts/foundations/step-04-extended-sym-notation.md",
+    "contracts/foundations/step-04a-n1-super-yang-mills.md",
+    "contracts/foundations/step-04b-n2-super-yang-mills.md",
+    "contracts/foundations/step-04c-n4-super-yang-mills.md",
+    "contracts/dictionaries/step-04-extended-sym-weinberg-srednicki-dictionary.md"
+  ],
+  "review_results": [
+    {
+      "scope": "Common notation, adjoint variance, Lorentzian reality, Euclidean independence, and Noether labels",
+      "result": "PASS"
+    },
+    {
+      "scope": "N=1 superspace projection, both component signatures, off-shell closure, and both Noether-current chiralities",
+      "result": "PASS"
+    },
+    {
+      "scope": "N=2 relative metric, all component slots, free and covariant-jet closure, coefficient uniqueness, and current divergence",
+      "result": "PASS"
+    },
+    {
+      "scope": "N=2 linear off-shell SU(2)_R auxiliary-triplet packaging",
+      "result": "BLOCKED_OFFSHELL_SU2_R_PACKAGING",
+      "reason": "Within the declared linear invertible ansatz, exact residual 2 i s conflicts with s!=0; nonlinear or field-dependent alternatives are not excluded."
+    },
+    {
+      "scope": "N=4 cubic normalization, SU(4) packaging, on-shell closure remainders, and four Noether sectors",
+      "result": "PASS"
+    },
+    {
+      "scope": "Project-Srednicki-Weinberg source-status and coefficient dictionary",
+      "result": "PASS"
+    }
+  ],
+  "exact_verification": {
+    "extended_sym_failure_count": 0,
+    "n2_closure_residuals_excluding_su2_r_gate": 0,
+    "n2_su2_r_gate_residuals": 1,
+    "n2_su2_r_exact_residual": "2 i s",
+    "status": "BLOCKED_OFFSHELL_SU2_R_PACKAGING"
+  },
+  "post_resolution": {
+    "P0": [],
+    "P1": [
+      "N2_OFFSHELL_SU2_R_TRIPLET"
+    ]
+  },
+  "result": "BLOCKED_OFFSHELL_SU2_R_PACKAGING"
+}

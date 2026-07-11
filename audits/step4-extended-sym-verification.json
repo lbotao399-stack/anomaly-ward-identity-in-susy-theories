@@ -1,0 +1,271 @@
+{
+  "checks": {
+    "bar_sigma_triple_identity": {
+      "failure_count": 0,
+      "failures": []
+    },
+    "lorentz_clifford": {
+      "failures": []
+    },
+    "n2_euclidean_current_expansion": {
+      "actual": {
+        "('hidden', 'Dtildephi', 'lambda')": "-sqrt(2)",
+        "('hidden', 'Fmunu', 'tildepsi')": "-1",
+        "('hidden', 'H', 'tildepsi')": "-i",
+        "('hidden', 'mu', 'tildepsi')": "-i",
+        "('hidden', 'tildeF', 'tildelambda')": "-sqrt(2)",
+        "('manifest', 'Dtildephi', 'psi')": "-sqrt(2)",
+        "('manifest', 'F', 'tildepsi')": "-sqrt(2)",
+        "('manifest', 'Fmunu', 'tildelambda')": "1",
+        "('manifest', 'H', 'tildelambda')": "-i",
+        "('manifest', 'mu', 'tildelambda')": "i"
+      },
+      "expected": {
+        "('hidden', 'Dtildephi', 'lambda')": "-sqrt(2)",
+        "('hidden', 'Fmunu', 'tildepsi')": "-1",
+        "('hidden', 'H', 'tildepsi')": "-i",
+        "('hidden', 'mu', 'tildepsi')": "-i",
+        "('hidden', 'tildeF', 'tildelambda')": "-sqrt(2)",
+        "('manifest', 'Dtildephi', 'psi')": "-sqrt(2)",
+        "('manifest', 'F', 'tildepsi')": "-sqrt(2)",
+        "('manifest', 'Fmunu', 'tildelambda')": "1",
+        "('manifest', 'H', 'tildelambda')": "-i",
+        "('manifest', 'mu', 'tildelambda')": "i"
+      }
+    },
+    "n2_lorentz_current_expansion": {
+      "actual": {
+        "('hidden', 'Dtildephi', 'lambda')": "-sqrt(2)",
+        "('hidden', 'Fmunu', 'tildepsi')": "i",
+        "('hidden', 'H', 'tildepsi')": "1",
+        "('hidden', 'mu', 'tildepsi')": "1",
+        "('hidden', 'tildeF', 'tildelambda')": "-i sqrt(2)",
+        "('manifest', 'Dtildephi', 'psi')": "-sqrt(2)",
+        "('manifest', 'F', 'tildepsi')": "-i sqrt(2)",
+        "('manifest', 'Fmunu', 'tildelambda')": "-i",
+        "('manifest', 'H', 'tildelambda')": "1",
+        "('manifest', 'mu', 'tildelambda')": "-1"
+      },
+      "expected": {
+        "('hidden', 'Dtildephi', 'lambda')": "-sqrt(2)",
+        "('hidden', 'Fmunu', 'tildepsi')": "i",
+        "('hidden', 'H', 'tildepsi')": "1",
+        "('hidden', 'mu', 'tildepsi')": "1",
+        "('hidden', 'tildeF', 'tildelambda')": "-i sqrt(2)",
+        "('manifest', 'Dtildephi', 'psi')": "-sqrt(2)",
+        "('manifest', 'F', 'tildepsi')": "-i sqrt(2)",
+        "('manifest', 'Fmunu', 'tildelambda')": "-i",
+        "('manifest', 'H', 'tildelambda')": "1",
+        "('manifest', 'mu', 'tildelambda')": "-1"
+      }
+    },
+    "n4_cubic_coefficient": {
+      "C": "1/2sqrt(2)",
+      "passed": true,
+      "u": "-sqrt(2)"
+    },
+    "n4_divergence_wick_coefficients": {
+      "checks": {
+        "conjugate_M_fermion_eom": true,
+        "conjugate_bar_sigma_f_fermion_eom": true,
+        "conjugate_derivative_fermion_eom": true,
+        "conjugate_dual_scalar_eom": true,
+        "conjugate_gauge_eom": true,
+        "conjugate_scalar_eom": true,
+        "left_M_fermion_eom": true,
+        "left_derivative_fermion_eom": true,
+        "left_dual_scalar_eom": true,
+        "left_gauge_eom": true,
+        "left_scalar_eom": true,
+        "left_sigma_f_fermion_eom": true
+      },
+      "failure_count": 0
+    },
+    "n4_fermion_closure_eom_reduction": {
+      "checks": {
+        "left_A": true,
+        "left_A_spinor": true,
+        "left_T": true,
+        "left_X": true,
+        "left_epsilon_barA": true,
+        "right_barA": true,
+        "right_barA_spinor": true,
+        "right_barT": true,
+        "right_barX": true,
+        "right_epsilon_A": true
+      },
+      "failure_count": 0
+    },
+    "sigma_triple_identity": {
+      "failure_count": 0,
+      "failures": []
+    },
+    "su2_auxiliary_triplet": {
+      "actual": {
+        "('F', 'tF')": "1",
+        "('H', 'H')": "1/2"
+      },
+      "expected": {
+        "('F', 'tF')": "1",
+        "('H', 'H')": "1/2"
+      }
+    },
+    "su4_quartic_packaging": {
+      "actual": {
+        "(('p0', 'p1'), ('t0', 't1'))": "16",
+        "(('p0', 'p2'), ('t0', 't2'))": "16",
+        "(('p0', 't0'), ('p0', 't0'))": "-8",
+        "(('p0', 't1'), ('p1', 't0'))": "-16",
+        "(('p0', 't2'), ('p2', 't0'))": "-16",
+        "(('p1', 'p2'), ('t1', 't2'))": "16",
+        "(('p1', 't1'), ('p1', 't1'))": "-8",
+        "(('p1', 't2'), ('p2', 't1'))": "-16",
+        "(('p2', 't2'), ('p2', 't2'))": "-8"
+      },
+      "equivalent_mod_invariance_and_jacobi": true,
+      "expected": {
+        "(('p0', 'p1'), ('t0', 't1'))": "32",
+        "(('p0', 'p2'), ('t0', 't2'))": "32",
+        "(('p0', 't0'), ('p0', 't0'))": "-8",
+        "(('p0', 't0'), ('p1', 't1'))": "-16",
+        "(('p0', 't0'), ('p2', 't2'))": "-16",
+        "(('p1', 'p2'), ('t1', 't2'))": "32",
+        "(('p1', 't1'), ('p1', 't1'))": "-8",
+        "(('p1', 't1'), ('p2', 't2'))": "-16",
+        "(('p2', 't2'), ('p2', 't2'))": "-8"
+      }
+    },
+    "su4_rho_identities": {
+      "checks": {
+        "chiral_completeness": true,
+        "mixed_completeness": true,
+        "rho_clifford_0_0": true,
+        "rho_clifford_0_1": true,
+        "rho_clifford_0_2": true,
+        "rho_clifford_0_3": true,
+        "rho_clifford_0_4": true,
+        "rho_clifford_0_5": true,
+        "rho_clifford_1_0": true,
+        "rho_clifford_1_1": true,
+        "rho_clifford_1_2": true,
+        "rho_clifford_1_3": true,
+        "rho_clifford_1_4": true,
+        "rho_clifford_1_5": true,
+        "rho_clifford_2_0": true,
+        "rho_clifford_2_1": true,
+        "rho_clifford_2_2": true,
+        "rho_clifford_2_3": true,
+        "rho_clifford_2_4": true,
+        "rho_clifford_2_5": true,
+        "rho_clifford_3_0": true,
+        "rho_clifford_3_1": true,
+        "rho_clifford_3_2": true,
+        "rho_clifford_3_3": true,
+        "rho_clifford_3_4": true,
+        "rho_clifford_3_5": true,
+        "rho_clifford_4_0": true,
+        "rho_clifford_4_1": true,
+        "rho_clifford_4_2": true,
+        "rho_clifford_4_3": true,
+        "rho_clifford_4_4": true,
+        "rho_clifford_4_5": true,
+        "rho_clifford_5_0": true,
+        "rho_clifford_5_1": true,
+        "rho_clifford_5_2": true,
+        "rho_clifford_5_3": true,
+        "rho_clifford_5_4": true,
+        "rho_clifford_5_5": true,
+        "rho_trace_0_0": true,
+        "rho_trace_0_1": true,
+        "rho_trace_0_2": true,
+        "rho_trace_0_3": true,
+        "rho_trace_0_4": true,
+        "rho_trace_0_5": true,
+        "rho_trace_1_0": true,
+        "rho_trace_1_1": true,
+        "rho_trace_1_2": true,
+        "rho_trace_1_3": true,
+        "rho_trace_1_4": true,
+        "rho_trace_1_5": true,
+        "rho_trace_2_0": true,
+        "rho_trace_2_1": true,
+        "rho_trace_2_2": true,
+        "rho_trace_2_3": true,
+        "rho_trace_2_4": true,
+        "rho_trace_2_5": true,
+        "rho_trace_3_0": true,
+        "rho_trace_3_1": true,
+        "rho_trace_3_2": true,
+        "rho_trace_3_3": true,
+        "rho_trace_3_4": true,
+        "rho_trace_3_5": true,
+        "rho_trace_4_0": true,
+        "rho_trace_4_1": true,
+        "rho_trace_4_2": true,
+        "rho_trace_4_3": true,
+        "rho_trace_4_4": true,
+        "rho_trace_4_5": true,
+        "rho_trace_5_0": true,
+        "rho_trace_5_1": true,
+        "rho_trace_5_2": true,
+        "rho_trace_5_3": true,
+        "rho_trace_5_4": true,
+        "rho_trace_5_5": true
+      },
+      "failure_count": 0
+    },
+    "su4_scalar_norm": {
+      "actual": {
+        "('p0', 't0')": "4",
+        "('p1', 't1')": "4",
+        "('p2', 't2')": "4"
+      },
+      "expected": {
+        "('p0', 't0')": "4",
+        "('p1', 't1')": "4",
+        "('p2', 't2')": "4"
+      }
+    },
+    "su4_yukawa_packaging": {
+      "actual": {
+        "('p0', (1, 2))": "2",
+        "('p1', (0, 2))": "-2",
+        "('p2', (0, 1))": "2",
+        "('t0', (0, 3))": "2",
+        "('t1', (1, 3))": "2",
+        "('t2', (2, 3))": "2"
+      },
+      "expected": {
+        "('p0', (1, 2))": "2",
+        "('p1', (0, 2))": "-2",
+        "('p2', (0, 1))": "2",
+        "('t0', (0, 3))": "2",
+        "('t1', (1, 3))": "2",
+        "('t2', (2, 3))": "2"
+      }
+    },
+    "two_spinor_schouten": {
+      "failure_count": 0,
+      "failures": []
+    },
+    "wick_sigma_d": {
+      "0": true,
+      "1": true,
+      "2": true,
+      "3": true
+    },
+    "wick_sigma_f": {
+      "01": true,
+      "02": true,
+      "03": true,
+      "12": true,
+      "13": true,
+      "23": true
+    }
+  },
+  "exact_ring": "Q(i,sqrt(2)) plus integer formal internal-index algebra",
+  "failure_count": 0,
+  "failures": [],
+  "schema": 1,
+  "task": "CONTRACT-STEP-04-EXTENDED-SUPER-YANG-MILLS-001"
+}

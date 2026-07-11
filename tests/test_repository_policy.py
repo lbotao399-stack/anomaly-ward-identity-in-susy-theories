@@ -590,6 +590,188 @@ class RepositoryPolicyTest(unittest.TestCase):
             self.assertEqual(audit["post_resolution"]["P0"], [])
             self.assertEqual(audit["post_resolution"]["P1"], [])
 
+    def test_step_4_formula_surfaces(self) -> None:
+        surfaces = {
+            "contracts/foundations/step-04-extended-sym-notation.md": (
+                "4.",
+                44,
+                (
+                    r"[T_A,T_B]=ic_{AB}{}^CT_C",
+                    r"\llbracket X,Y\rrbracket^A&:=ic_{BC}{}^AX^BY^C",
+                    r"Y_{11}:=-\sqrt2F",
+                    r"\varphi^{r4}:=\phi_r",
+                ),
+            ),
+            "contracts/foundations/step-04a-n1-super-yang-mills.md": (
+                "4A.",
+                57,
+                (
+                    r"S_L^{(1)}",
+                    r"S_E^{(1)}",
+                    r"\mathcal L_{L,{\rm compact}}^{(1)}",
+                    r"\partial_\mu j_{L,a}^\mu",
+                ),
+            ),
+            "contracts/foundations/step-04b-n2-super-yang-mills.md": (
+                "4B.",
+                99,
+                (
+                    r"S_L^{(2)}",
+                    r"S_E^{(2)}",
+                    r"Y_{ij}",
+                    r"j_{L,ia}^{\mu}",
+                ),
+            ),
+            "contracts/foundations/step-04c-n4-super-yang-mills.md": (
+                "4C.",
+                111,
+                (
+                    r"S_L^{(4)}",
+                    r"S_E^{(4)}",
+                    r"\boxed{u=-\sqrt2.}",
+                    r"j_{L,a\mathcal I}^{\mu}",
+                ),
+            ),
+        }
+        all_tags: list[str] = []
+        for relative, (prefix, minimum_tags, required) in surfaces.items():
+            path = ROOT / relative
+            self.assertTrue(path.is_file(), relative)
+            text = path.read_text(encoding="utf-8")
+            tags = re.findall(r"\\tag\{([^}]+)\}", text)
+            self.assertGreaterEqual(len(tags), minimum_tags, relative)
+            self.assertEqual(len(tags), len(set(tags)), relative)
+            self.assertTrue(all(tag.startswith(prefix) for tag in tags), relative)
+            all_tags.extend(tags)
+            for formula in required:
+                self.assertIn(formula, text, f"{relative}: {formula}")
+            self.assertEqual(text.count("$$") % 2, 0, relative)
+            self.assertNotIn(r"\sim", text, relative)
+            self.assertNotIn(r"\approx", text, relative)
+            self.assertNotIn(r"\propto", text, relative)
+            for character in text:
+                self.assertFalse(
+                    ord(character) < 32 and character not in "\n\r\t",
+                    relative,
+                )
+        self.assertEqual(len(all_tags), len(set(all_tags)))
+
+    def test_step_4_extended_sym_exact_verifier(self) -> None:
+        script = ROOT / "scripts/verify_step4_extended_sym.py"
+        audit_path = ROOT / "audits/step4-extended-sym-verification.json"
+        self.assertTrue(script.is_file())
+        self.assertTrue(audit_path.is_file())
+        expected = audit_path.read_text(encoding="utf-8")
+        subprocess.run(
+            [sys.executable, str(script), "--write-audit"],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
+        audit = json.loads(expected)
+        self.assertEqual(audit["failure_count"], 0)
+        self.assertEqual(audit["failures"], [])
+        self.assertEqual(audit["checks"]["lorentz_clifford"]["failures"], [])
+        self.assertEqual(audit["checks"]["sigma_triple_identity"]["failure_count"], 0)
+        self.assertEqual(audit["checks"]["bar_sigma_triple_identity"]["failure_count"], 0)
+        self.assertEqual(audit["checks"]["two_spinor_schouten"]["failure_count"], 0)
+        self.assertEqual(audit["checks"]["su4_rho_identities"]["failure_count"], 0)
+        self.assertEqual(audit["checks"]["n4_divergence_wick_coefficients"]["failure_count"], 0)
+        self.assertEqual(
+            audit["checks"]["n4_fermion_closure_eom_reduction"]["failure_count"],
+            0,
+        )
+
+    def test_step_4_n2_closure_verifier(self) -> None:
+        script = ROOT / "scripts/verify_step4_n2_closure.py"
+        audit_path = ROOT / "audits/step4-n2-closure-verification.json"
+        self.assertTrue(script.is_file())
+        self.assertTrue(audit_path.is_file())
+        expected = audit_path.read_text(encoding="utf-8")
+        completed = subprocess.run(
+            [sys.executable, str(script), "--write-audit"],
+            cwd=ROOT,
+            check=False,
+            stdout=subprocess.DEVNULL,
+        )
+        self.assertEqual(completed.returncode, 1)
+        self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
+        audit = json.loads(expected)
+        self.assertEqual(audit["status"], "BLOCKED_OFFSHELL_SU2_R_PACKAGING")
+        self.assertEqual(audit["failure_count"], 1)
+        self.assertEqual(
+            audit["failures"],
+            ["offshell_su2_r_triplet:manifest_slot_no_go"],
+        )
+        for name in (
+            "lorentz_free_all_field_closure",
+            "euclidean_free_all_field_closure",
+            "constant_su2_nonabelian_interaction_closure",
+            "simultaneous_nonlinear_coefficient_solution",
+            "omega_sign_and_normalization_solution",
+        ):
+            check = audit["checks"][name]
+            self.assertTrue(check["passed"], name)
+            self.assertEqual(check["residual_count"], 0, name)
+        gate = audit["checks"]["offshell_su2_r_triplet_gate"]
+        self.assertFalse(gate["passed"])
+        self.assertEqual(gate["residual_count"], 1)
+        self.assertEqual(
+            gate["derived_exact_coefficients"]["residual_coefficient_of_s"],
+            "2i",
+        )
+        self.assertEqual(
+            gate["conclusion"],
+            "residual*s=0 contradicts s!=0",
+        )
+        self.assertEqual(
+            gate["scope_boundary"],
+            "This gate excludes only the declared linear invertible doublet/triplet "
+            "packaging.  It does not exclude nonlinear or field-dependent alternatives.",
+        )
+
+    def test_step_4_dictionary_surface(self) -> None:
+        path = ROOT / "contracts/dictionaries/step-04-extended-sym-weinberg-srednicki-dictionary.md"
+        self.assertTrue(path.is_file())
+        text = path.read_text(encoding="utf-8")
+        tags = re.findall(r"\\tag\{(D4\.[^}]+)\}", text)
+        self.assertGreaterEqual(len(tags), 12)
+        self.assertEqual(len(tags), len(set(tags)))
+        self.assertIn("Project--Srednicki--Weinberg", text)
+        self.assertIn("SOURCE_INSUFFICIENT", text)
+        self.assertIn("NOT_DEFINED_IN_SOURCE", text)
+        self.assertNotIn(r"\sim", text)
+        self.assertNotIn(r"\approx", text)
+        self.assertNotIn(r"\propto", text)
+        for character in text:
+            self.assertFalse(ord(character) < 32 and character not in "\n\r\t")
+
+    def test_step_4_audits(self) -> None:
+        expected = {
+            "audits/step4-gap-audit.json": (
+                "BLOCKED_OFFSHELL_SU2_R_PACKAGING",
+                ["N2_OFFSHELL_SU2_R_TRIPLET"],
+            ),
+            "audits/step4-independent-review.json": (
+                "BLOCKED_OFFSHELL_SU2_R_PACKAGING",
+                ["N2_OFFSHELL_SU2_R_TRIPLET"],
+            ),
+            "audits/step4-notation-ledger.json": ("PASS", []),
+            "audits/step4-dictionary-review.json": ("PASS", []),
+        }
+        for relative, (result, p1_findings) in expected.items():
+            path = ROOT / relative
+            self.assertTrue(path.is_file(), relative)
+            audit = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(audit["result"], result, relative)
+            self.assertEqual(audit["post_resolution"]["P0"], [], relative)
+            self.assertEqual(
+                audit["post_resolution"]["P1"],
+                p1_findings,
+                relative,
+            )
+
     def test_weinberg_srednicki_section_verdicts(self) -> None:
         path = ROOT / "audits/ws-dictionary/draft-section-verdicts.json"
         if not path.exists():
