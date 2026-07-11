@@ -1,0 +1,51 @@
+{
+  "id": "CONTRACT-STEP-03B-COMPONENT-RECONSTRUCTION-001",
+  "type": "CONTRACT_CHANGE",
+  "status": "SPECIFIED",
+  "outcome": "Reconstruct from component projections the chiral, antichiral, and vector superfields and gauge-covariant superspace derivatives, then derive and verify every off-shell component of the general Step-3A rigid local two-derivative K, U, f, and FI action in parallel Lorentzian and Euclidean signatures, with an equation-level Project-Srednicki-Weinberg dictionary comparison.",
+  "allowed_inputs": [
+    "AUTHORITY.md",
+    "AGENTS.md",
+    "contracts/manifest.yaml",
+    "contracts/foundations/step-01-supersymmetry-commutator.md",
+    "contracts/foundations/step-02a-flat-superspace.md",
+    "contracts/foundations/step-03a-gauge-chiral-action.md",
+    "contracts/dictionaries/weinberg-srednicki-project-notation-dictionary.md",
+    "audits/step3a-gauge-chiral-verification.json",
+    "audits/step3a-independent-review.json",
+    "audits/step3a-notation-ledger.json",
+    "scripts/verify_step3a_gauge_chiral_action.py",
+    "audits/ws-dictionary/draft-section-verdicts.json",
+    "audits/ws-dictionary/exact-verification.json",
+    "audits/ws-dictionary/independent-review.json",
+    "references/weinberg-srednicki-notation-source-ledger.json",
+    "references/claim-map.yaml",
+    "references/manifest.yaml",
+    "ledger/proof_obligations.json",
+    "tests/test_repository_policy.py"
+  ],
+  "forbidden_inputs": [
+    "Notion content",
+    "Notion fetch, search, page read, block read, or content readback",
+    "web pages or URLs",
+    "attachments",
+    "legacy repositories",
+    "other local files",
+    "unmerged branches",
+    "unstated textbook conventions",
+    "quoted component formulas without a project-side derivation"
+  ],
+  "acceptance": [
+    "every chiral and antichiral x-coordinate superfield expansion is solved from chirality plus the vertical-bar component projections, and applying the projections back returns each defining component exactly",
+    "the Wess-Zumino bridge, chiral-frame and antichiral-row connections, gauge-covariant spinor and vector derivatives, and both field-strength superfields are reconstructed from their component projections with all operator order and indices explicit",
+    "the general gauge-invariant Kahler D-term is expanded first in raw derivatives of K and only then reorganized into Kahler metric, connection, curvature, moment-map, and gauge-covariant component expressions by displayed equalities",
+    "the holomorphic superpotential, field-dependent symmetric gauge-kinetic matrix, antichiral partners, and allowed FI term are expanded off shell with every fermion permutation, one-half factor, gauge index ordering, and auxiliary coupling shown",
+    "the canonical specialization reproduces exactly the Step-3A scalar, Weyl-fermion, gauge-field, gaugino, Yukawa, topological, and auxiliary terms with D_mu equal to partial_mu minus i A_mu",
+    "the locked Wick map independently produces every Euclidean coefficient, keeps chiral and antichiral variables independent before the contour, and reproduces the stated positive real bosonic contour",
+    "each construction rule and final coefficient has a three-column Project, Srednicki, and Weinberg dictionary row; textbook entries retain their source notation and exact vendored-page provenance, and differences are translated rather than silently normalized",
+    "no Srednicki or Weinberg result is used to derive a project coefficient; the two book columns are independent checks performed only after the project calculation",
+    "an exact symbolic verifier constructs the superfields and all action densities from the component definitions and reports zero failed projection, derivative, coefficient, index, and Wick-map checks",
+    "the derivation-gap audit, notation ledger, and independent reverse-order reviews report no unresolved P0 or P1 defect",
+    "contract manifest hashes are valid and repository-policy passes"
+  ]
+}
