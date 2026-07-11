@@ -75,6 +75,12 @@
     },
     {
       "id": "CONTRACT-STEP-03B-COMPONENT-RECONSTRUCTION-001",
+      "state": "ACCEPTED",
+      "blocking_reason": null,
+      "task": "tasks/archive/CONTRACT-STEP-03B-COMPONENT-RECONSTRUCTION-001.yaml"
+    },
+    {
+      "id": "CONTRACT-STEP-04-EXTENDED-SUPER-YANG-MILLS-001",
       "state": "SPECIFIED",
       "blocking_reason": null,
       "task": "tasks/CURRENT.yaml"
