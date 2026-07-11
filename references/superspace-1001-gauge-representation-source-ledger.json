@@ -1,0 +1,180 @@
+{
+  "schema": 1,
+  "task": "REFERENCE-IMPORT-SUPERSPACE-1001-VECTOR-REPRESENTATION-001",
+  "source": {
+    "title": "Superspace, or One Thousand and One Lessons in Supersymmetry",
+    "authors": [
+      "S. James Gates, Jr.",
+      "Marcus T. Grisaru",
+      "Martin Rocek",
+      "Warren Siegel"
+    ],
+    "local_locator": "/Users/libotao/Library/Mobile Documents/com~apple~CloudDocs/01_物理科研/CMC材料/CMC课题/SUPERSPACE.pdf",
+    "local_file_size_bytes": 3182047,
+    "local_pdf_pages": 568,
+    "local_sha256": "3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99",
+    "identical_existing_vendor_artifact": {
+      "id": "ARXIV-HEP-TH-0108200-V1",
+      "path": "references/vendor/hep-th-0108200v1.pdf",
+      "sha256": "3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99"
+    },
+    "identity_check": "EXACT_BYTE_IDENTITY"
+  },
+  "discovery": {
+    "method": "Spotlight mdfind restricted to the iCloud root, PDF content type, and filenames containing Superspace",
+    "filename_candidate_count": 5,
+    "filename_candidates": [
+      "TASI 2012- Super-Tricks for Superspace.pdf",
+      "SUPERSPACE.pdf",
+      "2. A TOY SUPERSPACE.pdf",
+      "The low-energy N = 4 SYM effective action in diverse harmonic superspaces.pdf",
+      "Superfield formulation of N=4 supersymmetric Yang-Mills theory in extended superspace.pdf"
+    ],
+    "opened_candidate_count": 1,
+    "selected_filename": "SUPERSPACE.pdf",
+    "rendered_title_page_exact_match_count": 1,
+    "selection_evidence": "Rendered PDF page 1 states SUPERSPACE or One thousand and one lessons in supersymmetry and lists Gates, Grisaru, Rocek, and Siegel."
+  },
+  "locator_index_pass": {
+    "input": "selected SUPERSPACE.pdf only",
+    "method": "pdftotext -layout followed by exact phrase search",
+    "coverage": "568-page PDF text layer",
+    "purpose": "Locate page numbers for chiral representation, vector representation, bridge, and gauge-covariant derivatives; no formula was adopted or translated from this locator output.",
+    "search_terms": [
+      "chiral representation",
+      "antichiral representation",
+      "vector representation",
+      "bridge",
+      "gauge-covariant derivatives"
+    ],
+    "temporary_full_text_retained": false,
+    "semantic_inspection_boundary": "Only source PDF pages 1, 5, 177-180, 182-188, and 190 were retained as admissible evidence; the earlier locator review of neighboring pages was used only to remove irrelevant pages from the final subset."
+  },
+  "scoped_artifact": {
+    "id": "SUPERSPACE-1001-GAUGE-REPRESENTATIONS-PAGES",
+    "path": "references/vendor/local/superspace-1001-gauge-representations-pages.pdf",
+    "sha256": "57d71bcf95fb84dabb4f5e85cfb9290ba52031e031a062cf7b0e5dad93a2d87e",
+    "pages": 14,
+    "page_selection": [
+      {
+        "subset_pages": "1",
+        "source_pdf_pages": "1",
+        "role": "title and authors"
+      },
+      {
+        "subset_pages": "2",
+        "source_pdf_pages": "5",
+        "role": "table of contents"
+      },
+      {
+        "subset_pages": "3-6",
+        "source_pdf_pages": "177-180",
+        "printed_pages": "165-168",
+        "role": "gauge-chiral covariant derivatives, nonhermitian chiral/antichiral representations, field strengths, and chiral action"
+      },
+      {
+        "subset_pages": "7-13",
+        "source_pdf_pages": "182-188",
+        "printed_pages": "170-176",
+        "role": "hermitian vector representation, constraints, bridge prepotential, gauge-chiral similarity map, and Bianchi identities"
+      },
+      {
+        "subset_pages": "14",
+        "source_pdf_pages": "190",
+        "printed_pages": "178",
+        "role": "vector-versus-gauge-chiral action comparison"
+      }
+    ],
+    "extraction": {
+      "method": "Poppler pdfseparate followed by pdfunite",
+      "content_policy": "page-content-preserving scoped subset; no OCR rewrite and no formula transcription"
+    }
+  },
+  "source_scope": {
+    "included_topics": [
+      "gauge-covariant superspace derivatives",
+      "conventional and representation-preserving constraints",
+      "hermitian K gauge transformations",
+      "complex bridge prepotential Omega",
+      "Lambda redundancy",
+      "vector-representation covariantly chiral fields",
+      "similarity transformation to gauge-chiral representation",
+      "field strengths and Bianchi identities",
+      "vector-versus-gauge-chiral action comparison"
+    ],
+    "page_claim_classification": [
+      {
+        "source_pdf_pages": "177-180",
+        "admissible_equations": "(4.2.30)-(4.2.47)",
+        "admissible_claim": "source gauge-chiral derivative, field-strength, and action convention system",
+        "incidental_not_admitted": "(4.2.27)-(4.2.29) Wess-Zumino-gauge transformations and (4.2.48) variation opening"
+      },
+      {
+        "source_pdf_pages": "182-186",
+        "admissible_equations": "(4.2.53)-(4.2.78)",
+        "admissible_claim": "source hermitian vector representation, constraints, bridge, redundancies, and similarity map"
+      },
+      {
+        "source_pdf_pages": "187-188",
+        "admissible_equations": "(4.2.79)-(4.2.91)",
+        "admissible_claim": "source Bianchi solution and covariant field-strength content"
+      },
+      {
+        "source_pdf_pages": "190",
+        "admissible_equations": "(4.3.1), (4.3.2), and (4.3.4)",
+        "admissible_claim": "source vector-versus-gauge-chiral action and covariant component comparison",
+        "incidental_not_admitted": "(4.3.3) Fayet-Iliopoulos term"
+      }
+    ],
+    "translation_status": "NOT_PERFORMED_IN_REFERENCE_IMPORT"
+  },
+  "visual_verification": {
+    "rendering_tool": "pdftoppm",
+    "manual_visual_checks": [
+      {
+        "subset_page": 1,
+        "source_pdf_page": 1,
+        "role": "title identity"
+      },
+      {
+        "subset_page": 3,
+        "source_pdf_page": 177,
+        "role": "gauge-chiral covariant derivative opening"
+      },
+      {
+        "subset_page": 7,
+        "source_pdf_page": 182,
+        "role": "vector covariant approach and K transformation"
+      },
+      {
+        "subset_page": 10,
+        "source_pdf_page": 185,
+        "role": "bridge solution and e^V factorization"
+      },
+      {
+        "subset_page": 11,
+        "source_pdf_page": 186,
+        "role": "gauge-chiral similarity transformation"
+      },
+      {
+        "subset_page": 14,
+        "source_pdf_page": 190,
+        "role": "vector-versus-gauge-chiral action boundary"
+      }
+    ],
+    "independent_page_comparison": {
+      "mapping": "subset 1 -> source 1; subset 2 -> source 5; subset 3-6 -> source 177-180; subset 7-13 -> source 182-188; subset 14 -> source 190",
+      "machine_text_comparisons": 14,
+      "machine_text_mismatches": 0,
+      "independent_manual_raster_comparisons": 14,
+      "independent_manual_raster_mismatches": 0,
+      "manual_raster_resolution_dpi": 72
+    },
+    "result": "PASS"
+  },
+  "admissibility": {
+    "current_task_use": "REFERENCE_EVIDENCE_ONLY",
+    "later_contract_change_use": "Reconstruct the source convention system from the scoped pages, then derive a separate translation into locked Project conventions.",
+    "forbidden_use": "No source sign, factor, index placement, hermiticity rule, gauge transformation, or representation map is a Project formula before the later contract derivation and exact audit."
+  }
+}

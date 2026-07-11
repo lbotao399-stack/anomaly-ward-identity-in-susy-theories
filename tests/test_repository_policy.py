@@ -79,6 +79,59 @@ class RepositoryPolicyTest(unittest.TestCase):
             self.assertTrue(snapshot.is_file(), page["snapshot_path"])
             self.assertEqual(hashlib.sha256(snapshot.read_bytes()).hexdigest(), page["sha256"])
 
+    def test_superspace_1001_gauge_representation_reference_import(self) -> None:
+        ledger_path = ROOT / "references/superspace-1001-gauge-representation-source-ledger.json"
+        if not ledger_path.exists():
+            self.skipTest("Superspace 1001 gauge-representation reference import is not registered")
+        ledger = json.loads(ledger_path.read_text(encoding="utf-8"))
+        self.assertEqual(
+            ledger["task"],
+            "REFERENCE-IMPORT-SUPERSPACE-1001-VECTOR-REPRESENTATION-001",
+        )
+        source = ledger["source"]
+        discovery = ledger["discovery"]
+        locator = ledger["locator_index_pass"]
+        scoped = ledger["scoped_artifact"]
+        self.assertEqual(source["identity_check"], "EXACT_BYTE_IDENTITY")
+        self.assertEqual(
+            source["local_sha256"],
+            source["identical_existing_vendor_artifact"]["sha256"],
+        )
+        self.assertEqual(scoped["pages"], 14)
+        self.assertEqual(discovery["filename_candidate_count"], 5)
+        self.assertEqual(discovery["opened_candidate_count"], 1)
+        self.assertEqual(discovery["rendered_title_page_exact_match_count"], 1)
+        self.assertFalse(locator["temporary_full_text_retained"])
+        self.assertEqual(scoped["page_selection"][2]["source_pdf_pages"], "177-180")
+        self.assertEqual(scoped["page_selection"][3]["source_pdf_pages"], "182-188")
+        self.assertEqual(scoped["page_selection"][4]["source_pdf_pages"], "190")
+        artifact = ROOT / scoped["path"]
+        self.assertTrue(artifact.is_file())
+        self.assertEqual(hashlib.sha256(artifact.read_bytes()).hexdigest(), scoped["sha256"])
+        self.assertEqual(ledger["source_scope"]["translation_status"], "NOT_PERFORMED_IN_REFERENCE_IMPORT")
+        visual_checks = ledger["visual_verification"]["manual_visual_checks"]
+        self.assertEqual(len(visual_checks), 6)
+        self.assertEqual(len({item["subset_page"] for item in visual_checks}), 6)
+        self.assertTrue(all({"subset_page", "source_pdf_page", "role"} == set(item) for item in visual_checks))
+        self.assertEqual(ledger["visual_verification"]["result"], "PASS")
+
+    def test_superspace_1001_reference_import_exact_verifier(self) -> None:
+        script = ROOT / "scripts/verify_superspace_1001_reference_import.py"
+        audit_path = ROOT / "audits/superspace-1001-reference-import-verification.json"
+        if not script.exists() or not audit_path.exists():
+            self.skipTest("Superspace 1001 reference-import verifier is not registered")
+        expected = audit_path.read_text(encoding="utf-8")
+        subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
+        audit = json.loads(expected)
+        self.assertEqual(audit["status"], "PASS")
+        self.assertEqual(audit["totals"], {"checks": 46, "failed": 0, "page_text_comparisons": 14})
+
     def test_notion_is_output_only(self) -> None:
         page_map = json.loads((ROOT / "mirror/page_map.yaml").read_text(encoding="utf-8"))
         self.assertEqual(page_map["direction"], "GIT_TO_NOTION_ONLY")
@@ -105,9 +158,15 @@ class RepositoryPolicyTest(unittest.TestCase):
         ids = {item["id"] for item in obligations["proof_obligations"]}
         self.assertIn(task["id"], ids)
         self.assertIn(task["type"], {"AUTHORITY_REPAIR", "REFERENCE_IMPORT", "CONTRACT_CHANGE"})
+        current = [item for item in obligations["proof_obligations"] if item["task"] == "tasks/CURRENT.yaml"]
+        self.assertEqual(len(current), 1)
+        self.assertEqual(current[0]["id"], task["id"])
         for obligation in obligations["proof_obligations"]:
             packet = json.loads((ROOT / obligation["task"]).read_text(encoding="utf-8"))
             self.assertEqual(packet["id"], obligation["id"])
+            if "task_sha256" in obligation:
+                digest = hashlib.sha256((ROOT / obligation["task"]).read_bytes()).hexdigest()
+                self.assertEqual(digest, obligation["task_sha256"])
 
     def test_reference_import_has_narrow_acquisition_scope(self) -> None:
         task = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
@@ -148,6 +207,19 @@ class RepositoryPolicyTest(unittest.TestCase):
                     "notion-search://Srednicki supersymmetry",
                 ],
             )
+            return
+        if task["id"] == "REFERENCE-IMPORT-SUPERSPACE-1001-VECTOR-REPRESENTATION-001":
+            exception = task["local_reference_exception"]
+            search_locator = "icloud-title-search://Superspace, or One Thousand and One Lessons in Supersymmetry"
+            resolved_locator = "icloud-file://01_物理科研/CMC材料/CMC课题/SUPERSPACE.pdf#sha256=3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99"
+            self.assertTrue(exception["user_authorized"])
+            self.assertEqual(exception["search_locator"], search_locator)
+            self.assertEqual(exception["resolved_locator"], resolved_locator)
+            self.assertEqual(exception["resolved_sha256"], "3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99")
+            self.assertEqual(exception["default_boundary_after_task"], "GIT_TO_NOTION_ONLY")
+            external = [item for item in task["allowed_inputs"] if "://" in item]
+            self.assertEqual(external, [search_locator, resolved_locator])
+            self.assertIn("references/vendor/hep-th-0108200v1.pdf", task["allowed_inputs"])
             return
         self.fail(f"unreviewed reference-import task: {task['id']}")
 

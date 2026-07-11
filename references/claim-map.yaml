@@ -99,6 +99,38 @@
       ],
       "allowed_use": "A later registered contract-change task may use the draft only as a checklist of candidate dictionary claims that must each be independently proved or rejected from the book snapshots and project contracts.",
       "forbidden_use": "Citing the draft as evidence, adopting any draft formula without derivation, or using URLs and sources embedded in the draft."
+    },
+    {
+      "id": "SUPERSPACE-1001-GAUGE-CHIRAL-REPRESENTATION-EVIDENCE",
+      "sources": [
+        "SUPERSPACE-1001-GAUGE-REPRESENTATIONS-PAGES"
+      ],
+      "allowed_use": "A later registered Step-3 contract-change task may reconstruct the source gauge-chiral covariant derivatives, conjugate representation, field strengths, and action from source PDF pages 177-180, printed pages 165-168.",
+      "forbidden_use": "Admitting the incidental Wess-Zumino-gauge transformation formulas on source page 177 or the variation opening on source page 180 as evidence for the representation translation."
+    },
+    {
+      "id": "SUPERSPACE-1001-VECTOR-BRIDGE-EVIDENCE",
+      "sources": [
+        "SUPERSPACE-1001-GAUGE-REPRESENTATIONS-PAGES"
+      ],
+      "allowed_use": "A later registered Step-3 contract-change task may reconstruct the source hermitian vector representation, conventional and representation-preserving constraints, complex bridge, K and Lambda redundancies, and gauge-chiral similarity transformation from source PDF pages 182-186, printed pages 170-174.",
+      "forbidden_use": "Treating the source convention as Project authority, copying a sign or factor without Project-side derivation, or conflating supersymmetry chiral coordinates with gauge-chiral representation."
+    },
+    {
+      "id": "SUPERSPACE-1001-VECTOR-BIANCHI-EVIDENCE",
+      "sources": [
+        "SUPERSPACE-1001-GAUGE-REPRESENTATIONS-PAGES"
+      ],
+      "allowed_use": "A later registered Step-3 contract-change task may reconstruct the source constrained Bianchi solution and covariant field-strength content from source PDF pages 187-188, printed pages 175-176.",
+      "forbidden_use": "Using any Bianchi sign, torsion coefficient, or spinor raising rule before translation through the locked Project derivative algebra."
+    },
+    {
+      "id": "SUPERSPACE-1001-VECTOR-ACTION-COMPARISON-EVIDENCE",
+      "sources": [
+        "SUPERSPACE-1001-GAUGE-REPRESENTATIONS-PAGES"
+      ],
+      "allowed_use": "A later registered Step-3 contract-change task may reconstruct the source vector-versus-gauge-chiral action and covariant component comparison from source PDF page 190, printed page 178.",
+      "forbidden_use": "Importing the incidental Fayet-Iliopoulos term (4.3.3), source gauge-coupling normalization, measure normalization, or component definitions without a separate Project-side derivation."
     }
   ]
 }
