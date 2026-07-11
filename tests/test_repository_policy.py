@@ -109,7 +109,11 @@ class RepositoryPolicyTest(unittest.TestCase):
             self.assertTrue(exception["user_authorized"])
             self.assertEqual(
                 exception["search_queries"],
-                ["Weinberg supersymmetry", "Srednicki supersymmetry"],
+                [
+                    "Weinberg supersymmetry",
+                    "The Quantum Theory of Fields Volume III Weinberg",
+                    "Srednicki supersymmetry",
+                ],
             )
             self.assertEqual(exception["default_boundary_after_task"], "GIT_TO_NOTION_ONLY")
             external = [item for item in task["allowed_inputs"] if "://" in item]
@@ -118,6 +122,7 @@ class RepositoryPolicyTest(unittest.TestCase):
                 [
                     "attachment://weinberg-srednicki-dictionary-draft",
                     "notion-search://Weinberg supersymmetry",
+                    "notion-search://The Quantum Theory of Fields Volume III Weinberg",
                     "notion-search://Srednicki supersymmetry",
                 ],
             )
