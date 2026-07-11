@@ -321,6 +321,108 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertEqual(review["post_resolution"]["P1"], [])
         self.assertTrue(all(item["status"] == "RESOLVED" for item in review["findings"]))
 
+    def test_step_2c_formula_surface(self) -> None:
+        path = ROOT / "contracts/foundations/step-02c-complete-superconformal-covariance.md"
+        if not path.exists():
+            self.skipTest("Step 2C contract is not registered")
+        text = path.read_text(encoding="utf-8")
+        tags = {int(value) for value in re.findall(r"\\tag\{2C\.(\d+)\}", text)}
+        self.assertEqual(tags, set(range(1, 63)))
+        for subtag in (
+            "3a",
+            "5a",
+            "12a",
+            "12b",
+            "12c",
+            "12d",
+            "29a",
+            "29ba",
+            "29e",
+            "30a",
+            "43a",
+            "46a",
+            "47a",
+            "49b",
+            "58c",
+        ):
+            self.assertIn(rf"\tag{{2C.{subtag}}}", text)
+        self.assertIn(r"\boxed{\mathsf P_\mu^L=-i\partial_\mu.}", text)
+        self.assertIn(r"\widetilde{\bar\partial}_{\dot a}", text)
+        self.assertIn(r"\mathsf K_\mu^L", text)
+        self.assertIn(r"\mathsf S_L^a", text)
+        self.assertIn(r"\bar{\mathsf S}_L^{\dot a}", text)
+        self.assertIn(r"\boldsymbol{\mathsf G}_A^L", text)
+        self.assertIn(r"M_{\Phi_{\lambda'\leftarrow\lambda}}", text)
+        self.assertIn(r"\mathsf K_m^E", text)
+        self.assertIn(r"\mathsf S_E^a", text)
+        self.assertIn(r"\bar{\mathsf S}_E^{\dot a}", text)
+        self.assertIn(r"N_L", text)
+        self.assertIn(r"N_E=62{,}704", text)
+        self.assertNotIn(r"\sim", text)
+        self.assertNotIn(r"\approx", text)
+        self.assertNotIn(r"\propto", text)
+
+    def test_step_2c_notation_audit(self) -> None:
+        path = ROOT / "audits/step2c-notation-ledger.json"
+        if not path.exists():
+            self.skipTest("Step 2C notation audit is not registered")
+        audit = json.loads(path.read_text(encoding="utf-8"))
+        self.assertEqual(audit["result"], "PASS")
+        self.assertEqual(audit["findings"]["P0"], [])
+        self.assertEqual(audit["findings"]["P1"], [])
+        self.assertTrue(all(item["result"] == "PASS" for item in audit["checks"]))
+
+    def test_step_2c_lorentz_exact_verifier(self) -> None:
+        script = ROOT / "scripts/verify_step2c_full_lorentz_superconformal.py"
+        audit_path = ROOT / "audits/step2c-full-lorentz-verification.json"
+        if not script.exists() or not audit_path.exists():
+            self.skipTest("Step 2C Lorentz verifier is not registered")
+        expected = audit_path.read_text(encoding="utf-8")
+        subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
+        audit = json.loads(expected)
+        self.assertEqual(audit["status"], "PASS")
+        self.assertEqual(audit["basis"]["grassmann_monomials"], 16)
+        self.assertEqual(audit["coverage"]["total_exact_cases"], 58896)
+        self.assertEqual(audit["failed_cases"], 0)
+
+    def test_step_2c_euclidean_exact_verifier(self) -> None:
+        script = ROOT / "scripts/verify_step2c_full_euclidean_superconformal.py"
+        audit_path = ROOT / "audits/step2c-full-euclidean-verification.json"
+        if not script.exists() or not audit_path.exists():
+            self.skipTest("Step 2C Euclidean verifier is not registered")
+        expected = audit_path.read_text(encoding="utf-8")
+        subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
+        audit = json.loads(expected)
+        self.assertEqual(audit["status"], "PASS")
+        self.assertEqual(audit["basis"]["grassmann_monomials"], 16)
+        self.assertEqual(audit["operator_identities"], 1163)
+        self.assertEqual(audit["input_cases"], 62704)
+        self.assertEqual(audit["failed_cases"], 0)
+
+    def test_step_2c_independent_review(self) -> None:
+        path = ROOT / "audits/step2c-independent-review.json"
+        if not path.exists():
+            self.skipTest("Step 2C independent review is not registered")
+        review = json.loads(path.read_text(encoding="utf-8"))
+        self.assertEqual(review["result"], "PASS")
+        self.assertEqual(review["post_resolution"], {"P0": [], "P1": []})
+        self.assertTrue(all(item["status"] == "RESOLVED" for item in review["resolved_findings"]))
+        self.assertEqual(review["exact_verification"]["lorentz_total_cases"], 58896)
+        self.assertEqual(review["exact_verification"]["euclidean_total_cases"], 62704)
+        self.assertEqual(review["exact_verification"]["failed_cases"], 0)
+
     def test_weinberg_srednicki_dictionary_surface(self) -> None:
         path = ROOT / "contracts/dictionaries/weinberg-srednicki-project-notation-dictionary.md"
         if not path.exists():

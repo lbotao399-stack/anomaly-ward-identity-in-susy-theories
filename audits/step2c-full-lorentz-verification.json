@@ -1,0 +1,35 @@
+{
+  "arithmetic": "Q(i) polynomial coefficients and exact four-generator exterior algebra; no floating point; no CAS",
+  "basis": {
+    "antichiral_restriction_inputs": 20,
+    "bosonic_factors": [
+      "1",
+      "x^0",
+      "x^1",
+      "x^2",
+      "x^3"
+    ],
+    "chiral_restriction_inputs": 20,
+    "commuting_coordinates": 4,
+    "grassmann_generators": 4,
+    "grassmann_monomials": 16,
+    "separating_inputs": 80,
+    "separation_proof": "A coefficient-left first-order operator is determined by its action on 1 and on the eight coordinate generators; these occur in the stated basis. Tensoring each bosonic factor with all 16 exterior monomials additionally checks every left-odd-derivative sign."
+  },
+  "chart": "full superspace (x^mu,vartheta^a,barvartheta^dot_a)",
+  "coverage": {
+    "algebra_input_cases": 58480,
+    "algebra_operator_identities": 731,
+    "coordinate_action_identities": 96,
+    "restriction_input_cases": 320,
+    "restriction_operator_identities": 16,
+    "total_exact_cases": 58896
+  },
+  "failed_cases": 0,
+  "failures": [],
+  "schema": 1,
+  "signature": "Lorentzian (-,+,+,+)",
+  "status": "PASS",
+  "superinversion_phase": "phi=0 convention of contract equation 2B.32",
+  "task_id": "CONTRACT-STEP-02C-COMPLETE-SUPERCONFORMAL-COVARIANCE-001"
+}
