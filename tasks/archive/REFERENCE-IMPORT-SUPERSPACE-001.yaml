@@ -1,0 +1,32 @@
+{
+  "id": "REFERENCE-IMPORT-SUPERSPACE-001",
+  "type": "REFERENCE_IMPORT",
+  "status": "ACCEPTED",
+  "outcome": "Vendor the minimum primary-source material needed to derive Lorentzian and Euclidean N=1 superspace and superconformal coordinate generators in the locked Step-1 convention.",
+  "allowed_inputs": [
+    "AUTHORITY.md",
+    "AGENTS.md",
+    "contracts/foundations/step-01-supersymmetry-commutator.md",
+    "contracts/manifest.yaml",
+    "references/manifest.yaml",
+    "https://arxiv.org/abs/hep-th/0108200",
+    "https://arxiv.org/abs/hep-th/9808041",
+    "https://arxiv.org/abs/hep-th/9903230"
+  ],
+  "forbidden_inputs": [
+    "Notion content",
+    "legacy repositories",
+    "other local files",
+    "secondary summaries",
+    "unvendored web claims",
+    "other calculation channels"
+  ],
+  "acceptance": [
+    "only public primary sources are selected",
+    "network acquisition is restricted to the three explicit arXiv locators in allowed_inputs",
+    "each imported source is stored inside references/vendor with SHA-256",
+    "references/claim-map.yaml states exactly which structural claim each source may support",
+    "no imported convention overrides Step 1",
+    "no Step-2 formula is admitted before an independent derivation and notation audit"
+  ]
+}
