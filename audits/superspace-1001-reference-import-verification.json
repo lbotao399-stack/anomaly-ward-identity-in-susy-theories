@@ -1,0 +1,347 @@
+{
+  "schema": 1,
+  "task": "REFERENCE-IMPORT-SUPERSPACE-1001-VECTOR-REPRESENTATION-001",
+  "status": "PASS",
+  "page_map": [
+    {
+      "subset_page": 1,
+      "source_pdf_page": 1
+    },
+    {
+      "subset_page": 2,
+      "source_pdf_page": 5
+    },
+    {
+      "subset_page": 3,
+      "source_pdf_page": 177
+    },
+    {
+      "subset_page": 4,
+      "source_pdf_page": 178
+    },
+    {
+      "subset_page": 5,
+      "source_pdf_page": 179
+    },
+    {
+      "subset_page": 6,
+      "source_pdf_page": 180
+    },
+    {
+      "subset_page": 7,
+      "source_pdf_page": 182
+    },
+    {
+      "subset_page": 8,
+      "source_pdf_page": 183
+    },
+    {
+      "subset_page": 9,
+      "source_pdf_page": 184
+    },
+    {
+      "subset_page": 10,
+      "source_pdf_page": 185
+    },
+    {
+      "subset_page": 11,
+      "source_pdf_page": 186
+    },
+    {
+      "subset_page": 12,
+      "source_pdf_page": 187
+    },
+    {
+      "subset_page": 13,
+      "source_pdf_page": 188
+    },
+    {
+      "subset_page": 14,
+      "source_pdf_page": 190
+    }
+  ],
+  "checks": [
+    {
+      "name": "source_sha",
+      "left": "3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99",
+      "right": "3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99",
+      "passed": true
+    },
+    {
+      "name": "subset_sha",
+      "left": "57d71bcf95fb84dabb4f5e85cfb9290ba52031e031a062cf7b0e5dad93a2d87e",
+      "right": "57d71bcf95fb84dabb4f5e85cfb9290ba52031e031a062cf7b0e5dad93a2d87e",
+      "passed": true
+    },
+    {
+      "name": "source_page_count",
+      "left": 568,
+      "right": 568,
+      "passed": true
+    },
+    {
+      "name": "subset_page_count",
+      "left": 14,
+      "right": 14,
+      "passed": true
+    },
+    {
+      "name": "manifest_source_path",
+      "left": "references/vendor/hep-th-0108200v1.pdf",
+      "right": "references/vendor/hep-th-0108200v1.pdf",
+      "passed": true
+    },
+    {
+      "name": "manifest_source_sha",
+      "left": "3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99",
+      "right": "3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99",
+      "passed": true
+    },
+    {
+      "name": "manifest_subset_path",
+      "left": "references/vendor/local/superspace-1001-gauge-representations-pages.pdf",
+      "right": "references/vendor/local/superspace-1001-gauge-representations-pages.pdf",
+      "passed": true
+    },
+    {
+      "name": "manifest_subset_sha",
+      "left": "57d71bcf95fb84dabb4f5e85cfb9290ba52031e031a062cf7b0e5dad93a2d87e",
+      "right": "57d71bcf95fb84dabb4f5e85cfb9290ba52031e031a062cf7b0e5dad93a2d87e",
+      "passed": true
+    },
+    {
+      "name": "ledger_local_source_sha",
+      "left": "3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99",
+      "right": "3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99",
+      "passed": true
+    },
+    {
+      "name": "ledger_vendor_source_sha",
+      "left": "3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99",
+      "right": "3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99",
+      "passed": true
+    },
+    {
+      "name": "ledger_subset_sha",
+      "left": "57d71bcf95fb84dabb4f5e85cfb9290ba52031e031a062cf7b0e5dad93a2d87e",
+      "right": "57d71bcf95fb84dabb4f5e85cfb9290ba52031e031a062cf7b0e5dad93a2d87e",
+      "passed": true
+    },
+    {
+      "name": "ledger_subset_pages",
+      "left": 14,
+      "right": 14,
+      "passed": true
+    },
+    {
+      "name": "discovery_filename_candidates",
+      "left": 5,
+      "right": 5,
+      "passed": true
+    },
+    {
+      "name": "discovery_opened_candidates",
+      "left": 1,
+      "right": 1,
+      "passed": true
+    },
+    {
+      "name": "discovery_exact_title_matches",
+      "left": 1,
+      "right": 1,
+      "passed": true
+    },
+    {
+      "name": "temporary_full_text_retained",
+      "left": false,
+      "right": false,
+      "passed": true
+    },
+    {
+      "name": "manual_visual_check_count",
+      "left": 6,
+      "right": 6,
+      "passed": true
+    },
+    {
+      "name": "manual_visual_check_pages_unique",
+      "left": 6,
+      "right": 6,
+      "passed": true
+    },
+    {
+      "name": "independent_manual_raster_comparisons",
+      "left": 14,
+      "right": 14,
+      "passed": true
+    },
+    {
+      "name": "page_text_1_from_1",
+      "left": "7b14d5799261998a86b425e82f2e640f2e94d63b1837c3bb8883a9b3491378cc",
+      "right": "7b14d5799261998a86b425e82f2e640f2e94d63b1837c3bb8883a9b3491378cc",
+      "passed": true
+    },
+    {
+      "name": "page_text_2_from_5",
+      "left": "e79e4348f5fe296294d0399fcede148e4b07eedc5d1e159e64d7b2bee6d761f1",
+      "right": "e79e4348f5fe296294d0399fcede148e4b07eedc5d1e159e64d7b2bee6d761f1",
+      "passed": true
+    },
+    {
+      "name": "page_text_3_from_177",
+      "left": "703fed390361f1063b12fa189e196a281c6fcbdb57c246cbcf0a5d37dc53c300",
+      "right": "703fed390361f1063b12fa189e196a281c6fcbdb57c246cbcf0a5d37dc53c300",
+      "passed": true
+    },
+    {
+      "name": "page_text_4_from_178",
+      "left": "834e9c830b7b8c6ee80e565804e53b0eee5dcab665ce31cf420c61e52870a948",
+      "right": "834e9c830b7b8c6ee80e565804e53b0eee5dcab665ce31cf420c61e52870a948",
+      "passed": true
+    },
+    {
+      "name": "page_text_5_from_179",
+      "left": "771b3d16f87f34570b097eaaf98920a08c40fa64622885fc3c1d2cc0fd57a11e",
+      "right": "771b3d16f87f34570b097eaaf98920a08c40fa64622885fc3c1d2cc0fd57a11e",
+      "passed": true
+    },
+    {
+      "name": "page_text_6_from_180",
+      "left": "e8f1610ce912951b367ccf6bdbeb135b5592d27432edf03a859df216ad89cf01",
+      "right": "e8f1610ce912951b367ccf6bdbeb135b5592d27432edf03a859df216ad89cf01",
+      "passed": true
+    },
+    {
+      "name": "page_text_7_from_182",
+      "left": "e9a5b9c1e556d1db3fb77ed8886eeda5eaf3c26869ebb60d321f0e65468a3076",
+      "right": "e9a5b9c1e556d1db3fb77ed8886eeda5eaf3c26869ebb60d321f0e65468a3076",
+      "passed": true
+    },
+    {
+      "name": "page_text_8_from_183",
+      "left": "b38b3d9c12c6c59aa93b770b7fea66b7f5ca026bcb8061e9891b439e8cd90b54",
+      "right": "b38b3d9c12c6c59aa93b770b7fea66b7f5ca026bcb8061e9891b439e8cd90b54",
+      "passed": true
+    },
+    {
+      "name": "page_text_9_from_184",
+      "left": "94a100c3be8f1d92ddc27447764658fdb788681616581649bb139f655275b7fb",
+      "right": "94a100c3be8f1d92ddc27447764658fdb788681616581649bb139f655275b7fb",
+      "passed": true
+    },
+    {
+      "name": "page_text_10_from_185",
+      "left": "82cb8e139d310ef79ca7b4ab84f9403e92f80a29d3195fae70790181c1ed87dc",
+      "right": "82cb8e139d310ef79ca7b4ab84f9403e92f80a29d3195fae70790181c1ed87dc",
+      "passed": true
+    },
+    {
+      "name": "page_text_11_from_186",
+      "left": "f9d087f01ef0dad339b3df207456b2bb6b20e9f98882319f424ed3fa5f9e6476",
+      "right": "f9d087f01ef0dad339b3df207456b2bb6b20e9f98882319f424ed3fa5f9e6476",
+      "passed": true
+    },
+    {
+      "name": "page_text_12_from_187",
+      "left": "61b0e54cb105d668c5e686a7a5cca1dd54cfa348e80cfe97ef36b67c97c002eb",
+      "right": "61b0e54cb105d668c5e686a7a5cca1dd54cfa348e80cfe97ef36b67c97c002eb",
+      "passed": true
+    },
+    {
+      "name": "page_text_13_from_188",
+      "left": "8fc086a337f0f103f0456d28e75533b5c36cd01a04442c54465a9b0a847147c3",
+      "right": "8fc086a337f0f103f0456d28e75533b5c36cd01a04442c54465a9b0a847147c3",
+      "passed": true
+    },
+    {
+      "name": "page_text_14_from_190",
+      "left": "8fd4012a42ffa652c5ec60963036d692ef7e76bcf20acb0aa1d48b7f838f9413",
+      "right": "8fd4012a42ffa652c5ec60963036d692ef7e76bcf20acb0aa1d48b7f838f9413",
+      "passed": true
+    },
+    {
+      "name": "title_marker",
+      "left": true,
+      "right": true,
+      "passed": true
+    },
+    {
+      "name": "subtitle_marker",
+      "left": true,
+      "right": true,
+      "passed": true
+    },
+    {
+      "name": "author_marker",
+      "left": true,
+      "right": true,
+      "passed": true
+    },
+    {
+      "name": "claim_SUPERSPACE-1001-GAUGE-CHIRAL-REPRESENTATION-EVIDENCE",
+      "left": true,
+      "right": true,
+      "passed": true
+    },
+    {
+      "name": "claim_SUPERSPACE-1001-VECTOR-BRIDGE-EVIDENCE",
+      "left": true,
+      "right": true,
+      "passed": true
+    },
+    {
+      "name": "claim_SUPERSPACE-1001-VECTOR-BIANCHI-EVIDENCE",
+      "left": true,
+      "right": true,
+      "passed": true
+    },
+    {
+      "name": "claim_SUPERSPACE-1001-VECTOR-ACTION-COMPARISON-EVIDENCE",
+      "left": true,
+      "right": true,
+      "passed": true
+    },
+    {
+      "name": "task_resolved_locator",
+      "left": "icloud-file://01_物理科研/CMC材料/CMC课题/SUPERSPACE.pdf#sha256=3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99",
+      "right": "icloud-file://01_物理科研/CMC材料/CMC课题/SUPERSPACE.pdf#sha256=3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99",
+      "passed": true
+    },
+    {
+      "name": "task_resolved_sha",
+      "left": "3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99",
+      "right": "3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99",
+      "passed": true
+    },
+    {
+      "name": "task_vendor_source_allowed",
+      "left": true,
+      "right": true,
+      "passed": true
+    },
+    {
+      "name": "step4_recorded_sha",
+      "left": "f76e1975617e6a703efda4413a67760bf55d84e22fb3a7a6289d3b890ff3eb6e",
+      "right": "f76e1975617e6a703efda4413a67760bf55d84e22fb3a7a6289d3b890ff3eb6e",
+      "passed": true
+    },
+    {
+      "name": "step4_file_sha",
+      "left": "f76e1975617e6a703efda4413a67760bf55d84e22fb3a7a6289d3b890ff3eb6e",
+      "right": "f76e1975617e6a703efda4413a67760bf55d84e22fb3a7a6289d3b890ff3eb6e",
+      "passed": true
+    },
+    {
+      "name": "one_current_obligation",
+      "left": 1,
+      "right": 1,
+      "passed": true
+    }
+  ],
+  "totals": {
+    "checks": 46,
+    "failed": 0,
+    "page_text_comparisons": 14
+  },
+  "failures": []
+}

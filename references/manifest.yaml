@@ -17,7 +17,7 @@
       "id": "REFERENCE-CLAIM-MAP",
       "path": "references/claim-map.yaml",
       "classification": "REFERENCE_CLAIM_BOUNDARY",
-      "sha256": "cde3fa9f6ee08e93c06ce466404fb6451296f23fa892a28796481793984a6fe7"
+      "sha256": "9554429cd68f05735dcfba1a6faeaf636a937895a8f632576b6764529a9418e4"
     },
     {
       "id": "ARXIV-HEP-TH-0108200-V1",
@@ -252,6 +252,18 @@
       "path": "references/weinberg-srednicki-notation-source-ledger.json",
       "classification": "REFERENCE_SOURCE_LEDGER",
       "sha256": "e4ecac3a6122fa021501388e94d58c7e24d38292e599df04742443a1a5ef0600"
+    },
+    {
+      "id": "SUPERSPACE-1001-GAUGE-REPRESENTATIONS-PAGES",
+      "path": "references/vendor/local/superspace-1001-gauge-representations-pages.pdf",
+      "classification": "PRIMARY_REFERENCE_SOURCE_CONVENTION_EVIDENCE",
+      "sha256": "57d71bcf95fb84dabb4f5e85cfb9290ba52031e031a062cf7b0e5dad93a2d87e"
+    },
+    {
+      "id": "SUPERSPACE-1001-GAUGE-REPRESENTATION-SOURCE-LEDGER",
+      "path": "references/superspace-1001-gauge-representation-source-ledger.json",
+      "classification": "REFERENCE_SOURCE_LEDGER",
+      "sha256": "7530baacded6fe86d4a137ea7fd6e8e2606a0b64d937bab6409525d7210506f2"
     }
   ]
 }
