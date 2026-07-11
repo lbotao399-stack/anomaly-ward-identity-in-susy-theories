@@ -1,7 +1,7 @@
 {
   "id": "MIRROR-STEP-02B-NOTION-001",
   "type": "CONTRACT_CHANGE",
-  "status": "SPECIFIED",
+  "status": "ACCEPTED",
   "outcome": "Publish the accepted Step-2A and Step-2B contracts from origin/main to Notion child pages under the fixed AWI root without reading any Notion content.",
   "allowed_inputs": [
     "AUTHORITY.md",
