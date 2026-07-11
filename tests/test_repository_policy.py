@@ -177,6 +177,102 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertEqual(review["post_resolution"]["P1"], [])
         self.assertTrue(all(item["status"] == "RESOLVED" for item in review["findings"]))
 
+    def test_step_2b_formula_surface(self) -> None:
+        path = ROOT / "contracts/foundations/step-02b-superconformal-superspace.md"
+        if not path.exists():
+            self.skipTest("Step 2B contract is not registered")
+        text = path.read_text(encoding="utf-8")
+        tags = {int(value) for value in re.findall(r"\\tag\{2B\.(\d+)\}", text)}
+        self.assertEqual(tags, set(range(1, 79)))
+        for subtag in (
+            "31a",
+            "31b",
+            "33b",
+            "34bb",
+            "35a",
+            "35fa",
+            "35h",
+            "35i",
+            "35k",
+            "58b",
+            "58g",
+            "60c",
+            "61c",
+            "63c",
+            "76b",
+        ):
+            self.assertIn(rf"\tag{{2B.{subtag}}}", text)
+        self.assertIn(r"\bar y^\mu-y^\mu", text)
+        self.assertIn(r"\mathcal I_{s,L}^*:\mathscr F_{\rm ch}\longleftrightarrow", text)
+        self.assertIn(r"\mathsf K_\mu^L", text)
+        self.assertIn(r"\mathsf S_L^a", text)
+        self.assertIn(r"\bar{\mathsf S}_L^{\dot a}", text)
+        self.assertIn(r"\boxed{r=-\frac23\Delta.}", text)
+        self.assertIn(r"\mathsf P_m^E&=-\partial_m^E", text)
+        self.assertIn(r"\mathsf R_E&=-iN_\vartheta", text)
+        self.assertIn("Intrinsic Euclidean superspace imposes no adjoint relation", text)
+        self.assertNotIn(r"\sim", text)
+        self.assertNotIn(r"\approx", text)
+        self.assertNotIn(r"\propto", text)
+
+    def test_step_2b_notation_audit(self) -> None:
+        path = ROOT / "audits/step2b-notation-ledger.json"
+        if not path.exists():
+            self.skipTest("Step 2B notation audit is not registered")
+        audit = json.loads(path.read_text(encoding="utf-8"))
+        self.assertEqual(audit["result"], "PASS")
+        self.assertEqual(audit["findings"]["P0"], [])
+        self.assertEqual(audit["findings"]["P1"], [])
+        self.assertTrue(all(item["result"] == "PASS" for item in audit["checks"]))
+
+    def test_step_2b_lorentz_exact_verifier(self) -> None:
+        script = ROOT / "scripts/verify_step2b_chiral_superconformal.py"
+        audit_path = ROOT / "audits/step2b-lorentzian-superconformal-verification.json"
+        if not script.exists() or not audit_path.exists():
+            self.skipTest("Step 2B Lorentz verifier is not registered")
+        expected = audit_path.read_text(encoding="utf-8")
+        subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
+        audit = json.loads(expected)
+        self.assertEqual(audit["status"], "PASS")
+        self.assertEqual(audit["operator_identities"], 905)
+        self.assertEqual(audit["input_cases"], 54300)
+        self.assertEqual(audit["failed_cases"], 0)
+
+    def test_step_2b_euclidean_exact_verifier(self) -> None:
+        script = ROOT / "scripts/verify_step2b_euclidean_superconformal.py"
+        audit_path = ROOT / "audits/step2b-euclidean-superconformal-verification.json"
+        if not script.exists() or not audit_path.exists():
+            self.skipTest("Step 2B Euclidean verifier is not registered")
+        expected = audit_path.read_text(encoding="utf-8")
+        subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
+        audit = json.loads(expected)
+        self.assertEqual(audit["status"], "PASS")
+        self.assertEqual(audit["operator_identities"], 763)
+        self.assertEqual(audit["input_cases"], 45780)
+        self.assertEqual(audit["failed_cases"], 0)
+
+    def test_step_2b_independent_review(self) -> None:
+        path = ROOT / "audits/step2b-independent-review.json"
+        if not path.exists():
+            self.skipTest("Step 2B independent review is not registered")
+        review = json.loads(path.read_text(encoding="utf-8"))
+        self.assertEqual(review["result"], "PASS")
+        self.assertEqual(review["post_resolution"]["P0"], [])
+        self.assertEqual(review["post_resolution"]["P1"], [])
+        self.assertTrue(all(item["status"] == "RESOLVED" for item in review["findings"]))
+
     def test_no_absolute_user_paths_in_authority_surface(self) -> None:
         roots = [
             ROOT / "AUTHORITY.md",

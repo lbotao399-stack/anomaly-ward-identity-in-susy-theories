@@ -1,0 +1,27 @@
+{
+  "arithmetic": "Q(i) polynomial coefficients and exact exterior algebra; no floating point; no CAS",
+  "basis": {
+    "bosonic_monomials_total_degree_at_most_2": 15,
+    "grassmann_monomials": 4,
+    "total_inputs": 60
+  },
+  "chart": "chiral (y^mu,vartheta^a)",
+  "failed_cases": 0,
+  "failures": [],
+  "input_cases": 54300,
+  "operator_identities": 905,
+  "schema": 1,
+  "signature": "Lorentzian",
+  "status": "PASS",
+  "superinversion_phase": "the explicit plus/minus i convention declared in contract equation 2B.32",
+  "task_id": "CONTRACT-STEP-02B-SUPERCONFORMAL-001",
+  "weighted_chiral_modules": {
+    "closure_relation": "r=-2 Delta/3",
+    "tested_Delta": [
+      "-1",
+      "1/2",
+      "3/2",
+      "2"
+    ]
+  }
+}

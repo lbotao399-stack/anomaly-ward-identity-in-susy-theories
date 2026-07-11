@@ -1,0 +1,79 @@
+{
+  "arithmetic": "Q(i) polynomial coefficients and exact exterior algebra; no floating point; no CAS",
+  "basis": {
+    "bosonic_monomials_total_degree_at_most_2": 15,
+    "grassmann_monomials": 4,
+    "total_inputs": 60
+  },
+  "chart": "chiral (y_E^m,vartheta^a)",
+  "failed_cases": 0,
+  "failures": [],
+  "families": {
+    "euclidean_bosonic_conformal": {
+      "failed_cases": 0,
+      "input_cases": 1440,
+      "operator_identities": 24,
+      "passed_cases": 1440
+    },
+    "euclidean_dilation_r": {
+      "failed_cases": 0,
+      "input_cases": 960,
+      "operator_identities": 16,
+      "passed_cases": 960
+    },
+    "euclidean_graded_algebra": {
+      "failed_cases": 0,
+      "input_cases": 2400,
+      "operator_identities": 40,
+      "passed_cases": 2400
+    },
+    "euclidean_mixed_even_odd": {
+      "failed_cases": 0,
+      "input_cases": 1920,
+      "operator_identities": 32,
+      "passed_cases": 1920
+    },
+    "euclidean_spin4": {
+      "failed_cases": 0,
+      "input_cases": 32640,
+      "operator_identities": 544,
+      "passed_cases": 32640
+    },
+    "euclidean_zero_sectors": {
+      "failed_cases": 0,
+      "input_cases": 4380,
+      "operator_identities": 73,
+      "passed_cases": 4380
+    },
+    "wick_phase_relations": {
+      "failed_cases": 0,
+      "input_cases": 2040,
+      "operator_identities": 34,
+      "passed_cases": 2040
+    }
+  },
+  "input_cases": 45780,
+  "operator_definitions": {
+    "D": "-(y_E.partial_E+N_vartheta/2)",
+    "J_mn": "-i(y_m partial_n-y_n partial_m)-i vartheta sigma_E_mn partial_vartheta",
+    "K_m": "-[(y^2 delta_m^n-2 y_m y^n)partial_n-vartheta(sigma_E_m tildeY_E)partial_vartheta]",
+    "P_m": "-partial_m",
+    "Q_a": "-partial_a",
+    "R": "-i N_vartheta",
+    "S^a": "-2 vartheta sigma_E^m tildeY_E^a partial_m-2 vartheta^2 epsilon^(ab)partial_b",
+    "barQ_dot_a": "-2 vartheta sigma_E^m partial_m",
+    "barS^dot_a": "tildeY_E^(dot a a) partial_a"
+  },
+  "operator_identities": 763,
+  "schema": 1,
+  "signature": "Euclidean",
+  "status": "PASS",
+  "task_id": "CONTRACT-STEP-02B-SUPERCONFORMAL-001",
+  "wick_transport": {
+    "coordinates": "y_L^0=-i y_E^4; y_L^i=y_E^i; vartheta_L=vartheta_E",
+    "derivatives": "partial_L0=i partial_E4; partial_Li=partial_Ei",
+    "rotation_phases": "J_Eij=J_Lij and J_E4i=-i J_L0i",
+    "scalar_and_spinor_phases": "G_E=-i G_L for G=D,R,Q,barQ,S,barS",
+    "vector_phases": "G_Ei=-i G_Li and G_E4=-G_L0 for G=P,K"
+  }
+}
