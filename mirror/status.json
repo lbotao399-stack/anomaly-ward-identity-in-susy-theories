@@ -1,12 +1,12 @@
 {
   "schema": 1,
   "state": "PUBLISHED_WRITE_RECEIPT",
-  "source": "contracts/foundations/step-03c-gauge-vector-representation.md",
-  "source_sha256": "90e5211557e0a12e444ee91a174beaf7ddea9039e6f9b987eb0861f0a9ef2461",
-  "git_commit": "fe4b80a9478a4ad0bdd63c614c0d1a1f4b1cd5f0",
-  "notion_page_id": "39aee2b7-4b3f-8161-b3dd-fbb0d0c97f7d",
+  "source": "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md",
+  "source_sha256": "109e0c531da3a1b98313e87dd692fa3d9047c8f745291f8e87021008c7acc538",
+  "git_commit": "218c043b7d0a10b54464d46a42d4732d6ab6b8ac",
+  "notion_page_id": "39aee2b7-4b3f-8126-881c-ec4d32b780de",
   "verification": "WRITE_RECEIPT_ONLY_NO_NOTION_READBACK",
-  "published_at": "2026-07-11T17:18:36Z",
+  "published_at": "2026-07-11T23:01:27Z",
   "mutation": "create_pages",
-  "async_task_id": "task_fef05d827db34ce9824832396636f7cd"
+  "async_task_id": "task_99c3a12ada2e4bf69773d68e6925cd0f"
 }

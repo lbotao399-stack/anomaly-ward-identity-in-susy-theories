@@ -746,6 +746,28 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertEqual(mirror_task["id"], "MIRROR-STEP-03C-NOTION-001")
         self.assertEqual(mirror_task["status"], "ACCEPTED")
 
+    def test_step_3d_write_only_mirror_receipt(self) -> None:
+        page_map = json.loads((ROOT / "mirror/page_map.yaml").read_text(encoding="utf-8"))
+        receipt = json.loads((ROOT / "audits/notion_write_receipt.json").read_text(encoding="utf-8"))
+        current = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
+        page = next(
+            item
+            for item in page_map["pages"]
+            if item["id"] == "FOUNDATION-N1-SUPERFIELD-PATH-INTEGRAL-BV-BRST-003D"
+        )
+        write = next(
+            item
+            for item in receipt["pages"]
+            if item["id"] == "FOUNDATION-N1-SUPERFIELD-PATH-INTEGRAL-BV-BRST-003D"
+        )
+        self.assertEqual(page["source_commit"], "218c043b7d0a10b54464d46a42d4732d6ab6b8ac")
+        self.assertEqual(page["source_sha256"], "109e0c531da3a1b98313e87dd692fa3d9047c8f745291f8e87021008c7acc538")
+        self.assertEqual(page["notion_page_id"], "39aee2b7-4b3f-8126-881c-ec4d32b780de")
+        self.assertEqual(write["write_response"], "succeeded")
+        self.assertFalse(receipt["content_readback_performed"])
+        self.assertEqual(current["id"], "MIRROR-STEP-03D-NOTION-001")
+        self.assertEqual(current["status"], "ACCEPTED")
+
     def test_step_3d_path_integral_bv_brst_contract(self) -> None:
         path = ROOT / "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md"
         if not path.exists():

@@ -106,7 +106,13 @@
     },
     {
       "id": "CONTRACT-STEP-03D-N1-SUPERFIELD-PATH-INTEGRAL-BV-BRST-001",
-      "state": "SPECIFIED",
+      "state": "ACCEPTED",
+      "blocking_reason": null,
+      "task": "tasks/archive/CONTRACT-STEP-03D-N1-SUPERFIELD-PATH-INTEGRAL-BV-BRST-001.yaml"
+    },
+    {
+      "id": "MIRROR-STEP-03D-NOTION-001",
+      "state": "ACCEPTED",
       "blocking_reason": null,
       "task": "tasks/CURRENT.yaml"
     }
