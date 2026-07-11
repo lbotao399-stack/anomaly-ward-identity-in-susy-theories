@@ -7,7 +7,11 @@
 - Direct pushes after the bootstrap commits are forbidden; use one proof-obligation branch and review.
 - An unpushed local commit is a proposal.
 - Do not read outside this repository except runtime executables required by repository code.
-- Do not read Notion, chat history, Codex memory, attachments, Desktop notes, other repositories, or web pages as calculation input.
+- Do not read Notion, chat history, Codex memory, attachments, Desktop notes, other repositories,
+  or web pages as calculation input, except for the exact external handles of a user-authorized
+  REFERENCE_IMPORT task under the scoped exception in AUTHORITY.md.
+- During that import task, vendor raw source snapshots and metadata only.  Mathematical comparison
+  begins in a later CONTRACT_CHANGE after the import reaches verified origin/main.
 - Do not create a `legacy/` directory. Legacy material remains outside the authoritative checkout.
 
 ## Scope

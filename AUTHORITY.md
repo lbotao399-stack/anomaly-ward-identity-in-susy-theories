@@ -34,6 +34,22 @@ Notion is an output-only human-readable mirror.
 - Manual Notion edits are non-authoritative and may be overwritten.
 - Publishing receipts and target page identifiers are transport metadata, not mathematical evidence.
 
+### User-authorized Notion reference-import exception
+
+A user may explicitly authorize named Notion book pages as external references for one
+REFERENCE_IMPORT task.  The exception is valid only when all of the following hold:
+
+1. tasks/CURRENT.yaml records the exact search queries and forbids every unrelated Notion page;
+2. search is used only to identify the named book roots and their descendants;
+3. every fetched page is stored verbatim in references/vendor/ with page id, URL, title, and
+   SHA-256 in references/manifest.yaml;
+4. the imported snapshot is a reference, not a contract: it cannot settle a project sign or
+   normalization until a later reviewed CONTRACT_CHANGE derives the translation;
+5. after the import task is accepted, the default output-only Notion boundary resumes.
+
+No attachment, draft dictionary, or fetched Notion page is authoritative before its vendored
+snapshot and hash reach origin/main with a successful verify workflow.
+
 ## Bootstrap exception
 
 The Step-1 supersymmetry-commutator foundation is admitted once from the exact payload authored in the
