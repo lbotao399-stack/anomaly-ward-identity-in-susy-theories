@@ -53,6 +53,12 @@
       "id": "CONTRACT-STEP-02C-COMPLETE-SUPERCONFORMAL-COVARIANCE-001",
       "state": "ACCEPTED",
       "blocking_reason": null,
+      "task": "tasks/archive/CONTRACT-STEP-02C-COMPLETE-SUPERCONFORMAL-COVARIANCE-001.yaml"
+    },
+    {
+      "id": "MIRROR-STEP-02C-NOTION-001",
+      "state": "ACCEPTED",
+      "blocking_reason": null,
       "task": "tasks/CURRENT.yaml"
     }
   ]

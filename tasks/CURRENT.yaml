@@ -1,42 +1,32 @@
 {
-  "id": "CONTRACT-STEP-02C-COMPLETE-SUPERCONFORMAL-COVARIANCE-001",
+  "id": "MIRROR-STEP-02C-NOTION-001",
   "type": "CONTRACT_CHANGE",
   "status": "ACCEPTED",
-  "outcome": "Derive from superspace inversion the complete Lorentzian and Euclidean coordinate realizations of K, S, and bar S; state the full N=1 superconformal graded algebra; and prove that diagonal coordinate-Noether covariance transfers the identical structure constants to Hilbert-space charges.",
+  "outcome": "Publish the accepted Step-2C complete superconformal covariance contract from origin/main commit 3d6d99102753c152a5a4eb0f9be1a1f6dc121834 to one Notion child page under the fixed AWI root without reading any Notion content.",
   "allowed_inputs": [
     "AUTHORITY.md",
     "AGENTS.md",
+    "contracts/foundations/step-02c-complete-superconformal-covariance.md",
     "contracts/manifest.yaml",
-    "contracts/foundations/step-01-supersymmetry-commutator.md",
-    "contracts/foundations/step-02a-flat-superspace.md",
-    "contracts/foundations/step-02b-superconformal-superspace.md",
-    "audits/step2b-lorentzian-superconformal-verification.json",
-    "audits/step2b-euclidean-superconformal-verification.json",
-    "audits/step2b-independent-review.json",
-    "audits/step2b-notation-ledger.json",
-    "scripts/verify_step2b_chiral_superconformal.py",
-    "scripts/verify_step2b_euclidean_superconformal.py",
-    "ledger/proof_obligations.json",
-    "tests/test_repository_policy.py"
+    "mirror/page_map.yaml",
+    "mirror/README.md",
+    "scripts/build_notion_payload.py",
+    "audits/notion_write_receipt.json"
   ],
   "forbidden_inputs": [
     "Notion content",
     "Notion fetch, search, page read, block read, or content readback",
-    "web pages or URLs",
-    "attachments",
     "legacy repositories",
     "other local files",
-    "unstated textbook conventions"
+    "unmerged branches",
+    "manual mathematical edits on the Notion side"
   ],
   "acceptance": [
-    "Lorentzian P coordinate is fixed as -i partial and every full-superspace coordinate generator is written with all spinor indices and operator order explicit",
-    "K, S, and bar S are derived by conjugation with the involutive superspace inversion rather than quoted",
-    "the complete Lorentzian N=1 superconformal graded commutator table includes every nonzero bracket and all vanishing bracket families",
-    "diagonal covariance [coordinate generator plus Hilbert generator, multiplication by Phi] graded-equals zero is proved to transfer identical structure constants, modulo an explicitly excluded central operator commuting with all local multiplication operators",
-    "the Euclidean coordinate realization and complete Euclidean algebra are obtained by the locked Wick map with no Euclidean Hermitian identification of the two Weyl sectors",
-    "all changed symbols pass the local notation ledger, free-index, grading, conjugation, and operator-order audits",
-    "exact symbolic verification checks the Lorentzian and Euclidean generator brackets on a finite complete Grassmann-monomial basis with zero failures",
-    "independent reviewers report no unresolved P0 or P1 defect",
-    "contract manifest hashes are valid and repository-policy passes"
+    "the published mathematical source is exactly the Step-2C contract at origin/main commit 3d6d99102753c152a5a4eb0f9be1a1f6dc121834",
+    "the Notion child page is created only through a write operation under root page 39e80ed3e5844b17b3ccf2579e2a64ca",
+    "the payload contains the Git authority header, exact source path, commit, and SHA-256",
+    "mirror page map records the Notion page id, source path, source commit, and source sha256",
+    "write receipt states content_readback_performed=false",
+    "repository-policy passes after the mirror metadata update"
   ]
 }
