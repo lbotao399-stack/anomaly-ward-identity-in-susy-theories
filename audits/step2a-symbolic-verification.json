@@ -1,0 +1,140 @@
+{
+  "arithmetic": {
+    "coefficient_ring": "Z[i][k_0,k_1,k_2,k_3]",
+    "implementation": "exact integer pairs; no floating point; no external CAS"
+  },
+  "bosonic_symbols": {
+    "Euclidean": [
+      "kE1",
+      "kE2",
+      "kE3",
+      "kE4"
+    ],
+    "Lorentzian": [
+      "kL0",
+      "kL1",
+      "kL2",
+      "kL3"
+    ],
+    "independence": "four commuting algebraically independent indeterminates per signature"
+  },
+  "failures": [],
+  "families": {
+    "euclidean_chiral_coordinates": {
+      "failed_cases": 0,
+      "input_cases": 16,
+      "operator_identities": 16,
+      "passed_cases": 16
+    },
+    "euclidean_graded_algebra": {
+      "failed_cases": 0,
+      "input_cases": 384,
+      "operator_identities": 24,
+      "passed_cases": 384
+    },
+    "euclidean_mixed_q_d": {
+      "failed_cases": 0,
+      "input_cases": 256,
+      "operator_identities": 16,
+      "passed_cases": 256
+    },
+    "euclidean_translation_commutators": {
+      "failed_cases": 0,
+      "input_cases": 768,
+      "operator_identities": 48,
+      "passed_cases": 768
+    },
+    "grassmann_calculus": {
+      "failed_cases": 0,
+      "input_cases": 128,
+      "operator_identities": 8,
+      "passed_cases": 128
+    },
+    "lorentzian_chiral_coordinates": {
+      "failed_cases": 0,
+      "input_cases": 16,
+      "operator_identities": 16,
+      "passed_cases": 16
+    },
+    "lorentzian_coordinate_formal_adjoint": {
+      "failed_cases": 0,
+      "input_cases": 12,
+      "operator_identities": 12,
+      "passed_cases": 12
+    },
+    "lorentzian_graded_algebra": {
+      "failed_cases": 0,
+      "input_cases": 384,
+      "operator_identities": 24,
+      "passed_cases": 384
+    },
+    "lorentzian_mixed_q_d": {
+      "failed_cases": 0,
+      "input_cases": 256,
+      "operator_identities": 16,
+      "passed_cases": 256
+    },
+    "lorentzian_translation_commutators": {
+      "failed_cases": 0,
+      "input_cases": 768,
+      "operator_identities": 48,
+      "passed_cases": 768
+    },
+    "wick_relations": {
+      "failed_cases": 0,
+      "input_cases": 196,
+      "operator_identities": 16,
+      "passed_cases": 196
+    }
+  },
+  "grassmann_basis": {
+    "basis_monomials": 16,
+    "derived_bracket": "{barpartial_dot a,barvartheta^dot b}=-delta_dot a^dot b",
+    "lower_bar_derivative_rule": "barpartial_dot a=epsilon_(dot a dot b)d^L/dbarvartheta_dot b",
+    "ordered_primitive_generators": [
+      "vartheta^1",
+      "vartheta^2",
+      "barvartheta_dot1",
+      "barvartheta_dot2"
+    ],
+    "raised_bar_rule": "barvartheta^dot a=epsilon^(dot a dot b)barvartheta_dot b"
+  },
+  "lorentzian_coordinate_formal_adjoint": {
+    "rules": [
+      "x^dagger=x",
+      "partial_mu^dagger=-partial_mu",
+      "(vartheta^a)^dagger=barvartheta^dot a",
+      "(partial_a)^dagger=-barpartial_dot a",
+      "(A B)^dagger=B^dagger A^dagger"
+    ],
+    "scope": "exact symbolic coordinate differential-operator involution; not a Euclidean or Berezin L2 spinor adjoint"
+  },
+  "operator_definitions": {
+    "Euclidean": {
+      "D": "partial_a + sigma_E barvartheta partial_E",
+      "D_barD": "+2 sigma_E.P",
+      "P": "-partial_E",
+      "Q": "-partial_a + sigma_E barvartheta partial_E",
+      "Q_barQ": "-2 sigma_E.P",
+      "barD": "barpartial_dot - vartheta sigma_E partial_E",
+      "barQ": "-barpartial_dot - vartheta sigma_E partial_E"
+    },
+    "Lorentzian": {
+      "D": "partial_a - i sigma_L barvartheta partial_L",
+      "D_barD": "-2 sigma_L.P",
+      "P": "-i partial_L",
+      "Q": "-i partial_a + sigma_L barvartheta partial_L",
+      "Q_barQ": "-2 sigma_L.P",
+      "barD": "barpartial_dot + i vartheta sigma_L partial_L",
+      "barQ": "-i barpartial_dot - vartheta sigma_L partial_L"
+    }
+  },
+  "status": "PASS",
+  "task_id": "CONTRACT-STEP-02A-FLAT-SUPERSPACE-001",
+  "totals": {
+    "failed_cases": 0,
+    "input_cases": 3184,
+    "operator_identities": 244,
+    "passed_cases": 3184
+  }
+}

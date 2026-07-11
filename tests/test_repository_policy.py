@@ -3,6 +3,8 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+import subprocess
+import sys
 import unittest
 from pathlib import Path
 
@@ -118,6 +120,62 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertIn(r"\{Q^E_a,\bar Q^E_{\dot b}\}", text)
         self.assertNotIn(r"\sim", text)
         self.assertNotIn(r"\approx", text)
+
+    def test_step_2a_formula_surface(self) -> None:
+        path = ROOT / "contracts/foundations/step-02a-flat-superspace.md"
+        if not path.exists():
+            self.skipTest("Step 2A contract is not registered")
+        text = path.read_text(encoding="utf-8")
+        tags = {int(value) for value in re.findall(r"\\tag\{2A\.(\d+)\}", text)}
+        self.assertEqual(tags, set(range(1, 54)))
+        for subtag in ("15a", "20a", "20b", "20c", "20d", "50a"):
+            self.assertIn(rf"\tag{{2A.{subtag}}}", text)
+        self.assertIn(r"\mathsf P^L_\mu=-i\partial_\mu^L", text)
+        self.assertIn(r"\mathsf P_m^E=-\partial_m^E", text)
+        self.assertIn(r"\pi_m^E:=i\mathsf P_m^E=-i\partial_m^E", text)
+        self.assertIn(r"\{\bar\partial_{\dot a},\bar\vartheta^{\dot b}\}", text)
+        self.assertIn("Intrinsic Euclidean superspace imposes no relation", text)
+        self.assertNotIn(r"\sim", text)
+        self.assertNotIn(r"\approx", text)
+
+    def test_step_2a_notation_audit(self) -> None:
+        path = ROOT / "audits/step2a-notation-ledger.json"
+        if not path.exists():
+            self.skipTest("Step 2A notation audit is not registered")
+        audit = json.loads(path.read_text(encoding="utf-8"))
+        self.assertEqual(audit["result"], "PASS")
+        self.assertEqual(audit["findings"]["P0"], [])
+        self.assertEqual(audit["findings"]["P1"], [])
+        self.assertTrue(all(item["result"] == "PASS" for item in audit["checks"]))
+
+    def test_step_2a_exact_symbolic_verifier(self) -> None:
+        script = ROOT / "scripts/verify_step2a_flat_superspace.py"
+        audit_path = ROOT / "audits/step2a-symbolic-verification.json"
+        if not script.exists() or not audit_path.exists():
+            self.skipTest("Step 2A symbolic verifier is not registered")
+        expected = audit_path.read_text(encoding="utf-8")
+        subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
+        audit = json.loads(expected)
+        self.assertEqual(audit["status"], "PASS")
+        self.assertEqual(audit["totals"]["operator_identities"], 244)
+        self.assertEqual(audit["totals"]["input_cases"], 3184)
+        self.assertEqual(audit["totals"]["failed_cases"], 0)
+
+    def test_step_2a_independent_review(self) -> None:
+        path = ROOT / "audits/step2a-independent-review.json"
+        if not path.exists():
+            self.skipTest("Step 2A independent review is not registered")
+        review = json.loads(path.read_text(encoding="utf-8"))
+        self.assertEqual(review["result"], "PASS")
+        self.assertEqual(review["post_resolution"]["P0"], [])
+        self.assertEqual(review["post_resolution"]["P1"], [])
+        self.assertTrue(all(item["status"] == "RESOLVED" for item in review["findings"]))
 
     def test_no_absolute_user_paths_in_authority_surface(self) -> None:
         roots = [

@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-02A-FLAT-SUPERSPACE-001",
+  "contract": "contracts/foundations/step-02a-flat-superspace.md",
+  "checks": [
+    {
+      "id": "PARAMETER_VERSUS_COORDINATE",
+      "result": "PASS",
+      "locked": "epsilon and barepsilon are transformation parameters; vartheta and barvartheta are superspace coordinates"
+    },
+    {
+      "id": "BARRED_PRIMITIVE_INDEX",
+      "result": "PASS",
+      "locked": "barvartheta_dot_a is primitive and barpartial_dot_a is derived with epsilon_dot_a_dot_b"
+    },
+    {
+      "id": "BARRED_LEFT_DERIVATIVE_SIGN",
+      "result": "PASS",
+      "locked": "anticommutator(barpartial_dot_a,barvartheta^dot_b)=-delta_dot_a^dot_b"
+    },
+    {
+      "id": "EUCLIDEAN_MOMENTUM_SPLIT",
+      "result": "PASS",
+      "locked": "Step-1 exponent coordinate generator is mathsf P_E=-partial_E; Hermitian coordinate momentum is pi_E=-i partial_E"
+    },
+    {
+      "id": "ADJOINT_SURFACES",
+      "result": "PASS",
+      "locked": "physical Hilbert dagger, Lorentz coordinate formal adjoint, bosonic coordinate L2 adjoint, and Wick-transported Euclidean adjoint are distinct"
+    },
+    {
+      "id": "FLAT_VERSUS_GAUGE_COVARIANT",
+      "result": "PASS",
+      "locked": "D denotes standard-normalized flat superspace covariant derivatives; nabla is reserved for gauge-covariant derivatives"
+    }
+  ],
+  "findings": {
+    "P0": [],
+    "P1": []
+  },
+  "result": "PASS"
+}
