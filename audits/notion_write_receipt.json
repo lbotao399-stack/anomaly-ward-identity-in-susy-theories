@@ -1,17 +1,31 @@
 {
-  "schema": 1,
+  "schema": 2,
   "direction": "GIT_TO_NOTION_ONLY",
   "content_readback_performed": false,
-  "source_commit": "8a0b55889b08690f21a42b46d9d54c3a0508ef08",
-  "source_sha256": "a73d8017c2d07de578f4f98ea25054033b0384ebffb6b426650a22f404c3231b",
-  "foundation_page": {
+  "source_commit": "a2db71aefe3296ebf31bdb18609d5054af6e0325",
+  "pages": [
+    {
+      "id": "FOUNDATION-FLAT-SUPERSPACE-002A",
+      "source": "contracts/foundations/step-02a-flat-superspace.md",
+      "source_sha256": "6694f46634d604fac6a8866323c7325a803cbf3079a5771ddea25772c91cef2d",
+      "page_id": "39aee2b7-4b3f-81a0-a011-db60c1e3aa16",
+      "mutation": "create_pages",
+      "write_response": "accepted"
+    },
+    {
+      "id": "FOUNDATION-SUPERCONFORMAL-SUPERSPACE-002B",
+      "source": "contracts/foundations/step-02b-superconformal-superspace.md",
+      "source_sha256": "90c80095ae2381c3a94008d5304365f0de3b917edf1052e31e76a17a851577ce",
+      "page_id": "39aee2b7-4b3f-81fb-a3a3-f6abf55b267e",
+      "mutation": "create_pages",
+      "write_response": "accepted"
+    }
+  ],
+  "previous_receipt": {
+    "source_commit": "8a0b55889b08690f21a42b46d9d54c3a0508ef08",
+    "source_sha256": "a73d8017c2d07de578f4f98ea25054033b0384ebffb6b426650a22f404c3231b",
     "page_id": "399ee2b7-4b3f-8158-9f75-f4a148e431fb",
-    "archived_blocks": 108,
-    "appended_blocks": 116
+    "published_at": "2026-07-10T23:46:35Z"
   },
-  "root_banner": {
-    "page_id": "39e80ed3-e584-4b17-b3cc-f2579e2a64ca",
-    "write_receipt": "accepted"
-  },
-  "published_at": "2026-07-10T23:46:35Z"
+  "published_at": "2026-07-11T03:09:59Z"
 }
