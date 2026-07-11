@@ -2,10 +2,11 @@
   "id": "MIRROR-STEP-02B-NOTION-001",
   "type": "CONTRACT_CHANGE",
   "status": "SPECIFIED",
-  "outcome": "Publish the accepted Step-2B contract from origin/main to a Notion child page under the fixed AWI root without reading any Notion content.",
+  "outcome": "Publish the accepted Step-2A and Step-2B contracts from origin/main to Notion child pages under the fixed AWI root without reading any Notion content.",
   "allowed_inputs": [
     "AUTHORITY.md",
     "AGENTS.md",
+    "contracts/foundations/step-02a-flat-superspace.md",
     "contracts/foundations/step-02b-superconformal-superspace.md",
     "contracts/manifest.yaml",
     "mirror/page_map.yaml",
@@ -20,9 +21,9 @@
     "manual mathematical edits on the Notion side"
   ],
   "acceptance": [
-    "the published mathematical source is exactly the Step-2B contract at the accepted origin/main commit",
-    "the Notion child page is created or replaced only through write operations under root page 39e80ed3e5844b17b3ccf2579e2a64ca",
-    "mirror page map records the Notion page id, source path, source commit, and source sha256",
+    "the published mathematical sources are exactly the Step-2A and Step-2B contracts at the accepted origin/main commit",
+    "the Notion child pages are created or replaced only through write operations under root page 39e80ed3e5844b17b3ccf2579e2a64ca",
+    "mirror page map records both Notion page ids, source paths, source commit, and source sha256 values",
     "write receipt states content_readback_performed=false",
     "repository-policy passes after the mirror metadata update"
   ]
