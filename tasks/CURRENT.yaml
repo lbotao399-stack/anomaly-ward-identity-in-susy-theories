@@ -1,29 +1,28 @@
 {
-  "id": "AUTHORITY-REPAIR-001",
-  "type": "AUTHORITY_REPAIR",
-  "status": "ACCEPTED",
-  "outcome": "Create a clean GitHub authority, isolate legacy attempts, migrate Step 1, and establish one-way Git-to-Notion mirroring.",
+  "id": "REFERENCE-IMPORT-SUPERSPACE-001",
+  "type": "REFERENCE_IMPORT",
+  "status": "SPECIFIED",
+  "outcome": "Vendor the minimum primary-source material needed to derive Lorentzian and Euclidean N=1 superspace and superconformal coordinate generators in the locked Step-1 convention.",
   "allowed_inputs": [
     "AUTHORITY.md",
     "AGENTS.md",
-    "proposals/gpt-pro-workflow-draft-2026-07-10.md",
     "contracts/foundations/step-01-supersymmetry-commutator.md",
     "contracts/manifest.yaml",
-    "mirror/page_map.yaml"
+    "references/manifest.yaml"
   ],
   "forbidden_inputs": [
     "Notion content",
     "legacy repositories",
     "other local files",
-    "Codex memory as mathematical evidence",
+    "secondary summaries",
+    "unvendored web claims",
     "other calculation channels"
   ],
   "acceptance": [
-    "new private GitHub repository exists",
-    "default branch contains no legacy history",
-    "Step-1 contract hash passes",
-    "repository policy tests pass",
-    "clearly obsolete AWI remotes are archived, not deleted",
-    "Notion receives a Git-authority banner and Git-generated Step-1 payload without content fetch"
+    "only public primary sources are selected",
+    "each imported source is stored inside references/vendor with SHA-256",
+    "references/claim-map.yaml states exactly which structural claim each source may support",
+    "no imported convention overrides Step 1",
+    "no Step-2 formula is admitted before an independent derivation and notation audit"
   ]
 }
