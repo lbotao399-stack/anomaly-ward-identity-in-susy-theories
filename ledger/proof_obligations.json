@@ -17,6 +17,12 @@
       "id": "CONTRACT-STEP-02A-FLAT-SUPERSPACE-001",
       "state": "ACCEPTED",
       "blocking_reason": null,
+      "task": "tasks/archive/CONTRACT-STEP-02A-FLAT-SUPERSPACE-001.yaml"
+    },
+    {
+      "id": "CONTRACT-STEP-02B-SUPERCONFORMAL-001",
+      "state": "SPECIFIED",
+      "blocking_reason": null,
       "task": "tasks/CURRENT.yaml"
     }
   ]

@@ -1,0 +1,37 @@
+{
+  "id": "CONTRACT-STEP-02A-FLAT-SUPERSPACE-001",
+  "type": "CONTRACT_CHANGE",
+  "status": "ACCEPTED",
+  "outcome": "Derive the Lorentzian and Euclidean flat N=1 superspace coordinate realization, Noether/Hilbert versus coordinate representations, spinor covariant derivatives, graded algebra, reality rules, and chiral coordinates in the locked Step-1 convention.",
+  "allowed_inputs": [
+    "AUTHORITY.md",
+    "AGENTS.md",
+    "contracts/foundations/step-01-supersymmetry-commutator.md",
+    "contracts/manifest.yaml",
+    "references/claim-map.yaml",
+    "references/manifest.yaml",
+    "references/vendor/hep-th-0108200v1.pdf",
+    "references/vendor/hep-th-9808041v4-source.tex.gz",
+    "references/vendor/hep-th-9808041v4.pdf",
+    "references/vendor/hep-th-9903230v3-source.tar",
+    "references/vendor/hep-th-9903230v3.pdf"
+  ],
+  "forbidden_inputs": [
+    "Notion content",
+    "legacy repositories",
+    "other local files",
+    "unvendored references",
+    "quoted textbook signs or normalizations",
+    "superconformal K or S formulas before Step 2A is accepted"
+  ],
+  "acceptance": [
+    "Noether-charge and active fixed-coordinate transformation conventions are explicit",
+    "coordinate and Hilbert-space representations satisfy an exact diagonal covariance identity",
+    "Lorentzian P-coordinate, Q-coordinate, D and barred operators are explicitly derived",
+    "all Lorentzian graded brackets and dagger relations pass symbolic tests",
+    "Euclidean operators follow only by the locked Wick map and pass symbolic tests",
+    "Euclidean Hilbert-space reality and coordinate L2 adjoint are distinguished",
+    "Lorentzian and Euclidean chiral coordinates are derived by direct annihilation",
+    "notation audit reports no P0 or P1 inconsistency"
+  ]
+}
