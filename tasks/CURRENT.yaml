@@ -1,39 +1,29 @@
 {
-  "id": "CONTRACT-STEP-02B-SUPERCONFORMAL-001",
+  "id": "MIRROR-STEP-02B-NOTION-001",
   "type": "CONTRACT_CHANGE",
-  "status": "ACCEPTED",
-  "outcome": "Derive Lorentzian and Euclidean N=1 superconformal coordinate generators from inversion and superinversion in the accepted Step-1 and Step-2A conventions, including the necessary dilation and R generators, K, S, barred S, their graded algebra, and all reality relations.",
+  "status": "SPECIFIED",
+  "outcome": "Publish the accepted Step-2B contract from origin/main to a Notion child page under the fixed AWI root without reading any Notion content.",
   "allowed_inputs": [
     "AUTHORITY.md",
     "AGENTS.md",
-    "contracts/foundations/step-01-supersymmetry-commutator.md",
-    "contracts/foundations/step-02a-flat-superspace.md",
+    "contracts/foundations/step-02b-superconformal-superspace.md",
     "contracts/manifest.yaml",
-    "references/claim-map.yaml",
-    "references/manifest.yaml",
-    "references/vendor/hep-th-0108200v1.pdf",
-    "references/vendor/hep-th-9808041v4-source.tex.gz",
-    "references/vendor/hep-th-9808041v4.pdf",
-    "references/vendor/hep-th-9903230v3-source.tar",
-    "references/vendor/hep-th-9903230v3.pdf"
+    "mirror/page_map.yaml",
+    "audits/notion_write_receipt.json"
   ],
   "forbidden_inputs": [
     "Notion content",
+    "Notion fetch, search, page read, block read, or content readback",
     "legacy repositories",
     "other local files",
-    "unvendored references",
-    "quoted textbook signs or normalizations",
-    "gauge-covariant superspace or action-dependent formulas"
+    "unmerged branches",
+    "manual mathematical edits on the Notion side"
   ],
   "acceptance": [
-    "Lorentzian bosonic inversion and its domain are defined and K-coordinate is derived by conjugating P-coordinate",
-    "the dilation normalization and Lorentz-spin action are fixed by direct coordinate commutators",
-    "Lorentzian superinversion is defined on the accepted chiral coordinates and S-coordinate and barred S-coordinate are derived by conjugating Q-coordinate",
-    "the necessary U(1) R-coordinate generator is fixed without importing a source normalization",
-    "all P, J, dilation, R, Q, barred Q, K, S, and barred S graded brackets pass exact symbolic tests",
-    "Lorentzian coordinate formal adjoints of K and S agree with the physical charge pairing",
-    "Euclidean K and S coordinate generators follow only from the locked Wick map and exponent matching",
-    "intrinsic Euclidean reality is separated from Wick-transported adjoints",
-    "notation audit reports no P0 or P1 inconsistency"
+    "the published mathematical source is exactly the Step-2B contract at the accepted origin/main commit",
+    "the Notion child page is created or replaced only through write operations under root page 39e80ed3e5844b17b3ccf2579e2a64ca",
+    "mirror page map records the Notion page id, source path, source commit, and source sha256",
+    "write receipt states content_readback_performed=false",
+    "repository-policy passes after the mirror metadata update"
   ]
 }

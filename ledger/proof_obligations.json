@@ -23,6 +23,12 @@
       "id": "CONTRACT-STEP-02B-SUPERCONFORMAL-001",
       "state": "ACCEPTED",
       "blocking_reason": null,
+      "task": "tasks/archive/CONTRACT-STEP-02B-SUPERCONFORMAL-001.yaml"
+    },
+    {
+      "id": "MIRROR-STEP-02B-NOTION-001",
+      "state": "SPECIFIED",
+      "blocking_reason": null,
       "task": "tasks/CURRENT.yaml"
     }
   ]
