@@ -1,0 +1,100 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-02B-SUPERCONFORMAL-001",
+  "scope": "equations 2B.1 through 2B.78; Lorentzian and Euclidean inversion, superinversion, coordinate generators, graded algebra, Wick continuation, and adjoints",
+  "reviewers": [
+    "independent_lorentz_read_only_agent",
+    "independent_euclidean_read_only_agent",
+    "independent_superinversion_read_only_agent"
+  ],
+  "findings": [
+    {
+      "priority": "P1",
+      "equation": "2B.31a-2B.33c",
+      "issue": "the initial superinversion domain treated y and bar y as independent and did not prove preservation of the superspace constraint",
+      "resolution": "defined the constrained 4|4 domain and displayed the exact matrix calculation proving bar y prime-y prime=2i vartheta prime sigma barvartheta prime",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equation": "2B.34a-2B.34e",
+      "issue": "the initial involution statement omitted the determinant and epsilon contractions",
+      "resolution": "expanded det Y=-y squared and both two-by-two epsilon contractions before concluding I_s squared=1",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equation": "2B.35a-2B.35k",
+      "issue": "the point map and pullback were initially mixed and the K, S, barred S Jacobian table stated results without a typed chain rule",
+      "resolution": "separated I_s from I_s star, typed chiral-to-antichiral pullback, defined antichiral Q actions, and expanded every even and odd derivative",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equation": "2B.35",
+      "issue": "the fermionic phase was initially composed at the point-map level and lacked its real U(1) domain",
+      "resolution": "defined I_s_phi star=exp(-i phi R)I_s star for phi in R modulo 2pi and derived K_phi, S_phi, barred S_phi by conjugation",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equation": "2B.56-2B.57",
+      "issue": "formal integration-by-parts identities were initially written as literal Hilbert-adjoint operator equalities without maximal domains",
+      "resolution": "replaced them by core sesquilinear identities and explicitly excluded closed or maximal domain claims",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equation": "2B.58",
+      "issue": "the antichiral operators on the right-hand side of the coordinate formal-adjoint equations were undefined",
+      "resolution": "defined the antichiral D, K, and barred S operators and expanded the shadow-weight calculation Delta prime=3-Delta star",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equation": "2B.58h-2B.59a",
+      "issue": "the initial same-weight chiral-antichiral statement omitted the formal-adjoint transformation of the R offset",
+      "resolution": "expanded R_ch ddagger=2-N_barvartheta+r star and derived r prime=2+r star=2 Delta prime/3",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equation": "2B.60",
+      "issue": "the physical Noether adjoints were asserted without parameter and current reality",
+      "resolution": "fixed real bosonic parameters, Lorentz spinor reality, current reality, odd order reversal, and unitarity",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equation": "2B.61b-2B.63",
+      "issue": "the initial Euclidean section recorded coordinate phases but omitted the physical Noether phase map and parameter map",
+      "resolution": "derived physical phases by exponent matching, fixed all parameters, then transferred phases to coordinate generators by diagonal covariance",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equation": "2B.75a-2B.76b",
+      "issue": "the initial Euclidean L2 claim acted on full chiral superspace without a Berezin pairing",
+      "resolution": "restricted to explicit bosonic operators on a compactly supported core and stated only sesquilinear identities",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equation": "2B.78",
+      "issue": "the initial Lorentz audit metadata named an undefined phase label",
+      "resolution": "regenerated the audit with the explicit plus-minus-i convention of equation 2B.32",
+      "status": "RESOLVED"
+    }
+  ],
+  "post_resolution": {
+    "P0": [],
+    "P1": [],
+    "lorentz_operator_identities": 905,
+    "lorentz_input_cases": 54300,
+    "lorentz_failures": 0,
+    "euclidean_operator_identities": 763,
+    "euclidean_input_cases": 45780,
+    "euclidean_failures": 0
+  },
+  "result": "PASS"
+}

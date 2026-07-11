@@ -1,0 +1,67 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-02B-SUPERCONFORMAL-001",
+  "contract": "contracts/foundations/step-02b-superconformal-superspace.md",
+  "checks": [
+    {
+      "id": "DILATATION_VERSUS_SPINOR_DERIVATIVE",
+      "result": "PASS",
+      "locked": "D_a and barD_dot_a remain flat spinor derivatives; dilatation is D_dil with mathsf for coordinate action"
+    },
+    {
+      "id": "COORDINATE_VERSUS_NOETHER",
+      "result": "PASS",
+      "locked": "mathsf G is a coordinate differential operator; unsans-serif G is the Noether charge; only the diagonal graded sum annihilates local multiplication operators"
+    },
+    {
+      "id": "SUPERINVERSION_DOMAIN",
+      "result": "PASS",
+      "locked": "y and bar y obey bar y-y=2i vartheta sigma_L barvartheta and have invertible even bodies"
+    },
+    {
+      "id": "SUPERINVERSION_PHASE",
+      "result": "PASS",
+      "locked": "equation 2B.32 is phi=0; I_phi_star=exp(-i phi R) I_star rephases S and barred S but not K"
+    },
+    {
+      "id": "R_NORMALIZATION",
+      "result": "PASS",
+      "locked": "mathsf R_L=N_vartheta-N_barvartheta; its chiral and antichiral restrictions are N_vartheta and -N_barvartheta"
+    },
+    {
+      "id": "CHIRAL_VERSUS_ANTICHIRAL_CHART",
+      "result": "PASS",
+      "locked": "I_star maps F_ch(y,vartheta) bijectively to F_ach(bar y,barvartheta); every formal-adjoint right-hand operator is explicitly defined on the antichiral chart"
+    },
+    {
+      "id": "ADJOINT_SURFACES",
+      "result": "PASS",
+      "locked": "Lorentz physical Hilbert dagger, algebraic coordinate ddagger, bosonic core sesquilinear identities, Euclidean bosonic core identities, and Wick-transported dagger_W are distinct"
+    },
+    {
+      "id": "EUCLIDEAN_EXPONENT_NORMALIZATION",
+      "result": "PASS",
+      "locked": "D_E,R_E,Q_E,barQ_E,S_E,barS_E carry -i Wick phase; spatial P_E,K_E carry -i and fourth components carry -1"
+    },
+    {
+      "id": "INTRINSIC_EUCLIDEAN_REALITY",
+      "result": "PASS",
+      "locked": "intrinsic Euclidean superspace has independent Weyl coordinates and no intrinsic S-to-barS adjoint"
+    },
+    {
+      "id": "CHIRAL_PRIMARY_WEIGHT",
+      "result": "PASS",
+      "locked": "closure fixes r=-2 Delta/3; algebraic chiral-to-antichiral formal adjoint maps Delta to 3-Delta_star"
+    },
+    {
+      "id": "STRICT_EQUALITY_NOTATION",
+      "result": "PASS",
+      "locked": "the contract contains no sim, approx, or propto relation"
+    }
+  ],
+  "findings": {
+    "P0": [],
+    "P1": []
+  },
+  "result": "PASS"
+}
