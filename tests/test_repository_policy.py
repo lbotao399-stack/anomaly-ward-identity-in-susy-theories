@@ -112,6 +112,7 @@ class RepositoryPolicyTest(unittest.TestCase):
                 [
                     "Weinberg supersymmetry",
                     "The Quantum Theory of Fields Volume III Weinberg",
+                    "25.2 Supersymmetry Algebra",
                     "Srednicki supersymmetry",
                 ],
             )
@@ -123,6 +124,7 @@ class RepositoryPolicyTest(unittest.TestCase):
                     "attachment://weinberg-srednicki-dictionary-draft",
                     "notion-search://Weinberg supersymmetry",
                     "notion-search://The Quantum Theory of Fields Volume III Weinberg",
+                    "notion-search://25.2 Supersymmetry Algebra",
                     "notion-search://Srednicki supersymmetry",
                 ],
             )
