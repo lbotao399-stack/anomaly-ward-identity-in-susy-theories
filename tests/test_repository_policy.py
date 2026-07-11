@@ -101,6 +101,14 @@ class RepositoryPolicyTest(unittest.TestCase):
             ],
         )
 
+    def test_contract_change_has_no_network_inputs(self) -> None:
+        task = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
+        if task["type"] != "CONTRACT_CHANGE":
+            self.skipTest("current task is not a contract change")
+        self.assertFalse(any(item.startswith("http://") or item.startswith("https://") for item in task["allowed_inputs"]))
+        for item in task["allowed_inputs"]:
+            self.assertTrue((ROOT / item).exists(), item)
+
     def test_step_1_formula_surface(self) -> None:
         text = (ROOT / "contracts/foundations/step-01-supersymmetry-commutator.md").read_text(encoding="utf-8")
         tags = {int(value) for value in re.findall(r"\\tag\{1\.(\d+)\}", text)}
