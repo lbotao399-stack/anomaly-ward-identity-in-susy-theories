@@ -888,7 +888,11 @@ Sources: Weinberg 26.3 snapshot lines 196–205; Srednicki 95 snapshot lines 135
 
 ## 8. Chiral superfields and component projections
 
-The project has fixed chiral coordinates and $D,\bar D$, but not a component expansion normalization or $F/D$ projection. Thus the project component/projection entries below remain `PROJECT_UNFIXED`.
+The historical draft stopped before fixing the project component
+normalization.  Verified Step 3A equations (3A.13)--(3A.30), followed by
+the projection inversion in Step 3B equations (3B.2)--(3B.17), now fix
+the Project column.  The W/S formulas below remain in their source
+normalizations and are translated by (D.8.3)--(D.8.12b).
 
 ### 8.1 Chiral-coordinate expansions
 
@@ -1142,7 +1146,11 @@ Source: Srednicki 95 snapshot lines 280–335. The allowed page states the canon
 
 ## 9. Gauge-superfield dictionary
 
-The project column remains `PROJECT_UNFIXED` throughout this section: Steps 1–2B define neither $V$, $W_\alpha$, $g$, $T_A$, $F/D$ projections, nor a gauge action.
+The historical draft stopped at Step 2B.  Verified Step 3A equations
+(3A.31)--(3A.64) and the component reconstruction in Step 3B equations
+(3B.18)--(3B.40) now fix the Project bridge, field strengths, component
+projections, and gauge action.  The Srednicki and Weinberg equations
+below retain their source-native normalizations.
 
 ### 9.1 Wess--Zumino representatives
 

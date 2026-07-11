@@ -1,0 +1,67 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-03B-COMPONENT-RECONSTRUCTION-001",
+  "contract": "contracts/foundations/step-03b-component-reconstruction.md",
+  "checks": [
+    {
+      "id": "SIGNATURE_DOMAINS",
+      "result": "PASS",
+      "locked": "R is L or E; mu is Lorentz; m is Euclidean; a and dot a are Weyl indices; I and bar I are target slots; A and B are adjoint slots"
+    },
+    {
+      "id": "LORENTZ_REALITY_EUCLIDEAN_INDEPENDENCE",
+      "result": "PASS",
+      "locked": "barred Lorentz fields are adjoints; tilded Euclidean fields are independent until the contour"
+    },
+    {
+      "id": "COMPONENT_PROJECTORS",
+      "result": "PASS",
+      "locked": "F=-D^2 Phi vertical-bar /4, tilde F=-barD^2 tildePhi vertical-bar /4, and the ordered D projector is D^2 barD^2 vertical-bar /16"
+    },
+    {
+      "id": "COLUMN_ROW_MODULES",
+      "result": "PASS",
+      "locked": "nabla acts on columns; the graded tilde-nabla row derivative acts from the right on dual rows"
+    },
+    {
+      "id": "GAUGE_VERSUS_KAHLER_CONNECTIONS",
+      "result": "PASS",
+      "locked": "Gamma and tildeGamma are superspace gauge connections; mathring Gamma and tilded mathring Gamma are target Kahler connections"
+    },
+    {
+      "id": "AUXILIARY_DOMAINS",
+      "result": "PASS",
+      "locked": "F and tilde F are matter auxiliaries; mathscr D is the vector auxiliary; F_MN is gauge curvature"
+    },
+    {
+      "id": "MOMENT_MAP_DATA",
+      "result": "PASS",
+      "locked": "mu is the moment map, P=mu+xi is its FI shift, and the Euclidean tilded vector and compensator are independent analytic data"
+    },
+    {
+      "id": "GAUGE_KINETIC_DATA",
+      "result": "PASS",
+      "locked": "f_AB is a symmetric holomorphic gauge-kinetic matrix; h and k are its real and imaginary combinations; kappa_AB is the invariant source trace metric"
+    },
+    {
+      "id": "SOURCE_FRAME_BOUNDARY",
+      "result": "PASS",
+      "locked": "the Project-Srednicki bridge orientation is fixed; the opposite Weinberg native connection ordering is displayed and the direct Project-order Weinberg map is SOURCE_INSUFFICIENT"
+    },
+    {
+      "id": "EQUATION_TAGS",
+      "result": "PASS",
+      "locked": "all tags are unique and principal tags 3B.1 through 3B.117 occur exactly once in increasing order"
+    },
+    {
+      "id": "STRICT_EQUALITY_NOTATION",
+      "result": "PASS",
+      "locked": "the contract contains no sim, approx, or propto relation"
+    }
+  ],
+  "post_resolution": {
+    "P0": [],
+    "P1": []
+  },
+  "result": "PASS"
+}
