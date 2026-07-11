@@ -321,6 +321,88 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertEqual(review["post_resolution"]["P1"], [])
         self.assertTrue(all(item["status"] == "RESOLVED" for item in review["findings"]))
 
+    def test_weinberg_srednicki_dictionary_surface(self) -> None:
+        path = ROOT / "contracts/dictionaries/weinberg-srednicki-project-notation-dictionary.md"
+        if not path.exists():
+            self.skipTest("Weinberg-Srednicki-project dictionary is not registered")
+        text = path.read_text(encoding="utf-8")
+        tags = re.findall(r"\\tag\{(D\.[^}]+)\}", text)
+        self.assertGreaterEqual(len(tags), 130)
+        self.assertEqual(len(tags), len(set(tags)))
+        self.assertNotIn(r"\sim", text)
+        self.assertNotIn(r"\approx", text)
+        self.assertNotIn(r"\propto", text)
+        self.assertNotIn(",qquad", text)
+        self.assertNotIn("Pending integrated fields", text)
+        self.assertIn(r"\Theta_W=-i\Theta_S^{(4)}", text)
+        self.assertIn(r"[X]^S_D=\frac12[X]^W_D+\frac14\Box C_X", text)
+        self.assertIn(r"\int d^4x\,[X]^S_D", text)
+        self.assertIn(r"V_c^A=V_S^A", text)
+        self.assertIn(r"\widehat V^A=gV_S^A", text)
+        self.assertIn("PROJECT_UNFIXED", text)
+        for character in text:
+            self.assertFalse(ord(character) < 32 and character not in "\n\r\t")
+
+    def test_weinberg_srednicki_section_verdicts(self) -> None:
+        path = ROOT / "audits/ws-dictionary/draft-section-verdicts.json"
+        if not path.exists():
+            self.skipTest("Weinberg-Srednicki section audit is not registered")
+        audit = json.loads(path.read_text(encoding="utf-8"))
+        self.assertEqual(audit["result"], "PASS")
+        self.assertEqual(audit["section_range"], {"first": 0, "last": 54, "count": 55})
+        self.assertEqual([item["section"] for item in audit["sections"]], list(range(55)))
+        allowed = {"VERIFIED", "CORRECTED", "FALSE", "NOT_IN_SCOPE", "SOURCE_INSUFFICIENT"}
+        self.assertTrue(all(item["status"] in allowed for item in audit["sections"]))
+        self.assertTrue(all(item["citations"] for item in audit["sections"]))
+        for source in audit["source_registry"].values():
+            self.assertTrue((ROOT / source["path"]).is_file(), source["path"])
+            if source["source"] in {"WEINBERG", "SREDNICKI"}:
+                self.assertEqual(source["url"], f"https://app.notion.com/p/{source['page_id']}")
+
+    def test_weinberg_srednicki_exact_verifier(self) -> None:
+        script = ROOT / "scripts/verify_ws_notation_dictionary.py"
+        audit_path = ROOT / "audits/ws-dictionary/exact-verification.json"
+        if not script.exists() or not audit_path.exists():
+            self.skipTest("Weinberg-Srednicki exact verifier is not registered")
+        expected = audit_path.read_text(encoding="utf-8")
+        subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
+        audit = json.loads(expected)
+        self.assertEqual(audit["status"], "PASS")
+        self.assertEqual(audit["totals"]["checks"], 1953)
+        self.assertEqual(audit["totals"]["failed"], 0)
+        for name in (
+            "gamma5_phase",
+            "weinberg_fierz_0_0",
+            "srednicki_fierz_3_3",
+            "exterior_covariant_D_identity_0",
+            "exterior_srednicki_Q_bracket_1_1",
+            "exterior_chiral_coordinate_3_1",
+            "superspace_chiral_coordinate_bridge_3",
+            "superspace_D_grassmann_factor",
+            "superspace_chiral_fermion_contraction",
+        ):
+            self.assertTrue(audit["checks"][name], name)
+
+    def test_weinberg_srednicki_independent_review(self) -> None:
+        path = ROOT / "audits/ws-dictionary/independent-review.json"
+        if not path.exists():
+            self.skipTest("Weinberg-Srednicki independent review is not registered")
+        review = json.loads(path.read_text(encoding="utf-8"))
+        self.assertEqual(review["result"], "PASS")
+        self.assertEqual(review["post_resolution"], {"P0": [], "P1": []})
+        self.assertTrue(all(item["status"] == "RESOLVED" for item in review["resolved_findings"]))
+        self.assertEqual(review["exact_verification"], {"checks": 1953, "failed": 0, "status": "PASS"})
+        self.assertEqual(
+            review["section_verdicts"],
+            {"first": 0, "last": 54, "count": 55, "status": "PASS"},
+        )
+
     def test_no_absolute_user_paths_in_authority_surface(self) -> None:
         roots = [
             ROOT / "AUTHORITY.md",
