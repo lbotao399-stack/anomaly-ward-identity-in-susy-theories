@@ -35,6 +35,12 @@
       "id": "REFERENCE-IMPORT-WEINBERG-SREDNICKI-NOTATION-001",
       "state": "ACCEPTED",
       "blocking_reason": null,
+      "task": "tasks/archive/REFERENCE-IMPORT-WEINBERG-SREDNICKI-NOTATION-001.yaml"
+    },
+    {
+      "id": "CONTRACT-WEINBERG-SREDNICKI-CODEX-DICTIONARY-001",
+      "state": "SPECIFIED",
+      "blocking_reason": null,
       "task": "tasks/CURRENT.yaml"
     }
   ]
