@@ -93,15 +93,36 @@ class RepositoryPolicyTest(unittest.TestCase):
         task = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
         if task["type"] != "REFERENCE_IMPORT":
             self.skipTest("current task is not a reference import")
-        urls = [item for item in task["allowed_inputs"] if item.startswith("https://")]
-        self.assertEqual(
-            urls,
-            [
-                "https://arxiv.org/abs/hep-th/0108200",
-                "https://arxiv.org/abs/hep-th/9808041",
-                "https://arxiv.org/abs/hep-th/9903230",
-            ],
-        )
+        if task["id"] == "REFERENCE-IMPORT-SUPERSPACE-001":
+            urls = [item for item in task["allowed_inputs"] if item.startswith("https://")]
+            self.assertEqual(
+                urls,
+                [
+                    "https://arxiv.org/abs/hep-th/0108200",
+                    "https://arxiv.org/abs/hep-th/9808041",
+                    "https://arxiv.org/abs/hep-th/9903230",
+                ],
+            )
+            return
+        if task["id"] == "REFERENCE-IMPORT-WEINBERG-SREDNICKI-NOTATION-001":
+            exception = task["notion_reference_exception"]
+            self.assertTrue(exception["user_authorized"])
+            self.assertEqual(
+                exception["search_queries"],
+                ["Weinberg supersymmetry", "Srednicki supersymmetry"],
+            )
+            self.assertEqual(exception["default_boundary_after_task"], "GIT_TO_NOTION_ONLY")
+            external = [item for item in task["allowed_inputs"] if "://" in item]
+            self.assertEqual(
+                external,
+                [
+                    "attachment://weinberg-srednicki-dictionary-draft",
+                    "notion-search://Weinberg supersymmetry",
+                    "notion-search://Srednicki supersymmetry",
+                ],
+            )
+            return
+        self.fail(f"unreviewed reference-import task: {task['id']}")
 
     def test_contract_change_has_no_network_inputs(self) -> None:
         task = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
