@@ -423,6 +423,96 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertEqual(review["exact_verification"]["euclidean_total_cases"], 62704)
         self.assertEqual(review["exact_verification"]["failed_cases"], 0)
 
+    def test_step_3a_formula_surface(self) -> None:
+        path = ROOT / "contracts/foundations/step-03a-gauge-chiral-action.md"
+        if not path.exists():
+            self.skipTest("Step 3A contract is not registered")
+        text = path.read_text(encoding="utf-8")
+        tags = {int(value) for value in re.findall(r"\\tag\{3A\.(\d+)\}", text)}
+        self.assertEqual(tags, set(range(1, 107)))
+        for subtag in (
+            "34a",
+            "34b",
+            "50a",
+            "50b",
+            "50c",
+            "50d",
+            "53a",
+            "54a",
+            "65a",
+            "65b",
+            "66a",
+            "84a",
+            "104a",
+        ):
+            self.assertIn(rf"\tag{{3A.{subtag}}}", text)
+        self.assertIn(r"\psi_{Ra}^I:=\frac1{\sqrt2}D_{Ra}\Phi_R^I\Big|", text)
+        self.assertIn(r"\boxed{\mathcal D_\mu=\partial_\mu-iA_\mu.}", text)
+        self.assertIn(r"\mathcal W_{Ra}", text)
+        self.assertIn(r"[T_A,T_B]=ic_{AB}{}^CT_C", text)
+        self.assertIn(r"f_{AB}(\Phi)=f_{BA}(\Phi)", text)
+        self.assertIn(r"N_{\rm identities}=88", text)
+        self.assertIn(r"N_{\rm component\ coefficients}=336", text)
+        self.assertNotIn(r"\sim", text)
+        self.assertNotIn(r"\approx", text)
+        self.assertNotIn(r"\propto", text)
+        for character in text:
+            self.assertFalse(ord(character) < 32 and character not in "\n\r\t")
+
+    def test_step_3a_notation_audit(self) -> None:
+        path = ROOT / "audits/step3a-notation-ledger.json"
+        if not path.exists():
+            self.skipTest("Step 3A notation audit is not registered")
+        audit = json.loads(path.read_text(encoding="utf-8"))
+        self.assertEqual(audit["result"], "PASS")
+        self.assertEqual(audit["findings"]["P0"], [])
+        self.assertEqual(audit["findings"]["P1"], [])
+        self.assertTrue(all(item["result"] == "PASS" for item in audit["checks"]))
+
+    def test_step_3a_exact_component_verifier(self) -> None:
+        script = ROOT / "scripts/verify_step3a_gauge_chiral_action.py"
+        audit_path = ROOT / "audits/step3a-gauge-chiral-verification.json"
+        if not script.exists() or not audit_path.exists():
+            self.skipTest("Step 3A exact verifier is not registered")
+        expected = audit_path.read_text(encoding="utf-8")
+        subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
+        audit = json.loads(expected)
+        self.assertEqual(audit["status"], "PASS")
+        self.assertEqual(audit["totals"]["exact_identities"], 88)
+        self.assertEqual(audit["totals"]["exact_component_coefficients"], 336)
+        self.assertEqual(audit["totals"]["failed_checks"], 0)
+        self.assertEqual(audit["projection_checks"]["projection_chain_failures"], 0)
+        self.assertEqual(
+            audit["projection_checks"]["projection_chain_coefficients"],
+            164,
+        )
+
+    def test_step_3a_independent_review(self) -> None:
+        path = ROOT / "audits/step3a-independent-review.json"
+        if not path.exists():
+            self.skipTest("Step 3A independent review is not registered")
+        review = json.loads(path.read_text(encoding="utf-8"))
+        self.assertEqual(review["result"], "PASS")
+        self.assertEqual(review["post_resolution"], {"P0": [], "P1": []})
+        self.assertTrue(
+            all(item["status"] == "RESOLVED" for item in review["resolved_findings"])
+        )
+        self.assertEqual(
+            review["exact_verification"],
+            {
+                "identities": 88,
+                "component_coefficients": 336,
+                "failed": 0,
+                "status": "PASS",
+            },
+        )
+
     def test_weinberg_srednicki_dictionary_surface(self) -> None:
         path = ROOT / "contracts/dictionaries/weinberg-srednicki-project-notation-dictionary.md"
         if not path.exists():

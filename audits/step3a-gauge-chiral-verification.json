@@ -1,0 +1,5777 @@
+{
+  "task_id": "CONTRACT-STEP-03A-GAUGE-CHIRAL-ACTION-001",
+  "status": "PASS",
+  "arithmetic": {
+    "coefficient_ring": "Q(i,sqrt(2))",
+    "external_cas": false,
+    "grassmann_order": [
+      "vartheta^1",
+      "vartheta^2",
+      "barvartheta_dot1",
+      "barvartheta_dot2"
+    ]
+  },
+  "projection_checks": {
+    "theta_squared": "-2 vartheta^1 vartheta^2",
+    "bartheta_squared": "+2 barvartheta_dot1 barvartheta_dot2",
+    "theta2_bartheta2_top_coefficient": "-4",
+    "lorentz_bilinear_identities": 16,
+    "euclidean_bilinear_identities": 16,
+    "measure_failures": 0,
+    "lorentz_bilinear_failures": 0,
+    "euclidean_bilinear_failures": 0,
+    "bridge_projection_identities": 36,
+    "curvature_projection_identities": 6,
+    "gaugino_tail_identities": 4,
+    "projection_chain_coefficients": 164,
+    "projection_chain_failures": 0
+  },
+  "totals": {
+    "exact_identities": 88,
+    "exact_component_coefficients": 336,
+    "failed_checks": 0
+  },
+  "bridge_projection_chain": {
+    "algebraic_components": {
+      "L_connection_A_projection": {
+        "11": {
+          "actual": [
+            {
+              "coefficient": "2",
+              "ordered_factors": [
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "2",
+              "ordered_factors": [
+                "A3"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "2",
+              "ordered_factors": [
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "2",
+              "ordered_factors": [
+                "A3"
+              ]
+            }
+          ]
+        },
+        "12": {
+          "actual": [
+            {
+              "coefficient": "2",
+              "ordered_factors": [
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "-2i",
+              "ordered_factors": [
+                "A2"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "2",
+              "ordered_factors": [
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "-2i",
+              "ordered_factors": [
+                "A2"
+              ]
+            }
+          ]
+        },
+        "21": {
+          "actual": [
+            {
+              "coefficient": "2",
+              "ordered_factors": [
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "2i",
+              "ordered_factors": [
+                "A2"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "2",
+              "ordered_factors": [
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "2i",
+              "ordered_factors": [
+                "A2"
+              ]
+            }
+          ]
+        },
+        "22": {
+          "actual": [
+            {
+              "coefficient": "2",
+              "ordered_factors": [
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "-2",
+              "ordered_factors": [
+                "A3"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "2",
+              "ordered_factors": [
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "-2",
+              "ordered_factors": [
+                "A3"
+              ]
+            }
+          ]
+        }
+      },
+      "L_vector_projection": {
+        "0": {
+          "actual": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A0"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A0"
+              ]
+            }
+          ]
+        },
+        "1": {
+          "actual": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A1"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A1"
+              ]
+            }
+          ]
+        },
+        "2": {
+          "actual": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A2"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A2"
+              ]
+            }
+          ]
+        },
+        "3": {
+          "actual": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A3"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A3"
+              ]
+            }
+          ]
+        }
+      },
+      "L_lambda_projection": {
+        "1": {
+          "actual": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "lambda1"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "lambda1"
+              ]
+            }
+          ]
+        },
+        "2": {
+          "actual": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "lambda2"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "lambda2"
+              ]
+            }
+          ]
+        }
+      },
+      "L_barlambda_projection": {
+        "1": {
+          "actual": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "barlambda1"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "barlambda1"
+              ]
+            }
+          ]
+        },
+        "2": {
+          "actual": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "barlambda2"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "barlambda2"
+              ]
+            }
+          ]
+        }
+      },
+      "L_auxiliary_projections": {
+        "chiral": [
+          {
+            "coefficient": "1",
+            "ordered_factors": [
+              "Daux"
+            ]
+          }
+        ],
+        "antichiral": [
+          {
+            "coefficient": "1",
+            "ordered_factors": [
+              "Daux"
+            ]
+          }
+        ],
+        "expected": [
+          {
+            "coefficient": "1",
+            "ordered_factors": [
+              "Daux"
+            ]
+          }
+        ]
+      },
+      "L_chiral_strength_chirality": {
+        "11": {
+          "actual": [],
+          "expected": []
+        },
+        "12": {
+          "actual": [],
+          "expected": []
+        },
+        "21": {
+          "actual": [],
+          "expected": []
+        },
+        "22": {
+          "actual": [],
+          "expected": []
+        }
+      },
+      "E_connection_A_projection": {
+        "11": {
+          "actual": [
+            {
+              "coefficient": "2",
+              "ordered_factors": [
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "2i",
+              "ordered_factors": [
+                "A3"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "2",
+              "ordered_factors": [
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "2i",
+              "ordered_factors": [
+                "A3"
+              ]
+            }
+          ]
+        },
+        "12": {
+          "actual": [
+            {
+              "coefficient": "2",
+              "ordered_factors": [
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "-2i",
+              "ordered_factors": [
+                "A1"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "2",
+              "ordered_factors": [
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "-2i",
+              "ordered_factors": [
+                "A1"
+              ]
+            }
+          ]
+        },
+        "21": {
+          "actual": [
+            {
+              "coefficient": "2",
+              "ordered_factors": [
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "2i",
+              "ordered_factors": [
+                "A1"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "2",
+              "ordered_factors": [
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "2i",
+              "ordered_factors": [
+                "A1"
+              ]
+            }
+          ]
+        },
+        "22": {
+          "actual": [
+            {
+              "coefficient": "-2",
+              "ordered_factors": [
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "2i",
+              "ordered_factors": [
+                "A3"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "-2",
+              "ordered_factors": [
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "2i",
+              "ordered_factors": [
+                "A3"
+              ]
+            }
+          ]
+        }
+      },
+      "E_vector_projection": {
+        "0": {
+          "actual": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A0"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A0"
+              ]
+            }
+          ]
+        },
+        "1": {
+          "actual": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A1"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A1"
+              ]
+            }
+          ]
+        },
+        "2": {
+          "actual": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A2"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A2"
+              ]
+            }
+          ]
+        },
+        "3": {
+          "actual": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A3"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A3"
+              ]
+            }
+          ]
+        }
+      },
+      "E_lambda_projection": {
+        "1": {
+          "actual": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "lambda1"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "lambda1"
+              ]
+            }
+          ]
+        },
+        "2": {
+          "actual": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "lambda2"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "lambda2"
+              ]
+            }
+          ]
+        }
+      },
+      "E_barlambda_projection": {
+        "1": {
+          "actual": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "barlambda1"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "barlambda1"
+              ]
+            }
+          ]
+        },
+        "2": {
+          "actual": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "barlambda2"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "barlambda2"
+              ]
+            }
+          ]
+        }
+      },
+      "E_auxiliary_projections": {
+        "chiral": [
+          {
+            "coefficient": "1",
+            "ordered_factors": [
+              "Daux"
+            ]
+          }
+        ],
+        "antichiral": [
+          {
+            "coefficient": "1",
+            "ordered_factors": [
+              "Daux"
+            ]
+          }
+        ],
+        "expected": [
+          {
+            "coefficient": "1",
+            "ordered_factors": [
+              "Daux"
+            ]
+          }
+        ]
+      },
+      "E_chiral_strength_chirality": {
+        "11": {
+          "actual": [],
+          "expected": []
+        },
+        "12": {
+          "actual": [],
+          "expected": []
+        },
+        "21": {
+          "actual": [],
+          "expected": []
+        },
+        "22": {
+          "actual": [],
+          "expected": []
+        }
+      }
+    },
+    "nonabelian_curvature": {
+      "L": {
+        "11": {
+          "actual": [
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "A0",
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A0",
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A1",
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A1",
+                "A3"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "A2",
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "A2",
+                "A3"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "A3",
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A3",
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "d0_A1"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d0_A2"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "d1_A0"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "d1_A3"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "d2_A0"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "d2_A3"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "d3_A1"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d3_A2"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "A0",
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A0",
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A1",
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A1",
+                "A3"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "A2",
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "A2",
+                "A3"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "A3",
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A3",
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "d0_A1"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d0_A2"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "d1_A0"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "d1_A3"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "d2_A0"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "d2_A3"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "d3_A1"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d3_A2"
+              ]
+            }
+          ]
+        },
+        "12": {
+          "actual": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A0",
+                "A3"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A1",
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "A2",
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "A3",
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "d0_A3"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d1_A2"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "d2_A1"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "d3_A0"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A0",
+                "A3"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A1",
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "A2",
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "A3",
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "d0_A3"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d1_A2"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "d2_A1"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "d3_A0"
+              ]
+            }
+          ]
+        },
+        "22": {
+          "actual": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A0",
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A0",
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "A1",
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A1",
+                "A3"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "A2",
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A2",
+                "A3"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "A3",
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "A3",
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "d0_A1"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d0_A2"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "d1_A0"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "d1_A3"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "d2_A0"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d2_A3"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "d3_A1"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "d3_A2"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A0",
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A0",
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "A1",
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A1",
+                "A3"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "A2",
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A2",
+                "A3"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "A3",
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "A3",
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "d0_A1"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d0_A2"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "d1_A0"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "d1_A3"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "d2_A0"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d2_A3"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "d3_A1"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "d3_A2"
+              ]
+            }
+          ]
+        }
+      },
+      "E": {
+        "11": {
+          "actual": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A0",
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A0",
+                "A3"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "A1",
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A1",
+                "A3"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "A2",
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A2",
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "A3",
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "A3",
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "d0_A2"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d0_A3"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "d1_A2"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "d1_A3"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "d2_A0"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d2_A1"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "d3_A0"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "d3_A1"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A0",
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A0",
+                "A3"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "A1",
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A1",
+                "A3"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "A2",
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A2",
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "A3",
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "A3",
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "d0_A2"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d0_A3"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "d1_A2"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "d1_A3"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "d2_A0"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d2_A1"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "d3_A0"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "d3_A1"
+              ]
+            }
+          ]
+        },
+        "12": {
+          "actual": [
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A0",
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "A1",
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "A2",
+                "A3"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A3",
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d0_A1"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "d1_A0"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "d2_A3"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d3_A2"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A0",
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "A1",
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "A2",
+                "A3"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A3",
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d0_A1"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "d1_A0"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "d2_A3"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d3_A2"
+              ]
+            }
+          ]
+        },
+        "22": {
+          "actual": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A0",
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "A0",
+                "A3"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A1",
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A1",
+                "A3"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "A2",
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "A2",
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A3",
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "A3",
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "d0_A2"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "d0_A3"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d1_A2"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "d1_A3"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "d2_A0"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "d2_A1"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d3_A0"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "d3_A1"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A0",
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "A0",
+                "A3"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A1",
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A1",
+                "A3"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "A2",
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "A2",
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A3",
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "A3",
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "d0_A2"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "d0_A3"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d1_A2"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "d1_A3"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "d2_A0"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "d2_A1"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d3_A0"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "d3_A1"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "covariant_gaugino_tail": {
+      "L": {
+        "1": {
+          "actual": [
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A0",
+                "barlambda2"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "A1",
+                "barlambda1"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "A2",
+                "barlambda1"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A3",
+                "barlambda2"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "barlambda1",
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "barlambda1",
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "barlambda2",
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "barlambda2",
+                "A3"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d0_barlambda2"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "d1_barlambda1"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "d2_barlambda1"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d3_barlambda2"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A0",
+                "barlambda2"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "A1",
+                "barlambda1"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "A2",
+                "barlambda1"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A3",
+                "barlambda2"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "barlambda1",
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "barlambda1",
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "barlambda2",
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "barlambda2",
+                "A3"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d0_barlambda2"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "d1_barlambda1"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "d2_barlambda1"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d3_barlambda2"
+              ]
+            }
+          ]
+        },
+        "2": {
+          "actual": [
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "A0",
+                "barlambda1"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A1",
+                "barlambda2"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "A2",
+                "barlambda2"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A3",
+                "barlambda1"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "barlambda1",
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "barlambda1",
+                "A3"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "barlambda2",
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "barlambda2",
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "d0_barlambda1"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d1_barlambda2"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "d2_barlambda2"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d3_barlambda1"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "A0",
+                "barlambda1"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A1",
+                "barlambda2"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "A2",
+                "barlambda2"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A3",
+                "barlambda1"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "barlambda1",
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "barlambda1",
+                "A3"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "barlambda2",
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "barlambda2",
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "d0_barlambda1"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d1_barlambda2"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "d2_barlambda2"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d3_barlambda1"
+              ]
+            }
+          ]
+        }
+      },
+      "E": {
+        "1": {
+          "actual": [
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "A0",
+                "barlambda1"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "A1",
+                "barlambda1"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A2",
+                "barlambda2"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "A3",
+                "barlambda2"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "barlambda1",
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "barlambda1",
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "barlambda2",
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "barlambda2",
+                "A3"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "d0_barlambda1"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "d1_barlambda1"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d2_barlambda2"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "d3_barlambda2"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "A0",
+                "barlambda1"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "A1",
+                "barlambda1"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A2",
+                "barlambda2"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "A3",
+                "barlambda2"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "barlambda1",
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "barlambda1",
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "barlambda2",
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "barlambda2",
+                "A3"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "d0_barlambda1"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "d1_barlambda1"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d2_barlambda2"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "d3_barlambda2"
+              ]
+            }
+          ]
+        },
+        "2": {
+          "actual": [
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A0",
+                "barlambda2"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "A1",
+                "barlambda2"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A2",
+                "barlambda1"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A3",
+                "barlambda1"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "barlambda1",
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "barlambda1",
+                "A3"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "barlambda2",
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "barlambda2",
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d0_barlambda2"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "d1_barlambda2"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d2_barlambda1"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "d3_barlambda1"
+              ]
+            }
+          ],
+          "expected": [
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A0",
+                "barlambda2"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "A1",
+                "barlambda2"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "A2",
+                "barlambda1"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "A3",
+                "barlambda1"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "barlambda1",
+                "A2"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "barlambda1",
+                "A3"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "barlambda2",
+                "A0"
+              ]
+            },
+            {
+              "coefficient": "1",
+              "ordered_factors": [
+                "barlambda2",
+                "A1"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d0_barlambda2"
+              ]
+            },
+            {
+              "coefficient": "-i",
+              "ordered_factors": [
+                "d1_barlambda2"
+              ]
+            },
+            {
+              "coefficient": "-1",
+              "ordered_factors": [
+                "d2_barlambda1"
+              ]
+            },
+            {
+              "coefficient": "i",
+              "ordered_factors": [
+                "d3_barlambda1"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "canonical_matter_top_component": [
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "barF",
+        "F"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "barphi",
+        "A0",
+        "A0",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "barphi",
+        "A0",
+        "d0_phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "barphi",
+        "A1",
+        "A1",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "barphi",
+        "A1",
+        "d1_phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "barphi",
+        "A2",
+        "A2",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "barphi",
+        "A2",
+        "d2_phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "barphi",
+        "A3",
+        "A3",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "barphi",
+        "A3",
+        "d3_phi"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "barphi",
+        "Daux",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-1/4",
+      "ordered_factors": [
+        "barphi",
+        "dd00_phi"
+      ]
+    },
+    {
+      "coefficient": "1/4",
+      "ordered_factors": [
+        "barphi",
+        "dd11_phi"
+      ]
+    },
+    {
+      "coefficient": "1/4",
+      "ordered_factors": [
+        "barphi",
+        "dd22_phi"
+      ]
+    },
+    {
+      "coefficient": "1/4",
+      "ordered_factors": [
+        "barphi",
+        "dd33_phi"
+      ]
+    },
+    {
+      "coefficient": "-i sqrt(2)",
+      "ordered_factors": [
+        "barphi",
+        "lambda1",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "i sqrt(2)",
+      "ordered_factors": [
+        "barphi",
+        "lambda2",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "barpsi1",
+        "A0",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "barpsi1",
+        "A1",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "barpsi1",
+        "A2",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "barpsi1",
+        "A3",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "-i sqrt(2)",
+      "ordered_factors": [
+        "barpsi1",
+        "barlambda2",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "1/2i",
+      "ordered_factors": [
+        "barpsi1",
+        "d0_psi1"
+      ]
+    },
+    {
+      "coefficient": "-1/2i",
+      "ordered_factors": [
+        "barpsi1",
+        "d1_psi2"
+      ]
+    },
+    {
+      "coefficient": "-1/2",
+      "ordered_factors": [
+        "barpsi1",
+        "d2_psi2"
+      ]
+    },
+    {
+      "coefficient": "-1/2i",
+      "ordered_factors": [
+        "barpsi1",
+        "d3_psi1"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "barpsi2",
+        "A0",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "barpsi2",
+        "A1",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "barpsi2",
+        "A2",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "barpsi2",
+        "A3",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "i sqrt(2)",
+      "ordered_factors": [
+        "barpsi2",
+        "barlambda1",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "1/2i",
+      "ordered_factors": [
+        "barpsi2",
+        "d0_psi2"
+      ]
+    },
+    {
+      "coefficient": "-1/2i",
+      "ordered_factors": [
+        "barpsi2",
+        "d1_psi1"
+      ]
+    },
+    {
+      "coefficient": "1/2",
+      "ordered_factors": [
+        "barpsi2",
+        "d2_psi1"
+      ]
+    },
+    {
+      "coefficient": "1/2i",
+      "ordered_factors": [
+        "barpsi2",
+        "d3_psi2"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "d0_barphi",
+        "A0",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "1/2",
+      "ordered_factors": [
+        "d0_barphi",
+        "d0_phi"
+      ]
+    },
+    {
+      "coefficient": "-1/2i",
+      "ordered_factors": [
+        "d0_barpsi1",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "-1/2i",
+      "ordered_factors": [
+        "d0_barpsi2",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "d1_barphi",
+        "A1",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-1/2",
+      "ordered_factors": [
+        "d1_barphi",
+        "d1_phi"
+      ]
+    },
+    {
+      "coefficient": "1/2i",
+      "ordered_factors": [
+        "d1_barpsi1",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "1/2i",
+      "ordered_factors": [
+        "d1_barpsi2",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "d2_barphi",
+        "A2",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-1/2",
+      "ordered_factors": [
+        "d2_barphi",
+        "d2_phi"
+      ]
+    },
+    {
+      "coefficient": "1/2",
+      "ordered_factors": [
+        "d2_barpsi1",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "-1/2",
+      "ordered_factors": [
+        "d2_barpsi2",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "d3_barphi",
+        "A3",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-1/2",
+      "ordered_factors": [
+        "d3_barphi",
+        "d3_phi"
+      ]
+    },
+    {
+      "coefficient": "1/2i",
+      "ordered_factors": [
+        "d3_barpsi1",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "-1/2i",
+      "ordered_factors": [
+        "d3_barpsi2",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "-1/4",
+      "ordered_factors": [
+        "dd00_barphi",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "1/4",
+      "ordered_factors": [
+        "dd11_barphi",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "1/4",
+      "ordered_factors": [
+        "dd22_barphi",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "1/4",
+      "ordered_factors": [
+        "dd33_barphi",
+        "phi"
+      ]
+    }
+  ],
+  "canonical_matter_after_integration_by_parts": [
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "barF",
+        "F"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "barphi",
+        "A0",
+        "A0",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "barphi",
+        "A0",
+        "d0_phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "barphi",
+        "A1",
+        "A1",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "barphi",
+        "A1",
+        "d1_phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "barphi",
+        "A2",
+        "A2",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "barphi",
+        "A2",
+        "d2_phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "barphi",
+        "A3",
+        "A3",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "barphi",
+        "A3",
+        "d3_phi"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "barphi",
+        "Daux",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-i sqrt(2)",
+      "ordered_factors": [
+        "barphi",
+        "lambda1",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "i sqrt(2)",
+      "ordered_factors": [
+        "barphi",
+        "lambda2",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "barpsi1",
+        "A0",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "barpsi1",
+        "A1",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "barpsi1",
+        "A2",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "barpsi1",
+        "A3",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "-i sqrt(2)",
+      "ordered_factors": [
+        "barpsi1",
+        "barlambda2",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "barpsi1",
+        "d0_psi1"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "barpsi1",
+        "d1_psi2"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "barpsi1",
+        "d2_psi2"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "barpsi1",
+        "d3_psi1"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "barpsi2",
+        "A0",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "barpsi2",
+        "A1",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "barpsi2",
+        "A2",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "barpsi2",
+        "A3",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "i sqrt(2)",
+      "ordered_factors": [
+        "barpsi2",
+        "barlambda1",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "barpsi2",
+        "d0_psi2"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "barpsi2",
+        "d1_psi1"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "barpsi2",
+        "d2_psi1"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "barpsi2",
+        "d3_psi2"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "d0_barphi",
+        "A0",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "d0_barphi",
+        "d0_phi"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "d1_barphi",
+        "A1",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "d1_barphi",
+        "d1_phi"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "d2_barphi",
+        "A2",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "d2_barphi",
+        "d2_phi"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "d3_barphi",
+        "A3",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "d3_barphi",
+        "d3_phi"
+      ]
+    }
+  ],
+  "canonical_matter_expected": [
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "barF",
+        "F"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "barphi",
+        "A0",
+        "A0",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "barphi",
+        "A0",
+        "d0_phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "barphi",
+        "A1",
+        "A1",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "barphi",
+        "A1",
+        "d1_phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "barphi",
+        "A2",
+        "A2",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "barphi",
+        "A2",
+        "d2_phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "barphi",
+        "A3",
+        "A3",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "barphi",
+        "A3",
+        "d3_phi"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "barphi",
+        "Daux",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-i sqrt(2)",
+      "ordered_factors": [
+        "barphi",
+        "lambda1",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "i sqrt(2)",
+      "ordered_factors": [
+        "barphi",
+        "lambda2",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "barpsi1",
+        "A0",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "barpsi1",
+        "A1",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "barpsi1",
+        "A2",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "barpsi1",
+        "A3",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "-i sqrt(2)",
+      "ordered_factors": [
+        "barpsi1",
+        "barlambda2",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "barpsi1",
+        "d0_psi1"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "barpsi1",
+        "d1_psi2"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "barpsi1",
+        "d2_psi2"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "barpsi1",
+        "d3_psi1"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "barpsi2",
+        "A0",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "barpsi2",
+        "A1",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "barpsi2",
+        "A2",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "barpsi2",
+        "A3",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "i sqrt(2)",
+      "ordered_factors": [
+        "barpsi2",
+        "barlambda1",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "barpsi2",
+        "d0_psi2"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "barpsi2",
+        "d1_psi1"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "barpsi2",
+        "d2_psi1"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "barpsi2",
+        "d3_psi2"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "d0_barphi",
+        "A0",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "d0_barphi",
+        "d0_phi"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "d1_barphi",
+        "A1",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "d1_barphi",
+        "d1_phi"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "d2_barphi",
+        "A2",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "d2_barphi",
+        "d2_phi"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "d3_barphi",
+        "A3",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "d3_barphi",
+        "d3_phi"
+      ]
+    }
+  ],
+  "euclidean_matter_top_component": [
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "d0_tildephi",
+        "A0",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-1/2",
+      "ordered_factors": [
+        "d0_tildephi",
+        "d0_phi"
+      ]
+    },
+    {
+      "coefficient": "1/2i",
+      "ordered_factors": [
+        "d0_tildepsi1",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "1/2i",
+      "ordered_factors": [
+        "d0_tildepsi2",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "d1_tildephi",
+        "A1",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-1/2",
+      "ordered_factors": [
+        "d1_tildephi",
+        "d1_phi"
+      ]
+    },
+    {
+      "coefficient": "1/2",
+      "ordered_factors": [
+        "d1_tildepsi1",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "-1/2",
+      "ordered_factors": [
+        "d1_tildepsi2",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "d2_tildephi",
+        "A2",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-1/2",
+      "ordered_factors": [
+        "d2_tildephi",
+        "d2_phi"
+      ]
+    },
+    {
+      "coefficient": "1/2i",
+      "ordered_factors": [
+        "d2_tildepsi1",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "-1/2i",
+      "ordered_factors": [
+        "d2_tildepsi2",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "d3_tildephi",
+        "A3",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-1/2",
+      "ordered_factors": [
+        "d3_tildephi",
+        "d3_phi"
+      ]
+    },
+    {
+      "coefficient": "1/2",
+      "ordered_factors": [
+        "d3_tildepsi1",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "1/2",
+      "ordered_factors": [
+        "d3_tildepsi2",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "1/4",
+      "ordered_factors": [
+        "dd00_tildephi",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "1/4",
+      "ordered_factors": [
+        "dd11_tildephi",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "1/4",
+      "ordered_factors": [
+        "dd22_tildephi",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "1/4",
+      "ordered_factors": [
+        "dd33_tildephi",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "tildeF",
+        "F"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "tildephi",
+        "A0",
+        "A0",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "tildephi",
+        "A0",
+        "d0_phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "tildephi",
+        "A1",
+        "A1",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "tildephi",
+        "A1",
+        "d1_phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "tildephi",
+        "A2",
+        "A2",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "tildephi",
+        "A2",
+        "d2_phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "tildephi",
+        "A3",
+        "A3",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "tildephi",
+        "A3",
+        "d3_phi"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "tildephi",
+        "Daux",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "1/4",
+      "ordered_factors": [
+        "tildephi",
+        "dd00_phi"
+      ]
+    },
+    {
+      "coefficient": "1/4",
+      "ordered_factors": [
+        "tildephi",
+        "dd11_phi"
+      ]
+    },
+    {
+      "coefficient": "1/4",
+      "ordered_factors": [
+        "tildephi",
+        "dd22_phi"
+      ]
+    },
+    {
+      "coefficient": "1/4",
+      "ordered_factors": [
+        "tildephi",
+        "dd33_phi"
+      ]
+    },
+    {
+      "coefficient": "-i sqrt(2)",
+      "ordered_factors": [
+        "tildephi",
+        "lambda1",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "i sqrt(2)",
+      "ordered_factors": [
+        "tildephi",
+        "lambda2",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "tildepsi1",
+        "A0",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "tildepsi1",
+        "A1",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "tildepsi1",
+        "A2",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "tildepsi1",
+        "A3",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "-i sqrt(2)",
+      "ordered_factors": [
+        "tildepsi1",
+        "barlambda2",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-1/2i",
+      "ordered_factors": [
+        "tildepsi1",
+        "d0_psi2"
+      ]
+    },
+    {
+      "coefficient": "-1/2",
+      "ordered_factors": [
+        "tildepsi1",
+        "d1_psi2"
+      ]
+    },
+    {
+      "coefficient": "-1/2i",
+      "ordered_factors": [
+        "tildepsi1",
+        "d2_psi1"
+      ]
+    },
+    {
+      "coefficient": "-1/2",
+      "ordered_factors": [
+        "tildepsi1",
+        "d3_psi1"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "tildepsi2",
+        "A0",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "tildepsi2",
+        "A1",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "tildepsi2",
+        "A2",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "tildepsi2",
+        "A3",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "i sqrt(2)",
+      "ordered_factors": [
+        "tildepsi2",
+        "barlambda1",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-1/2i",
+      "ordered_factors": [
+        "tildepsi2",
+        "d0_psi1"
+      ]
+    },
+    {
+      "coefficient": "1/2",
+      "ordered_factors": [
+        "tildepsi2",
+        "d1_psi1"
+      ]
+    },
+    {
+      "coefficient": "1/2i",
+      "ordered_factors": [
+        "tildepsi2",
+        "d2_psi2"
+      ]
+    },
+    {
+      "coefficient": "-1/2",
+      "ordered_factors": [
+        "tildepsi2",
+        "d3_psi2"
+      ]
+    }
+  ],
+  "euclidean_matter_after_integration_by_parts": [
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "d0_tildephi",
+        "A0",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "d0_tildephi",
+        "d0_phi"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "d1_tildephi",
+        "A1",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "d1_tildephi",
+        "d1_phi"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "d2_tildephi",
+        "A2",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "d2_tildephi",
+        "d2_phi"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "d3_tildephi",
+        "A3",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "d3_tildephi",
+        "d3_phi"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "tildeF",
+        "F"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "tildephi",
+        "A0",
+        "A0",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "tildephi",
+        "A0",
+        "d0_phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "tildephi",
+        "A1",
+        "A1",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "tildephi",
+        "A1",
+        "d1_phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "tildephi",
+        "A2",
+        "A2",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "tildephi",
+        "A2",
+        "d2_phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "tildephi",
+        "A3",
+        "A3",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "tildephi",
+        "A3",
+        "d3_phi"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "tildephi",
+        "Daux",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-i sqrt(2)",
+      "ordered_factors": [
+        "tildephi",
+        "lambda1",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "i sqrt(2)",
+      "ordered_factors": [
+        "tildephi",
+        "lambda2",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "tildepsi1",
+        "A0",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "tildepsi1",
+        "A1",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "tildepsi1",
+        "A2",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "tildepsi1",
+        "A3",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "-i sqrt(2)",
+      "ordered_factors": [
+        "tildepsi1",
+        "barlambda2",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "tildepsi1",
+        "d0_psi2"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "tildepsi1",
+        "d1_psi2"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "tildepsi1",
+        "d2_psi1"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "tildepsi1",
+        "d3_psi1"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "tildepsi2",
+        "A0",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "tildepsi2",
+        "A1",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "tildepsi2",
+        "A2",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "tildepsi2",
+        "A3",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "i sqrt(2)",
+      "ordered_factors": [
+        "tildepsi2",
+        "barlambda1",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "tildepsi2",
+        "d0_psi1"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "tildepsi2",
+        "d1_psi1"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "tildepsi2",
+        "d2_psi2"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "tildepsi2",
+        "d3_psi2"
+      ]
+    }
+  ],
+  "euclidean_matter_expected": [
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "d0_tildephi",
+        "A0",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "d0_tildephi",
+        "d0_phi"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "d1_tildephi",
+        "A1",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "d1_tildephi",
+        "d1_phi"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "d2_tildephi",
+        "A2",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "d2_tildephi",
+        "d2_phi"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "d3_tildephi",
+        "A3",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "d3_tildephi",
+        "d3_phi"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "tildeF",
+        "F"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "tildephi",
+        "A0",
+        "A0",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "tildephi",
+        "A0",
+        "d0_phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "tildephi",
+        "A1",
+        "A1",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "tildephi",
+        "A1",
+        "d1_phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "tildephi",
+        "A2",
+        "A2",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "tildephi",
+        "A2",
+        "d2_phi"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "tildephi",
+        "A3",
+        "A3",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "tildephi",
+        "A3",
+        "d3_phi"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "tildephi",
+        "Daux",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-i sqrt(2)",
+      "ordered_factors": [
+        "tildephi",
+        "lambda1",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "i sqrt(2)",
+      "ordered_factors": [
+        "tildephi",
+        "lambda2",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "tildepsi1",
+        "A0",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "tildepsi1",
+        "A1",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "tildepsi1",
+        "A2",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "tildepsi1",
+        "A3",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "-i sqrt(2)",
+      "ordered_factors": [
+        "tildepsi1",
+        "barlambda2",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "tildepsi1",
+        "d0_psi2"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "tildepsi1",
+        "d1_psi2"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "tildepsi1",
+        "d2_psi1"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "tildepsi1",
+        "d3_psi1"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "tildepsi2",
+        "A0",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "tildepsi2",
+        "A1",
+        "psi1"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "tildepsi2",
+        "A2",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "tildepsi2",
+        "A3",
+        "psi2"
+      ]
+    },
+    {
+      "coefficient": "i sqrt(2)",
+      "ordered_factors": [
+        "tildepsi2",
+        "barlambda1",
+        "phi"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "tildepsi2",
+        "d0_psi1"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "tildepsi2",
+        "d1_psi1"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "tildepsi2",
+        "d2_psi2"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "tildepsi2",
+        "d3_psi2"
+      ]
+    }
+  ],
+  "superpotential_fermion_product": [
+    {
+      "coefficient": "1/2",
+      "ordered_factors": [
+        "psiI1",
+        "psiJ2"
+      ]
+    },
+    {
+      "coefficient": "-1/2",
+      "ordered_factors": [
+        "psiI2",
+        "psiJ1"
+      ]
+    }
+  ],
+  "gauge_field_strength_square": [
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "Daux",
+        "Daux"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "F01",
+        "F01"
+      ]
+    },
+    {
+      "coefficient": "2i",
+      "ordered_factors": [
+        "F01",
+        "F23"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "F02",
+        "F02"
+      ]
+    },
+    {
+      "coefficient": "-2i",
+      "ordered_factors": [
+        "F02",
+        "F13"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "F03",
+        "F03"
+      ]
+    },
+    {
+      "coefficient": "2i",
+      "ordered_factors": [
+        "F03",
+        "F12"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "F12",
+        "F12"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "F13",
+        "F13"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "F23",
+        "F23"
+      ]
+    },
+    {
+      "coefficient": "2i",
+      "ordered_factors": [
+        "lambda1",
+        "d0_barlambda1"
+      ]
+    },
+    {
+      "coefficient": "-2i",
+      "ordered_factors": [
+        "lambda1",
+        "d1_barlambda2"
+      ]
+    },
+    {
+      "coefficient": "2",
+      "ordered_factors": [
+        "lambda1",
+        "d2_barlambda2"
+      ]
+    },
+    {
+      "coefficient": "-2i",
+      "ordered_factors": [
+        "lambda1",
+        "d3_barlambda1"
+      ]
+    },
+    {
+      "coefficient": "2i",
+      "ordered_factors": [
+        "lambda2",
+        "d0_barlambda2"
+      ]
+    },
+    {
+      "coefficient": "-2i",
+      "ordered_factors": [
+        "lambda2",
+        "d1_barlambda1"
+      ]
+    },
+    {
+      "coefficient": "-2",
+      "ordered_factors": [
+        "lambda2",
+        "d2_barlambda1"
+      ]
+    },
+    {
+      "coefficient": "2i",
+      "ordered_factors": [
+        "lambda2",
+        "d3_barlambda2"
+      ]
+    }
+  ],
+  "gauge_field_strength_square_expected": [
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "Daux",
+        "Daux"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "F01",
+        "F01"
+      ]
+    },
+    {
+      "coefficient": "2i",
+      "ordered_factors": [
+        "F01",
+        "F23"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "F02",
+        "F02"
+      ]
+    },
+    {
+      "coefficient": "-2i",
+      "ordered_factors": [
+        "F02",
+        "F13"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "F03",
+        "F03"
+      ]
+    },
+    {
+      "coefficient": "2i",
+      "ordered_factors": [
+        "F03",
+        "F12"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "F12",
+        "F12"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "F13",
+        "F13"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "F23",
+        "F23"
+      ]
+    },
+    {
+      "coefficient": "2i",
+      "ordered_factors": [
+        "lambda1",
+        "d0_barlambda1"
+      ]
+    },
+    {
+      "coefficient": "-2i",
+      "ordered_factors": [
+        "lambda1",
+        "d1_barlambda2"
+      ]
+    },
+    {
+      "coefficient": "2",
+      "ordered_factors": [
+        "lambda1",
+        "d2_barlambda2"
+      ]
+    },
+    {
+      "coefficient": "-2i",
+      "ordered_factors": [
+        "lambda1",
+        "d3_barlambda1"
+      ]
+    },
+    {
+      "coefficient": "2i",
+      "ordered_factors": [
+        "lambda2",
+        "d0_barlambda2"
+      ]
+    },
+    {
+      "coefficient": "-2i",
+      "ordered_factors": [
+        "lambda2",
+        "d1_barlambda1"
+      ]
+    },
+    {
+      "coefficient": "-2",
+      "ordered_factors": [
+        "lambda2",
+        "d2_barlambda1"
+      ]
+    },
+    {
+      "coefficient": "2i",
+      "ordered_factors": [
+        "lambda2",
+        "d3_barlambda2"
+      ]
+    }
+  ],
+  "euclidean_gauge_field_strength_square": [
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "Daux",
+        "Daux"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FE01",
+        "FE01"
+      ]
+    },
+    {
+      "coefficient": "2",
+      "ordered_factors": [
+        "FE01",
+        "FE23"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FE02",
+        "FE02"
+      ]
+    },
+    {
+      "coefficient": "-2",
+      "ordered_factors": [
+        "FE02",
+        "FE13"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FE03",
+        "FE03"
+      ]
+    },
+    {
+      "coefficient": "2",
+      "ordered_factors": [
+        "FE03",
+        "FE12"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FE12",
+        "FE12"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FE13",
+        "FE13"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FE23",
+        "FE23"
+      ]
+    },
+    {
+      "coefficient": "-2i",
+      "ordered_factors": [
+        "lambda1",
+        "d0_barlambda2"
+      ]
+    },
+    {
+      "coefficient": "2",
+      "ordered_factors": [
+        "lambda1",
+        "d1_barlambda2"
+      ]
+    },
+    {
+      "coefficient": "-2i",
+      "ordered_factors": [
+        "lambda1",
+        "d2_barlambda1"
+      ]
+    },
+    {
+      "coefficient": "-2",
+      "ordered_factors": [
+        "lambda1",
+        "d3_barlambda1"
+      ]
+    },
+    {
+      "coefficient": "-2i",
+      "ordered_factors": [
+        "lambda2",
+        "d0_barlambda1"
+      ]
+    },
+    {
+      "coefficient": "-2",
+      "ordered_factors": [
+        "lambda2",
+        "d1_barlambda1"
+      ]
+    },
+    {
+      "coefficient": "2i",
+      "ordered_factors": [
+        "lambda2",
+        "d2_barlambda2"
+      ]
+    },
+    {
+      "coefficient": "-2",
+      "ordered_factors": [
+        "lambda2",
+        "d3_barlambda2"
+      ]
+    }
+  ],
+  "euclidean_gauge_field_strength_square_expected": [
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "Daux",
+        "Daux"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FE01",
+        "FE01"
+      ]
+    },
+    {
+      "coefficient": "2",
+      "ordered_factors": [
+        "FE01",
+        "FE23"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FE02",
+        "FE02"
+      ]
+    },
+    {
+      "coefficient": "-2",
+      "ordered_factors": [
+        "FE02",
+        "FE13"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FE03",
+        "FE03"
+      ]
+    },
+    {
+      "coefficient": "2",
+      "ordered_factors": [
+        "FE03",
+        "FE12"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FE12",
+        "FE12"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FE13",
+        "FE13"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FE23",
+        "FE23"
+      ]
+    },
+    {
+      "coefficient": "-2i",
+      "ordered_factors": [
+        "lambda1",
+        "d0_barlambda2"
+      ]
+    },
+    {
+      "coefficient": "2",
+      "ordered_factors": [
+        "lambda1",
+        "d1_barlambda2"
+      ]
+    },
+    {
+      "coefficient": "-2i",
+      "ordered_factors": [
+        "lambda1",
+        "d2_barlambda1"
+      ]
+    },
+    {
+      "coefficient": "-2",
+      "ordered_factors": [
+        "lambda1",
+        "d3_barlambda1"
+      ]
+    },
+    {
+      "coefficient": "-2i",
+      "ordered_factors": [
+        "lambda2",
+        "d0_barlambda1"
+      ]
+    },
+    {
+      "coefficient": "-2",
+      "ordered_factors": [
+        "lambda2",
+        "d1_barlambda1"
+      ]
+    },
+    {
+      "coefficient": "2i",
+      "ordered_factors": [
+        "lambda2",
+        "d2_barlambda2"
+      ]
+    },
+    {
+      "coefficient": "-2",
+      "ordered_factors": [
+        "lambda2",
+        "d3_barlambda2"
+      ]
+    }
+  ],
+  "cross_color_gauge_field_strength_square": [
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "DauxA",
+        "DauxB"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "FA01",
+        "FB01"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "FA01",
+        "FB23"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "FA02",
+        "FB02"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "FA02",
+        "FB13"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "FA03",
+        "FB03"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "FA03",
+        "FB12"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "FA12",
+        "FB03"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FA12",
+        "FB12"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "FA13",
+        "FB02"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FA13",
+        "FB13"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "FA23",
+        "FB01"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FA23",
+        "FB23"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "lambdaA1",
+        "d0_barlambdaB1"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "lambdaA1",
+        "d1_barlambdaB2"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "lambdaA1",
+        "d2_barlambdaB2"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "lambdaA1",
+        "d3_barlambdaB1"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "lambdaA2",
+        "d0_barlambdaB2"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "lambdaA2",
+        "d1_barlambdaB1"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "lambdaA2",
+        "d2_barlambdaB1"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "lambdaA2",
+        "d3_barlambdaB2"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "lambdaB1",
+        "d0_barlambdaA1"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "lambdaB1",
+        "d1_barlambdaA2"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "lambdaB1",
+        "d2_barlambdaA2"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "lambdaB1",
+        "d3_barlambdaA1"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "lambdaB2",
+        "d0_barlambdaA2"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "lambdaB2",
+        "d1_barlambdaA1"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "lambdaB2",
+        "d2_barlambdaA1"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "lambdaB2",
+        "d3_barlambdaA2"
+      ]
+    }
+  ],
+  "cross_color_gauge_field_strength_square_expected": [
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "DauxA",
+        "DauxB"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "FA01",
+        "FB01"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "FA01",
+        "FB23"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "FA02",
+        "FB02"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "FA02",
+        "FB13"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "FA03",
+        "FB03"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "FA03",
+        "FB12"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "FA12",
+        "FB03"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FA12",
+        "FB12"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "FA13",
+        "FB02"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FA13",
+        "FB13"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "FA23",
+        "FB01"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FA23",
+        "FB23"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "lambdaA1",
+        "d0_barlambdaB1"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "lambdaA1",
+        "d1_barlambdaB2"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "lambdaA1",
+        "d2_barlambdaB2"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "lambdaA1",
+        "d3_barlambdaB1"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "lambdaA2",
+        "d0_barlambdaB2"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "lambdaA2",
+        "d1_barlambdaB1"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "lambdaA2",
+        "d2_barlambdaB1"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "lambdaA2",
+        "d3_barlambdaB2"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "lambdaB1",
+        "d0_barlambdaA1"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "lambdaB1",
+        "d1_barlambdaA2"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "lambdaB1",
+        "d2_barlambdaA2"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "lambdaB1",
+        "d3_barlambdaA1"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "lambdaB2",
+        "d0_barlambdaA2"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "lambdaB2",
+        "d1_barlambdaA1"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "lambdaB2",
+        "d2_barlambdaA1"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "lambdaB2",
+        "d3_barlambdaA2"
+      ]
+    }
+  ],
+  "euclidean_cross_color_gauge_field_strength_square": [
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "DauxA",
+        "DauxB"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FEA01",
+        "FEB01"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "FEA01",
+        "FEB23"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FEA02",
+        "FEB02"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FEA02",
+        "FEB13"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FEA03",
+        "FEB03"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "FEA03",
+        "FEB12"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "FEA12",
+        "FEB03"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FEA12",
+        "FEB12"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FEA13",
+        "FEB02"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FEA13",
+        "FEB13"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "FEA23",
+        "FEB01"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FEA23",
+        "FEB23"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "lambdaA1",
+        "d0_barlambdaB2"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "lambdaA1",
+        "d1_barlambdaB2"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "lambdaA1",
+        "d2_barlambdaB1"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "lambdaA1",
+        "d3_barlambdaB1"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "lambdaA2",
+        "d0_barlambdaB1"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "lambdaA2",
+        "d1_barlambdaB1"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "lambdaA2",
+        "d2_barlambdaB2"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "lambdaA2",
+        "d3_barlambdaB2"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "lambdaB1",
+        "d0_barlambdaA2"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "lambdaB1",
+        "d1_barlambdaA2"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "lambdaB1",
+        "d2_barlambdaA1"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "lambdaB1",
+        "d3_barlambdaA1"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "lambdaB2",
+        "d0_barlambdaA1"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "lambdaB2",
+        "d1_barlambdaA1"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "lambdaB2",
+        "d2_barlambdaA2"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "lambdaB2",
+        "d3_barlambdaA2"
+      ]
+    }
+  ],
+  "euclidean_cross_color_gauge_field_strength_square_expected": [
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "DauxA",
+        "DauxB"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FEA01",
+        "FEB01"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "FEA01",
+        "FEB23"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FEA02",
+        "FEB02"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FEA02",
+        "FEB13"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FEA03",
+        "FEB03"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "FEA03",
+        "FEB12"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "FEA12",
+        "FEB03"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FEA12",
+        "FEB12"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FEA13",
+        "FEB02"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FEA13",
+        "FEB13"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "FEA23",
+        "FEB01"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "FEA23",
+        "FEB23"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "lambdaA1",
+        "d0_barlambdaB2"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "lambdaA1",
+        "d1_barlambdaB2"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "lambdaA1",
+        "d2_barlambdaB1"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "lambdaA1",
+        "d3_barlambdaB1"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "lambdaA2",
+        "d0_barlambdaB1"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "lambdaA2",
+        "d1_barlambdaB1"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "lambdaA2",
+        "d2_barlambdaB2"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "lambdaA2",
+        "d3_barlambdaB2"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "lambdaB1",
+        "d0_barlambdaA2"
+      ]
+    },
+    {
+      "coefficient": "1",
+      "ordered_factors": [
+        "lambdaB1",
+        "d1_barlambdaA2"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "lambdaB1",
+        "d2_barlambdaA1"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "lambdaB1",
+        "d3_barlambdaA1"
+      ]
+    },
+    {
+      "coefficient": "-i",
+      "ordered_factors": [
+        "lambdaB2",
+        "d0_barlambdaA1"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "lambdaB2",
+        "d1_barlambdaA1"
+      ]
+    },
+    {
+      "coefficient": "i",
+      "ordered_factors": [
+        "lambdaB2",
+        "d2_barlambdaA2"
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "ordered_factors": [
+        "lambdaB2",
+        "d3_barlambdaA2"
+      ]
+    }
+  ],
+  "failures": []
+}
