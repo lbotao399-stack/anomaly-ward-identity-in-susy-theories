@@ -45,6 +45,18 @@ class RepositoryPolicyTest(unittest.TestCase):
             digest = hashlib.sha256(path.read_bytes()).hexdigest()
             self.assertEqual(entry["sha256"], digest)
 
+    def test_claim_map_resolves_to_hashed_artifacts(self) -> None:
+        manifest = json.loads((ROOT / "references/manifest.yaml").read_text(encoding="utf-8"))
+        claim_map_path = ROOT / "references/claim-map.yaml"
+        if not claim_map_path.exists():
+            self.skipTest("no claim map registered")
+        claim_map = json.loads(claim_map_path.read_text(encoding="utf-8"))
+        artifacts = {entry["id"]: entry for entry in manifest["entries"]}
+        for claim in claim_map["claims"]:
+            for source_id in claim["sources"]:
+                self.assertIn(source_id, artifacts)
+                self.assertRegex(artifacts[source_id]["sha256"] or "", r"^[0-9a-f]{64}$")
+
     def test_notion_is_output_only(self) -> None:
         page_map = json.loads((ROOT / "mirror/page_map.yaml").read_text(encoding="utf-8"))
         self.assertEqual(page_map["direction"], "GIT_TO_NOTION_ONLY")

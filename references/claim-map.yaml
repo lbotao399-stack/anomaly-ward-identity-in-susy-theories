@@ -5,25 +5,25 @@
   "claims": [
     {
       "id": "FLAT-SUPERSPACE-GROUP-STRUCTURE",
-      "sources": ["ARXIV-HEP-TH-0108200-V1", "ARXIV-HEP-TH-9903230-V3"],
+      "sources": ["ARXIV-HEP-TH-0108200-V1", "ARXIV-HEP-TH-9903230-V3-SOURCE", "ARXIV-HEP-TH-9903230-V3-PDF"],
       "allowed_use": "Cross-check that flat superspace admits supertranslation coordinate generators and opposite-invariant spinor derivatives whose mixed graded brackets close on translations.",
       "forbidden_use": "Importing any sign, factor of i, metric signature, sigma convention, index placement, or Hermitian rule."
     },
     {
       "id": "CHIRAL-SUBSPACE-STRUCTURE",
-      "sources": ["ARXIV-HEP-TH-9808041-V4", "ARXIV-HEP-TH-9903230-V3"],
+      "sources": ["ARXIV-HEP-TH-9808041-V4-SOURCE", "ARXIV-HEP-TH-9808041-V4-PDF", "ARXIV-HEP-TH-9903230-V3-SOURCE", "ARXIV-HEP-TH-9903230-V3-PDF"],
       "allowed_use": "Cross-check that chiral and antichiral coordinates are annihilated by opposite spinor covariant derivatives and are preserved by superconformal diffeomorphisms.",
       "forbidden_use": "Copying either source's chiral-coordinate sign before deriving it from the locked Step-1 algebra."
     },
     {
       "id": "SUPERCONFORMAL-KILLING-STRUCTURE",
-      "sources": ["ARXIV-HEP-TH-9808041-V4", "ARXIV-HEP-TH-9903230-V3"],
+      "sources": ["ARXIV-HEP-TH-9808041-V4-SOURCE", "ARXIV-HEP-TH-9808041-V4-PDF", "ARXIV-HEP-TH-9903230-V3-SOURCE", "ARXIV-HEP-TH-9903230-V3-PDF"],
       "allowed_use": "Cross-check that superconformal coordinate vector fields preserve the supersymmetric one-form up to local Lorentz and scale transformations and satisfy a superspace Killing constraint.",
       "forbidden_use": "Treating a source differential generator as the Hilbert-space Noether charge or importing its active/passive sign."
     },
     {
       "id": "SUPERINVERSION-DUALITY-STRUCTURE",
-      "sources": ["ARXIV-HEP-TH-9808041-V4", "ARXIV-HEP-TH-9903230-V3"],
+      "sources": ["ARXIV-HEP-TH-9808041-V4-SOURCE", "ARXIV-HEP-TH-9808041-V4-PDF", "ARXIV-HEP-TH-9903230-V3-SOURCE", "ARXIV-HEP-TH-9903230-V3-PDF"],
       "allowed_use": "Cross-check that a superinversion exchanges translations with special conformal transformations and supertranslations with special supersymmetries.",
       "forbidden_use": "Admitting K or S coordinate generators without deriving their normalization and signs from the project's active transformation and Noether conventions."
     }

@@ -17,7 +17,7 @@
       "id": "STEP-2-CLAIM-MAP",
       "path": "references/claim-map.yaml",
       "classification": "REFERENCE_CLAIM_BOUNDARY",
-      "sha256": "b58257600f90468180afbc68a14cc4772ad26ba920e380f645fd6f1bb24df6bf"
+      "sha256": "0407a608173538404e2cd4f0320a9aaeda827cd5e98c4b2ac17ad48affe68d45"
     },
     {
       "id": "ARXIV-HEP-TH-0108200-V1",
@@ -27,7 +27,7 @@
     },
     {
       "id": "ARXIV-HEP-TH-9808041-V4-SOURCE",
-      "path": "references/vendor/hep-th-9808041v4-source.tar",
+      "path": "references/vendor/hep-th-9808041v4-source.tex.gz",
       "classification": "PRIMARY_REFERENCE_STRUCTURE_ONLY",
       "sha256": "66068db5f9f7044c57c81076f6221655c8fe1643089ada2d9f2dbae5e2389e08"
     },
