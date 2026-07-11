@@ -1,0 +1,380 @@
+{
+  "schema": 1,
+  "task": "REFERENCE-IMPORT-WEINBERG-SREDNICKI-NOTATION-001",
+  "boundary_after_task": "GIT_TO_NOTION_ONLY",
+  "source_classes": {
+    "project_contracts": "CANONICAL_PROJECT_AUTHORITY",
+    "book_snapshots": "REFERENCE_EVIDENCE_ONLY",
+    "attached_draft": "UNVERIFIED_CANDIDATE_DICTIONARY"
+  },
+  "snapshot_interpretation": {
+    "scope": "A snapshot proves the content of the cited live Notion page, not the authorship of every block on that page.",
+    "book_text_exclusions": [
+      "blocks explicitly labelled Codex supplement or Codex proof",
+      "translator or editor notes that explicitly replace the original book notation",
+      "synced annotations whose authorship is not the cited book"
+    ],
+    "later_audit_rule": "Classify excluded blocks as Notion editorial material; do not use them to assert Weinberg or Srednicki conventions."
+  },
+  "draft": {
+    "id": "WS-DICTIONARY-DRAFT-ATTACHMENT",
+    "role": "UNVERIFIED_CANDIDATE_DICTIONARY",
+    "path": "references/vendor/drafts/weinberg-srednicki-dictionary-draft.txt",
+    "sha256": "747c4a4a5091e078e4ba87288542b746ee1529641e01d31c6e8bab22e07fedac",
+    "byte_fidelity": "BYTE_FOR_BYTE_COPY_OF_USER_ATTACHMENT"
+  },
+  "notion_pages": [
+    {
+      "id": "WEINBERG-NOTION-ROOT",
+      "source": "WEINBERG",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "310ee2b74b3f8065a3acdbdac27f3b2b",
+      "title": "量子场论 温伯格",
+      "url": "https://app.notion.com/p/310ee2b74b3f8065a3acdbdac27f3b2b",
+      "fetched_at": "2026-07-11T03:36:35.336Z",
+      "snapshot_path": "references/vendor/notion/weinberg/root-310ee2b74b3f8065a3acdbdac27f3b2b.md",
+      "sha256": "c483e184025eafca84083bbf3623f3d13a6bd6fd01abbb1cb27ec6aadbae6b74"
+    },
+    {
+      "id": "WEINBERG-NOTION-CHAPTER-05-INDEX",
+      "source": "WEINBERG",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "34cee2b74b3f8140bf34e882f5601e5d",
+      "title": "第 5 章 量子场与反粒子",
+      "url": "https://app.notion.com/p/34cee2b74b3f8140bf34e882f5601e5d",
+      "fetched_at": "2026-07-11T03:36:35.343Z",
+      "snapshot_path": "references/vendor/notion/weinberg/chapter-05-index-34cee2b74b3f8140bf34e882f5601e5d.md",
+      "sha256": "fb6a619bc2bac2b1f723f611c454acf833d330f1877533d6ead6aa155e2b8e6b"
+    },
+    {
+      "id": "WEINBERG-NOTION-CHAPTER-25-INDEX",
+      "source": "WEINBERG",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "34cee2b74b3f815fb0b0e5db189e0b88",
+      "title": "第 25 章 超对称代数",
+      "url": "https://app.notion.com/p/34cee2b74b3f815fb0b0e5db189e0b88",
+      "fetched_at": "2026-07-11T03:36:35.343Z",
+      "snapshot_path": "references/vendor/notion/weinberg/chapter-25-index-34cee2b74b3f815fb0b0e5db189e0b88.md",
+      "sha256": "9cef0d9f3203cf66aac2645357e834a545bdc4a678ea6dc6e453d080517446ea"
+    },
+    {
+      "id": "WEINBERG-NOTION-CHAPTER-26-INDEX",
+      "source": "WEINBERG",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "34cee2b74b3f814e8d69d0e3182b91ec",
+      "title": "第 26 章 超对称场论",
+      "url": "https://app.notion.com/p/34cee2b74b3f814e8d69d0e3182b91ec",
+      "fetched_at": "2026-07-11T03:36:35.343Z",
+      "snapshot_path": "references/vendor/notion/weinberg/chapter-26-index-34cee2b74b3f814e8d69d0e3182b91ec.md",
+      "sha256": "593934afd70cdc45cc58e23c2f9c07a85c2013826af288d9c962bf54faa20390"
+    },
+    {
+      "id": "WEINBERG-NOTION-CHAPTER-27-INDEX",
+      "source": "WEINBERG",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "34cee2b74b3f811990e7cea413acedf0",
+      "title": "第 27 章 超对称规范理论",
+      "url": "https://app.notion.com/p/34cee2b74b3f811990e7cea413acedf0",
+      "fetched_at": "2026-07-11T03:36:35.343Z",
+      "snapshot_path": "references/vendor/notion/weinberg/chapter-27-index-34cee2b74b3f811990e7cea413acedf0.md",
+      "sha256": "bab595ca41e14a9389abb375a6c219d3b8e26bf67a29a8296dd78c10fe2094f4"
+    },
+    {
+      "id": "WEINBERG-NOTION-05-04-DIRAC-FORMALISM",
+      "source": "WEINBERG",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "34cee2b74b3f8115a5a1fac623c31862",
+      "title": "5.4 Dirac 形式体系",
+      "url": "https://app.notion.com/p/34cee2b74b3f8115a5a1fac623c31862",
+      "fetched_at": "2026-07-11T03:36:47.572Z",
+      "snapshot_path": "references/vendor/notion/weinberg/05-04-dirac-formalism-34cee2b74b3f8115a5a1fac623c31862.md",
+      "sha256": "025f0553a077e2aade0f61f56805c7c6c7e7c2369e87b39dc2c20543e9c500c9"
+    },
+    {
+      "id": "WEINBERG-NOTION-25-01-GRADED-LIE-ALGEBRAS",
+      "source": "WEINBERG",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "34cee2b74b3f81ea804ed1024d19375b",
+      "title": "25.1 阶化 Lie 代数和阶化参量",
+      "url": "https://app.notion.com/p/34cee2b74b3f81ea804ed1024d19375b",
+      "fetched_at": "2026-07-11T03:36:47.572Z",
+      "snapshot_path": "references/vendor/notion/weinberg/25-01-graded-lie-algebras-34cee2b74b3f81ea804ed1024d19375b.md",
+      "sha256": "4b7340c347d695ae94f0930d9b954ecb75d32b71b0f878cffa3738c3ca1c28b5"
+    },
+    {
+      "id": "WEINBERG-NOTION-25-02-SUPERSYMMETRY-ALGEBRA",
+      "source": "WEINBERG",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "34cee2b74b3f81edb24ed794dd04feb5",
+      "title": "25.2 超对称代数",
+      "url": "https://app.notion.com/p/34cee2b74b3f81edb24ed794dd04feb5",
+      "fetched_at": "2026-07-11T03:36:47.572Z",
+      "snapshot_path": "references/vendor/notion/weinberg/25-02-supersymmetry-algebra-34cee2b74b3f81edb24ed794dd04feb5.md",
+      "sha256": "34bb855488dd345c1981677dc0e11e6581babf6c4ebe07fbcefa32a1b0889e33"
+    },
+    {
+      "id": "WEINBERG-NOTION-25-03-PARITY",
+      "source": "WEINBERG",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "34cee2b74b3f81e6aec2d86de3184c84",
+      "title": "25.3 超对称性生成元的空间反演性质",
+      "url": "https://app.notion.com/p/34cee2b74b3f81e6aec2d86de3184c84",
+      "fetched_at": "2026-07-11T03:36:47.572Z",
+      "snapshot_path": "references/vendor/notion/weinberg/25-03-parity-34cee2b74b3f81e6aec2d86de3184c84.md",
+      "sha256": "8ca968bcc8c1a0f8530e9f8a9725edb4c1465ad07ddcaa08eec4b77539a2599e"
+    },
+    {
+      "id": "WEINBERG-NOTION-26-01-DIRECT-FIELD-SUPERMULTIPLETS",
+      "source": "WEINBERG",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "34cee2b74b3f81efaf28fa4031d4303e",
+      "title": "26.1 场超多重态的直接构造",
+      "url": "https://app.notion.com/p/34cee2b74b3f81efaf28fa4031d4303e",
+      "fetched_at": "2026-07-11T03:37:01.558Z",
+      "snapshot_path": "references/vendor/notion/weinberg/26-01-direct-field-supermultiplets-34cee2b74b3f81efaf28fa4031d4303e.md",
+      "sha256": "e8d2de2f6a6fe4491542a3cb424b2c8515f2690e49885e442faf1c51b8317a69"
+    },
+    {
+      "id": "WEINBERG-NOTION-26-02-GENERAL-SUPERFIELDS",
+      "source": "WEINBERG",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "34cee2b74b3f8182a538e629f277c1e7",
+      "title": "26.2 一般超场",
+      "url": "https://app.notion.com/p/34cee2b74b3f8182a538e629f277c1e7",
+      "fetched_at": "2026-07-11T03:37:01.558Z",
+      "snapshot_path": "references/vendor/notion/weinberg/26-02-general-superfields-34cee2b74b3f8182a538e629f277c1e7.md",
+      "sha256": "fe37d07ad93a10cec063a3d68a41c70c0772a27052c6adeb4390b1e9808a02e5"
+    },
+    {
+      "id": "WEINBERG-NOTION-26-03-CHIRAL-LINEAR-SUPERFIELDS",
+      "source": "WEINBERG",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "34cee2b74b3f8163b3b3fa265e1815b0",
+      "title": "26.3 手征超场和线性超场",
+      "url": "https://app.notion.com/p/34cee2b74b3f8163b3b3fa265e1815b0",
+      "fetched_at": "2026-07-11T03:37:01.558Z",
+      "snapshot_path": "references/vendor/notion/weinberg/26-03-chiral-linear-superfields-34cee2b74b3f8163b3b3fa265e1815b0.md",
+      "sha256": "dd3b94fc1d71595599afa15d21bdebb76169aa23208041663eb0db9a84bb67d3"
+    },
+    {
+      "id": "WEINBERG-NOTION-26-04-RENORMALIZABLE-CHIRAL-THEORIES",
+      "source": "WEINBERG",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "34cee2b74b3f81f6bba1c92f1c61727b",
+      "title": "26.4 手征超场的可重整理论",
+      "url": "https://app.notion.com/p/34cee2b74b3f81f6bba1c92f1c61727b",
+      "fetched_at": "2026-07-11T03:37:01.558Z",
+      "snapshot_path": "references/vendor/notion/weinberg/26-04-renormalizable-chiral-theories-34cee2b74b3f81f6bba1c92f1c61727b.md",
+      "sha256": "2a30c36abfe79068f302e739d5e84d324748b04c3094ddaa5cc8dfef9aa9bf2f"
+    },
+    {
+      "id": "WEINBERG-NOTION-26-06-INTEGRALS-EOM-CURRENT-SUPERFIELDS",
+      "source": "WEINBERG",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "34cee2b74b3f8128a678dc890332e79d",
+      "title": "26.6 超空间积分, 场方程和流超场",
+      "url": "https://app.notion.com/p/34cee2b74b3f8128a678dc890332e79d",
+      "fetched_at": "2026-07-11T03:37:15.061Z",
+      "snapshot_path": "references/vendor/notion/weinberg/26-06-integrals-eom-current-superfields-34cee2b74b3f8128a678dc890332e79d.md",
+      "sha256": "054d5e451ae6929285bac2fb78811cadf6613be5caa73a018691d9da66e650db"
+    },
+    {
+      "id": "WEINBERG-NOTION-26-08-GENERAL-KAHLER-POTENTIAL",
+      "source": "WEINBERG",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "34cee2b74b3f816280f7c5e18852c958",
+      "title": "26.8 一般 Kähler 势",
+      "url": "https://app.notion.com/p/34cee2b74b3f816280f7c5e18852c958",
+      "fetched_at": "2026-07-11T03:37:15.061Z",
+      "snapshot_path": "references/vendor/notion/weinberg/26-08-general-kahler-potential-34cee2b74b3f816280f7c5e18852c958.md",
+      "sha256": "bfdd548740c6ab93e1579636d4efe707a6755e76e04ec718147bec9dc067c486"
+    },
+    {
+      "id": "WEINBERG-NOTION-26-APPENDIX-MAJORANA-SPINORS",
+      "source": "WEINBERG",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "34cee2b74b3f81349f82dd4d257ba62c",
+      "title": "附录 Majorana 旋量",
+      "url": "https://app.notion.com/p/34cee2b74b3f81349f82dd4d257ba62c",
+      "fetched_at": "2026-07-11T03:37:15.061Z",
+      "snapshot_path": "references/vendor/notion/weinberg/26-appendix-majorana-spinors-34cee2b74b3f81349f82dd4d257ba62c.md",
+      "sha256": "e99e262bb1a0e5877f6b04f79e5ccc25fe5e9d588e66c977f70fcd90a107eb1a"
+    },
+    {
+      "id": "WEINBERG-NOTION-27-01-GAUGE-INVARIANT-CHIRAL-ACTION",
+      "source": "WEINBERG",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "34cee2b74b3f81b6b72bd47d34df4d88",
+      "title": "27.1 手征超场的规范不变作用量",
+      "url": "https://app.notion.com/p/34cee2b74b3f81b6b72bd47d34df4d88",
+      "fetched_at": "2026-07-11T03:37:15.061Z",
+      "snapshot_path": "references/vendor/notion/weinberg/27-01-gauge-invariant-chiral-action-34cee2b74b3f81b6b72bd47d34df4d88.md",
+      "sha256": "7db567328703a80feda625db49cb19589292010ea42dafacc1d767efc15ac06c"
+    },
+    {
+      "id": "WEINBERG-NOTION-27-02-ABELIAN-GAUGE-SUPERFIELD-ACTION",
+      "source": "WEINBERG",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "34cee2b74b3f8131b10edd7a1dad0172",
+      "title": "27.2 阿贝尔规范超场的规范不变作用量",
+      "url": "https://app.notion.com/p/34cee2b74b3f8131b10edd7a1dad0172",
+      "fetched_at": "2026-07-11T03:37:33.809Z",
+      "snapshot_path": "references/vendor/notion/weinberg/27-02-abelian-gauge-superfield-action-34cee2b74b3f8131b10edd7a1dad0172.md",
+      "sha256": "90c91d5b3d4ef0e12eee82208621f5f1cc60820e93fa7941913cbfc487d098ff"
+    },
+    {
+      "id": "WEINBERG-NOTION-27-03-GENERAL-GAUGE-SUPERFIELD-ACTION",
+      "source": "WEINBERG",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "34cee2b74b3f812f97c2d0aa902aba5d",
+      "title": "27.3 一般规范超场的规范不变作用量",
+      "url": "https://app.notion.com/p/34cee2b74b3f812f97c2d0aa902aba5d",
+      "fetched_at": "2026-07-11T03:37:33.809Z",
+      "snapshot_path": "references/vendor/notion/weinberg/27-03-general-gauge-superfield-action-34cee2b74b3f812f97c2d0aa902aba5d.md",
+      "sha256": "4767da0702f1faa82017f581708bc702a3d43b15260763f468fb9429942fec12"
+    },
+    {
+      "id": "WEINBERG-NOTION-27-04-RENORMALIZABLE-GAUGE-THEORY",
+      "source": "WEINBERG",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "34cee2b74b3f81949500f3f35884f580",
+      "title": "27.4 含有手征超场的可重整规范理论",
+      "url": "https://app.notion.com/p/34cee2b74b3f81949500f3f35884f580",
+      "fetched_at": "2026-07-11T03:37:33.809Z",
+      "snapshot_path": "references/vendor/notion/weinberg/27-04-renormalizable-gauge-theory-34cee2b74b3f81949500f3f35884f580.md",
+      "sha256": "83b239e9742077e910a16067b5334958d0e29ee3b362627d738af64bd72cf022"
+    },
+    {
+      "id": "SREDNICKI-NOTION-ROOT",
+      "source": "SREDNICKI",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "34fee2b74b3f80adaaa4e3113787083b",
+      "title": "Quantum field theory Srednicki",
+      "url": "https://app.notion.com/p/34fee2b74b3f80adaaa4e3113787083b",
+      "fetched_at": "2026-07-11T03:37:46.587Z",
+      "snapshot_path": "references/vendor/notion/srednicki/root-34fee2b74b3f80adaaa4e3113787083b.md",
+      "sha256": "663e2f49bb8f3f10c4cea369aab5e06b0eefe820a8d851da58738c1973310d22"
+    },
+    {
+      "id": "SREDNICKI-NOTION-PART-II-INDEX",
+      "source": "SREDNICKI",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "f8967ce7283b4557b4cd9553bc6faae1",
+      "title": "Part II Spin One Half",
+      "url": "https://app.notion.com/p/f8967ce7283b4557b4cd9553bc6faae1",
+      "fetched_at": "2026-07-11T03:37:46.587Z",
+      "snapshot_path": "references/vendor/notion/srednicki/part-ii-index-f8967ce7283b4557b4cd9553bc6faae1.md",
+      "sha256": "79bce9141243ba57b246b23b0c1838e5efe13d7ad08f61f3e85168958469b416"
+    },
+    {
+      "id": "SREDNICKI-NOTION-PART-III-INDEX",
+      "source": "SREDNICKI",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "a7bfa00c3bf745b393bdba34b5dbfa3f",
+      "title": "Part III Spin One",
+      "url": "https://app.notion.com/p/a7bfa00c3bf745b393bdba34b5dbfa3f",
+      "fetched_at": "2026-07-11T03:37:46.587Z",
+      "snapshot_path": "references/vendor/notion/srednicki/part-iii-index-a7bfa00c3bf745b393bdba34b5dbfa3f.md",
+      "sha256": "a7ae6094f8bef668d73890604b0860ac75658409ed95bc5907766759bc081be5"
+    },
+    {
+      "id": "SREDNICKI-NOTION-33-LORENTZ-GROUP-REPRESENTATIONS",
+      "source": "SREDNICKI",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "019f6db67ebe48249715e9c33b64f6f8",
+      "title": "33. Representations of the Lorentz group",
+      "url": "https://app.notion.com/p/019f6db67ebe48249715e9c33b64f6f8",
+      "fetched_at": "2026-07-11T03:37:57.118Z",
+      "snapshot_path": "references/vendor/notion/srednicki/33-lorentz-group-representations-019f6db67ebe48249715e9c33b64f6f8.md",
+      "sha256": "e69adb2ba193666481c4c99874f486d0723d7e038204b0a77a0d3494783fec4c"
+    },
+    {
+      "id": "SREDNICKI-NOTION-34-LEFT-RIGHT-SPINOR-FIELDS",
+      "source": "SREDNICKI",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "812622be5c2d466faeb4a613eabad116",
+      "title": "34. Left- and right-handed spinor fields",
+      "url": "https://app.notion.com/p/812622be5c2d466faeb4a613eabad116",
+      "fetched_at": "2026-07-11T03:37:57.118Z",
+      "snapshot_path": "references/vendor/notion/srednicki/34-left-right-spinor-fields-812622be5c2d466faeb4a613eabad116.md",
+      "sha256": "06a3f1a92793711eee23bada8f33fe88b5e755ebaf7fc16fa3e5d1e7559e8fad"
+    },
+    {
+      "id": "SREDNICKI-NOTION-35-SPINOR-INDICES",
+      "source": "SREDNICKI",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "1da2841c4cda42669598313359e3d07d",
+      "title": "35. Manipulating spinor indices",
+      "url": "https://app.notion.com/p/1da2841c4cda42669598313359e3d07d",
+      "fetched_at": "2026-07-11T03:37:57.118Z",
+      "snapshot_path": "references/vendor/notion/srednicki/35-spinor-indices-1da2841c4cda42669598313359e3d07d.md",
+      "sha256": "e2460a11fc45e2b11c4fbf740500c052e30cf4d53d6f11cffb7866a8d4dff3c8"
+    },
+    {
+      "id": "SREDNICKI-NOTION-36-SPINOR-LAGRANGIANS",
+      "source": "SREDNICKI",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "b41fbf43fd9247d280fe27cace58ea52",
+      "title": "36. Lagrangians for spinor fields",
+      "url": "https://app.notion.com/p/b41fbf43fd9247d280fe27cace58ea52",
+      "fetched_at": "2026-07-11T03:37:57.118Z",
+      "snapshot_path": "references/vendor/notion/srednicki/36-spinor-lagrangians-b41fbf43fd9247d280fe27cace58ea52.md",
+      "sha256": "c1b2ac02d783dfb078544a1f0205d337d08a6d6ff82543db3be902e4264d9485"
+    },
+    {
+      "id": "SREDNICKI-NOTION-38-SPINOR-TECHNOLOGY",
+      "source": "SREDNICKI",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "19f10ddaf77242df946f54f8c3f99be6",
+      "title": "38. Spinor technology",
+      "url": "https://app.notion.com/p/19f10ddaf77242df946f54f8c3f99be6",
+      "fetched_at": "2026-07-11T03:38:18.668Z",
+      "snapshot_path": "references/vendor/notion/srednicki/38-spinor-technology-19f10ddaf77242df946f54f8c3f99be6.md",
+      "sha256": "06be8da64d026f170a99da324cf6c8fadbba5adab1a4f3599a53859dfc451a5d"
+    },
+    {
+      "id": "SREDNICKI-NOTION-40-P-T-C",
+      "source": "SREDNICKI",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "c9cbde61fce8474281189008cfa39813",
+      "title": "40. Parity, time reversal, and charge conjugation",
+      "url": "https://app.notion.com/p/c9cbde61fce8474281189008cfa39813",
+      "fetched_at": "2026-07-11T03:38:18.668Z",
+      "snapshot_path": "references/vendor/notion/srednicki/40-p-t-c-c9cbde61fce8474281189008cfa39813.md",
+      "sha256": "b4ff8e5578d06073712f33aa2ef17ce42c3fe4b4da5bc1f6605a74cb1f90bf66"
+    },
+    {
+      "id": "SREDNICKI-NOTION-47-GAMMA-MATRIX-TECHNOLOGY",
+      "source": "SREDNICKI",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "22607397de1a4af2bc9610b320426208",
+      "title": "47. Gamma matrix technology",
+      "url": "https://app.notion.com/p/22607397de1a4af2bc9610b320426208",
+      "fetched_at": "2026-07-11T03:38:18.668Z",
+      "snapshot_path": "references/vendor/notion/srednicki/47-gamma-matrix-technology-22607397de1a4af2bc9610b320426208.md",
+      "sha256": "0bdf1293c6af375076f62d06ae4fcbea681b5ffb6282d65e3dabfb05d16379c4"
+    },
+    {
+      "id": "SREDNICKI-NOTION-49-MAJORANA-FEYNMAN-RULES",
+      "source": "SREDNICKI",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "1707531df3dd440bbd490a9e2b963de8",
+      "title": "49. The Feynman rules for Majorana fields",
+      "url": "https://app.notion.com/p/1707531df3dd440bbd490a9e2b963de8",
+      "fetched_at": "2026-07-11T03:38:18.668Z",
+      "snapshot_path": "references/vendor/notion/srednicki/49-majorana-feynman-rules-1707531df3dd440bbd490a9e2b963de8.md",
+      "sha256": "799fb389f1cc29df06cfdbf96f572f67c0a180d8d74d47c64d8909f23c6ce0b9"
+    },
+    {
+      "id": "SREDNICKI-NOTION-95-SUPERSYMMETRY",
+      "source": "SREDNICKI",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "0151805c7e85457a9928fcfd0e83da2a",
+      "title": "95. Supersymmetry",
+      "url": "https://app.notion.com/p/0151805c7e85457a9928fcfd0e83da2a",
+      "fetched_at": "2026-07-11T03:38:29.365Z",
+      "snapshot_path": "references/vendor/notion/srednicki/95-supersymmetry-0151805c7e85457a9928fcfd0e83da2a.md",
+      "sha256": "0e46576099fb2d877f193a187629764956dbae65f0592ae05751e4a9b97080fb"
+    }
+  ]
+}

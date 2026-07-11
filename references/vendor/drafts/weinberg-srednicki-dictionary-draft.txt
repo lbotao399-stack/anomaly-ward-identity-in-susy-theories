@@ -1,0 +1,3767 @@
+# Weinberg–Srednicki (d=4,\ \mathcal N=1) notation dictionary
+
+## 0. Symbols / 记号定义
+
+* 下标 (W,S)：分别表示 **Weinberg** 与 **Srednicki** convention。
+* (\eta_{\mu\nu}=\operatorname{diag}(-1,+1,+1,+1))，(\epsilon^{0123}=+1)，故 (\epsilon_{0123}=-1)。
+* (I_n)：(n\times n) identity matrix。
+* ([A,B]=AB-BA)，({A,B}=AB+BA)。
+* (\bar\Psi=\Psi^\dagger\beta)：Dirac adjoint。
+* (\slashed v_\bullet=\gamma_\bullet^\mu v_\mu)。
+* (\gamma^{\mu_1\cdots\mu_r}:=\gamma^{[\mu_1}\cdots\gamma^{\mu_r]})，方括号含 (1/r!)：
+  [
+  \gamma^{\mu\nu}=\frac12(\gamma^\mu\gamma^\nu-\gamma^\nu\gamma^\mu).
+  ]
+* (\Box=\partial_\mu\partial^\mu)。
+* (P_{L,R})：chirality projectors。
+* ([X]_F,[X]_D)：superfield 的 (F)-component 与 (D)-component projection；不是 auxiliary fields (F,D) 本身。
+* (T^A)：Hermitian gauge generators，
+  [
+  [T^A,T^B]=if^{ABC}T^C,\qquad
+  \operatorname{tr}_R(T^AT^B)=T(R)\delta^{AB}.
+  ]
+* (W_i=\partial W/\partial A_i)，(W_{ij}=\partial^2W/\partial A_i\partial A_j)。
+* (\mathrm{h.c.})、(\mathrm{c.c.})：Hermitian conjugate、complex conjugate。
+* 定义
+  [
+  \kappa_W=+1,\qquad \kappa_S=-1,
+  ]
+  则两套 Clifford algebra 统一写为
+  [
+  \boxed{{\gamma_\bullet^\mu,\gamma_\bullet^\nu}
+  =2\kappa_\bullet\eta^{\mu\nu}I_4.}
+  ]
+
+这里把“Swiecki”理解为 **Mark Srednicki**。以下是两书共同覆盖的 (d=4,\mathcal N=1) spinor、superfield 与 supersymmetric gauge theory 的 operationally complete dictionary。
+
+---
+
+# I. Minkowski metric 与 (\gamma)-matrix
+
+## 1. Metric 与 spacetime epsilon
+
+两者均采用
+
+[
+\boxed{\eta_{\mu\nu}=\operatorname{diag}(-1,+1,+1,+1)},
+]
+
+[
+x^2=-(x^0)^2+\mathbf x^2,
+\qquad
+p^2=-(p^0)^2+\mathbf p^2,
+]
+
+[
+\boxed{\epsilon^{0123}=+1,\qquad \epsilon_{0123}=-1.}
+]
+
+差别不在 metric，而在 Clifford algebra 的 overall sign。
+
+---
+
+## 2. Pauli matrices
+
+[
+\sigma^1=
+\begin{pmatrix}
+0&1\1&0
+\end{pmatrix},
+\qquad
+\sigma^2=
+\begin{pmatrix}
+0&-i\ i&0
+\end{pmatrix},
+\qquad
+\sigma^3=
+\begin{pmatrix}
+1&0\0&-1
+\end{pmatrix}.
+]
+
+Srednicki 定义
+
+[
+\sigma^\mu=(I_2,\sigma^1,\sigma^2,\sigma^3),
+]
+
+[
+\bar\sigma^\mu=(I_2,-\sigma^1,-\sigma^2,-\sigma^3).
+]
+
+它们满足
+
+[
+\boxed{
+\sigma^\mu\bar\sigma^\nu+\sigma^\nu\bar\sigma^\mu
+=-2\eta^{\mu\nu}I_2,
+}
+]
+
+[
+\boxed{
+\bar\sigma^\mu\sigma^\nu+\bar\sigma^\nu\sigma^\mu
+=-2\eta^{\mu\nu}I_2.
+}
+]
+
+例如
+
+[
+\sigma^0\bar\sigma^0+\sigma^0\bar\sigma^0
+=2I_2=-2\eta^{00}I_2,
+]
+
+因为 (\eta^{00}=-1)。
+
+---
+
+## 3. Srednicki (\gamma)-matrices
+
+在 Weyl/chiral basis：
+
+[
+\boxed{
+\gamma_S^\mu=
+\begin{pmatrix}
+0&\sigma^\mu\
+\bar\sigma^\mu&0
+\end{pmatrix}.
+}
+]
+
+显式地，
+
+[
+\gamma_S^0=
+\begin{pmatrix}
+0&I_2\
+I_2&0
+\end{pmatrix},
+]
+
+[
+\gamma_S^i=
+\begin{pmatrix}
+0&\sigma^i\
+-\sigma^i&0
+\end{pmatrix}.
+]
+
+因此
+
+[
+\boxed{
+{\gamma_S^\mu,\gamma_S^\nu}
+=-2\eta^{\mu\nu}I_4.
+}
+]
+
+例如
+
+[
+(\gamma_S^0)^2=I_4=-\eta^{00}I_4,
+]
+
+[
+(\gamma_S^i)^2=-I_4=-\eta^{ii}I_4.
+]
+
+---
+
+## 4. Weinberg (\gamma)-matrices
+
+Weinberg 的 chiral basis 可写为
+
+[
+\boxed{
+\gamma_W^0
+=-i
+\begin{pmatrix}
+0&I_2\
+I_2&0
+\end{pmatrix},
+}
+]
+
+[
+\boxed{
+\gamma_W^i
+=-i
+\begin{pmatrix}
+0&\sigma^i\
+-\sigma^i&0
+\end{pmatrix}.
+}
+]
+
+因此
+
+[
+\boxed{
+{\gamma_W^\mu,\gamma_W^\nu}
+=+2\eta^{\mu\nu}I_4.
+}
+]
+
+两者的 master conversion 是
+
+[
+\boxed{\gamma_W^\mu=-i\gamma_S^\mu.}
+]
+
+检验：
+
+[
+\begin{aligned}
+{\gamma_W^\mu,\gamma_W^\nu}
+&={-i\gamma_S^\mu,-i\gamma_S^\nu}\
+&=(-i)^2{\gamma_S^\mu,\gamma_S^\nu}\
+&=-(-2\eta^{\mu\nu}I_4)\
+&=2\eta^{\mu\nu}I_4.
+\end{aligned}
+]
+
+因此
+
+[
+\boxed{\slashed v_W=-i\slashed v_S.}
+]
+
+([Homepages UC][1])
+
+---
+
+# II. (\gamma_5)、chirality 与 Lorentz generators
+
+## 5. (\gamma_5)
+
+Weinberg：
+
+[
+\boxed{
+\gamma_{5W}
+=-i\gamma_W^0\gamma_W^1\gamma_W^2\gamma_W^3
+===========================================
+
+\begin{pmatrix}
+I_2&0\
+0&-I_2
+\end{pmatrix}.
+}
+]
+
+Srednicki：
+
+[
+\boxed{
+\gamma_{5S}
+=+i\gamma_S^0\gamma_S^1\gamma_S^2\gamma_S^3
+===========================================
+
+\begin{pmatrix}
+-I_2&0\
+0&I_2
+\end{pmatrix}.
+}
+]
+
+由 (\gamma_W^\mu=-i\gamma_S^\mu)：
+
+[
+\begin{aligned}
+\gamma_{5W}
+&=-i(-i\gamma_S^0)(-i\gamma_S^1)
+(-i\gamma_S^2)(-i\gamma_S^3)\
+&=-i(-i)^4\gamma_S^0\gamma_S^1\gamma_S^2\gamma_S^3\
+&=-i\gamma_S^0\gamma_S^1\gamma_S^2\gamma_S^3\
+&=-\gamma_{5S}.
+\end{aligned}
+]
+
+故
+
+[
+\boxed{\gamma_{5W}=-\gamma_{5S}.}
+]
+
+两套 convention 都有
+
+[
+\gamma_5^2=I_4,
+\qquad
+{\gamma_5,\gamma^\mu}=0,
+\qquad
+\gamma_5^\dagger=\gamma_5.
+]
+
+---
+
+## 6. Chirality projectors
+
+Weinberg：
+
+[
+P_\pm^W=\frac12(I_4\pm\gamma_{5W}).
+]
+
+Srednicki：
+
+[
+P_L^S=\frac12(I_4-\gamma_{5S}),
+\qquad
+P_R^S=\frac12(I_4+\gamma_{5S}).
+]
+
+因为 (\gamma_{5W}=-\gamma_{5S})：
+
+[
+\boxed{
+P_+^W=P_L^S,
+\qquad
+P_-^W=P_R^S.
+}
+]
+
+即：
+
+[
+\boxed{
+\text{Weinberg } \gamma_{5W}=+1
+\quad\Longleftrightarrow\quad
+\text{Srednicki left-handed}.
+}
+]
+
+在该 Weyl basis 中，
+
+[
+P_+^W=P_L^S=
+\begin{pmatrix}
+I_2&0\
+0&0
+\end{pmatrix},
+]
+
+[
+P_-^W=P_R^S=
+\begin{pmatrix}
+0&0\
+0&I_2
+\end{pmatrix}.
+]
+
+因此 Weinberg 的记号 (L) 并不等同于“(\gamma_5=-1)”；他的 (\gamma_5) 本身与 Srednicki 相反。
+
+---
+
+## 7. (\beta)-matrix 与 Hermiticity
+
+两者采用同一个 Dirac-adjoint matrix：
+
+[
+\boxed{
+\beta_W=i\gamma_W^0
+=\gamma_S^0
+=\beta_S
+========
+
+\begin{pmatrix}
+0&I_2\
+I_2&0
+\end{pmatrix}.
+}
+]
+
+Weinberg：
+
+[
+(\gamma_W^0)^\dagger=-\gamma_W^0,
+\qquad
+(\gamma_W^i)^\dagger=+\gamma_W^i.
+]
+
+Srednicki：
+
+[
+(\gamma_S^0)^\dagger=+\gamma_S^0,
+\qquad
+(\gamma_S^i)^\dagger=-\gamma_S^i.
+]
+
+统一为
+
+[
+\boxed{
+(\gamma_\bullet^\mu)^\dagger
+=-\kappa_\bullet\beta\gamma_\bullet^\mu\beta^{-1}.
+}
+]
+
+对 Weinberg：
+
+[
+-\kappa_W\beta\gamma_W^\mu\beta^{-1}
+=-\beta\gamma_W^\mu\beta^{-1}.
+]
+
+对 Srednicki：
+
+[
+-\kappa_S\beta\gamma_S^\mu\beta^{-1}
+=+\beta\gamma_S^\mu\beta^{-1}.
+]
+
+---
+
+## 8. Lorentz generators
+
+Weinberg：
+
+[
+\boxed{
+J_W^{\mu\nu}
+=-\frac{i}{4}[\gamma_W^\mu,\gamma_W^\nu].
+}
+]
+
+Srednicki：
+
+[
+\boxed{
+S_S^{\mu\nu}
+=+\frac{i}{4}[\gamma_S^\mu,\gamma_S^\nu].
+}
+]
+
+由
+
+[
+[\gamma_W^\mu,\gamma_W^\nu]
+=(-i)^2[\gamma_S^\mu,\gamma_S^\nu]
+=-[\gamma_S^\mu,\gamma_S^\nu],
+]
+
+得到
+
+[
+\begin{aligned}
+J_W^{\mu\nu}
+&=-\frac i4[-[\gamma_S^\mu,\gamma_S^\nu]]\
+&=\frac i4[\gamma_S^\mu,\gamma_S^\nu]\
+&=S_S^{\mu\nu}.
+\end{aligned}
+]
+
+所以
+
+[
+\boxed{J_W^{\mu\nu}=S_S^{\mu\nu}.}
+]
+
+两分量形式：
+
+[
+\boxed{
+(S_L^{\mu\nu})_a{}^b
+====================
+
+\frac i4
+(\sigma^\mu\bar\sigma^\nu-
+\sigma^\nu\bar\sigma^\mu)_a{}^b,
+}
+]
+
+[
+\boxed{
+(S_R^{\mu\nu})^{\dot a}{}_{\dot b}
+==================================
+
+-\frac i4
+(\bar\sigma^\mu\sigma^\nu-
+\bar\sigma^\nu\sigma^\mu)^{\dot a}{}_{\dot b}.
+}
+]
+
+---
+
+# III. Two-component spinor indices
+
+## 9. (\epsilon)-symbols
+
+Srednicki convention：
+
+[
+\epsilon^{12}
+=\epsilon^{\dot1\dot2}
+=\epsilon_{21}
+=\epsilon_{\dot2\dot1}
+=+1,
+]
+
+[
+\epsilon^{21}
+=\epsilon^{\dot2\dot1}
+=\epsilon_{12}
+=\epsilon_{\dot1\dot2}
+=-1.
+]
+
+矩阵形式：
+
+[
+(\epsilon^{ab})=
+\begin{pmatrix}
+0&1\
+-1&0
+\end{pmatrix}
+=i\sigma^2,
+]
+
+[
+(\epsilon_{ab})=
+\begin{pmatrix}
+0&-1\
+1&0
+\end{pmatrix}
+=-i\sigma^2.
+]
+
+满足
+
+[
+\epsilon^{ab}\epsilon_{bc}=\delta^a{}*c,
+\qquad
+\epsilon*{ab}\epsilon^{bc}=\delta_a{}^c.
+]
+
+Index raising/lowering：
+
+[
+\boxed{
+\psi^a=\epsilon^{ab}\psi_b,
+\qquad
+\psi_a=\epsilon_{ab}\psi^b,
+}
+]
+
+[
+\boxed{
+\bar\psi^{\dot a}
+=\epsilon^{\dot a\dot b}\bar\psi_{\dot b},
+\qquad
+\bar\psi_{\dot a}
+=\epsilon_{\dot a\dot b}\bar\psi^{\dot b}.
+}
+]
+
+---
+
+## 10. Grassmann contractions
+
+定义
+
+[
+\theta\psi:=\theta^a\psi_a,
+\qquad
+\theta\theta:=\theta^a\theta_a.
+]
+
+由于 (\theta,\psi) Grassmann odd：
+
+[
+\theta\psi
+=\theta^a\psi_a
+=-\psi_a\theta^a
+=\psi^a\theta_a
+=\psi\theta.
+]
+
+因此 two-component scalar contraction 是 symmetric：
+
+[
+\boxed{\theta\psi=\psi\theta.}
+]
+
+但 component products anti-commute：
+
+[
+\theta^a\psi^b=-\psi^b\theta^a.
+]
+
+有
+
+[
+\boxed{
+\theta_a\theta_b
+=\frac12\epsilon_{ab}\theta\theta,
+}
+]
+
+[
+\boxed{
+\theta^a\theta^b
+=-\frac12\epsilon^{ab}\theta\theta.
+}
+]
+
+证明第二式：设
+
+[
+\theta^a\theta^b=A\epsilon^{ab}\theta\theta.
+]
+
+乘 (\epsilon_{ba})：
+
+[
+\epsilon_{ba}\theta^a\theta^b
+=A\epsilon_{ba}\epsilon^{ab}\theta\theta.
+]
+
+左边：
+
+[
+\epsilon_{ba}\theta^a\theta^b
+=-\epsilon_{ab}\theta^a\theta^b
+=-\theta^a\theta_a
+=-\theta\theta.
+]
+
+右边：
+
+[
+\epsilon_{ba}\epsilon^{ab}=2.
+]
+
+故
+
+[
+-\theta\theta=2A\theta\theta,
+\qquad
+A=-\frac12.
+]
+
+Dotted spinors：
+
+[
+\boxed{
+\theta^*_{\dot a}\theta^**{\dot b}
+=-\frac12\epsilon*{\dot a\dot b}\theta^*\theta^*,
+}
+]
+
+[
+\boxed{
+\theta^{*\dot a}\theta^{*\dot b}
+=+\frac12\epsilon^{\dot a\dot b}\theta^*\theta^*.
+}
+]
+
+常用 sigma identity：
+
+[
+\boxed{
+\sigma^\mu_{a\dot a}\sigma_{\mu b\dot b}
+=-2\epsilon_{ab}\epsilon_{\dot a\dot b}.
+}
+]
+
+以及
+
+[
+\boxed{
+(\theta\sigma^\mu\theta^*)
+(\theta\sigma^\nu\theta^*)
+==========================
+
+-\frac12
+(\theta\theta)(\theta^*\theta^*)\eta^{\mu\nu}.
+}
+]
+
+([UCSB Physics][2])
+
+---
+
+# IV. Charge-conjugation matrix (C)
+
+## 11. (C)-matrix
+
+在上述 basis 中，两书可取同一矩阵：
+
+[
+\boxed{
+C_W=C_S=C
+=-i
+\begin{pmatrix}
+\sigma^2&0\
+0&-\sigma^2
+\end{pmatrix}.
+}
+]
+
+显式地，
+
+[
+C=
+\begin{pmatrix}
+0&-1&0&0\
+1&0&0&0\
+0&0&0&1\
+0&0&-1&0
+\end{pmatrix}.
+]
+
+也可写为
+
+[
+\boxed{
+C=
+\begin{pmatrix}
+\epsilon_{ab}&0\
+0&\epsilon^{\dot a\dot b}
+\end{pmatrix}.
+}
+]
+
+其性质：
+
+[
+\boxed{C^T=-C,}
+]
+
+[
+\boxed{C^*=C,}
+]
+
+[
+\boxed{C^\dagger=-C,}
+]
+
+[
+\boxed{C^2=-I_4,}
+]
+
+[
+\boxed{C^{-1}=-C.}
+]
+
+并且
+
+[
+\boxed{
+C^{-1}\gamma_\bullet^\mu C
+=-(\gamma_\bullet^\mu)^T.
+}
+]
+
+因为 (\gamma_{5}) 含四个 (\gamma)-matrices：
+
+[
+\boxed{
+C^{-1}\gamma_{5\bullet}C
+=(\gamma_{5\bullet})^T.
+}
+]
+
+此外，
+
+[
+\boxed{{\beta,C}=0,}
+\qquad
+\boxed{[C,\gamma_5]=0,}
+\qquad
+\boxed{{\beta,\gamma_5}=0.}
+]
+
+---
+
+# V. Dirac 与 Majorana spinors
+
+## 12. Srednicki Dirac spinor
+
+由两个 independent left-handed Weyl spinors (\chi_a,\xi_a) 构造：
+
+[
+\boxed{
+\Psi_{D,S}
+==========
+
+\begin{pmatrix}
+\chi_a\
+\xi^{\dagger\dot a}
+\end{pmatrix}.
+}
+]
+
+Dirac adjoint：
+
+[
+\begin{aligned}
+\bar\Psi_{D,S}
+&=\Psi_{D,S}^\dagger\beta\
+&=
+(\chi^{\dagger}*{\dot a},\xi^a)
+\begin{pmatrix}
+0&I_2\
+I_2&0
+\end{pmatrix}\
+&=
+\boxed{(\xi^a,\chi^\dagger*{\dot a})}.
+\end{aligned}
+]
+
+Charge conjugate：
+
+[
+\Psi_{D,S}^c
+:=C\bar\Psi_{D,S}^{,T}.
+]
+
+因此
+
+[
+\bar\Psi_{D,S}^{,T}
+===================
+
+\begin{pmatrix}
+\xi^a\
+\chi^\dagger_{\dot a}
+\end{pmatrix},
+]
+
+乘以 (C)：
+
+[
+\boxed{
+\Psi_{D,S}^{c}
+==============
+
+\begin{pmatrix}
+\xi_a\
+\chi^{\dagger\dot a}
+\end{pmatrix}.
+}
+]
+
+---
+
+## 13. Srednicki Majorana spinor
+
+令 (\xi=\chi=\psi)，则
+
+[
+\boxed{
+\Psi_{M,S}
+==========
+
+\begin{pmatrix}
+\psi_a\
+\psi^{\dagger\dot a}
+\end{pmatrix}.
+}
+]
+
+其 Majorana reality condition 是
+
+[
+\boxed{
+\Psi_S^*=-\beta C\Psi_S.
+}
+]
+
+相应地
+
+[
+\boxed{
+\bar\Psi_S=+\Psi_S^TC.
+}
+]
+
+检验：
+
+[
+\Psi_S^*=
+\begin{pmatrix}
+\psi_{\dot a}^\dagger\
+\psi^a
+\end{pmatrix}.
+]
+
+另一方面
+
+[
+-\beta C
+========
+
+*
+
+\begin{pmatrix}
+0&I\I&0
+\end{pmatrix}
+\begin{pmatrix}
+\epsilon&0\0&\epsilon^{-1}
+\end{pmatrix}
+=============
+
+*
+
+\begin{pmatrix}
+0&\epsilon^{-1}\
+\epsilon&0
+\end{pmatrix},
+]
+
+作用于 ((\psi_a,\psi^{\dagger\dot a})^T) 正好产生相同 raised/lowered components。
+
+---
+
+## 14. Weinberg Majorana condition
+
+Weinberg 写为
+
+[
+\boxed{
+\Psi_W^*=+\beta C\Psi_W,
+}
+]
+
+以及
+
+[
+\boxed{
+\bar\Psi_W=-\Psi_W^TC.
+}
+]
+
+这与 Srednicki 只差一个 field phase。
+
+令
+
+[
+\boxed{\Psi_W=i\Psi_S.}
+]
+
+则
+
+[
+\begin{aligned}
+\Psi_W^*
+&=(i\Psi_S)^*\
+&=-i\Psi_S^*\
+&=-i(-\beta C\Psi_S)\
+&=i\beta C\Psi_S\
+&=\beta C(i\Psi_S)\
+&=\beta C\Psi_W.
+\end{aligned}
+]
+
+同时
+
+[
+\boxed{\bar\Psi_W=-i\bar\Psi_S.}
+]
+
+因为
+
+[
+\begin{aligned}
+\bar\Psi_W
+&=(i\Psi_S)^\dagger\beta\
+&=-i\Psi_S^\dagger\beta\
+&=-i\bar\Psi_S.
+\end{aligned}
+]
+
+并且
+
+[
+\begin{aligned}
+\bar\Psi_W
+&=-i\Psi_S^TC\
+&=-(i\Psi_S)^TC\
+&=-\Psi_W^TC.
+\end{aligned}
+]
+
+所以 Majorana dictionary：
+
+[
+\boxed{
+\Psi_W=i\Psi_S,
+\qquad
+\bar\Psi_W=-i\bar\Psi_S.
+}
+]
+
+---
+
+## 15. Dirac Lagrangian dictionary
+
+Weinberg：
+
+[
+\boxed{
+\mathcal L_{D,W}
+================
+
+-\bar\Psi_W\gamma_W^\mu\partial_\mu\Psi_W
+-m\bar\Psi_W\Psi_W.
+}
+]
+
+代入
+
+[
+\bar\Psi_W=-i\bar\Psi_S,\qquad
+\gamma_W^\mu=-i\gamma_S^\mu,\qquad
+\Psi_W=i\Psi_S.
+]
+
+Kinetic term：
+
+[
+\begin{aligned}
+-\bar\Psi_W\gamma_W^\mu\partial_\mu\Psi_W
+&=-(-i\bar\Psi_S)(-i\gamma_S^\mu)
+\partial_\mu(i\Psi_S)\
+&=-(-i)(-i)(i)
+\bar\Psi_S\gamma_S^\mu\partial_\mu\Psi_S.
+\end{aligned}
+]
+
+系数：
+
+[
+(-i)(-i)=-1,
+]
+
+[
+(-1)(i)=-i,
+]
+
+[
+-(-i)=+i.
+]
+
+故
+
+[
+-\bar\Psi_W\gamma_W^\mu\partial_\mu\Psi_W
+=========================================
+
+i\bar\Psi_S\gamma_S^\mu\partial_\mu\Psi_S.
+]
+
+Mass term：
+
+[
+\begin{aligned}
+-m\bar\Psi_W\Psi_W
+&=-m(-i\bar\Psi_S)(i\Psi_S)\
+&=-m(-i)(i)\bar\Psi_S\Psi_S\
+&=-m\bar\Psi_S\Psi_S.
+\end{aligned}
+]
+
+因此
+
+[
+\boxed{
+\mathcal L_{D,S}
+================
+
+i\bar\Psi_S\gamma_S^\mu\partial_\mu\Psi_S
+-m\bar\Psi_S\Psi_S.
+}
+]
+
+---
+
+## 16. Majorana Lagrangian
+
+Weinberg：
+
+[
+\boxed{
+\mathcal L_{M,W}
+================
+
+-\frac12\bar\Psi_W\gamma_W^\mu\partial_\mu\Psi_W
+-\frac12m\bar\Psi_W\Psi_W.
+}
+]
+
+Srednicki：
+
+[
+\boxed{
+\mathcal L_{M,S}
+================
+
+\frac i2\bar\Psi_S\gamma_S^\mu\partial_\mu\Psi_S
+-\frac12m\bar\Psi_S\Psi_S.
+}
+]
+
+因 Majorana field 不具有 independent particle/antiparticle components，故整体 (1/2)。
+
+---
+
+## 17. Dirac spinor 分解为两个 Majorana spinors
+
+Weinberg 可写
+
+[
+\boxed{
+\Psi_1
+======
+
+\frac12(\Psi+\beta C\Psi^*),
+}
+]
+
+[
+\boxed{
+\Psi_2
+======
+
+-\frac i2(\Psi-\beta C\Psi^*).
+}
+]
+
+于是
+
+[
+\begin{aligned}
+\Psi_1+i\Psi_2
+&=\frac12(\Psi+\beta C\Psi^*)
++\frac12(\Psi-\beta C\Psi^*)\
+&=\Psi.
+\end{aligned}
+]
+
+所以
+
+[
+\boxed{\Psi=\Psi_1+i\Psi_2.}
+]
+
+且
+
+[
+\Psi_1^*=\beta C\Psi_1,
+\qquad
+\Psi_2^*=\beta C\Psi_2.
+]
+
+---
+
+## 18. Bilinear dictionary
+
+由
+
+[
+\Psi_W=i\Psi_S,\quad
+\bar\Psi_W=-i\bar\Psi_S,\quad
+\gamma_W^\mu=-i\gamma_S^\mu,\quad
+\gamma_{5W}=-\gamma_{5S},
+]
+
+得到
+
+### Scalar
+
+[
+\begin{aligned}
+\bar\Psi_W\Psi_W
+&=(-i\bar\Psi_S)(i\Psi_S)\
+&=(-i)(i)\bar\Psi_S\Psi_S\
+&=\bar\Psi_S\Psi_S.
+\end{aligned}
+]
+
+[
+\boxed{\bar\Psi_W\Psi_W=\bar\Psi_S\Psi_S.}
+]
+
+### Vector
+
+[
+\begin{aligned}
+\bar\Psi_W\gamma_W^\mu\Psi_W
+&=(-i)(-i)(i)
+\bar\Psi_S\gamma_S^\mu\Psi_S\
+&=-i\bar\Psi_S\gamma_S^\mu\Psi_S.
+\end{aligned}
+]
+
+[
+\boxed{
+\bar\Psi_W\gamma_W^\mu\Psi_W
+=-i\bar\Psi_S\gamma_S^\mu\Psi_S.
+}
+]
+
+### Pseudoscalar
+
+[
+\begin{aligned}
+\bar\Psi_W\gamma_{5W}\Psi_W
+&=(-i)(-1)(i)
+\bar\Psi_S\gamma_{5S}\Psi_S\
+&=-\bar\Psi_S\gamma_{5S}\Psi_S.
+\end{aligned}
+]
+
+[
+\boxed{
+\bar\Psi_W\gamma_{5W}\Psi_W
+=-\bar\Psi_S\gamma_{5S}\Psi_S.
+}
+]
+
+### Axial vector
+
+[
+\begin{aligned}
+\bar\Psi_W\gamma_W^\mu\gamma_{5W}\Psi_W
+&=(-i)(-i)(-1)(i)
+\bar\Psi_S\gamma_S^\mu\gamma_{5S}\Psi_S\
+&=i\bar\Psi_S\gamma_S^\mu\gamma_{5S}\Psi_S.
+\end{aligned}
+]
+
+[
+\boxed{
+\bar\Psi_W\gamma_W^\mu\gamma_{5W}\Psi_W
+=======================================
+
+i\bar\Psi_S\gamma_S^\mu\gamma_{5S}\Psi_S.
+}
+]
+
+### Antisymmetric tensor
+
+[
+[\gamma_W^\mu,\gamma_W^\nu]
+=-[\gamma_S^\mu,\gamma_S^\nu],
+]
+
+故
+
+[
+\boxed{
+\bar\Psi_W[\gamma_W^\mu,\gamma_W^\nu]\Psi_W
+===========================================
+
+-\bar\Psi_S[\gamma_S^\mu,\gamma_S^\nu]\Psi_S.
+}
+]
+
+---
+
+## 19. Majorana bilinear exchange identities
+
+矩阵 transpose properties：
+
+[
+M^T=+CMC^{-1},
+\qquad
+M\in
+{I,\gamma_5,\gamma_5\gamma^\mu},
+]
+
+[
+M^T=-CMC^{-1},
+\qquad
+M\in
+{\gamma^\mu,[\gamma^\mu,\gamma^\nu]}.
+]
+
+对 Grassmann-valued Majorana spinors (\chi,\psi)：
+
+[
+\boxed{
+\bar\chi M\psi=
+\begin{cases}
++\bar\psi M\chi,
+&M=I,\gamma_5,\gamma_5\gamma^\mu,[2mm]
+-\bar\psi M\chi,
+&M=\gamma^\mu,[\gamma^\mu,\gamma^\nu].
+\end{cases}
+}
+]
+
+取 (\chi=\psi)：
+
+[
+\boxed{\bar\psi\gamma^\mu\psi=0,}
+]
+
+[
+\boxed{
+\bar\psi[\gamma^\mu,\gamma^\nu]\psi=0.
+}
+]
+
+但一般
+
+[
+\bar\psi\psi,\qquad
+\bar\psi\gamma_5\psi,\qquad
+\bar\psi\gamma_5\gamma^\mu\psi
+]
+
+不必为零。
+
+---
+
+# VI. Gamma-matrix identities
+
+以下令
+
+[
+{\gamma^\mu,\gamma^\nu}
+=2\kappa\eta^{\mu\nu}I.
+]
+
+其中 Weinberg (\kappa=+1)，Srednicki (\kappa=-1)。
+
+## 20. 两个 (\gamma)
+
+[
+\boxed{
+\gamma^\mu\gamma^\nu
+====================
+
+\kappa\eta^{\mu\nu}I+\gamma^{\mu\nu}.
+}
+]
+
+因为
+
+[
+\gamma^\mu\gamma^\nu
+====================
+
+\frac12{\gamma^\mu,\gamma^\nu}
++\frac12[\gamma^\mu,\gamma^\nu].
+]
+
+---
+
+## 21. 三个 (\gamma)
+
+[
+\boxed{
+\gamma^\mu\gamma^\nu\gamma^\rho
+===============================
+
+\gamma^{\mu\nu\rho}
++\kappa
+\left(
+\eta^{\mu\nu}\gamma^\rho
+-\eta^{\mu\rho}\gamma^\nu
++\eta^{\nu\rho}\gamma^\mu
+\right).
+}
+]
+
+等价地，
+
+[
+\gamma^\mu\gamma^{\nu\rho}
+==========================
+
+\gamma^{\mu\nu\rho}
++\kappa\eta^{\mu\nu}\gamma^\rho
+-\kappa\eta^{\mu\rho}\gamma^\nu.
+]
+
+---
+
+## 22. Contracted identities in (d) dimensions
+
+### 第一式
+
+[
+\begin{aligned}
+\gamma^\mu\gamma_\mu
+&=\frac12{\gamma^\mu,\gamma_\mu}\
+&=\kappa\eta^\mu{}_\mu I\
+&=d\kappa I.
+\end{aligned}
+]
+
+[
+\boxed{\gamma^\mu\gamma_\mu=d\kappa I.}
+]
+
+### 第二式
+
+[
+\begin{aligned}
+\gamma^\mu\gamma^\nu\gamma_\mu
+&=\gamma^\mu(-\gamma_\mu\gamma^\nu
++2\kappa\delta_\mu{}^\nu)\
+&=-\gamma^\mu\gamma_\mu\gamma^\nu
++2\kappa\gamma^\nu\
+&=-d\kappa\gamma^\nu
++2\kappa\gamma^\nu\
+&=(2-d)\kappa\gamma^\nu.
+\end{aligned}
+]
+
+[
+\boxed{
+\gamma^\mu\gamma^\nu\gamma_\mu
+=(2-d)\kappa\gamma^\nu.
+}
+]
+
+### 第三式
+
+[
+\begin{aligned}
+\gamma^\mu\gamma^\nu\gamma^\rho\gamma_\mu
+&=\gamma^\mu\gamma^\nu
+(-\gamma_\mu\gamma^\rho+2\kappa\delta_\mu{}^\rho)\
+&=-\gamma^\mu\gamma^\nu\gamma_\mu\gamma^\rho
++2\kappa\gamma^\rho\gamma^\nu\
+&=-(2-d)\kappa\gamma^\nu\gamma^\rho
++2\kappa(-\gamma^\nu\gamma^\rho
++2\kappa\eta^{\nu\rho})\
+&=(d-2)\kappa\gamma^\nu\gamma^\rho
+-2\kappa\gamma^\nu\gamma^\rho
++4\eta^{\nu\rho}I\
+&=(d-4)\kappa\gamma^\nu\gamma^\rho
++4\eta^{\nu\rho}I.
+\end{aligned}
+]
+
+[
+\boxed{
+\gamma^\mu\gamma^\nu\gamma^\rho\gamma_\mu
+=========================================
+
+4\eta^{\nu\rho}I
++(d-4)\kappa\gamma^\nu\gamma^\rho.
+}
+]
+
+在 (d=4)：
+
+[
+\boxed{\gamma^\mu\gamma_\mu=4\kappa I,}
+]
+
+[
+\boxed{
+\gamma^\mu\gamma^\nu\gamma_\mu
+=-2\kappa\gamma^\nu,
+}
+]
+
+[
+\boxed{
+\gamma^\mu\gamma^\nu\gamma^\rho\gamma_\mu
+=4\eta^{\nu\rho}I.
+}
+]
+
+因此：
+
+* Weinberg：
+  [
+  \gamma_W^\mu\gamma_{W\mu}=4I,
+  \qquad
+  \gamma_W^\mu\gamma_W^\nu\gamma_{W\mu}=-2\gamma_W^\nu.
+  ]
+
+* Srednicki：
+  [
+  \gamma_S^\mu\gamma_{S\mu}=-4I,
+  \qquad
+  \gamma_S^\mu\gamma_S^\nu\gamma_{S\mu}=+2\gamma_S^\nu.
+  ]
+
+---
+
+## 23. Trace identities
+
+[
+\boxed{\operatorname{tr}I_4=4.}
+]
+
+Odd number of ordinary (\gamma)-matrices：
+
+[
+\boxed{
+\operatorname{tr}
+(\gamma^{\mu_1}\cdots\gamma^{\mu_{2n+1}})
+=0.
+}
+]
+
+两个：
+
+[
+\boxed{
+\operatorname{tr}(\gamma^\mu\gamma^\nu)
+=4\kappa\eta^{\mu\nu}.
+}
+]
+
+四个：
+
+[
+\boxed{
+\operatorname{tr}
+(\gamma^\mu\gamma^\nu\gamma^\rho\gamma^\sigma)
+==============================================
+
+4\left(
+\eta^{\mu\nu}\eta^{\rho\sigma}
+-\eta^{\mu\rho}\eta^{\nu\sigma}
++\eta^{\mu\sigma}\eta^{\nu\rho}
+\right).
+}
+]
+
+注意四个 (\gamma) 的结果不含 (\kappa)，因为出现 (\kappa^2=1)。
+
+含 (\gamma_5)：
+
+[
+\boxed{
+\operatorname{tr}
+(\gamma_5\gamma^\mu\gamma^\nu\gamma^\rho\gamma^\sigma)
+======================================================
+
+4i\kappa,\epsilon^{\mu\nu\rho\sigma}.
+}
+]
+
+因此
+
+[
+\boxed{
+\operatorname{tr}
+(\gamma_{5W}\gamma_W^\mu\gamma_W^\nu
+\gamma_W^\rho\gamma_W^\sigma)
+=============================
+
+4i\epsilon^{\mu\nu\rho\sigma},
+}
+]
+
+[
+\boxed{
+\operatorname{tr}
+(\gamma_{5S}\gamma_S^\mu\gamma_S^\nu
+\gamma_S^\rho\gamma_S^\sigma)
+=============================
+
+-4i\epsilon^{\mu\nu\rho\sigma}.
+}
+]
+
+---
+
+## 24. Duality identities
+
+统一定义
+
+[
+\boxed{
+\gamma_5
+=-i\kappa\gamma^0\gamma^1\gamma^2\gamma^3.
+}
+]
+
+于是
+
+[
+\boxed{
+\gamma^{\mu\nu\rho}
+===================
+
+i\epsilon^{\mu\nu\rho\sigma}
+\gamma_5\gamma_\sigma.
+}
+]
+
+[
+\boxed{
+\gamma^{\mu\nu\rho\sigma}
+=========================
+
+i\kappa\epsilon^{\mu\nu\rho\sigma}\gamma_5.
+}
+]
+
+[
+\boxed{
+\gamma_5\gamma^{\mu\nu}
+=======================
+
+-\frac{i\kappa}{2}
+\epsilon^{\mu\nu\rho\sigma}\gamma_{\rho\sigma}.
+}
+]
+
+所以 Weinberg：
+
+[
+\gamma_{5W}\gamma_W^{\mu\nu}
+============================
+
+-\frac i2
+\epsilon^{\mu\nu\rho\sigma}\gamma_{W\rho\sigma}.
+]
+
+Srednicki：
+
+[
+\gamma_{5S}\gamma_S^{\mu\nu}
+============================
+
++\frac i2
+\epsilon^{\mu\nu\rho\sigma}\gamma_{S\rho\sigma}.
+]
+
+若某处 Weinberg 使用 **unnormalized antisymmetrization**
+
+[
+\gamma^{[\mu}\gamma^\nu\gamma^{\rho]}
+]
+
+而不含 (1/3!)，则该表达式是此处 normalized (\gamma^{\mu\nu\rho}) 的 (3!) 倍。所有高阶 antisymmetric products 必须先检查该局部定义。
+
+---
+
+## 25. Majorana Fierz identity
+
+对一个 Grassmann Majorana spinor (\Theta)：
+
+[
+\boxed{
+\begin{aligned}
+\Theta_\alpha\Theta_\beta
+={}&-\frac14C_{\alpha\beta}(\bar\Theta\Theta)
+-\frac14(\gamma_5C)*{\alpha\beta}
+(\bar\Theta\gamma_5\Theta)\
+&+\frac14(\gamma_5\gamma*\mu C)_{\alpha\beta}
+(\bar\Theta\gamma_5\gamma^\mu\Theta).
+\end{aligned}
+}
+]
+
+Vector 与 tensor channels 因同一 Majorana spinor 的 exchange symmetry 消失。
+
+---
+
+# VII. Supersymmetry algebra 与 superspace
+
+## 26. Weinberg four-component notation
+
+取
+
+[
+P_\mu=i\partial_\mu.
+]
+
+Weinberg 的 Majorana superspace coordinate 为 (\Theta_\alpha)。
+
+Supercharge：
+
+[
+\boxed{
+Q_W
+===
+
+-\frac{\partial}{\partial\Theta}
++\slashed\partial_W\Theta.
+}
+]
+
+Component form：
+
+[
+\boxed{
+(Q_W)_\alpha
+============
+
+-\partial_\alpha
++(\gamma_W^\mu)*{\alpha\beta}
+\Theta^\beta\partial*\mu.
+}
+]
+
+Supercovariant derivative：
+
+[
+\boxed{
+\mathcal D_W
+============
+
+-\frac{\partial}{\partial\Theta}
+-\slashed\partial_W\Theta.
+}
+]
+
+它们满足
+
+[
+{\mathcal D_W,Q_W}=0.
+]
+
+Super-Poincaré algebra 可写为
+
+[
+\boxed{
+{Q,Q}
+=-2i\slashed P_W C.
+}
+]
+
+---
+
+## 27. Srednicki two-component notation
+
+Coordinates：
+
+[
+(x^\mu,\theta^a,\theta^{*\dot a}).
+]
+
+Supercharges：
+
+[
+\boxed{
+Q_a
+===
+
+\frac{\partial}{\partial\theta^a}
++i\sigma^\mu_{a\dot b}\theta^{*\dot b}\partial_\mu,
+}
+]
+
+[
+\boxed{
+Q^*_{\dot a}
+============
+
+-\frac{\partial}{\partial\theta^{*\dot a}}
+-i\theta^b\sigma^\mu_{b\dot a}\partial_\mu.
+}
+]
+
+Covariant derivatives：
+
+[
+\boxed{
+D_a
+===
+
+\frac{\partial}{\partial\theta^a}
+-i\sigma^\mu_{a\dot b}\theta^{*\dot b}\partial_\mu,
+}
+]
+
+[
+\boxed{
+D^*_{\dot a}
+============
+
+-\frac{\partial}{\partial\theta^{*\dot a}}
++i\theta^b\sigma^\mu_{b\dot a}\partial_\mu.
+}
+]
+
+Algebra：
+
+[
+\boxed{
+{Q_a,Q^*_{\dot b}}
+==================
+
+-2i\sigma^\mu_{a\dot b}\partial_\mu,
+}
+]
+
+[
+\boxed{
+{D_a,D^*_{\dot b}}
+==================
+
++2i\sigma^\mu_{a\dot b}\partial_\mu.
+}
+]
+
+其他同 chirality anticommutators 为零。
+
+([Homepages UC][1])
+
+---
+
+## 28. Superspace-coordinate bridge
+
+定义 Srednicki four-component Majorana package：
+
+[
+\Theta_S^{(4)}
+==============
+
+\begin{pmatrix}
+\theta_a\
+\theta^{*\dot a}
+\end{pmatrix}.
+]
+
+与 Weinberg coordinate 的精确 phase relation：
+
+[
+\boxed{
+\Theta_W=-i\Theta_S^{(4)}.
+}
+]
+
+于是
+
+[
+\boxed{
+\bar\Theta_W=+i\bar\Theta_S^{(4)}.
+}
+]
+
+注意 ordinary Majorana component field 是
+
+[
+\Psi_W=+i\Psi_S,
+]
+
+而 Grassmann superspace coordinate 是
+
+[
+\Theta_W=-i\Theta_S.
+]
+
+这是为了同时匹配两书的 Majorana reality condition、chiral coordinate 与 component expansion。
+
+---
+
+# VIII. Chiral superfields
+
+## 29. Chiral constraint
+
+Weinberg：
+
+[
+\boxed{
+\mathcal D_{R,W}\Phi_W=0,
+}
+]
+
+其中
+
+[
+\mathcal D_{R,W}=P_-^W\mathcal D_W.
+]
+
+由于
+
+[
+P_-^W=P_R^S,
+]
+
+这等价于 Srednicki：
+
+[
+\boxed{D^*_{\dot a}\Phi_S=0.}
+]
+
+---
+
+## 30. Chiral coordinates
+
+Weinberg：
+
+[
+\boxed{
+x_+^\mu
+=======
+
+x^\mu
++\frac12\bar\Theta_W
+\gamma_{5W}\gamma_W^\mu\Theta_W.
+}
+]
+
+Srednicki：
+
+[
+\boxed{
+y^\mu=x^\mu-i\theta\sigma^\mu\theta^*.
+}
+]
+
+证明二者相等。
+
+首先
+
+[
+\Theta_W=-i\Theta_S,
+\qquad
+\bar\Theta_W=i\bar\Theta_S.
+]
+
+故
+
+[
+\begin{aligned}
+\bar\Theta_W\gamma_{5W}\gamma_W^\mu\Theta_W
+&=(i\bar\Theta_S)
+(-\gamma_{5S})(-i\gamma_S^\mu)
+(-i\Theta_S)\
+&=i(-1)(-i)(-i)
+\bar\Theta_S\gamma_{5S}\gamma_S^\mu\Theta_S.
+\end{aligned}
+]
+
+系数：
+
+[
+i(-1)=-i,
+]
+
+[
+(-i)(-i)=-1,
+]
+
+[
+(-i)(-i)(-i)=i.
+]
+
+所以
+
+[
+\bar\Theta_W\gamma_{5W}\gamma_W^\mu\Theta_W
+===========================================
+
+i\bar\Theta_S\gamma_{5S}\gamma_S^\mu\Theta_S.
+]
+
+而
+
+[
+\gamma_{5S}\gamma_S^\mu
+=======================
+
+\begin{pmatrix}
+0&-\sigma^\mu\
+\bar\sigma^\mu&0
+\end{pmatrix}.
+]
+
+因此
+
+[
+\begin{aligned}
+\bar\Theta_S\gamma_{5S}\gamma_S^\mu\Theta_S
+&=
+(\theta^a,\theta^*_{\dot a})
+\begin{pmatrix}
+0&-\sigma^\mu\
+\bar\sigma^\mu&0
+\end{pmatrix}
+\begin{pmatrix}
+\theta_b\
+\theta^{*\dot b}
+\end{pmatrix}\
+&=-\theta\sigma^\mu\theta^*
++\theta^*\bar\sigma^\mu\theta.
+\end{aligned}
+]
+
+Grassmann reordering 给出
+
+[
+\theta^*\bar\sigma^\mu\theta
+=-\theta\sigma^\mu\theta^*.
+]
+
+故
+
+[
+\bar\Theta_S\gamma_{5S}\gamma_S^\mu\Theta_S
+=-2\theta\sigma^\mu\theta^*.
+]
+
+因此
+
+[
+\begin{aligned}
+x_+^\mu
+&=x^\mu+\frac12i
+(-2\theta\sigma^\mu\theta^*)\
+&=x^\mu-i\theta\sigma^\mu\theta^*\
+&=y^\mu.
+\end{aligned}
+]
+
+即
+
+[
+\boxed{x_+^\mu=y^\mu.}
+]
+
+---
+
+## 31. Weinberg chiral superfield
+
+令
+
+[
+\Theta_L=P_+^W\Theta.
+]
+
+Weinberg expansion：
+
+[
+\boxed{
+\Phi_W(x,\Theta)
+================
+
+\phi(x_+)
+-\sqrt2,\bar\Theta\psi_L(x_+)
++
+(\bar\Theta P_+^W\Theta)F(x_+).
+}
+]
+
+两分量 dictionary：
+
+[
+\boxed{\phi_W=A_S,}
+]
+
+[
+\boxed{
+\psi_W
+======
+
+i
+\begin{pmatrix}
+\psi_a\
+\psi^{\dagger\dot a}
+\end{pmatrix},
+}
+]
+
+[
+\boxed{F_W=F_S.}
+]
+
+并有
+
+[
+\boxed{
+-\bar\Theta_W\psi_{L,W}
+=\theta\psi,
+}
+]
+
+[
+\boxed{
+\bar\Theta_WP_+^W\Theta_W
+=\theta\theta.
+}
+]
+
+所以
+
+[
+\Phi_W
+======
+
+A(y)+\sqrt2\theta\psi(y)+\theta\theta F(y),
+]
+
+正是 Srednicki expansion。
+
+---
+
+## 32. Srednicki chiral expansion
+
+在 chiral coordinates：
+
+[
+\boxed{
+\Phi_S(y,\theta)
+================
+
+A(y)+\sqrt2\theta\psi(y)+\theta\theta F(y).
+}
+]
+
+回到 (x^\mu)：
+
+[
+y^\mu=x^\mu-i\theta\sigma^\mu\theta^*.
+]
+
+Scalar expansion：
+
+[
+\begin{aligned}
+A(y)
+&=A(x)
+-i(\theta\sigma^\mu\theta^*)\partial_\mu A(x)\
+&\quad
++\frac12
+[-i(\theta\sigma^\mu\theta^*)]
+[-i(\theta\sigma^\nu\theta^*)]
+\partial_\mu\partial_\nu A(x).
+\end{aligned}
+]
+
+二阶项：
+
+[
+\frac12(-i)^2
+(\theta\sigma^\mu\theta^*)
+(\theta\sigma^\nu\theta^*)
+\partial_\mu\partial_\nu A
+]
+
+# [
+
+-\frac12
+\left[
+-\frac12\theta^2\theta^{*2}\eta^{\mu\nu}
+\right]
+\partial_\mu\partial_\nu A
+]
+
+# [
+
+\frac14\theta^2\theta^{*2}\Box A.
+]
+
+因此
+
+[
+\begin{aligned}
+\Phi_S
+={}&A+\sqrt2\theta\psi+\theta^2F
+-i(\theta\sigma^\mu\theta^*)\partial_\mu A\
+&-\frac{i}{\sqrt2}
+\theta^2\theta^*\bar\sigma^\mu\partial_\mu\psi
++\frac14\theta^2\theta^{*2}\Box A.
+\end{aligned}
+]
+
+即
+
+[
+\boxed{
+\begin{aligned}
+\Phi_S
+={}&A+\sqrt2\theta\psi+\theta\theta F
+-i(\theta\sigma^\mu\theta^*)\partial_\mu A\
+&-\frac{i}{\sqrt2}
+(\theta\theta)\theta^*\bar\sigma^\mu\partial_\mu\psi
++\frac14(\theta\theta)(\theta^*\theta^*)\Box A.
+\end{aligned}
+}
+]
+
+([Homepages UC][1])
+
+---
+
+## 33. Weinberg expansion at fixed (x)
+
+Weinberg four-component form：
+
+[
+\boxed{
+\begin{aligned}
+\Phi_W={}&
+\phi-\sqrt2\bar\Theta\psi_L
++(\bar\Theta P_+\Theta)F\
+&+\frac12
+(\bar\Theta\gamma_5\gamma^\mu\Theta)
+\partial_\mu\phi\
+&+\frac1{\sqrt2}
+(\bar\Theta\gamma_5\Theta)
+(\bar\Theta\gamma_5\slashed\partial_W\psi_L)\
+&-\frac18
+(\bar\Theta\gamma_5\Theta)^2
+\Box\phi.
+\end{aligned}
+}
+]
+
+关键 bridge：
+
+[
+\boxed{
+\bar\Theta_W\gamma_{5W}\Theta_W
+===============================
+
+\theta\theta-\theta^*\theta^*.
+}
+]
+
+于是
+
+[
+\begin{aligned}
+(\bar\Theta\gamma_5\Theta)^2
+&=(\theta^2-\theta^{*2})^2\
+&=(\theta^2)^2
+-\theta^2\theta^{*2}
+-\theta^{*2}\theta^2
++(\theta^{*2})^2\
+&=-2\theta^2\theta^{*2}.
+\end{aligned}
+]
+
+因为
+
+[
+(\theta^2)^2=(\theta^{*2})^2=0,
+\qquad
+\theta^2\theta^{*2}
+=\theta^{*2}\theta^2.
+]
+
+故 Weinberg 最后一项：
+
+[
+-\frac18
+(\bar\Theta\gamma_5\Theta)^2\Box\phi
+====================================
+
+# -\frac18(-2\theta^2\theta^{*2})\Box A
+
+\frac14\theta^2\theta^{*2}\Box A.
+]
+
+与 Srednicki 完全一致。
+
+---
+
+# IX. (F)-term 与 (D)-term normalization
+
+## 34. (D)-component conversion
+
+Weinberg 一般 scalar superfield 的最高项写作
+
+[
+X_W
+\supset
+-\frac14
+(\bar\Theta\gamma_5\Theta)^2
+[X]^W_D.
+]
+
+利用
+
+[
+(\bar\Theta\gamma_5\Theta)^2
+=-2\theta^2\theta^{*2},
+]
+
+有
+
+[
+X_W
+\supset
+-\frac14(-2\theta^2\theta^{*2})[X]^W_D
+======================================
+
+\frac12\theta^2\theta^{*2}[X]^W_D.
+]
+
+Srednicki 将 ([X]^S_D) 定义为 (\theta^2\theta^{*2}) 的 coefficient：
+
+[
+X_S\supset\theta^2\theta^{*2}[X]^S_D.
+]
+
+所以
+
+[
+\boxed{
+[X]^W_D=2[X]^S_D.
+}
+]
+
+相应地 action 中
+
+[
+\boxed{
+\frac12[X]^W_D=[X]^S_D.
+}
+]
+
+而 (F)-component normalization 可直接取
+
+[
+\boxed{
+[X]^W_F=[X]^S_F.
+}
+]
+
+因此不要直接比较裸 Grassmann measures；两书的 Grassmann integration orientation 与 component projection normalization 不同。最稳定的对象是 ([X]_F,[X]_D)。
+
+Weinberg 的一种 measure convention 是
+
+[
+\int d^4x[X]^W_D
+================
+
+-\frac12
+\int d^4x,d^4\Theta,X,
+]
+
+[
+\int d^4x[X]^W_F
+================
+
+\frac12
+\int d^4x,d^2\Theta_L,X.
+]
+
+---
+
+## 35. Product of chiral superfields
+
+设
+
+[
+\Phi_1=A_1+\sqrt2\theta\psi_1+\theta^2F_1,
+]
+
+[
+\Phi_2=A_2+\sqrt2\theta\psi_2+\theta^2F_2.
+]
+
+乘积：
+
+[
+\begin{aligned}
+\Phi_1\Phi_2
+={}&A_1A_2\
+&+\sqrt2\theta(A_1\psi_2+A_2\psi_1)\
+&+\theta^2(A_1F_2+A_2F_1)\
+&+2(\theta\psi_1)(\theta\psi_2).
+\end{aligned}
+]
+
+计算最后一项：
+
+[
+(\theta\psi_1)(\theta\psi_2)
+============================
+
+\theta^a\psi_{1a}\theta^b\psi_{2b}.
+]
+
+把 (\psi_{1a}) 移过 (\theta^b)：
+
+# [
+
+-\theta^a\theta^b\psi_{1a}\psi_{2b}.
+]
+
+利用
+
+[
+\theta^a\theta^b
+=-\frac12\epsilon^{ab}\theta^2,
+]
+
+得到
+
+# [
+
+\frac12\theta^2\epsilon^{ab}\psi_{1a}\psi_{2b}.
+]
+
+而
+
+[
+\epsilon^{ab}\psi_{1a}\psi_{2b}
+=-\psi_1\psi_2,
+]
+
+故
+
+[
+(\theta\psi_1)(\theta\psi_2)
+============================
+
+-\frac12\theta^2\psi_1\psi_2.
+]
+
+所以
+
+[
+2(\theta\psi_1)(\theta\psi_2)
+=============================
+
+-\theta^2\psi_1\psi_2.
+]
+
+最终
+
+[
+\boxed{
+\begin{aligned}
+\Phi_1\Phi_2
+={}&A_1A_2
++\sqrt2\theta(A_1\psi_2+A_2\psi_1)\
+&+\theta^2
+(A_1F_2+A_2F_1-\psi_1\psi_2).
+\end{aligned}
+}
+]
+
+---
+
+# X. General chiral-multiplet action
+
+## 36. Superpotential notation
+
+这里有一个容易混淆的名称交换：
+
+[
+\boxed{
+f_W(\Phi)
+=========
+
+W_S(\Phi).
+}
+]
+
+即：
+
+* Weinberg 常把 holomorphic superpotential 写作 (f(\Phi))；
+* Srednicki 写作 (W(\Phi))；
+* 两者的 gauge field-strength superfield 也都常用 (W)，必须根据是否带 spinor index 区分。
+
+---
+
+## 37. General superspace action
+
+Weinberg：
+
+[
+\boxed{
+S_W
+===
+
+\int d^4x
+\left{
+\frac12
+[K(\Phi,\Phi^\dagger)]^W_D
++
+\left(
+[f(\Phi)]^W_F+\mathrm{c.c.}
+\right)
+\right}.
+}
+]
+
+Srednicki：
+
+[
+\boxed{
+\mathcal L_S
+============
+
+[K(\Phi^\dagger,\Phi)]^S_D
++
+\left(
+[W(\Phi)]^S_F+\mathrm{h.c.}
+\right).
+}
+]
+
+因为
+
+[
+\frac12[K]^W_D=[K]^S_D,
+\qquad
+[f]^W_F=[W]^S_F,
+]
+
+两式完全等价。
+
+---
+
+## 38. Superpotential component expansion
+
+Taylor-expand：
+
+[
+W(\Phi)
+=======
+
+W(A)
++W_i(A)(\Phi_i-A_i)
++\frac12W_{ij}(A)
+(\Phi_i-A_i)(\Phi_j-A_j).
+]
+
+其中
+
+[
+\Phi_i-A_i
+==========
+
+\sqrt2\theta\psi_i+\theta^2F_i.
+]
+
+线性项的 (F)-component：
+
+[
+W_i(\Phi_i-A_i)\Big|_{\theta^2}
+===============================
+
+W_iF_i.
+]
+
+二次项：
+
+[
+\frac12W_{ij}
+(\sqrt2\theta\psi_i)
+(\sqrt2\theta\psi_j)
+====================
+
+W_{ij}(\theta\psi_i)(\theta\psi_j).
+]
+
+利用
+
+[
+(\theta\psi_i)(\theta\psi_j)
+============================
+
+-\frac12\theta^2\psi_i\psi_j,
+]
+
+得到
+
+[
+-\frac12W_{ij}\theta^2\psi_i\psi_j.
+]
+
+所以
+
+[
+\boxed{
+[W(\Phi)]_F
+===========
+
+W_iF_i-\frac12W_{ij}\psi_i\psi_j.
+}
+]
+
+---
+
+## 39. Canonical Kähler term
+
+取
+
+[
+K=\Phi_i^\dagger\Phi_i.
+]
+
+则
+
+[
+\boxed{
+[\Phi_i^\dagger\Phi_i]_D
+========================
+
+-\partial_\mu A_i^\dagger\partial^\mu A_i
++i\psi_i^\dagger\bar\sigma^\mu\partial_\mu\psi_i
++F_i^\dagger F_i.
+}
+]
+
+因此
+
+[
+\begin{aligned}
+\mathcal L
+={}&-\partial_\mu A_i^\dagger\partial^\mu A_i
++i\psi_i^\dagger\bar\sigma^\mu\partial_\mu\psi_i
++F_i^\dagger F_i\
+&+W_iF_i+W_i^\dagger F_i^\dagger\
+&-\frac12W_{ij}\psi_i\psi_j
+-\frac12W_{ij}^\dagger
+\psi_i^\dagger\psi_j^\dagger.
+\end{aligned}
+]
+
+Auxiliary equations：
+
+[
+\frac{\partial\mathcal L}{\partial F_i}
+=F_i^\dagger+W_i=0,
+]
+
+[
+\boxed{F_i^\dagger=-W_i.}
+]
+
+同理
+
+[
+\boxed{F_i=-W_i^\dagger.}
+]
+
+代回 auxiliary 部分：
+
+[
+\begin{aligned}
+F_i^\dagger F_i
++W_iF_i
++W_i^\dagger F_i^\dagger
+={}&
+W_iW_i^\dagger
+-W_iW_i^\dagger
+-W_i^\dagger W_i\
+={}&-W_i^\dagger W_i.
+\end{aligned}
+]
+
+故
+
+[
+\boxed{
+V_F=W_i^\dagger W_i.
+}
+]
+
+---
+
+# XI. Vector superfield
+
+## 40. Srednicki Wess–Zumino gauge
+
+[
+\boxed{
+\begin{aligned}
+V_S^{WZ}
+={}&
+(\theta\sigma^\mu\theta^*)v_\mu
++\theta^2\theta^*\lambda^\dagger\
+&+\theta^{*2}\theta\lambda
++\frac12\theta^2\theta^{*2}D.
+\end{aligned}
+}
+]
+
+其中
+
+* (v_\mu)：gauge boson；
+* (\lambda_a)：left-handed gaugino；
+* (D)：real auxiliary field。
+
+---
+
+## 41. Weinberg Wess–Zumino gauge
+
+[
+\boxed{
+\begin{aligned}
+V_W^{WZ}
+={}&
+\frac i2
+(\bar\Theta\gamma_5\gamma^\mu\Theta)V_\mu\
+&-i(\bar\Theta\gamma_5\Theta)(\bar\Theta\lambda)
+-\frac14(\bar\Theta\gamma_5\Theta)^2D.
+\end{aligned}
+}
+]
+
+Bosonic vector term：
+
+[
+\frac i2
+\bar\Theta_W\gamma_{5W}\gamma_W^\mu\Theta_WV_\mu
+================================================
+
+# \frac i2(-2i\theta\sigma^\mu\theta^*)V_\mu
+
+(\theta\sigma^\mu\theta^*)V_\mu.
+]
+
+Auxiliary term：
+
+[
+-\frac14
+(\bar\Theta\gamma_5\Theta)^2D
+=============================
+
+# -\frac14(-2\theta^2\theta^{*2})D
+
+\frac12\theta^2\theta^{*2}D.
+]
+
+所以 vector 与 (D) terms 精确匹配。
+
+为匹配 cubic gaugino terms，可取 Weinberg four-component gaugino
+
+[
+\boxed{
+\lambda_W
+=========
+
+\begin{pmatrix}
+-\lambda_a\
++\lambda^{\dagger\dot a}
+\end{pmatrix}
+=============
+
+\gamma_{5S}
+\begin{pmatrix}
+\lambda_a\
+\lambda^{\dagger\dot a}
+\end{pmatrix}.
+}
+]
+
+这里的 minus sign 是 gaugino field rephasing；它不改变 physical action。
+
+([Homepages UC][1])
+
+---
+
+# XII. Abelian gauge transformations
+
+## 42. Srednicki convention
+
+Chiral gauge parameter (\Xi) 满足
+
+[
+D_{\dot a}^*\Xi=0.
+]
+
+Vector superfield：
+
+[
+\boxed{
+V_S\longrightarrow
+V_S+i(\Xi^\dagger-\Xi).
+}
+]
+
+Charged chiral field：
+
+[
+\boxed{
+\Phi_S\longrightarrow
+e^{-2igq\Xi}\Phi_S.
+}
+]
+
+[
+\boxed{
+\Phi_S^\dagger\longrightarrow
+\Phi_S^\dagger e^{2igq\Xi^\dagger}.
+}
+]
+
+Gauge-invariant Kähler combination：
+
+[
+\boxed{
+\Phi^\dagger e^{-2gqV_S}\Phi.
+}
+]
+
+对 matrix representation：
+
+[
+\boxed{
+\Phi^\dagger
+e^{-2gV_S^AT^A}
+\Phi.
+}
+]
+
+---
+
+## 43. Weinberg convention
+
+[
+\boxed{
+V_W\longrightarrow
+V_W+\frac i2(\Omega-\Omega^\dagger).
+}
+]
+
+[
+\boxed{
+\Phi_W\longrightarrow
+e^{iq\Omega}\Phi_W.
+}
+]
+
+Gauge-invariant combination：
+
+[
+\boxed{
+\Phi^\dagger e^{-2qV_W}\Phi.
+}
+]
+
+两者 gauge parameter dictionary：
+
+[
+\boxed{\Omega_W=-2g\Xi_S.}
+]
+
+检验 vector transformation：
+
+[
+\begin{aligned}
+\frac i2(\Omega-\Omega^\dagger)
+&=\frac i2[-2g\Xi+2g\Xi^\dagger]\
+&=ig(\Xi^\dagger-\Xi).
+\end{aligned}
+]
+
+若
+
+[
+V_W=gV_S,
+]
+
+则
+
+[
+\delta V_W
+=g,\delta V_S
+=ig(\Xi^\dagger-\Xi).
+]
+
+Matter transformation：
+
+[
+e^{iq\Omega}
+============
+
+# e^{iq(-2g\Xi)}
+
+e^{-2igq\Xi}.
+]
+
+因此
+
+[
+\boxed{
+V_W=gV_S,
+\qquad
+\Omega_W=-2g\Xi_S.
+}
+]
+
+---
+
+# XIII. Gauge-coupling normalization
+
+## 44. Weinberg versus Srednicki
+
+Weinberg 常把 coupling 放在 gauge kinetic term 前：
+
+[
+-\frac1{4g^2}f_{\mu\nu}f^{\mu\nu},
+]
+
+而 matter covariant derivative 使用
+
+[
+D_\mu=\partial_\mu-iqV_\mu.
+]
+
+Srednicki 使用 canonically normalized gauge field：
+
+[
+-\frac14F_{\mu\nu}F^{\mu\nu},
+]
+
+[
+D_\mu=\partial_\mu-igqv_\mu.
+]
+
+因此
+
+[
+\boxed{
+V_{\mu,W}=g,v_{\mu,S}.
+}
+]
+
+Abelian field strength：
+
+[
+f_{\mu\nu,W}
+============
+
+\partial_\mu V_{\nu,W}
+-\partial_\nu V_{\mu,W}.
+]
+
+代入 (V_W=gv_S)：
+
+[
+\begin{aligned}
+f_{\mu\nu,W}
+&=\partial_\mu(gv_{\nu,S})
+-\partial_\nu(gv_{\mu,S})\
+&=g(\partial_\mu v_{\nu,S}
+-\partial_\nu v_{\mu,S})\
+&=gF_{\mu\nu,S}.
+\end{aligned}
+]
+
+故
+
+[
+\boxed{f_{\mu\nu,W}=gF_{\mu\nu,S}.}
+]
+
+Kinetic term：
+
+[
+\begin{aligned}
+-\frac1{4g^2}
+f_{\mu\nu,W}f_W^{\mu\nu}
+&=
+-\frac1{4g^2}
+(gF_{\mu\nu,S})(gF_S^{\mu\nu})\
+&=-\frac14F_{\mu\nu,S}F_S^{\mu\nu}.
+\end{aligned}
+]
+
+Covariant derivative：
+
+[
+\begin{aligned}
+D_{\mu,W}
+&=\partial_\mu-iqV_{\mu,W}\
+&=\partial_\mu-iq(gv_{\mu,S})\
+&=\partial_\mu-igqv_{\mu,S}.
+\end{aligned}
+]
+
+整个 vector multiplet scaling：
+
+[
+\boxed{
+V_W=gV_S,
+}
+]
+
+[
+\boxed{
+V_{\mu,W}=g,v_{\mu,S},
+}
+]
+
+[
+\boxed{
+f_{\mu\nu,W}=gF_{\mu\nu,S},
+}
+]
+
+[
+\boxed{
+\lambda_W
+=g,(\text{phase-rotated }\lambda_S),
+}
+]
+
+[
+\boxed{
+D_W=gD_S.
+}
+]
+
+---
+
+# XIV. Gauge field-strength superfield
+
+## 45. Srednicki Abelian (W_a)
+
+[
+\boxed{
+W_{a,S}
+=======
+
+\frac14D_{\dot a}^*D^{*\dot a}D_aV.
+}
+]
+
+它是 chiral：
+
+[
+D_{\dot a}^*W_b=0.
+]
+
+Wess–Zumino gauge expansion：
+
+[
+\boxed{
+\begin{aligned}
+W_{a,S}
+={}&
+\lambda_a
++\theta_aD
+-(S_L^{\mu\nu})*a{}^b
+\theta_bF*{\mu\nu}\
+&+i\theta^2
+\sigma^\mu_{a\dot a}
+\partial_\mu\lambda^{\dagger\dot a}.
+\end{aligned}
+}
+]
+
+其中
+
+[
+F_{\mu\nu}
+==========
+
+\partial_\mu v_\nu-\partial_\nu v_\mu.
+]
+
+Gauge kinetic action：
+
+[
+\boxed{
+\mathcal L_{\mathrm{gauge},S}
+=============================
+
+\frac1{4T(R)}
+[\operatorname{tr}_R(W^aW_a)]_F
++\mathrm{h.c.}
+}
+]
+
+component form：
+
+[
+\boxed{
+\mathcal L_{\mathrm{gauge},S}
+=============================
+
+-\frac14F_{\mu\nu}^AF^{A\mu\nu}
++i\lambda^{A\dagger}\bar\sigma^\mu
+(D_\mu\lambda)^A
++\frac12D^AD^A.
+}
+]
+
+---
+
+## 46. Weinberg Abelian (W_L)
+
+[
+\boxed{
+W_{L,W}
+=======
+
+\frac i4
+(\mathcal D_R^TC\mathcal D_R)
+\mathcal D_LV.
+}
+]
+
+其 expansion：
+
+[
+\boxed{
+\begin{aligned}
+W_{L,W}
+={}&
+\lambda_L(x_+)
++\frac12\gamma^\mu\gamma^\nu
+\Theta_Lf_{\mu\nu}(x_+)\
+&-i\Theta_LD(x_+)
+-(\Theta_L^TC\Theta_L)
+\slashed\partial_W\lambda_R(x_+).
+\end{aligned}
+}
+]
+
+名称对应：
+
+[
+\boxed{
+W_{L,W}
+\quad\longleftrightarrow\quad
+W_{a,S}.
+}
+]
+
+其中 Weinberg 用 four-component left projection；Srednicki 直接保留 undotted Weyl index (a)。
+
+---
+
+## 47. Nonabelian Srednicki field strength
+
+Finite gauge transformation：
+
+[
+\boxed{
+e^{-2gV}
+\longrightarrow
+e^{-2ig\Xi^\dagger}
+e^{-2gV}
+e^{2ig\Xi}.
+}
+]
+
+Chiral matter：
+
+[
+\Phi\longrightarrow e^{-2ig\Xi}\Phi.
+]
+
+Nonabelian field strength：
+
+[
+\boxed{
+W_{a,S}
+=======
+
+-\frac1{8g}
+D^{*2}
+\left(
+e^{2gV}D_ae^{-2gV}
+\right).
+}
+]
+
+Transformation：
+
+[
+\boxed{
+W_a\longrightarrow
+e^{-2ig\Xi}W_ae^{2ig\Xi}.
+}
+]
+
+---
+
+## 48. Nonabelian Weinberg field strength
+
+在 Weinberg 的一个常用 sign family 中：
+
+[
+\boxed{
+W_{L,W}
+=======
+
+\frac i4
+(\mathcal D_R^TC\mathcal D_R)
+e^{-V}\mathcal D_Le^V.
+}
+]
+
+并且
+
+[
+\boxed{
+W_L\longrightarrow
+e^{-i\Omega}W_Le^{i\Omega}.
+}
+]
+
+这里 nonlinear prepotential formula 的 (e^{\pm V}) orientation 与 Srednicki 不仅相差 (g)，还依赖 gauge parameter sign convention。
+
+因此 nonabelian translation 必须把以下三式同时变换：
+
+[
+\Phi\text{ transformation},
+\qquad
+e^{\pm V}\text{ transformation},
+\qquad
+W_\alpha\text{ transformation}.
+]
+
+不能只对 isolated formula 使用 (V_W=gV_S)。
+
+一般地，若
+
+[
+\Phi\to e^{si\Omega}\Phi,
+\qquad s=\pm1,
+]
+
+则 (\Phi^\dagger\mathcal U\Phi) gauge invariant 要求
+
+[
+\boxed{
+\mathcal U
+\to
+e^{si\Omega^\dagger}
+\mathcal U
+e^{-si\Omega}.
+}
+]
+
+Srednicki 对应
+
+[
+s=+1,
+\qquad
+\Omega=-2g\Xi,
+\qquad
+\mathcal U=e^{-2gV}.
+]
+
+([Homepages UC][1])
+
+---
+
+# XV. Matter coupled to a vector multiplet
+
+## 49. Superspace form
+
+Srednicki：
+
+[
+\boxed{
+\mathcal L_{\mathrm{matter}}
+============================
+
+[\Phi^\dagger
+e^{-2gV^AT^A}
+\Phi]_D.
+}
+]
+
+Component expansion：
+
+[
+\boxed{
+\begin{aligned}
+\mathcal L_{\mathrm{matter}}
+={}&
+-(D_\mu A)^\dagger D^\mu A
++i\psi^\dagger\bar\sigma^\mu D_\mu\psi
++F^\dagger F\
+&+\sqrt2g,
+\psi^\dagger\lambda^{A\dagger}T^AA\
+&+\sqrt2g,
+A^\dagger T^A\lambda^A\psi\
+&-gA^\dagger T^AA,D^A.
+\end{aligned}
+}
+]
+
+其中
+
+[
+\boxed{
+D_\mu A
+=======
+
+\partial_\mu A-igv_\mu^AT^AA,
+}
+]
+
+[
+\boxed{
+D_\mu\psi
+=========
+
+\partial_\mu\psi-igv_\mu^AT^A\psi.
+}
+]
+
+Weinberg 对应：
+
+[
+\boxed{
+\frac12
+[\Phi^\dagger
+e^{-2V_W^AT^A}
+\Phi]^W_D,
+}
+]
+
+并使用
+
+[
+V_W^A=gV_S^A.
+]
+
+---
+
+# XVI. Full (\mathcal N=1) gauge-theory action
+
+## 50. Weinberg form
+
+[
+\boxed{
+\begin{aligned}
+S_W
+===
+
+\int d^4x\Bigg{&
+\left[
+\frac12
+K!\left(
+\Phi_n^\dagger e^{-2V_W^{(r_n)}},
+\Phi_n
+\right)
+\right]^W_D\
+&+
+\left[
+f(\Phi_n)
++
+\frac1{16\pi i}
+\tau(\Phi_n)
+\operatorname{tr}
+(W_L^TCW_L)
++\mathrm{c.c.}
+\right]^W_F
+\Bigg}.
+\end{aligned}
+}
+]
+
+对于 constant gauge coupling：
+
+[
+\boxed{
+\tau
+====
+
+\frac{\vartheta}{2\pi}
++\frac{4\pi i}{g^2}.
+}
+]
+
+Gauge component action：
+
+[
+\boxed{
+\begin{aligned}
+\mathcal L_{\mathrm{gauge},W}
+={}&
+-\frac1{4g^2}
+f_{\mu\nu}^Af^{A\mu\nu}\
+&-\frac1{2g^2}
+\bar\lambda^A\slashed D_W\lambda^A
++\frac1{2g^2}D^AD^A\
+&+\frac{\vartheta}{32\pi^2}
+f_{\mu\nu}^A\widetilde f^{A\mu\nu}.
+\end{aligned}
+}
+]
+
+其中
+
+[
+\widetilde f^{\mu\nu}
+=====================
+
+\frac12\epsilon^{\mu\nu\rho\sigma}f_{\rho\sigma}.
+]
+
+---
+
+## 51. Srednicki form
+
+[
+\boxed{
+\begin{aligned}
+\mathcal L_S
+={}&
+[K(\Phi^\dagger e^{-2gV},\Phi)]^S_D\
+&+
+\left[
+W(\Phi)
++
+\frac1{4T(R)}
+\operatorname{tr}_R(W^aW_a)
+\right]^S_F
++\mathrm{h.c.}
+\end{aligned}
+}
+]
+
+其中
+
+[
+\boxed{
+f_W(\Phi)=W_S(\Phi).
+}
+]
+
+对 field-dependent gauge kinetic function，写成
+
+[
+\frac14
+[f_{AB}(\Phi)W^{A\alpha}W^B_\alpha]_F
++\mathrm{h.c.},
+]
+
+其中 (f_{AB}(\Phi)) holomorphic and symmetric：
+
+[
+f_{AB}=f_{BA}.
+]
+
+---
+
+## 52. Topological term under canonical normalization
+
+Weinberg 使用
+
+[
+f_W=gF_S.
+]
+
+于是
+
+[
+\begin{aligned}
+\frac{\vartheta}{32\pi^2}
+f_{W\mu\nu}\widetilde f_W^{\mu\nu}
+&=
+\frac{\vartheta}{32\pi^2}
+(gF_{S\mu\nu})
+(g\widetilde F_S^{\mu\nu})\
+&=
+\frac{\vartheta g^2}{32\pi^2}
+F_{S\mu\nu}\widetilde F_S^{\mu\nu}.
+\end{aligned}
+]
+
+这不是 physical discrepancy，而是 holomorphic normalization 与 canonical normalization 的差异。比较 (\vartheta) 时必须同时声明 gauge-field normalization。
+
+([Homepages UC][1])
+
+---
+
+# XVII. Canonical component action
+
+## 53. Chiral multiplets in representations (R_i)
+
+完整 Srednicki/canonical form：
+
+[
+\boxed{
+\begin{aligned}
+\mathcal L
+={}&
+-(D_\mu A_i)^\dagger D^\mu A_i
++i\psi_i^\dagger\bar\sigma^\mu D_\mu\psi_i
++F_i^\dagger F_i\
+&-\frac14F_{\mu\nu}^AF^{A\mu\nu}
++i\lambda^{A\dagger}\bar\sigma^\mu
+(D_\mu\lambda)^A
++\frac12D^AD^A\
+&+\sqrt2g,
+\psi_i^\dagger\lambda^{A\dagger}
+T_{R_i}^AA_i\
+&+\sqrt2g,
+A_i^\dagger T_{R_i}^A
+\lambda^A\psi_i\
+&-gA_i^\dagger T_{R_i}^AA_iD^A\
+&+
+\left(
+W_iF_i
+-\frac12W_{ij}\psi_i\psi_j
++\mathrm{h.c.}
+\right).
+\end{aligned}
+}
+]
+
+Definitions：
+
+[
+\boxed{
+D_\mu A_i
+=========
+
+\partial_\mu A_i
+-igv_\mu^AT_{R_i}^AA_i,
+}
+]
+
+[
+\boxed{
+(D_\mu\lambda)^A
+================
+
+\partial_\mu\lambda^A
++gf^{ABC}v_\mu^B\lambda^C,
+}
+]
+
+[
+\boxed{
+F_{\mu\nu}^A
+============
+
+\partial_\mu v_\nu^A
+-\partial_\nu v_\mu^A
++gf^{ABC}v_\mu^Bv_\nu^C.
+}
+]
+
+---
+
+## 54. Elimination of auxiliary fields
+
+### (F_i)
+
+[
+\frac{\partial\mathcal L}{\partial F_i}
+=======================================
+
+F_i^\dagger+W_i=0,
+]
+
+[
+\boxed{F_i^\dagger=-W_i.}
+]
+
+故
+
+[
+\boxed{V_F=W_i^\dagger W_i.}
+]
+
+### (D^A)
+
+包含 (D^A) 的项：
+
+[
+\mathcal L_D
+============
+
+\frac12D^AD^A
+-gA_i^\dagger T^AA_iD^A.
+]
+
+Variation：
+
+[
+\frac{\partial\mathcal L_D}{\partial D^A}
+=========================================
+
+D^A-gA_i^\dagger T^AA_i=0.
+]
+
+所以
+
+[
+\boxed{
+D^A=gA_i^\dagger T^AA_i.
+}
+]
+
+代回：
+
+[
+\begin{aligned}
+\mathcal L_D
+&=
+\frac12
+g^2(A_i^\dagger T^AA_i)
+(A_j^\dagger T^AA_j)\
+&\quad
+-g^2
+(A_i^\dagger T^AA_i)
+(A_j^\dagger T^AA_j)\
+&=
+-\frac{g^2}{2}
+(A_i^\dagger T^AA_i)
+(A_j^\dagger T^AA_j).
+\end{aligned}
+]
+
+故
+
+[
+\boxed{
+V_D
+===
+
+\frac{g^2}{2}
+(A_i^\dagger T^AA_i)
+(A_j^\dagger T^AA_j).
+}
+]
+
+总 scalar potential：
+
+[
+\boxed{
+V=V_F+V_D
+=========
+
+W_i^\dagger W_i
++
+\frac{g^2}{2}
+(A_i^\dagger T^AA_i)
+(A_j^\dagger T^AA_j).
+}
+]
+
+---
+
+# XVIII. Compact master table
+
+| Object                | Weinberg                                                  | Srednicki                                     | Exact conversion                 |
+| --------------------- | --------------------------------------------------------- | --------------------------------------------- | -------------------------------- |
+| Metric                | (\eta=(-,+,+,+))                                          | (\eta=(-,+,+,+))                              | identical                        |
+| Clifford algebra      | ({\gamma_W^\mu,\gamma_W^\nu}=2\eta^{\mu\nu})              | ({\gamma_S^\mu,\gamma_S^\nu}=-2\eta^{\mu\nu}) | (\gamma_W^\mu=-i\gamma_S^\mu)    |
+| Chirality matrix      | (\gamma_{5W}=\operatorname{diag}(I,-I))                   | (\gamma_{5S}=\operatorname{diag}(-I,I))       | (\gamma_{5W}=-\gamma_{5S})       |
+| Dirac-adjoint matrix  | (\beta=i\gamma_W^0)                                       | (\beta=\gamma_S^0)                            | identical                        |
+| Charge conjugation    | (C)                                                       | (C)                                           | identical                        |
+| Left projector        | (P_+^W)                                                   | (P_L^S)                                       | (P_+^W=P_L^S)                    |
+| Right projector       | (P_-^W)                                                   | (P_R^S)                                       | (P_-^W=P_R^S)                    |
+| Lorentz generator     | (-\frac i4[\gamma_W^\mu,\gamma_W^\nu])                    | (+\frac i4[\gamma_S^\mu,\gamma_S^\nu])        | identical operator               |
+| Majorana condition    | (\Psi_W^*=\beta C\Psi_W)                                  | (\Psi_S^*=-\beta C\Psi_S)                     | (\Psi_W=i\Psi_S)                 |
+| Dirac adjoint         | (\bar\Psi_W=-\Psi_W^TC)                                   | (\bar\Psi_S=+\Psi_S^TC)                       | (\bar\Psi_W=-i\bar\Psi_S)        |
+| Superspace coordinate | (\Theta_W)                                                | ((\theta,\theta^*)^T)                         | (\Theta_W=-i(\theta,\theta^*)^T) |
+| Chiral coordinate     | (x_+^\mu=x^\mu+\frac12\bar\Theta\gamma_5\gamma^\mu\Theta) | (y^\mu=x^\mu-i\theta\sigma^\mu\theta^*)       | (x_+=y)                          |
+| Chiral fermion        | four-component (\psi_{L,W})                               | Weyl (\psi_a)                                 | (\psi_W=i(\psi,\psi^\dagger)^T)  |
+| Superpotential        | (f(\Phi))                                                 | (W(\Phi))                                     | (f_W=W_S)                        |
+| Gauge strength        | (W_L)                                                     | (W_a)                                         | four-component ↔ two-component   |
+| (D)-projection        | ([X]^W_D)                                                 | ([X]^S_D)                                     | ([X]^W_D=2[X]^S_D)               |
+| (F)-projection        | ([X]^W_F)                                                 | ([X]^S_F)                                     | identical                        |
+| Matter action         | (\frac12[K]^W_D)                                          | ([K]^S_D)                                     | identical                        |
+| Gauge prepotential    | (V_W)                                                     | (V_S)                                         | (V_W=gV_S)                       |
+| Gauge boson           | (V_{\mu,W})                                               | (v_{\mu,S})                                   | (V_{\mu,W}=gv_{\mu,S})           |
+| Field strength        | (f_W)                                                     | (F_S)                                         | (f_W=gF_S)                       |
+| Abelian parameter     | (\Omega_W)                                                | (\Xi_S)                                       | (\Omega_W=-2g\Xi_S)              |
+
+---
+
+# XIX. Mechanical translation algorithm
+
+给定任意 Weinberg (d=4,\mathcal N=1) formula，转到 Srednicki：
+
+[
+\boxed{
+\gamma_W^\mu\mapsto-i\gamma_S^\mu,
+\qquad
+\gamma_{5W}\mapsto-\gamma_{5S}.
+}
+]
+
+[
+\boxed{
+\beta_W\mapsto\beta_S,
+\qquad
+C_W\mapsto C_S.
+}
+]
+
+[
+\boxed{
+P_+^W\mapsto P_L^S,
+\qquad
+P_-^W\mapsto P_R^S.
+}
+]
+
+对 ordinary Majorana component fields：
+
+[
+\boxed{
+\Psi_W\mapsto i\Psi_S,
+\qquad
+\bar\Psi_W\mapsto-i\bar\Psi_S.
+}
+]
+
+对 superspace：
+
+[
+\boxed{
+\Theta_W\mapsto
+-i
+\begin{pmatrix}
+\theta\ \theta^*
+\end{pmatrix}.
+}
+]
+
+对 component projections：
+
+[
+\boxed{
+[X]^W_D\mapsto2[X]^S_D,
+\qquad
+[X]^W_F\mapsto[X]^S_F.
+}
+]
+
+对 canonical gauge normalization：
+
+[
+\boxed{
+V_W\mapsto gV_S,
+\qquad
+f_W\mapsto gF_S,
+\qquad
+D_W\mapsto gD_S.
+}
+]
+
+对 Abelian gauge parameter：
+
+[
+\boxed{\Omega_W\mapsto-2g\Xi_S.}
+]
+
+对 nonabelian theory，必须同时翻译
+
+[
+\boxed{
+{\Phi\text{ transformation},
+\ e^{\pm V}\text{ transformation},
+\ W_\alpha\text{ transformation}},
+}
+]
+
+不能单独翻译某个 (e^{\pm V}) expression。
+
+对于 extended supersymmetry (\mathcal N>1)，只需附加
+
+[
+I=1,\ldots,\mathcal N
+]
+
+于
+
+[
+Q^I,\quad\Theta^I,\quad\lambda^I,
+]
+
+上述 spinor dictionary 对每个 (I) 独立成立；(R)-symmetry indices 与 invariant tensors 不发生改变。Srednicki 的书主要系统处理 (\mathcal N=1)，而 Weinberg Vol. III 对 extended SUSY、central charges 与更一般 multiplets 的覆盖更广。
+
+[1]: https://homepages.uc.edu/~argyrepc/cu661-gr-SUSY/susy2001.pdf "https://homepages.uc.edu/~argyrepc/cu661-gr-SUSY/susy2001.pdf"
+[2]: https://web.physics.ucsb.edu/~mark/ms-qft-DRAFT.pdf "https://web.physics.ucsb.edu/~mark/ms-qft-DRAFT.pdf"

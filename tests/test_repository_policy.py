@@ -59,6 +59,26 @@ class RepositoryPolicyTest(unittest.TestCase):
                 self.assertIn(source_id, artifacts)
                 self.assertRegex(artifacts[source_id]["sha256"] or "", r"^[0-9a-f]{64}$")
 
+    def test_weinberg_srednicki_reference_import(self) -> None:
+        ledger_path = ROOT / "references/weinberg-srednicki-notation-source-ledger.json"
+        if not ledger_path.exists():
+            self.skipTest("Weinberg-Srednicki reference import is not registered")
+        ledger = json.loads(ledger_path.read_text(encoding="utf-8"))
+        pages = ledger["notion_pages"]
+        self.assertEqual(ledger["task"], "REFERENCE-IMPORT-WEINBERG-SREDNICKI-NOTATION-001")
+        self.assertEqual(ledger["draft"]["role"], "UNVERIFIED_CANDIDATE_DICTIONARY")
+        self.assertEqual(ledger["draft"]["byte_fidelity"], "BYTE_FOR_BYTE_COPY_OF_USER_ATTACHMENT")
+        self.assertEqual(len(pages), 32)
+        self.assertEqual(sum(page["source"] == "WEINBERG" for page in pages), 20)
+        self.assertEqual(sum(page["source"] == "SREDNICKI" for page in pages), 12)
+        for page in pages:
+            self.assertEqual(page["role"], "REFERENCE_EVIDENCE_ONLY")
+            self.assertRegex(page["page_id"], r"^[0-9a-f]{32}$")
+            self.assertEqual(page["url"], f"https://app.notion.com/p/{page['page_id']}")
+            snapshot = ROOT / page["snapshot_path"]
+            self.assertTrue(snapshot.is_file(), page["snapshot_path"])
+            self.assertEqual(hashlib.sha256(snapshot.read_bytes()).hexdigest(), page["sha256"])
+
     def test_notion_is_output_only(self) -> None:
         page_map = json.loads((ROOT / "mirror/page_map.yaml").read_text(encoding="utf-8"))
         self.assertEqual(page_map["direction"], "GIT_TO_NOTION_ONLY")
