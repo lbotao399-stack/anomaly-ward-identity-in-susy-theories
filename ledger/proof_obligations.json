@@ -65,6 +65,12 @@
       "id": "CONTRACT-STEP-03A-GAUGE-CHIRAL-ACTION-001",
       "state": "ACCEPTED",
       "blocking_reason": null,
+      "task": "tasks/archive/CONTRACT-STEP-03A-GAUGE-CHIRAL-ACTION-001.yaml"
+    },
+    {
+      "id": "MIRROR-STEP-03A-NOTION-001",
+      "state": "ACCEPTED",
+      "blocking_reason": null,
       "task": "tasks/CURRENT.yaml"
     }
   ]
