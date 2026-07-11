@@ -1,0 +1,39 @@
+{
+  "id": "CONTRACT-STEP-02B-SUPERCONFORMAL-001",
+  "type": "CONTRACT_CHANGE",
+  "status": "ACCEPTED",
+  "outcome": "Derive Lorentzian and Euclidean N=1 superconformal coordinate generators from inversion and superinversion in the accepted Step-1 and Step-2A conventions, including the necessary dilation and R generators, K, S, barred S, their graded algebra, and all reality relations.",
+  "allowed_inputs": [
+    "AUTHORITY.md",
+    "AGENTS.md",
+    "contracts/foundations/step-01-supersymmetry-commutator.md",
+    "contracts/foundations/step-02a-flat-superspace.md",
+    "contracts/manifest.yaml",
+    "references/claim-map.yaml",
+    "references/manifest.yaml",
+    "references/vendor/hep-th-0108200v1.pdf",
+    "references/vendor/hep-th-9808041v4-source.tex.gz",
+    "references/vendor/hep-th-9808041v4.pdf",
+    "references/vendor/hep-th-9903230v3-source.tar",
+    "references/vendor/hep-th-9903230v3.pdf"
+  ],
+  "forbidden_inputs": [
+    "Notion content",
+    "legacy repositories",
+    "other local files",
+    "unvendored references",
+    "quoted textbook signs or normalizations",
+    "gauge-covariant superspace or action-dependent formulas"
+  ],
+  "acceptance": [
+    "Lorentzian bosonic inversion and its domain are defined and K-coordinate is derived by conjugating P-coordinate",
+    "the dilation normalization and Lorentz-spin action are fixed by direct coordinate commutators",
+    "Lorentzian superinversion is defined on the accepted chiral coordinates and S-coordinate and barred S-coordinate are derived by conjugating Q-coordinate",
+    "the necessary U(1) R-coordinate generator is fixed without importing a source normalization",
+    "all P, J, dilation, R, Q, barred Q, K, S, and barred S graded brackets pass exact symbolic tests",
+    "Lorentzian coordinate formal adjoints of K and S agree with the physical charge pairing",
+    "Euclidean K and S coordinate generators follow only from the locked Wick map and exponent matching",
+    "intrinsic Euclidean reality is separated from Wick-transported adjoints",
+    "notation audit reports no P0 or P1 inconsistency"
+  ]
+}
