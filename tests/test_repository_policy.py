@@ -749,7 +749,9 @@ class RepositoryPolicyTest(unittest.TestCase):
     def test_step_3d_write_only_mirror_receipt(self) -> None:
         page_map = json.loads((ROOT / "mirror/page_map.yaml").read_text(encoding="utf-8"))
         receipt = json.loads((ROOT / "audits/notion_write_receipt.json").read_text(encoding="utf-8"))
-        current = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
+        mirror_task = json.loads(
+            (ROOT / "tasks/archive/MIRROR-STEP-03D-NOTION-001.yaml").read_text(encoding="utf-8")
+        )
         page = next(
             item
             for item in page_map["pages"]
@@ -765,8 +767,8 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertEqual(page["notion_page_id"], "39aee2b7-4b3f-8126-881c-ec4d32b780de")
         self.assertEqual(write["write_response"], "succeeded")
         self.assertFalse(receipt["content_readback_performed"])
-        self.assertEqual(current["id"], "MIRROR-STEP-03D-NOTION-001")
-        self.assertEqual(current["status"], "ACCEPTED")
+        self.assertEqual(mirror_task["id"], "MIRROR-STEP-03D-NOTION-001")
+        self.assertEqual(mirror_task["status"], "ACCEPTED")
 
     def test_step_3d_path_integral_bv_brst_contract(self) -> None:
         path = ROOT / "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md"
