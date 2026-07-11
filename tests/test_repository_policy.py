@@ -662,6 +662,66 @@ class RepositoryPolicyTest(unittest.TestCase):
             self.assertEqual(audit["post_resolution"]["P0"], [])
             self.assertEqual(audit["post_resolution"]["P1"], [])
 
+    def test_step_3c_gauge_vector_representation_contract(self) -> None:
+        path = ROOT / "contracts/foundations/step-03c-gauge-vector-representation.md"
+        if not path.exists():
+            self.skipTest("Step 3C gauge-vector representation is not registered")
+        text = path.read_text(encoding="utf-8")
+        tags = {int(value) for value in re.findall(r"\\tag\{3C\.(\d+)\}", text)}
+        self.assertEqual(tags, set(range(1, 82)))
+        self.assertIn(r"\tag{3C.39a}", text)
+        self.assertIn(r"\tag{3C.60a}", text)
+        self.assertIn(r"\mathsf V:=\text{gauge-vector frame}", text)
+        self.assertIn(r"\mathsf C:=\text{gauge-chiral frame}", text)
+        self.assertIn(r"\mathsf A:=\text{gauge-antichiral frame}", text)
+        self.assertIn(r"\rho_R:=\frac4{\kappa_R^2}", text)
+        self.assertIn(r"\xi_Ac_{BC}{}^A=0", text)
+        self.assertIn(r"\widetilde{\mathcal B}_R\mathcal B_R", text)
+        self.assertIn(r"\boldsymbol\nabla_R^{\mathsf V a}", text)
+        self.assertNotRegex(text, r"\^\{V(?:A|B|a|\\dot)")
+        self.assertNotIn(r"\sim", text)
+        self.assertNotIn(r"\approx", text)
+        self.assertNotIn(r"\propto", text)
+        for character in text:
+            self.assertFalse(ord(character) < 32 and character not in "\n\r\t")
+
+    def test_step_3c_exact_verifier(self) -> None:
+        script = ROOT / "scripts/verify_step3c_gauge_vector_representation.py"
+        audit_path = ROOT / "audits/step3c-vector-representation-verification.json"
+        if not script.exists() or not audit_path.exists():
+            self.skipTest("Step 3C exact verifier is not registered")
+        expected = audit_path.read_text(encoding="utf-8")
+        subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
+        audit = json.loads(expected)
+        self.assertEqual(audit["status"], "PASS")
+        self.assertEqual(audit["totals"]["exact_checks"], 106)
+        self.assertEqual(audit["totals"]["failed_checks"], 0)
+        self.assertTrue(all(item["failed"] == 0 for item in audit["categories"].values()))
+
+    def test_step_3c_audits(self) -> None:
+        for relative in (
+            "audits/step3c-gap-audit.json",
+            "audits/step3c-notation-ledger.json",
+            "audits/step3c-independent-review.json",
+        ):
+            path = ROOT / relative
+            if not path.exists():
+                self.skipTest(f"{relative} is not registered")
+            audit = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(audit["result"], "PASS")
+            if "post_resolution" in audit:
+                self.assertEqual(audit["post_resolution"]["P0"], [])
+                self.assertEqual(audit["post_resolution"]["P1"], [])
+            else:
+                self.assertEqual(audit["verification"]["post_resolution_P0"], [])
+                self.assertEqual(audit["verification"]["post_resolution_P1"], [])
+
     def test_weinberg_srednicki_section_verdicts(self) -> None:
         path = ROOT / "audits/ws-dictionary/draft-section-verdicts.json"
         if not path.exists():

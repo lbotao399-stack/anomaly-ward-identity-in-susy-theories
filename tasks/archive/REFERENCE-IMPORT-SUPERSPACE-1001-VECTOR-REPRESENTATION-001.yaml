@@ -1,0 +1,43 @@
+{
+  "id": "REFERENCE-IMPORT-SUPERSPACE-1001-VECTOR-REPRESENTATION-001",
+  "type": "REFERENCE_IMPORT",
+  "status": "ACCEPTED",
+  "outcome": "Vendor the exact local iCloud PDF source material from Superspace, or One Thousand and One Lessons in Supersymmetry that defines gauge-covariant chiral and vector representations, without translating any formula during this import task.",
+  "allowed_inputs": [
+    "AUTHORITY.md",
+    "AGENTS.md",
+    "references/manifest.yaml",
+    "references/claim-map.yaml",
+    "references/vendor/hep-th-0108200v1.pdf",
+    "ledger/proof_obligations.json",
+    "tests/test_repository_policy.py",
+    ".github/workflows/verify.yml",
+    "icloud-title-search://Superspace, or One Thousand and One Lessons in Supersymmetry",
+    "icloud-file://01_物理科研/CMC材料/CMC课题/SUPERSPACE.pdf#sha256=3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99"
+  ],
+  "local_reference_exception": {
+    "user_authorized": true,
+    "search_locator": "icloud-title-search://Superspace, or One Thousand and One Lessons in Supersymmetry",
+    "resolved_locator": "icloud-file://01_物理科研/CMC材料/CMC课题/SUPERSPACE.pdf#sha256=3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99",
+    "resolved_sha256": "3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99",
+    "fetch_scope": "A filename-only iCloud PDF candidate search may enumerate paths. Exactly one selected candidate may be opened after its rendered title page identifies Superspace, or One Thousand and One Lessons in Supersymmetry. A whole-file text-layer pass is allowed only as a mechanical phrase-to-page locator; semantic inspection is restricted to the title/front matter, table of contents, and pages directly defining gauge-covariant derivatives, chiral representation, antichiral representation, vector representation, bridges, and representation changes.",
+    "default_boundary_after_task": "GIT_TO_NOTION_ONLY"
+  },
+  "forbidden_inputs": [
+    "Notion content or Notion readback",
+    "local Markdown outside this repository",
+    "other local books or PDFs",
+    "web pages or URLs",
+    "attachments",
+    "legacy repositories",
+    "mathematical translation into Project conventions during this import task"
+  ],
+  "acceptance": [
+    "the filename-only candidate search and rendered-title-page check resolve exactly one matching PDF, with the candidate count and selection evidence recorded",
+    "a copyright-minimal discontinuous page subset is stored under references/vendor with SHA-256",
+    "a source ledger records original file metadata, PDF page count, imported page range, printed page labels, extraction method, visual verification pages, and SHA-256",
+    "references/manifest.yaml and references/claim-map.yaml register the imported evidence and restrict it to later reconstruction of the source convention system",
+    "no source formula is translated, corrected, or adopted as a Project formula in this task",
+    "repository-policy passes and the import reaches verified origin/main before any Step-3 contract change reads it"
+  ]
+}

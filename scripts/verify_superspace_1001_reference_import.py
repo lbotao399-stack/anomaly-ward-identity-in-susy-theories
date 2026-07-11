@@ -15,7 +15,7 @@ SUBSET = ROOT / "references/vendor/local/superspace-1001-gauge-representations-p
 LEDGER = ROOT / "references/superspace-1001-gauge-representation-source-ledger.json"
 MANIFEST = ROOT / "references/manifest.yaml"
 CLAIM_MAP = ROOT / "references/claim-map.yaml"
-TASK = ROOT / "tasks/CURRENT.yaml"
+TASK = ROOT / "tasks/archive/REFERENCE-IMPORT-SUPERSPACE-1001-VECTOR-REPRESENTATION-001.yaml"
 OBLIGATIONS = ROOT / "ledger/proof_obligations.json"
 AUDIT = ROOT / "audits/superspace-1001-reference-import-verification.json"
 
