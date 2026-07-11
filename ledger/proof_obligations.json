@@ -94,7 +94,13 @@
     },
     {
       "id": "CONTRACT-STEP-03C-GAUGE-VECTOR-REPRESENTATION-001",
-      "state": "SPECIFIED",
+      "state": "ACCEPTED",
+      "blocking_reason": null,
+      "task": "tasks/archive/CONTRACT-STEP-03C-GAUGE-VECTOR-REPRESENTATION-001.yaml"
+    },
+    {
+      "id": "MIRROR-STEP-03C-NOTION-001",
+      "state": "ACCEPTED",
       "blocking_reason": null,
       "task": "tasks/CURRENT.yaml"
     }

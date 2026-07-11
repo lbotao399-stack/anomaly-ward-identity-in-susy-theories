@@ -722,6 +722,28 @@ class RepositoryPolicyTest(unittest.TestCase):
                 self.assertEqual(audit["verification"]["post_resolution_P0"], [])
                 self.assertEqual(audit["verification"]["post_resolution_P1"], [])
 
+    def test_step_3c_write_only_mirror_receipt(self) -> None:
+        page_map = json.loads((ROOT / "mirror/page_map.yaml").read_text(encoding="utf-8"))
+        receipt = json.loads((ROOT / "audits/notion_write_receipt.json").read_text(encoding="utf-8"))
+        current = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
+        page = next(
+            item
+            for item in page_map["pages"]
+            if item["id"] == "FOUNDATION-GAUGE-VECTOR-REPRESENTATION-003C"
+        )
+        write = next(
+            item
+            for item in receipt["pages"]
+            if item["id"] == "FOUNDATION-GAUGE-VECTOR-REPRESENTATION-003C"
+        )
+        self.assertEqual(page["source_commit"], "fe4b80a9478a4ad0bdd63c614c0d1a1f4b1cd5f0")
+        self.assertEqual(page["source_sha256"], "90e5211557e0a12e444ee91a174beaf7ddea9039e6f9b987eb0861f0a9ef2461")
+        self.assertEqual(page["notion_page_id"], "39aee2b7-4b3f-8161-b3dd-fbb0d0c97f7d")
+        self.assertEqual(write["write_response"], "succeeded")
+        self.assertFalse(receipt["content_readback_performed"])
+        self.assertEqual(current["id"], "MIRROR-STEP-03C-NOTION-001")
+        self.assertEqual(current["status"], "ACCEPTED")
+
     def test_weinberg_srednicki_section_verdicts(self) -> None:
         path = ROOT / "audits/ws-dictionary/draft-section-verdicts.json"
         if not path.exists():

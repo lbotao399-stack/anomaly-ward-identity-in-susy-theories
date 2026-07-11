@@ -21,7 +21,7 @@ from typing import Any, Iterable
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTRACT = ROOT / "contracts" / "foundations" / "step-03c-gauge-vector-representation.md"
-TASK = ROOT / "tasks" / "CURRENT.yaml"
+TASK = ROOT / "tasks" / "archive" / "CONTRACT-STEP-03C-GAUGE-VECTOR-REPRESENTATION-001.yaml"
 OBLIGATIONS = ROOT / "ledger" / "proof_obligations.json"
 CLAIM_MAP = ROOT / "references" / "claim-map.yaml"
 SOURCE_LEDGER = ROOT / "references" / "superspace-1001-gauge-representation-source-ledger.json"
@@ -868,7 +868,12 @@ def document_and_provenance_checks(recorder: Recorder) -> None:
         recorder.check(f"claim admitted: {claim}", claim in claims, True, "provenance")
 
     obligation = next(item for item in obligations["proof_obligations"] if item["id"] == TASK_ID)
-    recorder.check("proof obligation points to current task", obligation["task"], "tasks/CURRENT.yaml", "provenance")
+    recorder.check(
+        "proof obligation points to archived task",
+        obligation["task"],
+        "tasks/archive/CONTRACT-STEP-03C-GAUGE-VECTOR-REPRESENTATION-001.yaml",
+        "provenance",
+    )
 
     for token in (r"\sim", r"\approx", r"\propto"):
         recorder.check(f"forbidden loose token absent: {token}", token in contract, False, "document")
