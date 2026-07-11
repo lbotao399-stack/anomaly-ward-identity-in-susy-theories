@@ -725,7 +725,9 @@ class RepositoryPolicyTest(unittest.TestCase):
     def test_step_3c_write_only_mirror_receipt(self) -> None:
         page_map = json.loads((ROOT / "mirror/page_map.yaml").read_text(encoding="utf-8"))
         receipt = json.loads((ROOT / "audits/notion_write_receipt.json").read_text(encoding="utf-8"))
-        current = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
+        mirror_task = json.loads(
+            (ROOT / "tasks/archive/MIRROR-STEP-03C-NOTION-001.yaml").read_text(encoding="utf-8")
+        )
         page = next(
             item
             for item in page_map["pages"]
@@ -741,8 +743,8 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertEqual(page["notion_page_id"], "39aee2b7-4b3f-8161-b3dd-fbb0d0c97f7d")
         self.assertEqual(write["write_response"], "succeeded")
         self.assertFalse(receipt["content_readback_performed"])
-        self.assertEqual(current["id"], "MIRROR-STEP-03C-NOTION-001")
-        self.assertEqual(current["status"], "ACCEPTED")
+        self.assertEqual(mirror_task["id"], "MIRROR-STEP-03C-NOTION-001")
+        self.assertEqual(mirror_task["status"], "ACCEPTED")
 
     def test_weinberg_srednicki_section_verdicts(self) -> None:
         path = ROOT / "audits/ws-dictionary/draft-section-verdicts.json"
