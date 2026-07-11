@@ -5,6 +5,12 @@
       "id": "AUTHORITY-REPAIR-001",
       "state": "ACCEPTED",
       "blocking_reason": null,
+      "task": "tasks/archive/AUTHORITY-REPAIR-001.yaml"
+    },
+    {
+      "id": "REFERENCE-IMPORT-SUPERSPACE-001",
+      "state": "SPECIFIED",
+      "blocking_reason": null,
       "task": "tasks/CURRENT.yaml"
     }
   ]
