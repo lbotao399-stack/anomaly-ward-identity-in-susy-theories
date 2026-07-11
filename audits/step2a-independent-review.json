@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-02A-FLAT-SUPERSPACE-001",
+  "scope": "equations 2A.15 through 2A.53; sign, index, diagonal covariance, Wick continuation, adjoint, and chiral-coordinate review",
+  "reviewer": "independent_read_only_agent",
+  "findings": [
+    {
+      "priority": "P1",
+      "equation": "2A.45",
+      "issue": "the two displayed Euclidean chiral-annihilation expansions were globally sign-reversed relative to the defined operators",
+      "resolution": "replaced them by barpartial B minus theta sigma and sigma bartheta minus partial B",
+      "status": "RESOLVED"
+    }
+  ],
+  "post_resolution": {
+    "P0": [],
+    "P1": [],
+    "symbolic_operator_identities": 244,
+    "symbolic_input_cases": 3184,
+    "symbolic_failures": 0
+  },
+  "result": "PASS"
+}
