@@ -1,0 +1,1589 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-03D-N1-SUPERFIELD-PATH-INTEGRAL-BV-BRST-001",
+  "status": "PASS",
+  "contract": {
+    "path": "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md",
+    "sha256": "109e0c531da3a1b98313e87dd692fa3d9047c8f745291f8e87021008c7acc538",
+    "display_tags": 222,
+    "base_tags": 134,
+    "suffixed_tags": 88
+  },
+  "arithmetic": {
+    "coefficient_field": "Q(i)",
+    "floating_point": false,
+    "external_cas": false
+  },
+  "categories": {
+    "document": {
+      "checks": 76,
+      "failed": 0
+    },
+    "notation": {
+      "checks": 4,
+      "failed": 0
+    },
+    "provenance": {
+      "checks": 6,
+      "failed": 0
+    },
+    "grading": {
+      "checks": 27,
+      "failed": 0
+    },
+    "measure": {
+      "checks": 2,
+      "failed": 0
+    },
+    "schwinger_dyson": {
+      "checks": 3,
+      "failed": 0
+    },
+    "brst": {
+      "checks": 5,
+      "failed": 0
+    },
+    "nonminimal": {
+      "checks": 16,
+      "failed": 0
+    },
+    "frame": {
+      "checks": 7,
+      "failed": 0
+    },
+    "bv_sign": {
+      "checks": 6,
+      "failed": 0
+    },
+    "qme": {
+      "checks": 12,
+      "failed": 0
+    },
+    "gauge_fixing": {
+      "checks": 3,
+      "failed": 0
+    },
+    "fp_nk": {
+      "checks": 2,
+      "failed": 0
+    },
+    "split": {
+      "checks": 7,
+      "failed": 0
+    },
+    "wick": {
+      "checks": 7,
+      "failed": 0
+    }
+  },
+  "totals": {
+    "exact_checks": 183,
+    "failed_checks": 0
+  },
+  "checks": [
+    {
+      "name": "display tag count",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "9b871512327c09ce91dd649b3f96a63b7408ef267c8cc5710114e629730cb61f",
+      "expected_sha256": "9b871512327c09ce91dd649b3f96a63b7408ef267c8cc5710114e629730cb61f",
+      "actual": 222,
+      "expected": 222
+    },
+    {
+      "name": "display tags unique",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "9b871512327c09ce91dd649b3f96a63b7408ef267c8cc5710114e629730cb61f",
+      "expected_sha256": "9b871512327c09ce91dd649b3f96a63b7408ef267c8cc5710114e629730cb61f",
+      "actual": 222,
+      "expected": 222
+    },
+    {
+      "name": "base tag surface",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "66c4dd3758bcc57f8491cc96e3ae5d97c9c8c2e9e399db2e5a499fe61d2d223c",
+      "expected_sha256": "66c4dd3758bcc57f8491cc96e3ae5d97c9c8c2e9e399db2e5a499fe61d2d223c"
+    },
+    {
+      "name": "suffix tag surface",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "21f4c86596734fbca2fae01598622c0adedf5a379889b5bbca26b3a1cd963fed",
+      "expected_sha256": "21f4c86596734fbca2fae01598622c0adedf5a379889b5bbca26b3a1cd963fed"
+    },
+    {
+      "name": "display block count",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "9b871512327c09ce91dd649b3f96a63b7408ef267c8cc5710114e629730cb61f",
+      "expected_sha256": "9b871512327c09ce91dd649b3f96a63b7408ef267c8cc5710114e629730cb61f",
+      "actual": 222,
+      "expected": 222
+    },
+    {
+      "name": "all internal equation references resolve",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "control characters absent",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "forbidden shortcut absent: \\sim",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "expected_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "forbidden shortcut absent: \\approx",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "expected_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "forbidden shortcut absent: \\propto",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "expected_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "forbidden shortcut absent: After substitution and algebra",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "expected_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "contract binding: left Hamiltonian BRST",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: minus gauge graph",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: nonminimal parity sign",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: extended semidensity",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: residual orbit removed",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: required NK factor",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: split curvature minus",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: general-gauge typed FP map",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: typed residual FP reference",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: coupled nonminimal branch retained",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: coupled nonminimal integral named",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: measure-only NK independence",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: BV NK branch restriction",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: BV NK action wired",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: general residual slice",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: split tangent projection",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: split normal defect",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: finite extended CME defect",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: odd split Koszul sign",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: hatted tangent BV pair",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: induced 1PI antibracket",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: external antifield graph derivative",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: external antifield response retained",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: Legendre 1PI breaking",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: canonical source domain",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: source exponent equality",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: dagger closed cutoff",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: explicit paired mode transport",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: independent determinant cycles",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: typed FP reference isomorphism",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: residual cotangent pullback",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: frame split commutative square",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: complete external Wick blocks",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: split supercharge equivariance",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: common algebra compatibility",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: nonlinear frame source",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: typed integrated Wick map",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: cycle-level SUSY defect",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: source normalization fixed arguments",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: adapted tubular completion",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: adapted normal cotangent pair",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: normal external source fixed",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: relative supercharge pullback",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: residual Wick intertwining",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: BV NK normalized graph integral",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: explicit split cotangent lift",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: logarithm branch anchor",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: residual frame cotangent law",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: dimensionful split Legendre derivative",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: adapted background dual shift",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: adapted antibracket",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: adapted density pushforward",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: homogeneous normal typing",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: normal frame no mixing",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: gauge graph background frame cross",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: source independent residual Wick map",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: intrinsic Euclidean cycle defect",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: typed BV NK coordinate map",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: ordered BV NK measure",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: tubular frame zero section",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: tubular frame commutative square",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: normalized split insertion",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: adapted supercharge Hamiltonian",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: nonlinear source insertion retained",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "contract binding: linear sources inert",
+      "category": "document",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "raw Gamma 1PI notation absent",
+      "category": "notation",
+      "passed": true,
+      "actual_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "expected_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "QME kappa collision absent",
+      "category": "notation",
+      "passed": true,
+      "actual_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "expected_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "stale tag count absent",
+      "category": "notation",
+      "passed": true,
+      "actual_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "expected_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "plain s_R reserved exactly once",
+      "category": "notation",
+      "passed": true,
+      "actual_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "expected_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "task id",
+      "category": "provenance",
+      "passed": true,
+      "actual_sha256": "6be7b0d6d1e4be1e113986bd5f67c0e0788ed7617008b437e8c073b95801879d",
+      "expected_sha256": "6be7b0d6d1e4be1e113986bd5f67c0e0788ed7617008b437e8c073b95801879d",
+      "actual": "CONTRACT-STEP-03D-N1-SUPERFIELD-PATH-INTEGRAL-BV-BRST-001",
+      "expected": "CONTRACT-STEP-03D-N1-SUPERFIELD-PATH-INTEGRAL-BV-BRST-001"
+    },
+    {
+      "name": "task type",
+      "category": "provenance",
+      "passed": true,
+      "actual_sha256": "640557e001d216f000f7679f67c21240cada1a35f75108ce16d6f5e19d740c20",
+      "expected_sha256": "640557e001d216f000f7679f67c21240cada1a35f75108ce16d6f5e19d740c20",
+      "actual": "CONTRACT_CHANGE",
+      "expected": "CONTRACT_CHANGE"
+    },
+    {
+      "name": "contract task has no network input",
+      "category": "provenance",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "Notion forbidden input",
+      "category": "provenance",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Weinberg forbidden input",
+      "category": "provenance",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Srednicki forbidden input",
+      "category": "provenance",
+      "passed": true,
+      "actual_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "expected_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "antifield parity V",
+      "category": "grading",
+      "passed": true,
+      "actual_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "expected_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "antifield ghost number V",
+      "category": "grading",
+      "passed": true,
+      "actual_sha256": "1bad6b8cf97131fceab8543e81f7757195fbb1d36b376ee994ad1cf17699c464",
+      "expected_sha256": "1bad6b8cf97131fceab8543e81f7757195fbb1d36b376ee994ad1cf17699c464",
+      "actual": -1,
+      "expected": -1
+    },
+    {
+      "name": "antifield dimension V",
+      "category": "grading",
+      "passed": true,
+      "actual_sha256": "cc11310c456c3690d5a74c23aa31cc25b4e74cdae146c71e54ad9dbc1d109fde",
+      "expected_sha256": "cc11310c456c3690d5a74c23aa31cc25b4e74cdae146c71e54ad9dbc1d109fde"
+    },
+    {
+      "name": "antifield parity Phi",
+      "category": "grading",
+      "passed": true,
+      "actual_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "expected_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "antifield ghost number Phi",
+      "category": "grading",
+      "passed": true,
+      "actual_sha256": "1bad6b8cf97131fceab8543e81f7757195fbb1d36b376ee994ad1cf17699c464",
+      "expected_sha256": "1bad6b8cf97131fceab8543e81f7757195fbb1d36b376ee994ad1cf17699c464",
+      "actual": -1,
+      "expected": -1
+    },
+    {
+      "name": "antifield dimension Phi",
+      "category": "grading",
+      "passed": true,
+      "actual_sha256": "cc11310c456c3690d5a74c23aa31cc25b4e74cdae146c71e54ad9dbc1d109fde",
+      "expected_sha256": "cc11310c456c3690d5a74c23aa31cc25b4e74cdae146c71e54ad9dbc1d109fde"
+    },
+    {
+      "name": "antifield parity PhiT",
+      "category": "grading",
+      "passed": true,
+      "actual_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "expected_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "antifield ghost number PhiT",
+      "category": "grading",
+      "passed": true,
+      "actual_sha256": "1bad6b8cf97131fceab8543e81f7757195fbb1d36b376ee994ad1cf17699c464",
+      "expected_sha256": "1bad6b8cf97131fceab8543e81f7757195fbb1d36b376ee994ad1cf17699c464",
+      "actual": -1,
+      "expected": -1
+    },
+    {
+      "name": "antifield dimension PhiT",
+      "category": "grading",
+      "passed": true,
+      "actual_sha256": "cc11310c456c3690d5a74c23aa31cc25b4e74cdae146c71e54ad9dbc1d109fde",
+      "expected_sha256": "cc11310c456c3690d5a74c23aa31cc25b4e74cdae146c71e54ad9dbc1d109fde"
+    },
+    {
+      "name": "antifield parity c",
+      "category": "grading",
+      "passed": true,
+      "actual_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "expected_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "antifield ghost number c",
+      "category": "grading",
+      "passed": true,
+      "actual_sha256": "cf3bae39dd692048a8bf961182e6a34dfd323eeb0748e162eaf055107f1cb873",
+      "expected_sha256": "cf3bae39dd692048a8bf961182e6a34dfd323eeb0748e162eaf055107f1cb873",
+      "actual": -2,
+      "expected": -2
+    },
+    {
+      "name": "antifield dimension c",
+      "category": "grading",
+      "passed": true,
+      "actual_sha256": "a4aab3f1f08004e907d2357fafe74cab56359bcb32e23f52e7eb1d3a9c0a2ad3",
+      "expected_sha256": "a4aab3f1f08004e907d2357fafe74cab56359bcb32e23f52e7eb1d3a9c0a2ad3"
+    },
+    {
+      "name": "antifield parity ct",
+      "category": "grading",
+      "passed": true,
+      "actual_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "expected_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "antifield ghost number ct",
+      "category": "grading",
+      "passed": true,
+      "actual_sha256": "cf3bae39dd692048a8bf961182e6a34dfd323eeb0748e162eaf055107f1cb873",
+      "expected_sha256": "cf3bae39dd692048a8bf961182e6a34dfd323eeb0748e162eaf055107f1cb873",
+      "actual": -2,
+      "expected": -2
+    },
+    {
+      "name": "antifield dimension ct",
+      "category": "grading",
+      "passed": true,
+      "actual_sha256": "a4aab3f1f08004e907d2357fafe74cab56359bcb32e23f52e7eb1d3a9c0a2ad3",
+      "expected_sha256": "a4aab3f1f08004e907d2357fafe74cab56359bcb32e23f52e7eb1d3a9c0a2ad3"
+    },
+    {
+      "name": "doublet parity epsilon_u=0",
+      "category": "grading",
+      "passed": true,
+      "actual_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "expected_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "doublet ghost epsilon_u=0",
+      "category": "grading",
+      "passed": true,
+      "actual_sha256": "1bad6b8cf97131fceab8543e81f7757195fbb1d36b376ee994ad1cf17699c464",
+      "expected_sha256": "1bad6b8cf97131fceab8543e81f7757195fbb1d36b376ee994ad1cf17699c464",
+      "actual": -1,
+      "expected": -1
+    },
+    {
+      "name": "doublet dimension epsilon_u=0",
+      "category": "grading",
+      "passed": true,
+      "actual_sha256": "b2a023469a00f4cedcbe896b2310bd30e232132e0859c2871b56e191e9903072",
+      "expected_sha256": "b2a023469a00f4cedcbe896b2310bd30e232132e0859c2871b56e191e9903072"
+    },
+    {
+      "name": "doublet parity epsilon_u=1",
+      "category": "grading",
+      "passed": true,
+      "actual_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "expected_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "doublet ghost epsilon_u=1",
+      "category": "grading",
+      "passed": true,
+      "actual_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "expected_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "doublet dimension epsilon_u=1",
+      "category": "grading",
+      "passed": true,
+      "actual_sha256": "cc11310c456c3690d5a74c23aa31cc25b4e74cdae146c71e54ad9dbc1d109fde",
+      "expected_sha256": "cc11310c456c3690d5a74c23aa31cc25b4e74cdae146c71e54ad9dbc1d109fde"
+    },
+    {
+      "name": "hatted integrated coordinates are dimensionless",
+      "category": "grading",
+      "passed": true,
+      "actual_sha256": "1c2c258239bcdf2ff0c78936f63c906b55fa76d831a327bd7c1e32f029d1e35b",
+      "expected_sha256": "1c2c258239bcdf2ff0c78936f63c906b55fa76d831a327bd7c1e32f029d1e35b"
+    },
+    {
+      "name": "hatted external antifields are dimensionless",
+      "category": "grading",
+      "passed": true,
+      "actual_sha256": "1c2c258239bcdf2ff0c78936f63c906b55fa76d831a327bd7c1e32f029d1e35b",
+      "expected_sha256": "1c2c258239bcdf2ff0c78936f63c906b55fa76d831a327bd7c1e32f029d1e35b"
+    },
+    {
+      "name": "finite super-Jacobian inverse",
+      "category": "measure",
+      "passed": true,
+      "actual_sha256": "391552c099c101b131feaf24c5795a6a15bc8ec82015424e0d2b4274a369a0bf",
+      "expected_sha256": "391552c099c101b131feaf24c5795a6a15bc8ec82015424e0d2b4274a369a0bf"
+    },
+    {
+      "name": "Berezin one-variable normalization",
+      "category": "measure",
+      "passed": true,
+      "actual_sha256": "391552c099c101b131feaf24c5795a6a15bc8ec82015424e0d2b4274a369a0bf",
+      "expected_sha256": "391552c099c101b131feaf24c5795a6a15bc8ec82015424e0d2b4274a369a0bf"
+    },
+    {
+      "name": "bosonic Schwinger-Dyson a=2 J=3",
+      "category": "schwinger_dyson",
+      "passed": true,
+      "actual_sha256": "98089e6d36f78e9766c9ea34d5acb3611f3a92cd81c5eb102095d924ffc7d08b",
+      "expected_sha256": "98089e6d36f78e9766c9ea34d5acb3611f3a92cd81c5eb102095d924ffc7d08b"
+    },
+    {
+      "name": "bosonic Schwinger-Dyson a=5/2 J=-7/3",
+      "category": "schwinger_dyson",
+      "passed": true,
+      "actual_sha256": "98089e6d36f78e9766c9ea34d5acb3611f3a92cd81c5eb102095d924ffc7d08b",
+      "expected_sha256": "98089e6d36f78e9766c9ea34d5acb3611f3a92cd81c5eb102095d924ffc7d08b"
+    },
+    {
+      "name": "odd total derivative has zero Berezin integral",
+      "category": "schwinger_dyson",
+      "passed": true,
+      "actual_sha256": "98089e6d36f78e9766c9ea34d5acb3611f3a92cd81c5eb102095d924ffc7d08b",
+      "expected_sha256": "98089e6d36f78e9766c9ea34d5acb3611f3a92cd81c5eb102095d924ffc7d08b"
+    },
+    {
+      "name": "untruncated BRST nilpotency on c",
+      "category": "brst",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "untruncated BRST nilpotency on t",
+      "category": "brst",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "untruncated BRST nilpotency on E",
+      "category": "brst",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "untruncated BRST nilpotency on P",
+      "category": "brst",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "untruncated BRST nilpotency on T",
+      "category": "brst",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "nonminimal nilpotency epsilon_u=0 on u",
+      "category": "nonminimal",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "nonminimal nilpotency epsilon_u=0 on v",
+      "category": "nonminimal",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "nonminimal nilpotency epsilon_u=0 on us",
+      "category": "nonminimal",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "nonminimal nilpotency epsilon_u=0 on vs",
+      "category": "nonminimal",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "contracting homotopy epsilon_u=0 on u",
+      "category": "nonminimal",
+      "passed": true,
+      "actual_sha256": "5bee4b1b7934e1f524779bed4459af081602843a6d8cde3fa13c43c6a8b8fb2c",
+      "expected_sha256": "5bee4b1b7934e1f524779bed4459af081602843a6d8cde3fa13c43c6a8b8fb2c"
+    },
+    {
+      "name": "contracting homotopy epsilon_u=0 on v",
+      "category": "nonminimal",
+      "passed": true,
+      "actual_sha256": "c20a42de18c2d795f863292b2b209a7c92726126a98671446c6fcc38b87ccd5e",
+      "expected_sha256": "c20a42de18c2d795f863292b2b209a7c92726126a98671446c6fcc38b87ccd5e"
+    },
+    {
+      "name": "contracting homotopy epsilon_u=0 on us",
+      "category": "nonminimal",
+      "passed": true,
+      "actual_sha256": "2b2083306b97ede6541218e4c43172cfe75bcf092bfe95a4b2501966738faf16",
+      "expected_sha256": "2b2083306b97ede6541218e4c43172cfe75bcf092bfe95a4b2501966738faf16"
+    },
+    {
+      "name": "contracting homotopy epsilon_u=0 on vs",
+      "category": "nonminimal",
+      "passed": true,
+      "actual_sha256": "8b378bdeaf6fe530ca5234babaebdc680d349ba458f9913ffdf3879743276945",
+      "expected_sha256": "8b378bdeaf6fe530ca5234babaebdc680d349ba458f9913ffdf3879743276945"
+    },
+    {
+      "name": "nonminimal nilpotency epsilon_u=1 on u",
+      "category": "nonminimal",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "nonminimal nilpotency epsilon_u=1 on v",
+      "category": "nonminimal",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "nonminimal nilpotency epsilon_u=1 on us",
+      "category": "nonminimal",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "nonminimal nilpotency epsilon_u=1 on vs",
+      "category": "nonminimal",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "contracting homotopy epsilon_u=1 on u",
+      "category": "nonminimal",
+      "passed": true,
+      "actual_sha256": "5bee4b1b7934e1f524779bed4459af081602843a6d8cde3fa13c43c6a8b8fb2c",
+      "expected_sha256": "5bee4b1b7934e1f524779bed4459af081602843a6d8cde3fa13c43c6a8b8fb2c"
+    },
+    {
+      "name": "contracting homotopy epsilon_u=1 on v",
+      "category": "nonminimal",
+      "passed": true,
+      "actual_sha256": "c20a42de18c2d795f863292b2b209a7c92726126a98671446c6fcc38b87ccd5e",
+      "expected_sha256": "c20a42de18c2d795f863292b2b209a7c92726126a98671446c6fcc38b87ccd5e"
+    },
+    {
+      "name": "contracting homotopy epsilon_u=1 on us",
+      "category": "nonminimal",
+      "passed": true,
+      "actual_sha256": "2b2083306b97ede6541218e4c43172cfe75bcf092bfe95a4b2501966738faf16",
+      "expected_sha256": "2b2083306b97ede6541218e4c43172cfe75bcf092bfe95a4b2501966738faf16"
+    },
+    {
+      "name": "contracting homotopy epsilon_u=1 on vs",
+      "category": "nonminimal",
+      "passed": true,
+      "actual_sha256": "8b378bdeaf6fe530ca5234babaebdc680d349ba458f9913ffdf3879743276945",
+      "expected_sha256": "8b378bdeaf6fe530ca5234babaebdc680d349ba458f9913ffdf3879743276945"
+    },
+    {
+      "name": "frame BRST nilpotency on k",
+      "category": "frame",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "frame BRST nilpotency on c",
+      "category": "frame",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "frame BRST nilpotency on t",
+      "category": "frame",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "frame BRST nilpotency on B",
+      "category": "frame",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "frame BRST nilpotency on Bt",
+      "category": "frame",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "left Hamiltonian master sign epsilon_q=0",
+      "category": "bv_sign",
+      "passed": true,
+      "actual_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "expected_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "minus graph gives plus sPsi epsilon_q=0",
+      "category": "bv_sign",
+      "passed": true,
+      "actual_sha256": "1bad6b8cf97131fceab8543e81f7757195fbb1d36b376ee994ad1cf17699c464",
+      "expected_sha256": "1bad6b8cf97131fceab8543e81f7757195fbb1d36b376ee994ad1cf17699c464",
+      "actual": -1,
+      "expected": -1
+    },
+    {
+      "name": "external antifield parity epsilon_q=0",
+      "category": "grading",
+      "passed": true,
+      "actual_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "expected_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "external antifield ghost shift epsilon_q=0",
+      "category": "grading",
+      "passed": true,
+      "actual_sha256": "1bad6b8cf97131fceab8543e81f7757195fbb1d36b376ee994ad1cf17699c464",
+      "expected_sha256": "1bad6b8cf97131fceab8543e81f7757195fbb1d36b376ee994ad1cf17699c464",
+      "actual": -1,
+      "expected": -1
+    },
+    {
+      "name": "left Hamiltonian master sign epsilon_q=1",
+      "category": "bv_sign",
+      "passed": true,
+      "actual_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "expected_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "minus graph gives plus sPsi epsilon_q=1",
+      "category": "bv_sign",
+      "passed": true,
+      "actual_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "expected_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "external antifield parity epsilon_q=1",
+      "category": "grading",
+      "passed": true,
+      "actual_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "expected_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "external antifield ghost shift epsilon_q=1",
+      "category": "grading",
+      "passed": true,
+      "actual_sha256": "1bad6b8cf97131fceab8543e81f7757195fbb1d36b376ee994ad1cf17699c464",
+      "expected_sha256": "1bad6b8cf97131fceab8543e81f7757195fbb1d36b376ee994ad1cf17699c464",
+      "actual": -1,
+      "expected": -1
+    },
+    {
+      "name": "nonminimal master parity sign epsilon_u=0",
+      "category": "bv_sign",
+      "passed": true,
+      "actual_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "expected_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "nonminimal master parity sign epsilon_u=1",
+      "category": "bv_sign",
+      "passed": true,
+      "actual_sha256": "1bad6b8cf97131fceab8543e81f7757195fbb1d36b376ee994ad1cf17699c464",
+      "expected_sha256": "1bad6b8cf97131fceab8543e81f7757195fbb1d36b376ee994ad1cf17699c464",
+      "actual": -1,
+      "expected": -1
+    },
+    {
+      "name": "tau=upsilon*phase/hbar L",
+      "category": "qme",
+      "passed": true,
+      "actual_sha256": "a05447c5b6502c5938db0f77f99354078bd88674bb56712709fd2cfdbcd56ac2",
+      "expected_sha256": "a05447c5b6502c5938db0f77f99354078bd88674bb56712709fd2cfdbcd56ac2"
+    },
+    {
+      "name": "inverse tau=-hbar*phase L",
+      "category": "qme",
+      "passed": true,
+      "actual_sha256": "7b25d93e083079a177921f2ae05f418a833ee0cdb57b2fece5b2a934a8c38f2d",
+      "expected_sha256": "7b25d93e083079a177921f2ae05f418a833ee0cdb57b2fece5b2a934a8c38f2d"
+    },
+    {
+      "name": "QME exponential obstruction sign L",
+      "category": "qme",
+      "passed": true,
+      "actual_sha256": "6b54ef0f2b5a5ef8e655f3ee42f1630f4f098d1007decc5ca13855879dd63657",
+      "expected_sha256": "6b54ef0f2b5a5ef8e655f3ee42f1630f4f098d1007decc5ca13855879dd63657"
+    },
+    {
+      "name": "tau=upsilon*phase/hbar E",
+      "category": "qme",
+      "passed": true,
+      "actual_sha256": "6b54ef0f2b5a5ef8e655f3ee42f1630f4f098d1007decc5ca13855879dd63657",
+      "expected_sha256": "6b54ef0f2b5a5ef8e655f3ee42f1630f4f098d1007decc5ca13855879dd63657"
+    },
+    {
+      "name": "inverse tau=-hbar*phase E",
+      "category": "qme",
+      "passed": true,
+      "actual_sha256": "6b54ef0f2b5a5ef8e655f3ee42f1630f4f098d1007decc5ca13855879dd63657",
+      "expected_sha256": "6b54ef0f2b5a5ef8e655f3ee42f1630f4f098d1007decc5ca13855879dd63657"
+    },
+    {
+      "name": "QME exponential obstruction sign E",
+      "category": "qme",
+      "passed": true,
+      "actual_sha256": "391552c099c101b131feaf24c5795a6a15bc8ec82015424e0d2b4274a369a0bf",
+      "expected_sha256": "391552c099c101b131feaf24c5795a6a15bc8ec82015424e0d2b4274a369a0bf"
+    },
+    {
+      "name": "QME recursion convolution n=1",
+      "category": "qme",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "QME recursion convolution n=2",
+      "category": "qme",
+      "passed": true,
+      "actual_sha256": "5cc6a8a697bb6f2fcb468ef02cf2a76e9ad3f5da223682f1ca29288836ee66b3",
+      "expected_sha256": "5cc6a8a697bb6f2fcb468ef02cf2a76e9ad3f5da223682f1ca29288836ee66b3"
+    },
+    {
+      "name": "QME recursion convolution n=3",
+      "category": "qme",
+      "passed": true,
+      "actual_sha256": "328bc989b58fc287d46e23bbf0156bc14b108411436dd5be59531117ae1777d6",
+      "expected_sha256": "328bc989b58fc287d46e23bbf0156bc14b108411436dd5be59531117ae1777d6"
+    },
+    {
+      "name": "QME recursion convolution n=4",
+      "category": "qme",
+      "passed": true,
+      "actual_sha256": "d9260ae27fad0b59f7b719505b7c1792ee827a5f0cf8b6539155318dfcf70be7",
+      "expected_sha256": "d9260ae27fad0b59f7b719505b7c1792ee827a5f0cf8b6539155318dfcf70be7"
+    },
+    {
+      "name": "QME recursion convolution n=5",
+      "category": "qme",
+      "passed": true,
+      "actual_sha256": "13d088ff265ed076a70ecb55ac5eb9f046b456ebd49c004d656d9407e0b92d9a",
+      "expected_sha256": "13d088ff265ed076a70ecb55ac5eb9f046b456ebd49c004d656d9407e0b92d9a"
+    },
+    {
+      "name": "QME recursion convolution n=6",
+      "category": "qme",
+      "passed": true,
+      "actual_sha256": "7379d9468b48baa4312de766b278179f41125a95ddd2b6eff9a4f2d2f0f32999",
+      "expected_sha256": "7379d9468b48baa4312de766b278179f41125a95ddd2b6eff9a4f2d2f0f32999"
+    },
+    {
+      "name": "multiplier square n=-2",
+      "category": "gauge_fixing",
+      "passed": true,
+      "actual_sha256": "efea02bfd97be3b14a10fc1318d42a269de7595c6eb57bacec574d356015d02d",
+      "expected_sha256": "efea02bfd97be3b14a10fc1318d42a269de7595c6eb57bacec574d356015d02d"
+    },
+    {
+      "name": "multiplier square n=0",
+      "category": "gauge_fixing",
+      "passed": true,
+      "actual_sha256": "98089e6d36f78e9766c9ea34d5acb3611f3a92cd81c5eb102095d924ffc7d08b",
+      "expected_sha256": "98089e6d36f78e9766c9ea34d5acb3611f3a92cd81c5eb102095d924ffc7d08b"
+    },
+    {
+      "name": "multiplier square n=7/3",
+      "category": "gauge_fixing",
+      "passed": true,
+      "actual_sha256": "61f41ca5b8dca8a035048659e3ca8cce0b5feb5c354c5bf86fdd05b02b94a0aa",
+      "expected_sha256": "61f41ca5b8dca8a035048659e3ca8cce0b5feb5c354c5bf86fdd05b02b94a0aa"
+    },
+    {
+      "name": "parity-reversed FP Berezinian inversion",
+      "category": "fp_nk",
+      "passed": true,
+      "actual_sha256": "d10a4bc9e0c1fa4e8f3d7ce2512b8756e47ca5fa451f373c39a1431bb88db49f",
+      "expected_sha256": "d10a4bc9e0c1fa4e8f3d7ce2512b8756e47ca5fa451f373c39a1431bb88db49f"
+    },
+    {
+      "name": "multiplier times NK equals averaging normalization",
+      "category": "fp_nk",
+      "passed": true,
+      "actual_sha256": "99cd41e5a03514b636e41d7b71d89fa289e874f29c8af78a7b29fcc79c224435",
+      "expected_sha256": "99cd41e5a03514b636e41d7b71d89fa289e874f29c8af78a7b29fcc79c224435"
+    },
+    {
+      "name": "split flatness with minus bracket",
+      "category": "split",
+      "passed": true,
+      "actual_sha256": "98089e6d36f78e9766c9ea34d5acb3611f3a92cd81c5eb102095d924ffc7d08b",
+      "expected_sha256": "98089e6d36f78e9766c9ea34d5acb3611f3a92cd81c5eb102095d924ffc7d08b"
+    },
+    {
+      "name": "opposite split-curvature sign fails",
+      "category": "split",
+      "passed": true,
+      "actual_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "expected_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "cotangent split antifield cancellation",
+      "category": "split",
+      "passed": true,
+      "actual_sha256": "98089e6d36f78e9766c9ea34d5acb3611f3a92cd81c5eb102095d924ffc7d08b",
+      "expected_sha256": "98089e6d36f78e9766c9ea34d5acb3611f3a92cd81c5eb102095d924ffc7d08b"
+    },
+    {
+      "name": "split-source Koszul sign background=0 quantum=0",
+      "category": "split",
+      "passed": true,
+      "actual_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "expected_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "split-source Koszul sign background=0 quantum=1",
+      "category": "split",
+      "passed": true,
+      "actual_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "expected_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "split-source Koszul sign background=1 quantum=0",
+      "category": "split",
+      "passed": true,
+      "actual_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "expected_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "split-source Koszul sign background=1 quantum=1",
+      "category": "split",
+      "passed": true,
+      "actual_sha256": "1bad6b8cf97131fceab8543e81f7757195fbb1d36b376ee994ad1cf17699c464",
+      "expected_sha256": "1bad6b8cf97131fceab8543e81f7757195fbb1d36b376ee994ad1cf17699c464",
+      "actual": -1,
+      "expected": -1
+    },
+    {
+      "name": "nonlinear frame mean is composite expectation",
+      "category": "frame",
+      "passed": true,
+      "actual_sha256": "53d7f4a048bd0daee134c84d46a9de1de3d4c71942f740eb4f964d3fccbeecf3",
+      "expected_sha256": "53d7f4a048bd0daee134c84d46a9de1de3d4c71942f740eb4f964d3fccbeecf3"
+    },
+    {
+      "name": "nonlinear frame does not commute with mean",
+      "category": "frame",
+      "passed": true,
+      "actual_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "expected_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Wick source pairing",
+      "category": "wick",
+      "passed": true,
+      "actual_sha256": "07b7e9f5df25d23dbdd206c8ee1dd4b8d86f68fb2304d532613099b1679fb8e4",
+      "expected_sha256": "07b7e9f5df25d23dbdd206c8ee1dd4b8d86f68fb2304d532613099b1679fb8e4"
+    },
+    {
+      "name": "Wick cotangent product",
+      "category": "wick",
+      "passed": true,
+      "actual_sha256": "755070570193a7c53bbc3cd8e04c14558feff18e892fcf83b76940b6994462a5",
+      "expected_sha256": "755070570193a7c53bbc3cd8e04c14558feff18e892fcf83b76940b6994462a5"
+    },
+    {
+      "name": "Wick antibracket scale",
+      "category": "wick",
+      "passed": true,
+      "actual_sha256": "a05447c5b6502c5938db0f77f99354078bd88674bb56712709fd2cfdbcd56ac2",
+      "expected_sha256": "a05447c5b6502c5938db0f77f99354078bd88674bb56712709fd2cfdbcd56ac2"
+    },
+    {
+      "name": "Wick BV Laplacian scale",
+      "category": "wick",
+      "passed": true,
+      "actual_sha256": "a05447c5b6502c5938db0f77f99354078bd88674bb56712709fd2cfdbcd56ac2",
+      "expected_sha256": "a05447c5b6502c5938db0f77f99354078bd88674bb56712709fd2cfdbcd56ac2"
+    },
+    {
+      "name": "Wick obstruction scale",
+      "category": "wick",
+      "passed": true,
+      "actual_sha256": "7b25d93e083079a177921f2ae05f418a833ee0cdb57b2fece5b2a934a8c38f2d",
+      "expected_sha256": "7b25d93e083079a177921f2ae05f418a833ee0cdb57b2fece5b2a934a8c38f2d"
+    },
+    {
+      "name": "Wick connected generator scale",
+      "category": "wick",
+      "passed": true,
+      "actual_sha256": "a05447c5b6502c5938db0f77f99354078bd88674bb56712709fd2cfdbcd56ac2",
+      "expected_sha256": "a05447c5b6502c5938db0f77f99354078bd88674bb56712709fd2cfdbcd56ac2"
+    },
+    {
+      "name": "Wick 1PI action scale",
+      "category": "wick",
+      "passed": true,
+      "actual_sha256": "7b25d93e083079a177921f2ae05f418a833ee0cdb57b2fece5b2a934a8c38f2d",
+      "expected_sha256": "7b25d93e083079a177921f2ae05f418a833ee0cdb57b2fece5b2a934a8c38f2d"
+    }
+  ],
+  "failures": []
+}

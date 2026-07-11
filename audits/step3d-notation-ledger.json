@@ -1,0 +1,79 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-03D-N1-SUPERFIELD-PATH-INTEGRAL-BV-BRST-001",
+  "contract": "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md",
+  "contract_sha256": "109e0c531da3a1b98313e87dd692fa3d9047c8f745291f8e87021008c7acc538",
+  "checks": [
+    {
+      "id": "SIGNATURE_AND_PHASES",
+      "result": "PASS",
+      "locked": "R is L or E; tau, upsilon, and the QME phase retain the independently derived Lorentzian and Euclidean exponent conventions"
+    },
+    {
+      "id": "MODE_MEASURE_AND_ORDER",
+      "result": "PASS",
+      "locked": "all cylindrical coordinates, dual modes, even-forward and odd-reverse Berezin orders, constrained kernels, residual complements, and integration cycles have unique domains"
+    },
+    {
+      "id": "BV_FIELDS_SOURCES_AND_GRADINGS",
+      "result": "PASS",
+      "locked": "every minimal, arbitrary nonminimal, admitted BV-NK, background, partner, antifield, external antifield, and source block has fixed parity, ghost number, dimension, and superspace domain"
+    },
+    {
+      "id": "ADAPTED_TANGENT_NORMAL_CHART",
+      "result": "PASS",
+      "locked": "x is integrated, y is normal and fixed to zero; I,N,P,R form a full homogeneous tubular inverse; ambient, BV-adapted, and external-adapted background duals are distinct"
+    },
+    {
+      "id": "BRACKETS_DENSITIES_AND_LAPLACIANS",
+      "result": "PASS",
+      "locked": "ambient and adapted Darboux brackets and densities are connected by the exact cotangent pushforward; no hatted and unhatted canonical pair is mixed"
+    },
+    {
+      "id": "NONLINEAR_SOURCE_BOUNDARY",
+      "result": "PASS",
+      "locked": "ordinary linear sources are inert under nonlinear residual BRST, split, and supercharge fields; all nonlinear source responses are explicit composite insertions"
+    },
+    {
+      "id": "BACKGROUND_SPLIT_AND_FRAME_MAPS",
+      "result": "PASS",
+      "locked": "ambient BV cotangent, affine gauge-fixed source, residual tangent, and compatible normal frame maps have separate symbols and preserve the normal-source boundary"
+    },
+    {
+      "id": "FP_NK_BRANCHES",
+      "result": "PASS",
+      "locked": "external measure-only, density-absorbed, coupled, and admitted BV-NK branches are mutually exclusive and each determinant or integral has one carrier"
+    },
+    {
+      "id": "WICK_AND_INTRINSIC_EUCLIDEAN_CYCLES",
+      "result": "PASS",
+      "locked": "the residual Wick map is source-independent linear; Wick-image and intrinsic Euclidean cycles are not identified without the displayed zero-defect admission"
+    },
+    {
+      "id": "FRAME_LABELS_AND_COMPONENT_SYMBOLS",
+      "result": "PASS",
+      "locked": "mathsf C, mathsf V, and mathsf A remain Step-3C gauge frames; no source, split, ghost, auxiliary, or component symbol collides"
+    },
+    {
+      "id": "SOURCE_BOUNDARY",
+      "result": "PASS",
+      "locked": "no Notion, web, local-book, Weinberg, or Srednicki content is used; the accepted Project contracts are the only calculation inputs"
+    },
+    {
+      "id": "EQUATION_AND_LATEX_SURFACE",
+      "result": "PASS",
+      "locked": "222 display blocks have 222 unique tags, all internal references resolve, 183 exact checks pass, and every display compiles with LuaLaTeX"
+    },
+    {
+      "id": "STRICT_EQUALITY_NOTATION",
+      "result": "PASS",
+      "locked": "the contract contains no sim, approx, propto, or hidden after-algebra shortcut"
+    }
+  ],
+  "post_resolution": {
+    "P0": [],
+    "P1": [],
+    "P2": []
+  },
+  "result": "PASS"
+}
