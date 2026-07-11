@@ -1,0 +1,67 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-03B-COMPONENT-RECONSTRUCTION-001",
+  "contract": "contracts/foundations/step-03b-component-reconstruction.md",
+  "reviewers": [
+    "lorentz_component_reverse_review_agent",
+    "euclidean_wick_reverse_review_agent",
+    "three_dictionary_notation_source_review_agent"
+  ],
+  "review_results": [
+    {
+      "scope": "Lorentz projections, K expansion, moment-map completion, field-dependent f_AB, and canonical reduction",
+      "result": "PASS"
+    },
+    {
+      "scope": "Euclidean direct multiplication, Wick transport, auxiliary completion, and positive contour",
+      "result": "PASS"
+    },
+    {
+      "scope": "Project-Srednicki-Weinberg phase, sign, normalization, source page, and status rows",
+      "result": "PASS"
+    }
+  ],
+  "resolved_findings": [
+    {
+      "priority": "P1",
+      "equations": "3B.114c-3B.114h",
+      "issue": "the first three-source map identified ordered barred derivative squares and therefore obscured the field-strength sign",
+      "resolution": "derived D_S-star-squared=-barD_P-squared and W_P=-g W_S from the ordered Grassmann projectors",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equations": "3B.114j-3B.114k",
+      "issue": "the source trace metric disappeared from the translated component equalities",
+      "resolution": "defined kappa_AB and retained it in every gauge and topological normalization",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equations": "comparison table",
+      "issue": "the first Weinberg column used the Project-Srednicki bridge order instead of Weinberg's opposite native order",
+      "resolution": "displayed the native Weinberg order and marked the direct Project-order map SOURCE_INSUFFICIENT",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equations": "comparison table",
+      "issue": "the first table grouped several independent Lorentzian and Euclidean coefficients",
+      "resolution": "split scalar, fermion, auxiliary, Yukawa, curvature, FI, chiral f, and antichiral f coefficients into separate source-status rows",
+      "status": "RESOLVED"
+    }
+  ],
+  "exact_verification": {
+    "new_identities": 99,
+    "new_component_coefficients": 772,
+    "cumulative_identities": 187,
+    "cumulative_component_coefficients": 1108,
+    "failed": 0,
+    "status": "PASS"
+  },
+  "post_resolution": {
+    "P0": [],
+    "P1": []
+  },
+  "result": "PASS"
+}

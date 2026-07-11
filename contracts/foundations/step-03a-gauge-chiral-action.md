@@ -374,15 +374,19 @@ $$
 \tag{3A.34}
 $$
 
-For the dual row in the antichiral frame, define
+For a homogeneous dual row $X$ in the antichiral frame, define
 
 $$
 \begin{aligned}
 \widetilde\Gamma_{\dot a}
 &:=\mathcal E(\bar D_{\dot a}\mathcal E^{-1}),\\
+\widetilde\nabla_{\dot a}^{\,{\rm row}}X
+&:=\bar D_{\dot a}X
+-(-1)^{|X|}X\widetilde\Gamma_{\dot a},\\
 \widetilde\nabla_{\dot a}^{\,{\rm row}}\widetilde\Phi
-&:=\bar D_{\dot a}\widetilde\Phi
--\widetilde\Phi\,\widetilde\Gamma_{\dot a}.
+&=\bar D_{\dot a}\widetilde\Phi
+-\widetilde\Phi\,\widetilde\Gamma_{\dot a}
+\qquad(|\widetilde\Phi|=0).
 \end{aligned}
 \tag{3A.34a}
 $$
@@ -755,6 +759,39 @@ $$
 \mathcal D_m\widetilde\lambda^{\dot b}.
 \end{aligned}}
 \tag{3A.59}
+$$
+
+The antichiral-coordinate expansions obtained directly from (3A.52)
+are
+
+$$
+\boxed{
+\begin{aligned}
+\widetilde{\mathcal W}_{L\dot a}
+(\widetilde y_L,\bar\vartheta)={}&
++i\bar\lambda_{\dot a}
++\bar\vartheta_{\dot a}\mathscr D
++i\bar\vartheta_{\dot b}
+(\bar\sigma_L^{\mu\nu})^{\dot b}{}_{\dot a}F_{\mu\nu}\\
+&-\bar\vartheta^2(\sigma_L^\mu)_{b\dot a}
+\mathcal D_\mu\lambda^b,
+\end{aligned}}
+\tag{3A.59a}
+$$
+
+$$
+\boxed{
+\begin{aligned}
+\widetilde{\mathcal W}_{E\dot a}
+(\widetilde y_E,\bar\vartheta)={}&
++i\widetilde\lambda_{\dot a}
++\bar\vartheta_{\dot a}\mathscr D
+-i\bar\vartheta_{\dot b}
+(\bar\sigma_E^{mn})^{\dot b}{}_{\dot a}F_{mn}\\
+&-i\bar\vartheta^2(\sigma_E^m)_{b\dot a}
+\mathcal D_m\lambda^b.
+\end{aligned}}
+\tag{3A.59b}
 $$
 
 For the Lorentzian multiplication, write

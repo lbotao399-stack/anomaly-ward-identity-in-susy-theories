@@ -1,0 +1,99 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-03B-COMPONENT-RECONSTRUCTION-001",
+  "contract": "contracts/foundations/step-03b-component-reconstruction.md",
+  "scope": "Independent component reconstruction of the general Lorentzian and Euclidean N=1 gauge-chiral action from the declared superfield projections and covariant derivatives",
+  "proof_obligations": [
+    {
+      "id": "COMPONENT_INVERSION",
+      "equations": "3B.2-3B.17",
+      "result": "PASS"
+    },
+    {
+      "id": "BRIDGE_TO_BOTH_FIELD_STRENGTHS",
+      "equations": "3B.18-3B.40",
+      "result": "PASS"
+    },
+    {
+      "id": "RAW_KAHLER_TO_GEOMETRIC_FORM",
+      "equations": "3B.41-3B.70c",
+      "result": "PASS"
+    },
+    {
+      "id": "SUPERPOTENTIAL_AND_FIELD_DEPENDENT_GAUGE_KINETIC",
+      "equations": "3B.71-3B.87a",
+      "result": "PASS"
+    },
+    {
+      "id": "INDEPENDENT_EUCLIDEAN_MULTIPLICATION",
+      "equations": "3B.88-3B.98",
+      "result": "PASS"
+    },
+    {
+      "id": "WICK_AND_POSITIVE_CONTOUR",
+      "equations": "3B.99-3B.109",
+      "result": "PASS"
+    },
+    {
+      "id": "CANONICAL_REDUCTION_AND_THREE_DICTIONARY_COMPARISON",
+      "equations": "3B.110-3B.114k",
+      "result": "PASS"
+    }
+  ],
+  "resolved_findings": [
+    {
+      "priority": "P1",
+      "equations": "3B.30-3B.34",
+      "issue": "the dual-row derivative initially lacked the parity sign required on odd descendants",
+      "resolution": "defined the graded right-module derivative and propagated it to Step 3A",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equations": "3B.35a-3B.39",
+      "issue": "the first reconstruction did not display the full independent antichiral field strength",
+      "resolution": "derived and displayed both Lorentzian and Euclidean antichiral expansions",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equations": "3B.64a-3B.70c",
+      "issue": "the moment-map bridge path and equivariance step contained undeclared or skipped geometric operations",
+      "resolution": "defined the target vector fields before use and derived the bridge path, mixed derivative, and equivariance chain",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equations": "3B.81-3B.86c",
+      "issue": "ordered antichiral products and the covariant derivative of both adjoint slots of f_AB were initially implicit",
+      "resolution": "expanded the ordered products and defined the full two-adjoint-slot derivative",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equations": "3B.90a-3B.90h",
+      "issue": "independent Euclidean antichiral target data, direct gauged bridge products, and mu_E,A,IbarJ were incomplete",
+      "resolution": "defined the independent tilded data and derived every direct bridge coefficient including the mixed moment-map derivative",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equations": "3B.99a-3B.99d",
+      "issue": "the Wick rules initially omitted zero-order, second-order, Kahler, moment-map, and FI data",
+      "resolution": "replaced them by arbitrary multi-index analytic transport rules and the complete target-data map",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equations": "3B.107-3B.109",
+      "issue": "the first contour statement did not state all conjugacy and reality conditions needed for positivity",
+      "resolution": "declared the superpotential-source conjugacy and real moment-map contour before completing the squares",
+      "status": "RESOLVED"
+    }
+  ],
+  "post_resolution": {
+    "P0": [],
+    "P1": []
+  },
+  "result": "PASS"
+}

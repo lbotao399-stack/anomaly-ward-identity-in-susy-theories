@@ -531,9 +531,64 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertIn(r"\int d^4x\,[X]^S_D", text)
         self.assertIn(r"V_c^A=V_S^A", text)
         self.assertIn(r"\widehat V^A=gV_S^A", text)
-        self.assertIn("PROJECT_UNFIXED", text)
+        self.assertNotIn("PROJECT_UNFIXED", text)
+        self.assertIn("Verified Step 3A equations", text)
         for character in text:
             self.assertFalse(ord(character) < 32 and character not in "\n\r\t")
+
+    def test_step_3b_component_reconstruction_contract(self) -> None:
+        path = ROOT / "contracts/foundations/step-03b-component-reconstruction.md"
+        if not path.exists():
+            self.skipTest("Step 3B component reconstruction is not registered")
+        text = path.read_text(encoding="utf-8")
+        tags = {int(value) for value in re.findall(r"\\tag\{3B\.(\d+)\}", text)}
+        self.assertEqual(tags, set(range(1, 118)))
+        self.assertIn(r"\tag{3B.63a}", text)
+        self.assertIn(r"\widetilde\nabla_{\dot a}^{\,\mathrm{row}}X", text)
+        self.assertIn(r"\mathcal L_{K,L}^{\rm raw}", text)
+        self.assertIn(r"\mathcal C_{L,f}", text)
+        self.assertIn(r"\widetilde{\mathcal C}_{E,\widetilde f}", text)
+        self.assertIn(r"N_{\rm failures}=0", text)
+        self.assertNotIn(r"\sim", text)
+        self.assertNotIn(r"\approx", text)
+        self.assertNotIn(r"\propto", text)
+        for character in text:
+            self.assertFalse(ord(character) < 32 and character not in "\n\r\t")
+
+    def test_step_3b_exact_component_verifier(self) -> None:
+        script = ROOT / "scripts/verify_step3b_component_reconstruction.py"
+        audit_path = ROOT / "audits/step3b-component-reconstruction-verification.json"
+        if not script.exists() or not audit_path.exists():
+            self.skipTest("Step 3B exact verifier is not registered")
+        expected = audit_path.read_text(encoding="utf-8")
+        subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
+        audit = json.loads(expected)
+        self.assertEqual(audit["status"], "PASS")
+        self.assertEqual(audit["totals"]["new_exact_identities"], 99)
+        self.assertEqual(audit["totals"]["new_exact_component_coefficients"], 772)
+        self.assertEqual(audit["totals"]["cumulative_exact_identities"], 187)
+        self.assertEqual(audit["totals"]["cumulative_exact_component_coefficients"], 1108)
+        self.assertEqual(audit["totals"]["failed_checks"], 0)
+
+    def test_step_3b_audits(self) -> None:
+        for relative in (
+            "audits/step3b-gap-audit.json",
+            "audits/step3b-notation-ledger.json",
+            "audits/step3b-independent-review.json",
+        ):
+            path = ROOT / relative
+            if not path.exists():
+                self.skipTest(f"{relative} is not registered")
+            audit = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(audit["result"], "PASS")
+            self.assertEqual(audit["post_resolution"]["P0"], [])
+            self.assertEqual(audit["post_resolution"]["P1"], [])
 
     def test_weinberg_srednicki_section_verdicts(self) -> None:
         path = ROOT / "audits/ws-dictionary/draft-section-verdicts.json"
