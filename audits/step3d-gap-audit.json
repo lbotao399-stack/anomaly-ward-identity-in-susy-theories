@@ -1,0 +1,121 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-03D-N1-SUPERFIELD-PATH-INTEGRAL-BV-BRST-001",
+  "contract": "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md",
+  "contract_sha256": "109e0c531da3a1b98313e87dd692fa3d9047c8f745291f8e87021008c7acc538",
+  "scope": "All 222 tagged equation groups in Step 3D, audited against only the accepted Project contracts and the task allowlist",
+  "checked_equation_groups": 222,
+  "proof_obligations": [
+    {
+      "id": "CYLINDRICAL_MEASURE_AND_SCHWINGER_DYSON",
+      "equations": "3D.1-3D.48a",
+      "result": "PASS"
+    },
+    {
+      "id": "MINIMAL_AND_NONMINIMAL_BV",
+      "equations": "3D.49-3D.78c",
+      "result": "PASS"
+    },
+    {
+      "id": "BACKGROUND_GAUGE_FP_NK_AND_BRANCHES",
+      "equations": "3D.79-3D.96b",
+      "result": "PASS"
+    },
+    {
+      "id": "ADAPTED_BACKGROUND_SPLIT_AND_EFFECTIVE_IDENTITIES",
+      "equations": "3D.97-3D.106b",
+      "result": "PASS"
+    },
+    {
+      "id": "CHIRAL_VECTOR_FRAME_EQUIVALENCE",
+      "equations": "3D.107-3D.116",
+      "result": "PASS"
+    },
+    {
+      "id": "LORENTZ_EUCLIDEAN_WICK_TRANSPORT",
+      "equations": "3D.117-3D.124d",
+      "result": "PASS"
+    },
+    {
+      "id": "NORMALIZED_FUNCTIONALS_1PI_AND_SUPERCHARGE_WARDS",
+      "equations": "3D.125-3D.132c",
+      "result": "PASS"
+    },
+    {
+      "id": "NOTATION_SOURCE_AND_ACCEPTANCE_LEDGER",
+      "equations": "3D.133-3D.134",
+      "result": "PASS"
+    }
+  ],
+  "gap_types_checked": [
+    "G-DEF",
+    "G-IDX",
+    "G-SIGN",
+    "G-ALG",
+    "G-OP",
+    "G-MEASURE",
+    "G-CYCLE",
+    "G-PROJ",
+    "G-NORM",
+    "G-SCOPE"
+  ],
+  "resolved_findings": [
+    {
+      "id": "G1[G-MEASURE]",
+      "priority": "P0",
+      "location": "3D.97c, 3D.105c-3D.105d1",
+      "resolution": "constructed the full tubular Darboux chart, its normal complement, distinct BV and external adapted background duals, canonical one-form, adapted bracket, density pushforward, and fixed-variable graph derivative",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "G2[G-PROJ]",
+      "priority": "P0",
+      "location": "3D.97c, 3D.104b-3D.106b, 3D.128b-3D.128d",
+      "resolution": "replaced raw ambient projection by the relative moving-slice vector and retained every normal defect",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "G3[G-NORM]",
+      "priority": "P1",
+      "location": "3D.95a-3D.96b",
+      "resolution": "made the admitted BV-NK branch an oriented graded superdiffeomorphic, reference-normalized graph integral equal to the required determinant ratio",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "G4[G-OP]",
+      "priority": "P0",
+      "location": "3D.105-3D.105b, 3D.128c-3D.132c",
+      "resolution": "separated normalized and unnormalized composite insertions, kept nonlinear linear-source responses as explicit insertions, and generated external cotangent actions by adapted Hamiltonians",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "G5[G-IDX]",
+      "priority": "P0",
+      "location": "3D.108-3D.111a",
+      "resolution": "separated ambient and residual frame maps, added a compatible normal tubular map preserving the zero section, and derived the affine gauge-graph cotangent cross term",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "G6[G-CYCLE]",
+      "priority": "P1",
+      "location": "3D.117d-3D.128a",
+      "resolution": "imposed the source-independent linear residual Wick map and retained an explicit intrinsic-Euclidean versus Wick-image cycle defect at source and zero source",
+      "status": "RESOLVED"
+    }
+  ],
+  "verification": {
+    "exact_checks": 183,
+    "exact_failures": 0,
+    "lualatex_display_blocks": 222,
+    "lualatex_failures": 0,
+    "post_resolution_P0": [],
+    "post_resolution_P1": [],
+    "post_resolution_P2": []
+  },
+  "post_resolution": {
+    "P0": [],
+    "P1": [],
+    "P2": []
+  },
+  "result": "PASS"
+}

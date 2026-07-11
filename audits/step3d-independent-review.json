@@ -1,0 +1,96 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-03D-N1-SUPERFIELD-PATH-INTEGRAL-BV-BRST-001",
+  "contract": "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md",
+  "contract_sha256": "109e0c531da3a1b98313e87dd692fa3d9047c8f745291f8e87021008c7acc538",
+  "reviewers": [
+    "final_step3d_bv_sign_audit_agent",
+    "final_step3d_measure_wick_audit_agent",
+    "final_step3d_reverse_notation_audit_agent"
+  ],
+  "review_order": "independent specialized reviews, including a reverse-order notation pass, repeated on the final frozen SHA",
+  "allowed_evidence": [
+    "AUTHORITY.md",
+    "AGENTS.md",
+    "accepted Step 1, Step 2A, Step 3A, Step 3B, and Step 3C contracts",
+    "the Step 3D task allowlist",
+    "the exact verifier and repository-policy tests"
+  ],
+  "review_results": [
+    {
+      "scope": "BV signs, adapted tangent-normal cotangent chart, QME, Zinn-Justin, split and supercharge Hamiltonian lifts",
+      "result": "PASS",
+      "P0": 0,
+      "P1": 0,
+      "P2": 0
+    },
+    {
+      "scope": "Lorentzian and Euclidean measures, determinant branches, frame Jacobians, Wick maps, and intrinsic Euclidean cycle",
+      "result": "PASS",
+      "P0": 0,
+      "P1": 0,
+      "P2": 0
+    },
+    {
+      "scope": "reverse-order notation, symbol domains, source boundaries, branch typing, and prior-finding closure",
+      "result": "PASS",
+      "P0": 0,
+      "P1": 0,
+      "P2": 0
+    }
+  ],
+  "exact_verification": {
+    "verifier": "scripts/verify_step3d_path_integral_bv_brst.py",
+    "verifier_sha256": "e235c109b1964c81dc2289b8a735104959d0c76b750dba941492b9266ceaac99",
+    "exact_checks": 183,
+    "failed_checks": 0,
+    "status": "PASS"
+  },
+  "latex_verification": {
+    "display_blocks": 222,
+    "equation_tags": 222,
+    "unique_equation_tags": 222,
+    "unresolved_internal_references": 0,
+    "lualatex_return_code": 0,
+    "status": "PASS"
+  },
+  "resolved_history": [
+    {
+      "priority": "P0",
+      "issue": "residual source and antifield formulas used an incomplete moving slice and incomplete adapted cotangent chart",
+      "resolution": "constructed the full tubular Darboux lift, relative symmetry vectors, adapted densities, and fixed-variable graph identities",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P0",
+      "issue": "nonlinear residual symmetries were incorrectly promoted to derivations on the ordinary linear-source algebra",
+      "resolution": "kept the linear source inert, retained every nonlinear response as a composite insertion, and used full adapted Hamiltonians for cotangent variables",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P0",
+      "issue": "vector-frame source transport omitted the gauge-fermion cross term and did not preserve the tubular zero section",
+      "resolution": "derived the affine graph source map and compatible tangent-normal commutative square",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "issue": "BV-NK normalization, residual Wick linearity, and intrinsic Euclidean contour transport were conditional but under-specified",
+      "resolution": "added exact branch normalization, source-independent Wick admission, and a retained intrinsic-cycle defect at source and zero source",
+      "status": "RESOLVED"
+    }
+  ],
+  "source_boundary": {
+    "project_contracts_only": true,
+    "notion_read_performed": false,
+    "external_book_or_web_formula_used": false,
+    "weinberg_or_srednicki_formula_used": false,
+    "result": "PASS"
+  },
+  "post_resolution": {
+    "P0": [],
+    "P1": [],
+    "P2": []
+  },
+  "result": "PASS"
+}

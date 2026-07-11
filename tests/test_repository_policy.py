@@ -746,6 +746,65 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertEqual(mirror_task["id"], "MIRROR-STEP-03C-NOTION-001")
         self.assertEqual(mirror_task["status"], "ACCEPTED")
 
+    def test_step_3d_path_integral_bv_brst_contract(self) -> None:
+        path = ROOT / "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md"
+        if not path.exists():
+            self.skipTest("Step 3D path-integral/BV-BRST contract is not registered")
+        text = path.read_text(encoding="utf-8")
+        tags = re.findall(r"\\tag\{3D\.([^}]+)\}", text)
+        self.assertEqual(len(tags), 222)
+        self.assertEqual(len(tags), len(set(tags)))
+        self.assertEqual({tag for tag in tags if tag.isdigit()}, {str(value) for value in range(1, 135)})
+        self.assertEqual(sum(not tag.isdigit() for tag in tags), 88)
+        self.assertEqual(len(re.findall(r"\$\$\n.*?\n\$\$", text, re.DOTALL)), 222)
+        self.assertIn(
+            re.sub(r"\s+", "", r"\mathbf s_R F=(S_{\min,R},F)_R"),
+            re.sub(r"\s+", "", text),
+        )
+        self.assertIn(r"X^\star_{\rmBV}=X^{\star{\rmext}}-", re.sub(r"\s+", "", text))
+        self.assertIn(r"\widehat{\boldsymbol\varpi}_{\rmext,R,\nu}^{\,1/2}", re.sub(r"\s+", "", text))
+        self.assertIn(r"(F,G)_{\rm1PI,int,R,\nu}", re.sub(r"\s+", "", text))
+        self.assertIn(r"\mathfrakO_{R,\nu}^{\rm1PI,u}", re.sub(r"\s+", "", text))
+        self.assertIn(r"M_{\nu,\rmint}^{\rmW,\perp}", re.sub(r"\s+", "", text))
+        self.assertNotIn(r"\Gamma", text)
+        self.assertNotIn(r"\sim", text)
+        self.assertNotIn(r"\approx", text)
+        self.assertNotIn(r"\propto", text)
+        for character in text:
+            self.assertFalse(ord(character) < 32 and character not in "\n\t")
+
+    def test_step_3d_exact_verifier(self) -> None:
+        script = ROOT / "scripts/verify_step3d_path_integral_bv_brst.py"
+        audit_path = ROOT / "audits/step3d-path-integral-bv-brst-verification.json"
+        if not script.exists() or not audit_path.exists():
+            self.skipTest("Step 3D exact verifier is not registered")
+        expected = audit_path.read_text(encoding="utf-8")
+        subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
+        audit = json.loads(expected)
+        self.assertEqual(audit["status"], "PASS")
+        self.assertEqual(audit["totals"], {"exact_checks": 183, "failed_checks": 0})
+        self.assertTrue(all(item["failed"] == 0 for item in audit["categories"].values()))
+
+    def test_step_3d_audits(self) -> None:
+        for relative in (
+            "audits/step3d-gap-audit.json",
+            "audits/step3d-notation-ledger.json",
+            "audits/step3d-independent-review.json",
+        ):
+            path = ROOT / relative
+            if not path.exists():
+                self.skipTest(f"{relative} is not registered")
+            audit = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(audit["result"], "PASS")
+            self.assertEqual(audit["post_resolution"]["P0"], [])
+            self.assertEqual(audit["post_resolution"]["P1"], [])
+
     def test_weinberg_srednicki_section_verdicts(self) -> None:
         path = ROOT / "audits/ws-dictionary/draft-section-verdicts.json"
         if not path.exists():
