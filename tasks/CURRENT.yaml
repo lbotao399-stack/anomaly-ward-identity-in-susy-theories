@@ -38,7 +38,12 @@
     "references/vendor/local/N2_SYM_offshell_SU2R_obstruction_lecture_note.tex",
     "references/n2-su2r-obstruction-note-source-ledger.json",
     "audits/n2-su2r-obstruction-reference-import-verification.json",
-    "scripts/verify_n2_su2r_obstruction_reference_import.py"
+    "scripts/verify_n2_su2r_obstruction_reference_import.py",
+    "references/vendor/local/N2_SYM_general_Lie_closure_instructor_2026-07-12.md",
+    "references/n2-general-lie-closure-instructor-source-ledger.json",
+    "scripts/verify_n2_general_lie_closure_instructor_import.py",
+    "audits/n2-general-lie-closure-instructor-import-verification.json",
+    "tasks/archive/REFERENCE-IMPORT-N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-001.yaml"
   ],
   "forbidden_inputs": [
     "Notion content",
@@ -58,6 +63,7 @@
     "every Lorentzian and Euclidean component transformation and verifier matrix declares one graded normal order; parameter-left and field-left coefficient extraction are related by explicit Koszul maps and dual-order regression tests",
     "the proposed N=2 auxiliary dictionary is accepted only after every off-shell component slot, conjugate slot, auxiliary quadratic form, Lorentzian reality condition, Euclidean independent contour, and SU(2)_R generator intertwining relation is checked; vanishing of one coefficient residual is not treated as a complete proof",
     "the vendored N2 SU2R obstruction note is used only through its three admitted candidate claims and every adopted sign or code change is independently rederived from the locked Project contracts; its embedded external citations remain forbidden",
+    "the vendored general-Lie instructor is used only through its admitted conditional identities and verifier checklist; its circular primitive-closure completeness claim is rejected, and Lorentzian plus Euclidean primitive residuals must be expanded directly in the Project normal form",
     "pure N=1 SYM is obtained as an explicit specialization of Step 3A and Step 3B, with its Lorentzian and Euclidean superspace actions, component actions, off-shell supersymmetry transformations, algebra closure, reality contour, and component supersymmetry current derived term by term",
     "pure N=2 SYM is constructed in N=1 superspace from one vector and one adjoint chiral multiplet, with the relative kinetic normalization fixed by the second supersymmetry, and is independently rewritten in SU(2)_R-covariant components with all eight transformations and the auxiliary triplet explicit",
     "pure N=4 SYM is constructed in N=1 superspace from one vector and three adjoint chiral multiplets, with the cubic superpotential coefficient fixed by the hidden supersymmetries, and is independently rewritten in SU(4)_R-covariant components with all sixteen transformations and the on-shell versus off-shell closure boundary explicit",
@@ -79,6 +85,18 @@
     ],
     "role": "CANDIDATE_REQUIRING_INDEPENDENT_PROJECT_REDERIVATION",
     "excluded_claim_id": "N2-SU2R-EMBEDDED-EXTERNAL-CONTEXT",
+    "external_citations_imported": false
+  },
+  "general_lie_reference_admission": {
+    "source_id": "N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-MD",
+    "admitted_claim_ids": [
+      "N2-GENERAL-LIE-PRIMITIVE-CLOSURE-CANDIDATE",
+      "N2-GENERAL-LIE-FUNCTORIAL-LIFT-CANDIDATE",
+      "N2-GENERAL-LIE-VERIFIER-DESIGN-CANDIDATE"
+    ],
+    "rejected_claim_id": "N2-GENERAL-LIE-COMPLETENESS-CANDIDATE",
+    "rejection": "CIRCULAR_UNTIL_ALL_PRIMITIVE_RESIDUALS_ARE_DIRECTLY_ZERO",
+    "role": "CANDIDATE_REQUIRING_INDEPENDENT_PROJECT_REDERIVATION",
     "external_citations_imported": false
   }
 }

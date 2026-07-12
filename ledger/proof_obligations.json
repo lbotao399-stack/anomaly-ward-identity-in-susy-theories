@@ -83,7 +83,7 @@
       "id": "CONTRACT-STEP-04-EXTENDED-SUPER-YANG-MILLS-001",
       "state": "SPECIFIED",
       "blocking_reason": null,
-      "task_sha256": "7a0275641c96155b9a16df66a8e7d98fd4d26f43509a5365276a4e92811f05fe",
+      "task_sha256": "2c25423173662442c261dccfe4f8d1945f33ad9d2b39294d4e71c56b4d67b443",
       "task": "tasks/CURRENT.yaml",
       "checked_scope": {
         "N2_OFFSHELL_SU2_R_TRIPLET": {
@@ -156,6 +156,12 @@
       "state": "ACCEPTED",
       "blocking_reason": null,
       "task": "tasks/archive/REFERENCE-IMPORT-N2-SU2R-OBSTRUCTION-NOTE-001.yaml"
+    },
+    {
+      "id": "REFERENCE-IMPORT-N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-001",
+      "state": "ACCEPTED",
+      "blocking_reason": null,
+      "task": "tasks/archive/REFERENCE-IMPORT-N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-001.yaml"
     }
   ]
 }

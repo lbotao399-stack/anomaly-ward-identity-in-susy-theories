@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "task": "REFERENCE-IMPORT-N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-001",
+  "source": {
+    "original_locator": "attachment://N2_SYM_general_Lie_closure_instructor_2026-07-12.md#sha256=392c9e59ee038d7ac19f390acf9f18111f1a1fc880cd7fed9c09a21f42a166ec",
+    "vendored_path": "references/vendor/local/N2_SYM_general_Lie_closure_instructor_2026-07-12.md",
+    "sha256": "392c9e59ee038d7ac19f390acf9f18111f1a1fc880cd7fed9c09a21f42a166ec",
+    "bytes": 22528,
+    "lines": 1244,
+    "identity_check": "EXACT_BYTE_IDENTITY",
+    "document_claimed_scope": "Close N2_GENERAL_LIE_CLOSURE in draft PR 37",
+    "repository_status_at_import": "NON_AUTHORITY_CANDIDATE_INSTRUCTOR"
+  },
+  "candidate_claims": [
+    {
+      "id": "N2-GENERAL-LIE-PRIMITIVE-CLOSURE-CANDIDATE",
+      "line_ranges": [
+        "409-663"
+      ],
+      "classification": "CANDIDATE_DERIVATION_REQUIRES_PROJECT_REDERIVATION",
+      "claim": "The scalar and gauge-field commutators determine the proposed translation vector and field-dependent gauge parameter without equations of motion.",
+      "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+    },
+    {
+      "id": "N2-GENERAL-LIE-FUNCTORIAL-LIFT-CANDIDATE",
+      "line_ranges": [
+        "665-1046"
+      ],
+      "classification": "CANDIDATE_DERIVATION_REQUIRES_PROJECT_REDERIVATION",
+      "claim": "Covariant derivatives, curvature, brackets, the moment map, H, and Y inherit closure from primitive residuals using curvature, Bianchi, and Jacobi identities.",
+      "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+    },
+    {
+      "id": "N2-GENERAL-LIE-COMPLETENESS-CANDIDATE",
+      "line_ranges": [
+        "1050-1189"
+      ],
+      "classification": "CANDIDATE_COMPLETENESS_ARGUMENT_REQUIRES_PROJECT_REDERIVATION",
+      "claim": "The displayed component grammar contains no independent structures beyond covariant derivatives, curvature, and Lie brackets, so a universal residual recursion closes the simultaneous general-Lie sector.",
+      "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+    },
+    {
+      "id": "N2-GENERAL-LIE-VERIFIER-DESIGN-CANDIDATE",
+      "line_ranges": [
+        "1191-1244"
+      ],
+      "classification": "CANDIDATE_IMPLEMENTATION_PLAN_REQUIRES_PROJECT_REDERIVATION",
+      "claim": "An exact gate can use graded free-Lie trees, an antisymmetry/Jacobi canonicalizer, independent nonzero jets, curvature and Bianchi rewrite rules, and all primitive and derived component residuals.",
+      "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+    }
+  ],
+  "source_scope": {
+    "translation_status": "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+    "project_formula_adoption": false,
+    "step4_contract_modified": false,
+    "step4_verifier_modified": false,
+    "notion_read_performed": false,
+    "web_read_performed": false,
+    "external_citations_imported": false
+  },
+  "embedded_external_references": []
+}
