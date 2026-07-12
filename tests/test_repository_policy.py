@@ -132,6 +132,40 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertEqual(audit["status"], "PASS")
         self.assertEqual(audit["totals"], {"checks": 46, "failed": 0, "page_text_comparisons": 14})
 
+    def test_n2_su2r_obstruction_note_reference_import(self) -> None:
+        ledger_path = ROOT / "references/n2-su2r-obstruction-note-source-ledger.json"
+        source_path = ROOT / "references/vendor/local/N2_SYM_offshell_SU2R_obstruction_lecture_note.tex"
+        self.assertTrue(ledger_path.is_file())
+        self.assertTrue(source_path.is_file())
+        ledger = json.loads(ledger_path.read_text(encoding="utf-8"))
+        self.assertEqual(ledger["task"], "REFERENCE-IMPORT-N2-SU2R-OBSTRUCTION-NOTE-001")
+        self.assertEqual(ledger["source"]["identity_check"], "EXACT_BYTE_IDENTITY")
+        self.assertEqual(
+            hashlib.sha256(source_path.read_bytes()).hexdigest(),
+            "cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6",
+        )
+        self.assertEqual(ledger["source_scope"]["translation_status"], "NOT_PERFORMED_IN_REFERENCE_IMPORT")
+        self.assertFalse(ledger["source_scope"]["project_formula_adoption"])
+        self.assertFalse(ledger["source_scope"]["notion_read_performed"])
+        self.assertTrue(all(not item["imported"] for item in ledger["embedded_external_references"]))
+
+    def test_n2_su2r_obstruction_reference_import_exact_verifier(self) -> None:
+        script = ROOT / "scripts/verify_n2_su2r_obstruction_reference_import.py"
+        audit_path = ROOT / "audits/n2-su2r-obstruction-reference-import-verification.json"
+        self.assertTrue(script.is_file())
+        self.assertTrue(audit_path.is_file())
+        expected = audit_path.read_text(encoding="utf-8")
+        subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
+        audit = json.loads(expected)
+        self.assertEqual(audit["status"], "PASS")
+        self.assertEqual(audit["totals"], {"checks": 37, "failed": 0})
+
     def test_notion_is_output_only(self) -> None:
         page_map = json.loads((ROOT / "mirror/page_map.yaml").read_text(encoding="utf-8"))
         self.assertEqual(page_map["direction"], "GIT_TO_NOTION_ONLY")
@@ -220,6 +254,26 @@ class RepositoryPolicyTest(unittest.TestCase):
             external = [item for item in task["allowed_inputs"] if "://" in item]
             self.assertEqual(external, [search_locator, resolved_locator])
             self.assertIn("references/vendor/hep-th-0108200v1.pdf", task["allowed_inputs"])
+            return
+        if task["id"] == "REFERENCE-IMPORT-N2-SU2R-OBSTRUCTION-NOTE-001":
+            exception = task["local_reference_exception"]
+            locator = (
+                "attachment://N2_SYM_offshell_SU2R_obstruction_lecture_note.tex"
+                "#sha256=cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6"
+            )
+            self.assertTrue(exception["user_authorized"])
+            self.assertEqual(exception["resolved_locator"], locator)
+            self.assertEqual(
+                exception["resolved_sha256"],
+                "cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6",
+            )
+            self.assertEqual(exception["default_boundary_after_task"], "GIT_TO_NOTION_ONLY")
+            external = [item for item in task["allowed_inputs"] if "://" in item]
+            self.assertEqual(external, [locator])
+            self.assertIn(
+                "references/vendor/local/N2_SYM_offshell_SU2R_obstruction_lecture_note.tex",
+                task["allowed_inputs"],
+            )
             return
         self.fail(f"unreviewed reference-import task: {task['id']}")
 

@@ -1,0 +1,399 @@
+{
+  "schema": 1,
+  "task": "REFERENCE-IMPORT-N2-SU2R-OBSTRUCTION-NOTE-001",
+  "status": "PASS",
+  "source": {
+    "path": "references/vendor/local/N2_SYM_offshell_SU2R_obstruction_lecture_note.tex",
+    "sha256": "cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6",
+    "bytes": 32358,
+    "lines": 1054
+  },
+  "categories": {
+    "identity": {
+      "checks": 3,
+      "failed": 0
+    },
+    "task": {
+      "checks": 9,
+      "failed": 0
+    },
+    "ledger": {
+      "checks": 5,
+      "failed": 0
+    },
+    "boundary": {
+      "checks": 9,
+      "failed": 0
+    },
+    "claims": {
+      "checks": 5,
+      "failed": 0
+    },
+    "manifest": {
+      "checks": 4,
+      "failed": 0
+    },
+    "source": {
+      "checks": 1,
+      "failed": 0
+    },
+    "lifecycle": {
+      "checks": 1,
+      "failed": 0
+    }
+  },
+  "totals": {
+    "checks": 37,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "name": "source sha256",
+      "category": "identity",
+      "passed": true,
+      "actual": "cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6",
+      "expected": "cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6"
+    },
+    {
+      "name": "source byte count",
+      "category": "identity",
+      "passed": true,
+      "actual": 32358,
+      "expected": 32358
+    },
+    {
+      "name": "source line count",
+      "category": "identity",
+      "passed": true,
+      "actual": 1054,
+      "expected": 1054
+    },
+    {
+      "name": "task id",
+      "category": "task",
+      "passed": true,
+      "actual": "REFERENCE-IMPORT-N2-SU2R-OBSTRUCTION-NOTE-001",
+      "expected": "REFERENCE-IMPORT-N2-SU2R-OBSTRUCTION-NOTE-001"
+    },
+    {
+      "name": "task type",
+      "category": "task",
+      "passed": true,
+      "actual": "REFERENCE_IMPORT",
+      "expected": "REFERENCE_IMPORT"
+    },
+    {
+      "name": "task status",
+      "category": "task",
+      "passed": true,
+      "actual": "ACCEPTED",
+      "expected": "ACCEPTED"
+    },
+    {
+      "name": "user authorization",
+      "category": "task",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "source locator",
+      "category": "task",
+      "passed": true,
+      "actual": "attachment://N2_SYM_offshell_SU2R_obstruction_lecture_note.tex#sha256=cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6",
+      "expected": "attachment://N2_SYM_offshell_SU2R_obstruction_lecture_note.tex#sha256=cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6"
+    },
+    {
+      "name": "source locator hash",
+      "category": "task",
+      "passed": true,
+      "actual": "cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6",
+      "expected": "cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6"
+    },
+    {
+      "name": "write-only boundary restored",
+      "category": "task",
+      "passed": true,
+      "actual": "GIT_TO_NOTION_ONLY",
+      "expected": "GIT_TO_NOTION_ONLY"
+    },
+    {
+      "name": "single external handle",
+      "category": "task",
+      "passed": true,
+      "actual": [
+        "attachment://N2_SYM_offshell_SU2R_obstruction_lecture_note.tex#sha256=cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6"
+      ],
+      "expected": [
+        "attachment://N2_SYM_offshell_SU2R_obstruction_lecture_note.tex#sha256=cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6"
+      ]
+    },
+    {
+      "name": "Notion content forbidden",
+      "category": "task",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "ledger task",
+      "category": "ledger",
+      "passed": true,
+      "actual": "REFERENCE-IMPORT-N2-SU2R-OBSTRUCTION-NOTE-001",
+      "expected": "REFERENCE-IMPORT-N2-SU2R-OBSTRUCTION-NOTE-001"
+    },
+    {
+      "name": "ledger source hash",
+      "category": "ledger",
+      "passed": true,
+      "actual": "cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6",
+      "expected": "cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6"
+    },
+    {
+      "name": "ledger source bytes",
+      "category": "ledger",
+      "passed": true,
+      "actual": 32358,
+      "expected": 32358
+    },
+    {
+      "name": "ledger source lines",
+      "category": "ledger",
+      "passed": true,
+      "actual": 1054,
+      "expected": 1054
+    },
+    {
+      "name": "ledger exact identity",
+      "category": "ledger",
+      "passed": true,
+      "actual": "EXACT_BYTE_IDENTITY",
+      "expected": "EXACT_BYTE_IDENTITY"
+    },
+    {
+      "name": "translation not performed",
+      "category": "boundary",
+      "passed": true,
+      "actual": "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+      "expected": "NOT_PERFORMED_IN_REFERENCE_IMPORT"
+    },
+    {
+      "name": "project formula not adopted",
+      "category": "boundary",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Step4 contract untouched",
+      "category": "boundary",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Step4 verifier untouched",
+      "category": "boundary",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Notion not read",
+      "category": "boundary",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "web not read",
+      "category": "boundary",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "candidate claim ids",
+      "category": "claims",
+      "passed": true,
+      "actual": [
+        "N2-SU2R-GRADED-ORDERING-CANDIDATE",
+        "N2-SU2R-CANONICAL-PACKAGE-CANDIDATE",
+        "N2-SU2R-PATCH-CHECKLIST-CANDIDATE",
+        "N2-SU2R-EMBEDDED-EXTERNAL-CONTEXT"
+      ],
+      "expected": [
+        "N2-SU2R-GRADED-ORDERING-CANDIDATE",
+        "N2-SU2R-CANONICAL-PACKAGE-CANDIDATE",
+        "N2-SU2R-PATCH-CHECKLIST-CANDIDATE",
+        "N2-SU2R-EMBEDDED-EXTERNAL-CONTEXT"
+      ]
+    },
+    {
+      "name": "candidate claims not adopted",
+      "category": "claims",
+      "passed": true,
+      "actual": [
+        "NOT_ADOPTED_IN_REFERENCE_IMPORT",
+        "NOT_ADOPTED_IN_REFERENCE_IMPORT",
+        "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+      ],
+      "expected": [
+        "NOT_ADOPTED_IN_REFERENCE_IMPORT",
+        "NOT_ADOPTED_IN_REFERENCE_IMPORT",
+        "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+      ]
+    },
+    {
+      "name": "external context forbidden",
+      "category": "claims",
+      "passed": true,
+      "actual": "FORBIDDEN_UNTIL_SEPARATE_REFERENCE_IMPORT",
+      "expected": "FORBIDDEN_UNTIL_SEPARATE_REFERENCE_IMPORT"
+    },
+    {
+      "name": "embedded references not imported",
+      "category": "boundary",
+      "passed": true,
+      "actual": [
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "source registered",
+      "category": "manifest",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "source manifest hash",
+      "category": "manifest",
+      "passed": true,
+      "actual": "cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6",
+      "expected": "cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6"
+    },
+    {
+      "name": "ledger manifest hash",
+      "category": "manifest",
+      "passed": true,
+      "actual": "b8e8dddfe3244ca72e5fd20d9b785ab4d62fe049472ceeb04928e5d7d3aaa50c",
+      "expected": "b8e8dddfe3244ca72e5fd20d9b785ab4d62fe049472ceeb04928e5d7d3aaa50c"
+    },
+    {
+      "name": "claim-map manifest hash",
+      "category": "manifest",
+      "passed": true,
+      "actual": "4ce321832c3579859b69636595623934a7604a421bedd5f2587a4c0e1ffe4060",
+      "expected": "4ce321832c3579859b69636595623934a7604a421bedd5f2587a4c0e1ffe4060"
+    },
+    {
+      "name": "claim-map ids present",
+      "category": "claims",
+      "passed": true,
+      "actual": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "claim-map source boundary",
+      "category": "claims",
+      "passed": true,
+      "actual": [
+        [
+          "N2-SU2R-OBSTRUCTION-LECTURE-NOTE-TEX"
+        ],
+        [
+          "N2-SU2R-OBSTRUCTION-LECTURE-NOTE-TEX"
+        ],
+        [
+          "N2-SU2R-OBSTRUCTION-LECTURE-NOTE-TEX"
+        ],
+        [
+          "N2-SU2R-OBSTRUCTION-LECTURE-NOTE-TEX"
+        ]
+      ],
+      "expected": [
+        [
+          "N2-SU2R-OBSTRUCTION-LECTURE-NOTE-TEX"
+        ],
+        [
+          "N2-SU2R-OBSTRUCTION-LECTURE-NOTE-TEX"
+        ],
+        [
+          "N2-SU2R-OBSTRUCTION-LECTURE-NOTE-TEX"
+        ],
+        [
+          "N2-SU2R-OBSTRUCTION-LECTURE-NOTE-TEX"
+        ]
+      ]
+    },
+    {
+      "name": "source markers exact",
+      "category": "source",
+      "passed": true,
+      "actual": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Step4 pending hash preserved",
+      "category": "lifecycle",
+      "passed": true,
+      "actual": "f76e1975617e6a703efda4413a67760bf55d84e22fb3a7a6289d3b890ff3eb6e",
+      "expected": "f76e1975617e6a703efda4413a67760bf55d84e22fb3a7a6289d3b890ff3eb6e"
+    },
+    {
+      "name": "Step4 contract absent during import",
+      "category": "boundary",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Step4 verifier absent during import",
+      "category": "boundary",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    }
+  ],
+  "failures": []
+}
