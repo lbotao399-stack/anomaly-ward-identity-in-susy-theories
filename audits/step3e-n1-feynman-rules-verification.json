@@ -1,0 +1,196 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-03E-N1-FEYNMAN-RULES-001",
+  "status": "PASS",
+  "contract": {
+    "path": "contracts/foundations/step-03e-n1-superfield-component-feynman-rules.md",
+    "sha256": "10cc0bcdc131c5ffd19712497fd710e47a4558d50b3e66756964adb42f8100a5",
+    "base_display_tags": 88,
+    "subtags": 164,
+    "all_display_tags": 252,
+    "first_tag": "3E.1",
+    "last_tag": "3E.88"
+  },
+  "verifier": {
+    "path": "scripts/verify_step3e_n1_feynman_rules.py",
+    "sha256": "3ff3fecba9ba73903eb4d93d9ce6cdb627445c9811ceb8b1c0e67f5a2e113f04"
+  },
+  "arithmetic": {
+    "coefficient_field": "Q(i)[d0,d1,d2,d3]",
+    "grassmann_matrix_dimension": 16,
+    "signatures": [
+      "Lorentzian",
+      "Euclidean"
+    ],
+    "floating_point": false,
+    "external_cas": false,
+    "standard_library_only": true
+  },
+  "acceptance": {
+    "kind": "HONEST_GENERATOR_WITH_RECORDED_BLOCKER",
+    "generator_verified": true,
+    "universal_numerical_table_claimed": false,
+    "blocker_count": 1,
+    "blockers_are_verifier_failures": false,
+    "conditional_route_scope": {
+      "projection_routes": "require B_proj=1",
+      "Wick_image_routes": "exact finite changes of variables",
+      "intrinsic_Euclidean_routes": "require proper cycle isotopy",
+      "intrinsic_Euclidean_ledgers": "independent when isotopy is absent",
+      "coupled_closure": "seeded Hessian-support component with nondegenerate direct-sum blocks",
+      "coupled_Berezinian": "defined only on the nonzero Berezinian domain"
+    }
+  },
+  "acceptance_blockers": [
+    {
+      "id": "LC_REAL_COVARIANT_VECTOR_CYCLE_OBSTRUCTION",
+      "status": "RECORDED_NONZERO",
+      "equation": "3E.79g6c",
+      "normalized_distribution": "2*pi*hbar*delta(p_L^2)*h_L^{-1}",
+      "normalized_delta_coefficient": "2",
+      "direct_rule": "all-real Lorentz cycle with positive damping",
+      "excluded_identification": "single covariant denominator on the same cycle",
+      "effect": "covariant candidate remains a distinct conditional cycle ledger"
+    }
+  ],
+  "categories": {
+    "document": {
+      "checks": 55,
+      "failed": 0
+    },
+    "provenance": {
+      "checks": 6,
+      "failed": 0
+    },
+    "symbol_collision": {
+      "checks": 11,
+      "failed": 0
+    },
+    "source_repairs": {
+      "checks": 12,
+      "failed": 0
+    },
+    "power_counting": {
+      "checks": 6,
+      "failed": 0
+    },
+    "d_algebra": {
+      "checks": 26,
+      "failed": 0
+    },
+    "projector": {
+      "checks": 26,
+      "failed": 0
+    },
+    "berezin": {
+      "checks": 8,
+      "failed": 0
+    },
+    "chiral_inverse": {
+      "checks": 19,
+      "failed": 0
+    },
+    "vector": {
+      "checks": 16,
+      "failed": 0
+    },
+    "gaussian": {
+      "checks": 9,
+      "failed": 0
+    },
+    "residual": {
+      "checks": 7,
+      "failed": 0
+    },
+    "finite_regulator": {
+      "checks": 8,
+      "failed": 0
+    },
+    "fp_supermatrix": {
+      "checks": 14,
+      "failed": 0
+    },
+    "nonminimal": {
+      "checks": 3,
+      "failed": 0
+    },
+    "graph": {
+      "checks": 2,
+      "failed": 0
+    },
+    "typed_graph": {
+      "checks": 6,
+      "failed": 0
+    },
+    "fp_color": {
+      "checks": 5,
+      "failed": 0
+    },
+    "component_inverse": {
+      "checks": 28,
+      "failed": 0
+    },
+    "ec_cycle": {
+      "checks": 10,
+      "failed": 0
+    },
+    "component_emitter": {
+      "checks": 11,
+      "failed": 0
+    },
+    "graded_gaussian": {
+      "checks": 15,
+      "failed": 0
+    },
+    "route": {
+      "checks": 20,
+      "failed": 0
+    },
+    "route_scope": {
+      "checks": 7,
+      "failed": 0
+    },
+    "brst": {
+      "checks": 13,
+      "failed": 0
+    },
+    "schur": {
+      "checks": 6,
+      "failed": 0
+    },
+    "nk": {
+      "checks": 5,
+      "failed": 0
+    },
+    "nk_carrier": {
+      "checks": 6,
+      "failed": 0
+    },
+    "determinant": {
+      "checks": 6,
+      "failed": 0
+    },
+    "coupled_closure": {
+      "checks": 15,
+      "failed": 0
+    },
+    "conditional_berezinian": {
+      "checks": 7,
+      "failed": 0
+    },
+    "lorentz_obstruction": {
+      "checks": 6,
+      "failed": 0
+    },
+    "source_boundary": {
+      "checks": 6,
+      "failed": 0
+    }
+  },
+  "totals": {
+    "exact_checks": 400,
+    "failed_checks": 0
+  },
+  "check_manifest_sha256": "14c420528c27818bc6919a29bdaffd347d97bd51383808a309daa541a55b2f69",
+  "failures": []
+}

@@ -1,0 +1,246 @@
+{
+  "schema": 1,
+  "audit_id": "STEP3E-POWER-COUNTING-CLASSIFICATION",
+  "task": "CONTRACT-STEP-03E-N1-FEYNMAN-RULES-001",
+  "authority": {
+    "repository_commit": "ed37a5f51ab775e3871252306e36916e432af83d",
+    "branch": "origin/main",
+    "verify_workflow_run": 29197939385,
+    "verify_result": "SUCCESS"
+  },
+  "source_contract_locators": [
+    {
+      "path": "contracts/foundations/step-03a-gauge-chiral-action.md",
+      "locators": [
+        "3A.51-3A.53",
+        "3A.65-3A.72",
+        "3A.89-3A.93"
+      ],
+      "role": "locked field strengths, engineering dimensions, physical action, gauge-invariance constraints, and Lorentz-Euclidean independence"
+    },
+    {
+      "path": "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md",
+      "locators": [
+        "3D.1-3D.9",
+        "3D.15-3D.18a",
+        "3D.51-3D.52a",
+        "3D.70-3D.78a",
+        "3D.84-3D.96b"
+      ],
+      "role": "field gradings, arbitrary finite contractible doublets, gauge-fermion class, standard multiplier family, residual complements, and FP-NK branch separation"
+    },
+    {
+      "path": "tasks/CURRENT.yaml",
+      "locators": [
+        "scope.nonminimal_requirement",
+        "fp_nk_branches",
+        "acceptance"
+      ],
+      "role": "Step-3E classification boundary"
+    }
+  ],
+  "locked_dimensions": {
+    "density_dimensions": {
+      "Sigma_8": 2,
+      "Sigma_plus": 3,
+      "Sigma_minus": 3
+    },
+    "fields": {
+      "mathcal_V": 0,
+      "Phi": 1,
+      "widetilde_Phi": 1,
+      "mathcal_W_a": "3/2",
+      "widetilde_mathcal_W_dot_a": "3/2",
+      "mathfrak_c": 0,
+      "widetilde_mathfrak_c": 0
+    },
+    "operators": {
+      "s_R": 0,
+      "nabla_M": 1,
+      "nabla_a": "1/2",
+      "bar_nabla_dot_a": "1/2"
+    }
+  },
+  "physical_classification": {
+    "result": "PASS_EXACT_POWER_COUNTING_CLASSIFICATION",
+    "densities": {
+      "kahler": "mathscr K_g^ren = widetilde Phi_I (Z mathcal E)^I{}_J Phi^J, with mathcal E = exp(mathcal V)",
+      "superpotential": "mathscr U^ren = ell_I Phi^I + (1/2) m_IJ Phi^I Phi^J + (1/3!) y_IJK Phi^I Phi^J Phi^K",
+      "gauge_kinetic": "f_AB(Phi) = kappa_AB",
+      "fayet_iliopoulos": "xi_A [mathcal V^A]_D"
+    },
+    "coefficient_properties": {
+      "Z": "constant nondegenerate gauge intertwiner; Z^ddagger_L = Z in Lorentz signature; intrinsic Euclidean datum before the integration cycle",
+      "ell": "mass dimension 2",
+      "m": "mass dimension 1 and m_IJ = m_JI",
+      "y": "mass dimension 0 and y_IJK is totally symmetric",
+      "kappa": "mass dimension 0 and kappa_AB = kappa_BA",
+      "xi": "mass dimension 2 and supported on the Abelian quotient"
+    },
+    "invariant_tensor_constraints": [
+      "[Z,T_A] = 0",
+      "sum_I ell_I (T_A)^I{}_J = 0",
+      "sum_I ((T_A)^I{}_J m_IK + (T_A)^I{}_K m_IJ) = 0",
+      "sum_I ((T_A)^I{}_J y_IKL + (T_A)^I{}_K y_IJL + (T_A)^I{}_L y_IJK) = 0",
+      "sum_D (c_CA{}^D kappa_DB + c_CB{}^D kappa_AD) = 0",
+      "sum_A xi_A c_BC{}^A = 0"
+    ],
+    "lorentz_euclidean_relation": {
+      "Lorentz": "widetilde mathscr U = (mathscr U)^ddagger_L and widetilde kappa = kappa^ddagger_L",
+      "Euclidean": "ell_E, m_E, y_E, kappa_E and their tilded dual-representation tensors are independent before a cycle is fixed"
+    },
+    "exclusion_proof": [
+      "A nonzero local D-density has integrand dimension 2. Pure chiral or pure antichiral terms are Kähler-exact, so the only matter kinetic density contains one widetilde Phi and one Phi.",
+      "A local chiral Lorentz scalar obeys N_Phi + (3/2) N_W <= 3 and N_W is even. Therefore the only cases are N_W = 0 with N_Phi <= 3, or N_W = 2 with N_Phi = 0.",
+      "Any nonconstant Phi-dependence of f_AB requires a negative-mass-dimension interaction coefficient and is excluded.",
+      "Gauge invariance of a pure-mathcal V D-density leaves only the linear Abelian-quotient Fayet-Iliopoulos term.",
+      "A field-independent rigid F-density and a field-independent rigid D-density vanish under their ordered Berezin projectors."
+    ]
+  },
+  "all_valence": {
+    "result": "FINITE_UNIVERSAL_VERTEX_TABLE_IMPOSSIBLE",
+    "bridge_expansion": "mathcal E = exp(mathcal V) = sum_{n=0}^infinity (1/n!) mathcal V^{A_1} ... mathcal V^{A_n} T_{A_1} ... T_{A_n}",
+    "matter_vertex_color_tensor": "C_{A_1...A_n} = (1/n!) sum_{pi in S_n} Z T_{A_{pi(1)}} ... T_{A_{pi(n)}}",
+    "field_strength_expansion": "mathcal E^{-1} D_a mathcal E = sum_{n=0}^infinity ((-1)^n/(n+1)!) ad_mathcal_V^n(D_a mathcal V)",
+    "field_strength_definition": "mathcal W_a = -(1/8) bar D^2(mathcal E^{-1} D_a mathcal E)",
+    "conclusion": "Charged-matter, pure-gauge, BRST, gauge-fixing, and FP sectors contain vertices of unbounded valence. Completeness is represented by an ordered analytic generating functional and arbitrary-n ordered functional derivatives."
+  },
+  "nonminimal_classification": {
+    "result": "PASS_ARBITRARY_FINITE_UNION",
+    "species_scope": "The universal class is the union over arbitrary finite disjoint sets R_nm^base and R_NK^BV; it is not one infinite-species path integral.",
+    "doublet": {
+      "equations": [
+        "s_R u_l = v_l",
+        "s_R v_l = 0"
+      ],
+      "grading": [
+        "epsilon(v_l) = epsilon(u_l) + 1 mod 2",
+        "gh(v_l) = gh(u_l) + 1",
+        "[v_l] = [u_l] = d_l"
+      ],
+      "domains": [
+        "Sigma_8",
+        "Sigma_plus",
+        "Sigma_minus"
+      ]
+    },
+    "active_scope_lock": {
+      "condition": "d_l >= 0 for every active contractible doublet",
+      "reason": "An active negative UV weight permits repeated insertions with unbounded compensating derivative degree, so the local counterterm filtration is not power-counting closed.",
+      "inactive_negative_weight": "A negative-weight doublet that does not occur in the gauge fermion does not define a nondegenerate integrated Hessian and is excluded from the active rule ledger."
+    },
+    "direct_gauge_generator": {
+      "term": "integral_{Sigma_l} u_l F_l",
+      "selection": [
+        "[F_l] = d_{Sigma_l} - d_l",
+        "gh(F_l) = -1 - gh(u_l)",
+        "epsilon(F_l) = 1 - epsilon(u_l) mod 2"
+      ],
+      "antighost_subset": "epsilon(u_l) = 1 and gh(u_l) = -1",
+      "standard_chiral_pair": "(epsilon,gh,d)(mathfrak c') = (1,-1,2), (epsilon,gh,d)(mathfrak n) = (0,0,2), [mathcal F_plus] = [mathcal F_minus] = 1"
+    },
+    "quadratic_doublet_kernel": {
+      "term": "integral_Sigma u_l K_lm v_m",
+      "selection": [
+        "[K_lm] = d_Sigma - d_l - d_m",
+        "gh(K_lm) = -2 - gh(u_l) - gh(u_m)",
+        "epsilon(K_lm) = epsilon(u_l) + epsilon(u_m) mod 2"
+      ],
+      "self_kernel": "A ghost-neutral even K_ll exists exactly when gh(u_l) = -1; then [K_ll] = d_Sigma - 2 d_l."
+    }
+  },
+  "gauge_fermion_generating_family": {
+    "field_order": "one canonical total order on all physical, minimal-ghost, nonminimal, multiplier, NK, and background-insertion letters",
+    "jet_weight": {
+      "dimension": "d(PX) = [X] + n_vector(P) + n_spinor(P)/2",
+      "ghost_number": "gh(PX) = gh(X)",
+      "parity": "epsilon(PX) = epsilon(X) + n_spinor(P) mod 2"
+    },
+    "monomial_selection": [
+      "sum_i d(P_i X_i) + [g_omega] = d_Sigma",
+      "sum_i gh(X_i) = -1",
+      "sum_i epsilon(P_i X_i) = 1 mod 2",
+      "all spinor, Lorentz, representation, and adjoint indices are contracted",
+      "the density is a background scalar",
+      "the density has the chirality required by Sigma",
+      "every local functional kernel is supported on the superspace diagonal"
+    ],
+    "formula": "Psi_R^pc = sum_{Sigma in {8,+,-}} integral_{R,Sigma} sum_{omega in W_Sigma^pc} g_{R,omega} Contr_omega[(P_1 X_1)...(P_N X_N)]",
+    "reality": {
+      "Lorentz": "(Psi_L)^ddagger_L = -Psi_L",
+      "Euclidean": "tilded and untilded arguments and coefficients are independent before the Euclidean cycle"
+    },
+    "ordered_vertex": "Gamma_R;I_1...I_n^(n) = [delta_left/delta X^{I_n} ... delta_left/delta X^{I_1} (S_0,R + s_R Psi_R)] at zero quantum fields",
+    "dimension_zero_consequence": "Because [mathcal V] = [mathfrak c] = [widetilde mathfrak c] = 0, and allowed zero-weight doublets may occur, the word family has unbounded valence even though its derivative degree is bounded."
+  },
+  "multiplier_schur_exception": {
+    "kernel": "mathcal Y_R = mu^{-1} widehat mathcal Y_R",
+    "widehat_kernel_properties": [
+      "dimension 0",
+      "even",
+      "ghost number 0",
+      "local algebraic map",
+      "background covariant",
+      "graded self-adjoint",
+      "invertible on the declared residual complement",
+      "analytic only in admitted dimension-zero arguments"
+    ],
+    "locked_dimension": "[mathcal Y_R] = -1",
+    "exact_completion": "<n,F> - (1/2)<n,Y n> = (1/2)<Y^{-1}F,F> - (1/2)<n-Y^{-1}F, Y(n-Y^{-1}F)>",
+    "power_counting_rule": "Y is a fixed algebraic quadratic normalization. Renormalizability is checked after exact multiplier Schur elimination. Additional inverse-mass derivative interactions are excluded."
+  },
+  "fp_nk_branches": [
+    {
+      "id": "COUPLED_NO_SEPARATED_NK",
+      "condition": "Psi_R differs from the factorized standard family, or s_R Y_R is nonzero",
+      "carrier": "complete coupled antighost-FP-multiplier integral",
+      "separated_nk_factor": 1,
+      "nk_propagator": false
+    },
+    {
+      "id": "EXTERNAL_MEASURE_ONLY_NK",
+      "condition": "the required normalized NK factor is independent of every integrated coordinate",
+      "carrier": "external normalized measure factor",
+      "nk_bv_doublets": false,
+      "nk_propagator": false
+    },
+    {
+      "id": "DENSITY_ABSORBED_NK",
+      "condition": "the required normalized NK factor depends on integrated coordinates",
+      "carrier": "gauge-fixed density",
+      "rule_requirement": "all ordered Taylor vertices of the logarithmic density contribution are retained",
+      "nk_bv_doublets": false,
+      "nk_propagator": false
+    },
+    {
+      "id": "ADMITTED_BV_NK",
+      "condition": "the typed finite BV-NK doublets, pushed-forward density, action, cycle, and normalized auxiliary integral satisfy every equality in 3D.96b",
+      "carrier": "BV action, BV density, and integrated BV-NK coordinates",
+      "external_nk_factor": 1,
+      "nk_propagator": "derived only from the admitted BV-NK Hessian"
+    }
+  ],
+  "scope_boundary": {
+    "proved": [
+      "physical power-counting classification",
+      "invariant tensor constraints",
+      "unbounded-valence theorem",
+      "arbitrary-finite contractible-doublet classification",
+      "power-counting monomial selection",
+      "multiplier Schur exception",
+      "mutually exclusive FP-NK carrier classification"
+    ],
+    "not_claimed": [
+      "quadratic Hessian inversion",
+      "signature-specific propagators",
+      "explicit momentum-space vertices",
+      "component projection",
+      "loop graph enumeration"
+    ]
+  },
+  "findings": {
+    "P0": [],
+    "P1": [],
+    "result": "PASS_ZERO_UNRESOLVED_P0_P1_WITHIN_CLASSIFICATION_SCOPE"
+  }
+}

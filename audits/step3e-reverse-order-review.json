@@ -1,0 +1,359 @@
+{
+  "schema": 2,
+  "audit_id": "STEP3E-FINAL-INDEPENDENT-REVERSE-DOCUMENT-ORDER-WHITESPACE-DELTA-REVIEW",
+  "task": "CONTRACT-STEP-03E-N1-FEYNMAN-RULES-001",
+  "status": "PASS_DOCUMENT_WITH_RECORDED_EXTERNAL_BLOCKER",
+  "snapshot_mode": "FINAL_IMMUTABLE_WHITESPACE_DELTA_REVIEW",
+  "audited_contract": {
+    "path": "contracts/foundations/step-03e-n1-superfield-component-feynman-rules.md",
+    "sha256": "10cc0bcdc131c5ffd19712497fd710e47a4558d50b3e66756964adb42f8100a5",
+    "base_equations": 88,
+    "subtags": 164,
+    "all_display_tags": 252
+  },
+  "source_boundary": {
+    "used": [
+      "contracts/foundations/step-03e-n1-superfield-component-feynman-rules.md",
+      "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md",
+      "scripts/verify_step3e_n1_feynman_rules.py",
+      "audits/step3e-n1-feynman-rules-verification.json",
+      "tasks/CURRENT.yaml"
+    ],
+    "not_used": [
+      "Notion",
+      "local books or PDFs",
+      "external web sources",
+      "chat transcripts or memories",
+      "unmerged branches as mathematical evidence"
+    ],
+    "step3d_use": "Only equations 3D.23--3D.24 were used to classify the Lorentz vector-cycle obstruction as external to the Step-3E document."
+  },
+  "input_hashes": {
+    "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md": "109e0c531da3a1b98313e87dd692fa3d9047c8f745291f8e87021008c7acc538",
+    "contracts/foundations/step-03e-n1-superfield-component-feynman-rules.md": "10cc0bcdc131c5ffd19712497fd710e47a4558d50b3e66756964adb42f8100a5",
+    "scripts/verify_step3e_n1_feynman_rules.py": "3ff3fecba9ba73903eb4d93d9ce6cdb627445c9811ceb8b1c0e67f5a2e113f04",
+    "audits/step3e-n1-feynman-rules-verification.json": "85d877a88d17842c8c335d33f4d91fe26861cc17e3aee1a4850bb0599dc902b8",
+    "tasks/CURRENT.yaml": "fefff3f685da5b05bcbe6fae1d043a57a7f137993ff11fe11370f004d6690385"
+  },
+  "method": {
+    "direction": [
+      "3E.10",
+      "3E.9",
+      "3E.8",
+      "3E.7",
+      "3E.6",
+      "3E.5",
+      "3E.4",
+      "3E.3",
+      "3E.2",
+      "3E.1"
+    ],
+    "independence": "The analytical reverse review was completed before using the exact verifier as read-only confirmation.",
+    "severity_definitions": {
+      "P0": "False or contradictory document statement, or a completion-blocking mandatory derivation absent from the declared document scope.",
+      "P1": "A required definition, domain, cycle, typed inverse, or derivation is missing, while no displayed equality is directly disproved.",
+      "P2": "Nonblocking precision, locator, or presentation defect."
+    },
+    "conditional_rule": "A formula explicitly restricted to a residual complement, cycle, branch predicate, nonzero Berezinian domain, or proper isotopy is reviewed only in that declared domain.",
+    "external_blocker_rule": "A nonzero obstruction inherited from a prior contract choice is not relabeled as a Step-3E document defect when Step 3E derives and records it exactly."
+  },
+  "reverse_section_review": [
+    {
+      "section": "3E.10",
+      "status": "PASS",
+      "evidence": ["3E.88a", "candidate-source table"],
+      "checks": [
+        "Seven candidate families are listed.",
+        "Source conventions and coefficients are explicitly not imported.",
+        "Propagator signs, factors of i, determinant powers, projector coefficients, vertex coefficients, and D-transfer signs remain Project-derived."
+      ]
+    },
+    {
+      "section": "3E.9",
+      "status": "PASS",
+      "evidence": [
+        "3E.84d--3E.87a9",
+        "3E.87c1--3E.87e",
+        "3E.87f--3E.87f8",
+        "3E.87g",
+        "3E.88"
+      ],
+      "checks": [
+        "Projection and Wick routes carry typed internal, external, density, projector, cycle, and eight-component NK data.",
+        "Projection routes require B_proj=1; intrinsic Euclidean equality requires the declared proper cycle isotopy; independent Euclidean ledgers are not forced equal.",
+        "Finite-cutoff BRST, CME, ST, density, and background defects are retained unless their separate hypotheses hold.",
+        "The standard determinant branches satisfy the factorized identity exactly.",
+        "The coupled branch uses the Hessian-support connected closure, a disjoint coupled/spectator partition, block nondegeneracy, and the explicit nonzero Berezinian domain.",
+        "The coupled determinant residual is retained and is not assigned zero without the supertrace, boundary-flux, and nonsingular-path conditions."
+      ]
+    },
+    {
+      "section": "3E.8",
+      "status": "PASS",
+      "evidence": [
+        "3E.76--3E.84c",
+        "3E.79a--3E.79r"
+      ],
+      "checks": [
+        "The sixteen unconstrained-vector slots and every four-slot chiral or antichiral block are explicitly ordered.",
+        "The flat standard gauge sector has 16+8+8+8=40 raw slots and a finite component emitter.",
+        "Vector-multiplier Schur and graded ghost inverses are multiplied on both sides.",
+        "FP color variance is lower AB for the kernel, upper AB for the inverse, and contracts to delta_A^C.",
+        "Direct EC cycles give the displayed scalar, vector, ghost, fermion, auxiliary, and multiplier signs.",
+        "The LC real cycle and positive damping yield the direct noncovariant temporal prescription; the unequal covariant candidate is recorded rather than identified with it.",
+        "The arbitrary-doublet rule remains a finite generator after branch data are fixed."
+      ]
+    },
+    {
+      "section": "3E.7",
+      "status": "PASS",
+      "evidence": ["3E.73--3E.75"],
+      "checks": [
+        "Classical, quantum-density, matter, gauge, potential, nonminimal, and admitted NK vertices are separated without double counting.",
+        "Every n-point momentum rule keeps incoming momentum conservation, leg-wise derivative position, spinor-derivative order, and color-word order.",
+        "Odd integrations by parts and forbidden chiral-measure transfers are explicit."
+      ]
+    },
+    {
+      "section": "3E.6",
+      "status": "PASS",
+      "evidence": [
+        "3E.57--3E.72g",
+        "3E.72a"
+      ],
+      "checks": [
+        "The nonsymmetric-Z chiral inverse has the correct transpose placement and all four products.",
+        "The transverse vector kernel, multiplier Schur block, reduced longitudinal block, and residual projectors are typed.",
+        "The flat FP supermatrix, inverse, four chiral/antichiral products, residual restrictions, and the LC/EC <c_R^{pair} c'_R> orientation and signs are explicit.",
+        "Arbitrary-background kernels do not reuse flat projectors."
+      ]
+    },
+    {
+      "section": "3E.5",
+      "status": "PASS",
+      "evidence": ["3E.44--3E.56c", "3E.56a"],
+      "checks": [
+        "Lorentz completion gives i*hbar*H_L^{-1}; Euclidean completion gives hbar*H_E^{-1}.",
+        "The direct EC scalar, vector, auxiliary, multiplier, odd, and nonminimal cycles and their orientation or positivity conditions are stated.",
+        "The ordered odd-pair Gaussian, graded determinant powers, and closed FP-loop sign are explicit.",
+        "The fully labeled graph sum retains vertex-copy and leg factorials and decomposes typed pairings into all group orbits."
+      ]
+    },
+    {
+      "section": "3E.4",
+      "status": "PASS",
+      "evidence": ["3E.27--3E.43f"],
+      "checks": [
+        "Fourier phases, incoming momentum conservation, Wick momentum map, and Berezin deltas are fixed.",
+        "Lorentzian and Euclidean D algebra and all three projector numerators are exact.",
+        "The finite periodic momentum regulator satisfies the intertwiner gate; when it does not, the leakage defect is retained.",
+        "Box inverse and every analytic projector formula exclude kernel modes."
+      ]
+    },
+    {
+      "section": "3E.3",
+      "status": "PASS",
+      "evidence": ["3E.17--3E.26a"],
+      "checks": [
+        "Flat and curved-background normal forms are separated and retain background curvature letters.",
+        "The unique dimension-minus-one multiplier normalization is outside the nonnegative interaction-word family.",
+        "FP isomorphism and full residual Hessian nondegeneracy are admission conditions.",
+        "Coupled, external, density, and BV-NK branches form a disjoint predicate partition with distinct carriers."
+      ]
+    },
+    {
+      "section": "3E.2",
+      "status": "PASS",
+      "evidence": ["3E.9--3E.16"],
+      "checks": [
+        "Untilded and independent tilded superpotentials and gauge kinetic tensors are both present with their invariance equations.",
+        "The direct L/E action uses the unique signature coefficient varkappa_R.",
+        "The gauge metric h_R is defined from kappa_R,AB and tilde-kappa_R,AB on its nondegenerate invariant color subspace.",
+        "Power counting, Kähler-exact exclusions, FI support, arbitrary vector valence, and curvature vertices are derived."
+      ]
+    },
+    {
+      "section": "3E.1",
+      "status": "PASS",
+      "evidence": ["3E.1--3E.8"],
+      "checks": [
+        "varkappa_L=+1 and varkappa_E=-1 are defined before use.",
+        "There is no unindexed kappa_L/E/R, rho_L/E/R, or omega_L/E/R collision.",
+        "The first varrho occurrence is its definition varrho_L=i, varrho_E=-1 at 3E.79a.",
+        "Internal and external fields have separate roles, domains, representations, parity, ghost number, dimensions, Lorentz data, Euclidean data, and Wick blocks.",
+        "LS, ES, LC, EC and all four NK branch labels are fixed."
+      ]
+    }
+  ],
+  "changed_loci_review": [
+    {
+      "locus": "varkappa/varrho definitions and uses",
+      "status": "PASS",
+      "facts": {
+        "varkappa_L": "+1",
+        "varkappa_E": "-1",
+        "varrho_L": "i",
+        "varrho_E": "-1",
+        "first_varrho_occurrence_is_definition": true,
+        "unindexed_kappa_collision_count": 0,
+        "unindexed_rho_collision_count": 0,
+        "unindexed_omega_collision_count": 0
+      }
+    },
+    {
+      "locus": "3E.87f7a--3E.87f7c",
+      "status": "PASS",
+      "facts": {
+        "Slot_defined_before_use": true,
+        "active_BV_NK_space_defined": true,
+        "Gamma_is_undirected_Hessian_support_graph": true,
+        "seeded_connected_closure_defined": true,
+        "coupled_spectator_partition_disjoint_and_exhaustive": true,
+        "Hessian_direct_sum_follows_from_connected_components": true,
+        "each_block_nondegenerate_from_full_nondegeneracy": true,
+        "coupled_Berezinian_domain_is_conditional": true
+      }
+    },
+    {
+      "locus": "3E.87f7b line-end LaTeX control-space cleanup",
+      "status": "PASS",
+      "facts": {
+        "removed_line_end_control_spaces": 2,
+        "trailing_horizontal_whitespace_line_count": 0,
+        "semantic_delta": false,
+        "coupled_spectator_partition_unchanged": true,
+        "Hessian_direct_sum_unchanged": true
+      }
+    },
+    {
+      "locus": "Lorentz/Euclidean Gaussian and cycle signs",
+      "status": "PASS",
+      "facts": {
+        "LC_even_line": "i*hbar*H_L,epsilon^{-1}",
+        "EC_even_line": "hbar*H_E^{-1}",
+        "EC_F_tildeF": "-hbar*Z_E^{-1}",
+        "EC_F_Fdagger": "+hbar*Z_E^{-1}",
+        "EC_D_D": "-hbar*h_E^{-1}",
+        "EC_d_d": "+hbar*h_E^{-1}",
+        "EC_B_B": "-hbar*Y_E^{-1}",
+        "EC_beta_beta": "+hbar*Y_E^{-1}"
+      }
+    },
+    {
+      "locus": "typed inverses and ordered vertices",
+      "status": "PASS",
+      "facts": {
+        "chiral_inverse_four_products": true,
+        "FP_supermatrix_four_products": true,
+        "40_slot_two_sided_inverse": true,
+        "arbitrary_doublet_emitter_conditional": true,
+        "typed_graph_orbit_decomposition": true,
+        "ordered_momentum_derivative_routing": true
+      }
+    },
+    {
+      "locus": "3E.72g typed FP pair and prose-math delimiter repairs",
+      "status": "PASS",
+      "facts": {
+        "ordered_FP_action": "S_FP=<c'_R,K_FP,R c_R^{pair}> with K_FP,R=-M_R^{FP,(0)}",
+        "generic_odd_pair_orientation": "<psi tildepsi>",
+        "Lorentz_direct_line": "<c_L^{pair} c'_L>_c=-i*hbar*G_L,epsilon^{FP,(0),perp}",
+        "Euclidean_direct_line": "<c_E^{pair} c'_E>_c=-hbar*G_E^{FP,(0),perp}",
+        "undefined_legacy_mathbf_c_count": 0,
+        "repaired_inline_math_surfaces": [
+          "let \\(c>0\\) be",
+          "For \\(0\\le t\\le1\\),",
+          "matrix \\(Q\\),",
+          "set \\(x:=-p_L^2\\) and"
+        ],
+        "legacy_raw_delimiter_forms_present": 0
+      }
+    },
+    {
+      "locus": "determinant branches",
+      "status": "PASS",
+      "facts": {
+        "external_factorized_identity": "1",
+        "density_factorized_identity": "1 fiberwise",
+        "BV_factorized_identity": "1 when F_NK,aux=F_NK,req",
+        "coupled_branch_residual_retained": true,
+        "conditional_Berezinian_nonzero_domain": true
+      }
+    },
+    {
+      "locus": "candidate-source boundary",
+      "status": "PASS",
+      "facts": {
+        "candidate_family_rows": 7,
+        "source_conventions_imported": false,
+        "source_coefficients_adopted": false
+      }
+    }
+  ],
+  "P0_P1_P2_table": [
+    {
+      "severity": "P0",
+      "count": 0,
+      "document_findings": []
+    },
+    {
+      "severity": "P1",
+      "count": 0,
+      "document_findings": []
+    },
+    {
+      "severity": "P2",
+      "count": 0,
+      "document_findings": []
+    }
+  ],
+  "document_findings": [],
+  "external_blockers": [
+    {
+      "id": "STEP3D_LC_REAL_COVARIANT_VECTOR_CYCLE_OBSTRUCTION",
+      "classification": "GENUINE_PRIOR-CYCLE_BLOCKER_NOT_A_STEP3E_DOCUMENT_FINDING",
+      "status": "RECORDED_NONZERO",
+      "origin": [
+        "3D.23: the Lorentzian vector prepotential is on the real cycle",
+        "3D.24: damping is an even positive quadratic form on that real bosonic cycle"
+      ],
+      "Step3E_derivation": [
+        "3E.79g5--3E.79g6d",
+        "3E.79g6a--3E.79g6c"
+      ],
+      "incompatibility": [
+        "all-real Lorentz vector cycle",
+        "positive damping",
+        "one covariant vector denominator"
+      ],
+      "exact_distribution": "i*hbar[(p_L^2+i0)^{-1}-(p_L^2-i0)^{-1}]*h_L^{-1}=2*pi*hbar*delta(p_L^2)*h_L^{-1}",
+      "normalized_delta_coefficient": "2",
+      "nonzero": true,
+      "impact": "The direct all-real LC rule cannot be identified with the covariant candidate. The latter remains a distinct conditional cycle ledger.",
+      "why_not_a_document_finding": "Step 3E derives the mismatch exactly, states it is nonzero, and does not claim the two ledgers are equal."
+    }
+  ],
+  "verifier_confirmation": {
+    "mode": "READ_ONLY_CONFIRMATION_AFTER_ANALYTICAL_REVIEW",
+    "command": "python3 scripts/verify_step3e_n1_feynman_rules.py --stdout",
+    "status": "PASS",
+    "exact_checks": 400,
+    "failed_checks": 0,
+    "source_repairs_checks": 12,
+    "source_repairs_failed": 0,
+    "contract_sha256": "10cc0bcdc131c5ffd19712497fd710e47a4558d50b3e66756964adb42f8100a5",
+    "acceptance_kind": "HONEST_GENERATOR_WITH_RECORDED_BLOCKER",
+    "acceptance_blocker_id": "LC_REAL_COVARIANT_VECTOR_CYCLE_OBSTRUCTION"
+  },
+  "summary": {
+    "document_status": "PASS",
+    "document_P0": 0,
+    "document_P1": 0,
+    "document_P2": 0,
+    "external_blocker_count": 1,
+    "overall_status": "DOCUMENT_COMPLETE; FOUR-CHANNEL COVARIANT IDENTIFICATION REMAINS BLOCKED BY THE STEP3D VECTOR-CYCLE CHOICE",
+    "contract_modified_by_review": false,
+    "verifier_modified_by_review": false,
+    "verification_audit_modified_by_review": false
+  }
+}
