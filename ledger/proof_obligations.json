@@ -83,8 +83,69 @@
       "id": "CONTRACT-STEP-04-EXTENDED-SUPER-YANG-MILLS-001",
       "state": "SPECIFIED",
       "blocking_reason": null,
-      "task_sha256": "f76e1975617e6a703efda4413a67760bf55d84e22fb3a7a6289d3b890ff3eb6e",
-      "task": "tasks/pending/CONTRACT-STEP-04-EXTENDED-SUPER-YANG-MILLS-001.yaml"
+      "task_sha256": "2c25423173662442c261dccfe4f8d1945f33ad9d2b39294d4e71c56b4d67b443",
+      "task": "tasks/CURRENT.yaml",
+      "checked_scope": {
+        "N2_OFFSHELL_SU2_R_TRIPLET": {
+          "result": "PASS",
+          "resolution": "RESOLVED_GRADED_NORMAL_ORDERING_BUG",
+          "graded_normal_ordering": {
+            "checked_components": 32,
+            "residual_count": 0
+          },
+          "generator_basis": [
+            "t1=i*sigma1/2",
+            "t2=i*sigma2/2",
+            "t3=i*sigma3/2"
+          ],
+          "free_lorentzian": {
+            "checked_matrix_cells": 1734,
+            "residual_count": 0
+          },
+          "free_euclidean": {
+            "checked_matrix_cells": 1734,
+            "residual_count": 0
+          },
+          "interacting_su2_color_covariant_jet": {
+            "checked_object_color_slots": 396,
+            "checked_triplet_reconstruction_slots": 27,
+            "residual_count": 0
+          },
+          "scope_boundary": "Exact free Lorentzian and Euclidean intertwiners plus the SU(2)-color covariant-jet intertwiner; this finite gate is retained as a regression witness."
+        },
+        "N2_GENERAL_LIE_CLOSURE": {
+          "result": "PASS_EXACT_GENERAL_LIE_CLOSURE",
+          "verifier": "scripts/verify_step4_n2_closure.py",
+          "audit": "audits/step4-n2-closure-verification.json",
+          "normal_form": "free differential associative superalgebra with exterior parameter-left monomials and unreordered ordinary-jet PBW words",
+          "lorentzian": {
+            "primitive_residual_objects": 17,
+            "derived_residual_objects": 5,
+            "residual_monomial_count": 0
+          },
+          "euclidean": {
+            "primitive_residual_objects": 17,
+            "derived_residual_objects": 5,
+            "residual_monomial_count": 0
+          },
+          "rule_bindings": {
+            "lorentzian": 578,
+            "euclidean": 578,
+            "residual_count": 0
+          },
+          "structural_identities": {
+            "checked": 284,
+            "residual_count": 0
+          },
+          "finite_color_projection": false,
+          "structure_constants_instantiated": false,
+          "primitive_closure_inferred_from_recursion": false
+        },
+        "unresolved": {
+          "P0": [],
+          "P1": []
+        }
+      }
     },
     {
       "id": "REFERENCE-IMPORT-SUPERSPACE-1001-VECTOR-REPRESENTATION-001",
@@ -126,7 +187,7 @@
       "id": "REFERENCE-IMPORT-N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-001",
       "state": "ACCEPTED",
       "blocking_reason": null,
-      "task": "tasks/CURRENT.yaml"
+      "task": "tasks/archive/REFERENCE-IMPORT-N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-001.yaml"
     }
   ]
 }

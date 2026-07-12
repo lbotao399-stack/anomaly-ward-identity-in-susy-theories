@@ -420,25 +420,25 @@
       "expected": "33f849a9de6b83d0c4698eb4f781efa906fe7e101fc6f83dde8bd70a48ff5aa1"
     },
     {
-      "name": "Step4 pending hash preserved",
+      "name": "import task excludes Step4 contract",
+      "category": "boundary",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "import task excludes Step4 verifier",
+      "category": "boundary",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "import task forbids translation",
       "category": "lifecycle",
       "passed": true,
-      "actual": "f76e1975617e6a703efda4413a67760bf55d84e22fb3a7a6289d3b890ff3eb6e",
-      "expected": "f76e1975617e6a703efda4413a67760bf55d84e22fb3a7a6289d3b890ff3eb6e"
-    },
-    {
-      "name": "Step4 contract absent during import",
-      "category": "boundary",
-      "passed": true,
-      "actual": false,
-      "expected": false
-    },
-    {
-      "name": "Step4 verifier absent during import",
-      "category": "boundary",
-      "passed": true,
-      "actual": false,
-      "expected": false
+      "actual": true,
+      "expected": true
     }
   ],
   "failures": []

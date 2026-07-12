@@ -14,9 +14,8 @@ SOURCE = ROOT / "references/vendor/local/N2_SYM_general_Lie_closure_instructor_2
 LEDGER = ROOT / "references/n2-general-lie-closure-instructor-source-ledger.json"
 MANIFEST = ROOT / "references/manifest.yaml"
 CLAIM_MAP = ROOT / "references/claim-map.yaml"
-TASK = ROOT / "tasks/CURRENT.yaml"
+TASK = ROOT / "tasks/archive/REFERENCE-IMPORT-N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-001.yaml"
 PREVIOUS_TASK = ROOT / "tasks/archive/REFERENCE-IMPORT-N2-SU2R-OBSTRUCTION-NOTE-001.yaml"
-PENDING_STEP4 = ROOT / "tasks/pending/CONTRACT-STEP-04-EXTENDED-SUPER-YANG-MILLS-001.yaml"
 AUDIT = ROOT / "audits/n2-general-lie-closure-instructor-import-verification.json"
 
 TASK_ID = "REFERENCE-IMPORT-N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-001"
@@ -27,7 +26,6 @@ SOURCE_LOCATOR = (
     "#sha256=" + SOURCE_SHA256
 )
 PREVIOUS_TASK_SHA256 = "33f849a9de6b83d0c4698eb4f781efa906fe7e101fc6f83dde8bd70a48ff5aa1"
-STEP4_SHA256 = "f76e1975617e6a703efda4413a67760bf55d84e22fb3a7a6289d3b890ff3eb6e"
 CLAIM_IDS = (
     "N2-GENERAL-LIE-PRIMITIVE-CLOSURE-CANDIDATE",
     "N2-GENERAL-LIE-FUNCTORIAL-LIFT-CANDIDATE",
@@ -155,9 +153,24 @@ def build_audit() -> dict[str, Any]:
     )
     recorder.check("source markers exact", [marker in source_text for marker in markers], [True] * len(markers), "source")
     recorder.check("previous current task archived exactly", sha256(PREVIOUS_TASK), PREVIOUS_TASK_SHA256, "lifecycle")
-    recorder.check("Step4 pending hash preserved", sha256(PENDING_STEP4), STEP4_SHA256, "lifecycle")
-    recorder.check("Step4 contract absent during import", (ROOT / "contracts/foundations/step-04b-n2-super-yang-mills.md").exists(), False, "boundary")
-    recorder.check("Step4 verifier absent during import", (ROOT / "scripts/verify_step4_n2_closure.py").exists(), False, "boundary")
+    recorder.check(
+        "import task excludes Step4 contract",
+        [item for item in task["allowed_inputs"] if item.startswith("contracts/foundations/step-04")],
+        [],
+        "boundary",
+    )
+    recorder.check(
+        "import task excludes Step4 verifier",
+        "scripts/verify_step4_n2_closure.py" in task["allowed_inputs"],
+        False,
+        "boundary",
+    )
+    recorder.check(
+        "import task forbids translation",
+        any("translation or adoption" in item for item in task["forbidden_inputs"]),
+        True,
+        "lifecycle",
+    )
 
     categories: dict[str, dict[str, int]] = {}
     for check in recorder.checks:

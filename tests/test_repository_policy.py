@@ -130,7 +130,7 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
         audit = json.loads(expected)
         self.assertEqual(audit["status"], "PASS")
-        self.assertEqual(audit["totals"], {"checks": 46, "failed": 0, "page_text_comparisons": 14})
+        self.assertEqual(audit["totals"], {"checks": 47, "failed": 0, "page_text_comparisons": 14})
 
     def test_n2_su2r_obstruction_note_reference_import(self) -> None:
         ledger_path = ROOT / "references/n2-su2r-obstruction-note-source-ledger.json"
@@ -940,6 +940,335 @@ class RepositoryPolicyTest(unittest.TestCase):
             self.assertEqual(audit["post_resolution"]["P0"], [])
             self.assertEqual(audit["post_resolution"]["P1"], [])
 
+    def test_step_4_formula_surfaces(self) -> None:
+        surfaces = {
+            "contracts/foundations/step-04-extended-sym-notation.md": (
+                "4.",
+                52,
+                (
+                    r"[T_A,T_B]=ic_{AB}{}^CT_C",
+                    r"\llbracket X,Y\rrbracket^A&:=ic_{BC}{}^AX^BY^C",
+                    r"Y_{11}:=-\sqrt2F",
+                    r"\varphi^{r4}:=\phi_r",
+                    r"\mathsf N_{\rm PL}",
+                    r"\mathcal R_{{\rm PR},\mathsf s}^{\Xi}",
+                    r"\mathcal A_{\rm univ}^{R}",
+                    r"\iota_R\!\left(\llbracket U,V\rrbracket\right)",
+                    r"\mathcal D_{[M}F_{NP]}&=0",
+                ),
+            ),
+            "contracts/foundations/step-04a-n1-super-yang-mills.md": (
+                "4A.",
+                57,
+                (
+                    r"S_L^{(1)}",
+                    r"S_E^{(1)}",
+                    r"\mathcal L_{L,{\rm compact}}^{(1)}",
+                    r"\partial_\mu j_{L,a}^\mu",
+                ),
+            ),
+            "contracts/foundations/step-04b-n2-super-yang-mills.md": (
+                "4B.",
+                112,
+                (
+                    r"S_L^{(2)}",
+                    r"S_E^{(2)}",
+                    r"Y_{ij}",
+                    r"j_{L,ia}^{\mu}",
+                    r"\mathsf A_{\rm PL}",
+                    r"(-\sqrt2,-\sqrt2,i,-1,1,-i,-2i,+2i)",
+                    r"\mathscr S_{\rm free}^{L,E}",
+                    r"\mathscr S_{\rm int}^{L}",
+                    r"\mathscr R_R[\mathcal D_MX]",
+                    r"N_{\rm free\text{-}bind}^{L+E}&=1156",
+                    r"A_r^{\rm internal}=A_{E,r+1}",
+                    r"\operatorname{ev}_{\mathfrak g}",
+                    r"PASS\_EXACT\_GENERAL\_LIE\_CLOSURE",
+                ),
+            ),
+            "contracts/foundations/step-04c-n4-super-yang-mills.md": (
+                "4C.",
+                111,
+                (
+                    r"S_L^{(4)}",
+                    r"S_E^{(4)}",
+                    r"\boxed{u=-\sqrt2.}",
+                    r"j_{L,a\mathcal I}^{\mu}",
+                    r"-i\bar\varepsilon_{\mathcal I}\bar\sigma_{L,\mu}",
+                    r"+\widetilde\varepsilon_{\mathcal I}\bar\sigma_{E,m}",
+                ),
+            ),
+        }
+        all_tags: list[str] = []
+        for relative, (prefix, minimum_tags, required) in surfaces.items():
+            path = ROOT / relative
+            self.assertTrue(path.is_file(), relative)
+            text = path.read_text(encoding="utf-8")
+            tags = re.findall(r"\\tag\{([^}]+)\}", text)
+            self.assertGreaterEqual(len(tags), minimum_tags, relative)
+            self.assertEqual(len(tags), len(set(tags)), relative)
+            self.assertTrue(all(tag.startswith(prefix) for tag in tags), relative)
+            all_tags.extend(tags)
+            for formula in required:
+                self.assertIn(formula, text, f"{relative}: {formula}")
+            self.assertEqual(text.count("$$") % 2, 0, relative)
+            self.assertNotIn(r"\sim", text, relative)
+            self.assertNotIn(r"\approx", text, relative)
+            self.assertNotIn(r"\propto", text, relative)
+            for character in text:
+                self.assertFalse(
+                    ord(character) < 32 and character not in "\n\t",
+                    relative,
+                )
+        self.assertEqual(len(all_tags), len(set(all_tags)))
+
+    def test_step_4_extended_sym_exact_verifier(self) -> None:
+        script = ROOT / "scripts/verify_step4_extended_sym.py"
+        audit_path = ROOT / "audits/step4-extended-sym-verification.json"
+        self.assertTrue(script.is_file())
+        self.assertTrue(audit_path.is_file())
+        expected = audit_path.read_text(encoding="utf-8")
+        subprocess.run(
+            [sys.executable, str(script), "--write-audit"],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
+        audit = json.loads(expected)
+        self.assertEqual(audit["failure_count"], 0)
+        self.assertEqual(audit["failures"], [])
+        self.assertEqual(audit["checks"]["lorentz_clifford"]["failures"], [])
+        self.assertEqual(audit["checks"]["sigma_triple_identity"]["failure_count"], 0)
+        self.assertEqual(audit["checks"]["bar_sigma_triple_identity"]["failure_count"], 0)
+        self.assertEqual(audit["checks"]["two_spinor_schouten"]["failure_count"], 0)
+        self.assertEqual(audit["checks"]["su4_rho_identities"]["failure_count"], 0)
+        self.assertEqual(audit["checks"]["n4_divergence_wick_coefficients"]["failure_count"], 0)
+        self.assertEqual(
+            audit["checks"]["n4_fermion_closure_eom_reduction"]["failure_count"],
+            0,
+        )
+
+    def test_step_4_n2_closure_verifier(self) -> None:
+        script = ROOT / "scripts/verify_step4_n2_closure.py"
+        audit_path = ROOT / "audits/step4-n2-closure-verification.json"
+        self.assertTrue(script.is_file())
+        self.assertTrue(audit_path.is_file())
+        expected = audit_path.read_text(encoding="utf-8")
+        completed = subprocess.run(
+            [sys.executable, str(script), "--write-audit"],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        self.assertEqual(completed.returncode, 0)
+        self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
+        audit = json.loads(expected)
+        task = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
+        admission = task["general_lie_reference_admission"]
+        self.assertEqual(admission["source_id"], "N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-MD")
+        self.assertEqual(
+            admission["admitted_claim_ids"],
+            [
+                "N2-GENERAL-LIE-PRIMITIVE-CLOSURE-CANDIDATE",
+                "N2-GENERAL-LIE-FUNCTORIAL-LIFT-CANDIDATE",
+                "N2-GENERAL-LIE-VERIFIER-DESIGN-CANDIDATE",
+            ],
+        )
+        self.assertEqual(
+            admission["rejected_claim_id"],
+            "N2-GENERAL-LIE-COMPLETENESS-CANDIDATE",
+        )
+        self.assertEqual(
+            admission["rejection"],
+            "CIRCULAR_UNTIL_ALL_PRIMITIVE_RESIDUALS_ARE_DIRECTLY_ZERO",
+        )
+        self.assertEqual(audit["status"], "PASS_EXACT_GENERAL_LIE_CLOSURE")
+        self.assertEqual(audit["failure_count"], 0)
+        self.assertEqual(audit["failures"], [])
+        self.assertTrue(audit["nonabelian_full_covariant_closure_claimed"])
+        self.assertTrue(
+            audit[
+                "complete_checked_scope_offshell_su2_r_intertwiner_claimed"
+            ]
+        )
+        for name in (
+            "lorentz_free_all_field_closure",
+            "euclidean_free_all_field_closure",
+            "constant_su2_nonabelian_interaction_closure",
+            "simultaneous_nonlinear_coefficient_solution",
+            "omega_sign_and_normalization_solution",
+            "graded_normal_ordering_identity",
+            "offshell_su2_r_lie_free_lorentz_intertwiner",
+            "offshell_su2_r_lie_free_euclidean_intertwiner",
+            "offshell_su2_r_lie_interaction_intertwiner",
+            "offshell_su2_r_triplet_gate",
+            "offshell_su2_r_quarter_turn_free_lorentz_regression",
+            "offshell_su2_r_quarter_turn_free_euclidean_regression",
+            "offshell_su2_r_quarter_turn_interaction_regression",
+        ):
+            check = audit["checks"][name]
+            self.assertTrue(check["passed"], name)
+            self.assertEqual(check["residual_count"], 0, name)
+
+        normal_order = audit["checks"]["graded_normal_ordering_identity"]
+        self.assertEqual(normal_order["checked_components"], 32)
+        self.assertEqual(
+            normal_order["identity"],
+            "barepsilon barsigma^M psi=-(psi sigma^M barepsilon)",
+        )
+
+        gate = audit["checks"]["offshell_su2_r_triplet_gate"]
+        self.assertEqual(
+            gate["derived_exact_coefficients"]["residual_coefficient_of_s"],
+            "0",
+        )
+        self.assertEqual(
+            gate["derived_exact_coefficients"]["order_covariance_residual"],
+            "0",
+        )
+        self.assertEqual(
+            gate["derived_exact_coefficients"]["gamma_c_over_s_parameter_left"],
+            "-i",
+        )
+        self.assertEqual(
+            gate["derived_exact_coefficients"]["gamma_c_over_s_field_left"],
+            "-i",
+        )
+        self.assertEqual(gate["conclusion"], "dual-order manifest-slot compatibility")
+
+        generator_basis = [
+            "t1=i*sigma1/2",
+            "t2=i*sigma2/2",
+            "t3=i*sigma3/2",
+        ]
+        for signature in ("lorentz", "euclidean"):
+            lie = audit["checks"][
+                f"offshell_su2_r_lie_free_{signature}_intertwiner"
+            ]
+            self.assertEqual(lie["generator_basis"], generator_basis)
+            self.assertEqual(lie["parameter_copies"], [1, 2])
+            self.assertEqual(lie["checked_matrix_cells"], 1734)
+            self.assertEqual(lie["residual_monomial_count"], 0)
+
+        interaction = audit["checks"][
+            "offshell_su2_r_lie_interaction_intertwiner"
+        ]
+        self.assertEqual(interaction["generator_basis"], generator_basis)
+        self.assertEqual(interaction["parameter_copies"], [1, 2])
+        self.assertEqual(interaction["checked_object_color_slots"], 396)
+        self.assertEqual(interaction["checked_triplet_reconstruction_slots"], 27)
+        self.assertEqual(interaction["residual_monomial_count"], 0)
+        for output in (
+            "lambda0",
+            "tlambda0",
+            "psi0",
+            "tpsi0",
+            "Y11",
+            "Y22",
+            "Y12",
+        ):
+            self.assertIn(output, interaction["checked_outputs"])
+
+        for signature in ("lorentz", "euclidean"):
+            binding = audit["checks"][f"universal_abelian_roundtrip_{signature}"]
+            self.assertTrue(binding["passed"])
+            self.assertEqual(binding["checked_cell_bindings"], 578)
+            self.assertEqual(binding["nonzero_source_cells"], 224)
+            self.assertEqual(binding["nonzero_roundtrip_cells"], 224)
+            self.assertEqual(binding["residual_count"], 0)
+
+            direct = audit["checks"][f"universal_direct_general_lie_closure_{signature}"]
+            self.assertTrue(direct["passed"])
+            self.assertEqual(direct["primitive_residual_objects_checked"], 17)
+            self.assertEqual(direct["derived_residual_objects_checked"], 5)
+            self.assertEqual(direct["total_residual_objects_checked"], 22)
+            self.assertEqual(direct["residual_object_count"], 0)
+            self.assertEqual(direct["residual_monomial_count"], 0)
+            self.assertEqual(direct["maximum_actual_term_count"], 392)
+            self.assertEqual(direct["maximum_expected_term_count"], 392)
+            self.assertEqual(direct["maximum_composed_word_length"], 3)
+            self.assertEqual(direct["maximum_composed_jet_order"], 1)
+            self.assertTrue(direct["direct_composition_used_for_every_object"])
+            self.assertFalse(direct["recursion_used_to_infer_primitive_closure"])
+            self.assertFalse(direct["finite_color_projection"])
+            self.assertFalse(direct["structure_constants_instantiated"])
+            self.assertIsNone(direct["truncation"])
+            self.assertFalse(direct["pbw_word_order_reordered"])
+
+        structural = audit["checks"]["universal_structural_identities"]
+        self.assertTrue(structural["passed"])
+        self.assertEqual(structural["checked_identity_count"], 284)
+        self.assertEqual(
+            structural["category_counts"],
+            {
+                "commuting_partial_jets": 12,
+                "graded_jacobi": 8,
+                "covariant_derivative_curvature": 12,
+                "bianchi": 4,
+                "variation_covariant_derivative_recursion": 208,
+                "variation_curvature_recursion": 24,
+                "variation_bracket_recursion": 16,
+            },
+        )
+        self.assertTrue(all(value == 0 for value in structural["category_residual_counts"].values()))
+        self.assertEqual(structural["residual_count"], 0)
+        self.assertFalse(structural["finite_color_projection"])
+        self.assertFalse(structural["structure_constants_instantiated"])
+        self.assertIsNone(structural["truncation"])
+        self.assertFalse(structural["pbw_word_order_reordered"])
+        exact_counts = audit["checks"]["universal_gate_exact_counts"]
+        self.assertTrue(exact_counts["passed"])
+        self.assertEqual(exact_counts["abelian_roundtrip_bindings"], 1156)
+        self.assertEqual(exact_counts["direct_object_residuals"], 44)
+        universal_surface = json.dumps(
+            {
+                "lorentz": audit["checks"]["universal_direct_general_lie_closure_lorentz"],
+                "euclidean": audit["checks"]["universal_direct_general_lie_closure_euclidean"],
+                "structural": structural,
+            },
+            sort_keys=True,
+        )
+        self.assertNotIn("epsilon_AB", universal_surface)
+        self.assertNotIn("fixed three-color", universal_surface)
+
+    def test_step_4_dictionary_surface(self) -> None:
+        path = ROOT / "contracts/dictionaries/step-04-extended-sym-weinberg-srednicki-dictionary.md"
+        self.assertTrue(path.is_file())
+        text = path.read_text(encoding="utf-8")
+        tags = re.findall(r"\\tag\{(D4\.[^}]+)\}", text)
+        self.assertGreaterEqual(len(tags), 12)
+        self.assertEqual(len(tags), len(set(tags)))
+        self.assertIn("Project--Srednicki--Weinberg", text)
+        self.assertIn("SOURCE_INSUFFICIENT", text)
+        self.assertIn("NOT_DEFINED_IN_SOURCE", text)
+        self.assertIn("PASS_EXACT_GENERAL_LIE_CLOSURE", text)
+        self.assertNotIn("UNVERIFIED_GENERAL_LIE_CLOSURE", text)
+        self.assertNotIn(r"\sim", text)
+        self.assertNotIn(r"\approx", text)
+        self.assertNotIn(r"\propto", text)
+        for character in text:
+            self.assertFalse(ord(character) < 32 and character not in "\n\r\t")
+
+    def test_step_4_audits(self) -> None:
+        expected = {
+            "audits/step4-gap-audit.json": ("PASS", []),
+            "audits/step4-independent-review.json": ("PASS", []),
+            "audits/step4-notation-ledger.json": ("PASS", []),
+            "audits/step4-dictionary-review.json": ("PASS", []),
+        }
+        for relative, (result, p1_findings) in expected.items():
+            path = ROOT / relative
+            self.assertTrue(path.is_file(), relative)
+            audit = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(audit["result"], result, relative)
+            self.assertEqual(audit["post_resolution"]["P0"], [], relative)
+            self.assertEqual(
+                audit["post_resolution"]["P1"],
+                p1_findings,
+                relative,
+            )
+
     def test_weinberg_srednicki_section_verdicts(self) -> None:
         path = ROOT / "audits/ws-dictionary/draft-section-verdicts.json"
         if not path.exists():
@@ -1012,7 +1341,17 @@ class RepositoryPolicyTest(unittest.TestCase):
             ROOT / "scripts",
         ]
         for root in roots:
-            paths = [root] if root.is_file() else [p for p in root.rglob("*") if p.is_file()]
+            paths = (
+                [root]
+                if root.is_file()
+                else [
+                    path
+                    for path in root.rglob("*")
+                    if path.is_file()
+                    and "__pycache__" not in path.parts
+                    and path.suffix != ".pyc"
+                ]
+            )
             for path in paths:
                 text = path.read_text(encoding="utf-8")
                 self.assertNotIn("/Users/", text, str(path))

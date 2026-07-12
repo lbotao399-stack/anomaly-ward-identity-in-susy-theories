@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-04-EXTENDED-SUPER-YANG-MILLS-001",
+  "contract": "contracts/dictionaries/step-04-extended-sym-weinberg-srednicki-dictionary.md",
+  "scope": "Registered-Git-only Project-Srednicki-Weinberg coefficient dictionary for pure N=1, N=2, and N=4 super Yang-Mills",
+  "checks": [
+    {
+      "id": "REGISTERED_SOURCE_LOCATORS",
+      "result": "PASS",
+      "detail": "Every displayed Srednicki and Weinberg locator resolves to the registered vendored page snapshot and its source-ledger page id."
+    },
+    {
+      "id": "GAUGE_BASIS_AND_TRACE_METRIC",
+      "result": "PASS",
+      "detail": "The Project absorbed basis, Srednicki basis, Weinberg hatted basis, invariant trace metric, and four-component gaugino rescaling are separated explicitly."
+    },
+    {
+      "id": "SPINOR_TYPE_BOUNDARY",
+      "result": "PASS",
+      "detail": "No unsupported identification between a Project Weyl spinor and Weinberg's four-component Majorana spinor is made."
+    },
+    {
+      "id": "EXTENDED_SYM_SOURCE_BOUNDARY",
+      "result": "PASS",
+      "detail": "Every N=2 and N=4 textbook cell is SOURCE_INSUFFICIENT because the registered snapshots do not fix those rules."
+    },
+    {
+      "id": "N2_GENERAL_LIE_PROJECT_GATE",
+      "result": "PASS",
+      "detail": "The Project cell is PASS_EXACT_GENERAL_LIE_CLOSURE from the color-free Lorentzian and Euclidean PBW-word verifier; both textbook cells remain SOURCE_INSUFFICIENT."
+    },
+    {
+      "id": "EUCLIDEAN_STATUS_TYPES",
+      "result": "PASS",
+      "detail": "NOT_DEFINED_IN_SOURCE is restricted to intrinsic Euclidean superspace; Euclidean components and currents are SOURCE_INSUFFICIENT."
+    }
+  ],
+  "resolved_findings": [
+    {
+      "priority": "P1",
+      "issue": "The first table draft could be read as a direct Project-Weyl to Weinberg-Majorana field equality.",
+      "resolution": "The final table keeps the spinor representations typed and records only the source-supported four-component rescaling.",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "issue": "The first Euclidean source-status partition did not distinguish absent intrinsic Euclidean superspace from insufficient component evidence.",
+      "resolution": "The final dictionary uses NOT_DEFINED_IN_SOURCE only for intrinsic Euclidean superspace and SOURCE_INSUFFICIENT for components and currents.",
+      "status": "RESOLVED"
+    }
+  ],
+  "post_resolution": {
+    "P0": [],
+    "P1": []
+  },
+  "result": "PASS"
+}
