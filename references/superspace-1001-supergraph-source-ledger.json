@@ -1,0 +1,170 @@
+{
+  "schema": 1,
+  "task": "REFERENCE-IMPORT-SUPERSPACE-1001-SUPERGRAPH-001",
+  "source": {
+    "id": "ARXIV-HEP-TH-0108200-V1",
+    "title": "Superspace, or One Thousand and One Lessons in Supersymmetry",
+    "authors": [
+      "S. James Gates, Jr.",
+      "Marcus T. Grisaru",
+      "Martin Rocek",
+      "Warren Siegel"
+    ],
+    "path": "references/vendor/hep-th-0108200v1.pdf",
+    "file_size_bytes": 3182047,
+    "pdf_pages": 568,
+    "sha256": "3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99",
+    "user_named_local_identity": {
+      "result": "EXACT_BYTE_IDENTITY",
+      "local_file_name": "SUPERSPACE.pdf",
+      "local_sha256": "3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99"
+    }
+  },
+  "locator_pass": {
+    "input": "references/vendor/hep-th-0108200v1.pdf only",
+    "method": "pdftotext -layout over the 568-page PDF followed by exact phrase searches",
+    "search_terms": [
+      "Introduction to supergraphs",
+      "Gauge fixing and ghosts",
+      "Supergraph rules",
+      "Derivation of Feynman rules",
+      "D-algebra",
+      "The background field method",
+      "Nielsen-Kallosh ghost",
+      "Covariant Feynman rules"
+    ],
+    "located_source_pdf_pages": [
+      "1",
+      "5-6",
+      "353-379",
+      "389-404"
+    ],
+    "located_printed_pages": [
+      "title and table of contents",
+      "337-363",
+      "373-388"
+    ],
+    "temporary_full_text_retained": false,
+    "translation_status": "NOT_PERFORMED_IN_REFERENCE_IMPORT"
+  },
+  "scoped_artifact": {
+    "id": "SUPERSPACE-1001-SUPERGRAPH-PAGES",
+    "path": "references/vendor/local/superspace-1001-supergraph-pages.pdf",
+    "sha256": "1cb68ae63aa5c8d8a3e2150b769ba2bfb56f245c91204bafceaa5793f969ccb8",
+    "pages": 46,
+    "page_selection": [
+      {
+        "subset_pages": "1",
+        "source_pdf_pages": "1",
+        "role": "title and authors"
+      },
+      {
+        "subset_pages": "2-3",
+        "source_pdf_pages": "5-6",
+        "role": "table of contents and exact chapter-six printed-page locators"
+      },
+      {
+        "subset_pages": "4-30",
+        "source_pdf_pages": "353-379",
+        "printed_pages": "337-363",
+        "role": "supergraph introduction, supersymmetric gauge fixing and ghosts, Gaussian derivation of propagators and vertices, delta-transfer identities, effective-action reduction, power counting, and D-algebra"
+      },
+      {
+        "subset_pages": "31-46",
+        "source_pdf_pages": "389-404",
+        "printed_pages": "373-388",
+        "role": "background-field splitting, gauge averaging, Nielsen-Kallosh determinant, background-covariant ghosts, covariant quadratic operators, and covariant Feynman-rule construction"
+      }
+    ],
+    "extraction": {
+      "method": "Poppler pdfseparate followed by pdfunite",
+      "source_page_order": "1,5,6,353-379,389-404",
+      "content_policy": "page-content-preserving discontinuous subset; no OCR rewrite and no formula transcription"
+    }
+  },
+  "candidate_claims": [
+    {
+      "id": "SUPERSPACE-1001-GAUSSIAN-SUPERFIELD-EVIDENCE",
+      "source_pdf_pages": "364-368",
+      "subset_pages": "15-19",
+      "printed_pages": "348-352",
+      "equations": "(6.3.1)-(6.3.20)",
+      "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+    },
+    {
+      "id": "SUPERSPACE-1001-DELTA-PROJECTOR-EVIDENCE",
+      "source_pdf_pages": "366-372",
+      "subset_pages": "17-23",
+      "printed_pages": "350-356",
+      "equations": "(6.3.8)-(6.3.31)",
+      "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+    },
+    {
+      "id": "SUPERSPACE-1001-CHIRAL-PROPAGATOR-EVIDENCE",
+      "source_pdf_pages": "365-368",
+      "subset_pages": "16-19",
+      "printed_pages": "349-352",
+      "equations": "(6.3.7)-(6.3.15d)",
+      "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+    },
+    {
+      "id": "SUPERSPACE-1001-VECTOR-GAUGE-FIXING-EVIDENCE",
+      "source_pdf_pages": "359-361,393-399",
+      "subset_pages": "10-12,35-41",
+      "printed_pages": "343-345,377-383",
+      "equations": "(6.2.11)-(6.2.23), (6.5.15)-(6.5.39)",
+      "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+    },
+    {
+      "id": "SUPERSPACE-1001-FP-NK-GHOST-EVIDENCE",
+      "source_pdf_pages": "360-361,392,397",
+      "subset_pages": "11-12,34,39",
+      "printed_pages": "344-345,376,381",
+      "equations": "(6.2.14)-(6.2.23), (6.5.12)-(6.5.13), (6.5.32)-(6.5.33)",
+      "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+    },
+    {
+      "id": "SUPERSPACE-1001-ORDERED-SUPERGRAPH-VERTEX-EVIDENCE",
+      "source_pdf_pages": "364-369,398-404",
+      "subset_pages": "15-20,40-46",
+      "printed_pages": "348-353,382-388",
+      "equations": "(6.3.5)-(6.3.20), (6.5.35)-(6.5.62)",
+      "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+    },
+    {
+      "id": "SUPERSPACE-1001-D-ALGEBRA-EVIDENCE",
+      "source_pdf_pages": "370-379",
+      "subset_pages": "21-30",
+      "printed_pages": "354-363",
+      "equations": "(6.3.21)-(6.3.31), Figures 6.3.1-6.3.5",
+      "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+    }
+  ],
+  "incidental_not_admitted": [
+    "source metric, Fourier phase, sigma matrices, spinor raising and lowering, source D normalization, and source gauge-coupling normalization",
+    "the dimensional-reduction paragraph on printed page 339",
+    "sample loop values, divergence claims, nonrenormalization claims, anomaly formulas, and regularization prescriptions",
+    "any source propagator sign, factor of i, ghost multiplicity, determinant exponent, vertex coefficient, or D-algebra sign before independent Project derivation"
+  ],
+  "visual_verification": {
+    "rendering_tool": "pdftoppm",
+    "manual_contact_sheets": 8,
+    "manually_inspected_subset_pages": 46,
+    "manual_visual_mismatches": 0,
+    "independent_page_comparison": {
+      "mapping": "subset 1->source 1; subset 2-3->source 5-6; subset 4-30->source 353-379; subset 31-46->source 389-404",
+      "machine_text_comparisons": 46,
+      "machine_text_mismatches": 0,
+      "independent_raster_comparisons": 46,
+      "independent_raster_mismatches": 0,
+      "raster_resolution_dpi": 72
+    },
+    "result": "PASS"
+  },
+  "admissibility": {
+    "current_task_use": "REFERENCE_EVIDENCE_ONLY",
+    "later_contract_change_use": "Reconstruct the source supergraph convention system from the scoped pages, then independently derive Project Feynman rules from the locked action and compare only after both derivations are complete.",
+    "forbidden_use": "No source propagator, vertex, ghost rule, D-algebra rule, sign, factor, or normalization is a Project formula during this import task.",
+    "translation_status": "NOT_PERFORMED_IN_REFERENCE_IMPORT"
+  }
+}
