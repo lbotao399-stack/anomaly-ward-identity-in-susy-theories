@@ -17,7 +17,7 @@
       "id": "REFERENCE-CLAIM-MAP",
       "path": "references/claim-map.yaml",
       "classification": "REFERENCE_CLAIM_BOUNDARY",
-      "sha256": "4ce321832c3579859b69636595623934a7604a421bedd5f2587a4c0e1ffe4060"
+      "sha256": "1c7fb10dadf5dbe8da0dc32b8ea267f6bcd629f5b349b8f50a47e9b000a48b74"
     },
     {
       "id": "ARXIV-HEP-TH-0108200-V1",
@@ -276,6 +276,18 @@
       "path": "references/n2-su2r-obstruction-note-source-ledger.json",
       "classification": "REFERENCE_SOURCE_LEDGER",
       "sha256": "b8e8dddfe3244ca72e5fd20d9b785ab4d62fe049472ceeb04928e5d7d3aaa50c"
+    },
+    {
+      "id": "N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-MD",
+      "path": "references/vendor/local/N2_SYM_general_Lie_closure_instructor_2026-07-12.md",
+      "classification": "USER_AUTHORIZED_NON_AUTHORITY_CANDIDATE_INSTRUCTOR",
+      "sha256": "392c9e59ee038d7ac19f390acf9f18111f1a1fc880cd7fed9c09a21f42a166ec"
+    },
+    {
+      "id": "N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-SOURCE-LEDGER",
+      "path": "references/n2-general-lie-closure-instructor-source-ledger.json",
+      "classification": "REFERENCE_SOURCE_LEDGER",
+      "sha256": "17bb11d75be8dbf544a73ecd75e887fa429dd2d8d838414c8ebb85e5fc1208cc"
     }
   ]
 }
