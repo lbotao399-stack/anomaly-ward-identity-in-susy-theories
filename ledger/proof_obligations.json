@@ -216,6 +216,13 @@
       "state": "ACCEPTED",
       "blocking_reason": null,
       "task_sha256": "d2e76bc4a979c307c60b771f395221eab10eaa4217920b42d1a7b33cf48f2b70",
+      "task": "tasks/archive/REFERENCE-IMPORT-STEP5-CHAT-WEINBERG30-001.yaml"
+    },
+    {
+      "id": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
+      "state": "SPECIFIED",
+      "blocking_reason": null,
+      "task_sha256": "06f8c400c681f2fbb32aaccc7a44139c280513afaf8499829528ff2c38f419c7",
       "task": "tasks/CURRENT.yaml"
     }
   ]

@@ -1,0 +1,84 @@
+{
+  "id": "REFERENCE-IMPORT-STEP5-CHAT-WEINBERG30-001",
+  "type": "REFERENCE_IMPORT",
+  "status": "ACCEPTED",
+  "outcome": "Vendor the complete user-authorized ChatGPT conversation titled 1-loop result in SYM and the exact Weinberg Chapter 30 Notion page tree needed as candidate evidence for Step 5; preserve message/page order and source notation without translating, correcting, or adopting any mathematical claim during this import task.",
+  "allowed_inputs": [
+    "AUTHORITY.md",
+    "AGENTS.md",
+    "references/manifest.yaml",
+    "references/claim-map.yaml",
+    "references/vendor/notion/weinberg/root-310ee2b74b3f8065a3acdbdac27f3b2b.md",
+    "ledger/proof_obligations.json",
+    "tests/test_repository_policy.py",
+    ".github/workflows/verify.yml",
+    "https://chatgpt.com/c/6a51b2b1-5870-83e8-ad8f-b1f8496be0fc",
+    "https://chatgpt.com/share/6a53ea95-9138-83e8-9761-2e85a29c3970",
+    "notion-search://Weinberg Chapter 30",
+    "notion-search://30 Supergraphs",
+    "references/vendor/chatgpt/6a53ea95-9138-83e8-9761-2e85a29c3970/authenticated-visible.json",
+    "references/vendor/chatgpt/6a53ea95-9138-83e8-9761-2e85a29c3970/share-visible.json",
+    "references/vendor/chatgpt/6a53ea95-9138-83e8-9761-2e85a29c3970/authenticated-visible.md",
+    "references/vendor/chatgpt/6a53ea95-9138-83e8-9761-2e85a29c3970/comparison.json",
+    "references/vendor/notion/weinberg/chapter-30/search/weinberg-chapter-30.json",
+    "references/vendor/notion/weinberg/chapter-30/search/30-supergraphs.json",
+    "references/vendor/notion/weinberg/chapter-30/chapter-30-index-34cee2b74b3f81239f12c44eda7b664f.md",
+    "references/vendor/notion/weinberg/chapter-30/30-01-potential-superfields-34cee2b74b3f8182a114ff6b4b910489.md",
+    "references/vendor/notion/weinberg/chapter-30/30-02-superpropagators-34cee2b74b3f81359cb6e2419fe2f5f0.md",
+    "references/vendor/notion/weinberg/chapter-30/30-03-calculations-with-supergraphs-34cee2b74b3f817499daf036a9bdca44.md",
+    "references/step5-chat-weinberg30-source-ledger.json",
+    "scripts/verify_step5_reference_import.py",
+    "audits/step5-reference-import-verification.json",
+    "scripts/verify_n2_general_lie_closure_instructor_import.py",
+    "audits/n2-general-lie-closure-instructor-import-verification.json",
+    "scripts/verify_n2_su2r_obstruction_reference_import.py",
+    "audits/n2-su2r-obstruction-reference-import-verification.json",
+    "scripts/verify_superspace_1001_supergraph_reference_import.py",
+    "audits/superspace-1001-supergraph-reference-import-verification.json"
+  ],
+  "chat_reference_exception": {
+    "user_authorized": true,
+    "browser": "Codex in-app browser",
+    "conversation_title": "1-loop result in SYM",
+    "conversation_url": "https://chatgpt.com/c/6a51b2b1-5870-83e8-ad8f-b1f8496be0fc",
+    "share_url": "https://chatgpt.com/share/6a53ea95-9138-83e8-9761-2e85a29c3970",
+    "fetch_scope": "All and only the visible ordered user/assistant messages, rendered formula sources, headings, and explicit workflow prompts in this one conversation. Hidden reasoning, account data, sidebar history, and unrelated conversations are excluded.",
+    "translation_status": "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+    "default_boundary_after_task": "GIT_TO_NOTION_ONLY"
+  },
+  "notion_reference_exception": {
+    "user_authorized": true,
+    "book_root_page_id": "310ee2b74b3f8065a3acdbdac27f3b2b",
+    "search_queries": [
+      "Weinberg Chapter 30",
+      "30 Supergraphs"
+    ],
+    "fetch_scope": "Only the already-identified Weinberg book root and the Chapter 30 index plus descendants whose titles or contents directly define supergraph perturbation theory, superspace propagators, vertices, D-algebra, or loop organization.",
+    "translation_status": "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+    "default_boundary_after_task": "GIT_TO_NOTION_ONLY"
+  },
+  "forbidden_inputs": [
+    "all ChatGPT conversations other than the two exact URLs naming the same 1-loop result in SYM conversation",
+    "ChatGPT hidden reasoning, account metadata, sidebar history, memories, or unrelated browser tabs",
+    "Notion pages outside the identified Weinberg root or outside the Chapter 30 index and scoped descendants",
+    "other books, PDFs, web pages, URLs, attachments, local notes, or legacy repositories",
+    "unmerged branches as mathematical evidence",
+    "translation, correction, or adoption of any chat or Weinberg formula during this reference-import task",
+    "modification of a Project mathematical contract during this reference-import task"
+  ],
+  "candidate_claim_ids": [
+    "CHATGPT-STEP5-TRIANGLE-CALCULATION-CANDIDATE",
+    "CHATGPT-STEP5-DRAW-MAP-DALGEBRA-WORKFLOW-CANDIDATE",
+    "WEINBERG-CH30-SUPERGRAPH-STRUCTURE-CANDIDATE"
+  ],
+  "acceptance": [
+    "the complete visible conversation is stored message-by-message with stable order, author role, visible text, formula-source sequence, source URL, title, acquisition timestamp, and SHA-256",
+    "the signed-in conversation and public share page are compared for message count, author order, and content hashes; any difference is recorded rather than silently merged",
+    "every fetched Weinberg Chapter 30 page has exact page id, URL, title, parent relation, fetch timestamp, local snapshot path, and SHA-256",
+    "a source ledger separates chat attempts, later corrections, workflow prompts, and Weinberg candidate material without mathematical adjudication",
+    "references/manifest.yaml and references/claim-map.yaml register exactly the three candidate claim families and forbid importing source conventions or coefficients",
+    "translation_status remains NOT_PERFORMED_IN_REFERENCE_IMPORT and no Step-5 formula is asserted",
+    "an exact verifier reproduces message/page counts, order, hashes, source boundaries, and candidate-claim registration with zero failures",
+    "repository-policy passes and the import reaches verified origin/main before a later CONTRACT_CHANGE may read or translate the snapshots"
+  ]
+}
