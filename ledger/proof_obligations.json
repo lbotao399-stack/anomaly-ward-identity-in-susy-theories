@@ -195,6 +195,13 @@
       "state": "ACCEPTED",
       "blocking_reason": null,
       "task_sha256": "5f3e38192b74b04cb263b281e8ef5ab38f6a404cff59ad778bd65ef480562ace",
+      "task": "tasks/archive/REFERENCE-IMPORT-SUPERSPACE-1001-SUPERGRAPH-001.yaml"
+    },
+    {
+      "id": "CONTRACT-STEP-03E-N1-FEYNMAN-RULES-001",
+      "state": "SPECIFIED",
+      "blocking_reason": null,
+      "task_sha256": "fefff3f685da5b05bcbe6fae1d043a57a7f137993ff11fe11370f004d6690385",
       "task": "tasks/CURRENT.yaml"
     }
   ]
