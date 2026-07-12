@@ -1,0 +1,268 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-03E-N1-FEYNMAN-RULES-001",
+  "status": "CANDIDATE_TRANSLATION_LEDGER_ONLY",
+  "authority_gate": {
+    "branch": "origin/main",
+    "commit": "ed37a5f51ab775e3871252306e36916e432af83d",
+    "verify_workflow": "verify",
+    "verify_run_id": 29197939385,
+    "verify_result": "SUCCESS",
+    "verify_url": "https://github.com/lbotao399-stack/anomaly-ward-identity-in-susy-theories/actions/runs/29197939385"
+  },
+  "source_scope": {
+    "source_id": "ARXIV-HEP-TH-0108200-V1",
+    "title": "Superspace, or One Thousand and One Lessons in Supersymmetry",
+    "subset": "references/vendor/local/superspace-1001-supergraph-pages.pdf",
+    "subset_sha256": "1cb68ae63aa5c8d8a3e2150b769ba2bfb56f245c91204bafceaa5793f969ccb8",
+    "role": "CHECKLIST_REQUIRING_INDEPENDENT_PROJECT_REDERIVATION",
+    "source_conventions_imported": false,
+    "mathematical_coefficients_adopted": false
+  },
+  "claim_families": [
+    {
+      "id": "SUPERSPACE-1001-GAUSSIAN-SUPERFIELD-EVIDENCE",
+      "source_locators": {
+        "source_pdf_pages": "364-368",
+        "subset_pages": "15-19",
+        "printed_pages": "348-352",
+        "equations": "(6.3.1)-(6.3.20)"
+      },
+      "status": "CANDIDATE_ONLY_NOT_ADOPTED",
+      "forbidden_imports": [
+        "source Fourier phase",
+        "source exponent convention",
+        "source propagator sign",
+        "source factor of i",
+        "source normalization",
+        "source inverse operator"
+      ],
+      "project_rederivation_obligations": [
+        "Derive the Lorentzian Gaussian directly from the regulated exp(iS) functional and its declared damping and residual slice.",
+        "Derive the Euclidean Gaussian independently from exp(-S_E) on the declared integration cycle.",
+        "Construct every graded quadratic kernel from ordered left and right derivatives of the complete gauge-fixed exponent, including nonconstant density contributions.",
+        "Prove typed left and right inverse identities on the declared residual complement before naming any propagator.",
+        "Derive source differentiation, connected contractions, every overall i, and the Lorentzian pole prescription from the Project Gaussian itself."
+      ]
+    },
+    {
+      "id": "SUPERSPACE-1001-DELTA-PROJECTOR-EVIDENCE",
+      "source_locators": {
+        "source_pdf_pages": "366-372",
+        "subset_pages": "17-23",
+        "printed_pages": "350-356",
+        "equations": "(6.3.8)-(6.3.31)"
+      },
+      "status": "CANDIDATE_ONLY_NOT_ADOPTED",
+      "forbidden_imports": [
+        "source D-algebra sign",
+        "source D-squared normalization",
+        "source chirality-projector coefficient",
+        "source integration-by-parts sign",
+        "source momentum-square convention"
+      ],
+      "project_rederivation_obligations": [
+        "Derive full, chiral, and antichiral delta kernels from the Step-2A derivative algebra and the Step-3A ordered Berezin projectors.",
+        "Derive all spinor-derivative projector coefficients independently in Lorentzian and Euclidean signatures.",
+        "Prove projector idempotence, orthogonality, completeness on the residual complement, and compatibility with the regulated projectors.",
+        "Fix which argument every derivative acts on and prove every left-action, right-action, transfer, and integration-by-parts sign.",
+        "Distinguish the finite-cutoff delta resolving the regulated projector from any continuum delta obtained only after a proved regulator limit."
+      ]
+    },
+    {
+      "id": "SUPERSPACE-1001-CHIRAL-PROPAGATOR-EVIDENCE",
+      "source_locators": {
+        "source_pdf_pages": "365-368",
+        "subset_pages": "16-19",
+        "printed_pages": "349-352",
+        "equations": "(6.3.7)-(6.3.15d)"
+      },
+      "status": "CANDIDATE_ONLY_NOT_ADOPTED",
+      "forbidden_imports": [
+        "source chiral propagator",
+        "source numerator-derivative placement",
+        "source mass phase",
+        "source pole prescription",
+        "source delta normalization"
+      ],
+      "project_rederivation_obligations": [
+        "Derive the complete chiral-antichiral quadratic block matrix from the classified Project action.",
+        "Invert every chiral-chiral, chiral-antichiral, and antichiral-antichiral block against typed delta kernels on the residual complement.",
+        "Treat Euclidean tilded and untilded fields as independent until the Euclidean integration cycle is declared.",
+        "If unconstrained prepotentials are introduced, derive and gauge-fix their additional redundancy and prove equivalence to constrained functional differentiation.",
+        "Compare with the source matrix method only after the independent Project inversion is complete."
+      ]
+    },
+    {
+      "id": "SUPERSPACE-1001-VECTOR-GAUGE-FIXING-EVIDENCE",
+      "source_locators": {
+        "source_pdf_pages": "359-361,393-399",
+        "subset_pages": "10-12,35-41",
+        "printed_pages": "343-345,377-383",
+        "equations": "(6.2.11)-(6.2.23), (6.5.15)-(6.5.39)"
+      },
+      "status": "CANDIDATE_ONLY_NOT_ADOPTED",
+      "forbidden_imports": [
+        "source gauge parameter",
+        "source gauge-fixing functional",
+        "source projector coefficient",
+        "source field rescaling",
+        "source background split",
+        "source vector propagator coefficient"
+      ],
+      "project_rederivation_obligations": [
+        "Derive the vector physical Hessian from the Project field-strength definition and classified action.",
+        "Add gauge fixing only through the declared Project gauge fermion and its operator-valued gauge kernel.",
+        "Prove removal of gauge zero modes and typed invertibility on the selected residual complement.",
+        "Derive the arbitrary-background covariant Green kernel and, separately, the translation-invariant free kernel with backgrounds represented by ordered insertions.",
+        "Use the Project background split and bridge order; compare with the source split only through the admitted bridge dictionary after derivation."
+      ]
+    },
+    {
+      "id": "SUPERSPACE-1001-FP-NK-GHOST-EVIDENCE",
+      "source_locators": {
+        "source_pdf_pages": "360-361,392,397",
+        "subset_pages": "11-12,34,39",
+        "printed_pages": "344-345,376,381",
+        "equations": "(6.2.14)-(6.2.23), (6.5.12)-(6.5.13), (6.5.32)-(6.5.33)"
+      },
+      "status": "CANDIDATE_ONLY_NOT_ADOPTED",
+      "forbidden_imports": [
+        "source number of ghosts",
+        "source ghost statistics",
+        "source determinant power",
+        "source one-loop statement",
+        "source kinetic sign",
+        "source background-coupling rule"
+      ],
+      "project_rederivation_obligations": [
+        "Derive the Faddeev-Popov operator as the differential of the declared gauge condition composed with the exact Project gauge tangent.",
+        "Derive ghost, antighost, multiplier, and arbitrary contractible-doublet kernels and vertices in the fixed graded coordinate order.",
+        "Keep the coupled branch without a separated Nielsen-Kallosh field whenever the Project gauge-kernel variation requires it.",
+        "Give no Nielsen-Kallosh propagator on the external measure-only branch and include density vertices on the density-absorbed branch.",
+        "Admit BV Nielsen-Kallosh propagators only after the auxiliary realization, density, cycle, normalization, and master-equation conditions are proved."
+      ]
+    },
+    {
+      "id": "SUPERSPACE-1001-ORDERED-SUPERGRAPH-VERTEX-EVIDENCE",
+      "source_locators": {
+        "source_pdf_pages": "364-369,398-404",
+        "subset_pages": "15-20,40-46",
+        "printed_pages": "348-353,382-388",
+        "equations": "(6.3.5)-(6.3.20), (6.5.35)-(6.5.62)"
+      },
+      "status": "CANDIDATE_ONLY_NOT_ADOPTED",
+      "forbidden_imports": [
+        "source interaction term read directly as a Project vertex",
+        "suppressed odd-field derivative order",
+        "symmetrized color words without proof",
+        "omitted exponential-expansion factors",
+        "omitted identical-leg stabilizers"
+      ],
+      "project_rederivation_obligations": [
+        "Define every vertex by ordered functional differentiation of the complete Project gauge-fixed exponent.",
+        "Fix all-incoming momentum orientation, derivative routing, color-word order, field order, and left-right derivative conventions before differentiation.",
+        "Derive exponential factorials, Wick-pairing multiplicities, identical-leg stabilizers, fermion permutations, closed-ghost-loop signs, and graph automorphism factors.",
+        "Represent unbounded valence caused by dimension-zero superfields through an exact ordered generating functional rather than a finite table.",
+        "Include measure and density-absorbed determinant vertices whenever their logarithms depend on integrated fields."
+      ]
+    },
+    {
+      "id": "SUPERSPACE-1001-D-ALGEBRA-EVIDENCE",
+      "source_locators": {
+        "source_pdf_pages": "370-379",
+        "subset_pages": "21-30",
+        "printed_pages": "354-363",
+        "equations": "(6.3.21)-(6.3.31), Figures 6.3.1-6.3.5"
+      },
+      "status": "CANDIDATE_ONLY_NOT_ADOPTED",
+      "forbidden_imports": [
+        "source D-transfer sign",
+        "source twinning sign",
+        "source contracted-index convention",
+        "source loop-ordering rule",
+        "source momentum replacement",
+        "source statement that signs may be ignored"
+      ],
+      "project_rederivation_obligations": [
+        "Derive every derivative-transfer identity directly from the locked Lorentzian and Euclidean coordinate operators.",
+        "Derive every Berezin integration-by-parts sign for homogeneous external and internal factors.",
+        "Derive delta-saturation identities with the Project top-monomial normalization and explicit spinor-index order.",
+        "Reduce each closed derivative chain with explicit arrows, line momentum, momentum reversal, and odd-field ordering.",
+        "Treat dimensional reduction as a separate Project construction because the source dimensional-reduction paragraph is not admitted."
+      ]
+    }
+  ],
+  "global_forbidden_imports": [
+    "source metric",
+    "source Fourier phase",
+    "source sigma matrices",
+    "source spinor raising and lowering",
+    "source D normalization",
+    "source gauge-coupling normalization",
+    "the dimensional-reduction paragraph on printed page 339",
+    "sample loop values",
+    "divergence claims",
+    "nonrenormalization claims",
+    "anomaly formulas",
+    "regularization prescriptions",
+    "any source propagator sign, factor of i, ghost multiplicity, determinant exponent, vertex coefficient, or D-algebra sign before independent Project derivation"
+  ],
+  "convention_mismatches": [
+    {
+      "topic": "exponent_and_signature",
+      "source": "The source chapter is already Wick rotated and writes its functional weight as exp(S).",
+      "project": "The Project keeps direct Lorentzian and Euclidean constructions separate, with tau_L=i/hbar and tau_E=-1/hbar.",
+      "required_resolution": "Derive both Project Gaussians independently and compare only after the locked Wick map is applied."
+    },
+    {
+      "topic": "momentum_and_fourier_phase",
+      "source": "The source states i partial_a=p_a and uses its own positive-energy and pole conventions.",
+      "project": "Project coordinate momenta and Wick transport are locked, but the Step-3E Fourier phase and all-incoming orientation must be declared explicitly.",
+      "required_resolution": "No source momentum substitution or pole prescription may be copied."
+    },
+    {
+      "topic": "spinor_derivative_normalization",
+      "source": "The source uses its own D-squared, delta, projector, and spinor-index conventions.",
+      "project": "The Project uses raw D_R^2=D_R^a D_Ra and ordered F, antichiral-F, and D projectors fixed in Step 3A.",
+      "required_resolution": "Recompute every coefficient and sign from the Project algebra."
+    },
+    {
+      "topic": "gauge_coupling_and_field_rescaling",
+      "source": "The source warns that its gauge coupling differs from its usual normalization and rescales the vector prepotential before perturbation theory.",
+      "project": "The Project absorbs the gauge coupling into the ordinary connection and retains the gauge-kinetic tensor in the action.",
+      "required_resolution": "Derive the Project quadratic normalization and interaction powers without importing the source rescaling."
+    },
+    {
+      "topic": "bridge_and_background_split",
+      "source": "The source uses its Omega, bar-Omega, and V bridge order and a nonlinear background-quantum split.",
+      "project": "The admitted dictionary maps source exp(Omega), exp(bar-Omega), and exp(V) to the Project left bridge, right bridge, and relative bridge, while Step 3D fixes the Project total split.",
+      "required_resolution": "Use the dictionary only to compare structures after deriving the Project split and Hessian."
+    },
+    {
+      "topic": "euclidean_reality",
+      "source": "The source notation retains barred fields in its Wick-rotated presentation.",
+      "project": "Intrinsic Euclidean tilded and untilded fields, ghosts, multipliers, and auxiliaries are independent before a cycle is selected.",
+      "required_resolution": "No source bar may impose a Project Euclidean conjugacy condition."
+    },
+    {
+      "topic": "gauge_kernel",
+      "source": "The source presents a scalar gauge parameter and a selected supersymmetric gauge.",
+      "project": "The Project admits an operator-valued, local, background-covariant gauge kernel and a general analytic gauge fermion.",
+      "required_resolution": "A source gauge parameter may be compared only after deriving a specialized Project kernel map."
+    },
+    {
+      "topic": "ghost_and_nielsen_kallosh_sector",
+      "source": "The source presents named Faddeev-Popov and Nielsen-Kallosh fields in one construction.",
+      "project": "The Project has arbitrary typed contractible doublets and four distinct Faddeev-Popov/Nielsen-Kallosh branches.",
+      "required_resolution": "No source ghost is identified by name, statistics, multiplicity, or determinant power."
+    },
+    {
+      "topic": "component_channel",
+      "source": "The admitted source pages provide supergraph structures, not the complete Project component rule ledger.",
+      "project": "The Project component channel requires full unconstrained vector, matter, ghost, multiplier, non-minimal, and admitted Nielsen-Kallosh slots; Wess-Zumino gauge is only a specialization.",
+      "required_resolution": "Project every slot and invert the component Hessian independently before comparing with superspace."
+    }
+  ],
+  "final_admission_rule": "A source item may enter the Step-3E contract only after the corresponding Project identity has been independently derived from the locked Project algebra, action, measure, gauge fermion, density, residual projector, and integration cycle, and an explicit convention translation has zero unexplained residual."
+}

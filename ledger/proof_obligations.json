@@ -207,7 +207,7 @@
     {
       "id": "CONTRACT-STEP-03E-N1-FEYNMAN-RULES-001",
       "state": "SPECIFIED",
-      "blocking_reason": null,
+      "blocking_reason": "BLOCKED_STEP3D_LC_VECTOR_CYCLE: Step 3D fixes A_M^ddagger=A_M on the all-real Lorentz cycle and requires positive damping. For Q>0, Im lim_(epsilon->0)(x eta+i epsilon Q)^(-1) is negative definite, whereas Im[eta/(x+i0)]=-pi eta delta(x) has Lorentzian inertia; Eq. (3E.79g6c) gives <A_0A_0>_real-<A_0A_0>_cov=2*pi*hbar*delta(p_L^2)*h_L^(-1)!=0. The exp(iS) and zero-four-ledger-mismatch acceptance clauses cannot both hold without a user-authorized Step-3D cycle change.",
       "task_sha256": "fefff3f685da5b05bcbe6fae1d043a57a7f137993ff11fe11370f004d6690385",
       "task": "tasks/CURRENT.yaml"
     }

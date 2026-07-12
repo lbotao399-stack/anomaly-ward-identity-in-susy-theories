@@ -1,0 +1,287 @@
+{
+  "schema": "step3e-derivation-gap-postrepair-final.v2",
+  "audit_id": "STEP3E-DERIVATION-GAP-POSTREPAIR-FINAL-2026-07-12",
+  "task": "CONTRACT-STEP-03E-N1-FEYNMAN-RULES-001",
+  "input": {
+    "path": "contracts/foundations/step-03e-n1-superfield-component-feynman-rules.md",
+    "sha256": "10cc0bcdc131c5ffd19712497fd710e47a4558d50b3e66756964adb42f8100a5",
+    "line_count": 4433,
+    "equation_groups_checked": 252,
+    "sections_checked": [
+      "3E.1",
+      "3E.2",
+      "3E.3",
+      "3E.4",
+      "3E.5",
+      "3E.6",
+      "3E.7",
+      "3E.8",
+      "3E.9",
+      "3E.10"
+    ]
+  },
+  "authority": {
+    "contract_edited": false,
+    "notion_read": false,
+    "external_reference_read": false,
+    "cross_contract_symbol_scan": [
+      "contracts/foundations/step-01-supersymmetry-commutator.md",
+      "contracts/foundations/step-02a-flat-superspace.md",
+      "contracts/foundations/step-03a-gauge-chiral-action.md",
+      "contracts/foundations/step-03b-component-reconstruction.md",
+      "contracts/foundations/step-03c-gauge-vector-representation.md",
+      "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md"
+    ]
+  },
+  "method": {
+    "skill": "find-gap",
+    "passes": [
+      "section-by-section definition-to-claim dependency pass",
+      "F1-F13 regression pass",
+      "G1-G20 regression pass",
+      "global symbol-collision scan",
+      "support-graph block-decomposition and nondegeneracy proof check",
+      "determinant-branch and route-scope check",
+      "four reverse calculation spot-checks",
+      "current verifier execution"
+    ],
+    "classification": {
+      "A": "mathematical gap or false/type-incomplete claim",
+      "B": "explicit conditional rule or retained nonzero/unevaluated defect; not a mathematical gap",
+      "C": "genuine task-acceptance obstruction forced by the Step-3D all-real Lorentz cycle plus positive damping"
+    }
+  },
+  "summary": {
+    "derivation_result": "PASS_NO_UNRESOLVED_P0_OR_P1",
+    "P0": 0,
+    "P1": 0,
+    "P2": 0,
+    "P3": 0,
+    "unresolved_P0_ids": [],
+    "unresolved_P1_ids": [],
+    "unresolved_P2_ids": [],
+    "mathematically_self_consistent_at_P0_P1": true,
+    "mathematically_self_consistent": true,
+    "task_acceptance": "BLOCKED",
+    "genuine_acceptance_blocker": "C1[LORENTZ-CYCLE-NOGO]",
+    "acceptance_blocker_classes": [
+      "Step-3D all-real-positive Lorentz vector-cycle no-go",
+      "explicit retained finite master/background/coupled-determinant/independent-cycle defects on unadmitted branches",
+      "final manifest/origin-main workflow gate"
+    ]
+  },
+  "focused_rechecks": {
+    "last_hash_regression": {
+      "status": "PASS",
+      "scope": "two TeX control-space line endings in (3E.87f7b)",
+      "evidence": "Relative to SHA256 553e597c9b525213207cb4ed8f73b67b1c8b55d2846b3b9c8522eaa99c1788c0, the only delta removes the two trailing backslash control-space endings after math commas in the definitions of H_R,nu^cpl and H_R,nu^spec. The indexed symbols, set-builder predicates, direct-sum decomposition, all 252 display-equation tags, support-graph closure, block nondegeneracy proof, determinant domain, conditional path, and Lorentz-cycle no-go are unchanged. The 4433-line final file therefore introduces no new P0, P1, or P2 obligation."
+    },
+    "global_symbols": {
+      "status": "PASS",
+      "evidence": "Step 3E now uses varkappa_L=+1, varkappa_E=-1 for the action-sign pair and varrho_L=i, varrho_E=-1 for the component fermion coefficient. Neither symbol occurs in Steps 1-3D. The locked Step-3C kappa_R and rho_R are no longer shadowed."
+    },
+    "coupled_support_graph": {
+      "status": "PASS",
+      "evidence": "The paragraph before (3E.87f7a) defines Slot(X), the active BV-NK coefficient space, and the undirected Hessian-support graph before use. Equations (3E.87f7a)-(3E.87f7b) seed every active minimal ghost, non-minimal doublet, and selected BV-NK carrier, then include every physical or further slot in the same Hessian-support component. Therefore no nonzero H_AB or H_BA crosses from H_cpl to H_spec, and H=H_cpl direct-sum H_spec. Equation (3E.87f7c) correctly proves nondegeneracy of each restricted block from full residual nondegeneracy."
+    },
+    "coupled_determinant_scope": {
+      "status": "PASS_CONDITIONAL",
+      "evidence": "Equation (3E.87f7) defines the determinant only on Ber(H_qcpl) nonzero. Equation (3E.87f8) sets its residual to zero only along a nonsingular oriented path with vanishing supertrace and boundary flux. The general coupled branch retains D_det,cpl and is not assigned zero."
+    }
+  },
+  "F1_F13_recheck": [
+    {
+      "id": "F1[G-PROJ]",
+      "status": "RESOLVED_AS_CONDITIONAL_FINITE_RULE",
+      "classification": "B",
+      "evidence": "Equations (3E.43b)-(3E.43f) define the finite commutator defect, the flat analytic gate, a momentum-fibre realization, and the projected inverse; a failed gate falls back to the independently inverted finite matrix (3E.72a)."
+    },
+    {
+      "id": "F2[G-ALG]",
+      "status": "RESOLVED_BY_RETAINED_REGULATED_DEFECT",
+      "classification": "B",
+      "evidence": "Equations (3E.87c1)-(3E.87d1) separate ambient nilpotency from s_R,nu and retain the finite BRST-square, CME, and canonical-transform residuals."
+    },
+    {
+      "id": "F3[G-SCOPE]",
+      "status": "RESOLVED",
+      "classification": "A_CLOSED",
+      "evidence": "Equation (3E.73) excludes log varpi from the classical master functional and assigns it only to the quantum/QME sector."
+    },
+    {
+      "id": "F4[G-ALG]",
+      "status": "RESOLVED",
+      "classification": "A_CLOSED",
+      "evidence": "Equations (3E.72b)-(3E.72g) derive the full FP matrix, inverse, four projector products, and LS/ES ghost lines."
+    },
+    {
+      "id": "F5[G-PROJ]",
+      "status": "RESOLVED_AT_EXACT_EMITTER_LEVEL",
+      "classification": "A_CLOSED",
+      "evidence": "Equations (3E.76a)-(3E.79r) give the complete slot order, the 40-slot standard basis, every finite matrix element, both vector-multiplier and graded-ghost inverse checks, and the arbitrary-finite-doublet emitter."
+    },
+    {
+      "id": "F6[G-DEF]",
+      "status": "RESOLVED_WITH_EXPLICIT_ADMISSION_GATE",
+      "classification": "B",
+      "evidence": "Equations (3E.52c)-(3E.52m) fix Euclidean chiral, vector-auxiliary, multiplier, orientation, phase, positivity, and source-shift cycles; further even blocks are admitted only after the same explicit test."
+    },
+    {
+      "id": "F7[G-NORM]",
+      "status": "RESOLVED_WITH_CONDITIONAL_COUPLED_RESIDUAL",
+      "classification": "B",
+      "evidence": "Equations (3E.87f)-(3E.87f6) close the three factorized branch ledgers. Equations (3E.87f7a)-(3E.87f7c) construct the full Hessian-connected coupled closure and prove both restricted blocks nondegenerate. Equations (3E.87f7)-(3E.87f8) retain rather than erase the general coupled residual."
+    },
+    {
+      "id": "F8[G-THM]",
+      "status": "RESOLVED_BY_ROUTE_SCOPE_SPLIT",
+      "classification": "B",
+      "evidence": "Equations (3E.87a2)-(3E.87a9) distinguish projection, Wick-image, and independent Euclidean routes. Cycle zero requires the displayed proper holomorphic isotopy, no singularity crossing, uniform damping removal, and zero boundary flux for all declared sources."
+    },
+    {
+      "id": "F9[G-OP]",
+      "status": "RESOLVED_BY_RETAINED_BACKGROUND_DENSITY_DEFECT",
+      "classification": "B",
+      "evidence": "Equation (3E.87e) expands the full background defect into action and density terms and asserts a Ward identity only when both vanish."
+    },
+    {
+      "id": "F10[G-ALG]",
+      "status": "RESOLVED",
+      "classification": "A_CLOSED",
+      "evidence": "Equations (3E.13a)-(3E.13e) derive chiral D-density vanishing, the unique matter bridge, pure-vector exclusions, and the FI invariant-tensor condition."
+    },
+    {
+      "id": "F11[G-SCOPE]",
+      "status": "RESOLVED",
+      "classification": "A_CLOSED",
+      "evidence": "Equations (3E.20a)-(3E.20c) separate flat and background normal forms and retain all background-curvature letters."
+    },
+    {
+      "id": "F12[G-DEF]",
+      "status": "RESOLVED",
+      "classification": "A_CLOSED",
+      "evidence": "Equations (3E.84a1)-(3E.84b2) supply the arbitrary finite component doublets, symbol ledger, optional Y_C, word classification, FP isomorphism, Hessian gate, and Euclidean-cycle gate."
+    },
+    {
+      "id": "F13[G-NORM]",
+      "status": "DERIVATION_RESOLVED_TASK_ACCEPTANCE_BLOCKED",
+      "classification": "C",
+      "evidence": "Equations (3E.79g3)-(3E.79g11) derive every displayed LC prescription. Equations (3E.79g6b)-(3E.79g6c) prove the incompatibility of an all-real positive-damped Lorentz vector cycle with a single covariant i0 denominator and zero Wick-route defect."
+    }
+  ],
+  "G1_G20_recheck": [
+    {"id": "G1[G-SCOPE]", "status": "RESOLVED", "evidence": "The optional fixed negative-dimension normalization is separated in (3E.21)."},
+    {"id": "G2[G-DEF]", "status": "RESOLVED", "evidence": "Y_R is fully typed in (3E.5)-(3E.5a)."},
+    {"id": "G3[G-SCOPE]", "status": "RESOLVED", "evidence": "Formal-adic topology, normal forms, FP isomorphism, and Hessian admission are explicit in (3E.20)-(3E.22a)."},
+    {"id": "G4[G-SCOPE]", "status": "RESOLVED", "evidence": "The Boolean NK partition and carriers are exhaustive in (3E.25a)-(3E.26a)."},
+    {"id": "G5[G-IDX]", "status": "RESOLVED", "evidence": "Independent dual tensors and invariant equations occur in (3E.9)-(3E.10a)."},
+    {"id": "G6[G-DEF]", "status": "RESOLVED", "evidence": "Internal/external slots and the no-external-contraction scope are fixed in (3E.6)-(3E.6b)."},
+    {"id": "G7[G-NORM]", "status": "RESOLVED", "evidence": "The exact pairing coefficient and typed orbit-stabilizer decomposition are derived in (3E.56)-(3E.56c)."},
+    {"id": "G8[G-PROJ]", "status": "RESOLVED", "evidence": "Separate field and dual residual projectors appear in (3E.49)."},
+    {"id": "G9[G-IDX]", "status": "RESOLVED", "evidence": "Matter-index order and all four chiral products are explicit in (3E.57a)-(3E.60a)."},
+    {"id": "G10[G-DEF]", "status": "RESOLVED", "evidence": "The gauge metric and its vector-Hessian coefficient are fixed in (3E.11a) and (3E.64a)."},
+    {"id": "G11[G-SCOPE]", "status": "RESOLVED", "evidence": "Flat analytic and arbitrary-background finite kernels are separated in Section 3E.6."},
+    {"id": "G12[G-ALG]", "status": "RESOLVED_AT_GENERATOR_AND_STANDARD_EMITTER_LEVEL", "evidence": "The full graded Hessian, recursive inverse, standard 40-slot emitter, and multiplication checks occur in (3E.48a)-(3E.49) and (3E.79h)-(3E.79r)."},
+    {"id": "G13[G-ALG]", "status": "RESOLVED", "evidence": "Action, BV-NK, and density contributions are counted once in (3E.73)."},
+    {"id": "G14[G-SCOPE]", "status": "RESOLVED", "evidence": "Both superpotentials and ordered momentum routing are included in (3E.74)-(3E.74a)."},
+    {"id": "G15[G-PROJ]", "status": "RESOLVED_AT_EXACT_EMITTER_LEVEL", "evidence": "Every superfield slot and finite component matrix element is generated by (3E.76a)-(3E.79r)."},
+    {"id": "G16[G-PROJ]", "status": "RESOLVED", "evidence": "The full monomial map and both induced inverse identities are explicit in (3E.77a) and (3E.80)."},
+    {"id": "G17[G-THM]", "status": "RESOLVED", "evidence": "The formal implicit solution and Schur complement are derived in (3E.83a)-(3E.83b)."},
+    {"id": "G18[G-SCOPE]", "status": "RESOLVED", "evidence": "The WZ specialization has its independent most-general residual component BRST family in (3E.84a)-(3E.84c)."},
+    {"id": "G19[G-OP]", "status": "RESOLVED_BY_ADMITTED_ROUTE_PREDICATES", "evidence": "All maps and defects are typed in (3E.84d)-(3E.87a9), while independent Euclidean cycles retain their own defects."},
+    {"id": "G20[G-NORM]", "status": "RESOLVED", "evidence": "Graded determinant powers, closed odd-loop signs, pairing multiplicities, and typed symmetry factors are derived in (3E.54a)-(3E.56c)."}
+  ],
+  "issues": [],
+  "conditional_or_retained_not_gaps": [
+    {"id": "B1", "location": "(3E.43b)-(3E.43f)", "status": "CONDITIONAL", "statement": "Flat analytic kernels are finite-cutoff rules only when the projector-intertwining gate holds."},
+    {"id": "B2", "location": "(3E.52a)-(3E.52m)", "status": "CONDITIONAL", "statement": "A Euclidean branch is admitted only after an explicit middle-dimensional cycle passes positivity and zero-flux tests."},
+    {"id": "B3", "location": "(3E.79g7)-(3E.79g11)", "status": "CONDITIONAL", "statement": "Fermion, FP, commuting-superghost, and contact prescriptions are not claimed to arise from one universal finite-epsilon damping form."},
+    {"id": "B4", "location": "(3E.87a2)-(3E.87a9)", "status": "CONDITIONAL_OR_RETAINED", "statement": "Projection and intrinsic-cycle route zeros require explicit predicates; an independent Euclidean cycle keeps its defect."},
+    {"id": "B5", "location": "(3E.87c1)-(3E.87e)", "status": "RETAINED", "statement": "Finite BRST-square, CME, ST, and background-density residuals are not silently set to zero."},
+    {"id": "B6", "location": "(3E.87f7)-(3E.87f8)", "status": "RETAINED", "statement": "The general coupled determinant residual is zero only under the explicit nondegenerate zero-supertrace zero-flux path conditions."}
+  ],
+  "genuine_acceptance_blocker": {
+    "id": "C1[LORENTZ-CYCLE-NOGO]",
+    "classification": "C",
+    "source_requirements": [
+      "Step 3D equation (3D.23): all-real Lorentz vector cycle",
+      "Step 3D equation (3D.24): positive bosonic damping functional",
+      "Step 3E acceptance: one covariant vector i0 rule and zero direct-LC/Wick-image mismatch"
+    ],
+    "contract_derivation": "Equations (3E.79g5)-(3E.79g6b2) show that for every positive real Q, the boundary imaginary part of (x eta+i epsilon Q)^(-1) is negative definite at x=0, whereas the covariant target eta/(x+i0) has Lorentzian inertia. Equation (3E.79g6c) computes the temporal mismatch as 2 pi hbar delta(p_L^2) h_L^(-1), which is nonzero.",
+    "consequence": "The direct all-real positive-damped LC vector rule cannot simultaneously be covariant, be the Wick image of the Euclidean positive cycle, and have zero route defect.",
+    "repair_requires_authority_change": "Complexify or change the Step-3D Lorentz vector cycle, weaken the positivity requirement, or weaken the single-covariant-Wick-paired-ledger acceptance demand. No Step-3E algebraic patch removes this obstruction."
+  },
+  "acceptance_matrix": [
+    {"acceptance": "complete symbol ledger and canonical order", "result": "PASS"},
+    {"acceptance": "most general physical power-counting classification with exclusions", "result": "PASS"},
+    {"acceptance": "most general finite non-minimal extension and analytic gauge fermion", "result": "PASS_AT_GENERATOR_LEVEL"},
+    {"acceptance": "background split, FP, and four NK realizations", "result": "PASS_BY_BRANCH_ADMISSION"},
+    {"acceptance": "Fourier, deltas, Berezin order, and stabilizers", "result": "PASS_WITH_FLAT_GATE"},
+    {"acceptance": "direct Lorentzian Gaussian with every i and i0", "result": "BLOCKED", "blocking_ids": ["C1[LORENTZ-CYCLE-NOGO]"]},
+    {"acceptance": "direct Euclidean Gaussian on declared cycles", "result": "PASS_BY_BRANCH_ADMISSION"},
+    {"acceptance": "all mixed quadratic blocks and typed inverses", "result": "PASS_AT_GENERATOR_LEVEL"},
+    {"acceptance": "ordered arbitrary-valence superspace vertices", "result": "PASS"},
+    {"acceptance": "full unconstrained component projection and independent inversion", "result": "PASS_AT_EXACT_EMITTER_LEVEL"},
+    {"acceptance": "component differentiation equals superspace projection", "result": "PASS_AT_GENERATOR_LEVEL"},
+    {"acceptance": "auxiliary Schur complement and induced contacts", "result": "PASS"},
+    {"acceptance": "ghost loops, determinant powers, Wick multiplicities, and graph symmetries", "result": "PASS"},
+    {"acceptance": "tree BRST, master, ST, background covariance, determinant balance, and Taylor roundtrip all zero", "result": "NOT_PROVED_FOR_FULL_FAMILY", "blocking_ids": ["B5", "B6"]},
+    {"acceptance": "LS, ES, LC, and EC ledgers have zero unexplained mismatch", "result": "BLOCKED_FOR_DIRECT_LC_TO_INTRINSIC_EC", "blocking_ids": ["C1[LORENTZ-CYCLE-NOGO]"]},
+    {"acceptance": "candidate source remains non-authoritative", "result": "PASS"},
+    {"acceptance": "verifier, notation audit, derivation-gap audit, and reverse review have no P0/P1", "result": "PASS_CURRENT_VERIFIER_AND_DERIVATION_AUDIT; FINAL_NOTATION_AND_REVERSE_REPORTS_ARE_SEPARATE GATES"},
+    {"acceptance": "manifest hashes, repository policy, origin/main verify workflow", "result": "NOT_REACHED", "blocking_ids": ["PROCESS2[MANIFEST-WORKFLOW]"]}
+  ],
+  "process_checks": [
+    {
+      "id": "PROCESS1[EXACT-VERIFIER]",
+      "severity": "PASS",
+      "command": "python3 scripts/verify_step3e_n1_feynman_rules.py",
+      "result": "PASS_400_EXACT_CHECKS_0_FAILURES",
+      "evidence": "The regenerated verifier is bound to contract SHA256 10cc0bcdc131c5ffd19712497fd710e47a4558d50b3e66756964adb42f8100a5 and reports 400 exact checks with 0 failures; verifier SHA256 is 3ff3fecba9ba73903eb4d93d9ce6cdb627445c9811ceb8b1c0e67f5a2e113f04."
+    },
+    {
+      "id": "PROCESS2[MANIFEST-WORKFLOW]",
+      "severity": "ACCEPTANCE_GATE",
+      "result": "NOT_REACHED",
+      "evidence": "No final Step-3E manifest/origin-main successful verify workflow exists for this candidate."
+    }
+  ],
+  "verification_checks": [
+    {
+      "id": "VC1",
+      "location": "(3E.72d)-(3E.72f)",
+      "result": "PASS",
+      "calculation": "(-i barD^2/4)(+i D^2 Box^(-1)/4)=barD^2 D^2/(16 Box)=Pi_+ and (+i D^2/4)(-i barD^2 Box^(-1)/4)=D^2 barD^2/(16 Box)=Pi_-. The reverse products give the same input-space projectors."
+    },
+    {
+      "id": "VC2",
+      "location": "(3E.87f7a)-(3E.87f7c)",
+      "result": "PASS_BLOCK_DECOMPOSITION_AND_NONDEGENERACY",
+      "calculation": "If A lies in a seeded connected component and B lies in an unseeded component, neither H_AB nor H_BA is nonzero; hence both cross blocks vanish. If H_cpl x=0, block diagonality gives H(x,0)=0, and full residual nondegeneracy gives x=0. The spectator proof is identical."
+    },
+    {
+      "id": "VC3",
+      "location": "(3E.87f3)-(3E.87f8)",
+      "result": "PASS_FACTORIZED_AND_CONDITIONAL_COUPLED_LEDGER",
+      "calculation": "The change f=M gamma gives F_parallel=(F_FP)^(-1)(F_av)^(-1), so F_parallel F_FP F_nm F_NK,req=1. On the coupled block, d log F_q/dt=-Str(H_q^(-1) dot H_q)/2+B_q; zero follows only when both displayed terms vanish along a nondegenerate path, exactly as scoped."
+    },
+    {
+      "id": "VC4",
+      "location": "(3E.79g6b1)-(3E.79g6c)",
+      "result": "PASS_NO_GO",
+      "calculation": "For each eigenvalue lambda of Q^(-1/2) eta Q^(-1/2), Im[(x lambda+i0)^(-1)]=-pi |lambda|^(-1)delta(x), which is negative definite after congruence. The covariant target -pi eta delta(x) is indefinite. The temporal distributions differ by 2 pi hbar delta(p_L^2)."
+    }
+  ],
+  "repair_order": [
+    "Record the contract manifest hash and run repository policy.",
+    "Resolve C1 only by a Step-3D authority change or an acceptance-criterion change."
+  ],
+  "final_verdict": {
+    "P0": 0,
+    "P1": 0,
+    "P2": 0,
+    "mathematically_self_consistent_but_acceptance_blocked": true,
+    "exact_statement": "All 252 display-equation groups and all prior F1-F13 and G1-G20 P0/P1/P2 findings remain closed at contract SHA256 10cc0bcdc131c5ffd19712497fd710e47a4558d50b3e66756964adb42f8100a5. The two (3E.87f7b) TeX line-ending-separator removals introduce no mathematical or notation regression. The varkappa_R/varrho_R rename removes the Step-1/Step-3C symbol collisions and varrho_R is defined before first use. The support graph is defined before use, contains every Hessian-connected physical, non-minimal, and active BV-NK slot, and its two restricted blocks are genuinely nondegenerate. The determinant remains correctly conditional. Independently, task acceptance is genuinely blocked by the Step-3D all-real positive Lorentz vector-cycle no-go and the final manifest/workflow gate."
+  }
+}
