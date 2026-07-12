@@ -25,6 +25,11 @@
       "detail": "Every N=2 and N=4 textbook cell is SOURCE_INSUFFICIENT because the registered snapshots do not fix those rules."
     },
     {
+      "id": "N2_GENERAL_LIE_PROJECT_GATE",
+      "result": "PASS",
+      "detail": "The Project cell is PASS_EXACT_GENERAL_LIE_CLOSURE from the color-free Lorentzian and Euclidean PBW-word verifier; both textbook cells remain SOURCE_INSUFFICIENT."
+    },
+    {
       "id": "EUCLIDEAN_STATUS_TYPES",
       "result": "PASS",
       "detail": "NOT_DEFINED_IN_SOURCE is restricted to intrinsic Euclidean superspace; Euclidean components and currents are SOURCE_INSUFFICIENT."

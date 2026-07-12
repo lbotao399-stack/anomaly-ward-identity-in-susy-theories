@@ -1,17 +1,13 @@
 #!/usr/bin/env python3
-"""Exact checked-scope off-shell closure gates for Step 4B N=2 SYM.
+"""Exact off-shell closure gates for Step 4B N=2 SYM.
 
-The first two gates are the free Abelian specializations of the displayed
-Lorentzian and Euclidean component rules.  The interaction gate is an exact
-constant-background SU(2) covariant-jet calculation.  In particular, it does
-not make the invalid replacement delta(D_mu X)=0 when D_mu X=0; it retains
-delta(D_mu X)|_{A=partial X=0}=(delta A_mu) cross X.  All spinor matrices and
-coefficients lie in Q(i,sqrt(2)); momenta are formal commuting indeterminates
-and supersymmetry parameters form an exact exterior algebra.  No random
-evaluation or external formula is used.
-
-If a checked gate fails, the script records the exact residual and does not
-claim the corresponding closure result.
+The decisive gate directly composes every displayed nonlinear Lorentzian and
+Euclidean transformation in a free differential associative superalgebra over
+Q(i,sqrt(2)).  SUSY parameters form a parameter-left exterior algebra;
+ordinary jets have commuting sorted derivative labels; matrix words remain
+ordered and untruncated.  The older free and constant-background SU(2) gates
+remain independent regressions.  No random evaluation or external formula is
+used, and every failure is emitted as an exact normal-form residual.
 """
 
 from __future__ import annotations
@@ -2610,6 +2606,1054 @@ def check_offshell_su2_triplet_gate():
     }
 
 
+# ---------------------------------------------------------------------------
+# Universal arbitrary-Lie closure gate.
+#
+# The coefficient ring is K=Q(i,sqrt(2)).  Supersymmetry parameters are kept
+# in parameter-left exterior order.  Component fields are matrix-valued free
+# differential-superalgebra generators: ordinary jets commute only at the
+# derivative-label level, while matrix words are never reordered or
+# truncated.  Therefore equality of the resulting PBW words is an identity
+# for every associative matrix realization, hence for every Lie algebra in
+# the declared representation convention.
+
+
+@dataclass(frozen=True, order=True)
+class UniversalJet:
+    field: str
+    derivatives: tuple[int, ...] = ()
+
+
+UniversalWord = tuple[UniversalJet, ...]
+UniversalKey = tuple[ExteriorMonomial, UniversalWord]
+UniversalExpression = dict[UniversalKey, Exact]
+
+
+def universal_field_parity(field: str) -> int:
+    return int(field.startswith(("lambda", "tlambda", "psi", "tpsi")))
+
+
+def universal_word_parity(word: UniversalWord) -> int:
+    return sum(universal_field_parity(jet.field) for jet in word) % 2
+
+
+def universal_normalize(value: UniversalExpression) -> UniversalExpression:
+    return {
+        key: coefficient
+        for key, coefficient in value.items()
+        if not coefficient.is_zero()
+    }
+
+
+def universal_add(
+    left: UniversalExpression,
+    right: UniversalExpression,
+) -> UniversalExpression:
+    result = dict(left)
+    for key, coefficient in right.items():
+        result[key] = result.get(key, ZERO) + coefficient
+    return universal_normalize(result)
+
+
+def universal_scale(
+    value: UniversalExpression,
+    coefficient: Exact,
+) -> UniversalExpression:
+    if coefficient.is_zero():
+        return {}
+    return universal_normalize(
+        {key: coefficient * term for key, term in value.items()}
+    )
+
+
+def universal_multiply(
+    left: UniversalExpression,
+    right: UniversalExpression,
+) -> UniversalExpression:
+    result: UniversalExpression = {}
+    for (left_parameters, left_word), left_coefficient in left.items():
+        for (right_parameters, right_word), right_coefficient in right.items():
+            parameter_sign, parameters = exterior_product(
+                left_parameters,
+                right_parameters,
+            )
+            if parameter_sign == 0:
+                continue
+            koszul_sign = -1 if (
+                universal_word_parity(left_word)
+                and len(right_parameters) % 2
+            ) else 1
+            coefficient = left_coefficient * right_coefficient
+            if parameter_sign * koszul_sign == -1:
+                coefficient = -coefficient
+            key = (parameters, left_word + right_word)
+            result[key] = result.get(key, ZERO) + coefficient
+    return universal_normalize(result)
+
+
+def universal_one(coefficient: Exact = ONE) -> UniversalExpression:
+    return {} if coefficient.is_zero() else {((), ()): coefficient}
+
+
+def universal_parameter(name: str, coefficient: Exact = ONE) -> UniversalExpression:
+    return {} if coefficient.is_zero() else {((name,), ()): coefficient}
+
+
+def universal_parameter_monomial(
+    names: ExteriorMonomial,
+    coefficient: Exact = ONE,
+) -> UniversalExpression:
+    return {} if coefficient.is_zero() else {(names, ()): coefficient}
+
+
+def universal_jet(
+    field: str,
+    derivatives: tuple[int, ...] = (),
+    coefficient: Exact = ONE,
+) -> UniversalExpression:
+    if coefficient.is_zero():
+        return {}
+    if field not in FIELD_INDEX:
+        raise ValueError(f"unknown universal component field: {field}")
+    return {
+        ((), (UniversalJet(field, tuple(sorted(derivatives))),)): coefficient
+    }
+
+
+def universal_expression_parity(value: UniversalExpression) -> int:
+    parities = {
+        (len(parameters) + universal_word_parity(word)) % 2
+        for parameters, word in value
+    }
+    if len(parities) != 1:
+        raise ValueError(f"expression is not homogeneous: parities={sorted(parities)}")
+    return next(iter(parities))
+
+
+def universal_bracket(
+    left: UniversalExpression,
+    right: UniversalExpression,
+) -> UniversalExpression:
+    if not left or not right:
+        return {}
+    sign = -1 if (
+        universal_expression_parity(left)
+        * universal_expression_parity(right)
+    ) % 2 else 1
+    reverse = universal_multiply(right, left)
+    if sign == 1:
+        reverse = universal_scale(reverse, MINUS_ONE)
+    return universal_add(universal_multiply(left, right), reverse)
+
+
+def universal_partial(
+    value: UniversalExpression,
+    spacetime_index: int,
+) -> UniversalExpression:
+    result: UniversalExpression = {}
+    for (parameters, word), coefficient in value.items():
+        for position, jet in enumerate(word):
+            differentiated = UniversalJet(
+                jet.field,
+                tuple(sorted(jet.derivatives + (spacetime_index,))),
+            )
+            new_word = word[:position] + (differentiated,) + word[position + 1 :]
+            key = (parameters, new_word)
+            result[key] = result.get(key, ZERO) + coefficient
+    return universal_normalize(result)
+
+
+def universal_partial_multi(
+    value: UniversalExpression,
+    derivatives: tuple[int, ...],
+) -> UniversalExpression:
+    result = value
+    for spacetime_index in derivatives:
+        result = universal_partial(result, spacetime_index)
+    return result
+
+
+def universal_covariant_expression(
+    value: UniversalExpression,
+    spacetime_index: int,
+) -> UniversalExpression:
+    return universal_add(
+        universal_partial(value, spacetime_index),
+        universal_scale(
+            universal_bracket(
+                universal_jet(f"A{spacetime_index}"),
+                value,
+            ),
+            MINUS_I,
+        ),
+    )
+
+
+def universal_covariant_field(
+    field: str,
+    spacetime_index: int,
+) -> UniversalExpression:
+    return universal_covariant_expression(
+        universal_jet(field),
+        spacetime_index,
+    )
+
+
+def universal_curvature(mu: int, nu: int) -> UniversalExpression:
+    return universal_add(
+        universal_add(
+            universal_jet(f"A{nu}", (mu,)),
+            universal_scale(universal_jet(f"A{mu}", (nu,)), MINUS_ONE),
+        ),
+        universal_scale(
+            universal_bracket(
+                universal_jet(f"A{mu}"),
+                universal_jet(f"A{nu}"),
+            ),
+            MINUS_I,
+        ),
+    )
+
+
+def universal_parameter_component(
+    kind: str,
+    set_index: int,
+    component: int,
+    raised: bool = False,
+) -> UniversalExpression:
+    prefix = {"e": "e", "be": "b", "n": "n", "bn": "m"}[kind]
+    if not raised:
+        return universal_parameter(f"{set_index}{prefix}{component}")
+    result: UniversalExpression = {}
+    for lower in range(2):
+        coefficient = EPSILON_UPPER[component][lower]
+        if not coefficient.is_zero():
+            result = universal_add(
+                result,
+                universal_parameter(f"{set_index}{prefix}{lower}", coefficient),
+            )
+    return result
+
+
+def universal_contract_parameter_fermion(
+    kind: str,
+    set_index: int,
+    field_prefix: str,
+) -> UniversalExpression:
+    result: UniversalExpression = {}
+    for spinor in range(2):
+        result = universal_add(
+            result,
+            universal_multiply(
+                universal_parameter_component(
+                    kind,
+                    set_index,
+                    spinor,
+                    raised=True,
+                ),
+                universal_jet(f"{field_prefix}{spinor}"),
+            ),
+        )
+    return result
+
+
+def universal_bar_contract_parameter_fermion(
+    kind: str,
+    set_index: int,
+    field_prefix: str,
+) -> UniversalExpression:
+    result: UniversalExpression = {}
+    for dotted in range(2):
+        parameter_value = universal_parameter_component(
+            kind,
+            set_index,
+            dotted,
+            raised=False,
+        )
+        for raised_dotted in range(2):
+            coefficient = EPSILON_UPPER[dotted][raised_dotted]
+            if coefficient.is_zero():
+                continue
+            result = universal_add(
+                result,
+                universal_scale(
+                    universal_multiply(
+                        parameter_value,
+                        universal_jet(f"{field_prefix}{raised_dotted}"),
+                    ),
+                    coefficient,
+                ),
+            )
+    return result
+
+
+def build_universal_transform(
+    signature: str,
+    set_index: int,
+) -> dict[str, UniversalExpression]:
+    if signature == "L":
+        linear = build_lorentz_transform(
+            set_index,
+            corrected_tilde_f_sign=True,
+        )
+    elif signature == "E":
+        linear = build_euclidean_transform(set_index)
+    else:
+        raise ValueError(signature)
+
+    variations = {field: {} for field in FIELDS}
+    for row, output in enumerate(FIELDS):
+        for column, input_field in enumerate(FIELDS):
+            for parameter_names, polynomial in linear[row][column].items():
+                parameter_value = universal_parameter_monomial(parameter_names)
+                for momentum_power, coefficient in polynomial.items():
+                    degree = sum(momentum_power)
+                    if degree == 0:
+                        source = universal_jet(input_field)
+                    elif degree == 1:
+                        spacetime_index = next(
+                            index
+                            for index, power in enumerate(momentum_power)
+                            if power
+                        )
+                        if input_field.startswith("A"):
+                            gauge_index = int(input_field[1:])
+                            source = universal_scale(
+                                universal_curvature(
+                                    spacetime_index,
+                                    gauge_index,
+                                ),
+                                EXACT_HALF,
+                            )
+                        else:
+                            source = universal_covariant_field(
+                                input_field,
+                                spacetime_index,
+                            )
+                    else:
+                        raise ValueError(
+                            "full nonlinear rule builder received a higher "
+                            f"momentum monomial: {momentum_power}"
+                        )
+                    variations[output] = universal_add(
+                        variations[output],
+                        universal_scale(
+                            universal_multiply(parameter_value, source),
+                            coefficient,
+                        ),
+                    )
+
+    coefficients = displayed_nonlinear_coefficients()
+    phi = universal_jet("phi")
+    tilde_phi = universal_jet("tphi")
+    moment_map = universal_bracket(phi, tilde_phi)
+    for spinor in range(2):
+        variations[f"psi{spinor}"] = universal_add(
+            variations[f"psi{spinor}"],
+            universal_scale(
+                universal_multiply(
+                    universal_parameter_component(
+                        "n", set_index, spinor, raised=False
+                    ),
+                    moment_map,
+                ),
+                coefficients["psi_mu"],
+            ),
+        )
+        variations[f"tpsi{spinor}"] = universal_add(
+            variations[f"tpsi{spinor}"],
+            universal_scale(
+                universal_multiply(
+                    universal_parameter_component(
+                        "bn", set_index, spinor, raised=False
+                    ),
+                    moment_map,
+                ),
+                coefficients["tpsi_mu"],
+            ),
+        )
+
+    barred_epsilon_tilde_lambda = universal_bar_contract_parameter_fermion(
+        "be", set_index, "tlambda"
+    )
+    epsilon_lambda = universal_contract_parameter_fermion(
+        "e", set_index, "lambda"
+    )
+    eta_psi = universal_contract_parameter_fermion(
+        "n", set_index, "psi"
+    )
+    barred_eta_tilde_psi = universal_bar_contract_parameter_fermion(
+        "bn", set_index, "tpsi"
+    )
+    eta_lambda = universal_contract_parameter_fermion(
+        "n", set_index, "lambda"
+    )
+    barred_eta_tilde_lambda = universal_bar_contract_parameter_fermion(
+        "bn", set_index, "tlambda"
+    )
+    nonlinear_terms = {
+        "F": (
+            (
+                coefficients["manifest_F"],
+                universal_bracket(barred_epsilon_tilde_lambda, phi),
+            ),
+            (
+                coefficients["hidden_F"],
+                universal_bracket(eta_psi, tilde_phi),
+            ),
+        ),
+        "tF": (
+            (
+                coefficients["manifest_tF"],
+                universal_bracket(epsilon_lambda, tilde_phi),
+            ),
+            (
+                coefficients["hidden_tF"],
+                universal_bracket(barred_eta_tilde_psi, phi),
+            ),
+        ),
+        "D": (
+            (
+                coefficients["hidden_D_left"],
+                universal_bracket(eta_lambda, tilde_phi),
+            ),
+            (
+                coefficients["hidden_D_right"],
+                universal_bracket(phi, barred_eta_tilde_lambda),
+            ),
+        ),
+    }
+    for output, terms in nonlinear_terms.items():
+        for coefficient, value in terms:
+            variations[output] = universal_add(
+                variations[output],
+                universal_scale(value, coefficient),
+            )
+    return variations
+
+
+def universal_abelian_matrix(
+    variations: dict[str, UniversalExpression],
+):
+    result = zero_matrix()
+    for output, value in variations.items():
+        for (parameters, word), coefficient in value.items():
+            if len(word) != 1:
+                continue
+            jet = word[0]
+            if len(jet.derivatives) > 1:
+                raise ValueError(
+                    f"nonlinear transform contains unexpected jet {jet}"
+                )
+            momentum_power = [0, 0, 0, 0]
+            if jet.derivatives:
+                momentum_power[jet.derivatives[0]] = 1
+            entry = {
+                parameters: {
+                    tuple(momentum_power): coefficient,
+                }
+            }
+            matrix_add_term(result, output, jet.field, entry)
+    return result
+
+
+def check_universal_abelian_roundtrip(signature: str):
+    failures = []
+    residuals = []
+    checked_cells = 0
+    nonzero_source_cells = 0
+    nonzero_roundtrip_cells = 0
+    for set_index in (1, 2):
+        source = (
+            build_lorentz_transform(set_index, corrected_tilde_f_sign=True)
+            if signature == "L"
+            else build_euclidean_transform(set_index)
+        )
+        roundtrip = universal_abelian_matrix(
+            build_universal_transform(signature, set_index)
+        )
+        difference = matrix_subtract_entries(roundtrip, source)
+        for row, output in enumerate(FIELDS):
+            for column, input_field in enumerate(FIELDS):
+                checked_cells += 1
+                nonzero_source_cells += int(bool(source[row][column]))
+                nonzero_roundtrip_cells += int(bool(roundtrip[row][column]))
+                if difference[row][column]:
+                    failure = f"set{set_index}:{output}<-{input_field}"
+                    failures.append(failure)
+                    if len(residuals) < 24:
+                        residuals.append(
+                            {
+                                "binding": failure,
+                                "residual": serialize_entry(
+                                    difference[row][column]
+                                ),
+                            }
+                        )
+    return {
+        "passed": not failures,
+        "signature": signature,
+        "parameter_copies": [1, 2],
+        "matrix_shape": [len(FIELDS), len(FIELDS)],
+        "checked_cell_bindings": checked_cells,
+        "nonzero_source_cells": nonzero_source_cells,
+        "nonzero_roundtrip_cells": nonzero_roundtrip_cells,
+        "residual_count": len(failures),
+        "failures": failures,
+        "residuals": residuals,
+        "map": (
+            "p_mu X -> D_mu X; antisymmetric p_mu A_nu sector "
+            "-> F_mu_nu/2; displayed nonlinear coefficients appended"
+        ),
+    }
+
+
+def universal_jet_label(jet: UniversalJet) -> str:
+    if not jet.derivatives:
+        return jet.field
+    return "d" + "".join(str(index) for index in jet.derivatives) + jet.field
+
+
+def serialize_universal_expression(value: UniversalExpression):
+    return {
+        (
+            (" ".join(parameters) if parameters else "1")
+            + " | "
+            + (" ".join(universal_jet_label(jet) for jet in word) if word else "1")
+        ): exact_string(coefficient)
+        for (parameters, word), coefficient in sorted(value.items())
+    }
+
+
+def universal_expression_metrics(value: UniversalExpression):
+    return {
+        "term_count": len(value),
+        "maximum_word_length": max((len(word) for _, word in value), default=0),
+        "maximum_jet_order": max(
+            (
+                len(jet.derivatives)
+                for _, word in value
+                for jet in word
+            ),
+            default=0,
+        ),
+        "maximum_parameter_degree": max(
+            (len(parameters) for parameters, _ in value),
+            default=0,
+        ),
+    }
+
+
+def universal_apply_variation(
+    value: UniversalExpression,
+    variations: dict[str, UniversalExpression],
+) -> UniversalExpression:
+    """Apply the parameter-included, even transformation without truncation."""
+
+    jet_cache: dict[UniversalJet, UniversalExpression] = {}
+
+    def jet_variation(jet: UniversalJet) -> UniversalExpression:
+        if jet not in jet_cache:
+            jet_cache[jet] = universal_partial_multi(
+                variations[jet.field],
+                jet.derivatives,
+            )
+        return jet_cache[jet]
+
+    result: UniversalExpression = {}
+    for (parameters, word), coefficient in value.items():
+        for position, jet in enumerate(word):
+            left = {
+                (parameters, word[:position]): coefficient,
+            }
+            right = universal_one()
+            if position + 1 < len(word):
+                right = {((), word[position + 1 :]): ONE}
+            term = universal_multiply(
+                universal_multiply(left, jet_variation(jet)),
+                right,
+            )
+            result = universal_add(result, term)
+    return result
+
+
+def universal_entry_parameter_expression(value: Entry) -> UniversalExpression:
+    result: UniversalExpression = {}
+    for parameters, polynomial in value.items():
+        for momentum_power, coefficient in polynomial.items():
+            if momentum_power != (0, 0, 0, 0):
+                raise ValueError(
+                    "closure parameter unexpectedly depends on momentum: "
+                    f"{momentum_power}"
+                )
+            result = universal_add(
+                result,
+                universal_parameter_monomial(parameters, coefficient),
+            )
+    return result
+
+
+def universal_closure_parameters(signature: str):
+    if signature == "L":
+        sigma = SIGMA_L
+        velocity_coefficient = TWO * I
+    elif signature == "E":
+        sigma = SIGMA_E
+        velocity_coefficient = -TWO
+    else:
+        raise ValueError(signature)
+
+    velocities = []
+    for spacetime_index in range(4):
+        value = entry_add(
+            bilinear(
+                "e", 1, sigma[spacetime_index], "be", 2,
+                velocity_coefficient,
+            ),
+            bilinear(
+                "e", 2, sigma[spacetime_index], "be", 1,
+                -velocity_coefficient,
+            ),
+        )
+        value = entry_add(
+            value,
+            bilinear(
+                "n", 1, sigma[spacetime_index], "bn", 2,
+                velocity_coefficient,
+            ),
+        )
+        value = entry_add(
+            value,
+            bilinear(
+                "n", 2, sigma[spacetime_index], "bn", 1,
+                -velocity_coefficient,
+            ),
+        )
+        velocities.append(universal_entry_parameter_expression(value))
+
+    omega_tilde_phi = entry_add(
+        spinor_contraction("e", 1, "n", 2),
+        entry_scale(spinor_contraction("e", 2, "n", 1), MINUS_ONE),
+    )
+    omega_tilde_phi = entry_scale(omega_tilde_phi, TWO * SQRT_TWO)
+    omega_phi = entry_add(
+        barred_contraction("be", 1, "bn", 2),
+        entry_scale(barred_contraction("be", 2, "bn", 1), MINUS_ONE),
+    )
+    omega_phi = entry_scale(omega_phi, TWO * SQRT_TWO)
+    omega = universal_add(
+        universal_multiply(
+            universal_entry_parameter_expression(omega_tilde_phi),
+            universal_jet("tphi"),
+        ),
+        universal_multiply(
+            universal_entry_parameter_expression(omega_phi),
+            universal_jet("phi"),
+        ),
+    )
+    return velocities, omega
+
+
+UNIVERSAL_DERIVED_FIELDS = ("mu", "H", "Y11", "Y22", "Y12")
+
+
+def universal_closure_objects():
+    objects = {field: universal_jet(field) for field in FIELDS}
+    objects["mu"] = universal_bracket(objects["phi"], objects["tphi"])
+    objects["H"] = universal_add(objects["D"], objects["mu"])
+    objects["Y11"] = universal_scale(objects["F"], -SQRT_TWO)
+    objects["Y22"] = universal_scale(objects["tF"], -SQRT_TWO)
+    objects["Y12"] = universal_scale(objects["H"], I)
+    return objects
+
+
+def universal_expected_closure(
+    name: str,
+    value: UniversalExpression,
+    velocities: list[UniversalExpression],
+    omega: UniversalExpression,
+) -> UniversalExpression:
+    if name.startswith("A") and name in FIELD_INDEX:
+        mu = int(name[1:])
+        result: UniversalExpression = {}
+        for nu in range(4):
+            result = universal_add(
+                result,
+                universal_multiply(
+                    velocities[nu],
+                    universal_curvature(nu, mu),
+                ),
+            )
+        return universal_add(
+            result,
+            universal_covariant_expression(omega, mu),
+        )
+
+    result: UniversalExpression = {}
+    for mu in range(4):
+        result = universal_add(
+            result,
+            universal_multiply(
+                velocities[mu],
+                universal_covariant_expression(value, mu),
+            ),
+        )
+    return universal_add(
+        result,
+        universal_scale(universal_bracket(omega, value), I),
+    )
+
+
+def check_universal_direct_closure(signature: str):
+    first = build_universal_transform(signature, 1)
+    second = build_universal_transform(signature, 2)
+    velocities, omega = universal_closure_parameters(signature)
+    objects = universal_closure_objects()
+    failures = []
+    residual_rows = []
+    residual_monomial_count = 0
+    maximum_actual_terms = 0
+    maximum_expected_terms = 0
+    maximum_composed_word_length = 0
+    maximum_composed_jet_order = 0
+    per_object = {}
+
+    for name, value in objects.items():
+        delta_two = universal_apply_variation(value, second)
+        delta_one = universal_apply_variation(value, first)
+        actual = universal_add(
+            universal_apply_variation(delta_two, first),
+            universal_scale(
+                universal_apply_variation(delta_one, second),
+                MINUS_ONE,
+            ),
+        )
+        expected = universal_expected_closure(
+            name,
+            value,
+            velocities,
+            omega,
+        )
+        residual = universal_add(
+            actual,
+            universal_scale(expected, MINUS_ONE),
+        )
+        actual_metrics = universal_expression_metrics(actual)
+        expected_metrics = universal_expression_metrics(expected)
+        residual_metrics = universal_expression_metrics(residual)
+        maximum_actual_terms = max(
+            maximum_actual_terms,
+            actual_metrics["term_count"],
+        )
+        maximum_expected_terms = max(
+            maximum_expected_terms,
+            expected_metrics["term_count"],
+        )
+        maximum_composed_word_length = max(
+            maximum_composed_word_length,
+            actual_metrics["maximum_word_length"],
+            expected_metrics["maximum_word_length"],
+        )
+        maximum_composed_jet_order = max(
+            maximum_composed_jet_order,
+            actual_metrics["maximum_jet_order"],
+            expected_metrics["maximum_jet_order"],
+        )
+        per_object[name] = {
+            "passed": not residual,
+            "actual_term_count": actual_metrics["term_count"],
+            "expected_term_count": expected_metrics["term_count"],
+            "residual_monomial_count": residual_metrics["term_count"],
+        }
+        if residual:
+            failures.append(name)
+            residual_monomial_count += len(residual)
+            if len(residual_rows) < 22:
+                residual_rows.append(
+                    {
+                        "object": name,
+                        "residual": serialize_universal_expression(residual),
+                    }
+                )
+
+    primitive_objects = tuple(FIELDS)
+    derived_objects = UNIVERSAL_DERIVED_FIELDS
+    return {
+        "passed": not failures,
+        "signature": signature,
+        "finite_color_projection": False,
+        "structure_constants_instantiated": False,
+        "truncation": None,
+        "pbw_word_order_reordered": False,
+        "primitive_objects": list(primitive_objects),
+        "derived_objects": list(derived_objects),
+        "primitive_residual_objects_checked": len(primitive_objects),
+        "derived_residual_objects_checked": len(derived_objects),
+        "total_residual_objects_checked": len(objects),
+        "direct_composition_used_for_every_object": True,
+        "recursion_used_to_infer_primitive_closure": False,
+        "residual_object_count": len(failures),
+        "residual_monomial_count": residual_monomial_count,
+        "maximum_actual_term_count": maximum_actual_terms,
+        "maximum_expected_term_count": maximum_expected_terms,
+        "maximum_composed_word_length": maximum_composed_word_length,
+        "maximum_composed_jet_order": maximum_composed_jet_order,
+        "failures": failures,
+        "residuals": residual_rows,
+        "per_object": per_object,
+    }
+
+
+def check_universal_structural_identities():
+    failures = []
+    residual_rows = []
+    category_counts = {
+        "commuting_partial_jets": 0,
+        "graded_jacobi": 0,
+        "covariant_derivative_curvature": 0,
+        "bianchi": 0,
+        "variation_covariant_derivative_recursion": 0,
+        "variation_curvature_recursion": 0,
+        "variation_bracket_recursion": 0,
+    }
+    category_residual_counts = {key: 0 for key in category_counts}
+
+    def record(category: str, label: str, residual: UniversalExpression):
+        category_counts[category] += 1
+        if not residual:
+            return
+        failures.append(f"{category}:{label}")
+        category_residual_counts[category] += 1
+        if len(residual_rows) < 24:
+            residual_rows.append(
+                {
+                    "identity": f"{category}:{label}",
+                    "residual": serialize_universal_expression(residual),
+                }
+            )
+
+    for field in ("phi", "lambda0"):
+        value = universal_jet(field)
+        for mu in range(4):
+            for nu in range(mu + 1, 4):
+                residual = universal_add(
+                    universal_partial(
+                        universal_partial(value, nu),
+                        mu,
+                    ),
+                    universal_scale(
+                        universal_partial(
+                            universal_partial(value, mu),
+                            nu,
+                        ),
+                        MINUS_ONE,
+                    ),
+                )
+                record(
+                    "commuting_partial_jets",
+                    f"{field}:d{mu}d{nu}",
+                    residual,
+                )
+
+    parity_representatives = {
+        0: ("phi", "tphi", "D"),
+        1: ("lambda0", "psi0", "tlambda0"),
+    }
+    for px in (0, 1):
+        for py in (0, 1):
+            for pz in (0, 1):
+                x = universal_jet(parity_representatives[px][0])
+                y = universal_jet(parity_representatives[py][1])
+                z = universal_jet(parity_representatives[pz][2])
+                first = universal_bracket(x, universal_bracket(y, z))
+                second = universal_bracket(y, universal_bracket(z, x))
+                third = universal_bracket(z, universal_bracket(x, y))
+                if px * pz % 2:
+                    first = universal_scale(first, MINUS_ONE)
+                if py * px % 2:
+                    second = universal_scale(second, MINUS_ONE)
+                if pz * py % 2:
+                    third = universal_scale(third, MINUS_ONE)
+                residual = universal_add(universal_add(first, second), third)
+                record(
+                    "graded_jacobi",
+                    f"parities={px}{py}{pz}",
+                    residual,
+                )
+
+    for field in ("phi", "lambda0"):
+        value = universal_jet(field)
+        for mu in range(4):
+            for nu in range(mu + 1, 4):
+                commutator = universal_add(
+                    universal_covariant_expression(
+                        universal_covariant_expression(value, nu),
+                        mu,
+                    ),
+                    universal_scale(
+                        universal_covariant_expression(
+                            universal_covariant_expression(value, mu),
+                            nu,
+                        ),
+                        MINUS_ONE,
+                    ),
+                )
+                residual = universal_add(
+                    commutator,
+                    universal_scale(
+                        universal_bracket(universal_curvature(mu, nu), value),
+                        I,
+                    ),
+                )
+                record(
+                    "covariant_derivative_curvature",
+                    f"{field}:m{mu}n{nu}",
+                    residual,
+                )
+
+    for mu in range(4):
+        for nu in range(mu + 1, 4):
+            for rho in range(nu + 1, 4):
+                residual = universal_add(
+                    universal_add(
+                        universal_covariant_expression(
+                            universal_curvature(nu, rho),
+                            mu,
+                        ),
+                        universal_covariant_expression(
+                            universal_curvature(rho, mu),
+                            nu,
+                        ),
+                    ),
+                    universal_covariant_expression(
+                        universal_curvature(mu, nu),
+                        rho,
+                    ),
+                )
+                record(
+                    "bianchi",
+                    f"m{mu}n{nu}r{rho}",
+                    residual,
+                )
+
+    tensor_fields = tuple(
+        field for field in FIELDS if not field.startswith("A")
+    )
+    bracket_pairs = (
+        ("phi", "tphi"),
+        ("phi", "lambda0"),
+        ("lambda0", "phi"),
+        ("lambda0", "psi0"),
+    )
+    for signature in ("L", "E"):
+        for set_index in (1, 2):
+            variations = build_universal_transform(signature, set_index)
+            for field in tensor_fields:
+                value = universal_jet(field)
+                for mu in range(4):
+                    left = universal_apply_variation(
+                        universal_covariant_expression(value, mu),
+                        variations,
+                    )
+                    right = universal_add(
+                        universal_covariant_expression(
+                            variations[field],
+                            mu,
+                        ),
+                        universal_scale(
+                            universal_bracket(
+                                variations[f"A{mu}"],
+                                value,
+                            ),
+                            MINUS_I,
+                        ),
+                    )
+                    residual = universal_add(
+                        left,
+                        universal_scale(right, MINUS_ONE),
+                    )
+                    record(
+                        "variation_covariant_derivative_recursion",
+                        f"{signature}:set{set_index}:{field}:m{mu}",
+                        residual,
+                    )
+            for mu in range(4):
+                for nu in range(mu + 1, 4):
+                    left = universal_apply_variation(
+                        universal_curvature(mu, nu),
+                        variations,
+                    )
+                    right = universal_add(
+                        universal_covariant_expression(
+                            variations[f"A{nu}"],
+                            mu,
+                        ),
+                        universal_scale(
+                            universal_covariant_expression(
+                                variations[f"A{mu}"],
+                                nu,
+                            ),
+                            MINUS_ONE,
+                        ),
+                    )
+                    residual = universal_add(
+                        left,
+                        universal_scale(right, MINUS_ONE),
+                    )
+                    record(
+                        "variation_curvature_recursion",
+                        f"{signature}:set{set_index}:m{mu}n{nu}",
+                        residual,
+                    )
+            for left_field, right_field in bracket_pairs:
+                left_value = universal_jet(left_field)
+                right_value = universal_jet(right_field)
+                left = universal_apply_variation(
+                    universal_bracket(left_value, right_value),
+                    variations,
+                )
+                right = universal_add(
+                    universal_bracket(
+                        variations[left_field],
+                        right_value,
+                    ),
+                    universal_bracket(
+                        left_value,
+                        variations[right_field],
+                    ),
+                )
+                residual = universal_add(
+                    left,
+                    universal_scale(right, MINUS_ONE),
+                )
+                record(
+                    "variation_bracket_recursion",
+                    (
+                        f"{signature}:set{set_index}:"
+                        f"[{left_field},{right_field}]"
+                    ),
+                    residual,
+                )
+
+    return {
+        "passed": not failures,
+        "finite_color_projection": False,
+        "structure_constants_instantiated": False,
+        "truncation": None,
+        "pbw_word_order_reordered": False,
+        "normal_form": (
+            "free differential associative superalgebra with sorted "
+            "ordinary-jet derivative tuples and unreordered PBW words"
+        ),
+        "checked_identity_count": sum(category_counts.values()),
+        "category_counts": category_counts,
+        "category_residual_counts": category_residual_counts,
+        "residual_count": len(failures),
+        "failures": failures,
+        "residuals": residual_rows,
+    }
+
+
 def run_checks():
     lorentz_failures, lorentz_residuals = check_lorentz_free_closure()
     euclidean_failures, euclidean_residuals = check_euclidean_free_closure()
@@ -2646,6 +3690,11 @@ def run_checks():
     su2_quarter_turn_lorentz = check_free_su2_r_intertwiner("L")
     su2_quarter_turn_euclidean = check_free_su2_r_intertwiner("E")
     su2_quarter_turn_interaction = check_nonabelian_su2_r_intertwiner()
+    universal_roundtrip_lorentz = check_universal_abelian_roundtrip("L")
+    universal_roundtrip_euclidean = check_universal_abelian_roundtrip("E")
+    universal_closure_lorentz = check_universal_direct_closure("L")
+    universal_closure_euclidean = check_universal_direct_closure("E")
+    universal_structural = check_universal_structural_identities()
     all_failures = [f"lorentz_free:{failure}" for failure in lorentz_failures]
     all_failures.extend(f"euclidean_free:{failure}" for failure in euclidean_failures)
     all_failures.extend(f"constant_su2:{failure}" for failure in nonabelian_failures)
@@ -2669,17 +3718,44 @@ def run_checks():
         ("offshell_su2_r_quarter_turn_interaction", su2_quarter_turn_interaction),
     ):
         all_failures.extend(f"{label}:{failure}" for failure in gate["failures"])
+    for label, gate in (
+        ("universal_abelian_roundtrip_lorentz", universal_roundtrip_lorentz),
+        ("universal_abelian_roundtrip_euclidean", universal_roundtrip_euclidean),
+        ("universal_direct_closure_lorentz", universal_closure_lorentz),
+        ("universal_direct_closure_euclidean", universal_closure_euclidean),
+        ("universal_structural", universal_structural),
+    ):
+        all_failures.extend(f"{label}:{failure}" for failure in gate["failures"])
+
+    universal_binding_count = (
+        universal_roundtrip_lorentz["checked_cell_bindings"]
+        + universal_roundtrip_euclidean["checked_cell_bindings"]
+    )
+    universal_object_residual_count = (
+        universal_closure_lorentz["total_residual_objects_checked"]
+        + universal_closure_euclidean["total_residual_objects_checked"]
+    )
+    if universal_binding_count != 1156:
+        all_failures.append(
+            f"universal_binding_count:{universal_binding_count}!=1156"
+        )
+    if universal_object_residual_count != 44:
+        all_failures.append(
+            "universal_object_residual_count:"
+            f"{universal_object_residual_count}!=44"
+        )
     status = (
-        "PASS_EXACT_CHECKED_SCOPE"
+        "PASS_EXACT_GENERAL_LIE_CLOSURE"
         if not all_failures
-        else "FAILED_EXACT_CHECKED_SCOPE"
+        else "FAILED_EXACT_GENERAL_LIE_CLOSURE"
     )
     return {
-        "schema": 2,
+        "schema": 3,
         "task": "CONTRACT-STEP-04-EXTENDED-SUPER-YANG-MILLS-001",
         "scope": (
-            "Exact free all-field Lorentzian/Euclidean closure plus exact Lorentzian "
-            "constant-background SU(2) covariant-first-jet interaction closure."
+            "Exact direct off-shell N=2 closure for the displayed Lorentzian and "
+            "Euclidean component rules in the free differential associative "
+            "superalgebra, together with all previous regression gates."
         ),
         "exact_rings": {
             "free": "Q(i,sqrt(2))[p0,p1,p2,p3] tensor exterior(parameters)",
@@ -2687,9 +3763,13 @@ def run_checks():
                 "Q(i,sqrt(2))[commuting adjoint bosons] tensor "
                 "exterior(parameters, adjoint fermions)"
             ),
+            "universal": (
+                "Q(i,sqrt(2)) tensor exterior(parameter-left SUSY parameters) "
+                "tensor ordered noncommutative ordinary-jet PBW words"
+            ),
         },
         "status": status,
-        "nonabelian_full_covariant_closure_claimed": False,
+        "nonabelian_full_covariant_closure_claimed": not all_failures,
         "constant_su2_interaction_closure_claimed": not nonabelian_failures,
         "euclidean_free_closure_claimed": not euclidean_failures,
         "complete_checked_scope_offshell_su2_r_intertwiner_claimed": (
@@ -2741,6 +3821,23 @@ def run_checks():
             "offshell_su2_r_quarter_turn_free_lorentz_regression": su2_quarter_turn_lorentz,
             "offshell_su2_r_quarter_turn_free_euclidean_regression": su2_quarter_turn_euclidean,
             "offshell_su2_r_quarter_turn_interaction_regression": su2_quarter_turn_interaction,
+            "universal_abelian_roundtrip_lorentz": universal_roundtrip_lorentz,
+            "universal_abelian_roundtrip_euclidean": universal_roundtrip_euclidean,
+            "universal_direct_general_lie_closure_lorentz": universal_closure_lorentz,
+            "universal_direct_general_lie_closure_euclidean": universal_closure_euclidean,
+            "universal_structural_identities": universal_structural,
+            "universal_gate_exact_counts": {
+                "passed": (
+                    universal_binding_count == 1156
+                    and universal_object_residual_count == 44
+                ),
+                "residual_count": int(universal_binding_count != 1156)
+                + int(universal_object_residual_count != 44),
+                "abelian_roundtrip_bindings": universal_binding_count,
+                "direct_object_residuals": universal_object_residual_count,
+                "required_abelian_roundtrip_bindings": 1156,
+                "required_direct_object_residuals": 44,
+            },
         },
         "diagnostics": {
             "rejected_old_sign": {
@@ -2785,10 +3882,7 @@ def run_checks():
                 ),
             },
         },
-        "unchecked_scope": (
-            "General-Lie-algebra non-Abelian closure with simultaneous covariant derivatives, "
-            "field strength, and Jacobi reductions is not claimed by this verifier."
-        ),
+        "unchecked_scope": [],
     }
 
 

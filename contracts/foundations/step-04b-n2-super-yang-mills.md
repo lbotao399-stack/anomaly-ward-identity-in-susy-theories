@@ -1241,10 +1241,248 @@ $$
 \tag{4B.46c}
 $$
 
-Here (X_E) runs over the Euclidean version of every field in
-(4B.45).  The simultaneous general-Lie-algebra closure with nonzero
-covariant derivatives, field strength, and Jacobi reductions is not
-verified by the present gates in either signature.
+Here \(X_E\) runs over the Euclidean version of every field in
+(4B.45).
+
+The finite \(SU(2)\)-color gate in (4B.45a) is a regression gate; by
+itself it is not an arbitrary-Lie theorem.  The universal gate uses
+\(\mathcal A_{\rm univ}^{R}\) of (4.43)--(4.50).  Define
+
+$$
+\Delta_R:=\delta_{R,1}\delta_{R,2}-\delta_{R,2}\delta_{R,1},
+\tag{4B.46d}
+$$
+
+$$
+\begin{aligned}
+\mathsf T_R(A_M)&:=v_R^NF_{NM}+\mathcal D_M\Omega_{12,R},\\
+\mathsf T_R(X)&:=v_R^M\mathcal D_MX
++i\llbracket\Omega_{12,R},X\rrbracket,\\
+\mathscr R_R[Z]&:=
+\operatorname{NF}_{\mathcal A_{\rm univ}^{R}}
+\!\left(\Delta_RZ-\mathsf T_R(Z)\right),
+\end{aligned}
+\tag{4B.46e}
+$$
+
+$$
+\Omega_{12,R}:=
+\begin{cases}
+\Omega_{12},&R=L,\\
+\Omega_{12,E},&R=E.
+\end{cases}
+\tag{4B.46f}
+$$
+
+The directly expanded primitive bases are
+
+$$
+\begin{aligned}
+\mathscr P_L:=(&A_0,A_1,A_2,A_3,
+\phi,\widetilde\phi,
+\lambda_1,\lambda_2,
+\widetilde\lambda_{\dot1},\widetilde\lambda_{\dot2},\\
+&\psi_1,\psi_2,
+\widetilde\psi_{\dot1},\widetilde\psi_{\dot2},
+F,\widetilde F,\mathscr D),\\
+\mathscr P_E:=(&A_1,A_2,A_3,A_4,
+\phi,\widetilde\phi,
+\lambda_1,\lambda_2,
+\widetilde\lambda_{\dot1},\widetilde\lambda_{\dot2},\\
+&\psi_1,\psi_2,
+\widetilde\psi_{\dot1},\widetilde\psi_{\dot2},
+F,\widetilde F,\mathscr D).
+\end{aligned}
+\tag{4B.46g}
+$$
+
+The verifier's internal Euclidean vector labels obey
+
+$$
+\boxed{A_r^{\rm internal}=A_{E,r+1},\qquad r=0,1,2,3.}
+\tag{4B.46g1}
+$$
+
+Direct double application of the Step-4A Lorentzian vector rules and
+(4B.20)--(4B.26) gives
+
+$$
+\begin{aligned}
+(&\mathscr R_L[A_0],\mathscr R_L[A_1],
+\mathscr R_L[A_2],\mathscr R_L[A_3],
+\mathscr R_L[\phi],\mathscr R_L[\widetilde\phi],\\
+&\mathscr R_L[\lambda_1],\mathscr R_L[\lambda_2],
+\mathscr R_L[\widetilde\lambda_{\dot1}],
+\mathscr R_L[\widetilde\lambda_{\dot2}],\\
+&\mathscr R_L[\psi_1],\mathscr R_L[\psi_2],
+\mathscr R_L[\widetilde\psi_{\dot1}],
+\mathscr R_L[\widetilde\psi_{\dot2}],
+\mathscr R_L[F],\mathscr R_L[\widetilde F],
+\mathscr R_L[\mathscr D])\\
+&=(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0).
+\end{aligned}
+\tag{4B.46h}
+$$
+
+Direct double application of the Step-4A Euclidean vector rules and
+(4B.33b)--(4B.35) gives
+
+$$
+\begin{aligned}
+(&\mathscr R_E[A_1],\mathscr R_E[A_2],
+\mathscr R_E[A_3],\mathscr R_E[A_4],
+\mathscr R_E[\phi],\mathscr R_E[\widetilde\phi],\\
+&\mathscr R_E[\lambda_1],\mathscr R_E[\lambda_2],
+\mathscr R_E[\widetilde\lambda_{\dot1}],
+\mathscr R_E[\widetilde\lambda_{\dot2}],\\
+&\mathscr R_E[\psi_1],\mathscr R_E[\psi_2],
+\mathscr R_E[\widetilde\psi_{\dot1}],
+\mathscr R_E[\widetilde\psi_{\dot2}],
+\mathscr R_E[F],\mathscr R_E[\widetilde F],
+\mathscr R_E[\mathscr D])\\
+&=(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0).
+\end{aligned}
+\tag{4B.46i}
+$$
+
+The exact object and binding counts are
+
+$$
+\begin{aligned}
+N_{\rm primitive}^{L}=N_{\rm primitive}^{E}&=17,\\
+N_{\rm derived}^{L}=N_{\rm derived}^{E}&=5,\\
+N_{\rm residual}^{L}=N_{\rm residual}^{E}&=22,\\
+N_{\rm free\text{-}bind}^{L}=N_{\rm free\text{-}bind}^{E}
+&=2\cdot17\cdot17=578,\\
+N_{\rm free\text{-}bind}^{L+E}&=1156.
+\end{aligned}
+\tag{4B.46j}
+$$
+
+Only after (4B.46h)--(4B.46i), the even-derivation identities give
+
+$$
+\boxed{
+\begin{aligned}
+\mathscr R_R[\mathcal D_MX]
+&=\mathcal D_M\mathscr R_R[X]
+-i\llbracket\mathscr R_R[A_M],X\rrbracket,\\
+\mathscr R_R[F_{MN}]
+&=\mathcal D_M\mathscr R_R[A_N]
+-\mathcal D_N\mathscr R_R[A_M],\\
+\mathscr R_R[\llbracket U,V\rrbracket]
+&=\llbracket\mathscr R_R[U],V\rrbracket
++\llbracket U,\mathscr R_R[V]\rrbracket.
+\end{aligned}}
+\tag{4B.46k}
+$$
+
+Thus the instructor recursion is the conditional implication
+
+$$
+\operatorname{DiffLie}(\mathscr P_R)
+:=\langle\mathscr P_R\rangle_{\mathcal D,\llbracket\ ,\ \rrbracket},
+\qquad
+\left.\mathscr R_R\right|_{\mathscr P_R}=0
+\quad\Longrightarrow\quad
+\left.\mathscr R_R\right|_{\operatorname{DiffLie}(\mathscr P_R)}=0;
+\tag{4B.46l}
+$$
+
+it does not establish the premise.  The five derived slots are
+
+$$
+\mu:=\llbracket\phi,\widetilde\phi\rrbracket,
+\qquad
+H:=\mathscr D+\mu,
+\qquad
+Y_{11}:=-\sqrt2F,
+\qquad
+Y_{22}:=-\sqrt2\widetilde F,
+\qquad
+Y_{12}:=iH.
+\tag{4B.46m}
+$$
+
+Direct double application to the five expressions in (4B.46m) first
+gives five zero PBW residuals.  Independently, (4B.46k) reproduces them
+as
+
+$$
+\begin{aligned}
+\mathscr R_R[\mu]
+&=\llbracket\mathscr R_R[\phi],\widetilde\phi\rrbracket
++\llbracket\phi,\mathscr R_R[\widetilde\phi]\rrbracket=0,\\
+\mathscr R_R[H]
+&=\mathscr R_R[\mathscr D]+\mathscr R_R[\mu]=0,\\
+\mathscr R_R[Y_{11}]&=-\sqrt2\mathscr R_R[F]=0,\\
+\mathscr R_R[Y_{22}]&=-\sqrt2\mathscr R_R[\widetilde F]=0,\\
+\mathscr R_R[Y_{12}]&=i\mathscr R_R[H]=0.
+\end{aligned}
+\tag{4B.46n}
+$$
+
+For a Lie algebra \(\mathfrak g\) with basis \(T_A\), let
+\(\mathscr C_{R,\mathfrak g}\) be the free supercommutative coefficient
+algebra generated by the colored jets \(J_{\Xi,\mathbf n}^{A}\).  Define
+
+$$
+\begin{aligned}
+\operatorname{ev}_{\mathfrak g}:\mathcal A_{\rm univ}^{R}
+&\longrightarrow
+\Lambda(\Theta_R)\widehat\otimes
+\mathscr C_{R,\mathfrak g}\widehat\otimes U(\mathfrak g),\\
+\operatorname{ev}_{\mathfrak g}(\theta_i)&=\theta_i,\\
+\operatorname{ev}_{\mathfrak g}(J_{\Xi,\mathbf n})
+&=J_{\Xi,\mathbf n}^{A}T_A,
+\end{aligned}
+$$
+
+where \(\widehat\otimes\) uses the Koszul product.  The tensor-algebra
+universal property extends \(\operatorname{ev}_{\mathfrak g}\) to an
+algebra homomorphism.  Hence
+
+$$
+X=0\ \text{in }\mathcal A_{m univ}^{R}
+\quad\Longrightarrow\quad
+\operatorname{ev}_{\mathfrak g}(X)=0.
+$$
+
+PBW is used only for the injective inclusion
+\(\mathfrak g\hookrightarrow U(\mathfrak g)\); injectivity of
+\(\operatorname{ev}_{\mathfrak g}\) is neither asserted nor required.
+Therefore
+
+$$
+\left.
+\begin{gathered}
+c_{AB}{}^C=-c_{BA}{}^C,\\
+c_{AB}{}^Ec_{EC}{}^D
++c_{BC}{}^Ec_{EA}{}^D
++c_{CA}{}^Ec_{EB}{}^D=0,\\
+J_{\Xi,\mathbf n}\text{ are algebraically independent},\\
+\mathcal D_MX\text{ and }F_{MN}\text{ are expanded by (4.50)}
+\end{gathered}
+\right\}
+\Longrightarrow
+\boxed{
+\texttt{N2\_GENERAL\_LIE\_CLOSURE}
+=\texttt{PASS\_EXACT\_GENERAL\_LIE\_CLOSURE}.}
+\tag{4B.46o}
+$$
+
+No Euler operator enters (4B.46h)--(4B.46o).  The auxiliary-eliminated
+surface remains a separate boundary:
+
+$$
+\boxed{
+\texttt{N2\_ONSHELL\_SU2\_R\_BOUNDARY}:
+\qquad
+F=\widetilde F=H=0,
+\qquad
+\mathscr D=-\mu.}
+\tag{4B.46p}
+$$
 
 ### 4B.10 Noether currents in the verifier-gated \(SU(2)_R\) field basis
 

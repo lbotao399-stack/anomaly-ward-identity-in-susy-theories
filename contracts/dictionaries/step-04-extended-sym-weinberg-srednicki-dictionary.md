@@ -167,7 +167,7 @@ Weinberg theta term, exactly.  The fermion comparison stops at (D4.4).
 | global ${\rm PL}$, equivalent ${\rm FL}$, and Noether-local ${\rm PR}$ orders | (4.38a)--(4.42), (4B.33L3)--(4B.33L6) | `SOURCE_INSUFFICIENT` | `SOURCE_INSUFFICIENT` |
 | free all-field off-shell closure | (4B.42)--(4B.46c) on $\mathscr S_{\rm free}^{L,E}$ | `SOURCE_INSUFFICIENT` | `SOURCE_INSUFFICIENT` |
 | constant-background $SU(2)$ interaction witness | (4B.44)--(4B.45a) on $\mathscr S_{\rm int}^{L}$ | `SOURCE_INSUFFICIENT` | `SOURCE_INSUFFICIENT` |
-| simultaneous general non-Abelian closure | `UNVERIFIED_GENERAL_LIE_CLOSURE` | `SOURCE_INSUFFICIENT` | `SOURCE_INSUFFICIENT` |
+| simultaneous general non-Abelian closure | (4B.46d)--(4B.46o), `PASS_EXACT_GENERAL_LIE_CLOSURE` | `SOURCE_INSUFFICIENT` | `SOURCE_INSUFFICIENT` |
 | $C,K,j$ assembled in the verifier-gated $SU(2)_R$ field basis | (4B.47)--(4B.55) | `SOURCE_INSUFFICIENT` | `SOURCE_INSUFFICIENT` |
 | Euclidean action, transformations, currents | (4B.8), (4B.16)--(4B.19), (4B.34)--(4B.35), (4B.52a)--(4B.58) | `SOURCE_INSUFFICIENT` | `SOURCE_INSUFFICIENT` |
 

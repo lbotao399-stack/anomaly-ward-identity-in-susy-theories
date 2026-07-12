@@ -31,9 +31,26 @@
     },
     {
       "id": "N2_GENERAL_LIE_CLOSURE",
-      "equations": "4B.44-4B.46c",
-      "result": "UNVERIFIED_GENERAL_LIE_CLOSURE",
-      "reason": "No exact gate yet combines nonzero covariant derivatives, field strength, and Jacobi reductions for an arbitrary Lie algebra."
+      "equations": "4B.44-4B.46o",
+      "result": "PASS_EXACT_GENERAL_LIE_CLOSURE",
+      "exact_universal_gate": {
+        "normal_form": "Q(i,sqrt(2)) tensor exterior(parameter-left SUSY parameters) tensor ordered noncommutative ordinary-jet PBW words",
+        "lorentzian": {
+          "primitive_residual_objects": 17,
+          "derived_residual_objects": 5,
+          "residual_monomial_count": 0
+        },
+        "euclidean": {
+          "primitive_residual_objects": 17,
+          "derived_residual_objects": 5,
+          "residual_monomial_count": 0
+        },
+        "abelian_rule_bindings": 1156,
+        "structural_identities": 284,
+        "structural_residual_count": 0,
+        "finite_color_projection": false,
+        "primitive_closure_inferred_from_recursion": false
+      }
     },
     {
       "id": "N2_OFFSHELL_SU2_R_TRIPLET",
@@ -63,7 +80,7 @@
           "checked_triplet_reconstruction_slots": 27,
           "residual_count": 0
         },
-        "scope_boundary": "No claim is made for arbitrary Lie algebras beyond the exact SU(2)-color covariant-jet gate."
+        "scope_boundary": "This finite-color intertwiner remains a regression witness; arbitrary-Lie closure is proved independently by the universal PBW gate."
       }
     },
     {
@@ -117,13 +134,17 @@
       "issue": "The former 2 i s obstruction compared parameter-left and field-left Grassmann normal orders as if their coefficients were identical.",
       "resolution": "RESOLVED_GRADED_NORMAL_ORDERING_BUG",
       "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "issue": "The instructor's covariant-derivative, curvature, and bracket recursions assumed zero primitive fermion and auxiliary residuals and therefore did not prove general-Lie closure.",
+      "resolution": "Direct Lorentzian and Euclidean PBW-word composition gives zero residual on all 17 primitive and 5 derived objects in each signature; 1156 rule bindings and 284 structural identities also have zero residual.",
+      "status": "RESOLVED"
     }
   ],
   "post_resolution": {
     "P0": [],
-    "P1": [
-      "N2_GENERAL_LIE_CLOSURE"
-    ]
+    "P1": []
   },
-  "result": "BLOCKED_GENERAL_LIE_CLOSURE_VERIFICATION"
+  "result": "PASS"
 }

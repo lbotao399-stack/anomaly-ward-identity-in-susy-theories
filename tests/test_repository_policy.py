@@ -944,7 +944,7 @@ class RepositoryPolicyTest(unittest.TestCase):
         surfaces = {
             "contracts/foundations/step-04-extended-sym-notation.md": (
                 "4.",
-                44,
+                52,
                 (
                     r"[T_A,T_B]=ic_{AB}{}^CT_C",
                     r"\llbracket X,Y\rrbracket^A&:=ic_{BC}{}^AX^BY^C",
@@ -952,6 +952,9 @@ class RepositoryPolicyTest(unittest.TestCase):
                     r"\varphi^{r4}:=\phi_r",
                     r"\mathsf N_{\rm PL}",
                     r"\mathcal R_{{\rm PR},\mathsf s}^{\Xi}",
+                    r"\mathcal A_{\rm univ}^{R}",
+                    r"\iota_R\!\left(\llbracket U,V\rrbracket\right)",
+                    r"\mathcal D_{[M}F_{NP]}&=0",
                 ),
             ),
             "contracts/foundations/step-04a-n1-super-yang-mills.md": (
@@ -966,7 +969,7 @@ class RepositoryPolicyTest(unittest.TestCase):
             ),
             "contracts/foundations/step-04b-n2-super-yang-mills.md": (
                 "4B.",
-                99,
+                112,
                 (
                     r"S_L^{(2)}",
                     r"S_E^{(2)}",
@@ -976,6 +979,11 @@ class RepositoryPolicyTest(unittest.TestCase):
                     r"(-\sqrt2,-\sqrt2,i,-1,1,-i,-2i,+2i)",
                     r"\mathscr S_{\rm free}^{L,E}",
                     r"\mathscr S_{\rm int}^{L}",
+                    r"\mathscr R_R[\mathcal D_MX]",
+                    r"N_{\rm free\text{-}bind}^{L+E}&=1156",
+                    r"A_r^{\rm internal}=A_{E,r+1}",
+                    r"\operatorname{ev}_{\mathfrak g}",
+                    r"PASS\_EXACT\_GENERAL\_LIE\_CLOSURE",
                 ),
             ),
             "contracts/foundations/step-04c-n4-super-yang-mills.md": (
@@ -1056,9 +1064,29 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertEqual(completed.returncode, 0)
         self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
         audit = json.loads(expected)
-        self.assertEqual(audit["status"], "PASS_EXACT_CHECKED_SCOPE")
+        task = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
+        admission = task["general_lie_reference_admission"]
+        self.assertEqual(admission["source_id"], "N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-MD")
+        self.assertEqual(
+            admission["admitted_claim_ids"],
+            [
+                "N2-GENERAL-LIE-PRIMITIVE-CLOSURE-CANDIDATE",
+                "N2-GENERAL-LIE-FUNCTORIAL-LIFT-CANDIDATE",
+                "N2-GENERAL-LIE-VERIFIER-DESIGN-CANDIDATE",
+            ],
+        )
+        self.assertEqual(
+            admission["rejected_claim_id"],
+            "N2-GENERAL-LIE-COMPLETENESS-CANDIDATE",
+        )
+        self.assertEqual(
+            admission["rejection"],
+            "CIRCULAR_UNTIL_ALL_PRIMITIVE_RESIDUALS_ARE_DIRECTLY_ZERO",
+        )
+        self.assertEqual(audit["status"], "PASS_EXACT_GENERAL_LIE_CLOSURE")
         self.assertEqual(audit["failure_count"], 0)
         self.assertEqual(audit["failures"], [])
+        self.assertTrue(audit["nonabelian_full_covariant_closure_claimed"])
         self.assertTrue(
             audit[
                 "complete_checked_scope_offshell_su2_r_intertwiner_claimed"
@@ -1142,6 +1170,68 @@ class RepositoryPolicyTest(unittest.TestCase):
         ):
             self.assertIn(output, interaction["checked_outputs"])
 
+        for signature in ("lorentz", "euclidean"):
+            binding = audit["checks"][f"universal_abelian_roundtrip_{signature}"]
+            self.assertTrue(binding["passed"])
+            self.assertEqual(binding["checked_cell_bindings"], 578)
+            self.assertEqual(binding["nonzero_source_cells"], 224)
+            self.assertEqual(binding["nonzero_roundtrip_cells"], 224)
+            self.assertEqual(binding["residual_count"], 0)
+
+            direct = audit["checks"][f"universal_direct_general_lie_closure_{signature}"]
+            self.assertTrue(direct["passed"])
+            self.assertEqual(direct["primitive_residual_objects_checked"], 17)
+            self.assertEqual(direct["derived_residual_objects_checked"], 5)
+            self.assertEqual(direct["total_residual_objects_checked"], 22)
+            self.assertEqual(direct["residual_object_count"], 0)
+            self.assertEqual(direct["residual_monomial_count"], 0)
+            self.assertEqual(direct["maximum_actual_term_count"], 392)
+            self.assertEqual(direct["maximum_expected_term_count"], 392)
+            self.assertEqual(direct["maximum_composed_word_length"], 3)
+            self.assertEqual(direct["maximum_composed_jet_order"], 1)
+            self.assertTrue(direct["direct_composition_used_for_every_object"])
+            self.assertFalse(direct["recursion_used_to_infer_primitive_closure"])
+            self.assertFalse(direct["finite_color_projection"])
+            self.assertFalse(direct["structure_constants_instantiated"])
+            self.assertIsNone(direct["truncation"])
+            self.assertFalse(direct["pbw_word_order_reordered"])
+
+        structural = audit["checks"]["universal_structural_identities"]
+        self.assertTrue(structural["passed"])
+        self.assertEqual(structural["checked_identity_count"], 284)
+        self.assertEqual(
+            structural["category_counts"],
+            {
+                "commuting_partial_jets": 12,
+                "graded_jacobi": 8,
+                "covariant_derivative_curvature": 12,
+                "bianchi": 4,
+                "variation_covariant_derivative_recursion": 208,
+                "variation_curvature_recursion": 24,
+                "variation_bracket_recursion": 16,
+            },
+        )
+        self.assertTrue(all(value == 0 for value in structural["category_residual_counts"].values()))
+        self.assertEqual(structural["residual_count"], 0)
+        self.assertFalse(structural["finite_color_projection"])
+        self.assertFalse(structural["structure_constants_instantiated"])
+        self.assertIsNone(structural["truncation"])
+        self.assertFalse(structural["pbw_word_order_reordered"])
+        exact_counts = audit["checks"]["universal_gate_exact_counts"]
+        self.assertTrue(exact_counts["passed"])
+        self.assertEqual(exact_counts["abelian_roundtrip_bindings"], 1156)
+        self.assertEqual(exact_counts["direct_object_residuals"], 44)
+        universal_surface = json.dumps(
+            {
+                "lorentz": audit["checks"]["universal_direct_general_lie_closure_lorentz"],
+                "euclidean": audit["checks"]["universal_direct_general_lie_closure_euclidean"],
+                "structural": structural,
+            },
+            sort_keys=True,
+        )
+        self.assertNotIn("epsilon_AB", universal_surface)
+        self.assertNotIn("fixed three-color", universal_surface)
+
     def test_step_4_dictionary_surface(self) -> None:
         path = ROOT / "contracts/dictionaries/step-04-extended-sym-weinberg-srednicki-dictionary.md"
         self.assertTrue(path.is_file())
@@ -1152,7 +1242,8 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertIn("Project--Srednicki--Weinberg", text)
         self.assertIn("SOURCE_INSUFFICIENT", text)
         self.assertIn("NOT_DEFINED_IN_SOURCE", text)
-        self.assertIn("UNVERIFIED_GENERAL_LIE_CLOSURE", text)
+        self.assertIn("PASS_EXACT_GENERAL_LIE_CLOSURE", text)
+        self.assertNotIn("UNVERIFIED_GENERAL_LIE_CLOSURE", text)
         self.assertNotIn(r"\sim", text)
         self.assertNotIn(r"\approx", text)
         self.assertNotIn(r"\propto", text)
@@ -1161,14 +1252,8 @@ class RepositoryPolicyTest(unittest.TestCase):
 
     def test_step_4_audits(self) -> None:
         expected = {
-            "audits/step4-gap-audit.json": (
-                "BLOCKED_GENERAL_LIE_CLOSURE_VERIFICATION",
-                ["N2_GENERAL_LIE_CLOSURE"],
-            ),
-            "audits/step4-independent-review.json": (
-                "BLOCKED_GENERAL_LIE_CLOSURE_VERIFICATION",
-                ["N2_GENERAL_LIE_CLOSURE"],
-            ),
+            "audits/step4-gap-audit.json": ("PASS", []),
+            "audits/step4-independent-review.json": ("PASS", []),
             "audits/step4-notation-ledger.json": ("PASS", []),
             "audits/step4-dictionary-review.json": ("PASS", []),
         }

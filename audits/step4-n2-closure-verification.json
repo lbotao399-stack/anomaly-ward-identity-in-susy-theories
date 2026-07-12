@@ -383,6 +383,444 @@
       "rank": 8,
       "residual_count": 0,
       "solution_branch_count": 1
+    },
+    "universal_abelian_roundtrip_euclidean": {
+      "checked_cell_bindings": 578,
+      "failures": [],
+      "map": "p_mu X -> D_mu X; antisymmetric p_mu A_nu sector -> F_mu_nu/2; displayed nonlinear coefficients appended",
+      "matrix_shape": [
+        17,
+        17
+      ],
+      "nonzero_roundtrip_cells": 224,
+      "nonzero_source_cells": 224,
+      "parameter_copies": [
+        1,
+        2
+      ],
+      "passed": true,
+      "residual_count": 0,
+      "residuals": [],
+      "signature": "E"
+    },
+    "universal_abelian_roundtrip_lorentz": {
+      "checked_cell_bindings": 578,
+      "failures": [],
+      "map": "p_mu X -> D_mu X; antisymmetric p_mu A_nu sector -> F_mu_nu/2; displayed nonlinear coefficients appended",
+      "matrix_shape": [
+        17,
+        17
+      ],
+      "nonzero_roundtrip_cells": 224,
+      "nonzero_source_cells": 224,
+      "parameter_copies": [
+        1,
+        2
+      ],
+      "passed": true,
+      "residual_count": 0,
+      "residuals": [],
+      "signature": "L"
+    },
+    "universal_direct_general_lie_closure_euclidean": {
+      "derived_objects": [
+        "mu",
+        "H",
+        "Y11",
+        "Y22",
+        "Y12"
+      ],
+      "derived_residual_objects_checked": 5,
+      "direct_composition_used_for_every_object": true,
+      "failures": [],
+      "finite_color_projection": false,
+      "maximum_actual_term_count": 392,
+      "maximum_composed_jet_order": 1,
+      "maximum_composed_word_length": 3,
+      "maximum_expected_term_count": 392,
+      "passed": true,
+      "pbw_word_order_reordered": false,
+      "per_object": {
+        "A0": {
+          "actual_term_count": 120,
+          "expected_term_count": 120,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "A1": {
+          "actual_term_count": 120,
+          "expected_term_count": 120,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "A2": {
+          "actual_term_count": 120,
+          "expected_term_count": 120,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "A3": {
+          "actual_term_count": 120,
+          "expected_term_count": 120,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "D": {
+          "actual_term_count": 112,
+          "expected_term_count": 112,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "F": {
+          "actual_term_count": 112,
+          "expected_term_count": 112,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "H": {
+          "actual_term_count": 392,
+          "expected_term_count": 392,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "Y11": {
+          "actual_term_count": 112,
+          "expected_term_count": 112,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "Y12": {
+          "actual_term_count": 392,
+          "expected_term_count": 392,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "Y22": {
+          "actual_term_count": 112,
+          "expected_term_count": 112,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "lambda0": {
+          "actual_term_count": 112,
+          "expected_term_count": 112,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "lambda1": {
+          "actual_term_count": 112,
+          "expected_term_count": 112,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "mu": {
+          "actual_term_count": 280,
+          "expected_term_count": 280,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "phi": {
+          "actual_term_count": 104,
+          "expected_term_count": 104,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "psi0": {
+          "actual_term_count": 112,
+          "expected_term_count": 112,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "psi1": {
+          "actual_term_count": 112,
+          "expected_term_count": 112,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "tF": {
+          "actual_term_count": 112,
+          "expected_term_count": 112,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "tlambda0": {
+          "actual_term_count": 112,
+          "expected_term_count": 112,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "tlambda1": {
+          "actual_term_count": 112,
+          "expected_term_count": 112,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "tphi": {
+          "actual_term_count": 104,
+          "expected_term_count": 104,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "tpsi0": {
+          "actual_term_count": 112,
+          "expected_term_count": 112,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "tpsi1": {
+          "actual_term_count": 112,
+          "expected_term_count": 112,
+          "passed": true,
+          "residual_monomial_count": 0
+        }
+      },
+      "primitive_objects": [
+        "A0",
+        "A1",
+        "A2",
+        "A3",
+        "phi",
+        "tphi",
+        "lambda0",
+        "lambda1",
+        "tlambda0",
+        "tlambda1",
+        "psi0",
+        "psi1",
+        "tpsi0",
+        "tpsi1",
+        "F",
+        "tF",
+        "D"
+      ],
+      "primitive_residual_objects_checked": 17,
+      "recursion_used_to_infer_primitive_closure": false,
+      "residual_monomial_count": 0,
+      "residual_object_count": 0,
+      "residuals": [],
+      "signature": "E",
+      "structure_constants_instantiated": false,
+      "total_residual_objects_checked": 22,
+      "truncation": null
+    },
+    "universal_direct_general_lie_closure_lorentz": {
+      "derived_objects": [
+        "mu",
+        "H",
+        "Y11",
+        "Y22",
+        "Y12"
+      ],
+      "derived_residual_objects_checked": 5,
+      "direct_composition_used_for_every_object": true,
+      "failures": [],
+      "finite_color_projection": false,
+      "maximum_actual_term_count": 392,
+      "maximum_composed_jet_order": 1,
+      "maximum_composed_word_length": 3,
+      "maximum_expected_term_count": 392,
+      "passed": true,
+      "pbw_word_order_reordered": false,
+      "per_object": {
+        "A0": {
+          "actual_term_count": 120,
+          "expected_term_count": 120,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "A1": {
+          "actual_term_count": 120,
+          "expected_term_count": 120,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "A2": {
+          "actual_term_count": 120,
+          "expected_term_count": 120,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "A3": {
+          "actual_term_count": 120,
+          "expected_term_count": 120,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "D": {
+          "actual_term_count": 112,
+          "expected_term_count": 112,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "F": {
+          "actual_term_count": 112,
+          "expected_term_count": 112,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "H": {
+          "actual_term_count": 392,
+          "expected_term_count": 392,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "Y11": {
+          "actual_term_count": 112,
+          "expected_term_count": 112,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "Y12": {
+          "actual_term_count": 392,
+          "expected_term_count": 392,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "Y22": {
+          "actual_term_count": 112,
+          "expected_term_count": 112,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "lambda0": {
+          "actual_term_count": 112,
+          "expected_term_count": 112,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "lambda1": {
+          "actual_term_count": 112,
+          "expected_term_count": 112,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "mu": {
+          "actual_term_count": 280,
+          "expected_term_count": 280,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "phi": {
+          "actual_term_count": 104,
+          "expected_term_count": 104,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "psi0": {
+          "actual_term_count": 112,
+          "expected_term_count": 112,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "psi1": {
+          "actual_term_count": 112,
+          "expected_term_count": 112,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "tF": {
+          "actual_term_count": 112,
+          "expected_term_count": 112,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "tlambda0": {
+          "actual_term_count": 112,
+          "expected_term_count": 112,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "tlambda1": {
+          "actual_term_count": 112,
+          "expected_term_count": 112,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "tphi": {
+          "actual_term_count": 104,
+          "expected_term_count": 104,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "tpsi0": {
+          "actual_term_count": 112,
+          "expected_term_count": 112,
+          "passed": true,
+          "residual_monomial_count": 0
+        },
+        "tpsi1": {
+          "actual_term_count": 112,
+          "expected_term_count": 112,
+          "passed": true,
+          "residual_monomial_count": 0
+        }
+      },
+      "primitive_objects": [
+        "A0",
+        "A1",
+        "A2",
+        "A3",
+        "phi",
+        "tphi",
+        "lambda0",
+        "lambda1",
+        "tlambda0",
+        "tlambda1",
+        "psi0",
+        "psi1",
+        "tpsi0",
+        "tpsi1",
+        "F",
+        "tF",
+        "D"
+      ],
+      "primitive_residual_objects_checked": 17,
+      "recursion_used_to_infer_primitive_closure": false,
+      "residual_monomial_count": 0,
+      "residual_object_count": 0,
+      "residuals": [],
+      "signature": "L",
+      "structure_constants_instantiated": false,
+      "total_residual_objects_checked": 22,
+      "truncation": null
+    },
+    "universal_gate_exact_counts": {
+      "abelian_roundtrip_bindings": 1156,
+      "direct_object_residuals": 44,
+      "passed": true,
+      "required_abelian_roundtrip_bindings": 1156,
+      "required_direct_object_residuals": 44,
+      "residual_count": 0
+    },
+    "universal_structural_identities": {
+      "category_counts": {
+        "bianchi": 4,
+        "commuting_partial_jets": 12,
+        "covariant_derivative_curvature": 12,
+        "graded_jacobi": 8,
+        "variation_bracket_recursion": 16,
+        "variation_covariant_derivative_recursion": 208,
+        "variation_curvature_recursion": 24
+      },
+      "category_residual_counts": {
+        "bianchi": 0,
+        "commuting_partial_jets": 0,
+        "covariant_derivative_curvature": 0,
+        "graded_jacobi": 0,
+        "variation_bracket_recursion": 0,
+        "variation_covariant_derivative_recursion": 0,
+        "variation_curvature_recursion": 0
+      },
+      "checked_identity_count": 284,
+      "failures": [],
+      "finite_color_projection": false,
+      "normal_form": "free differential associative superalgebra with sorted ordinary-jet derivative tuples and unreordered PBW words",
+      "passed": true,
+      "pbw_word_order_reordered": false,
+      "residual_count": 0,
+      "residuals": [],
+      "structure_constants_instantiated": false,
+      "truncation": null
     }
   },
   "complete_checked_scope_offshell_su2_r_intertwiner_claimed": true,
@@ -1166,14 +1604,15 @@
   "euclidean_free_closure_claimed": true,
   "exact_rings": {
     "free": "Q(i,sqrt(2))[p0,p1,p2,p3] tensor exterior(parameters)",
-    "interaction": "Q(i,sqrt(2))[commuting adjoint bosons] tensor exterior(parameters, adjoint fermions)"
+    "interaction": "Q(i,sqrt(2))[commuting adjoint bosons] tensor exterior(parameters, adjoint fermions)",
+    "universal": "Q(i,sqrt(2)) tensor exterior(parameter-left SUSY parameters) tensor ordered noncommutative ordinary-jet PBW words"
   },
   "failure_count": 0,
   "failures": [],
-  "nonabelian_full_covariant_closure_claimed": false,
-  "schema": 2,
-  "scope": "Exact free all-field Lorentzian/Euclidean closure plus exact Lorentzian constant-background SU(2) covariant-first-jet interaction closure.",
-  "status": "PASS_EXACT_CHECKED_SCOPE",
+  "nonabelian_full_covariant_closure_claimed": true,
+  "schema": 3,
+  "scope": "Exact direct off-shell N=2 closure for the displayed Lorentzian and Euclidean component rules in the free differential associative superalgebra, together with all previous regression gates.",
+  "status": "PASS_EXACT_GENERAL_LIE_CLOSURE",
   "task": "CONTRACT-STEP-04-EXTENDED-SUPER-YANG-MILLS-001",
-  "unchecked_scope": "General-Lie-algebra non-Abelian closure with simultaneous covariant derivatives, field strength, and Jacobi reductions is not claimed by this verifier."
+  "unchecked_scope": []
 }

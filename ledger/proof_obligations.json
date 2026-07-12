@@ -111,13 +111,39 @@
             "checked_triplet_reconstruction_slots": 27,
             "residual_count": 0
           },
-          "scope_boundary": "Exact free Lorentzian and Euclidean intertwiners plus the SU(2)-color covariant-jet intertwiner only; no arbitrary-Lie-algebra generalization is claimed."
+          "scope_boundary": "Exact free Lorentzian and Euclidean intertwiners plus the SU(2)-color covariant-jet intertwiner; this finite gate is retained as a regression witness."
+        },
+        "N2_GENERAL_LIE_CLOSURE": {
+          "result": "PASS_EXACT_GENERAL_LIE_CLOSURE",
+          "verifier": "scripts/verify_step4_n2_closure.py",
+          "audit": "audits/step4-n2-closure-verification.json",
+          "normal_form": "free differential associative superalgebra with exterior parameter-left monomials and unreordered ordinary-jet PBW words",
+          "lorentzian": {
+            "primitive_residual_objects": 17,
+            "derived_residual_objects": 5,
+            "residual_monomial_count": 0
+          },
+          "euclidean": {
+            "primitive_residual_objects": 17,
+            "derived_residual_objects": 5,
+            "residual_monomial_count": 0
+          },
+          "rule_bindings": {
+            "lorentzian": 578,
+            "euclidean": 578,
+            "residual_count": 0
+          },
+          "structural_identities": {
+            "checked": 284,
+            "residual_count": 0
+          },
+          "finite_color_projection": false,
+          "structure_constants_instantiated": false,
+          "primitive_closure_inferred_from_recursion": false
         },
         "unresolved": {
-          "N2_GENERAL_LIE_CLOSURE": {
-            "result": "UNVERIFIED_GENERAL_LIE_CLOSURE",
-            "required_gate": "Simultaneous nonzero covariant derivatives, field strength, and Jacobi reductions for arbitrary Lie algebra."
-          }
+          "P0": [],
+          "P1": []
         }
       }
     },
