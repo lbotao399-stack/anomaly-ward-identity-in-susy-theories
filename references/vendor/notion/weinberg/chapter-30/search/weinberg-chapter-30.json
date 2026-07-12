@@ -1,0 +1,94 @@
+{
+  "schema": 1,
+  "query": "Weinberg Chapter 30",
+  "page_url": "310ee2b74b3f8065a3acdbdac27f3b2b",
+  "query_type": "internal",
+  "page_size": 10,
+  "max_highlight_length": 300,
+  "acquired_at": "2026-07-12T20:13:18.351Z",
+  "response": {
+    "results": [
+      {
+        "id": "34cee2b7-4b3f-81ed-b24e-d794dd04feb5",
+        "title": "25.2 超对称代数",
+        "url": "https://app.notion.com/p/34cee2b74b3f81edb24ed794dd04feb5?pvs=1",
+        "type": "page",
+        "highlight": "本 fold 保留 Weinberg 的 physical quantities、phase、normal",
+        "timestamp": "2026-07-11T21:58:00.000Z"
+      },
+      {
+        "id": "34cee2b7-4b3f-8182-a538-e629f277c1e7",
+        "title": "26.2 一般超场",
+        "url": "https://app.notion.com/p/34cee2b74b3f8182a538e629f277c1e7?pvs=1",
+        "type": "page",
+        "highlight": "Weinberg quantities · Srednicki index grammar（no rephasing）",
+        "timestamp": "2026-07-12T13:21:00.000Z"
+      },
+      {
+        "id": "34cee2b7-4b3f-8163-b3b3-fa265e1815b0",
+        "title": "26.3 手征超场和线性超场",
+        "url": "https://app.notion.com/p/34cee2b74b3f8163b3b3fa265e1815b0?pvs=1",
+        "type": "page",
+        "highlight": "Weinberg quantities · Srednicki index grammar（no rephasing）",
+        "timestamp": "2026-07-12T12:38:00.000Z"
+      },
+      {
+        "id": "34cee2b7-4b3f-816d-a424-ea67619cfa5f",
+        "title": "26.7 超流",
+        "url": "https://app.notion.com/p/34cee2b74b3f816da424ea67619cfa5f?pvs=1",
+        "type": "page",
+        "highlight": "Weinberg quantities · Srednicki index grammar（no rephasing）",
+        "timestamp": "2026-07-12T18:53:00.000Z"
+      },
+      {
+        "id": "34cee2b7-4b3f-81ef-af28-fa4031d4303e",
+        "title": "26.1 场超多重态的直接构造",
+        "url": "https://app.notion.com/p/34cee2b74b3f81efaf28fa4031d4303e?pvs=1",
+        "type": "page",
+        "highlight": "Typed Weinberg dictionary — Srednicki spinor-index grammar（no field mapping）",
+        "timestamp": "2026-07-11T22:51:00.000Z"
+      },
+      {
+        "id": "34cee2b7-4b3f-8128-a678-dc890332e79d",
+        "title": "26.6 超空间积分, 场方程和流超场",
+        "url": "https://app.notion.com/p/34cee2b74b3f8128a678dc890332e79d?pvs=1",
+        "type": "page",
+        "highlight": "(写下这种形式的作用量并它表示成分量场的动机将在26.8节进行阐述.) 仅通过要求作用量对 \\Phi 的任意变分均是驻定, 我们无法导出正确的场方程, 这是因为 \\Phi _ { n } 是被左手征超场的要求 \\mathcal{D} _ { R } \\boldsymbol { \\Phi } _ { n } = 0 约束的.为了确保任意变分不会破坏这个条件, 我们要用到一个小技巧, 这个技巧在第30章推导超空间Feynman规则时也将是有用的.",
+        "timestamp": "2026-07-12T12:39:00.000Z"
+      },
+      {
+        "id": "34cee2b7-4b3f-81e6-aec2-d86de3184c84",
+        "title": "25.3 超对称性生成元的空间反演性质",
+        "url": "https://app.notion.com/p/34cee2b74b3f81e6aec2d86de3184c84?pvs=1",
+        "type": "page",
+        "highlight": "本 fold 继承 25.2 的 typed-Weinberg gate：保留 Weinberg",
+        "timestamp": "2026-07-11T22:14:00.000Z"
+      },
+      {
+        "id": "34cee2b7-4b3f-81aa-bbbf-fa6bdcb81359",
+        "title": "参考文献",
+        "url": "https://app.notion.com/p/34cee2b74b3f81aabbbffa6bdcb81359?pvs=1",
+        "type": "page",
+        "highlight": "D8, 3633 (1973); S. Weinberg, Phys.",
+        "timestamp": "2026-04-24T10:31:00.000Z"
+      },
+      {
+        "id": "325ee2b7-4b3f-80a8-a287-cdcbdada485b",
+        "title": "参考文献",
+        "url": "https://app.notion.com/p/325ee2b74b3f80a8a287cdcbdada485b?pvs=1",
+        "type": "page",
+        "highlight": "[7] M. Ademollo, G. Veneziano, and S. Weinberg, Phys. Rev. Lett.  22 , 83 (1969).",
+        "timestamp": "2026-03-16T06:29:00.000Z"
+      },
+      {
+        "id": "34cee2b7-4b3f-81d9-9e7f-e0e15e33e101",
+        "title": "参考文献",
+        "url": "https://app.notion.com/p/34cee2b74b3f81d99e7fe0e15e33e101?pvs=1",
+        "type": "page",
+        "highlight": "[30] S. Weinberg, 参考文献27. Y. Tomozawa独立地计算出了  \\pi  介子-核子的散射长度, Nuovo Cimento 46A, 707 (1966).",
+        "timestamp": "2026-04-24T10:41:00.000Z"
+      }
+    ],
+    "type": "workspace_search"
+  }
+}

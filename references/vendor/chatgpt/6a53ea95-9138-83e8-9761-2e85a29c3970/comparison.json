@@ -1,0 +1,172 @@
+{
+  "schema": 1,
+  "artifact_kind": "dual_visible_capture_provenance_comparison",
+  "generated_at": "2026-07-12T20:15:31Z",
+  "comparison_boundary": "VISIBLE_DOM_ONLY_NO_HIDDEN_REASONING",
+  "interpretation_status": "NOT_PERFORMED",
+  "translation_status": "NOT_PERFORMED",
+  "content_fingerprint_definition": {
+    "included_fields": "every message field except order and canonical_sha256",
+    "excluded_fields": [
+      "order",
+      "canonical_sha256"
+    ],
+    "reason_for_exclusion": "order is capture-local; canonical_sha256 changes with capture-local order",
+    "serialization": "recursive lexicographic object-key ordering; array order preserved; JSON.stringify without whitespace; UTF-8",
+    "digest": "SHA-256"
+  },
+  "artifacts": {
+    "authenticated_visible_json": {
+      "path": "authenticated-visible.json",
+      "byte_count": 543825,
+      "sha256": "0eba2b4e454b9ffe97f139b28bd94efc01643f55460dde6792fd05e2fcbcac7f",
+      "source_kind": "AUTHENTICATED_CONVERSATION",
+      "source_url": "https://chatgpt.com/c/6a51b2b1-5870-83e8-ad8f-b1f8496be0fc",
+      "acquired_at": "2026-07-12T20:07:20.076Z",
+      "declared_message_count": 7,
+      "parsed_message_count": 7,
+      "normalized_transcript_sha256": "761d93838766f6b1502136f680615f8f26ec9eeba33d81fed44cc3bf7c6c6ff2"
+    },
+    "share_visible_json": {
+      "path": "share-visible.json",
+      "byte_count": 465587,
+      "sha256": "987adb876381e5126682dab4c31f1de0cc9a511b6743b5d36f59102acce0a3fa",
+      "source_kind": "PUBLIC_SHARE",
+      "source_url": "https://chatgpt.com/share/6a53ea95-9138-83e8-9761-2e85a29c3970",
+      "acquired_at": "2026-07-12T20:08:14.967Z",
+      "declared_message_count": 5,
+      "parsed_message_count": 5,
+      "normalized_transcript_sha256": "1e9c4ca047b8af9e3359578631295c1b6844b500c833ce346881a5ae410b5dce"
+    },
+    "authenticated_visible_markdown": {
+      "path": "authenticated-visible.md",
+      "byte_count": 93712,
+      "sha256": "369c29f0092310d16a8392f23223de9cf0c9c8102c42e9a298f6dad2519aa7ce",
+      "generated_from_sha256": "0eba2b4e454b9ffe97f139b28bd94efc01643f55460dde6792fd05e2fcbcac7f",
+      "body_field": "text_with_tex",
+      "transcript_body_count": 7,
+      "exact_body_equality_sequence": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    }
+  },
+  "json_integrity_checks": {
+    "authenticated_visible": {
+      "valid_json": true,
+      "schema_is_1": true,
+      "declared_count_matches_array_length": true,
+      "message_ids_are_nonempty_and_unique": true,
+      "orders_are_contiguous_zero_based": true,
+      "role_sequence_matches_messages": true,
+      "message_hash_sequence_matches_message_canonical_sha256_fields": true,
+      "all_declared_hashes_are_lowercase_sha256_hex": true
+    },
+    "share_visible": {
+      "valid_json": true,
+      "schema_is_1": true,
+      "declared_count_matches_array_length": true,
+      "message_ids_are_nonempty_and_unique": true,
+      "orders_are_contiguous_zero_based": true,
+      "role_sequence_matches_messages": true,
+      "message_hash_sequence_matches_message_canonical_sha256_fields": true,
+      "all_declared_hashes_are_lowercase_sha256_hex": true
+    },
+    "cross_capture_metadata": {
+      "conversation_title_equal": true,
+      "acquisition_boundary_equal": true,
+      "acquisition_boundary": "VISIBLE_DOM_ONLY_NO_HIDDEN_REASONING"
+    }
+  },
+  "shared_messages": [
+    {
+      "message_id": "85f1987d-2b98-4202-b4ad-c35ae39a41ee",
+      "role": "assistant",
+      "conversation_turn": "conversation-turn-8",
+      "authenticated_order": 2,
+      "share_order": 0,
+      "content_sha256_without_capture_order": "64dbcb1d4821cf4858c1c84c277f8025303c212a83ca9268caea3891761d8f24",
+      "content_equal": true,
+      "authenticated_capture_canonical_sha256": "ad87f512c7e0f641080741184cded79843671c63ef3ed54f5f7fd0fbfbf5f565",
+      "share_capture_canonical_sha256": "2ef291169307e1626654da1ad7047ab16259d5d72d90b15c7d78b6986ba5f453"
+    },
+    {
+      "message_id": "1064c3f5-5760-4e0a-b400-311a968dd191",
+      "role": "user",
+      "conversation_turn": "conversation-turn-9",
+      "authenticated_order": 3,
+      "share_order": 1,
+      "content_sha256_without_capture_order": "81682659eca08f253160e8e015b6f0946d37007fe0c21345c3f768688d905252",
+      "content_equal": true,
+      "authenticated_capture_canonical_sha256": "1364ad81082719121ad58afa0799b295e6a109849f25caea1bba2a88ced0363b",
+      "share_capture_canonical_sha256": "613d7dbe87cf6e1e38d347347c990bb448e0d9b72b12d66a001b60f88baf289e"
+    },
+    {
+      "message_id": "d54b7adf-15f1-472b-9518-6347ee4b77aa",
+      "role": "assistant",
+      "conversation_turn": "conversation-turn-10",
+      "authenticated_order": 4,
+      "share_order": 2,
+      "content_sha256_without_capture_order": "5d7a7c3943174b07906682dba94ed1567bc0b8959a44cd60ecb03d8de6849c08",
+      "content_equal": true,
+      "authenticated_capture_canonical_sha256": "8351d68bf40b88c34a7aa465df8c2533a7c87fca1b86f500d10f29b3af61b31a",
+      "share_capture_canonical_sha256": "1bff1bf05cec7cd340cfba9774be1f5124b7abb058cc61fe2030aec7eea69cd2"
+    },
+    {
+      "message_id": "0f6acae0-bd68-4fa5-874c-60dc2fb5fdbb",
+      "role": "user",
+      "conversation_turn": "conversation-turn-11",
+      "authenticated_order": 5,
+      "share_order": 3,
+      "content_sha256_without_capture_order": "d18b0781c9a5c1f5edc2f87420b2102046fdd3006083b88e997952f6d57a0f5e",
+      "content_equal": true,
+      "authenticated_capture_canonical_sha256": "5e4190dba1473b13fec8dbbca339931d2eebe4676eafe7ea123604e6d03c236d",
+      "share_capture_canonical_sha256": "63602bca6233d7e0e7de5d0a667d42a7e337da947620162f868527234bb4587a"
+    },
+    {
+      "message_id": "e0aef8be-dd6b-4be5-88c4-113bb38fe8d8",
+      "role": "assistant",
+      "conversation_turn": "conversation-turn-12",
+      "authenticated_order": 6,
+      "share_order": 4,
+      "content_sha256_without_capture_order": "98e9ae45f33531adf9ac6f77d569af5cd94a7211d2ef823a4830fcf0a39351c6",
+      "content_equal": true,
+      "authenticated_capture_canonical_sha256": "1a960b1a88dd85ba8ea26ee428b00873861e94459732be6a5c53a379b978f002",
+      "share_capture_canonical_sha256": "e61184fc9d093ef7b82b2efe0aa986733ad754dda93d102a8d4d75a5a5815592"
+    }
+  ],
+  "missing_from_share": [
+    {
+      "message_id": "0b973267-f5e1-4a08-bd5c-548b91c646ea",
+      "role": "user",
+      "conversation_turn": "conversation-turn-1",
+      "authenticated_order": 0,
+      "content_sha256_without_capture_order": "02428ee89da008985daf1bad6666a3e4362820409b904cc00f5f4cfa195f2620"
+    },
+    {
+      "message_id": "7af98f88-eda4-426f-b85d-eece9477a4af",
+      "role": "assistant",
+      "conversation_turn": "conversation-turn-2",
+      "authenticated_order": 1,
+      "content_sha256_without_capture_order": "ae54e7509dfd4f00b37b3fc1c63a18db4069e58b2aa9208e8b477b233cffccaf"
+    }
+  ],
+  "missing_from_authenticated": [],
+  "cross_capture_checks": {
+    "shared_message_count": 5,
+    "all_shared_message_contents_equal": true,
+    "shared_message_id_sequence_equal": true,
+    "share_is_exact_authenticated_suffix_by_message_id_and_content": true,
+    "authenticated_prefix_omitted_by_share_count": 2,
+    "authenticated_prefix_orders_omitted_by_share": [
+      0,
+      1
+    ],
+    "verdict": "SHARED_CONTENT_IDENTICAL_SHARE_OMITS_AUTHENTICATED_PREFIX_2"
+  }
+}
