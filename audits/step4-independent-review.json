@@ -1,0 +1,83 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-04-EXTENDED-SUPER-YANG-MILLS-001",
+  "contracts": [
+    "contracts/foundations/step-04-extended-sym-notation.md",
+    "contracts/foundations/step-04a-n1-super-yang-mills.md",
+    "contracts/foundations/step-04b-n2-super-yang-mills.md",
+    "contracts/foundations/step-04c-n4-super-yang-mills.md",
+    "contracts/dictionaries/step-04-extended-sym-weinberg-srednicki-dictionary.md"
+  ],
+  "review_results": [
+    {
+      "scope": "Common notation, adjoint variance, Lorentzian reality, Euclidean independence, and Noether labels",
+      "result": "PASS"
+    },
+    {
+      "scope": "N=1 superspace projection, both component signatures, off-shell closure, and both Noether-current chiralities",
+      "result": "PASS"
+    },
+    {
+      "scope": "N=2 relative metric, all component slots, free and covariant-jet closure, coefficient uniqueness, and current divergence",
+      "result": "PASS"
+    },
+    {
+      "scope": "N=2 simultaneous general-Lie-algebra closure with nonzero covariant derivatives, field strength, and Jacobi reductions",
+      "result": "UNVERIFIED_GENERAL_LIE_CLOSURE"
+    },
+    {
+      "scope": "N=2 off-shell SU(2)_R auxiliary-triplet covariance in exact free Lorentzian, free Euclidean, and SU(2)-color covariant-jet gates",
+      "result": "PASS",
+      "resolution": "RESOLVED_GRADED_NORMAL_ORDERING_BUG"
+    },
+    {
+      "scope": "N=4 cubic normalization, SU(4) packaging, on-shell closure remainders, and four Noether sectors",
+      "result": "PASS"
+    },
+    {
+      "scope": "Project-Srednicki-Weinberg source-status and coefficient dictionary",
+      "result": "PASS"
+    }
+  ],
+  "exact_verification": {
+    "extended_sym_failure_count": 0,
+    "n2_closure_residuals_excluding_su2_r_gate": 0,
+    "n2_su2_r_gate_residuals": 0,
+    "n2_su2_r_exact_residual": "0",
+    "n2_su2_r_resolution": "RESOLVED_GRADED_NORMAL_ORDERING_BUG",
+    "n2_su2_r_exact_checked_scope": {
+      "graded_normal_ordering": {
+        "checked_components": 32,
+        "residual_count": 0
+      },
+      "generator_basis": [
+        "t1=i*sigma1/2",
+        "t2=i*sigma2/2",
+        "t3=i*sigma3/2"
+      ],
+      "free_lorentzian": {
+        "checked_matrix_cells": 1734,
+        "residual_count": 0
+      },
+      "free_euclidean": {
+        "checked_matrix_cells": 1734,
+        "residual_count": 0
+      },
+      "interacting_su2_color_covariant_jet": {
+        "checked_object_color_slots": 396,
+        "checked_triplet_reconstruction_slots": 27,
+        "residual_count": 0
+      },
+      "scope_boundary": "No claim is made for arbitrary Lie algebras beyond the exact SU(2)-color covariant-jet gate."
+    },
+    "verifier_status": "PASS_EXACT_CHECKED_SCOPE",
+    "status": "BLOCKED_GENERAL_LIE_CLOSURE_VERIFICATION"
+  },
+  "post_resolution": {
+    "P0": [],
+    "P1": [
+      "N2_GENERAL_LIE_CLOSURE"
+    ]
+  },
+  "result": "BLOCKED_GENERAL_LIE_CLOSURE_VERIFICATION"
+}

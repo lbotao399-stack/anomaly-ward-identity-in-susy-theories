@@ -320,15 +320,21 @@
       "passed": true
     },
     {
-      "name": "step4_recorded_sha",
-      "left": "f76e1975617e6a703efda4413a67760bf55d84e22fb3a7a6289d3b890ff3eb6e",
-      "right": "f76e1975617e6a703efda4413a67760bf55d84e22fb3a7a6289d3b890ff3eb6e",
+      "name": "import_task_excludes_step4_contracts",
+      "left": [],
+      "right": [],
       "passed": true
     },
     {
-      "name": "step4_file_sha",
-      "left": "f76e1975617e6a703efda4413a67760bf55d84e22fb3a7a6289d3b890ff3eb6e",
-      "right": "f76e1975617e6a703efda4413a67760bf55d84e22fb3a7a6289d3b890ff3eb6e",
+      "name": "import_task_excludes_step4_verifiers",
+      "left": [],
+      "right": [],
+      "passed": true
+    },
+    {
+      "name": "import_task_is_archived",
+      "left": "tasks/archive/REFERENCE-IMPORT-SUPERSPACE-1001-VECTOR-REPRESENTATION-001.yaml",
+      "right": "tasks/archive/REFERENCE-IMPORT-SUPERSPACE-1001-VECTOR-REPRESENTATION-001.yaml",
       "passed": true
     },
     {
@@ -339,7 +345,7 @@
     }
   ],
   "totals": {
-    "checks": 46,
+    "checks": 47,
     "failed": 0,
     "page_text_comparisons": 14
   },

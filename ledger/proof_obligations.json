@@ -83,8 +83,43 @@
       "id": "CONTRACT-STEP-04-EXTENDED-SUPER-YANG-MILLS-001",
       "state": "SPECIFIED",
       "blocking_reason": null,
-      "task_sha256": "f76e1975617e6a703efda4413a67760bf55d84e22fb3a7a6289d3b890ff3eb6e",
-      "task": "tasks/pending/CONTRACT-STEP-04-EXTENDED-SUPER-YANG-MILLS-001.yaml"
+      "task_sha256": "7a0275641c96155b9a16df66a8e7d98fd4d26f43509a5365276a4e92811f05fe",
+      "task": "tasks/CURRENT.yaml",
+      "checked_scope": {
+        "N2_OFFSHELL_SU2_R_TRIPLET": {
+          "result": "PASS",
+          "resolution": "RESOLVED_GRADED_NORMAL_ORDERING_BUG",
+          "graded_normal_ordering": {
+            "checked_components": 32,
+            "residual_count": 0
+          },
+          "generator_basis": [
+            "t1=i*sigma1/2",
+            "t2=i*sigma2/2",
+            "t3=i*sigma3/2"
+          ],
+          "free_lorentzian": {
+            "checked_matrix_cells": 1734,
+            "residual_count": 0
+          },
+          "free_euclidean": {
+            "checked_matrix_cells": 1734,
+            "residual_count": 0
+          },
+          "interacting_su2_color_covariant_jet": {
+            "checked_object_color_slots": 396,
+            "checked_triplet_reconstruction_slots": 27,
+            "residual_count": 0
+          },
+          "scope_boundary": "Exact free Lorentzian and Euclidean intertwiners plus the SU(2)-color covariant-jet intertwiner only; no arbitrary-Lie-algebra generalization is claimed."
+        },
+        "unresolved": {
+          "N2_GENERAL_LIE_CLOSURE": {
+            "result": "UNVERIFIED_GENERAL_LIE_CLOSURE",
+            "required_gate": "Simultaneous nonzero covariant derivatives, field strength, and Jacobi reductions for arbitrary Lie algebra."
+          }
+        }
+      }
     },
     {
       "id": "REFERENCE-IMPORT-SUPERSPACE-1001-VECTOR-REPRESENTATION-001",
@@ -120,7 +155,7 @@
       "id": "REFERENCE-IMPORT-N2-SU2R-OBSTRUCTION-NOTE-001",
       "state": "ACCEPTED",
       "blocking_reason": null,
-      "task": "tasks/CURRENT.yaml"
+      "task": "tasks/archive/REFERENCE-IMPORT-N2-SU2R-OBSTRUCTION-NOTE-001.yaml"
     }
   ]
 }

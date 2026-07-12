@@ -21,7 +21,6 @@ AUDIT = ROOT / "audits/superspace-1001-reference-import-verification.json"
 
 SOURCE_SHA = "3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99"
 SUBSET_SHA = "57d71bcf95fb84dabb4f5e85cfb9290ba52031e031a062cf7b0e5dad93a2d87e"
-STEP4_SHA = "f76e1975617e6a703efda4413a67760bf55d84e22fb3a7a6289d3b890ff3eb6e"
 
 PAGE_MAP = [
     (1, 1),
@@ -154,14 +153,34 @@ def main() -> int:
     check("task_resolved_sha", task["local_reference_exception"]["resolved_sha256"], SOURCE_SHA)
     check("task_vendor_source_allowed", "references/vendor/hep-th-0108200v1.pdf" in task["allowed_inputs"], True)
 
-    step4 = next(
-        item
-        for item in obligations["proof_obligations"]
-        if item["id"] == "CONTRACT-STEP-04-EXTENDED-SUPER-YANG-MILLS-001"
+    check(
+        "import_task_excludes_step4_contracts",
+        [
+            item
+            for item in task["allowed_inputs"]
+            if item.startswith("contracts/foundations/step-04")
+        ],
+        [],
     )
-    step4_path = ROOT / step4["task"]
-    check("step4_recorded_sha", step4["task_sha256"], STEP4_SHA)
-    check("step4_file_sha", sha256(step4_path), STEP4_SHA)
+    check(
+        "import_task_excludes_step4_verifiers",
+        [
+            item
+            for item in task["allowed_inputs"]
+            if item.startswith("scripts/verify_step4")
+        ],
+        [],
+    )
+    check(
+        "import_task_is_archived",
+        next(
+            item["task"]
+            for item in obligations["proof_obligations"]
+            if item["id"]
+            == "REFERENCE-IMPORT-SUPERSPACE-1001-VECTOR-REPRESENTATION-001"
+        ),
+        "tasks/archive/REFERENCE-IMPORT-SUPERSPACE-1001-VECTOR-REPRESENTATION-001.yaml",
+    )
     check(
         "one_current_obligation",
         sum(item["task"] == "tasks/CURRENT.yaml" for item in obligations["proof_obligations"]),

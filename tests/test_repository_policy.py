@@ -130,7 +130,7 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
         audit = json.loads(expected)
         self.assertEqual(audit["status"], "PASS")
-        self.assertEqual(audit["totals"], {"checks": 46, "failed": 0, "page_text_comparisons": 14})
+        self.assertEqual(audit["totals"], {"checks": 47, "failed": 0, "page_text_comparisons": 14})
 
     def test_n2_su2r_obstruction_note_reference_import(self) -> None:
         ledger_path = ROOT / "references/n2-su2r-obstruction-note-source-ledger.json"
@@ -883,6 +883,250 @@ class RepositoryPolicyTest(unittest.TestCase):
             self.assertEqual(audit["post_resolution"]["P0"], [])
             self.assertEqual(audit["post_resolution"]["P1"], [])
 
+    def test_step_4_formula_surfaces(self) -> None:
+        surfaces = {
+            "contracts/foundations/step-04-extended-sym-notation.md": (
+                "4.",
+                44,
+                (
+                    r"[T_A,T_B]=ic_{AB}{}^CT_C",
+                    r"\llbracket X,Y\rrbracket^A&:=ic_{BC}{}^AX^BY^C",
+                    r"Y_{11}:=-\sqrt2F",
+                    r"\varphi^{r4}:=\phi_r",
+                    r"\mathsf N_{\rm PL}",
+                    r"\mathcal R_{{\rm PR},\mathsf s}^{\Xi}",
+                ),
+            ),
+            "contracts/foundations/step-04a-n1-super-yang-mills.md": (
+                "4A.",
+                57,
+                (
+                    r"S_L^{(1)}",
+                    r"S_E^{(1)}",
+                    r"\mathcal L_{L,{\rm compact}}^{(1)}",
+                    r"\partial_\mu j_{L,a}^\mu",
+                ),
+            ),
+            "contracts/foundations/step-04b-n2-super-yang-mills.md": (
+                "4B.",
+                99,
+                (
+                    r"S_L^{(2)}",
+                    r"S_E^{(2)}",
+                    r"Y_{ij}",
+                    r"j_{L,ia}^{\mu}",
+                    r"\mathsf A_{\rm PL}",
+                    r"(-\sqrt2,-\sqrt2,i,-1,1,-i,-2i,+2i)",
+                    r"\mathscr S_{\rm free}^{L,E}",
+                    r"\mathscr S_{\rm int}^{L}",
+                ),
+            ),
+            "contracts/foundations/step-04c-n4-super-yang-mills.md": (
+                "4C.",
+                111,
+                (
+                    r"S_L^{(4)}",
+                    r"S_E^{(4)}",
+                    r"\boxed{u=-\sqrt2.}",
+                    r"j_{L,a\mathcal I}^{\mu}",
+                    r"-i\bar\varepsilon_{\mathcal I}\bar\sigma_{L,\mu}",
+                    r"+\widetilde\varepsilon_{\mathcal I}\bar\sigma_{E,m}",
+                ),
+            ),
+        }
+        all_tags: list[str] = []
+        for relative, (prefix, minimum_tags, required) in surfaces.items():
+            path = ROOT / relative
+            self.assertTrue(path.is_file(), relative)
+            text = path.read_text(encoding="utf-8")
+            tags = re.findall(r"\\tag\{([^}]+)\}", text)
+            self.assertGreaterEqual(len(tags), minimum_tags, relative)
+            self.assertEqual(len(tags), len(set(tags)), relative)
+            self.assertTrue(all(tag.startswith(prefix) for tag in tags), relative)
+            all_tags.extend(tags)
+            for formula in required:
+                self.assertIn(formula, text, f"{relative}: {formula}")
+            self.assertEqual(text.count("$$") % 2, 0, relative)
+            self.assertNotIn(r"\sim", text, relative)
+            self.assertNotIn(r"\approx", text, relative)
+            self.assertNotIn(r"\propto", text, relative)
+            for character in text:
+                self.assertFalse(
+                    ord(character) < 32 and character not in "\n\r\t",
+                    relative,
+                )
+        self.assertEqual(len(all_tags), len(set(all_tags)))
+
+    def test_step_4_extended_sym_exact_verifier(self) -> None:
+        script = ROOT / "scripts/verify_step4_extended_sym.py"
+        audit_path = ROOT / "audits/step4-extended-sym-verification.json"
+        self.assertTrue(script.is_file())
+        self.assertTrue(audit_path.is_file())
+        expected = audit_path.read_text(encoding="utf-8")
+        subprocess.run(
+            [sys.executable, str(script), "--write-audit"],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
+        audit = json.loads(expected)
+        self.assertEqual(audit["failure_count"], 0)
+        self.assertEqual(audit["failures"], [])
+        self.assertEqual(audit["checks"]["lorentz_clifford"]["failures"], [])
+        self.assertEqual(audit["checks"]["sigma_triple_identity"]["failure_count"], 0)
+        self.assertEqual(audit["checks"]["bar_sigma_triple_identity"]["failure_count"], 0)
+        self.assertEqual(audit["checks"]["two_spinor_schouten"]["failure_count"], 0)
+        self.assertEqual(audit["checks"]["su4_rho_identities"]["failure_count"], 0)
+        self.assertEqual(audit["checks"]["n4_divergence_wick_coefficients"]["failure_count"], 0)
+        self.assertEqual(
+            audit["checks"]["n4_fermion_closure_eom_reduction"]["failure_count"],
+            0,
+        )
+
+    def test_step_4_n2_closure_verifier(self) -> None:
+        script = ROOT / "scripts/verify_step4_n2_closure.py"
+        audit_path = ROOT / "audits/step4-n2-closure-verification.json"
+        self.assertTrue(script.is_file())
+        self.assertTrue(audit_path.is_file())
+        expected = audit_path.read_text(encoding="utf-8")
+        completed = subprocess.run(
+            [sys.executable, str(script), "--write-audit"],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        self.assertEqual(completed.returncode, 0)
+        self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
+        audit = json.loads(expected)
+        self.assertEqual(audit["status"], "PASS_EXACT_CHECKED_SCOPE")
+        self.assertEqual(audit["failure_count"], 0)
+        self.assertEqual(audit["failures"], [])
+        self.assertTrue(
+            audit[
+                "complete_checked_scope_offshell_su2_r_intertwiner_claimed"
+            ]
+        )
+        for name in (
+            "lorentz_free_all_field_closure",
+            "euclidean_free_all_field_closure",
+            "constant_su2_nonabelian_interaction_closure",
+            "simultaneous_nonlinear_coefficient_solution",
+            "omega_sign_and_normalization_solution",
+            "graded_normal_ordering_identity",
+            "offshell_su2_r_lie_free_lorentz_intertwiner",
+            "offshell_su2_r_lie_free_euclidean_intertwiner",
+            "offshell_su2_r_lie_interaction_intertwiner",
+            "offshell_su2_r_triplet_gate",
+            "offshell_su2_r_quarter_turn_free_lorentz_regression",
+            "offshell_su2_r_quarter_turn_free_euclidean_regression",
+            "offshell_su2_r_quarter_turn_interaction_regression",
+        ):
+            check = audit["checks"][name]
+            self.assertTrue(check["passed"], name)
+            self.assertEqual(check["residual_count"], 0, name)
+
+        normal_order = audit["checks"]["graded_normal_ordering_identity"]
+        self.assertEqual(normal_order["checked_components"], 32)
+        self.assertEqual(
+            normal_order["identity"],
+            "barepsilon barsigma^M psi=-(psi sigma^M barepsilon)",
+        )
+
+        gate = audit["checks"]["offshell_su2_r_triplet_gate"]
+        self.assertEqual(
+            gate["derived_exact_coefficients"]["residual_coefficient_of_s"],
+            "0",
+        )
+        self.assertEqual(
+            gate["derived_exact_coefficients"]["order_covariance_residual"],
+            "0",
+        )
+        self.assertEqual(
+            gate["derived_exact_coefficients"]["gamma_c_over_s_parameter_left"],
+            "-i",
+        )
+        self.assertEqual(
+            gate["derived_exact_coefficients"]["gamma_c_over_s_field_left"],
+            "-i",
+        )
+        self.assertEqual(gate["conclusion"], "dual-order manifest-slot compatibility")
+
+        generator_basis = [
+            "t1=i*sigma1/2",
+            "t2=i*sigma2/2",
+            "t3=i*sigma3/2",
+        ]
+        for signature in ("lorentz", "euclidean"):
+            lie = audit["checks"][
+                f"offshell_su2_r_lie_free_{signature}_intertwiner"
+            ]
+            self.assertEqual(lie["generator_basis"], generator_basis)
+            self.assertEqual(lie["parameter_copies"], [1, 2])
+            self.assertEqual(lie["checked_matrix_cells"], 1734)
+            self.assertEqual(lie["residual_monomial_count"], 0)
+
+        interaction = audit["checks"][
+            "offshell_su2_r_lie_interaction_intertwiner"
+        ]
+        self.assertEqual(interaction["generator_basis"], generator_basis)
+        self.assertEqual(interaction["parameter_copies"], [1, 2])
+        self.assertEqual(interaction["checked_object_color_slots"], 396)
+        self.assertEqual(interaction["checked_triplet_reconstruction_slots"], 27)
+        self.assertEqual(interaction["residual_monomial_count"], 0)
+        for output in (
+            "lambda0",
+            "tlambda0",
+            "psi0",
+            "tpsi0",
+            "Y11",
+            "Y22",
+            "Y12",
+        ):
+            self.assertIn(output, interaction["checked_outputs"])
+
+    def test_step_4_dictionary_surface(self) -> None:
+        path = ROOT / "contracts/dictionaries/step-04-extended-sym-weinberg-srednicki-dictionary.md"
+        self.assertTrue(path.is_file())
+        text = path.read_text(encoding="utf-8")
+        tags = re.findall(r"\\tag\{(D4\.[^}]+)\}", text)
+        self.assertGreaterEqual(len(tags), 12)
+        self.assertEqual(len(tags), len(set(tags)))
+        self.assertIn("Project--Srednicki--Weinberg", text)
+        self.assertIn("SOURCE_INSUFFICIENT", text)
+        self.assertIn("NOT_DEFINED_IN_SOURCE", text)
+        self.assertIn("UNVERIFIED_GENERAL_LIE_CLOSURE", text)
+        self.assertNotIn(r"\sim", text)
+        self.assertNotIn(r"\approx", text)
+        self.assertNotIn(r"\propto", text)
+        for character in text:
+            self.assertFalse(ord(character) < 32 and character not in "\n\r\t")
+
+    def test_step_4_audits(self) -> None:
+        expected = {
+            "audits/step4-gap-audit.json": (
+                "BLOCKED_GENERAL_LIE_CLOSURE_VERIFICATION",
+                ["N2_GENERAL_LIE_CLOSURE"],
+            ),
+            "audits/step4-independent-review.json": (
+                "BLOCKED_GENERAL_LIE_CLOSURE_VERIFICATION",
+                ["N2_GENERAL_LIE_CLOSURE"],
+            ),
+            "audits/step4-notation-ledger.json": ("PASS", []),
+            "audits/step4-dictionary-review.json": ("PASS", []),
+        }
+        for relative, (result, p1_findings) in expected.items():
+            path = ROOT / relative
+            self.assertTrue(path.is_file(), relative)
+            audit = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(audit["result"], result, relative)
+            self.assertEqual(audit["post_resolution"]["P0"], [], relative)
+            self.assertEqual(
+                audit["post_resolution"]["P1"],
+                p1_findings,
+                relative,
+            )
+
     def test_weinberg_srednicki_section_verdicts(self) -> None:
         path = ROOT / "audits/ws-dictionary/draft-section-verdicts.json"
         if not path.exists():
@@ -955,7 +1199,17 @@ class RepositoryPolicyTest(unittest.TestCase):
             ROOT / "scripts",
         ]
         for root in roots:
-            paths = [root] if root.is_file() else [p for p in root.rglob("*") if p.is_file()]
+            paths = (
+                [root]
+                if root.is_file()
+                else [
+                    path
+                    for path in root.rglob("*")
+                    if path.is_file()
+                    and "__pycache__" not in path.parts
+                    and path.suffix != ".pyc"
+                ]
+            )
             for path in paths:
                 text = path.read_text(encoding="utf-8")
                 self.assertNotIn("/Users/", text, str(path))

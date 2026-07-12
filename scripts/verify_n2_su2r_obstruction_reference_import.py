@@ -14,8 +14,10 @@ SOURCE = ROOT / "references/vendor/local/N2_SYM_offshell_SU2R_obstruction_lectur
 LEDGER = ROOT / "references/n2-su2r-obstruction-note-source-ledger.json"
 MANIFEST = ROOT / "references/manifest.yaml"
 CLAIM_MAP = ROOT / "references/claim-map.yaml"
-TASK = ROOT / "tasks/CURRENT.yaml"
-PENDING_STEP4 = ROOT / "tasks/pending/CONTRACT-STEP-04-EXTENDED-SUPER-YANG-MILLS-001.yaml"
+TASK_CANDIDATES = (
+    ROOT / "tasks/CURRENT.yaml",
+    ROOT / "tasks/archive/REFERENCE-IMPORT-N2-SU2R-OBSTRUCTION-NOTE-001.yaml",
+)
 AUDIT = ROOT / "audits/n2-su2r-obstruction-reference-import-verification.json"
 
 TASK_ID = "REFERENCE-IMPORT-N2-SU2R-OBSTRUCTION-NOTE-001"
@@ -25,7 +27,6 @@ SOURCE_LOCATOR = (
     "attachment://N2_SYM_offshell_SU2R_obstruction_lecture_note.tex"
     "#sha256=" + SOURCE_SHA256
 )
-STEP4_SHA256 = "f76e1975617e6a703efda4413a67760bf55d84e22fb3a7a6289d3b890ff3eb6e"
 CLAIM_IDS = (
     "N2-SU2R-GRADED-ORDERING-CANDIDATE",
     "N2-SU2R-CANONICAL-PACKAGE-CANDIDATE",
@@ -65,7 +66,12 @@ def build_audit() -> dict[str, Any]:
     ledger = json.loads(LEDGER.read_text(encoding="utf-8"))
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
     claim_map = json.loads(CLAIM_MAP.read_text(encoding="utf-8"))
-    task = json.loads(TASK.read_text(encoding="utf-8"))
+    task_path = next(
+        path
+        for path in TASK_CANDIDATES
+        if path.exists() and json.loads(path.read_text(encoding="utf-8"))["id"] == TASK_ID
+    )
+    task = json.loads(task_path.read_text(encoding="utf-8"))
 
     recorder.check("source sha256", sha256(SOURCE), SOURCE_SHA256, "identity")
     recorder.check("source byte count", len(source_bytes), 32358, "identity")
@@ -161,9 +167,24 @@ def build_audit() -> dict[str, Any]:
         "\\bibitem{ProjectPR}",
     )
     recorder.check("source markers exact", [marker in source_text for marker in markers], [True] * len(markers), "source")
-    recorder.check("Step4 pending hash preserved", sha256(PENDING_STEP4), STEP4_SHA256, "lifecycle")
-    recorder.check("Step4 contract absent during import", (ROOT / "contracts/foundations/step-04b-n2-super-yang-mills.md").exists(), False, "boundary")
-    recorder.check("Step4 verifier absent during import", (ROOT / "scripts/verify_step4_n2_closure.py").exists(), False, "boundary")
+    recorder.check(
+        "import task excludes Step4 contract",
+        [item for item in task["allowed_inputs"] if item.startswith("contracts/foundations/step-04")],
+        [],
+        "boundary",
+    )
+    recorder.check(
+        "import task excludes Step4 verifier",
+        "scripts/verify_step4_n2_closure.py" in task["allowed_inputs"],
+        False,
+        "boundary",
+    )
+    recorder.check(
+        "import task forbids translation",
+        any("translation of a candidate sign" in item for item in task["forbidden_inputs"]),
+        True,
+        "lifecycle",
+    )
 
     categories: dict[str, dict[str, int]] = {}
     for check in recorder.checks:
