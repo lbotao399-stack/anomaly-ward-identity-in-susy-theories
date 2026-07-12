@@ -924,6 +924,54 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertEqual(mirror_task["id"], "MIRROR-STEP-03D-NOTION-001")
         self.assertEqual(mirror_task["status"], "ACCEPTED")
 
+    def test_step_4_write_only_mirror_receipt(self) -> None:
+        page_map = json.loads((ROOT / "mirror/page_map.yaml").read_text(encoding="utf-8"))
+        receipt = json.loads((ROOT / "audits/notion_write_receipt.json").read_text(encoding="utf-8"))
+        mirror_task = json.loads(
+            (ROOT / "tasks/archive/MIRROR-STEP-04-NOTION-001.yaml").read_text(
+                encoding="utf-8"
+            )
+        )
+        expected = {
+            "FOUNDATION-EXTENDED-SYM-NOTATION-004": (
+                "contracts/foundations/step-04-extended-sym-notation.md",
+                "3fcf7e242928d3512c02059d8c28d9551b5cb86156f9d6259cd2bba713211d27",
+                "39bee2b7-4b3f-8173-949c-dead35930a41",
+            ),
+            "FOUNDATION-N1-SUPER-YANG-MILLS-004A": (
+                "contracts/foundations/step-04a-n1-super-yang-mills.md",
+                "b2495f6a98c8cffe21ab2583b1955c81f5bb06af9b0edfb677fc0a3a3ee1fbc1",
+                "39bee2b7-4b3f-8102-8acd-c94d11c92963",
+            ),
+            "FOUNDATION-N2-SUPER-YANG-MILLS-004B": (
+                "contracts/foundations/step-04b-n2-super-yang-mills.md",
+                "c8c46744d2c41880bf145d8d6c90af25555276650cc036ded8ddbda9071870d3",
+                "39bee2b7-4b3f-8188-bfb0-f7bb9f1d6d0f",
+            ),
+            "FOUNDATION-N4-SUPER-YANG-MILLS-004C": (
+                "contracts/foundations/step-04c-n4-super-yang-mills.md",
+                "9fb057d14ee438b31d3f38836e8ca848dfee74b1ea363716222264c96405e5db",
+                "39bee2b7-4b3f-81ee-ad8d-ec5b838fa90d",
+            ),
+            "CONTRACT-STEP-04-EXTENDED-SYM-DICTIONARY-001": (
+                "contracts/dictionaries/step-04-extended-sym-weinberg-srednicki-dictionary.md",
+                "0909093c4afa22d5d8ae9c540880a524e57353c573795bf1937de1cfdcdd0a7b",
+                "39bee2b7-4b3f-8150-a227-dd76caa48008",
+            ),
+        }
+        for page_id, (source, digest, notion_page_id) in expected.items():
+            page = next(item for item in page_map["pages"] if item["id"] == page_id)
+            write = next(item for item in receipt["pages"] if item["id"] == page_id)
+            self.assertEqual(page["source"], source)
+            self.assertEqual(page["source_commit"], "a3d7791c0469051f21471f5f5c40c97f6aef1cff")
+            self.assertEqual(page["source_sha256"], digest)
+            self.assertEqual(page["notion_page_id"], notion_page_id)
+            self.assertEqual(write["page_id"], notion_page_id)
+            self.assertEqual(write["write_response"], "succeeded")
+        self.assertFalse(receipt["content_readback_performed"])
+        self.assertEqual(mirror_task["id"], "MIRROR-STEP-04-NOTION-001")
+        self.assertEqual(mirror_task["status"], "ACCEPTED")
+
     def test_step_3d_path_integral_bv_brst_contract(self) -> None:
         path = ROOT / "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md"
         if not path.exists():
