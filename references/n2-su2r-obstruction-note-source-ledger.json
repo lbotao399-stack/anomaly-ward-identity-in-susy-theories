@@ -1,0 +1,95 @@
+{
+  "schema": 1,
+  "task": "REFERENCE-IMPORT-N2-SU2R-OBSTRUCTION-NOTE-001",
+  "source": {
+    "original_locator": "attachment://N2_SYM_offshell_SU2R_obstruction_lecture_note.tex#sha256=cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6",
+    "vendored_path": "references/vendor/local/N2_SYM_offshell_SU2R_obstruction_lecture_note.tex",
+    "sha256": "cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6",
+    "bytes": 32358,
+    "lines": 1054,
+    "identity_check": "EXACT_BYTE_IDENTITY",
+    "document_claimed_author": "OpenAI GPT-5.6 Pro",
+    "document_claimed_date": "2026-07-11",
+    "document_claimed_scope": "Draft PR 27 at commit e814615",
+    "repository_status_at_import": "NON_AUTHORITY_PROPOSAL"
+  },
+  "candidate_claims": [
+    {
+      "id": "N2-SU2R-GRADED-ORDERING-CANDIDATE",
+      "line_ranges": [
+        "144-191",
+        "256-316",
+        "383-589",
+        "878-917"
+      ],
+      "classification": "CANDIDATE_DERIVATION_REQUIRES_PROJECT_REDERIVATION",
+      "claim": "The reported nonzero triplet residual is caused by mixing parameter-left and field-left graded normal orders.",
+      "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+    },
+    {
+      "id": "N2-SU2R-CANONICAL-PACKAGE-CANDIDATE",
+      "line_ranges": [
+        "317-382",
+        "590-703",
+        "918-950",
+        "953-977"
+      ],
+      "classification": "CANDIDATE_DICTIONARY_REQUIRES_PROJECT_REDERIVATION",
+      "claim": "A linear off-shell package with chi_1=psi, chi_2=-lambda, Y_11=-sqrt(2)F, Y_22=-sqrt(2)tildeF, and Y_12=iH is compatible with the displayed candidate coefficient equations.",
+      "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+    },
+    {
+      "id": "N2-SU2R-PATCH-CHECKLIST-CANDIDATE",
+      "line_ranges": [
+        "704-856",
+        "979-1011"
+      ],
+      "classification": "CANDIDATE_PATCH_CHECKLIST_REQUIRES_CODE_AUDIT",
+      "claim": "A later contract-change task should normalize both derivative handles in one graded order and add dual-order regression checks.",
+      "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+    },
+    {
+      "id": "N2-SU2R-EMBEDDED-EXTERNAL-CONTEXT",
+      "line_ranges": [
+        "229-254",
+        "1013-1052"
+      ],
+      "classification": "EMBEDDED_EXTERNAL_REFERENCE_NOT_IMPORTED",
+      "claim": "The note cites external literature for the standard off-shell N=2 vector multiplet.",
+      "adoption_status": "FORBIDDEN_UNTIL_SEPARATE_REFERENCE_IMPORT"
+    }
+  ],
+  "embedded_external_references": [
+    {
+      "citation_key": "VanProeyen1995",
+      "locator": "arXiv:hep-th/9512139",
+      "imported": false,
+      "allowed_use": "NONE_IN_THIS_TASK"
+    },
+    {
+      "citation_key": "MartinPrimer",
+      "locator": "arXiv:hep-ph/9709356",
+      "imported": false,
+      "allowed_use": "NONE_IN_THIS_TASK"
+    },
+    {
+      "citation_key": "ProjectPR",
+      "locator": "draft PR 27 commit e814615",
+      "imported": false,
+      "allowed_use": "IDENTIFY_PROPOSAL_SCOPE_ONLY"
+    }
+  ],
+  "source_scope": {
+    "translation_status": "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+    "project_formula_adoption": false,
+    "step4_contract_modified": false,
+    "step4_verifier_modified": false,
+    "notion_read_performed": false,
+    "web_read_performed": false
+  },
+  "verification": {
+    "verifier": "scripts/verify_n2_su2r_obstruction_reference_import.py",
+    "audit": "audits/n2-su2r-obstruction-reference-import-verification.json",
+    "expected_status": "PASS"
+  }
+}

@@ -131,6 +131,38 @@
       ],
       "allowed_use": "A later registered Step-3 contract-change task may reconstruct the source vector-versus-gauge-chiral action and covariant component comparison from source PDF page 190, printed page 178.",
       "forbidden_use": "Importing the incidental Fayet-Iliopoulos term (4.3.3), source gauge-coupling normalization, measure normalization, or component definitions without a separate Project-side derivation."
+    },
+    {
+      "id": "N2-SU2R-GRADED-ORDERING-CANDIDATE",
+      "sources": [
+        "N2-SU2R-OBSTRUCTION-LECTURE-NOTE-TEX"
+      ],
+      "allowed_use": "A later registered Step-4 contract-change task may use the exact line ranges classified in the source ledger as a candidate diagnosis, but must independently derive both parameter-left and field-left coefficient chains from the locked Project transformations.",
+      "forbidden_use": "Treating the note's sign, coefficient, canonical package, final no-obstruction statement, or embedded citations as Project authority."
+    },
+    {
+      "id": "N2-SU2R-CANONICAL-PACKAGE-CANDIDATE",
+      "sources": [
+        "N2-SU2R-OBSTRUCTION-LECTURE-NOTE-TEX"
+      ],
+      "allowed_use": "A later registered Step-4 contract-change task may test the proposed chi, zeta, and Y dictionary as a candidate graded intertwiner against every Project component slot.",
+      "forbidden_use": "Declaring a complete off-shell SU(2)_R intertwiner from the single gamma-c-over-s gate or importing an external N=2 multiplet formula."
+    },
+    {
+      "id": "N2-SU2R-PATCH-CHECKLIST-CANDIDATE",
+      "sources": [
+        "N2-SU2R-OBSTRUCTION-LECTURE-NOTE-TEX"
+      ],
+      "allowed_use": "A later registered Step-4 contract-change task may use the listed file and equation locations only as a repair queue, followed by direct source inspection, exact regression tests, and full repository verification.",
+      "forbidden_use": "Applying the proposed code or documentation patch without reproducing the current matrix order and all affected conjugate, closure, and Wick checks."
+    },
+    {
+      "id": "N2-SU2R-EMBEDDED-EXTERNAL-CONTEXT",
+      "sources": [
+        "N2-SU2R-OBSTRUCTION-LECTURE-NOTE-TEX"
+      ],
+      "allowed_use": "Record only that the attachment contains unimported citations to hep-th/9512139 and hep-ph/9709356.",
+      "forbidden_use": "Using either cited paper, its formulas, or the attachment's summary of those papers before a separate user-authorized reference import."
     }
   ]
 }

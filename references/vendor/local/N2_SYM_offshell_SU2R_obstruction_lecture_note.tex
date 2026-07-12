@@ -1,0 +1,1054 @@
+\documentclass[11pt,a4paper,UTF8]{ctexart}
+
+\usepackage[margin=22mm,headheight=15pt]{geometry}
+\usepackage{fontspec}
+\setmainfont{Noto Serif}
+\setsansfont{Noto Sans}
+\setmonofont{Noto Sans Mono}
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont{Noto Sans Mono CJK SC}
+
+\usepackage{amsmath,amssymb,mathtools,amscd,mathrsfs}
+\usepackage{booktabs,longtable,array,tabularx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\usepackage{setspace}
+\usepackage{caption}
+
+\definecolor{deepblue}{HTML}{17365D}
+\definecolor{softblue}{HTML}{EAF2F8}
+\definecolor{deepred}{HTML}{8E2A2A}
+\definecolor{softred}{HTML}{FBEDED}
+\definecolor{deepgreen}{HTML}{245B3A}
+\definecolor{softgreen}{HTML}{EAF6EE}
+\definecolor{softgray}{HTML}{F4F5F6}
+\definecolor{codegray}{HTML}{F7F7F8}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=deepblue,
+  citecolor=deepgreen,
+  urlcolor=deepblue,
+  pdftitle={Removing the Off-Shell SU(2)_R Pseudo-Obstruction in 4d N=2 SYM},
+  pdfauthor={OpenAI GPT-5.6 Pro},
+  pdfsubject={Exact graded-sign diagnosis and verifier repair}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small $4d\;\mathcal N=2$ SYM: off-shell $SU(2)_R$ packaging}
+\fancyhead[R]{\small Lecture note}
+\fancyfoot[C]{\thepage}
+
+\titleformat{\section}{\Large\bfseries\color{deepblue}}{\thesection}{0.65em}{}
+\titleformat{\subsection}{\large\bfseries\color{deepblue}}{\thesubsection}{0.65em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries\color{deepblue}}{\thesubsubsection}{0.65em}{}
+\numberwithin{equation}{section}
+\setlist[itemize]{leftmargin=1.6em,itemsep=0.25em,topsep=0.35em}
+\setlist[enumerate]{leftmargin=1.8em,itemsep=0.25em,topsep=0.35em}
+\setstretch{1.08}
+
+\newcommand{\ii}{\mathrm i}
+\newcommand{\cD}{\mathcal D}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\N}{\mathcal N}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\id}{\mathbf 1}
+\newcommand{\PL}{\mathsf L}
+\newcommand{\PR}{\mathsf R}
+\newcommand{\parity}[1]{\lvert #1\rvert}
+\newcommand{\slot}{\big\vert}
+\newcommand{\ket}[1]{\lvert #1\rangle}
+
+\newtcolorbox{resultbox}[1][]{
+  enhanced, breakable, colback=softgreen, colframe=deepgreen,
+  boxrule=0.8pt, arc=1.5mm, left=2.5mm, right=2.5mm,
+  top=1.8mm, bottom=1.8mm, title={#1}, fonttitle=\bfseries
+}
+\newtcolorbox{warningbox}[1][]{
+  enhanced, breakable, colback=softred, colframe=deepred,
+  boxrule=0.8pt, arc=1.5mm, left=2.5mm, right=2.5mm,
+  top=1.8mm, bottom=1.8mm, title={#1}, fonttitle=\bfseries
+}
+\newtcolorbox{definitionbox}[1][]{
+  enhanced, breakable, colback=softblue, colframe=deepblue,
+  boxrule=0.8pt, arc=1.5mm, left=2.5mm, right=2.5mm,
+  top=1.8mm, bottom=1.8mm, title={#1}, fonttitle=\bfseries
+}
+\newtcolorbox{codebox}[1][]{
+  enhanced, breakable, colback=codegray, colframe=black!35,
+  boxrule=0.6pt, arc=1mm, left=2mm, right=2mm,
+  top=1.5mm, bottom=1.5mm, title={#1}, fonttitle=\bfseries
+}
+
+\lstdefinestyle{pythonstyle}{
+  language=Python,
+  basicstyle=\ttfamily\small,
+  keywordstyle=\bfseries,
+  commentstyle=\itshape,
+  showstringspaces=false,
+  breaklines=true,
+  columns=fullflexible,
+  frame=single,
+  rulecolor=\color{black!25},
+  backgroundcolor=\color{codegray},
+  xleftmargin=0.5em,
+  framexleftmargin=0.4em,
+  aboveskip=0.6em,
+  belowskip=0.6em
+}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace*{18mm}
+{\sffamily\bfseries\fontsize{24}{29}\selectfont
+Removing the Off-Shell $SU(2)_R$ Pseudo-Obstruction\par}
+\vspace{2mm}
+{\sffamily\bfseries\fontsize{19}{24}\selectfont
+in $4d\;\mathcal N=2$ Super Yang--Mills\par}
+\vspace{7mm}
+{\Large 解除 $4d\;\mathcal N=2$ SYM 中的 off-shell $SU(2)_R$ 伪 obstruction\par}
+\vspace{9mm}
+{\large A convention-safe derivation, exact sign audit, and machine-verifier repair\par}
+\vspace{16mm}
+\begin{tcolorbox}[width=0.88\textwidth,colback=softgreen,colframe=deepgreen,boxrule=1pt,arc=2mm]
+\centering
+\textbf{Main result}\par\medskip
+The reported equations $\gamma c=-\ii s$ and $\gamma c=+\ii s$ do not define a physical no-go theorem.  The second sign is produced by mixing two different graded normal orders.  In either one consistent order, both derivations give
+\[
+\boxed{\gamma c=-\ii s}.
+\]
+Hence the linear invertible doublet/triplet package is viable; nonlinear or field-dependent packaging is not needed for this gate.
+\end{tcolorbox}
+\vfill
+{\large Scope: PR \#27, commit \texttt{e814615}\par}
+\vspace{2mm}
+{\large 11 July 2026\par}
+\vspace{5mm}
+{\small This note diagnoses and specifies a patch.  It does not modify the repository and does not claim that the patched test suite has already been rerun.\par}
+\end{titlepage}
+
+\tableofcontents
+\clearpage
+
+\section*{Notation and symbol dictionary}
+\addcontentsline{toc}{section}{Notation and symbol dictionary}
+
+本 note 先固定全部新记号。所有等式均在同一组 two-component spinor conventions 内解释。
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.19\textwidth}>{\raggedright\arraybackslash}p{0.74\textwidth}}
+\toprule
+Symbol & Meaning \\
+\midrule
+\endfirsthead
+\toprule
+Symbol & Meaning \\
+\midrule
+\endhead
+$\parity{X}\in\mathbb Z_2$ & Grassmann parity. Bosonic fields have parity $0$; supersymmetry parameters and fermions have parity $1$. \\
+$\eps_{ij}$ & $SU(2)_R$ antisymmetric tensor, with $\eps_{12}=-1$, $\eps^{12}=+1$. Indices are raised and lowered by $\eps_{ij}$ and $\eps^{ij}$. \\
+$T_{(ij)}$ & Unit-weight symmetrization: $T_{(ij)}=(T_{ij}+T_{ji})/2$. \\
+$\cD_\mu$ & Gauge-covariant derivative. For the Abelian sign gate, it may be replaced by $\partial_\mu$ without changing the conclusion. \\
+$\phi,\psi,F$ & The adjoint $\N=1$ chiral multiplet inside the $\N=2$ vector multiplet. \\
+$A_\mu,\lambda,\mathscr D$ & The adjoint $\N=1$ vector multiplet. \\
+$\widetilde F$ & Lorentzian conjugate of $F$ in the project convention; in Euclidean signature it is an independent complex slot before a contour is chosen. \\
+$\mu$ & Adjoint moment map used by the project: $\mu=\ii(\phi\times\widetilde\phi)$. \\
+$H$ & Shifted real auxiliary, $H=\mathscr D+\mu$. \\
+$\chi_i$ & Left-handed $SU(2)_R$ fermion doublet. \\
+$\zeta^i$ & Left-handed supersymmetry-parameter doublet. \\
+$Y_{ij}=Y_{ji}$ & Symmetric lower-index auxiliary triplet. Lorentzian reality is $(Y_{ij})^\dagger=Y^{ij}$. \\
+$a,b,c,s$ & Nonzero linear packaging coefficients in $Y_{11}=aF$, $Y_{22}=b\widetilde F$, $Y_{12}=cH$, $\chi_2=s\lambda$. \\
+$\gamma,\beta$ & Coefficients in $\delta\chi_i\slot_{Y,\mu}=\gamma Y_{ij}\zeta^j+\beta\mu\eps_{ij}\zeta^j$. \\
+$A_{\PL}$ & Coefficient of the auxiliary derivative law in \emph{parameter-left} order, $\bar\zeta\,\bar\sigma\cD\chi$. \\
+$A_{\PR}$ & Coefficient of the same law in \emph{field-left} order, $(\cD\chi)\sigma\bar\zeta$. \\
+$\mathfrak O$ & Difference between the value of $\gamma c/s$ extracted from the gaugino slot and the value extracted from the triplet slot. A genuine obstruction requires $\mathfrak O\neq0$ in every consistent normal order. \\
+\bottomrule
+\end{longtable}
+
+\begin{definitionbox}[Two canonical graded normal orders]
+For Grassmann-odd $\bar\zeta$ and $\chi$,
+\begin{align}
+\mathsf N_{\PL}\!\left(\bar\zeta\,\bar\sigma^\mu\cD_\mu\chi\right)
+&=\bar\zeta\,\bar\sigma^\mu\cD_\mu\chi,
+\\
+\mathsf N_{\PR}\!\left(\bar\zeta\,\bar\sigma^\mu\cD_\mu\chi\right)
+&=-(\cD_\mu\chi)\sigma^\mu\bar\zeta.
+\end{align}
+The minus sign is the Koszul sign
+\[
+(-1)^{\parity{\bar\zeta}\parity{\chi}}=(-1)^{1\cdot1}=-1.
+\]
+\end{definitionbox}
+
+\section{What would a genuine obstruction mean?}
+
+\subsection{The packaging map as an intertwiner}
+
+Let $\mathcal F_{\N=1}$ denote the component field space written as one $\N=1$ vector plus one adjoint chiral multiplet. Let $\mathcal F_{SU(2)}$ denote the same off-shell degrees of freedom arranged into $SU(2)_R$ tensors. A linear package is a map
+\[
+P:\mathcal F_{\N=1}\longrightarrow\mathcal F_{SU(2)}.
+\]
+It is a valid $\N=2$ dictionary precisely when it intertwines every supersymmetry transformation:
+\begin{equation}
+P\,\delta_{\N=1}=\delta_{SU(2)}\,P.
+\label{eq:intertwiner}
+\end{equation}
+Equivalently, the diagram commutes:
+\[
+\begin{CD}
+\mathcal F_{\N=1} @>{P}>> \mathcal F_{SU(2)}\\
+@V{\delta_{\N=1}}VV @VV{\delta_{SU(2)}}V\\
+\mathcal F_{\N=1} @>{P}>> \mathcal F_{SU(2)}.
+\end{CD}
+\]
+
+A genuine linear obstruction would mean that the coefficient equations following from \cref{eq:intertwiner} have no solution with
+\[
+\det P\neq0,
+\qquad
+sabc\neq0.
+\]
+Such a conclusion must be invariant under:
+\begin{enumerate}
+\item invertible field redefinitions;
+\item rephasing of the $SU(2)_R$ basis;
+\item a consistent change of graded monomial order;
+\item Hermitian conjugation performed as an anti-automorphism.
+\end{enumerate}
+
+\subsection{Why a physical no-go is already implausible}
+
+The standard rigid $4d\;\N=2$ vector multiplet is an irreducible finite off-shell $8+8$ representation with independent fields
+\[
+(X,\Omega_i,Y_{ij},W_\mu),
+\qquad
+Y_{ij}=Y_{ji},
+\]
+and a reality condition leaving three real components in $Y_{ij}$ \cite{VanProeyen1995}. Its off-shell counting is exact:
+\begin{align}
+N_B&=(4-1)_{W_\mu}+2_X+3_Y=8,
+\\
+N_F&=2\times4_{\text{two Weyl fermions}}=8.
+\end{align}
+Therefore the standard vector multiplet does not suffer from the finite-auxiliary-field problem familiar from a generic hypermultiplet. A contradiction found inside one $\N=1\to SU(2)_R$ dictionary must first be tested for convention consistency before it is interpreted as physics.
+
+\begin{resultbox}[Classification of the reported result]
+The current contradiction is not:
+\begin{itemize}
+\item a quantum anomaly;
+\item a cohomological no-go theorem;
+\item a proof that $\N=2$ SYM closes only on shell;
+\item evidence that nonlinear packaging is required.
+\end{itemize}
+It is a false-positive coefficient residual generated by combining one parameter-left coefficient with one field-left coefficient.
+\end{resultbox}
+
+\section{The exact $\N=1$ sign identities}
+
+\subsection{Chiral top-slot transformation}
+
+With the project normalization
+\[
+\delta\phi=-\sqrt2\,\eps\psi,
+\qquad
+\delta\psi_\alpha=-\sqrt2\,\eps_\alpha F
++\ii\sqrt2\,\sigma^\mu_{\alpha\dot\alpha}\bar\eps^{\dot\alpha}\cD_\mu\phi,
+\]
+the chiral top slot in parameter-left order is
+\begin{equation}
+\boxed{
+\delta F\slot_{\bar\eps}
+=+\ii\sqrt2\,\bar\eps\bar\sigma^\mu\cD_\mu\psi.}
+\label{eq:F-left}
+\end{equation}
+Because $\bar\eps$ and $\psi$ are both odd,
+\begin{equation}
+\bar\eps\bar\sigma^\mu\cD_\mu\psi
+=-(\cD_\mu\psi)\sigma^\mu\bar\eps.
+\label{eq:koszul-spinor}
+\end{equation}
+Hence the same transformation in field-left order is
+\begin{equation}
+\boxed{
+\delta F\slot_{\bar\eps}
+=-\ii\sqrt2\,(\cD_\mu\psi)\sigma^\mu\bar\eps.}
+\label{eq:F-right}
+\end{equation}
+Equations \eqref{eq:F-left} and \eqref{eq:F-right} are identical statements. The coefficient changes sign because the monomial order changes.
+
+\subsection{Vector auxiliary transformation}
+
+The manifest vector-multiplet rule contains
+\begin{equation}
+\boxed{
+\delta\mathscr D\slot_{\bar\eps}
+=+\bar\eps\bar\sigma^\mu\cD_\mu\lambda
+=-(\cD_\mu\lambda)\sigma^\mu\bar\eps.}
+\label{eq:D-orders}
+\end{equation}
+Thus both the $F$ derivative slot and the $\mathscr D$ derivative slot acquire a minus sign under the same change from parameter-left to field-left order.
+
+\subsection{Hermitian conjugation does not remove the ordering issue}
+
+For homogeneous operators $X,Y$,
+\begin{equation}
+(XY)^\dagger=Y^\dagger X^\dagger.
+\label{eq:dagger-anti}
+\end{equation}
+No Koszul sign is inserted into \cref{eq:dagger-anti}; the order is reversed. If one subsequently restores parameter-left order, the odd factors must be exchanged and one minus sign appears. For example,
+\begin{align}
+\left(+\ii\sqrt2\,\eps\sigma^\mu\cD_\mu\widetilde\psi\right)^\dagger
+&=-\ii\sqrt2\,(\cD_\mu\psi)\sigma^\mu\bar\eps,
+\\
+&=+\ii\sqrt2\,\bar\eps\bar\sigma^\mu\cD_\mu\psi.
+\end{align}
+This is exactly \cref{eq:F-right,eq:F-left}. A sign audit that conjugates coefficients but forgets that the operator order reverses is incomplete.
+
+\section{The $SU(2)_R$ package and the gaugino equations}
+
+\subsection{General linear ansatz}
+
+The gate uses
+\begin{align}
+\chi_1&=\psi,
+&\chi_2&=s\lambda,
+&\zeta^1&=\eps,
+&\zeta^2&=s^{-1}\eta,
+\label{eq:general-doublet}
+\\
+Y_{11}&=aF,
+&Y_{22}&=b\widetilde F,
+&Y_{12}&=Y_{21}=cH,
+& H&=\mathscr D+\mu,
+\label{eq:general-triplet}
+\end{align}
+with $sabc\neq0$. The auxiliary and moment-map part of the fermion transformation is
+\begin{equation}
+\delta\chi_i\slot_{Y,\mu}
+=\gamma Y_{ij}\zeta^j+\beta\mu\eps_{ij}\zeta^j.
+\label{eq:fermion-ansatz}
+\end{equation}
+
+\subsection{Manifest $F\eps$ slot}
+
+For $i=1$, the $F\eps$ term in \cref{eq:fermion-ansatz} is
+\[
+\gamma Y_{11}\zeta^1
+=\gamma aF\eps.
+\]
+The $\N=1$ chiral rule gives
+\[
+\delta\chi_1\slot_{F\eps}
+=\delta\psi\slot_{F\eps}
+=-\sqrt2\,F\eps.
+\]
+Therefore
+\begin{equation}
+\boxed{\gamma a=-\sqrt2.}
+\label{eq:gamma-a}
+\end{equation}
+
+\subsection{Manifest $\mathscr D\eps$ gaugino slot}
+
+For $i=2$,
+\[
+\delta\chi_2\slot_{\mathscr D\eps}
+=s\,\delta\lambda\slot_{\mathscr D\eps}
+=s(-\ii\eps\mathscr D)
+=-\ii s\,\mathscr D\eps.
+\]
+The $Y$ term gives
+\[
+\gamma Y_{21}\zeta^1
+=\gamma cH\eps
+=\gamma c\mathscr D\eps+\gamma c\mu\eps.
+\]
+Comparing only the $\mathscr D\eps$ coefficient yields
+\begin{equation}
+\boxed{\gamma c=-\ii s.}
+\label{eq:gaugino-c}
+\end{equation}
+This equation is independent of the monomial-order issue because $\mathscr D$ is bosonic.
+
+\section{Forensic reconstruction of the false $+\ii s$}
+
+The verifier stores transformation matrices in parameter-left order. In particular, it extracts
+\begin{align}
+\frac{A_{\PL}}{a}&=+\ii\sqrt2
+&&\text{from }F\leftarrow\bar\eps\,\cD\psi,
+\label{eq:stored-F}
+\\
+q_{\mathscr D,\PL}&=+1
+&&\text{from }\mathscr D\leftarrow\bar\eps\,\cD\lambda.
+\label{eq:stored-D}
+\end{align}
+The gate then manually converts only the second coefficient to field-left order:
+\begin{equation}
+q_{\mathscr D,\PR}=-q_{\mathscr D,\PL}=-1,
+\label{eq:D-converted}
+\end{equation}
+but it leaves \cref{eq:stored-F} unchanged. It therefore combines
+\[
+\frac{A_{\PL}}a=+\ii\sqrt2
+\qquad\text{with}\qquad
+\frac{c}{A_{\PR}s}=-\frac12.
+\]
+These two ratios do not belong to the same coefficient system.
+
+The resulting machine expression is
+\begin{align}
+\left.\frac{\gamma c}{s}\right|_{\text{mixed}}
+&=(\gamma a)
+\left(\frac{A_{\PL}}a\right)
+\left(\frac{c}{A_{\PR}s}\right)
+\\
+&=(-\sqrt2)(+\ii\sqrt2)\left(-\frac12\right)
+\\
+&=(-2\ii)\left(-\frac12\right)
+\\
+&=+\ii.
+\label{eq:false-plus-i}
+\end{align}
+The gaugino slot gives
+\[
+\left.\frac{\gamma c}{s}\right|_{\text{gaugino}}=-\ii.
+\]
+Thus the reported residual is
+\begin{align}
+\mathfrak O_{\text{mixed}}
+&=\left.\frac{\gamma c}{s}\right|_{\text{triplet,mixed}}
+-
+\left.\frac{\gamma c}{s}\right|_{\text{gaugino}}
+\\
+&=(+\ii)-(-\ii)
+\\
+&=2\ii.
+\end{align}
+The residual is generated by the inconsistent normal-order change itself.
+
+\begin{warningbox}[The exact logical failure]
+The pair
+\[
+\frac{A_{\PL}}a=+\ii\sqrt2,
+\qquad
+\frac{c}{A_{\PR}s}=-\frac12
+\]
+cannot be multiplied as though $A_{\PL}=A_{\PR}$. They satisfy
+\[
+A_{\PR}=-A_{\PL}.
+\]
+The missing minus sign is the entire reported obstruction.
+\end{warningbox}
+
+\section{Correct derivation in parameter-left order}
+
+Choose one canonical law:
+\begin{equation}
+\boxed{
+\delta Y_{ij}\slot_{\cD\chi\bar\zeta}
+=A_{\PL}\,\bar\zeta_{(i}\bar\sigma^\mu\cD_\mu\chi_{j)}.}
+\label{eq:Y-left-law}
+\end{equation}
+
+\subsection{$Y_{11}$ slot}
+
+From $Y_{11}=aF$ and \cref{eq:F-left},
+\begin{align}
+\delta Y_{11}\slot_{\bar\eps}
+&=a\,\delta F\slot_{\bar\eps}
+\\
+&=a\left(+\ii\sqrt2\,\bar\eps\bar\sigma^\mu\cD_\mu\psi\right)
+\\
+&=a\ii\sqrt2\,\bar\zeta_1\bar\sigma^\mu\cD_\mu\chi_1.
+\end{align}
+Equation \eqref{eq:Y-left-law} gives
+\[
+\delta Y_{11}\slot_{\bar\eps}
+=A_{\PL}\,\bar\zeta_1\bar\sigma^\mu\cD_\mu\chi_1.
+\]
+Therefore
+\begin{equation}
+\boxed{A_{\PL}=a\ii\sqrt2.}
+\label{eq:AL-a}
+\end{equation}
+
+\subsection{$Y_{12}$ slot}
+
+The manifest derivative in $H$ is
+\[
+\delta H\slot_{\bar\eps}
+=+\bar\eps\bar\sigma^\mu\cD_\mu\lambda.
+\]
+Using $Y_{12}=cH$ and $\chi_2=s\lambda$,
+\begin{align}
+\delta Y_{12}\slot_{\bar\eps}
+&=c\,\bar\eps\bar\sigma^\mu\cD_\mu\lambda
+\\
+&=\frac cs\,\bar\zeta_1\bar\sigma^\mu\cD_\mu\chi_2.
+\end{align}
+Equation \eqref{eq:Y-left-law} gives, with unit-weight symmetrization,
+\begin{align}
+\delta Y_{12}\slot_{\bar\eps}
+&=\frac{A_{\PL}}2\,
+\bar\zeta_1\bar\sigma^\mu\cD_\mu\chi_2.
+\end{align}
+Hence
+\begin{equation}
+\boxed{\frac{A_{\PL}s}{2}=c.}
+\label{eq:c-AL}
+\end{equation}
+
+\subsection{Exact compatibility with the gaugino slot}
+
+Using \cref{eq:gamma-a,eq:AL-a,eq:c-AL},
+\begin{align}
+\gamma c
+&=\gamma\left(\frac{A_{\PL}s}{2}\right)
+\\
+&=\frac12\gamma A_{\PL}s
+\\
+&=\frac12\gamma(a\ii\sqrt2)s
+\\
+&=\frac12(\gamma a)\ii\sqrt2\,s
+\\
+&=\frac12(-\sqrt2)\ii\sqrt2\,s
+\\
+&=\frac12(-2\ii)s
+\\
+&=-\ii s.
+\end{align}
+Thus the symmetric-triplet slot gives exactly the same equation as \cref{eq:gaugino-c}:
+\begin{equation}
+\boxed{\gamma c=-\ii s.}
+\end{equation}
+
+\section{Equivalent derivation in field-left order}
+
+The same law may be written as
+\begin{equation}
+\boxed{
+\delta Y_{ij}\slot_{\cD\chi\bar\zeta}
+=A_{\PR}(\cD_\mu\chi_{(i})\sigma^\mu\bar\zeta_{j)}.}
+\label{eq:Y-right-law}
+\end{equation}
+Using \cref{eq:koszul-spinor},
+\begin{equation}
+A_{\PR}=-A_{\PL}.
+\label{eq:ARminusAL}
+\end{equation}
+Equations \eqref{eq:AL-a} and \eqref{eq:c-AL} become
+\begin{equation}
+\boxed{
+A_{\PR}=-a\ii\sqrt2,
+\qquad
+\frac{A_{\PR}s}{2}=-c.}
+\label{eq:right-relations}
+\end{equation}
+Now compute without changing order midway:
+\begin{align}
+\gamma c
+&=\gamma\left(-\frac{A_{\PR}s}{2}\right)
+\\
+&=-\frac12\gamma A_{\PR}s
+\\
+&=-\frac12\gamma(-a\ii\sqrt2)s
+\\
+&=\frac12(\gamma a)\ii\sqrt2\,s
+\\
+&=\frac12(-\sqrt2)\ii\sqrt2\,s
+\\
+&=-\ii s.
+\end{align}
+Both canonical orders therefore produce the same invariant coefficient.
+
+\begin{resultbox}[Normal-order covariance]
+The two valid systems are
+\[
+\left\{
+\frac{A_{\PL}}a=+\ii\sqrt2,
+\frac{c}{A_{\PL}s}=+\frac12
+\right\},
+\qquad
+\left\{
+\frac{A_{\PR}}a=-\ii\sqrt2,
+\frac{c}{A_{\PR}s}=-\frac12
+\right\}.
+\]
+Each system gives $\gamma c/s=-\ii$. The invalid mixed system takes the first entry from the left set and the second entry from the right set.
+\end{resultbox}
+
+\section{The corrected canonical $\N=2$ vector-multiplet dictionary}
+
+Choose the project normalization
+\begin{align}
+\chi_1&=\psi,
+&\chi_2&=-\lambda,
+&\zeta^1&=\eps,
+&\zeta^2&=-\eta,
+\label{eq:canonical-doublet}
+\\
+Y_{11}&=-\sqrt2F,
+&Y_{22}&=-\sqrt2\widetilde F,
+&Y_{12}&=Y_{21}=\ii H.
+\label{eq:canonical-Y}
+\end{align}
+Thus
+\begin{equation}
+(a,b,c,s,\gamma)=(-\sqrt2,-\sqrt2,\ii,-1,1).
+\label{eq:canonical-coeffs}
+\end{equation}
+The derivative coefficient is
+\begin{equation}
+A_{\PL}=-2\ii,
+\qquad
+A_{\PR}=+2\ii.
+\label{eq:canonical-A}
+\end{equation}
+The relevant auxiliary law can be written in either exact form:
+\begin{align}
+\delta Y_{ij}\slot_{\bar\zeta}
+&=-2\ii\,\bar\zeta_{(i}\bar\sigma^\mu\cD_\mu\chi_{j)},
+\label{eq:canonical-Y-left}
+\\
+&=+2\ii\,(\cD_\mu\chi_{(i})\sigma^\mu\bar\zeta_{j)}.
+\label{eq:canonical-Y-right}
+\end{align}
+
+\subsection{Moment-map coefficient}
+
+For the canonical choice, the complete auxiliary and moment-map part is
+\begin{equation}
+\boxed{
+\delta\chi_i\slot_{Y,\mu}
+=Y_{ij}\zeta^j-\ii\mu\eps_{ij}\zeta^j.}
+\label{eq:canonical-fermion}
+\end{equation}
+Check $i=1$ explicitly. Since $\eps_{12}=-1$,
+\begin{align}
+\delta\chi_1\slot_{Y,\mu}
+&=Y_{11}\zeta^1+Y_{12}\zeta^2
+-\ii\mu\eps_{12}\zeta^2
+\\
+&=(-\sqrt2F)\eps+(\ii H)(-\eta)
+-\ii\mu(-1)(-\eta)
+\\
+&=-\sqrt2F\eps-\ii H\eta-\ii\mu\eta
+\\
+&=-\sqrt2F\eps-\ii(\mathscr D+\mu)\eta-\ii\mu\eta
+\\
+&=-\sqrt2F\eps-\ii\mathscr D\eta-2\ii\mu\eta.
+\end{align}
+This is the manifest chiral $F$ slot plus the hidden $\mathscr D$ and moment-map slots.
+
+For $i=2$, $\eps_{21}=+1$ and $\chi_2=-\lambda$:
+\begin{align}
+\delta\chi_2\slot_{Y,\mu}
+&=Y_{21}\zeta^1+Y_{22}\zeta^2
+-\ii\mu\eps_{21}\zeta^1
+\\
+&=(\ii H)\eps+(-\sqrt2\widetilde F)(-\eta)
+-\ii\mu\eps
+\\
+&=\ii(\mathscr D+\mu)\eps+\sqrt2\widetilde F\eta-\ii\mu\eps
+\\
+&=\ii\mathscr D\eps+\sqrt2\widetilde F\eta.
+\end{align}
+Multiplying by $-1$ gives
+\[
+\delta\lambda\slot_{Y,\mu}
+=-\ii\mathscr D\eps-\sqrt2\widetilde F\eta,
+\]
+which is exactly the manifest and hidden gaugino auxiliary rule.
+
+\subsection{Reality and auxiliary action}
+
+With $F^\dagger=\widetilde F$ and $H^\dagger=H$,
+\begin{align}
+(Y_{11})^\dagger
+&=(-\sqrt2F)^\dagger
+=-\sqrt2\widetilde F
+=Y_{22}
+=Y^{11},
+\\
+(Y_{12})^\dagger
+&=(\ii H)^\dagger
+=-\ii H
+=-Y_{12}
+=Y^{12}.
+\end{align}
+The auxiliary quadratic form is
+\begin{align}
+\frac14Y^{ij}Y_{ij}
+&=\frac14\left(Y_{22}Y_{11}+Y_{11}Y_{22}-2Y_{12}Y_{12}\right)
+\\
+&=\frac14\left(
+2\widetilde FF+2F\widetilde F-2(\ii H)(\ii H)
+\right)
+\\
+&=\frac14\left(4\widetilde FF+2H^2\right)
+\\
+&=\widetilde FF+\frac12H^2,
+\end{align}
+where the adjoint trace and its invariant symmetric metric are understood. Thus the same canonical package satisfies the Lorentzian contour and the auxiliary action normalization.
+
+\section{Concrete verifier repair}
+
+\subsection{Minimal repair: stay parameter-left}
+
+The existing matrix builder already stores supersymmetry parameters on the left. The safest repair is therefore to keep the gate in that same normal form.
+
+\begin{lstlisting}[style=pythonstyle,caption={Parameter-left coefficient extraction for the repaired gate}]
+# Existing exact handles, all in parameter-left normal form.
+gamma_times_a = selected_coefficient("psi0", "F", "1e0", p_zero)
+# gamma_times_a = -sqrt(2)
+
+A_L_over_a = selected_coefficient("F", "psi0", "1b0", p_time)
+# A_L_over_a = +i*sqrt(2)
+
+Dlambda_parameter_left = selected_coefficient(
+    "D", "lambda0", "1b0", p_time
+)
+# Dlambda_parameter_left = +1
+
+c_over_A_L_s = Fraction(1, 2) * Dlambda_parameter_left
+# c/(A_L*s) = +1/2
+
+gamma_c_over_s_from_triplet = (
+    gamma_times_a * A_L_over_a * c_over_A_L_s
+)
+# (-sqrt(2))*(+i*sqrt(2))*(+1/2) = -i
+
+residual = (
+    gamma_c_over_s_from_triplet
+    - gamma_c_over_s_from_gaugino
+)
+# residual = (-i) - (-i) = 0
+\end{lstlisting}
+
+The line
+\begin{lstlisting}[style=pythonstyle]
+field_first_dlambda = -d_barepsilon_barsigma_dlambda
+\end{lstlisting}
+should not feed a product that still contains the parameter-left $F$ coefficient. Either delete that conversion from this gate or convert the $F$ slot at the same time.
+
+\subsection{Dual-order regression test}
+
+A strong verifier should prove that both normal orders agree:
+\begin{lstlisting}[style=pythonstyle,caption={Order-covariance regression test}]
+A_R_over_a = -A_L_over_a
+c_over_A_R_s = -c_over_A_L_s
+
+gamma_c_over_s_left = (
+    gamma_times_a * A_L_over_a * c_over_A_L_s
+)
+gamma_c_over_s_right = (
+    gamma_times_a * A_R_over_a * c_over_A_R_s
+)
+
+assert gamma_c_over_s_left == MINUS_I
+assert gamma_c_over_s_right == MINUS_I
+assert gamma_c_over_s_left == gamma_c_over_s_right
+\end{lstlisting}
+The two minus signs in the right-order product cancel exactly:
+\begin{align}
+(-\sqrt2)(-\ii\sqrt2)\left(-\frac12\right)
+&=(+2\ii)\left(-\frac12\right)
+\\
+&=-\ii.
+\end{align}
+
+\subsection{Documentation repair}
+
+The component note should choose one style and use it everywhere. The parameter-left style is closest to the current matrix implementation:
+\begin{align}
+\delta_1F\slot_{\bar\eps}
+&=+\ii\sqrt2\,\bar\eps\bar\sigma^\mu\cD_\mu\psi,
+\label{eq:doc-F-left}
+\\
+\delta Y_{11}\slot_{\bar\eps}
+&=-2\ii\,\bar\eps\bar\sigma^\mu\cD_\mu\psi,
+\label{eq:doc-Y11-left}
+\\
+\delta Y_{ij}\slot_{\bar\zeta}
+&=A_{\PL}\bar\zeta_{(i}\bar\sigma^\mu\cD_\mu\chi_{j)},
+\label{eq:doc-general-left}
+\\
+A_{\PL}&=a\ii\sqrt2,
+\qquad
+\frac{A_{\PL}s}{2}=c.
+\label{eq:doc-relations-left}
+\end{align}
+If the note instead uses field-left style, it must write
+\begin{align}
+\delta_1F\slot_{\bar\eps}
+&=-\ii\sqrt2(\cD_\mu\psi)\sigma^\mu\bar\eps,
+\\
+\delta Y_{11}\slot_{\bar\eps}
+&=+2\ii(\cD_\mu\psi)\sigma^\mu\bar\eps,
+\\
+A_{\PR}&=-a\ii\sqrt2,
+\qquad
+\frac{A_{\PR}s}{2}=-c.
+\end{align}
+The old combination
+\[
+A=+a\ii\sqrt2,
+\qquad
+\frac{As}{2}=-c
+\]
+is precisely the forbidden mixed-order pair.
+
+\section{Regression proof obligations}
+
+After the patch, the following exact checks should be required before changing the PR status.
+
+\begin{enumerate}
+\item \textbf{Canonical package check}
+\[
+(a,b,c,s,\gamma)=(-\sqrt2,-\sqrt2,\ii,-1,1),
+\qquad
+\frac{\gamma c}{s}=-\ii.
+\]
+
+\item \textbf{Order covariance}
+\[
+\left.\frac{\gamma c}{s}\right|_{\PL}
+=
+\left.\frac{\gamma c}{s}\right|_{\PR}
+=-\ii.
+\]
+
+\item \textbf{Koszul involution}
+\[
+\mathsf N_{\PL}\!\left(\mathsf N_{\PR}(M)\right)=M
+\]
+for each bilinear containing one odd parameter and one odd field.
+
+\item \textbf{Hermitian-conjugation consistency}
+\[
+(XY)^\dagger=Y^\dagger X^\dagger
+\]
+followed by canonical normal ordering must reproduce the conjugate component rule exactly.
+
+\item \textbf{Free Abelian closure}
+The existing zero residual must remain zero; the patch changes the presentation of one coefficient extraction, not the transformation matrix.
+
+\item \textbf{Non-Abelian closure}
+The existing covariant-jet checks must be rerun. The local sign repair is independent of compensators, but the full audit should still verify that no documentation change was copied incorrectly into the non-Abelian rules.
+
+\item \textbf{Audit status}
+Only after the focused and repository-wide tests pass should
+\[
+\texttt{BLOCKED\_OFFSHELL\_SU2\_R\_PACKAGING}
+\]
+be replaced by a passing status.
+\end{enumerate}
+
+\section{Why nonlinear packaging cannot be the first remedy}
+
+Suppose one keeps the inconsistent pair
+\[
+A=+a\ii\sqrt2,
+\qquad
+\frac{As}{2}=-c.
+\]
+The contradiction then appears already in the free Abelian derivative slots. A nonlinear correction contains at least one additional field. It cannot alter a coefficient multiplying a term linear in one fermion and one constant supersymmetry parameter at zero background. A field-dependent redefinition also reduces to its linear Jacobian at the origin. Therefore neither option repairs this residual without first correcting the linear graded sign.
+
+The logical order is:
+\begin{equation}
+\boxed{
+\text{normalize monomials}
+\;\longrightarrow\;
+\text{solve the linear gate}
+\;\longrightarrow\;
+\text{test nonlinear completion}.}
+\end{equation}
+For the present gate, the first step already produces a solution.
+
+\section{Conceptual interpretation}
+
+\subsection{The obstruction residual is not convention invariant}
+
+Define
+\begin{equation}
+\mathfrak O
+=
+\left.\frac{\gamma c}{s}\right|_{\delta Y}
+-
+\left.\frac{\gamma c}{s}\right|_{\delta\chi}.
+\end{equation}
+A genuine representation-theoretic obstruction would satisfy
+\[
+\mathfrak O\neq0
+\]
+after every consistent change of basis and every consistent graded normal-order map. Here one finds
+\begin{align}
+\mathfrak O_{\PL}&=(-\ii)-(-\ii)=0,
+\\
+\mathfrak O_{\PR}&=(-\ii)-(-\ii)=0,
+\\
+\mathfrak O_{\text{mixed}}&=(+\ii)-(-\ii)=2\ii.
+\end{align}
+Because only the mixed expression is nonzero, it is not an invariant of the supermultiplet. It is an invariant of an inconsistent bookkeeping choice, and therefore has no physical content.
+
+\subsection{Why the other closure tests could still pass}
+
+The full free-closure matrix uses one exterior algebra and one parameter-left ordering. Its coefficients therefore retain the correct Koszul signs. The specialized triplet gate steps outside that representation when it manually converts only the $\mathscr D\leftarrow\lambda$ handle to field-left form. This explains the otherwise surprising pattern:
+\[
+\text{free closure}=0,
+\qquad
+\text{triplet gate}\neq0.
+\]
+The two calculations were not evaluating the same normal-form system.
+
+\subsection{Theoretical meaning in one sentence}
+
+The Codex result means that the current \emph{implementation of the dictionary} fails to be a graded intertwiner; it does not mean that the $\N=2$ vector multiplet fails to possess an off-shell $SU(2)_R$-covariant realization.
+
+\section{Final result}
+
+\begin{resultbox}[Resolved coefficient system]
+For any $\gamma\neq0$ and $s\neq0$, the relevant linear equations admit
+\begin{align}
+ a&=-\frac{\sqrt2}{\gamma},
+& c&=-\frac{\ii s}{\gamma},
+& A_{\PL}&=-\frac{2\ii}{\gamma},
+& A_{\PR}&=+\frac{2\ii}{\gamma}.
+\end{align}
+The hidden $\widetilde F\eta$ slot gives
+\[
+b=-\frac{\sqrt2s^2}{\gamma}.
+\]
+The moment-map coefficient is
+\[
+\beta=\ii s.
+\]
+The project choice $\gamma=1$, $s=-1$ yields
+\[
+(a,b,c,s,\gamma,\beta,A_{\PL},A_{\PR})
+=(-\sqrt2,-\sqrt2,\ii,-1,1,-\ii,-2\ii,+2\ii).
+\]
+Every displayed equation is invertible and satisfies $\gamma c=-\ii s$.
+\end{resultbox}
+
+The correct conclusion is therefore
+\begin{equation}
+\boxed{
+\text{No off-shell }SU(2)_R\text{ obstruction exists in the declared linear package.}}
+\end{equation}
+The blocker should be treated as a graded-ordering bug in the note and verifier, patched in one canonical normal form, and then revalidated by the existing exact closure suite.
+
+\appendix
+
+\section{Exact sign table}
+
+\begin{center}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.22\textwidth}X X}
+\toprule
+Slot & Parameter-left form & Field-left form \\
+\midrule
+$\delta F\slot_{\bar\eps}$
+& $+\ii\sqrt2\,\bar\eps\bar\sigma^\mu\cD_\mu\psi$
+& $-\ii\sqrt2(\cD_\mu\psi)\sigma^\mu\bar\eps$ \\
+$\delta\mathscr D\slot_{\bar\eps}$
+& $+\bar\eps\bar\sigma^\mu\cD_\mu\lambda$
+& $-(\cD_\mu\lambda)\sigma^\mu\bar\eps$ \\
+$\delta Y_{11}\slot_{\bar\eps}$
+& $a\ii\sqrt2\,\bar\eps\bar\sigma^\mu\cD_\mu\psi$
+& $-a\ii\sqrt2(\cD_\mu\psi)\sigma^\mu\bar\eps$ \\
+General $\delta Y_{ij}$
+& $A_{\PL}\bar\zeta_{(i}\bar\sigma^\mu\cD_\mu\chi_{j)}$
+& $A_{\PR}(\cD_\mu\chi_{(i})\sigma^\mu\bar\zeta_{j)}$ \\
+Coefficient map
+& $A_{\PL}=a\ii\sqrt2$, $c=A_{\PL}s/2$
+& $A_{\PR}=-a\ii\sqrt2$, $c=-A_{\PR}s/2$ \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\section{Suggested patch checklist by file}
+
+\begin{enumerate}
+\item \path{contracts/foundations/step-04b-n2-super-yang-mills.md}, Eq. (4B.20a).
+
+Write the $\delta_1F$ derivative term in parameter-left form as in \cref{eq:doc-F-left}, or change its field-left coefficient to $-\ii\sqrt2$.
+
+\item \path{contracts/foundations/step-04b-n2-super-yang-mills.md}, Eq. (4B.31).
+
+Make the $Y_{11}$ derivative term consistent with $Y_{11}=aF$. In canonical parameter-left form it is
+\[
+-2\ii\bar\eps\bar\sigma^\mu\cD_\mu\psi.
+\]
+
+\item \path{contracts/foundations/step-04b-n2-super-yang-mills.md}, Eqs. (4B.33L3)--(4B.33L5).
+
+Use either \cref{eq:Y-left-law,eq:AL-a,eq:c-AL} or \cref{eq:Y-right-law,eq:right-relations}. Do not combine them.
+
+\item \path{scripts/verify_step4_n2_closure.py}, function \path{check_offshell_su2_triplet_gate}.
+
+Remove the one-sided conversion \texttt{field\_first\_dlambda} followed by a manual minus sign, or convert both derivative handles. Add the dual-order regression test.
+
+\item \path{audits/step4-n2-closure-verification.json}.
+
+Regenerate the audit from the patched verifier. The expected residual coefficient is $0$, and both triplet and gaugino equations are
+\[
+\frac{\gamma c}{s}=-\ii.
+\]
+
+\item PR body and manifest status.
+
+Update them only after the focused and full repository policies pass on the patched commit.
+\end{enumerate}
+
+\section{Reference formulas from the standard off-shell multiplet}
+
+In the conventions of Van Proeyen \cite{VanProeyen1995}, the Abelian vector multiplet is written as
+\[
+(X,\Omega_i,Y_{ij},W_\mu),
+\qquad Y_{ij}=Y_{ji},
+\]
+with the relevant transformation structure
+\begin{align}
+\delta X&=\bar\epsilon^i\Omega_i,
+\\
+\delta\Omega_i
+&=\not\!\partial X\,\epsilon_i
++\frac12Y_{ij}\epsilon^j
++\frac12\sigma_{ab}F^{-ab}\eps_{ij}\epsilon^j,
+\\
+\delta Y_{ij}
+&=2\bar\epsilon_{(i}\not\!\partial\Omega_{j)}
++2\eps_{ik}\eps_{j\ell}\bar\epsilon^{(k}\not\!\partial\Omega^{\ell)}.
+\end{align}
+These phases and factors should not be copied directly into a different two-component convention. Their role here is structural: a symmetric real auxiliary triplet exists and closes the $4d\;\N=2$ vector multiplet off shell.
+
+\begin{thebibliography}{9}
+
+\bibitem{VanProeyen1995}
+A. Van Proeyen,
+\emph{Vector multiplets in $N=2$ supersymmetry and its associated moduli spaces},
+arXiv:hep-th/9512139, Sec. 2.2, especially Eq. (2.17).
+
+\bibitem{MartinPrimer}
+S. P. Martin,
+\emph{A Supersymmetry Primer},
+arXiv:hep-ph/9709356.
+
+\bibitem{ProjectPR}
+L. Botao repository,
+\emph{Derive $N=1,2,4$ SYM and isolate the $N=2$ off-shell R-symmetry gate},
+Draft PR \#27, commit \texttt{e814615}, inspected 11 July 2026.
+
+\end{thebibliography}
+
+\end{document}

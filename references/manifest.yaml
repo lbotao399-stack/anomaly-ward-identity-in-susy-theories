@@ -17,7 +17,7 @@
       "id": "REFERENCE-CLAIM-MAP",
       "path": "references/claim-map.yaml",
       "classification": "REFERENCE_CLAIM_BOUNDARY",
-      "sha256": "9554429cd68f05735dcfba1a6faeaf636a937895a8f632576b6764529a9418e4"
+      "sha256": "4ce321832c3579859b69636595623934a7604a421bedd5f2587a4c0e1ffe4060"
     },
     {
       "id": "ARXIV-HEP-TH-0108200-V1",
@@ -264,6 +264,18 @@
       "path": "references/superspace-1001-gauge-representation-source-ledger.json",
       "classification": "REFERENCE_SOURCE_LEDGER",
       "sha256": "7530baacded6fe86d4a137ea7fd6e8e2606a0b64d937bab6409525d7210506f2"
+    },
+    {
+      "id": "N2-SU2R-OBSTRUCTION-LECTURE-NOTE-TEX",
+      "path": "references/vendor/local/N2_SYM_offshell_SU2R_obstruction_lecture_note.tex",
+      "classification": "USER_AUTHORIZED_NON_AUTHORITY_CANDIDATE_DERIVATION",
+      "sha256": "cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6"
+    },
+    {
+      "id": "N2-SU2R-OBSTRUCTION-NOTE-SOURCE-LEDGER",
+      "path": "references/n2-su2r-obstruction-note-source-ledger.json",
+      "classification": "REFERENCE_SOURCE_LEDGER",
+      "sha256": "b8e8dddfe3244ca72e5fd20d9b785ab4d62fe049472ceeb04928e5d7d3aaa50c"
     }
   ]
 }
