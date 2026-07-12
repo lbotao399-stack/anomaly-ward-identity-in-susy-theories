@@ -140,6 +140,12 @@
       "issue": "The instructor's covariant-derivative, curvature, and bracket recursions assumed zero primitive fermion and auxiliary residuals and therefore did not prove general-Lie closure.",
       "resolution": "Direct Lorentzian and Euclidean PBW-word composition gives zero residual on all 17 primitive and 5 derived objects in each signature; 1156 rule bindings and 284 structural identities also have zero residual.",
       "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "issue": "A bare carriage-return byte in the universal-algebra formula made the raw contract hash differ from the Notion payload hash and corrupted the mirrored formula.",
+      "resolution": "Removed the carriage-return byte, updated the manifest hash, verified raw and payload SHA-256 equality, and made the Step-4 formula-surface policy reject bare carriage returns.",
+      "status": "RESOLVED"
     }
   ],
   "post_resolution": {

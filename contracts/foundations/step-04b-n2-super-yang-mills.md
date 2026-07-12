@@ -1443,7 +1443,7 @@ universal property extends \(\operatorname{ev}_{\mathfrak g}\) to an
 algebra homomorphism.  Hence
 
 $$
-X=0\ \text{in }\mathcal A_{m univ}^{R}
+X=0\ \text{in }\mathcal A_{\rm univ}^{R}
 \quad\Longrightarrow\quad
 \operatorname{ev}_{\mathfrak g}(X)=0.
 $$

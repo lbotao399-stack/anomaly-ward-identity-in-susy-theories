@@ -1017,7 +1017,7 @@ class RepositoryPolicyTest(unittest.TestCase):
             self.assertNotIn(r"\propto", text, relative)
             for character in text:
                 self.assertFalse(
-                    ord(character) < 32 and character not in "\n\r\t",
+                    ord(character) < 32 and character not in "\n\t",
                     relative,
                 )
         self.assertEqual(len(all_tags), len(set(all_tags)))

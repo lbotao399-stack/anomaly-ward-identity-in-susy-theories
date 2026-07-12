@@ -48,6 +48,11 @@
           "id": "GENERAL-LIE-P2-EUCLIDEAN-INTERNAL-INDEX",
           "result": "RESOLVED",
           "resolution": "Locked A_internal[r]=A_E[r+1] and listed the Step-4A vector rules among both signature composition inputs."
+        },
+        {
+          "id": "GENERAL-LIE-P1-NOTION-NEWLINE-INTEGRITY",
+          "result": "RESOLVED",
+          "resolution": "Removed the bare carriage-return byte, matched the raw contract and generated Notion-payload SHA-256 values, and added a repository-policy regression."
         }
       ]
     },
