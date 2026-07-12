@@ -163,6 +163,38 @@
       ],
       "allowed_use": "Record only that the attachment contains unimported citations to hep-th/9512139 and hep-ph/9709356.",
       "forbidden_use": "Using either cited paper, its formulas, or the attachment's summary of those papers before a separate user-authorized reference import."
+    },
+    {
+      "id": "N2-GENERAL-LIE-PRIMITIVE-CLOSURE-CANDIDATE",
+      "sources": [
+        "N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-MD"
+      ],
+      "allowed_use": "A later registered Step-4 contract-change task may independently rederive and test the proposed scalar and gauge-field closure formulas against the locked Project transformations.",
+      "forbidden_use": "Treating the instructor's translation vector, gauge parameter, spinor rearrangement, sign, or coefficient as Project authority."
+    },
+    {
+      "id": "N2-GENERAL-LIE-FUNCTORIAL-LIFT-CANDIDATE",
+      "sources": [
+        "N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-MD"
+      ],
+      "allowed_use": "A later registered Step-4 contract-change task may test the proposed covariant-derivative, curvature, bracket, moment-map, H, and Y residual lifts using exact independent identities.",
+      "forbidden_use": "Using functorial propagation as a substitute for proving every primitive-field residual required by the Step-4 contract."
+    },
+    {
+      "id": "N2-GENERAL-LIE-COMPLETENESS-CANDIDATE",
+      "sources": [
+        "N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-MD"
+      ],
+      "allowed_use": "A later registered Step-4 contract-change task may audit the claimed component grammar and prove or reject that the listed primitive and derived objects exhaust the simultaneous general-Lie closure problem.",
+      "forbidden_use": "Declaring complete arbitrary-Lie closure from scalar and gauge-field checks alone or from an unproved recursion-completeness assertion."
+    },
+    {
+      "id": "N2-GENERAL-LIE-VERIFIER-DESIGN-CANDIDATE",
+      "sources": [
+        "N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-MD"
+      ],
+      "allowed_use": "A later registered Step-4 contract-change task may use the proposed graded free-Lie, independent-jet, curvature, Bianchi, and Jacobi checklist as candidate verifier requirements and must justify the implemented exact algebra independently.",
+      "forbidden_use": "Treating the proposed Hall or Lyndon canonicalizer, test list, or zero-residual claim as verified code or as a mathematical proof."
     }
   ]
 }

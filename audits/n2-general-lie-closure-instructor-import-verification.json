@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "task": "REFERENCE-IMPORT-N2-SU2R-OBSTRUCTION-NOTE-001",
+  "task": "REFERENCE-IMPORT-N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-001",
   "status": "PASS",
   "source": {
-    "path": "references/vendor/local/N2_SYM_offshell_SU2R_obstruction_lecture_note.tex",
-    "sha256": "cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6",
-    "bytes": 32358,
-    "lines": 1054
+    "path": "references/vendor/local/N2_SYM_general_Lie_closure_instructor_2026-07-12.md",
+    "sha256": "392c9e59ee038d7ac19f390acf9f18111f1a1fc880cd7fed9c09a21f42a166ec",
+    "bytes": 22528,
+    "lines": 1244
   },
   "categories": {
     "identity": {
@@ -14,15 +14,15 @@
       "failed": 0
     },
     "task": {
-      "checks": 9,
+      "checks": 10,
       "failed": 0
     },
     "ledger": {
-      "checks": 5,
+      "checks": 6,
       "failed": 0
     },
     "boundary": {
-      "checks": 9,
+      "checks": 10,
       "failed": 0
     },
     "claims": {
@@ -38,12 +38,12 @@
       "failed": 0
     },
     "lifecycle": {
-      "checks": 1,
+      "checks": 2,
       "failed": 0
     }
   },
   "totals": {
-    "checks": 37,
+    "checks": 41,
     "failed": 0
   },
   "checks": [
@@ -51,29 +51,29 @@
       "name": "source sha256",
       "category": "identity",
       "passed": true,
-      "actual": "cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6",
-      "expected": "cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6"
+      "actual": "392c9e59ee038d7ac19f390acf9f18111f1a1fc880cd7fed9c09a21f42a166ec",
+      "expected": "392c9e59ee038d7ac19f390acf9f18111f1a1fc880cd7fed9c09a21f42a166ec"
     },
     {
       "name": "source byte count",
       "category": "identity",
       "passed": true,
-      "actual": 32358,
-      "expected": 32358
+      "actual": 22528,
+      "expected": 22528
     },
     {
       "name": "source line count",
       "category": "identity",
       "passed": true,
-      "actual": 1054,
-      "expected": 1054
+      "actual": 1244,
+      "expected": 1244
     },
     {
       "name": "task id",
       "category": "task",
       "passed": true,
-      "actual": "REFERENCE-IMPORT-N2-SU2R-OBSTRUCTION-NOTE-001",
-      "expected": "REFERENCE-IMPORT-N2-SU2R-OBSTRUCTION-NOTE-001"
+      "actual": "REFERENCE-IMPORT-N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-001",
+      "expected": "REFERENCE-IMPORT-N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-001"
     },
     {
       "name": "task type",
@@ -100,15 +100,15 @@
       "name": "source locator",
       "category": "task",
       "passed": true,
-      "actual": "attachment://N2_SYM_offshell_SU2R_obstruction_lecture_note.tex#sha256=cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6",
-      "expected": "attachment://N2_SYM_offshell_SU2R_obstruction_lecture_note.tex#sha256=cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6"
+      "actual": "attachment://N2_SYM_general_Lie_closure_instructor_2026-07-12.md#sha256=392c9e59ee038d7ac19f390acf9f18111f1a1fc880cd7fed9c09a21f42a166ec",
+      "expected": "attachment://N2_SYM_general_Lie_closure_instructor_2026-07-12.md#sha256=392c9e59ee038d7ac19f390acf9f18111f1a1fc880cd7fed9c09a21f42a166ec"
     },
     {
       "name": "source locator hash",
       "category": "task",
       "passed": true,
-      "actual": "cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6",
-      "expected": "cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6"
+      "actual": "392c9e59ee038d7ac19f390acf9f18111f1a1fc880cd7fed9c09a21f42a166ec",
+      "expected": "392c9e59ee038d7ac19f390acf9f18111f1a1fc880cd7fed9c09a21f42a166ec"
     },
     {
       "name": "write-only boundary restored",
@@ -122,10 +122,10 @@
       "category": "task",
       "passed": true,
       "actual": [
-        "attachment://N2_SYM_offshell_SU2R_obstruction_lecture_note.tex#sha256=cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6"
+        "attachment://N2_SYM_general_Lie_closure_instructor_2026-07-12.md#sha256=392c9e59ee038d7ac19f390acf9f18111f1a1fc880cd7fed9c09a21f42a166ec"
       ],
       "expected": [
-        "attachment://N2_SYM_offshell_SU2R_obstruction_lecture_note.tex#sha256=cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6"
+        "attachment://N2_SYM_general_Lie_closure_instructor_2026-07-12.md#sha256=392c9e59ee038d7ac19f390acf9f18111f1a1fc880cd7fed9c09a21f42a166ec"
       ]
     },
     {
@@ -136,32 +136,46 @@
       "expected": true
     },
     {
+      "name": "draft PR content forbidden",
+      "category": "task",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
       "name": "ledger task",
       "category": "ledger",
       "passed": true,
-      "actual": "REFERENCE-IMPORT-N2-SU2R-OBSTRUCTION-NOTE-001",
-      "expected": "REFERENCE-IMPORT-N2-SU2R-OBSTRUCTION-NOTE-001"
+      "actual": "REFERENCE-IMPORT-N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-001",
+      "expected": "REFERENCE-IMPORT-N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-001"
+    },
+    {
+      "name": "ledger source locator",
+      "category": "ledger",
+      "passed": true,
+      "actual": "attachment://N2_SYM_general_Lie_closure_instructor_2026-07-12.md#sha256=392c9e59ee038d7ac19f390acf9f18111f1a1fc880cd7fed9c09a21f42a166ec",
+      "expected": "attachment://N2_SYM_general_Lie_closure_instructor_2026-07-12.md#sha256=392c9e59ee038d7ac19f390acf9f18111f1a1fc880cd7fed9c09a21f42a166ec"
     },
     {
       "name": "ledger source hash",
       "category": "ledger",
       "passed": true,
-      "actual": "cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6",
-      "expected": "cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6"
+      "actual": "392c9e59ee038d7ac19f390acf9f18111f1a1fc880cd7fed9c09a21f42a166ec",
+      "expected": "392c9e59ee038d7ac19f390acf9f18111f1a1fc880cd7fed9c09a21f42a166ec"
     },
     {
       "name": "ledger source bytes",
       "category": "ledger",
       "passed": true,
-      "actual": 32358,
-      "expected": 32358
+      "actual": 22528,
+      "expected": 22528
     },
     {
       "name": "ledger source lines",
       "category": "ledger",
       "passed": true,
-      "actual": 1054,
-      "expected": 1054
+      "actual": 1244,
+      "expected": 1244
     },
     {
       "name": "ledger exact identity",
@@ -213,20 +227,67 @@
       "expected": false
     },
     {
+      "name": "external citations not imported",
+      "category": "boundary",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "embedded external references empty",
+      "category": "boundary",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
       "name": "candidate claim ids",
       "category": "claims",
       "passed": true,
       "actual": [
-        "N2-SU2R-GRADED-ORDERING-CANDIDATE",
-        "N2-SU2R-CANONICAL-PACKAGE-CANDIDATE",
-        "N2-SU2R-PATCH-CHECKLIST-CANDIDATE",
-        "N2-SU2R-EMBEDDED-EXTERNAL-CONTEXT"
+        "N2-GENERAL-LIE-PRIMITIVE-CLOSURE-CANDIDATE",
+        "N2-GENERAL-LIE-FUNCTORIAL-LIFT-CANDIDATE",
+        "N2-GENERAL-LIE-COMPLETENESS-CANDIDATE",
+        "N2-GENERAL-LIE-VERIFIER-DESIGN-CANDIDATE"
       ],
       "expected": [
-        "N2-SU2R-GRADED-ORDERING-CANDIDATE",
-        "N2-SU2R-CANONICAL-PACKAGE-CANDIDATE",
-        "N2-SU2R-PATCH-CHECKLIST-CANDIDATE",
-        "N2-SU2R-EMBEDDED-EXTERNAL-CONTEXT"
+        "N2-GENERAL-LIE-PRIMITIVE-CLOSURE-CANDIDATE",
+        "N2-GENERAL-LIE-FUNCTORIAL-LIFT-CANDIDATE",
+        "N2-GENERAL-LIE-COMPLETENESS-CANDIDATE",
+        "N2-GENERAL-LIE-VERIFIER-DESIGN-CANDIDATE"
+      ]
+    },
+    {
+      "name": "candidate claim line ranges",
+      "category": "claims",
+      "passed": true,
+      "actual": [
+        [
+          "409-663"
+        ],
+        [
+          "665-1046"
+        ],
+        [
+          "1050-1189"
+        ],
+        [
+          "1191-1244"
+        ]
+      ],
+      "expected": [
+        [
+          "409-663"
+        ],
+        [
+          "665-1046"
+        ],
+        [
+          "1050-1189"
+        ],
+        [
+          "1191-1244"
+        ]
       ]
     },
     {
@@ -236,34 +297,14 @@
       "actual": [
         "NOT_ADOPTED_IN_REFERENCE_IMPORT",
         "NOT_ADOPTED_IN_REFERENCE_IMPORT",
+        "NOT_ADOPTED_IN_REFERENCE_IMPORT",
         "NOT_ADOPTED_IN_REFERENCE_IMPORT"
       ],
       "expected": [
         "NOT_ADOPTED_IN_REFERENCE_IMPORT",
         "NOT_ADOPTED_IN_REFERENCE_IMPORT",
+        "NOT_ADOPTED_IN_REFERENCE_IMPORT",
         "NOT_ADOPTED_IN_REFERENCE_IMPORT"
-      ]
-    },
-    {
-      "name": "external context forbidden",
-      "category": "claims",
-      "passed": true,
-      "actual": "FORBIDDEN_UNTIL_SEPARATE_REFERENCE_IMPORT",
-      "expected": "FORBIDDEN_UNTIL_SEPARATE_REFERENCE_IMPORT"
-    },
-    {
-      "name": "embedded references not imported",
-      "category": "boundary",
-      "passed": true,
-      "actual": [
-        false,
-        false,
-        false
-      ],
-      "expected": [
-        false,
-        false,
-        false
       ]
     },
     {
@@ -277,15 +318,15 @@
       "name": "source manifest hash",
       "category": "manifest",
       "passed": true,
-      "actual": "cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6",
-      "expected": "cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6"
+      "actual": "392c9e59ee038d7ac19f390acf9f18111f1a1fc880cd7fed9c09a21f42a166ec",
+      "expected": "392c9e59ee038d7ac19f390acf9f18111f1a1fc880cd7fed9c09a21f42a166ec"
     },
     {
       "name": "ledger manifest hash",
       "category": "manifest",
       "passed": true,
-      "actual": "b8e8dddfe3244ca72e5fd20d9b785ab4d62fe049472ceeb04928e5d7d3aaa50c",
-      "expected": "b8e8dddfe3244ca72e5fd20d9b785ab4d62fe049472ceeb04928e5d7d3aaa50c"
+      "actual": "17bb11d75be8dbf544a73ecd75e887fa429dd2d8d838414c8ebb85e5fc1208cc",
+      "expected": "17bb11d75be8dbf544a73ecd75e887fa429dd2d8d838414c8ebb85e5fc1208cc"
     },
     {
       "name": "claim-map manifest hash",
@@ -317,30 +358,30 @@
       "passed": true,
       "actual": [
         [
-          "N2-SU2R-OBSTRUCTION-LECTURE-NOTE-TEX"
+          "N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-MD"
         ],
         [
-          "N2-SU2R-OBSTRUCTION-LECTURE-NOTE-TEX"
+          "N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-MD"
         ],
         [
-          "N2-SU2R-OBSTRUCTION-LECTURE-NOTE-TEX"
+          "N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-MD"
         ],
         [
-          "N2-SU2R-OBSTRUCTION-LECTURE-NOTE-TEX"
+          "N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-MD"
         ]
       ],
       "expected": [
         [
-          "N2-SU2R-OBSTRUCTION-LECTURE-NOTE-TEX"
+          "N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-MD"
         ],
         [
-          "N2-SU2R-OBSTRUCTION-LECTURE-NOTE-TEX"
+          "N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-MD"
         ],
         [
-          "N2-SU2R-OBSTRUCTION-LECTURE-NOTE-TEX"
+          "N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-MD"
         ],
         [
-          "N2-SU2R-OBSTRUCTION-LECTURE-NOTE-TEX"
+          "N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-MD"
         ]
       ]
     },
@@ -357,7 +398,6 @@
         true,
         true,
         true,
-        true,
         true
       ],
       "expected": [
@@ -369,9 +409,15 @@
         true,
         true,
         true,
-        true,
         true
       ]
+    },
+    {
+      "name": "previous current task archived exactly",
+      "category": "lifecycle",
+      "passed": true,
+      "actual": "33f849a9de6b83d0c4698eb4f781efa906fe7e101fc6f83dde8bd70a48ff5aa1",
+      "expected": "33f849a9de6b83d0c4698eb4f781efa906fe7e101fc6f83dde8bd70a48ff5aa1"
     },
     {
       "name": "Step4 pending hash preserved",

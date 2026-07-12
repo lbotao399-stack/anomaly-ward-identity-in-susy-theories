@@ -120,6 +120,12 @@
       "id": "REFERENCE-IMPORT-N2-SU2R-OBSTRUCTION-NOTE-001",
       "state": "ACCEPTED",
       "blocking_reason": null,
+      "task": "tasks/archive/REFERENCE-IMPORT-N2-SU2R-OBSTRUCTION-NOTE-001.yaml"
+    },
+    {
+      "id": "REFERENCE-IMPORT-N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-001",
+      "state": "ACCEPTED",
+      "blocking_reason": null,
       "task": "tasks/CURRENT.yaml"
     }
   ]

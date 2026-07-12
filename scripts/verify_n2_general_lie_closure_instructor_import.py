@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact verifier for the scoped N=2 SU(2)_R obstruction-note import."""
+"""Exact verifier for the scoped N=2 general-Lie closure instructor import."""
 
 from __future__ import annotations
 
@@ -10,28 +10,31 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "references/vendor/local/N2_SYM_offshell_SU2R_obstruction_lecture_note.tex"
-LEDGER = ROOT / "references/n2-su2r-obstruction-note-source-ledger.json"
+SOURCE = ROOT / "references/vendor/local/N2_SYM_general_Lie_closure_instructor_2026-07-12.md"
+LEDGER = ROOT / "references/n2-general-lie-closure-instructor-source-ledger.json"
 MANIFEST = ROOT / "references/manifest.yaml"
 CLAIM_MAP = ROOT / "references/claim-map.yaml"
-TASK = ROOT / "tasks/archive/REFERENCE-IMPORT-N2-SU2R-OBSTRUCTION-NOTE-001.yaml"
+TASK = ROOT / "tasks/CURRENT.yaml"
+PREVIOUS_TASK = ROOT / "tasks/archive/REFERENCE-IMPORT-N2-SU2R-OBSTRUCTION-NOTE-001.yaml"
 PENDING_STEP4 = ROOT / "tasks/pending/CONTRACT-STEP-04-EXTENDED-SUPER-YANG-MILLS-001.yaml"
-AUDIT = ROOT / "audits/n2-su2r-obstruction-reference-import-verification.json"
+AUDIT = ROOT / "audits/n2-general-lie-closure-instructor-import-verification.json"
 
-TASK_ID = "REFERENCE-IMPORT-N2-SU2R-OBSTRUCTION-NOTE-001"
-SOURCE_ID = "N2-SU2R-OBSTRUCTION-LECTURE-NOTE-TEX"
-SOURCE_SHA256 = "cc5abc773174305472acfe06b14f3d63229ffcfba9ed70f55ff3d3b534be26e6"
+TASK_ID = "REFERENCE-IMPORT-N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-001"
+SOURCE_ID = "N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-MD"
+SOURCE_SHA256 = "392c9e59ee038d7ac19f390acf9f18111f1a1fc880cd7fed9c09a21f42a166ec"
 SOURCE_LOCATOR = (
-    "attachment://N2_SYM_offshell_SU2R_obstruction_lecture_note.tex"
+    "attachment://N2_SYM_general_Lie_closure_instructor_2026-07-12.md"
     "#sha256=" + SOURCE_SHA256
 )
+PREVIOUS_TASK_SHA256 = "33f849a9de6b83d0c4698eb4f781efa906fe7e101fc6f83dde8bd70a48ff5aa1"
 STEP4_SHA256 = "f76e1975617e6a703efda4413a67760bf55d84e22fb3a7a6289d3b890ff3eb6e"
 CLAIM_IDS = (
-    "N2-SU2R-GRADED-ORDERING-CANDIDATE",
-    "N2-SU2R-CANONICAL-PACKAGE-CANDIDATE",
-    "N2-SU2R-PATCH-CHECKLIST-CANDIDATE",
-    "N2-SU2R-EMBEDDED-EXTERNAL-CONTEXT",
+    "N2-GENERAL-LIE-PRIMITIVE-CLOSURE-CANDIDATE",
+    "N2-GENERAL-LIE-FUNCTORIAL-LIFT-CANDIDATE",
+    "N2-GENERAL-LIE-COMPLETENESS-CANDIDATE",
+    "N2-GENERAL-LIE-VERIFIER-DESIGN-CANDIDATE",
 )
+CLAIM_RANGES = (["409-663"], ["665-1046"], ["1050-1189"], ["1191-1244"])
 
 
 def sha256(path: Path) -> str:
@@ -68,8 +71,8 @@ def build_audit() -> dict[str, Any]:
     task = json.loads(TASK.read_text(encoding="utf-8"))
 
     recorder.check("source sha256", sha256(SOURCE), SOURCE_SHA256, "identity")
-    recorder.check("source byte count", len(source_bytes), 32358, "identity")
-    recorder.check("source line count", len(source_text.splitlines()), 1054, "identity")
+    recorder.check("source byte count", len(source_bytes), 22528, "identity")
+    recorder.check("source line count", len(source_text.splitlines()), 1244, "identity")
     recorder.check("task id", task["id"], TASK_ID, "task")
     recorder.check("task type", task["type"], "REFERENCE_IMPORT", "task")
     recorder.check("task status", task["status"], "ACCEPTED", "task")
@@ -86,42 +89,33 @@ def build_audit() -> dict[str, Any]:
     external_inputs = [item for item in task["allowed_inputs"] if "://" in item]
     recorder.check("single external handle", external_inputs, [SOURCE_LOCATOR], "task")
     recorder.check("Notion content forbidden", "Notion content" in task["forbidden_inputs"], True, "task")
+    recorder.check("draft PR content forbidden", "the mathematical content of draft PR 37 or any unmerged branch" in task["forbidden_inputs"], True, "task")
 
     source = ledger["source"]
     recorder.check("ledger task", ledger["task"], TASK_ID, "ledger")
+    recorder.check("ledger source locator", source["original_locator"], SOURCE_LOCATOR, "ledger")
     recorder.check("ledger source hash", source["sha256"], SOURCE_SHA256, "ledger")
-    recorder.check("ledger source bytes", source["bytes"], 32358, "ledger")
-    recorder.check("ledger source lines", source["lines"], 1054, "ledger")
+    recorder.check("ledger source bytes", source["bytes"], 22528, "ledger")
+    recorder.check("ledger source lines", source["lines"], 1244, "ledger")
     recorder.check("ledger exact identity", source["identity_check"], "EXACT_BYTE_IDENTITY", "ledger")
-    recorder.check(
-        "translation not performed",
-        ledger["source_scope"]["translation_status"],
-        "NOT_PERFORMED_IN_REFERENCE_IMPORT",
-        "boundary",
-    )
-    recorder.check("project formula not adopted", ledger["source_scope"]["project_formula_adoption"], False, "boundary")
-    recorder.check("Step4 contract untouched", ledger["source_scope"]["step4_contract_modified"], False, "boundary")
-    recorder.check("Step4 verifier untouched", ledger["source_scope"]["step4_verifier_modified"], False, "boundary")
-    recorder.check("Notion not read", ledger["source_scope"]["notion_read_performed"], False, "boundary")
-    recorder.check("web not read", ledger["source_scope"]["web_read_performed"], False, "boundary")
-    recorder.check("candidate claim ids", tuple(item["id"] for item in ledger["candidate_claims"]), CLAIM_IDS, "claims")
+    scope = ledger["source_scope"]
+    recorder.check("translation not performed", scope["translation_status"], "NOT_PERFORMED_IN_REFERENCE_IMPORT", "boundary")
+    recorder.check("project formula not adopted", scope["project_formula_adoption"], False, "boundary")
+    recorder.check("Step4 contract untouched", scope["step4_contract_modified"], False, "boundary")
+    recorder.check("Step4 verifier untouched", scope["step4_verifier_modified"], False, "boundary")
+    recorder.check("Notion not read", scope["notion_read_performed"], False, "boundary")
+    recorder.check("web not read", scope["web_read_performed"], False, "boundary")
+    recorder.check("external citations not imported", scope["external_citations_imported"], False, "boundary")
+    recorder.check("embedded external references empty", ledger["embedded_external_references"], [], "boundary")
+
+    claims = ledger["candidate_claims"]
+    recorder.check("candidate claim ids", tuple(item["id"] for item in claims), CLAIM_IDS, "claims")
+    recorder.check("candidate claim line ranges", tuple(item["line_ranges"] for item in claims), CLAIM_RANGES, "claims")
     recorder.check(
         "candidate claims not adopted",
-        [item["adoption_status"] for item in ledger["candidate_claims"][:3]],
-        ["NOT_ADOPTED_IN_REFERENCE_IMPORT"] * 3,
+        [item["adoption_status"] for item in claims],
+        ["NOT_ADOPTED_IN_REFERENCE_IMPORT"] * 4,
         "claims",
-    )
-    recorder.check(
-        "external context forbidden",
-        ledger["candidate_claims"][3]["adoption_status"],
-        "FORBIDDEN_UNTIL_SEPARATE_REFERENCE_IMPORT",
-        "claims",
-    )
-    recorder.check(
-        "embedded references not imported",
-        [item["imported"] for item in ledger["embedded_external_references"]],
-        [False, False, False],
-        "boundary",
     )
 
     manifest_by_id = {item["id"]: item for item in manifest["entries"]}
@@ -129,7 +123,7 @@ def build_audit() -> dict[str, Any]:
     recorder.check("source manifest hash", manifest_by_id[SOURCE_ID]["sha256"], SOURCE_SHA256, "manifest")
     recorder.check(
         "ledger manifest hash",
-        manifest_by_id["N2-SU2R-OBSTRUCTION-NOTE-SOURCE-LEDGER"]["sha256"],
+        manifest_by_id["N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-SOURCE-LEDGER"]["sha256"],
         sha256(LEDGER),
         "manifest",
     )
@@ -149,18 +143,18 @@ def build_audit() -> dict[str, Any]:
     )
 
     markers = (
-        "Removing the Off-Shell $SU(2)_R$ Pseudo-Obstruction",
-        "Scope: PR \\#27, commit \\texttt{e814615}",
-        "This note diagnoses and specifies a patch.",
-        "\\section{Correct derivation in parameter-left order}",
-        "\\section{Equivalent derivation in field-left order}",
-        "\\section{Concrete verifier repair}",
-        "\\section{Suggested patch checklist by file}",
-        "\\bibitem{VanProeyen1995}",
-        "\\bibitem{MartinPrimer}",
-        "\\bibitem{ProjectPR}",
+        "## Notation / 记号",
+        "# 1. PR #37 当前实际状态",
+        "# 3. P1 障碍具体在哪里",
+        "# 4. 直接理论推导：先固定 (v^\\mu) 与 (\\Omega_{12})",
+        "# 5. Missing Check I：同时非零的 (\\mathcal D_\\mu X)",
+        "# 6. Missing Check II：非零 (F_{\\mu\\nu})",
+        "# 7. Missing Check III：arbitrary Lie algebra 的 Jacobi reductions",
+        "# 8. 为什么这三个计算已经覆盖全部 component fields",
+        "## Repository conclusion",
     )
     recorder.check("source markers exact", [marker in source_text for marker in markers], [True] * len(markers), "source")
+    recorder.check("previous current task archived exactly", sha256(PREVIOUS_TASK), PREVIOUS_TASK_SHA256, "lifecycle")
     recorder.check("Step4 pending hash preserved", sha256(PENDING_STEP4), STEP4_SHA256, "lifecycle")
     recorder.check("Step4 contract absent during import", (ROOT / "contracts/foundations/step-04b-n2-super-yang-mills.md").exists(), False, "boundary")
     recorder.check("Step4 verifier absent during import", (ROOT / "scripts/verify_step4_n2_closure.py").exists(), False, "boundary")
@@ -178,8 +172,8 @@ def build_audit() -> dict[str, Any]:
         "source": {
             "path": str(SOURCE.relative_to(ROOT)),
             "sha256": SOURCE_SHA256,
-            "bytes": 32358,
-            "lines": 1054,
+            "bytes": 22528,
+            "lines": 1244,
         },
         "categories": categories,
         "totals": {"checks": len(recorder.checks), "failed": len(recorder.failures)},
@@ -194,7 +188,7 @@ def main() -> None:
     if audit["status"] != "PASS":
         print(json.dumps(audit["failures"], indent=2, ensure_ascii=False))
         raise SystemExit(1)
-    print(f"N2 SU2R reference import: {audit['totals']['checks']} checks, 0 failures")
+    print(f"N2 general-Lie instructor import: {audit['totals']['checks']} checks, 0 failures")
 
 
 if __name__ == "__main__":
