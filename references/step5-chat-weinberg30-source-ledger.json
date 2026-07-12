@@ -1,0 +1,272 @@
+{
+  "schema": 1,
+  "task": "REFERENCE-IMPORT-STEP5-CHAT-WEINBERG30-001",
+  "acquisition_boundary": "VISIBLE_CHAT_DOM_AND_EXACT_SCOPED_NOTION_FETCHES_ONLY",
+  "chat": {
+    "conversation_title": "1-loop result in SYM",
+    "authenticated_source_url": "https://chatgpt.com/c/6a51b2b1-5870-83e8-ad8f-b1f8496be0fc",
+    "share_source_url": "https://chatgpt.com/share/6a53ea95-9138-83e8-9761-2e85a29c3970",
+    "capture_boundary": "VISIBLE_DOM_ONLY_NO_HIDDEN_REASONING",
+    "artifacts": [
+      {
+        "id": "CHATGPT-STEP5-AUTHENTICATED-VISIBLE",
+        "path": "references/vendor/chatgpt/6a53ea95-9138-83e8-9761-2e85a29c3970/authenticated-visible.json",
+        "acquired_at": "2026-07-12T20:07:20.076Z",
+        "bytes": 543825,
+        "message_count": 7,
+        "sha256": "0eba2b4e454b9ffe97f139b28bd94efc01643f55460dde6792fd05e2fcbcac7f",
+        "normalized_transcript_sha256": "761d93838766f6b1502136f680615f8f26ec9eeba33d81fed44cc3bf7c6c6ff2"
+      },
+      {
+        "id": "CHATGPT-STEP5-SHARE-VISIBLE",
+        "path": "references/vendor/chatgpt/6a53ea95-9138-83e8-9761-2e85a29c3970/share-visible.json",
+        "acquired_at": "2026-07-12T20:08:14.967Z",
+        "bytes": 465587,
+        "message_count": 5,
+        "sha256": "987adb876381e5126682dab4c31f1de0cc9a511b6743b5d36f59102acce0a3fa",
+        "normalized_transcript_sha256": "1e9c4ca047b8af9e3359578631295c1b6844b500c833ce346881a5ae410b5dce"
+      },
+      {
+        "id": "CHATGPT-STEP5-AUTHENTICATED-TRANSCRIPT",
+        "path": "references/vendor/chatgpt/6a53ea95-9138-83e8-9761-2e85a29c3970/authenticated-visible.md",
+        "generated_from": "CHATGPT-STEP5-AUTHENTICATED-VISIBLE",
+        "bytes": 93712,
+        "message_count": 7,
+        "sha256": "369c29f0092310d16a8392f23223de9cf0c9c8102c42e9a298f6dad2519aa7ce",
+        "body_field": "text_with_tex"
+      },
+      {
+        "id": "CHATGPT-STEP5-DUAL-CAPTURE-COMPARISON",
+        "path": "references/vendor/chatgpt/6a53ea95-9138-83e8-9761-2e85a29c3970/comparison.json",
+        "generated_at": "2026-07-12T20:15:31Z",
+        "bytes": 7383,
+        "sha256": "fcf34b7b96231ba8c7deefefac818d271a5bc0e9aad3d4db6db67f324344a321",
+        "verdict": "SHARED_CONTENT_IDENTICAL_SHARE_OMITS_AUTHENTICATED_PREFIX_2"
+      }
+    ],
+    "message_ledger": [
+      {
+        "order": 0,
+        "conversation_turn": "conversation-turn-1",
+        "message_id": "0b973267-f5e1-4a08-bd5c-548b91c646ea",
+        "role": "user",
+        "source_stage": "INITIAL_CALCULATION_REQUEST",
+        "formula_count": 0,
+        "canonical_sha256": "400bb28a1be446bfddbb0dd98152929941114f7dc4b22488fb734840dfb75552",
+        "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+      },
+      {
+        "order": 1,
+        "conversation_turn": "conversation-turn-2",
+        "message_id": "7af98f88-eda4-426f-b85d-eece9477a4af",
+        "role": "assistant",
+        "source_stage": "INITIAL_ASSISTANT_ATTEMPT",
+        "formula_count": 95,
+        "canonical_sha256": "4f7427e3ec0a5a54043dd5ebe59c5a75360c7c63d4b04f4ab3443ac8435984e7",
+        "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+      },
+      {
+        "order": 2,
+        "conversation_turn": "conversation-turn-8",
+        "message_id": "85f1987d-2b98-4202-b4ad-c35ae39a41ee",
+        "role": "assistant",
+        "source_stage": "LATER_ASSISTANT_REVISION_VISIBLE_WITHOUT_VISIBLE_TRIGGER",
+        "formula_count": 173,
+        "canonical_sha256": "ad87f512c7e0f641080741184cded79843671c63ef3ed54f5f7fd0fbfbf5f565",
+        "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+      },
+      {
+        "order": 3,
+        "conversation_turn": "conversation-turn-9",
+        "message_id": "1064c3f5-5760-4e0a-b400-311a968dd191",
+        "role": "user",
+        "source_stage": "DERIVATIVE_GENERATOR_REQUEST",
+        "formula_count": 0,
+        "canonical_sha256": "1364ad81082719121ad58afa0799b295e6a109849f25caea1bba2a88ced0363b",
+        "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+      },
+      {
+        "order": 4,
+        "conversation_turn": "conversation-turn-10",
+        "message_id": "d54b7adf-15f1-472b-9518-6347ee4b77aa",
+        "role": "assistant",
+        "source_stage": "DERIVATIVE_GENERATOR_ASSISTANT_ATTEMPT",
+        "formula_count": 186,
+        "canonical_sha256": "8351d68bf40b88c34a7aa465df8c2533a7c87fca1b86f500d10f29b3af61b31a",
+        "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+      },
+      {
+        "order": 5,
+        "conversation_turn": "conversation-turn-11",
+        "message_id": "0f6acae0-bd68-4fa5-874c-60dc2fb5fdbb",
+        "role": "user",
+        "source_stage": "AUTOMATION_WORKFLOW_REQUEST",
+        "formula_count": 0,
+        "canonical_sha256": "5e4190dba1473b13fec8dbbca339931d2eebe4676eafe7ea123604e6d03c236d",
+        "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+      },
+      {
+        "order": 6,
+        "conversation_turn": "conversation-turn-12",
+        "message_id": "e0aef8be-dd6b-4be5-88c4-113bb38fe8d8",
+        "role": "assistant",
+        "source_stage": "AUTOMATION_WORKFLOW_PROMPTS",
+        "formula_count": 19,
+        "canonical_sha256": "1a960b1a88dd85ba8ea26ee428b00873861e94459732be6a5c53a379b978f002",
+        "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+      }
+    ],
+    "visible_turn_gap": {
+      "authenticated_visible_sequence": [1, 2, 8, 9, 10, 11, 12],
+      "absent_visible_turn_numbers": [3, 4, 5, 6, 7],
+      "policy": "NO_INFERENCE_FROM_NON_VISIBLE_TURNS"
+    },
+    "dual_capture_result": {
+      "shared_message_count": 5,
+      "all_shared_message_contents_equal": true,
+      "share_is_exact_authenticated_suffix_by_message_id_and_content": true,
+      "missing_from_share": [
+        "0b973267-f5e1-4a08-bd5c-548b91c646ea",
+        "7af98f88-eda4-426f-b85d-eece9477a4af"
+      ],
+      "missing_from_authenticated": []
+    }
+  },
+  "weinberg_chapter_30": {
+    "book_root_page_id": "310ee2b74b3f8065a3acdbdac27f3b2b",
+    "chapter_root_page_id": "34cee2b74b3f81239f12c44eda7b664f",
+    "chapter_root_title": "第 30 章 超图",
+    "chapter_root_url": "https://app.notion.com/p/34cee2b74b3f81239f12c44eda7b664f",
+    "page_fetch_acquired_at": "2026-07-12T20:13:10Z",
+    "searches": [
+      {
+        "query": "Weinberg Chapter 30",
+        "path": "references/vendor/notion/weinberg/chapter-30/search/weinberg-chapter-30.json",
+        "acquired_at": "2026-07-12T20:13:18.351Z",
+        "sha256": "53eeaaaabc6a6d2cab838e6f08d52d21cf3ef775c165e6cba8df784f399a7e44",
+        "chapter_root_in_first_ten_results": false
+      },
+      {
+        "query": "30 Supergraphs",
+        "path": "references/vendor/notion/weinberg/chapter-30/search/30-supergraphs.json",
+        "acquired_at": "2026-07-12T20:13:19.383Z",
+        "sha256": "ae75f72f653fa313a2a86d4b546366b6c4eff1065eb875e694e9c17511315f71",
+        "chapter_root_in_first_ten_results": true
+      }
+    ],
+    "fetched_pages": [
+      {
+        "order": 0,
+        "page_id": "34cee2b74b3f81239f12c44eda7b664f",
+        "url": "https://app.notion.com/p/34cee2b74b3f81239f12c44eda7b664f",
+        "title": "第 30 章 超图",
+        "parent_page_id": "310ee2b74b3f8065a3acdbdac27f3b2b",
+        "fetched_at": "2026-07-12T20:13:10Z",
+        "path": "references/vendor/notion/weinberg/chapter-30/chapter-30-index-34cee2b74b3f81239f12c44eda7b664f.md",
+        "bytes": 1014,
+        "lines": 20,
+        "sha256": "bd4e5c578fa157daf4b5e41dfe482280bd059b359374fdaaaa405daf0a525405"
+      },
+      {
+        "order": 1,
+        "page_id": "34cee2b74b3f8182a114ff6b4b910489",
+        "url": "https://app.notion.com/p/34cee2b74b3f8182a114ff6b4b910489",
+        "title": "30.1 势超场",
+        "parent_page_id": "34cee2b74b3f81239f12c44eda7b664f",
+        "fetched_at": "2026-07-12T20:13:10Z",
+        "path": "references/vendor/notion/weinberg/chapter-30/30-01-potential-superfields-34cee2b74b3f8182a114ff6b4b910489.md",
+        "bytes": 9123,
+        "lines": 149,
+        "sha256": "c1bec1b653e08ae194d8d00a8f46cc1bedb8520347a57e64a7b0a19a2ce526fe"
+      },
+      {
+        "order": 2,
+        "page_id": "34cee2b74b3f81359cb6e2419fe2f5f0",
+        "url": "https://app.notion.com/p/34cee2b74b3f81359cb6e2419fe2f5f0",
+        "title": "30.2 超传播子",
+        "parent_page_id": "34cee2b74b3f81239f12c44eda7b664f",
+        "fetched_at": "2026-07-12T20:13:10Z",
+        "path": "references/vendor/notion/weinberg/chapter-30/30-02-superpropagators-34cee2b74b3f81359cb6e2419fe2f5f0.md",
+        "bytes": 17206,
+        "lines": 265,
+        "sha256": "a9d4eebc2397b5230329f9a19a1d59e2bad7f8fff6143d1c68840d0b149dee7e"
+      },
+      {
+        "order": 3,
+        "page_id": "34cee2b74b3f817499daf036a9bdca44",
+        "url": "https://app.notion.com/p/34cee2b74b3f817499daf036a9bdca44",
+        "title": "30.3 用超图进行计算",
+        "parent_page_id": "34cee2b74b3f81239f12c44eda7b664f",
+        "fetched_at": "2026-07-12T20:13:10Z",
+        "path": "references/vendor/notion/weinberg/chapter-30/30-03-calculations-with-supergraphs-34cee2b74b3f817499daf036a9bdca44.md",
+        "bytes": 12982,
+        "lines": 131,
+        "sha256": "732ec39d572eec6037ade1dc8e319bd540a7ba5b868dbc980f240e9508d1357d"
+      }
+    ],
+    "chapter_child_order": [
+      "34cee2b74b3f8182a114ff6b4b910489",
+      "34cee2b74b3f81359cb6e2419fe2f5f0",
+      "34cee2b74b3f817499daf036a9bdca44",
+      "34cee2b74b3f819e9687dfd81389b4c2"
+    ],
+    "discovered_not_fetched": [
+      {
+        "order": 4,
+        "page_id": "34cee2b74b3f819e9687dfd81389b4c2",
+        "url": "https://app.notion.com/p/34cee2b74b3f819e9687dfd81389b4c2",
+        "title": "参考文献",
+        "reason": "BIBLIOGRAPHY_ONLY_OUTSIDE_DIRECT_SUPERGRAPH_DEFINITION_FETCH_SCOPE"
+      }
+    ],
+    "incidental_search_hits": {
+      "policy": "SEARCH_RESULTS_RECORDED_BUT_NOT_FETCHED_OR_ADMITTED",
+      "fetched_page_ids": [
+        "34cee2b74b3f81239f12c44eda7b664f",
+        "34cee2b74b3f8182a114ff6b4b910489",
+        "34cee2b74b3f81359cb6e2419fe2f5f0",
+        "34cee2b74b3f817499daf036a9bdca44"
+      ]
+    }
+  },
+  "candidate_claims": [
+    {
+      "id": "CHATGPT-STEP5-TRIANGLE-CALCULATION-CANDIDATE",
+      "source_artifact_ids": [
+        "CHATGPT-STEP5-AUTHENTICATED-VISIBLE",
+        "CHATGPT-STEP5-SHARE-VISIBLE",
+        "CHATGPT-STEP5-DUAL-CAPTURE-COMPARISON"
+      ],
+      "source_message_orders": [0, 1, 2, 3, 4],
+      "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+    },
+    {
+      "id": "CHATGPT-STEP5-DRAW-MAP-DALGEBRA-WORKFLOW-CANDIDATE",
+      "source_artifact_ids": [
+        "CHATGPT-STEP5-AUTHENTICATED-VISIBLE",
+        "CHATGPT-STEP5-SHARE-VISIBLE",
+        "CHATGPT-STEP5-DUAL-CAPTURE-COMPARISON"
+      ],
+      "source_message_orders": [5, 6],
+      "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+    },
+    {
+      "id": "WEINBERG-CH30-SUPERGRAPH-STRUCTURE-CANDIDATE",
+      "source_artifact_ids": [
+        "WEINBERG-NOTION-CHAPTER-30-INDEX",
+        "WEINBERG-NOTION-30-01-POTENTIAL-SUPERFIELDS",
+        "WEINBERG-NOTION-30-02-SUPERPROPAGATORS",
+        "WEINBERG-NOTION-30-03-CALCULATIONS-WITH-SUPERGRAPHS"
+      ],
+      "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+    }
+  ],
+  "admissibility": {
+    "current_task_use": "REFERENCE_EVIDENCE_ONLY",
+    "later_contract_change_use": "Read the complete snapshots, reconstruct every source convention independently, translate only through locked Project contracts, and derive every Project coefficient from the Project action and measure before comparison.",
+    "forbidden_use": "No source notation, propagator, vertex, sign, loop coefficient, D-algebra identity, DRED split, graph inventory, anomaly formula, or workflow claim is a Project formula during this import task.",
+    "translation_status": "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+    "project_formula_adoption": false,
+    "project_contract_modified": false
+  }
+}

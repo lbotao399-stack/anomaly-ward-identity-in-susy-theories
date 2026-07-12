@@ -1,7 +1,7 @@
 {
   "id": "REFERENCE-IMPORT-STEP5-CHAT-WEINBERG30-001",
   "type": "REFERENCE_IMPORT",
-  "status": "SPECIFIED",
+  "status": "ACCEPTED",
   "outcome": "Vendor the complete user-authorized ChatGPT conversation titled 1-loop result in SYM and the exact Weinberg Chapter 30 Notion page tree needed as candidate evidence for Step 5; preserve message/page order and source notation without translating, correcting, or adopting any mathematical claim during this import task.",
   "allowed_inputs": [
     "AUTHORITY.md",
@@ -15,7 +15,26 @@
     "https://chatgpt.com/c/6a51b2b1-5870-83e8-ad8f-b1f8496be0fc",
     "https://chatgpt.com/share/6a53ea95-9138-83e8-9761-2e85a29c3970",
     "notion-search://Weinberg Chapter 30",
-    "notion-search://30 Supergraphs"
+    "notion-search://30 Supergraphs",
+    "references/vendor/chatgpt/6a53ea95-9138-83e8-9761-2e85a29c3970/authenticated-visible.json",
+    "references/vendor/chatgpt/6a53ea95-9138-83e8-9761-2e85a29c3970/share-visible.json",
+    "references/vendor/chatgpt/6a53ea95-9138-83e8-9761-2e85a29c3970/authenticated-visible.md",
+    "references/vendor/chatgpt/6a53ea95-9138-83e8-9761-2e85a29c3970/comparison.json",
+    "references/vendor/notion/weinberg/chapter-30/search/weinberg-chapter-30.json",
+    "references/vendor/notion/weinberg/chapter-30/search/30-supergraphs.json",
+    "references/vendor/notion/weinberg/chapter-30/chapter-30-index-34cee2b74b3f81239f12c44eda7b664f.md",
+    "references/vendor/notion/weinberg/chapter-30/30-01-potential-superfields-34cee2b74b3f8182a114ff6b4b910489.md",
+    "references/vendor/notion/weinberg/chapter-30/30-02-superpropagators-34cee2b74b3f81359cb6e2419fe2f5f0.md",
+    "references/vendor/notion/weinberg/chapter-30/30-03-calculations-with-supergraphs-34cee2b74b3f817499daf036a9bdca44.md",
+    "references/step5-chat-weinberg30-source-ledger.json",
+    "scripts/verify_step5_reference_import.py",
+    "audits/step5-reference-import-verification.json",
+    "scripts/verify_n2_general_lie_closure_instructor_import.py",
+    "audits/n2-general-lie-closure-instructor-import-verification.json",
+    "scripts/verify_n2_su2r_obstruction_reference_import.py",
+    "audits/n2-su2r-obstruction-reference-import-verification.json",
+    "scripts/verify_superspace_1001_supergraph_reference_import.py",
+    "audits/superspace-1001-supergraph-reference-import-verification.json"
   ],
   "chat_reference_exception": {
     "user_authorized": true,

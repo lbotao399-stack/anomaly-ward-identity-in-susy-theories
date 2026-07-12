@@ -412,6 +412,41 @@ class RepositoryPolicyTest(unittest.TestCase):
             )
         )
 
+    def test_step5_chat_weinberg30_reference_import(self) -> None:
+        script = ROOT / "scripts/verify_step5_reference_import.py"
+        audit_path = ROOT / "audits/step5-reference-import-verification.json"
+        ledger_path = ROOT / "references/step5-chat-weinberg30-source-ledger.json"
+        self.assertTrue(script.is_file())
+        self.assertTrue(audit_path.is_file())
+        self.assertTrue(ledger_path.is_file())
+        expected = audit_path.read_text(encoding="utf-8")
+        subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
+        audit = json.loads(expected)
+        ledger = json.loads(ledger_path.read_text(encoding="utf-8"))
+        self.assertEqual(audit["status"], "PASS")
+        self.assertEqual(audit["totals"], {"checks": 77, "failed": 0})
+        self.assertEqual(ledger["task"], "REFERENCE-IMPORT-STEP5-CHAT-WEINBERG30-001")
+        self.assertEqual(
+            ledger["admissibility"]["translation_status"],
+            "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+        )
+        self.assertFalse(ledger["admissibility"]["project_formula_adoption"])
+        self.assertFalse(ledger["admissibility"]["project_contract_modified"])
+        self.assertTrue(
+            all(
+                item["adoption_status"] == "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+                for item in ledger["candidate_claims"]
+            )
+        )
+        self.assertTrue(ledger["chat"]["dual_capture_result"]["share_is_exact_authenticated_suffix_by_message_id_and_content"])
+        self.assertEqual(len(ledger["weinberg_chapter_30"]["fetched_pages"]), 4)
+
     def test_contract_change_has_no_network_inputs(self) -> None:
         task = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
         if task["type"] != "CONTRACT_CHANGE":

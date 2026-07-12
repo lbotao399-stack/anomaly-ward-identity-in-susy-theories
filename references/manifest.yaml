@@ -17,7 +17,7 @@
       "id": "REFERENCE-CLAIM-MAP",
       "path": "references/claim-map.yaml",
       "classification": "REFERENCE_CLAIM_BOUNDARY",
-      "sha256": "26b8106d7c5b5cf08904a34d17ae1a280a1df3166929ca4081859ef9a2e11bad"
+      "sha256": "10439fbbcae893ab5f1f2ceab9e26a9c5245e28356ad0918f593b1c86d7271e2"
     },
     {
       "id": "ARXIV-HEP-TH-0108200-V1",
@@ -300,6 +300,72 @@
       "path": "references/superspace-1001-supergraph-source-ledger.json",
       "classification": "REFERENCE_SOURCE_LEDGER",
       "sha256": "fefb51c998872d6bee6a4bcfb21a56d75b121a294d22abd189b1da8d80d4a5f3"
+    },
+    {
+      "id": "CHATGPT-STEP5-AUTHENTICATED-VISIBLE",
+      "path": "references/vendor/chatgpt/6a53ea95-9138-83e8-9761-2e85a29c3970/authenticated-visible.json",
+      "classification": "USER_AUTHORIZED_NON_AUTHORITY_VISIBLE_CHAT_CAPTURE",
+      "sha256": "0eba2b4e454b9ffe97f139b28bd94efc01643f55460dde6792fd05e2fcbcac7f"
+    },
+    {
+      "id": "CHATGPT-STEP5-SHARE-VISIBLE",
+      "path": "references/vendor/chatgpt/6a53ea95-9138-83e8-9761-2e85a29c3970/share-visible.json",
+      "classification": "USER_AUTHORIZED_NON_AUTHORITY_VISIBLE_CHAT_CAPTURE",
+      "sha256": "987adb876381e5126682dab4c31f1de0cc9a511b6743b5d36f59102acce0a3fa"
+    },
+    {
+      "id": "CHATGPT-STEP5-AUTHENTICATED-TRANSCRIPT",
+      "path": "references/vendor/chatgpt/6a53ea95-9138-83e8-9761-2e85a29c3970/authenticated-visible.md",
+      "classification": "MECHANICAL_VISIBLE_CHAT_TRANSCRIPT",
+      "sha256": "369c29f0092310d16a8392f23223de9cf0c9c8102c42e9a298f6dad2519aa7ce"
+    },
+    {
+      "id": "CHATGPT-STEP5-DUAL-CAPTURE-COMPARISON",
+      "path": "references/vendor/chatgpt/6a53ea95-9138-83e8-9761-2e85a29c3970/comparison.json",
+      "classification": "REFERENCE_PROVENANCE_COMPARISON",
+      "sha256": "fcf34b7b96231ba8c7deefefac818d271a5bc0e9aad3d4db6db67f324344a321"
+    },
+    {
+      "id": "WEINBERG-NOTION-CHAPTER-30-SEARCH-WEINBERG",
+      "path": "references/vendor/notion/weinberg/chapter-30/search/weinberg-chapter-30.json",
+      "classification": "USER_AUTHORIZED_NOTION_SEARCH_BOUNDARY",
+      "sha256": "53eeaaaabc6a6d2cab838e6f08d52d21cf3ef775c165e6cba8df784f399a7e44"
+    },
+    {
+      "id": "WEINBERG-NOTION-CHAPTER-30-SEARCH-SUPERGRAPHS",
+      "path": "references/vendor/notion/weinberg/chapter-30/search/30-supergraphs.json",
+      "classification": "USER_AUTHORIZED_NOTION_SEARCH_BOUNDARY",
+      "sha256": "ae75f72f653fa313a2a86d4b546366b6c4eff1065eb875e694e9c17511315f71"
+    },
+    {
+      "id": "WEINBERG-NOTION-CHAPTER-30-INDEX",
+      "path": "references/vendor/notion/weinberg/chapter-30/chapter-30-index-34cee2b74b3f81239f12c44eda7b664f.md",
+      "classification": "WEINBERG_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "bd4e5c578fa157daf4b5e41dfe482280bd059b359374fdaaaa405daf0a525405"
+    },
+    {
+      "id": "WEINBERG-NOTION-30-01-POTENTIAL-SUPERFIELDS",
+      "path": "references/vendor/notion/weinberg/chapter-30/30-01-potential-superfields-34cee2b74b3f8182a114ff6b4b910489.md",
+      "classification": "WEINBERG_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "c1bec1b653e08ae194d8d00a8f46cc1bedb8520347a57e64a7b0a19a2ce526fe"
+    },
+    {
+      "id": "WEINBERG-NOTION-30-02-SUPERPROPAGATORS",
+      "path": "references/vendor/notion/weinberg/chapter-30/30-02-superpropagators-34cee2b74b3f81359cb6e2419fe2f5f0.md",
+      "classification": "WEINBERG_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "a9d4eebc2397b5230329f9a19a1d59e2bad7f8fff6143d1c68840d0b149dee7e"
+    },
+    {
+      "id": "WEINBERG-NOTION-30-03-CALCULATIONS-WITH-SUPERGRAPHS",
+      "path": "references/vendor/notion/weinberg/chapter-30/30-03-calculations-with-supergraphs-34cee2b74b3f817499daf036a9bdca44.md",
+      "classification": "WEINBERG_NOTION_BOOK_PAGE_REFERENCE_ONLY",
+      "sha256": "732ec39d572eec6037ade1dc8e319bd540a7ba5b868dbc980f240e9508d1357d"
+    },
+    {
+      "id": "STEP5-CHAT-WEINBERG30-SOURCE-LEDGER",
+      "path": "references/step5-chat-weinberg30-source-ledger.json",
+      "classification": "REFERENCE_SOURCE_LEDGER",
+      "sha256": "6a7d6a699f8572c976d0bf1c964fc8a85417f85ab787c60383aa6fd08d16229b"
     }
   ]
 }
