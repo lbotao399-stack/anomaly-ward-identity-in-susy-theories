@@ -1,0 +1,1159 @@
+{
+  "schema": 1,
+  "task": "REFERENCE-IMPORT-SUPERSPACE-1001-SUPERGRAPH-001",
+  "status": "PASS",
+  "arithmetic": {
+    "hash": "SHA-256",
+    "page_text": "exact pdftotext -layout bytes after form-feed removal",
+    "page_raster": "exact 72-dpi pdftoppm PNG bytes"
+  },
+  "page_map": [
+    {
+      "subset_page": 1,
+      "source_pdf_page": 1
+    },
+    {
+      "subset_page": 2,
+      "source_pdf_page": 5
+    },
+    {
+      "subset_page": 3,
+      "source_pdf_page": 6
+    },
+    {
+      "subset_page": 4,
+      "source_pdf_page": 353
+    },
+    {
+      "subset_page": 5,
+      "source_pdf_page": 354
+    },
+    {
+      "subset_page": 6,
+      "source_pdf_page": 355
+    },
+    {
+      "subset_page": 7,
+      "source_pdf_page": 356
+    },
+    {
+      "subset_page": 8,
+      "source_pdf_page": 357
+    },
+    {
+      "subset_page": 9,
+      "source_pdf_page": 358
+    },
+    {
+      "subset_page": 10,
+      "source_pdf_page": 359
+    },
+    {
+      "subset_page": 11,
+      "source_pdf_page": 360
+    },
+    {
+      "subset_page": 12,
+      "source_pdf_page": 361
+    },
+    {
+      "subset_page": 13,
+      "source_pdf_page": 362
+    },
+    {
+      "subset_page": 14,
+      "source_pdf_page": 363
+    },
+    {
+      "subset_page": 15,
+      "source_pdf_page": 364
+    },
+    {
+      "subset_page": 16,
+      "source_pdf_page": 365
+    },
+    {
+      "subset_page": 17,
+      "source_pdf_page": 366
+    },
+    {
+      "subset_page": 18,
+      "source_pdf_page": 367
+    },
+    {
+      "subset_page": 19,
+      "source_pdf_page": 368
+    },
+    {
+      "subset_page": 20,
+      "source_pdf_page": 369
+    },
+    {
+      "subset_page": 21,
+      "source_pdf_page": 370
+    },
+    {
+      "subset_page": 22,
+      "source_pdf_page": 371
+    },
+    {
+      "subset_page": 23,
+      "source_pdf_page": 372
+    },
+    {
+      "subset_page": 24,
+      "source_pdf_page": 373
+    },
+    {
+      "subset_page": 25,
+      "source_pdf_page": 374
+    },
+    {
+      "subset_page": 26,
+      "source_pdf_page": 375
+    },
+    {
+      "subset_page": 27,
+      "source_pdf_page": 376
+    },
+    {
+      "subset_page": 28,
+      "source_pdf_page": 377
+    },
+    {
+      "subset_page": 29,
+      "source_pdf_page": 378
+    },
+    {
+      "subset_page": 30,
+      "source_pdf_page": 379
+    },
+    {
+      "subset_page": 31,
+      "source_pdf_page": 389
+    },
+    {
+      "subset_page": 32,
+      "source_pdf_page": 390
+    },
+    {
+      "subset_page": 33,
+      "source_pdf_page": 391
+    },
+    {
+      "subset_page": 34,
+      "source_pdf_page": 392
+    },
+    {
+      "subset_page": 35,
+      "source_pdf_page": 393
+    },
+    {
+      "subset_page": 36,
+      "source_pdf_page": 394
+    },
+    {
+      "subset_page": 37,
+      "source_pdf_page": 395
+    },
+    {
+      "subset_page": 38,
+      "source_pdf_page": 396
+    },
+    {
+      "subset_page": 39,
+      "source_pdf_page": 397
+    },
+    {
+      "subset_page": 40,
+      "source_pdf_page": 398
+    },
+    {
+      "subset_page": 41,
+      "source_pdf_page": 399
+    },
+    {
+      "subset_page": 42,
+      "source_pdf_page": 400
+    },
+    {
+      "subset_page": 43,
+      "source_pdf_page": 401
+    },
+    {
+      "subset_page": 44,
+      "source_pdf_page": 402
+    },
+    {
+      "subset_page": 45,
+      "source_pdf_page": 403
+    },
+    {
+      "subset_page": 46,
+      "source_pdf_page": 404
+    }
+  ],
+  "checks": [
+    {
+      "name": "source_sha",
+      "left": "3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99",
+      "right": "3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99",
+      "passed": true
+    },
+    {
+      "name": "subset_sha",
+      "left": "1cb68ae63aa5c8d8a3e2150b769ba2bfb56f245c91204bafceaa5793f969ccb8",
+      "right": "1cb68ae63aa5c8d8a3e2150b769ba2bfb56f245c91204bafceaa5793f969ccb8",
+      "passed": true
+    },
+    {
+      "name": "ledger_sha",
+      "left": "fefb51c998872d6bee6a4bcfb21a56d75b121a294d22abd189b1da8d80d4a5f3",
+      "right": "fefb51c998872d6bee6a4bcfb21a56d75b121a294d22abd189b1da8d80d4a5f3",
+      "passed": true
+    },
+    {
+      "name": "claim_map_sha",
+      "left": "26b8106d7c5b5cf08904a34d17ae1a280a1df3166929ca4081859ef9a2e11bad",
+      "right": "26b8106d7c5b5cf08904a34d17ae1a280a1df3166929ca4081859ef9a2e11bad",
+      "passed": true
+    },
+    {
+      "name": "source_page_count",
+      "left": 568,
+      "right": 568,
+      "passed": true
+    },
+    {
+      "name": "subset_page_count",
+      "left": 46,
+      "right": 46,
+      "passed": true
+    },
+    {
+      "name": "manifest_source_sha",
+      "left": "3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99",
+      "right": "3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99",
+      "passed": true
+    },
+    {
+      "name": "manifest_subset_path",
+      "left": "references/vendor/local/superspace-1001-supergraph-pages.pdf",
+      "right": "references/vendor/local/superspace-1001-supergraph-pages.pdf",
+      "passed": true
+    },
+    {
+      "name": "manifest_subset_sha",
+      "left": "1cb68ae63aa5c8d8a3e2150b769ba2bfb56f245c91204bafceaa5793f969ccb8",
+      "right": "1cb68ae63aa5c8d8a3e2150b769ba2bfb56f245c91204bafceaa5793f969ccb8",
+      "passed": true
+    },
+    {
+      "name": "manifest_ledger_path",
+      "left": "references/superspace-1001-supergraph-source-ledger.json",
+      "right": "references/superspace-1001-supergraph-source-ledger.json",
+      "passed": true
+    },
+    {
+      "name": "manifest_ledger_sha",
+      "left": "fefb51c998872d6bee6a4bcfb21a56d75b121a294d22abd189b1da8d80d4a5f3",
+      "right": "fefb51c998872d6bee6a4bcfb21a56d75b121a294d22abd189b1da8d80d4a5f3",
+      "passed": true
+    },
+    {
+      "name": "manifest_claim_map_sha",
+      "left": "26b8106d7c5b5cf08904a34d17ae1a280a1df3166929ca4081859ef9a2e11bad",
+      "right": "26b8106d7c5b5cf08904a34d17ae1a280a1df3166929ca4081859ef9a2e11bad",
+      "passed": true
+    },
+    {
+      "name": "task_id",
+      "left": "REFERENCE-IMPORT-SUPERSPACE-1001-SUPERGRAPH-001",
+      "right": "REFERENCE-IMPORT-SUPERSPACE-1001-SUPERGRAPH-001",
+      "passed": true
+    },
+    {
+      "name": "task_type",
+      "left": "REFERENCE_IMPORT",
+      "right": "REFERENCE_IMPORT",
+      "passed": true
+    },
+    {
+      "name": "task_source_sha",
+      "left": "3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99",
+      "right": "3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99",
+      "passed": true
+    },
+    {
+      "name": "task_source_pages",
+      "left": 568,
+      "right": 568,
+      "passed": true
+    },
+    {
+      "name": "task_translation_status",
+      "left": "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+      "right": "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+      "passed": true
+    },
+    {
+      "name": "task_claim_ids",
+      "left": [
+        "SUPERSPACE-1001-GAUSSIAN-SUPERFIELD-EVIDENCE",
+        "SUPERSPACE-1001-DELTA-PROJECTOR-EVIDENCE",
+        "SUPERSPACE-1001-CHIRAL-PROPAGATOR-EVIDENCE",
+        "SUPERSPACE-1001-VECTOR-GAUGE-FIXING-EVIDENCE",
+        "SUPERSPACE-1001-FP-NK-GHOST-EVIDENCE",
+        "SUPERSPACE-1001-ORDERED-SUPERGRAPH-VERTEX-EVIDENCE",
+        "SUPERSPACE-1001-D-ALGEBRA-EVIDENCE"
+      ],
+      "right": [
+        "SUPERSPACE-1001-GAUSSIAN-SUPERFIELD-EVIDENCE",
+        "SUPERSPACE-1001-DELTA-PROJECTOR-EVIDENCE",
+        "SUPERSPACE-1001-CHIRAL-PROPAGATOR-EVIDENCE",
+        "SUPERSPACE-1001-VECTOR-GAUGE-FIXING-EVIDENCE",
+        "SUPERSPACE-1001-FP-NK-GHOST-EVIDENCE",
+        "SUPERSPACE-1001-ORDERED-SUPERGRAPH-VERTEX-EVIDENCE",
+        "SUPERSPACE-1001-D-ALGEBRA-EVIDENCE"
+      ],
+      "passed": true
+    },
+    {
+      "name": "ledger_source_sha",
+      "left": "3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99",
+      "right": "3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99",
+      "passed": true
+    },
+    {
+      "name": "ledger_subset_sha",
+      "left": "1cb68ae63aa5c8d8a3e2150b769ba2bfb56f245c91204bafceaa5793f969ccb8",
+      "right": "1cb68ae63aa5c8d8a3e2150b769ba2bfb56f245c91204bafceaa5793f969ccb8",
+      "passed": true
+    },
+    {
+      "name": "ledger_subset_pages",
+      "left": 46,
+      "right": 46,
+      "passed": true
+    },
+    {
+      "name": "ledger_translation_status",
+      "left": "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+      "right": "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+      "passed": true
+    },
+    {
+      "name": "ledger_candidate_claim_ids",
+      "left": [
+        "SUPERSPACE-1001-GAUSSIAN-SUPERFIELD-EVIDENCE",
+        "SUPERSPACE-1001-DELTA-PROJECTOR-EVIDENCE",
+        "SUPERSPACE-1001-CHIRAL-PROPAGATOR-EVIDENCE",
+        "SUPERSPACE-1001-VECTOR-GAUGE-FIXING-EVIDENCE",
+        "SUPERSPACE-1001-FP-NK-GHOST-EVIDENCE",
+        "SUPERSPACE-1001-ORDERED-SUPERGRAPH-VERTEX-EVIDENCE",
+        "SUPERSPACE-1001-D-ALGEBRA-EVIDENCE"
+      ],
+      "right": [
+        "SUPERSPACE-1001-GAUSSIAN-SUPERFIELD-EVIDENCE",
+        "SUPERSPACE-1001-DELTA-PROJECTOR-EVIDENCE",
+        "SUPERSPACE-1001-CHIRAL-PROPAGATOR-EVIDENCE",
+        "SUPERSPACE-1001-VECTOR-GAUGE-FIXING-EVIDENCE",
+        "SUPERSPACE-1001-FP-NK-GHOST-EVIDENCE",
+        "SUPERSPACE-1001-ORDERED-SUPERGRAPH-VERTEX-EVIDENCE",
+        "SUPERSPACE-1001-D-ALGEBRA-EVIDENCE"
+      ],
+      "passed": true
+    },
+    {
+      "name": "ledger_claims_not_adopted",
+      "left": true,
+      "right": true,
+      "passed": true
+    },
+    {
+      "name": "claim_present_SUPERSPACE-1001-GAUSSIAN-SUPERFIELD-EVIDENCE",
+      "left": true,
+      "right": true,
+      "passed": true
+    },
+    {
+      "name": "claim_source_SUPERSPACE-1001-GAUSSIAN-SUPERFIELD-EVIDENCE",
+      "left": [
+        "SUPERSPACE-1001-SUPERGRAPH-PAGES"
+      ],
+      "right": [
+        "SUPERSPACE-1001-SUPERGRAPH-PAGES"
+      ],
+      "passed": true
+    },
+    {
+      "name": "claim_present_SUPERSPACE-1001-DELTA-PROJECTOR-EVIDENCE",
+      "left": true,
+      "right": true,
+      "passed": true
+    },
+    {
+      "name": "claim_source_SUPERSPACE-1001-DELTA-PROJECTOR-EVIDENCE",
+      "left": [
+        "SUPERSPACE-1001-SUPERGRAPH-PAGES"
+      ],
+      "right": [
+        "SUPERSPACE-1001-SUPERGRAPH-PAGES"
+      ],
+      "passed": true
+    },
+    {
+      "name": "claim_present_SUPERSPACE-1001-CHIRAL-PROPAGATOR-EVIDENCE",
+      "left": true,
+      "right": true,
+      "passed": true
+    },
+    {
+      "name": "claim_source_SUPERSPACE-1001-CHIRAL-PROPAGATOR-EVIDENCE",
+      "left": [
+        "SUPERSPACE-1001-SUPERGRAPH-PAGES"
+      ],
+      "right": [
+        "SUPERSPACE-1001-SUPERGRAPH-PAGES"
+      ],
+      "passed": true
+    },
+    {
+      "name": "claim_present_SUPERSPACE-1001-VECTOR-GAUGE-FIXING-EVIDENCE",
+      "left": true,
+      "right": true,
+      "passed": true
+    },
+    {
+      "name": "claim_source_SUPERSPACE-1001-VECTOR-GAUGE-FIXING-EVIDENCE",
+      "left": [
+        "SUPERSPACE-1001-SUPERGRAPH-PAGES"
+      ],
+      "right": [
+        "SUPERSPACE-1001-SUPERGRAPH-PAGES"
+      ],
+      "passed": true
+    },
+    {
+      "name": "claim_present_SUPERSPACE-1001-FP-NK-GHOST-EVIDENCE",
+      "left": true,
+      "right": true,
+      "passed": true
+    },
+    {
+      "name": "claim_source_SUPERSPACE-1001-FP-NK-GHOST-EVIDENCE",
+      "left": [
+        "SUPERSPACE-1001-SUPERGRAPH-PAGES"
+      ],
+      "right": [
+        "SUPERSPACE-1001-SUPERGRAPH-PAGES"
+      ],
+      "passed": true
+    },
+    {
+      "name": "claim_present_SUPERSPACE-1001-ORDERED-SUPERGRAPH-VERTEX-EVIDENCE",
+      "left": true,
+      "right": true,
+      "passed": true
+    },
+    {
+      "name": "claim_source_SUPERSPACE-1001-ORDERED-SUPERGRAPH-VERTEX-EVIDENCE",
+      "left": [
+        "SUPERSPACE-1001-SUPERGRAPH-PAGES"
+      ],
+      "right": [
+        "SUPERSPACE-1001-SUPERGRAPH-PAGES"
+      ],
+      "passed": true
+    },
+    {
+      "name": "claim_present_SUPERSPACE-1001-D-ALGEBRA-EVIDENCE",
+      "left": true,
+      "right": true,
+      "passed": true
+    },
+    {
+      "name": "claim_source_SUPERSPACE-1001-D-ALGEBRA-EVIDENCE",
+      "left": [
+        "SUPERSPACE-1001-SUPERGRAPH-PAGES"
+      ],
+      "right": [
+        "SUPERSPACE-1001-SUPERGRAPH-PAGES"
+      ],
+      "passed": true
+    },
+    {
+      "name": "page_text_1_from_1",
+      "left": "7b14d5799261998a86b425e82f2e640f2e94d63b1837c3bb8883a9b3491378cc",
+      "right": "7b14d5799261998a86b425e82f2e640f2e94d63b1837c3bb8883a9b3491378cc",
+      "passed": true
+    },
+    {
+      "name": "page_raster_1_from_1",
+      "left": "255b3f18f2445230386c4ec0615e0137a33ba0e6997afb78cd2ed5f1ffb54404",
+      "right": "255b3f18f2445230386c4ec0615e0137a33ba0e6997afb78cd2ed5f1ffb54404",
+      "passed": true
+    },
+    {
+      "name": "page_text_2_from_5",
+      "left": "e79e4348f5fe296294d0399fcede148e4b07eedc5d1e159e64d7b2bee6d761f1",
+      "right": "e79e4348f5fe296294d0399fcede148e4b07eedc5d1e159e64d7b2bee6d761f1",
+      "passed": true
+    },
+    {
+      "name": "page_raster_2_from_5",
+      "left": "2265925c32a9e5624ce3a9e141dbd51ca428c4ec2ebeead1d00d699f53c6ceb2",
+      "right": "2265925c32a9e5624ce3a9e141dbd51ca428c4ec2ebeead1d00d699f53c6ceb2",
+      "passed": true
+    },
+    {
+      "name": "page_text_3_from_6",
+      "left": "0a53351ee0eec372fdf3f48873d843008eeaef6a2f2df9d6f1be9ee3d0a7434e",
+      "right": "0a53351ee0eec372fdf3f48873d843008eeaef6a2f2df9d6f1be9ee3d0a7434e",
+      "passed": true
+    },
+    {
+      "name": "page_raster_3_from_6",
+      "left": "5b3f837c52cc795ee9650e2913dbde86515df2365e79e8377a3d9a654b67476a",
+      "right": "5b3f837c52cc795ee9650e2913dbde86515df2365e79e8377a3d9a654b67476a",
+      "passed": true
+    },
+    {
+      "name": "page_text_4_from_353",
+      "left": "52675d91bfafc6745e8bbac60e946a6562715d519603e007e1646bfc1ba485ad",
+      "right": "52675d91bfafc6745e8bbac60e946a6562715d519603e007e1646bfc1ba485ad",
+      "passed": true
+    },
+    {
+      "name": "page_raster_4_from_353",
+      "left": "e716b438a94a88dab7e78e2daca66acb1922dcb5aca5bf2c60ebf90a46f37432",
+      "right": "e716b438a94a88dab7e78e2daca66acb1922dcb5aca5bf2c60ebf90a46f37432",
+      "passed": true
+    },
+    {
+      "name": "page_text_5_from_354",
+      "left": "0bfdf9b970547bf0c915c7c261db5d1d9c05103ab1a33154bb125c7312003557",
+      "right": "0bfdf9b970547bf0c915c7c261db5d1d9c05103ab1a33154bb125c7312003557",
+      "passed": true
+    },
+    {
+      "name": "page_raster_5_from_354",
+      "left": "e005499b681b39e6e9c8bc344800fb68a703345aab3778be7848051bc877cbb2",
+      "right": "e005499b681b39e6e9c8bc344800fb68a703345aab3778be7848051bc877cbb2",
+      "passed": true
+    },
+    {
+      "name": "page_text_6_from_355",
+      "left": "a1a4799cab8420d70bc5ee52c54afce92f81f65d937f3d6f1b2d3486ab682180",
+      "right": "a1a4799cab8420d70bc5ee52c54afce92f81f65d937f3d6f1b2d3486ab682180",
+      "passed": true
+    },
+    {
+      "name": "page_raster_6_from_355",
+      "left": "42d4a66322630eb0b1666e8f43f6283a4b72266215ac0e59966e08a8c2811b69",
+      "right": "42d4a66322630eb0b1666e8f43f6283a4b72266215ac0e59966e08a8c2811b69",
+      "passed": true
+    },
+    {
+      "name": "page_text_7_from_356",
+      "left": "43a793c6f2597c704127a315f21b398a0f076efb6a3d98968893622e1c98746a",
+      "right": "43a793c6f2597c704127a315f21b398a0f076efb6a3d98968893622e1c98746a",
+      "passed": true
+    },
+    {
+      "name": "page_raster_7_from_356",
+      "left": "aa07779c05bca14633615fdf609ead7e5ebf076e13971268264df0ea2e2b702c",
+      "right": "aa07779c05bca14633615fdf609ead7e5ebf076e13971268264df0ea2e2b702c",
+      "passed": true
+    },
+    {
+      "name": "page_text_8_from_357",
+      "left": "05e43a9d68f8db62235afb7cdc71be2f689e33b4c7a6ead7d25f4a2dc4cf1f3a",
+      "right": "05e43a9d68f8db62235afb7cdc71be2f689e33b4c7a6ead7d25f4a2dc4cf1f3a",
+      "passed": true
+    },
+    {
+      "name": "page_raster_8_from_357",
+      "left": "e1371b246868b9181f17a19fc5bfc1776c65b6b80cf56ceea4e2d176d1aa44cb",
+      "right": "e1371b246868b9181f17a19fc5bfc1776c65b6b80cf56ceea4e2d176d1aa44cb",
+      "passed": true
+    },
+    {
+      "name": "page_text_9_from_358",
+      "left": "f8f80b20405214e6fd95d02f7256520ee6ae90b796215b94a0d639af6e8ebb88",
+      "right": "f8f80b20405214e6fd95d02f7256520ee6ae90b796215b94a0d639af6e8ebb88",
+      "passed": true
+    },
+    {
+      "name": "page_raster_9_from_358",
+      "left": "439f27142ad4b1b8f38d740eeb859138bb3b5af826100e426e2e22d43437dcf1",
+      "right": "439f27142ad4b1b8f38d740eeb859138bb3b5af826100e426e2e22d43437dcf1",
+      "passed": true
+    },
+    {
+      "name": "page_text_10_from_359",
+      "left": "48c2cb247f6a0f2645f4902ee366d3fd4d636d7d0244d8fef9b2b2c2a0beb55d",
+      "right": "48c2cb247f6a0f2645f4902ee366d3fd4d636d7d0244d8fef9b2b2c2a0beb55d",
+      "passed": true
+    },
+    {
+      "name": "page_raster_10_from_359",
+      "left": "ee4e1c957a63f6f7d4a71628ed32e6d0a1c3cbcb318259fb1989d5c083e1f124",
+      "right": "ee4e1c957a63f6f7d4a71628ed32e6d0a1c3cbcb318259fb1989d5c083e1f124",
+      "passed": true
+    },
+    {
+      "name": "page_text_11_from_360",
+      "left": "27e344bd85cec8942f4cb840afdf37ee09bfeed800b942dc5ea03173b9cd9520",
+      "right": "27e344bd85cec8942f4cb840afdf37ee09bfeed800b942dc5ea03173b9cd9520",
+      "passed": true
+    },
+    {
+      "name": "page_raster_11_from_360",
+      "left": "be44e6b0a136ec43f8a9f2d599107a853ef14b59b1f7806f58bbfcc34f4f6f08",
+      "right": "be44e6b0a136ec43f8a9f2d599107a853ef14b59b1f7806f58bbfcc34f4f6f08",
+      "passed": true
+    },
+    {
+      "name": "page_text_12_from_361",
+      "left": "c1facae64fc1cf8250b1c8ae41d70162e6dcbb637a6321ac07c5ed4b8e0c24d2",
+      "right": "c1facae64fc1cf8250b1c8ae41d70162e6dcbb637a6321ac07c5ed4b8e0c24d2",
+      "passed": true
+    },
+    {
+      "name": "page_raster_12_from_361",
+      "left": "da513fd54fcef618316b18f64b238fdd7e4815358dd5077d31c69d74d7666dc6",
+      "right": "da513fd54fcef618316b18f64b238fdd7e4815358dd5077d31c69d74d7666dc6",
+      "passed": true
+    },
+    {
+      "name": "page_text_13_from_362",
+      "left": "3a1932a7641ffc1618d63b6636e09e21d316f07f2f76e172b1c122358d861fa8",
+      "right": "3a1932a7641ffc1618d63b6636e09e21d316f07f2f76e172b1c122358d861fa8",
+      "passed": true
+    },
+    {
+      "name": "page_raster_13_from_362",
+      "left": "05f76c1185581753a91e968464d27336b3c2a3176ad3cc7c7afe17c9c422cdcc",
+      "right": "05f76c1185581753a91e968464d27336b3c2a3176ad3cc7c7afe17c9c422cdcc",
+      "passed": true
+    },
+    {
+      "name": "page_text_14_from_363",
+      "left": "3e8134ac79ce4f046b5990e4bdf8efc31ec05cb2f18c5b9e526fb21d82eeed99",
+      "right": "3e8134ac79ce4f046b5990e4bdf8efc31ec05cb2f18c5b9e526fb21d82eeed99",
+      "passed": true
+    },
+    {
+      "name": "page_raster_14_from_363",
+      "left": "2c6b27bc9bf7dc5ef8448668162c94314b998ab60ada8a315db47f3322b9d75a",
+      "right": "2c6b27bc9bf7dc5ef8448668162c94314b998ab60ada8a315db47f3322b9d75a",
+      "passed": true
+    },
+    {
+      "name": "page_text_15_from_364",
+      "left": "92f91c3ffd21677ea17153732067d5d1b6dcbe4f5f40757d3e2437fc7184693e",
+      "right": "92f91c3ffd21677ea17153732067d5d1b6dcbe4f5f40757d3e2437fc7184693e",
+      "passed": true
+    },
+    {
+      "name": "page_raster_15_from_364",
+      "left": "abb990aaf2f3569ee608ae6c52c7ad9393ac82e38db784e5bac678c8c6f594f5",
+      "right": "abb990aaf2f3569ee608ae6c52c7ad9393ac82e38db784e5bac678c8c6f594f5",
+      "passed": true
+    },
+    {
+      "name": "page_text_16_from_365",
+      "left": "b49af17a199f457474fe7bc649f3e9afd652bc561bbe42e5e21a40d213af9c87",
+      "right": "b49af17a199f457474fe7bc649f3e9afd652bc561bbe42e5e21a40d213af9c87",
+      "passed": true
+    },
+    {
+      "name": "page_raster_16_from_365",
+      "left": "bffba25b03708c88ccbbb86677b463251e1cc27843ce73f01d97d44fc13feaa3",
+      "right": "bffba25b03708c88ccbbb86677b463251e1cc27843ce73f01d97d44fc13feaa3",
+      "passed": true
+    },
+    {
+      "name": "page_text_17_from_366",
+      "left": "691df006563ed918c8cdcd200bff450f8bd3bd4955232c10c17bf18e163e3f96",
+      "right": "691df006563ed918c8cdcd200bff450f8bd3bd4955232c10c17bf18e163e3f96",
+      "passed": true
+    },
+    {
+      "name": "page_raster_17_from_366",
+      "left": "61f9a59a9bd146586b3e23941aeaf0eafaa71ad2c78fc2486ada80100f481216",
+      "right": "61f9a59a9bd146586b3e23941aeaf0eafaa71ad2c78fc2486ada80100f481216",
+      "passed": true
+    },
+    {
+      "name": "page_text_18_from_367",
+      "left": "696280c9df949a025012de75da422522824cad9159f9fe9e8661ea4a689b5520",
+      "right": "696280c9df949a025012de75da422522824cad9159f9fe9e8661ea4a689b5520",
+      "passed": true
+    },
+    {
+      "name": "page_raster_18_from_367",
+      "left": "ff46d176e6800421c73f6a3bb89f2a9b614508234fcdee089ea1f338402ad398",
+      "right": "ff46d176e6800421c73f6a3bb89f2a9b614508234fcdee089ea1f338402ad398",
+      "passed": true
+    },
+    {
+      "name": "page_text_19_from_368",
+      "left": "5e6e457df4fd2a8bf3f9f87f0ec06309dd5f6b96c6bc56220692d5724312e767",
+      "right": "5e6e457df4fd2a8bf3f9f87f0ec06309dd5f6b96c6bc56220692d5724312e767",
+      "passed": true
+    },
+    {
+      "name": "page_raster_19_from_368",
+      "left": "ad21f0ffddc1ac24c7e88ca9406cb887408ccc571c8b565f1157a57b2e4c4205",
+      "right": "ad21f0ffddc1ac24c7e88ca9406cb887408ccc571c8b565f1157a57b2e4c4205",
+      "passed": true
+    },
+    {
+      "name": "page_text_20_from_369",
+      "left": "28591e6ede4b9b7d6b4fc697e29e31e48a1864aecc2fbad0f7664169e699a8bc",
+      "right": "28591e6ede4b9b7d6b4fc697e29e31e48a1864aecc2fbad0f7664169e699a8bc",
+      "passed": true
+    },
+    {
+      "name": "page_raster_20_from_369",
+      "left": "f1a4b49034e6efaea2ba9daafc151db45b65e44af508c19491f65be42c848124",
+      "right": "f1a4b49034e6efaea2ba9daafc151db45b65e44af508c19491f65be42c848124",
+      "passed": true
+    },
+    {
+      "name": "page_text_21_from_370",
+      "left": "bf2138d0a74cd9f11106f1508781f57147382503cd511e96c8293b6188501dd5",
+      "right": "bf2138d0a74cd9f11106f1508781f57147382503cd511e96c8293b6188501dd5",
+      "passed": true
+    },
+    {
+      "name": "page_raster_21_from_370",
+      "left": "ba70828a1096c1e32e6d4bb17678223c3dd82f94f5b88ad7243c90f5552c9fe8",
+      "right": "ba70828a1096c1e32e6d4bb17678223c3dd82f94f5b88ad7243c90f5552c9fe8",
+      "passed": true
+    },
+    {
+      "name": "page_text_22_from_371",
+      "left": "27e97e3bbbfcfa920a45a8c01db7971e64376399506a5c867205c2595143c346",
+      "right": "27e97e3bbbfcfa920a45a8c01db7971e64376399506a5c867205c2595143c346",
+      "passed": true
+    },
+    {
+      "name": "page_raster_22_from_371",
+      "left": "d4b21e84bee65587fca5dddcf01fb150d882d6822952055447b03da067c5199a",
+      "right": "d4b21e84bee65587fca5dddcf01fb150d882d6822952055447b03da067c5199a",
+      "passed": true
+    },
+    {
+      "name": "page_text_23_from_372",
+      "left": "72e33c38f83fc6cfb7bc86948d233cfe7d33e2a5f8666d133c9cc7ee12dcccfc",
+      "right": "72e33c38f83fc6cfb7bc86948d233cfe7d33e2a5f8666d133c9cc7ee12dcccfc",
+      "passed": true
+    },
+    {
+      "name": "page_raster_23_from_372",
+      "left": "1e3c65de8c8052fd618acad95623989c5c3a5c8368ecfa7fbdcc7bc9660e28c0",
+      "right": "1e3c65de8c8052fd618acad95623989c5c3a5c8368ecfa7fbdcc7bc9660e28c0",
+      "passed": true
+    },
+    {
+      "name": "page_text_24_from_373",
+      "left": "fe1aafc7700e680516ab5b5b4d520f03553b4b505852ba60107e6c0e6a9d4e04",
+      "right": "fe1aafc7700e680516ab5b5b4d520f03553b4b505852ba60107e6c0e6a9d4e04",
+      "passed": true
+    },
+    {
+      "name": "page_raster_24_from_373",
+      "left": "bf0f7e583e0019360b849dfd29b28fb4bf462c5e01d4494fb545c53b6fa754d8",
+      "right": "bf0f7e583e0019360b849dfd29b28fb4bf462c5e01d4494fb545c53b6fa754d8",
+      "passed": true
+    },
+    {
+      "name": "page_text_25_from_374",
+      "left": "4e2e4d1dd90cd92b27cb180524466f9aa958306d6a24e9e76fc6ada9663ab37e",
+      "right": "4e2e4d1dd90cd92b27cb180524466f9aa958306d6a24e9e76fc6ada9663ab37e",
+      "passed": true
+    },
+    {
+      "name": "page_raster_25_from_374",
+      "left": "516d9c0dfb85e44d20eeeadf9da8fc7853c1370b4a11ed8146fd3f7c07f22e18",
+      "right": "516d9c0dfb85e44d20eeeadf9da8fc7853c1370b4a11ed8146fd3f7c07f22e18",
+      "passed": true
+    },
+    {
+      "name": "page_text_26_from_375",
+      "left": "de8ef16f7f926f9d76df8c80d00bfb5f6ce7fa25673d60f7b93f78de40ca9e16",
+      "right": "de8ef16f7f926f9d76df8c80d00bfb5f6ce7fa25673d60f7b93f78de40ca9e16",
+      "passed": true
+    },
+    {
+      "name": "page_raster_26_from_375",
+      "left": "102db490f33a1b6bc1ffbfd90d80722fe6ff57364ea4a676f826cc7dc1c16261",
+      "right": "102db490f33a1b6bc1ffbfd90d80722fe6ff57364ea4a676f826cc7dc1c16261",
+      "passed": true
+    },
+    {
+      "name": "page_text_27_from_376",
+      "left": "e08501b65738506b2aa3c53b348f84380cc418ae39edbb92c7121ecedc74483c",
+      "right": "e08501b65738506b2aa3c53b348f84380cc418ae39edbb92c7121ecedc74483c",
+      "passed": true
+    },
+    {
+      "name": "page_raster_27_from_376",
+      "left": "e42a5297fd51fb63b224ed2f0ad25e45fc8581852d3037de4d441e45d40c8189",
+      "right": "e42a5297fd51fb63b224ed2f0ad25e45fc8581852d3037de4d441e45d40c8189",
+      "passed": true
+    },
+    {
+      "name": "page_text_28_from_377",
+      "left": "d0814b064a37f0df873583c2a036484a66b7d6f8b90332057e38b52853c0d8f4",
+      "right": "d0814b064a37f0df873583c2a036484a66b7d6f8b90332057e38b52853c0d8f4",
+      "passed": true
+    },
+    {
+      "name": "page_raster_28_from_377",
+      "left": "be91d9a2acc1230e97f057b7a8daff42d3b4b6907ca98bc6a17c0b0ac8037b93",
+      "right": "be91d9a2acc1230e97f057b7a8daff42d3b4b6907ca98bc6a17c0b0ac8037b93",
+      "passed": true
+    },
+    {
+      "name": "page_text_29_from_378",
+      "left": "4fab9c0a8aac54f62e555d0d8b5e2215416e7d80a92b7416cf053012e8d0428f",
+      "right": "4fab9c0a8aac54f62e555d0d8b5e2215416e7d80a92b7416cf053012e8d0428f",
+      "passed": true
+    },
+    {
+      "name": "page_raster_29_from_378",
+      "left": "c6763e56bb7466e8ac405e894ae502ac8da14d64f9dc3cb9e483ee65ecd6f3bf",
+      "right": "c6763e56bb7466e8ac405e894ae502ac8da14d64f9dc3cb9e483ee65ecd6f3bf",
+      "passed": true
+    },
+    {
+      "name": "page_text_30_from_379",
+      "left": "5e961cb09edab49d29eb0c02bf2ae17230470dc01f491896aea6d9ac41097cba",
+      "right": "5e961cb09edab49d29eb0c02bf2ae17230470dc01f491896aea6d9ac41097cba",
+      "passed": true
+    },
+    {
+      "name": "page_raster_30_from_379",
+      "left": "5b2e8ba6e60d4b71078f7b68b1fedb327572f6f3a8d414c9052c8a98d334bf97",
+      "right": "5b2e8ba6e60d4b71078f7b68b1fedb327572f6f3a8d414c9052c8a98d334bf97",
+      "passed": true
+    },
+    {
+      "name": "page_text_31_from_389",
+      "left": "2ec58f5cd45ce887b03ea8a14d74ce2a0c7f324cef1bd6ac6bdc90d099f2770a",
+      "right": "2ec58f5cd45ce887b03ea8a14d74ce2a0c7f324cef1bd6ac6bdc90d099f2770a",
+      "passed": true
+    },
+    {
+      "name": "page_raster_31_from_389",
+      "left": "831557b39e5381d9f96a29adb5d2c8029c15efcc0af0ded275e5421d437a8e22",
+      "right": "831557b39e5381d9f96a29adb5d2c8029c15efcc0af0ded275e5421d437a8e22",
+      "passed": true
+    },
+    {
+      "name": "page_text_32_from_390",
+      "left": "5c58e234d96bbcb47c28e9fef65bd7ed097668b28ddad914a36c7af0e5b65525",
+      "right": "5c58e234d96bbcb47c28e9fef65bd7ed097668b28ddad914a36c7af0e5b65525",
+      "passed": true
+    },
+    {
+      "name": "page_raster_32_from_390",
+      "left": "8ec54aace45c345445e43ff6ba8a67d1f804351b79192ddbf8ec55984916bff0",
+      "right": "8ec54aace45c345445e43ff6ba8a67d1f804351b79192ddbf8ec55984916bff0",
+      "passed": true
+    },
+    {
+      "name": "page_text_33_from_391",
+      "left": "3915e08c5e1ef243cac2091365011b347aa471d1ab38c42e422ea6ba4fbf9e48",
+      "right": "3915e08c5e1ef243cac2091365011b347aa471d1ab38c42e422ea6ba4fbf9e48",
+      "passed": true
+    },
+    {
+      "name": "page_raster_33_from_391",
+      "left": "e81e9a456e93c952ecd51c1e854f3ab11bab74fda256c0e274a40ad00a260d83",
+      "right": "e81e9a456e93c952ecd51c1e854f3ab11bab74fda256c0e274a40ad00a260d83",
+      "passed": true
+    },
+    {
+      "name": "page_text_34_from_392",
+      "left": "60b0edef4cd0642ed9ce3020fe86718f92fa53dee020bd2a81d2ff11c6c34f0c",
+      "right": "60b0edef4cd0642ed9ce3020fe86718f92fa53dee020bd2a81d2ff11c6c34f0c",
+      "passed": true
+    },
+    {
+      "name": "page_raster_34_from_392",
+      "left": "cdd8585ea0f3ca7c90390c90314e337f47a5fc77faaaaeb07dafbeef98ce8a42",
+      "right": "cdd8585ea0f3ca7c90390c90314e337f47a5fc77faaaaeb07dafbeef98ce8a42",
+      "passed": true
+    },
+    {
+      "name": "page_text_35_from_393",
+      "left": "55a490d66af7a7ea5883898940c55464cea53a90708d255aa77852e6e1cf4c25",
+      "right": "55a490d66af7a7ea5883898940c55464cea53a90708d255aa77852e6e1cf4c25",
+      "passed": true
+    },
+    {
+      "name": "page_raster_35_from_393",
+      "left": "a0fc3ce967880697976e5ff99e5e486f7502ef773e889d23cfe84a9963744693",
+      "right": "a0fc3ce967880697976e5ff99e5e486f7502ef773e889d23cfe84a9963744693",
+      "passed": true
+    },
+    {
+      "name": "page_text_36_from_394",
+      "left": "765e4157aaab0759473731f2b81d5017d38be97c6724751a57547cba48e14045",
+      "right": "765e4157aaab0759473731f2b81d5017d38be97c6724751a57547cba48e14045",
+      "passed": true
+    },
+    {
+      "name": "page_raster_36_from_394",
+      "left": "292f61b0b13b23c29589a398b3e09b08e48794d9c4e58d632758f6c5a9c3bfac",
+      "right": "292f61b0b13b23c29589a398b3e09b08e48794d9c4e58d632758f6c5a9c3bfac",
+      "passed": true
+    },
+    {
+      "name": "page_text_37_from_395",
+      "left": "e2496222f119e81400b2d965240b1f487bb60f40e152ea66b06aeea19218ba1e",
+      "right": "e2496222f119e81400b2d965240b1f487bb60f40e152ea66b06aeea19218ba1e",
+      "passed": true
+    },
+    {
+      "name": "page_raster_37_from_395",
+      "left": "e3ba06f36ff5e7070a84107b3b6bcbd41e6462c930a715a19c6f93d905c049e7",
+      "right": "e3ba06f36ff5e7070a84107b3b6bcbd41e6462c930a715a19c6f93d905c049e7",
+      "passed": true
+    },
+    {
+      "name": "page_text_38_from_396",
+      "left": "1cc8f4c788b9211c56971491d3a18bb258e015ed052500c09c559304139d61c4",
+      "right": "1cc8f4c788b9211c56971491d3a18bb258e015ed052500c09c559304139d61c4",
+      "passed": true
+    },
+    {
+      "name": "page_raster_38_from_396",
+      "left": "6d76158a8a6f32d570d27108e47852aabb92535dfc48a8fa0c072efba7ce1da2",
+      "right": "6d76158a8a6f32d570d27108e47852aabb92535dfc48a8fa0c072efba7ce1da2",
+      "passed": true
+    },
+    {
+      "name": "page_text_39_from_397",
+      "left": "62e28525bf78ee08fd6e619b482b8ec8f0ca8a7f8993a67be26939febf198658",
+      "right": "62e28525bf78ee08fd6e619b482b8ec8f0ca8a7f8993a67be26939febf198658",
+      "passed": true
+    },
+    {
+      "name": "page_raster_39_from_397",
+      "left": "5c2213b416fa3474e80a87e428a84c43e6a25b1517d50cd1fb95389fa5aaad0a",
+      "right": "5c2213b416fa3474e80a87e428a84c43e6a25b1517d50cd1fb95389fa5aaad0a",
+      "passed": true
+    },
+    {
+      "name": "page_text_40_from_398",
+      "left": "1475575f8199d94baa4e78a04e127534c8e24dcb0fb13437fc285c67ccad647a",
+      "right": "1475575f8199d94baa4e78a04e127534c8e24dcb0fb13437fc285c67ccad647a",
+      "passed": true
+    },
+    {
+      "name": "page_raster_40_from_398",
+      "left": "7aa0e3c920df1df8f9f76305e155e5248542d107d0dc54c63f611715c378d14b",
+      "right": "7aa0e3c920df1df8f9f76305e155e5248542d107d0dc54c63f611715c378d14b",
+      "passed": true
+    },
+    {
+      "name": "page_text_41_from_399",
+      "left": "7d129483af426308bfa41137fa970ed58e290d5b5415c3a35a08e7076d3db442",
+      "right": "7d129483af426308bfa41137fa970ed58e290d5b5415c3a35a08e7076d3db442",
+      "passed": true
+    },
+    {
+      "name": "page_raster_41_from_399",
+      "left": "bf4e2b773b8fc7dd94c617c82370a6fbbc2eba89b39699da1122caef205001cd",
+      "right": "bf4e2b773b8fc7dd94c617c82370a6fbbc2eba89b39699da1122caef205001cd",
+      "passed": true
+    },
+    {
+      "name": "page_text_42_from_400",
+      "left": "29f5beed5185153a507bde377bd767ff8d3c537d3a1d49c361895914bc51b476",
+      "right": "29f5beed5185153a507bde377bd767ff8d3c537d3a1d49c361895914bc51b476",
+      "passed": true
+    },
+    {
+      "name": "page_raster_42_from_400",
+      "left": "42650c729cf0e09b71eac37068056abe594829d819bdd29ba8f5a8b77f92d4a4",
+      "right": "42650c729cf0e09b71eac37068056abe594829d819bdd29ba8f5a8b77f92d4a4",
+      "passed": true
+    },
+    {
+      "name": "page_text_43_from_401",
+      "left": "b142c16c9ec6a9dd0e9b1a0094699847efac4aa38f66bf9ca3697826e5fb98f8",
+      "right": "b142c16c9ec6a9dd0e9b1a0094699847efac4aa38f66bf9ca3697826e5fb98f8",
+      "passed": true
+    },
+    {
+      "name": "page_raster_43_from_401",
+      "left": "c538e320f50da70df0fc39f1111cea4803c1694b9bf1920f010e6540e08e3bf2",
+      "right": "c538e320f50da70df0fc39f1111cea4803c1694b9bf1920f010e6540e08e3bf2",
+      "passed": true
+    },
+    {
+      "name": "page_text_44_from_402",
+      "left": "54969365080df1237f01197b5384bbf2a030b63f9de907cd4a23048afdeb00dc",
+      "right": "54969365080df1237f01197b5384bbf2a030b63f9de907cd4a23048afdeb00dc",
+      "passed": true
+    },
+    {
+      "name": "page_raster_44_from_402",
+      "left": "2ba29d29a5384901258c49e0af4e4bc2d2bb1f80ccc8233e23b535c092c7d935",
+      "right": "2ba29d29a5384901258c49e0af4e4bc2d2bb1f80ccc8233e23b535c092c7d935",
+      "passed": true
+    },
+    {
+      "name": "page_text_45_from_403",
+      "left": "e22c5674caccc3df95531cb97606a55a44de0878720cac45cad0fcba527f4c6a",
+      "right": "e22c5674caccc3df95531cb97606a55a44de0878720cac45cad0fcba527f4c6a",
+      "passed": true
+    },
+    {
+      "name": "page_raster_45_from_403",
+      "left": "caa5b2bf2465094294be854a74e6b7eb21c3fb73c0d6b4562239c72fe44b5da8",
+      "right": "caa5b2bf2465094294be854a74e6b7eb21c3fb73c0d6b4562239c72fe44b5da8",
+      "passed": true
+    },
+    {
+      "name": "page_text_46_from_404",
+      "left": "02af59ede0f036c7e0865ccc4f33a3126036f2288a9181ed1510cf96e854bf4b",
+      "right": "02af59ede0f036c7e0865ccc4f33a3126036f2288a9181ed1510cf96e854bf4b",
+      "passed": true
+    },
+    {
+      "name": "page_raster_46_from_404",
+      "left": "47db10366b1cf1056a53201cebcb396458877b2f80abe2e61bb4810d3fab703a",
+      "right": "47db10366b1cf1056a53201cebcb396458877b2f80abe2e61bb4810d3fab703a",
+      "passed": true
+    },
+    {
+      "name": "page_text_mismatch_count",
+      "left": 0,
+      "right": 0,
+      "passed": true
+    },
+    {
+      "name": "page_raster_mismatch_count",
+      "left": 0,
+      "right": 0,
+      "passed": true
+    },
+    {
+      "name": "title",
+      "left": true,
+      "right": true,
+      "passed": true
+    },
+    {
+      "name": "contents_supergraphs",
+      "left": true,
+      "right": true,
+      "passed": true
+    },
+    {
+      "name": "contents_gauge_fixing",
+      "left": true,
+      "right": true,
+      "passed": true
+    },
+    {
+      "name": "contents_rules",
+      "left": true,
+      "right": true,
+      "passed": true
+    },
+    {
+      "name": "contents_background",
+      "left": true,
+      "right": true,
+      "passed": true
+    },
+    {
+      "name": "gauge_section",
+      "left": true,
+      "right": true,
+      "passed": true
+    },
+    {
+      "name": "rules_section",
+      "left": true,
+      "right": true,
+      "passed": true
+    },
+    {
+      "name": "dalgebra_section",
+      "left": true,
+      "right": true,
+      "passed": true
+    },
+    {
+      "name": "nk_marker",
+      "left": true,
+      "right": true,
+      "passed": true
+    },
+    {
+      "name": "covariant_marker",
+      "left": true,
+      "right": true,
+      "passed": true
+    },
+    {
+      "name": "one_current_obligation",
+      "left": 1,
+      "right": 1,
+      "passed": true
+    },
+    {
+      "name": "current_obligation_id",
+      "left": "REFERENCE-IMPORT-SUPERSPACE-1001-SUPERGRAPH-001",
+      "right": "REFERENCE-IMPORT-SUPERSPACE-1001-SUPERGRAPH-001",
+      "passed": true
+    },
+    {
+      "name": "manual_contact_sheets",
+      "left": 8,
+      "right": 8,
+      "passed": true
+    },
+    {
+      "name": "manual_pages",
+      "left": 46,
+      "right": 46,
+      "passed": true
+    },
+    {
+      "name": "manual_mismatches",
+      "left": 0,
+      "right": 0,
+      "passed": true
+    },
+    {
+      "name": "ledger_text_comparisons",
+      "left": 46,
+      "right": 46,
+      "passed": true
+    },
+    {
+      "name": "ledger_raster_comparisons",
+      "left": 46,
+      "right": 46,
+      "passed": true
+    }
+  ],
+  "totals": {
+    "checks": 149,
+    "failed": 0,
+    "page_text_comparisons": 46,
+    "page_raster_comparisons": 46
+  },
+  "failures": []
+}

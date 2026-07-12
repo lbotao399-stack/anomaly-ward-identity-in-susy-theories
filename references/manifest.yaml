@@ -17,7 +17,7 @@
       "id": "REFERENCE-CLAIM-MAP",
       "path": "references/claim-map.yaml",
       "classification": "REFERENCE_CLAIM_BOUNDARY",
-      "sha256": "1c7fb10dadf5dbe8da0dc32b8ea267f6bcd629f5b349b8f50a47e9b000a48b74"
+      "sha256": "26b8106d7c5b5cf08904a34d17ae1a280a1df3166929ca4081859ef9a2e11bad"
     },
     {
       "id": "ARXIV-HEP-TH-0108200-V1",
@@ -288,6 +288,18 @@
       "path": "references/n2-general-lie-closure-instructor-source-ledger.json",
       "classification": "REFERENCE_SOURCE_LEDGER",
       "sha256": "17bb11d75be8dbf544a73ecd75e887fa429dd2d8d838414c8ebb85e5fc1208cc"
+    },
+    {
+      "id": "SUPERSPACE-1001-SUPERGRAPH-PAGES",
+      "path": "references/vendor/local/superspace-1001-supergraph-pages.pdf",
+      "classification": "PRIMARY_REFERENCE_CANDIDATE_SUPERGRAPH_EVIDENCE",
+      "sha256": "1cb68ae63aa5c8d8a3e2150b769ba2bfb56f245c91204bafceaa5793f969ccb8"
+    },
+    {
+      "id": "SUPERSPACE-1001-SUPERGRAPH-SOURCE-LEDGER",
+      "path": "references/superspace-1001-supergraph-source-ledger.json",
+      "classification": "REFERENCE_SOURCE_LEDGER",
+      "sha256": "fefb51c998872d6bee6a4bcfb21a56d75b121a294d22abd189b1da8d80d4a5f3"
     }
   ]
 }

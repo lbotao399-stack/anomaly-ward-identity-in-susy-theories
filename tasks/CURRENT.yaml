@@ -1,36 +1,64 @@
 {
-  "id": "MIRROR-STEP-04-NOTION-001",
-  "type": "CONTRACT_CHANGE",
+  "id": "REFERENCE-IMPORT-SUPERSPACE-1001-SUPERGRAPH-001",
+  "type": "REFERENCE_IMPORT",
   "status": "ACCEPTED",
-  "outcome": "Publish the accepted Step-4 extended super-Yang-Mills contract family from origin/main commit a3d7791c0469051f21471f5f5c40c97f6aef1cff to Notion child pages under the fixed AWI root without reading any Notion content.",
+  "outcome": "Classify and vendor the minimal page evidence from the already-admitted Superspace, or One Thousand and One Lessons in Supersymmetry PDF needed for a later independent derivation of N=1 Lorentzian and Euclidean superspace Feynman rules, without translating or adopting any source formula during this import task.",
   "allowed_inputs": [
     "AUTHORITY.md",
     "AGENTS.md",
-    "contracts/foundations/step-04-extended-sym-notation.md",
-    "contracts/foundations/step-04a-n1-super-yang-mills.md",
-    "contracts/foundations/step-04b-n2-super-yang-mills.md",
-    "contracts/foundations/step-04c-n4-super-yang-mills.md",
-    "contracts/dictionaries/step-04-extended-sym-weinberg-srednicki-dictionary.md",
-    "contracts/manifest.yaml",
-    "mirror/page_map.yaml",
-    "mirror/README.md",
-    "scripts/build_notion_payload.py",
-    "audits/notion_write_receipt.json"
+    "references/vendor/hep-th-0108200v1.pdf",
+    "references/vendor/local/superspace-1001-supergraph-pages.pdf",
+    "references/manifest.yaml",
+    "references/claim-map.yaml",
+    "references/superspace-1001-supergraph-source-ledger.json",
+    "references/superspace-1001-gauge-representation-source-ledger.json",
+    "audits/superspace-1001-reference-import-verification.json",
+    "audits/superspace-1001-supergraph-reference-import-verification.json",
+    "scripts/verify_superspace_1001_supergraph_reference_import.py",
+    "ledger/proof_obligations.json",
+    "tasks/archive/CONTRACT-STEP-04-EXTENDED-SUPER-YANG-MILLS-001.yaml",
+    "tasks/archive/REFERENCE-IMPORT-SUPERSPACE-001.yaml",
+    "tasks/archive/REFERENCE-IMPORT-SUPERSPACE-1001-VECTOR-REPRESENTATION-001.yaml",
+    "tests/test_repository_policy.py",
+    ".github/workflows/verify.yml"
   ],
+  "source_scope": {
+    "user_authorized": true,
+    "source_id": "ARXIV-HEP-TH-0108200-V1",
+    "vendored_path": "references/vendor/hep-th-0108200v1.pdf",
+    "sha256": "3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99",
+    "pdf_pages": 568,
+    "identity": "byte-identical to the user-named local iCloud book",
+    "locator_method": "whole-file text-layer search may locate pages mechanically; semantic inspection is restricted to the title, table of contents, and pages directly defining Gaussian superfield integrals, superspace delta functions and projectors, chiral and vector propagators, gauge fixing, Faddeev-Popov or Nielsen-Kallosh sectors, interaction vertices, supergraph ordering, and D-algebra",
+    "translation_status": "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+    "default_boundary_after_task": "GIT_TO_NOTION_ONLY"
+  },
   "forbidden_inputs": [
-    "Notion content",
-    "Notion fetch, search, page read, block read, or content readback",
-    "legacy repositories",
-    "other local files",
+    "Notion content or Notion readback",
+    "local files outside this repository",
+    "other books, PDFs, web pages, URLs, chats, attachments, or legacy repositories",
     "unmerged branches",
-    "manual mathematical edits on the Notion side"
+    "translation of a source sign, factor, metric, spinor convention, propagator, vertex, ghost rule, D-algebra rule, or loop coefficient into Project notation during this import task",
+    "modification of a Project contract during this import task"
+  ],
+  "candidate_claim_ids": [
+    "SUPERSPACE-1001-GAUSSIAN-SUPERFIELD-EVIDENCE",
+    "SUPERSPACE-1001-DELTA-PROJECTOR-EVIDENCE",
+    "SUPERSPACE-1001-CHIRAL-PROPAGATOR-EVIDENCE",
+    "SUPERSPACE-1001-VECTOR-GAUGE-FIXING-EVIDENCE",
+    "SUPERSPACE-1001-FP-NK-GHOST-EVIDENCE",
+    "SUPERSPACE-1001-ORDERED-SUPERGRAPH-VERTEX-EVIDENCE",
+    "SUPERSPACE-1001-D-ALGEBRA-EVIDENCE"
   ],
   "acceptance": [
-    "the published mathematical sources are exactly the five Step-4 contract files at origin/main commit a3d7791c0469051f21471f5f5c40c97f6aef1cff",
-    "the Notion child pages are created only through write operations under root page 39e80ed3e5844b17b3ccf2579e2a64ca",
-    "each payload contains the Git authority header, exact source path, commit, and SHA-256",
-    "mirror page map records each Notion page id, source path, source commit, and source sha256",
-    "write receipt states content_readback_performed=false",
-    "repository-policy passes after the mirror metadata update"
+    "the admitted full PDF has exactly 568 pages and SHA-256 3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99",
+    "the table of contents and mechanical text-layer search identify every inspected source page before semantic extraction",
+    "a copyright-minimal discontinuous page subset is stored under references/vendor/local with its own SHA-256",
+    "rendered PNG inspection confirms the title page, table-of-contents locators, every imported formula page, printed page labels, and equation labels",
+    "a source ledger records original PDF page numbers, printed labels, extraction commands, visual-inspection evidence, and exact candidate-claim page ranges",
+    "references/manifest.yaml and references/claim-map.yaml register only the seven candidate claims and forbid importing source conventions or coefficients",
+    "translation_status remains NOT_PERFORMED_IN_REFERENCE_IMPORT and no Project Feynman rule is asserted",
+    "an exact verifier reproduces every hash, page count, page-range, locator, claim boundary, and rendered-page check with zero failures",
+    "repository-policy passes and the import reaches verified origin/main before a later CONTRACT_CHANGE may read the imported subset"
   ]
 }

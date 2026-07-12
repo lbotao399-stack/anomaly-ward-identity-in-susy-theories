@@ -332,7 +332,50 @@ class RepositoryPolicyTest(unittest.TestCase):
                 task["allowed_inputs"],
             )
             return
+        if task["id"] == "REFERENCE-IMPORT-SUPERSPACE-1001-SUPERGRAPH-001":
+            scope = task["source_scope"]
+            self.assertTrue(scope["user_authorized"])
+            self.assertEqual(scope["source_id"], "ARXIV-HEP-TH-0108200-V1")
+            self.assertEqual(scope["vendored_path"], "references/vendor/hep-th-0108200v1.pdf")
+            self.assertEqual(
+                scope["sha256"],
+                "3669da125d970d5db9f247b580da3e89f76a9363235910e7f94509eff097ea99",
+            )
+            self.assertEqual(scope["pdf_pages"], 568)
+            self.assertEqual(scope["translation_status"], "NOT_PERFORMED_IN_REFERENCE_IMPORT")
+            self.assertEqual(scope["default_boundary_after_task"], "GIT_TO_NOTION_ONLY")
+            self.assertFalse(any("://" in item for item in task["allowed_inputs"]))
+            self.assertIn("references/vendor/hep-th-0108200v1.pdf", task["allowed_inputs"])
+            self.assertEqual(len(task["candidate_claim_ids"]), 7)
+            return
         self.fail(f"unreviewed reference-import task: {task['id']}")
+
+    def test_superspace_1001_supergraph_reference_import(self) -> None:
+        audit_path = ROOT / "audits/superspace-1001-supergraph-reference-import-verification.json"
+        ledger_path = ROOT / "references/superspace-1001-supergraph-source-ledger.json"
+        subset_path = ROOT / "references/vendor/local/superspace-1001-supergraph-pages.pdf"
+        self.assertTrue(audit_path.exists())
+        self.assertTrue(ledger_path.exists())
+        self.assertTrue(subset_path.exists())
+        audit = json.loads(audit_path.read_text(encoding="utf-8"))
+        ledger = json.loads(ledger_path.read_text(encoding="utf-8"))
+        self.assertEqual(audit["status"], "PASS")
+        self.assertEqual(audit["totals"]["checks"], 149)
+        self.assertEqual(audit["totals"]["failed"], 0)
+        self.assertEqual(audit["totals"]["page_text_comparisons"], 46)
+        self.assertEqual(audit["totals"]["page_raster_comparisons"], 46)
+        self.assertEqual(ledger["scoped_artifact"]["pages"], 46)
+        self.assertEqual(
+            ledger["scoped_artifact"]["sha256"],
+            "1cb68ae63aa5c8d8a3e2150b769ba2bfb56f245c91204bafceaa5793f969ccb8",
+        )
+        self.assertEqual(ledger["admissibility"]["translation_status"], "NOT_PERFORMED_IN_REFERENCE_IMPORT")
+        self.assertTrue(
+            all(
+                item["adoption_status"] == "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+                for item in ledger["candidate_claims"]
+            )
+        )
 
     def test_contract_change_has_no_network_inputs(self) -> None:
         task = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
@@ -884,7 +927,11 @@ class RepositoryPolicyTest(unittest.TestCase):
     def test_step_4_write_only_mirror_receipt(self) -> None:
         page_map = json.loads((ROOT / "mirror/page_map.yaml").read_text(encoding="utf-8"))
         receipt = json.loads((ROOT / "audits/notion_write_receipt.json").read_text(encoding="utf-8"))
-        mirror_task = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
+        mirror_task = json.loads(
+            (ROOT / "tasks/archive/MIRROR-STEP-04-NOTION-001.yaml").read_text(
+                encoding="utf-8"
+            )
+        )
         expected = {
             "FOUNDATION-EXTENDED-SYM-NOTATION-004": (
                 "contracts/foundations/step-04-extended-sym-notation.md",
