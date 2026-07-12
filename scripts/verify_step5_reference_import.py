@@ -22,7 +22,7 @@ NOTION = ROOT / "references/vendor/notion/weinberg/chapter-30"
 LEDGER = ROOT / "references/step5-chat-weinberg30-source-ledger.json"
 MANIFEST = ROOT / "references/manifest.yaml"
 CLAIM_MAP = ROOT / "references/claim-map.yaml"
-TASK = ROOT / "tasks/CURRENT.yaml"
+TASK = ROOT / "tasks/archive/REFERENCE-IMPORT-STEP5-CHAT-WEINBERG30-001.yaml"
 AUDIT = ROOT / "audits/step5-reference-import-verification.json"
 
 AUTH_SHA = "0eba2b4e454b9ffe97f139b28bd94efc01643f55460dde6792fd05e2fcbcac7f"

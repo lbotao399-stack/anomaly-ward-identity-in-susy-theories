@@ -454,6 +454,22 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertFalse(any(item.startswith("http://") or item.startswith("https://") for item in task["allowed_inputs"]))
         for item in task["allowed_inputs"]:
             self.assertTrue((ROOT / item).exists(), item)
+        if "reference_admission" in task:
+            claim_map = json.loads((ROOT / "references/claim-map.yaml").read_text(encoding="utf-8"))
+            registered_claims = {item["id"] for item in claim_map["claims"]}
+            self.assertTrue(set(task["reference_admission"]["admitted_claim_ids"]) <= registered_claims)
+
+    def test_step5_contract_registration(self) -> None:
+        task = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
+        if task["id"] != "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001":
+            self.skipTest("Step-5 Euclidean N=4 AWI task is not current")
+        self.assertEqual(task["type"], "CONTRACT_CHANGE")
+        self.assertEqual(task["status"], "SPECIFIED")
+        self.assertTrue(task["reference_admission"]["source_translation_required_before_formula_adoption"])
+        self.assertEqual(len(task["acceptance"]), 16)
+        self.assertTrue(any("sixteen channel classes" in item for item in task["acceptance"]))
+        self.assertTrue(any("external leg" in item for item in task["acceptance"]))
+        self.assertTrue(any("isolated triangle" in item for item in task["forbidden_inputs"]))
 
     def test_step_1_formula_surface(self) -> None:
         text = (ROOT / "contracts/foundations/step-01-supersymmetry-commutator.md").read_text(encoding="utf-8")
