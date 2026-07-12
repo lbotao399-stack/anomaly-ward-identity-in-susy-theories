@@ -1,0 +1,490 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
+  "contract_sha256": "7f1116253444cf09b240cfa4d6092436eb41f49146d387450d68f608e242b8f7",
+  "source_ledger_sha256": "3df707cfa375c292d18d799160aaceab814011f6d4e88754b34096e7d0b6322f",
+  "status": "PASS",
+  "stage": "FROZEN",
+  "totals": {
+    "checks": 51,
+    "failed": 0
+  },
+  "failures": [],
+  "sections": {
+    "contract": {
+      "status_frozen": true,
+      "spin_frame_locked": true,
+      "dred_split_locked": true,
+      "physical_euler_present": true,
+      "sixteen_tree_table_present": true,
+      "source_chronology_present": true,
+      "source_rejected_conditional_split_present": true,
+      "one_loop_blockers_present": true,
+      "multiplier_block_inverse_present": true,
+      "nonlocality_obstruction_derived": true,
+      "measure_vertex_split_present": true,
+      "reference_flat_matter_kernels_present": true,
+      "vector_is_only_pseudoinverse": true,
+      "seed_project_dalgebra_audit_present": true,
+      "resolved_gaussian_blocker_absent": true,
+      "forbidden_approximation_tokens_absent": true
+    },
+    "spinor": {
+      "sigma_identity_5_9_all_64_components": true,
+      "p_plus_p_minus_5_10_axis_check": true
+    },
+    "grassmann_operator": {
+      "D_plus_squared_zero": true,
+      "D_minus_squared_zero": true,
+      "barD_plus_squared_zero": true,
+      "barD_minus_squared_zero": true,
+      "mixed_plus_plus": true,
+      "mixed_minus_minus": true,
+      "mixed_plus_minus_zero": true,
+      "mixed_minus_plus_zero": true,
+      "project_identity_5_37": true,
+      "triple_D_identity_5_38": true,
+      "triple_barD_identity_5_38": true,
+      "pi_half_idempotent": true,
+      "pi_zero_idempotent": true,
+      "projectors_orthogonal_left": true,
+      "projectors_orthogonal_right": true,
+      "projectors_complete": true
+    },
+    "channels": {
+      "sixteen_ordered_channels": true,
+      "sixteen_unique_ids": true,
+      "reversed_orders_distinct": true,
+      "four_exact_zero_tree_rows": true,
+      "all_one_loop_states_honest": true
+    },
+    "sources": {
+      "seven_visible_messages": true,
+      "orders_exact": true,
+      "hidden_turns_not_claimed": true,
+      "all_claims_have_known_verdict": true,
+      "initial_epsilon_numerator_rejected": true,
+      "later_contact_pole_conditional": true,
+      "later_dalgebra_chain_rejected": true,
+      "later_vertex_momentum_magnitudes_proved": true,
+      "workflow_coefficient_rejected": true,
+      "weinberg_groups_present": true,
+      "superspace_groups_present": true,
+      "no_source_formula_adopted": true
+    }
+  },
+  "channel_ledger": [
+    {
+      "id": "W__W",
+      "left": "W",
+      "right": "W",
+      "left_parity": 0,
+      "tree_terms": [
+        {
+          "sign": 1,
+          "word": [
+            "dW",
+            "W"
+          ]
+        },
+        {
+          "sign": 1,
+          "word": [
+            "W",
+            "dW"
+          ]
+        }
+      ],
+      "one_loop_blockers": [
+        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
+        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
+        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
+        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
+        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
+        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
+        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
+        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
+        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
+      ]
+    },
+    {
+      "id": "W__Phi",
+      "left": "W",
+      "right": "Phi",
+      "left_parity": 0,
+      "tree_terms": [
+        {
+          "sign": 1,
+          "word": [
+            "dW",
+            "Phi"
+          ]
+        },
+        {
+          "sign": 1,
+          "word": [
+            "W",
+            "dPhi"
+          ]
+        }
+      ],
+      "one_loop_blockers": [
+        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
+        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
+        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
+        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
+        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
+        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
+        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
+        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
+        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
+      ]
+    },
+    {
+      "id": "W__TildePhi",
+      "left": "W",
+      "right": "TildePhi",
+      "left_parity": 0,
+      "tree_terms": [
+        {
+          "sign": 1,
+          "word": [
+            "dW",
+            "TildePhi"
+          ]
+        }
+      ],
+      "one_loop_blockers": [
+        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
+        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
+        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
+        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
+        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
+        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
+        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
+        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
+        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
+      ]
+    },
+    {
+      "id": "W__TildeW",
+      "left": "W",
+      "right": "TildeW",
+      "left_parity": 0,
+      "tree_terms": [
+        {
+          "sign": 1,
+          "word": [
+            "dW",
+            "TildeW"
+          ]
+        }
+      ],
+      "one_loop_blockers": [
+        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
+        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
+        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
+        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
+        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
+        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
+        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
+        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
+        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
+      ]
+    },
+    {
+      "id": "Phi__W",
+      "left": "Phi",
+      "right": "W",
+      "left_parity": 1,
+      "tree_terms": [
+        {
+          "sign": 1,
+          "word": [
+            "dPhi",
+            "W"
+          ]
+        },
+        {
+          "sign": -1,
+          "word": [
+            "Phi",
+            "dW"
+          ]
+        }
+      ],
+      "one_loop_blockers": [
+        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
+        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
+        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
+        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
+        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
+        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
+        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
+        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
+        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
+      ]
+    },
+    {
+      "id": "Phi__Phi",
+      "left": "Phi",
+      "right": "Phi",
+      "left_parity": 1,
+      "tree_terms": [
+        {
+          "sign": 1,
+          "word": [
+            "dPhi",
+            "Phi"
+          ]
+        },
+        {
+          "sign": -1,
+          "word": [
+            "Phi",
+            "dPhi"
+          ]
+        }
+      ],
+      "one_loop_blockers": [
+        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
+        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
+        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
+        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
+        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
+        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
+        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
+        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
+        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
+      ]
+    },
+    {
+      "id": "Phi__TildePhi",
+      "left": "Phi",
+      "right": "TildePhi",
+      "left_parity": 1,
+      "tree_terms": [
+        {
+          "sign": 1,
+          "word": [
+            "dPhi",
+            "TildePhi"
+          ]
+        }
+      ],
+      "one_loop_blockers": [
+        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
+        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
+        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
+        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
+        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
+        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
+        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
+        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
+        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
+      ]
+    },
+    {
+      "id": "Phi__TildeW",
+      "left": "Phi",
+      "right": "TildeW",
+      "left_parity": 1,
+      "tree_terms": [
+        {
+          "sign": 1,
+          "word": [
+            "dPhi",
+            "TildeW"
+          ]
+        }
+      ],
+      "one_loop_blockers": [
+        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
+        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
+        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
+        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
+        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
+        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
+        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
+        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
+        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
+      ]
+    },
+    {
+      "id": "TildePhi__W",
+      "left": "TildePhi",
+      "right": "W",
+      "left_parity": 0,
+      "tree_terms": [
+        {
+          "sign": 1,
+          "word": [
+            "TildePhi",
+            "dW"
+          ]
+        }
+      ],
+      "one_loop_blockers": [
+        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
+        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
+        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
+        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
+        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
+        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
+        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
+        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
+        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
+      ]
+    },
+    {
+      "id": "TildePhi__Phi",
+      "left": "TildePhi",
+      "right": "Phi",
+      "left_parity": 0,
+      "tree_terms": [
+        {
+          "sign": 1,
+          "word": [
+            "TildePhi",
+            "dPhi"
+          ]
+        }
+      ],
+      "one_loop_blockers": [
+        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
+        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
+        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
+        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
+        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
+        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
+        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
+        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
+        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
+      ]
+    },
+    {
+      "id": "TildePhi__TildePhi",
+      "left": "TildePhi",
+      "right": "TildePhi",
+      "left_parity": 0,
+      "tree_terms": [],
+      "one_loop_blockers": [
+        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
+        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
+        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
+        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
+        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
+        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
+        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
+        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
+        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
+      ]
+    },
+    {
+      "id": "TildePhi__TildeW",
+      "left": "TildePhi",
+      "right": "TildeW",
+      "left_parity": 0,
+      "tree_terms": [],
+      "one_loop_blockers": [
+        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
+        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
+        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
+        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
+        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
+        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
+        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
+        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
+        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
+      ]
+    },
+    {
+      "id": "TildeW__W",
+      "left": "TildeW",
+      "right": "W",
+      "left_parity": 1,
+      "tree_terms": [
+        {
+          "sign": -1,
+          "word": [
+            "TildeW",
+            "dW"
+          ]
+        }
+      ],
+      "one_loop_blockers": [
+        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
+        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
+        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
+        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
+        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
+        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
+        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
+        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
+        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
+      ]
+    },
+    {
+      "id": "TildeW__Phi",
+      "left": "TildeW",
+      "right": "Phi",
+      "left_parity": 1,
+      "tree_terms": [
+        {
+          "sign": -1,
+          "word": [
+            "TildeW",
+            "dPhi"
+          ]
+        }
+      ],
+      "one_loop_blockers": [
+        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
+        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
+        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
+        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
+        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
+        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
+        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
+        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
+        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
+      ]
+    },
+    {
+      "id": "TildeW__TildePhi",
+      "left": "TildeW",
+      "right": "TildePhi",
+      "left_parity": 1,
+      "tree_terms": [],
+      "one_loop_blockers": [
+        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
+        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
+        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
+        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
+        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
+        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
+        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
+        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
+        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
+      ]
+    },
+    {
+      "id": "TildeW__TildeW",
+      "left": "TildeW",
+      "right": "TildeW",
+      "left_parity": 1,
+      "tree_terms": [],
+      "one_loop_blockers": [
+        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
+        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
+        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
+        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
+        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
+        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
+        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
+        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
+        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
+      ]
+    }
+  ]
+}

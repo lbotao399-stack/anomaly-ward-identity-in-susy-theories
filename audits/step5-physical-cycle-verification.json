@@ -1,0 +1,166 @@
+{
+  "admission_status": "REFERENCE_FLAT_CHIRAL_GAUSSIAN_VERIFIED_VECTOR_PSEUDOINVERSE_ONLY",
+  "algebraic_pseudoinverses": {
+    "not_a_wick_contraction": true,
+    "two_sided_projected_identity": "K_T G_T=G_T K_T=Pi_(1/2)",
+    "vector_transverse": "G_T^{AB}=-2 g^2 kappa^{AB} Pi_(1/2)/p_(4)^2"
+  },
+  "arithmetic": "EXACT_RATIONAL_AND_EXACT_Q_I_PROJECTOR_DEPENDENCY",
+  "checks": [
+    {
+      "id": "bosonic_cycle.kappa_positive_first_minor",
+      "passed": true
+    },
+    {
+      "id": "bosonic_cycle.kappa_positive_determinant",
+      "passed": true
+    },
+    {
+      "id": "bosonic_cycle.scalar_cycle_kernel_positive_factor",
+      "passed": true
+    },
+    {
+      "id": "bosonic_cycle.transverse_A_cycle_positive_factor",
+      "passed": true
+    },
+    {
+      "id": "bosonic_cycle.d_cycle_positive_factor",
+      "passed": true
+    },
+    {
+      "id": "bosonic_cycle.scalar_inverse_left",
+      "passed": true
+    },
+    {
+      "id": "bosonic_cycle.scalar_inverse_right",
+      "passed": true
+    },
+    {
+      "id": "bosonic_cycle.auxiliary_contour_changes_minus_hessian_to_positive",
+      "passed": true
+    },
+    {
+      "id": "bosonic_cycle.auxiliary_inverse_left",
+      "passed": true
+    },
+    {
+      "id": "bosonic_cycle.scalar_source_derivative",
+      "passed": true
+    },
+    {
+      "id": "bosonic_cycle.F_source_derivative_before_tildeF_to_minus_Fdagger",
+      "passed": true
+    },
+    {
+      "id": "fermion_gaussian.normalized_generator_exact",
+      "passed": true
+    },
+    {
+      "id": "fermion_gaussian.vacuum_nonzero",
+      "passed": true
+    },
+    {
+      "id": "fermion_gaussian.psi_0_tildepsi_0",
+      "passed": true
+    },
+    {
+      "id": "fermion_gaussian.psi_0_tildepsi_1",
+      "passed": true
+    },
+    {
+      "id": "fermion_gaussian.psi_1_tildepsi_0",
+      "passed": true
+    },
+    {
+      "id": "fermion_gaussian.psi_1_tildepsi_1",
+      "passed": true
+    },
+    {
+      "id": "vector_transverse.physical_left_inverse_on_transverse_image",
+      "passed": true
+    },
+    {
+      "id": "vector_transverse.physical_right_inverse_on_transverse_image",
+      "passed": true
+    },
+    {
+      "id": "vector_transverse.physical_kernel_annihilates_longitudinal_left",
+      "passed": true
+    },
+    {
+      "id": "vector_transverse.physical_kernel_annihilates_longitudinal_right",
+      "passed": true
+    },
+    {
+      "id": "vector_transverse.transverse_projector_nontrivial",
+      "passed": true
+    },
+    {
+      "id": "vector_transverse.longitudinal_projector_nontrivial",
+      "passed": true
+    }
+  ],
+  "contract": "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md",
+  "contract_sha256": "7f1116253444cf09b240cfa4d6092436eb41f49146d387450d68f608e242b8f7",
+  "physical_cycle": {
+    "bosonic_convergence": "For h>0, positive kappa, and p_(4)^2>0, scalar, transverse-A, F-cycle, and d-cycle quadratic real parts are positive.",
+    "fermion_coefficient_order": "psi_+ < psi_- < tildepsi_dot+ < tildepsi_dot- for every lexicographically ordered (p,r,A) block",
+    "fermion_measure_order": "dtildepsi_dot- dtildepsi_dot+ dpsi_- dpsi_+",
+    "fermion_source_coupling": "-rho psi - tildepsi tilderho",
+    "fermion_source_derivative_order": "both derivatives are LEFT: first d/drho, then d/dtilderho, i.e. (d_L/dtilderho)(d_L/drho) Z",
+    "momentum_reality": [
+      "tildephi^A(-p)=(phi^A(p))^dagger",
+      "tildeF^A(-p)=-(F^A(p))^dagger",
+      "A_m^A(-p)=(A_m^A(p))^dagger",
+      "D^A(p)=i d^A(p), d^A(-p)=(d^A(p))^dagger"
+    ],
+    "normalized_finite_gaussian": "Z[rho,tilderho]/Z[0]=exp(rho K^{-1} tilderho/hbar)"
+  },
+  "reference_flat_wick_rules": {
+    "auxiliary": "<F^A(p) tildeF^B(-p)>=-hbar g^2 kappa^{AB}",
+    "fermion": "<psi_a^A(p) tildepsi_dotb^B(-p)>=-i hbar g^2 kappa^{AB} p_(a dotb)/p_(4)^2",
+    "fermion_reverse_order": "<tildepsi_dotb^B(-p) psi_a^A(p)>=+i hbar g^2 kappa^{AB} p_(a dotb)/p_(4)^2",
+    "scalar": "<phi^A(p) tildephi^B(-p)>=hbar g^2 kappa^{AB}/p_(4)^2"
+  },
+  "schema": 1,
+  "source_boundary": {
+    "anomaly_coefficient_computed": false,
+    "external_propagator_coefficients_used": false,
+    "full_density_used_in_gaussian": false,
+    "project_equations_used": [
+      "3A.102-3A.103",
+      "3D.18-3D.21",
+      "3D.26-3D.27",
+      "3D.125b",
+      "current Step5 physical Hessians and Green kernels"
+    ],
+    "reference_measure": "D' qhat with varpi(0) divided out"
+  },
+  "status": "PASS",
+  "task": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
+  "totals": {
+    "checks": 23,
+    "failed": 0
+  },
+  "typed_blockers": [
+    {
+      "id": "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
+      "reason": "The field-dependent density is isolated as S_measure=-hbar log(varpi(q)/varpi(0)); its coefficient vertices are not instantiated.",
+      "scope": "promotion of reference-flat Gaussian rules to the full regulated measure"
+    },
+    {
+      "id": "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
+      "reason": "The algebraic Pi_(1/2) pseudoinverse has not been accompanied by the complete finite Gaussian for (A_T,lambda,tildelambda,d), its ordered sources, and coefficientwise reconstruction to V_T.",
+      "scope": "transverse V Wick contraction"
+    },
+    {
+      "id": "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
+      "reason": "The accepted physical Hessian vanishes on Im Pi_0.  A local non-minimal multiplier kernel and its cycle are not fixed by the physical contour (3A.102)-(3A.103).",
+      "scope": "Pi_0 longitudinal and full unconstrained V Wick contraction"
+    }
+  ],
+  "untouched_sectors": {
+    "FP_cycle": "NOT_READ_OR_MODIFIED",
+    "NK_cycle": "NOT_READ_OR_MODIFIED"
+  }
+}

@@ -1,0 +1,775 @@
+{
+  "arithmetic": {
+    "external_cas": false,
+    "floating_point": false,
+    "formal_symbols": [
+      "x",
+      "y",
+      "z",
+      "p2",
+      "pq",
+      "q2",
+      "L0",
+      "EulerGamma",
+      "epsilon"
+    ],
+    "rational_field": "fractions.Fraction"
+  },
+  "categories": {
+    "DRED-projectors": {
+      "checks": 10,
+      "failed": 0
+    },
+    "Feynman-shift": {
+      "checks": 7,
+      "failed": 0
+    },
+    "Laurent-integrals": {
+      "checks": 4,
+      "failed": 0
+    },
+    "Laurent-poles": {
+      "checks": 4,
+      "failed": 0
+    },
+    "bare-numerator-template": {
+      "checks": 9,
+      "failed": 0
+    },
+    "conventions": {
+      "checks": 4,
+      "failed": 0
+    },
+    "numerator-shift": {
+      "checks": 3,
+      "failed": 0
+    },
+    "physical-evanescent-split": {
+      "checks": 3,
+      "failed": 0
+    },
+    "tensor-reduction": {
+      "checks": 3,
+      "failed": 0
+    }
+  },
+  "checks": [
+    {
+      "category": "conventions",
+      "lhs": "exp(+i k.x)",
+      "name": "Fourier phase lock",
+      "passed": true,
+      "rhs": "exp(+i k.x)"
+    },
+    {
+      "category": "conventions",
+      "lhs": "mu^(2 epsilon) d^d ell/(2 pi)^d",
+      "name": "loop measure lock",
+      "passed": true,
+      "rhs": "mu^(2 epsilon) d^d ell/(2 pi)^d"
+    },
+    {
+      "category": "conventions",
+      "lhs": "Euclidean-positive",
+      "name": "Euclidean signature lock",
+      "passed": true,
+      "rhs": "Euclidean-positive"
+    },
+    {
+      "category": "conventions",
+      "lhs": "+i k_M",
+      "name": "derivative Fourier image",
+      "passed": true,
+      "rhs": "+i k_M"
+    },
+    {
+      "category": "Feynman-shift",
+      "lhs": "2",
+      "name": "Feynman parameter prefactor",
+      "passed": true,
+      "rhs": "2"
+    },
+    {
+      "category": "DRED-projectors",
+      "lhs": "(0)*hat_g + (1)*tilde_g",
+      "name": "g4 decomposition",
+      "passed": true,
+      "rhs": "(0)*hat_g + (1)*tilde_g"
+    },
+    {
+      "category": "DRED-projectors",
+      "lhs": "(1)*hat_g + (1)*tilde_g",
+      "name": "g4 idempotence",
+      "passed": true,
+      "rhs": "(1)*hat_g + (1)*tilde_g"
+    },
+    {
+      "category": "DRED-projectors",
+      "lhs": "(1)*hat_g + (0)*tilde_g",
+      "name": "hat projector idempotence",
+      "passed": true,
+      "rhs": "(1)*hat_g + (0)*tilde_g"
+    },
+    {
+      "category": "DRED-projectors",
+      "lhs": "(0)*hat_g + (1)*tilde_g",
+      "name": "tilde projector idempotence",
+      "passed": true,
+      "rhs": "(0)*hat_g + (1)*tilde_g"
+    },
+    {
+      "category": "DRED-projectors",
+      "lhs": "(0)*hat_g + (0)*tilde_g",
+      "name": "hat-tilde orthogonality",
+      "passed": true,
+      "rhs": "(0)*hat_g + (0)*tilde_g"
+    },
+    {
+      "category": "DRED-projectors",
+      "lhs": "(0)*hat_g + (0)*tilde_g",
+      "name": "tilde-hat orthogonality",
+      "passed": true,
+      "rhs": "(0)*hat_g + (0)*tilde_g"
+    },
+    {
+      "category": "DRED-projectors",
+      "lhs": "4",
+      "name": "trace g4",
+      "passed": true,
+      "rhs": "4"
+    },
+    {
+      "category": "DRED-projectors",
+      "lhs": "-2*epsilon + 4",
+      "name": "trace hat_g",
+      "passed": true,
+      "rhs": "-2*epsilon + 4"
+    },
+    {
+      "category": "DRED-projectors",
+      "lhs": "2*epsilon",
+      "name": "trace tilde_g",
+      "passed": true,
+      "rhs": "2*epsilon"
+    },
+    {
+      "category": "DRED-projectors",
+      "lhs": "4",
+      "name": "trace decomposition",
+      "passed": true,
+      "rhs": "4"
+    },
+    {
+      "category": "Feynman-shift",
+      "lhs": "1",
+      "name": "simplex coefficient of k^2",
+      "passed": true,
+      "rhs": "1"
+    },
+    {
+      "category": "Feynman-shift",
+      "lhs": "q2",
+      "name": "routing (s1-s0)^2",
+      "passed": true,
+      "rhs": "q2"
+    },
+    {
+      "category": "Feynman-shift",
+      "lhs": "p2 + 2*pq + q2",
+      "name": "routing (s2-s0)^2",
+      "passed": true,
+      "rhs": "p2 + 2*pq + q2"
+    },
+    {
+      "category": "Feynman-shift",
+      "lhs": "p2",
+      "name": "routing (s2-s1)^2",
+      "passed": true,
+      "rhs": "p2"
+    },
+    {
+      "category": "Feynman-shift",
+      "lhs": [
+        "0",
+        "0"
+      ],
+      "name": "shifted cross term",
+      "passed": true,
+      "rhs": [
+        "0",
+        "0"
+      ]
+    },
+    {
+      "category": "Feynman-shift",
+      "lhs": "-y^2*q2 - 2*y*z*pq - 2*y*z*q2 - z^2*p2 - 2*z^2*pq - z^2*q2 + y*q2 + z*p2 + 2*z*pq + z*q2",
+      "name": "Delta polynomial",
+      "passed": true,
+      "rhs": "-y^2*q2 - 2*y*z*pq - 2*y*z*q2 - z^2*p2 - 2*z^2*pq - z^2*q2 + y*q2 + z*p2 + 2*z*pq + z*q2"
+    },
+    {
+      "category": "numerator-shift",
+      "lhs": [
+        "-z",
+        "-y - z"
+      ],
+      "name": "shifted vector u0",
+      "passed": true,
+      "rhs": [
+        "-z",
+        "-y - z"
+      ]
+    },
+    {
+      "category": "numerator-shift",
+      "lhs": [
+        "-z",
+        "-y - z + 1"
+      ],
+      "name": "shifted vector u1",
+      "passed": true,
+      "rhs": [
+        "-z",
+        "-y - z + 1"
+      ]
+    },
+    {
+      "category": "numerator-shift",
+      "lhs": [
+        "-z + 1",
+        "-y - z + 1"
+      ],
+      "name": "shifted vector u2",
+      "passed": true,
+      "rhs": [
+        "-z + 1",
+        "-y - z + 1"
+      ]
+    },
+    {
+      "category": "bare-numerator-template",
+      "lhs": false,
+      "name": "bare numerator (0,0) has no regulator token",
+      "passed": true,
+      "rhs": false
+    },
+    {
+      "category": "bare-numerator-template",
+      "lhs": false,
+      "name": "bare numerator (0,1) has no regulator token",
+      "passed": true,
+      "rhs": false
+    },
+    {
+      "category": "bare-numerator-template",
+      "lhs": false,
+      "name": "bare numerator (0,2) has no regulator token",
+      "passed": true,
+      "rhs": false
+    },
+    {
+      "category": "bare-numerator-template",
+      "lhs": false,
+      "name": "bare numerator (1,0) has no regulator token",
+      "passed": true,
+      "rhs": false
+    },
+    {
+      "category": "bare-numerator-template",
+      "lhs": false,
+      "name": "bare numerator (1,1) has no regulator token",
+      "passed": true,
+      "rhs": false
+    },
+    {
+      "category": "bare-numerator-template",
+      "lhs": false,
+      "name": "bare numerator (1,2) has no regulator token",
+      "passed": true,
+      "rhs": false
+    },
+    {
+      "category": "bare-numerator-template",
+      "lhs": false,
+      "name": "bare numerator (2,0) has no regulator token",
+      "passed": true,
+      "rhs": false
+    },
+    {
+      "category": "bare-numerator-template",
+      "lhs": false,
+      "name": "bare numerator (2,1) has no regulator token",
+      "passed": true,
+      "rhs": false
+    },
+    {
+      "category": "bare-numerator-template",
+      "lhs": false,
+      "name": "bare numerator (2,2) has no regulator token",
+      "passed": true,
+      "rhs": false
+    },
+    {
+      "category": "Laurent-integrals",
+      "lhs": {
+        "-1": "1",
+        "0": "L0 - EulerGamma"
+      },
+      "name": "J_0,2 Laurent expansion",
+      "passed": true,
+      "rhs": {
+        "-1": "1",
+        "0": "L0 - EulerGamma"
+      }
+    },
+    {
+      "category": "Laurent-integrals",
+      "lhs": {
+        "0": "1/2",
+        "1": "1/2*L0 - 1/2*EulerGamma"
+      },
+      "name": "Delta J_0,3 Laurent expansion",
+      "passed": true,
+      "rhs": {
+        "0": "1/2",
+        "1": "1/2*L0 - 1/2*EulerGamma"
+      }
+    },
+    {
+      "category": "tensor-reduction",
+      "lhs": {
+        "-1": "1",
+        "0": "L0 - EulerGamma - 1/2"
+      },
+      "name": "J_1,3 reduction identity",
+      "passed": true,
+      "rhs": {
+        "-1": "1",
+        "0": "L0 - EulerGamma - 1/2"
+      }
+    },
+    {
+      "category": "Laurent-integrals",
+      "lhs": {
+        "-1": "1",
+        "0": "L0 - EulerGamma - 1/2"
+      },
+      "name": "J_1,3 Laurent expansion",
+      "passed": true,
+      "rhs": {
+        "-1": "1",
+        "0": "L0 - EulerGamma - 1/2"
+      }
+    },
+    {
+      "category": "tensor-reduction",
+      "lhs": {
+        "-1": "1/4",
+        "0": "1/4*L0 - 1/4*EulerGamma"
+      },
+      "name": "rank-two rotational reduction",
+      "passed": true,
+      "rhs": {
+        "-1": "1/4",
+        "0": "1/4*L0 - 1/4*EulerGamma"
+      }
+    },
+    {
+      "category": "Laurent-integrals",
+      "lhs": {
+        "-1": "1/4",
+        "0": "1/4*L0 - 1/4*EulerGamma"
+      },
+      "name": "rank-two Laurent expansion",
+      "passed": true,
+      "rhs": {
+        "-1": "1/4",
+        "0": "1/4*L0 - 1/4*EulerGamma"
+      }
+    },
+    {
+      "category": "Laurent-poles",
+      "lhs": "1",
+      "name": "J_0,2 pole",
+      "passed": true,
+      "rhs": "1"
+    },
+    {
+      "category": "Laurent-poles",
+      "lhs": "0",
+      "name": "J_0,3 pole",
+      "passed": true,
+      "rhs": "0"
+    },
+    {
+      "category": "Laurent-poles",
+      "lhs": "1",
+      "name": "J_1,3 pole",
+      "passed": true,
+      "rhs": "1"
+    },
+    {
+      "category": "Laurent-poles",
+      "lhs": "1/4",
+      "name": "rank-two hat_g pole",
+      "passed": true,
+      "rhs": "1/4"
+    },
+    {
+      "category": "physical-evanescent-split",
+      "lhs": "(1)*hat_g + (0)*tilde_g",
+      "name": "tensor pole metric recombination",
+      "passed": true,
+      "rhs": "(1)*hat_g + (0)*tilde_g"
+    },
+    {
+      "category": "physical-evanescent-split",
+      "lhs": "-1/2",
+      "name": "isolated evanescent trace finite coefficient in units of A0",
+      "passed": true,
+      "rhs": "-1/2"
+    },
+    {
+      "category": "physical-evanescent-split",
+      "lhs": "0",
+      "name": "full tilde contraction cancellation",
+      "passed": true,
+      "rhs": "0"
+    },
+    {
+      "category": "tensor-reduction",
+      "lhs": {
+        "-1": "1",
+        "0": "L0 - EulerGamma - 1/2"
+      },
+      "name": "g4 contraction of rank-two tensor",
+      "passed": true,
+      "rhs": {
+        "-1": "1",
+        "0": "L0 - EulerGamma - 1/2"
+      }
+    }
+  ],
+  "contract_sha256": "7f1116253444cf09b240cfa4d6092436eb41f49146d387450d68f608e242b8f7",
+  "excluded": [
+    "anomaly coefficient",
+    "supergraph numerator",
+    "graph multiplicity",
+    "color factor",
+    "counterterm coefficient"
+  ],
+  "failures": [],
+  "feynman_parameter_shift": {
+    "all_incoming_external_momenta": [
+      "q",
+      "p",
+      "-(p+q)"
+    ],
+    "bare_numerator_check_classification": "CONVENTION_TEMPLATE_ONLY",
+    "bare_numerators": [
+      {
+        "coefficient": "1",
+        "left": "r0",
+        "metric": "g4",
+        "right": "r0"
+      },
+      {
+        "coefficient": "1",
+        "left": "r0",
+        "metric": "g4",
+        "right": "r1"
+      },
+      {
+        "coefficient": "1",
+        "left": "r0",
+        "metric": "g4",
+        "right": "r2"
+      },
+      {
+        "coefficient": "1",
+        "left": "r1",
+        "metric": "g4",
+        "right": "r0"
+      },
+      {
+        "coefficient": "1",
+        "left": "r1",
+        "metric": "g4",
+        "right": "r1"
+      },
+      {
+        "coefficient": "1",
+        "left": "r1",
+        "metric": "g4",
+        "right": "r2"
+      },
+      {
+        "coefficient": "1",
+        "left": "r2",
+        "metric": "g4",
+        "right": "r0"
+      },
+      {
+        "coefficient": "1",
+        "left": "r2",
+        "metric": "g4",
+        "right": "r1"
+      },
+      {
+        "coefficient": "1",
+        "left": "r2",
+        "metric": "g4",
+        "right": "r2"
+      }
+    ],
+    "feynman_identity": "1/(r0^2 r1^2 r2^2) = 2 int_0^1 dx dy dz delta(1-x-y-z)/(x r0^2+y r1^2+z r2^2)^3",
+    "rank_two_numerator_expansions": [
+      {
+        "after_shift": "ell^mu ell^nu + ell^mu u0^nu + u0^mu ell^nu + u0^mu u0^nu",
+        "before_shift": "r0^mu r0^nu",
+        "integrated": "(hat_g^{mu nu}/d) J_1,3 + u0^mu u0^nu J_0,3",
+        "odd_integral_terms": [
+          "ell^mu u0^nu",
+          "u0^mu ell^nu"
+        ],
+        "odd_integral_value": "0",
+        "ordered_pair": [
+          0,
+          0
+        ]
+      },
+      {
+        "after_shift": "ell^mu ell^nu + ell^mu u1^nu + u0^mu ell^nu + u0^mu u1^nu",
+        "before_shift": "r0^mu r1^nu",
+        "integrated": "(hat_g^{mu nu}/d) J_1,3 + u0^mu u1^nu J_0,3",
+        "odd_integral_terms": [
+          "ell^mu u1^nu",
+          "u0^mu ell^nu"
+        ],
+        "odd_integral_value": "0",
+        "ordered_pair": [
+          0,
+          1
+        ]
+      },
+      {
+        "after_shift": "ell^mu ell^nu + ell^mu u2^nu + u0^mu ell^nu + u0^mu u2^nu",
+        "before_shift": "r0^mu r2^nu",
+        "integrated": "(hat_g^{mu nu}/d) J_1,3 + u0^mu u2^nu J_0,3",
+        "odd_integral_terms": [
+          "ell^mu u2^nu",
+          "u0^mu ell^nu"
+        ],
+        "odd_integral_value": "0",
+        "ordered_pair": [
+          0,
+          2
+        ]
+      },
+      {
+        "after_shift": "ell^mu ell^nu + ell^mu u0^nu + u1^mu ell^nu + u1^mu u0^nu",
+        "before_shift": "r1^mu r0^nu",
+        "integrated": "(hat_g^{mu nu}/d) J_1,3 + u1^mu u0^nu J_0,3",
+        "odd_integral_terms": [
+          "ell^mu u0^nu",
+          "u1^mu ell^nu"
+        ],
+        "odd_integral_value": "0",
+        "ordered_pair": [
+          1,
+          0
+        ]
+      },
+      {
+        "after_shift": "ell^mu ell^nu + ell^mu u1^nu + u1^mu ell^nu + u1^mu u1^nu",
+        "before_shift": "r1^mu r1^nu",
+        "integrated": "(hat_g^{mu nu}/d) J_1,3 + u1^mu u1^nu J_0,3",
+        "odd_integral_terms": [
+          "ell^mu u1^nu",
+          "u1^mu ell^nu"
+        ],
+        "odd_integral_value": "0",
+        "ordered_pair": [
+          1,
+          1
+        ]
+      },
+      {
+        "after_shift": "ell^mu ell^nu + ell^mu u2^nu + u1^mu ell^nu + u1^mu u2^nu",
+        "before_shift": "r1^mu r2^nu",
+        "integrated": "(hat_g^{mu nu}/d) J_1,3 + u1^mu u2^nu J_0,3",
+        "odd_integral_terms": [
+          "ell^mu u2^nu",
+          "u1^mu ell^nu"
+        ],
+        "odd_integral_value": "0",
+        "ordered_pair": [
+          1,
+          2
+        ]
+      },
+      {
+        "after_shift": "ell^mu ell^nu + ell^mu u0^nu + u2^mu ell^nu + u2^mu u0^nu",
+        "before_shift": "r2^mu r0^nu",
+        "integrated": "(hat_g^{mu nu}/d) J_1,3 + u2^mu u0^nu J_0,3",
+        "odd_integral_terms": [
+          "ell^mu u0^nu",
+          "u2^mu ell^nu"
+        ],
+        "odd_integral_value": "0",
+        "ordered_pair": [
+          2,
+          0
+        ]
+      },
+      {
+        "after_shift": "ell^mu ell^nu + ell^mu u1^nu + u2^mu ell^nu + u2^mu u1^nu",
+        "before_shift": "r2^mu r1^nu",
+        "integrated": "(hat_g^{mu nu}/d) J_1,3 + u2^mu u1^nu J_0,3",
+        "odd_integral_terms": [
+          "ell^mu u1^nu",
+          "u2^mu ell^nu"
+        ],
+        "odd_integral_value": "0",
+        "ordered_pair": [
+          2,
+          1
+        ]
+      },
+      {
+        "after_shift": "ell^mu ell^nu + ell^mu u2^nu + u2^mu ell^nu + u2^mu u2^nu",
+        "before_shift": "r2^mu r2^nu",
+        "integrated": "(hat_g^{mu nu}/d) J_1,3 + u2^mu u2^nu J_0,3",
+        "odd_integral_terms": [
+          "ell^mu u2^nu",
+          "u2^mu ell^nu"
+        ],
+        "odd_integral_value": "0",
+        "ordered_pair": [
+          2,
+          2
+        ]
+      }
+    ],
+    "routing": [
+      "r0=k",
+      "r1=k+q",
+      "r2=k+p+q"
+    ],
+    "shift": {
+      "Delta_expanded_on_simplex": "-y^2*q2 - 2*y*z*pq - 2*y*z*q2 - z^2*p2 - 2*z^2*pq - z^2*q2 + y*q2 + z*p2 + 2*z*pq + z*q2",
+      "Delta_invariant_form": "x*y*q^2 + x*z*(p+q)^2 + y*z*p^2",
+      "R": "(z)*p + (y + z)*q",
+      "denominator_expansion": [
+        "x r0^2+y r1^2+z r2^2",
+        "(x+y+z) k^2+2 k.R+y q^2+z (p+q)^2",
+        "ell^2+y q^2+z (p+q)^2-R^2",
+        "ell^2+Delta"
+      ],
+      "ell": "k+R",
+      "k": "ell-R"
+    },
+    "shifted_external_vectors": {
+      "u0=s0-R": "(-z)*p + (-y - z)*q",
+      "u1=s1-R": "(-z)*p + (-y - z + 1)*q",
+      "u2=s2-R": "(-z + 1)*p + (-y - z + 1)*q"
+    }
+  },
+  "integrals": {
+    "definition": "J_a,n(Delta)=mu^(2 epsilon) integral d^d ell/(2 pi)^d (ell^2)^a/(ell^2+Delta)^n",
+    "exact_relations": [
+      "J_1,3 = J_0,2 - Delta*J_0,3",
+      "integral ell^mu ell^nu F(ell^2) = (hat_g^{mu nu}/d) integral ell^2 F(ell^2)",
+      "hat_g = g4-tilde_g"
+    ],
+    "instances": {
+      "J_0,2": "mu^(2 epsilon)/(4 pi)^(2-epsilon) * Gamma(epsilon) * Delta^(-epsilon)",
+      "J_0,3": "mu^(2 epsilon)/(4 pi)^(2-epsilon) * Gamma(1+epsilon)/2 * Delta^(-1-epsilon)",
+      "J_1,3": "mu^(2 epsilon)/(4 pi)^(2-epsilon) * d/4 * Gamma(epsilon) * Delta^(-epsilon)",
+      "T^{mu nu}": "integral ell^mu ell^nu/(ell^2+Delta)^3 = (hat_g^{mu nu}/d) J_1,3 = hat_g^{mu nu} mu^(2 epsilon) Gamma(epsilon) Delta^(-epsilon)/(4*(4 pi)^(2-epsilon))"
+    },
+    "laurent_derivation": [
+      "mu^(2 epsilon)*(4*pi)^(-2+epsilon)*Delta^(-epsilon) = A0*[1+epsilon*L0+O(epsilon^2)]",
+      "Gamma(epsilon) = 1/epsilon-EulerGamma+O(epsilon)",
+      "Gamma(1+epsilon) = 1-epsilon*EulerGamma+O(epsilon^2)",
+      "d/4 = 1-epsilon/2",
+      "1/d = 1/4+epsilon/8+O(epsilon^2)"
+    ],
+    "laurent_in_units_of_A0": {
+      "Delta*J_0,3": {
+        "0": "1/2",
+        "1": "1/2*L0 - 1/2*EulerGamma"
+      },
+      "J_0,2": {
+        "-1": "1",
+        "0": "L0 - EulerGamma"
+      },
+      "J_1,3": {
+        "-1": "1",
+        "0": "L0 - EulerGamma - 1/2"
+      },
+      "coefficient_of_hat_g_in_T": {
+        "-1": "1/4",
+        "0": "1/4*L0 - 1/4*EulerGamma"
+      }
+    },
+    "master_derivation": [
+      "1/(ell^2+Delta)^n = 1/Gamma(n) * integral_0^infinity dt t^(n-1) exp[-t(ell^2+Delta)]",
+      "integral d^d ell/(2*pi)^d exp(-t ell^2) = (4*pi*t)^(-d/2)",
+      "integral d^d ell/(2*pi)^d (ell^2)^a exp(-t ell^2) = (4*pi)^(-d/2)*Gamma(a+d/2)/Gamma(d/2)*t^(-a-d/2)",
+      "integral_0^infinity dt t^(n-a-d/2-1) exp(-t Delta) = Gamma(n-a-d/2)*Delta^(a+d/2-n)"
+    ],
+    "master_formula": "J_a,n=(mu^(2 epsilon)/(4 pi)^(d/2))*Gamma(a+d/2)*Gamma(n-a-d/2)/(Gamma(d/2)*Gamma(n))*Delta^(a+d/2-n)",
+    "metric_split_of_rank_two_pole": {
+      "classification": "KINEMATIC_PROJECTOR_TRACE_ONLY_NOT_AN_ANOMALY_COEFFICIENT",
+      "complete": "A0*(g4^{mu nu}-tilde_g^{mu nu})/(4*epsilon)",
+      "evanescent_metric_part": "-A0*tilde_g^{mu nu}/(4*epsilon)",
+      "isolated_evanescent_trace": "-A0/2",
+      "physical_metric_part": "A0*g4^{mu nu}/(4*epsilon)"
+    },
+    "normalization": {
+      "A0": "1/(16*pi^2)",
+      "L": "L0-EulerGamma",
+      "L0": "log(4*pi*mu^2/Delta)"
+    }
+  },
+  "parameters": {
+    "derivative_image": "+i k_M",
+    "dimension": "d=4-2*epsilon",
+    "evanescent_metric": "tilde_g=g4-hat_g",
+    "fourier_phase": "exp(+i k.x)",
+    "fourier_transform": "f(x)=integral d^d k/(2*pi)^d exp(+i k.x) f(k)",
+    "loop_measure": "mu^(2 epsilon) d^d ell/(2 pi)^d",
+    "loop_metric": "hat_g",
+    "signature": "Euclidean-positive",
+    "spin_algebra_metric": "g4"
+  },
+  "projectors": {
+    "definition": "tilde_g = g4 - hat_g",
+    "loop_vector_embedding": [
+      "ell = hat_g*ell",
+      "tilde_g*ell = 0",
+      "g4(ell,ell) = hat_g(ell,ell) = ell^2"
+    ],
+    "projector_products": {
+      "g4*g4": "g4",
+      "hat_g*hat_g": "hat_g",
+      "hat_g*tilde_g": "0",
+      "tilde_g*hat_g": "0",
+      "tilde_g*tilde_g": "tilde_g"
+    },
+    "traces": {
+      "g4": "4",
+      "hat_g": "-2*epsilon + 4",
+      "tilde_g": "2*epsilon"
+    }
+  },
+  "schema": 1,
+  "scope": "DRED projectors, routed triangle denominator, rank-two numerator shift, and exact one-loop scalar/tensor integrals only",
+  "status": "PASS",
+  "task": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
+  "totals": {
+    "exact_checks": 47,
+    "failed_checks": 0
+  }
+}

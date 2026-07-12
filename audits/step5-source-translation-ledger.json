@@ -1,0 +1,398 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
+  "project_contract": "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md",
+  "verdicts": [
+    "PROVED",
+    "REJECTED",
+    "CONDITIONAL",
+    "OUT_OF_SCOPE"
+  ],
+  "chat": {
+    "snapshot": "references/vendor/chatgpt/6a53ea95-9138-83e8-9761-2e85a29c3970/authenticated-visible.json",
+    "visible_message_count": 7,
+    "hidden_turns_read": false,
+    "dictionary": [
+      {
+        "source": "alpha=+,-",
+        "project": "+=1,-=2 with (5.1)-(5.3)",
+        "verdict": "PROVED"
+      },
+      {
+        "source": "bar W_dot-a in intrinsic Euclidean signature",
+        "project": "tilde mathcal W_E,dot-a, independent of mathcal W_E,a",
+        "verdict": "PROVED"
+      },
+      {
+        "source": "canonical g in exp(2gV)",
+        "project": "absorbed bridge mathcal E=exp(mathcal V), h=g^-2 overall",
+        "verdict": "REJECTED"
+      },
+      {
+        "source": "f^{ABC}, tr(T^AT^B)=delta^{AB}/2",
+        "project": "c_{AB}{}^C and general invariant kappa_{AB}",
+        "verdict": "CONDITIONAL"
+      },
+      {
+        "source": "source symbol mathcal E=nabla^a W_a",
+        "project": "mathcal E=exp(mathcal V); normalized gauge Euler is mathcal G in (5.27)",
+        "verdict": "REJECTED"
+      }
+    ],
+    "messages": [
+      {
+        "order": 0,
+        "role": "user",
+        "claims": [
+          {
+            "id": "M1_TARGET_WW",
+            "statement": "nabla_- of the ordered WW letter product is the target",
+            "verdict": "PROVED",
+            "project_anchor": "(5.29),(5.34)-(5.35)"
+          },
+          {
+            "id": "M1_CLASSICAL_ZERO",
+            "statement": "the N=4 descendant vanishes after the pure-gauge EOM",
+            "verdict": "REJECTED",
+            "project_anchor": "matter term in (5.26),(5.33)"
+          },
+          {
+            "id": "M1_ONE_LOOP_NONZERO",
+            "statement": "the renormalized one-loop coefficient is nonzero",
+            "verdict": "CONDITIONAL",
+            "project_anchor": "(5.54)"
+          }
+        ]
+      },
+      {
+        "order": 1,
+        "role": "assistant_initial",
+        "claims": [
+          {
+            "id": "M2_EUCLIDEAN_MIXED_DERIVATIVE",
+            "statement": "{nabla_a,bar nabla_dot-a}=-2i nabla_a,dot-a",
+            "verdict": "REJECTED",
+            "project_anchor": "(3C.45) has -2 mathcal D_a,dot-a"
+          },
+          {
+            "id": "M2_CHIRALITY",
+            "statement": "bar nabla W=0 and nabla tilde W=0",
+            "verdict": "PROVED",
+            "project_anchor": "(3C.35)"
+          },
+          {
+            "id": "M2_BIANCHI",
+            "statement": "source divergence equality",
+            "verdict": "PROVED",
+            "project_anchor": "index-raised translation derived in (5.23d) from (3C.43)"
+          },
+          {
+            "id": "M2_BCH_SERIES",
+            "statement": "the displayed first two BCH orders follow from exp(-V)D exp(V)",
+            "verdict": "PROVED",
+            "project_anchor": "formal source algebra only; Project coefficients require (3A.51)"
+          },
+          {
+            "id": "M2_CUBIC_VERTEX",
+            "statement": "the displayed cubic source vertex is a Project vertex",
+            "verdict": "CONDITIONAL",
+            "project_anchor": "ordered functional differentiation not supplied"
+          },
+          {
+            "id": "M2_VECTOR_PROPAGATOR",
+            "statement": "delta^{AB} delta^4(theta-theta')/k^2",
+            "verdict": "REJECTED",
+            "project_anchor": "Project Hessian is (5.45); cycle/source order remains required"
+          },
+          {
+            "id": "M2_EPSILON_NUMERATOR",
+            "statement": "the isolated triangle numerator equals epsilon k^2 r",
+            "verdict": "REJECTED",
+            "project_anchor": "explicitly retracted by message order 2"
+          },
+          {
+            "id": "M2_SCALAR_EPSILON_INTEGRAL",
+            "statement": "epsilon times a normalized logarithmic scalar pole has a finite limit",
+            "verdict": "PROVED",
+            "project_anchor": "ordinary scalar integral only, not graph normalization"
+          },
+          {
+            "id": "M2_FINAL_COEFFICIENT",
+            "statement": "g^2/(16pi^2) times the displayed color tensor",
+            "verdict": "REJECTED",
+            "project_anchor": "depends on M2_EPSILON_NUMERATOR"
+          }
+        ]
+      },
+      {
+        "order": 2,
+        "role": "assistant_revision",
+        "claims": [
+          {
+            "id": "M3_RETRACTION",
+            "statement": "the bare triangle has no preinserted epsilon numerator",
+            "verdict": "PROVED",
+            "project_anchor": "source chronology and (5.15)"
+          },
+          {
+            "id": "M3_PERTURBATIVE_EXPANSION",
+            "statement": "1/2<I2 S3^2>-<I3 S3>-<I2 S4>+<I4>+wavefunction/counterterm",
+            "verdict": "CONDITIONAL",
+            "project_anchor": "generic exponential expansion, incomplete N=4 BV graph census"
+          },
+          {
+            "id": "M3_DENOMINATOR_ROUTING",
+            "statement": "r0=k,r1=k+q,r2=k+p+q",
+            "verdict": "PROVED",
+            "project_anchor": "(5.15a)-(5.15d)"
+          },
+          {
+            "id": "M3_DALGEBRA_VERTEX_MOMENTA",
+            "statement": "the displayed L1=2k+q and L2=2k+p+2q emerge from the Project vertices",
+            "verdict": "PROVED",
+            "project_anchor": "(5.53f)-(5.53g); the antichiral raw derivative difference is -L1, while the displayed L1 is its magnitude"
+          },
+          {
+            "id": "M3_DALGEBRA_CHAIN",
+            "statement": "the displayed three-sigma numerator is the complete D-algebra trace",
+            "verdict": "REJECTED",
+            "project_anchor": "(5.53a)-(5.53i): Project K_+=-D_+barD^2D_+/8, the fixed-placement D-factor is -1/2 rather than +2, and every accepted vector edge retains Pi_(1/2)"
+          },
+          {
+            "id": "M3_FEYNMAN_SHIFT",
+            "statement": "Delta=xy q^2+xz(p+q)^2+yz p^2",
+            "verdict": "PROVED",
+            "project_anchor": "direct denominator completion"
+          },
+          {
+            "id": "M3_TENSOR_REDUCTION",
+            "statement": "integral ell^m ell^n/(ell^2+Delta)^3 equals (hat-delta^mn/d) J_1,3(Delta)",
+            "verdict": "PROVED",
+            "project_anchor": "(5.14), coefficient independently verified"
+          },
+          {
+            "id": "M3_CONTACT_POLE",
+            "statement": "the sum of all contact descendants equals the asserted four-metric pole",
+            "verdict": "CONDITIONAL",
+            "project_anchor": "no separate graph list, Wick factors, or D-algebra traces"
+          },
+          {
+            "id": "M3_EVANESCENT_MECHANISM",
+            "statement": "a separately derived hat-metric pole minus a four-metric pole leaves a tilde-metric tensor",
+            "verdict": "PROVED",
+            "project_anchor": "algebraic identity (5.15), conditional on graph coefficients"
+          },
+          {
+            "id": "M3_FINAL_COEFFICIENT",
+            "statement": "g^2/(16pi^2) times the displayed color tensor",
+            "verdict": "CONDITIONAL",
+            "project_anchor": "contact coefficient is unproved"
+          }
+        ]
+      },
+      {
+        "order": 3,
+        "role": "user",
+        "claims": [
+          {
+            "id": "M4_TRANSLATION_GENERATOR_REQUEST",
+            "statement": "insert exp(w nabla) and retain Feynman parameters",
+            "verdict": "OUT_OF_SCOPE",
+            "project_anchor": "current local 4x4 letter census has no link insertion"
+          }
+        ]
+      },
+      {
+        "order": 4,
+        "role": "assistant_translation_attempt",
+        "claims": [
+          {
+            "id": "M5_DUHAMEL",
+            "statement": "the displayed Duhamel commutator expansions",
+            "verdict": "PROVED",
+            "project_anchor": "formal operator algebra"
+          },
+          {
+            "id": "M5_EUCLIDEAN_COMMUTATOR",
+            "statement": "[nabla_-,nabla_+,dot-a]=+2i ad(bar W_dot-a)",
+            "verdict": "REJECTED",
+            "project_anchor": "(3C.45) gives -2 epsilon_{-+} tilde W_dot-a"
+          },
+          {
+            "id": "M5_ORDERED_VARIABLES",
+            "statement": "a=x,b=x+y,0<=a<=b<=1",
+            "verdict": "PROVED",
+            "project_anchor": "simplex change of variables"
+          },
+          {
+            "id": "M5_ORDERED_KERNEL",
+            "statement": "K_w=2 int_0^1 db int_0^b da (T_a F)(T_b G) and its series coefficients",
+            "verdict": "PROVED",
+            "project_anchor": "parameter integration only"
+          },
+          {
+            "id": "M5_LINK_CANCELLATION",
+            "statement": "all longitudinal terms cancel against link graphs",
+            "verdict": "CONDITIONAL",
+            "project_anchor": "no link amplitudes or Wick census"
+          },
+          {
+            "id": "M5_FINAL_COEFFICIENT",
+            "statement": "M3 coefficient transported through K_w",
+            "verdict": "CONDITIONAL",
+            "project_anchor": "inherits M3_CONTACT_POLE"
+          }
+        ]
+      },
+      {
+        "order": 5,
+        "role": "user",
+        "claims": [
+          {
+            "id": "M6_CUTTING_INTERPRETATION",
+            "statement": "the anomaly is a regulator/cutting noncommutativity",
+            "verdict": "CONDITIONAL",
+            "project_anchor": "must be defined from (5.47) including density and BRST terms"
+          }
+        ]
+      },
+      {
+        "order": 6,
+        "role": "assistant_workflow",
+        "claims": [
+          {
+            "id": "M7_CONTINUUM_SD",
+            "statement": "<delta S F>=<delta F> without density, source, gauge-fixing, or cycle terms",
+            "verdict": "REJECTED",
+            "project_anchor": "(3D.34),(5.47)"
+          },
+          {
+            "id": "M7_CUT_OPERATOR",
+            "statement": "Box Box^-1=delta for the actual gauge-fixed kernel",
+            "verdict": "CONDITIONAL",
+            "project_anchor": "requires exact Hessian inverse and cycle contraction"
+          },
+          {
+            "id": "M7_GRAPH_IR",
+            "statement": "typed graph IR, D-algebra trace, cutting orbit, and DRED metric separation",
+            "verdict": "CONDITIONAL",
+            "project_anchor": "implementation requirements (5.51)-(5.53)"
+          },
+          {
+            "id": "M7_EXPECTED_COEFFICIENT",
+            "statement": "the workflow regression coefficient",
+            "verdict": "REJECTED",
+            "project_anchor": "forbidden as an input"
+          }
+        ]
+      }
+    ]
+  },
+  "weinberg_chapter_30": {
+    "scope": "Lorentzian nongauge chiral matter potential-superfield construction",
+    "dictionary_status": "all source normalization constants unresolved",
+    "claim_groups": [
+      {
+        "source_equations": "30.1.1-30.1.7",
+        "statement": "constrained chiral measure may be represented with redundant unconstrained potentials and D-extraction",
+        "verdict": "CONDITIONAL"
+      },
+      {
+        "source_equations": "30.1.8",
+        "statement": "displayed formula is the claimed all-D-term action",
+        "verdict": "REJECTED",
+        "reason": "the displayed interaction still carries an F subscript"
+      },
+      {
+        "source_equations": "30.1.9",
+        "statement": "source-normalized full-superspace potential action",
+        "verdict": "CONDITIONAL"
+      },
+      {
+        "source_equations": "30.2.2-30.2.13",
+        "statement": "a degenerate Hessian is inverted only on a declared transverse complement, K Delta=Pi",
+        "verdict": "PROVED"
+      },
+      {
+        "source_equations": "30.2.14-30.2.16",
+        "statement": "exact displayed potential projector and propagator",
+        "verdict": "REJECTED",
+        "reason": "duplicate numbering, suppressed slots, and corrupted box/exact-direction glyphs"
+      },
+      {
+        "source_equations": "30.2.17-30.2.20",
+        "statement": "endpoint spinor squares reconstruct a physical chiral propagator",
+        "verdict": "CONDITIONAL",
+        "reason": "source measure, delta, box, and Wick phase differ"
+      },
+      {
+        "source_equations": "30.3.1",
+        "statement": "source Lorentzian potential contraction",
+        "verdict": "CONDITIONAL"
+      },
+      {
+        "source_equations": "30.3.2-30.3.4",
+        "statement": "corrected graph counting identities for D-routing",
+        "verdict": "PROVED",
+        "reason": "snapshot summation notation is damaged; corrected identities follow from half-edge counting"
+      },
+      {
+        "source_equations": "Chapter 30.3 conclusion",
+        "statement": "nongauge superpotential nonrenormalization",
+        "verdict": "OUT_OF_SCOPE"
+      }
+    ]
+  },
+  "superspace_1001": {
+    "snapshot": "references/vendor/local/superspace-1001-supergraph-pages.pdf",
+    "visually_checked_subset_pages": [
+      10,
+      15,
+      17,
+      21,
+      35,
+      39,
+      40,
+      46
+    ],
+    "claim_groups": [
+      {
+        "source_equations": "6.2.11-6.2.23",
+        "statement": "supersymmetric gauge fixing adds a longitudinal projector and FP ghosts",
+        "verdict": "CONDITIONAL",
+        "reason": "source D, box, coupling, exponent, and bridge normalization differ; Project branch is (3D.80)-(3D.94)"
+      },
+      {
+        "source_equations": "6.3.1-6.3.20",
+        "statement": "Gaussian inversion plus constrained functional differentiation generates propagators and endpoint D operators",
+        "verdict": "CONDITIONAL",
+        "reason": "structural method only; every Project factor is independently inverted"
+      },
+      {
+        "source_equations": "6.3.21-6.3.31",
+        "statement": "edge delta transfer, D-algebra IBP, delta saturation, and one surviving theta integral",
+        "verdict": "PROVED",
+        "reason": "only as graph-rewrite structure; each Project Koszul sign remains explicit"
+      },
+      {
+        "source_equations": "6.5.15-6.5.34",
+        "statement": "nonlinear background-quantum split, covariant gauge averaging, FP and Nielsen-Kallosh sectors",
+        "verdict": "CONDITIONAL",
+        "reason": "Project BV realization is independently fixed in Step 3D"
+      },
+      {
+        "source_equations": "6.5.35-6.5.62",
+        "statement": "background-covariant quadratic operators and ordered one-loop vertex strings",
+        "verdict": "CONDITIONAL",
+        "reason": "source coefficients and representations are not Project rules"
+      },
+      {
+        "source_equations": "printed page 339 DRED paragraph",
+        "statement": "source regularization warning",
+        "verdict": "OUT_OF_SCOPE",
+        "reason": "explicitly excluded by the import ledger"
+      }
+    ]
+  },
+  "accepted_project_formulas_from_sources": []
+}

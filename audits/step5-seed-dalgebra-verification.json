@@ -1,0 +1,201 @@
+{
+  "admission_status": "PROJECT_SEED_NORMALIZATION_AUDITED_NO_LOOP_AMPLITUDE_ADMITTED",
+  "anomaly_coefficient_computed": false,
+  "arithmetic": "EXACT_Q_I_NO_FLOATING_POINT",
+  "checks": [
+    {
+      "id": "normalization.theta_square_normal_order_coefficient",
+      "passed": true
+    },
+    {
+      "id": "normalization.bar_theta_square_normal_order_coefficient",
+      "passed": true
+    },
+    {
+      "id": "normalization.normalized_delta_top_coefficient",
+      "passed": true
+    },
+    {
+      "id": "normalization.closed_delta_constant_0_0_0_1",
+      "passed": true
+    },
+    {
+      "id": "normalization.closed_delta_constant_1_2_3_4",
+      "passed": true
+    },
+    {
+      "id": "normalization.closed_delta_constant_2_m1_0_3",
+      "passed": true
+    },
+    {
+      "id": "project_coefficients.project_K_plus_is_minus_one_eighth",
+      "passed": true
+    },
+    {
+      "id": "project_coefficients.project_D_minus_K_plus_is_minus_one_sixteenth",
+      "passed": true
+    },
+    {
+      "id": "project_coefficients.fixed_placement_insertion_prefactor_is_one_over_128",
+      "passed": true
+    },
+    {
+      "id": "project_coefficients.claimed_one_over_32_prefactor_rejected",
+      "passed": true
+    },
+    {
+      "id": "project_coefficients.closed_chain_factor_is_minus_one_half",
+      "passed": true
+    },
+    {
+      "id": "project_coefficients.claimed_plus_two_chain_factor_rejected",
+      "passed": true
+    },
+    {
+      "id": "routing.L1_is_2k_plus_q",
+      "passed": true
+    },
+    {
+      "id": "routing.antichiral_raw_difference_is_minus_L1",
+      "passed": true
+    },
+    {
+      "id": "routing.L2_is_2k_plus_p_plus_2q",
+      "passed": true
+    },
+    {
+      "id": "routing.chiral_raw_difference_is_plus_L2",
+      "passed": true
+    },
+    {
+      "id": "endpoint_transfer.D_endpoint_0_0_0_1_0",
+      "passed": true
+    },
+    {
+      "id": "endpoint_transfer.D_endpoint_0_0_0_1_1",
+      "passed": true
+    },
+    {
+      "id": "endpoint_transfer.barD_endpoint_0_0_0_1_0",
+      "passed": true
+    },
+    {
+      "id": "endpoint_transfer.barD_endpoint_0_0_0_1_1",
+      "passed": true
+    },
+    {
+      "id": "endpoint_transfer.D_endpoint_1_2_3_4_0",
+      "passed": true
+    },
+    {
+      "id": "endpoint_transfer.D_endpoint_1_2_3_4_1",
+      "passed": true
+    },
+    {
+      "id": "endpoint_transfer.barD_endpoint_1_2_3_4_0",
+      "passed": true
+    },
+    {
+      "id": "endpoint_transfer.barD_endpoint_1_2_3_4_1",
+      "passed": true
+    },
+    {
+      "id": "endpoint_transfer.D_endpoint_2_m1_0_3_0",
+      "passed": true
+    },
+    {
+      "id": "endpoint_transfer.D_endpoint_2_m1_0_3_1",
+      "passed": true
+    },
+    {
+      "id": "endpoint_transfer.barD_endpoint_2_m1_0_3_0",
+      "passed": true
+    },
+    {
+      "id": "endpoint_transfer.barD_endpoint_2_m1_0_3_1",
+      "passed": true
+    },
+    {
+      "id": "mixed_anticommutator.mixed_0_0_0_1_0_0",
+      "passed": true
+    },
+    {
+      "id": "mixed_anticommutator.mixed_0_0_0_1_0_1",
+      "passed": true
+    },
+    {
+      "id": "mixed_anticommutator.mixed_0_0_0_1_1_0",
+      "passed": true
+    },
+    {
+      "id": "mixed_anticommutator.mixed_0_0_0_1_1_1",
+      "passed": true
+    },
+    {
+      "id": "mixed_anticommutator.mixed_1_2_3_4_0_0",
+      "passed": true
+    },
+    {
+      "id": "mixed_anticommutator.mixed_1_2_3_4_0_1",
+      "passed": true
+    },
+    {
+      "id": "mixed_anticommutator.mixed_1_2_3_4_1_0",
+      "passed": true
+    },
+    {
+      "id": "mixed_anticommutator.mixed_1_2_3_4_1_1",
+      "passed": true
+    },
+    {
+      "id": "mixed_anticommutator.mixed_2_m1_0_3_0_0",
+      "passed": true
+    },
+    {
+      "id": "mixed_anticommutator.mixed_2_m1_0_3_0_1",
+      "passed": true
+    },
+    {
+      "id": "mixed_anticommutator.mixed_2_m1_0_3_1_0",
+      "passed": true
+    },
+    {
+      "id": "mixed_anticommutator.mixed_2_m1_0_3_1_1",
+      "passed": true
+    },
+    {
+      "id": "rejected_slice_diagnostic.rejected_slice_magnitude_is_one_sixteenth",
+      "passed": true
+    },
+    {
+      "id": "rejected_slice_diagnostic.rejected_slice_magnitude_is_not_one_half",
+      "passed": true
+    }
+  ],
+  "contract_sha256": "7f1116253444cf09b240cfa4d6092436eb41f49146d387450d68f608e242b8f7",
+  "derived": {
+    "D_minus_K_plus": "-(1/16) D^2 barD^2 D_+",
+    "K_plus": "-(1/8) D_+ barD^2 D_+",
+    "antichiral_raw_vertex_momentum": "-(2k+q)",
+    "chiral_raw_vertex_momentum": "2k+p+2q",
+    "fixed_placement_D_factor": "-1/2",
+    "rejected_slice_coefficient_magnitude": "g^2/16"
+  },
+  "rejected_source_claims": [
+    "M3_DALGEBRA_CHAIN",
+    "M3 overall g^2/2 three-sigma numerator coefficient"
+  ],
+  "schema": 1,
+  "source_ledger_sha256": "3df707cfa375c292d18d799160aaceab814011f6d4e88754b34096e7d0b6322f",
+  "status": "PASS",
+  "task": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
+  "totals": {
+    "checks": 42,
+    "failed": 0
+  },
+  "typed_blockers": [
+    "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
+    "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
+    "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE"
+  ]
+}

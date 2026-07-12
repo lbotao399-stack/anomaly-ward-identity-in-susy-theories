@@ -1,0 +1,57 @@
+{
+  "checks": {
+    "all_valence_only_requests_are_not_graphs": true,
+    "eight_generic_blocked_fixtures": true,
+    "external_derivative_ledger_retained": true,
+    "fixed_index_reverse_bindings_exact": true,
+    "fixture_amplitudes_all_blocked": true,
+    "fixture_ir_amplitude_edge_equivalence": true,
+    "fixture_ir_render_id_equivalence": true,
+    "fixture_momentum_routing_exact": true,
+    "four_chart_insertions_core_blocked": true,
+    "no_numeric_anomaly_coefficient": true,
+    "physical_ww_seed_not_claimed": true,
+    "reverse_request_census_closed": true,
+    "reverse_request_map_is_involutive": true,
+    "six_contact_children": true,
+    "six_hundred_fifty_two_valence_only_templates_per_channel": true,
+    "sixteen_indexed_tree_maps": true,
+    "ten_thousand_four_hundred_thirty_two_valence_only_requests": true,
+    "topology_distribution_exact": true,
+    "tree_tensor_factors_fully_typed": true,
+    "twenty_seven_nonzero_action_vertices": true,
+    "two_generic_parent_triangle_fixtures": true,
+    "two_typed_zero_fp_monomials": true
+  },
+  "counts": {
+    "action_monomials": 27,
+    "action_vertices": 27,
+    "generic_blocked_graph_fixtures": 8,
+    "insertion_chart_monomials": 4,
+    "insertion_chart_vertices": 4,
+    "ordered_channels": 16,
+    "typed_zero_action_monomials": 2,
+    "valence_only_requests": 10432,
+    "valence_only_templates_per_channel": 652
+  },
+  "failures": [],
+  "schema": 1,
+  "sha256": {
+    "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md": "7f1116253444cf09b240cfa4d6092436eb41f49146d387450d68f608e242b8f7",
+    "generated/step5/graph-catalogue.json": "e7264f950437c278e3372794c0635cb6f569fa6778c969a9c03411393395cd84",
+    "generated/step5/graph-maps.md": "f8048760f241e4d3e636db1b30d1edfd1eb5369fb17ed10c6ca0e44c21b0c46a",
+    "scripts/step5_graph_ir.py": "2e5cf55ad5e486084ad4e3a0435031e29b6d22480586cbeef25e2a7b40954044",
+    "scripts/step5_vertex_grammar.py": "b91f0e9633f13ebb238a18f09b0265a0c8b1bb72d964307d3fc4b1d04fd39dd8"
+  },
+  "status": "PASS",
+  "task": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
+  "topology_distribution": {
+    "BUBBLE": 432,
+    "TADPOLE": 16,
+    "TRIANGLE": 9984
+  },
+  "totals": {
+    "checks": 22,
+    "failed": 0
+  }
+}

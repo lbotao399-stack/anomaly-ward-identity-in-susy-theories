@@ -4,4 +4,7 @@ __pycache__/
 .venv/
 generated/*
 !generated/README.md
+!generated/step5/
+!generated/step5/graph-catalogue.json
+!generated/step5/graph-maps.md
 mirror/.payload/

@@ -1,0 +1,428 @@
+{
+  "admission_status": "PHYSICAL_HESSIANS_VERIFIED_VECTOR_GREEN_BLOCKED_REJECTED_SLICE_REGRESSION_ONLY",
+  "arithmetic": "EXACT_Q_I_NO_FLOATING_POINT",
+  "checks": [
+    {
+      "id": "operator.p_0_0_0_1.identity_5_37",
+      "passed": true
+    },
+    {
+      "id": "operator.p_0_0_0_1.identity_5_38_D",
+      "passed": true
+    },
+    {
+      "id": "operator.p_0_0_0_1.identity_5_38_barD",
+      "passed": true
+    },
+    {
+      "id": "operator.p_0_0_0_1.Pi_half_idempotent",
+      "passed": true
+    },
+    {
+      "id": "operator.p_0_0_0_1.Pi_zero_idempotent",
+      "passed": true
+    },
+    {
+      "id": "operator.p_0_0_0_1.Pi_left_orthogonal",
+      "passed": true
+    },
+    {
+      "id": "operator.p_0_0_0_1.Pi_right_orthogonal",
+      "passed": true
+    },
+    {
+      "id": "operator.p_0_0_0_1.Pi_complete",
+      "passed": true
+    },
+    {
+      "id": "vector.p_0_0_0_1.physical_5_43",
+      "passed": true
+    },
+    {
+      "id": "vector.p_0_0_0_1.rejected_target_5_45",
+      "passed": true
+    },
+    {
+      "id": "vector.p_0_0_0_1.h_times_g_squared_is_one",
+      "passed": true
+    },
+    {
+      "id": "vector.p_0_0_0_1.kappa_left_inverse",
+      "passed": true
+    },
+    {
+      "id": "vector.p_0_0_0_1.kappa_right_inverse",
+      "passed": true
+    },
+    {
+      "id": "vector.p_0_0_0_1.rejected_target_inverse_5_46_left",
+      "passed": true
+    },
+    {
+      "id": "vector.p_0_0_0_1.rejected_target_inverse_5_46_right",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_0_0_0_1.chiral_embedding_annihilated_by_barD",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_0_0_0_1.antichiral_embedding_at_minus_p_annihilated_by_D",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_0_0_0_1.pairing_scalar_block",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_0_0_0_1.pairing_auxiliary_block",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_0_0_0_1.pairing_no_boson_fermion_mix",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_0_0_0_1.hessian_inverse_left",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_0_0_0_1.hessian_inverse_right",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_0_0_0_1.scalar_green_kernel",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_0_0_0_1.fermion_green_kernel",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_0_0_0_1.auxiliary_green_kernel",
+      "passed": true
+    },
+    {
+      "id": "fp.p_0_0_0_1.M_plus_is_chiral_plus",
+      "passed": true
+    },
+    {
+      "id": "fp.p_0_0_0_1.M_plus_is_chiral_minus",
+      "passed": true
+    },
+    {
+      "id": "fp.p_0_0_0_1.M_minus_is_antichiral_plus",
+      "passed": true
+    },
+    {
+      "id": "fp.p_0_0_0_1.M_minus_is_antichiral_minus",
+      "passed": true
+    },
+    {
+      "id": "operator.p_1_2_3_4.identity_5_37",
+      "passed": true
+    },
+    {
+      "id": "operator.p_1_2_3_4.identity_5_38_D",
+      "passed": true
+    },
+    {
+      "id": "operator.p_1_2_3_4.identity_5_38_barD",
+      "passed": true
+    },
+    {
+      "id": "operator.p_1_2_3_4.Pi_half_idempotent",
+      "passed": true
+    },
+    {
+      "id": "operator.p_1_2_3_4.Pi_zero_idempotent",
+      "passed": true
+    },
+    {
+      "id": "operator.p_1_2_3_4.Pi_left_orthogonal",
+      "passed": true
+    },
+    {
+      "id": "operator.p_1_2_3_4.Pi_right_orthogonal",
+      "passed": true
+    },
+    {
+      "id": "operator.p_1_2_3_4.Pi_complete",
+      "passed": true
+    },
+    {
+      "id": "vector.p_1_2_3_4.physical_5_43",
+      "passed": true
+    },
+    {
+      "id": "vector.p_1_2_3_4.rejected_target_5_45",
+      "passed": true
+    },
+    {
+      "id": "vector.p_1_2_3_4.h_times_g_squared_is_one",
+      "passed": true
+    },
+    {
+      "id": "vector.p_1_2_3_4.kappa_left_inverse",
+      "passed": true
+    },
+    {
+      "id": "vector.p_1_2_3_4.kappa_right_inverse",
+      "passed": true
+    },
+    {
+      "id": "vector.p_1_2_3_4.rejected_target_inverse_5_46_left",
+      "passed": true
+    },
+    {
+      "id": "vector.p_1_2_3_4.rejected_target_inverse_5_46_right",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_1_2_3_4.chiral_embedding_annihilated_by_barD",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_1_2_3_4.antichiral_embedding_at_minus_p_annihilated_by_D",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_1_2_3_4.pairing_scalar_block",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_1_2_3_4.pairing_auxiliary_block",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_1_2_3_4.pairing_no_boson_fermion_mix",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_1_2_3_4.hessian_inverse_left",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_1_2_3_4.hessian_inverse_right",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_1_2_3_4.scalar_green_kernel",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_1_2_3_4.fermion_green_kernel",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_1_2_3_4.auxiliary_green_kernel",
+      "passed": true
+    },
+    {
+      "id": "fp.p_1_2_3_4.M_plus_is_chiral_plus",
+      "passed": true
+    },
+    {
+      "id": "fp.p_1_2_3_4.M_plus_is_chiral_minus",
+      "passed": true
+    },
+    {
+      "id": "fp.p_1_2_3_4.M_minus_is_antichiral_plus",
+      "passed": true
+    },
+    {
+      "id": "fp.p_1_2_3_4.M_minus_is_antichiral_minus",
+      "passed": true
+    },
+    {
+      "id": "operator.p_2_m1_0_3.identity_5_37",
+      "passed": true
+    },
+    {
+      "id": "operator.p_2_m1_0_3.identity_5_38_D",
+      "passed": true
+    },
+    {
+      "id": "operator.p_2_m1_0_3.identity_5_38_barD",
+      "passed": true
+    },
+    {
+      "id": "operator.p_2_m1_0_3.Pi_half_idempotent",
+      "passed": true
+    },
+    {
+      "id": "operator.p_2_m1_0_3.Pi_zero_idempotent",
+      "passed": true
+    },
+    {
+      "id": "operator.p_2_m1_0_3.Pi_left_orthogonal",
+      "passed": true
+    },
+    {
+      "id": "operator.p_2_m1_0_3.Pi_right_orthogonal",
+      "passed": true
+    },
+    {
+      "id": "operator.p_2_m1_0_3.Pi_complete",
+      "passed": true
+    },
+    {
+      "id": "vector.p_2_m1_0_3.physical_5_43",
+      "passed": true
+    },
+    {
+      "id": "vector.p_2_m1_0_3.rejected_target_5_45",
+      "passed": true
+    },
+    {
+      "id": "vector.p_2_m1_0_3.h_times_g_squared_is_one",
+      "passed": true
+    },
+    {
+      "id": "vector.p_2_m1_0_3.kappa_left_inverse",
+      "passed": true
+    },
+    {
+      "id": "vector.p_2_m1_0_3.kappa_right_inverse",
+      "passed": true
+    },
+    {
+      "id": "vector.p_2_m1_0_3.rejected_target_inverse_5_46_left",
+      "passed": true
+    },
+    {
+      "id": "vector.p_2_m1_0_3.rejected_target_inverse_5_46_right",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_2_m1_0_3.chiral_embedding_annihilated_by_barD",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_2_m1_0_3.antichiral_embedding_at_minus_p_annihilated_by_D",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_2_m1_0_3.pairing_scalar_block",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_2_m1_0_3.pairing_auxiliary_block",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_2_m1_0_3.pairing_no_boson_fermion_mix",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_2_m1_0_3.hessian_inverse_left",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_2_m1_0_3.hessian_inverse_right",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_2_m1_0_3.scalar_green_kernel",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_2_m1_0_3.fermion_green_kernel",
+      "passed": true
+    },
+    {
+      "id": "chiral.p_2_m1_0_3.auxiliary_green_kernel",
+      "passed": true
+    },
+    {
+      "id": "fp.p_2_m1_0_3.M_plus_is_chiral_plus",
+      "passed": true
+    },
+    {
+      "id": "fp.p_2_m1_0_3.M_plus_is_chiral_minus",
+      "passed": true
+    },
+    {
+      "id": "fp.p_2_m1_0_3.M_minus_is_antichiral_plus",
+      "passed": true
+    },
+    {
+      "id": "fp.p_2_m1_0_3.M_minus_is_antichiral_minus",
+      "passed": true
+    }
+  ],
+  "contract": "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md",
+  "contract_sha256": "7f1116253444cf09b240cfa4d6092436eb41f49146d387450d68f608e242b8f7",
+  "derived_rules": {
+    "auxiliary_green_kernel": "G_(F tildeF)^{AB}=-g^2 kappa^{AB}",
+    "chiral_hessian": "K_(tilde q q),AB=-h kappa_AB B_component(p)",
+    "fermion_green_kernel": "G_(psi_a tildepsi_dotb)^{AB}=-i g^2 kappa^{AB} p_(a dotb)/p_(4)^2",
+    "gaussian_wick_factor_if_admitted": "hbar times the ordered Green kernel",
+    "rejected_slice_regression_vector_green_kernel": "G_V,target^{AB}=-(2 g^2/p_(4)^2) kappa^{AB} 1_16",
+    "reverse_fermion_order": "G_(tildepsi_dotb psi_a)(-p,p)=-G_(psi_a tildepsi_dotb)(p,-p)",
+    "scalar_green_kernel": "G_(phi tildephi)^{AB}=g^2 kappa^{AB}/p_(4)^2",
+    "source_order": "int_(E,+) J_Phi Phi + int_(E,-) tildePhi tildeJ_Phi; forward derivative order is J_Phi then tildeJ_Phi",
+    "vector_hessian": "K_V,AB^phys=-(h/2) kappa_AB p_(4)^2 Pi_1/2"
+  },
+  "momenta": [
+    [
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      2,
+      3,
+      4
+    ],
+    [
+      2,
+      -1,
+      0,
+      3
+    ]
+  ],
+  "schema": 1,
+  "source_boundary": {
+    "anomaly_coefficient_computed": false,
+    "project_equations_used": [
+      "2A.41",
+      "3A.9-3A.16",
+      "3D.84-3D.94",
+      "4C.4",
+      "5.37-5.46"
+    ],
+    "superspace_1001_coefficients_used": false,
+    "weinberg_coefficients_used": false
+  },
+  "status": "PASS",
+  "task": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
+  "totals": {
+    "checks": 87,
+    "failed": 0
+  },
+  "typed_blockers": [
+    {
+      "id": "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
+      "reason": "The local Step-3D non-minimal class does not admit the nonlocal Y required by (5.44a)-(5.44b); (5.46) is a rejected-slice regression only.",
+      "scope": "vector longitudinal Hessian and vector Green kernel"
+    },
+    {
+      "id": "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
+      "reason": "The chiral-matter coefficient cycle is verified separately.  The complete (A_T,lambda,tilde-lambda,d) cycle, its Berezinian, reconstruction to V_T, and ordered vector-source differentiation are not supplied.",
+      "scope": "promotion of the transverse vector pseudoinverse to a V_T Wick contraction"
+    },
+    {
+      "id": "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
+      "reason": "Equations (3D.84)-(3D.91) fix the free FP operator, but (3D.93c) leaves the parity-reversed Euclidean ghost cycle and orientation as chosen data.",
+      "scope": "FP Wick propagator"
+    },
+    {
+      "id": "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
+      "reason": "No 3D.95b branch, admitted 3D.96 NK auxiliary action, kernel, and cycle have been selected.",
+      "scope": "Nielsen-Kallosh Hessian and propagator"
+    }
+  ]
+}
