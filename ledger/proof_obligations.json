@@ -207,8 +207,15 @@
     {
       "id": "CONTRACT-STEP-03E-N1-FEYNMAN-RULES-001",
       "state": "SPECIFIED",
+      "blocking_reason": "BLOCKED_STEP3D_LC_VECTOR_CYCLE: Step 3D fixes an all-real Lorentz vector cycle with positive damping. The direct temporal line differs from the single-covariant candidate by 2*pi*hbar*delta(p_L^2)*h_L^(-1), so the Step-3E Lorentzian acceptance clauses cannot be satisfied without a user-authorized Step-3D cycle or acceptance-contract change.",
+      "task_sha256": "e05e980cf6fc5dd10316331c1fa06cd5f1bf730a9927d611efb8c723dff91b45",
+      "task": "tasks/archive/CONTRACT-STEP-03E-N1-FEYNMAN-RULES-001.yaml"
+    },
+    {
+      "id": "REFERENCE-IMPORT-STEP5-CHAT-WEINBERG30-001",
+      "state": "SPECIFIED",
       "blocking_reason": null,
-      "task_sha256": "fefff3f685da5b05bcbe6fae1d043a57a7f137993ff11fe11370f004d6690385",
+      "task_sha256": "630715911f6e86bcbd908021e4d5222e1ba158fcab23bba175d53e5a1cdb939a",
       "task": "tasks/CURRENT.yaml"
     }
   ]

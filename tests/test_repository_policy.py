@@ -348,6 +348,41 @@ class RepositoryPolicyTest(unittest.TestCase):
             self.assertIn("references/vendor/hep-th-0108200v1.pdf", task["allowed_inputs"])
             self.assertEqual(len(task["candidate_claim_ids"]), 7)
             return
+        if task["id"] == "REFERENCE-IMPORT-STEP5-CHAT-WEINBERG30-001":
+            chat = task["chat_reference_exception"]
+            notion = task["notion_reference_exception"]
+            self.assertTrue(chat["user_authorized"])
+            self.assertEqual(chat["conversation_title"], "1-loop result in SYM")
+            self.assertEqual(
+                chat["conversation_url"],
+                "https://chatgpt.com/c/6a51b2b1-5870-83e8-ad8f-b1f8496be0fc",
+            )
+            self.assertEqual(
+                chat["share_url"],
+                "https://chatgpt.com/share/6a53ea95-9138-83e8-9761-2e85a29c3970",
+            )
+            self.assertEqual(chat["translation_status"], "NOT_PERFORMED_IN_REFERENCE_IMPORT")
+            self.assertTrue(notion["user_authorized"])
+            self.assertEqual(notion["book_root_page_id"], "310ee2b74b3f8065a3acdbdac27f3b2b")
+            self.assertEqual(
+                notion["search_queries"],
+                ["Weinberg Chapter 30", "30 Supergraphs"],
+            )
+            self.assertEqual(notion["translation_status"], "NOT_PERFORMED_IN_REFERENCE_IMPORT")
+            self.assertEqual(chat["default_boundary_after_task"], "GIT_TO_NOTION_ONLY")
+            self.assertEqual(notion["default_boundary_after_task"], "GIT_TO_NOTION_ONLY")
+            external = [item for item in task["allowed_inputs"] if "://" in item]
+            self.assertEqual(
+                external,
+                [
+                    "https://chatgpt.com/c/6a51b2b1-5870-83e8-ad8f-b1f8496be0fc",
+                    "https://chatgpt.com/share/6a53ea95-9138-83e8-9761-2e85a29c3970",
+                    "notion-search://Weinberg Chapter 30",
+                    "notion-search://30 Supergraphs",
+                ],
+            )
+            self.assertEqual(len(task["candidate_claim_ids"]), 3)
+            return
         self.fail(f"unreviewed reference-import task: {task['id']}")
 
     def test_superspace_1001_supergraph_reference_import(self) -> None:
