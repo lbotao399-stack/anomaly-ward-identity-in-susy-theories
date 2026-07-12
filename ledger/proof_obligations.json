@@ -81,10 +81,10 @@
     },
     {
       "id": "CONTRACT-STEP-04-EXTENDED-SUPER-YANG-MILLS-001",
-      "state": "SPECIFIED",
+      "state": "ACCEPTED",
       "blocking_reason": null,
       "task_sha256": "2c25423173662442c261dccfe4f8d1945f33ad9d2b39294d4e71c56b4d67b443",
-      "task": "tasks/CURRENT.yaml",
+      "task": "tasks/archive/CONTRACT-STEP-04-EXTENDED-SUPER-YANG-MILLS-001.yaml",
       "checked_scope": {
         "N2_OFFSHELL_SU2_R_TRIPLET": {
           "result": "PASS",
@@ -146,6 +146,12 @@
           "P1": []
         }
       }
+    },
+    {
+      "id": "MIRROR-STEP-04-NOTION-001",
+      "state": "ACCEPTED",
+      "blocking_reason": null,
+      "task": "tasks/CURRENT.yaml"
     },
     {
       "id": "REFERENCE-IMPORT-SUPERSPACE-1001-VECTOR-REPRESENTATION-001",

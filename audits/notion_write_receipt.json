@@ -91,6 +91,66 @@
       "request_id": "1cf7f5ba-5db6-4086-8432-41c4e12c7722",
       "completion_request_id": "478227c2-8d19-4126-aa2d-52dfe97cbf14",
       "write_response": "succeeded"
+    },
+    {
+      "id": "FOUNDATION-EXTENDED-SYM-NOTATION-004",
+      "source": "contracts/foundations/step-04-extended-sym-notation.md",
+      "source_commit": "a3d7791c0469051f21471f5f5c40c97f6aef1cff",
+      "source_sha256": "3fcf7e242928d3512c02059d8c28d9551b5cb86156f9d6259cd2bba713211d27",
+      "page_id": "39bee2b7-4b3f-8173-949c-dead35930a41",
+      "mutation": "create_pages",
+      "async_task_id": "task_dc429cce326341d9b4695199b7e6458a",
+      "request_id": "8f339533-c315-4e00-86b9-c2c2b36944eb",
+      "completion_request_id": "9c7086f6-0f65-41e7-9d71-7c96fcfe00bc",
+      "write_response": "succeeded"
+    },
+    {
+      "id": "FOUNDATION-N1-SUPER-YANG-MILLS-004A",
+      "source": "contracts/foundations/step-04a-n1-super-yang-mills.md",
+      "source_commit": "a3d7791c0469051f21471f5f5c40c97f6aef1cff",
+      "source_sha256": "b2495f6a98c8cffe21ab2583b1955c81f5bb06af9b0edfb677fc0a3a3ee1fbc1",
+      "page_id": "39bee2b7-4b3f-8102-8acd-c94d11c92963",
+      "mutation": "create_pages",
+      "async_task_id": "task_dc429cce326341d9b4695199b7e6458a",
+      "request_id": "8f339533-c315-4e00-86b9-c2c2b36944eb",
+      "completion_request_id": "9c7086f6-0f65-41e7-9d71-7c96fcfe00bc",
+      "write_response": "succeeded"
+    },
+    {
+      "id": "FOUNDATION-N2-SUPER-YANG-MILLS-004B",
+      "source": "contracts/foundations/step-04b-n2-super-yang-mills.md",
+      "source_commit": "a3d7791c0469051f21471f5f5c40c97f6aef1cff",
+      "source_sha256": "c8c46744d2c41880bf145d8d6c90af25555276650cc036ded8ddbda9071870d3",
+      "page_id": "39bee2b7-4b3f-8188-bfb0-f7bb9f1d6d0f",
+      "mutation": "create_pages",
+      "async_task_id": "task_dc429cce326341d9b4695199b7e6458a",
+      "request_id": "8f339533-c315-4e00-86b9-c2c2b36944eb",
+      "completion_request_id": "9c7086f6-0f65-41e7-9d71-7c96fcfe00bc",
+      "write_response": "succeeded"
+    },
+    {
+      "id": "FOUNDATION-N4-SUPER-YANG-MILLS-004C",
+      "source": "contracts/foundations/step-04c-n4-super-yang-mills.md",
+      "source_commit": "a3d7791c0469051f21471f5f5c40c97f6aef1cff",
+      "source_sha256": "9fb057d14ee438b31d3f38836e8ca848dfee74b1ea363716222264c96405e5db",
+      "page_id": "39bee2b7-4b3f-81ee-ad8d-ec5b838fa90d",
+      "mutation": "create_pages",
+      "async_task_id": "task_dc429cce326341d9b4695199b7e6458a",
+      "request_id": "8f339533-c315-4e00-86b9-c2c2b36944eb",
+      "completion_request_id": "9c7086f6-0f65-41e7-9d71-7c96fcfe00bc",
+      "write_response": "succeeded"
+    },
+    {
+      "id": "CONTRACT-STEP-04-EXTENDED-SYM-DICTIONARY-001",
+      "source": "contracts/dictionaries/step-04-extended-sym-weinberg-srednicki-dictionary.md",
+      "source_commit": "a3d7791c0469051f21471f5f5c40c97f6aef1cff",
+      "source_sha256": "0909093c4afa22d5d8ae9c540880a524e57353c573795bf1937de1cfdcdd0a7b",
+      "page_id": "39bee2b7-4b3f-8150-a227-dd76caa48008",
+      "mutation": "create_pages",
+      "async_task_id": "task_dc429cce326341d9b4695199b7e6458a",
+      "request_id": "8f339533-c315-4e00-86b9-c2c2b36944eb",
+      "completion_request_id": "9c7086f6-0f65-41e7-9d71-7c96fcfe00bc",
+      "write_response": "succeeded"
     }
   ],
   "previous_receipt": {
@@ -99,5 +159,5 @@
     "page_id": "399ee2b7-4b3f-8158-9f75-f4a148e431fb",
     "published_at": "2026-07-10T23:46:35Z"
   },
-  "published_at": "2026-07-11T23:01:27Z"
+  "published_at": "2026-07-12T14:44:34Z"
 }
