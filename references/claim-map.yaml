@@ -195,6 +195,62 @@
       ],
       "allowed_use": "A later registered Step-4 contract-change task may use the proposed graded free-Lie, independent-jet, curvature, Bianchi, and Jacobi checklist as candidate verifier requirements and must justify the implemented exact algebra independently.",
       "forbidden_use": "Treating the proposed Hall or Lyndon canonicalizer, test list, or zero-residual claim as verified code or as a mathematical proof."
+    },
+    {
+      "id": "SUPERSPACE-1001-GAUSSIAN-SUPERFIELD-EVIDENCE",
+      "sources": [
+        "SUPERSPACE-1001-SUPERGRAPH-PAGES"
+      ],
+      "allowed_use": "A later registered Feynman-rule contract may reconstruct the source Gaussian superfield generating-functional method from source PDF pages 364-368, printed pages 348-352, and then derive an independent Project Gaussian inversion.",
+      "forbidden_use": "Importing the source Fourier phase, exponent convention, propagator sign, factor of i, source normalization, or source inverse operator as a Project formula."
+    },
+    {
+      "id": "SUPERSPACE-1001-DELTA-PROJECTOR-EVIDENCE",
+      "sources": [
+        "SUPERSPACE-1001-SUPERGRAPH-PAGES"
+      ],
+      "allowed_use": "A later registered Feynman-rule contract may reconstruct the source superspace delta-transfer and spinor-derivative projector method from source PDF pages 366-372, printed pages 350-356, before deriving Project-normalized full, chiral, and antichiral deltas.",
+      "forbidden_use": "Importing a source D-algebra sign, D-squared normalization, chirality projector coefficient, integration-by-parts sign, or momentum-square convention."
+    },
+    {
+      "id": "SUPERSPACE-1001-CHIRAL-PROPAGATOR-EVIDENCE",
+      "sources": [
+        "SUPERSPACE-1001-SUPERGRAPH-PAGES"
+      ],
+      "allowed_use": "A later registered Feynman-rule contract may reconstruct the source massive and massless chiral-superfield quadratic-matrix method from source PDF pages 365-368, printed pages 349-352, and compare it with an independently inverted Project kernel.",
+      "forbidden_use": "Quoting any source chiral propagator, numerator D placement, mass phase, pole prescription, or source delta normalization as a Project rule."
+    },
+    {
+      "id": "SUPERSPACE-1001-VECTOR-GAUGE-FIXING-EVIDENCE",
+      "sources": [
+        "SUPERSPACE-1001-SUPERGRAPH-PAGES"
+      ],
+      "allowed_use": "A later registered Feynman-rule contract may reconstruct the source supersymmetric gauge-averaging, vector-kernel inversion, and background-covariant splitting methods from source PDF pages 359-361 and 393-399, then derive the Project gauge fermion and Hessian independently.",
+      "forbidden_use": "Importing the source gauge parameter, source gauge-fixing functional, projector coefficient, field rescaling, background split, or vector propagator coefficient."
+    },
+    {
+      "id": "SUPERSPACE-1001-FP-NK-GHOST-EVIDENCE",
+      "sources": [
+        "SUPERSPACE-1001-SUPERGRAPH-PAGES"
+      ],
+      "allowed_use": "A later registered Feynman-rule contract may reconstruct the source Faddeev-Popov and Nielsen-Kallosh determinant constructions from source PDF pages 360-361, 392, and 397, then derive every Project ghost parity, determinant exponent, contour, quadratic kernel, and vertex from the Project measure and gauge fermion.",
+      "forbidden_use": "Treating the source number of ghosts, ghost statistics, determinant power, one-loop statement, kinetic sign, or background-coupling rule as fixed in the general Project non-minimal sector."
+    },
+    {
+      "id": "SUPERSPACE-1001-ORDERED-SUPERGRAPH-VERTEX-EVIDENCE",
+      "sources": [
+        "SUPERSPACE-1001-SUPERGRAPH-PAGES"
+      ],
+      "allowed_use": "A later registered Feynman-rule contract may reconstruct the source interaction-expansion and background-covariant vertex methods from source PDF pages 364-369 and 398-404, while defining Project vertices only by ordered functional differentiation of the locked action.",
+      "forbidden_use": "Reading a source interaction term directly as a Project vertex, suppressing odd-field derivative order, symmetrizing color words, or omitting the exponential-expansion and identical-leg factors."
+    },
+    {
+      "id": "SUPERSPACE-1001-D-ALGEBRA-EVIDENCE",
+      "sources": [
+        "SUPERSPACE-1001-SUPERGRAPH-PAGES"
+      ],
+      "allowed_use": "A later registered Feynman-rule contract may reconstruct the source graphical D-transfer workflow from source PDF pages 370-379, printed pages 354-363, and then prove each Project D-algebra rewrite from the locked Lorentzian and Euclidean derivative algebras.",
+      "forbidden_use": "Importing a source D-transfer sign, twinning sign, contracted-index convention, loop-ordering rule, momentum replacement, or source claim that signs may be ignored."
     }
   ]
 }

@@ -84,7 +84,7 @@
       "state": "SPECIFIED",
       "blocking_reason": null,
       "task_sha256": "2c25423173662442c261dccfe4f8d1945f33ad9d2b39294d4e71c56b4d67b443",
-      "task": "tasks/CURRENT.yaml",
+      "task": "tasks/archive/CONTRACT-STEP-04-EXTENDED-SUPER-YANG-MILLS-001.yaml",
       "checked_scope": {
         "N2_OFFSHELL_SU2_R_TRIPLET": {
           "result": "PASS",
@@ -187,7 +187,15 @@
       "id": "REFERENCE-IMPORT-N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-001",
       "state": "ACCEPTED",
       "blocking_reason": null,
+      "task_sha256": "d9a78b74e4bf10568396a46f7253cb4ccb902533497cc5d8856464fa076a4b28",
       "task": "tasks/archive/REFERENCE-IMPORT-N2-GENERAL-LIE-CLOSURE-INSTRUCTOR-001.yaml"
+    },
+    {
+      "id": "REFERENCE-IMPORT-SUPERSPACE-1001-SUPERGRAPH-001",
+      "state": "ACCEPTED",
+      "blocking_reason": null,
+      "task_sha256": "5f3e38192b74b04cb263b281e8ef5ab38f6a404cff59ad778bd65ef480562ace",
+      "task": "tasks/CURRENT.yaml"
     }
   ]
 }
