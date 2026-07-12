@@ -16,7 +16,10 @@ SUBSET = ROOT / "references/vendor/local/superspace-1001-supergraph-pages.pdf"
 LEDGER = ROOT / "references/superspace-1001-supergraph-source-ledger.json"
 MANIFEST = ROOT / "references/manifest.yaml"
 CLAIM_MAP = ROOT / "references/claim-map.yaml"
-TASK = ROOT / "tasks/CURRENT.yaml"
+TASK_CANDIDATES = (
+    ROOT / "tasks/CURRENT.yaml",
+    ROOT / "tasks/archive/REFERENCE-IMPORT-SUPERSPACE-1001-SUPERGRAPH-001.yaml",
+)
 OBLIGATIONS = ROOT / "ledger/proof_obligations.json"
 AUDIT = ROOT / "audits/superspace-1001-supergraph-reference-import-verification.json"
 
@@ -97,7 +100,14 @@ def main() -> int:
     ledger = json.loads(LEDGER.read_text(encoding="utf-8"))
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
     claim_map = json.loads(CLAIM_MAP.read_text(encoding="utf-8"))
-    task = json.loads(TASK.read_text(encoding="utf-8"))
+    task_path = next(
+        path
+        for path in TASK_CANDIDATES
+        if path.exists()
+        and json.loads(path.read_text(encoding="utf-8"))["id"]
+        == "REFERENCE-IMPORT-SUPERSPACE-1001-SUPERGRAPH-001"
+    )
+    task = json.loads(task_path.read_text(encoding="utf-8"))
     obligations = json.loads(OBLIGATIONS.read_text(encoding="utf-8"))
     entries = {entry["id"]: entry for entry in manifest["entries"]}
     claims = {claim["id"]: claim for claim in claim_map["claims"]}
@@ -193,9 +203,9 @@ def main() -> int:
     ):
         check(name, marker in text, True)
 
-    current = [item for item in obligations["proof_obligations"] if item["task"] == "tasks/CURRENT.yaml"]
-    check("one_current_obligation", len(current), 1)
-    check("current_obligation_id", current[0]["id"], task["id"])
+    task_obligations = [item for item in obligations["proof_obligations"] if item["id"] == task["id"]]
+    check("one_current_obligation", len(task_obligations), 1)
+    check("current_obligation_id", task_obligations[0]["id"], task["id"])
 
     visual = ledger["visual_verification"]
     check("manual_contact_sheets", visual["manual_contact_sheets"], 8)
