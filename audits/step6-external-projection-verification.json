@@ -1,0 +1,40 @@
+{
+  "schema_version": "step6.external_projection.v1",
+  "status": "PROPOSAL_ONLY_BLOCKED_ON_STEP5_ACCEPTANCE",
+  "scope": "STEP6_EXTERNAL_BACKGROUND_PROJECTION_VERIFICATION",
+  "checks": {
+    "status_is_proposal_only": true,
+    "exactly_three_decorated_graphs": true,
+    "all_topologies_are_literal_k4_minus_edge": true,
+    "ordered_split_role_words_are_unique_and_unit_multiplicity": true,
+    "ordered_split_fixed_b_counts_are_binomial_census_only": true,
+    "linear_gamma_map_exact": true,
+    "linear_w_map_exact": true,
+    "linear_x_map_exact": true,
+    "linear_tilde_gamma_map_exact": true,
+    "linear_tilde_w_map_exact": true,
+    "exact_projection_radices": true,
+    "exact_projection_cardinalities": true,
+    "double_background_s4_has_both_external_permutations": true,
+    "each_graph_projection_has_p1_p2_once": true,
+    "all_source_joins_have_deterministic_keys": true,
+    "all_port_derivative_words_match_source_ast": true,
+    "measure_chirality_is_exactly_parallel": true,
+    "spinor_and_color_slots_are_retained": true,
+    "nonlinear_ports_never_claim_linear_letters": true,
+    "orientation_covariance_is_projection_only": true,
+    "source_coefficients_retained_but_not_assembled": true,
+    "downstream_stages_fail_closed": true,
+    "no_external_target_used": true
+  },
+  "summary": {
+    "passed": 23,
+    "failed": 0,
+    "total": 23
+  },
+  "gaps": [
+    "quantum grammar ports are not yet joined to topology edge endpoints for all three graphs",
+    "propagators, Wick contractions, D-algebra, amplitudes, graph coefficients, and subtraction are absent",
+    "nonlinear W_(n) and TildeW_(n) background ports remain exact AST contexts and are not renamed as linear external letters"
+  ]
+}
