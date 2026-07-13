@@ -1,6 +1,6 @@
 {
   "artifact_sha256": {
-    "generated/step6/two-loop-amplitude-ir/pre-dalgebra-amplitude-ir.json": "12e6e9e23b5f68e6acbaa2278faf34781fffc59a0bc6560a93a095b5c9d2418f",
+    "generated/step6/two-loop-amplitude-ir/pre-dalgebra-amplitude-ir.json": "7e7bb6d675b6ceed07560f176ac9c4289f982c1f5e04b74634eb9585e4b1a0df",
     "generated/step6/two-loop-amplitude-ir/pre-dalgebra-amplitude-ir.md": "fd2b34379db5c64a31c98b761c434f63f9368d98f6626e30377c54edaafbe66b"
   },
   "checks": {
@@ -32,7 +32,7 @@
   "failures": [],
   "parent_count": 6,
   "passed": 22,
-  "payload_sha256": "ef1484db125117d3f8bc4fadaaf0ae9b70a60e2f21fb2528b310b71ab7f1b4c5",
+  "payload_sha256": "7f54c9b2c3403ced576a21e82ea1fa1d227cdb1fd00a8904ab6d2d05a8d3c624",
   "proposal_status": "PROPOSAL_ONLY_BLOCKED_ON_STEP5_ACCEPTANCE",
   "schema_version": "step6.two_loop_amplitude_ir.audit.v1",
   "status": "PASS"

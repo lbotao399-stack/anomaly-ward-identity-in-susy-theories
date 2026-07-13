@@ -6,7 +6,7 @@
     "coefficient_tensor": {
       "path": "scripts/step6_coefficient_tensor.py",
       "sha256": "ad8c9a1560c21d9889e233b0d0fa14e9ce9b0d0c85736866dccd1bcdcc6b437f",
-      "payload_sha256": "c5c82bd14306b0c10f00088c5e08e321a49260a7a4a379638bd32f45923c0bab"
+      "payload_sha256": "f5644237846889218221d496f1ce597f3001ec479811c6d6a782ce8a4a0ca66f"
     },
     "color_tensor": {
       "path": "scripts/step6_color_tensor.py",
@@ -15,7 +15,7 @@
     "amplitude_ir": {
       "path": "scripts/step6_two_loop_amplitude_ir.py",
       "sha256": "ef2ce40b7bb372d69aa8f4ee9ad72431f4808dfd5b2e3619662a6487ad2beb4a",
-      "payload_sha256": "ef1484db125117d3f8bc4fadaaf0ae9b70a60e2f21fb2528b310b71ab7f1b4c5"
+      "payload_sha256": "7f54c9b2c3403ced576a21e82ea1fa1d227cdb1fd00a8904ab6d2d05a8d3c624"
     }
   },
   "graph_weight_certificate": {
@@ -107693,5 +107693,5 @@
     "UV_pole": "BLOCKED_NOT_PERFORMED",
     "renormalized_two_loop_coefficient": null
   },
-  "payload_sha256": "f73ee1583bc76e92adbde663a9de1478fb93e572b439a497059a9e3f4e622106"
+  "payload_sha256": "4e3e72b182313f7134c5d310f3f99a18d0fe68080604845f2758c7393ca7f809"
 }

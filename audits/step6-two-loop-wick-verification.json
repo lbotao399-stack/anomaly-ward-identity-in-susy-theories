@@ -33,13 +33,13 @@
     "authority_role": "UNMERGED_PROPOSAL_INPUTS_NOT_COMPUTATIONAL_EVIDENCE",
     "grammar_generator": "scripts/step6_two_loop_grammar.py",
     "grammar_generator_sha256": "bd0905d0a29fb91e4f9bd8d2d28533b8ff0acf55d37d30f2d0e49c44e29c3b58",
-    "grammar_payload_sha256": "6463175a6b123e0f0d60f713bac7a5aab71efb72c0dc18d1e94c16022301eda8",
+    "grammar_payload_sha256": "be53fff76fd4b4ef2ce5d533a56d36fbecc87bccbcec82e843e5a09d25bfd859",
     "topology_bundle_sha256": "483ead9891aed38e533e8885d941eea3d98f50f9b22d3c87680b8756fe5337a5",
     "topology_generator": "scripts/step6_two_loop_graphir.py",
     "topology_generator_sha256": "a8d823be343a639989732812e976953bdb64b72e26f09495300a025ba6985ab3"
   },
   "passed": 24,
-  "payload_sha256": "536bdbeaa3b872926b37e375535bf256149fb03c810fbc874eb4e7e84ecb0db7",
+  "payload_sha256": "ea8fe245c0e9ce718b6db37af1bd7d6d366d455990ba8f7b8e24fa93e7ef38bd",
   "proposal_status": "PROPOSAL_ONLY_BLOCKED_ON_STEP5_ACCEPTANCE",
   "schema_version": "step6.two_loop_wick.audit.v1",
   "status": "PASS"

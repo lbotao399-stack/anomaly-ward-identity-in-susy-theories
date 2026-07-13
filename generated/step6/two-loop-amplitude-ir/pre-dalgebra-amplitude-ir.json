@@ -69,7 +69,7 @@
     "step5a_kernel_generator_sha256": "eee4eebe985f4bc0c531c6aed1fd5957336788a147b0bb0a066fe3fd6f3fb0e6",
     "wick_generator": "scripts/step6_two_loop_wick.py",
     "wick_generator_sha256": "32bfa0129164b40286062976df937b26a9ad3897e3b503151d20f173710093c2",
-    "wick_payload_sha256": "536bdbeaa3b872926b37e375535bf256149fb03c810fbc874eb4e7e84ecb0db7"
+    "wick_payload_sha256": "ea8fe245c0e9ce718b6db37af1bd7d6d366d455990ba8f7b8e24fa93e7ef38bd"
   },
   "orientation_sum_policy": "SUM_DIRECT_ONLY_REFLECTED_ROWS_CERTIFY_ROUTING_COVARIANCE",
   "parent_count": 6,
@@ -148401,7 +148401,7 @@
       ]
     }
   ],
-  "payload_sha256": "ef1484db125117d3f8bc4fadaaf0ae9b70a60e2f21fb2528b310b71ab7f1b4c5",
+  "payload_sha256": "7f54c9b2c3403ced576a21e82ea1fa1d227cdb1fd00a8904ab6d2d05a8d3c624",
   "projection_candidate_dictionary": {
     "G6_DIRECT_K4ME_I2_S3SQ_S4::A::S3_MINUS_1_2::B0::E1": {
       "assembled_vertex_coefficient": null,
