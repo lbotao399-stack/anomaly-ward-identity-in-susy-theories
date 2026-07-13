@@ -43,6 +43,11 @@ DERIVATION_GENERATED_DIRS = (
     "generated/step6/two-loop-color-tensor",
     "generated/step6/global-supertensor",
     "generated/step6/sd-orbit",
+    "generated/step6/dred-reducer",
+    "generated/step6/bitriangle-master",
+    "generated/step6/full-supertensor",
+    "generated/step6/global-dword-adapter",
+    "generated/step6/color-jacobi",
 )
 
 

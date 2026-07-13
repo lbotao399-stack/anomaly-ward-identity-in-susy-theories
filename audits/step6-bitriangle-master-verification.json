@@ -1,0 +1,17 @@
+{
+  "schema": "step6.bitriangle_scalar_master.audit.v1",
+  "status": "PASS",
+  "checks": {
+    "correct_source_graph": true,
+    "exact_denominator": true,
+    "six_exact_modes": true,
+    "radial_modes_exact": true,
+    "full_modes_exact": true,
+    "measure_normalization_exact": true,
+    "external_target_absent": true,
+    "coefficient_not_claimed": true
+  },
+  "passed": 8,
+  "total": 8,
+  "payload_sha256": "13693aba2f5b461715aedd61808812f8055e691d0cad76f53450ae1f42f5db3f"
+}

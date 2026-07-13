@@ -1,0 +1,1334 @@
+{
+  "authority": {
+    "contract": "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md",
+    "contract_sha256": "dd06ff2ecf0d78605282cbb505daf16797ce859650fc8d398405031f3acdb002",
+    "external_target_imported": false,
+    "review_input_imported": false
+  },
+  "fixtures": {
+    "contact_subtraction": {
+      "epsilon_trace_applied": false,
+      "inputs": {
+        "contact": {
+          "coefficient": {
+            "atoms": [
+              {
+                "kind": "PHYSICAL",
+                "name": "C"
+              }
+            ],
+            "rational": {
+              "denominator": 1,
+              "numerator": 1
+            },
+            "sign": -1
+          },
+          "contact_census_status": "SD_COMPLETE_CONTACT_FAMILY",
+          "derivation_sha256": "84eab90a183920332efeedbca9bc5524153c8df61401f625e7f7f3a6e6e27efd",
+          "external_operator_tensor": {
+            "derivation_provenance": "TYPED_FIXTURE_NO_PHYSICAL_COEFFICIENT",
+            "identity_sha256": "6aa99202e1ac9522b6fa7d108d5ff898d17bf4a7ea33670f54e72de6f542e519",
+            "operator_id": "T2",
+            "ordered_indices": [
+              {
+                "name": "m",
+                "space": "VECTOR_4",
+                "variance": "LOWER"
+              },
+              {
+                "name": "n",
+                "space": "VECTOR_4",
+                "variance": "LOWER"
+              }
+            ],
+            "tensor_ast": {
+              "free_color_slots": [
+                "A",
+                "B",
+                "R",
+                "S"
+              ],
+              "op": "ExternalOperatorTensor",
+              "operator": "T2",
+              "ordered_vector_slots": [
+                "m",
+                "n"
+              ]
+            }
+          },
+          "metric": {
+            "construction": "INDEPENDENT_SD_CONTACT_DALGEBRA",
+            "indices": [
+              {
+                "name": "m",
+                "space": "VECTOR_4",
+                "variance": "UPPER"
+              },
+              {
+                "name": "n",
+                "space": "VECTOR_4",
+                "variance": "UPPER"
+              }
+            ],
+            "kind": "delta_(4)",
+            "proof_sha256": null,
+            "source_id": "contact:D-algebra",
+            "stage": "CONTACT_DALGEBRA"
+          },
+          "source_graph_id": "G_contact_family_fixture",
+          "term_id": "contact_metric_fixture"
+        },
+        "triangle": {
+          "coefficient": {
+            "atoms": [
+              {
+                "kind": "PHYSICAL",
+                "name": "C"
+              }
+            ],
+            "rational": {
+              "denominator": 1,
+              "numerator": 1
+            },
+            "sign": 1
+          },
+          "contact_census_status": null,
+          "derivation_sha256": "8d92811159569af19ad909384334163cbbc937d9233bda502f450c4d38a5b9ba",
+          "external_operator_tensor": {
+            "derivation_provenance": "TYPED_FIXTURE_NO_PHYSICAL_COEFFICIENT",
+            "identity_sha256": "6aa99202e1ac9522b6fa7d108d5ff898d17bf4a7ea33670f54e72de6f542e519",
+            "operator_id": "T2",
+            "ordered_indices": [
+              {
+                "name": "m",
+                "space": "VECTOR_4",
+                "variance": "LOWER"
+              },
+              {
+                "name": "n",
+                "space": "VECTOR_4",
+                "variance": "LOWER"
+              }
+            ],
+            "tensor_ast": {
+              "free_color_slots": [
+                "A",
+                "B",
+                "R",
+                "S"
+              ],
+              "op": "ExternalOperatorTensor",
+              "operator": "T2",
+              "ordered_vector_slots": [
+                "m",
+                "n"
+              ]
+            }
+          },
+          "metric": {
+            "construction": "CENTERED_HAT_SPACE_ISOTROPIC_AVERAGE",
+            "indices": [
+              {
+                "name": "m",
+                "space": "VECTOR_4",
+                "variance": "UPPER"
+              },
+              {
+                "name": "n",
+                "space": "VECTOR_4",
+                "variance": "UPPER"
+              }
+            ],
+            "kind": "hat_delta",
+            "proof_sha256": null,
+            "source_id": "triangle:rank2-average",
+            "stage": "LOOP_TENSOR_AVERAGING"
+          },
+          "source_graph_id": "G_triangle_fixture",
+          "term_id": "triangle_metric_fixture"
+        }
+      },
+      "interpretation_status": "TYPED_METRIC_IDENTITY_ONLY_NOT_AN_ANOMALY_COEFFICIENT",
+      "output_sha256": "bd2f114e04200d5f15324458e59d430e7b5d08915ed33254e41a6ff4b3c7c003",
+      "proof_record": {
+        "complete_contact_census": true,
+        "contact_term_sha256": "863a417cd2ad04139de8a3fd9763c25292236cf7c636bf149a15025688e3728f",
+        "identity": "hat_delta-delta_(4)=-tilde_delta",
+        "independent_source_graphs": true,
+        "opposite_required_signs": true,
+        "same_coefficient_magnitude": true,
+        "same_external_operator_tensor_sha256": "6aa99202e1ac9522b6fa7d108d5ff898d17bf4a7ea33670f54e72de6f542e519",
+        "triangle_term_sha256": "5b69a44823e1a3cf95cd73e01ebb65ae944f37a1236e61120cb32f7c759e8075"
+      },
+      "proof_sha256": "155b166f76b0d55b2df40c14697eb2cc9c52434827600ba68075027e7ebb2b0b",
+      "result": {
+        "coefficient": {
+          "atoms": [
+            {
+              "kind": "PHYSICAL",
+              "name": "C"
+            }
+          ],
+          "rational": {
+            "denominator": 1,
+            "numerator": 1
+          },
+          "sign": -1
+        },
+        "external_operator_tensor": {
+          "derivation_provenance": "TYPED_FIXTURE_NO_PHYSICAL_COEFFICIENT",
+          "identity_sha256": "6aa99202e1ac9522b6fa7d108d5ff898d17bf4a7ea33670f54e72de6f542e519",
+          "operator_id": "T2",
+          "ordered_indices": [
+            {
+              "name": "m",
+              "space": "VECTOR_4",
+              "variance": "LOWER"
+            },
+            {
+              "name": "n",
+              "space": "VECTOR_4",
+              "variance": "LOWER"
+            }
+          ],
+          "tensor_ast": {
+            "free_color_slots": [
+              "A",
+              "B",
+              "R",
+              "S"
+            ],
+            "op": "ExternalOperatorTensor",
+            "operator": "T2",
+            "ordered_vector_slots": [
+              "m",
+              "n"
+            ]
+          }
+        },
+        "metric": {
+          "construction": "VALIDATED_INDEPENDENT_CONTACT_SUBTRACTION",
+          "indices": [
+            {
+              "name": "m",
+              "space": "VECTOR_4",
+              "variance": "UPPER"
+            },
+            {
+              "name": "n",
+              "space": "VECTOR_4",
+              "variance": "UPPER"
+            }
+          ],
+          "kind": "tilde_delta",
+          "proof_sha256": "155b166f76b0d55b2df40c14697eb2cc9c52434827600ba68075027e7ebb2b0b",
+          "source_id": "triangle_metric_fixture+contact_metric_fixture",
+          "stage": "POST_CONTACT_SUBTRACTION"
+        }
+      },
+      "schema": "step6.validated_dred_contact_subtraction.v1",
+      "stage": "POST_CONTACT_SUBTRACTION"
+    },
+    "rank2_average": {
+      "bare_exact_coefficient": {
+        "atoms": [
+          {
+            "kind": "PHYSICAL",
+            "name": "C"
+          }
+        ],
+        "rational": {
+          "denominator": 5,
+          "numerator": 3
+        },
+        "sign": 1
+      },
+      "epsilon_inserted_into_bare_numerator": false,
+      "external_operator_tensor": {
+        "derivation_provenance": "TYPED_FIXTURE_NO_PHYSICAL_COEFFICIENT",
+        "identity_sha256": "6aa99202e1ac9522b6fa7d108d5ff898d17bf4a7ea33670f54e72de6f542e519",
+        "operator_id": "T2",
+        "ordered_indices": [
+          {
+            "name": "m",
+            "space": "VECTOR_4",
+            "variance": "LOWER"
+          },
+          {
+            "name": "n",
+            "space": "VECTOR_4",
+            "variance": "LOWER"
+          }
+        ],
+        "tensor_ast": {
+          "free_color_slots": [
+            "A",
+            "B",
+            "R",
+            "S"
+          ],
+          "op": "ExternalOperatorTensor",
+          "operator": "T2",
+          "ordered_vector_slots": [
+            "m",
+            "n"
+          ]
+        }
+      },
+      "external_operator_tensor_preserved_sha256": "6aa99202e1ac9522b6fa7d108d5ff898d17bf4a7ea33670f54e72de6f542e519",
+      "formula": "I[q_i^m q_j^n F]=hat_delta^(mn)/d I[(q_i.q_j)F]",
+      "loop_metric": "hat_delta",
+      "output_sha256": "6e07f152a6be3a45a2c6c032f7ec9c6b55f7a1fbfb505083b428a7f84473c1d9",
+      "rank": 2,
+      "schema": "step6.typed_dred_tensor_average.v1",
+      "source_bare_numerator_sha256": "a4c73f666efa4d3ba97fdefdfe2188b65e68d83726825b56cb6801f6c43ce27a",
+      "source_graph_id": "G_rank2_fixture",
+      "source_numerator_id": "N_rank2_fixture",
+      "spectator_spin_dalgebra_metrics": [
+        {
+          "construction": "FOUR_DIMENSIONAL_SPINOR_ANTICOMMUTATOR",
+          "indices": [
+            {
+              "name": "u",
+              "space": "VECTOR_4",
+              "variance": "UPPER"
+            },
+            {
+              "name": "v",
+              "space": "VECTOR_4",
+              "variance": "UPPER"
+            }
+          ],
+          "kind": "delta_(4)",
+          "proof_sha256": null,
+          "source_id": "fixture:D-algebra",
+          "stage": "SPIN_DALGEBRA"
+        }
+      ],
+      "spin_metric_replacement_performed": false,
+      "stage": "LOOP_TENSOR_AVERAGING",
+      "terms": [
+        {
+          "coefficient": {
+            "d_definition": "tr(hat_delta)",
+            "denominator_factors": [
+              "d"
+            ],
+            "epsilon_expansion_performed": false,
+            "kind": "EXACT_RATIONAL_FUNCTION_OF_D_AFTER_TENSOR_AVERAGING",
+            "numerator_terms": [
+              {
+                "dimension_factor": "1",
+                "scalar_moment": {
+                  "kind": "PHYSICAL",
+                  "name": "I_qiqj"
+                }
+              }
+            ]
+          },
+          "metric_product": [
+            {
+              "construction": "CENTERED_HAT_SPACE_ISOTROPIC_AVERAGE",
+              "indices": [
+                {
+                  "name": "m",
+                  "space": "VECTOR_4",
+                  "variance": "UPPER"
+                },
+                {
+                  "name": "n",
+                  "space": "VECTOR_4",
+                  "variance": "UPPER"
+                }
+              ],
+              "kind": "hat_delta",
+              "proof_sha256": null,
+              "source_id": "N_rank2_fixture:rank2",
+              "stage": "LOOP_TENSOR_AVERAGING"
+            }
+          ]
+        }
+      ]
+    },
+    "rank2_bare": {
+      "coefficient": {
+        "atoms": [
+          {
+            "kind": "PHYSICAL",
+            "name": "C"
+          }
+        ],
+        "rational": {
+          "denominator": 5,
+          "numerator": 3
+        },
+        "sign": 1
+      },
+      "external_operator_tensor": {
+        "derivation_provenance": "TYPED_FIXTURE_NO_PHYSICAL_COEFFICIENT",
+        "identity_sha256": "6aa99202e1ac9522b6fa7d108d5ff898d17bf4a7ea33670f54e72de6f542e519",
+        "operator_id": "T2",
+        "ordered_indices": [
+          {
+            "name": "m",
+            "space": "VECTOR_4",
+            "variance": "LOWER"
+          },
+          {
+            "name": "n",
+            "space": "VECTOR_4",
+            "variance": "LOWER"
+          }
+        ],
+        "tensor_ast": {
+          "free_color_slots": [
+            "A",
+            "B",
+            "R",
+            "S"
+          ],
+          "op": "ExternalOperatorTensor",
+          "operator": "T2",
+          "ordered_vector_slots": [
+            "m",
+            "n"
+          ]
+        }
+      },
+      "momentum_factors": [
+        {
+          "index": {
+            "name": "m",
+            "space": "VECTOR_4",
+            "variance": "UPPER"
+          },
+          "momentum": {
+            "name": "q",
+            "role": "CENTERED_LOOP",
+            "support": "REGULATED_HAT"
+          }
+        },
+        {
+          "index": {
+            "name": "n",
+            "space": "VECTOR_4",
+            "variance": "UPPER"
+          },
+          "momentum": {
+            "name": "q",
+            "role": "CENTERED_LOOP",
+            "support": "REGULATED_HAT"
+          }
+        }
+      ],
+      "numerator_id": "N_rank2_fixture",
+      "radial_scalar_moment": {
+        "kind": "PHYSICAL",
+        "name": "I_qiqj"
+      },
+      "rank": 2,
+      "regulator_scalar_in_bare_numerator": false,
+      "schema": "step6.typed_bare_dred_numerator.v1",
+      "source_graph_id": "G_rank2_fixture",
+      "spin_dalgebra_metrics": [
+        {
+          "construction": "FOUR_DIMENSIONAL_SPINOR_ANTICOMMUTATOR",
+          "indices": [
+            {
+              "name": "u",
+              "space": "VECTOR_4",
+              "variance": "UPPER"
+            },
+            {
+              "name": "v",
+              "space": "VECTOR_4",
+              "variance": "UPPER"
+            }
+          ],
+          "kind": "delta_(4)",
+          "proof_sha256": null,
+          "source_id": "fixture:D-algebra",
+          "stage": "SPIN_DALGEBRA"
+        }
+      ],
+      "stage": "BARE_DALGEBRA_NUMERATOR"
+    },
+    "rank4_bare": {
+      "coefficient": {
+        "atoms": [
+          {
+            "kind": "PHYSICAL",
+            "name": "C"
+          }
+        ],
+        "rational": {
+          "denominator": 5,
+          "numerator": 3
+        },
+        "sign": 1
+      },
+      "external_operator_tensor": {
+        "derivation_provenance": "TYPED_FIXTURE_NO_PHYSICAL_COEFFICIENT",
+        "identity_sha256": "68bebe11d15c910b6d1f7b0ce34668870c6dfe9ab24125c7ae2f407705b84383",
+        "operator_id": "T4",
+        "ordered_indices": [
+          {
+            "name": "m",
+            "space": "VECTOR_4",
+            "variance": "LOWER"
+          },
+          {
+            "name": "n",
+            "space": "VECTOR_4",
+            "variance": "LOWER"
+          },
+          {
+            "name": "r",
+            "space": "VECTOR_4",
+            "variance": "LOWER"
+          },
+          {
+            "name": "s",
+            "space": "VECTOR_4",
+            "variance": "LOWER"
+          }
+        ],
+        "tensor_ast": {
+          "free_color_slots": [
+            "A",
+            "B",
+            "R",
+            "S"
+          ],
+          "op": "ExternalOperatorTensor",
+          "operator": "T4",
+          "ordered_vector_slots": [
+            "m",
+            "n",
+            "r",
+            "s"
+          ]
+        }
+      },
+      "momentum_factors": [
+        {
+          "index": {
+            "name": "m",
+            "space": "VECTOR_4",
+            "variance": "UPPER"
+          },
+          "momentum": {
+            "name": "q",
+            "role": "CENTERED_LOOP",
+            "support": "REGULATED_HAT"
+          }
+        },
+        {
+          "index": {
+            "name": "n",
+            "space": "VECTOR_4",
+            "variance": "UPPER"
+          },
+          "momentum": {
+            "name": "q",
+            "role": "CENTERED_LOOP",
+            "support": "REGULATED_HAT"
+          }
+        },
+        {
+          "index": {
+            "name": "r",
+            "space": "VECTOR_4",
+            "variance": "UPPER"
+          },
+          "momentum": {
+            "name": "q",
+            "role": "CENTERED_LOOP",
+            "support": "REGULATED_HAT"
+          }
+        },
+        {
+          "index": {
+            "name": "s",
+            "space": "VECTOR_4",
+            "variance": "UPPER"
+          },
+          "momentum": {
+            "name": "q",
+            "role": "CENTERED_LOOP",
+            "support": "REGULATED_HAT"
+          }
+        }
+      ],
+      "numerator_id": "N_rank4_fixture",
+      "radial_scalar_moment": {
+        "kind": "PHYSICAL",
+        "name": "I_q4"
+      },
+      "rank": 4,
+      "regulator_scalar_in_bare_numerator": false,
+      "schema": "step6.typed_bare_dred_numerator.v1",
+      "source_graph_id": "G_rank4_fixture",
+      "spin_dalgebra_metrics": [
+        {
+          "construction": "FOUR_DIMENSIONAL_SPINOR_ANTICOMMUTATOR",
+          "indices": [
+            {
+              "name": "u",
+              "space": "VECTOR_4",
+              "variance": "UPPER"
+            },
+            {
+              "name": "v",
+              "space": "VECTOR_4",
+              "variance": "UPPER"
+            }
+          ],
+          "kind": "delta_(4)",
+          "proof_sha256": null,
+          "source_id": "fixture:D-algebra",
+          "stage": "SPIN_DALGEBRA"
+        }
+      ],
+      "stage": "BARE_DALGEBRA_NUMERATOR"
+    },
+    "rank4_generic_average": {
+      "bare_exact_coefficient": {
+        "atoms": [
+          {
+            "kind": "PHYSICAL",
+            "name": "C"
+          }
+        ],
+        "rational": {
+          "denominator": 5,
+          "numerator": 3
+        },
+        "sign": 1
+      },
+      "contractions": {
+        "X": {
+          "kind": "PHYSICAL",
+          "name": "X"
+        },
+        "Y": {
+          "kind": "PHYSICAL",
+          "name": "Y"
+        },
+        "Z": {
+          "kind": "PHYSICAL",
+          "name": "Z"
+        }
+      },
+      "epsilon_inserted_into_bare_numerator": false,
+      "external_operator_tensor": {
+        "derivation_provenance": "TYPED_FIXTURE_NO_PHYSICAL_COEFFICIENT",
+        "identity_sha256": "68bebe11d15c910b6d1f7b0ce34668870c6dfe9ab24125c7ae2f407705b84383",
+        "operator_id": "T4",
+        "ordered_indices": [
+          {
+            "name": "m",
+            "space": "VECTOR_4",
+            "variance": "LOWER"
+          },
+          {
+            "name": "n",
+            "space": "VECTOR_4",
+            "variance": "LOWER"
+          },
+          {
+            "name": "r",
+            "space": "VECTOR_4",
+            "variance": "LOWER"
+          },
+          {
+            "name": "s",
+            "space": "VECTOR_4",
+            "variance": "LOWER"
+          }
+        ],
+        "tensor_ast": {
+          "free_color_slots": [
+            "A",
+            "B",
+            "R",
+            "S"
+          ],
+          "op": "ExternalOperatorTensor",
+          "operator": "T4",
+          "ordered_vector_slots": [
+            "m",
+            "n",
+            "r",
+            "s"
+          ]
+        }
+      },
+      "external_operator_tensor_preserved_sha256": "68bebe11d15c910b6d1f7b0ce34668870c6dfe9ab24125c7ae2f407705b84383",
+      "formula": "T^(mnrs)=A hat_delta^(mn)hat_delta^(rs)+B hat_delta^(mr)hat_delta^(ns)+C hat_delta^(ms)hat_delta^(nr)",
+      "linear_system": [
+        "X=d^2 A+d B+d C",
+        "Y=d A+d^2 B+d C",
+        "Z=d A+d B+d^2 C"
+      ],
+      "loop_metric": "hat_delta",
+      "output_sha256": "f3c1a4b475d208f112973e368e9645e84b894d0eb6084d4a9b57aae94135a3b4",
+      "rank": 4,
+      "schema": "step6.typed_dred_tensor_average.v1",
+      "source_bare_numerator_sha256": "4b5a451024c87d140bccb17104dbc8caca42b80b0c0e1bf4a529d4c80dea20f1",
+      "source_graph_id": "G_rank4_fixture",
+      "source_numerator_id": "N_rank4_fixture",
+      "spectator_spin_dalgebra_metrics": [
+        {
+          "construction": "FOUR_DIMENSIONAL_SPINOR_ANTICOMMUTATOR",
+          "indices": [
+            {
+              "name": "u",
+              "space": "VECTOR_4",
+              "variance": "UPPER"
+            },
+            {
+              "name": "v",
+              "space": "VECTOR_4",
+              "variance": "UPPER"
+            }
+          ],
+          "kind": "delta_(4)",
+          "proof_sha256": null,
+          "source_id": "fixture:D-algebra",
+          "stage": "SPIN_DALGEBRA"
+        }
+      ],
+      "spin_metric_replacement_performed": false,
+      "stage": "LOOP_TENSOR_AVERAGING",
+      "terms": [
+        {
+          "channel": "A",
+          "coefficient": {
+            "d_definition": "tr(hat_delta)",
+            "denominator_factors": [
+              "d",
+              "d-1",
+              "d+2"
+            ],
+            "epsilon_expansion_performed": false,
+            "kind": "EXACT_RATIONAL_FUNCTION_OF_D_AFTER_TENSOR_AVERAGING",
+            "numerator_terms": [
+              {
+                "dimension_factor": "d+1",
+                "scalar_moment": {
+                  "kind": "PHYSICAL",
+                  "name": "X"
+                }
+              },
+              {
+                "dimension_factor": "-1",
+                "scalar_moment": {
+                  "kind": "PHYSICAL",
+                  "name": "Y"
+                }
+              },
+              {
+                "dimension_factor": "-1",
+                "scalar_moment": {
+                  "kind": "PHYSICAL",
+                  "name": "Z"
+                }
+              }
+            ]
+          },
+          "metric_product": [
+            {
+              "construction": "CENTERED_HAT_SPACE_ISOTROPIC_AVERAGE",
+              "indices": [
+                {
+                  "name": "m",
+                  "space": "VECTOR_4",
+                  "variance": "UPPER"
+                },
+                {
+                  "name": "n",
+                  "space": "VECTOR_4",
+                  "variance": "UPPER"
+                }
+              ],
+              "kind": "hat_delta",
+              "proof_sha256": null,
+              "source_id": "N_rank4_fixture:rank4:A:1",
+              "stage": "LOOP_TENSOR_AVERAGING"
+            },
+            {
+              "construction": "CENTERED_HAT_SPACE_ISOTROPIC_AVERAGE",
+              "indices": [
+                {
+                  "name": "r",
+                  "space": "VECTOR_4",
+                  "variance": "UPPER"
+                },
+                {
+                  "name": "s",
+                  "space": "VECTOR_4",
+                  "variance": "UPPER"
+                }
+              ],
+              "kind": "hat_delta",
+              "proof_sha256": null,
+              "source_id": "N_rank4_fixture:rank4:A:2",
+              "stage": "LOOP_TENSOR_AVERAGING"
+            }
+          ]
+        },
+        {
+          "channel": "B",
+          "coefficient": {
+            "d_definition": "tr(hat_delta)",
+            "denominator_factors": [
+              "d",
+              "d-1",
+              "d+2"
+            ],
+            "epsilon_expansion_performed": false,
+            "kind": "EXACT_RATIONAL_FUNCTION_OF_D_AFTER_TENSOR_AVERAGING",
+            "numerator_terms": [
+              {
+                "dimension_factor": "-1",
+                "scalar_moment": {
+                  "kind": "PHYSICAL",
+                  "name": "X"
+                }
+              },
+              {
+                "dimension_factor": "d+1",
+                "scalar_moment": {
+                  "kind": "PHYSICAL",
+                  "name": "Y"
+                }
+              },
+              {
+                "dimension_factor": "-1",
+                "scalar_moment": {
+                  "kind": "PHYSICAL",
+                  "name": "Z"
+                }
+              }
+            ]
+          },
+          "metric_product": [
+            {
+              "construction": "CENTERED_HAT_SPACE_ISOTROPIC_AVERAGE",
+              "indices": [
+                {
+                  "name": "m",
+                  "space": "VECTOR_4",
+                  "variance": "UPPER"
+                },
+                {
+                  "name": "r",
+                  "space": "VECTOR_4",
+                  "variance": "UPPER"
+                }
+              ],
+              "kind": "hat_delta",
+              "proof_sha256": null,
+              "source_id": "N_rank4_fixture:rank4:B:1",
+              "stage": "LOOP_TENSOR_AVERAGING"
+            },
+            {
+              "construction": "CENTERED_HAT_SPACE_ISOTROPIC_AVERAGE",
+              "indices": [
+                {
+                  "name": "n",
+                  "space": "VECTOR_4",
+                  "variance": "UPPER"
+                },
+                {
+                  "name": "s",
+                  "space": "VECTOR_4",
+                  "variance": "UPPER"
+                }
+              ],
+              "kind": "hat_delta",
+              "proof_sha256": null,
+              "source_id": "N_rank4_fixture:rank4:B:2",
+              "stage": "LOOP_TENSOR_AVERAGING"
+            }
+          ]
+        },
+        {
+          "channel": "C",
+          "coefficient": {
+            "d_definition": "tr(hat_delta)",
+            "denominator_factors": [
+              "d",
+              "d-1",
+              "d+2"
+            ],
+            "epsilon_expansion_performed": false,
+            "kind": "EXACT_RATIONAL_FUNCTION_OF_D_AFTER_TENSOR_AVERAGING",
+            "numerator_terms": [
+              {
+                "dimension_factor": "-1",
+                "scalar_moment": {
+                  "kind": "PHYSICAL",
+                  "name": "X"
+                }
+              },
+              {
+                "dimension_factor": "-1",
+                "scalar_moment": {
+                  "kind": "PHYSICAL",
+                  "name": "Y"
+                }
+              },
+              {
+                "dimension_factor": "d+1",
+                "scalar_moment": {
+                  "kind": "PHYSICAL",
+                  "name": "Z"
+                }
+              }
+            ]
+          },
+          "metric_product": [
+            {
+              "construction": "CENTERED_HAT_SPACE_ISOTROPIC_AVERAGE",
+              "indices": [
+                {
+                  "name": "m",
+                  "space": "VECTOR_4",
+                  "variance": "UPPER"
+                },
+                {
+                  "name": "s",
+                  "space": "VECTOR_4",
+                  "variance": "UPPER"
+                }
+              ],
+              "kind": "hat_delta",
+              "proof_sha256": null,
+              "source_id": "N_rank4_fixture:rank4:C:1",
+              "stage": "LOOP_TENSOR_AVERAGING"
+            },
+            {
+              "construction": "CENTERED_HAT_SPACE_ISOTROPIC_AVERAGE",
+              "indices": [
+                {
+                  "name": "n",
+                  "space": "VECTOR_4",
+                  "variance": "UPPER"
+                },
+                {
+                  "name": "r",
+                  "space": "VECTOR_4",
+                  "variance": "UPPER"
+                }
+              ],
+              "kind": "hat_delta",
+              "proof_sha256": null,
+              "source_id": "N_rank4_fixture:rank4:C:2",
+              "stage": "LOOP_TENSOR_AVERAGING"
+            }
+          ]
+        }
+      ]
+    },
+    "rank4_identical_average": {
+      "bare_exact_coefficient": {
+        "atoms": [
+          {
+            "kind": "PHYSICAL",
+            "name": "C"
+          }
+        ],
+        "rational": {
+          "denominator": 5,
+          "numerator": 3
+        },
+        "sign": 1
+      },
+      "epsilon_inserted_into_bare_numerator": false,
+      "external_operator_tensor": {
+        "derivation_provenance": "TYPED_FIXTURE_NO_PHYSICAL_COEFFICIENT",
+        "identity_sha256": "68bebe11d15c910b6d1f7b0ce34668870c6dfe9ab24125c7ae2f407705b84383",
+        "operator_id": "T4",
+        "ordered_indices": [
+          {
+            "name": "m",
+            "space": "VECTOR_4",
+            "variance": "LOWER"
+          },
+          {
+            "name": "n",
+            "space": "VECTOR_4",
+            "variance": "LOWER"
+          },
+          {
+            "name": "r",
+            "space": "VECTOR_4",
+            "variance": "LOWER"
+          },
+          {
+            "name": "s",
+            "space": "VECTOR_4",
+            "variance": "LOWER"
+          }
+        ],
+        "tensor_ast": {
+          "free_color_slots": [
+            "A",
+            "B",
+            "R",
+            "S"
+          ],
+          "op": "ExternalOperatorTensor",
+          "operator": "T4",
+          "ordered_vector_slots": [
+            "m",
+            "n",
+            "r",
+            "s"
+          ]
+        }
+      },
+      "external_operator_tensor_preserved_sha256": "68bebe11d15c910b6d1f7b0ce34668870c6dfe9ab24125c7ae2f407705b84383",
+      "formula": "I[q^m q^n q^r q^s F]=(hat_delta^(mn)hat_delta^(rs)+hat_delta^(mr)hat_delta^(ns)+hat_delta^(ms)hat_delta^(nr))/(d(d+2)) I[(q^2)^2F]",
+      "loop_metric": "hat_delta",
+      "output_sha256": "d04dfeaad92eb67a4f0108bd84bc20f7f21476fef9135980c1d2434e4c4d7968",
+      "rank": 4,
+      "schema": "step6.typed_dred_tensor_average.v1",
+      "source_bare_numerator_sha256": "4b5a451024c87d140bccb17104dbc8caca42b80b0c0e1bf4a529d4c80dea20f1",
+      "source_graph_id": "G_rank4_fixture",
+      "source_numerator_id": "N_rank4_fixture",
+      "specialization": "ONE_IDENTICAL_CENTERED_LOOP_VECTOR",
+      "spectator_spin_dalgebra_metrics": [
+        {
+          "construction": "FOUR_DIMENSIONAL_SPINOR_ANTICOMMUTATOR",
+          "indices": [
+            {
+              "name": "u",
+              "space": "VECTOR_4",
+              "variance": "UPPER"
+            },
+            {
+              "name": "v",
+              "space": "VECTOR_4",
+              "variance": "UPPER"
+            }
+          ],
+          "kind": "delta_(4)",
+          "proof_sha256": null,
+          "source_id": "fixture:D-algebra",
+          "stage": "SPIN_DALGEBRA"
+        }
+      ],
+      "spin_metric_replacement_performed": false,
+      "stage": "LOOP_TENSOR_AVERAGING",
+      "terms": [
+        {
+          "channel": "A",
+          "coefficient": {
+            "d_definition": "tr(hat_delta)",
+            "denominator_factors": [
+              "d",
+              "d+2"
+            ],
+            "epsilon_expansion_performed": false,
+            "kind": "EXACT_RATIONAL_FUNCTION_OF_D_AFTER_TENSOR_AVERAGING",
+            "numerator_terms": [
+              {
+                "dimension_factor": "1",
+                "scalar_moment": {
+                  "kind": "PHYSICAL",
+                  "name": "I_q4"
+                }
+              }
+            ]
+          },
+          "metric_product": [
+            {
+              "construction": "CENTERED_HAT_SPACE_ISOTROPIC_AVERAGE",
+              "indices": [
+                {
+                  "name": "m",
+                  "space": "VECTOR_4",
+                  "variance": "UPPER"
+                },
+                {
+                  "name": "n",
+                  "space": "VECTOR_4",
+                  "variance": "UPPER"
+                }
+              ],
+              "kind": "hat_delta",
+              "proof_sha256": null,
+              "source_id": "N_rank4_fixture:rank4-identical:A:1",
+              "stage": "LOOP_TENSOR_AVERAGING"
+            },
+            {
+              "construction": "CENTERED_HAT_SPACE_ISOTROPIC_AVERAGE",
+              "indices": [
+                {
+                  "name": "r",
+                  "space": "VECTOR_4",
+                  "variance": "UPPER"
+                },
+                {
+                  "name": "s",
+                  "space": "VECTOR_4",
+                  "variance": "UPPER"
+                }
+              ],
+              "kind": "hat_delta",
+              "proof_sha256": null,
+              "source_id": "N_rank4_fixture:rank4-identical:A:2",
+              "stage": "LOOP_TENSOR_AVERAGING"
+            }
+          ]
+        },
+        {
+          "channel": "B",
+          "coefficient": {
+            "d_definition": "tr(hat_delta)",
+            "denominator_factors": [
+              "d",
+              "d+2"
+            ],
+            "epsilon_expansion_performed": false,
+            "kind": "EXACT_RATIONAL_FUNCTION_OF_D_AFTER_TENSOR_AVERAGING",
+            "numerator_terms": [
+              {
+                "dimension_factor": "1",
+                "scalar_moment": {
+                  "kind": "PHYSICAL",
+                  "name": "I_q4"
+                }
+              }
+            ]
+          },
+          "metric_product": [
+            {
+              "construction": "CENTERED_HAT_SPACE_ISOTROPIC_AVERAGE",
+              "indices": [
+                {
+                  "name": "m",
+                  "space": "VECTOR_4",
+                  "variance": "UPPER"
+                },
+                {
+                  "name": "r",
+                  "space": "VECTOR_4",
+                  "variance": "UPPER"
+                }
+              ],
+              "kind": "hat_delta",
+              "proof_sha256": null,
+              "source_id": "N_rank4_fixture:rank4-identical:B:1",
+              "stage": "LOOP_TENSOR_AVERAGING"
+            },
+            {
+              "construction": "CENTERED_HAT_SPACE_ISOTROPIC_AVERAGE",
+              "indices": [
+                {
+                  "name": "n",
+                  "space": "VECTOR_4",
+                  "variance": "UPPER"
+                },
+                {
+                  "name": "s",
+                  "space": "VECTOR_4",
+                  "variance": "UPPER"
+                }
+              ],
+              "kind": "hat_delta",
+              "proof_sha256": null,
+              "source_id": "N_rank4_fixture:rank4-identical:B:2",
+              "stage": "LOOP_TENSOR_AVERAGING"
+            }
+          ]
+        },
+        {
+          "channel": "C",
+          "coefficient": {
+            "d_definition": "tr(hat_delta)",
+            "denominator_factors": [
+              "d",
+              "d+2"
+            ],
+            "epsilon_expansion_performed": false,
+            "kind": "EXACT_RATIONAL_FUNCTION_OF_D_AFTER_TENSOR_AVERAGING",
+            "numerator_terms": [
+              {
+                "dimension_factor": "1",
+                "scalar_moment": {
+                  "kind": "PHYSICAL",
+                  "name": "I_q4"
+                }
+              }
+            ]
+          },
+          "metric_product": [
+            {
+              "construction": "CENTERED_HAT_SPACE_ISOTROPIC_AVERAGE",
+              "indices": [
+                {
+                  "name": "m",
+                  "space": "VECTOR_4",
+                  "variance": "UPPER"
+                },
+                {
+                  "name": "s",
+                  "space": "VECTOR_4",
+                  "variance": "UPPER"
+                }
+              ],
+              "kind": "hat_delta",
+              "proof_sha256": null,
+              "source_id": "N_rank4_fixture:rank4-identical:C:1",
+              "stage": "LOOP_TENSOR_AVERAGING"
+            },
+            {
+              "construction": "CENTERED_HAT_SPACE_ISOTROPIC_AVERAGE",
+              "indices": [
+                {
+                  "name": "n",
+                  "space": "VECTOR_4",
+                  "variance": "UPPER"
+                },
+                {
+                  "name": "r",
+                  "space": "VECTOR_4",
+                  "variance": "UPPER"
+                }
+              ],
+              "kind": "hat_delta",
+              "proof_sha256": null,
+              "source_id": "N_rank4_fixture:rank4-identical:C:2",
+              "stage": "LOOP_TENSOR_AVERAGING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "negative_type_tests": [
+    {
+      "exception": "BareNumeratorError",
+      "label": "epsilon_in_bare_numerator",
+      "message": "bare numerator contains a DRED dimension or regulator scalar",
+      "status": "EXPECTED_FAIL_CLOSED"
+    },
+    {
+      "exception": "TypeSpaceError",
+      "label": "spinor_index_on_momentum",
+      "message": "momentum factor requires a four-vector index",
+      "status": "EXPECTED_FAIL_CLOSED"
+    },
+    {
+      "exception": "TypeSpaceError",
+      "label": "momentum_outside_hat_space",
+      "message": "every routed or centered momentum must lie in hat space",
+      "status": "EXPECTED_FAIL_CLOSED"
+    },
+    {
+      "exception": "MetricProvenanceError",
+      "label": "hat_metric_in_spin_D_algebra",
+      "message": "hat_delta cannot be emitted at SPIN_DALGEBRA",
+      "status": "EXPECTED_FAIL_CLOSED"
+    },
+    {
+      "exception": "MetricProvenanceError",
+      "label": "delta4_metric_in_loop_average",
+      "message": "delta_(4) cannot be emitted at LOOP_TENSOR_AVERAGING",
+      "status": "EXPECTED_FAIL_CLOSED"
+    },
+    {
+      "exception": "MetricProvenanceError",
+      "label": "premature_tilde_metric",
+      "message": "tilde_delta cannot be emitted at LOOP_TENSOR_AVERAGING",
+      "status": "EXPECTED_FAIL_CLOSED"
+    },
+    {
+      "exception": "TypeSpaceError",
+      "label": "spinor_index_on_vector_metric",
+      "message": "four-vector metric cannot carry a spinor index",
+      "status": "EXPECTED_FAIL_CLOSED"
+    },
+    {
+      "exception": "BareNumeratorError",
+      "label": "repeated_rank2_free_index",
+      "message": "loop-tensor free indices must be distinct",
+      "status": "EXPECTED_FAIL_CLOSED"
+    },
+    {
+      "exception": "TypeSpaceError",
+      "label": "covariant_centered_momentum",
+      "message": "centered tensor averaging accepts contravariant momenta",
+      "status": "EXPECTED_FAIL_CLOSED"
+    }
+  ],
+  "schema": "step6.dred_reducer.v1",
+  "stage": "TYPED_DRED_NUMERATOR_REDUCTION_NO_INTEGRATION",
+  "status": "PROPOSAL_ONLY_BLOCKED_ON_STEP5_ACCEPTANCE",
+  "terminal_blocks": {
+    "UV_poles": null,
+    "external_target_comparison": null,
+    "master_integrals": null,
+    "renormalized_coefficients": null,
+    "status": "OUT_OF_SCOPE_NO_RESULT_CLAIM"
+  },
+  "typed_contract": {
+    "bare_numerator_epsilon": "FORBIDDEN",
+    "d_expansion_before_laurent_multiplication": "FORBIDDEN",
+    "delta4": {
+      "contact_owner": "CONTACT_DALGEBRA",
+      "owner": "SPIN_DALGEBRA"
+    },
+    "hat_delta": {
+      "owner": "LOOP_TENSOR_AVERAGING"
+    },
+    "metric_decomposition": "delta_(4)=hat_delta+tilde_delta",
+    "orthogonality": "hat_delta*tilde_delta=0",
+    "projectors": [
+      "hat_delta^2=hat_delta",
+      "tilde_delta^2=tilde_delta"
+    ],
+    "tilde_delta": {
+      "only_constructor": "validated_contact_subtraction",
+      "owner": "POST_CONTACT_SUBTRACTION"
+    },
+    "traces": {
+      "delta_(4)": {
+        "atoms": [],
+        "bare_numerator_mutated": false,
+        "expression": "4",
+        "metric": "delta_(4)",
+        "stage": "METRIC_IDENTITY_AUDIT"
+      },
+      "hat_delta": {
+        "atoms": [
+          {
+            "kind": "DRED_DIMENSION",
+            "name": "d"
+          }
+        ],
+        "bare_numerator_mutated": false,
+        "definition": "d=4-2*epsilon_DRED",
+        "expression": "d",
+        "metric": "hat_delta",
+        "stage": "METRIC_IDENTITY_AUDIT"
+      },
+      "tilde_delta": {
+        "atoms": [
+          {
+            "kind": "DRED_REGULATOR",
+            "name": "epsilon_DRED"
+          }
+        ],
+        "bare_numerator_mutated": false,
+        "expression": "2*epsilon_DRED",
+        "metric": "tilde_delta",
+        "stage": "METRIC_IDENTITY_AUDIT"
+      }
+    }
+  }
+}

@@ -1,0 +1,322 @@
+{
+  "checks": [
+    {
+      "evidence": "/Users/libotao/Desktop/awi-step5-euclidean-n4/contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md",
+      "name": "contract_exists",
+      "status": "PASS"
+    },
+    {
+      "evidence": "6aa99202e1ac9522b6fa7d108d5ff898d17bf4a7ea33670f54e72de6f542e519",
+      "name": "rank2_external_tensor_preserved",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "coefficient": {
+          "d_definition": "tr(hat_delta)",
+          "denominator_factors": [
+            "d"
+          ],
+          "epsilon_expansion_performed": false,
+          "kind": "EXACT_RATIONAL_FUNCTION_OF_D_AFTER_TENSOR_AVERAGING",
+          "numerator_terms": [
+            {
+              "dimension_factor": "1",
+              "scalar_moment": {
+                "kind": "PHYSICAL",
+                "name": "I_qiqj"
+              }
+            }
+          ]
+        },
+        "metric_product": [
+          {
+            "construction": "CENTERED_HAT_SPACE_ISOTROPIC_AVERAGE",
+            "indices": [
+              {
+                "name": "m",
+                "space": "VECTOR_4",
+                "variance": "UPPER"
+              },
+              {
+                "name": "n",
+                "space": "VECTOR_4",
+                "variance": "UPPER"
+              }
+            ],
+            "kind": "hat_delta",
+            "proof_sha256": null,
+            "source_id": "N_rank2_fixture:rank2",
+            "stage": "LOOP_TENSOR_AVERAGING"
+          }
+        ]
+      },
+      "name": "rank2_average_uses_hat_over_d",
+      "status": "PASS"
+    },
+    {
+      "evidence": [
+        "A",
+        "B",
+        "C"
+      ],
+      "name": "rank4_three_pairings",
+      "status": "PASS"
+    },
+    {
+      "evidence": [
+        [
+          "d",
+          "d-1",
+          "d+2"
+        ],
+        [
+          "d",
+          "d-1",
+          "d+2"
+        ],
+        [
+          "d",
+          "d-1",
+          "d+2"
+        ]
+      ],
+      "name": "rank4_exact_denominator",
+      "status": "PASS"
+    },
+    {
+      "evidence": "I[q^m q^n q^r q^s F]=(hat_delta^(mn)hat_delta^(rs)+hat_delta^(mr)hat_delta^(ns)+hat_delta^(ms)hat_delta^(nr))/(d(d+2)) I[(q^2)^2F]",
+      "name": "rank4_identical_specialization",
+      "status": "PASS"
+    },
+    {
+      "evidence": [
+        {
+          "construction": "FOUR_DIMENSIONAL_SPINOR_ANTICOMMUTATOR",
+          "indices": [
+            {
+              "name": "u",
+              "space": "VECTOR_4",
+              "variance": "UPPER"
+            },
+            {
+              "name": "v",
+              "space": "VECTOR_4",
+              "variance": "UPPER"
+            }
+          ],
+          "kind": "delta_(4)",
+          "proof_sha256": null,
+          "source_id": "fixture:D-algebra",
+          "stage": "SPIN_DALGEBRA"
+        }
+      ],
+      "name": "spin_metric_is_not_replaced",
+      "status": "PASS"
+    },
+    {
+      "evidence": "typed ScalarAtomKind gate",
+      "name": "no_epsilon_in_bare_numerators",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "complete_contact_census": true,
+        "contact_term_sha256": "863a417cd2ad04139de8a3fd9763c25292236cf7c636bf149a15025688e3728f",
+        "identity": "hat_delta-delta_(4)=-tilde_delta",
+        "independent_source_graphs": true,
+        "opposite_required_signs": true,
+        "same_coefficient_magnitude": true,
+        "same_external_operator_tensor_sha256": "6aa99202e1ac9522b6fa7d108d5ff898d17bf4a7ea33670f54e72de6f542e519",
+        "triangle_term_sha256": "5b69a44823e1a3cf95cd73e01ebb65ae944f37a1236e61120cb32f7c759e8075"
+      },
+      "name": "tilde_only_after_validated_contact_subtraction",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "coefficient": {
+          "atoms": [
+            {
+              "kind": "PHYSICAL",
+              "name": "C"
+            }
+          ],
+          "rational": {
+            "denominator": 1,
+            "numerator": 1
+          },
+          "sign": -1
+        },
+        "external_operator_tensor": {
+          "derivation_provenance": "TYPED_FIXTURE_NO_PHYSICAL_COEFFICIENT",
+          "identity_sha256": "6aa99202e1ac9522b6fa7d108d5ff898d17bf4a7ea33670f54e72de6f542e519",
+          "operator_id": "T2",
+          "ordered_indices": [
+            {
+              "name": "m",
+              "space": "VECTOR_4",
+              "variance": "LOWER"
+            },
+            {
+              "name": "n",
+              "space": "VECTOR_4",
+              "variance": "LOWER"
+            }
+          ],
+          "tensor_ast": {
+            "free_color_slots": [
+              "A",
+              "B",
+              "R",
+              "S"
+            ],
+            "op": "ExternalOperatorTensor",
+            "operator": "T2",
+            "ordered_vector_slots": [
+              "m",
+              "n"
+            ]
+          }
+        },
+        "metric": {
+          "construction": "VALIDATED_INDEPENDENT_CONTACT_SUBTRACTION",
+          "indices": [
+            {
+              "name": "m",
+              "space": "VECTOR_4",
+              "variance": "UPPER"
+            },
+            {
+              "name": "n",
+              "space": "VECTOR_4",
+              "variance": "UPPER"
+            }
+          ],
+          "kind": "tilde_delta",
+          "proof_sha256": "155b166f76b0d55b2df40c14697eb2cc9c52434827600ba68075027e7ebb2b0b",
+          "source_id": "triangle_metric_fixture+contact_metric_fixture",
+          "stage": "POST_CONTACT_SUBTRACTION"
+        }
+      },
+      "name": "contact_result_is_minus_C_tilde",
+      "status": "PASS"
+    },
+    {
+      "evidence": [
+        {
+          "exception": "BareNumeratorError",
+          "label": "epsilon_in_bare_numerator",
+          "message": "bare numerator contains a DRED dimension or regulator scalar",
+          "status": "EXPECTED_FAIL_CLOSED"
+        },
+        {
+          "exception": "TypeSpaceError",
+          "label": "spinor_index_on_momentum",
+          "message": "momentum factor requires a four-vector index",
+          "status": "EXPECTED_FAIL_CLOSED"
+        },
+        {
+          "exception": "TypeSpaceError",
+          "label": "momentum_outside_hat_space",
+          "message": "every routed or centered momentum must lie in hat space",
+          "status": "EXPECTED_FAIL_CLOSED"
+        },
+        {
+          "exception": "MetricProvenanceError",
+          "label": "hat_metric_in_spin_D_algebra",
+          "message": "hat_delta cannot be emitted at SPIN_DALGEBRA",
+          "status": "EXPECTED_FAIL_CLOSED"
+        },
+        {
+          "exception": "MetricProvenanceError",
+          "label": "delta4_metric_in_loop_average",
+          "message": "delta_(4) cannot be emitted at LOOP_TENSOR_AVERAGING",
+          "status": "EXPECTED_FAIL_CLOSED"
+        },
+        {
+          "exception": "MetricProvenanceError",
+          "label": "premature_tilde_metric",
+          "message": "tilde_delta cannot be emitted at LOOP_TENSOR_AVERAGING",
+          "status": "EXPECTED_FAIL_CLOSED"
+        },
+        {
+          "exception": "TypeSpaceError",
+          "label": "spinor_index_on_vector_metric",
+          "message": "four-vector metric cannot carry a spinor index",
+          "status": "EXPECTED_FAIL_CLOSED"
+        },
+        {
+          "exception": "BareNumeratorError",
+          "label": "repeated_rank2_free_index",
+          "message": "loop-tensor free indices must be distinct",
+          "status": "EXPECTED_FAIL_CLOSED"
+        },
+        {
+          "exception": "TypeSpaceError",
+          "label": "covariant_centered_momentum",
+          "message": "centered tensor averaging accepts contravariant momenta",
+          "status": "EXPECTED_FAIL_CLOSED"
+        }
+      ],
+      "name": "all_illegal_type_mixes_fail_closed",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "delta_(4)": {
+          "atoms": [],
+          "bare_numerator_mutated": false,
+          "expression": "4",
+          "metric": "delta_(4)",
+          "stage": "METRIC_IDENTITY_AUDIT"
+        },
+        "hat_delta": {
+          "atoms": [
+            {
+              "kind": "DRED_DIMENSION",
+              "name": "d"
+            }
+          ],
+          "bare_numerator_mutated": false,
+          "definition": "d=4-2*epsilon_DRED",
+          "expression": "d",
+          "metric": "hat_delta",
+          "stage": "METRIC_IDENTITY_AUDIT"
+        },
+        "tilde_delta": {
+          "atoms": [
+            {
+              "kind": "DRED_REGULATOR",
+              "name": "epsilon_DRED"
+            }
+          ],
+          "bare_numerator_mutated": false,
+          "expression": "2*epsilon_DRED",
+          "metric": "tilde_delta",
+          "stage": "METRIC_IDENTITY_AUDIT"
+        }
+      },
+      "name": "trace_contract_exact",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "UV_poles": null,
+        "external_target_comparison": null,
+        "master_integrals": null,
+        "renormalized_coefficients": null,
+        "status": "OUT_OF_SCOPE_NO_RESULT_CLAIM"
+      },
+      "name": "no_terminal_physics_result",
+      "status": "PASS"
+    }
+  ],
+  "payload_sha256": "53ae6700496d1895f011c2cc2506f8e888af5c839e940214d6e5f69f17d352ae",
+  "schema": "step6.dred_reducer.audit.v1",
+  "status": "PASS",
+  "totals": {
+    "checks": 13,
+    "failed": 0
+  }
+}

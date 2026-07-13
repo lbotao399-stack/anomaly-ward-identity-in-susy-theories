@@ -59,8 +59,12 @@
     "holomorphic twist target"
   ],
   "derivation_artifact_files": [
+    "generated/step6/bitriangle-master/bitriangle-master.json",
+    "generated/step6/bitriangle-master/bitriangle-master.md",
     "generated/step6/coefficient-tensor/coefficient-tensor-programs.json",
     "generated/step6/coefficient-tensor/coefficient-tensor-programs.md",
+    "generated/step6/dred-reducer/dred-reducer.json",
+    "generated/step6/dred-reducer/dred-reducer.md",
     "generated/step6/external-projection/external-projection-certificate.json",
     "generated/step6/external-projection/external-projection-certificate.md",
     "generated/step6/global-supertensor/global-supertensor.json",
@@ -97,9 +101,12 @@
     "generated/step6/two-loop-wick/typed-wick-join.md"
   ],
   "derivation_source_files": [
+    "scripts/step6_bitriangle_master.py",
     "scripts/step6_coefficient_tensor.py",
     "scripts/step6_color_tensor.py",
+    "scripts/step6_dred_reducer.py",
     "scripts/step6_external_projection.py",
+    "scripts/step6_full_supertensor.py",
     "scripts/step6_global_supertensor.py",
     "scripts/step6_sd_orbit.py",
     "scripts/step6_symbolic_grassmann_oracle.py",
@@ -112,7 +119,7 @@
     "scripts/step6_two_loop_integrals.py",
     "scripts/step6_two_loop_wick.py"
   ],
-  "firewall_hash": "25c2ab2bb0fce5aab77a696d8a859b2a0f82de345216f54f27a7f7b123b65ac3",
+  "firewall_hash": "b2acc10b8fbe31fb366610417437cac7549c3015300ce4af46ff82f3c04e808d",
   "non_claims": [
     "NO_HUMAN_MEMORY_ISOLATION_CLAIM",
     "NO_PHYSICAL_CORRECTNESS_CLAIM",
