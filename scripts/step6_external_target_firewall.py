@@ -42,6 +42,7 @@ DERIVATION_GENERATED_DIRS = (
     "generated/step6/coefficient-tensor",
     "generated/step6/two-loop-color-tensor",
     "generated/step6/global-supertensor",
+    "generated/step6/sd-orbit",
 )
 
 

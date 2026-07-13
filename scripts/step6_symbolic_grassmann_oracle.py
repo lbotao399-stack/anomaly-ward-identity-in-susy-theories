@@ -14,6 +14,7 @@ import json
 import sys
 from dataclasses import dataclass
 from fractions import Fraction
+from functools import lru_cache
 from pathlib import Path
 from typing import Iterable, Mapping, Sequence
 
@@ -489,6 +490,7 @@ def matrix_sum(*matrices: SparseMatrix) -> SparseMatrix:
     return result
 
 
+@lru_cache(maxsize=None)
 def flat_operators(momentum: BispinorMomentum) -> dict[str, SparseMatrix]:
     """Translate the verified Project matrices to symbolic p_(a dot a)."""
 

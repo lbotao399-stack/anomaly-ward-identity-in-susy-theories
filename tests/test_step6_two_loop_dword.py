@@ -10,6 +10,8 @@ import unittest
 
 from scripts.step6_two_loop_dword import (
     BLOCKED_STATUS,
+    EXECUTOR_RESULT_VERSION,
+    EXECUTOR_SCHEMA_VERSION,
     INPUT_SCHEMA_VERSION,
     MEASURE_COMPONENTS,
     MINUS_ONE,
@@ -22,10 +24,15 @@ from scripts.step6_two_loop_dword import (
     build_payload,
     compile_schedule_contract,
     deterministic_missing_inputs,
+    endpoint_square_polynomial,
+    exact_executor_fixtures,
+    execute_edge_tagged_dalgebra,
+    graph_executor_endpoints,
     lexicographically_decreases,
     phase_measure_decreases,
     theta_decomposition,
     validate_derivative_token,
+    validate_global_join_key,
     validate_polynomial_oracle,
 )
 from scripts.step6_two_loop_graphir import (
@@ -288,6 +295,187 @@ class Step6TwoLoopDWordTests(unittest.TestCase):
         self.assertTrue(all(phase["after_measure"] is None for phase in result["phase_execution"]))
         self.assertIsNone(result["evaluated_word"])
         self.assertFalse(result["global_confluence_claimed"])
+
+    def test_graph_executor_endpoints_cover_internal_external_and_composite(self) -> None:
+        endpoints = graph_executor_endpoints(self.i3)
+        kinds = {endpoint["endpoint_kind"] for endpoint in endpoints}
+        self.assertEqual(
+            kinds,
+            {
+                "INTERNAL_SOURCE",
+                "INTERNAL_TARGET",
+                "EXTERNAL_BACKGROUND",
+                "COMPOSITE_SOURCE",
+            },
+        )
+        by_id = {endpoint["endpoint_id"]: endpoint for endpoint in endpoints}
+        for edge in self.i3["internal_edges"]:
+            source = by_id[edge["source_port"]]
+            target = by_id[edge["target_port"]]
+            self.assertEqual(
+                target["momentum"]["coefficients"],
+                [-value for value in source["momentum"]["coefficients"]],
+            )
+            self.assertEqual(source["paired_endpoint_id"], target["endpoint_id"])
+            self.assertEqual(target["paired_endpoint_id"], source["endpoint_id"])
+
+    def test_exact_graded_ibp_retains_external_composite_token_and_sign(self) -> None:
+        fixtures = exact_executor_fixtures(self.i3)
+        result = next(
+            item
+            for item in fixtures["results"]
+            if item["program_id"] == "FIXTURE_GRADED_IBP_EXTERNAL_TO_COMPOSITE"
+        )
+        self.assertEqual(result["schema_version"], EXECUTOR_RESULT_VERSION)
+        self.assertEqual(len(result["terms"]), 2)
+        by_component = {
+            term["ordered_tokens"][0]["spinor_component"]: term for term in result["terms"]
+        }
+        self.assertEqual(by_component["+"]["polynomial"], [{"monomial": [], "factor": qi(-1)}])
+        self.assertEqual(by_component["-"]["polynomial"], [{"monomial": [], "factor": qi(1)}])
+        for term in result["terms"]:
+            self.assertEqual(term["ordered_tokens"][0]["endpoint_id"], "fixture.composite")
+            self.assertEqual(
+                set(term["classifications"]),
+                {"COMPOSITE_SOURCE_DERIVATIVE", "D_ALGEBRA_REMAINDER", "EOM_REMAINDER"},
+            )
+            ledger_kinds = {
+                ledger["kind"]
+                for provenance in term["provenance"]
+                for ledger in provenance["ledger"]
+            }
+            self.assertEqual(ledger_kinds, {"ENDPOINT_TRANSFER", "KOSZUL"})
+        odd_koszul = [
+            ledger
+            for provenance in by_component["-"]["provenance"]
+            for ledger in provenance["ledger"]
+            if ledger["kind"] == "KOSZUL"
+        ]
+        self.assertEqual(odd_koszul[0]["factor"], qi(-1))
+
+    def test_internal_endpoint_transfer_and_mixed_anticommutator_execute(self) -> None:
+        fixtures = exact_executor_fixtures(self.i3)
+        result = next(
+            item
+            for item in fixtures["results"]
+            if item["program_id"] == "FIXTURE_INTERNAL_TARGET_TRANSFER_AND_MIXED_MOMENTUM"
+        )
+        scalar = next(term for term in result["terms"] if not term["ordered_tokens"])
+        self.assertEqual(scalar["classifications"], ["SCALAR_REMAINDER"])
+        self.assertTrue(scalar["polynomial"])
+        ledger = [
+            entry
+            for provenance in scalar["provenance"]
+            for entry in provenance["ledger"]
+        ]
+        self.assertEqual(
+            sum(entry["kind"] == "ENDPOINT_TRANSFER" for entry in ledger),
+            2,
+        )
+        self.assertEqual(
+            sum(entry["kind"] == "MIXED_ANTICOMMUTATOR" for entry in ledger),
+            1,
+        )
+        self.assertEqual(result["mixed_anticommutator"], "{D_a,barD_dota}=-2*i*p_(a,dota)")
+
+    def test_nilpotence_chirality_and_eom_are_typed_classifications(self) -> None:
+        fixtures = exact_executor_fixtures(self.i3)
+        result = next(
+            item
+            for item in fixtures["results"]
+            if item["program_id"] == "FIXTURE_NILPOTENCE_CHIRALITY_EOM"
+        )
+        classes = [zero["classification"] for zero in result["zero_terms"]]
+        self.assertEqual(classes.count("NILPOTENT_ZERO"), 1)
+        self.assertEqual(classes.count("CHIRALITY_ZERO"), 2)
+        self.assertTrue(any("EOM_REMAINDER" in term["classifications"] for term in result["terms"]))
+
+    def test_exact_momentum_determinant_collapses_one_propagator(self) -> None:
+        fixtures = exact_executor_fixtures(self.i3)
+        result = next(
+            item
+            for item in fixtures["results"]
+            if item["program_id"] == "FIXTURE_EXACT_R_SQUARE_PROPAGATOR_COLLAPSE"
+        )
+        collapsed = [
+            term for term in result["terms"] if "PROPAGATOR_COLLAPSE" in term["classifications"]
+        ]
+        self.assertEqual(len(collapsed), 1)
+        self.assertEqual(collapsed[0]["polynomial"], [{"monomial": [], "factor": qi(-4)}])
+        self.assertEqual(collapsed[0]["remaining_denominator_edges"], [])
+        self.assertEqual(collapsed[0]["collapsed_edges"][0]["quotient"], qi(-4))
+        self.assertFalse(result["DRED_performed"])
+        self.assertFalse(result["IBP_integral_reduction_performed"])
+        self.assertIsNone(result["UV_pole"])
+        self.assertIsNone(result["two_loop_coefficient"])
+
+    def test_executor_rejects_unknown_endpoint_and_schema(self) -> None:
+        program = {
+            "schema_version": EXECUTOR_SCHEMA_VERSION,
+            "program_id": "bad",
+            "program_kind": "FIXTURE",
+            "left_coefficient_order": True,
+            "endpoints": [],
+            "branches": [
+                {
+                    "branch_id": "b",
+                    "coefficient": qi(1),
+                    "ordered_tokens": [
+                        {
+                            "token_id": "D",
+                            "derivative_kind": "D",
+                            "spinor_component": "+",
+                            "endpoint_id": "missing",
+                            "carrier": "FIELD",
+                        }
+                    ],
+                    "denominator_edges": [],
+                }
+            ],
+            "ibp_transfers": [],
+        }
+        with self.assertRaisesRegex(ValueError, "unknown endpoint"):
+            execute_edge_tagged_dalgebra(program)
+        program["schema_version"] = "wrong"
+        with self.assertRaisesRegex(ValueError, "schema version"):
+            execute_edge_tagged_dalgebra(program)
+
+    def test_global_numerator_join_key_preserves_option_tuple_and_left_word(self) -> None:
+        join_key = {
+            "parent_id": "PARENT_FIXTURE",
+            "parent_vertex_order": ["I", "A", "B", "C"],
+            "ordered_local_amplitude_option_ids": ["I.opt", "A.opt", "B.opt", "C.opt"],
+            "global_left_coefficient_word": [
+                {
+                    "coefficient_id": f"x{index}",
+                    "basis_index": index,
+                    "parity": index.bit_count() & 1,
+                }
+                for index in range(10)
+            ],
+            "fixed_edge_pairing_order": [
+                {
+                    "edge_id": f"e{edge}",
+                    "source_coefficient_id": f"x{2 * edge}",
+                    "target_coefficient_id": f"x{2 * edge + 1}",
+                }
+                for edge in range(5)
+            ],
+        }
+        normalized = validate_global_join_key(join_key)
+        self.assertEqual(
+            normalized["ordered_local_amplitude_option_ids"],
+            ["I.opt", "A.opt", "B.opt", "C.opt"],
+        )
+        self.assertEqual(
+            [entry["coefficient_id"] for entry in normalized["global_left_coefficient_word"]],
+            [f"x{index}" for index in range(10)],
+        )
+        self.assertEqual(len(normalized["join_key_hash"]), 64)
+        broken = deepcopy(join_key)
+        broken["global_left_coefficient_word"][1]["parity"] = 0
+        with self.assertRaisesRegex(ValueError, "popcount"):
+            validate_global_join_key(broken)
 
     def test_missing_one_kernel_never_compiles(self) -> None:
         record = formal_complete_record(self.i2)

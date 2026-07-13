@@ -22,10 +22,10 @@
       "sha256": "4e82efda2a6e8cde02eaf00efe2c12cc3058fc05631162ce19b2ff074db85182"
     },
     {
-      "byte_count": 61006,
+      "byte_count": 61005,
       "path": "tasks/reviews/2026-07-12-step6-gpt-pro-round2-response.md",
       "role": "DENIED_DERIVATION_INPUT_GAP_REVIEW_ONLY",
-      "sha256": "48929292078bb911d25d57e989445ca794bb327990c17d955ad493476e8e6075"
+      "sha256": "cfd71b3ca8efa98f575acce8018832014956a324336cd55a55a72b7e22932cdf"
     },
     {
       "byte_count": 44221,
@@ -63,6 +63,10 @@
     "generated/step6/coefficient-tensor/coefficient-tensor-programs.md",
     "generated/step6/external-projection/external-projection-certificate.json",
     "generated/step6/external-projection/external-projection-certificate.md",
+    "generated/step6/global-supertensor/global-supertensor.json",
+    "generated/step6/global-supertensor/global-supertensor.md",
+    "generated/step6/sd-orbit/sd-orbit.json",
+    "generated/step6/sd-orbit/sd-orbit.md",
     "generated/step6/symbolic-grassmann-oracle/symbolic-grassmann-oracle.json",
     "generated/step6/symbolic-grassmann-oracle/symbolic-grassmann-oracle.md",
     "generated/step6/two-loop-amplitude-ir/pre-dalgebra-amplitude-ir.json",
@@ -96,6 +100,8 @@
     "scripts/step6_coefficient_tensor.py",
     "scripts/step6_color_tensor.py",
     "scripts/step6_external_projection.py",
+    "scripts/step6_global_supertensor.py",
+    "scripts/step6_sd_orbit.py",
     "scripts/step6_symbolic_grassmann_oracle.py",
     "scripts/step6_two_loop_amplitude_ir.py",
     "scripts/step6_two_loop_dword.py",
@@ -106,7 +112,7 @@
     "scripts/step6_two_loop_integrals.py",
     "scripts/step6_two_loop_wick.py"
   ],
-  "firewall_hash": "c718352f748d558f5be5a9a90ce1bacfceee4ac162ceffe5487d82d042dfc952",
+  "firewall_hash": "25c2ab2bb0fce5aab77a696d8a859b2a0f82de345216f54f27a7f7b123b65ac3",
   "non_claims": [
     "NO_HUMAN_MEMORY_ISOLATION_CLAIM",
     "NO_PHYSICAL_CORRECTNESS_CLAIM",

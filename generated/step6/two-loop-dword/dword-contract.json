@@ -1,5 +1,2924 @@
 {
+  "DRED_performed": false,
+  "IBP_integral_reduction_performed": false,
+  "UV_pole": null,
   "authority_role": "UNMERGED_PROPOSAL_NOT_COMPUTATIONAL_EVIDENCE",
+  "edge_tagged_executor_fixtures": {
+    "fixture_hash": "743d57e6a8add30d06f8efab633269f04f9c7c26ddeaf7251c2db0cbb869610c",
+    "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+    "programs": [
+      {
+        "branches": [
+          {
+            "branch_id": "ibp_even_source",
+            "coefficient": {
+              "domain": "Q(i)",
+              "im": "0",
+              "re": "1"
+            },
+            "denominator_edges": [],
+            "ordered_tokens": [
+              {
+                "carrier": "FIELD",
+                "derivative_kind": "D",
+                "endpoint_id": "fixture.background",
+                "operator_parity": 1,
+                "spinor_component": "+",
+                "token_id": "ibp_D"
+              }
+            ]
+          },
+          {
+            "branch_id": "ibp_odd_source",
+            "coefficient": {
+              "domain": "Q(i)",
+              "im": "0",
+              "re": "1"
+            },
+            "denominator_edges": [],
+            "ordered_tokens": [
+              {
+                "carrier": "FIELD",
+                "derivative_kind": "D",
+                "endpoint_id": "fixture.odd_external",
+                "operator_parity": 1,
+                "spinor_component": "-",
+                "token_id": "ibp_D_odd"
+              }
+            ]
+          }
+        ],
+        "endpoints": [
+          {
+            "chirality": "NONE",
+            "edge_id": null,
+            "endpoint_id": "fixture.background",
+            "endpoint_kind": "EXTERNAL_BACKGROUND",
+            "equation_class": "ORDINARY",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                0,
+                0,
+                0,
+                1,
+                0
+              ]
+            },
+            "paired_endpoint_id": null,
+            "parity": 0
+          },
+          {
+            "chirality": "NONE",
+            "edge_id": null,
+            "endpoint_id": "fixture.composite",
+            "endpoint_kind": "COMPOSITE_SOURCE",
+            "equation_class": "EOM",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                0,
+                0,
+                1,
+                0,
+                0
+              ]
+            },
+            "paired_endpoint_id": null,
+            "parity": 1
+          },
+          {
+            "chirality": "NONE",
+            "edge_id": null,
+            "endpoint_id": "fixture.odd_external",
+            "endpoint_kind": "EXTERNAL_BACKGROUND",
+            "equation_class": "ORDINARY",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            "paired_endpoint_id": null,
+            "parity": 1
+          }
+        ],
+        "ibp_transfers": [
+          {
+            "branch_id": "ibp_even_source",
+            "crossed_endpoint_ids": [
+              "fixture.background"
+            ],
+            "from_endpoint_id": "fixture.background",
+            "to_endpoint_id": "fixture.composite",
+            "token_id": "ibp_D"
+          },
+          {
+            "branch_id": "ibp_odd_source",
+            "crossed_endpoint_ids": [
+              "fixture.odd_external"
+            ],
+            "from_endpoint_id": "fixture.odd_external",
+            "to_endpoint_id": "fixture.composite",
+            "token_id": "ibp_D_odd"
+          }
+        ],
+        "left_coefficient_order": true,
+        "program_id": "FIXTURE_GRADED_IBP_EXTERNAL_TO_COMPOSITE",
+        "program_kind": "FIXTURE",
+        "schema_version": "step6.edge_tagged_dalgebra_program.v1"
+      },
+      {
+        "branches": [
+          {
+            "branch_id": "target_mixed",
+            "coefficient": {
+              "domain": "Q(i)",
+              "im": "0",
+              "re": "1"
+            },
+            "denominator_edges": [],
+            "ordered_tokens": [
+              {
+                "carrier": "PROPAGATOR_DELTA",
+                "derivative_kind": "D",
+                "endpoint_id": "I.q1",
+                "operator_parity": 1,
+                "spinor_component": "+",
+                "token_id": "target_D"
+              },
+              {
+                "carrier": "PROPAGATOR_DELTA",
+                "derivative_kind": "BAR_D",
+                "endpoint_id": "I.q1",
+                "operator_parity": 1,
+                "spinor_component": "dot+",
+                "token_id": "target_barD"
+              }
+            ]
+          }
+        ],
+        "endpoints": [
+          {
+            "chirality": "NONE",
+            "edge_id": "e_CI",
+            "endpoint_id": "C.q0",
+            "endpoint_kind": "INTERNAL_SOURCE",
+            "equation_class": "ORDINARY",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                1,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "paired_endpoint_id": "I.q0",
+            "parity": 0
+          },
+          {
+            "chirality": "NONE",
+            "edge_id": "e_CI",
+            "endpoint_id": "I.q0",
+            "endpoint_kind": "INTERNAL_TARGET",
+            "equation_class": "ORDINARY",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                -1,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "paired_endpoint_id": "C.q0",
+            "parity": 0
+          },
+          {
+            "chirality": "NONE",
+            "edge_id": "e_CA",
+            "endpoint_id": "C.q1",
+            "endpoint_kind": "INTERNAL_SOURCE",
+            "equation_class": "ORDINARY",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                0,
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "paired_endpoint_id": "A.q0",
+            "parity": 0
+          },
+          {
+            "chirality": "NONE",
+            "edge_id": "e_CA",
+            "endpoint_id": "A.q0",
+            "endpoint_kind": "INTERNAL_TARGET",
+            "equation_class": "ORDINARY",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                0,
+                -1,
+                0,
+                0,
+                0
+              ]
+            },
+            "paired_endpoint_id": "C.q1",
+            "parity": 0
+          },
+          {
+            "chirality": "NONE",
+            "edge_id": "e_AI",
+            "endpoint_id": "A.q1",
+            "endpoint_kind": "INTERNAL_SOURCE",
+            "equation_class": "ORDINARY",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                0,
+                1,
+                0,
+                -1,
+                0
+              ]
+            },
+            "paired_endpoint_id": "I.q1",
+            "parity": 0
+          },
+          {
+            "chirality": "NONE",
+            "edge_id": "e_AI",
+            "endpoint_id": "I.q1",
+            "endpoint_kind": "INTERNAL_TARGET",
+            "equation_class": "ORDINARY",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                0,
+                -1,
+                0,
+                1,
+                0
+              ]
+            },
+            "paired_endpoint_id": "A.q1",
+            "parity": 0
+          },
+          {
+            "chirality": "NONE",
+            "edge_id": "e_CB",
+            "endpoint_id": "C.q2",
+            "endpoint_kind": "INTERNAL_SOURCE",
+            "equation_class": "ORDINARY",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                -1,
+                -1,
+                0,
+                0,
+                0
+              ]
+            },
+            "paired_endpoint_id": "B.q0",
+            "parity": 0
+          },
+          {
+            "chirality": "NONE",
+            "edge_id": "e_CB",
+            "endpoint_id": "B.q0",
+            "endpoint_kind": "INTERNAL_TARGET",
+            "equation_class": "ORDINARY",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                1,
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "paired_endpoint_id": "C.q2",
+            "parity": 0
+          },
+          {
+            "chirality": "NONE",
+            "edge_id": "e_BI",
+            "endpoint_id": "B.q1",
+            "endpoint_kind": "INTERNAL_SOURCE",
+            "equation_class": "ORDINARY",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                -1,
+                -1,
+                0,
+                0,
+                -1
+              ]
+            },
+            "paired_endpoint_id": "I.q2",
+            "parity": 0
+          },
+          {
+            "chirality": "NONE",
+            "edge_id": "e_BI",
+            "endpoint_id": "I.q2",
+            "endpoint_kind": "INTERNAL_TARGET",
+            "equation_class": "ORDINARY",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                1,
+                1,
+                0,
+                0,
+                1
+              ]
+            },
+            "paired_endpoint_id": "B.q1",
+            "parity": 0
+          },
+          {
+            "chirality": "NONE",
+            "edge_id": null,
+            "endpoint_id": "I.composite_source",
+            "endpoint_kind": "COMPOSITE_SOURCE",
+            "equation_class": "EOM",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                0,
+                0,
+                1,
+                0,
+                0
+              ]
+            },
+            "paired_endpoint_id": null,
+            "parity": 0
+          },
+          {
+            "chirality": "NONE",
+            "edge_id": null,
+            "endpoint_id": "A.b0",
+            "endpoint_kind": "EXTERNAL_BACKGROUND",
+            "equation_class": "ORDINARY",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                0,
+                0,
+                0,
+                1,
+                0
+              ]
+            },
+            "paired_endpoint_id": null,
+            "parity": 0
+          },
+          {
+            "chirality": "NONE",
+            "edge_id": null,
+            "endpoint_id": "B.b0",
+            "endpoint_kind": "EXTERNAL_BACKGROUND",
+            "equation_class": "ORDINARY",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            "paired_endpoint_id": null,
+            "parity": 0
+          }
+        ],
+        "ibp_transfers": [],
+        "left_coefficient_order": true,
+        "program_id": "FIXTURE_INTERNAL_TARGET_TRANSFER_AND_MIXED_MOMENTUM",
+        "program_kind": "FIXTURE",
+        "schema_version": "step6.edge_tagged_dalgebra_program.v1"
+      },
+      {
+        "branches": [
+          {
+            "branch_id": "determinant_diagonal",
+            "coefficient": {
+              "domain": "Q(i)",
+              "im": "0",
+              "re": "1"
+            },
+            "denominator_edges": [
+              "e_AI"
+            ],
+            "ordered_tokens": [
+              {
+                "carrier": "PROPAGATOR_DELTA",
+                "derivative_kind": "D",
+                "endpoint_id": "A.q1",
+                "operator_parity": 1,
+                "spinor_component": "+",
+                "token_id": "a_Dp"
+              },
+              {
+                "carrier": "PROPAGATOR_DELTA",
+                "derivative_kind": "BAR_D",
+                "endpoint_id": "A.q1",
+                "operator_parity": 1,
+                "spinor_component": "dot+",
+                "token_id": "a_Bp"
+              },
+              {
+                "carrier": "PROPAGATOR_DELTA",
+                "derivative_kind": "D",
+                "endpoint_id": "A.q1",
+                "operator_parity": 1,
+                "spinor_component": "-",
+                "token_id": "a_Dm"
+              },
+              {
+                "carrier": "PROPAGATOR_DELTA",
+                "derivative_kind": "BAR_D",
+                "endpoint_id": "A.q1",
+                "operator_parity": 1,
+                "spinor_component": "dot-",
+                "token_id": "a_Bm"
+              }
+            ]
+          },
+          {
+            "branch_id": "determinant_off_diagonal",
+            "coefficient": {
+              "domain": "Q(i)",
+              "im": "0",
+              "re": "-1"
+            },
+            "denominator_edges": [
+              "e_AI"
+            ],
+            "ordered_tokens": [
+              {
+                "carrier": "PROPAGATOR_DELTA",
+                "derivative_kind": "D",
+                "endpoint_id": "A.q1",
+                "operator_parity": 1,
+                "spinor_component": "+",
+                "token_id": "b_Dp"
+              },
+              {
+                "carrier": "PROPAGATOR_DELTA",
+                "derivative_kind": "BAR_D",
+                "endpoint_id": "A.q1",
+                "operator_parity": 1,
+                "spinor_component": "dot-",
+                "token_id": "b_Bm"
+              },
+              {
+                "carrier": "PROPAGATOR_DELTA",
+                "derivative_kind": "D",
+                "endpoint_id": "A.q1",
+                "operator_parity": 1,
+                "spinor_component": "-",
+                "token_id": "b_Dm"
+              },
+              {
+                "carrier": "PROPAGATOR_DELTA",
+                "derivative_kind": "BAR_D",
+                "endpoint_id": "A.q1",
+                "operator_parity": 1,
+                "spinor_component": "dot+",
+                "token_id": "b_Bp"
+              }
+            ]
+          }
+        ],
+        "endpoints": [
+          {
+            "chirality": "NONE",
+            "edge_id": "e_CI",
+            "endpoint_id": "C.q0",
+            "endpoint_kind": "INTERNAL_SOURCE",
+            "equation_class": "ORDINARY",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                1,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "paired_endpoint_id": "I.q0",
+            "parity": 0
+          },
+          {
+            "chirality": "NONE",
+            "edge_id": "e_CI",
+            "endpoint_id": "I.q0",
+            "endpoint_kind": "INTERNAL_TARGET",
+            "equation_class": "ORDINARY",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                -1,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "paired_endpoint_id": "C.q0",
+            "parity": 0
+          },
+          {
+            "chirality": "NONE",
+            "edge_id": "e_CA",
+            "endpoint_id": "C.q1",
+            "endpoint_kind": "INTERNAL_SOURCE",
+            "equation_class": "ORDINARY",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                0,
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "paired_endpoint_id": "A.q0",
+            "parity": 0
+          },
+          {
+            "chirality": "NONE",
+            "edge_id": "e_CA",
+            "endpoint_id": "A.q0",
+            "endpoint_kind": "INTERNAL_TARGET",
+            "equation_class": "ORDINARY",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                0,
+                -1,
+                0,
+                0,
+                0
+              ]
+            },
+            "paired_endpoint_id": "C.q1",
+            "parity": 0
+          },
+          {
+            "chirality": "NONE",
+            "edge_id": "e_AI",
+            "endpoint_id": "A.q1",
+            "endpoint_kind": "INTERNAL_SOURCE",
+            "equation_class": "ORDINARY",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                0,
+                1,
+                0,
+                -1,
+                0
+              ]
+            },
+            "paired_endpoint_id": "I.q1",
+            "parity": 0
+          },
+          {
+            "chirality": "NONE",
+            "edge_id": "e_AI",
+            "endpoint_id": "I.q1",
+            "endpoint_kind": "INTERNAL_TARGET",
+            "equation_class": "ORDINARY",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                0,
+                -1,
+                0,
+                1,
+                0
+              ]
+            },
+            "paired_endpoint_id": "A.q1",
+            "parity": 0
+          },
+          {
+            "chirality": "NONE",
+            "edge_id": "e_CB",
+            "endpoint_id": "C.q2",
+            "endpoint_kind": "INTERNAL_SOURCE",
+            "equation_class": "ORDINARY",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                -1,
+                -1,
+                0,
+                0,
+                0
+              ]
+            },
+            "paired_endpoint_id": "B.q0",
+            "parity": 0
+          },
+          {
+            "chirality": "NONE",
+            "edge_id": "e_CB",
+            "endpoint_id": "B.q0",
+            "endpoint_kind": "INTERNAL_TARGET",
+            "equation_class": "ORDINARY",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                1,
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            "paired_endpoint_id": "C.q2",
+            "parity": 0
+          },
+          {
+            "chirality": "NONE",
+            "edge_id": "e_BI",
+            "endpoint_id": "B.q1",
+            "endpoint_kind": "INTERNAL_SOURCE",
+            "equation_class": "ORDINARY",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                -1,
+                -1,
+                0,
+                0,
+                -1
+              ]
+            },
+            "paired_endpoint_id": "I.q2",
+            "parity": 0
+          },
+          {
+            "chirality": "NONE",
+            "edge_id": "e_BI",
+            "endpoint_id": "I.q2",
+            "endpoint_kind": "INTERNAL_TARGET",
+            "equation_class": "ORDINARY",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                1,
+                1,
+                0,
+                0,
+                1
+              ]
+            },
+            "paired_endpoint_id": "B.q1",
+            "parity": 0
+          },
+          {
+            "chirality": "NONE",
+            "edge_id": null,
+            "endpoint_id": "I.composite_source",
+            "endpoint_kind": "COMPOSITE_SOURCE",
+            "equation_class": "EOM",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                0,
+                0,
+                1,
+                0,
+                0
+              ]
+            },
+            "paired_endpoint_id": null,
+            "parity": 0
+          },
+          {
+            "chirality": "NONE",
+            "edge_id": null,
+            "endpoint_id": "A.b0",
+            "endpoint_kind": "EXTERNAL_BACKGROUND",
+            "equation_class": "ORDINARY",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                0,
+                0,
+                0,
+                1,
+                0
+              ]
+            },
+            "paired_endpoint_id": null,
+            "parity": 0
+          },
+          {
+            "chirality": "NONE",
+            "edge_id": null,
+            "endpoint_id": "B.b0",
+            "endpoint_kind": "EXTERNAL_BACKGROUND",
+            "equation_class": "ORDINARY",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            "paired_endpoint_id": null,
+            "parity": 0
+          }
+        ],
+        "ibp_transfers": [],
+        "left_coefficient_order": true,
+        "program_id": "FIXTURE_EXACT_R_SQUARE_PROPAGATOR_COLLAPSE",
+        "program_kind": "FIXTURE",
+        "schema_version": "step6.edge_tagged_dalgebra_program.v1"
+      },
+      {
+        "branches": [
+          {
+            "branch_id": "barD_chiral_zero",
+            "coefficient": {
+              "domain": "Q(i)",
+              "im": "0",
+              "re": "1"
+            },
+            "denominator_edges": [],
+            "ordered_tokens": [
+              {
+                "carrier": "FIELD",
+                "derivative_kind": "BAR_D",
+                "endpoint_id": "fixture.chiral",
+                "operator_parity": 1,
+                "spinor_component": "dot+",
+                "token_id": "bar_ch"
+              }
+            ]
+          },
+          {
+            "branch_id": "D_antichiral_zero",
+            "coefficient": {
+              "domain": "Q(i)",
+              "im": "0",
+              "re": "1"
+            },
+            "denominator_edges": [],
+            "ordered_tokens": [
+              {
+                "carrier": "FIELD",
+                "derivative_kind": "D",
+                "endpoint_id": "fixture.antichiral",
+                "operator_parity": 1,
+                "spinor_component": "+",
+                "token_id": "D_ach"
+              }
+            ]
+          },
+          {
+            "branch_id": "eom_remainder",
+            "coefficient": {
+              "domain": "Q(i)",
+              "im": "0",
+              "re": "1"
+            },
+            "denominator_edges": [],
+            "ordered_tokens": [
+              {
+                "carrier": "FIELD",
+                "derivative_kind": "D",
+                "endpoint_id": "fixture.eom",
+                "operator_parity": 1,
+                "spinor_component": "-",
+                "token_id": "D_eom"
+              }
+            ]
+          },
+          {
+            "branch_id": "nilpotent_zero",
+            "coefficient": {
+              "domain": "Q(i)",
+              "im": "0",
+              "re": "1"
+            },
+            "denominator_edges": [],
+            "ordered_tokens": [
+              {
+                "carrier": "FIELD",
+                "derivative_kind": "D",
+                "endpoint_id": "fixture.ordinary",
+                "operator_parity": 1,
+                "spinor_component": "+",
+                "token_id": "D_nil_1"
+              },
+              {
+                "carrier": "FIELD",
+                "derivative_kind": "D",
+                "endpoint_id": "fixture.ordinary",
+                "operator_parity": 1,
+                "spinor_component": "+",
+                "token_id": "D_nil_2"
+              }
+            ]
+          }
+        ],
+        "endpoints": [
+          {
+            "chirality": "CHIRAL",
+            "edge_id": null,
+            "endpoint_id": "fixture.chiral",
+            "endpoint_kind": "EXTERNAL_BACKGROUND",
+            "equation_class": "ORDINARY",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                0,
+                0,
+                0,
+                1,
+                0
+              ]
+            },
+            "paired_endpoint_id": null,
+            "parity": 0
+          },
+          {
+            "chirality": "ANTICHIRAL",
+            "edge_id": null,
+            "endpoint_id": "fixture.antichiral",
+            "endpoint_kind": "EXTERNAL_BACKGROUND",
+            "equation_class": "ORDINARY",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            "paired_endpoint_id": null,
+            "parity": 0
+          },
+          {
+            "chirality": "NONE",
+            "edge_id": null,
+            "endpoint_id": "fixture.eom",
+            "endpoint_kind": "COMPOSITE_SOURCE",
+            "equation_class": "EOM",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                0,
+                0,
+                1,
+                0,
+                0
+              ]
+            },
+            "paired_endpoint_id": null,
+            "parity": 0
+          },
+          {
+            "chirality": "NONE",
+            "edge_id": null,
+            "endpoint_id": "fixture.ordinary",
+            "endpoint_kind": "EXTERNAL_BACKGROUND",
+            "equation_class": "ORDINARY",
+            "momentum": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "coefficients": [
+                0,
+                0,
+                0,
+                1,
+                0
+              ]
+            },
+            "paired_endpoint_id": null,
+            "parity": 0
+          }
+        ],
+        "ibp_transfers": [],
+        "left_coefficient_order": true,
+        "program_id": "FIXTURE_NILPOTENCE_CHIRALITY_EOM",
+        "program_kind": "FIXTURE",
+        "schema_version": "step6.edge_tagged_dalgebra_program.v1"
+      }
+    ],
+    "results": [
+      {
+        "DRED_performed": false,
+        "IBP_integral_reduction_performed": false,
+        "UV_pole": null,
+        "endpoint_transfer_rule": "D_target*delta=-D_source*delta",
+        "global_join_key": null,
+        "ibp_rule": "integral (D F)G=-(-1)^|F| integral F(D G)",
+        "left_coefficient_order": true,
+        "mixed_anticommutator": "{D_a,barD_dota}=-2*i*p_(a,dota)",
+        "phase_execution": [
+          {
+            "phase": "SCOPE_EXPANSION",
+            "status": "INPUT_ALREADY_EXACTLY_EXPANDED"
+          },
+          {
+            "phase": "ENDPOINT_CANONICALIZATION",
+            "status": "EXECUTED"
+          },
+          {
+            "phase": "PIVOTED_IBP",
+            "status": "EXECUTED"
+          },
+          {
+            "phase": "PRIMITIVE_NORMAL_ORDERING",
+            "status": "EXECUTED"
+          },
+          {
+            "phase": "PROJECTOR_REDUCTION",
+            "status": "NO_UNDECLARED_PROJECTOR_REWRITE"
+          },
+          {
+            "phase": "EXTERNAL_CHIRALITY",
+            "status": "EXECUTED"
+          },
+          {
+            "phase": "GRASSMANN_SATURATION",
+            "status": "CLASSIFIED_BY_EXACT_WORD"
+          },
+          {
+            "phase": "TYPED_EDGE_COLLAPSE",
+            "status": "EXECUTED_EXACT_R_SQUARE_ONLY"
+          }
+        ],
+        "program_hash": "3fd15a28f2539011cab7e7b37be4bf9c035a7fd8e6aeb7692ba6343b65878b14",
+        "program_id": "FIXTURE_GRADED_IBP_EXTERNAL_TO_COMPOSITE",
+        "program_kind": "FIXTURE",
+        "result_hash": "4f619ca925712f09c8b7d432af3ae65b20e9554f50231f5e54b73429345acef8",
+        "schema_version": "step6.edge_tagged_dalgebra_result.v1",
+        "terms": [
+          {
+            "classifications": [
+              "COMPOSITE_SOURCE_DERIVATIVE",
+              "D_ALGEBRA_REMAINDER",
+              "EOM_REMAINDER"
+            ],
+            "collapsed_edges": [],
+            "external_derivative_tokens": [
+              {
+                "carrier": "FIELD",
+                "derivative_kind": "D",
+                "endpoint_id": "fixture.composite",
+                "operator_parity": 1,
+                "spinor_component": "+",
+                "token_id": "ibp_D"
+              }
+            ],
+            "ordered_tokens": [
+              {
+                "carrier": "FIELD",
+                "derivative_kind": "D",
+                "endpoint_id": "fixture.composite",
+                "operator_parity": 1,
+                "spinor_component": "+",
+                "token_id": "ibp_D"
+              }
+            ],
+            "polynomial": [
+              {
+                "factor": {
+                  "domain": "Q(i)",
+                  "im": "0",
+                  "re": "-1"
+                },
+                "monomial": []
+              }
+            ],
+            "provenance": [
+              {
+                "branch_id": "ibp_even_source",
+                "ledger": [
+                  {
+                    "details": {
+                      "from": "fixture.background",
+                      "to": "fixture.composite"
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "0",
+                      "re": "-1"
+                    },
+                    "kind": "ENDPOINT_TRANSFER",
+                    "ledger_id": "ibp_even_source:IBP:0:boundary",
+                    "phase": "PIVOTED_IBP",
+                    "rule_id": "integral_of_total_D_is_zero",
+                    "token_ids": [
+                      "ibp_D"
+                    ]
+                  },
+                  {
+                    "details": {
+                      "crossed_endpoint_ids": [
+                        "fixture.background"
+                      ],
+                      "crossed_parities": [
+                        0
+                      ]
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "0",
+                      "re": "1"
+                    },
+                    "kind": "KOSZUL",
+                    "ledger_id": "ibp_even_source:IBP:0:koszul",
+                    "phase": "PIVOTED_IBP",
+                    "rule_id": "(-1)^(sum_crossed_endpoint_parities)",
+                    "token_ids": [
+                      "ibp_D"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "remaining_denominator_edges": []
+          },
+          {
+            "classifications": [
+              "COMPOSITE_SOURCE_DERIVATIVE",
+              "D_ALGEBRA_REMAINDER",
+              "EOM_REMAINDER"
+            ],
+            "collapsed_edges": [],
+            "external_derivative_tokens": [
+              {
+                "carrier": "FIELD",
+                "derivative_kind": "D",
+                "endpoint_id": "fixture.composite",
+                "operator_parity": 1,
+                "spinor_component": "-",
+                "token_id": "ibp_D_odd"
+              }
+            ],
+            "ordered_tokens": [
+              {
+                "carrier": "FIELD",
+                "derivative_kind": "D",
+                "endpoint_id": "fixture.composite",
+                "operator_parity": 1,
+                "spinor_component": "-",
+                "token_id": "ibp_D_odd"
+              }
+            ],
+            "polynomial": [
+              {
+                "factor": {
+                  "domain": "Q(i)",
+                  "im": "0",
+                  "re": "1"
+                },
+                "monomial": []
+              }
+            ],
+            "provenance": [
+              {
+                "branch_id": "ibp_odd_source",
+                "ledger": [
+                  {
+                    "details": {
+                      "from": "fixture.odd_external",
+                      "to": "fixture.composite"
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "0",
+                      "re": "-1"
+                    },
+                    "kind": "ENDPOINT_TRANSFER",
+                    "ledger_id": "ibp_odd_source:IBP:1:boundary",
+                    "phase": "PIVOTED_IBP",
+                    "rule_id": "integral_of_total_D_is_zero",
+                    "token_ids": [
+                      "ibp_D_odd"
+                    ]
+                  },
+                  {
+                    "details": {
+                      "crossed_endpoint_ids": [
+                        "fixture.odd_external"
+                      ],
+                      "crossed_parities": [
+                        1
+                      ]
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "0",
+                      "re": "-1"
+                    },
+                    "kind": "KOSZUL",
+                    "ledger_id": "ibp_odd_source:IBP:1:koszul",
+                    "phase": "PIVOTED_IBP",
+                    "rule_id": "(-1)^(sum_crossed_endpoint_parities)",
+                    "token_ids": [
+                      "ibp_D_odd"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "remaining_denominator_edges": []
+          }
+        ],
+        "two_loop_coefficient": null,
+        "zero_terms": []
+      },
+      {
+        "DRED_performed": false,
+        "IBP_integral_reduction_performed": false,
+        "UV_pole": null,
+        "endpoint_transfer_rule": "D_target*delta=-D_source*delta",
+        "global_join_key": null,
+        "ibp_rule": "integral (D F)G=-(-1)^|F| integral F(D G)",
+        "left_coefficient_order": true,
+        "mixed_anticommutator": "{D_a,barD_dota}=-2*i*p_(a,dota)",
+        "phase_execution": [
+          {
+            "phase": "SCOPE_EXPANSION",
+            "status": "INPUT_ALREADY_EXACTLY_EXPANDED"
+          },
+          {
+            "phase": "ENDPOINT_CANONICALIZATION",
+            "status": "EXECUTED"
+          },
+          {
+            "phase": "PIVOTED_IBP",
+            "status": "EXECUTED"
+          },
+          {
+            "phase": "PRIMITIVE_NORMAL_ORDERING",
+            "status": "EXECUTED"
+          },
+          {
+            "phase": "PROJECTOR_REDUCTION",
+            "status": "NO_UNDECLARED_PROJECTOR_REWRITE"
+          },
+          {
+            "phase": "EXTERNAL_CHIRALITY",
+            "status": "EXECUTED"
+          },
+          {
+            "phase": "GRASSMANN_SATURATION",
+            "status": "CLASSIFIED_BY_EXACT_WORD"
+          },
+          {
+            "phase": "TYPED_EDGE_COLLAPSE",
+            "status": "EXECUTED_EXACT_R_SQUARE_ONLY"
+          }
+        ],
+        "program_hash": "9a6442b6dd188fee46649953a2988568898a272df53a5e7197daf8e44a495fe7",
+        "program_id": "FIXTURE_INTERNAL_TARGET_TRANSFER_AND_MIXED_MOMENTUM",
+        "program_kind": "FIXTURE",
+        "result_hash": "66be83134b182b9b645355dc13620517fe2f21ba17acb449007f2d6dd64a546a",
+        "schema_version": "step6.edge_tagged_dalgebra_result.v1",
+        "terms": [
+          {
+            "classifications": [
+              "SCALAR_REMAINDER"
+            ],
+            "collapsed_edges": [],
+            "external_derivative_tokens": [],
+            "ordered_tokens": [],
+            "polynomial": [
+              {
+                "factor": {
+                  "domain": "Q(i)",
+                  "im": "-2",
+                  "re": "0"
+                },
+                "monomial": [
+                  {
+                    "exponent": 1,
+                    "symbol": "l_pp"
+                  }
+                ]
+              },
+              {
+                "factor": {
+                  "domain": "Q(i)",
+                  "im": "2",
+                  "re": "0"
+                },
+                "monomial": [
+                  {
+                    "exponent": 1,
+                    "symbol": "p1_pp"
+                  }
+                ]
+              }
+            ],
+            "provenance": [
+              {
+                "branch_id": "target_mixed",
+                "ledger": [
+                  {
+                    "details": {
+                      "edge_id": "e_AI",
+                      "from": "I.q1",
+                      "to": "A.q1"
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "0",
+                      "re": "-1"
+                    },
+                    "kind": "ENDPOINT_TRANSFER",
+                    "ledger_id": "target_mixed:DELTA_TRANSFER:0",
+                    "phase": "ENDPOINT_CANONICALIZATION",
+                    "rule_id": "D_target_delta(theta_source-theta_target)=-D_source_delta",
+                    "token_ids": [
+                      "target_D"
+                    ]
+                  },
+                  {
+                    "details": {
+                      "edge_id": "e_AI",
+                      "from": "I.q1",
+                      "to": "A.q1"
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "0",
+                      "re": "-1"
+                    },
+                    "kind": "ENDPOINT_TRANSFER",
+                    "ledger_id": "target_mixed:DELTA_TRANSFER:1",
+                    "phase": "ENDPOINT_CANONICALIZATION",
+                    "rule_id": "D_target_delta(theta_source-theta_target)=-D_source_delta",
+                    "token_ids": [
+                      "target_barD"
+                    ]
+                  },
+                  {
+                    "details": {
+                      "dotted": "dot+",
+                      "endpoint_id": "A.q1",
+                      "momentum_basis": [
+                        "k",
+                        "l",
+                        "P",
+                        "p1",
+                        "p2"
+                      ],
+                      "momentum_coefficients": [
+                        0,
+                        1,
+                        0,
+                        -1,
+                        0
+                      ],
+                      "undotted": "+"
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "-2",
+                      "re": "0"
+                    },
+                    "kind": "MIXED_ANTICOMMUTATOR",
+                    "ledger_id": "target_mixed:MIXED:0:2",
+                    "phase": "PRIMITIVE_NORMAL_ORDERING",
+                    "rule_id": "{D_a,barD_dota}=-2*i*p_(a,dota)",
+                    "token_ids": [
+                      "target_D",
+                      "target_barD"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "remaining_denominator_edges": []
+          },
+          {
+            "classifications": [
+              "D_ALGEBRA_REMAINDER"
+            ],
+            "collapsed_edges": [],
+            "external_derivative_tokens": [],
+            "ordered_tokens": [
+              {
+                "carrier": "PROPAGATOR_DELTA",
+                "derivative_kind": "BAR_D",
+                "endpoint_id": "A.q1",
+                "operator_parity": 1,
+                "spinor_component": "dot+",
+                "token_id": "target_barD"
+              },
+              {
+                "carrier": "PROPAGATOR_DELTA",
+                "derivative_kind": "D",
+                "endpoint_id": "A.q1",
+                "operator_parity": 1,
+                "spinor_component": "+",
+                "token_id": "target_D"
+              }
+            ],
+            "polynomial": [
+              {
+                "factor": {
+                  "domain": "Q(i)",
+                  "im": "0",
+                  "re": "-1"
+                },
+                "monomial": []
+              }
+            ],
+            "provenance": [
+              {
+                "branch_id": "target_mixed",
+                "ledger": [
+                  {
+                    "details": {
+                      "edge_id": "e_AI",
+                      "from": "I.q1",
+                      "to": "A.q1"
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "0",
+                      "re": "-1"
+                    },
+                    "kind": "ENDPOINT_TRANSFER",
+                    "ledger_id": "target_mixed:DELTA_TRANSFER:0",
+                    "phase": "ENDPOINT_CANONICALIZATION",
+                    "rule_id": "D_target_delta(theta_source-theta_target)=-D_source_delta",
+                    "token_ids": [
+                      "target_D"
+                    ]
+                  },
+                  {
+                    "details": {
+                      "edge_id": "e_AI",
+                      "from": "I.q1",
+                      "to": "A.q1"
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "0",
+                      "re": "-1"
+                    },
+                    "kind": "ENDPOINT_TRANSFER",
+                    "ledger_id": "target_mixed:DELTA_TRANSFER:1",
+                    "phase": "ENDPOINT_CANONICALIZATION",
+                    "rule_id": "D_target_delta(theta_source-theta_target)=-D_source_delta",
+                    "token_ids": [
+                      "target_barD"
+                    ]
+                  },
+                  {
+                    "details": {
+                      "same_endpoint": true
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "0",
+                      "re": "-1"
+                    },
+                    "kind": "PRIMITIVE_REORDER",
+                    "ledger_id": "target_mixed:SWAP:0:2",
+                    "phase": "PRIMITIVE_NORMAL_ORDERING",
+                    "rule_id": "odd_primitive_swap",
+                    "token_ids": [
+                      "target_D",
+                      "target_barD"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "remaining_denominator_edges": []
+          }
+        ],
+        "two_loop_coefficient": null,
+        "zero_terms": []
+      },
+      {
+        "DRED_performed": false,
+        "IBP_integral_reduction_performed": false,
+        "UV_pole": null,
+        "endpoint_transfer_rule": "D_target*delta=-D_source*delta",
+        "global_join_key": null,
+        "ibp_rule": "integral (D F)G=-(-1)^|F| integral F(D G)",
+        "left_coefficient_order": true,
+        "mixed_anticommutator": "{D_a,barD_dota}=-2*i*p_(a,dota)",
+        "phase_execution": [
+          {
+            "phase": "SCOPE_EXPANSION",
+            "status": "INPUT_ALREADY_EXACTLY_EXPANDED"
+          },
+          {
+            "phase": "ENDPOINT_CANONICALIZATION",
+            "status": "EXECUTED"
+          },
+          {
+            "phase": "PIVOTED_IBP",
+            "status": "EXECUTED"
+          },
+          {
+            "phase": "PRIMITIVE_NORMAL_ORDERING",
+            "status": "EXECUTED"
+          },
+          {
+            "phase": "PROJECTOR_REDUCTION",
+            "status": "NO_UNDECLARED_PROJECTOR_REWRITE"
+          },
+          {
+            "phase": "EXTERNAL_CHIRALITY",
+            "status": "EXECUTED"
+          },
+          {
+            "phase": "GRASSMANN_SATURATION",
+            "status": "CLASSIFIED_BY_EXACT_WORD"
+          },
+          {
+            "phase": "TYPED_EDGE_COLLAPSE",
+            "status": "EXECUTED_EXACT_R_SQUARE_ONLY"
+          }
+        ],
+        "program_hash": "cae58f0daa54155b233e5df0f08453021425bd07e1af35f17180c3babe13ed3e",
+        "program_id": "FIXTURE_EXACT_R_SQUARE_PROPAGATOR_COLLAPSE",
+        "program_kind": "FIXTURE",
+        "result_hash": "8112666c4f47885e23573d9d25e03c65a3409a96cf9cef876d4aaec9d9bbea48",
+        "schema_version": "step6.edge_tagged_dalgebra_result.v1",
+        "terms": [
+          {
+            "classifications": [
+              "PROPAGATOR_COLLAPSE"
+            ],
+            "collapsed_edges": [
+              {
+                "edge_id": "e_AI",
+                "quotient": {
+                  "domain": "Q(i)",
+                  "im": "0",
+                  "re": "-4"
+                },
+                "rule": "exact_numerator_equals_scalar_times_r_square"
+              }
+            ],
+            "external_derivative_tokens": [],
+            "ordered_tokens": [],
+            "polynomial": [
+              {
+                "factor": {
+                  "domain": "Q(i)",
+                  "im": "0",
+                  "re": "-4"
+                },
+                "monomial": []
+              }
+            ],
+            "provenance": [
+              {
+                "branch_id": "determinant_diagonal",
+                "ledger": [
+                  {
+                    "details": {
+                      "dotted": "dot+",
+                      "endpoint_id": "A.q1",
+                      "momentum_basis": [
+                        "k",
+                        "l",
+                        "P",
+                        "p1",
+                        "p2"
+                      ],
+                      "momentum_coefficients": [
+                        0,
+                        1,
+                        0,
+                        -1,
+                        0
+                      ],
+                      "undotted": "+"
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "-2",
+                      "re": "0"
+                    },
+                    "kind": "MIXED_ANTICOMMUTATOR",
+                    "ledger_id": "determinant_diagonal:MIXED:0:0",
+                    "phase": "PRIMITIVE_NORMAL_ORDERING",
+                    "rule_id": "{D_a,barD_dota}=-2*i*p_(a,dota)",
+                    "token_ids": [
+                      "a_Dp",
+                      "a_Bp"
+                    ]
+                  },
+                  {
+                    "details": {
+                      "dotted": "dot-",
+                      "endpoint_id": "A.q1",
+                      "momentum_basis": [
+                        "k",
+                        "l",
+                        "P",
+                        "p1",
+                        "p2"
+                      ],
+                      "momentum_coefficients": [
+                        0,
+                        1,
+                        0,
+                        -1,
+                        0
+                      ],
+                      "undotted": "-"
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "-2",
+                      "re": "0"
+                    },
+                    "kind": "MIXED_ANTICOMMUTATOR",
+                    "ledger_id": "determinant_diagonal:MIXED:0:1",
+                    "phase": "PRIMITIVE_NORMAL_ORDERING",
+                    "rule_id": "{D_a,barD_dota}=-2*i*p_(a,dota)",
+                    "token_ids": [
+                      "a_Dm",
+                      "a_Bm"
+                    ]
+                  }
+                ]
+              },
+              {
+                "branch_id": "determinant_off_diagonal",
+                "ledger": [
+                  {
+                    "details": {
+                      "dotted": "dot-",
+                      "endpoint_id": "A.q1",
+                      "momentum_basis": [
+                        "k",
+                        "l",
+                        "P",
+                        "p1",
+                        "p2"
+                      ],
+                      "momentum_coefficients": [
+                        0,
+                        1,
+                        0,
+                        -1,
+                        0
+                      ],
+                      "undotted": "+"
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "-2",
+                      "re": "0"
+                    },
+                    "kind": "MIXED_ANTICOMMUTATOR",
+                    "ledger_id": "determinant_off_diagonal:MIXED:0:0",
+                    "phase": "PRIMITIVE_NORMAL_ORDERING",
+                    "rule_id": "{D_a,barD_dota}=-2*i*p_(a,dota)",
+                    "token_ids": [
+                      "b_Dp",
+                      "b_Bm"
+                    ]
+                  },
+                  {
+                    "details": {
+                      "dotted": "dot+",
+                      "endpoint_id": "A.q1",
+                      "momentum_basis": [
+                        "k",
+                        "l",
+                        "P",
+                        "p1",
+                        "p2"
+                      ],
+                      "momentum_coefficients": [
+                        0,
+                        1,
+                        0,
+                        -1,
+                        0
+                      ],
+                      "undotted": "-"
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "-2",
+                      "re": "0"
+                    },
+                    "kind": "MIXED_ANTICOMMUTATOR",
+                    "ledger_id": "determinant_off_diagonal:MIXED:0:1",
+                    "phase": "PRIMITIVE_NORMAL_ORDERING",
+                    "rule_id": "{D_a,barD_dota}=-2*i*p_(a,dota)",
+                    "token_ids": [
+                      "b_Dm",
+                      "b_Bp"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "remaining_denominator_edges": []
+          },
+          {
+            "classifications": [
+              "D_ALGEBRA_REMAINDER"
+            ],
+            "collapsed_edges": [],
+            "external_derivative_tokens": [],
+            "ordered_tokens": [
+              {
+                "carrier": "PROPAGATOR_DELTA",
+                "derivative_kind": "BAR_D",
+                "endpoint_id": "A.q1",
+                "operator_parity": 1,
+                "spinor_component": "dot+",
+                "token_id": "a_Bp"
+              },
+              {
+                "carrier": "PROPAGATOR_DELTA",
+                "derivative_kind": "BAR_D",
+                "endpoint_id": "A.q1",
+                "operator_parity": 1,
+                "spinor_component": "dot-",
+                "token_id": "a_Bm"
+              },
+              {
+                "carrier": "PROPAGATOR_DELTA",
+                "derivative_kind": "D",
+                "endpoint_id": "A.q1",
+                "operator_parity": 1,
+                "spinor_component": "+",
+                "token_id": "a_Dp"
+              },
+              {
+                "carrier": "PROPAGATOR_DELTA",
+                "derivative_kind": "D",
+                "endpoint_id": "A.q1",
+                "operator_parity": 1,
+                "spinor_component": "-",
+                "token_id": "a_Dm"
+              }
+            ],
+            "polynomial": [
+              {
+                "factor": {
+                  "domain": "Q(i)",
+                  "im": "0",
+                  "re": "-2"
+                },
+                "monomial": []
+              }
+            ],
+            "provenance": [
+              {
+                "branch_id": "determinant_diagonal",
+                "ledger": [
+                  {
+                    "details": {
+                      "same_endpoint": true
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "0",
+                      "re": "-1"
+                    },
+                    "kind": "PRIMITIVE_REORDER",
+                    "ledger_id": "determinant_diagonal:SWAP:0:0",
+                    "phase": "PRIMITIVE_NORMAL_ORDERING",
+                    "rule_id": "odd_primitive_swap",
+                    "token_ids": [
+                      "a_Dp",
+                      "a_Bp"
+                    ]
+                  },
+                  {
+                    "details": {
+                      "same_endpoint": true
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "0",
+                      "re": "-1"
+                    },
+                    "kind": "PRIMITIVE_REORDER",
+                    "ledger_id": "determinant_diagonal:SWAP:2:1",
+                    "phase": "PRIMITIVE_NORMAL_ORDERING",
+                    "rule_id": "odd_primitive_swap",
+                    "token_ids": [
+                      "a_Dm",
+                      "a_Bm"
+                    ]
+                  },
+                  {
+                    "details": {
+                      "same_endpoint": true
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "0",
+                      "re": "-1"
+                    },
+                    "kind": "PRIMITIVE_REORDER",
+                    "ledger_id": "determinant_diagonal:SWAP:1:2",
+                    "phase": "PRIMITIVE_NORMAL_ORDERING",
+                    "rule_id": "odd_primitive_swap",
+                    "token_ids": [
+                      "a_Dp",
+                      "a_Bm"
+                    ]
+                  }
+                ]
+              },
+              {
+                "branch_id": "determinant_off_diagonal",
+                "ledger": [
+                  {
+                    "details": {
+                      "same_endpoint": true
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "0",
+                      "re": "-1"
+                    },
+                    "kind": "PRIMITIVE_REORDER",
+                    "ledger_id": "determinant_off_diagonal:SWAP:0:0",
+                    "phase": "PRIMITIVE_NORMAL_ORDERING",
+                    "rule_id": "odd_primitive_swap",
+                    "token_ids": [
+                      "b_Dp",
+                      "b_Bm"
+                    ]
+                  },
+                  {
+                    "details": {
+                      "same_endpoint": true
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "0",
+                      "re": "-1"
+                    },
+                    "kind": "PRIMITIVE_REORDER",
+                    "ledger_id": "determinant_off_diagonal:SWAP:2:1",
+                    "phase": "PRIMITIVE_NORMAL_ORDERING",
+                    "rule_id": "odd_primitive_swap",
+                    "token_ids": [
+                      "b_Dm",
+                      "b_Bp"
+                    ]
+                  },
+                  {
+                    "details": {
+                      "same_endpoint": true
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "0",
+                      "re": "-1"
+                    },
+                    "kind": "PRIMITIVE_REORDER",
+                    "ledger_id": "determinant_off_diagonal:SWAP:1:2",
+                    "phase": "PRIMITIVE_NORMAL_ORDERING",
+                    "rule_id": "odd_primitive_swap",
+                    "token_ids": [
+                      "b_Dp",
+                      "b_Bp"
+                    ]
+                  },
+                  {
+                    "details": {
+                      "same_endpoint": true
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "0",
+                      "re": "-1"
+                    },
+                    "kind": "PRIMITIVE_REORDER",
+                    "ledger_id": "determinant_off_diagonal:SWAP:0:3",
+                    "phase": "PRIMITIVE_NORMAL_ORDERING",
+                    "rule_id": "odd_primitive_swap",
+                    "token_ids": [
+                      "b_Bm",
+                      "b_Bp"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "remaining_denominator_edges": [
+              "e_AI"
+            ]
+          },
+          {
+            "classifications": [
+              "D_ALGEBRA_REMAINDER"
+            ],
+            "collapsed_edges": [],
+            "external_derivative_tokens": [],
+            "ordered_tokens": [
+              {
+                "carrier": "PROPAGATOR_DELTA",
+                "derivative_kind": "BAR_D",
+                "endpoint_id": "A.q1",
+                "operator_parity": 1,
+                "spinor_component": "dot+",
+                "token_id": "a_Bp"
+              },
+              {
+                "carrier": "PROPAGATOR_DELTA",
+                "derivative_kind": "D",
+                "endpoint_id": "A.q1",
+                "operator_parity": 1,
+                "spinor_component": "+",
+                "token_id": "a_Dp"
+              }
+            ],
+            "polynomial": [
+              {
+                "factor": {
+                  "domain": "Q(i)",
+                  "im": "2",
+                  "re": "0"
+                },
+                "monomial": [
+                  {
+                    "exponent": 1,
+                    "symbol": "l_mm"
+                  }
+                ]
+              },
+              {
+                "factor": {
+                  "domain": "Q(i)",
+                  "im": "-2",
+                  "re": "0"
+                },
+                "monomial": [
+                  {
+                    "exponent": 1,
+                    "symbol": "p1_mm"
+                  }
+                ]
+              }
+            ],
+            "provenance": [
+              {
+                "branch_id": "determinant_diagonal",
+                "ledger": [
+                  {
+                    "details": {
+                      "same_endpoint": true
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "0",
+                      "re": "-1"
+                    },
+                    "kind": "PRIMITIVE_REORDER",
+                    "ledger_id": "determinant_diagonal:SWAP:0:0",
+                    "phase": "PRIMITIVE_NORMAL_ORDERING",
+                    "rule_id": "odd_primitive_swap",
+                    "token_ids": [
+                      "a_Dp",
+                      "a_Bp"
+                    ]
+                  },
+                  {
+                    "details": {
+                      "dotted": "dot-",
+                      "endpoint_id": "A.q1",
+                      "momentum_basis": [
+                        "k",
+                        "l",
+                        "P",
+                        "p1",
+                        "p2"
+                      ],
+                      "momentum_coefficients": [
+                        0,
+                        1,
+                        0,
+                        -1,
+                        0
+                      ],
+                      "undotted": "-"
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "-2",
+                      "re": "0"
+                    },
+                    "kind": "MIXED_ANTICOMMUTATOR",
+                    "ledger_id": "determinant_diagonal:MIXED:2:1",
+                    "phase": "PRIMITIVE_NORMAL_ORDERING",
+                    "rule_id": "{D_a,barD_dota}=-2*i*p_(a,dota)",
+                    "token_ids": [
+                      "a_Dm",
+                      "a_Bm"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "remaining_denominator_edges": [
+              "e_AI"
+            ]
+          },
+          {
+            "classifications": [
+              "D_ALGEBRA_REMAINDER"
+            ],
+            "collapsed_edges": [],
+            "external_derivative_tokens": [],
+            "ordered_tokens": [
+              {
+                "carrier": "PROPAGATOR_DELTA",
+                "derivative_kind": "BAR_D",
+                "endpoint_id": "A.q1",
+                "operator_parity": 1,
+                "spinor_component": "dot+",
+                "token_id": "b_Bp"
+              },
+              {
+                "carrier": "PROPAGATOR_DELTA",
+                "derivative_kind": "D",
+                "endpoint_id": "A.q1",
+                "operator_parity": 1,
+                "spinor_component": "-",
+                "token_id": "b_Dm"
+              }
+            ],
+            "polynomial": [
+              {
+                "factor": {
+                  "domain": "Q(i)",
+                  "im": "-4",
+                  "re": "0"
+                },
+                "monomial": [
+                  {
+                    "exponent": 1,
+                    "symbol": "l_pm"
+                  }
+                ]
+              },
+              {
+                "factor": {
+                  "domain": "Q(i)",
+                  "im": "4",
+                  "re": "0"
+                },
+                "monomial": [
+                  {
+                    "exponent": 1,
+                    "symbol": "p1_pm"
+                  }
+                ]
+              }
+            ],
+            "provenance": [
+              {
+                "branch_id": "determinant_off_diagonal",
+                "ledger": [
+                  {
+                    "details": {
+                      "dotted": "dot-",
+                      "endpoint_id": "A.q1",
+                      "momentum_basis": [
+                        "k",
+                        "l",
+                        "P",
+                        "p1",
+                        "p2"
+                      ],
+                      "momentum_coefficients": [
+                        0,
+                        1,
+                        0,
+                        -1,
+                        0
+                      ],
+                      "undotted": "+"
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "-2",
+                      "re": "0"
+                    },
+                    "kind": "MIXED_ANTICOMMUTATOR",
+                    "ledger_id": "determinant_off_diagonal:MIXED:0:0",
+                    "phase": "PRIMITIVE_NORMAL_ORDERING",
+                    "rule_id": "{D_a,barD_dota}=-2*i*p_(a,dota)",
+                    "token_ids": [
+                      "b_Dp",
+                      "b_Bm"
+                    ]
+                  },
+                  {
+                    "details": {
+                      "same_endpoint": true
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "0",
+                      "re": "-1"
+                    },
+                    "kind": "PRIMITIVE_REORDER",
+                    "ledger_id": "determinant_off_diagonal:SWAP:0:1",
+                    "phase": "PRIMITIVE_NORMAL_ORDERING",
+                    "rule_id": "odd_primitive_swap",
+                    "token_ids": [
+                      "b_Dm",
+                      "b_Bp"
+                    ]
+                  }
+                ]
+              },
+              {
+                "branch_id": "determinant_diagonal",
+                "ledger": [
+                  {
+                    "details": {
+                      "same_endpoint": true
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "0",
+                      "re": "-1"
+                    },
+                    "kind": "PRIMITIVE_REORDER",
+                    "ledger_id": "determinant_diagonal:SWAP:0:0",
+                    "phase": "PRIMITIVE_NORMAL_ORDERING",
+                    "rule_id": "odd_primitive_swap",
+                    "token_ids": [
+                      "a_Dp",
+                      "a_Bp"
+                    ]
+                  },
+                  {
+                    "details": {
+                      "same_endpoint": true
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "0",
+                      "re": "-1"
+                    },
+                    "kind": "PRIMITIVE_REORDER",
+                    "ledger_id": "determinant_diagonal:SWAP:2:1",
+                    "phase": "PRIMITIVE_NORMAL_ORDERING",
+                    "rule_id": "odd_primitive_swap",
+                    "token_ids": [
+                      "a_Dm",
+                      "a_Bm"
+                    ]
+                  },
+                  {
+                    "details": {
+                      "dotted": "dot-",
+                      "endpoint_id": "A.q1",
+                      "momentum_basis": [
+                        "k",
+                        "l",
+                        "P",
+                        "p1",
+                        "p2"
+                      ],
+                      "momentum_coefficients": [
+                        0,
+                        1,
+                        0,
+                        -1,
+                        0
+                      ],
+                      "undotted": "+"
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "-2",
+                      "re": "0"
+                    },
+                    "kind": "MIXED_ANTICOMMUTATOR",
+                    "ledger_id": "determinant_diagonal:MIXED:1:2",
+                    "phase": "PRIMITIVE_NORMAL_ORDERING",
+                    "rule_id": "{D_a,barD_dota}=-2*i*p_(a,dota)",
+                    "token_ids": [
+                      "a_Dp",
+                      "a_Bm"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "remaining_denominator_edges": [
+              "e_AI"
+            ]
+          },
+          {
+            "classifications": [
+              "D_ALGEBRA_REMAINDER"
+            ],
+            "collapsed_edges": [],
+            "external_derivative_tokens": [],
+            "ordered_tokens": [
+              {
+                "carrier": "PROPAGATOR_DELTA",
+                "derivative_kind": "BAR_D",
+                "endpoint_id": "A.q1",
+                "operator_parity": 1,
+                "spinor_component": "dot-",
+                "token_id": "b_Bm"
+              },
+              {
+                "carrier": "PROPAGATOR_DELTA",
+                "derivative_kind": "D",
+                "endpoint_id": "A.q1",
+                "operator_parity": 1,
+                "spinor_component": "+",
+                "token_id": "b_Dp"
+              }
+            ],
+            "polynomial": [
+              {
+                "factor": {
+                  "domain": "Q(i)",
+                  "im": "-2",
+                  "re": "0"
+                },
+                "monomial": [
+                  {
+                    "exponent": 1,
+                    "symbol": "l_mp"
+                  }
+                ]
+              },
+              {
+                "factor": {
+                  "domain": "Q(i)",
+                  "im": "2",
+                  "re": "0"
+                },
+                "monomial": [
+                  {
+                    "exponent": 1,
+                    "symbol": "p1_mp"
+                  }
+                ]
+              }
+            ],
+            "provenance": [
+              {
+                "branch_id": "determinant_off_diagonal",
+                "ledger": [
+                  {
+                    "details": {
+                      "same_endpoint": true
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "0",
+                      "re": "-1"
+                    },
+                    "kind": "PRIMITIVE_REORDER",
+                    "ledger_id": "determinant_off_diagonal:SWAP:0:0",
+                    "phase": "PRIMITIVE_NORMAL_ORDERING",
+                    "rule_id": "odd_primitive_swap",
+                    "token_ids": [
+                      "b_Dp",
+                      "b_Bm"
+                    ]
+                  },
+                  {
+                    "details": {
+                      "dotted": "dot+",
+                      "endpoint_id": "A.q1",
+                      "momentum_basis": [
+                        "k",
+                        "l",
+                        "P",
+                        "p1",
+                        "p2"
+                      ],
+                      "momentum_coefficients": [
+                        0,
+                        1,
+                        0,
+                        -1,
+                        0
+                      ],
+                      "undotted": "-"
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "-2",
+                      "re": "0"
+                    },
+                    "kind": "MIXED_ANTICOMMUTATOR",
+                    "ledger_id": "determinant_off_diagonal:MIXED:2:1",
+                    "phase": "PRIMITIVE_NORMAL_ORDERING",
+                    "rule_id": "{D_a,barD_dota}=-2*i*p_(a,dota)",
+                    "token_ids": [
+                      "b_Dm",
+                      "b_Bp"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "remaining_denominator_edges": [
+              "e_AI"
+            ]
+          },
+          {
+            "classifications": [
+              "D_ALGEBRA_REMAINDER"
+            ],
+            "collapsed_edges": [],
+            "external_derivative_tokens": [],
+            "ordered_tokens": [
+              {
+                "carrier": "PROPAGATOR_DELTA",
+                "derivative_kind": "BAR_D",
+                "endpoint_id": "A.q1",
+                "operator_parity": 1,
+                "spinor_component": "dot-",
+                "token_id": "a_Bm"
+              },
+              {
+                "carrier": "PROPAGATOR_DELTA",
+                "derivative_kind": "D",
+                "endpoint_id": "A.q1",
+                "operator_parity": 1,
+                "spinor_component": "-",
+                "token_id": "a_Dm"
+              }
+            ],
+            "polynomial": [
+              {
+                "factor": {
+                  "domain": "Q(i)",
+                  "im": "4",
+                  "re": "0"
+                },
+                "monomial": [
+                  {
+                    "exponent": 1,
+                    "symbol": "l_pp"
+                  }
+                ]
+              },
+              {
+                "factor": {
+                  "domain": "Q(i)",
+                  "im": "-4",
+                  "re": "0"
+                },
+                "monomial": [
+                  {
+                    "exponent": 1,
+                    "symbol": "p1_pp"
+                  }
+                ]
+              }
+            ],
+            "provenance": [
+              {
+                "branch_id": "determinant_diagonal",
+                "ledger": [
+                  {
+                    "details": {
+                      "dotted": "dot+",
+                      "endpoint_id": "A.q1",
+                      "momentum_basis": [
+                        "k",
+                        "l",
+                        "P",
+                        "p1",
+                        "p2"
+                      ],
+                      "momentum_coefficients": [
+                        0,
+                        1,
+                        0,
+                        -1,
+                        0
+                      ],
+                      "undotted": "+"
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "-2",
+                      "re": "0"
+                    },
+                    "kind": "MIXED_ANTICOMMUTATOR",
+                    "ledger_id": "determinant_diagonal:MIXED:0:0",
+                    "phase": "PRIMITIVE_NORMAL_ORDERING",
+                    "rule_id": "{D_a,barD_dota}=-2*i*p_(a,dota)",
+                    "token_ids": [
+                      "a_Dp",
+                      "a_Bp"
+                    ]
+                  },
+                  {
+                    "details": {
+                      "same_endpoint": true
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "0",
+                      "re": "-1"
+                    },
+                    "kind": "PRIMITIVE_REORDER",
+                    "ledger_id": "determinant_diagonal:SWAP:0:1",
+                    "phase": "PRIMITIVE_NORMAL_ORDERING",
+                    "rule_id": "odd_primitive_swap",
+                    "token_ids": [
+                      "a_Dm",
+                      "a_Bm"
+                    ]
+                  }
+                ]
+              },
+              {
+                "branch_id": "determinant_off_diagonal",
+                "ledger": [
+                  {
+                    "details": {
+                      "same_endpoint": true
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "0",
+                      "re": "-1"
+                    },
+                    "kind": "PRIMITIVE_REORDER",
+                    "ledger_id": "determinant_off_diagonal:SWAP:0:0",
+                    "phase": "PRIMITIVE_NORMAL_ORDERING",
+                    "rule_id": "odd_primitive_swap",
+                    "token_ids": [
+                      "b_Dp",
+                      "b_Bm"
+                    ]
+                  },
+                  {
+                    "details": {
+                      "same_endpoint": true
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "0",
+                      "re": "-1"
+                    },
+                    "kind": "PRIMITIVE_REORDER",
+                    "ledger_id": "determinant_off_diagonal:SWAP:2:1",
+                    "phase": "PRIMITIVE_NORMAL_ORDERING",
+                    "rule_id": "odd_primitive_swap",
+                    "token_ids": [
+                      "b_Dm",
+                      "b_Bp"
+                    ]
+                  },
+                  {
+                    "details": {
+                      "dotted": "dot+",
+                      "endpoint_id": "A.q1",
+                      "momentum_basis": [
+                        "k",
+                        "l",
+                        "P",
+                        "p1",
+                        "p2"
+                      ],
+                      "momentum_coefficients": [
+                        0,
+                        1,
+                        0,
+                        -1,
+                        0
+                      ],
+                      "undotted": "+"
+                    },
+                    "factor": {
+                      "domain": "Q(i)",
+                      "im": "-2",
+                      "re": "0"
+                    },
+                    "kind": "MIXED_ANTICOMMUTATOR",
+                    "ledger_id": "determinant_off_diagonal:MIXED:1:2",
+                    "phase": "PRIMITIVE_NORMAL_ORDERING",
+                    "rule_id": "{D_a,barD_dota}=-2*i*p_(a,dota)",
+                    "token_ids": [
+                      "b_Dp",
+                      "b_Bp"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "remaining_denominator_edges": [
+              "e_AI"
+            ]
+          }
+        ],
+        "two_loop_coefficient": null,
+        "zero_terms": []
+      },
+      {
+        "DRED_performed": false,
+        "IBP_integral_reduction_performed": false,
+        "UV_pole": null,
+        "endpoint_transfer_rule": "D_target*delta=-D_source*delta",
+        "global_join_key": null,
+        "ibp_rule": "integral (D F)G=-(-1)^|F| integral F(D G)",
+        "left_coefficient_order": true,
+        "mixed_anticommutator": "{D_a,barD_dota}=-2*i*p_(a,dota)",
+        "phase_execution": [
+          {
+            "phase": "SCOPE_EXPANSION",
+            "status": "INPUT_ALREADY_EXACTLY_EXPANDED"
+          },
+          {
+            "phase": "ENDPOINT_CANONICALIZATION",
+            "status": "EXECUTED"
+          },
+          {
+            "phase": "PIVOTED_IBP",
+            "status": "EXECUTED"
+          },
+          {
+            "phase": "PRIMITIVE_NORMAL_ORDERING",
+            "status": "EXECUTED"
+          },
+          {
+            "phase": "PROJECTOR_REDUCTION",
+            "status": "NO_UNDECLARED_PROJECTOR_REWRITE"
+          },
+          {
+            "phase": "EXTERNAL_CHIRALITY",
+            "status": "EXECUTED"
+          },
+          {
+            "phase": "GRASSMANN_SATURATION",
+            "status": "CLASSIFIED_BY_EXACT_WORD"
+          },
+          {
+            "phase": "TYPED_EDGE_COLLAPSE",
+            "status": "EXECUTED_EXACT_R_SQUARE_ONLY"
+          }
+        ],
+        "program_hash": "96fb48db97b1382d94deed8d41091d7fd56f610daa2090e85e40415966dc77c3",
+        "program_id": "FIXTURE_NILPOTENCE_CHIRALITY_EOM",
+        "program_kind": "FIXTURE",
+        "result_hash": "f694acda79e473e4666dc25c8ea193a6a67d55bebb32c1dd723c071072bb8a2a",
+        "schema_version": "step6.edge_tagged_dalgebra_result.v1",
+        "terms": [
+          {
+            "classifications": [
+              "COMPOSITE_SOURCE_DERIVATIVE",
+              "D_ALGEBRA_REMAINDER",
+              "EOM_REMAINDER"
+            ],
+            "collapsed_edges": [],
+            "external_derivative_tokens": [
+              {
+                "carrier": "FIELD",
+                "derivative_kind": "D",
+                "endpoint_id": "fixture.eom",
+                "operator_parity": 1,
+                "spinor_component": "-",
+                "token_id": "D_eom"
+              }
+            ],
+            "ordered_tokens": [
+              {
+                "carrier": "FIELD",
+                "derivative_kind": "D",
+                "endpoint_id": "fixture.eom",
+                "operator_parity": 1,
+                "spinor_component": "-",
+                "token_id": "D_eom"
+              }
+            ],
+            "polynomial": [
+              {
+                "factor": {
+                  "domain": "Q(i)",
+                  "im": "0",
+                  "re": "1"
+                },
+                "monomial": []
+              }
+            ],
+            "provenance": [
+              {
+                "branch_id": "eom_remainder",
+                "ledger": []
+              }
+            ],
+            "remaining_denominator_edges": []
+          }
+        ],
+        "two_loop_coefficient": null,
+        "zero_terms": [
+          {
+            "branch_id": "nilpotent_zero",
+            "classification": "NILPOTENT_ZERO",
+            "ledger": [
+              {
+                "details": {},
+                "factor": {
+                  "domain": "Q(i)",
+                  "im": "0",
+                  "re": "1"
+                },
+                "kind": "NILPOTENCE",
+                "ledger_id": "nilpotent_zero:NILPOTENT:0",
+                "phase": "PRIMITIVE_NORMAL_ORDERING",
+                "rule_id": "odd_primitive_square_zero",
+                "token_ids": [
+                  "D_nil_1",
+                  "D_nil_2"
+                ]
+              }
+            ],
+            "rule": "D_+^2=0",
+            "token_ids": [
+              "D_nil_1",
+              "D_nil_2"
+            ]
+          },
+          {
+            "branch_id": "barD_chiral_zero",
+            "classification": "CHIRALITY_ZERO",
+            "ledger": [
+              {
+                "details": {},
+                "factor": {
+                  "domain": "Q(i)",
+                  "im": "0",
+                  "re": "1"
+                },
+                "kind": "CHIRALITY",
+                "ledger_id": "barD_chiral_zero:CHIRALITY:bar_ch",
+                "phase": "EXTERNAL_CHIRALITY",
+                "rule_id": "barD_on_chiral_field",
+                "token_ids": [
+                  "bar_ch"
+                ]
+              }
+            ],
+            "rule": "barD_on_chiral_field",
+            "token_ids": [
+              "bar_ch"
+            ]
+          },
+          {
+            "branch_id": "D_antichiral_zero",
+            "classification": "CHIRALITY_ZERO",
+            "ledger": [
+              {
+                "details": {},
+                "factor": {
+                  "domain": "Q(i)",
+                  "im": "0",
+                  "re": "1"
+                },
+                "kind": "CHIRALITY",
+                "ledger_id": "D_antichiral_zero:CHIRALITY:D_ach",
+                "phase": "EXTERNAL_CHIRALITY",
+                "rule_id": "D_on_antichiral_field",
+                "token_ids": [
+                  "D_ach"
+                ]
+              }
+            ],
+            "rule": "D_on_antichiral_field",
+            "token_ids": [
+              "D_ach"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "edge_tagged_executor_schema": {
+    "carriers": [
+      "FIELD",
+      "PROPAGATOR_DELTA"
+    ],
+    "endpoint_fields": [
+      "endpoint_id",
+      "endpoint_kind",
+      "parity",
+      "chirality",
+      "equation_class",
+      "momentum",
+      "edge_id",
+      "paired_endpoint_id"
+    ],
+    "endpoint_kinds": [
+      "COMPOSITE_SOURCE",
+      "EXTERNAL_BACKGROUND",
+      "INTERNAL_SOURCE",
+      "INTERNAL_TARGET"
+    ],
+    "exact_rules": {
+      "chirality": "barD*Phi=0; D*TildePhi=0",
+      "delta_endpoint_transfer": "D_target*delta=-D_source*delta",
+      "edge_collapse": "exact numerator polynomial c*r^2 divided by r^2 gives c",
+      "graded_IBP": "integral (D F)G=-(-1)^|F| integral F(D G)",
+      "mixed_anticommutator": "{D_a,barD_dota}=-2*i*p_(a,dota)",
+      "nilpotence": "D_a^2=barD_dota^2=0"
+    },
+    "global_join_key_fields": [
+      "parent_id",
+      "parent_vertex_order",
+      "ordered_local_amplitude_option_ids",
+      "global_left_coefficient_word",
+      "fixed_edge_pairing_order"
+    ],
+    "global_numerator_interface": "one result per exact global left coefficient word and fixed Wick pairing",
+    "left_coefficient_order": true,
+    "primitive_kinds": {
+      "BAR_D": [
+        "dot+",
+        "dot-"
+      ],
+      "D": [
+        "+",
+        "-"
+      ]
+    },
+    "primitive_token_fields": [
+      "token_id",
+      "derivative_kind",
+      "spinor_component",
+      "endpoint_id",
+      "carrier"
+    ],
+    "program_kinds": [
+      "FIXTURE",
+      "GLOBAL_NUMERATOR"
+    ],
+    "required_program_fields": [
+      "schema_version",
+      "program_id",
+      "program_kind",
+      "left_coefficient_order",
+      "endpoints",
+      "branches",
+      "ibp_transfers"
+    ],
+    "schema_version": "step6.edge_tagged_dalgebra_program.v1",
+    "typed_output": [
+      "polynomial",
+      "ordered_tokens",
+      "external_derivative_tokens",
+      "remaining_denominator_edges",
+      "collapsed_edges",
+      "classifications",
+      "provenance"
+    ]
+  },
+  "exact_fixture_execution_performed": true,
   "exact_scalar_domain": "Q(i)",
   "external_result_used_as_calculation_input": false,
   "global_confluence_claimed": false,
@@ -994,7 +3913,7 @@
       "schema_version": "step6.wick_complete_dword_input.v1"
     }
   ],
-  "payload_hash": "9fbe63914303bdec4ea06f6a87390525494f5f6f7415f792cfc2ab88a567b61a",
+  "payload_hash": "4173f14aff8d3f22d095c024e2fa389f4d39cef5bbe38180efee68f7f70d4f47",
   "phase_execution_performed": false,
   "phase_order": [
     "SCOPE_EXPANSION",
@@ -1007,12 +3926,13 @@
     "TYPED_EDGE_COLLAPSE"
   ],
   "physical_derivative_scopes_inferred": false,
+  "physical_global_numerator_execution": "BLOCKED_MISSING_EXACT_GLOBAL_WORD_INPUT",
   "polynomial_oracle_requirement": {
     "numerical_sampling_admissible": false,
     "proof_mode": "EXACT_SYMBOLIC_POLYNOMIAL_IDENTITY"
   },
   "schema_version": "step6.two_loop_dword.v1",
-  "scope": "LITERAL_K4_MINUS_EDGE_TWO_LOOP_DWORD_PHASE_SCHEDULER_CONTRACT",
+  "scope": "LITERAL_K4_MINUS_EDGE_SCHEDULER_PLUS_EXACT_EDGE_TAGGED_EXECUTOR",
   "status": "PROPOSAL_ONLY_BLOCKED_ON_STEP5_ACCEPTANCE",
   "termination_measure": {
     "components": [
@@ -1038,5 +3958,6 @@
     },
     "rewrite_obligation": "every applied rewrite must strictly lower the full lexicographic tuple; all earlier components must remain unchanged",
     "unchecked_transition_status": "REJECTED_MISSING_EXACT_BEFORE_AFTER_MEASURES"
-  }
+  },
+  "two_loop_coefficient": null
 }

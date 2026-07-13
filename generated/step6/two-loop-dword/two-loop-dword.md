@@ -1,4 +1,4 @@
-# Step 6 — literal $K_4\setminus e$ DWordIR scheduler contract
+# Step 6 — literal $K_4\setminus e$ edge-tagged D-algebra executor
 
 `PROPOSAL_ONLY_BLOCKED_ON_STEP5_ACCEPTANCE`
 
@@ -41,3 +41,23 @@ $$
 Exact input domain: `Q(i)`.
 
 Polynomial gate: `EXACT_SYMBOLIC_POLYNOMIAL_IDENTITY`; numerical samples are rejected.
+
+## Exact edge-tagged executor fixtures
+
+$$
+\int (D F)G=-(-1)^{|F|}\int F(DG),\qquad
+D^{(t)}\delta=-D^{(s)}\delta,
+$$
+
+$$
+D_a\bar D_{\dot a}=-\bar D_{\dot a}D_a-2ip_{a\dot a}.
+$$
+
+$$
+D_a^2=\bar D_{\dot a}^2=0,\qquad
+\bar D_{\dot a}\Phi=0,\qquad D_a\widetilde\Phi=0.
+$$
+
+Executed fixtures: `4`.
+
+Physical global numerator: `BLOCKED_MISSING_EXACT_GLOBAL_WORD_INPUT`.

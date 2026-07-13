@@ -1,0 +1,33 @@
+{
+  "artifact_sha256": {
+    "generated/step6/sd-orbit/sd-orbit.json": "12b9d503f307f360b45aeddfe73e295fd1cd70ae9748dd132d838f09a440fe3e",
+    "generated/step6/sd-orbit/sd-orbit.md": "e4d2bd4a589c4935d22cc5924ae105c4bedd022a9bfd5bd102e5aff635fd2bab"
+  },
+  "checks": {
+    "automorphisms_are_audit_only": true,
+    "bosonic_Koszul_sign_is_plus_one": true,
+    "cut_cycle_histogram_per_orbit_is_3_to_8_and_4_to_2": true,
+    "every_bubble_is_two_parallel_propagators": true,
+    "every_contact_is_V3_I4_L2_with_KG_plus_one": true,
+    "every_cut_is_connected_one_loop_four_propagators": true,
+    "exact_rooted_census_60_60_216": true,
+    "external_input_firewall": true,
+    "functional_signs_are_exact_by_root_role": true,
+    "no_Dalgebra_integral_or_coefficient_claim": true,
+    "six_oriented_parent_orbits": true,
+    "source_action_expansion_has_all_eight_sector_assignments": true
+  },
+  "global_census": {
+    "rooted_bubble_derivation_path_count": 216,
+    "rooted_contact_child_count": 60,
+    "rooted_open_cut_count": 60
+  },
+  "payload_sha256": "3674f852f67d71ba45ddf6e63d98786708b4e2b46887f7038cb431421f8e79c1",
+  "schema_version": "step6.sd_orbit.audit.v1",
+  "status": "PASS",
+  "totals": {
+    "checks": 12,
+    "failed": 0,
+    "passed": 12
+  }
+}

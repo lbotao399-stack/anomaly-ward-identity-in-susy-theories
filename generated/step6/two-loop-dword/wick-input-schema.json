@@ -1,4 +1,83 @@
 {
+  "edge_tagged_executor_program_schema": {
+    "carriers": [
+      "FIELD",
+      "PROPAGATOR_DELTA"
+    ],
+    "endpoint_fields": [
+      "endpoint_id",
+      "endpoint_kind",
+      "parity",
+      "chirality",
+      "equation_class",
+      "momentum",
+      "edge_id",
+      "paired_endpoint_id"
+    ],
+    "endpoint_kinds": [
+      "COMPOSITE_SOURCE",
+      "EXTERNAL_BACKGROUND",
+      "INTERNAL_SOURCE",
+      "INTERNAL_TARGET"
+    ],
+    "exact_rules": {
+      "chirality": "barD*Phi=0; D*TildePhi=0",
+      "delta_endpoint_transfer": "D_target*delta=-D_source*delta",
+      "edge_collapse": "exact numerator polynomial c*r^2 divided by r^2 gives c",
+      "graded_IBP": "integral (D F)G=-(-1)^|F| integral F(D G)",
+      "mixed_anticommutator": "{D_a,barD_dota}=-2*i*p_(a,dota)",
+      "nilpotence": "D_a^2=barD_dota^2=0"
+    },
+    "global_join_key_fields": [
+      "parent_id",
+      "parent_vertex_order",
+      "ordered_local_amplitude_option_ids",
+      "global_left_coefficient_word",
+      "fixed_edge_pairing_order"
+    ],
+    "global_numerator_interface": "one result per exact global left coefficient word and fixed Wick pairing",
+    "left_coefficient_order": true,
+    "primitive_kinds": {
+      "BAR_D": [
+        "dot+",
+        "dot-"
+      ],
+      "D": [
+        "+",
+        "-"
+      ]
+    },
+    "primitive_token_fields": [
+      "token_id",
+      "derivative_kind",
+      "spinor_component",
+      "endpoint_id",
+      "carrier"
+    ],
+    "program_kinds": [
+      "FIXTURE",
+      "GLOBAL_NUMERATOR"
+    ],
+    "required_program_fields": [
+      "schema_version",
+      "program_id",
+      "program_kind",
+      "left_coefficient_order",
+      "endpoints",
+      "branches",
+      "ibp_transfers"
+    ],
+    "schema_version": "step6.edge_tagged_dalgebra_program.v1",
+    "typed_output": [
+      "polynomial",
+      "ordered_tokens",
+      "external_derivative_tokens",
+      "remaining_denominator_edges",
+      "collapsed_edges",
+      "classifications",
+      "provenance"
+    ]
+  },
   "graph_schemas": [
     {
       "derivative_token": {

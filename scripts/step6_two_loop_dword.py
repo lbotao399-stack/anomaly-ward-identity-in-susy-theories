@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Proposal-only two-loop DWordIR scheduler contract.
+"""Proposal-only two-loop edge-tagged D-algebra contract and executor.
 
 The module fixes typed words, a rooted theta decomposition, the ordered
 rewrite phases, an exact lexicographic termination measure, exact Q(i)
@@ -9,7 +9,9 @@ does not infer a derivative scope from topology.  Every decorated literal
 Wick-complete record supplies an explicit ordered derivative-scope AST and an
 explicit propagator kernel for every internal edge.
 
-No D-algebra trace multiplicity or evaluated local result is constructed.
+Physical graph words still fail closed when their exact scope input is absent.
+Independently, a typed exact executor evaluates bounded edge-tagged words and
+emits every rewrite sign, mixed momentum, external token, and classification.
 """
 
 from __future__ import annotations
@@ -37,6 +39,8 @@ AUDIT = ROOT / "audits/step6-two-loop-dword-verification.json"
 
 SCHEMA_VERSION = "step6.two_loop_dword.v1"
 INPUT_SCHEMA_VERSION = "step6.wick_complete_dword_input.v1"
+EXECUTOR_SCHEMA_VERSION = "step6.edge_tagged_dalgebra_program.v1"
+EXECUTOR_RESULT_VERSION = "step6.edge_tagged_dalgebra_result.v1"
 STATUS = "PROPOSAL_ONLY_BLOCKED_ON_STEP5_ACCEPTANCE"
 BLOCKED_STATUS = "BLOCKED_MISSING_WICK_COMPLETE_DWORD_INPUTS"
 READY_STATUS = "READY_PHASE_SCHEDULE_CONTRACT_ONLY"
@@ -80,7 +84,25 @@ LEDGER_KINDS = {
     "PROJECTOR",
     "CHIRALITY",
     "COLLAPSE",
+    "MIXED_ANTICOMMUTATOR",
+    "NILPOTENCE",
+    "EOM",
 }
+
+ENDPOINT_KINDS = {
+    "INTERNAL_SOURCE",
+    "INTERNAL_TARGET",
+    "EXTERNAL_BACKGROUND",
+    "COMPOSITE_SOURCE",
+}
+
+CHIRALITY_CLASSES = {"NONE", "CHIRAL", "ANTICHIRAL"}
+EQUATION_CLASSES = {"ORDINARY", "EOM"}
+TOKEN_CARRIERS = {"FIELD", "PROPAGATOR_DELTA"}
+PRIMITIVE_KINDS = {"D", "BAR_D"}
+EXECUTOR_PROGRAM_KINDS = {"FIXTURE", "GLOBAL_NUMERATOR"}
+UNDOTTED_COMPONENTS = {"+", "-"}
+DOTTED_COMPONENTS = {"dot+", "dot-"}
 
 FORBIDDEN_SAMPLE_KEYS = {
     "sample",
@@ -140,6 +162,19 @@ class GaussianRational:
 
     __rmul__ = __mul__
 
+    def __truediv__(self, other: object) -> "GaussianRational":
+        rhs = gaussian(other)
+        norm = rhs.re * rhs.re + rhs.im * rhs.im
+        if norm == 0:
+            raise ZeroDivisionError("division by zero in Q(i)")
+        return GaussianRational(
+            (self.re * rhs.re + self.im * rhs.im) / norm,
+            (self.im * rhs.re - self.re * rhs.im) / norm,
+        )
+
+    def __bool__(self) -> bool:
+        return bool(self.re or self.im)
+
     def to_json(self) -> dict[str, str]:
         return {"domain": QI_DOMAIN, "re": str(self.re), "im": str(self.im)}
 
@@ -160,6 +195,211 @@ def gaussian(value: object) -> GaussianRational:
 
 ONE = GaussianRational(Fraction(1), Fraction(0))
 MINUS_ONE = GaussianRational(Fraction(-1), Fraction(0))
+I_UNIT = GaussianRational(Fraction(0), Fraction(1))
+MINUS_TWO_I = GaussianRational(Fraction(0), Fraction(-2))
+
+Monomial = tuple[tuple[str, int], ...]
+
+
+def _multiply_monomials(left: Monomial, right: Monomial) -> Monomial:
+    powers: dict[str, int] = {}
+    for symbol, exponent in (*left, *right):
+        powers[symbol] = powers.get(symbol, 0) + exponent
+    return tuple(sorted((symbol, exponent) for symbol, exponent in powers.items() if exponent))
+
+
+@dataclass(frozen=True)
+class ExactPolynomial:
+    """Sparse exact Q(i) polynomial in typed momentum components."""
+
+    terms: tuple[tuple[Monomial, GaussianRational], ...] = ()
+
+    @staticmethod
+    def from_terms(terms: Mapping[Monomial, GaussianRational]) -> "ExactPolynomial":
+        return ExactPolynomial(tuple(sorted((monomial, value) for monomial, value in terms.items() if value)))
+
+    @staticmethod
+    def constant(value: object) -> "ExactPolynomial":
+        coefficient = gaussian(value)
+        return ExactPolynomial.from_terms({(): coefficient}) if coefficient else ExactPolynomial()
+
+    @staticmethod
+    def variable(symbol: str) -> "ExactPolynomial":
+        if not symbol or any(character.isspace() for character in symbol):
+            raise ValueError("momentum variable must be nonempty and whitespace-free")
+        return ExactPolynomial.from_terms({((symbol, 1),): ONE})
+
+    def as_dict(self) -> dict[Monomial, GaussianRational]:
+        return dict(self.terms)
+
+    def __bool__(self) -> bool:
+        return bool(self.terms)
+
+    def __add__(self, other: "ExactPolynomial") -> "ExactPolynomial":
+        merged = self.as_dict()
+        for monomial, value in other.terms:
+            merged[monomial] = merged.get(monomial, GaussianRational()) + value
+        return ExactPolynomial.from_terms(merged)
+
+    def __neg__(self) -> "ExactPolynomial":
+        return self.scale(MINUS_ONE)
+
+    def __sub__(self, other: "ExactPolynomial") -> "ExactPolynomial":
+        return self + (-other)
+
+    def __mul__(self, other: "ExactPolynomial") -> "ExactPolynomial":
+        result: dict[Monomial, GaussianRational] = {}
+        for left_monomial, left_value in self.terms:
+            for right_monomial, right_value in other.terms:
+                monomial = _multiply_monomials(left_monomial, right_monomial)
+                result[monomial] = result.get(monomial, GaussianRational()) + left_value * right_value
+        return ExactPolynomial.from_terms(result)
+
+    def scale(self, value: object) -> "ExactPolynomial":
+        coefficient = gaussian(value)
+        return ExactPolynomial.from_terms(
+            {monomial: coefficient * term_value for monomial, term_value in self.terms}
+        )
+
+    def scalar_multiple_of(self, divisor: "ExactPolynomial") -> GaussianRational | None:
+        """Return c only when self=c*divisor exactly."""
+
+        if not divisor:
+            raise ZeroDivisionError("zero polynomial divisor")
+        left = self.as_dict()
+        right = divisor.as_dict()
+        if set(left) != set(right):
+            return None
+        pivot = next(iter(sorted(right)))
+        coefficient = left[pivot] / right[pivot]
+        return coefficient if self == divisor.scale(coefficient) else None
+
+    def to_json(self) -> list[dict[str, object]]:
+        return [
+            {
+                "monomial": [
+                    {"symbol": symbol, "exponent": exponent}
+                    for symbol, exponent in monomial
+                ],
+                "factor": value.to_json(),
+            }
+            for monomial, value in self.terms
+        ]
+
+
+POLY_ZERO = ExactPolynomial()
+POLY_ONE = ExactPolynomial.constant(ONE)
+
+
+@dataclass(frozen=True)
+class ExecutorEndpoint:
+    endpoint_id: str
+    endpoint_kind: str
+    parity: int
+    chirality: str
+    equation_class: str
+    momentum_basis: tuple[str, ...]
+    momentum_coefficients: tuple[int, ...]
+    edge_id: str | None = None
+    paired_endpoint_id: str | None = None
+
+    def __post_init__(self) -> None:
+        if not self.endpoint_id:
+            raise ValueError("executor endpoint id is required")
+        if self.endpoint_kind not in ENDPOINT_KINDS:
+            raise ValueError(f"unknown endpoint kind {self.endpoint_kind}")
+        if self.parity not in (0, 1):
+            raise ValueError("endpoint parity must lie in Z2")
+        if self.chirality not in CHIRALITY_CLASSES:
+            raise ValueError(f"unknown chirality {self.chirality}")
+        if self.equation_class not in EQUATION_CLASSES:
+            raise ValueError(f"unknown equation class {self.equation_class}")
+        if not self.momentum_basis or len(self.momentum_basis) != len(self.momentum_coefficients):
+            raise ValueError("typed endpoint momentum basis and coefficients disagree")
+        internal = self.endpoint_kind in {"INTERNAL_SOURCE", "INTERNAL_TARGET"}
+        if internal and (self.edge_id is None or self.paired_endpoint_id is None):
+            raise ValueError("internal endpoints require an edge and paired endpoint")
+        if not internal and (self.edge_id is not None or self.paired_endpoint_id is not None):
+            raise ValueError("external/composite endpoints cannot carry an internal edge pairing")
+
+    def to_json(self) -> dict[str, object]:
+        return {
+            "endpoint_id": self.endpoint_id,
+            "endpoint_kind": self.endpoint_kind,
+            "parity": self.parity,
+            "chirality": self.chirality,
+            "equation_class": self.equation_class,
+            "momentum": {
+                "basis": list(self.momentum_basis),
+                "coefficients": list(self.momentum_coefficients),
+            },
+            "edge_id": self.edge_id,
+            "paired_endpoint_id": self.paired_endpoint_id,
+        }
+
+
+@dataclass(frozen=True)
+class ExecutorToken:
+    token_id: str
+    derivative_kind: str
+    spinor_component: str
+    endpoint_id: str
+    carrier: str
+
+    def __post_init__(self) -> None:
+        if not self.token_id:
+            raise ValueError("executor token id is required")
+        if self.derivative_kind not in PRIMITIVE_KINDS:
+            raise ValueError(f"unknown primitive derivative {self.derivative_kind}")
+        allowed = UNDOTTED_COMPONENTS if self.derivative_kind == "D" else DOTTED_COMPONENTS
+        if self.spinor_component not in allowed:
+            raise ValueError("spinor component disagrees with derivative kind")
+        if self.carrier not in TOKEN_CARRIERS:
+            raise ValueError(f"unknown derivative carrier {self.carrier}")
+
+    def with_endpoint(self, endpoint_id: str) -> "ExecutorToken":
+        return ExecutorToken(
+            self.token_id,
+            self.derivative_kind,
+            self.spinor_component,
+            endpoint_id,
+            self.carrier,
+        )
+
+    def to_json(self) -> dict[str, object]:
+        return {
+            "token_id": self.token_id,
+            "derivative_kind": self.derivative_kind,
+            "spinor_component": self.spinor_component,
+            "endpoint_id": self.endpoint_id,
+            "carrier": self.carrier,
+            "operator_parity": 1,
+        }
+
+
+@dataclass(frozen=True)
+class ExecutorTerm:
+    branch_id: str
+    polynomial: ExactPolynomial
+    ordered_tokens: tuple[ExecutorToken, ...]
+    denominator_edges: tuple[str, ...]
+    ledger: tuple[dict[str, object], ...] = ()
+
+    def replace(
+        self,
+        *,
+        polynomial: ExactPolynomial | None = None,
+        ordered_tokens: tuple[ExecutorToken, ...] | None = None,
+        denominator_edges: tuple[str, ...] | None = None,
+        ledger_entry: dict[str, object] | None = None,
+    ) -> "ExecutorTerm":
+        return ExecutorTerm(
+            self.branch_id,
+            self.polynomial if polynomial is None else polynomial,
+            self.ordered_tokens if ordered_tokens is None else ordered_tokens,
+            self.denominator_edges if denominator_edges is None else denominator_edges,
+            self.ledger + (() if ledger_entry is None else (ledger_entry,)),
+        )
 
 
 @dataclass(frozen=True)
@@ -225,6 +465,608 @@ class ExactLedgerEntry:
                 None if value.get("oracle_identity_id") is None else str(value["oracle_identity_id"])
             ),
         )
+
+
+def executor_ledger_entry(
+    *,
+    ledger_id: str,
+    phase: str,
+    kind: str,
+    factor: GaussianRational,
+    rule_id: str,
+    token_ids: Sequence[str],
+    details: Mapping[str, object] | None = None,
+) -> dict[str, object]:
+    if phase not in PHASE_ORDER or kind not in LEDGER_KINDS:
+        raise ValueError("executor ledger phase or kind is undeclared")
+    return {
+        "ledger_id": ledger_id,
+        "phase": phase,
+        "kind": kind,
+        "factor": factor.to_json(),
+        "rule_id": rule_id,
+        "token_ids": list(token_ids),
+        "details": {} if details is None else dict(details),
+    }
+
+
+def endpoint_from_json(value: Mapping[str, object]) -> ExecutorEndpoint:
+    momentum = _mapping(value.get("momentum"), "executor endpoint momentum")
+    return ExecutorEndpoint(
+        endpoint_id=str(value.get("endpoint_id", "")),
+        endpoint_kind=str(value.get("endpoint_kind", "")),
+        parity=int(value.get("parity", -1)),
+        chirality=str(value.get("chirality", "")),
+        equation_class=str(value.get("equation_class", "")),
+        momentum_basis=tuple(str(item) for item in _sequence(momentum.get("basis"), "momentum basis")),
+        momentum_coefficients=tuple(
+            int(item) for item in _sequence(momentum.get("coefficients"), "momentum coefficients")
+        ),
+        edge_id=None if value.get("edge_id") is None else str(value["edge_id"]),
+        paired_endpoint_id=(
+            None if value.get("paired_endpoint_id") is None else str(value["paired_endpoint_id"])
+        ),
+    )
+
+
+def token_from_json(value: Mapping[str, object]) -> ExecutorToken:
+    return ExecutorToken(
+        token_id=str(value.get("token_id", "")),
+        derivative_kind=str(value.get("derivative_kind", "")),
+        spinor_component=str(value.get("spinor_component", "")),
+        endpoint_id=str(value.get("endpoint_id", "")),
+        carrier=str(value.get("carrier", "")),
+    )
+
+
+def _token_sort_key(token: ExecutorToken, endpoint_order: Mapping[str, int]) -> tuple[int, int, int, str]:
+    kind_order = 0 if token.derivative_kind == "BAR_D" else 1
+    component_order = {
+        "dot+": 0,
+        "dot-": 1,
+        "+": 0,
+        "-": 1,
+    }[token.spinor_component]
+    return endpoint_order[token.endpoint_id], kind_order, component_order, token.token_id
+
+
+def _momentum_component(endpoint: ExecutorEndpoint, token_d: ExecutorToken, token_bar: ExecutorToken) -> ExactPolynomial:
+    if token_d.derivative_kind != "D" or token_bar.derivative_kind != "BAR_D":
+        raise ValueError("mixed momentum requires D then BAR_D")
+    suffix = {
+        ("+", "dot+"): "pp",
+        ("+", "dot-"): "pm",
+        ("-", "dot+"): "mp",
+        ("-", "dot-"): "mm",
+    }[(token_d.spinor_component, token_bar.spinor_component)]
+    result = POLY_ZERO
+    for coefficient, basis_symbol in zip(endpoint.momentum_coefficients, endpoint.momentum_basis):
+        if coefficient:
+            result = result + ExactPolynomial.variable(f"{basis_symbol}_{suffix}").scale(coefficient)
+    return result
+
+
+def endpoint_square_polynomial(endpoint: ExecutorEndpoint) -> ExactPolynomial:
+    def component(suffix: str) -> ExactPolynomial:
+        value = POLY_ZERO
+        for coefficient, basis_symbol in zip(endpoint.momentum_coefficients, endpoint.momentum_basis):
+            if coefficient:
+                value = value + ExactPolynomial.variable(f"{basis_symbol}_{suffix}").scale(coefficient)
+        return value
+
+    return component("pp") * component("mm") - component("pm") * component("mp")
+
+
+def _apply_ibp_transfers(
+    term: ExecutorTerm,
+    transfers: Sequence[Mapping[str, object]],
+    endpoints: Mapping[str, ExecutorEndpoint],
+) -> ExecutorTerm:
+    current = term
+    for ordinal, transfer in enumerate(transfers):
+        if str(transfer.get("branch_id")) != term.branch_id:
+            continue
+        token_id = str(transfer.get("token_id", ""))
+        positions = [index for index, token in enumerate(current.ordered_tokens) if token.token_id == token_id]
+        if len(positions) != 1:
+            raise ValueError(f"IBP transfer token {token_id} is not unique")
+        position = positions[0]
+        token = current.ordered_tokens[position]
+        source_id = str(transfer.get("from_endpoint_id", ""))
+        target_id = str(transfer.get("to_endpoint_id", ""))
+        if token.endpoint_id != source_id or source_id not in endpoints or target_id not in endpoints:
+            raise ValueError("IBP transfer endpoint binding mismatch")
+        crossed_ids = [
+            str(item)
+            for item in _sequence(transfer.get("crossed_endpoint_ids"), "IBP crossed endpoints")
+        ]
+        if any(endpoint_id not in endpoints for endpoint_id in crossed_ids):
+            raise ValueError("IBP transfer crosses an unknown endpoint")
+        crossed_parity = sum(endpoints[endpoint_id].parity for endpoint_id in crossed_ids) & 1
+        boundary_factor = MINUS_ONE
+        koszul_factor = MINUS_ONE if crossed_parity else ONE
+        tokens = list(current.ordered_tokens)
+        tokens[position] = token.with_endpoint(target_id)
+        boundary_ledger = executor_ledger_entry(
+            ledger_id=f"{term.branch_id}:IBP:{ordinal}:boundary",
+            phase="PIVOTED_IBP",
+            kind="ENDPOINT_TRANSFER",
+            factor=boundary_factor,
+            rule_id="integral_of_total_D_is_zero",
+            token_ids=[token_id],
+            details={"from": source_id, "to": target_id},
+        )
+        koszul_ledger = executor_ledger_entry(
+            ledger_id=f"{term.branch_id}:IBP:{ordinal}:koszul",
+            phase="PIVOTED_IBP",
+            kind="KOSZUL",
+            factor=koszul_factor,
+            rule_id="(-1)^(sum_crossed_endpoint_parities)",
+            token_ids=[token_id],
+            details={
+                "crossed_endpoint_ids": crossed_ids,
+                "crossed_parities": [endpoints[endpoint_id].parity for endpoint_id in crossed_ids],
+            },
+        )
+        current = current.replace(
+            polynomial=current.polynomial.scale(boundary_factor * koszul_factor),
+            ordered_tokens=tuple(tokens),
+            ledger_entry=boundary_ledger,
+        )
+        current = current.replace(ledger_entry=koszul_ledger)
+    return current
+
+
+def _canonicalize_delta_endpoints(
+    term: ExecutorTerm, endpoints: Mapping[str, ExecutorEndpoint]
+) -> ExecutorTerm:
+    current = term
+    tokens = list(current.ordered_tokens)
+    for position, token in enumerate(tuple(tokens)):
+        endpoint = endpoints[token.endpoint_id]
+        if token.carrier != "PROPAGATOR_DELTA" or endpoint.endpoint_kind != "INTERNAL_TARGET":
+            continue
+        assert endpoint.paired_endpoint_id is not None
+        paired = endpoints[endpoint.paired_endpoint_id]
+        if paired.endpoint_kind != "INTERNAL_SOURCE" or paired.edge_id != endpoint.edge_id:
+            raise ValueError("internal delta endpoint pairing is not source-target")
+        tokens[position] = token.with_endpoint(paired.endpoint_id)
+        entry = executor_ledger_entry(
+            ledger_id=f"{term.branch_id}:DELTA_TRANSFER:{position}",
+            phase="ENDPOINT_CANONICALIZATION",
+            kind="ENDPOINT_TRANSFER",
+            factor=MINUS_ONE,
+            rule_id="D_target_delta(theta_source-theta_target)=-D_source_delta",
+            token_ids=[token.token_id],
+            details={
+                "edge_id": endpoint.edge_id,
+                "from": endpoint.endpoint_id,
+                "to": paired.endpoint_id,
+            },
+        )
+        current = current.replace(polynomial=current.polynomial.scale(MINUS_ONE), ledger_entry=entry)
+    return current.replace(ordered_tokens=tuple(tokens))
+
+
+def _normal_order_one_step(
+    term: ExecutorTerm,
+    endpoints: Mapping[str, ExecutorEndpoint],
+    endpoint_order: Mapping[str, int],
+) -> tuple[list[ExecutorTerm], dict[str, object] | None]:
+    tokens = term.ordered_tokens
+    for index in range(len(tokens) - 1):
+        left, right = tokens[index], tokens[index + 1]
+        if (
+            left.endpoint_id == right.endpoint_id
+            and left.derivative_kind == right.derivative_kind
+            and left.spinor_component == right.spinor_component
+        ):
+            zero = {
+                "branch_id": term.branch_id,
+                "classification": "NILPOTENT_ZERO",
+                "rule": f"{left.derivative_kind}_{left.spinor_component}^2=0",
+                "token_ids": [left.token_id, right.token_id],
+                "ledger": [
+                    *term.ledger,
+                    executor_ledger_entry(
+                        ledger_id=f"{term.branch_id}:NILPOTENT:{index}",
+                        phase="PRIMITIVE_NORMAL_ORDERING",
+                        kind="NILPOTENCE",
+                        factor=ONE,
+                        rule_id="odd_primitive_square_zero",
+                        token_ids=[left.token_id, right.token_id],
+                    ),
+                ],
+            }
+            return [], zero
+        if _token_sort_key(left, endpoint_order) <= _token_sort_key(right, endpoint_order):
+            continue
+        swapped_tokens = tokens[:index] + (right, left) + tokens[index + 2 :]
+        swap_entry = executor_ledger_entry(
+            ledger_id=f"{term.branch_id}:SWAP:{index}:{len(term.ledger)}",
+            phase="PRIMITIVE_NORMAL_ORDERING",
+            kind="PRIMITIVE_REORDER",
+            factor=MINUS_ONE,
+            rule_id="odd_primitive_swap",
+            token_ids=[left.token_id, right.token_id],
+            details={"same_endpoint": left.endpoint_id == right.endpoint_id},
+        )
+        swapped = term.replace(
+            polynomial=term.polynomial.scale(MINUS_ONE),
+            ordered_tokens=swapped_tokens,
+            ledger_entry=swap_entry,
+        )
+        if (
+            left.endpoint_id == right.endpoint_id
+            and left.derivative_kind == "D"
+            and right.derivative_kind == "BAR_D"
+        ):
+            endpoint = endpoints[left.endpoint_id]
+            momentum = _momentum_component(endpoint, left, right)
+            mixed_entry = executor_ledger_entry(
+                ledger_id=f"{term.branch_id}:MIXED:{index}:{len(term.ledger)}",
+                phase="PRIMITIVE_NORMAL_ORDERING",
+                kind="MIXED_ANTICOMMUTATOR",
+                factor=MINUS_TWO_I,
+                rule_id="{D_a,barD_dota}=-2*i*p_(a,dota)",
+                token_ids=[left.token_id, right.token_id],
+                details={
+                    "endpoint_id": endpoint.endpoint_id,
+                    "momentum_basis": list(endpoint.momentum_basis),
+                    "momentum_coefficients": list(endpoint.momentum_coefficients),
+                    "undotted": left.spinor_component,
+                    "dotted": right.spinor_component,
+                },
+            )
+            contracted = term.replace(
+                polynomial=term.polynomial * momentum.scale(MINUS_TWO_I),
+                ordered_tokens=tokens[:index] + tokens[index + 2 :],
+                ledger_entry=mixed_entry,
+            )
+            return [swapped, contracted], None
+        return [swapped], None
+    return [term], None
+
+
+def _normal_order_terms(
+    terms: Sequence[ExecutorTerm], endpoints: Mapping[str, ExecutorEndpoint]
+) -> tuple[list[ExecutorTerm], list[dict[str, object]]]:
+    endpoint_order = {endpoint_id: index for index, endpoint_id in enumerate(endpoints)}
+    queue = list(terms)
+    normal: list[ExecutorTerm] = []
+    zero_terms: list[dict[str, object]] = []
+    steps = 0
+    while queue:
+        current = queue.pop(0)
+        rewritten, zero = _normal_order_one_step(current, endpoints, endpoint_order)
+        if zero is not None:
+            zero_terms.append(zero)
+            continue
+        if len(rewritten) == 1 and rewritten[0] == current:
+            normal.append(current)
+        else:
+            queue.extend(rewritten)
+        steps += 1
+        if steps > 10000:
+            raise RuntimeError("primitive normal ordering failed to terminate")
+    return normal, zero_terms
+
+
+def _chirality_and_eom_classify(
+    terms: Sequence[ExecutorTerm], endpoints: Mapping[str, ExecutorEndpoint]
+) -> tuple[list[ExecutorTerm], list[dict[str, object]]]:
+    active: list[ExecutorTerm] = []
+    zero_terms: list[dict[str, object]] = []
+    for term in terms:
+        killed: tuple[ExecutorToken, str] | None = None
+        for token in term.ordered_tokens:
+            endpoint = endpoints[token.endpoint_id]
+            if token.carrier != "FIELD":
+                continue
+            if endpoint.chirality == "CHIRAL" and token.derivative_kind == "BAR_D":
+                killed = (token, "barD_on_chiral_field")
+                break
+            if endpoint.chirality == "ANTICHIRAL" and token.derivative_kind == "D":
+                killed = (token, "D_on_antichiral_field")
+                break
+        if killed is not None:
+            token, rule = killed
+            zero_terms.append(
+                {
+                    "branch_id": term.branch_id,
+                    "classification": "CHIRALITY_ZERO",
+                    "rule": rule,
+                    "token_ids": [token.token_id],
+                    "ledger": [
+                        *term.ledger,
+                        executor_ledger_entry(
+                            ledger_id=f"{term.branch_id}:CHIRALITY:{token.token_id}",
+                            phase="EXTERNAL_CHIRALITY",
+                            kind="CHIRALITY",
+                            factor=ONE,
+                            rule_id=rule,
+                            token_ids=[token.token_id],
+                        ),
+                    ],
+                }
+            )
+        else:
+            active.append(term)
+    return active, zero_terms
+
+
+def _combine_terms(terms: Sequence[ExecutorTerm]) -> list[dict[str, object]]:
+    groups: dict[tuple[tuple[tuple[str, str, str, str], ...], tuple[str, ...]], dict[str, object]] = {}
+    for term in terms:
+        token_key = tuple(
+            (token.derivative_kind, token.spinor_component, token.endpoint_id, token.carrier)
+            for token in term.ordered_tokens
+        )
+        key = token_key, tuple(sorted(term.denominator_edges))
+        if key not in groups:
+            groups[key] = {
+                "polynomial": POLY_ZERO,
+                "tokens": term.ordered_tokens,
+                "denominator_edges": tuple(sorted(term.denominator_edges)),
+                "provenance": [],
+            }
+        groups[key]["polynomial"] = groups[key]["polynomial"] + term.polynomial  # type: ignore[operator]
+        groups[key]["provenance"].append(
+            {"branch_id": term.branch_id, "ledger": list(term.ledger)}
+        )
+    return [value for _, value in sorted(groups.items()) if value["polynomial"]]
+
+
+def _collapse_exact_edge_squares(
+    groups: Sequence[dict[str, object]], endpoints: Mapping[str, ExecutorEndpoint]
+) -> list[dict[str, object]]:
+    source_by_edge = {
+        endpoint.edge_id: endpoint
+        for endpoint in endpoints.values()
+        if endpoint.endpoint_kind == "INTERNAL_SOURCE"
+    }
+    output: list[dict[str, object]] = []
+    for group in groups:
+        polynomial = group["polynomial"]
+        assert isinstance(polynomial, ExactPolynomial)
+        denominators = list(group["denominator_edges"])
+        collapsed: list[dict[str, object]] = []
+        for edge_id in tuple(denominators):
+            if edge_id not in source_by_edge:
+                raise ValueError(f"denominator edge {edge_id} lacks an internal source endpoint")
+            square = endpoint_square_polynomial(source_by_edge[edge_id])
+            quotient = polynomial.scalar_multiple_of(square)
+            if quotient is None:
+                continue
+            polynomial = ExactPolynomial.constant(quotient)
+            denominators.remove(edge_id)
+            collapsed.append(
+                {
+                    "edge_id": edge_id,
+                    "rule": "exact_numerator_equals_scalar_times_r_square",
+                    "quotient": quotient.to_json(),
+                }
+            )
+        tokens = group["tokens"]
+        assert isinstance(tokens, tuple)
+        classification: list[str] = []
+        if collapsed:
+            classification.append("PROPAGATOR_COLLAPSE")
+        if tokens:
+            classification.append("D_ALGEBRA_REMAINDER")
+        if not tokens and not collapsed:
+            classification.append("SCALAR_REMAINDER")
+        output.append(
+            {
+                "polynomial": polynomial.to_json(),
+                "ordered_tokens": [token.to_json() for token in tokens],
+                "remaining_denominator_edges": denominators,
+                "collapsed_edges": collapsed,
+                "classifications": classification,
+                "provenance": group["provenance"],
+            }
+        )
+    return output
+
+
+def validate_global_join_key(value: Mapping[str, object]) -> dict[str, object]:
+    required = {
+        "parent_id",
+        "parent_vertex_order",
+        "ordered_local_amplitude_option_ids",
+        "global_left_coefficient_word",
+        "fixed_edge_pairing_order",
+    }
+    if set(value) != required:
+        raise ValueError(f"global join key fields differ: {sorted(set(value) ^ required)}")
+    vertex_order = [
+        str(item) for item in _sequence(value["parent_vertex_order"], "parent vertex order")
+    ]
+    options = [
+        str(item)
+        for item in _sequence(
+            value["ordered_local_amplitude_option_ids"], "ordered local option ids"
+        )
+    ]
+    if not vertex_order or len(vertex_order) != len(options):
+        raise ValueError("one ordered local option id is required per parent vertex")
+    word_rows = [
+        _mapping(item, "global coefficient word entry")
+        for item in _sequence(value["global_left_coefficient_word"], "global coefficient word")
+    ]
+    if len(word_rows) != 10:
+        raise ValueError("a five-edge global coefficient word must contain ten entries")
+    word: list[dict[str, object]] = []
+    for position, row in enumerate(word_rows):
+        if set(row) != {"coefficient_id", "basis_index", "parity"}:
+            raise ValueError("global coefficient word entry has undeclared fields")
+        basis_index = int(row["basis_index"])
+        parity = int(row["parity"])
+        if not 0 <= basis_index < 16 or parity != (basis_index.bit_count() & 1):
+            raise ValueError("global coefficient parity must equal popcount(basis_index) mod 2")
+        word.append(
+            {
+                "position": position,
+                "coefficient_id": str(row["coefficient_id"]),
+                "basis_index": basis_index,
+                "parity": parity,
+            }
+        )
+    coefficient_ids = [str(row["coefficient_id"]) for row in word]
+    if len(coefficient_ids) != len(set(coefficient_ids)):
+        raise ValueError("global coefficient ids must be unique")
+    edge_rows = [
+        _mapping(item, "fixed edge pairing")
+        for item in _sequence(value["fixed_edge_pairing_order"], "fixed edge pairing order")
+    ]
+    if len(edge_rows) != 5:
+        raise ValueError("fixed two-loop pairing order must contain five edges")
+    pairings: list[dict[str, str]] = []
+    paired_ids: list[str] = []
+    for row in edge_rows:
+        if set(row) != {"edge_id", "source_coefficient_id", "target_coefficient_id"}:
+            raise ValueError("fixed edge pairing has undeclared fields")
+        source = str(row["source_coefficient_id"])
+        target = str(row["target_coefficient_id"])
+        if source not in coefficient_ids or target not in coefficient_ids or source == target:
+            raise ValueError("fixed edge pairing references invalid coefficient ids")
+        paired_ids.extend([source, target])
+        pairings.append(
+            {
+                "edge_id": str(row["edge_id"]),
+                "source_coefficient_id": source,
+                "target_coefficient_id": target,
+            }
+        )
+    if sorted(paired_ids) != sorted(coefficient_ids):
+        raise ValueError("fixed five-edge pairing must use every coefficient exactly once")
+    normalized = {
+        "parent_id": str(value["parent_id"]),
+        "parent_vertex_order": vertex_order,
+        "ordered_local_amplitude_option_ids": options,
+        "global_left_coefficient_word": word,
+        "fixed_edge_pairing_order": pairings,
+    }
+    normalized["join_key_hash"] = digest(normalized)
+    return normalized
+
+
+def execute_edge_tagged_dalgebra(program: Mapping[str, object]) -> dict[str, object]:
+    """Execute exact local D-algebra on a typed, already scope-expanded program."""
+
+    if program.get("schema_version") != EXECUTOR_SCHEMA_VERSION:
+        raise ValueError("edge-tagged executor schema version mismatch")
+    if program.get("left_coefficient_order") is not True:
+        raise ValueError("executor input must lock LEFT coefficient order")
+    program_kind = str(program.get("program_kind", ""))
+    if program_kind not in EXECUTOR_PROGRAM_KINDS:
+        raise ValueError("executor program_kind must be FIXTURE or GLOBAL_NUMERATOR")
+    global_join_key = None
+    if program_kind == "GLOBAL_NUMERATOR":
+        global_join_key = validate_global_join_key(
+            _mapping(program.get("global_join_key"), "global numerator join key")
+        )
+    elif program.get("global_join_key") is not None:
+        raise ValueError("fixture programs cannot declare a global join key")
+    program_id = str(program.get("program_id", ""))
+    if not program_id:
+        raise ValueError("executor program id is required")
+    endpoint_rows = _sequence(program.get("endpoints"), "executor endpoints")
+    endpoints = {
+        endpoint.endpoint_id: endpoint
+        for endpoint in (
+            endpoint_from_json(_mapping(row, "executor endpoint")) for row in endpoint_rows
+        )
+    }
+    if len(endpoints) != len(endpoint_rows):
+        raise ValueError("executor endpoint ids must be unique")
+    branches = _sequence(program.get("branches"), "executor branches")
+    terms: list[ExecutorTerm] = []
+    token_ids: set[str] = set()
+    for branch in branches:
+        row = _mapping(branch, "executor branch")
+        branch_id = str(row.get("branch_id", ""))
+        if not branch_id:
+            raise ValueError("executor branch id is required")
+        tokens = tuple(
+            token_from_json(_mapping(token, "executor token"))
+            for token in _sequence(row.get("ordered_tokens"), "executor ordered tokens")
+        )
+        if any(token.endpoint_id not in endpoints for token in tokens):
+            raise ValueError("executor token uses an unknown endpoint")
+        for token in tokens:
+            qualified = f"{branch_id}:{token.token_id}"
+            if qualified in token_ids:
+                raise ValueError("executor token ids must be unique per branch")
+            token_ids.add(qualified)
+        coefficient = GaussianRational.from_json(_mapping(row.get("coefficient"), "branch coefficient"))
+        denominators = tuple(
+            str(item)
+            for item in _sequence(row.get("denominator_edges", ()), "denominator edges")
+        )
+        terms.append(
+            ExecutorTerm(branch_id, ExactPolynomial.constant(coefficient), tokens, denominators)
+        )
+    transfers = [
+        _mapping(item, "IBP transfer")
+        for item in _sequence(program.get("ibp_transfers", ()), "IBP transfers")
+    ]
+    canonical_terms = [_canonicalize_delta_endpoints(term, endpoints) for term in terms]
+    ibp_terms = [_apply_ibp_transfers(term, transfers, endpoints) for term in canonical_terms]
+    normal_terms, nilpotent_zeros = _normal_order_terms(ibp_terms, endpoints)
+    active_terms, chirality_zeros = _chirality_and_eom_classify(normal_terms, endpoints)
+    groups = _combine_terms(active_terms)
+    output_terms = _collapse_exact_edge_squares(groups, endpoints)
+    for output in output_terms:
+        token_endpoints = {
+            str(token["endpoint_id"])
+            for token in output["ordered_tokens"]  # type: ignore[index]
+        }
+        endpoint_records = [endpoints[endpoint_id] for endpoint_id in token_endpoints]
+        classifications = output["classifications"]
+        assert isinstance(classifications, list)
+        if any(endpoint.equation_class == "EOM" for endpoint in endpoint_records):
+            classifications.append("EOM_REMAINDER")
+        if any(endpoint.endpoint_kind == "EXTERNAL_BACKGROUND" for endpoint in endpoint_records):
+            classifications.append("EXTERNAL_BACKGROUND_DERIVATIVE")
+        if any(endpoint.endpoint_kind == "COMPOSITE_SOURCE" for endpoint in endpoint_records):
+            classifications.append("COMPOSITE_SOURCE_DERIVATIVE")
+        output["classifications"] = sorted(set(classifications))
+        output["external_derivative_tokens"] = [
+            token
+            for token in output["ordered_tokens"]  # type: ignore[index]
+            if endpoints[str(token["endpoint_id"])].endpoint_kind
+            in {"EXTERNAL_BACKGROUND", "COMPOSITE_SOURCE"}
+        ]
+    result = {
+        "schema_version": EXECUTOR_RESULT_VERSION,
+        "program_id": program_id,
+        "program_kind": program_kind,
+        "program_hash": digest(program),
+        "global_join_key": global_join_key,
+        "left_coefficient_order": True,
+        "mixed_anticommutator": "{D_a,barD_dota}=-2*i*p_(a,dota)",
+        "endpoint_transfer_rule": "D_target*delta=-D_source*delta",
+        "ibp_rule": "integral (D F)G=-(-1)^|F| integral F(D G)",
+        "terms": output_terms,
+        "zero_terms": [*nilpotent_zeros, *chirality_zeros],
+        "phase_execution": [
+            {"phase": "SCOPE_EXPANSION", "status": "INPUT_ALREADY_EXACTLY_EXPANDED"},
+            {"phase": "ENDPOINT_CANONICALIZATION", "status": "EXECUTED"},
+            {"phase": "PIVOTED_IBP", "status": "EXECUTED"},
+            {"phase": "PRIMITIVE_NORMAL_ORDERING", "status": "EXECUTED"},
+            {"phase": "PROJECTOR_REDUCTION", "status": "NO_UNDECLARED_PROJECTOR_REWRITE"},
+            {"phase": "EXTERNAL_CHIRALITY", "status": "EXECUTED"},
+            {"phase": "GRASSMANN_SATURATION", "status": "CLASSIFIED_BY_EXACT_WORD"},
+            {"phase": "TYPED_EDGE_COLLAPSE", "status": "EXECUTED_EXACT_R_SQUARE_ONLY"},
+        ],
+        "DRED_performed": False,
+        "IBP_integral_reduction_performed": False,
+        "UV_pole": None,
+        "two_loop_coefficient": None,
+    }
+    result["result_hash"] = digest(result)
+    return result
 
 
 def _mapping(value: object, label: str) -> Mapping[str, object]:
@@ -923,16 +1765,362 @@ def input_schema_contract(graph: Mapping[str, object]) -> dict[str, object]:
     }
 
 
+def graph_executor_endpoints(graph: Mapping[str, object]) -> list[dict[str, object]]:
+    basis = tuple(str(item) for item in graph["momentum_contract"]["basis"])  # type: ignore[index]
+    endpoints: list[ExecutorEndpoint] = []
+    for edge in _edge_by_id(graph).values():
+        vector = tuple(int(item) for item in edge["momentum_vector"])  # type: ignore[index]
+        endpoints.extend(
+            [
+                ExecutorEndpoint(
+                    str(edge["source_port"]),
+                    "INTERNAL_SOURCE",
+                    0,
+                    "NONE",
+                    "ORDINARY",
+                    basis,
+                    vector,
+                    str(edge["edge_id"]),
+                    str(edge["target_port"]),
+                ),
+                ExecutorEndpoint(
+                    str(edge["target_port"]),
+                    "INTERNAL_TARGET",
+                    0,
+                    "NONE",
+                    "ORDINARY",
+                    basis,
+                    tuple(-item for item in vector),
+                    str(edge["edge_id"]),
+                    str(edge["source_port"]),
+                ),
+            ]
+        )
+    for vertex in _sequence(graph["vertices"], "vertices"):
+        row = _mapping(vertex, "vertex")
+        injections = {
+            str(injection["momentum"]): tuple(int(item) for item in injection["momentum_vector"])
+            for injection in _sequence(row.get("momentum_injections", ()), "momentum injections")
+        }
+        for port in _sequence(row.get("background_ports", ()), "background ports"):
+            port_row = _mapping(port, "background port")
+            momentum_label = str(port_row["momentum"])
+            endpoints.append(
+                ExecutorEndpoint(
+                    str(port_row["port_id"]),
+                    "EXTERNAL_BACKGROUND",
+                    0,
+                    "NONE",
+                    "ORDINARY",
+                    basis,
+                    injections[momentum_label],
+                )
+            )
+        for injection in _sequence(row.get("momentum_injections", ()), "momentum injections"):
+            injection_row = _mapping(injection, "momentum injection")
+            if injection_row.get("kind") == "COMPOSITE_SOURCE_MOMENTUM":
+                endpoints.append(
+                    ExecutorEndpoint(
+                        f"{row['vertex_id']}.composite_source",
+                        "COMPOSITE_SOURCE",
+                        0,
+                        "NONE",
+                        "EOM",
+                        basis,
+                        tuple(int(item) for item in injection_row["momentum_vector"]),
+                    )
+                )
+    ids = [endpoint.endpoint_id for endpoint in endpoints]
+    if len(ids) != len(set(ids)):
+        raise ValueError("graph executor endpoint ids are not unique")
+    return [endpoint.to_json() for endpoint in endpoints]
+
+
+def executor_program_schema() -> dict[str, object]:
+    return {
+        "schema_version": EXECUTOR_SCHEMA_VERSION,
+        "left_coefficient_order": True,
+        "required_program_fields": [
+            "schema_version",
+            "program_id",
+            "program_kind",
+            "left_coefficient_order",
+            "endpoints",
+            "branches",
+            "ibp_transfers",
+        ],
+        "endpoint_kinds": sorted(ENDPOINT_KINDS),
+        "endpoint_fields": [
+            "endpoint_id",
+            "endpoint_kind",
+            "parity",
+            "chirality",
+            "equation_class",
+            "momentum",
+            "edge_id",
+            "paired_endpoint_id",
+        ],
+        "primitive_token_fields": [
+            "token_id",
+            "derivative_kind",
+            "spinor_component",
+            "endpoint_id",
+            "carrier",
+        ],
+        "primitive_kinds": {"D": sorted(UNDOTTED_COMPONENTS), "BAR_D": sorted(DOTTED_COMPONENTS)},
+        "carriers": sorted(TOKEN_CARRIERS),
+        "exact_rules": {
+            "graded_IBP": "integral (D F)G=-(-1)^|F| integral F(D G)",
+            "delta_endpoint_transfer": "D_target*delta=-D_source*delta",
+            "mixed_anticommutator": "{D_a,barD_dota}=-2*i*p_(a,dota)",
+            "nilpotence": "D_a^2=barD_dota^2=0",
+            "chirality": "barD*Phi=0; D*TildePhi=0",
+            "edge_collapse": "exact numerator polynomial c*r^2 divided by r^2 gives c",
+        },
+        "typed_output": [
+            "polynomial",
+            "ordered_tokens",
+            "external_derivative_tokens",
+            "remaining_denominator_edges",
+            "collapsed_edges",
+            "classifications",
+            "provenance",
+        ],
+        "global_numerator_interface": "one result per exact global left coefficient word and fixed Wick pairing",
+        "program_kinds": sorted(EXECUTOR_PROGRAM_KINDS),
+        "global_join_key_fields": [
+            "parent_id",
+            "parent_vertex_order",
+            "ordered_local_amplitude_option_ids",
+            "global_left_coefficient_word",
+            "fixed_edge_pairing_order",
+        ],
+    }
+
+
+def _token_json(
+    token_id: str,
+    derivative_kind: str,
+    spinor_component: str,
+    endpoint_id: str,
+    carrier: str,
+) -> dict[str, object]:
+    return ExecutorToken(
+        token_id, derivative_kind, spinor_component, endpoint_id, carrier
+    ).to_json()
+
+
+def exact_executor_fixtures(graph: Mapping[str, object]) -> dict[str, object]:
+    basis = list(graph["momentum_contract"]["basis"])  # type: ignore[index]
+    edge = _edge_by_id(graph)[sorted(_edge_by_id(graph))[0]]
+    source = str(edge["source_port"])
+    target = str(edge["target_port"])
+    edge_id = str(edge["edge_id"])
+    graph_endpoints = graph_executor_endpoints(graph)
+
+    ibp_endpoints = [
+        ExecutorEndpoint(
+            "fixture.background",
+            "EXTERNAL_BACKGROUND",
+            0,
+            "NONE",
+            "ORDINARY",
+            tuple(basis),
+            (0, 0, 0, 1, 0),
+        ).to_json(),
+        ExecutorEndpoint(
+            "fixture.composite",
+            "COMPOSITE_SOURCE",
+            1,
+            "NONE",
+            "EOM",
+            tuple(basis),
+            (0, 0, 1, 0, 0),
+        ).to_json(),
+        ExecutorEndpoint(
+            "fixture.odd_external",
+            "EXTERNAL_BACKGROUND",
+            1,
+            "NONE",
+            "ORDINARY",
+            tuple(basis),
+            (0, 0, 0, 0, 1),
+        ).to_json(),
+    ]
+    ibp_program = {
+        "schema_version": EXECUTOR_SCHEMA_VERSION,
+        "program_id": "FIXTURE_GRADED_IBP_EXTERNAL_TO_COMPOSITE",
+        "program_kind": "FIXTURE",
+        "left_coefficient_order": True,
+        "endpoints": ibp_endpoints,
+        "branches": [
+            {
+                "branch_id": "ibp_even_source",
+                "coefficient": ONE.to_json(),
+                "ordered_tokens": [
+                    _token_json("ibp_D", "D", "+", "fixture.background", "FIELD")
+                ],
+                "denominator_edges": [],
+            },
+            {
+                "branch_id": "ibp_odd_source",
+                "coefficient": ONE.to_json(),
+                "ordered_tokens": [
+                    _token_json("ibp_D_odd", "D", "-", "fixture.odd_external", "FIELD")
+                ],
+                "denominator_edges": [],
+            }
+        ],
+        "ibp_transfers": [
+            {
+                "branch_id": "ibp_even_source",
+                "token_id": "ibp_D",
+                "from_endpoint_id": "fixture.background",
+                "to_endpoint_id": "fixture.composite",
+                "crossed_endpoint_ids": ["fixture.background"],
+            },
+            {
+                "branch_id": "ibp_odd_source",
+                "token_id": "ibp_D_odd",
+                "from_endpoint_id": "fixture.odd_external",
+                "to_endpoint_id": "fixture.composite",
+                "crossed_endpoint_ids": ["fixture.odd_external"],
+            }
+        ],
+    }
+
+    endpoint_program = {
+        "schema_version": EXECUTOR_SCHEMA_VERSION,
+        "program_id": "FIXTURE_INTERNAL_TARGET_TRANSFER_AND_MIXED_MOMENTUM",
+        "program_kind": "FIXTURE",
+        "left_coefficient_order": True,
+        "endpoints": graph_endpoints,
+        "branches": [
+            {
+                "branch_id": "target_mixed",
+                "coefficient": ONE.to_json(),
+                "ordered_tokens": [
+                    _token_json("target_D", "D", "+", target, "PROPAGATOR_DELTA"),
+                    _token_json("target_barD", "BAR_D", "dot+", target, "PROPAGATOR_DELTA"),
+                ],
+                "denominator_edges": [],
+            }
+        ],
+        "ibp_transfers": [],
+    }
+
+    collapse_program = {
+        "schema_version": EXECUTOR_SCHEMA_VERSION,
+        "program_id": "FIXTURE_EXACT_R_SQUARE_PROPAGATOR_COLLAPSE",
+        "program_kind": "FIXTURE",
+        "left_coefficient_order": True,
+        "endpoints": graph_endpoints,
+        "branches": [
+            {
+                "branch_id": "determinant_diagonal",
+                "coefficient": ONE.to_json(),
+                "ordered_tokens": [
+                    _token_json("a_Dp", "D", "+", source, "PROPAGATOR_DELTA"),
+                    _token_json("a_Bp", "BAR_D", "dot+", source, "PROPAGATOR_DELTA"),
+                    _token_json("a_Dm", "D", "-", source, "PROPAGATOR_DELTA"),
+                    _token_json("a_Bm", "BAR_D", "dot-", source, "PROPAGATOR_DELTA"),
+                ],
+                "denominator_edges": [edge_id],
+            },
+            {
+                "branch_id": "determinant_off_diagonal",
+                "coefficient": MINUS_ONE.to_json(),
+                "ordered_tokens": [
+                    _token_json("b_Dp", "D", "+", source, "PROPAGATOR_DELTA"),
+                    _token_json("b_Bm", "BAR_D", "dot-", source, "PROPAGATOR_DELTA"),
+                    _token_json("b_Dm", "D", "-", source, "PROPAGATOR_DELTA"),
+                    _token_json("b_Bp", "BAR_D", "dot+", source, "PROPAGATOR_DELTA"),
+                ],
+                "denominator_edges": [edge_id],
+            },
+        ],
+        "ibp_transfers": [],
+    }
+
+    classification_endpoints = [
+        ExecutorEndpoint(
+            "fixture.chiral", "EXTERNAL_BACKGROUND", 0, "CHIRAL", "ORDINARY", tuple(basis), (0, 0, 0, 1, 0)
+        ).to_json(),
+        ExecutorEndpoint(
+            "fixture.antichiral", "EXTERNAL_BACKGROUND", 0, "ANTICHIRAL", "ORDINARY", tuple(basis), (0, 0, 0, 0, 1)
+        ).to_json(),
+        ExecutorEndpoint(
+            "fixture.eom", "COMPOSITE_SOURCE", 0, "NONE", "EOM", tuple(basis), (0, 0, 1, 0, 0)
+        ).to_json(),
+        ExecutorEndpoint(
+            "fixture.ordinary", "EXTERNAL_BACKGROUND", 0, "NONE", "ORDINARY", tuple(basis), (0, 0, 0, 1, 0)
+        ).to_json(),
+    ]
+    classification_program = {
+        "schema_version": EXECUTOR_SCHEMA_VERSION,
+        "program_id": "FIXTURE_NILPOTENCE_CHIRALITY_EOM",
+        "program_kind": "FIXTURE",
+        "left_coefficient_order": True,
+        "endpoints": classification_endpoints,
+        "branches": [
+            {
+                "branch_id": "barD_chiral_zero",
+                "coefficient": ONE.to_json(),
+                "ordered_tokens": [
+                    _token_json("bar_ch", "BAR_D", "dot+", "fixture.chiral", "FIELD")
+                ],
+                "denominator_edges": [],
+            },
+            {
+                "branch_id": "D_antichiral_zero",
+                "coefficient": ONE.to_json(),
+                "ordered_tokens": [
+                    _token_json("D_ach", "D", "+", "fixture.antichiral", "FIELD")
+                ],
+                "denominator_edges": [],
+            },
+            {
+                "branch_id": "eom_remainder",
+                "coefficient": ONE.to_json(),
+                "ordered_tokens": [
+                    _token_json("D_eom", "D", "-", "fixture.eom", "FIELD")
+                ],
+                "denominator_edges": [],
+            },
+            {
+                "branch_id": "nilpotent_zero",
+                "coefficient": ONE.to_json(),
+                "ordered_tokens": [
+                    _token_json("D_nil_1", "D", "+", "fixture.ordinary", "FIELD"),
+                    _token_json("D_nil_2", "D", "+", "fixture.ordinary", "FIELD"),
+                ],
+                "denominator_edges": [],
+            },
+        ],
+        "ibp_transfers": [],
+    }
+
+    programs = [ibp_program, endpoint_program, collapse_program, classification_program]
+    results = [execute_edge_tagged_dalgebra(program) for program in programs]
+    return {
+        "graph_id": graph["graph_id"],
+        "programs": programs,
+        "results": results,
+        "fixture_hash": digest(results),
+    }
+
+
 def build_payload() -> dict[str, object]:
     graph_bundle = build_bundle()
     graphs = graph_bundle["literal_direct_graphs"]
     contracts = [compile_schedule_contract(graph, None) for graph in graphs]
     schemas = [input_schema_contract(graph) for graph in graphs]
+    fixtures = exact_executor_fixtures(graphs[0])
     payload = {
         "schema_version": SCHEMA_VERSION,
         "status": STATUS,
         "authority_role": "UNMERGED_PROPOSAL_NOT_COMPUTATIONAL_EVIDENCE",
-        "scope": "LITERAL_K4_MINUS_EDGE_TWO_LOOP_DWORD_PHASE_SCHEDULER_CONTRACT",
+        "scope": "LITERAL_K4_MINUS_EDGE_SCHEDULER_PLUS_EXACT_EDGE_TAGGED_EXECUTOR",
         "external_result_used_as_calculation_input": False,
         "phase_order": list(PHASE_ORDER),
         "termination_measure": termination_contract(),
@@ -946,6 +2134,14 @@ def build_payload() -> dict[str, object]:
         "global_confluence_claimed": False,
         "physical_derivative_scopes_inferred": False,
         "phase_execution_performed": False,
+        "exact_fixture_execution_performed": True,
+        "edge_tagged_executor_schema": executor_program_schema(),
+        "edge_tagged_executor_fixtures": fixtures,
+        "physical_global_numerator_execution": "BLOCKED_MISSING_EXACT_GLOBAL_WORD_INPUT",
+        "DRED_performed": False,
+        "IBP_integral_reduction_performed": False,
+        "UV_pole": None,
+        "two_loop_coefficient": None,
     }
     payload["payload_hash"] = digest({key: value for key, value in payload.items() if key != "payload_hash"})
     return payload
@@ -969,6 +2165,27 @@ def exact_checks(payload: Mapping[str, object]) -> dict[str, bool]:
         "anomaly_coefficient",
         "local_coefficient",
     }
+    fixture_results = payload["edge_tagged_executor_fixtures"]["results"]  # type: ignore[index]
+    collapse_result = next(
+        result
+        for result in fixture_results
+        if result["program_id"] == "FIXTURE_EXACT_R_SQUARE_PROPAGATOR_COLLAPSE"
+    )
+    classification_result = next(
+        result
+        for result in fixture_results
+        if result["program_id"] == "FIXTURE_NILPOTENCE_CHIRALITY_EOM"
+    )
+    ibp_result = next(
+        result
+        for result in fixture_results
+        if result["program_id"] == "FIXTURE_GRADED_IBP_EXTERNAL_TO_COMPOSITE"
+    )
+    endpoint_result = next(
+        result
+        for result in fixture_results
+        if result["program_id"] == "FIXTURE_INTERNAL_TARGET_TRANSFER_AND_MIXED_MOMENTUM"
+    )
     checks = {
         "proposal_status": payload["status"] == STATUS,
         "phase_order_exact": tuple(payload["phase_order"]) == PHASE_ORDER,  # type: ignore[arg-type]
@@ -1003,6 +2220,48 @@ def exact_checks(payload: Mapping[str, object]) -> dict[str, bool]:
         "no_global_confluence_claim": payload["global_confluence_claimed"] is False,
         "no_scope_inference": payload["physical_derivative_scopes_inferred"] is False,
         "no_phase_execution": payload["phase_execution_performed"] is False,
+        "exact_fixture_execution": payload["exact_fixture_execution_performed"] is True,
+        "left_coefficient_order_locked": all(
+            result["left_coefficient_order"] is True for result in fixture_results
+        ),
+        "graded_ibp_fixture_executes": any(
+            "COMPOSITE_SOURCE_DERIVATIVE" in term["classifications"]
+            and "EOM_REMAINDER" in term["classifications"]
+            for term in ibp_result["terms"]
+        ),
+        "internal_endpoint_transfer_and_mixed_momentum_execute": any(
+            any(
+                ledger["kind"] == "MIXED_ANTICOMMUTATOR"
+                for provenance in term["provenance"]
+                for ledger in provenance["ledger"]
+            )
+            for term in endpoint_result["terms"]
+        ),
+        "nilpotence_chirality_eom_classified": {
+            zero["classification"] for zero in classification_result["zero_terms"]
+        }
+        == {"NILPOTENT_ZERO", "CHIRALITY_ZERO"}
+        and any("EOM_REMAINDER" in term["classifications"] for term in classification_result["terms"]),
+        "exact_propagator_collapse_executes": any(
+            "PROPAGATOR_COLLAPSE" in term["classifications"]
+            and any(edge["quotient"] == (MINUS_ONE * 4).to_json() for edge in term["collapsed_edges"])
+            for term in collapse_result["terms"]
+        ),
+        "external_tokens_are_retained": any(
+            term["external_derivative_tokens"] for term in ibp_result["terms"]
+        ),
+        "global_numerator_join_api_is_typed": payload["edge_tagged_executor_schema"][
+            "global_join_key_fields"
+        ]
+        == [
+            "parent_id",
+            "parent_vertex_order",
+            "ordered_local_amplitude_option_ids",
+            "global_left_coefficient_word",
+            "fixed_edge_pairing_order",
+        ]
+        and payload["physical_global_numerator_execution"]
+        == "BLOCKED_MISSING_EXACT_GLOBAL_WORD_INPUT",
         "polynomial_oracle_is_symbolic_gate": payload["polynomial_oracle_requirement"] == {  # type: ignore[index]
             "proof_mode": "EXACT_SYMBOLIC_POLYNOMIAL_IDENTITY",
             "numerical_sampling_admissible": False,
@@ -1011,6 +2270,10 @@ def exact_checks(payload: Mapping[str, object]) -> dict[str, bool]:
         "payload_hash_recomputes": payload["payload_hash"] == digest(
             {key: value for key, value in payload.items() if key != "payload_hash"}
         ),
+        "no_DRED_IBP_pole_or_coefficient": payload["DRED_performed"] is False
+        and payload["IBP_integral_reduction_performed"] is False
+        and payload["UV_pole"] is None
+        and payload["two_loop_coefficient"] is None,
     }
     return checks
 
@@ -1031,7 +2294,7 @@ def build_audit(payload: Mapping[str, object]) -> dict[str, object]:
 
 def render_markdown(payload: Mapping[str, object]) -> str:
     lines = [
-        "# Step 6 — literal $K_4\\setminus e$ DWordIR scheduler contract",
+        "# Step 6 — literal $K_4\\setminus e$ edge-tagged D-algebra executor",
         "",
         f"`{STATUS}`",
         "",
@@ -1070,6 +2333,26 @@ def render_markdown(payload: Mapping[str, object]) -> str:
             "",
             "Polynomial gate: `EXACT_SYMBOLIC_POLYNOMIAL_IDENTITY`; numerical samples are rejected.",
             "",
+            "## Exact edge-tagged executor fixtures",
+            "",
+            "$$",
+            "\\int (D F)G=-(-1)^{|F|}\\int F(DG),\\qquad",
+            "D^{(t)}\\delta=-D^{(s)}\\delta,",
+            "$$",
+            "",
+            "$$",
+            "D_a\\bar D_{\\dot a}=-\\bar D_{\\dot a}D_a-2ip_{a\\dot a}.",
+            "$$",
+            "",
+            "$$",
+            "D_a^2=\\bar D_{\\dot a}^2=0,\\qquad",
+            "\\bar D_{\\dot a}\\Phi=0,\\qquad D_a\\widetilde\\Phi=0.",
+            "$$",
+            "",
+            f"Executed fixtures: `{len(payload['edge_tagged_executor_fixtures']['results'])}`.",  # type: ignore[index]
+            "",
+            "Physical global numerator: `BLOCKED_MISSING_EXACT_GLOBAL_WORD_INPUT`.",
+            "",
         ]
     )
     return "\n".join(lines)
@@ -1087,6 +2370,7 @@ def write_outputs() -> tuple[dict[str, object], dict[str, object]]:
             {
                 "schema_version": INPUT_SCHEMA_VERSION,
                 "graph_schemas": payload["input_schemas"],
+                "edge_tagged_executor_program_schema": payload["edge_tagged_executor_schema"],
             },
             indent=2,
             sort_keys=True,
