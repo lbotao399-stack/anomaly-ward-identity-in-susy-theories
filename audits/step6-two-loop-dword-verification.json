@@ -1,0 +1,26 @@
+{
+  "checks": {
+    "all_inputs_are_literal_k4_minus_edge": true,
+    "all_missing_lists_deterministic": true,
+    "all_real_graph_attempts_fail_closed": true,
+    "all_theta_cycle_rank_two": true,
+    "all_theta_trees_have_three_edges_two_chords": true,
+    "central_critical_pairs_declared_unjoined": true,
+    "literal_graph_set_nonempty": true,
+    "no_evaluated_physical_result_fields": true,
+    "no_global_confluence_claim": true,
+    "no_phase_execution": true,
+    "no_scope_inference": true,
+    "payload_hash_recomputes": true,
+    "phase_order_exact": true,
+    "polynomial_oracle_is_symbolic_gate": true,
+    "proposal_status": true,
+    "termination_components_exact": true
+  },
+  "failed": 0,
+  "failures": [],
+  "passed": 16,
+  "proposal_status": "PROPOSAL_ONLY_BLOCKED_ON_STEP5_ACCEPTANCE",
+  "schema_version": "step6.two_loop_dword.audit.v1",
+  "status": "PASS"
+}

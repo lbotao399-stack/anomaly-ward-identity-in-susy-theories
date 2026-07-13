@@ -1,0 +1,1042 @@
+{
+  "authority_role": "UNMERGED_PROPOSAL_NOT_COMPUTATIONAL_EVIDENCE",
+  "exact_scalar_domain": "Q(i)",
+  "external_result_used_as_calculation_input": false,
+  "global_confluence_claimed": false,
+  "graph_contracts": [
+    {
+      "critical_pairs": [
+        {
+          "central_edge_id": "e_CI",
+          "central_endpoint_port_id": "C.q0",
+          "critical_pair_id": "e_CI:scope_endpoint_overlap:C.q0",
+          "left_phase": "SCOPE_EXPANSION",
+          "overlap_class": "scope_endpoint_overlap",
+          "required_certificate": {
+            "exact_ledger_product_equal_in_Q_i": null,
+            "left_normal_form_hash": null,
+            "polynomial_oracle_identity_id": null,
+            "right_normal_form_hash": null,
+            "same_input_word_hash": null
+          },
+          "right_phase": "ENDPOINT_CANONICALIZATION",
+          "status": "DECLARED_UNJOINED_UNTIL_EXACT_WORD_INPUT"
+        },
+        {
+          "central_edge_id": "e_CI",
+          "central_endpoint_port_id": "I.q0",
+          "critical_pair_id": "e_CI:scope_endpoint_overlap:I.q0",
+          "left_phase": "SCOPE_EXPANSION",
+          "overlap_class": "scope_endpoint_overlap",
+          "required_certificate": {
+            "exact_ledger_product_equal_in_Q_i": null,
+            "left_normal_form_hash": null,
+            "polynomial_oracle_identity_id": null,
+            "right_normal_form_hash": null,
+            "same_input_word_hash": null
+          },
+          "right_phase": "ENDPOINT_CANONICALIZATION",
+          "status": "DECLARED_UNJOINED_UNTIL_EXACT_WORD_INPUT"
+        },
+        {
+          "central_edge_id": "e_CI",
+          "central_endpoint_port_id": "C.q0",
+          "critical_pair_id": "e_CI:endpoint_pivot_overlap:C.q0",
+          "left_phase": "ENDPOINT_CANONICALIZATION",
+          "overlap_class": "endpoint_pivot_overlap",
+          "required_certificate": {
+            "exact_ledger_product_equal_in_Q_i": null,
+            "left_normal_form_hash": null,
+            "polynomial_oracle_identity_id": null,
+            "right_normal_form_hash": null,
+            "same_input_word_hash": null
+          },
+          "right_phase": "PIVOTED_IBP",
+          "status": "DECLARED_UNJOINED_UNTIL_EXACT_WORD_INPUT"
+        },
+        {
+          "central_edge_id": "e_CI",
+          "central_endpoint_port_id": "I.q0",
+          "critical_pair_id": "e_CI:endpoint_pivot_overlap:I.q0",
+          "left_phase": "ENDPOINT_CANONICALIZATION",
+          "overlap_class": "endpoint_pivot_overlap",
+          "required_certificate": {
+            "exact_ledger_product_equal_in_Q_i": null,
+            "left_normal_form_hash": null,
+            "polynomial_oracle_identity_id": null,
+            "right_normal_form_hash": null,
+            "same_input_word_hash": null
+          },
+          "right_phase": "PIVOTED_IBP",
+          "status": "DECLARED_UNJOINED_UNTIL_EXACT_WORD_INPUT"
+        },
+        {
+          "central_edge_id": "e_CI",
+          "central_endpoint_port_id": "C.q0",
+          "critical_pair_id": "e_CI:pivot_primitive_overlap:C.q0",
+          "left_phase": "PIVOTED_IBP",
+          "overlap_class": "pivot_primitive_overlap",
+          "required_certificate": {
+            "exact_ledger_product_equal_in_Q_i": null,
+            "left_normal_form_hash": null,
+            "polynomial_oracle_identity_id": null,
+            "right_normal_form_hash": null,
+            "same_input_word_hash": null
+          },
+          "right_phase": "PRIMITIVE_NORMAL_ORDERING",
+          "status": "DECLARED_UNJOINED_UNTIL_EXACT_WORD_INPUT"
+        },
+        {
+          "central_edge_id": "e_CI",
+          "central_endpoint_port_id": "I.q0",
+          "critical_pair_id": "e_CI:pivot_primitive_overlap:I.q0",
+          "left_phase": "PIVOTED_IBP",
+          "overlap_class": "pivot_primitive_overlap",
+          "required_certificate": {
+            "exact_ledger_product_equal_in_Q_i": null,
+            "left_normal_form_hash": null,
+            "polynomial_oracle_identity_id": null,
+            "right_normal_form_hash": null,
+            "same_input_word_hash": null
+          },
+          "right_phase": "PRIMITIVE_NORMAL_ORDERING",
+          "status": "DECLARED_UNJOINED_UNTIL_EXACT_WORD_INPUT"
+        },
+        {
+          "central_edge_id": "e_CI",
+          "central_endpoint_port_id": "C.q0",
+          "critical_pair_id": "e_CI:projector_collapse_overlap:C.q0",
+          "left_phase": "PROJECTOR_REDUCTION",
+          "overlap_class": "projector_collapse_overlap",
+          "required_certificate": {
+            "exact_ledger_product_equal_in_Q_i": null,
+            "left_normal_form_hash": null,
+            "polynomial_oracle_identity_id": null,
+            "right_normal_form_hash": null,
+            "same_input_word_hash": null
+          },
+          "right_phase": "TYPED_EDGE_COLLAPSE",
+          "status": "DECLARED_UNJOINED_UNTIL_EXACT_WORD_INPUT"
+        },
+        {
+          "central_edge_id": "e_CI",
+          "central_endpoint_port_id": "I.q0",
+          "critical_pair_id": "e_CI:projector_collapse_overlap:I.q0",
+          "left_phase": "PROJECTOR_REDUCTION",
+          "overlap_class": "projector_collapse_overlap",
+          "required_certificate": {
+            "exact_ledger_product_equal_in_Q_i": null,
+            "left_normal_form_hash": null,
+            "polynomial_oracle_identity_id": null,
+            "right_normal_form_hash": null,
+            "same_input_word_hash": null
+          },
+          "right_phase": "TYPED_EDGE_COLLAPSE",
+          "status": "DECLARED_UNJOINED_UNTIL_EXACT_WORD_INPUT"
+        }
+      ],
+      "global_confluence_claimed": false,
+      "graph_hash": "5cbf5cea3c11f28278e0366aaf48206a8fbb9c57a0c3d63a357a99ff0c519fcf",
+      "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+      "missing_inputs": [
+        "wick_record.exact_sign_koszul_ledger",
+        "wick_record.graph_hash",
+        "wick_record.graph_id",
+        "wick_record.notation_schema_hash",
+        "wick_record.ordered_derivative_scope_ast",
+        "wick_record.polynomial_oracle",
+        "wick_record.propagator_kernels[e_AI]",
+        "wick_record.propagator_kernels[e_BI]",
+        "wick_record.propagator_kernels[e_CA]",
+        "wick_record.propagator_kernels[e_CB]",
+        "wick_record.propagator_kernels[e_CI]",
+        "wick_record.schema_version",
+        "wick_record.wick_complete",
+        "wick_record.wick_completeness_certificate",
+        "wick_record.wick_pairings"
+      ],
+      "phase_execution": null,
+      "phase_order": [
+        "SCOPE_EXPANSION",
+        "ENDPOINT_CANONICALIZATION",
+        "PIVOTED_IBP",
+        "PRIMITIVE_NORMAL_ORDERING",
+        "PROJECTOR_REDUCTION",
+        "EXTERNAL_CHIRALITY",
+        "GRASSMANN_SATURATION",
+        "TYPED_EDGE_COLLAPSE"
+      ],
+      "status": "BLOCKED_MISSING_WICK_COMPLETE_DWORD_INPUTS",
+      "theta_decomposition": {
+        "anchor_pole_vertex_id": "I",
+        "central_edge_id": "e_CI",
+        "central_endpoint_ports": [
+          "C.q0",
+          "I.q0"
+        ],
+        "chord_edge_ids": [
+          "e_CA",
+          "e_CB"
+        ],
+        "cycle_rank_certificate": {
+          "I_minus_V_plus_1": 2,
+          "chord_count": 2,
+          "passed": true
+        },
+        "degree_two_vertex_ids": [
+          "A",
+          "B"
+        ],
+        "fundamental_cycles": [
+          {
+            "chord_edge_id": "e_CA",
+            "fundamental_cycle_edge_ids": [
+              "e_AI",
+              "e_CA",
+              "e_CI"
+            ],
+            "tree_edge_path": [
+              "e_CI",
+              "e_AI"
+            ],
+            "tree_vertex_path": [
+              "C",
+              "I",
+              "A"
+            ]
+          },
+          {
+            "chord_edge_id": "e_CB",
+            "fundamental_cycle_edge_ids": [
+              "e_BI",
+              "e_CB",
+              "e_CI"
+            ],
+            "tree_edge_path": [
+              "e_CI",
+              "e_BI"
+            ],
+            "tree_vertex_path": [
+              "C",
+              "I",
+              "B"
+            ]
+          }
+        ],
+        "root_vertex_id": "I",
+        "spanning_tree_edge_ids": [
+          "e_AI",
+          "e_BI",
+          "e_CI"
+        ],
+        "theta_pole_vertex_ids": [
+          "C",
+          "I"
+        ]
+      }
+    },
+    {
+      "critical_pairs": [
+        {
+          "central_edge_id": "e_BC",
+          "central_endpoint_port_id": "B.q2",
+          "critical_pair_id": "e_BC:scope_endpoint_overlap:B.q2",
+          "left_phase": "SCOPE_EXPANSION",
+          "overlap_class": "scope_endpoint_overlap",
+          "required_certificate": {
+            "exact_ledger_product_equal_in_Q_i": null,
+            "left_normal_form_hash": null,
+            "polynomial_oracle_identity_id": null,
+            "right_normal_form_hash": null,
+            "same_input_word_hash": null
+          },
+          "right_phase": "ENDPOINT_CANONICALIZATION",
+          "status": "DECLARED_UNJOINED_UNTIL_EXACT_WORD_INPUT"
+        },
+        {
+          "central_edge_id": "e_BC",
+          "central_endpoint_port_id": "C.q2",
+          "critical_pair_id": "e_BC:scope_endpoint_overlap:C.q2",
+          "left_phase": "SCOPE_EXPANSION",
+          "overlap_class": "scope_endpoint_overlap",
+          "required_certificate": {
+            "exact_ledger_product_equal_in_Q_i": null,
+            "left_normal_form_hash": null,
+            "polynomial_oracle_identity_id": null,
+            "right_normal_form_hash": null,
+            "same_input_word_hash": null
+          },
+          "right_phase": "ENDPOINT_CANONICALIZATION",
+          "status": "DECLARED_UNJOINED_UNTIL_EXACT_WORD_INPUT"
+        },
+        {
+          "central_edge_id": "e_BC",
+          "central_endpoint_port_id": "B.q2",
+          "critical_pair_id": "e_BC:endpoint_pivot_overlap:B.q2",
+          "left_phase": "ENDPOINT_CANONICALIZATION",
+          "overlap_class": "endpoint_pivot_overlap",
+          "required_certificate": {
+            "exact_ledger_product_equal_in_Q_i": null,
+            "left_normal_form_hash": null,
+            "polynomial_oracle_identity_id": null,
+            "right_normal_form_hash": null,
+            "same_input_word_hash": null
+          },
+          "right_phase": "PIVOTED_IBP",
+          "status": "DECLARED_UNJOINED_UNTIL_EXACT_WORD_INPUT"
+        },
+        {
+          "central_edge_id": "e_BC",
+          "central_endpoint_port_id": "C.q2",
+          "critical_pair_id": "e_BC:endpoint_pivot_overlap:C.q2",
+          "left_phase": "ENDPOINT_CANONICALIZATION",
+          "overlap_class": "endpoint_pivot_overlap",
+          "required_certificate": {
+            "exact_ledger_product_equal_in_Q_i": null,
+            "left_normal_form_hash": null,
+            "polynomial_oracle_identity_id": null,
+            "right_normal_form_hash": null,
+            "same_input_word_hash": null
+          },
+          "right_phase": "PIVOTED_IBP",
+          "status": "DECLARED_UNJOINED_UNTIL_EXACT_WORD_INPUT"
+        },
+        {
+          "central_edge_id": "e_BC",
+          "central_endpoint_port_id": "B.q2",
+          "critical_pair_id": "e_BC:pivot_primitive_overlap:B.q2",
+          "left_phase": "PIVOTED_IBP",
+          "overlap_class": "pivot_primitive_overlap",
+          "required_certificate": {
+            "exact_ledger_product_equal_in_Q_i": null,
+            "left_normal_form_hash": null,
+            "polynomial_oracle_identity_id": null,
+            "right_normal_form_hash": null,
+            "same_input_word_hash": null
+          },
+          "right_phase": "PRIMITIVE_NORMAL_ORDERING",
+          "status": "DECLARED_UNJOINED_UNTIL_EXACT_WORD_INPUT"
+        },
+        {
+          "central_edge_id": "e_BC",
+          "central_endpoint_port_id": "C.q2",
+          "critical_pair_id": "e_BC:pivot_primitive_overlap:C.q2",
+          "left_phase": "PIVOTED_IBP",
+          "overlap_class": "pivot_primitive_overlap",
+          "required_certificate": {
+            "exact_ledger_product_equal_in_Q_i": null,
+            "left_normal_form_hash": null,
+            "polynomial_oracle_identity_id": null,
+            "right_normal_form_hash": null,
+            "same_input_word_hash": null
+          },
+          "right_phase": "PRIMITIVE_NORMAL_ORDERING",
+          "status": "DECLARED_UNJOINED_UNTIL_EXACT_WORD_INPUT"
+        },
+        {
+          "central_edge_id": "e_BC",
+          "central_endpoint_port_id": "B.q2",
+          "critical_pair_id": "e_BC:projector_collapse_overlap:B.q2",
+          "left_phase": "PROJECTOR_REDUCTION",
+          "overlap_class": "projector_collapse_overlap",
+          "required_certificate": {
+            "exact_ledger_product_equal_in_Q_i": null,
+            "left_normal_form_hash": null,
+            "polynomial_oracle_identity_id": null,
+            "right_normal_form_hash": null,
+            "same_input_word_hash": null
+          },
+          "right_phase": "TYPED_EDGE_COLLAPSE",
+          "status": "DECLARED_UNJOINED_UNTIL_EXACT_WORD_INPUT"
+        },
+        {
+          "central_edge_id": "e_BC",
+          "central_endpoint_port_id": "C.q2",
+          "critical_pair_id": "e_BC:projector_collapse_overlap:C.q2",
+          "left_phase": "PROJECTOR_REDUCTION",
+          "overlap_class": "projector_collapse_overlap",
+          "required_certificate": {
+            "exact_ledger_product_equal_in_Q_i": null,
+            "left_normal_form_hash": null,
+            "polynomial_oracle_identity_id": null,
+            "right_normal_form_hash": null,
+            "same_input_word_hash": null
+          },
+          "right_phase": "TYPED_EDGE_COLLAPSE",
+          "status": "DECLARED_UNJOINED_UNTIL_EXACT_WORD_INPUT"
+        }
+      ],
+      "global_confluence_claimed": false,
+      "graph_hash": "c1c75f47543ab29ebb53137f46656705f6fca9e972a0643b96c69fd295c5a78a",
+      "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+      "missing_inputs": [
+        "wick_record.exact_sign_koszul_ledger",
+        "wick_record.graph_hash",
+        "wick_record.graph_id",
+        "wick_record.notation_schema_hash",
+        "wick_record.ordered_derivative_scope_ast",
+        "wick_record.polynomial_oracle",
+        "wick_record.propagator_kernels[e_AC]",
+        "wick_record.propagator_kernels[e_BA]",
+        "wick_record.propagator_kernels[e_BC]",
+        "wick_record.propagator_kernels[e_BI]",
+        "wick_record.propagator_kernels[e_IC]",
+        "wick_record.schema_version",
+        "wick_record.wick_complete",
+        "wick_record.wick_completeness_certificate",
+        "wick_record.wick_pairings"
+      ],
+      "phase_execution": null,
+      "phase_order": [
+        "SCOPE_EXPANSION",
+        "ENDPOINT_CANONICALIZATION",
+        "PIVOTED_IBP",
+        "PRIMITIVE_NORMAL_ORDERING",
+        "PROJECTOR_REDUCTION",
+        "EXTERNAL_CHIRALITY",
+        "GRASSMANN_SATURATION",
+        "TYPED_EDGE_COLLAPSE"
+      ],
+      "status": "BLOCKED_MISSING_WICK_COMPLETE_DWORD_INPUTS",
+      "theta_decomposition": {
+        "anchor_pole_vertex_id": "B",
+        "central_edge_id": "e_BC",
+        "central_endpoint_ports": [
+          "B.q2",
+          "C.q2"
+        ],
+        "chord_edge_ids": [
+          "e_AC",
+          "e_IC"
+        ],
+        "cycle_rank_certificate": {
+          "I_minus_V_plus_1": 2,
+          "chord_count": 2,
+          "passed": true
+        },
+        "degree_two_vertex_ids": [
+          "A",
+          "I"
+        ],
+        "fundamental_cycles": [
+          {
+            "chord_edge_id": "e_AC",
+            "fundamental_cycle_edge_ids": [
+              "e_AC",
+              "e_BA",
+              "e_BC"
+            ],
+            "tree_edge_path": [
+              "e_BA",
+              "e_BC"
+            ],
+            "tree_vertex_path": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          {
+            "chord_edge_id": "e_IC",
+            "fundamental_cycle_edge_ids": [
+              "e_BC",
+              "e_BI",
+              "e_IC"
+            ],
+            "tree_edge_path": [
+              "e_BI",
+              "e_BC"
+            ],
+            "tree_vertex_path": [
+              "I",
+              "B",
+              "C"
+            ]
+          }
+        ],
+        "root_vertex_id": "I",
+        "spanning_tree_edge_ids": [
+          "e_BA",
+          "e_BC",
+          "e_BI"
+        ],
+        "theta_pole_vertex_ids": [
+          "B",
+          "C"
+        ]
+      }
+    },
+    {
+      "critical_pairs": [
+        {
+          "central_edge_id": "e_BA",
+          "central_endpoint_port_id": "B.q2",
+          "critical_pair_id": "e_BA:scope_endpoint_overlap:B.q2",
+          "left_phase": "SCOPE_EXPANSION",
+          "overlap_class": "scope_endpoint_overlap",
+          "required_certificate": {
+            "exact_ledger_product_equal_in_Q_i": null,
+            "left_normal_form_hash": null,
+            "polynomial_oracle_identity_id": null,
+            "right_normal_form_hash": null,
+            "same_input_word_hash": null
+          },
+          "right_phase": "ENDPOINT_CANONICALIZATION",
+          "status": "DECLARED_UNJOINED_UNTIL_EXACT_WORD_INPUT"
+        },
+        {
+          "central_edge_id": "e_BA",
+          "central_endpoint_port_id": "A.q2",
+          "critical_pair_id": "e_BA:scope_endpoint_overlap:A.q2",
+          "left_phase": "SCOPE_EXPANSION",
+          "overlap_class": "scope_endpoint_overlap",
+          "required_certificate": {
+            "exact_ledger_product_equal_in_Q_i": null,
+            "left_normal_form_hash": null,
+            "polynomial_oracle_identity_id": null,
+            "right_normal_form_hash": null,
+            "same_input_word_hash": null
+          },
+          "right_phase": "ENDPOINT_CANONICALIZATION",
+          "status": "DECLARED_UNJOINED_UNTIL_EXACT_WORD_INPUT"
+        },
+        {
+          "central_edge_id": "e_BA",
+          "central_endpoint_port_id": "B.q2",
+          "critical_pair_id": "e_BA:endpoint_pivot_overlap:B.q2",
+          "left_phase": "ENDPOINT_CANONICALIZATION",
+          "overlap_class": "endpoint_pivot_overlap",
+          "required_certificate": {
+            "exact_ledger_product_equal_in_Q_i": null,
+            "left_normal_form_hash": null,
+            "polynomial_oracle_identity_id": null,
+            "right_normal_form_hash": null,
+            "same_input_word_hash": null
+          },
+          "right_phase": "PIVOTED_IBP",
+          "status": "DECLARED_UNJOINED_UNTIL_EXACT_WORD_INPUT"
+        },
+        {
+          "central_edge_id": "e_BA",
+          "central_endpoint_port_id": "A.q2",
+          "critical_pair_id": "e_BA:endpoint_pivot_overlap:A.q2",
+          "left_phase": "ENDPOINT_CANONICALIZATION",
+          "overlap_class": "endpoint_pivot_overlap",
+          "required_certificate": {
+            "exact_ledger_product_equal_in_Q_i": null,
+            "left_normal_form_hash": null,
+            "polynomial_oracle_identity_id": null,
+            "right_normal_form_hash": null,
+            "same_input_word_hash": null
+          },
+          "right_phase": "PIVOTED_IBP",
+          "status": "DECLARED_UNJOINED_UNTIL_EXACT_WORD_INPUT"
+        },
+        {
+          "central_edge_id": "e_BA",
+          "central_endpoint_port_id": "B.q2",
+          "critical_pair_id": "e_BA:pivot_primitive_overlap:B.q2",
+          "left_phase": "PIVOTED_IBP",
+          "overlap_class": "pivot_primitive_overlap",
+          "required_certificate": {
+            "exact_ledger_product_equal_in_Q_i": null,
+            "left_normal_form_hash": null,
+            "polynomial_oracle_identity_id": null,
+            "right_normal_form_hash": null,
+            "same_input_word_hash": null
+          },
+          "right_phase": "PRIMITIVE_NORMAL_ORDERING",
+          "status": "DECLARED_UNJOINED_UNTIL_EXACT_WORD_INPUT"
+        },
+        {
+          "central_edge_id": "e_BA",
+          "central_endpoint_port_id": "A.q2",
+          "critical_pair_id": "e_BA:pivot_primitive_overlap:A.q2",
+          "left_phase": "PIVOTED_IBP",
+          "overlap_class": "pivot_primitive_overlap",
+          "required_certificate": {
+            "exact_ledger_product_equal_in_Q_i": null,
+            "left_normal_form_hash": null,
+            "polynomial_oracle_identity_id": null,
+            "right_normal_form_hash": null,
+            "same_input_word_hash": null
+          },
+          "right_phase": "PRIMITIVE_NORMAL_ORDERING",
+          "status": "DECLARED_UNJOINED_UNTIL_EXACT_WORD_INPUT"
+        },
+        {
+          "central_edge_id": "e_BA",
+          "central_endpoint_port_id": "B.q2",
+          "critical_pair_id": "e_BA:projector_collapse_overlap:B.q2",
+          "left_phase": "PROJECTOR_REDUCTION",
+          "overlap_class": "projector_collapse_overlap",
+          "required_certificate": {
+            "exact_ledger_product_equal_in_Q_i": null,
+            "left_normal_form_hash": null,
+            "polynomial_oracle_identity_id": null,
+            "right_normal_form_hash": null,
+            "same_input_word_hash": null
+          },
+          "right_phase": "TYPED_EDGE_COLLAPSE",
+          "status": "DECLARED_UNJOINED_UNTIL_EXACT_WORD_INPUT"
+        },
+        {
+          "central_edge_id": "e_BA",
+          "central_endpoint_port_id": "A.q2",
+          "critical_pair_id": "e_BA:projector_collapse_overlap:A.q2",
+          "left_phase": "PROJECTOR_REDUCTION",
+          "overlap_class": "projector_collapse_overlap",
+          "required_certificate": {
+            "exact_ledger_product_equal_in_Q_i": null,
+            "left_normal_form_hash": null,
+            "polynomial_oracle_identity_id": null,
+            "right_normal_form_hash": null,
+            "same_input_word_hash": null
+          },
+          "right_phase": "TYPED_EDGE_COLLAPSE",
+          "status": "DECLARED_UNJOINED_UNTIL_EXACT_WORD_INPUT"
+        }
+      ],
+      "global_confluence_claimed": false,
+      "graph_hash": "84137962e3a5d40a2be79e124cc85f3fdd180a42cf7119c3464e7da6f620baa3",
+      "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+      "missing_inputs": [
+        "wick_record.exact_sign_koszul_ledger",
+        "wick_record.graph_hash",
+        "wick_record.graph_id",
+        "wick_record.notation_schema_hash",
+        "wick_record.ordered_derivative_scope_ast",
+        "wick_record.polynomial_oracle",
+        "wick_record.propagator_kernels[e_AI]",
+        "wick_record.propagator_kernels[e_BA]",
+        "wick_record.propagator_kernels[e_BC]",
+        "wick_record.propagator_kernels[e_CA]",
+        "wick_record.propagator_kernels[e_IB]",
+        "wick_record.schema_version",
+        "wick_record.wick_complete",
+        "wick_record.wick_completeness_certificate",
+        "wick_record.wick_pairings"
+      ],
+      "phase_execution": null,
+      "phase_order": [
+        "SCOPE_EXPANSION",
+        "ENDPOINT_CANONICALIZATION",
+        "PIVOTED_IBP",
+        "PRIMITIVE_NORMAL_ORDERING",
+        "PROJECTOR_REDUCTION",
+        "EXTERNAL_CHIRALITY",
+        "GRASSMANN_SATURATION",
+        "TYPED_EDGE_COLLAPSE"
+      ],
+      "status": "BLOCKED_MISSING_WICK_COMPLETE_DWORD_INPUTS",
+      "theta_decomposition": {
+        "anchor_pole_vertex_id": "A",
+        "central_edge_id": "e_BA",
+        "central_endpoint_ports": [
+          "B.q2",
+          "A.q2"
+        ],
+        "chord_edge_ids": [
+          "e_BC",
+          "e_IB"
+        ],
+        "cycle_rank_certificate": {
+          "I_minus_V_plus_1": 2,
+          "chord_count": 2,
+          "passed": true
+        },
+        "degree_two_vertex_ids": [
+          "C",
+          "I"
+        ],
+        "fundamental_cycles": [
+          {
+            "chord_edge_id": "e_BC",
+            "fundamental_cycle_edge_ids": [
+              "e_BA",
+              "e_BC",
+              "e_CA"
+            ],
+            "tree_edge_path": [
+              "e_BA",
+              "e_CA"
+            ],
+            "tree_vertex_path": [
+              "B",
+              "A",
+              "C"
+            ]
+          },
+          {
+            "chord_edge_id": "e_IB",
+            "fundamental_cycle_edge_ids": [
+              "e_AI",
+              "e_BA",
+              "e_IB"
+            ],
+            "tree_edge_path": [
+              "e_AI",
+              "e_BA"
+            ],
+            "tree_vertex_path": [
+              "I",
+              "A",
+              "B"
+            ]
+          }
+        ],
+        "root_vertex_id": "I",
+        "spanning_tree_edge_ids": [
+          "e_AI",
+          "e_BA",
+          "e_CA"
+        ],
+        "theta_pole_vertex_ids": [
+          "A",
+          "B"
+        ]
+      }
+    }
+  ],
+  "input_schemas": [
+    {
+      "derivative_token": {
+        "kinds": {
+          "BAR_D": {
+            "index_arity": 1,
+            "parity": 1,
+            "spinor_index_space": "DOTTED"
+          },
+          "BAR_D2": {
+            "index_arity": 2,
+            "parity": 0,
+            "spinor_index_space": "DOTTED"
+          },
+          "D": {
+            "index_arity": 1,
+            "parity": 1,
+            "spinor_index_space": "UNDOTTED"
+          },
+          "D2": {
+            "index_arity": 2,
+            "parity": 0,
+            "spinor_index_space": "UNDOTTED"
+          }
+        },
+        "momentum_rule": "exact oriented edge momentum; orientation_sign_from_edge is +1 or -1",
+        "required_fields": [
+          "token_id",
+          "derivative_kind",
+          "spinor_index_space",
+          "spinor_indices",
+          "operator_parity",
+          "edge_id",
+          "endpoint_port_id",
+          "momentum"
+        ]
+      },
+      "exact_scalar_domain": "Q(i)",
+      "graph_binding": {
+        "graph_hash": "5cbf5cea3c11f28278e0366aaf48206a8fbb9c57a0c3d63a357a99ff0c519fcf",
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "topology": "K4_MINUS_ONE_EDGE"
+      },
+      "ordered_scope_ast_nodes": [
+        "ORDERED_SCOPE",
+        "ORDERED_PRODUCT",
+        "DERIVATIVE_APPLICATION",
+        "LINEAR_COMBINATION",
+        "FIELD_PORT"
+      ],
+      "polynomial_oracle_gate": {
+        "forbidden_sampling_keys": [
+          "numerical_check",
+          "probe",
+          "probes",
+          "random_check",
+          "sample",
+          "sample_point",
+          "sample_points",
+          "samples"
+        ],
+        "method": "EXACT_MONOMIAL_COEFFICIENT_COMPARISON",
+        "proof_mode": "EXACT_SYMBOLIC_POLYNOMIAL_IDENTITY"
+      },
+      "propagator_kernel": {
+        "explicit_fields": [
+          "ordered_derivative_tokens",
+          "grassmann_delta_ast",
+          "scalar_denominator_ast",
+          "oracle_identity_ids"
+        ],
+        "kernel_node_type": "ORDERED_PROPAGATOR_KERNEL",
+        "one_per_edge": [
+          "e_AI",
+          "e_BI",
+          "e_CA",
+          "e_CB",
+          "e_CI"
+        ]
+      },
+      "required_paths": [
+        "wick_record.schema_version",
+        "wick_record.graph_id",
+        "wick_record.graph_hash",
+        "wick_record.notation_schema_hash",
+        "wick_record.wick_complete",
+        "wick_record.wick_pairings",
+        "wick_record.wick_completeness_certificate",
+        "wick_record.ordered_derivative_scope_ast",
+        "wick_record.exact_sign_koszul_ledger",
+        "wick_record.polynomial_oracle",
+        "wick_record.propagator_kernels[e_AI]",
+        "wick_record.propagator_kernels[e_BI]",
+        "wick_record.propagator_kernels[e_CA]",
+        "wick_record.propagator_kernels[e_CB]",
+        "wick_record.propagator_kernels[e_CI]"
+      ],
+      "schema_version": "step6.wick_complete_dword_input.v1"
+    },
+    {
+      "derivative_token": {
+        "kinds": {
+          "BAR_D": {
+            "index_arity": 1,
+            "parity": 1,
+            "spinor_index_space": "DOTTED"
+          },
+          "BAR_D2": {
+            "index_arity": 2,
+            "parity": 0,
+            "spinor_index_space": "DOTTED"
+          },
+          "D": {
+            "index_arity": 1,
+            "parity": 1,
+            "spinor_index_space": "UNDOTTED"
+          },
+          "D2": {
+            "index_arity": 2,
+            "parity": 0,
+            "spinor_index_space": "UNDOTTED"
+          }
+        },
+        "momentum_rule": "exact oriented edge momentum; orientation_sign_from_edge is +1 or -1",
+        "required_fields": [
+          "token_id",
+          "derivative_kind",
+          "spinor_index_space",
+          "spinor_indices",
+          "operator_parity",
+          "edge_id",
+          "endpoint_port_id",
+          "momentum"
+        ]
+      },
+      "exact_scalar_domain": "Q(i)",
+      "graph_binding": {
+        "graph_hash": "c1c75f47543ab29ebb53137f46656705f6fca9e972a0643b96c69fd295c5a78a",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "topology": "K4_MINUS_ONE_EDGE"
+      },
+      "ordered_scope_ast_nodes": [
+        "ORDERED_SCOPE",
+        "ORDERED_PRODUCT",
+        "DERIVATIVE_APPLICATION",
+        "LINEAR_COMBINATION",
+        "FIELD_PORT"
+      ],
+      "polynomial_oracle_gate": {
+        "forbidden_sampling_keys": [
+          "numerical_check",
+          "probe",
+          "probes",
+          "random_check",
+          "sample",
+          "sample_point",
+          "sample_points",
+          "samples"
+        ],
+        "method": "EXACT_MONOMIAL_COEFFICIENT_COMPARISON",
+        "proof_mode": "EXACT_SYMBOLIC_POLYNOMIAL_IDENTITY"
+      },
+      "propagator_kernel": {
+        "explicit_fields": [
+          "ordered_derivative_tokens",
+          "grassmann_delta_ast",
+          "scalar_denominator_ast",
+          "oracle_identity_ids"
+        ],
+        "kernel_node_type": "ORDERED_PROPAGATOR_KERNEL",
+        "one_per_edge": [
+          "e_AC",
+          "e_BA",
+          "e_BC",
+          "e_BI",
+          "e_IC"
+        ]
+      },
+      "required_paths": [
+        "wick_record.schema_version",
+        "wick_record.graph_id",
+        "wick_record.graph_hash",
+        "wick_record.notation_schema_hash",
+        "wick_record.wick_complete",
+        "wick_record.wick_pairings",
+        "wick_record.wick_completeness_certificate",
+        "wick_record.ordered_derivative_scope_ast",
+        "wick_record.exact_sign_koszul_ledger",
+        "wick_record.polynomial_oracle",
+        "wick_record.propagator_kernels[e_AC]",
+        "wick_record.propagator_kernels[e_BA]",
+        "wick_record.propagator_kernels[e_BC]",
+        "wick_record.propagator_kernels[e_BI]",
+        "wick_record.propagator_kernels[e_IC]"
+      ],
+      "schema_version": "step6.wick_complete_dword_input.v1"
+    },
+    {
+      "derivative_token": {
+        "kinds": {
+          "BAR_D": {
+            "index_arity": 1,
+            "parity": 1,
+            "spinor_index_space": "DOTTED"
+          },
+          "BAR_D2": {
+            "index_arity": 2,
+            "parity": 0,
+            "spinor_index_space": "DOTTED"
+          },
+          "D": {
+            "index_arity": 1,
+            "parity": 1,
+            "spinor_index_space": "UNDOTTED"
+          },
+          "D2": {
+            "index_arity": 2,
+            "parity": 0,
+            "spinor_index_space": "UNDOTTED"
+          }
+        },
+        "momentum_rule": "exact oriented edge momentum; orientation_sign_from_edge is +1 or -1",
+        "required_fields": [
+          "token_id",
+          "derivative_kind",
+          "spinor_index_space",
+          "spinor_indices",
+          "operator_parity",
+          "edge_id",
+          "endpoint_port_id",
+          "momentum"
+        ]
+      },
+      "exact_scalar_domain": "Q(i)",
+      "graph_binding": {
+        "graph_hash": "84137962e3a5d40a2be79e124cc85f3fdd180a42cf7119c3464e7da6f620baa3",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+        "topology": "K4_MINUS_ONE_EDGE"
+      },
+      "ordered_scope_ast_nodes": [
+        "ORDERED_SCOPE",
+        "ORDERED_PRODUCT",
+        "DERIVATIVE_APPLICATION",
+        "LINEAR_COMBINATION",
+        "FIELD_PORT"
+      ],
+      "polynomial_oracle_gate": {
+        "forbidden_sampling_keys": [
+          "numerical_check",
+          "probe",
+          "probes",
+          "random_check",
+          "sample",
+          "sample_point",
+          "sample_points",
+          "samples"
+        ],
+        "method": "EXACT_MONOMIAL_COEFFICIENT_COMPARISON",
+        "proof_mode": "EXACT_SYMBOLIC_POLYNOMIAL_IDENTITY"
+      },
+      "propagator_kernel": {
+        "explicit_fields": [
+          "ordered_derivative_tokens",
+          "grassmann_delta_ast",
+          "scalar_denominator_ast",
+          "oracle_identity_ids"
+        ],
+        "kernel_node_type": "ORDERED_PROPAGATOR_KERNEL",
+        "one_per_edge": [
+          "e_AI",
+          "e_BA",
+          "e_BC",
+          "e_CA",
+          "e_IB"
+        ]
+      },
+      "required_paths": [
+        "wick_record.schema_version",
+        "wick_record.graph_id",
+        "wick_record.graph_hash",
+        "wick_record.notation_schema_hash",
+        "wick_record.wick_complete",
+        "wick_record.wick_pairings",
+        "wick_record.wick_completeness_certificate",
+        "wick_record.ordered_derivative_scope_ast",
+        "wick_record.exact_sign_koszul_ledger",
+        "wick_record.polynomial_oracle",
+        "wick_record.propagator_kernels[e_AI]",
+        "wick_record.propagator_kernels[e_BA]",
+        "wick_record.propagator_kernels[e_BC]",
+        "wick_record.propagator_kernels[e_CA]",
+        "wick_record.propagator_kernels[e_IB]"
+      ],
+      "schema_version": "step6.wick_complete_dword_input.v1"
+    }
+  ],
+  "payload_hash": "9fbe63914303bdec4ea06f6a87390525494f5f6f7415f792cfc2ab88a567b61a",
+  "phase_execution_performed": false,
+  "phase_order": [
+    "SCOPE_EXPANSION",
+    "ENDPOINT_CANONICALIZATION",
+    "PIVOTED_IBP",
+    "PRIMITIVE_NORMAL_ORDERING",
+    "PROJECTOR_REDUCTION",
+    "EXTERNAL_CHIRALITY",
+    "GRASSMANN_SATURATION",
+    "TYPED_EDGE_COLLAPSE"
+  ],
+  "physical_derivative_scopes_inferred": false,
+  "polynomial_oracle_requirement": {
+    "numerical_sampling_admissible": false,
+    "proof_mode": "EXACT_SYMBOLIC_POLYNOMIAL_IDENTITY"
+  },
+  "schema_version": "step6.two_loop_dword.v1",
+  "scope": "LITERAL_K4_MINUS_EDGE_TWO_LOOP_DWORD_PHASE_SCHEDULER_CONTRACT",
+  "status": "PROPOSAL_ONLY_BLOCKED_ON_STEP5_ACCEPTANCE",
+  "termination_measure": {
+    "components": [
+      "unexpanded_scope_nodes",
+      "noncanonical_endpoint_tokens",
+      "off_tree_pivot_distance",
+      "primitive_order_inversions",
+      "unreduced_projector_nodes",
+      "unresolved_external_chirality_actions",
+      "grassmann_saturation_defect",
+      "typed_collapsible_edges"
+    ],
+    "order": "LEXICOGRAPHIC_ON_N8",
+    "phase_component": {
+      "ENDPOINT_CANONICALIZATION": "noncanonical_endpoint_tokens",
+      "EXTERNAL_CHIRALITY": "unresolved_external_chirality_actions",
+      "GRASSMANN_SATURATION": "grassmann_saturation_defect",
+      "PIVOTED_IBP": "off_tree_pivot_distance",
+      "PRIMITIVE_NORMAL_ORDERING": "primitive_order_inversions",
+      "PROJECTOR_REDUCTION": "unreduced_projector_nodes",
+      "SCOPE_EXPANSION": "unexpanded_scope_nodes",
+      "TYPED_EDGE_COLLAPSE": "typed_collapsible_edges"
+    },
+    "rewrite_obligation": "every applied rewrite must strictly lower the full lexicographic tuple; all earlier components must remain unchanged",
+    "unchecked_transition_status": "REJECTED_MISSING_EXACT_BEFORE_AFTER_MEASURES"
+  }
+}

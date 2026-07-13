@@ -1,0 +1,81 @@
+{
+  "checks": [
+    {
+      "id": "proposal_status_is_explicit",
+      "passed": true
+    },
+    {
+      "id": "primitive_has_exactly_two_quantum_V_ports",
+      "passed": true
+    },
+    {
+      "id": "valence_certificate_forces_M2_and_no_gauge_vertices",
+      "passed": true
+    },
+    {
+      "id": "FP_kernel_vertices_are_not_interactions",
+      "passed": true
+    },
+    {
+      "id": "FP_has_ten_labeled_candidates",
+      "passed": true
+    },
+    {
+      "id": "FP_topology_counts_are_exact",
+      "passed": true
+    },
+    {
+      "id": "all_fourteen_FP_species_multisets_are_classified",
+      "passed": true
+    },
+    {
+      "id": "every_FP_candidate_is_saturated_connected_L2_1PI",
+      "passed": true
+    },
+    {
+      "id": "FP_species_families_are_exact",
+      "passed": true
+    },
+    {
+      "id": "NK_absence_has_empty_mixed_ports",
+      "passed": true
+    },
+    {
+      "id": "matter_has_twelve_labeled_candidates",
+      "passed": true
+    },
+    {
+      "id": "matter_topology_counts_are_exact",
+      "passed": true
+    },
+    {
+      "id": "all_twelve_matter_flavor_assignments_are_classified",
+      "passed": true
+    },
+    {
+      "id": "every_matter_candidate_is_saturated_connected_L2_1PI",
+      "passed": true
+    },
+    {
+      "id": "matter_is_not_declared_absent",
+      "passed": true
+    },
+    {
+      "id": "no_candidate_contains_a_coefficient_or_amplitude",
+      "passed": true
+    },
+    {
+      "id": "finite_BV_equivalence_is_not_claimed",
+      "passed": true
+    }
+  ],
+  "failed": [],
+  "output_sha256": "01b67810a3db6c04f1863f8b00b8ea599d3ca298321c8f3fd7981120958d77c0",
+  "proposal_status": "PROPOSAL_ONLY_BLOCKED_ON_STEP5_ACCEPTANCE",
+  "schema": 1,
+  "status": "PASS",
+  "totals": {
+    "checks": 17,
+    "failed": 0
+  }
+}

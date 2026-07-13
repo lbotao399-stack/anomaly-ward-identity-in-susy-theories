@@ -1,0 +1,39 @@
+{
+  "artifact_sha256": {
+    "generated/step6/two-loop-amplitude-ir/pre-dalgebra-amplitude-ir.json": "12e6e9e23b5f68e6acbaa2278faf34781fffc59a0bc6560a93a095b5c9d2418f",
+    "generated/step6/two-loop-amplitude-ir/pre-dalgebra-amplitude-ir.md": "fd2b34379db5c64a31c98b761c434f63f9368d98f6626e30377c54edaafbe66b"
+  },
+  "checks": {
+    "all_later_stages_fail_closed": true,
+    "all_projection_candidates_are_referenced": true,
+    "coefficient_factor_counts_are_1_3_5": true,
+    "coefficient_histograms_are_exact": true,
+    "decorated_occurrence_orbit_weights_are_graphwise_exact": true,
+    "denominator_products_equal_GraphIR": true,
+    "direct_only_is_physical_sum": true,
+    "endpoint_derivative_words_and_source_refs_preserved": true,
+    "every_background_wick_assignment_has_one_projection": true,
+    "exact_total_pairing_cardinality_preserved": true,
+    "external_p1_p2_topology_order_preserved": true,
+    "external_projector_coefficient_never_multiplied": true,
+    "five_Project_vector_propagators_per_sample": true,
+    "h_rewrite_gives_exact_g4": true,
+    "kernel_is_two_sided_identity_16": true,
+    "no_global_pairing_rows_materialized": true,
+    "optional_integral_interface_does_not_supply_numerator": true,
+    "rank_unrank_stable": true,
+    "six_oriented_parents_preserved": true,
+    "source_hashes_present": true,
+    "status_is_proposal_only": true,
+    "theta_vertices_and_measures_preserved": true
+  },
+  "exact_total_labeled_amplitudes": 2985984,
+  "failed": 0,
+  "failures": [],
+  "parent_count": 6,
+  "passed": 22,
+  "payload_sha256": "ef1484db125117d3f8bc4fadaaf0ae9b70a60e2f21fb2528b310b71ab7f1b4c5",
+  "proposal_status": "PROPOSAL_ONLY_BLOCKED_ON_STEP5_ACCEPTANCE",
+  "schema_version": "step6.two_loop_amplitude_ir.audit.v1",
+  "status": "PASS"
+}

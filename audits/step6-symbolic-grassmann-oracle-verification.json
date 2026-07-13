@@ -1,0 +1,454 @@
+{
+  "admission_status": "EXACT_LOCAL_ORACLE_NO_GRAPH_CONTRACTION",
+  "checks": [
+    {
+      "id": "ring.difference_of_squares_exact",
+      "passed": true
+    },
+    {
+      "id": "ring.canonical_monomial_sort",
+      "passed": true
+    },
+    {
+      "id": "ring.zero_terms_removed",
+      "passed": true
+    },
+    {
+      "id": "ring.no_float_in_coefficients",
+      "passed": true
+    },
+    {
+      "id": "exterior.nilpotent_0",
+      "passed": true
+    },
+    {
+      "id": "exterior.anticommute_0_0",
+      "passed": true
+    },
+    {
+      "id": "exterior.left_derivative_0_0",
+      "passed": true
+    },
+    {
+      "id": "exterior.anticommute_0_1",
+      "passed": true
+    },
+    {
+      "id": "exterior.left_derivative_0_1",
+      "passed": true
+    },
+    {
+      "id": "exterior.anticommute_0_2",
+      "passed": true
+    },
+    {
+      "id": "exterior.left_derivative_0_2",
+      "passed": true
+    },
+    {
+      "id": "exterior.anticommute_0_3",
+      "passed": true
+    },
+    {
+      "id": "exterior.left_derivative_0_3",
+      "passed": true
+    },
+    {
+      "id": "exterior.nilpotent_1",
+      "passed": true
+    },
+    {
+      "id": "exterior.anticommute_1_0",
+      "passed": true
+    },
+    {
+      "id": "exterior.left_derivative_1_0",
+      "passed": true
+    },
+    {
+      "id": "exterior.anticommute_1_1",
+      "passed": true
+    },
+    {
+      "id": "exterior.left_derivative_1_1",
+      "passed": true
+    },
+    {
+      "id": "exterior.anticommute_1_2",
+      "passed": true
+    },
+    {
+      "id": "exterior.left_derivative_1_2",
+      "passed": true
+    },
+    {
+      "id": "exterior.anticommute_1_3",
+      "passed": true
+    },
+    {
+      "id": "exterior.left_derivative_1_3",
+      "passed": true
+    },
+    {
+      "id": "exterior.nilpotent_2",
+      "passed": true
+    },
+    {
+      "id": "exterior.anticommute_2_0",
+      "passed": true
+    },
+    {
+      "id": "exterior.left_derivative_2_0",
+      "passed": true
+    },
+    {
+      "id": "exterior.anticommute_2_1",
+      "passed": true
+    },
+    {
+      "id": "exterior.left_derivative_2_1",
+      "passed": true
+    },
+    {
+      "id": "exterior.anticommute_2_2",
+      "passed": true
+    },
+    {
+      "id": "exterior.left_derivative_2_2",
+      "passed": true
+    },
+    {
+      "id": "exterior.anticommute_2_3",
+      "passed": true
+    },
+    {
+      "id": "exterior.left_derivative_2_3",
+      "passed": true
+    },
+    {
+      "id": "exterior.nilpotent_3",
+      "passed": true
+    },
+    {
+      "id": "exterior.anticommute_3_0",
+      "passed": true
+    },
+    {
+      "id": "exterior.left_derivative_3_0",
+      "passed": true
+    },
+    {
+      "id": "exterior.anticommute_3_1",
+      "passed": true
+    },
+    {
+      "id": "exterior.left_derivative_3_1",
+      "passed": true
+    },
+    {
+      "id": "exterior.anticommute_3_2",
+      "passed": true
+    },
+    {
+      "id": "exterior.left_derivative_3_2",
+      "passed": true
+    },
+    {
+      "id": "exterior.anticommute_3_3",
+      "passed": true
+    },
+    {
+      "id": "exterior.left_derivative_3_3",
+      "passed": true
+    },
+    {
+      "id": "project_translation.0_0_0_1_D_plus",
+      "passed": true
+    },
+    {
+      "id": "project_translation.0_0_0_1_D_minus",
+      "passed": true
+    },
+    {
+      "id": "project_translation.0_0_0_1_barD_dotplus",
+      "passed": true
+    },
+    {
+      "id": "project_translation.0_0_0_1_barD_dotminus",
+      "passed": true
+    },
+    {
+      "id": "project_translation.0_0_0_1_D2",
+      "passed": true
+    },
+    {
+      "id": "project_translation.0_0_0_1_barD2",
+      "passed": true
+    },
+    {
+      "id": "project_translation.0_0_0_1_DbarD2D",
+      "passed": true
+    },
+    {
+      "id": "project_translation.1_2_3_4_D_plus",
+      "passed": true
+    },
+    {
+      "id": "project_translation.1_2_3_4_D_minus",
+      "passed": true
+    },
+    {
+      "id": "project_translation.1_2_3_4_barD_dotplus",
+      "passed": true
+    },
+    {
+      "id": "project_translation.1_2_3_4_barD_dotminus",
+      "passed": true
+    },
+    {
+      "id": "project_translation.1_2_3_4_D2",
+      "passed": true
+    },
+    {
+      "id": "project_translation.1_2_3_4_barD2",
+      "passed": true
+    },
+    {
+      "id": "project_translation.1_2_3_4_DbarD2D",
+      "passed": true
+    },
+    {
+      "id": "project_translation.2_m1_0_3_D_plus",
+      "passed": true
+    },
+    {
+      "id": "project_translation.2_m1_0_3_D_minus",
+      "passed": true
+    },
+    {
+      "id": "project_translation.2_m1_0_3_barD_dotplus",
+      "passed": true
+    },
+    {
+      "id": "project_translation.2_m1_0_3_barD_dotminus",
+      "passed": true
+    },
+    {
+      "id": "project_translation.2_m1_0_3_D2",
+      "passed": true
+    },
+    {
+      "id": "project_translation.2_m1_0_3_barD2",
+      "passed": true
+    },
+    {
+      "id": "project_translation.2_m1_0_3_DbarD2D",
+      "passed": true
+    },
+    {
+      "id": "project_polynomial_identities.D_D_0_0",
+      "passed": true
+    },
+    {
+      "id": "project_polynomial_identities.barD_barD_0_0",
+      "passed": true
+    },
+    {
+      "id": "project_polynomial_identities.D_barD_0_0",
+      "passed": true
+    },
+    {
+      "id": "project_polynomial_identities.D_D_0_1",
+      "passed": true
+    },
+    {
+      "id": "project_polynomial_identities.barD_barD_0_1",
+      "passed": true
+    },
+    {
+      "id": "project_polynomial_identities.D_barD_0_1",
+      "passed": true
+    },
+    {
+      "id": "project_polynomial_identities.D_D_1_0",
+      "passed": true
+    },
+    {
+      "id": "project_polynomial_identities.barD_barD_1_0",
+      "passed": true
+    },
+    {
+      "id": "project_polynomial_identities.D_barD_1_0",
+      "passed": true
+    },
+    {
+      "id": "project_polynomial_identities.D_D_1_1",
+      "passed": true
+    },
+    {
+      "id": "project_polynomial_identities.barD_barD_1_1",
+      "passed": true
+    },
+    {
+      "id": "project_polynomial_identities.D_barD_1_1",
+      "passed": true
+    },
+    {
+      "id": "project_polynomial_identities.D2_barD2_D2",
+      "passed": true
+    },
+    {
+      "id": "project_polynomial_identities.barD2_D2_barD2",
+      "passed": true
+    },
+    {
+      "id": "project_polynomial_identities.normalized_delta_closed_constant_16",
+      "passed": true
+    },
+    {
+      "id": "project_polynomial_identities.normalized_delta_full_measure_1",
+      "passed": true
+    },
+    {
+      "id": "project_polynomial_identities.theta2_chiral_measure_1",
+      "passed": true
+    },
+    {
+      "id": "project_polynomial_identities.bartheta2_antichiral_measure_1",
+      "passed": true
+    },
+    {
+      "id": "project_polynomial_identities.K_V_G_V_scalar_left",
+      "passed": true
+    },
+    {
+      "id": "project_polynomial_identities.G_V_K_V_scalar_right",
+      "passed": true
+    },
+    {
+      "id": "word_and_leibniz.W1_compiled_equals_direct",
+      "passed": true
+    },
+    {
+      "id": "word_and_leibniz.X1_compiled_equals_K_plus",
+      "passed": true
+    },
+    {
+      "id": "word_and_leibniz.odd_even_graded_Leibniz_equals_total_momentum_matrix",
+      "passed": true
+    },
+    {
+      "id": "word_and_leibniz.labeled_leaf_histories_retained",
+      "passed": true
+    },
+    {
+      "id": "generic_graded_bracket_scope.full_scope_has_terms",
+      "passed": true
+    },
+    {
+      "id": "generic_graded_bracket_scope.full_scope_retains_both_bracket_orders",
+      "passed": true
+    },
+    {
+      "id": "generic_graded_bracket_scope.full_scope_uses_exactly_two_outer_bar_derivatives",
+      "passed": true
+    },
+    {
+      "id": "generic_graded_bracket_scope.full_scope_contains_mixed_endpoint_terms",
+      "passed": true
+    },
+    {
+      "id": "generic_graded_bracket_scope.full_scope_contains_left_endpoint_terms",
+      "passed": true
+    },
+    {
+      "id": "generic_graded_bracket_scope.full_scope_contains_right_endpoint_terms",
+      "passed": true
+    },
+    {
+      "id": "generic_graded_bracket_scope.generic_inner_D_history_stays_on_F2",
+      "passed": true
+    },
+    {
+      "id": "generic_graded_bracket_scope.leafwise_double_application_has_four_bar_derivatives",
+      "passed": true
+    },
+    {
+      "id": "generic_graded_bracket_scope.full_scope_rejects_leafwise_double_application",
+      "passed": true
+    },
+    {
+      "id": "component_adjoint_ordered_product.component_adjoint_has_one_ordered_term",
+      "passed": true
+    },
+    {
+      "id": "component_adjoint_ordered_product.component_adjoint_has_forward_order_only",
+      "passed": true
+    },
+    {
+      "id": "component_adjoint_ordered_product.component_adjoint_has_no_reverse_term",
+      "passed": true
+    },
+    {
+      "id": "component_adjoint_ordered_product.component_adjoint_carries_one_color_tensor",
+      "passed": true
+    },
+    {
+      "id": "component_adjoint_ordered_product.component_adjoint_adds_no_extra_i",
+      "passed": true
+    },
+    {
+      "id": "component_adjoint_ordered_product.component_adjoint_has_no_factor_two",
+      "passed": true
+    },
+    {
+      "id": "component_adjoint_ordered_product.Gamma2_post_commutator_prefactor_stays_minus_i_over_2",
+      "passed": true
+    },
+    {
+      "id": "component_adjoint_ordered_product.W2_post_commutator_prefactor_stays_plus_i_over_16",
+      "passed": true
+    },
+    {
+      "id": "component_adjoint_ordered_product.W2_component_scope_has_forward_order_only",
+      "passed": true
+    }
+  ],
+  "generated": [
+    "generated/step6/symbolic-grassmann-oracle/symbolic-grassmann-oracle.json",
+    "generated/step6/symbolic-grassmann-oracle/symbolic-grassmann-oracle.md"
+  ],
+  "generated_sha256": {
+    "generated/step6/symbolic-grassmann-oracle/symbolic-grassmann-oracle.json": "46685505e146372662c271ab0a5be40cf62c2ae49e9b81e95c08ac8e4e288444",
+    "generated/step6/symbolic-grassmann-oracle/symbolic-grassmann-oracle.md": "b10e09689ba381ee3c9dbe9a08e781fd11e994c36f55606a5f8f44666381a6d9"
+  },
+  "generator": "scripts/step6_symbolic_grassmann_oracle.py",
+  "negative_claims": {
+    "coefficient_computed": false,
+    "graph_contraction_performed": false,
+    "integral_reduction_performed": false,
+    "two_loop_numerator_computed": false
+  },
+  "provenance": {
+    "contracts/foundations/step-03b-component-reconstruction.md": "4b3ae678463747cc78d3c7e594904647620d919eae769c5b5bfd16d5b556a75b",
+    "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md": "dd06ff2ecf0d78605282cbb505daf16797ce859650fc8d398405031f3acdb002",
+    "scripts/verify_step5_propagators.py": "db7ffb109e6a672e9e23c724ba302a1ec7f47d194a7758d13a026329feb0c718",
+    "scripts/verify_step5_seed_dalgebra.py": "ad5dfa5f3d1198e67fd83381606e519f8a3bcadafb5092c6e682384c18dda970"
+  },
+  "remaining_interface": {
+    "required": [
+      "typed map from GraphIR ports to labeled leaves and routed bispinor momenta",
+      "propagator endpoint delta and edge-orientation object",
+      "color and coupling coefficient tensor carried independently of Grassmann tensors",
+      "edge-tagged endpoint transfer and collapse certificates",
+      "streaming contraction sink from Wick rows into local S3 S4 I2 I3 tensors"
+    ],
+    "status": "BLOCKED_GRAPH_TENSOR_CONTRACTION_INTERFACE_NOT_IMPLEMENTED"
+  },
+  "schema": 1,
+  "status": "PASS",
+  "totals": {
+    "checks": 103,
+    "failed": 0
+  }
+}

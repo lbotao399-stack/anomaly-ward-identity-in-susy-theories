@@ -1,0 +1,354 @@
+{
+  "families": [
+    {
+      "action_vertex_multiplicities": {
+        "S3": 4
+      },
+      "blocked_reason": "NO_BACKGROUND_DISTRIBUTION_NO_TYPED_PORTS_NO_WICK_PAIRING_NO_CONNECTIVITY",
+      "classification": "VALENCE_NOT_GRAPH",
+      "family_id": "I2__S3^4",
+      "graph_ir": null,
+      "identity": {
+        "I": 6,
+        "L": 2,
+        "V": 5,
+        "half_edge_identity": "14=2*6+2",
+        "lhs": 4,
+        "loop_identity": "2=6-5+1",
+        "required_value": 4,
+        "rhs": 4
+      },
+      "insertion": {
+        "family": "I2",
+        "total_valence": 2
+      },
+      "typed_valence_totals": {
+        "background_distribution": "UNRESOLVED",
+        "background_valence": 2,
+        "quantum_valence": 12,
+        "total_valence": 14
+      }
+    },
+    {
+      "action_vertex_multiplicities": {
+        "S3": 2,
+        "S4": 1
+      },
+      "blocked_reason": "NO_BACKGROUND_DISTRIBUTION_NO_TYPED_PORTS_NO_WICK_PAIRING_NO_CONNECTIVITY",
+      "classification": "VALENCE_NOT_GRAPH",
+      "family_id": "I2__S3^2__S4^1",
+      "graph_ir": null,
+      "identity": {
+        "I": 5,
+        "L": 2,
+        "V": 4,
+        "half_edge_identity": "12=2*5+2",
+        "lhs": 4,
+        "loop_identity": "2=5-4+1",
+        "required_value": 4,
+        "rhs": 4
+      },
+      "insertion": {
+        "family": "I2",
+        "total_valence": 2
+      },
+      "typed_valence_totals": {
+        "background_distribution": "UNRESOLVED",
+        "background_valence": 2,
+        "quantum_valence": 10,
+        "total_valence": 12
+      }
+    },
+    {
+      "action_vertex_multiplicities": {
+        "S3": 1,
+        "S5": 1
+      },
+      "blocked_reason": "NO_BACKGROUND_DISTRIBUTION_NO_TYPED_PORTS_NO_WICK_PAIRING_NO_CONNECTIVITY",
+      "classification": "VALENCE_NOT_GRAPH",
+      "family_id": "I2__S3^1__S5^1",
+      "graph_ir": null,
+      "identity": {
+        "I": 4,
+        "L": 2,
+        "V": 3,
+        "half_edge_identity": "10=2*4+2",
+        "lhs": 4,
+        "loop_identity": "2=4-3+1",
+        "required_value": 4,
+        "rhs": 4
+      },
+      "insertion": {
+        "family": "I2",
+        "total_valence": 2
+      },
+      "typed_valence_totals": {
+        "background_distribution": "UNRESOLVED",
+        "background_valence": 2,
+        "quantum_valence": 8,
+        "total_valence": 10
+      }
+    },
+    {
+      "action_vertex_multiplicities": {
+        "S4": 2
+      },
+      "blocked_reason": "NO_BACKGROUND_DISTRIBUTION_NO_TYPED_PORTS_NO_WICK_PAIRING_NO_CONNECTIVITY",
+      "classification": "VALENCE_NOT_GRAPH",
+      "family_id": "I2__S4^2",
+      "graph_ir": null,
+      "identity": {
+        "I": 4,
+        "L": 2,
+        "V": 3,
+        "half_edge_identity": "10=2*4+2",
+        "lhs": 4,
+        "loop_identity": "2=4-3+1",
+        "required_value": 4,
+        "rhs": 4
+      },
+      "insertion": {
+        "family": "I2",
+        "total_valence": 2
+      },
+      "typed_valence_totals": {
+        "background_distribution": "UNRESOLVED",
+        "background_valence": 2,
+        "quantum_valence": 8,
+        "total_valence": 10
+      }
+    },
+    {
+      "action_vertex_multiplicities": {
+        "S6": 1
+      },
+      "blocked_reason": "NO_BACKGROUND_DISTRIBUTION_NO_TYPED_PORTS_NO_WICK_PAIRING_NO_CONNECTIVITY",
+      "classification": "VALENCE_NOT_GRAPH",
+      "family_id": "I2__S6^1",
+      "graph_ir": null,
+      "identity": {
+        "I": 3,
+        "L": 2,
+        "V": 2,
+        "half_edge_identity": "8=2*3+2",
+        "lhs": 4,
+        "loop_identity": "2=3-2+1",
+        "required_value": 4,
+        "rhs": 4
+      },
+      "insertion": {
+        "family": "I2",
+        "total_valence": 2
+      },
+      "typed_valence_totals": {
+        "background_distribution": "UNRESOLVED",
+        "background_valence": 2,
+        "quantum_valence": 6,
+        "total_valence": 8
+      }
+    },
+    {
+      "action_vertex_multiplicities": {
+        "S3": 3
+      },
+      "blocked_reason": "NO_BACKGROUND_DISTRIBUTION_NO_TYPED_PORTS_NO_WICK_PAIRING_NO_CONNECTIVITY",
+      "classification": "VALENCE_NOT_GRAPH",
+      "family_id": "I3__S3^3",
+      "graph_ir": null,
+      "identity": {
+        "I": 5,
+        "L": 2,
+        "V": 4,
+        "half_edge_identity": "12=2*5+2",
+        "lhs": 4,
+        "loop_identity": "2=5-4+1",
+        "required_value": 4,
+        "rhs": 4
+      },
+      "insertion": {
+        "family": "I3",
+        "total_valence": 3
+      },
+      "typed_valence_totals": {
+        "background_distribution": "UNRESOLVED",
+        "background_valence": 2,
+        "quantum_valence": 10,
+        "total_valence": 12
+      }
+    },
+    {
+      "action_vertex_multiplicities": {
+        "S3": 1,
+        "S4": 1
+      },
+      "blocked_reason": "NO_BACKGROUND_DISTRIBUTION_NO_TYPED_PORTS_NO_WICK_PAIRING_NO_CONNECTIVITY",
+      "classification": "VALENCE_NOT_GRAPH",
+      "family_id": "I3__S3^1__S4^1",
+      "graph_ir": null,
+      "identity": {
+        "I": 4,
+        "L": 2,
+        "V": 3,
+        "half_edge_identity": "10=2*4+2",
+        "lhs": 4,
+        "loop_identity": "2=4-3+1",
+        "required_value": 4,
+        "rhs": 4
+      },
+      "insertion": {
+        "family": "I3",
+        "total_valence": 3
+      },
+      "typed_valence_totals": {
+        "background_distribution": "UNRESOLVED",
+        "background_valence": 2,
+        "quantum_valence": 8,
+        "total_valence": 10
+      }
+    },
+    {
+      "action_vertex_multiplicities": {
+        "S5": 1
+      },
+      "blocked_reason": "NO_BACKGROUND_DISTRIBUTION_NO_TYPED_PORTS_NO_WICK_PAIRING_NO_CONNECTIVITY",
+      "classification": "VALENCE_NOT_GRAPH",
+      "family_id": "I3__S5^1",
+      "graph_ir": null,
+      "identity": {
+        "I": 3,
+        "L": 2,
+        "V": 2,
+        "half_edge_identity": "8=2*3+2",
+        "lhs": 4,
+        "loop_identity": "2=3-2+1",
+        "required_value": 4,
+        "rhs": 4
+      },
+      "insertion": {
+        "family": "I3",
+        "total_valence": 3
+      },
+      "typed_valence_totals": {
+        "background_distribution": "UNRESOLVED",
+        "background_valence": 2,
+        "quantum_valence": 6,
+        "total_valence": 8
+      }
+    },
+    {
+      "action_vertex_multiplicities": {
+        "S3": 2
+      },
+      "blocked_reason": "NO_BACKGROUND_DISTRIBUTION_NO_TYPED_PORTS_NO_WICK_PAIRING_NO_CONNECTIVITY",
+      "classification": "VALENCE_NOT_GRAPH",
+      "family_id": "I4__S3^2",
+      "graph_ir": null,
+      "identity": {
+        "I": 4,
+        "L": 2,
+        "V": 3,
+        "half_edge_identity": "10=2*4+2",
+        "lhs": 4,
+        "loop_identity": "2=4-3+1",
+        "required_value": 4,
+        "rhs": 4
+      },
+      "insertion": {
+        "family": "I4",
+        "total_valence": 4
+      },
+      "typed_valence_totals": {
+        "background_distribution": "UNRESOLVED",
+        "background_valence": 2,
+        "quantum_valence": 8,
+        "total_valence": 10
+      }
+    },
+    {
+      "action_vertex_multiplicities": {
+        "S4": 1
+      },
+      "blocked_reason": "NO_BACKGROUND_DISTRIBUTION_NO_TYPED_PORTS_NO_WICK_PAIRING_NO_CONNECTIVITY",
+      "classification": "VALENCE_NOT_GRAPH",
+      "family_id": "I4__S4^1",
+      "graph_ir": null,
+      "identity": {
+        "I": 3,
+        "L": 2,
+        "V": 2,
+        "half_edge_identity": "8=2*3+2",
+        "lhs": 4,
+        "loop_identity": "2=3-2+1",
+        "required_value": 4,
+        "rhs": 4
+      },
+      "insertion": {
+        "family": "I4",
+        "total_valence": 4
+      },
+      "typed_valence_totals": {
+        "background_distribution": "UNRESOLVED",
+        "background_valence": 2,
+        "quantum_valence": 6,
+        "total_valence": 8
+      }
+    },
+    {
+      "action_vertex_multiplicities": {
+        "S3": 1
+      },
+      "blocked_reason": "NO_BACKGROUND_DISTRIBUTION_NO_TYPED_PORTS_NO_WICK_PAIRING_NO_CONNECTIVITY",
+      "classification": "VALENCE_NOT_GRAPH",
+      "family_id": "I5__S3^1",
+      "graph_ir": null,
+      "identity": {
+        "I": 3,
+        "L": 2,
+        "V": 2,
+        "half_edge_identity": "8=2*3+2",
+        "lhs": 4,
+        "loop_identity": "2=3-2+1",
+        "required_value": 4,
+        "rhs": 4
+      },
+      "insertion": {
+        "family": "I5",
+        "total_valence": 5
+      },
+      "typed_valence_totals": {
+        "background_distribution": "UNRESOLVED",
+        "background_valence": 2,
+        "quantum_valence": 6,
+        "total_valence": 8
+      }
+    },
+    {
+      "action_vertex_multiplicities": {},
+      "blocked_reason": "NO_BACKGROUND_DISTRIBUTION_NO_TYPED_PORTS_NO_WICK_PAIRING_NO_CONNECTIVITY",
+      "classification": "VALENCE_NOT_GRAPH",
+      "family_id": "I6__NO_ACTION_VERTEX",
+      "graph_ir": null,
+      "identity": {
+        "I": 2,
+        "L": 2,
+        "V": 1,
+        "half_edge_identity": "6=2*2+2",
+        "lhs": 4,
+        "loop_identity": "2=2-1+1",
+        "required_value": 4,
+        "rhs": 4
+      },
+      "insertion": {
+        "family": "I6",
+        "total_valence": 6
+      },
+      "typed_valence_totals": {
+        "background_distribution": "UNRESOLVED",
+        "background_valence": 2,
+        "quantum_valence": 4,
+        "total_valence": 6
+      }
+    }
+  ],
+  "schema_version": "step6.two_loop_graphir.v1"
+}

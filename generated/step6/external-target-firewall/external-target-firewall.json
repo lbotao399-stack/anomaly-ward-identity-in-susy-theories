@@ -1,0 +1,118 @@
+{
+  "anomaly_coefficient": null,
+  "calculation_result": null,
+  "checks": {
+    "artifacts_do_not_contain_denied_paths_or_target_tokens": true,
+    "artifacts_do_not_copy_denied_files": true,
+    "artifacts_do_not_declare_denied_dependency_hashes": true,
+    "source_string_literals_do_not_name_denied_inputs": true
+  },
+  "claim_scope": "SYNTACTIC_FILE_AND_DECLARED_HASH_ISOLATION_ONLY",
+  "denied_input_ledger": [
+    {
+      "byte_count": 30959,
+      "path": "tasks/reviews/2026-07-12-step5-gpt-pro-architecture-audit.md",
+      "role": "DENIED_DERIVATION_INPUT_GAP_REVIEW_ONLY",
+      "sha256": "bdb29f3a37b5881351ad259391fc397942700903f4fd15b018e32b7966fe4832"
+    },
+    {
+      "byte_count": 4386,
+      "path": "tasks/reviews/2026-07-12-step6-gpt-pro-round2-prompt.md",
+      "role": "DENIED_DERIVATION_INPUT_GAP_REVIEW_ONLY",
+      "sha256": "4e82efda2a6e8cde02eaf00efe2c12cc3058fc05631162ce19b2ff074db85182"
+    },
+    {
+      "byte_count": 61006,
+      "path": "tasks/reviews/2026-07-12-step6-gpt-pro-round2-response.md",
+      "role": "DENIED_DERIVATION_INPUT_GAP_REVIEW_ONLY",
+      "sha256": "48929292078bb911d25d57e989445ca794bb327990c17d955ad493476e8e6075"
+    },
+    {
+      "byte_count": 44221,
+      "path": "tasks/reviews/2026-07-12-step6-gpt-pro-two-loop-architecture-review.md",
+      "role": "DENIED_DERIVATION_INPUT_GAP_REVIEW_ONLY",
+      "sha256": "7d7fd5bbe782928862e718f1f7847701734abe981c47891584a11066764b1dbb"
+    },
+    {
+      "byte_count": 3977,
+      "path": "tasks/reviews/2026-07-12-step6-gpt-pro-two-loop-forensic-audit.md",
+      "role": "DENIED_DERIVATION_INPUT_GAP_REVIEW_ONLY",
+      "sha256": "3d3b772a57690694f6d119076cb9c898252f8f451658658b2d6db6709dbc01f5"
+    },
+    {
+      "byte_count": 1507,
+      "path": "references/external-targets/step6-holomorphic-q2-ledger.md",
+      "role": "DENIED_DERIVATION_INPUT_GAP_REVIEW_ONLY",
+      "sha256": "f0f5c910466125966694f61b1f9cef34a45b693e8358686a6a0233eb1229df3c"
+    }
+  ],
+  "denied_roots": [
+    "tasks/reviews",
+    "references/external-targets"
+  ],
+  "denied_semantic_tokens": [
+    "EXTERNAL_TARGET_NOT_DERIVATION",
+    "2207.14321",
+    "2306.01039",
+    "2512.07771",
+    "holomorphic-twist target",
+    "holomorphic twist target"
+  ],
+  "derivation_artifact_files": [
+    "generated/step6/coefficient-tensor/coefficient-tensor-programs.json",
+    "generated/step6/coefficient-tensor/coefficient-tensor-programs.md",
+    "generated/step6/external-projection/external-projection-certificate.json",
+    "generated/step6/external-projection/external-projection-certificate.md",
+    "generated/step6/symbolic-grassmann-oracle/symbolic-grassmann-oracle.json",
+    "generated/step6/symbolic-grassmann-oracle/symbolic-grassmann-oracle.md",
+    "generated/step6/two-loop-amplitude-ir/pre-dalgebra-amplitude-ir.json",
+    "generated/step6/two-loop-amplitude-ir/pre-dalgebra-amplitude-ir.md",
+    "generated/step6/two-loop-color-tensor/color-network.json",
+    "generated/step6/two-loop-color-tensor/color-network.md",
+    "generated/step6/two-loop-dword/dword-contract.json",
+    "generated/step6/two-loop-dword/two-loop-dword.md",
+    "generated/step6/two-loop-dword/wick-input-schema.json",
+    "generated/step6/two-loop-forest/literal-k4-minus-edge-forests.json",
+    "generated/step6/two-loop-forest/raw-k23-lift-forest.json",
+    "generated/step6/two-loop-forest/two-loop-forest.json",
+    "generated/step6/two-loop-forest/two-loop-forest.md",
+    "generated/step6/two-loop-ghost-census/census.json",
+    "generated/step6/two-loop-ghost-census/census.md",
+    "generated/step6/two-loop-grammar/project-two-loop-grammar.json",
+    "generated/step6/two-loop-grammar/project-two-loop-grammar.md",
+    "generated/step6/two-loop-graphir/direct-k4-minus-edge.json",
+    "generated/step6/two-loop-graphir/raw-k23-theta-lift.json",
+    "generated/step6/two-loop-graphir/two-loop-graphir.json",
+    "generated/step6/two-loop-graphir/two-loop-graphir.md",
+    "generated/step6/two-loop-graphir/valence-families.json",
+    "generated/step6/two-loop-integrals/ibp-certificates.json",
+    "generated/step6/two-loop-integrals/integral-families.json",
+    "generated/step6/two-loop-integrals/two-loop-integrals.json",
+    "generated/step6/two-loop-integrals/two-loop-integrals.md",
+    "generated/step6/two-loop-wick/typed-wick-join.json",
+    "generated/step6/two-loop-wick/typed-wick-join.md"
+  ],
+  "derivation_source_files": [
+    "scripts/step6_coefficient_tensor.py",
+    "scripts/step6_color_tensor.py",
+    "scripts/step6_external_projection.py",
+    "scripts/step6_symbolic_grassmann_oracle.py",
+    "scripts/step6_two_loop_amplitude_ir.py",
+    "scripts/step6_two_loop_dword.py",
+    "scripts/step6_two_loop_forest.py",
+    "scripts/step6_two_loop_ghost_census.py",
+    "scripts/step6_two_loop_grammar.py",
+    "scripts/step6_two_loop_graphir.py",
+    "scripts/step6_two_loop_integrals.py",
+    "scripts/step6_two_loop_wick.py"
+  ],
+  "firewall_hash": "c718352f748d558f5be5a9a90ce1bacfceee4ac162ceffe5487d82d042dfc952",
+  "non_claims": [
+    "NO_HUMAN_MEMORY_ISOLATION_CLAIM",
+    "NO_PHYSICAL_CORRECTNESS_CLAIM",
+    "NO_TWO_LOOP_COEFFICIENT_CLAIM"
+  ],
+  "schema": "step6.external_target_firewall.v1",
+  "status": "PASS_SYNTACTIC_DERIVATION_INPUT_ISOLATION",
+  "violations": []
+}

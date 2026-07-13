@@ -1,0 +1,420 @@
+{
+  "artifact_sha256": {
+    "generated/step6/two-loop-graphir/direct-k4-minus-edge.json": "5388822400f3541bdbe960b20bca1c51b8be7351686b145533a3ea159af3de00",
+    "generated/step6/two-loop-graphir/raw-k23-theta-lift.json": "22832fdffa3835fd6378145c45ec079b0ebf35685fcf08a46b23a77427df1ed7",
+    "generated/step6/two-loop-graphir/two-loop-graphir.json": "fa30274dcd2db4309b38db1a7c3644999aae5c0f28179f9f8574cc06bd7058ce",
+    "generated/step6/two-loop-graphir/two-loop-graphir.md": "cf7524e55427bd873568f45e4e10101b7763dd0992d7841c09b72ee6c7dd3e51",
+    "generated/step6/two-loop-graphir/valence-families.json": "661e5247d1e265c0a1f5737aca56fa10c1d35e6cea6da9a9a404895037251ee8"
+  },
+  "checks": [
+    {
+      "evidence": 12,
+      "id": "VALENCE_FAMILY_COUNT_12",
+      "passed": true
+    },
+    {
+      "evidence": [
+        "I2__S3^4",
+        "I2__S3^2__S4^1",
+        "I2__S3^1__S5^1",
+        "I2__S4^2",
+        "I2__S6^1",
+        "I3__S3^3",
+        "I3__S3^1__S4^1",
+        "I3__S5^1",
+        "I4__S3^2",
+        "I4__S4^1",
+        "I5__S3^1",
+        "I6__NO_ACTION_VERTEX"
+      ],
+      "id": "VALENCE_FAMILIES_ARE_NOT_GRAPHS",
+      "passed": true
+    },
+    {
+      "evidence": [
+        {
+          "I": 6,
+          "L": 2,
+          "V": 5,
+          "half_edge_identity": "14=2*6+2",
+          "lhs": 4,
+          "loop_identity": "2=6-5+1",
+          "required_value": 4,
+          "rhs": 4
+        },
+        {
+          "I": 5,
+          "L": 2,
+          "V": 4,
+          "half_edge_identity": "12=2*5+2",
+          "lhs": 4,
+          "loop_identity": "2=5-4+1",
+          "required_value": 4,
+          "rhs": 4
+        },
+        {
+          "I": 4,
+          "L": 2,
+          "V": 3,
+          "half_edge_identity": "10=2*4+2",
+          "lhs": 4,
+          "loop_identity": "2=4-3+1",
+          "required_value": 4,
+          "rhs": 4
+        },
+        {
+          "I": 4,
+          "L": 2,
+          "V": 3,
+          "half_edge_identity": "10=2*4+2",
+          "lhs": 4,
+          "loop_identity": "2=4-3+1",
+          "required_value": 4,
+          "rhs": 4
+        },
+        {
+          "I": 3,
+          "L": 2,
+          "V": 2,
+          "half_edge_identity": "8=2*3+2",
+          "lhs": 4,
+          "loop_identity": "2=3-2+1",
+          "required_value": 4,
+          "rhs": 4
+        },
+        {
+          "I": 5,
+          "L": 2,
+          "V": 4,
+          "half_edge_identity": "12=2*5+2",
+          "lhs": 4,
+          "loop_identity": "2=5-4+1",
+          "required_value": 4,
+          "rhs": 4
+        },
+        {
+          "I": 4,
+          "L": 2,
+          "V": 3,
+          "half_edge_identity": "10=2*4+2",
+          "lhs": 4,
+          "loop_identity": "2=4-3+1",
+          "required_value": 4,
+          "rhs": 4
+        },
+        {
+          "I": 3,
+          "L": 2,
+          "V": 2,
+          "half_edge_identity": "8=2*3+2",
+          "lhs": 4,
+          "loop_identity": "2=3-2+1",
+          "required_value": 4,
+          "rhs": 4
+        },
+        {
+          "I": 4,
+          "L": 2,
+          "V": 3,
+          "half_edge_identity": "10=2*4+2",
+          "lhs": 4,
+          "loop_identity": "2=4-3+1",
+          "required_value": 4,
+          "rhs": 4
+        },
+        {
+          "I": 3,
+          "L": 2,
+          "V": 2,
+          "half_edge_identity": "8=2*3+2",
+          "lhs": 4,
+          "loop_identity": "2=3-2+1",
+          "required_value": 4,
+          "rhs": 4
+        },
+        {
+          "I": 3,
+          "L": 2,
+          "V": 2,
+          "half_edge_identity": "8=2*3+2",
+          "lhs": 4,
+          "loop_identity": "2=3-2+1",
+          "required_value": 4,
+          "rhs": 4
+        },
+        {
+          "I": 2,
+          "L": 2,
+          "V": 1,
+          "half_edge_identity": "6=2*2+2",
+          "lhs": 4,
+          "loop_identity": "2=2-1+1",
+          "required_value": 4,
+          "rhs": 4
+        }
+      ],
+      "id": "VALENCE_IDENTITIES_EQUAL_FOUR",
+      "passed": true
+    },
+    {
+      "evidence": [
+        "G6_DIRECT_K4ME_I3_S3CUBED",
+        "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4"
+      ],
+      "id": "LITERAL_K4_MINUS_EDGE_DECORATED_GRAPH_COUNT_3",
+      "passed": true
+    },
+    {
+      "evidence": "G6_RAW_MARKED_K23_THETA_I2_S3FOURTH",
+      "id": "RAW_K23_IS_SEPARATE",
+      "passed": true
+    },
+    {
+      "evidence": [
+        {
+          "I": 5,
+          "L": 2,
+          "V": 4,
+          "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED"
+        },
+        {
+          "I": 5,
+          "L": 2,
+          "V": 4,
+          "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4"
+        },
+        {
+          "I": 5,
+          "L": 2,
+          "V": 4,
+          "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4"
+        },
+        {
+          "I": 6,
+          "L": 2,
+          "V": 5,
+          "graph_id": "G6_RAW_MARKED_K23_THETA_I2_S3FOURTH"
+        }
+      ],
+      "id": "ALL_GRAPHS_CONNECTED_TWO_LOOP",
+      "passed": true
+    },
+    {
+      "evidence": "total=background+quantum; sum_q=2I; sum_b=2",
+      "id": "ALL_TYPED_VALENCE_IDENTITIES_PASS",
+      "passed": true
+    },
+    {
+      "evidence": [
+        "G6_DIRECT_K4ME_I3_S3CUBED",
+        "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+        "G6_RAW_MARKED_K23_THETA_I2_S3FOURTH"
+      ],
+      "id": "ALL_QUANTUM_PORTS_SATURATED",
+      "passed": true
+    },
+    {
+      "evidence": [
+        "G6_DIRECT_K4ME_I3_S3CUBED",
+        "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+        "G6_RAW_MARKED_K23_THETA_I2_S3FOURTH"
+      ],
+      "id": "DIRECT_AND_REFLECTED_INCIDENCE_PASS",
+      "passed": true
+    },
+    {
+      "evidence": [
+        "k",
+        "k-P",
+        "l",
+        "l-p1",
+        "-k-l",
+        "-k-l-p2"
+      ],
+      "id": "RAW_ROUTING_LITERAL",
+      "passed": true
+    },
+    {
+      "evidence": "k^2 (k-P)^2 l^2 (l-p1)^2 (k+l)^2 (k+l+p2)^2",
+      "id": "RAW_DENOMINATOR_LITERAL",
+      "passed": true
+    },
+    {
+      "evidence": [
+        {
+          "cycle_hash": "b44340188f316d6a38fad4b3a1c84eca78d28c6caa6a44f39de2345bb3e0e447",
+          "cycle_id": "left",
+          "edge_ids": [
+            "e_AD",
+            "e_CA",
+            "e_CI",
+            "e_ID"
+          ],
+          "one_loop_rank": 1
+        },
+        {
+          "cycle_hash": "7bdb10087e46f27998f27e4eb11283fcc1fc4589c3cf4b4373e51ca38c307288",
+          "cycle_id": "right",
+          "edge_ids": [
+            "e_BD",
+            "e_CB",
+            "e_CI",
+            "e_ID"
+          ],
+          "one_loop_rank": 1
+        },
+        {
+          "cycle_hash": "9c0baaaf63a242995fbe39f38b8b49a800815703d9debbe4880beb2afb530a4a",
+          "cycle_id": "outer",
+          "edge_ids": [
+            "e_AD",
+            "e_BD",
+            "e_CA",
+            "e_CB"
+          ],
+          "one_loop_rank": 1
+        }
+      ],
+      "id": "RAW_LEFT_RIGHT_OUTER_COMPLETE",
+      "passed": true
+    },
+    {
+      "evidence": [
+        {
+          "cycle_pair": [
+            "left",
+            "right"
+          ],
+          "edge_disjoint": false,
+          "intersection_edge_ids": [
+            "e_CI",
+            "e_ID"
+          ],
+          "left_subset_right": false,
+          "relation": "OVERLAP_NON_NESTED",
+          "right_subset_left": false,
+          "symmetric_difference_cycle": "outer"
+        },
+        {
+          "cycle_pair": [
+            "left",
+            "outer"
+          ],
+          "edge_disjoint": false,
+          "intersection_edge_ids": [
+            "e_AD",
+            "e_CA"
+          ],
+          "left_subset_right": false,
+          "relation": "OVERLAP_NON_NESTED",
+          "right_subset_left": false,
+          "symmetric_difference_cycle": "right"
+        },
+        {
+          "cycle_pair": [
+            "right",
+            "outer"
+          ],
+          "edge_disjoint": false,
+          "intersection_edge_ids": [
+            "e_BD",
+            "e_CB"
+          ],
+          "left_subset_right": false,
+          "relation": "OVERLAP_NON_NESTED",
+          "right_subset_left": false,
+          "symmetric_difference_cycle": "left"
+        }
+      ],
+      "id": "RAW_CYCLES_PAIRWISE_OVERLAP_NON_NESTED",
+      "passed": true
+    },
+    {
+      "evidence": "left XOR right XOR outer = empty",
+      "id": "CYCLE_GF2_RELATION",
+      "passed": true
+    },
+    {
+      "evidence": [
+        {
+          "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+          "orders": [
+            2,
+            1
+          ]
+        },
+        {
+          "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+          "orders": [
+            1,
+            1
+          ]
+        },
+        {
+          "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+          "orders": [
+            2,
+            2
+          ]
+        },
+        {
+          "graph_id": "G6_RAW_MARKED_K23_THETA_I2_S3FOURTH",
+          "orders": [
+            4,
+            2
+          ]
+        }
+      ],
+      "id": "AUTOMORPHISM_HASHES_PRESENT",
+      "passed": true
+    },
+    {
+      "evidence": [
+        "ea89a1f89db687a42d73a5fc391c73d82099ca4b7c94a64f9c49c6ee46140a29",
+        "cafb4b1e99401c5ebd034d1d417aa92f797e11d1bc75cda04ccf9dd2c06bf401",
+        "ebc217a0c8e2226e7ba820253eb8d53aba7d9ba8269ee02ecaa9d21e85e45451",
+        "1f3ba68e8d44e52941a1d26757196ad1553f83794826d82de72929cd5ede374e"
+      ],
+      "id": "ORIENTATION_HASHES_DISTINCT",
+      "passed": true
+    },
+    {
+      "evidence": [
+        "5cbf5cea3c11f28278e0366aaf48206a8fbb9c57a0c3d63a357a99ff0c519fcf",
+        "c1c75f47543ab29ebb53137f46656705f6fca9e972a0643b96c69fd295c5a78a",
+        "84137962e3a5d40a2be79e124cc85f3fdd180a42cf7119c3464e7da6f620baa3",
+        "391ce9e4241a7666603d96231e51b094809c3ee9966508108832938cd11937fc"
+      ],
+      "id": "GRAPH_HASHES_UNIQUE",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "amplitude_ir": {
+          "status": "BLOCKED_ORDERED_PROJECT_VERTEX_PROPAGATOR_AND_WICK_DATA_ABSENT",
+          "value": null
+        },
+        "d_algebra_ir": {
+          "status": "BLOCKED_AMPLITUDE_IR_ABSENT",
+          "value": null
+        },
+        "renormalized_coefficient": {
+          "status": "BLOCKED_SUBTRACTED_INTEGRAL_IR_ABSENT",
+          "value": null
+        },
+        "subtracted_integral_ir": {
+          "status": "BLOCKED_DALGEBRA_AND_FOREST_COUNTERTERMS_ABSENT",
+          "value": null
+        }
+      },
+      "id": "AMPLITUDE_DALGEBRA_COEFFICIENT_FAIL_CLOSED",
+      "passed": true
+    }
+  ],
+  "failure_count": 0,
+  "schema_version": "step6.two_loop_graphir.audit.v1",
+  "status": "PASS"
+}

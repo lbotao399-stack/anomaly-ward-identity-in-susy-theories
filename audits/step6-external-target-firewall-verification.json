@@ -1,0 +1,13 @@
+{
+  "check_count": 4,
+  "checks": {
+    "artifacts_do_not_contain_denied_paths_or_target_tokens": true,
+    "artifacts_do_not_copy_denied_files": true,
+    "artifacts_do_not_declare_denied_dependency_hashes": true,
+    "source_string_literals_do_not_name_denied_inputs": true
+  },
+  "failure_count": 0,
+  "firewall_hash": "c718352f748d558f5be5a9a90ce1bacfceee4ac162ceffe5487d82d042dfc952",
+  "schema": "step6.external_target_firewall.audit.v1",
+  "status": "PASS"
+}

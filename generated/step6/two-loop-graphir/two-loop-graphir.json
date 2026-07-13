@@ -1,0 +1,4764 @@
+{
+  "authority_role": "UNMERGED_PROPOSAL_NOT_COMPUTATIONAL_EVIDENCE",
+  "bundle_hash": "ef50f639ade73d0b191990dd0488b1529d804c7396f3700f57c76b0d347cc623",
+  "downstream_fail_closed": {
+    "amplitude_ir": {
+      "status": "BLOCKED_ORDERED_PROJECT_VERTEX_PROPAGATOR_AND_WICK_DATA_ABSENT",
+      "value": null
+    },
+    "d_algebra_ir": {
+      "status": "BLOCKED_AMPLITUDE_IR_ABSENT",
+      "value": null
+    },
+    "renormalized_coefficient": {
+      "status": "BLOCKED_SUBTRACTED_INTEGRAL_IR_ABSENT",
+      "value": null
+    },
+    "subtracted_integral_ir": {
+      "status": "BLOCKED_DALGEBRA_AND_FOREST_COUNTERTERMS_ABSENT",
+      "value": null
+    }
+  },
+  "exact_identities": {
+    "loop": "L=I-V+1 for a connected graph",
+    "two_loop_two_background_leg_valence": "(m-2)+sum_(r>=3)(r-2)n_r=4"
+  },
+  "external_result_used_as_calculation_input": false,
+  "literal_direct_graphs": [
+    {
+      "automorphisms": {
+        "background_source_labeled": {
+          "automorphism_hash": "d56b78c8cd52b158fbb26bc4c5f0a10ebdb282315be233290c7c0d9a7b42ddba",
+          "order": 1,
+          "permutations": [
+            {
+              "A": "A",
+              "B": "B",
+              "C": "C",
+              "I": "I"
+            }
+          ],
+          "preserves": "typed vertices, topology, and labeled background/source momentum ports"
+        },
+        "typed_external_unlabeled": {
+          "automorphism_hash": "f532970bb26ac2127237b3000c14648178337747bff5d5480b8f442453fce5f0",
+          "order": 2,
+          "permutations": [
+            {
+              "A": "A",
+              "B": "B",
+              "C": "C",
+              "I": "I"
+            },
+            {
+              "A": "B",
+              "B": "A",
+              "C": "C",
+              "I": "I"
+            }
+          ],
+          "preserves": "typed vertices and topology; background momentum labels forgotten"
+        }
+      },
+      "classification": "LITERAL_K4_MINUS_EDGE_DIRECT_PARENT",
+      "denominator_ast": {
+        "all_powers": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "factors": [
+          {
+            "base": {
+              "argument": {
+                "basis": [
+                  "k",
+                  "l",
+                  "P",
+                  "p1",
+                  "p2"
+                ],
+                "op": "integer_linear_combination",
+                "terms": [
+                  {
+                    "coefficient": 1,
+                    "symbol": "k"
+                  }
+                ]
+              },
+              "bilinear_form": "POSITIVE_EUCLIDEAN",
+              "op": "square",
+              "space": "PROJECT_EUCLIDEAN_DRED_HAT_MOMENTUM_SUBSPACE"
+            },
+            "edge_id": "e_CI",
+            "exponent": 1,
+            "op": "power"
+          },
+          {
+            "base": {
+              "argument": {
+                "basis": [
+                  "k",
+                  "l",
+                  "P",
+                  "p1",
+                  "p2"
+                ],
+                "op": "integer_linear_combination",
+                "terms": [
+                  {
+                    "coefficient": 1,
+                    "symbol": "l"
+                  }
+                ]
+              },
+              "bilinear_form": "POSITIVE_EUCLIDEAN",
+              "op": "square",
+              "space": "PROJECT_EUCLIDEAN_DRED_HAT_MOMENTUM_SUBSPACE"
+            },
+            "edge_id": "e_CA",
+            "exponent": 1,
+            "op": "power"
+          },
+          {
+            "base": {
+              "argument": {
+                "basis": [
+                  "k",
+                  "l",
+                  "P",
+                  "p1",
+                  "p2"
+                ],
+                "op": "integer_linear_combination",
+                "terms": [
+                  {
+                    "coefficient": 1,
+                    "symbol": "l"
+                  },
+                  {
+                    "coefficient": -1,
+                    "symbol": "p1"
+                  }
+                ]
+              },
+              "bilinear_form": "POSITIVE_EUCLIDEAN",
+              "op": "square",
+              "space": "PROJECT_EUCLIDEAN_DRED_HAT_MOMENTUM_SUBSPACE"
+            },
+            "edge_id": "e_AI",
+            "exponent": 1,
+            "op": "power"
+          },
+          {
+            "base": {
+              "argument": {
+                "basis": [
+                  "k",
+                  "l",
+                  "P",
+                  "p1",
+                  "p2"
+                ],
+                "op": "integer_linear_combination",
+                "terms": [
+                  {
+                    "coefficient": 1,
+                    "symbol": "k"
+                  },
+                  {
+                    "coefficient": 1,
+                    "symbol": "l"
+                  }
+                ]
+              },
+              "bilinear_form": "POSITIVE_EUCLIDEAN",
+              "op": "square",
+              "space": "PROJECT_EUCLIDEAN_DRED_HAT_MOMENTUM_SUBSPACE"
+            },
+            "edge_id": "e_CB",
+            "exponent": 1,
+            "op": "power"
+          },
+          {
+            "base": {
+              "argument": {
+                "basis": [
+                  "k",
+                  "l",
+                  "P",
+                  "p1",
+                  "p2"
+                ],
+                "op": "integer_linear_combination",
+                "terms": [
+                  {
+                    "coefficient": 1,
+                    "symbol": "k"
+                  },
+                  {
+                    "coefficient": 1,
+                    "symbol": "l"
+                  },
+                  {
+                    "coefficient": 1,
+                    "symbol": "p2"
+                  }
+                ]
+              },
+              "bilinear_form": "POSITIVE_EUCLIDEAN",
+              "op": "square",
+              "space": "PROJECT_EUCLIDEAN_DRED_HAT_MOMENTUM_SUBSPACE"
+            },
+            "edge_id": "e_BI",
+            "exponent": 1,
+            "op": "power"
+          }
+        ],
+        "op": "product",
+        "rendered": "k^2 l^2 (l-p1)^2 (k+l)^2 (k+l+p2)^2"
+      },
+      "downstream_fail_closed": {
+        "amplitude_ir": {
+          "status": "BLOCKED_ORDERED_PROJECT_VERTEX_PROPAGATOR_AND_WICK_DATA_ABSENT",
+          "value": null
+        },
+        "d_algebra_ir": {
+          "status": "BLOCKED_AMPLITUDE_IR_ABSENT",
+          "value": null
+        },
+        "renormalized_coefficient": {
+          "status": "BLOCKED_SUBTRACTED_INTEGRAL_IR_ABSENT",
+          "value": null
+        },
+        "subtracted_integral_ir": {
+          "status": "BLOCKED_DALGEBRA_AND_FOREST_COUNTERTERMS_ABSENT",
+          "value": null
+        }
+      },
+      "graph_hash": "5cbf5cea3c11f28278e0366aaf48206a8fbb9c57a0c3d63a357a99ff0c519fcf",
+      "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+      "graph_kind": "TOPOLOGY_GRAPHIR_NO_FIELD_OR_WICK_ASSIGNMENT",
+      "identities": {
+        "I": 5,
+        "L": 2,
+        "V": 4,
+        "background_valence_identity": {
+          "lhs": 2,
+          "passed": true,
+          "rhs": 2
+        },
+        "connected": true,
+        "loop_identity": {
+          "equation": "2=5-4+1",
+          "lhs": 2,
+          "passed": true,
+          "rhs": 2
+        },
+        "quantum_valence_identity": {
+          "lhs": 10,
+          "passed": true,
+          "rhs": 10
+        },
+        "total_half_edge_identity": {
+          "lhs": 12,
+          "passed": true,
+          "rhs": 12
+        },
+        "valence_identity": {
+          "equation": "4=2*2+2-2=4",
+          "lhs": 4,
+          "passed": true,
+          "required_value": 4,
+          "rhs": 4
+        }
+      },
+      "incidence_routing": {
+        "direct": {
+          "convention": "B[v,e]=+1_at_source,-1_at_target; B*r+j=0 modulo P+p1+p2=0",
+          "each_column_has_one_source_and_one_target": true,
+          "edge_order": [
+            "e_CI",
+            "e_CA",
+            "e_AI",
+            "e_CB",
+            "e_BI"
+          ],
+          "expected_connected_rank": 3,
+          "matrix": [
+            [
+              -1,
+              0,
+              -1,
+              0,
+              -1
+            ],
+            [
+              0,
+              -1,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              -1,
+              1
+            ],
+            [
+              1,
+              1,
+              0,
+              1,
+              0
+            ]
+          ],
+          "passed": true,
+          "rank": 3,
+          "vertex_conservation": {
+            "A": {
+              "passed": true,
+              "raw_balance": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "raw_balance_rendered": "0",
+              "reduced_balance": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "reduced_basis": [
+                "k",
+                "l",
+                "p1",
+                "p2"
+              ],
+              "relation_multiple": 0
+            },
+            "B": {
+              "passed": true,
+              "raw_balance": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "raw_balance_rendered": "0",
+              "reduced_balance": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "reduced_basis": [
+                "k",
+                "l",
+                "p1",
+                "p2"
+              ],
+              "relation_multiple": 0
+            },
+            "C": {
+              "passed": true,
+              "raw_balance": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "raw_balance_rendered": "0",
+              "reduced_balance": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "reduced_basis": [
+                "k",
+                "l",
+                "p1",
+                "p2"
+              ],
+              "relation_multiple": 0
+            },
+            "I": {
+              "passed": true,
+              "raw_balance": [
+                0,
+                0,
+                1,
+                1,
+                1
+              ],
+              "raw_balance_rendered": "P+p1+p2",
+              "reduced_balance": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "reduced_basis": [
+                "k",
+                "l",
+                "p1",
+                "p2"
+              ],
+              "relation_multiple": 1
+            }
+          },
+          "vertex_order": [
+            "I",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "reflected": {
+          "convention": "B[v,e]=+1_at_source,-1_at_target; B*r+j=0 modulo P+p1+p2=0",
+          "each_column_has_one_source_and_one_target": true,
+          "edge_order": [
+            "e_CI",
+            "e_CA",
+            "e_AI",
+            "e_CB",
+            "e_BI"
+          ],
+          "expected_connected_rank": 3,
+          "matrix": [
+            [
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              -1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1,
+              -1
+            ],
+            [
+              -1,
+              -1,
+              0,
+              -1,
+              0
+            ]
+          ],
+          "passed": true,
+          "rank": 3,
+          "vertex_conservation": {
+            "A": {
+              "passed": true,
+              "raw_balance": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "raw_balance_rendered": "0",
+              "reduced_balance": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "reduced_basis": [
+                "k",
+                "l",
+                "p1",
+                "p2"
+              ],
+              "relation_multiple": 0
+            },
+            "B": {
+              "passed": true,
+              "raw_balance": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "raw_balance_rendered": "0",
+              "reduced_balance": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "reduced_basis": [
+                "k",
+                "l",
+                "p1",
+                "p2"
+              ],
+              "relation_multiple": 0
+            },
+            "C": {
+              "passed": true,
+              "raw_balance": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "raw_balance_rendered": "0",
+              "reduced_balance": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "reduced_basis": [
+                "k",
+                "l",
+                "p1",
+                "p2"
+              ],
+              "relation_multiple": 0
+            },
+            "I": {
+              "passed": true,
+              "raw_balance": [
+                0,
+                0,
+                1,
+                1,
+                1
+              ],
+              "raw_balance_rendered": "P+p1+p2",
+              "reduced_balance": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "reduced_basis": [
+                "k",
+                "l",
+                "p1",
+                "p2"
+              ],
+              "relation_multiple": 1
+            }
+          },
+          "vertex_order": [
+            "I",
+            "A",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "internal_edges": [
+        {
+          "edge_id": "e_CI",
+          "endpoint_type": "QUANTUM_PORT_TO_QUANTUM_PORT",
+          "momentum": "k",
+          "momentum_vector": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "propagator": null,
+          "propagator_status": "BLOCKED_FIELD_AND_PROJECTOR_ASSIGNMENT_ABSENT",
+          "source": "C",
+          "source_port": "C.q0",
+          "target": "I",
+          "target_port": "I.q0"
+        },
+        {
+          "edge_id": "e_CA",
+          "endpoint_type": "QUANTUM_PORT_TO_QUANTUM_PORT",
+          "momentum": "l",
+          "momentum_vector": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "propagator": null,
+          "propagator_status": "BLOCKED_FIELD_AND_PROJECTOR_ASSIGNMENT_ABSENT",
+          "source": "C",
+          "source_port": "C.q1",
+          "target": "A",
+          "target_port": "A.q0"
+        },
+        {
+          "edge_id": "e_AI",
+          "endpoint_type": "QUANTUM_PORT_TO_QUANTUM_PORT",
+          "momentum": "l-p1",
+          "momentum_vector": [
+            0,
+            1,
+            0,
+            -1,
+            0
+          ],
+          "propagator": null,
+          "propagator_status": "BLOCKED_FIELD_AND_PROJECTOR_ASSIGNMENT_ABSENT",
+          "source": "A",
+          "source_port": "A.q1",
+          "target": "I",
+          "target_port": "I.q1"
+        },
+        {
+          "edge_id": "e_CB",
+          "endpoint_type": "QUANTUM_PORT_TO_QUANTUM_PORT",
+          "momentum": "-k-l",
+          "momentum_vector": [
+            -1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "propagator": null,
+          "propagator_status": "BLOCKED_FIELD_AND_PROJECTOR_ASSIGNMENT_ABSENT",
+          "source": "C",
+          "source_port": "C.q2",
+          "target": "B",
+          "target_port": "B.q0"
+        },
+        {
+          "edge_id": "e_BI",
+          "endpoint_type": "QUANTUM_PORT_TO_QUANTUM_PORT",
+          "momentum": "-k-l-p2",
+          "momentum_vector": [
+            -1,
+            -1,
+            0,
+            0,
+            -1
+          ],
+          "propagator": null,
+          "propagator_status": "BLOCKED_FIELD_AND_PROJECTOR_ASSIGNMENT_ABSENT",
+          "source": "B",
+          "source_port": "B.q1",
+          "target": "I",
+          "target_port": "I.q2"
+        }
+      ],
+      "momentum_contract": {
+        "all_incoming_relation": "P+p1+p2=0",
+        "background_external_momenta": [
+          "p1",
+          "p2"
+        ],
+        "basis": [
+          "k",
+          "l",
+          "P",
+          "p1",
+          "p2"
+        ],
+        "composite_source_momentum": "P",
+        "loop_momenta": [
+          "k",
+          "l"
+        ],
+        "relation_vector": [
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "square_bilinear_form": "POSITIVE_EUCLIDEAN",
+        "square_space": "PROJECT_EUCLIDEAN_DRED_HAT_MOMENTUM_SUBSPACE"
+      },
+      "operator_seed": "nabla_-[(nabla_+W_+)^A (nabla_+W_+)^B]",
+      "orientations": {
+        "direct": {
+          "edges": [
+            {
+              "edge_id": "e_CI",
+              "momentum": "k",
+              "momentum_vector": [
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "source": "C",
+              "target": "I"
+            },
+            {
+              "edge_id": "e_CA",
+              "momentum": "l",
+              "momentum_vector": [
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "source": "C",
+              "target": "A"
+            },
+            {
+              "edge_id": "e_AI",
+              "momentum": "l-p1",
+              "momentum_vector": [
+                0,
+                1,
+                0,
+                -1,
+                0
+              ],
+              "source": "A",
+              "target": "I"
+            },
+            {
+              "edge_id": "e_CB",
+              "momentum": "-k-l",
+              "momentum_vector": [
+                -1,
+                -1,
+                0,
+                0,
+                0
+              ],
+              "source": "C",
+              "target": "B"
+            },
+            {
+              "edge_id": "e_BI",
+              "momentum": "-k-l-p2",
+              "momentum_vector": [
+                -1,
+                -1,
+                0,
+                0,
+                -1
+              ],
+              "source": "B",
+              "target": "I"
+            }
+          ],
+          "orientation_hash": "f5123345512a3c4b672330928087697f9916c657974221dace4962a4a16ace0d",
+          "orientation_id": "direct"
+        },
+        "orientation_pair_hash": "ea89a1f89db687a42d73a5fc391c73d82099ca4b7c94a64f9c49c6ee46140a29",
+        "reflected": {
+          "edges": [
+            {
+              "edge_id": "e_CI",
+              "momentum": "-k",
+              "momentum_vector": [
+                -1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "source": "I",
+              "target": "C"
+            },
+            {
+              "edge_id": "e_CA",
+              "momentum": "-l",
+              "momentum_vector": [
+                0,
+                -1,
+                0,
+                0,
+                0
+              ],
+              "source": "A",
+              "target": "C"
+            },
+            {
+              "edge_id": "e_AI",
+              "momentum": "-l+p1",
+              "momentum_vector": [
+                0,
+                -1,
+                0,
+                1,
+                0
+              ],
+              "source": "I",
+              "target": "A"
+            },
+            {
+              "edge_id": "e_CB",
+              "momentum": "k+l",
+              "momentum_vector": [
+                1,
+                1,
+                0,
+                0,
+                0
+              ],
+              "source": "B",
+              "target": "C"
+            },
+            {
+              "edge_id": "e_BI",
+              "momentum": "k+l+p2",
+              "momentum_vector": [
+                1,
+                1,
+                0,
+                0,
+                1
+              ],
+              "source": "I",
+              "target": "B"
+            }
+          ],
+          "orientation_hash": "4dcdb8aa2524fcf7e15919cf81bc88dd221330950b81ecfb9c39afdffc1b5271",
+          "orientation_id": "reflected"
+        },
+        "semantics": "EDGE_DIRECTION_AND_MOMENTUM_SIGN_ONLY_NOT_A_WICK_OR_FIELD_ORIENTATION"
+      },
+      "schema_version": "step6.two_loop_graphir.v1",
+      "sector": "EUCLIDEAN_N4_SYM_PURE_GAUGE",
+      "simple_one_loop_cycles": {
+        "cycles": [
+          {
+            "cycle_hash": "260a17b8516041ef61626982cf2ca84cf1b7b7dad63208f7b2f615125387cf6f",
+            "cycle_id": "left",
+            "edge_ids": [
+              "e_AI",
+              "e_CA",
+              "e_CI"
+            ],
+            "one_loop_rank": 1
+          },
+          {
+            "cycle_hash": "7ee4f7573905e6d065ec7024b6721fe20e5fcb08b72ad0b511cd70f08433941a",
+            "cycle_id": "right",
+            "edge_ids": [
+              "e_BI",
+              "e_CB",
+              "e_CI"
+            ],
+            "one_loop_rank": 1
+          },
+          {
+            "cycle_hash": "cdd279beb7826f0e899705fc9ceb46b3c8f20683ffa48873875bb82dfc9366a6",
+            "cycle_id": "outer",
+            "edge_ids": [
+              "e_AI",
+              "e_BI",
+              "e_CA",
+              "e_CB"
+            ],
+            "one_loop_rank": 1
+          }
+        ],
+        "enumeration_rule": "connected edge subsets with degree two at every used vertex and E-V+1=1",
+        "gf2_relation": {
+          "equation": "left XOR right XOR outer = empty",
+          "passed": true,
+          "residual_edge_ids": []
+        },
+        "overlap_relations": [
+          {
+            "cycle_pair": [
+              "left",
+              "right"
+            ],
+            "edge_disjoint": false,
+            "intersection_edge_ids": [
+              "e_CI"
+            ],
+            "left_subset_right": false,
+            "relation": "OVERLAP_NON_NESTED",
+            "right_subset_left": false,
+            "symmetric_difference_cycle": "outer"
+          },
+          {
+            "cycle_pair": [
+              "left",
+              "outer"
+            ],
+            "edge_disjoint": false,
+            "intersection_edge_ids": [
+              "e_AI",
+              "e_CA"
+            ],
+            "left_subset_right": false,
+            "relation": "OVERLAP_NON_NESTED",
+            "right_subset_left": false,
+            "symmetric_difference_cycle": "right"
+          },
+          {
+            "cycle_pair": [
+              "right",
+              "outer"
+            ],
+            "edge_disjoint": false,
+            "intersection_edge_ids": [
+              "e_BI",
+              "e_CB"
+            ],
+            "left_subset_right": false,
+            "relation": "OVERLAP_NON_NESTED",
+            "right_subset_left": false,
+            "symmetric_difference_cycle": "left"
+          }
+        ]
+      },
+      "stage": "TOPOLOGY_AND_ROUTING_ONLY",
+      "topology": "K4_MINUS_ONE_EDGE",
+      "topology_hash": "ec9b05304b6ee4eff8a5c04f7d393a88ea9a693773763784f948ffda8fc531b5",
+      "typed_port_saturation": {
+        "all_quantum_ports": [
+          "A.q0",
+          "A.q1",
+          "B.q0",
+          "B.q1",
+          "C.q0",
+          "C.q1",
+          "C.q2",
+          "I.q0",
+          "I.q1",
+          "I.q2"
+        ],
+        "each_quantum_port_used_once": true,
+        "edge_endpoint_ports": [
+          "A.q0",
+          "A.q1",
+          "B.q0",
+          "B.q1",
+          "C.q0",
+          "C.q1",
+          "C.q2",
+          "I.q0",
+          "I.q1",
+          "I.q2"
+        ]
+      },
+      "valence_family_id": "I3__S3^3",
+      "vertices": [
+        {
+          "background_ports": [],
+          "background_valence": 0,
+          "family": "I3",
+          "momentum_injections": [
+            {
+              "counts_toward_background_valence": false,
+              "kind": "COMPOSITE_SOURCE_MOMENTUM",
+              "momentum": "P",
+              "momentum_vector": [
+                0,
+                0,
+                1,
+                0,
+                0
+              ]
+            }
+          ],
+          "quantum_ports": [
+            "I.q0",
+            "I.q1",
+            "I.q2"
+          ],
+          "quantum_valence": 3,
+          "role": "COMPOSITE_INSERTION",
+          "total_valence": 3,
+          "vertex_id": "I"
+        },
+        {
+          "background_ports": [
+            {
+              "kind": "BACKGROUND_EXTERNAL",
+              "momentum": "p1",
+              "port_id": "A.b0"
+            }
+          ],
+          "background_valence": 1,
+          "family": "S3",
+          "momentum_injections": [
+            {
+              "kind": "BACKGROUND_EXTERNAL",
+              "momentum": "p1",
+              "momentum_vector": [
+                0,
+                0,
+                0,
+                1,
+                0
+              ]
+            }
+          ],
+          "quantum_ports": [
+            "A.q0",
+            "A.q1"
+          ],
+          "quantum_valence": 2,
+          "role": "ACTION_VERTEX",
+          "total_valence": 3,
+          "vertex_id": "A"
+        },
+        {
+          "background_ports": [
+            {
+              "kind": "BACKGROUND_EXTERNAL",
+              "momentum": "p2",
+              "port_id": "B.b0"
+            }
+          ],
+          "background_valence": 1,
+          "family": "S3",
+          "momentum_injections": [
+            {
+              "kind": "BACKGROUND_EXTERNAL",
+              "momentum": "p2",
+              "momentum_vector": [
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          ],
+          "quantum_ports": [
+            "B.q0",
+            "B.q1"
+          ],
+          "quantum_valence": 2,
+          "role": "ACTION_VERTEX",
+          "total_valence": 3,
+          "vertex_id": "B"
+        },
+        {
+          "background_ports": [],
+          "background_valence": 0,
+          "family": "S3",
+          "momentum_injections": [],
+          "quantum_ports": [
+            "C.q0",
+            "C.q1",
+            "C.q2"
+          ],
+          "quantum_valence": 3,
+          "role": "ACTION_VERTEX",
+          "total_valence": 3,
+          "vertex_id": "C"
+        }
+      ]
+    },
+    {
+      "automorphisms": {
+        "background_source_labeled": {
+          "automorphism_hash": "d56b78c8cd52b158fbb26bc4c5f0a10ebdb282315be233290c7c0d9a7b42ddba",
+          "order": 1,
+          "permutations": [
+            {
+              "A": "A",
+              "B": "B",
+              "C": "C",
+              "I": "I"
+            }
+          ],
+          "preserves": "typed vertices, topology, and labeled background/source momentum ports"
+        },
+        "typed_external_unlabeled": {
+          "automorphism_hash": "159dfc9345c96eedc13178ffdee3002c0826292470ec3741663b639d84dd4bc6",
+          "order": 1,
+          "permutations": [
+            {
+              "A": "A",
+              "B": "B",
+              "C": "C",
+              "I": "I"
+            }
+          ],
+          "preserves": "typed vertices and topology; background momentum labels forgotten"
+        }
+      },
+      "classification": "LITERAL_K4_MINUS_EDGE_DIRECT_PARENT",
+      "denominator_ast": {
+        "all_powers": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "factors": [
+          {
+            "base": {
+              "argument": {
+                "basis": [
+                  "k",
+                  "l",
+                  "P",
+                  "p1",
+                  "p2"
+                ],
+                "op": "integer_linear_combination",
+                "terms": [
+                  {
+                    "coefficient": 1,
+                    "symbol": "k"
+                  }
+                ]
+              },
+              "bilinear_form": "POSITIVE_EUCLIDEAN",
+              "op": "square",
+              "space": "PROJECT_EUCLIDEAN_DRED_HAT_MOMENTUM_SUBSPACE"
+            },
+            "edge_id": "e_BI",
+            "exponent": 1,
+            "op": "power"
+          },
+          {
+            "base": {
+              "argument": {
+                "basis": [
+                  "k",
+                  "l",
+                  "P",
+                  "p1",
+                  "p2"
+                ],
+                "op": "integer_linear_combination",
+                "terms": [
+                  {
+                    "coefficient": 1,
+                    "symbol": "k"
+                  },
+                  {
+                    "coefficient": -1,
+                    "symbol": "P"
+                  }
+                ]
+              },
+              "bilinear_form": "POSITIVE_EUCLIDEAN",
+              "op": "square",
+              "space": "PROJECT_EUCLIDEAN_DRED_HAT_MOMENTUM_SUBSPACE"
+            },
+            "edge_id": "e_IC",
+            "exponent": 1,
+            "op": "power"
+          },
+          {
+            "base": {
+              "argument": {
+                "basis": [
+                  "k",
+                  "l",
+                  "P",
+                  "p1",
+                  "p2"
+                ],
+                "op": "integer_linear_combination",
+                "terms": [
+                  {
+                    "coefficient": 1,
+                    "symbol": "l"
+                  }
+                ]
+              },
+              "bilinear_form": "POSITIVE_EUCLIDEAN",
+              "op": "square",
+              "space": "PROJECT_EUCLIDEAN_DRED_HAT_MOMENTUM_SUBSPACE"
+            },
+            "edge_id": "e_BA",
+            "exponent": 1,
+            "op": "power"
+          },
+          {
+            "base": {
+              "argument": {
+                "basis": [
+                  "k",
+                  "l",
+                  "P",
+                  "p1",
+                  "p2"
+                ],
+                "op": "integer_linear_combination",
+                "terms": [
+                  {
+                    "coefficient": 1,
+                    "symbol": "l"
+                  },
+                  {
+                    "coefficient": -1,
+                    "symbol": "p1"
+                  }
+                ]
+              },
+              "bilinear_form": "POSITIVE_EUCLIDEAN",
+              "op": "square",
+              "space": "PROJECT_EUCLIDEAN_DRED_HAT_MOMENTUM_SUBSPACE"
+            },
+            "edge_id": "e_AC",
+            "exponent": 1,
+            "op": "power"
+          },
+          {
+            "base": {
+              "argument": {
+                "basis": [
+                  "k",
+                  "l",
+                  "P",
+                  "p1",
+                  "p2"
+                ],
+                "op": "integer_linear_combination",
+                "terms": [
+                  {
+                    "coefficient": 1,
+                    "symbol": "k"
+                  },
+                  {
+                    "coefficient": 1,
+                    "symbol": "l"
+                  }
+                ]
+              },
+              "bilinear_form": "POSITIVE_EUCLIDEAN",
+              "op": "square",
+              "space": "PROJECT_EUCLIDEAN_DRED_HAT_MOMENTUM_SUBSPACE"
+            },
+            "edge_id": "e_BC",
+            "exponent": 1,
+            "op": "power"
+          }
+        ],
+        "op": "product",
+        "rendered": "k^2 (k-P)^2 l^2 (l-p1)^2 (k+l)^2"
+      },
+      "downstream_fail_closed": {
+        "amplitude_ir": {
+          "status": "BLOCKED_ORDERED_PROJECT_VERTEX_PROPAGATOR_AND_WICK_DATA_ABSENT",
+          "value": null
+        },
+        "d_algebra_ir": {
+          "status": "BLOCKED_AMPLITUDE_IR_ABSENT",
+          "value": null
+        },
+        "renormalized_coefficient": {
+          "status": "BLOCKED_SUBTRACTED_INTEGRAL_IR_ABSENT",
+          "value": null
+        },
+        "subtracted_integral_ir": {
+          "status": "BLOCKED_DALGEBRA_AND_FOREST_COUNTERTERMS_ABSENT",
+          "value": null
+        }
+      },
+      "graph_hash": "c1c75f47543ab29ebb53137f46656705f6fca9e972a0643b96c69fd295c5a78a",
+      "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+      "graph_kind": "TOPOLOGY_GRAPHIR_NO_FIELD_OR_WICK_ASSIGNMENT",
+      "identities": {
+        "I": 5,
+        "L": 2,
+        "V": 4,
+        "background_valence_identity": {
+          "lhs": 2,
+          "passed": true,
+          "rhs": 2
+        },
+        "connected": true,
+        "loop_identity": {
+          "equation": "2=5-4+1",
+          "lhs": 2,
+          "passed": true,
+          "rhs": 2
+        },
+        "quantum_valence_identity": {
+          "lhs": 10,
+          "passed": true,
+          "rhs": 10
+        },
+        "total_half_edge_identity": {
+          "lhs": 12,
+          "passed": true,
+          "rhs": 12
+        },
+        "valence_identity": {
+          "equation": "4=2*2+2-2=4",
+          "lhs": 4,
+          "passed": true,
+          "required_value": 4,
+          "rhs": 4
+        }
+      },
+      "incidence_routing": {
+        "direct": {
+          "convention": "B[v,e]=+1_at_source,-1_at_target; B*r+j=0 modulo P+p1+p2=0",
+          "each_column_has_one_source_and_one_target": true,
+          "edge_order": [
+            "e_BI",
+            "e_IC",
+            "e_BA",
+            "e_AC",
+            "e_BC"
+          ],
+          "expected_connected_rank": 3,
+          "matrix": [
+            [
+              -1,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              -1,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              -1,
+              0,
+              -1,
+              -1
+            ]
+          ],
+          "passed": true,
+          "rank": 3,
+          "vertex_conservation": {
+            "A": {
+              "passed": true,
+              "raw_balance": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "raw_balance_rendered": "0",
+              "reduced_balance": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "reduced_basis": [
+                "k",
+                "l",
+                "p1",
+                "p2"
+              ],
+              "relation_multiple": 0
+            },
+            "B": {
+              "passed": true,
+              "raw_balance": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "raw_balance_rendered": "0",
+              "reduced_balance": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "reduced_basis": [
+                "k",
+                "l",
+                "p1",
+                "p2"
+              ],
+              "relation_multiple": 0
+            },
+            "C": {
+              "passed": true,
+              "raw_balance": [
+                0,
+                0,
+                1,
+                1,
+                1
+              ],
+              "raw_balance_rendered": "P+p1+p2",
+              "reduced_balance": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "reduced_basis": [
+                "k",
+                "l",
+                "p1",
+                "p2"
+              ],
+              "relation_multiple": 1
+            },
+            "I": {
+              "passed": true,
+              "raw_balance": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "raw_balance_rendered": "0",
+              "reduced_balance": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "reduced_basis": [
+                "k",
+                "l",
+                "p1",
+                "p2"
+              ],
+              "relation_multiple": 0
+            }
+          },
+          "vertex_order": [
+            "I",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "reflected": {
+          "convention": "B[v,e]=+1_at_source,-1_at_target; B*r+j=0 modulo P+p1+p2=0",
+          "each_column_has_one_source_and_one_target": true,
+          "edge_order": [
+            "e_BI",
+            "e_IC",
+            "e_BA",
+            "e_AC",
+            "e_BC"
+          ],
+          "expected_connected_rank": 3,
+          "matrix": [
+            [
+              1,
+              -1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              -1,
+              0
+            ],
+            [
+              -1,
+              0,
+              -1,
+              0,
+              -1
+            ],
+            [
+              0,
+              1,
+              0,
+              1,
+              1
+            ]
+          ],
+          "passed": true,
+          "rank": 3,
+          "vertex_conservation": {
+            "A": {
+              "passed": true,
+              "raw_balance": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "raw_balance_rendered": "0",
+              "reduced_balance": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "reduced_basis": [
+                "k",
+                "l",
+                "p1",
+                "p2"
+              ],
+              "relation_multiple": 0
+            },
+            "B": {
+              "passed": true,
+              "raw_balance": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "raw_balance_rendered": "0",
+              "reduced_balance": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "reduced_basis": [
+                "k",
+                "l",
+                "p1",
+                "p2"
+              ],
+              "relation_multiple": 0
+            },
+            "C": {
+              "passed": true,
+              "raw_balance": [
+                0,
+                0,
+                1,
+                1,
+                1
+              ],
+              "raw_balance_rendered": "P+p1+p2",
+              "reduced_balance": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "reduced_basis": [
+                "k",
+                "l",
+                "p1",
+                "p2"
+              ],
+              "relation_multiple": 1
+            },
+            "I": {
+              "passed": true,
+              "raw_balance": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "raw_balance_rendered": "0",
+              "reduced_balance": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "reduced_basis": [
+                "k",
+                "l",
+                "p1",
+                "p2"
+              ],
+              "relation_multiple": 0
+            }
+          },
+          "vertex_order": [
+            "I",
+            "A",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "internal_edges": [
+        {
+          "edge_id": "e_BI",
+          "endpoint_type": "QUANTUM_PORT_TO_QUANTUM_PORT",
+          "momentum": "k",
+          "momentum_vector": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "propagator": null,
+          "propagator_status": "BLOCKED_FIELD_AND_PROJECTOR_ASSIGNMENT_ABSENT",
+          "source": "B",
+          "source_port": "B.q0",
+          "target": "I",
+          "target_port": "I.q0"
+        },
+        {
+          "edge_id": "e_IC",
+          "endpoint_type": "QUANTUM_PORT_TO_QUANTUM_PORT",
+          "momentum": "k-P",
+          "momentum_vector": [
+            1,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "propagator": null,
+          "propagator_status": "BLOCKED_FIELD_AND_PROJECTOR_ASSIGNMENT_ABSENT",
+          "source": "I",
+          "source_port": "I.q1",
+          "target": "C",
+          "target_port": "C.q0"
+        },
+        {
+          "edge_id": "e_BA",
+          "endpoint_type": "QUANTUM_PORT_TO_QUANTUM_PORT",
+          "momentum": "l",
+          "momentum_vector": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "propagator": null,
+          "propagator_status": "BLOCKED_FIELD_AND_PROJECTOR_ASSIGNMENT_ABSENT",
+          "source": "B",
+          "source_port": "B.q1",
+          "target": "A",
+          "target_port": "A.q0"
+        },
+        {
+          "edge_id": "e_AC",
+          "endpoint_type": "QUANTUM_PORT_TO_QUANTUM_PORT",
+          "momentum": "l-p1",
+          "momentum_vector": [
+            0,
+            1,
+            0,
+            -1,
+            0
+          ],
+          "propagator": null,
+          "propagator_status": "BLOCKED_FIELD_AND_PROJECTOR_ASSIGNMENT_ABSENT",
+          "source": "A",
+          "source_port": "A.q1",
+          "target": "C",
+          "target_port": "C.q1"
+        },
+        {
+          "edge_id": "e_BC",
+          "endpoint_type": "QUANTUM_PORT_TO_QUANTUM_PORT",
+          "momentum": "-k-l",
+          "momentum_vector": [
+            -1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "propagator": null,
+          "propagator_status": "BLOCKED_FIELD_AND_PROJECTOR_ASSIGNMENT_ABSENT",
+          "source": "B",
+          "source_port": "B.q2",
+          "target": "C",
+          "target_port": "C.q2"
+        }
+      ],
+      "momentum_contract": {
+        "all_incoming_relation": "P+p1+p2=0",
+        "background_external_momenta": [
+          "p1",
+          "p2"
+        ],
+        "basis": [
+          "k",
+          "l",
+          "P",
+          "p1",
+          "p2"
+        ],
+        "composite_source_momentum": "P",
+        "loop_momenta": [
+          "k",
+          "l"
+        ],
+        "relation_vector": [
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "square_bilinear_form": "POSITIVE_EUCLIDEAN",
+        "square_space": "PROJECT_EUCLIDEAN_DRED_HAT_MOMENTUM_SUBSPACE"
+      },
+      "operator_seed": "nabla_-[(nabla_+W_+)^A (nabla_+W_+)^B]",
+      "orientations": {
+        "direct": {
+          "edges": [
+            {
+              "edge_id": "e_BI",
+              "momentum": "k",
+              "momentum_vector": [
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "source": "B",
+              "target": "I"
+            },
+            {
+              "edge_id": "e_IC",
+              "momentum": "k-P",
+              "momentum_vector": [
+                1,
+                0,
+                -1,
+                0,
+                0
+              ],
+              "source": "I",
+              "target": "C"
+            },
+            {
+              "edge_id": "e_BA",
+              "momentum": "l",
+              "momentum_vector": [
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "source": "B",
+              "target": "A"
+            },
+            {
+              "edge_id": "e_AC",
+              "momentum": "l-p1",
+              "momentum_vector": [
+                0,
+                1,
+                0,
+                -1,
+                0
+              ],
+              "source": "A",
+              "target": "C"
+            },
+            {
+              "edge_id": "e_BC",
+              "momentum": "-k-l",
+              "momentum_vector": [
+                -1,
+                -1,
+                0,
+                0,
+                0
+              ],
+              "source": "B",
+              "target": "C"
+            }
+          ],
+          "orientation_hash": "f45fec500c6fe5b8f75f48ac30c21a9ead3f2b95bc751c9495cc204fb117f36f",
+          "orientation_id": "direct"
+        },
+        "orientation_pair_hash": "cafb4b1e99401c5ebd034d1d417aa92f797e11d1bc75cda04ccf9dd2c06bf401",
+        "reflected": {
+          "edges": [
+            {
+              "edge_id": "e_BI",
+              "momentum": "-k",
+              "momentum_vector": [
+                -1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "source": "I",
+              "target": "B"
+            },
+            {
+              "edge_id": "e_IC",
+              "momentum": "-k+P",
+              "momentum_vector": [
+                -1,
+                0,
+                1,
+                0,
+                0
+              ],
+              "source": "C",
+              "target": "I"
+            },
+            {
+              "edge_id": "e_BA",
+              "momentum": "-l",
+              "momentum_vector": [
+                0,
+                -1,
+                0,
+                0,
+                0
+              ],
+              "source": "A",
+              "target": "B"
+            },
+            {
+              "edge_id": "e_AC",
+              "momentum": "-l+p1",
+              "momentum_vector": [
+                0,
+                -1,
+                0,
+                1,
+                0
+              ],
+              "source": "C",
+              "target": "A"
+            },
+            {
+              "edge_id": "e_BC",
+              "momentum": "k+l",
+              "momentum_vector": [
+                1,
+                1,
+                0,
+                0,
+                0
+              ],
+              "source": "C",
+              "target": "B"
+            }
+          ],
+          "orientation_hash": "90519758f8fb28af5f4c49c90bbfefcda36519b96c7fa6f4085c826afd23f9e1",
+          "orientation_id": "reflected"
+        },
+        "semantics": "EDGE_DIRECTION_AND_MOMENTUM_SIGN_ONLY_NOT_A_WICK_OR_FIELD_ORIENTATION"
+      },
+      "schema_version": "step6.two_loop_graphir.v1",
+      "sector": "EUCLIDEAN_N4_SYM_PURE_GAUGE",
+      "simple_one_loop_cycles": {
+        "cycles": [
+          {
+            "cycle_hash": "aac3cdfa7396bf41715186e25aacf3490b081f43791aff797926668bcc350339",
+            "cycle_id": "left",
+            "edge_ids": [
+              "e_BC",
+              "e_BI",
+              "e_IC"
+            ],
+            "one_loop_rank": 1
+          },
+          {
+            "cycle_hash": "ee155a818f915653650be307835913c5a126b4f9da96bc5cb2f6a7073acc5333",
+            "cycle_id": "right",
+            "edge_ids": [
+              "e_AC",
+              "e_BA",
+              "e_BC"
+            ],
+            "one_loop_rank": 1
+          },
+          {
+            "cycle_hash": "3a2eed5ed2c340266265f887ba0d289e156f1cf02fcd0357443cb488eb9ede45",
+            "cycle_id": "outer",
+            "edge_ids": [
+              "e_AC",
+              "e_BA",
+              "e_BI",
+              "e_IC"
+            ],
+            "one_loop_rank": 1
+          }
+        ],
+        "enumeration_rule": "connected edge subsets with degree two at every used vertex and E-V+1=1",
+        "gf2_relation": {
+          "equation": "left XOR right XOR outer = empty",
+          "passed": true,
+          "residual_edge_ids": []
+        },
+        "overlap_relations": [
+          {
+            "cycle_pair": [
+              "left",
+              "right"
+            ],
+            "edge_disjoint": false,
+            "intersection_edge_ids": [
+              "e_BC"
+            ],
+            "left_subset_right": false,
+            "relation": "OVERLAP_NON_NESTED",
+            "right_subset_left": false,
+            "symmetric_difference_cycle": "outer"
+          },
+          {
+            "cycle_pair": [
+              "left",
+              "outer"
+            ],
+            "edge_disjoint": false,
+            "intersection_edge_ids": [
+              "e_BI",
+              "e_IC"
+            ],
+            "left_subset_right": false,
+            "relation": "OVERLAP_NON_NESTED",
+            "right_subset_left": false,
+            "symmetric_difference_cycle": "right"
+          },
+          {
+            "cycle_pair": [
+              "right",
+              "outer"
+            ],
+            "edge_disjoint": false,
+            "intersection_edge_ids": [
+              "e_AC",
+              "e_BA"
+            ],
+            "left_subset_right": false,
+            "relation": "OVERLAP_NON_NESTED",
+            "right_subset_left": false,
+            "symmetric_difference_cycle": "left"
+          }
+        ]
+      },
+      "stage": "TOPOLOGY_AND_ROUTING_ONLY",
+      "topology": "K4_MINUS_ONE_EDGE",
+      "topology_hash": "6680592c61429f7571806872d76c8878ed2028294fa6aeeb13a5283a5a53291e",
+      "typed_port_saturation": {
+        "all_quantum_ports": [
+          "A.q0",
+          "A.q1",
+          "B.q0",
+          "B.q1",
+          "B.q2",
+          "C.q0",
+          "C.q1",
+          "C.q2",
+          "I.q0",
+          "I.q1"
+        ],
+        "each_quantum_port_used_once": true,
+        "edge_endpoint_ports": [
+          "A.q0",
+          "A.q1",
+          "B.q0",
+          "B.q1",
+          "B.q2",
+          "C.q0",
+          "C.q1",
+          "C.q2",
+          "I.q0",
+          "I.q1"
+        ]
+      },
+      "valence_family_id": "I2__S3^2__S4^1",
+      "vertices": [
+        {
+          "background_ports": [],
+          "background_valence": 0,
+          "family": "I2",
+          "momentum_injections": [
+            {
+              "counts_toward_background_valence": false,
+              "kind": "COMPOSITE_SOURCE_MOMENTUM",
+              "momentum": "P",
+              "momentum_vector": [
+                0,
+                0,
+                1,
+                0,
+                0
+              ]
+            }
+          ],
+          "quantum_ports": [
+            "I.q0",
+            "I.q1"
+          ],
+          "quantum_valence": 2,
+          "role": "COMPOSITE_INSERTION",
+          "total_valence": 2,
+          "vertex_id": "I"
+        },
+        {
+          "background_ports": [
+            {
+              "kind": "BACKGROUND_EXTERNAL",
+              "momentum": "p1",
+              "port_id": "A.b0"
+            }
+          ],
+          "background_valence": 1,
+          "family": "S3",
+          "momentum_injections": [
+            {
+              "kind": "BACKGROUND_EXTERNAL",
+              "momentum": "p1",
+              "momentum_vector": [
+                0,
+                0,
+                0,
+                1,
+                0
+              ]
+            }
+          ],
+          "quantum_ports": [
+            "A.q0",
+            "A.q1"
+          ],
+          "quantum_valence": 2,
+          "role": "ACTION_VERTEX",
+          "total_valence": 3,
+          "vertex_id": "A"
+        },
+        {
+          "background_ports": [],
+          "background_valence": 0,
+          "family": "S3",
+          "momentum_injections": [],
+          "quantum_ports": [
+            "B.q0",
+            "B.q1",
+            "B.q2"
+          ],
+          "quantum_valence": 3,
+          "role": "ACTION_VERTEX",
+          "total_valence": 3,
+          "vertex_id": "B"
+        },
+        {
+          "background_ports": [
+            {
+              "kind": "BACKGROUND_EXTERNAL",
+              "momentum": "p2",
+              "port_id": "C.b0"
+            }
+          ],
+          "background_valence": 1,
+          "family": "S4",
+          "momentum_injections": [
+            {
+              "kind": "BACKGROUND_EXTERNAL",
+              "momentum": "p2",
+              "momentum_vector": [
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          ],
+          "quantum_ports": [
+            "C.q0",
+            "C.q1",
+            "C.q2"
+          ],
+          "quantum_valence": 3,
+          "role": "ACTION_VERTEX",
+          "total_valence": 4,
+          "vertex_id": "C"
+        }
+      ]
+    },
+    {
+      "automorphisms": {
+        "background_source_labeled": {
+          "automorphism_hash": "312dc8d5bc9008e1e1f636ce0455b2433db42f7ed81b4324f8b38dac1762e824",
+          "order": 2,
+          "permutations": [
+            {
+              "A": "A",
+              "B": "B",
+              "C": "C",
+              "I": "I"
+            },
+            {
+              "A": "B",
+              "B": "A",
+              "C": "C",
+              "I": "I"
+            }
+          ],
+          "preserves": "typed vertices, topology, and labeled background/source momentum ports"
+        },
+        "typed_external_unlabeled": {
+          "automorphism_hash": "f532970bb26ac2127237b3000c14648178337747bff5d5480b8f442453fce5f0",
+          "order": 2,
+          "permutations": [
+            {
+              "A": "A",
+              "B": "B",
+              "C": "C",
+              "I": "I"
+            },
+            {
+              "A": "B",
+              "B": "A",
+              "C": "C",
+              "I": "I"
+            }
+          ],
+          "preserves": "typed vertices and topology; background momentum labels forgotten"
+        }
+      },
+      "classification": "LITERAL_K4_MINUS_EDGE_DIRECT_PARENT",
+      "denominator_ast": {
+        "all_powers": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "factors": [
+          {
+            "base": {
+              "argument": {
+                "basis": [
+                  "k",
+                  "l",
+                  "P",
+                  "p1",
+                  "p2"
+                ],
+                "op": "integer_linear_combination",
+                "terms": [
+                  {
+                    "coefficient": 1,
+                    "symbol": "k"
+                  }
+                ]
+              },
+              "bilinear_form": "POSITIVE_EUCLIDEAN",
+              "op": "square",
+              "space": "PROJECT_EUCLIDEAN_DRED_HAT_MOMENTUM_SUBSPACE"
+            },
+            "edge_id": "e_AI",
+            "exponent": 1,
+            "op": "power"
+          },
+          {
+            "base": {
+              "argument": {
+                "basis": [
+                  "k",
+                  "l",
+                  "P",
+                  "p1",
+                  "p2"
+                ],
+                "op": "integer_linear_combination",
+                "terms": [
+                  {
+                    "coefficient": 1,
+                    "symbol": "k"
+                  },
+                  {
+                    "coefficient": -1,
+                    "symbol": "P"
+                  }
+                ]
+              },
+              "bilinear_form": "POSITIVE_EUCLIDEAN",
+              "op": "square",
+              "space": "PROJECT_EUCLIDEAN_DRED_HAT_MOMENTUM_SUBSPACE"
+            },
+            "edge_id": "e_IB",
+            "exponent": 1,
+            "op": "power"
+          },
+          {
+            "base": {
+              "argument": {
+                "basis": [
+                  "k",
+                  "l",
+                  "P",
+                  "p1",
+                  "p2"
+                ],
+                "op": "integer_linear_combination",
+                "terms": [
+                  {
+                    "coefficient": 1,
+                    "symbol": "l"
+                  }
+                ]
+              },
+              "bilinear_form": "POSITIVE_EUCLIDEAN",
+              "op": "square",
+              "space": "PROJECT_EUCLIDEAN_DRED_HAT_MOMENTUM_SUBSPACE"
+            },
+            "edge_id": "e_CA",
+            "exponent": 1,
+            "op": "power"
+          },
+          {
+            "base": {
+              "argument": {
+                "basis": [
+                  "k",
+                  "l",
+                  "P",
+                  "p1",
+                  "p2"
+                ],
+                "op": "integer_linear_combination",
+                "terms": [
+                  {
+                    "coefficient": 1,
+                    "symbol": "l"
+                  },
+                  {
+                    "coefficient": -1,
+                    "symbol": "P"
+                  }
+                ]
+              },
+              "bilinear_form": "POSITIVE_EUCLIDEAN",
+              "op": "square",
+              "space": "PROJECT_EUCLIDEAN_DRED_HAT_MOMENTUM_SUBSPACE"
+            },
+            "edge_id": "e_BC",
+            "exponent": 1,
+            "op": "power"
+          },
+          {
+            "base": {
+              "argument": {
+                "basis": [
+                  "k",
+                  "l",
+                  "P",
+                  "p1",
+                  "p2"
+                ],
+                "op": "integer_linear_combination",
+                "terms": [
+                  {
+                    "coefficient": 1,
+                    "symbol": "k"
+                  },
+                  {
+                    "coefficient": -1,
+                    "symbol": "l"
+                  }
+                ]
+              },
+              "bilinear_form": "POSITIVE_EUCLIDEAN",
+              "op": "square",
+              "space": "PROJECT_EUCLIDEAN_DRED_HAT_MOMENTUM_SUBSPACE"
+            },
+            "edge_id": "e_BA",
+            "exponent": 1,
+            "op": "power"
+          }
+        ],
+        "op": "product",
+        "rendered": "k^2 (k-P)^2 l^2 (l-P)^2 (k-l)^2"
+      },
+      "downstream_fail_closed": {
+        "amplitude_ir": {
+          "status": "BLOCKED_ORDERED_PROJECT_VERTEX_PROPAGATOR_AND_WICK_DATA_ABSENT",
+          "value": null
+        },
+        "d_algebra_ir": {
+          "status": "BLOCKED_AMPLITUDE_IR_ABSENT",
+          "value": null
+        },
+        "renormalized_coefficient": {
+          "status": "BLOCKED_SUBTRACTED_INTEGRAL_IR_ABSENT",
+          "value": null
+        },
+        "subtracted_integral_ir": {
+          "status": "BLOCKED_DALGEBRA_AND_FOREST_COUNTERTERMS_ABSENT",
+          "value": null
+        }
+      },
+      "graph_hash": "84137962e3a5d40a2be79e124cc85f3fdd180a42cf7119c3464e7da6f620baa3",
+      "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+      "graph_kind": "TOPOLOGY_GRAPHIR_NO_FIELD_OR_WICK_ASSIGNMENT",
+      "identities": {
+        "I": 5,
+        "L": 2,
+        "V": 4,
+        "background_valence_identity": {
+          "lhs": 2,
+          "passed": true,
+          "rhs": 2
+        },
+        "connected": true,
+        "loop_identity": {
+          "equation": "2=5-4+1",
+          "lhs": 2,
+          "passed": true,
+          "rhs": 2
+        },
+        "quantum_valence_identity": {
+          "lhs": 10,
+          "passed": true,
+          "rhs": 10
+        },
+        "total_half_edge_identity": {
+          "lhs": 12,
+          "passed": true,
+          "rhs": 12
+        },
+        "valence_identity": {
+          "equation": "4=2*2+2-2=4",
+          "lhs": 4,
+          "passed": true,
+          "required_value": 4,
+          "rhs": 4
+        }
+      },
+      "incidence_routing": {
+        "direct": {
+          "convention": "B[v,e]=+1_at_source,-1_at_target; B*r+j=0 modulo P+p1+p2=0",
+          "each_column_has_one_source_and_one_target": true,
+          "edge_order": [
+            "e_AI",
+            "e_IB",
+            "e_CA",
+            "e_BC",
+            "e_BA"
+          ],
+          "expected_connected_rank": 3,
+          "matrix": [
+            [
+              -1,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              -1,
+              0,
+              -1
+            ],
+            [
+              0,
+              -1,
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              1,
+              -1,
+              0
+            ]
+          ],
+          "passed": true,
+          "rank": 3,
+          "vertex_conservation": {
+            "A": {
+              "passed": true,
+              "raw_balance": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "raw_balance_rendered": "0",
+              "reduced_balance": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "reduced_basis": [
+                "k",
+                "l",
+                "p1",
+                "p2"
+              ],
+              "relation_multiple": 0
+            },
+            "B": {
+              "passed": true,
+              "raw_balance": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "raw_balance_rendered": "0",
+              "reduced_balance": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "reduced_basis": [
+                "k",
+                "l",
+                "p1",
+                "p2"
+              ],
+              "relation_multiple": 0
+            },
+            "C": {
+              "passed": true,
+              "raw_balance": [
+                0,
+                0,
+                1,
+                1,
+                1
+              ],
+              "raw_balance_rendered": "P+p1+p2",
+              "reduced_balance": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "reduced_basis": [
+                "k",
+                "l",
+                "p1",
+                "p2"
+              ],
+              "relation_multiple": 1
+            },
+            "I": {
+              "passed": true,
+              "raw_balance": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "raw_balance_rendered": "0",
+              "reduced_balance": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "reduced_basis": [
+                "k",
+                "l",
+                "p1",
+                "p2"
+              ],
+              "relation_multiple": 0
+            }
+          },
+          "vertex_order": [
+            "I",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "reflected": {
+          "convention": "B[v,e]=+1_at_source,-1_at_target; B*r+j=0 modulo P+p1+p2=0",
+          "each_column_has_one_source_and_one_target": true,
+          "edge_order": [
+            "e_AI",
+            "e_IB",
+            "e_CA",
+            "e_BC",
+            "e_BA"
+          ],
+          "expected_connected_rank": 3,
+          "matrix": [
+            [
+              1,
+              -1,
+              0,
+              0,
+              0
+            ],
+            [
+              -1,
+              0,
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0,
+              -1,
+              -1
+            ],
+            [
+              0,
+              0,
+              -1,
+              1,
+              0
+            ]
+          ],
+          "passed": true,
+          "rank": 3,
+          "vertex_conservation": {
+            "A": {
+              "passed": true,
+              "raw_balance": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "raw_balance_rendered": "0",
+              "reduced_balance": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "reduced_basis": [
+                "k",
+                "l",
+                "p1",
+                "p2"
+              ],
+              "relation_multiple": 0
+            },
+            "B": {
+              "passed": true,
+              "raw_balance": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "raw_balance_rendered": "0",
+              "reduced_balance": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "reduced_basis": [
+                "k",
+                "l",
+                "p1",
+                "p2"
+              ],
+              "relation_multiple": 0
+            },
+            "C": {
+              "passed": true,
+              "raw_balance": [
+                0,
+                0,
+                1,
+                1,
+                1
+              ],
+              "raw_balance_rendered": "P+p1+p2",
+              "reduced_balance": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "reduced_basis": [
+                "k",
+                "l",
+                "p1",
+                "p2"
+              ],
+              "relation_multiple": 1
+            },
+            "I": {
+              "passed": true,
+              "raw_balance": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "raw_balance_rendered": "0",
+              "reduced_balance": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "reduced_basis": [
+                "k",
+                "l",
+                "p1",
+                "p2"
+              ],
+              "relation_multiple": 0
+            }
+          },
+          "vertex_order": [
+            "I",
+            "A",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "internal_edges": [
+        {
+          "edge_id": "e_AI",
+          "endpoint_type": "QUANTUM_PORT_TO_QUANTUM_PORT",
+          "momentum": "k",
+          "momentum_vector": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "propagator": null,
+          "propagator_status": "BLOCKED_FIELD_AND_PROJECTOR_ASSIGNMENT_ABSENT",
+          "source": "A",
+          "source_port": "A.q0",
+          "target": "I",
+          "target_port": "I.q0"
+        },
+        {
+          "edge_id": "e_IB",
+          "endpoint_type": "QUANTUM_PORT_TO_QUANTUM_PORT",
+          "momentum": "k-P",
+          "momentum_vector": [
+            1,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "propagator": null,
+          "propagator_status": "BLOCKED_FIELD_AND_PROJECTOR_ASSIGNMENT_ABSENT",
+          "source": "I",
+          "source_port": "I.q1",
+          "target": "B",
+          "target_port": "B.q0"
+        },
+        {
+          "edge_id": "e_CA",
+          "endpoint_type": "QUANTUM_PORT_TO_QUANTUM_PORT",
+          "momentum": "l",
+          "momentum_vector": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "propagator": null,
+          "propagator_status": "BLOCKED_FIELD_AND_PROJECTOR_ASSIGNMENT_ABSENT",
+          "source": "C",
+          "source_port": "C.q0",
+          "target": "A",
+          "target_port": "A.q1"
+        },
+        {
+          "edge_id": "e_BC",
+          "endpoint_type": "QUANTUM_PORT_TO_QUANTUM_PORT",
+          "momentum": "l-P",
+          "momentum_vector": [
+            0,
+            1,
+            -1,
+            0,
+            0
+          ],
+          "propagator": null,
+          "propagator_status": "BLOCKED_FIELD_AND_PROJECTOR_ASSIGNMENT_ABSENT",
+          "source": "B",
+          "source_port": "B.q1",
+          "target": "C",
+          "target_port": "C.q1"
+        },
+        {
+          "edge_id": "e_BA",
+          "endpoint_type": "QUANTUM_PORT_TO_QUANTUM_PORT",
+          "momentum": "k-l",
+          "momentum_vector": [
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "propagator": null,
+          "propagator_status": "BLOCKED_FIELD_AND_PROJECTOR_ASSIGNMENT_ABSENT",
+          "source": "B",
+          "source_port": "B.q2",
+          "target": "A",
+          "target_port": "A.q2"
+        }
+      ],
+      "momentum_contract": {
+        "all_incoming_relation": "P+p1+p2=0",
+        "background_external_momenta": [
+          "p1",
+          "p2"
+        ],
+        "basis": [
+          "k",
+          "l",
+          "P",
+          "p1",
+          "p2"
+        ],
+        "composite_source_momentum": "P",
+        "loop_momenta": [
+          "k",
+          "l"
+        ],
+        "relation_vector": [
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "square_bilinear_form": "POSITIVE_EUCLIDEAN",
+        "square_space": "PROJECT_EUCLIDEAN_DRED_HAT_MOMENTUM_SUBSPACE"
+      },
+      "operator_seed": "nabla_-[(nabla_+W_+)^A (nabla_+W_+)^B]",
+      "orientations": {
+        "direct": {
+          "edges": [
+            {
+              "edge_id": "e_AI",
+              "momentum": "k",
+              "momentum_vector": [
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "source": "A",
+              "target": "I"
+            },
+            {
+              "edge_id": "e_IB",
+              "momentum": "k-P",
+              "momentum_vector": [
+                1,
+                0,
+                -1,
+                0,
+                0
+              ],
+              "source": "I",
+              "target": "B"
+            },
+            {
+              "edge_id": "e_CA",
+              "momentum": "l",
+              "momentum_vector": [
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "source": "C",
+              "target": "A"
+            },
+            {
+              "edge_id": "e_BC",
+              "momentum": "l-P",
+              "momentum_vector": [
+                0,
+                1,
+                -1,
+                0,
+                0
+              ],
+              "source": "B",
+              "target": "C"
+            },
+            {
+              "edge_id": "e_BA",
+              "momentum": "k-l",
+              "momentum_vector": [
+                1,
+                -1,
+                0,
+                0,
+                0
+              ],
+              "source": "B",
+              "target": "A"
+            }
+          ],
+          "orientation_hash": "eb80353c4ffe73c00d0eedfe32b0e09687e92bb837131ff213dc221b228697c3",
+          "orientation_id": "direct"
+        },
+        "orientation_pair_hash": "ebc217a0c8e2226e7ba820253eb8d53aba7d9ba8269ee02ecaa9d21e85e45451",
+        "reflected": {
+          "edges": [
+            {
+              "edge_id": "e_AI",
+              "momentum": "-k",
+              "momentum_vector": [
+                -1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "source": "I",
+              "target": "A"
+            },
+            {
+              "edge_id": "e_IB",
+              "momentum": "-k+P",
+              "momentum_vector": [
+                -1,
+                0,
+                1,
+                0,
+                0
+              ],
+              "source": "B",
+              "target": "I"
+            },
+            {
+              "edge_id": "e_CA",
+              "momentum": "-l",
+              "momentum_vector": [
+                0,
+                -1,
+                0,
+                0,
+                0
+              ],
+              "source": "A",
+              "target": "C"
+            },
+            {
+              "edge_id": "e_BC",
+              "momentum": "-l+P",
+              "momentum_vector": [
+                0,
+                -1,
+                1,
+                0,
+                0
+              ],
+              "source": "C",
+              "target": "B"
+            },
+            {
+              "edge_id": "e_BA",
+              "momentum": "-k+l",
+              "momentum_vector": [
+                -1,
+                1,
+                0,
+                0,
+                0
+              ],
+              "source": "A",
+              "target": "B"
+            }
+          ],
+          "orientation_hash": "7354c3f461f542895ea450d9fd4eab1827ed69d4ca2e0fe2f345bc2f7b801ec0",
+          "orientation_id": "reflected"
+        },
+        "semantics": "EDGE_DIRECTION_AND_MOMENTUM_SIGN_ONLY_NOT_A_WICK_OR_FIELD_ORIENTATION"
+      },
+      "schema_version": "step6.two_loop_graphir.v1",
+      "sector": "EUCLIDEAN_N4_SYM_PURE_GAUGE",
+      "simple_one_loop_cycles": {
+        "cycles": [
+          {
+            "cycle_hash": "097737506b47c5bbfe89c395240657250a94c29059214dc060b53d9ff7ed4c97",
+            "cycle_id": "left",
+            "edge_ids": [
+              "e_AI",
+              "e_BA",
+              "e_IB"
+            ],
+            "one_loop_rank": 1
+          },
+          {
+            "cycle_hash": "79c685caa0e85fb63f27af2491729e86ffc62e3aa62d8af0fa17f6bc1b404743",
+            "cycle_id": "right",
+            "edge_ids": [
+              "e_BA",
+              "e_BC",
+              "e_CA"
+            ],
+            "one_loop_rank": 1
+          },
+          {
+            "cycle_hash": "2aaf3258bb74bc7d6aabeb7669cae054f980169e2bb035a6b51dc889b84db42b",
+            "cycle_id": "outer",
+            "edge_ids": [
+              "e_AI",
+              "e_BC",
+              "e_CA",
+              "e_IB"
+            ],
+            "one_loop_rank": 1
+          }
+        ],
+        "enumeration_rule": "connected edge subsets with degree two at every used vertex and E-V+1=1",
+        "gf2_relation": {
+          "equation": "left XOR right XOR outer = empty",
+          "passed": true,
+          "residual_edge_ids": []
+        },
+        "overlap_relations": [
+          {
+            "cycle_pair": [
+              "left",
+              "right"
+            ],
+            "edge_disjoint": false,
+            "intersection_edge_ids": [
+              "e_BA"
+            ],
+            "left_subset_right": false,
+            "relation": "OVERLAP_NON_NESTED",
+            "right_subset_left": false,
+            "symmetric_difference_cycle": "outer"
+          },
+          {
+            "cycle_pair": [
+              "left",
+              "outer"
+            ],
+            "edge_disjoint": false,
+            "intersection_edge_ids": [
+              "e_AI",
+              "e_IB"
+            ],
+            "left_subset_right": false,
+            "relation": "OVERLAP_NON_NESTED",
+            "right_subset_left": false,
+            "symmetric_difference_cycle": "right"
+          },
+          {
+            "cycle_pair": [
+              "right",
+              "outer"
+            ],
+            "edge_disjoint": false,
+            "intersection_edge_ids": [
+              "e_BC",
+              "e_CA"
+            ],
+            "left_subset_right": false,
+            "relation": "OVERLAP_NON_NESTED",
+            "right_subset_left": false,
+            "symmetric_difference_cycle": "left"
+          }
+        ]
+      },
+      "stage": "TOPOLOGY_AND_ROUTING_ONLY",
+      "topology": "K4_MINUS_ONE_EDGE",
+      "topology_hash": "680f51121fe08f59a7a35d3f8f15fadb356c948c71299f61eecec86d28aebd10",
+      "typed_port_saturation": {
+        "all_quantum_ports": [
+          "A.q0",
+          "A.q1",
+          "A.q2",
+          "B.q0",
+          "B.q1",
+          "B.q2",
+          "C.q0",
+          "C.q1",
+          "I.q0",
+          "I.q1"
+        ],
+        "each_quantum_port_used_once": true,
+        "edge_endpoint_ports": [
+          "A.q0",
+          "A.q1",
+          "A.q2",
+          "B.q0",
+          "B.q1",
+          "B.q2",
+          "C.q0",
+          "C.q1",
+          "I.q0",
+          "I.q1"
+        ]
+      },
+      "valence_family_id": "I2__S3^2__S4^1",
+      "vertices": [
+        {
+          "background_ports": [],
+          "background_valence": 0,
+          "family": "I2",
+          "momentum_injections": [
+            {
+              "counts_toward_background_valence": false,
+              "kind": "COMPOSITE_SOURCE_MOMENTUM",
+              "momentum": "P",
+              "momentum_vector": [
+                0,
+                0,
+                1,
+                0,
+                0
+              ]
+            }
+          ],
+          "quantum_ports": [
+            "I.q0",
+            "I.q1"
+          ],
+          "quantum_valence": 2,
+          "role": "COMPOSITE_INSERTION",
+          "total_valence": 2,
+          "vertex_id": "I"
+        },
+        {
+          "background_ports": [],
+          "background_valence": 0,
+          "family": "S3",
+          "momentum_injections": [],
+          "quantum_ports": [
+            "A.q0",
+            "A.q1",
+            "A.q2"
+          ],
+          "quantum_valence": 3,
+          "role": "ACTION_VERTEX",
+          "total_valence": 3,
+          "vertex_id": "A"
+        },
+        {
+          "background_ports": [],
+          "background_valence": 0,
+          "family": "S3",
+          "momentum_injections": [],
+          "quantum_ports": [
+            "B.q0",
+            "B.q1",
+            "B.q2"
+          ],
+          "quantum_valence": 3,
+          "role": "ACTION_VERTEX",
+          "total_valence": 3,
+          "vertex_id": "B"
+        },
+        {
+          "background_ports": [
+            {
+              "kind": "BACKGROUND_EXTERNAL",
+              "momentum": "p1",
+              "port_id": "C.b0"
+            },
+            {
+              "kind": "BACKGROUND_EXTERNAL",
+              "momentum": "p2",
+              "port_id": "C.b1"
+            }
+          ],
+          "background_valence": 2,
+          "family": "S4",
+          "momentum_injections": [
+            {
+              "kind": "BACKGROUND_EXTERNAL",
+              "momentum": "p1",
+              "momentum_vector": [
+                0,
+                0,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "kind": "BACKGROUND_EXTERNAL",
+              "momentum": "p2",
+              "momentum_vector": [
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          ],
+          "quantum_ports": [
+            "C.q0",
+            "C.q1"
+          ],
+          "quantum_valence": 2,
+          "role": "ACTION_VERTEX",
+          "total_valence": 4,
+          "vertex_id": "C"
+        }
+      ]
+    }
+  ],
+  "raw_marked_theta_lift": {
+    "automorphisms": {
+      "background_source_labeled": {
+        "automorphism_hash": "d60112c840ced030b456846eb15d5ae5b7f5a7992693d1fc5f096a124ade1114",
+        "order": 2,
+        "permutations": [
+          {
+            "A": "A",
+            "B": "B",
+            "C": "C",
+            "D": "D",
+            "I": "I"
+          },
+          {
+            "A": "A",
+            "B": "B",
+            "C": "D",
+            "D": "C",
+            "I": "I"
+          }
+        ],
+        "preserves": "typed vertices, topology, and labeled background/source momentum ports"
+      },
+      "typed_external_unlabeled": {
+        "automorphism_hash": "d4cb3b3cbcb61a1ebbbb2196a16f77c0f3df8095baeda1965fd7d5cc923cd205",
+        "order": 4,
+        "permutations": [
+          {
+            "A": "A",
+            "B": "B",
+            "C": "C",
+            "D": "D",
+            "I": "I"
+          },
+          {
+            "A": "A",
+            "B": "B",
+            "C": "D",
+            "D": "C",
+            "I": "I"
+          },
+          {
+            "A": "B",
+            "B": "A",
+            "C": "C",
+            "D": "D",
+            "I": "I"
+          },
+          {
+            "A": "B",
+            "B": "A",
+            "C": "D",
+            "D": "C",
+            "I": "I"
+          }
+        ],
+        "preserves": "typed vertices and topology; background momentum labels forgotten"
+      }
+    },
+    "classification": "RAW_MARKED_K2_3_THETA_LIFT_NOT_DIRECT_BITRIANGLE",
+    "denominator_ast": {
+      "all_powers": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "factors": [
+        {
+          "base": {
+            "argument": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "op": "integer_linear_combination",
+              "terms": [
+                {
+                  "coefficient": 1,
+                  "symbol": "k"
+                }
+              ]
+            },
+            "bilinear_form": "POSITIVE_EUCLIDEAN",
+            "op": "square",
+            "space": "PROJECT_EUCLIDEAN_DRED_HAT_MOMENTUM_SUBSPACE"
+          },
+          "edge_id": "e_CI",
+          "exponent": 1,
+          "op": "power"
+        },
+        {
+          "base": {
+            "argument": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "op": "integer_linear_combination",
+              "terms": [
+                {
+                  "coefficient": 1,
+                  "symbol": "k"
+                },
+                {
+                  "coefficient": -1,
+                  "symbol": "P"
+                }
+              ]
+            },
+            "bilinear_form": "POSITIVE_EUCLIDEAN",
+            "op": "square",
+            "space": "PROJECT_EUCLIDEAN_DRED_HAT_MOMENTUM_SUBSPACE"
+          },
+          "edge_id": "e_ID",
+          "exponent": 1,
+          "op": "power"
+        },
+        {
+          "base": {
+            "argument": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "op": "integer_linear_combination",
+              "terms": [
+                {
+                  "coefficient": 1,
+                  "symbol": "l"
+                }
+              ]
+            },
+            "bilinear_form": "POSITIVE_EUCLIDEAN",
+            "op": "square",
+            "space": "PROJECT_EUCLIDEAN_DRED_HAT_MOMENTUM_SUBSPACE"
+          },
+          "edge_id": "e_CA",
+          "exponent": 1,
+          "op": "power"
+        },
+        {
+          "base": {
+            "argument": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "op": "integer_linear_combination",
+              "terms": [
+                {
+                  "coefficient": 1,
+                  "symbol": "l"
+                },
+                {
+                  "coefficient": -1,
+                  "symbol": "p1"
+                }
+              ]
+            },
+            "bilinear_form": "POSITIVE_EUCLIDEAN",
+            "op": "square",
+            "space": "PROJECT_EUCLIDEAN_DRED_HAT_MOMENTUM_SUBSPACE"
+          },
+          "edge_id": "e_AD",
+          "exponent": 1,
+          "op": "power"
+        },
+        {
+          "base": {
+            "argument": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "op": "integer_linear_combination",
+              "terms": [
+                {
+                  "coefficient": 1,
+                  "symbol": "k"
+                },
+                {
+                  "coefficient": 1,
+                  "symbol": "l"
+                }
+              ]
+            },
+            "bilinear_form": "POSITIVE_EUCLIDEAN",
+            "op": "square",
+            "space": "PROJECT_EUCLIDEAN_DRED_HAT_MOMENTUM_SUBSPACE"
+          },
+          "edge_id": "e_CB",
+          "exponent": 1,
+          "op": "power"
+        },
+        {
+          "base": {
+            "argument": {
+              "basis": [
+                "k",
+                "l",
+                "P",
+                "p1",
+                "p2"
+              ],
+              "op": "integer_linear_combination",
+              "terms": [
+                {
+                  "coefficient": 1,
+                  "symbol": "k"
+                },
+                {
+                  "coefficient": 1,
+                  "symbol": "l"
+                },
+                {
+                  "coefficient": 1,
+                  "symbol": "p2"
+                }
+              ]
+            },
+            "bilinear_form": "POSITIVE_EUCLIDEAN",
+            "op": "square",
+            "space": "PROJECT_EUCLIDEAN_DRED_HAT_MOMENTUM_SUBSPACE"
+          },
+          "edge_id": "e_BD",
+          "exponent": 1,
+          "op": "power"
+        }
+      ],
+      "op": "product",
+      "rendered": "k^2 (k-P)^2 l^2 (l-p1)^2 (k+l)^2 (k+l+p2)^2"
+    },
+    "downstream_fail_closed": {
+      "amplitude_ir": {
+        "status": "BLOCKED_ORDERED_PROJECT_VERTEX_PROPAGATOR_AND_WICK_DATA_ABSENT",
+        "value": null
+      },
+      "d_algebra_ir": {
+        "status": "BLOCKED_AMPLITUDE_IR_ABSENT",
+        "value": null
+      },
+      "renormalized_coefficient": {
+        "status": "BLOCKED_SUBTRACTED_INTEGRAL_IR_ABSENT",
+        "value": null
+      },
+      "subtracted_integral_ir": {
+        "status": "BLOCKED_DALGEBRA_AND_FOREST_COUNTERTERMS_ABSENT",
+        "value": null
+      }
+    },
+    "graph_hash": "391ce9e4241a7666603d96231e51b094809c3ee9966508108832938cd11937fc",
+    "graph_id": "G6_RAW_MARKED_K23_THETA_I2_S3FOURTH",
+    "graph_kind": "TOPOLOGY_GRAPHIR_NO_FIELD_OR_WICK_ASSIGNMENT",
+    "homeomorphic_suppression": {
+      "forbidden_inference": "DO_NOT_IDENTIFY_RAW_SIX_EDGE_GRAPH_WITH_FIVE_EDGE_BITRIANGLE",
+      "literal_k4_minus_edge_counts": {
+        "I": 5,
+        "L": 2,
+        "V": 4
+      },
+      "raw_counts": {
+        "I": 6,
+        "L": 2,
+        "V": 5
+      },
+      "raw_graph_is_literal_k4_minus_edge": false,
+      "status": "BLOCKED_NO_TYPED_DALGEBRA_PROPAGATOR_COLLAPSE_CERTIFICATE"
+    },
+    "identities": {
+      "I": 6,
+      "L": 2,
+      "V": 5,
+      "background_valence_identity": {
+        "lhs": 2,
+        "passed": true,
+        "rhs": 2
+      },
+      "connected": true,
+      "loop_identity": {
+        "equation": "2=6-5+1",
+        "lhs": 2,
+        "passed": true,
+        "rhs": 2
+      },
+      "quantum_valence_identity": {
+        "lhs": 12,
+        "passed": true,
+        "rhs": 12
+      },
+      "total_half_edge_identity": {
+        "lhs": 14,
+        "passed": true,
+        "rhs": 14
+      },
+      "valence_identity": {
+        "equation": "4=2*2+2-2=4",
+        "lhs": 4,
+        "passed": true,
+        "required_value": 4,
+        "rhs": 4
+      }
+    },
+    "incidence_routing": {
+      "direct": {
+        "convention": "B[v,e]=+1_at_source,-1_at_target; B*r+j=0 modulo P+p1+p2=0",
+        "each_column_has_one_source_and_one_target": true,
+        "edge_order": [
+          "e_CI",
+          "e_ID",
+          "e_CA",
+          "e_AD",
+          "e_CB",
+          "e_BD"
+        ],
+        "expected_connected_rank": 4,
+        "matrix": [
+          [
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1
+          ],
+          [
+            1,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            -1
+          ]
+        ],
+        "passed": true,
+        "rank": 4,
+        "vertex_conservation": {
+          "A": {
+            "passed": true,
+            "raw_balance": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "raw_balance_rendered": "0",
+            "reduced_balance": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "reduced_basis": [
+              "k",
+              "l",
+              "p1",
+              "p2"
+            ],
+            "relation_multiple": 0
+          },
+          "B": {
+            "passed": true,
+            "raw_balance": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "raw_balance_rendered": "0",
+            "reduced_balance": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "reduced_basis": [
+              "k",
+              "l",
+              "p1",
+              "p2"
+            ],
+            "relation_multiple": 0
+          },
+          "C": {
+            "passed": true,
+            "raw_balance": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "raw_balance_rendered": "0",
+            "reduced_balance": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "reduced_basis": [
+              "k",
+              "l",
+              "p1",
+              "p2"
+            ],
+            "relation_multiple": 0
+          },
+          "D": {
+            "passed": true,
+            "raw_balance": [
+              0,
+              0,
+              1,
+              1,
+              1
+            ],
+            "raw_balance_rendered": "P+p1+p2",
+            "reduced_balance": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "reduced_basis": [
+              "k",
+              "l",
+              "p1",
+              "p2"
+            ],
+            "relation_multiple": 1
+          },
+          "I": {
+            "passed": true,
+            "raw_balance": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "raw_balance_rendered": "0",
+            "reduced_balance": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "reduced_basis": [
+              "k",
+              "l",
+              "p1",
+              "p2"
+            ],
+            "relation_multiple": 0
+          }
+        },
+        "vertex_order": [
+          "I",
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      "reflected": {
+        "convention": "B[v,e]=+1_at_source,-1_at_target; B*r+j=0 modulo P+p1+p2=0",
+        "each_column_has_one_source_and_one_target": true,
+        "edge_order": [
+          "e_CI",
+          "e_ID",
+          "e_CA",
+          "e_AD",
+          "e_CB",
+          "e_BD"
+        ],
+        "expected_connected_rank": 4,
+        "matrix": [
+          [
+            1,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            -1
+          ],
+          [
+            -1,
+            0,
+            -1,
+            0,
+            -1,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        ],
+        "passed": true,
+        "rank": 4,
+        "vertex_conservation": {
+          "A": {
+            "passed": true,
+            "raw_balance": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "raw_balance_rendered": "0",
+            "reduced_balance": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "reduced_basis": [
+              "k",
+              "l",
+              "p1",
+              "p2"
+            ],
+            "relation_multiple": 0
+          },
+          "B": {
+            "passed": true,
+            "raw_balance": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "raw_balance_rendered": "0",
+            "reduced_balance": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "reduced_basis": [
+              "k",
+              "l",
+              "p1",
+              "p2"
+            ],
+            "relation_multiple": 0
+          },
+          "C": {
+            "passed": true,
+            "raw_balance": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "raw_balance_rendered": "0",
+            "reduced_balance": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "reduced_basis": [
+              "k",
+              "l",
+              "p1",
+              "p2"
+            ],
+            "relation_multiple": 0
+          },
+          "D": {
+            "passed": true,
+            "raw_balance": [
+              0,
+              0,
+              1,
+              1,
+              1
+            ],
+            "raw_balance_rendered": "P+p1+p2",
+            "reduced_balance": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "reduced_basis": [
+              "k",
+              "l",
+              "p1",
+              "p2"
+            ],
+            "relation_multiple": 1
+          },
+          "I": {
+            "passed": true,
+            "raw_balance": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "raw_balance_rendered": "0",
+            "reduced_balance": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "reduced_basis": [
+              "k",
+              "l",
+              "p1",
+              "p2"
+            ],
+            "relation_multiple": 0
+          }
+        },
+        "vertex_order": [
+          "I",
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      }
+    },
+    "internal_edges": [
+      {
+        "edge_id": "e_CI",
+        "endpoint_type": "QUANTUM_PORT_TO_QUANTUM_PORT",
+        "momentum": "k",
+        "momentum_vector": [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "propagator": null,
+        "propagator_status": "BLOCKED_FIELD_AND_PROJECTOR_ASSIGNMENT_ABSENT",
+        "source": "C",
+        "source_port": "C.q0",
+        "target": "I",
+        "target_port": "I.q0"
+      },
+      {
+        "edge_id": "e_ID",
+        "endpoint_type": "QUANTUM_PORT_TO_QUANTUM_PORT",
+        "momentum": "k-P",
+        "momentum_vector": [
+          1,
+          0,
+          -1,
+          0,
+          0
+        ],
+        "propagator": null,
+        "propagator_status": "BLOCKED_FIELD_AND_PROJECTOR_ASSIGNMENT_ABSENT",
+        "source": "I",
+        "source_port": "I.q1",
+        "target": "D",
+        "target_port": "D.q0"
+      },
+      {
+        "edge_id": "e_CA",
+        "endpoint_type": "QUANTUM_PORT_TO_QUANTUM_PORT",
+        "momentum": "l",
+        "momentum_vector": [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "propagator": null,
+        "propagator_status": "BLOCKED_FIELD_AND_PROJECTOR_ASSIGNMENT_ABSENT",
+        "source": "C",
+        "source_port": "C.q1",
+        "target": "A",
+        "target_port": "A.q0"
+      },
+      {
+        "edge_id": "e_AD",
+        "endpoint_type": "QUANTUM_PORT_TO_QUANTUM_PORT",
+        "momentum": "l-p1",
+        "momentum_vector": [
+          0,
+          1,
+          0,
+          -1,
+          0
+        ],
+        "propagator": null,
+        "propagator_status": "BLOCKED_FIELD_AND_PROJECTOR_ASSIGNMENT_ABSENT",
+        "source": "A",
+        "source_port": "A.q1",
+        "target": "D",
+        "target_port": "D.q1"
+      },
+      {
+        "edge_id": "e_CB",
+        "endpoint_type": "QUANTUM_PORT_TO_QUANTUM_PORT",
+        "momentum": "-k-l",
+        "momentum_vector": [
+          -1,
+          -1,
+          0,
+          0,
+          0
+        ],
+        "propagator": null,
+        "propagator_status": "BLOCKED_FIELD_AND_PROJECTOR_ASSIGNMENT_ABSENT",
+        "source": "C",
+        "source_port": "C.q2",
+        "target": "B",
+        "target_port": "B.q0"
+      },
+      {
+        "edge_id": "e_BD",
+        "endpoint_type": "QUANTUM_PORT_TO_QUANTUM_PORT",
+        "momentum": "-k-l-p2",
+        "momentum_vector": [
+          -1,
+          -1,
+          0,
+          0,
+          -1
+        ],
+        "propagator": null,
+        "propagator_status": "BLOCKED_FIELD_AND_PROJECTOR_ASSIGNMENT_ABSENT",
+        "source": "B",
+        "source_port": "B.q1",
+        "target": "D",
+        "target_port": "D.q2"
+      }
+    ],
+    "momentum_contract": {
+      "all_incoming_relation": "P+p1+p2=0",
+      "background_external_momenta": [
+        "p1",
+        "p2"
+      ],
+      "basis": [
+        "k",
+        "l",
+        "P",
+        "p1",
+        "p2"
+      ],
+      "composite_source_momentum": "P",
+      "loop_momenta": [
+        "k",
+        "l"
+      ],
+      "relation_vector": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "square_bilinear_form": "POSITIVE_EUCLIDEAN",
+      "square_space": "PROJECT_EUCLIDEAN_DRED_HAT_MOMENTUM_SUBSPACE"
+    },
+    "operator_seed": "nabla_-[(nabla_+W_+)^A (nabla_+W_+)^B]",
+    "orientations": {
+      "direct": {
+        "edges": [
+          {
+            "edge_id": "e_CI",
+            "momentum": "k",
+            "momentum_vector": [
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "source": "C",
+            "target": "I"
+          },
+          {
+            "edge_id": "e_ID",
+            "momentum": "k-P",
+            "momentum_vector": [
+              1,
+              0,
+              -1,
+              0,
+              0
+            ],
+            "source": "I",
+            "target": "D"
+          },
+          {
+            "edge_id": "e_CA",
+            "momentum": "l",
+            "momentum_vector": [
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "source": "C",
+            "target": "A"
+          },
+          {
+            "edge_id": "e_AD",
+            "momentum": "l-p1",
+            "momentum_vector": [
+              0,
+              1,
+              0,
+              -1,
+              0
+            ],
+            "source": "A",
+            "target": "D"
+          },
+          {
+            "edge_id": "e_CB",
+            "momentum": "-k-l",
+            "momentum_vector": [
+              -1,
+              -1,
+              0,
+              0,
+              0
+            ],
+            "source": "C",
+            "target": "B"
+          },
+          {
+            "edge_id": "e_BD",
+            "momentum": "-k-l-p2",
+            "momentum_vector": [
+              -1,
+              -1,
+              0,
+              0,
+              -1
+            ],
+            "source": "B",
+            "target": "D"
+          }
+        ],
+        "orientation_hash": "a08e85313752e0753ec93296fe5767b5ec9c10cf280627a26315d3cbb3ab0b0c",
+        "orientation_id": "direct"
+      },
+      "orientation_pair_hash": "1f3ba68e8d44e52941a1d26757196ad1553f83794826d82de72929cd5ede374e",
+      "reflected": {
+        "edges": [
+          {
+            "edge_id": "e_CI",
+            "momentum": "-k",
+            "momentum_vector": [
+              -1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "source": "I",
+            "target": "C"
+          },
+          {
+            "edge_id": "e_ID",
+            "momentum": "-k+P",
+            "momentum_vector": [
+              -1,
+              0,
+              1,
+              0,
+              0
+            ],
+            "source": "D",
+            "target": "I"
+          },
+          {
+            "edge_id": "e_CA",
+            "momentum": "-l",
+            "momentum_vector": [
+              0,
+              -1,
+              0,
+              0,
+              0
+            ],
+            "source": "A",
+            "target": "C"
+          },
+          {
+            "edge_id": "e_AD",
+            "momentum": "-l+p1",
+            "momentum_vector": [
+              0,
+              -1,
+              0,
+              1,
+              0
+            ],
+            "source": "D",
+            "target": "A"
+          },
+          {
+            "edge_id": "e_CB",
+            "momentum": "k+l",
+            "momentum_vector": [
+              1,
+              1,
+              0,
+              0,
+              0
+            ],
+            "source": "B",
+            "target": "C"
+          },
+          {
+            "edge_id": "e_BD",
+            "momentum": "k+l+p2",
+            "momentum_vector": [
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            "source": "D",
+            "target": "B"
+          }
+        ],
+        "orientation_hash": "272488eb3cddd5ee6cd6ad76b7c9c4900b24799ff778b004a0e73bc9eb6ae25b",
+        "orientation_id": "reflected"
+      },
+      "semantics": "EDGE_DIRECTION_AND_MOMENTUM_SIGN_ONLY_NOT_A_WICK_OR_FIELD_ORIENTATION"
+    },
+    "schema_version": "step6.two_loop_graphir.v1",
+    "sector": "EUCLIDEAN_N4_SYM_PURE_GAUGE",
+    "simple_one_loop_cycles": {
+      "cycles": [
+        {
+          "cycle_hash": "b44340188f316d6a38fad4b3a1c84eca78d28c6caa6a44f39de2345bb3e0e447",
+          "cycle_id": "left",
+          "edge_ids": [
+            "e_AD",
+            "e_CA",
+            "e_CI",
+            "e_ID"
+          ],
+          "one_loop_rank": 1
+        },
+        {
+          "cycle_hash": "7bdb10087e46f27998f27e4eb11283fcc1fc4589c3cf4b4373e51ca38c307288",
+          "cycle_id": "right",
+          "edge_ids": [
+            "e_BD",
+            "e_CB",
+            "e_CI",
+            "e_ID"
+          ],
+          "one_loop_rank": 1
+        },
+        {
+          "cycle_hash": "9c0baaaf63a242995fbe39f38b8b49a800815703d9debbe4880beb2afb530a4a",
+          "cycle_id": "outer",
+          "edge_ids": [
+            "e_AD",
+            "e_BD",
+            "e_CA",
+            "e_CB"
+          ],
+          "one_loop_rank": 1
+        }
+      ],
+      "enumeration_rule": "connected edge subsets with degree two at every used vertex and E-V+1=1",
+      "gf2_relation": {
+        "equation": "left XOR right XOR outer = empty",
+        "passed": true,
+        "residual_edge_ids": []
+      },
+      "overlap_relations": [
+        {
+          "cycle_pair": [
+            "left",
+            "right"
+          ],
+          "edge_disjoint": false,
+          "intersection_edge_ids": [
+            "e_CI",
+            "e_ID"
+          ],
+          "left_subset_right": false,
+          "relation": "OVERLAP_NON_NESTED",
+          "right_subset_left": false,
+          "symmetric_difference_cycle": "outer"
+        },
+        {
+          "cycle_pair": [
+            "left",
+            "outer"
+          ],
+          "edge_disjoint": false,
+          "intersection_edge_ids": [
+            "e_AD",
+            "e_CA"
+          ],
+          "left_subset_right": false,
+          "relation": "OVERLAP_NON_NESTED",
+          "right_subset_left": false,
+          "symmetric_difference_cycle": "right"
+        },
+        {
+          "cycle_pair": [
+            "right",
+            "outer"
+          ],
+          "edge_disjoint": false,
+          "intersection_edge_ids": [
+            "e_BD",
+            "e_CB"
+          ],
+          "left_subset_right": false,
+          "relation": "OVERLAP_NON_NESTED",
+          "right_subset_left": false,
+          "symmetric_difference_cycle": "left"
+        }
+      ]
+    },
+    "stage": "TOPOLOGY_AND_ROUTING_ONLY",
+    "topology": "K2_3_COMPLETE_BIPARTITE_RAW_MARKED",
+    "topology_hash": "8d8238941cf6cab778f07cc672e8bf3a080ab4c798dc536695e034b1f9a1fd0c",
+    "typed_port_saturation": {
+      "all_quantum_ports": [
+        "A.q0",
+        "A.q1",
+        "B.q0",
+        "B.q1",
+        "C.q0",
+        "C.q1",
+        "C.q2",
+        "D.q0",
+        "D.q1",
+        "D.q2",
+        "I.q0",
+        "I.q1"
+      ],
+      "each_quantum_port_used_once": true,
+      "edge_endpoint_ports": [
+        "A.q0",
+        "A.q1",
+        "B.q0",
+        "B.q1",
+        "C.q0",
+        "C.q1",
+        "C.q2",
+        "D.q0",
+        "D.q1",
+        "D.q2",
+        "I.q0",
+        "I.q1"
+      ]
+    },
+    "valence_family_id": "I2__S3^4",
+    "vertices": [
+      {
+        "background_ports": [],
+        "background_valence": 0,
+        "family": "I2",
+        "momentum_injections": [
+          {
+            "counts_toward_background_valence": false,
+            "kind": "COMPOSITE_SOURCE_MOMENTUM",
+            "momentum": "P",
+            "momentum_vector": [
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "quantum_ports": [
+          "I.q0",
+          "I.q1"
+        ],
+        "quantum_valence": 2,
+        "role": "COMPOSITE_INSERTION",
+        "total_valence": 2,
+        "vertex_id": "I"
+      },
+      {
+        "background_ports": [
+          {
+            "kind": "BACKGROUND_EXTERNAL",
+            "momentum": "p1",
+            "port_id": "A.b0"
+          }
+        ],
+        "background_valence": 1,
+        "family": "S3",
+        "momentum_injections": [
+          {
+            "kind": "BACKGROUND_EXTERNAL",
+            "momentum": "p1",
+            "momentum_vector": [
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          }
+        ],
+        "quantum_ports": [
+          "A.q0",
+          "A.q1"
+        ],
+        "quantum_valence": 2,
+        "role": "ACTION_VERTEX",
+        "total_valence": 3,
+        "vertex_id": "A"
+      },
+      {
+        "background_ports": [
+          {
+            "kind": "BACKGROUND_EXTERNAL",
+            "momentum": "p2",
+            "port_id": "B.b0"
+          }
+        ],
+        "background_valence": 1,
+        "family": "S3",
+        "momentum_injections": [
+          {
+            "kind": "BACKGROUND_EXTERNAL",
+            "momentum": "p2",
+            "momentum_vector": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "quantum_ports": [
+          "B.q0",
+          "B.q1"
+        ],
+        "quantum_valence": 2,
+        "role": "ACTION_VERTEX",
+        "total_valence": 3,
+        "vertex_id": "B"
+      },
+      {
+        "background_ports": [],
+        "background_valence": 0,
+        "family": "S3",
+        "momentum_injections": [],
+        "quantum_ports": [
+          "C.q0",
+          "C.q1",
+          "C.q2"
+        ],
+        "quantum_valence": 3,
+        "role": "ACTION_VERTEX",
+        "total_valence": 3,
+        "vertex_id": "C"
+      },
+      {
+        "background_ports": [],
+        "background_valence": 0,
+        "family": "S3",
+        "momentum_injections": [],
+        "quantum_ports": [
+          "D.q0",
+          "D.q1",
+          "D.q2"
+        ],
+        "quantum_valence": 3,
+        "role": "ACTION_VERTEX",
+        "total_valence": 3,
+        "vertex_id": "D"
+      }
+    ]
+  },
+  "schema_version": "step6.two_loop_graphir.v1",
+  "scope": "PURE_GAUGE_TWO_LOOP_TWO_BACKGROUND_LEG_TOPOLOGY_ROUTING",
+  "stage": "TOPOLOGY_AND_ROUTING_ONLY",
+  "valence_families": [
+    {
+      "action_vertex_multiplicities": {
+        "S3": 4
+      },
+      "blocked_reason": "NO_BACKGROUND_DISTRIBUTION_NO_TYPED_PORTS_NO_WICK_PAIRING_NO_CONNECTIVITY",
+      "classification": "VALENCE_NOT_GRAPH",
+      "family_id": "I2__S3^4",
+      "graph_ir": null,
+      "identity": {
+        "I": 6,
+        "L": 2,
+        "V": 5,
+        "half_edge_identity": "14=2*6+2",
+        "lhs": 4,
+        "loop_identity": "2=6-5+1",
+        "required_value": 4,
+        "rhs": 4
+      },
+      "insertion": {
+        "family": "I2",
+        "total_valence": 2
+      },
+      "typed_valence_totals": {
+        "background_distribution": "UNRESOLVED",
+        "background_valence": 2,
+        "quantum_valence": 12,
+        "total_valence": 14
+      }
+    },
+    {
+      "action_vertex_multiplicities": {
+        "S3": 2,
+        "S4": 1
+      },
+      "blocked_reason": "NO_BACKGROUND_DISTRIBUTION_NO_TYPED_PORTS_NO_WICK_PAIRING_NO_CONNECTIVITY",
+      "classification": "VALENCE_NOT_GRAPH",
+      "family_id": "I2__S3^2__S4^1",
+      "graph_ir": null,
+      "identity": {
+        "I": 5,
+        "L": 2,
+        "V": 4,
+        "half_edge_identity": "12=2*5+2",
+        "lhs": 4,
+        "loop_identity": "2=5-4+1",
+        "required_value": 4,
+        "rhs": 4
+      },
+      "insertion": {
+        "family": "I2",
+        "total_valence": 2
+      },
+      "typed_valence_totals": {
+        "background_distribution": "UNRESOLVED",
+        "background_valence": 2,
+        "quantum_valence": 10,
+        "total_valence": 12
+      }
+    },
+    {
+      "action_vertex_multiplicities": {
+        "S3": 1,
+        "S5": 1
+      },
+      "blocked_reason": "NO_BACKGROUND_DISTRIBUTION_NO_TYPED_PORTS_NO_WICK_PAIRING_NO_CONNECTIVITY",
+      "classification": "VALENCE_NOT_GRAPH",
+      "family_id": "I2__S3^1__S5^1",
+      "graph_ir": null,
+      "identity": {
+        "I": 4,
+        "L": 2,
+        "V": 3,
+        "half_edge_identity": "10=2*4+2",
+        "lhs": 4,
+        "loop_identity": "2=4-3+1",
+        "required_value": 4,
+        "rhs": 4
+      },
+      "insertion": {
+        "family": "I2",
+        "total_valence": 2
+      },
+      "typed_valence_totals": {
+        "background_distribution": "UNRESOLVED",
+        "background_valence": 2,
+        "quantum_valence": 8,
+        "total_valence": 10
+      }
+    },
+    {
+      "action_vertex_multiplicities": {
+        "S4": 2
+      },
+      "blocked_reason": "NO_BACKGROUND_DISTRIBUTION_NO_TYPED_PORTS_NO_WICK_PAIRING_NO_CONNECTIVITY",
+      "classification": "VALENCE_NOT_GRAPH",
+      "family_id": "I2__S4^2",
+      "graph_ir": null,
+      "identity": {
+        "I": 4,
+        "L": 2,
+        "V": 3,
+        "half_edge_identity": "10=2*4+2",
+        "lhs": 4,
+        "loop_identity": "2=4-3+1",
+        "required_value": 4,
+        "rhs": 4
+      },
+      "insertion": {
+        "family": "I2",
+        "total_valence": 2
+      },
+      "typed_valence_totals": {
+        "background_distribution": "UNRESOLVED",
+        "background_valence": 2,
+        "quantum_valence": 8,
+        "total_valence": 10
+      }
+    },
+    {
+      "action_vertex_multiplicities": {
+        "S6": 1
+      },
+      "blocked_reason": "NO_BACKGROUND_DISTRIBUTION_NO_TYPED_PORTS_NO_WICK_PAIRING_NO_CONNECTIVITY",
+      "classification": "VALENCE_NOT_GRAPH",
+      "family_id": "I2__S6^1",
+      "graph_ir": null,
+      "identity": {
+        "I": 3,
+        "L": 2,
+        "V": 2,
+        "half_edge_identity": "8=2*3+2",
+        "lhs": 4,
+        "loop_identity": "2=3-2+1",
+        "required_value": 4,
+        "rhs": 4
+      },
+      "insertion": {
+        "family": "I2",
+        "total_valence": 2
+      },
+      "typed_valence_totals": {
+        "background_distribution": "UNRESOLVED",
+        "background_valence": 2,
+        "quantum_valence": 6,
+        "total_valence": 8
+      }
+    },
+    {
+      "action_vertex_multiplicities": {
+        "S3": 3
+      },
+      "blocked_reason": "NO_BACKGROUND_DISTRIBUTION_NO_TYPED_PORTS_NO_WICK_PAIRING_NO_CONNECTIVITY",
+      "classification": "VALENCE_NOT_GRAPH",
+      "family_id": "I3__S3^3",
+      "graph_ir": null,
+      "identity": {
+        "I": 5,
+        "L": 2,
+        "V": 4,
+        "half_edge_identity": "12=2*5+2",
+        "lhs": 4,
+        "loop_identity": "2=5-4+1",
+        "required_value": 4,
+        "rhs": 4
+      },
+      "insertion": {
+        "family": "I3",
+        "total_valence": 3
+      },
+      "typed_valence_totals": {
+        "background_distribution": "UNRESOLVED",
+        "background_valence": 2,
+        "quantum_valence": 10,
+        "total_valence": 12
+      }
+    },
+    {
+      "action_vertex_multiplicities": {
+        "S3": 1,
+        "S4": 1
+      },
+      "blocked_reason": "NO_BACKGROUND_DISTRIBUTION_NO_TYPED_PORTS_NO_WICK_PAIRING_NO_CONNECTIVITY",
+      "classification": "VALENCE_NOT_GRAPH",
+      "family_id": "I3__S3^1__S4^1",
+      "graph_ir": null,
+      "identity": {
+        "I": 4,
+        "L": 2,
+        "V": 3,
+        "half_edge_identity": "10=2*4+2",
+        "lhs": 4,
+        "loop_identity": "2=4-3+1",
+        "required_value": 4,
+        "rhs": 4
+      },
+      "insertion": {
+        "family": "I3",
+        "total_valence": 3
+      },
+      "typed_valence_totals": {
+        "background_distribution": "UNRESOLVED",
+        "background_valence": 2,
+        "quantum_valence": 8,
+        "total_valence": 10
+      }
+    },
+    {
+      "action_vertex_multiplicities": {
+        "S5": 1
+      },
+      "blocked_reason": "NO_BACKGROUND_DISTRIBUTION_NO_TYPED_PORTS_NO_WICK_PAIRING_NO_CONNECTIVITY",
+      "classification": "VALENCE_NOT_GRAPH",
+      "family_id": "I3__S5^1",
+      "graph_ir": null,
+      "identity": {
+        "I": 3,
+        "L": 2,
+        "V": 2,
+        "half_edge_identity": "8=2*3+2",
+        "lhs": 4,
+        "loop_identity": "2=3-2+1",
+        "required_value": 4,
+        "rhs": 4
+      },
+      "insertion": {
+        "family": "I3",
+        "total_valence": 3
+      },
+      "typed_valence_totals": {
+        "background_distribution": "UNRESOLVED",
+        "background_valence": 2,
+        "quantum_valence": 6,
+        "total_valence": 8
+      }
+    },
+    {
+      "action_vertex_multiplicities": {
+        "S3": 2
+      },
+      "blocked_reason": "NO_BACKGROUND_DISTRIBUTION_NO_TYPED_PORTS_NO_WICK_PAIRING_NO_CONNECTIVITY",
+      "classification": "VALENCE_NOT_GRAPH",
+      "family_id": "I4__S3^2",
+      "graph_ir": null,
+      "identity": {
+        "I": 4,
+        "L": 2,
+        "V": 3,
+        "half_edge_identity": "10=2*4+2",
+        "lhs": 4,
+        "loop_identity": "2=4-3+1",
+        "required_value": 4,
+        "rhs": 4
+      },
+      "insertion": {
+        "family": "I4",
+        "total_valence": 4
+      },
+      "typed_valence_totals": {
+        "background_distribution": "UNRESOLVED",
+        "background_valence": 2,
+        "quantum_valence": 8,
+        "total_valence": 10
+      }
+    },
+    {
+      "action_vertex_multiplicities": {
+        "S4": 1
+      },
+      "blocked_reason": "NO_BACKGROUND_DISTRIBUTION_NO_TYPED_PORTS_NO_WICK_PAIRING_NO_CONNECTIVITY",
+      "classification": "VALENCE_NOT_GRAPH",
+      "family_id": "I4__S4^1",
+      "graph_ir": null,
+      "identity": {
+        "I": 3,
+        "L": 2,
+        "V": 2,
+        "half_edge_identity": "8=2*3+2",
+        "lhs": 4,
+        "loop_identity": "2=3-2+1",
+        "required_value": 4,
+        "rhs": 4
+      },
+      "insertion": {
+        "family": "I4",
+        "total_valence": 4
+      },
+      "typed_valence_totals": {
+        "background_distribution": "UNRESOLVED",
+        "background_valence": 2,
+        "quantum_valence": 6,
+        "total_valence": 8
+      }
+    },
+    {
+      "action_vertex_multiplicities": {
+        "S3": 1
+      },
+      "blocked_reason": "NO_BACKGROUND_DISTRIBUTION_NO_TYPED_PORTS_NO_WICK_PAIRING_NO_CONNECTIVITY",
+      "classification": "VALENCE_NOT_GRAPH",
+      "family_id": "I5__S3^1",
+      "graph_ir": null,
+      "identity": {
+        "I": 3,
+        "L": 2,
+        "V": 2,
+        "half_edge_identity": "8=2*3+2",
+        "lhs": 4,
+        "loop_identity": "2=3-2+1",
+        "required_value": 4,
+        "rhs": 4
+      },
+      "insertion": {
+        "family": "I5",
+        "total_valence": 5
+      },
+      "typed_valence_totals": {
+        "background_distribution": "UNRESOLVED",
+        "background_valence": 2,
+        "quantum_valence": 6,
+        "total_valence": 8
+      }
+    },
+    {
+      "action_vertex_multiplicities": {},
+      "blocked_reason": "NO_BACKGROUND_DISTRIBUTION_NO_TYPED_PORTS_NO_WICK_PAIRING_NO_CONNECTIVITY",
+      "classification": "VALENCE_NOT_GRAPH",
+      "family_id": "I6__NO_ACTION_VERTEX",
+      "graph_ir": null,
+      "identity": {
+        "I": 2,
+        "L": 2,
+        "V": 1,
+        "half_edge_identity": "6=2*2+2",
+        "lhs": 4,
+        "loop_identity": "2=2-1+1",
+        "required_value": 4,
+        "rhs": 4
+      },
+      "insertion": {
+        "family": "I6",
+        "total_valence": 6
+      },
+      "typed_valence_totals": {
+        "background_distribution": "UNRESOLVED",
+        "background_valence": 2,
+        "quantum_valence": 4,
+        "total_valence": 6
+      }
+    }
+  ]
+}

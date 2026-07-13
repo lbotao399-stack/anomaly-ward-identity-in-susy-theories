@@ -1,0 +1,4022 @@
+{
+  "graph_records": [
+    {
+      "connected_census": [
+        {
+          "I": 1,
+          "L": 0,
+          "V": 2,
+          "count": 5,
+          "omega4_formula": "rho+-2",
+          "one_particle_irreducible": false
+        },
+        {
+          "I": 2,
+          "L": 0,
+          "V": 3,
+          "count": 8,
+          "omega4_formula": "rho+-4",
+          "one_particle_irreducible": false
+        },
+        {
+          "I": 3,
+          "L": 0,
+          "V": 4,
+          "count": 8,
+          "omega4_formula": "rho+-6",
+          "one_particle_irreducible": false
+        },
+        {
+          "I": 3,
+          "L": 1,
+          "V": 3,
+          "count": 2,
+          "omega4_formula": "rho+-2",
+          "one_particle_irreducible": true
+        },
+        {
+          "I": 4,
+          "L": 1,
+          "V": 4,
+          "count": 4,
+          "omega4_formula": "rho+-4",
+          "one_particle_irreducible": false
+        },
+        {
+          "I": 4,
+          "L": 1,
+          "V": 4,
+          "count": 1,
+          "omega4_formula": "rho+-4",
+          "one_particle_irreducible": true
+        },
+        {
+          "I": 5,
+          "L": 2,
+          "V": 4,
+          "count": 1,
+          "omega4_formula": "rho+-2",
+          "one_particle_irreducible": true
+        }
+      ],
+      "connected_edge_subgraphs": [
+        {
+          "connected": true,
+          "counts": {
+            "I": 1,
+            "L": 0,
+            "V": 2
+          },
+          "edge_ids": [
+            "e_AI"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "5aa5c4fefb1014eb7e217d726e7657f40081f3143ee015e0cf41774e47481758",
+          "subgraph_id": "H_ccd85d1d89ef869d",
+          "superficial_degree_formula": "omega4=4*0-2*1+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 1,
+            "L": 0,
+            "V": 2
+          },
+          "edge_ids": [
+            "e_BI"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "bbe60cdbc68fb73ee52b140ea337f7fb88295699bdb4a4290dc24f71d88e8ac9",
+          "subgraph_id": "H_94fc3c73722045e1",
+          "superficial_degree_formula": "omega4=4*0-2*1+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "B",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 1,
+            "L": 0,
+            "V": 2
+          },
+          "edge_ids": [
+            "e_CA"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "fb333aeb0055d40fd61f846daeeebe228abb199974c1f8aa00ca36e17f93f4a3",
+          "subgraph_id": "H_e70189a028744c21",
+          "superficial_degree_formula": "omega4=4*0-2*1+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "C"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 1,
+            "L": 0,
+            "V": 2
+          },
+          "edge_ids": [
+            "e_CB"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "45ef69c433e8df666c3f2b07420d8a51f458521f4804ef592ff949e6e6a6ef4a",
+          "subgraph_id": "H_6a36b3c0d6053e24",
+          "superficial_degree_formula": "omega4=4*0-2*1+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "B",
+            "C"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 1,
+            "L": 0,
+            "V": 2
+          },
+          "edge_ids": [
+            "e_CI"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "36a1525e68aeee6ad0c8097f30155736e5a96ff27a9b840bd2b0603995826e2f",
+          "subgraph_id": "H_bb2f213f395f2c63",
+          "superficial_degree_formula": "omega4=4*0-2*1+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 2,
+            "L": 0,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_AI",
+            "e_BI"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "95a8aa15b79ba91c246d719d2c0676ec7f5c77825ca36a01e6b9cb0c3d2e56f5",
+          "subgraph_id": "H_1dd971562bb69bae",
+          "superficial_degree_formula": "omega4=4*0-2*2+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 2,
+            "L": 0,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_AI",
+            "e_CA"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "3396277e4b85959795131d672aeeba95a9bbe5cc62a013141fa6ff01043a2cc2",
+          "subgraph_id": "H_e5f33174a4533fb1",
+          "superficial_degree_formula": "omega4=4*0-2*2+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 2,
+            "L": 0,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_AI",
+            "e_CI"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "2e582ddff33b21162c521e588082c8d84ad9c10161b3ddaab4d1abeb38a4d384",
+          "subgraph_id": "H_92641d07156f9c83",
+          "superficial_degree_formula": "omega4=4*0-2*2+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 2,
+            "L": 0,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_BI",
+            "e_CB"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "43454da03ed2aa2fb3580a9014f91f9950e175e3d53eb38c872259733dc60821",
+          "subgraph_id": "H_55315ac975857225",
+          "superficial_degree_formula": "omega4=4*0-2*2+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 2,
+            "L": 0,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_BI",
+            "e_CI"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "ca0e518a452d286020bc684db0c28ba5f489670bd44139162c1afd7b7b0e7e1a",
+          "subgraph_id": "H_690283c0c5e2203d",
+          "superficial_degree_formula": "omega4=4*0-2*2+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 2,
+            "L": 0,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_CA",
+            "e_CB"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "4b253f28dd8025dd717419463cd9a370e0ce3b4326cc4d5f0b5b27073ef1ed89",
+          "subgraph_id": "H_1d1a747625eda209",
+          "superficial_degree_formula": "omega4=4*0-2*2+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 2,
+            "L": 0,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_CA",
+            "e_CI"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "fb4815ca497451a61fe5fdc4dc50e2724eaf2e88039a962f9b38d4df1861af96",
+          "subgraph_id": "H_2fcaceab44a56d12",
+          "superficial_degree_formula": "omega4=4*0-2*2+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 2,
+            "L": 0,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_CB",
+            "e_CI"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "5d8540067079a72ddb657c445c43d4b7068fc13daac4aeb16e71f97cde399fb2",
+          "subgraph_id": "H_e1dec0ec644c5c77",
+          "superficial_degree_formula": "omega4=4*0-2*2+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 1,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_AI",
+            "e_CA",
+            "e_CI"
+          ],
+          "one_particle_irreducible": true,
+          "proper": true,
+          "role": "NAMED_ONE_LOOP_CYCLE",
+          "subgraph_hash": "873a3e5856f30aea5a78ee99efe41d3145cebd806dbc751577cbd94f4f0616cc",
+          "subgraph_id": "left",
+          "superficial_degree_formula": "omega4=4*1-2*3+rho",
+          "topology_status": "ONE_PARTICLE_IRREDUCIBLE",
+          "vertex_ids": [
+            "A",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 1,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_BI",
+            "e_CB",
+            "e_CI"
+          ],
+          "one_particle_irreducible": true,
+          "proper": true,
+          "role": "NAMED_ONE_LOOP_CYCLE",
+          "subgraph_hash": "224e660c345a9fda3c77f19111cfed56231c5a74c691d43ab6c65b490987ee59",
+          "subgraph_id": "right",
+          "superficial_degree_formula": "omega4=4*1-2*3+rho",
+          "topology_status": "ONE_PARTICLE_IRREDUCIBLE",
+          "vertex_ids": [
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 0,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AI",
+            "e_BI",
+            "e_CA"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "7f012272013097ee015dc2cf6d823c0a7d0e4ed3a5133ac8185638c79cc776b9",
+          "subgraph_id": "H_cae06eba8d8e4f03",
+          "superficial_degree_formula": "omega4=4*0-2*3+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 0,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AI",
+            "e_BI",
+            "e_CB"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "375813fddb5e05623da1bc13c6f297222ad517a9c69341dd0ca7ded4cb0bfcdf",
+          "subgraph_id": "H_6d56e127a9f2e6d9",
+          "superficial_degree_formula": "omega4=4*0-2*3+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 0,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AI",
+            "e_BI",
+            "e_CI"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "f8351fc1dd8192d1f42fdb3a593c1af4c7353fe3a587c0b2dbdc6aefbf5042d9",
+          "subgraph_id": "H_788dc18debe158d6",
+          "superficial_degree_formula": "omega4=4*0-2*3+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 0,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AI",
+            "e_CA",
+            "e_CB"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "b692be826370e4363468e2f8efb71353530c3b20a19bba370af43e93d9f293ba",
+          "subgraph_id": "H_8af7a1aa0bc20733",
+          "superficial_degree_formula": "omega4=4*0-2*3+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 0,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AI",
+            "e_CB",
+            "e_CI"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "471246e043a7e5bc470c096b420a61ee9ee883b6b64b618ac9e8fa8d12f3e7ae",
+          "subgraph_id": "H_9aa10e5cb75c8bbb",
+          "superficial_degree_formula": "omega4=4*0-2*3+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 0,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_BI",
+            "e_CA",
+            "e_CB"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "c1bf088c51eaffc1effc7e6217ba12ed05c5591763d8ea1d4e8a1623fa841c52",
+          "subgraph_id": "H_bdaa85cb749bc567",
+          "superficial_degree_formula": "omega4=4*0-2*3+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 0,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_BI",
+            "e_CA",
+            "e_CI"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "3d4cc1a8466069f30482579af26ed308865212d2b0258c5f76d2ad6c8b0a504a",
+          "subgraph_id": "H_c3c0697dbb04e8c1",
+          "superficial_degree_formula": "omega4=4*0-2*3+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 0,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_CA",
+            "e_CB",
+            "e_CI"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "8ca44a83768ce2fceb1d86d47b53d225da6c66eb0c50a1555d971d2771d28e40",
+          "subgraph_id": "H_e7f46a20e2acc3ee",
+          "superficial_degree_formula": "omega4=4*0-2*3+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 4,
+            "L": 1,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AI",
+            "e_BI",
+            "e_CA",
+            "e_CB"
+          ],
+          "one_particle_irreducible": true,
+          "proper": true,
+          "role": "NAMED_ONE_LOOP_CYCLE",
+          "subgraph_hash": "d6809744c248c06116d3098004083cca598560041cb7acb30725bf0d3e6ea9ba",
+          "subgraph_id": "outer",
+          "superficial_degree_formula": "omega4=4*1-2*4+rho",
+          "topology_status": "ONE_PARTICLE_IRREDUCIBLE",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 4,
+            "L": 1,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AI",
+            "e_BI",
+            "e_CA",
+            "e_CI"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "7b859b5749faaf55caed6c7bcab1f957cc8d3cf9cd9f0893ad29a8040db13414",
+          "subgraph_id": "H_a4809778ae946913",
+          "superficial_degree_formula": "omega4=4*1-2*4+rho",
+          "topology_status": "CONTAINS_BRIDGE_NOT_RENORMALIZATION_PART",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 4,
+            "L": 1,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AI",
+            "e_BI",
+            "e_CB",
+            "e_CI"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "71d3c05d76dc6df4a63cbda8072dc5e4b7a81c09652032c8f073d57afb44eeb5",
+          "subgraph_id": "H_f567f8326e3806a0",
+          "superficial_degree_formula": "omega4=4*1-2*4+rho",
+          "topology_status": "CONTAINS_BRIDGE_NOT_RENORMALIZATION_PART",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 4,
+            "L": 1,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AI",
+            "e_CA",
+            "e_CB",
+            "e_CI"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "195f406c28417aac634828d4f286ecb09b8e07f8778b06c562c7349ac0d55416",
+          "subgraph_id": "H_93109e907a148769",
+          "superficial_degree_formula": "omega4=4*1-2*4+rho",
+          "topology_status": "CONTAINS_BRIDGE_NOT_RENORMALIZATION_PART",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 4,
+            "L": 1,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_BI",
+            "e_CA",
+            "e_CB",
+            "e_CI"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "52ffa20934e846c3cb43a7c51a6ffa35fa9177ea6c52e01bd619022d7aa3677a",
+          "subgraph_id": "H_0cb16e340e93819b",
+          "superficial_degree_formula": "omega4=4*1-2*4+rho",
+          "topology_status": "CONTAINS_BRIDGE_NOT_RENORMALIZATION_PART",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 5,
+            "L": 2,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AI",
+            "e_BI",
+            "e_CA",
+            "e_CB",
+            "e_CI"
+          ],
+          "one_particle_irreducible": true,
+          "proper": false,
+          "role": "FULL_GRAPH",
+          "subgraph_hash": "baaa24af908ba8f26c81a638029fa0e1162281e07872f181a26a7a6e8d125cc8",
+          "subgraph_id": "full",
+          "superficial_degree_formula": "omega4=4*2-2*5+rho",
+          "topology_status": "ONE_PARTICLE_IRREDUCIBLE",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        }
+      ],
+      "contractions": {
+        "cographs": [
+          {
+            "connected": true,
+            "contracted_vertex": "C_left",
+            "contraction_hash": "0aeac5a71f9afea08a7769119da1a41035008e12969358f37a6543777477871e",
+            "count_identity": {
+              "I_G_minus_I_gamma": 2,
+              "L_G_minus_L_gamma": 1,
+              "V_G_minus_V_gamma_plus_one": 2
+            },
+            "counts": {
+              "I": 2,
+              "L": 1,
+              "V": 2
+            },
+            "reduced_topology": "TWO_EDGE_ONE_LOOP_BUBBLE",
+            "remaining_edges": [
+              {
+                "edge_id": "e_CB",
+                "self_loop": false,
+                "source": "C_left",
+                "target": "B"
+              },
+              {
+                "edge_id": "e_BI",
+                "self_loop": false,
+                "source": "B",
+                "target": "C_left"
+              }
+            ],
+            "scaleless_status": "NOT_EVALUATED_REQUIRES_CONTRACTED_NUMERATOR_AND_EXTERNAL_INJECTION",
+            "subgraph_hash": "873a3e5856f30aea5a78ee99efe41d3145cebd806dbc751577cbd94f4f0616cc",
+            "subgraph_id": "left",
+            "topology_status": "CERTIFIED_FROM_EDGE_CONTRACTION",
+            "typed_counterterm_port_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+          },
+          {
+            "connected": true,
+            "contracted_vertex": "C_right",
+            "contraction_hash": "8dd89f9f8cb8ada8482568f7c6274d4e7c7aa3a6c6e5b33b50dd0c27a9328431",
+            "count_identity": {
+              "I_G_minus_I_gamma": 2,
+              "L_G_minus_L_gamma": 1,
+              "V_G_minus_V_gamma_plus_one": 2
+            },
+            "counts": {
+              "I": 2,
+              "L": 1,
+              "V": 2
+            },
+            "reduced_topology": "TWO_EDGE_ONE_LOOP_BUBBLE",
+            "remaining_edges": [
+              {
+                "edge_id": "e_CA",
+                "self_loop": false,
+                "source": "C_right",
+                "target": "A"
+              },
+              {
+                "edge_id": "e_AI",
+                "self_loop": false,
+                "source": "A",
+                "target": "C_right"
+              }
+            ],
+            "scaleless_status": "NOT_EVALUATED_REQUIRES_CONTRACTED_NUMERATOR_AND_EXTERNAL_INJECTION",
+            "subgraph_hash": "224e660c345a9fda3c77f19111cfed56231c5a74c691d43ab6c65b490987ee59",
+            "subgraph_id": "right",
+            "topology_status": "CERTIFIED_FROM_EDGE_CONTRACTION",
+            "typed_counterterm_port_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+          },
+          {
+            "connected": true,
+            "contracted_vertex": "C_outer",
+            "contraction_hash": "1695805bd55b56913630f1cd4e5e1676d15560e6154cb2c8bb7b940310b5580b",
+            "count_identity": {
+              "I_G_minus_I_gamma": 1,
+              "L_G_minus_L_gamma": 1,
+              "V_G_minus_V_gamma_plus_one": 1
+            },
+            "counts": {
+              "I": 1,
+              "L": 1,
+              "V": 1
+            },
+            "reduced_topology": "ONE_EDGE_SELF_LOOP_TADPOLE",
+            "remaining_edges": [
+              {
+                "edge_id": "e_CI",
+                "self_loop": true,
+                "source": "C_outer",
+                "target": "C_outer"
+              }
+            ],
+            "scaleless_status": "NOT_EVALUATED_REQUIRES_CONTRACTED_NUMERATOR_AND_EXTERNAL_INJECTION",
+            "subgraph_hash": "d6809744c248c06116d3098004083cca598560041cb7acb30725bf0d3e6ea9ba",
+            "subgraph_id": "outer",
+            "topology_status": "CERTIFIED_FROM_EDGE_CONTRACTION",
+            "typed_counterterm_port_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+          }
+        ],
+        "rule": "contract selected subgraph edges and identify all selected vertices",
+        "typed_status": "BLOCKED_COUNTERTERM_OPERATOR_TYPES_NOT_COMPILED"
+      },
+      "forests": {
+        "compatibility_rule": "edge-disjoint or one edge-set contained in the other",
+        "current_graph_maximum_structural_forest_cardinality": 1,
+        "pair_relations": [
+          {
+            "compatible": false,
+            "edge_disjoint": false,
+            "intersection_edge_ids": [
+              "e_CI"
+            ],
+            "left_subset_right": false,
+            "pair": [
+              "left",
+              "right"
+            ],
+            "relation": "OVERLAP_NON_NESTED",
+            "right_subset_left": false
+          },
+          {
+            "compatible": false,
+            "edge_disjoint": false,
+            "intersection_edge_ids": [
+              "e_AI",
+              "e_CA"
+            ],
+            "left_subset_right": false,
+            "pair": [
+              "left",
+              "outer"
+            ],
+            "relation": "OVERLAP_NON_NESTED",
+            "right_subset_left": false
+          },
+          {
+            "compatible": false,
+            "edge_disjoint": false,
+            "intersection_edge_ids": [
+              "e_BI",
+              "e_CB"
+            ],
+            "left_subset_right": false,
+            "pair": [
+              "right",
+              "outer"
+            ],
+            "relation": "OVERLAP_NON_NESTED",
+            "right_subset_left": false
+          }
+        ],
+        "power_counting_forests": null,
+        "power_counting_forests_status": "BLOCKED_RHO_UNKNOWN",
+        "proper_1pi_subgraph_ids": [
+          "left",
+          "right",
+          "outer"
+        ],
+        "structurally_compatible_forests": [
+          {
+            "cardinality": 0,
+            "compatible_disjoint_or_nested": true,
+            "forest_hash": "f2b391f2e76adccabc7433a3aa395c88ddeb6ae796d8c0ea30b074b9110e2ed1",
+            "subgraph_ids": []
+          },
+          {
+            "cardinality": 1,
+            "compatible_disjoint_or_nested": true,
+            "forest_hash": "08a6e5966d392e4ca22a8b3fef56cfc271f421ab3014b56d9f7b5bd95e85b819",
+            "subgraph_ids": [
+              "left"
+            ]
+          },
+          {
+            "cardinality": 1,
+            "compatible_disjoint_or_nested": true,
+            "forest_hash": "00dc848de2f6614e96c2dd1ee300ae9e01587943f7adc8e0fb8229216e95ccc1",
+            "subgraph_ids": [
+              "outer"
+            ]
+          },
+          {
+            "cardinality": 1,
+            "compatible_disjoint_or_nested": true,
+            "forest_hash": "ed7b9f4f364e6979ec419ee67183f8841c7a82e8c3fbece96bec0bd1d5930c8f",
+            "subgraph_ids": [
+              "right"
+            ]
+          }
+        ]
+      },
+      "no_numerator_pole_or_coefficient_claim": true,
+      "power_counting": {
+        "certificate": {
+          "adapted_basis_status": "BLOCKED_COMPILED_DALGEBRA_NUMERATOR_ABSENT",
+          "certificate_hash": "954769281c3b5d1e34f004bf927d138fb881cd3156e5494a0f587732be4f0617",
+          "forbidden_inference": "DO_NOT_INFER_RHO_FROM_EDGE_COUNT_FREE_INDEX_COUNT_OR_UNCOMPILED_DALGEBRA",
+          "graph_hash": "5cbf5cea3c11f28278e0366aaf48206a8fbb9c57a0c3d63a357a99ff0c519fcf",
+          "rho_by_subgraph": {
+            "full": "UNKNOWN",
+            "left": "UNKNOWN",
+            "outer": "UNKNOWN",
+            "right": "UNKNOWN"
+          },
+          "rho_definition": "highest homogeneous degree under scaling of an adapted subgraph loop basis with complementary loop and physical external momenta held fixed",
+          "schema_version": "step6.numerator_scaling_certificate.v1",
+          "source_status": "UNKNOWN_NUMERATOR_DEMONSTRATION_ONLY"
+        },
+        "definition": "omega4=4*L-2*I+rho",
+        "entries": [
+          {
+            "actual_uv_pole": null,
+            "actual_uv_pole_status": "BLOCKED_POWER_COUNTING_AND_KUV_EVALUATION",
+            "counts": {
+              "I": 3,
+              "L": 1,
+              "V": 3
+            },
+            "omega4": "UNKNOWN",
+            "power_counting_status": "BLOCKED_NUMERATOR_SCALING_CERTIFICATE_RHO_UNKNOWN",
+            "proper": true,
+            "rho": "UNKNOWN",
+            "subgraph_hash": "873a3e5856f30aea5a78ee99efe41d3145cebd806dbc751577cbd94f4f0616cc",
+            "subgraph_id": "left",
+            "superficially_divergent_candidate": null
+          },
+          {
+            "actual_uv_pole": null,
+            "actual_uv_pole_status": "BLOCKED_POWER_COUNTING_AND_KUV_EVALUATION",
+            "counts": {
+              "I": 3,
+              "L": 1,
+              "V": 3
+            },
+            "omega4": "UNKNOWN",
+            "power_counting_status": "BLOCKED_NUMERATOR_SCALING_CERTIFICATE_RHO_UNKNOWN",
+            "proper": true,
+            "rho": "UNKNOWN",
+            "subgraph_hash": "224e660c345a9fda3c77f19111cfed56231c5a74c691d43ab6c65b490987ee59",
+            "subgraph_id": "right",
+            "superficially_divergent_candidate": null
+          },
+          {
+            "actual_uv_pole": null,
+            "actual_uv_pole_status": "BLOCKED_POWER_COUNTING_AND_KUV_EVALUATION",
+            "counts": {
+              "I": 4,
+              "L": 1,
+              "V": 4
+            },
+            "omega4": "UNKNOWN",
+            "power_counting_status": "BLOCKED_NUMERATOR_SCALING_CERTIFICATE_RHO_UNKNOWN",
+            "proper": true,
+            "rho": "UNKNOWN",
+            "subgraph_hash": "d6809744c248c06116d3098004083cca598560041cb7acb30725bf0d3e6ea9ba",
+            "subgraph_id": "outer",
+            "superficially_divergent_candidate": null
+          },
+          {
+            "actual_uv_pole": null,
+            "actual_uv_pole_status": "BLOCKED_POWER_COUNTING_AND_KUV_EVALUATION",
+            "counts": {
+              "I": 5,
+              "L": 2,
+              "V": 4
+            },
+            "omega4": "UNKNOWN",
+            "power_counting_status": "BLOCKED_NUMERATOR_SCALING_CERTIFICATE_RHO_UNKNOWN",
+            "proper": false,
+            "rho": "UNKNOWN",
+            "subgraph_hash": "baaa24af908ba8f26c81a638029fa0e1162281e07872f181a26a7a6e8d125cc8",
+            "subgraph_id": "full",
+            "superficially_divergent_candidate": null
+          }
+        ],
+        "no_pole_or_coefficient_claim": true,
+        "status": "BLOCKED_RHO_UNKNOWN_FAIL_CLOSED",
+        "unknown_subgraph_ids": [
+          "left",
+          "right",
+          "outer",
+          "full"
+        ]
+      },
+      "record_hash": "3b7e0f40f7b8a26c58cb2b8e2f6013a33cc048c16f627776c461ade403d63940",
+      "renormalization_ast": {
+        "overall_counterterm": {
+          "argument": {
+            "forest_formula": "Rprime Phi(G)=sum_(proper compatible forests F) [product_(gamma in F) C(gamma)] star Phi(G/F)",
+            "forest_status": "BLOCKED_RHO_UNKNOWN",
+            "name": "Rprime",
+            "op": "SUM",
+            "terms": [
+              {
+                "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+                "op": "GRAPH_AMPLITUDE",
+                "symbol": "Phi(G6_DIRECT_K4ME_I3_S3CUBED)"
+              },
+              {
+                "activation_status": "BLOCKED_RHO_UNKNOWN",
+                "cograph": {
+                  "counts": {
+                    "I": 2,
+                    "L": 1,
+                    "V": 2
+                  },
+                  "op": "CONTRACTED_GRAPH_AMPLITUDE",
+                  "symbol": "Phi(G6_DIRECT_K4ME_I3_S3CUBED/left)",
+                  "typed_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+                },
+                "counterterm": {
+                  "argument": "Phi(left)",
+                  "op": "UV_POLE_PROJECTOR",
+                  "primitive_one_loop_subgraph": true,
+                  "projector": "K_UV"
+                },
+                "op": "COUNTERTERM_STAR_COGRAPH",
+                "sign": -1,
+                "subgraph_id": "left"
+              },
+              {
+                "activation_status": "BLOCKED_RHO_UNKNOWN",
+                "cograph": {
+                  "counts": {
+                    "I": 2,
+                    "L": 1,
+                    "V": 2
+                  },
+                  "op": "CONTRACTED_GRAPH_AMPLITUDE",
+                  "symbol": "Phi(G6_DIRECT_K4ME_I3_S3CUBED/right)",
+                  "typed_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+                },
+                "counterterm": {
+                  "argument": "Phi(right)",
+                  "op": "UV_POLE_PROJECTOR",
+                  "primitive_one_loop_subgraph": true,
+                  "projector": "K_UV"
+                },
+                "op": "COUNTERTERM_STAR_COGRAPH",
+                "sign": -1,
+                "subgraph_id": "right"
+              },
+              {
+                "activation_status": "BLOCKED_RHO_UNKNOWN",
+                "cograph": {
+                  "counts": {
+                    "I": 1,
+                    "L": 1,
+                    "V": 1
+                  },
+                  "op": "CONTRACTED_GRAPH_AMPLITUDE",
+                  "symbol": "Phi(G6_DIRECT_K4ME_I3_S3CUBED/outer)",
+                  "typed_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+                },
+                "counterterm": {
+                  "argument": "Phi(outer)",
+                  "op": "UV_POLE_PROJECTOR",
+                  "primitive_one_loop_subgraph": true,
+                  "projector": "K_UV"
+                },
+                "op": "COUNTERTERM_STAR_COGRAPH",
+                "sign": -1,
+                "subgraph_id": "outer"
+              }
+            ]
+          },
+          "formula": "C(G)=-K_UV Rprime Phi(G)",
+          "name": "C(G)",
+          "op": "NEGATIVE_UV_POLE_PROJECTOR",
+          "projector": "K_UV"
+        },
+        "renormalized": {
+          "argument": {
+            "forest_formula": "Rprime Phi(G)=sum_(proper compatible forests F) [product_(gamma in F) C(gamma)] star Phi(G/F)",
+            "forest_status": "BLOCKED_RHO_UNKNOWN",
+            "name": "Rprime",
+            "op": "SUM",
+            "terms": [
+              {
+                "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+                "op": "GRAPH_AMPLITUDE",
+                "symbol": "Phi(G6_DIRECT_K4ME_I3_S3CUBED)"
+              },
+              {
+                "activation_status": "BLOCKED_RHO_UNKNOWN",
+                "cograph": {
+                  "counts": {
+                    "I": 2,
+                    "L": 1,
+                    "V": 2
+                  },
+                  "op": "CONTRACTED_GRAPH_AMPLITUDE",
+                  "symbol": "Phi(G6_DIRECT_K4ME_I3_S3CUBED/left)",
+                  "typed_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+                },
+                "counterterm": {
+                  "argument": "Phi(left)",
+                  "op": "UV_POLE_PROJECTOR",
+                  "primitive_one_loop_subgraph": true,
+                  "projector": "K_UV"
+                },
+                "op": "COUNTERTERM_STAR_COGRAPH",
+                "sign": -1,
+                "subgraph_id": "left"
+              },
+              {
+                "activation_status": "BLOCKED_RHO_UNKNOWN",
+                "cograph": {
+                  "counts": {
+                    "I": 2,
+                    "L": 1,
+                    "V": 2
+                  },
+                  "op": "CONTRACTED_GRAPH_AMPLITUDE",
+                  "symbol": "Phi(G6_DIRECT_K4ME_I3_S3CUBED/right)",
+                  "typed_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+                },
+                "counterterm": {
+                  "argument": "Phi(right)",
+                  "op": "UV_POLE_PROJECTOR",
+                  "primitive_one_loop_subgraph": true,
+                  "projector": "K_UV"
+                },
+                "op": "COUNTERTERM_STAR_COGRAPH",
+                "sign": -1,
+                "subgraph_id": "right"
+              },
+              {
+                "activation_status": "BLOCKED_RHO_UNKNOWN",
+                "cograph": {
+                  "counts": {
+                    "I": 1,
+                    "L": 1,
+                    "V": 1
+                  },
+                  "op": "CONTRACTED_GRAPH_AMPLITUDE",
+                  "symbol": "Phi(G6_DIRECT_K4ME_I3_S3CUBED/outer)",
+                  "typed_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+                },
+                "counterterm": {
+                  "argument": "Phi(outer)",
+                  "op": "UV_POLE_PROJECTOR",
+                  "primitive_one_loop_subgraph": true,
+                  "projector": "K_UV"
+                },
+                "op": "COUNTERTERM_STAR_COGRAPH",
+                "sign": -1,
+                "subgraph_id": "outer"
+              }
+            ]
+          },
+          "formula": "R Phi(G)=(1-K_UV) Rprime Phi(G)",
+          "name": "R",
+          "op": "ONE_MINUS_UV_POLE_PROJECTOR",
+          "projector": "K_UV"
+        },
+        "renormalized_coefficient": null,
+        "rprime": {
+          "forest_formula": "Rprime Phi(G)=sum_(proper compatible forests F) [product_(gamma in F) C(gamma)] star Phi(G/F)",
+          "forest_status": "BLOCKED_RHO_UNKNOWN",
+          "name": "Rprime",
+          "op": "SUM",
+          "terms": [
+            {
+              "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+              "op": "GRAPH_AMPLITUDE",
+              "symbol": "Phi(G6_DIRECT_K4ME_I3_S3CUBED)"
+            },
+            {
+              "activation_status": "BLOCKED_RHO_UNKNOWN",
+              "cograph": {
+                "counts": {
+                  "I": 2,
+                  "L": 1,
+                  "V": 2
+                },
+                "op": "CONTRACTED_GRAPH_AMPLITUDE",
+                "symbol": "Phi(G6_DIRECT_K4ME_I3_S3CUBED/left)",
+                "typed_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+              },
+              "counterterm": {
+                "argument": "Phi(left)",
+                "op": "UV_POLE_PROJECTOR",
+                "primitive_one_loop_subgraph": true,
+                "projector": "K_UV"
+              },
+              "op": "COUNTERTERM_STAR_COGRAPH",
+              "sign": -1,
+              "subgraph_id": "left"
+            },
+            {
+              "activation_status": "BLOCKED_RHO_UNKNOWN",
+              "cograph": {
+                "counts": {
+                  "I": 2,
+                  "L": 1,
+                  "V": 2
+                },
+                "op": "CONTRACTED_GRAPH_AMPLITUDE",
+                "symbol": "Phi(G6_DIRECT_K4ME_I3_S3CUBED/right)",
+                "typed_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+              },
+              "counterterm": {
+                "argument": "Phi(right)",
+                "op": "UV_POLE_PROJECTOR",
+                "primitive_one_loop_subgraph": true,
+                "projector": "K_UV"
+              },
+              "op": "COUNTERTERM_STAR_COGRAPH",
+              "sign": -1,
+              "subgraph_id": "right"
+            },
+            {
+              "activation_status": "BLOCKED_RHO_UNKNOWN",
+              "cograph": {
+                "counts": {
+                  "I": 1,
+                  "L": 1,
+                  "V": 1
+                },
+                "op": "CONTRACTED_GRAPH_AMPLITUDE",
+                "symbol": "Phi(G6_DIRECT_K4ME_I3_S3CUBED/outer)",
+                "typed_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+              },
+              "counterterm": {
+                "argument": "Phi(outer)",
+                "op": "UV_POLE_PROJECTOR",
+                "primitive_one_loop_subgraph": true,
+                "projector": "K_UV"
+              },
+              "op": "COUNTERTERM_STAR_COGRAPH",
+              "sign": -1,
+              "subgraph_id": "outer"
+            }
+          ]
+        },
+        "scheme": "DRED_MINIMAL_POLE_SUBTRACTION_FOREST_COMBINATORICS",
+        "status": "BLOCKED_NUMERATOR_SCALING_CERTIFICATE",
+        "uv_pole": null,
+        "uv_projector": {
+          "definition": "K_UV[sum_n a_n epsilon^n]=sum_(n<0) a_n epsilon^n",
+          "distinct_from_superspace_projector": true,
+          "superspace_projector": "K_+=-(1/8)D_+ barD^2 D_+",
+          "symbol": "K_UV"
+        }
+      },
+      "schema_version": "step6.two_loop_forest.v1",
+      "source_graph_classification": "LITERAL_K4_MINUS_EDGE_DIRECT_PARENT",
+      "source_graph_hash": "5cbf5cea3c11f28278e0366aaf48206a8fbb9c57a0c3d63a357a99ff0c519fcf",
+      "source_graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+      "stage": "PROPOSAL_ONLY_TOPOLOGY_FOREST_DRED_ARCHITECTURE"
+    },
+    {
+      "connected_census": [
+        {
+          "I": 1,
+          "L": 0,
+          "V": 2,
+          "count": 5,
+          "omega4_formula": "rho+-2",
+          "one_particle_irreducible": false
+        },
+        {
+          "I": 2,
+          "L": 0,
+          "V": 3,
+          "count": 8,
+          "omega4_formula": "rho+-4",
+          "one_particle_irreducible": false
+        },
+        {
+          "I": 3,
+          "L": 0,
+          "V": 4,
+          "count": 8,
+          "omega4_formula": "rho+-6",
+          "one_particle_irreducible": false
+        },
+        {
+          "I": 3,
+          "L": 1,
+          "V": 3,
+          "count": 2,
+          "omega4_formula": "rho+-2",
+          "one_particle_irreducible": true
+        },
+        {
+          "I": 4,
+          "L": 1,
+          "V": 4,
+          "count": 4,
+          "omega4_formula": "rho+-4",
+          "one_particle_irreducible": false
+        },
+        {
+          "I": 4,
+          "L": 1,
+          "V": 4,
+          "count": 1,
+          "omega4_formula": "rho+-4",
+          "one_particle_irreducible": true
+        },
+        {
+          "I": 5,
+          "L": 2,
+          "V": 4,
+          "count": 1,
+          "omega4_formula": "rho+-2",
+          "one_particle_irreducible": true
+        }
+      ],
+      "connected_edge_subgraphs": [
+        {
+          "connected": true,
+          "counts": {
+            "I": 1,
+            "L": 0,
+            "V": 2
+          },
+          "edge_ids": [
+            "e_AC"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "151da9741e7d9cd24e7f2768f16122bba8b7f41bb6d1f9dba34cdbe59cddf058",
+          "subgraph_id": "H_7967cb6eb93fe14a",
+          "superficial_degree_formula": "omega4=4*0-2*1+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "C"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 1,
+            "L": 0,
+            "V": 2
+          },
+          "edge_ids": [
+            "e_BA"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "dd49e3eeee9344e1c98939dbf96ac861a42c85f2e93b01183df6348141445499",
+          "subgraph_id": "H_1037854d2ee54cbc",
+          "superficial_degree_formula": "omega4=4*0-2*1+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 1,
+            "L": 0,
+            "V": 2
+          },
+          "edge_ids": [
+            "e_BC"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "d461751f29f803d13f5ca1ff2e6778109b324f02c1451f3cc7b77ffb39737df4",
+          "subgraph_id": "H_7c5f1738290d007b",
+          "superficial_degree_formula": "omega4=4*0-2*1+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "B",
+            "C"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 1,
+            "L": 0,
+            "V": 2
+          },
+          "edge_ids": [
+            "e_BI"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "bbe60cdbc68fb73ee52b140ea337f7fb88295699bdb4a4290dc24f71d88e8ac9",
+          "subgraph_id": "H_94fc3c73722045e1",
+          "superficial_degree_formula": "omega4=4*0-2*1+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "B",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 1,
+            "L": 0,
+            "V": 2
+          },
+          "edge_ids": [
+            "e_IC"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "320aaef9d4f36b80c3c1116820f763da4d324bcb841979c95afc3847d364920c",
+          "subgraph_id": "H_a503a1c478df058d",
+          "superficial_degree_formula": "omega4=4*0-2*1+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 2,
+            "L": 0,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_AC",
+            "e_BA"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "847d50ebbb2e5d48555c20e068eddbac6f5e6137395e572bf142a32e40492474",
+          "subgraph_id": "H_a49bd569e41c90e9",
+          "superficial_degree_formula": "omega4=4*0-2*2+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 2,
+            "L": 0,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_AC",
+            "e_BC"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "095a1b03a8add39f2b08d9807369382704e167d4c51c4aa9a60a53557361b525",
+          "subgraph_id": "H_98bf22036b18b1cd",
+          "superficial_degree_formula": "omega4=4*0-2*2+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 2,
+            "L": 0,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_AC",
+            "e_IC"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "9635b1d2a44ea1150d1f0882fb1ca2feebd4d8e6ec5a822de2d9712a0261e218",
+          "subgraph_id": "H_3362a9aadad685f4",
+          "superficial_degree_formula": "omega4=4*0-2*2+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 2,
+            "L": 0,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_BA",
+            "e_BC"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "962b94332fe871a45689fc50318bc4d3a219a90ebf6fb838d981efe65f0efdda",
+          "subgraph_id": "H_fd4f5e6d67aa90f3",
+          "superficial_degree_formula": "omega4=4*0-2*2+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 2,
+            "L": 0,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_BA",
+            "e_BI"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "8307f006914e04f8197094e14e41fa2242e2c32043b053608e6e167f1fc73fd4",
+          "subgraph_id": "H_68a14ec66c7e6017",
+          "superficial_degree_formula": "omega4=4*0-2*2+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 2,
+            "L": 0,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_BC",
+            "e_BI"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "9046458083762544c6abb2105b6bd414648f3fca2da3366e877ba7c99745c88e",
+          "subgraph_id": "H_5136ef5558c6bf95",
+          "superficial_degree_formula": "omega4=4*0-2*2+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 2,
+            "L": 0,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_BC",
+            "e_IC"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "604b277634f9a078d50e4081343c29df9ecfebb907b8a1557982c9797249c1c8",
+          "subgraph_id": "H_de8283ca043f3972",
+          "superficial_degree_formula": "omega4=4*0-2*2+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 2,
+            "L": 0,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_BI",
+            "e_IC"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "0fe918a3024b70c9e6cbbc52c489c05617ae7956168850a7aafebdb1103a4f7f",
+          "subgraph_id": "H_ae44eb8ab2f978bf",
+          "superficial_degree_formula": "omega4=4*0-2*2+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 1,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_AC",
+            "e_BA",
+            "e_BC"
+          ],
+          "one_particle_irreducible": true,
+          "proper": true,
+          "role": "NAMED_ONE_LOOP_CYCLE",
+          "subgraph_hash": "40d4f7e0b364a66d421d2cd501437fc4f7b20ee1731f5eb3fda6fc25335da8f3",
+          "subgraph_id": "right",
+          "superficial_degree_formula": "omega4=4*1-2*3+rho",
+          "topology_status": "ONE_PARTICLE_IRREDUCIBLE",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 1,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_BC",
+            "e_BI",
+            "e_IC"
+          ],
+          "one_particle_irreducible": true,
+          "proper": true,
+          "role": "NAMED_ONE_LOOP_CYCLE",
+          "subgraph_hash": "6b64158a649af8dd7bb5f62316eeb9e39ef3a7e237dc103b0b4fa0805777b092",
+          "subgraph_id": "left",
+          "superficial_degree_formula": "omega4=4*1-2*3+rho",
+          "topology_status": "ONE_PARTICLE_IRREDUCIBLE",
+          "vertex_ids": [
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 0,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AC",
+            "e_BA",
+            "e_BI"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "daf7c9a17ffc70e37a98c9226edee4ac61a42be7ccce53fd472a89c6b42305d3",
+          "subgraph_id": "H_c747ecd959c99f10",
+          "superficial_degree_formula": "omega4=4*0-2*3+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 0,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AC",
+            "e_BA",
+            "e_IC"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "63a9dc425af33f57eb9e459e4b44f3c7089016bf1b960f25e9a5ee5d6b38e699",
+          "subgraph_id": "H_321bf496e992863e",
+          "superficial_degree_formula": "omega4=4*0-2*3+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 0,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AC",
+            "e_BC",
+            "e_BI"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "580be0a435ffb149fb5d39fa1bc7c1058aa3f9de288fbda8242fb0efca500e33",
+          "subgraph_id": "H_a7ee6aef307f993c",
+          "superficial_degree_formula": "omega4=4*0-2*3+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 0,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AC",
+            "e_BC",
+            "e_IC"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "58db592f82e8070e515be1084728df66c5a7584cfc769bceabafd05f2c1ac723",
+          "subgraph_id": "H_9316c1f7c861cdc5",
+          "superficial_degree_formula": "omega4=4*0-2*3+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 0,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AC",
+            "e_BI",
+            "e_IC"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "eae9bf69b51f5f397055d93a38d873ca0304623c58d5f642127758dd9e3468cf",
+          "subgraph_id": "H_6c5779c7d7bfa78b",
+          "superficial_degree_formula": "omega4=4*0-2*3+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 0,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_BA",
+            "e_BC",
+            "e_BI"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "b641c1fa6d8684347f4ab8eb61fb1af9058e30218b5e77988b5eba3e606a4c54",
+          "subgraph_id": "H_b64f8dcdb4e03a2c",
+          "superficial_degree_formula": "omega4=4*0-2*3+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 0,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_BA",
+            "e_BC",
+            "e_IC"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "08e7160a03c32d76892821561b3b5bf5a7171cd553d2e828e8297430c8c82bb5",
+          "subgraph_id": "H_e477a59f9bcb320f",
+          "superficial_degree_formula": "omega4=4*0-2*3+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 0,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_BA",
+            "e_BI",
+            "e_IC"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "9f22ff8dfe2e32cf8cc6551c673f6b79f82f6c3d04882e79795214a4fc733143",
+          "subgraph_id": "H_cc884b6403c22b53",
+          "superficial_degree_formula": "omega4=4*0-2*3+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 4,
+            "L": 1,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AC",
+            "e_BA",
+            "e_BC",
+            "e_BI"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "4c2a6f6b229b639f7fa8cd54a879bb4e5f1977776fb1db7317160942c7fadcdf",
+          "subgraph_id": "H_53df830ed8208e9c",
+          "superficial_degree_formula": "omega4=4*1-2*4+rho",
+          "topology_status": "CONTAINS_BRIDGE_NOT_RENORMALIZATION_PART",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 4,
+            "L": 1,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AC",
+            "e_BA",
+            "e_BC",
+            "e_IC"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "deb03319b4a3a459bd34204fa6b51f60ca220eee81821ceac54acbc7267698ec",
+          "subgraph_id": "H_ff917adcc3a375c7",
+          "superficial_degree_formula": "omega4=4*1-2*4+rho",
+          "topology_status": "CONTAINS_BRIDGE_NOT_RENORMALIZATION_PART",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 4,
+            "L": 1,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AC",
+            "e_BA",
+            "e_BI",
+            "e_IC"
+          ],
+          "one_particle_irreducible": true,
+          "proper": true,
+          "role": "NAMED_ONE_LOOP_CYCLE",
+          "subgraph_hash": "d4e767d414f6440b8dc961b682eec97010a2eec7dfeefbf2757c48ee6c758ced",
+          "subgraph_id": "outer",
+          "superficial_degree_formula": "omega4=4*1-2*4+rho",
+          "topology_status": "ONE_PARTICLE_IRREDUCIBLE",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 4,
+            "L": 1,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AC",
+            "e_BC",
+            "e_BI",
+            "e_IC"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "534dfccca7f5067b0d0ec48a7f4257a0e4a0661da2ae8ff808bc822ad744e7fb",
+          "subgraph_id": "H_ac728ab47958ebd0",
+          "superficial_degree_formula": "omega4=4*1-2*4+rho",
+          "topology_status": "CONTAINS_BRIDGE_NOT_RENORMALIZATION_PART",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 4,
+            "L": 1,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_BA",
+            "e_BC",
+            "e_BI",
+            "e_IC"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "ecc07ad783a2e1f21cc3f0ade6ae1c3403788ec5bed44dcc30e14dc1e24234da",
+          "subgraph_id": "H_d0d386f39769095c",
+          "superficial_degree_formula": "omega4=4*1-2*4+rho",
+          "topology_status": "CONTAINS_BRIDGE_NOT_RENORMALIZATION_PART",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 5,
+            "L": 2,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AC",
+            "e_BA",
+            "e_BC",
+            "e_BI",
+            "e_IC"
+          ],
+          "one_particle_irreducible": true,
+          "proper": false,
+          "role": "FULL_GRAPH",
+          "subgraph_hash": "e3a100b95939def2116b5057d67d28441f400365c17fede8031b9865233581d7",
+          "subgraph_id": "full",
+          "superficial_degree_formula": "omega4=4*2-2*5+rho",
+          "topology_status": "ONE_PARTICLE_IRREDUCIBLE",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        }
+      ],
+      "contractions": {
+        "cographs": [
+          {
+            "connected": true,
+            "contracted_vertex": "C_left",
+            "contraction_hash": "be83c7732f8dead5c1353f01f12b346aa88bcd993d630a3d205149076034e224",
+            "count_identity": {
+              "I_G_minus_I_gamma": 2,
+              "L_G_minus_L_gamma": 1,
+              "V_G_minus_V_gamma_plus_one": 2
+            },
+            "counts": {
+              "I": 2,
+              "L": 1,
+              "V": 2
+            },
+            "reduced_topology": "TWO_EDGE_ONE_LOOP_BUBBLE",
+            "remaining_edges": [
+              {
+                "edge_id": "e_BA",
+                "self_loop": false,
+                "source": "C_left",
+                "target": "A"
+              },
+              {
+                "edge_id": "e_AC",
+                "self_loop": false,
+                "source": "A",
+                "target": "C_left"
+              }
+            ],
+            "scaleless_status": "NOT_EVALUATED_REQUIRES_CONTRACTED_NUMERATOR_AND_EXTERNAL_INJECTION",
+            "subgraph_hash": "6b64158a649af8dd7bb5f62316eeb9e39ef3a7e237dc103b0b4fa0805777b092",
+            "subgraph_id": "left",
+            "topology_status": "CERTIFIED_FROM_EDGE_CONTRACTION",
+            "typed_counterterm_port_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+          },
+          {
+            "connected": true,
+            "contracted_vertex": "C_right",
+            "contraction_hash": "6fc11f46ebb67b3724ff4801499d08cb80621dd297bf53e9e68b377a49dd8aa0",
+            "count_identity": {
+              "I_G_minus_I_gamma": 2,
+              "L_G_minus_L_gamma": 1,
+              "V_G_minus_V_gamma_plus_one": 2
+            },
+            "counts": {
+              "I": 2,
+              "L": 1,
+              "V": 2
+            },
+            "reduced_topology": "TWO_EDGE_ONE_LOOP_BUBBLE",
+            "remaining_edges": [
+              {
+                "edge_id": "e_BI",
+                "self_loop": false,
+                "source": "C_right",
+                "target": "I"
+              },
+              {
+                "edge_id": "e_IC",
+                "self_loop": false,
+                "source": "I",
+                "target": "C_right"
+              }
+            ],
+            "scaleless_status": "NOT_EVALUATED_REQUIRES_CONTRACTED_NUMERATOR_AND_EXTERNAL_INJECTION",
+            "subgraph_hash": "40d4f7e0b364a66d421d2cd501437fc4f7b20ee1731f5eb3fda6fc25335da8f3",
+            "subgraph_id": "right",
+            "topology_status": "CERTIFIED_FROM_EDGE_CONTRACTION",
+            "typed_counterterm_port_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+          },
+          {
+            "connected": true,
+            "contracted_vertex": "C_outer",
+            "contraction_hash": "891213b708ca8dd857998e94927f0d468b0fafc79a839e264fb14b4cacf2b9b4",
+            "count_identity": {
+              "I_G_minus_I_gamma": 1,
+              "L_G_minus_L_gamma": 1,
+              "V_G_minus_V_gamma_plus_one": 1
+            },
+            "counts": {
+              "I": 1,
+              "L": 1,
+              "V": 1
+            },
+            "reduced_topology": "ONE_EDGE_SELF_LOOP_TADPOLE",
+            "remaining_edges": [
+              {
+                "edge_id": "e_BC",
+                "self_loop": true,
+                "source": "C_outer",
+                "target": "C_outer"
+              }
+            ],
+            "scaleless_status": "NOT_EVALUATED_REQUIRES_CONTRACTED_NUMERATOR_AND_EXTERNAL_INJECTION",
+            "subgraph_hash": "d4e767d414f6440b8dc961b682eec97010a2eec7dfeefbf2757c48ee6c758ced",
+            "subgraph_id": "outer",
+            "topology_status": "CERTIFIED_FROM_EDGE_CONTRACTION",
+            "typed_counterterm_port_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+          }
+        ],
+        "rule": "contract selected subgraph edges and identify all selected vertices",
+        "typed_status": "BLOCKED_COUNTERTERM_OPERATOR_TYPES_NOT_COMPILED"
+      },
+      "forests": {
+        "compatibility_rule": "edge-disjoint or one edge-set contained in the other",
+        "current_graph_maximum_structural_forest_cardinality": 1,
+        "pair_relations": [
+          {
+            "compatible": false,
+            "edge_disjoint": false,
+            "intersection_edge_ids": [
+              "e_BC"
+            ],
+            "left_subset_right": false,
+            "pair": [
+              "right",
+              "left"
+            ],
+            "relation": "OVERLAP_NON_NESTED",
+            "right_subset_left": false
+          },
+          {
+            "compatible": false,
+            "edge_disjoint": false,
+            "intersection_edge_ids": [
+              "e_AC",
+              "e_BA"
+            ],
+            "left_subset_right": false,
+            "pair": [
+              "right",
+              "outer"
+            ],
+            "relation": "OVERLAP_NON_NESTED",
+            "right_subset_left": false
+          },
+          {
+            "compatible": false,
+            "edge_disjoint": false,
+            "intersection_edge_ids": [
+              "e_BI",
+              "e_IC"
+            ],
+            "left_subset_right": false,
+            "pair": [
+              "left",
+              "outer"
+            ],
+            "relation": "OVERLAP_NON_NESTED",
+            "right_subset_left": false
+          }
+        ],
+        "power_counting_forests": null,
+        "power_counting_forests_status": "BLOCKED_RHO_UNKNOWN",
+        "proper_1pi_subgraph_ids": [
+          "right",
+          "left",
+          "outer"
+        ],
+        "structurally_compatible_forests": [
+          {
+            "cardinality": 0,
+            "compatible_disjoint_or_nested": true,
+            "forest_hash": "f2b391f2e76adccabc7433a3aa395c88ddeb6ae796d8c0ea30b074b9110e2ed1",
+            "subgraph_ids": []
+          },
+          {
+            "cardinality": 1,
+            "compatible_disjoint_or_nested": true,
+            "forest_hash": "08a6e5966d392e4ca22a8b3fef56cfc271f421ab3014b56d9f7b5bd95e85b819",
+            "subgraph_ids": [
+              "left"
+            ]
+          },
+          {
+            "cardinality": 1,
+            "compatible_disjoint_or_nested": true,
+            "forest_hash": "00dc848de2f6614e96c2dd1ee300ae9e01587943f7adc8e0fb8229216e95ccc1",
+            "subgraph_ids": [
+              "outer"
+            ]
+          },
+          {
+            "cardinality": 1,
+            "compatible_disjoint_or_nested": true,
+            "forest_hash": "ed7b9f4f364e6979ec419ee67183f8841c7a82e8c3fbece96bec0bd1d5930c8f",
+            "subgraph_ids": [
+              "right"
+            ]
+          }
+        ]
+      },
+      "no_numerator_pole_or_coefficient_claim": true,
+      "power_counting": {
+        "certificate": {
+          "adapted_basis_status": "BLOCKED_COMPILED_DALGEBRA_NUMERATOR_ABSENT",
+          "certificate_hash": "047097c5d86cb15fbb21c352f1d6c4d0fc5c7890852db655d1d8394d2242109b",
+          "forbidden_inference": "DO_NOT_INFER_RHO_FROM_EDGE_COUNT_FREE_INDEX_COUNT_OR_UNCOMPILED_DALGEBRA",
+          "graph_hash": "c1c75f47543ab29ebb53137f46656705f6fca9e972a0643b96c69fd295c5a78a",
+          "rho_by_subgraph": {
+            "full": "UNKNOWN",
+            "left": "UNKNOWN",
+            "outer": "UNKNOWN",
+            "right": "UNKNOWN"
+          },
+          "rho_definition": "highest homogeneous degree under scaling of an adapted subgraph loop basis with complementary loop and physical external momenta held fixed",
+          "schema_version": "step6.numerator_scaling_certificate.v1",
+          "source_status": "UNKNOWN_NUMERATOR_DEMONSTRATION_ONLY"
+        },
+        "definition": "omega4=4*L-2*I+rho",
+        "entries": [
+          {
+            "actual_uv_pole": null,
+            "actual_uv_pole_status": "BLOCKED_POWER_COUNTING_AND_KUV_EVALUATION",
+            "counts": {
+              "I": 3,
+              "L": 1,
+              "V": 3
+            },
+            "omega4": "UNKNOWN",
+            "power_counting_status": "BLOCKED_NUMERATOR_SCALING_CERTIFICATE_RHO_UNKNOWN",
+            "proper": true,
+            "rho": "UNKNOWN",
+            "subgraph_hash": "40d4f7e0b364a66d421d2cd501437fc4f7b20ee1731f5eb3fda6fc25335da8f3",
+            "subgraph_id": "right",
+            "superficially_divergent_candidate": null
+          },
+          {
+            "actual_uv_pole": null,
+            "actual_uv_pole_status": "BLOCKED_POWER_COUNTING_AND_KUV_EVALUATION",
+            "counts": {
+              "I": 3,
+              "L": 1,
+              "V": 3
+            },
+            "omega4": "UNKNOWN",
+            "power_counting_status": "BLOCKED_NUMERATOR_SCALING_CERTIFICATE_RHO_UNKNOWN",
+            "proper": true,
+            "rho": "UNKNOWN",
+            "subgraph_hash": "6b64158a649af8dd7bb5f62316eeb9e39ef3a7e237dc103b0b4fa0805777b092",
+            "subgraph_id": "left",
+            "superficially_divergent_candidate": null
+          },
+          {
+            "actual_uv_pole": null,
+            "actual_uv_pole_status": "BLOCKED_POWER_COUNTING_AND_KUV_EVALUATION",
+            "counts": {
+              "I": 4,
+              "L": 1,
+              "V": 4
+            },
+            "omega4": "UNKNOWN",
+            "power_counting_status": "BLOCKED_NUMERATOR_SCALING_CERTIFICATE_RHO_UNKNOWN",
+            "proper": true,
+            "rho": "UNKNOWN",
+            "subgraph_hash": "d4e767d414f6440b8dc961b682eec97010a2eec7dfeefbf2757c48ee6c758ced",
+            "subgraph_id": "outer",
+            "superficially_divergent_candidate": null
+          },
+          {
+            "actual_uv_pole": null,
+            "actual_uv_pole_status": "BLOCKED_POWER_COUNTING_AND_KUV_EVALUATION",
+            "counts": {
+              "I": 5,
+              "L": 2,
+              "V": 4
+            },
+            "omega4": "UNKNOWN",
+            "power_counting_status": "BLOCKED_NUMERATOR_SCALING_CERTIFICATE_RHO_UNKNOWN",
+            "proper": false,
+            "rho": "UNKNOWN",
+            "subgraph_hash": "e3a100b95939def2116b5057d67d28441f400365c17fede8031b9865233581d7",
+            "subgraph_id": "full",
+            "superficially_divergent_candidate": null
+          }
+        ],
+        "no_pole_or_coefficient_claim": true,
+        "status": "BLOCKED_RHO_UNKNOWN_FAIL_CLOSED",
+        "unknown_subgraph_ids": [
+          "right",
+          "left",
+          "outer",
+          "full"
+        ]
+      },
+      "record_hash": "27160cfce8ac9e6de15410465aa15d7988adb8c5a6e15fae0718b324f701e817",
+      "renormalization_ast": {
+        "overall_counterterm": {
+          "argument": {
+            "forest_formula": "Rprime Phi(G)=sum_(proper compatible forests F) [product_(gamma in F) C(gamma)] star Phi(G/F)",
+            "forest_status": "BLOCKED_RHO_UNKNOWN",
+            "name": "Rprime",
+            "op": "SUM",
+            "terms": [
+              {
+                "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+                "op": "GRAPH_AMPLITUDE",
+                "symbol": "Phi(G6_DIRECT_K4ME_I2_S3SQ_S4)"
+              },
+              {
+                "activation_status": "BLOCKED_RHO_UNKNOWN",
+                "cograph": {
+                  "counts": {
+                    "I": 2,
+                    "L": 1,
+                    "V": 2
+                  },
+                  "op": "CONTRACTED_GRAPH_AMPLITUDE",
+                  "symbol": "Phi(G6_DIRECT_K4ME_I2_S3SQ_S4/left)",
+                  "typed_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+                },
+                "counterterm": {
+                  "argument": "Phi(left)",
+                  "op": "UV_POLE_PROJECTOR",
+                  "primitive_one_loop_subgraph": true,
+                  "projector": "K_UV"
+                },
+                "op": "COUNTERTERM_STAR_COGRAPH",
+                "sign": -1,
+                "subgraph_id": "left"
+              },
+              {
+                "activation_status": "BLOCKED_RHO_UNKNOWN",
+                "cograph": {
+                  "counts": {
+                    "I": 2,
+                    "L": 1,
+                    "V": 2
+                  },
+                  "op": "CONTRACTED_GRAPH_AMPLITUDE",
+                  "symbol": "Phi(G6_DIRECT_K4ME_I2_S3SQ_S4/right)",
+                  "typed_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+                },
+                "counterterm": {
+                  "argument": "Phi(right)",
+                  "op": "UV_POLE_PROJECTOR",
+                  "primitive_one_loop_subgraph": true,
+                  "projector": "K_UV"
+                },
+                "op": "COUNTERTERM_STAR_COGRAPH",
+                "sign": -1,
+                "subgraph_id": "right"
+              },
+              {
+                "activation_status": "BLOCKED_RHO_UNKNOWN",
+                "cograph": {
+                  "counts": {
+                    "I": 1,
+                    "L": 1,
+                    "V": 1
+                  },
+                  "op": "CONTRACTED_GRAPH_AMPLITUDE",
+                  "symbol": "Phi(G6_DIRECT_K4ME_I2_S3SQ_S4/outer)",
+                  "typed_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+                },
+                "counterterm": {
+                  "argument": "Phi(outer)",
+                  "op": "UV_POLE_PROJECTOR",
+                  "primitive_one_loop_subgraph": true,
+                  "projector": "K_UV"
+                },
+                "op": "COUNTERTERM_STAR_COGRAPH",
+                "sign": -1,
+                "subgraph_id": "outer"
+              }
+            ]
+          },
+          "formula": "C(G)=-K_UV Rprime Phi(G)",
+          "name": "C(G)",
+          "op": "NEGATIVE_UV_POLE_PROJECTOR",
+          "projector": "K_UV"
+        },
+        "renormalized": {
+          "argument": {
+            "forest_formula": "Rprime Phi(G)=sum_(proper compatible forests F) [product_(gamma in F) C(gamma)] star Phi(G/F)",
+            "forest_status": "BLOCKED_RHO_UNKNOWN",
+            "name": "Rprime",
+            "op": "SUM",
+            "terms": [
+              {
+                "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+                "op": "GRAPH_AMPLITUDE",
+                "symbol": "Phi(G6_DIRECT_K4ME_I2_S3SQ_S4)"
+              },
+              {
+                "activation_status": "BLOCKED_RHO_UNKNOWN",
+                "cograph": {
+                  "counts": {
+                    "I": 2,
+                    "L": 1,
+                    "V": 2
+                  },
+                  "op": "CONTRACTED_GRAPH_AMPLITUDE",
+                  "symbol": "Phi(G6_DIRECT_K4ME_I2_S3SQ_S4/left)",
+                  "typed_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+                },
+                "counterterm": {
+                  "argument": "Phi(left)",
+                  "op": "UV_POLE_PROJECTOR",
+                  "primitive_one_loop_subgraph": true,
+                  "projector": "K_UV"
+                },
+                "op": "COUNTERTERM_STAR_COGRAPH",
+                "sign": -1,
+                "subgraph_id": "left"
+              },
+              {
+                "activation_status": "BLOCKED_RHO_UNKNOWN",
+                "cograph": {
+                  "counts": {
+                    "I": 2,
+                    "L": 1,
+                    "V": 2
+                  },
+                  "op": "CONTRACTED_GRAPH_AMPLITUDE",
+                  "symbol": "Phi(G6_DIRECT_K4ME_I2_S3SQ_S4/right)",
+                  "typed_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+                },
+                "counterterm": {
+                  "argument": "Phi(right)",
+                  "op": "UV_POLE_PROJECTOR",
+                  "primitive_one_loop_subgraph": true,
+                  "projector": "K_UV"
+                },
+                "op": "COUNTERTERM_STAR_COGRAPH",
+                "sign": -1,
+                "subgraph_id": "right"
+              },
+              {
+                "activation_status": "BLOCKED_RHO_UNKNOWN",
+                "cograph": {
+                  "counts": {
+                    "I": 1,
+                    "L": 1,
+                    "V": 1
+                  },
+                  "op": "CONTRACTED_GRAPH_AMPLITUDE",
+                  "symbol": "Phi(G6_DIRECT_K4ME_I2_S3SQ_S4/outer)",
+                  "typed_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+                },
+                "counterterm": {
+                  "argument": "Phi(outer)",
+                  "op": "UV_POLE_PROJECTOR",
+                  "primitive_one_loop_subgraph": true,
+                  "projector": "K_UV"
+                },
+                "op": "COUNTERTERM_STAR_COGRAPH",
+                "sign": -1,
+                "subgraph_id": "outer"
+              }
+            ]
+          },
+          "formula": "R Phi(G)=(1-K_UV) Rprime Phi(G)",
+          "name": "R",
+          "op": "ONE_MINUS_UV_POLE_PROJECTOR",
+          "projector": "K_UV"
+        },
+        "renormalized_coefficient": null,
+        "rprime": {
+          "forest_formula": "Rprime Phi(G)=sum_(proper compatible forests F) [product_(gamma in F) C(gamma)] star Phi(G/F)",
+          "forest_status": "BLOCKED_RHO_UNKNOWN",
+          "name": "Rprime",
+          "op": "SUM",
+          "terms": [
+            {
+              "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+              "op": "GRAPH_AMPLITUDE",
+              "symbol": "Phi(G6_DIRECT_K4ME_I2_S3SQ_S4)"
+            },
+            {
+              "activation_status": "BLOCKED_RHO_UNKNOWN",
+              "cograph": {
+                "counts": {
+                  "I": 2,
+                  "L": 1,
+                  "V": 2
+                },
+                "op": "CONTRACTED_GRAPH_AMPLITUDE",
+                "symbol": "Phi(G6_DIRECT_K4ME_I2_S3SQ_S4/left)",
+                "typed_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+              },
+              "counterterm": {
+                "argument": "Phi(left)",
+                "op": "UV_POLE_PROJECTOR",
+                "primitive_one_loop_subgraph": true,
+                "projector": "K_UV"
+              },
+              "op": "COUNTERTERM_STAR_COGRAPH",
+              "sign": -1,
+              "subgraph_id": "left"
+            },
+            {
+              "activation_status": "BLOCKED_RHO_UNKNOWN",
+              "cograph": {
+                "counts": {
+                  "I": 2,
+                  "L": 1,
+                  "V": 2
+                },
+                "op": "CONTRACTED_GRAPH_AMPLITUDE",
+                "symbol": "Phi(G6_DIRECT_K4ME_I2_S3SQ_S4/right)",
+                "typed_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+              },
+              "counterterm": {
+                "argument": "Phi(right)",
+                "op": "UV_POLE_PROJECTOR",
+                "primitive_one_loop_subgraph": true,
+                "projector": "K_UV"
+              },
+              "op": "COUNTERTERM_STAR_COGRAPH",
+              "sign": -1,
+              "subgraph_id": "right"
+            },
+            {
+              "activation_status": "BLOCKED_RHO_UNKNOWN",
+              "cograph": {
+                "counts": {
+                  "I": 1,
+                  "L": 1,
+                  "V": 1
+                },
+                "op": "CONTRACTED_GRAPH_AMPLITUDE",
+                "symbol": "Phi(G6_DIRECT_K4ME_I2_S3SQ_S4/outer)",
+                "typed_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+              },
+              "counterterm": {
+                "argument": "Phi(outer)",
+                "op": "UV_POLE_PROJECTOR",
+                "primitive_one_loop_subgraph": true,
+                "projector": "K_UV"
+              },
+              "op": "COUNTERTERM_STAR_COGRAPH",
+              "sign": -1,
+              "subgraph_id": "outer"
+            }
+          ]
+        },
+        "scheme": "DRED_MINIMAL_POLE_SUBTRACTION_FOREST_COMBINATORICS",
+        "status": "BLOCKED_NUMERATOR_SCALING_CERTIFICATE",
+        "uv_pole": null,
+        "uv_projector": {
+          "definition": "K_UV[sum_n a_n epsilon^n]=sum_(n<0) a_n epsilon^n",
+          "distinct_from_superspace_projector": true,
+          "superspace_projector": "K_+=-(1/8)D_+ barD^2 D_+",
+          "symbol": "K_UV"
+        }
+      },
+      "schema_version": "step6.two_loop_forest.v1",
+      "source_graph_classification": "LITERAL_K4_MINUS_EDGE_DIRECT_PARENT",
+      "source_graph_hash": "c1c75f47543ab29ebb53137f46656705f6fca9e972a0643b96c69fd295c5a78a",
+      "source_graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+      "stage": "PROPOSAL_ONLY_TOPOLOGY_FOREST_DRED_ARCHITECTURE"
+    },
+    {
+      "connected_census": [
+        {
+          "I": 1,
+          "L": 0,
+          "V": 2,
+          "count": 5,
+          "omega4_formula": "rho+-2",
+          "one_particle_irreducible": false
+        },
+        {
+          "I": 2,
+          "L": 0,
+          "V": 3,
+          "count": 8,
+          "omega4_formula": "rho+-4",
+          "one_particle_irreducible": false
+        },
+        {
+          "I": 3,
+          "L": 0,
+          "V": 4,
+          "count": 8,
+          "omega4_formula": "rho+-6",
+          "one_particle_irreducible": false
+        },
+        {
+          "I": 3,
+          "L": 1,
+          "V": 3,
+          "count": 2,
+          "omega4_formula": "rho+-2",
+          "one_particle_irreducible": true
+        },
+        {
+          "I": 4,
+          "L": 1,
+          "V": 4,
+          "count": 4,
+          "omega4_formula": "rho+-4",
+          "one_particle_irreducible": false
+        },
+        {
+          "I": 4,
+          "L": 1,
+          "V": 4,
+          "count": 1,
+          "omega4_formula": "rho+-4",
+          "one_particle_irreducible": true
+        },
+        {
+          "I": 5,
+          "L": 2,
+          "V": 4,
+          "count": 1,
+          "omega4_formula": "rho+-2",
+          "one_particle_irreducible": true
+        }
+      ],
+      "connected_edge_subgraphs": [
+        {
+          "connected": true,
+          "counts": {
+            "I": 1,
+            "L": 0,
+            "V": 2
+          },
+          "edge_ids": [
+            "e_AI"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "5aa5c4fefb1014eb7e217d726e7657f40081f3143ee015e0cf41774e47481758",
+          "subgraph_id": "H_ccd85d1d89ef869d",
+          "superficial_degree_formula": "omega4=4*0-2*1+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 1,
+            "L": 0,
+            "V": 2
+          },
+          "edge_ids": [
+            "e_BA"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "dd49e3eeee9344e1c98939dbf96ac861a42c85f2e93b01183df6348141445499",
+          "subgraph_id": "H_1037854d2ee54cbc",
+          "superficial_degree_formula": "omega4=4*0-2*1+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 1,
+            "L": 0,
+            "V": 2
+          },
+          "edge_ids": [
+            "e_BC"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "d461751f29f803d13f5ca1ff2e6778109b324f02c1451f3cc7b77ffb39737df4",
+          "subgraph_id": "H_7c5f1738290d007b",
+          "superficial_degree_formula": "omega4=4*0-2*1+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "B",
+            "C"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 1,
+            "L": 0,
+            "V": 2
+          },
+          "edge_ids": [
+            "e_CA"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "fb333aeb0055d40fd61f846daeeebe228abb199974c1f8aa00ca36e17f93f4a3",
+          "subgraph_id": "H_e70189a028744c21",
+          "superficial_degree_formula": "omega4=4*0-2*1+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "C"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 1,
+            "L": 0,
+            "V": 2
+          },
+          "edge_ids": [
+            "e_IB"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "f445999dd6a177c509c7ddf06a7b454ca7c085bc891328c887c6b244257c3713",
+          "subgraph_id": "H_b2495d86bc637695",
+          "superficial_degree_formula": "omega4=4*0-2*1+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "B",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 2,
+            "L": 0,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_AI",
+            "e_BA"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "c495ac00102f8745c44282da5d13e9c1d970c6a216d4e9a1c4a746b7a0c695b3",
+          "subgraph_id": "H_8bc6ae4bf97301c5",
+          "superficial_degree_formula": "omega4=4*0-2*2+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 2,
+            "L": 0,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_AI",
+            "e_CA"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "3396277e4b85959795131d672aeeba95a9bbe5cc62a013141fa6ff01043a2cc2",
+          "subgraph_id": "H_e5f33174a4533fb1",
+          "superficial_degree_formula": "omega4=4*0-2*2+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 2,
+            "L": 0,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_AI",
+            "e_IB"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "f8aa187b50b8a6dc6e84084c545c5383cdc8c8a92b7ca5b286206c8b023fdc9e",
+          "subgraph_id": "H_a71fc713e5901115",
+          "superficial_degree_formula": "omega4=4*0-2*2+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 2,
+            "L": 0,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_BA",
+            "e_BC"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "962b94332fe871a45689fc50318bc4d3a219a90ebf6fb838d981efe65f0efdda",
+          "subgraph_id": "H_fd4f5e6d67aa90f3",
+          "superficial_degree_formula": "omega4=4*0-2*2+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 2,
+            "L": 0,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_BA",
+            "e_CA"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "05354d592d54aad98366146d5d85f20681496d30db753577e234022098b78b3c",
+          "subgraph_id": "H_f514020d0b44f55e",
+          "superficial_degree_formula": "omega4=4*0-2*2+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 2,
+            "L": 0,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_BA",
+            "e_IB"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "a3c3f037cd1860ee980616c2d38408ecdf129abdf35d250ff6051a003d544a51",
+          "subgraph_id": "H_889a5b2264e4bd67",
+          "superficial_degree_formula": "omega4=4*0-2*2+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 2,
+            "L": 0,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_BC",
+            "e_CA"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "c0965fb8cf036fe2aed6e5df1133d1a559a5f22faee399771e6fffc87bf72d0b",
+          "subgraph_id": "H_a29584331320bd0e",
+          "superficial_degree_formula": "omega4=4*0-2*2+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 2,
+            "L": 0,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_BC",
+            "e_IB"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "996467daba16348a03b149a63269697effd10fa962a36e19af6f277141471c5c",
+          "subgraph_id": "H_61e9fde8b7f0f51d",
+          "superficial_degree_formula": "omega4=4*0-2*2+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 1,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_AI",
+            "e_BA",
+            "e_IB"
+          ],
+          "one_particle_irreducible": true,
+          "proper": true,
+          "role": "NAMED_ONE_LOOP_CYCLE",
+          "subgraph_hash": "ace41b730f1de86942c2f22f8332648d4dbaa9ee054dfcb1508e7e4a1ad43536",
+          "subgraph_id": "left",
+          "superficial_degree_formula": "omega4=4*1-2*3+rho",
+          "topology_status": "ONE_PARTICLE_IRREDUCIBLE",
+          "vertex_ids": [
+            "A",
+            "B",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 1,
+            "V": 3
+          },
+          "edge_ids": [
+            "e_BA",
+            "e_BC",
+            "e_CA"
+          ],
+          "one_particle_irreducible": true,
+          "proper": true,
+          "role": "NAMED_ONE_LOOP_CYCLE",
+          "subgraph_hash": "770abd2c47273a37e438a669b71555a8984ee5ccc0f641e2a7a7e8eac0dc3014",
+          "subgraph_id": "right",
+          "superficial_degree_formula": "omega4=4*1-2*3+rho",
+          "topology_status": "ONE_PARTICLE_IRREDUCIBLE",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 0,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AI",
+            "e_BA",
+            "e_BC"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "cb5fae2e238ad26bbe23124974b0a3a11abec7d7a92eaeb6a63964d9be013d76",
+          "subgraph_id": "H_835c8d51ae1809b9",
+          "superficial_degree_formula": "omega4=4*0-2*3+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 0,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AI",
+            "e_BA",
+            "e_CA"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "eaaf1d60db03f17f894e4bd60fda73712869b663b7e178923ec3f578b33d88f1",
+          "subgraph_id": "H_c27e6322d560594d",
+          "superficial_degree_formula": "omega4=4*0-2*3+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 0,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AI",
+            "e_BC",
+            "e_CA"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "5d9c20b9f729324751b9a2fd3006d6029e7734ce0d981a8d2cd48316413a7e0d",
+          "subgraph_id": "H_8d9b6084b5ecd216",
+          "superficial_degree_formula": "omega4=4*0-2*3+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 0,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AI",
+            "e_BC",
+            "e_IB"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "a0439584e7d1e5c8359a242692c5653ee4ef9c1de3b9a3698ad86a071a157b11",
+          "subgraph_id": "H_11611be2d4d61506",
+          "superficial_degree_formula": "omega4=4*0-2*3+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 0,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AI",
+            "e_CA",
+            "e_IB"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "0be4f9a0d12846deed266340edf249cc94379a9407b4b08b62374727524a9fbe",
+          "subgraph_id": "H_8922c9ec791b9222",
+          "superficial_degree_formula": "omega4=4*0-2*3+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 0,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_BA",
+            "e_BC",
+            "e_IB"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "40881d8aecd345e8d35e5719490966c238c2a018b2c6b331bd8caee867d2a5de",
+          "subgraph_id": "H_caca1f7099b7d7ed",
+          "superficial_degree_formula": "omega4=4*0-2*3+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 0,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_BA",
+            "e_CA",
+            "e_IB"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "bc29f43b4d916d704239f03f3da98c757e91ddcc9198167edac93165a5320526",
+          "subgraph_id": "H_6192109a3f2ac185",
+          "superficial_degree_formula": "omega4=4*0-2*3+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 3,
+            "L": 0,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_BC",
+            "e_CA",
+            "e_IB"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "7fb302c9ddd5babc8b5201410e8fd217666a078dac6db5111b02264049c9a0e4",
+          "subgraph_id": "H_2f60cf07973c6b13",
+          "superficial_degree_formula": "omega4=4*0-2*3+rho",
+          "topology_status": "TREE_NO_LOOP_INTEGRATION",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 4,
+            "L": 1,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AI",
+            "e_BA",
+            "e_BC",
+            "e_CA"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "dc8f50ba4ec18b7c0031843702e4df05174a3a313b7a706b0879514fa1f80de8",
+          "subgraph_id": "H_7fae66adc8b45b10",
+          "superficial_degree_formula": "omega4=4*1-2*4+rho",
+          "topology_status": "CONTAINS_BRIDGE_NOT_RENORMALIZATION_PART",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 4,
+            "L": 1,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AI",
+            "e_BA",
+            "e_BC",
+            "e_IB"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "4d5cce3fd6becdcd02204e31e3173a367287cedb6d85dd4e2dd3cbe2ef220935",
+          "subgraph_id": "H_fd7c202206df37ab",
+          "superficial_degree_formula": "omega4=4*1-2*4+rho",
+          "topology_status": "CONTAINS_BRIDGE_NOT_RENORMALIZATION_PART",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 4,
+            "L": 1,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AI",
+            "e_BA",
+            "e_CA",
+            "e_IB"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "9a4359d55dfa6a93b58465766ba07834ab767fec1193e207e48223eb4ce2c3ac",
+          "subgraph_id": "H_4dbfca3f70bdeea1",
+          "superficial_degree_formula": "omega4=4*1-2*4+rho",
+          "topology_status": "CONTAINS_BRIDGE_NOT_RENORMALIZATION_PART",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 4,
+            "L": 1,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AI",
+            "e_BC",
+            "e_CA",
+            "e_IB"
+          ],
+          "one_particle_irreducible": true,
+          "proper": true,
+          "role": "NAMED_ONE_LOOP_CYCLE",
+          "subgraph_hash": "1e1e083ec00fdc683b8f6c0dc5963617684bab584dc3daf04bd9c232d5a6f515",
+          "subgraph_id": "outer",
+          "superficial_degree_formula": "omega4=4*1-2*4+rho",
+          "topology_status": "ONE_PARTICLE_IRREDUCIBLE",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 4,
+            "L": 1,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_BA",
+            "e_BC",
+            "e_CA",
+            "e_IB"
+          ],
+          "one_particle_irreducible": false,
+          "proper": true,
+          "role": "CONNECTED_NON_1PI",
+          "subgraph_hash": "e2d1b4934428e2f49003ed84819970baaaee87e58d5d3d30163d8546b63bab95",
+          "subgraph_id": "H_ab6e4b8fea030fb2",
+          "superficial_degree_formula": "omega4=4*1-2*4+rho",
+          "topology_status": "CONTAINS_BRIDGE_NOT_RENORMALIZATION_PART",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        },
+        {
+          "connected": true,
+          "counts": {
+            "I": 5,
+            "L": 2,
+            "V": 4
+          },
+          "edge_ids": [
+            "e_AI",
+            "e_BA",
+            "e_BC",
+            "e_CA",
+            "e_IB"
+          ],
+          "one_particle_irreducible": true,
+          "proper": false,
+          "role": "FULL_GRAPH",
+          "subgraph_hash": "bdbbbc5864ada4fd670455635229c8865c09fe208d254cd68eb771571cc6d9b7",
+          "subgraph_id": "full",
+          "superficial_degree_formula": "omega4=4*2-2*5+rho",
+          "topology_status": "ONE_PARTICLE_IRREDUCIBLE",
+          "vertex_ids": [
+            "A",
+            "B",
+            "C",
+            "I"
+          ]
+        }
+      ],
+      "contractions": {
+        "cographs": [
+          {
+            "connected": true,
+            "contracted_vertex": "C_left",
+            "contraction_hash": "4d642b317a7931867f65e4b169b0a6faf25f71320c5cd12724e4ca079b72115b",
+            "count_identity": {
+              "I_G_minus_I_gamma": 2,
+              "L_G_minus_L_gamma": 1,
+              "V_G_minus_V_gamma_plus_one": 2
+            },
+            "counts": {
+              "I": 2,
+              "L": 1,
+              "V": 2
+            },
+            "reduced_topology": "TWO_EDGE_ONE_LOOP_BUBBLE",
+            "remaining_edges": [
+              {
+                "edge_id": "e_CA",
+                "self_loop": false,
+                "source": "C",
+                "target": "C_left"
+              },
+              {
+                "edge_id": "e_BC",
+                "self_loop": false,
+                "source": "C_left",
+                "target": "C"
+              }
+            ],
+            "scaleless_status": "NOT_EVALUATED_REQUIRES_CONTRACTED_NUMERATOR_AND_EXTERNAL_INJECTION",
+            "subgraph_hash": "ace41b730f1de86942c2f22f8332648d4dbaa9ee054dfcb1508e7e4a1ad43536",
+            "subgraph_id": "left",
+            "topology_status": "CERTIFIED_FROM_EDGE_CONTRACTION",
+            "typed_counterterm_port_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+          },
+          {
+            "connected": true,
+            "contracted_vertex": "C_right",
+            "contraction_hash": "f36b27444931f90682763db51b903d27dfefcd316fffae56d3931d55421f93c1",
+            "count_identity": {
+              "I_G_minus_I_gamma": 2,
+              "L_G_minus_L_gamma": 1,
+              "V_G_minus_V_gamma_plus_one": 2
+            },
+            "counts": {
+              "I": 2,
+              "L": 1,
+              "V": 2
+            },
+            "reduced_topology": "TWO_EDGE_ONE_LOOP_BUBBLE",
+            "remaining_edges": [
+              {
+                "edge_id": "e_AI",
+                "self_loop": false,
+                "source": "C_right",
+                "target": "I"
+              },
+              {
+                "edge_id": "e_IB",
+                "self_loop": false,
+                "source": "I",
+                "target": "C_right"
+              }
+            ],
+            "scaleless_status": "NOT_EVALUATED_REQUIRES_CONTRACTED_NUMERATOR_AND_EXTERNAL_INJECTION",
+            "subgraph_hash": "770abd2c47273a37e438a669b71555a8984ee5ccc0f641e2a7a7e8eac0dc3014",
+            "subgraph_id": "right",
+            "topology_status": "CERTIFIED_FROM_EDGE_CONTRACTION",
+            "typed_counterterm_port_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+          },
+          {
+            "connected": true,
+            "contracted_vertex": "C_outer",
+            "contraction_hash": "73760c8f8a6e2771a8dd72cadbcf64b2ee7e66a33f59251ff4b7467fafd0f31c",
+            "count_identity": {
+              "I_G_minus_I_gamma": 1,
+              "L_G_minus_L_gamma": 1,
+              "V_G_minus_V_gamma_plus_one": 1
+            },
+            "counts": {
+              "I": 1,
+              "L": 1,
+              "V": 1
+            },
+            "reduced_topology": "ONE_EDGE_SELF_LOOP_TADPOLE",
+            "remaining_edges": [
+              {
+                "edge_id": "e_BA",
+                "self_loop": true,
+                "source": "C_outer",
+                "target": "C_outer"
+              }
+            ],
+            "scaleless_status": "NOT_EVALUATED_REQUIRES_CONTRACTED_NUMERATOR_AND_EXTERNAL_INJECTION",
+            "subgraph_hash": "1e1e083ec00fdc683b8f6c0dc5963617684bab584dc3daf04bd9c232d5a6f515",
+            "subgraph_id": "outer",
+            "topology_status": "CERTIFIED_FROM_EDGE_CONTRACTION",
+            "typed_counterterm_port_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+          }
+        ],
+        "rule": "contract selected subgraph edges and identify all selected vertices",
+        "typed_status": "BLOCKED_COUNTERTERM_OPERATOR_TYPES_NOT_COMPILED"
+      },
+      "forests": {
+        "compatibility_rule": "edge-disjoint or one edge-set contained in the other",
+        "current_graph_maximum_structural_forest_cardinality": 1,
+        "pair_relations": [
+          {
+            "compatible": false,
+            "edge_disjoint": false,
+            "intersection_edge_ids": [
+              "e_BA"
+            ],
+            "left_subset_right": false,
+            "pair": [
+              "left",
+              "right"
+            ],
+            "relation": "OVERLAP_NON_NESTED",
+            "right_subset_left": false
+          },
+          {
+            "compatible": false,
+            "edge_disjoint": false,
+            "intersection_edge_ids": [
+              "e_AI",
+              "e_IB"
+            ],
+            "left_subset_right": false,
+            "pair": [
+              "left",
+              "outer"
+            ],
+            "relation": "OVERLAP_NON_NESTED",
+            "right_subset_left": false
+          },
+          {
+            "compatible": false,
+            "edge_disjoint": false,
+            "intersection_edge_ids": [
+              "e_BC",
+              "e_CA"
+            ],
+            "left_subset_right": false,
+            "pair": [
+              "right",
+              "outer"
+            ],
+            "relation": "OVERLAP_NON_NESTED",
+            "right_subset_left": false
+          }
+        ],
+        "power_counting_forests": null,
+        "power_counting_forests_status": "BLOCKED_RHO_UNKNOWN",
+        "proper_1pi_subgraph_ids": [
+          "left",
+          "right",
+          "outer"
+        ],
+        "structurally_compatible_forests": [
+          {
+            "cardinality": 0,
+            "compatible_disjoint_or_nested": true,
+            "forest_hash": "f2b391f2e76adccabc7433a3aa395c88ddeb6ae796d8c0ea30b074b9110e2ed1",
+            "subgraph_ids": []
+          },
+          {
+            "cardinality": 1,
+            "compatible_disjoint_or_nested": true,
+            "forest_hash": "08a6e5966d392e4ca22a8b3fef56cfc271f421ab3014b56d9f7b5bd95e85b819",
+            "subgraph_ids": [
+              "left"
+            ]
+          },
+          {
+            "cardinality": 1,
+            "compatible_disjoint_or_nested": true,
+            "forest_hash": "00dc848de2f6614e96c2dd1ee300ae9e01587943f7adc8e0fb8229216e95ccc1",
+            "subgraph_ids": [
+              "outer"
+            ]
+          },
+          {
+            "cardinality": 1,
+            "compatible_disjoint_or_nested": true,
+            "forest_hash": "ed7b9f4f364e6979ec419ee67183f8841c7a82e8c3fbece96bec0bd1d5930c8f",
+            "subgraph_ids": [
+              "right"
+            ]
+          }
+        ]
+      },
+      "no_numerator_pole_or_coefficient_claim": true,
+      "power_counting": {
+        "certificate": {
+          "adapted_basis_status": "BLOCKED_COMPILED_DALGEBRA_NUMERATOR_ABSENT",
+          "certificate_hash": "15538a1b645202d437b59f903567c719c66872a6503e8454bd5bf002739a9a25",
+          "forbidden_inference": "DO_NOT_INFER_RHO_FROM_EDGE_COUNT_FREE_INDEX_COUNT_OR_UNCOMPILED_DALGEBRA",
+          "graph_hash": "84137962e3a5d40a2be79e124cc85f3fdd180a42cf7119c3464e7da6f620baa3",
+          "rho_by_subgraph": {
+            "full": "UNKNOWN",
+            "left": "UNKNOWN",
+            "outer": "UNKNOWN",
+            "right": "UNKNOWN"
+          },
+          "rho_definition": "highest homogeneous degree under scaling of an adapted subgraph loop basis with complementary loop and physical external momenta held fixed",
+          "schema_version": "step6.numerator_scaling_certificate.v1",
+          "source_status": "UNKNOWN_NUMERATOR_DEMONSTRATION_ONLY"
+        },
+        "definition": "omega4=4*L-2*I+rho",
+        "entries": [
+          {
+            "actual_uv_pole": null,
+            "actual_uv_pole_status": "BLOCKED_POWER_COUNTING_AND_KUV_EVALUATION",
+            "counts": {
+              "I": 3,
+              "L": 1,
+              "V": 3
+            },
+            "omega4": "UNKNOWN",
+            "power_counting_status": "BLOCKED_NUMERATOR_SCALING_CERTIFICATE_RHO_UNKNOWN",
+            "proper": true,
+            "rho": "UNKNOWN",
+            "subgraph_hash": "ace41b730f1de86942c2f22f8332648d4dbaa9ee054dfcb1508e7e4a1ad43536",
+            "subgraph_id": "left",
+            "superficially_divergent_candidate": null
+          },
+          {
+            "actual_uv_pole": null,
+            "actual_uv_pole_status": "BLOCKED_POWER_COUNTING_AND_KUV_EVALUATION",
+            "counts": {
+              "I": 3,
+              "L": 1,
+              "V": 3
+            },
+            "omega4": "UNKNOWN",
+            "power_counting_status": "BLOCKED_NUMERATOR_SCALING_CERTIFICATE_RHO_UNKNOWN",
+            "proper": true,
+            "rho": "UNKNOWN",
+            "subgraph_hash": "770abd2c47273a37e438a669b71555a8984ee5ccc0f641e2a7a7e8eac0dc3014",
+            "subgraph_id": "right",
+            "superficially_divergent_candidate": null
+          },
+          {
+            "actual_uv_pole": null,
+            "actual_uv_pole_status": "BLOCKED_POWER_COUNTING_AND_KUV_EVALUATION",
+            "counts": {
+              "I": 4,
+              "L": 1,
+              "V": 4
+            },
+            "omega4": "UNKNOWN",
+            "power_counting_status": "BLOCKED_NUMERATOR_SCALING_CERTIFICATE_RHO_UNKNOWN",
+            "proper": true,
+            "rho": "UNKNOWN",
+            "subgraph_hash": "1e1e083ec00fdc683b8f6c0dc5963617684bab584dc3daf04bd9c232d5a6f515",
+            "subgraph_id": "outer",
+            "superficially_divergent_candidate": null
+          },
+          {
+            "actual_uv_pole": null,
+            "actual_uv_pole_status": "BLOCKED_POWER_COUNTING_AND_KUV_EVALUATION",
+            "counts": {
+              "I": 5,
+              "L": 2,
+              "V": 4
+            },
+            "omega4": "UNKNOWN",
+            "power_counting_status": "BLOCKED_NUMERATOR_SCALING_CERTIFICATE_RHO_UNKNOWN",
+            "proper": false,
+            "rho": "UNKNOWN",
+            "subgraph_hash": "bdbbbc5864ada4fd670455635229c8865c09fe208d254cd68eb771571cc6d9b7",
+            "subgraph_id": "full",
+            "superficially_divergent_candidate": null
+          }
+        ],
+        "no_pole_or_coefficient_claim": true,
+        "status": "BLOCKED_RHO_UNKNOWN_FAIL_CLOSED",
+        "unknown_subgraph_ids": [
+          "left",
+          "right",
+          "outer",
+          "full"
+        ]
+      },
+      "record_hash": "1c6050fc1c48c0b01a7dcbe5749e4ce38e1714aaccea72d706b78737ca63fad6",
+      "renormalization_ast": {
+        "overall_counterterm": {
+          "argument": {
+            "forest_formula": "Rprime Phi(G)=sum_(proper compatible forests F) [product_(gamma in F) C(gamma)] star Phi(G/F)",
+            "forest_status": "BLOCKED_RHO_UNKNOWN",
+            "name": "Rprime",
+            "op": "SUM",
+            "terms": [
+              {
+                "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+                "op": "GRAPH_AMPLITUDE",
+                "symbol": "Phi(G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4)"
+              },
+              {
+                "activation_status": "BLOCKED_RHO_UNKNOWN",
+                "cograph": {
+                  "counts": {
+                    "I": 2,
+                    "L": 1,
+                    "V": 2
+                  },
+                  "op": "CONTRACTED_GRAPH_AMPLITUDE",
+                  "symbol": "Phi(G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4/left)",
+                  "typed_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+                },
+                "counterterm": {
+                  "argument": "Phi(left)",
+                  "op": "UV_POLE_PROJECTOR",
+                  "primitive_one_loop_subgraph": true,
+                  "projector": "K_UV"
+                },
+                "op": "COUNTERTERM_STAR_COGRAPH",
+                "sign": -1,
+                "subgraph_id": "left"
+              },
+              {
+                "activation_status": "BLOCKED_RHO_UNKNOWN",
+                "cograph": {
+                  "counts": {
+                    "I": 2,
+                    "L": 1,
+                    "V": 2
+                  },
+                  "op": "CONTRACTED_GRAPH_AMPLITUDE",
+                  "symbol": "Phi(G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4/right)",
+                  "typed_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+                },
+                "counterterm": {
+                  "argument": "Phi(right)",
+                  "op": "UV_POLE_PROJECTOR",
+                  "primitive_one_loop_subgraph": true,
+                  "projector": "K_UV"
+                },
+                "op": "COUNTERTERM_STAR_COGRAPH",
+                "sign": -1,
+                "subgraph_id": "right"
+              },
+              {
+                "activation_status": "BLOCKED_RHO_UNKNOWN",
+                "cograph": {
+                  "counts": {
+                    "I": 1,
+                    "L": 1,
+                    "V": 1
+                  },
+                  "op": "CONTRACTED_GRAPH_AMPLITUDE",
+                  "symbol": "Phi(G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4/outer)",
+                  "typed_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+                },
+                "counterterm": {
+                  "argument": "Phi(outer)",
+                  "op": "UV_POLE_PROJECTOR",
+                  "primitive_one_loop_subgraph": true,
+                  "projector": "K_UV"
+                },
+                "op": "COUNTERTERM_STAR_COGRAPH",
+                "sign": -1,
+                "subgraph_id": "outer"
+              }
+            ]
+          },
+          "formula": "C(G)=-K_UV Rprime Phi(G)",
+          "name": "C(G)",
+          "op": "NEGATIVE_UV_POLE_PROJECTOR",
+          "projector": "K_UV"
+        },
+        "renormalized": {
+          "argument": {
+            "forest_formula": "Rprime Phi(G)=sum_(proper compatible forests F) [product_(gamma in F) C(gamma)] star Phi(G/F)",
+            "forest_status": "BLOCKED_RHO_UNKNOWN",
+            "name": "Rprime",
+            "op": "SUM",
+            "terms": [
+              {
+                "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+                "op": "GRAPH_AMPLITUDE",
+                "symbol": "Phi(G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4)"
+              },
+              {
+                "activation_status": "BLOCKED_RHO_UNKNOWN",
+                "cograph": {
+                  "counts": {
+                    "I": 2,
+                    "L": 1,
+                    "V": 2
+                  },
+                  "op": "CONTRACTED_GRAPH_AMPLITUDE",
+                  "symbol": "Phi(G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4/left)",
+                  "typed_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+                },
+                "counterterm": {
+                  "argument": "Phi(left)",
+                  "op": "UV_POLE_PROJECTOR",
+                  "primitive_one_loop_subgraph": true,
+                  "projector": "K_UV"
+                },
+                "op": "COUNTERTERM_STAR_COGRAPH",
+                "sign": -1,
+                "subgraph_id": "left"
+              },
+              {
+                "activation_status": "BLOCKED_RHO_UNKNOWN",
+                "cograph": {
+                  "counts": {
+                    "I": 2,
+                    "L": 1,
+                    "V": 2
+                  },
+                  "op": "CONTRACTED_GRAPH_AMPLITUDE",
+                  "symbol": "Phi(G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4/right)",
+                  "typed_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+                },
+                "counterterm": {
+                  "argument": "Phi(right)",
+                  "op": "UV_POLE_PROJECTOR",
+                  "primitive_one_loop_subgraph": true,
+                  "projector": "K_UV"
+                },
+                "op": "COUNTERTERM_STAR_COGRAPH",
+                "sign": -1,
+                "subgraph_id": "right"
+              },
+              {
+                "activation_status": "BLOCKED_RHO_UNKNOWN",
+                "cograph": {
+                  "counts": {
+                    "I": 1,
+                    "L": 1,
+                    "V": 1
+                  },
+                  "op": "CONTRACTED_GRAPH_AMPLITUDE",
+                  "symbol": "Phi(G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4/outer)",
+                  "typed_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+                },
+                "counterterm": {
+                  "argument": "Phi(outer)",
+                  "op": "UV_POLE_PROJECTOR",
+                  "primitive_one_loop_subgraph": true,
+                  "projector": "K_UV"
+                },
+                "op": "COUNTERTERM_STAR_COGRAPH",
+                "sign": -1,
+                "subgraph_id": "outer"
+              }
+            ]
+          },
+          "formula": "R Phi(G)=(1-K_UV) Rprime Phi(G)",
+          "name": "R",
+          "op": "ONE_MINUS_UV_POLE_PROJECTOR",
+          "projector": "K_UV"
+        },
+        "renormalized_coefficient": null,
+        "rprime": {
+          "forest_formula": "Rprime Phi(G)=sum_(proper compatible forests F) [product_(gamma in F) C(gamma)] star Phi(G/F)",
+          "forest_status": "BLOCKED_RHO_UNKNOWN",
+          "name": "Rprime",
+          "op": "SUM",
+          "terms": [
+            {
+              "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+              "op": "GRAPH_AMPLITUDE",
+              "symbol": "Phi(G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4)"
+            },
+            {
+              "activation_status": "BLOCKED_RHO_UNKNOWN",
+              "cograph": {
+                "counts": {
+                  "I": 2,
+                  "L": 1,
+                  "V": 2
+                },
+                "op": "CONTRACTED_GRAPH_AMPLITUDE",
+                "symbol": "Phi(G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4/left)",
+                "typed_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+              },
+              "counterterm": {
+                "argument": "Phi(left)",
+                "op": "UV_POLE_PROJECTOR",
+                "primitive_one_loop_subgraph": true,
+                "projector": "K_UV"
+              },
+              "op": "COUNTERTERM_STAR_COGRAPH",
+              "sign": -1,
+              "subgraph_id": "left"
+            },
+            {
+              "activation_status": "BLOCKED_RHO_UNKNOWN",
+              "cograph": {
+                "counts": {
+                  "I": 2,
+                  "L": 1,
+                  "V": 2
+                },
+                "op": "CONTRACTED_GRAPH_AMPLITUDE",
+                "symbol": "Phi(G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4/right)",
+                "typed_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+              },
+              "counterterm": {
+                "argument": "Phi(right)",
+                "op": "UV_POLE_PROJECTOR",
+                "primitive_one_loop_subgraph": true,
+                "projector": "K_UV"
+              },
+              "op": "COUNTERTERM_STAR_COGRAPH",
+              "sign": -1,
+              "subgraph_id": "right"
+            },
+            {
+              "activation_status": "BLOCKED_RHO_UNKNOWN",
+              "cograph": {
+                "counts": {
+                  "I": 1,
+                  "L": 1,
+                  "V": 1
+                },
+                "op": "CONTRACTED_GRAPH_AMPLITUDE",
+                "symbol": "Phi(G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4/outer)",
+                "typed_status": "BLOCKED_LOCAL_COUNTERTERM_OPERATOR_AND_TYPED_PORT_SIGNATURE_ABSENT"
+              },
+              "counterterm": {
+                "argument": "Phi(outer)",
+                "op": "UV_POLE_PROJECTOR",
+                "primitive_one_loop_subgraph": true,
+                "projector": "K_UV"
+              },
+              "op": "COUNTERTERM_STAR_COGRAPH",
+              "sign": -1,
+              "subgraph_id": "outer"
+            }
+          ]
+        },
+        "scheme": "DRED_MINIMAL_POLE_SUBTRACTION_FOREST_COMBINATORICS",
+        "status": "BLOCKED_NUMERATOR_SCALING_CERTIFICATE",
+        "uv_pole": null,
+        "uv_projector": {
+          "definition": "K_UV[sum_n a_n epsilon^n]=sum_(n<0) a_n epsilon^n",
+          "distinct_from_superspace_projector": true,
+          "superspace_projector": "K_+=-(1/8)D_+ barD^2 D_+",
+          "symbol": "K_UV"
+        }
+      },
+      "schema_version": "step6.two_loop_forest.v1",
+      "source_graph_classification": "LITERAL_K4_MINUS_EDGE_DIRECT_PARENT",
+      "source_graph_hash": "84137962e3a5d40a2be79e124cc85f3fdd180a42cf7119c3464e7da6f620baa3",
+      "source_graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+      "stage": "PROPOSAL_ONLY_TOPOLOGY_FOREST_DRED_ARCHITECTURE"
+    }
+  ],
+  "schema_version": "step6.two_loop_forest.v1"
+}

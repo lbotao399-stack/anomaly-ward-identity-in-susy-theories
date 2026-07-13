@@ -1,0 +1,299 @@
+{
+  "graph_schemas": [
+    {
+      "derivative_token": {
+        "kinds": {
+          "BAR_D": {
+            "index_arity": 1,
+            "parity": 1,
+            "spinor_index_space": "DOTTED"
+          },
+          "BAR_D2": {
+            "index_arity": 2,
+            "parity": 0,
+            "spinor_index_space": "DOTTED"
+          },
+          "D": {
+            "index_arity": 1,
+            "parity": 1,
+            "spinor_index_space": "UNDOTTED"
+          },
+          "D2": {
+            "index_arity": 2,
+            "parity": 0,
+            "spinor_index_space": "UNDOTTED"
+          }
+        },
+        "momentum_rule": "exact oriented edge momentum; orientation_sign_from_edge is +1 or -1",
+        "required_fields": [
+          "token_id",
+          "derivative_kind",
+          "spinor_index_space",
+          "spinor_indices",
+          "operator_parity",
+          "edge_id",
+          "endpoint_port_id",
+          "momentum"
+        ]
+      },
+      "exact_scalar_domain": "Q(i)",
+      "graph_binding": {
+        "graph_hash": "5cbf5cea3c11f28278e0366aaf48206a8fbb9c57a0c3d63a357a99ff0c519fcf",
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "topology": "K4_MINUS_ONE_EDGE"
+      },
+      "ordered_scope_ast_nodes": [
+        "ORDERED_SCOPE",
+        "ORDERED_PRODUCT",
+        "DERIVATIVE_APPLICATION",
+        "LINEAR_COMBINATION",
+        "FIELD_PORT"
+      ],
+      "polynomial_oracle_gate": {
+        "forbidden_sampling_keys": [
+          "numerical_check",
+          "probe",
+          "probes",
+          "random_check",
+          "sample",
+          "sample_point",
+          "sample_points",
+          "samples"
+        ],
+        "method": "EXACT_MONOMIAL_COEFFICIENT_COMPARISON",
+        "proof_mode": "EXACT_SYMBOLIC_POLYNOMIAL_IDENTITY"
+      },
+      "propagator_kernel": {
+        "explicit_fields": [
+          "ordered_derivative_tokens",
+          "grassmann_delta_ast",
+          "scalar_denominator_ast",
+          "oracle_identity_ids"
+        ],
+        "kernel_node_type": "ORDERED_PROPAGATOR_KERNEL",
+        "one_per_edge": [
+          "e_AI",
+          "e_BI",
+          "e_CA",
+          "e_CB",
+          "e_CI"
+        ]
+      },
+      "required_paths": [
+        "wick_record.schema_version",
+        "wick_record.graph_id",
+        "wick_record.graph_hash",
+        "wick_record.notation_schema_hash",
+        "wick_record.wick_complete",
+        "wick_record.wick_pairings",
+        "wick_record.wick_completeness_certificate",
+        "wick_record.ordered_derivative_scope_ast",
+        "wick_record.exact_sign_koszul_ledger",
+        "wick_record.polynomial_oracle",
+        "wick_record.propagator_kernels[e_AI]",
+        "wick_record.propagator_kernels[e_BI]",
+        "wick_record.propagator_kernels[e_CA]",
+        "wick_record.propagator_kernels[e_CB]",
+        "wick_record.propagator_kernels[e_CI]"
+      ],
+      "schema_version": "step6.wick_complete_dword_input.v1"
+    },
+    {
+      "derivative_token": {
+        "kinds": {
+          "BAR_D": {
+            "index_arity": 1,
+            "parity": 1,
+            "spinor_index_space": "DOTTED"
+          },
+          "BAR_D2": {
+            "index_arity": 2,
+            "parity": 0,
+            "spinor_index_space": "DOTTED"
+          },
+          "D": {
+            "index_arity": 1,
+            "parity": 1,
+            "spinor_index_space": "UNDOTTED"
+          },
+          "D2": {
+            "index_arity": 2,
+            "parity": 0,
+            "spinor_index_space": "UNDOTTED"
+          }
+        },
+        "momentum_rule": "exact oriented edge momentum; orientation_sign_from_edge is +1 or -1",
+        "required_fields": [
+          "token_id",
+          "derivative_kind",
+          "spinor_index_space",
+          "spinor_indices",
+          "operator_parity",
+          "edge_id",
+          "endpoint_port_id",
+          "momentum"
+        ]
+      },
+      "exact_scalar_domain": "Q(i)",
+      "graph_binding": {
+        "graph_hash": "c1c75f47543ab29ebb53137f46656705f6fca9e972a0643b96c69fd295c5a78a",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "topology": "K4_MINUS_ONE_EDGE"
+      },
+      "ordered_scope_ast_nodes": [
+        "ORDERED_SCOPE",
+        "ORDERED_PRODUCT",
+        "DERIVATIVE_APPLICATION",
+        "LINEAR_COMBINATION",
+        "FIELD_PORT"
+      ],
+      "polynomial_oracle_gate": {
+        "forbidden_sampling_keys": [
+          "numerical_check",
+          "probe",
+          "probes",
+          "random_check",
+          "sample",
+          "sample_point",
+          "sample_points",
+          "samples"
+        ],
+        "method": "EXACT_MONOMIAL_COEFFICIENT_COMPARISON",
+        "proof_mode": "EXACT_SYMBOLIC_POLYNOMIAL_IDENTITY"
+      },
+      "propagator_kernel": {
+        "explicit_fields": [
+          "ordered_derivative_tokens",
+          "grassmann_delta_ast",
+          "scalar_denominator_ast",
+          "oracle_identity_ids"
+        ],
+        "kernel_node_type": "ORDERED_PROPAGATOR_KERNEL",
+        "one_per_edge": [
+          "e_AC",
+          "e_BA",
+          "e_BC",
+          "e_BI",
+          "e_IC"
+        ]
+      },
+      "required_paths": [
+        "wick_record.schema_version",
+        "wick_record.graph_id",
+        "wick_record.graph_hash",
+        "wick_record.notation_schema_hash",
+        "wick_record.wick_complete",
+        "wick_record.wick_pairings",
+        "wick_record.wick_completeness_certificate",
+        "wick_record.ordered_derivative_scope_ast",
+        "wick_record.exact_sign_koszul_ledger",
+        "wick_record.polynomial_oracle",
+        "wick_record.propagator_kernels[e_AC]",
+        "wick_record.propagator_kernels[e_BA]",
+        "wick_record.propagator_kernels[e_BC]",
+        "wick_record.propagator_kernels[e_BI]",
+        "wick_record.propagator_kernels[e_IC]"
+      ],
+      "schema_version": "step6.wick_complete_dword_input.v1"
+    },
+    {
+      "derivative_token": {
+        "kinds": {
+          "BAR_D": {
+            "index_arity": 1,
+            "parity": 1,
+            "spinor_index_space": "DOTTED"
+          },
+          "BAR_D2": {
+            "index_arity": 2,
+            "parity": 0,
+            "spinor_index_space": "DOTTED"
+          },
+          "D": {
+            "index_arity": 1,
+            "parity": 1,
+            "spinor_index_space": "UNDOTTED"
+          },
+          "D2": {
+            "index_arity": 2,
+            "parity": 0,
+            "spinor_index_space": "UNDOTTED"
+          }
+        },
+        "momentum_rule": "exact oriented edge momentum; orientation_sign_from_edge is +1 or -1",
+        "required_fields": [
+          "token_id",
+          "derivative_kind",
+          "spinor_index_space",
+          "spinor_indices",
+          "operator_parity",
+          "edge_id",
+          "endpoint_port_id",
+          "momentum"
+        ]
+      },
+      "exact_scalar_domain": "Q(i)",
+      "graph_binding": {
+        "graph_hash": "84137962e3a5d40a2be79e124cc85f3fdd180a42cf7119c3464e7da6f620baa3",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+        "topology": "K4_MINUS_ONE_EDGE"
+      },
+      "ordered_scope_ast_nodes": [
+        "ORDERED_SCOPE",
+        "ORDERED_PRODUCT",
+        "DERIVATIVE_APPLICATION",
+        "LINEAR_COMBINATION",
+        "FIELD_PORT"
+      ],
+      "polynomial_oracle_gate": {
+        "forbidden_sampling_keys": [
+          "numerical_check",
+          "probe",
+          "probes",
+          "random_check",
+          "sample",
+          "sample_point",
+          "sample_points",
+          "samples"
+        ],
+        "method": "EXACT_MONOMIAL_COEFFICIENT_COMPARISON",
+        "proof_mode": "EXACT_SYMBOLIC_POLYNOMIAL_IDENTITY"
+      },
+      "propagator_kernel": {
+        "explicit_fields": [
+          "ordered_derivative_tokens",
+          "grassmann_delta_ast",
+          "scalar_denominator_ast",
+          "oracle_identity_ids"
+        ],
+        "kernel_node_type": "ORDERED_PROPAGATOR_KERNEL",
+        "one_per_edge": [
+          "e_AI",
+          "e_BA",
+          "e_BC",
+          "e_CA",
+          "e_IB"
+        ]
+      },
+      "required_paths": [
+        "wick_record.schema_version",
+        "wick_record.graph_id",
+        "wick_record.graph_hash",
+        "wick_record.notation_schema_hash",
+        "wick_record.wick_complete",
+        "wick_record.wick_pairings",
+        "wick_record.wick_completeness_certificate",
+        "wick_record.ordered_derivative_scope_ast",
+        "wick_record.exact_sign_koszul_ledger",
+        "wick_record.polynomial_oracle",
+        "wick_record.propagator_kernels[e_AI]",
+        "wick_record.propagator_kernels[e_BA]",
+        "wick_record.propagator_kernels[e_BC]",
+        "wick_record.propagator_kernels[e_CA]",
+        "wick_record.propagator_kernels[e_IB]"
+      ],
+      "schema_version": "step6.wick_complete_dword_input.v1"
+    }
+  ],
+  "schema_version": "step6.wick_complete_dword_input.v1"
+}

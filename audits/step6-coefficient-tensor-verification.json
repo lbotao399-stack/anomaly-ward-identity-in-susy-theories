@@ -1,0 +1,38 @@
+{
+  "check_count": 21,
+  "checks": {
+    "I2_fixture_retains_Exterior": true,
+    "action_fixtures_apply_measure": true,
+    "all_1048_local_options_compiled": true,
+    "all_30_oriented_edge_covariances_instantiated": true,
+    "all_fixture_evaluators_agree": true,
+    "all_parent_counts_close": true,
+    "all_vertex_conservation_checks_pass": true,
+    "coefficient_covariance_uses_metric_inverse": true,
+    "coefficient_exterior_reconstruction_recovers_delta": true,
+    "component_bracket_checks_pass": true,
+    "delta_coefficients_equal_metric_inverse": true,
+    "edge_endpoint_momenta_are_opposite": true,
+    "global_contraction_remains_blocked": true,
+    "left_ordered_H_inverse_is_two_sided": true,
+    "local_coefficient_exterior_cross_sign_locked": true,
+    "metric_inverse_not_operator_identity": true,
+    "no_two_loop_coefficient_claim": true,
+    "pairing_inverse_is_two_sided": true,
+    "pairing_is_16_by_16": true,
+    "selected_22_terms_compiled": true,
+    "six_oriented_parents_compiled": true
+  },
+  "passed_count": 21,
+  "payload_sha256": "8a2e1acc8efd03d160d364652fae10017433d2049ef589b1a9e5fce816e1c09e",
+  "remaining_boundary": [
+    "GLOBAL_FIVE_EDGE_TENSOR_CONTRACTION",
+    "GLOBAL_COEFFICIENT_WICK_KOSZUL_SIGN",
+    "DRED",
+    "IBP",
+    "UV_POLE",
+    "RENORMALIZED_TWO_LOOP_COEFFICIENT"
+  ],
+  "schema": "step6.coefficient_tensor_program_ir.audit.v1",
+  "status": "PASS"
+}

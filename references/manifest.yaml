@@ -17,7 +17,7 @@
       "id": "REFERENCE-CLAIM-MAP",
       "path": "references/claim-map.yaml",
       "classification": "REFERENCE_CLAIM_BOUNDARY",
-      "sha256": "10439fbbcae893ab5f1f2ceab9e26a9c5245e28356ad0918f593b1c86d7271e2"
+      "sha256": "77c30918c75307e4266e996f99e0f2ac60bbab61cad882a8f8bab22f7919b8e7"
     },
     {
       "id": "ARXIV-HEP-TH-0108200-V1",
@@ -366,6 +366,12 @@
       "path": "references/step5-chat-weinberg30-source-ledger.json",
       "classification": "REFERENCE_SOURCE_LEDGER",
       "sha256": "6a7d6a699f8572c976d0bf1c964fc8a85417f85ab787c60383aa6fd08d16229b"
+    },
+    {
+      "id": "STEP6-HOLOMORPHIC-Q2-TARGET-LEDGER",
+      "path": "references/external-targets/step6-holomorphic-q2-ledger.md",
+      "classification": "EXTERNAL_TARGET_COMPARISON_ONLY_NOT_DERIVATION",
+      "sha256": "f0f5c910466125966694f61b1f9cef34a45b693e8358686a6a0233eb1229df3c"
     }
   ]
 }

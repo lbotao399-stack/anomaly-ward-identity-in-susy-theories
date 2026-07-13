@@ -1,0 +1,252 @@
+{
+  "artifact_sha256": {
+    "generated/step6/two-loop-forest/literal-k4-minus-edge-forests.json": "6c39b0d90b8507e708fc35d629698026a051c6ec0f226a029325266d469d762b",
+    "generated/step6/two-loop-forest/raw-k23-lift-forest.json": "89b5a1174fda9126e052e4215ac637756ed113f09363c2c9d61574623e6f0513",
+    "generated/step6/two-loop-forest/two-loop-forest.json": "f22a5c79896941bcf449c38d41532a956a53c34a1a81a6833e06c5a4153c807b",
+    "generated/step6/two-loop-forest/two-loop-forest.md": "936aede0a5361c48c05d42e76d3f17f5bd5d0c5687ba0d7999f41fe8e5e9bc97"
+  },
+  "checks": [
+    {
+      "evidence": [
+        "G6_DIRECT_K4ME_I3_S3CUBED",
+        "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+        "G6_RAW_MARKED_K23_THETA_I2_S3FOURTH"
+      ],
+      "id": "FOUR_SOURCE_GRAPH_RECORDS",
+      "passed": true
+    },
+    {
+      "evidence": [
+        29,
+        29,
+        29
+      ],
+      "id": "LITERAL_CONNECTED_CENSUS_29",
+      "passed": true
+    },
+    {
+      "evidence": 51,
+      "id": "RAW_CONNECTED_CENSUS_51",
+      "passed": true
+    },
+    {
+      "evidence": "left,right,outer",
+      "id": "LEFT_RIGHT_OUTER_ARE_EXACT_1PI",
+      "passed": true
+    },
+    {
+      "evidence": [
+        [
+          {
+            "cardinality": 0,
+            "compatible_disjoint_or_nested": true,
+            "forest_hash": "f2b391f2e76adccabc7433a3aa395c88ddeb6ae796d8c0ea30b074b9110e2ed1",
+            "subgraph_ids": []
+          },
+          {
+            "cardinality": 1,
+            "compatible_disjoint_or_nested": true,
+            "forest_hash": "08a6e5966d392e4ca22a8b3fef56cfc271f421ab3014b56d9f7b5bd95e85b819",
+            "subgraph_ids": [
+              "left"
+            ]
+          },
+          {
+            "cardinality": 1,
+            "compatible_disjoint_or_nested": true,
+            "forest_hash": "00dc848de2f6614e96c2dd1ee300ae9e01587943f7adc8e0fb8229216e95ccc1",
+            "subgraph_ids": [
+              "outer"
+            ]
+          },
+          {
+            "cardinality": 1,
+            "compatible_disjoint_or_nested": true,
+            "forest_hash": "ed7b9f4f364e6979ec419ee67183f8841c7a82e8c3fbece96bec0bd1d5930c8f",
+            "subgraph_ids": [
+              "right"
+            ]
+          }
+        ],
+        [
+          {
+            "cardinality": 0,
+            "compatible_disjoint_or_nested": true,
+            "forest_hash": "f2b391f2e76adccabc7433a3aa395c88ddeb6ae796d8c0ea30b074b9110e2ed1",
+            "subgraph_ids": []
+          },
+          {
+            "cardinality": 1,
+            "compatible_disjoint_or_nested": true,
+            "forest_hash": "08a6e5966d392e4ca22a8b3fef56cfc271f421ab3014b56d9f7b5bd95e85b819",
+            "subgraph_ids": [
+              "left"
+            ]
+          },
+          {
+            "cardinality": 1,
+            "compatible_disjoint_or_nested": true,
+            "forest_hash": "00dc848de2f6614e96c2dd1ee300ae9e01587943f7adc8e0fb8229216e95ccc1",
+            "subgraph_ids": [
+              "outer"
+            ]
+          },
+          {
+            "cardinality": 1,
+            "compatible_disjoint_or_nested": true,
+            "forest_hash": "ed7b9f4f364e6979ec419ee67183f8841c7a82e8c3fbece96bec0bd1d5930c8f",
+            "subgraph_ids": [
+              "right"
+            ]
+          }
+        ],
+        [
+          {
+            "cardinality": 0,
+            "compatible_disjoint_or_nested": true,
+            "forest_hash": "f2b391f2e76adccabc7433a3aa395c88ddeb6ae796d8c0ea30b074b9110e2ed1",
+            "subgraph_ids": []
+          },
+          {
+            "cardinality": 1,
+            "compatible_disjoint_or_nested": true,
+            "forest_hash": "08a6e5966d392e4ca22a8b3fef56cfc271f421ab3014b56d9f7b5bd95e85b819",
+            "subgraph_ids": [
+              "left"
+            ]
+          },
+          {
+            "cardinality": 1,
+            "compatible_disjoint_or_nested": true,
+            "forest_hash": "00dc848de2f6614e96c2dd1ee300ae9e01587943f7adc8e0fb8229216e95ccc1",
+            "subgraph_ids": [
+              "outer"
+            ]
+          },
+          {
+            "cardinality": 1,
+            "compatible_disjoint_or_nested": true,
+            "forest_hash": "ed7b9f4f364e6979ec419ee67183f8841c7a82e8c3fbece96bec0bd1d5930c8f",
+            "subgraph_ids": [
+              "right"
+            ]
+          }
+        ],
+        [
+          {
+            "cardinality": 0,
+            "compatible_disjoint_or_nested": true,
+            "forest_hash": "f2b391f2e76adccabc7433a3aa395c88ddeb6ae796d8c0ea30b074b9110e2ed1",
+            "subgraph_ids": []
+          },
+          {
+            "cardinality": 1,
+            "compatible_disjoint_or_nested": true,
+            "forest_hash": "08a6e5966d392e4ca22a8b3fef56cfc271f421ab3014b56d9f7b5bd95e85b819",
+            "subgraph_ids": [
+              "left"
+            ]
+          },
+          {
+            "cardinality": 1,
+            "compatible_disjoint_or_nested": true,
+            "forest_hash": "00dc848de2f6614e96c2dd1ee300ae9e01587943f7adc8e0fb8229216e95ccc1",
+            "subgraph_ids": [
+              "outer"
+            ]
+          },
+          {
+            "cardinality": 1,
+            "compatible_disjoint_or_nested": true,
+            "forest_hash": "ed7b9f4f364e6979ec419ee67183f8841c7a82e8c3fbece96bec0bd1d5930c8f",
+            "subgraph_ids": [
+              "right"
+            ]
+          }
+        ]
+      ],
+      "id": "CURRENT_CYCLE_FORESTS_EMPTY_OR_SINGLETON",
+      "passed": true
+    },
+    {
+      "evidence": "three pair relations per graph",
+      "id": "ALL_CYCLE_PAIRS_OVERLAP_NON_NESTED",
+      "passed": true
+    },
+    {
+      "evidence": [
+        [
+          "left",
+          "right",
+          "outer",
+          "full"
+        ],
+        [
+          "right",
+          "left",
+          "outer",
+          "full"
+        ],
+        [
+          "left",
+          "right",
+          "outer",
+          "full"
+        ],
+        [
+          "outer",
+          "left",
+          "right",
+          "full"
+        ]
+      ],
+      "id": "UNKNOWN_RHO_FAILS_CLOSED",
+      "passed": true
+    },
+    {
+      "evidence": "K_UV != K_+",
+      "id": "RPRIME_KUV_DISTINCT_FROM_KPLUS",
+      "passed": true
+    },
+    {
+      "evidence": "L'=L-L_gamma; I'=I-I_gamma; V'=V-V_gamma+1",
+      "id": "CONTRACTION_COUNTS_EXACT",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "mu_power": "mu^(4*epsilon)",
+        "per_independent_loop": "mu^(2*epsilon) d^d q/(2*pi)^d",
+        "stripped_vertex_convention": true,
+        "two_loop": "mu^(4*epsilon) d^d k/(2*pi)^d d^d l/(2*pi)^d"
+      },
+      "id": "TWO_LOOP_MEASURE_MU4EPSILON",
+      "passed": true
+    },
+    {
+      "evidence": "1/d and [(d+1)X-Y-Z]/[d(d-1)(d+2)] plus permutations",
+      "id": "DRED_RANK_TWO_AND_FOUR_EXACT",
+      "passed": true
+    },
+    {
+      "evidence": "finite=a_(-1)e_1+a_(-2)e_2",
+      "id": "LAURENT_VALUATION_RULE_EXACT",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "compiled_numerator": null,
+        "divergent_subgraph_set": null,
+        "renormalized_coefficient": null,
+        "status": "BLOCKED_COMPILED_DALGEBRA_NUMERATOR_AND_KUV_EVALUATION",
+        "uv_poles": null
+      },
+      "id": "NO_NUMERATOR_POLE_COEFFICIENT_CLAIM",
+      "passed": true
+    }
+  ],
+  "failure_count": 0,
+  "schema_version": "step6.two_loop_forest.audit.v1",
+  "status": "PASS"
+}

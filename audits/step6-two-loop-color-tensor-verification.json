@@ -1,0 +1,118 @@
+{
+  "Gamma2_W2_regression": {
+    "Gamma2": {
+      "extra_i": 0,
+      "leaf_order": [
+        "Gamma_2.v1",
+        "Gamma_2.v2"
+      ],
+      "one_ordered_c": true,
+      "ordered_c_node": {
+        "coefficient_i_owner": "SOURCE_TERM_QI",
+        "component_rule": "[Y,Z]^C=i*c[A,B,C]*Y^A*Z^B",
+        "emission_policy": "ONE_ORDERED_C_NODE_NO_REVERSE_NO_EXTRA_I",
+        "extra_i_power": 0,
+        "kind": "c",
+        "ordered_indices": [
+          "v::Gamma2.q1",
+          "v::Gamma2.q2",
+          "o::Gamma2::0"
+        ],
+        "ordered_leg_roles": [
+          "left_input",
+          "right_input",
+          "bracket_output"
+        ],
+        "reverse_bracket_term_emitted": false,
+        "source_ast_path": [
+          0
+        ],
+        "source_color_tensor": "c[A,B,C]",
+        "source_output_color": "C.ad1",
+        "source_term_id": "Gamma_2",
+        "vertex_id": "Gamma2"
+      },
+      "resolved_output": "o::Gamma2::0",
+      "reverse_bracket_term": false,
+      "source_coefficient_Qi": {
+        "field": "Q(i)",
+        "i_power_reduced": 1,
+        "rational": "-1/2",
+        "rendered": "-1/2*i",
+        "symbols": []
+      },
+      "source_term_id": "Gamma_2"
+    },
+    "W2": {
+      "extra_i": 0,
+      "leaf_order": [
+        "W_2.Gamma_2.v1",
+        "W_2.Gamma_2.v2"
+      ],
+      "one_ordered_c": true,
+      "ordered_c_node": {
+        "coefficient_i_owner": "SOURCE_TERM_QI",
+        "component_rule": "[Y,Z]^C=i*c[A,B,C]*Y^A*Z^B",
+        "emission_policy": "ONE_ORDERED_C_NODE_NO_REVERSE_NO_EXTRA_I",
+        "extra_i_power": 0,
+        "kind": "c",
+        "ordered_indices": [
+          "v::W2.q1",
+          "v::W2.q2",
+          "o::W2::0.0"
+        ],
+        "ordered_leg_roles": [
+          "left_input",
+          "right_input",
+          "bracket_output"
+        ],
+        "reverse_bracket_term_emitted": false,
+        "source_ast_path": [
+          0,
+          0
+        ],
+        "source_color_tensor": "c[A,B,C]",
+        "source_output_color": "C.ad1",
+        "source_term_id": "W_2",
+        "vertex_id": "W2"
+      },
+      "resolved_output": "o::W2::0.0",
+      "reverse_bracket_term": false,
+      "source_coefficient_Qi": {
+        "field": "Q(i)",
+        "i_power_reduced": 1,
+        "rational": "1/16",
+        "rendered": "1/16*i",
+        "symbols": []
+      },
+      "source_term_id": "W_2"
+    }
+  },
+  "artifact_sha256": {
+    "generated/step6/two-loop-color-tensor/color-network.json": "a8ef55c6c62056d62eef691b0469aebe43bd596473e8ad7b2482c90fe39e8bf6",
+    "generated/step6/two-loop-color-tensor/color-network.md": "18e3b761a21ccf8dcb071499a9a4ab54e5009227c16769b80ef62b7eb2cbc738"
+  },
+  "checks": {
+    "Gamma2_W2_ordered_bracket_regression": true,
+    "Jacobi_not_applied_and_fail_closed": true,
+    "all_external_permutation_signs_bosonic_plus_one": true,
+    "all_parent_histograms_have_exact_cardinality": true,
+    "direct_reflected_not_merged": true,
+    "exact_2985984_labeled_amplitudes": true,
+    "input_firewall_has_no_review_or_target_read": true,
+    "no_Dalgebra_integral_or_coefficient": true,
+    "one_ordered_c_per_bracket_no_extra_i_no_reverse": true,
+    "only_A_B_R_S_free": true,
+    "six_oriented_parents_preserved": true
+  },
+  "exact_total_labeled_amplitudes": 2985984,
+  "parent_count": 6,
+  "payload_sha256": "988eeb30a860ebd764cfcccd909ee41eb85a9c6bcf44b96d666686275f99b624",
+  "schema_version": "step6.color_tensor.audit.v1",
+  "status": "PASS",
+  "totals": {
+    "checks": 11,
+    "failed": 0,
+    "passed": 11
+  }
+}

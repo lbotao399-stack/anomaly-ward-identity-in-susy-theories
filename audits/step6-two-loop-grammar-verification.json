@@ -1,0 +1,51 @@
+{
+  "checks": {
+    "E_V_count_equals_transport_derivation": true,
+    "E_V_count_is_70": true,
+    "E_V_uses_project_positive_factorial_transport": true,
+    "E_Xi_count_equals_recursion_derivation": true,
+    "E_Xi_count_is_30": true,
+    "action_measures_parallel": true,
+    "action_ordered_splits_complete": true,
+    "background_quantum_degrees_are_separate_and_exact": true,
+    "both_D_minus_placements_in_every_I": true,
+    "external_projection_fails_closed": true,
+    "gamma_coefficients_follow_BCH_formula": true,
+    "insertion_counts_are_2_10_30_70_140": true,
+    "insertion_counts_equal_composition_derivation": true,
+    "outer_Gamma_minus_present_I3_through_I6": true,
+    "result_products_empty": true,
+    "source_hashes_present": true,
+    "status_is_proposal_only": true,
+    "term_port_parity_measure_color_provenance_complete": true,
+    "tilde_gamma_coefficients_follow_BCH_formula": true,
+    "tilde_w_coefficients_are_plus_one_eighth_tilde_gamma": true,
+    "w_coefficients_are_minus_one_eighth_gamma": true,
+    "x_coefficients_follow_covariant_recursion": true,
+    "x_counts_derived_from_covariant_recursion": true
+  },
+  "failed": 0,
+  "failures": [],
+  "generated": [
+    "generated/step6/two-loop-grammar/project-two-loop-grammar.json",
+    "generated/step6/two-loop-grammar/project-two-loop-grammar.md"
+  ],
+  "generator": "scripts/step6_two_loop_grammar.py",
+  "passed": 23,
+  "schema": 1,
+  "source_contracts": [
+    {
+      "path": "contracts/foundations/step-03a-gauge-chiral-action.md",
+      "sha256": "1021c4efb4f046a4063da78a080cb15aba8e85f7c6bc815423cb3b367c96bd0b"
+    },
+    {
+      "path": "contracts/foundations/step-04c-n4-super-yang-mills.md",
+      "sha256": "9fb057d14ee438b31d3f38836e8ca848dfee74b1ea363716222264c96405e5db"
+    },
+    {
+      "path": "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md",
+      "sha256": "dd06ff2ecf0d78605282cbb505daf16797ce859650fc8d398405031f3acdb002"
+    }
+  ],
+  "status": "PROPOSAL_ONLY_BLOCKED_ON_STEP5_ACCEPTANCE"
+}

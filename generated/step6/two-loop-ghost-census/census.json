@@ -1,0 +1,4351 @@
+{
+  "FP": {
+    "candidate_count": 10,
+    "candidates": [
+      {
+        "candidate_id": "FP_L2_000",
+        "classification": "ADMITTED_UNCOMPUTED",
+        "connected": true,
+        "deletion_connected": [
+          [
+            "e0",
+            true
+          ],
+          [
+            "e1",
+            true
+          ],
+          [
+            "e2",
+            true
+          ],
+          [
+            "e3",
+            true
+          ]
+        ],
+        "edges": [
+          {
+            "edge_id": "e0",
+            "left_port": "I2:V1",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "FP1:1:fp_minus_c_v1_1"
+          },
+          {
+            "edge_id": "e1",
+            "left_port": "I2:V2",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "FP2:1:fp_minus_c_v1_1"
+          },
+          {
+            "edge_id": "e2",
+            "left_port": "FP1:0:fp_minus_c_antighost_1",
+            "oriented": true,
+            "propagator": "P_FP",
+            "right_port": "FP2:2:fp_minus_c_core_1"
+          },
+          {
+            "edge_id": "e3",
+            "left_port": "FP2:0:fp_minus_c_antighost_1",
+            "oriented": true,
+            "propagator": "P_FP",
+            "right_port": "FP1:2:fp_minus_c_core_1"
+          }
+        ],
+        "loop_number": 2,
+        "one_particle_irreducible": true,
+        "port_conservation": [
+          [
+            "FP1:0:fp_minus_c_antighost_1",
+            1
+          ],
+          [
+            "FP1:1:fp_minus_c_v1_1",
+            1
+          ],
+          [
+            "FP1:2:fp_minus_c_core_1",
+            1
+          ],
+          [
+            "FP2:0:fp_minus_c_antighost_1",
+            1
+          ],
+          [
+            "FP2:1:fp_minus_c_v1_1",
+            1
+          ],
+          [
+            "FP2:2:fp_minus_c_core_1",
+            1
+          ],
+          [
+            "I2:V1",
+            1
+          ],
+          [
+            "I2:V2",
+            1
+          ]
+        ],
+        "scope_relation": "IN_SCOPE_PURE_GAUGE_FIXED_GAUGE",
+        "sector": "FP_CHIRAL_GHOST",
+        "topology_family": "I2_FP_V1_FP_V1",
+        "vertices": [
+          {
+            "ports": [
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V2",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              }
+            ],
+            "sector": "WW_INSERTION",
+            "source_monomial_id": "primitive_I_(2)",
+            "vertex_id": "I2"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "tilde_cprime_minus",
+                "flavor": null,
+                "port_id": "FP1:0:fp_minus_c_antighost_1",
+                "role": "FP_ANTIGHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "FP1:1:fp_minus_c_v1_1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "FP1"
+              },
+              {
+                "chirality": "CHIRAL",
+                "field": "c",
+                "flavor": null,
+                "port_id": "FP1:2:fp_minus_c_core_1",
+                "role": "FP_GHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP1"
+              }
+            ],
+            "sector": "FP_GHOST",
+            "source_monomial_id": "fp_minus_c_v1",
+            "vertex_id": "FP1"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "tilde_cprime_minus",
+                "flavor": null,
+                "port_id": "FP2:0:fp_minus_c_antighost_1",
+                "role": "FP_ANTIGHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "FP2:1:fp_minus_c_v1_1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "FP2"
+              },
+              {
+                "chirality": "CHIRAL",
+                "field": "c",
+                "flavor": null,
+                "port_id": "FP2:2:fp_minus_c_core_1",
+                "role": "FP_GHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP2"
+              }
+            ],
+            "sector": "FP_GHOST",
+            "source_monomial_id": "fp_minus_c_v1",
+            "vertex_id": "FP2"
+          }
+        ]
+      },
+      {
+        "candidate_id": "FP_L2_001",
+        "classification": "ADMITTED_UNCOMPUTED",
+        "connected": true,
+        "deletion_connected": [
+          [
+            "e0",
+            true
+          ],
+          [
+            "e1",
+            true
+          ],
+          [
+            "e2",
+            true
+          ],
+          [
+            "e3",
+            true
+          ]
+        ],
+        "edges": [
+          {
+            "edge_id": "e0",
+            "left_port": "I2:V1",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "FP2:1:fp_minus_c_v1_1"
+          },
+          {
+            "edge_id": "e1",
+            "left_port": "I2:V2",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "FP1:1:fp_minus_c_v1_1"
+          },
+          {
+            "edge_id": "e2",
+            "left_port": "FP1:0:fp_minus_c_antighost_1",
+            "oriented": true,
+            "propagator": "P_FP",
+            "right_port": "FP2:2:fp_minus_c_core_1"
+          },
+          {
+            "edge_id": "e3",
+            "left_port": "FP2:0:fp_minus_c_antighost_1",
+            "oriented": true,
+            "propagator": "P_FP",
+            "right_port": "FP1:2:fp_minus_c_core_1"
+          }
+        ],
+        "loop_number": 2,
+        "one_particle_irreducible": true,
+        "port_conservation": [
+          [
+            "FP1:0:fp_minus_c_antighost_1",
+            1
+          ],
+          [
+            "FP1:1:fp_minus_c_v1_1",
+            1
+          ],
+          [
+            "FP1:2:fp_minus_c_core_1",
+            1
+          ],
+          [
+            "FP2:0:fp_minus_c_antighost_1",
+            1
+          ],
+          [
+            "FP2:1:fp_minus_c_v1_1",
+            1
+          ],
+          [
+            "FP2:2:fp_minus_c_core_1",
+            1
+          ],
+          [
+            "I2:V1",
+            1
+          ],
+          [
+            "I2:V2",
+            1
+          ]
+        ],
+        "scope_relation": "IN_SCOPE_PURE_GAUGE_FIXED_GAUGE",
+        "sector": "FP_CHIRAL_GHOST",
+        "topology_family": "I2_FP_V1_FP_V1",
+        "vertices": [
+          {
+            "ports": [
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V2",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              }
+            ],
+            "sector": "WW_INSERTION",
+            "source_monomial_id": "primitive_I_(2)",
+            "vertex_id": "I2"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "tilde_cprime_minus",
+                "flavor": null,
+                "port_id": "FP1:0:fp_minus_c_antighost_1",
+                "role": "FP_ANTIGHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "FP1:1:fp_minus_c_v1_1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "FP1"
+              },
+              {
+                "chirality": "CHIRAL",
+                "field": "c",
+                "flavor": null,
+                "port_id": "FP1:2:fp_minus_c_core_1",
+                "role": "FP_GHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP1"
+              }
+            ],
+            "sector": "FP_GHOST",
+            "source_monomial_id": "fp_minus_c_v1",
+            "vertex_id": "FP1"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "tilde_cprime_minus",
+                "flavor": null,
+                "port_id": "FP2:0:fp_minus_c_antighost_1",
+                "role": "FP_ANTIGHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "FP2:1:fp_minus_c_v1_1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "FP2"
+              },
+              {
+                "chirality": "CHIRAL",
+                "field": "c",
+                "flavor": null,
+                "port_id": "FP2:2:fp_minus_c_core_1",
+                "role": "FP_GHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP2"
+              }
+            ],
+            "sector": "FP_GHOST",
+            "source_monomial_id": "fp_minus_c_v1",
+            "vertex_id": "FP2"
+          }
+        ]
+      },
+      {
+        "candidate_id": "FP_L2_002",
+        "classification": "ADMITTED_UNCOMPUTED",
+        "connected": true,
+        "deletion_connected": [
+          [
+            "e0",
+            true
+          ],
+          [
+            "e1",
+            true
+          ],
+          [
+            "e2",
+            true
+          ],
+          [
+            "e3",
+            true
+          ]
+        ],
+        "edges": [
+          {
+            "edge_id": "e0",
+            "left_port": "I2:V1",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "FP1:1:fp_minus_tilde_c_v1_1"
+          },
+          {
+            "edge_id": "e1",
+            "left_port": "I2:V2",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "FP2:1:fp_plus_c_v1_1"
+          },
+          {
+            "edge_id": "e2",
+            "left_port": "FP1:0:fp_minus_tilde_c_antighost_1",
+            "oriented": true,
+            "propagator": "P_FP",
+            "right_port": "FP2:2:fp_plus_c_core_1"
+          },
+          {
+            "edge_id": "e3",
+            "left_port": "FP2:0:fp_plus_c_antighost_1",
+            "oriented": true,
+            "propagator": "P_FP",
+            "right_port": "FP1:2:fp_minus_tilde_c_core_1"
+          }
+        ],
+        "loop_number": 2,
+        "one_particle_irreducible": true,
+        "port_conservation": [
+          [
+            "FP1:0:fp_minus_tilde_c_antighost_1",
+            1
+          ],
+          [
+            "FP1:1:fp_minus_tilde_c_v1_1",
+            1
+          ],
+          [
+            "FP1:2:fp_minus_tilde_c_core_1",
+            1
+          ],
+          [
+            "FP2:0:fp_plus_c_antighost_1",
+            1
+          ],
+          [
+            "FP2:1:fp_plus_c_v1_1",
+            1
+          ],
+          [
+            "FP2:2:fp_plus_c_core_1",
+            1
+          ],
+          [
+            "I2:V1",
+            1
+          ],
+          [
+            "I2:V2",
+            1
+          ]
+        ],
+        "scope_relation": "IN_SCOPE_PURE_GAUGE_FIXED_GAUGE",
+        "sector": "FP_CHIRAL_GHOST",
+        "topology_family": "I2_FP_V1_FP_V1",
+        "vertices": [
+          {
+            "ports": [
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V2",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              }
+            ],
+            "sector": "WW_INSERTION",
+            "source_monomial_id": "primitive_I_(2)",
+            "vertex_id": "I2"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "tilde_cprime_minus",
+                "flavor": null,
+                "port_id": "FP1:0:fp_minus_tilde_c_antighost_1",
+                "role": "FP_ANTIGHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "FP1:1:fp_minus_tilde_c_v1_1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "FP1"
+              },
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "tilde_c",
+                "flavor": null,
+                "port_id": "FP1:2:fp_minus_tilde_c_core_1",
+                "role": "FP_GHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP1"
+              }
+            ],
+            "sector": "FP_GHOST",
+            "source_monomial_id": "fp_minus_tilde_c_v1",
+            "vertex_id": "FP1"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "CHIRAL",
+                "field": "cprime_plus",
+                "flavor": null,
+                "port_id": "FP2:0:fp_plus_c_antighost_1",
+                "role": "FP_ANTIGHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "FP2:1:fp_plus_c_v1_1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "FP2"
+              },
+              {
+                "chirality": "CHIRAL",
+                "field": "c",
+                "flavor": null,
+                "port_id": "FP2:2:fp_plus_c_core_1",
+                "role": "FP_GHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP2"
+              }
+            ],
+            "sector": "FP_GHOST",
+            "source_monomial_id": "fp_plus_c_v1",
+            "vertex_id": "FP2"
+          }
+        ]
+      },
+      {
+        "candidate_id": "FP_L2_003",
+        "classification": "ADMITTED_UNCOMPUTED",
+        "connected": true,
+        "deletion_connected": [
+          [
+            "e0",
+            true
+          ],
+          [
+            "e1",
+            true
+          ],
+          [
+            "e2",
+            true
+          ],
+          [
+            "e3",
+            true
+          ]
+        ],
+        "edges": [
+          {
+            "edge_id": "e0",
+            "left_port": "I2:V1",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "FP2:1:fp_plus_c_v1_1"
+          },
+          {
+            "edge_id": "e1",
+            "left_port": "I2:V2",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "FP1:1:fp_minus_tilde_c_v1_1"
+          },
+          {
+            "edge_id": "e2",
+            "left_port": "FP1:0:fp_minus_tilde_c_antighost_1",
+            "oriented": true,
+            "propagator": "P_FP",
+            "right_port": "FP2:2:fp_plus_c_core_1"
+          },
+          {
+            "edge_id": "e3",
+            "left_port": "FP2:0:fp_plus_c_antighost_1",
+            "oriented": true,
+            "propagator": "P_FP",
+            "right_port": "FP1:2:fp_minus_tilde_c_core_1"
+          }
+        ],
+        "loop_number": 2,
+        "one_particle_irreducible": true,
+        "port_conservation": [
+          [
+            "FP1:0:fp_minus_tilde_c_antighost_1",
+            1
+          ],
+          [
+            "FP1:1:fp_minus_tilde_c_v1_1",
+            1
+          ],
+          [
+            "FP1:2:fp_minus_tilde_c_core_1",
+            1
+          ],
+          [
+            "FP2:0:fp_plus_c_antighost_1",
+            1
+          ],
+          [
+            "FP2:1:fp_plus_c_v1_1",
+            1
+          ],
+          [
+            "FP2:2:fp_plus_c_core_1",
+            1
+          ],
+          [
+            "I2:V1",
+            1
+          ],
+          [
+            "I2:V2",
+            1
+          ]
+        ],
+        "scope_relation": "IN_SCOPE_PURE_GAUGE_FIXED_GAUGE",
+        "sector": "FP_CHIRAL_GHOST",
+        "topology_family": "I2_FP_V1_FP_V1",
+        "vertices": [
+          {
+            "ports": [
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V2",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              }
+            ],
+            "sector": "WW_INSERTION",
+            "source_monomial_id": "primitive_I_(2)",
+            "vertex_id": "I2"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "tilde_cprime_minus",
+                "flavor": null,
+                "port_id": "FP1:0:fp_minus_tilde_c_antighost_1",
+                "role": "FP_ANTIGHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "FP1:1:fp_minus_tilde_c_v1_1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "FP1"
+              },
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "tilde_c",
+                "flavor": null,
+                "port_id": "FP1:2:fp_minus_tilde_c_core_1",
+                "role": "FP_GHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP1"
+              }
+            ],
+            "sector": "FP_GHOST",
+            "source_monomial_id": "fp_minus_tilde_c_v1",
+            "vertex_id": "FP1"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "CHIRAL",
+                "field": "cprime_plus",
+                "flavor": null,
+                "port_id": "FP2:0:fp_plus_c_antighost_1",
+                "role": "FP_ANTIGHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "FP2:1:fp_plus_c_v1_1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "FP2"
+              },
+              {
+                "chirality": "CHIRAL",
+                "field": "c",
+                "flavor": null,
+                "port_id": "FP2:2:fp_plus_c_core_1",
+                "role": "FP_GHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP2"
+              }
+            ],
+            "sector": "FP_GHOST",
+            "source_monomial_id": "fp_plus_c_v1",
+            "vertex_id": "FP2"
+          }
+        ]
+      },
+      {
+        "candidate_id": "FP_L2_004",
+        "classification": "ADMITTED_UNCOMPUTED",
+        "connected": true,
+        "deletion_connected": [
+          [
+            "e0",
+            true
+          ],
+          [
+            "e1",
+            true
+          ],
+          [
+            "e2",
+            true
+          ],
+          [
+            "e3",
+            true
+          ]
+        ],
+        "edges": [
+          {
+            "edge_id": "e0",
+            "left_port": "I2:V1",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "FP1:1:fp_plus_tilde_c_v1_1"
+          },
+          {
+            "edge_id": "e1",
+            "left_port": "I2:V2",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "FP2:1:fp_plus_tilde_c_v1_1"
+          },
+          {
+            "edge_id": "e2",
+            "left_port": "FP1:0:fp_plus_tilde_c_antighost_1",
+            "oriented": true,
+            "propagator": "P_FP",
+            "right_port": "FP2:2:fp_plus_tilde_c_core_1"
+          },
+          {
+            "edge_id": "e3",
+            "left_port": "FP2:0:fp_plus_tilde_c_antighost_1",
+            "oriented": true,
+            "propagator": "P_FP",
+            "right_port": "FP1:2:fp_plus_tilde_c_core_1"
+          }
+        ],
+        "loop_number": 2,
+        "one_particle_irreducible": true,
+        "port_conservation": [
+          [
+            "FP1:0:fp_plus_tilde_c_antighost_1",
+            1
+          ],
+          [
+            "FP1:1:fp_plus_tilde_c_v1_1",
+            1
+          ],
+          [
+            "FP1:2:fp_plus_tilde_c_core_1",
+            1
+          ],
+          [
+            "FP2:0:fp_plus_tilde_c_antighost_1",
+            1
+          ],
+          [
+            "FP2:1:fp_plus_tilde_c_v1_1",
+            1
+          ],
+          [
+            "FP2:2:fp_plus_tilde_c_core_1",
+            1
+          ],
+          [
+            "I2:V1",
+            1
+          ],
+          [
+            "I2:V2",
+            1
+          ]
+        ],
+        "scope_relation": "IN_SCOPE_PURE_GAUGE_FIXED_GAUGE",
+        "sector": "FP_CHIRAL_GHOST",
+        "topology_family": "I2_FP_V1_FP_V1",
+        "vertices": [
+          {
+            "ports": [
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V2",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              }
+            ],
+            "sector": "WW_INSERTION",
+            "source_monomial_id": "primitive_I_(2)",
+            "vertex_id": "I2"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "CHIRAL",
+                "field": "cprime_plus",
+                "flavor": null,
+                "port_id": "FP1:0:fp_plus_tilde_c_antighost_1",
+                "role": "FP_ANTIGHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "FP1:1:fp_plus_tilde_c_v1_1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "FP1"
+              },
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "tilde_c",
+                "flavor": null,
+                "port_id": "FP1:2:fp_plus_tilde_c_core_1",
+                "role": "FP_GHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP1"
+              }
+            ],
+            "sector": "FP_GHOST",
+            "source_monomial_id": "fp_plus_tilde_c_v1",
+            "vertex_id": "FP1"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "CHIRAL",
+                "field": "cprime_plus",
+                "flavor": null,
+                "port_id": "FP2:0:fp_plus_tilde_c_antighost_1",
+                "role": "FP_ANTIGHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "FP2:1:fp_plus_tilde_c_v1_1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "FP2"
+              },
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "tilde_c",
+                "flavor": null,
+                "port_id": "FP2:2:fp_plus_tilde_c_core_1",
+                "role": "FP_GHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP2"
+              }
+            ],
+            "sector": "FP_GHOST",
+            "source_monomial_id": "fp_plus_tilde_c_v1",
+            "vertex_id": "FP2"
+          }
+        ]
+      },
+      {
+        "candidate_id": "FP_L2_005",
+        "classification": "ADMITTED_UNCOMPUTED",
+        "connected": true,
+        "deletion_connected": [
+          [
+            "e0",
+            true
+          ],
+          [
+            "e1",
+            true
+          ],
+          [
+            "e2",
+            true
+          ],
+          [
+            "e3",
+            true
+          ]
+        ],
+        "edges": [
+          {
+            "edge_id": "e0",
+            "left_port": "I2:V1",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "FP2:1:fp_plus_tilde_c_v1_1"
+          },
+          {
+            "edge_id": "e1",
+            "left_port": "I2:V2",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "FP1:1:fp_plus_tilde_c_v1_1"
+          },
+          {
+            "edge_id": "e2",
+            "left_port": "FP1:0:fp_plus_tilde_c_antighost_1",
+            "oriented": true,
+            "propagator": "P_FP",
+            "right_port": "FP2:2:fp_plus_tilde_c_core_1"
+          },
+          {
+            "edge_id": "e3",
+            "left_port": "FP2:0:fp_plus_tilde_c_antighost_1",
+            "oriented": true,
+            "propagator": "P_FP",
+            "right_port": "FP1:2:fp_plus_tilde_c_core_1"
+          }
+        ],
+        "loop_number": 2,
+        "one_particle_irreducible": true,
+        "port_conservation": [
+          [
+            "FP1:0:fp_plus_tilde_c_antighost_1",
+            1
+          ],
+          [
+            "FP1:1:fp_plus_tilde_c_v1_1",
+            1
+          ],
+          [
+            "FP1:2:fp_plus_tilde_c_core_1",
+            1
+          ],
+          [
+            "FP2:0:fp_plus_tilde_c_antighost_1",
+            1
+          ],
+          [
+            "FP2:1:fp_plus_tilde_c_v1_1",
+            1
+          ],
+          [
+            "FP2:2:fp_plus_tilde_c_core_1",
+            1
+          ],
+          [
+            "I2:V1",
+            1
+          ],
+          [
+            "I2:V2",
+            1
+          ]
+        ],
+        "scope_relation": "IN_SCOPE_PURE_GAUGE_FIXED_GAUGE",
+        "sector": "FP_CHIRAL_GHOST",
+        "topology_family": "I2_FP_V1_FP_V1",
+        "vertices": [
+          {
+            "ports": [
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V2",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              }
+            ],
+            "sector": "WW_INSERTION",
+            "source_monomial_id": "primitive_I_(2)",
+            "vertex_id": "I2"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "CHIRAL",
+                "field": "cprime_plus",
+                "flavor": null,
+                "port_id": "FP1:0:fp_plus_tilde_c_antighost_1",
+                "role": "FP_ANTIGHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "FP1:1:fp_plus_tilde_c_v1_1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "FP1"
+              },
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "tilde_c",
+                "flavor": null,
+                "port_id": "FP1:2:fp_plus_tilde_c_core_1",
+                "role": "FP_GHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP1"
+              }
+            ],
+            "sector": "FP_GHOST",
+            "source_monomial_id": "fp_plus_tilde_c_v1",
+            "vertex_id": "FP1"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "CHIRAL",
+                "field": "cprime_plus",
+                "flavor": null,
+                "port_id": "FP2:0:fp_plus_tilde_c_antighost_1",
+                "role": "FP_ANTIGHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "FP2:1:fp_plus_tilde_c_v1_1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "FP2"
+              },
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "tilde_c",
+                "flavor": null,
+                "port_id": "FP2:2:fp_plus_tilde_c_core_1",
+                "role": "FP_GHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP2"
+              }
+            ],
+            "sector": "FP_GHOST",
+            "source_monomial_id": "fp_plus_tilde_c_v1",
+            "vertex_id": "FP2"
+          }
+        ]
+      },
+      {
+        "candidate_id": "FP_L2_006",
+        "classification": "ADMITTED_UNCOMPUTED",
+        "connected": true,
+        "deletion_connected": [
+          [
+            "e0",
+            true
+          ],
+          [
+            "e1",
+            true
+          ],
+          [
+            "e2",
+            true
+          ]
+        ],
+        "edges": [
+          {
+            "edge_id": "e0",
+            "left_port": "I2:V1",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "FP1:1:fp_minus_c_v2_1"
+          },
+          {
+            "edge_id": "e1",
+            "left_port": "I2:V2",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "FP1:2:fp_minus_c_v2_2"
+          },
+          {
+            "edge_id": "e2",
+            "left_port": "FP1:0:fp_minus_c_antighost_2",
+            "oriented": true,
+            "propagator": "P_FP",
+            "right_port": "FP1:3:fp_minus_c_core_2"
+          }
+        ],
+        "loop_number": 2,
+        "one_particle_irreducible": true,
+        "port_conservation": [
+          [
+            "FP1:0:fp_minus_c_antighost_2",
+            1
+          ],
+          [
+            "FP1:1:fp_minus_c_v2_1",
+            1
+          ],
+          [
+            "FP1:2:fp_minus_c_v2_2",
+            1
+          ],
+          [
+            "FP1:3:fp_minus_c_core_2",
+            1
+          ],
+          [
+            "I2:V1",
+            1
+          ],
+          [
+            "I2:V2",
+            1
+          ]
+        ],
+        "scope_relation": "IN_SCOPE_PURE_GAUGE_FIXED_GAUGE",
+        "sector": "FP_CHIRAL_GHOST",
+        "topology_family": "I2_FP_V2",
+        "vertices": [
+          {
+            "ports": [
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V2",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              }
+            ],
+            "sector": "WW_INSERTION",
+            "source_monomial_id": "primitive_I_(2)",
+            "vertex_id": "I2"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "tilde_cprime_minus",
+                "flavor": null,
+                "port_id": "FP1:0:fp_minus_c_antighost_2",
+                "role": "FP_ANTIGHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "FP1:1:fp_minus_c_v2_1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "FP1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "FP1:2:fp_minus_c_v2_2",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "FP1"
+              },
+              {
+                "chirality": "CHIRAL",
+                "field": "c",
+                "flavor": null,
+                "port_id": "FP1:3:fp_minus_c_core_2",
+                "role": "FP_GHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP1"
+              }
+            ],
+            "sector": "FP_GHOST",
+            "source_monomial_id": "fp_minus_c_v2",
+            "vertex_id": "FP1"
+          }
+        ]
+      },
+      {
+        "candidate_id": "FP_L2_007",
+        "classification": "ADMITTED_UNCOMPUTED",
+        "connected": true,
+        "deletion_connected": [
+          [
+            "e0",
+            true
+          ],
+          [
+            "e1",
+            true
+          ],
+          [
+            "e2",
+            true
+          ]
+        ],
+        "edges": [
+          {
+            "edge_id": "e0",
+            "left_port": "I2:V1",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "FP1:2:fp_minus_c_v2_2"
+          },
+          {
+            "edge_id": "e1",
+            "left_port": "I2:V2",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "FP1:1:fp_minus_c_v2_1"
+          },
+          {
+            "edge_id": "e2",
+            "left_port": "FP1:0:fp_minus_c_antighost_2",
+            "oriented": true,
+            "propagator": "P_FP",
+            "right_port": "FP1:3:fp_minus_c_core_2"
+          }
+        ],
+        "loop_number": 2,
+        "one_particle_irreducible": true,
+        "port_conservation": [
+          [
+            "FP1:0:fp_minus_c_antighost_2",
+            1
+          ],
+          [
+            "FP1:1:fp_minus_c_v2_1",
+            1
+          ],
+          [
+            "FP1:2:fp_minus_c_v2_2",
+            1
+          ],
+          [
+            "FP1:3:fp_minus_c_core_2",
+            1
+          ],
+          [
+            "I2:V1",
+            1
+          ],
+          [
+            "I2:V2",
+            1
+          ]
+        ],
+        "scope_relation": "IN_SCOPE_PURE_GAUGE_FIXED_GAUGE",
+        "sector": "FP_CHIRAL_GHOST",
+        "topology_family": "I2_FP_V2",
+        "vertices": [
+          {
+            "ports": [
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V2",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              }
+            ],
+            "sector": "WW_INSERTION",
+            "source_monomial_id": "primitive_I_(2)",
+            "vertex_id": "I2"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "tilde_cprime_minus",
+                "flavor": null,
+                "port_id": "FP1:0:fp_minus_c_antighost_2",
+                "role": "FP_ANTIGHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "FP1:1:fp_minus_c_v2_1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "FP1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "FP1:2:fp_minus_c_v2_2",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "FP1"
+              },
+              {
+                "chirality": "CHIRAL",
+                "field": "c",
+                "flavor": null,
+                "port_id": "FP1:3:fp_minus_c_core_2",
+                "role": "FP_GHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP1"
+              }
+            ],
+            "sector": "FP_GHOST",
+            "source_monomial_id": "fp_minus_c_v2",
+            "vertex_id": "FP1"
+          }
+        ]
+      },
+      {
+        "candidate_id": "FP_L2_008",
+        "classification": "ADMITTED_UNCOMPUTED",
+        "connected": true,
+        "deletion_connected": [
+          [
+            "e0",
+            true
+          ],
+          [
+            "e1",
+            true
+          ],
+          [
+            "e2",
+            true
+          ]
+        ],
+        "edges": [
+          {
+            "edge_id": "e0",
+            "left_port": "I2:V1",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "FP1:1:fp_plus_tilde_c_v2_1"
+          },
+          {
+            "edge_id": "e1",
+            "left_port": "I2:V2",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "FP1:2:fp_plus_tilde_c_v2_2"
+          },
+          {
+            "edge_id": "e2",
+            "left_port": "FP1:0:fp_plus_tilde_c_antighost_2",
+            "oriented": true,
+            "propagator": "P_FP",
+            "right_port": "FP1:3:fp_plus_tilde_c_core_2"
+          }
+        ],
+        "loop_number": 2,
+        "one_particle_irreducible": true,
+        "port_conservation": [
+          [
+            "FP1:0:fp_plus_tilde_c_antighost_2",
+            1
+          ],
+          [
+            "FP1:1:fp_plus_tilde_c_v2_1",
+            1
+          ],
+          [
+            "FP1:2:fp_plus_tilde_c_v2_2",
+            1
+          ],
+          [
+            "FP1:3:fp_plus_tilde_c_core_2",
+            1
+          ],
+          [
+            "I2:V1",
+            1
+          ],
+          [
+            "I2:V2",
+            1
+          ]
+        ],
+        "scope_relation": "IN_SCOPE_PURE_GAUGE_FIXED_GAUGE",
+        "sector": "FP_CHIRAL_GHOST",
+        "topology_family": "I2_FP_V2",
+        "vertices": [
+          {
+            "ports": [
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V2",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              }
+            ],
+            "sector": "WW_INSERTION",
+            "source_monomial_id": "primitive_I_(2)",
+            "vertex_id": "I2"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "CHIRAL",
+                "field": "cprime_plus",
+                "flavor": null,
+                "port_id": "FP1:0:fp_plus_tilde_c_antighost_2",
+                "role": "FP_ANTIGHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "FP1:1:fp_plus_tilde_c_v2_1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "FP1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "FP1:2:fp_plus_tilde_c_v2_2",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "FP1"
+              },
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "tilde_c",
+                "flavor": null,
+                "port_id": "FP1:3:fp_plus_tilde_c_core_2",
+                "role": "FP_GHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP1"
+              }
+            ],
+            "sector": "FP_GHOST",
+            "source_monomial_id": "fp_plus_tilde_c_v2",
+            "vertex_id": "FP1"
+          }
+        ]
+      },
+      {
+        "candidate_id": "FP_L2_009",
+        "classification": "ADMITTED_UNCOMPUTED",
+        "connected": true,
+        "deletion_connected": [
+          [
+            "e0",
+            true
+          ],
+          [
+            "e1",
+            true
+          ],
+          [
+            "e2",
+            true
+          ]
+        ],
+        "edges": [
+          {
+            "edge_id": "e0",
+            "left_port": "I2:V1",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "FP1:2:fp_plus_tilde_c_v2_2"
+          },
+          {
+            "edge_id": "e1",
+            "left_port": "I2:V2",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "FP1:1:fp_plus_tilde_c_v2_1"
+          },
+          {
+            "edge_id": "e2",
+            "left_port": "FP1:0:fp_plus_tilde_c_antighost_2",
+            "oriented": true,
+            "propagator": "P_FP",
+            "right_port": "FP1:3:fp_plus_tilde_c_core_2"
+          }
+        ],
+        "loop_number": 2,
+        "one_particle_irreducible": true,
+        "port_conservation": [
+          [
+            "FP1:0:fp_plus_tilde_c_antighost_2",
+            1
+          ],
+          [
+            "FP1:1:fp_plus_tilde_c_v2_1",
+            1
+          ],
+          [
+            "FP1:2:fp_plus_tilde_c_v2_2",
+            1
+          ],
+          [
+            "FP1:3:fp_plus_tilde_c_core_2",
+            1
+          ],
+          [
+            "I2:V1",
+            1
+          ],
+          [
+            "I2:V2",
+            1
+          ]
+        ],
+        "scope_relation": "IN_SCOPE_PURE_GAUGE_FIXED_GAUGE",
+        "sector": "FP_CHIRAL_GHOST",
+        "topology_family": "I2_FP_V2",
+        "vertices": [
+          {
+            "ports": [
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V2",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              }
+            ],
+            "sector": "WW_INSERTION",
+            "source_monomial_id": "primitive_I_(2)",
+            "vertex_id": "I2"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "CHIRAL",
+                "field": "cprime_plus",
+                "flavor": null,
+                "port_id": "FP1:0:fp_plus_tilde_c_antighost_2",
+                "role": "FP_ANTIGHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "FP1:1:fp_plus_tilde_c_v2_1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "FP1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "FP1:2:fp_plus_tilde_c_v2_2",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "FP1"
+              },
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "tilde_c",
+                "flavor": null,
+                "port_id": "FP1:3:fp_plus_tilde_c_core_2",
+                "role": "FP_GHOST",
+                "statistics": "FERMION",
+                "vertex_id": "FP1"
+              }
+            ],
+            "sector": "FP_GHOST",
+            "source_monomial_id": "fp_plus_tilde_c_v2",
+            "vertex_id": "FP1"
+          }
+        ]
+      }
+    ],
+    "classification": "ADMITTED_UNCOMPUTED",
+    "exact_signatures": [
+      {
+        "V_valence": 0,
+        "chiralities": [
+          "CHIRAL",
+          "ANTICHIRAL"
+        ],
+        "monomial_id": "fp_plus_tilde_c_v0",
+        "ordered_fields": [
+          "cprime_plus",
+          "tilde_c"
+        ],
+        "role": "QUADRATIC_KERNEL"
+      },
+      {
+        "V_valence": 1,
+        "chiralities": [
+          "CHIRAL",
+          "REAL",
+          "ANTICHIRAL"
+        ],
+        "monomial_id": "fp_plus_tilde_c_v1",
+        "ordered_fields": [
+          "cprime_plus",
+          "V",
+          "tilde_c"
+        ],
+        "role": "INTERACTION"
+      },
+      {
+        "V_valence": 2,
+        "chiralities": [
+          "CHIRAL",
+          "REAL",
+          "REAL",
+          "ANTICHIRAL"
+        ],
+        "monomial_id": "fp_plus_tilde_c_v2",
+        "ordered_fields": [
+          "cprime_plus",
+          "V",
+          "V",
+          "tilde_c"
+        ],
+        "role": "INTERACTION"
+      },
+      {
+        "V_valence": 1,
+        "chiralities": [
+          "CHIRAL",
+          "REAL",
+          "CHIRAL"
+        ],
+        "monomial_id": "fp_plus_c_v1",
+        "ordered_fields": [
+          "cprime_plus",
+          "V",
+          "c"
+        ],
+        "role": "INTERACTION"
+      },
+      {
+        "V_valence": 2,
+        "chiralities": [
+          "CHIRAL",
+          "REAL",
+          "REAL",
+          "CHIRAL"
+        ],
+        "monomial_id": "fp_plus_c_v2",
+        "ordered_fields": [
+          "cprime_plus",
+          "V",
+          "V",
+          "c"
+        ],
+        "role": "INTERACTION"
+      },
+      {
+        "V_valence": 1,
+        "chiralities": [
+          "ANTICHIRAL",
+          "REAL",
+          "ANTICHIRAL"
+        ],
+        "monomial_id": "fp_minus_tilde_c_v1",
+        "ordered_fields": [
+          "tilde_cprime_minus",
+          "V",
+          "tilde_c"
+        ],
+        "role": "INTERACTION"
+      },
+      {
+        "V_valence": 2,
+        "chiralities": [
+          "ANTICHIRAL",
+          "REAL",
+          "REAL",
+          "ANTICHIRAL"
+        ],
+        "monomial_id": "fp_minus_tilde_c_v2",
+        "ordered_fields": [
+          "tilde_cprime_minus",
+          "V",
+          "V",
+          "tilde_c"
+        ],
+        "role": "INTERACTION"
+      },
+      {
+        "V_valence": 0,
+        "chiralities": [
+          "ANTICHIRAL",
+          "CHIRAL"
+        ],
+        "monomial_id": "fp_minus_c_v0",
+        "ordered_fields": [
+          "tilde_cprime_minus",
+          "c"
+        ],
+        "role": "QUADRATIC_KERNEL"
+      },
+      {
+        "V_valence": 1,
+        "chiralities": [
+          "ANTICHIRAL",
+          "REAL",
+          "CHIRAL"
+        ],
+        "monomial_id": "fp_minus_c_v1",
+        "ordered_fields": [
+          "tilde_cprime_minus",
+          "V",
+          "c"
+        ],
+        "role": "INTERACTION"
+      },
+      {
+        "V_valence": 2,
+        "chiralities": [
+          "ANTICHIRAL",
+          "REAL",
+          "REAL",
+          "CHIRAL"
+        ],
+        "monomial_id": "fp_minus_c_v2",
+        "ordered_fields": [
+          "tilde_cprime_minus",
+          "V",
+          "V",
+          "c"
+        ],
+        "role": "INTERACTION"
+      }
+    ],
+    "field_system": {
+      "antighosts": [
+        "cprime_plus(CHIRAL)",
+        "tilde_cprime_minus(ANTICHIRAL)"
+      ],
+      "ghosts": [
+        "c(CHIRAL)",
+        "tilde_c(ANTICHIRAL)"
+      ],
+      "propagators": [
+        "cprime_plus -> tilde_c",
+        "tilde_cprime_minus -> c"
+      ]
+    },
+    "quadratic_kernel_vertices_excluded_from_interaction_expansion": [
+      "fp_plus_tilde_c_v0",
+      "fp_minus_c_v0"
+    ],
+    "structural_family_census": [
+      {
+        "V_valence_sum": 2,
+        "admitted_labeled_graph_count": 2,
+        "classification": "ADMITTED_UNCOMPUTED",
+        "negative_witness": null,
+        "primitive_vertex": "primitive_I_(2)",
+        "source_monomial_ids": [
+          "fp_minus_c_v2"
+        ],
+        "typed_ghost_matching_count": 1
+      },
+      {
+        "V_valence_sum": 2,
+        "admitted_labeled_graph_count": 0,
+        "classification": "PROVED_ABSENT_AT_THIS_ORDER",
+        "negative_witness": "NO_BIJECTION_BETWEEN_TYPED_ANTIGHOST_AND_GHOST_PORTS",
+        "primitive_vertex": "primitive_I_(2)",
+        "source_monomial_ids": [
+          "fp_minus_tilde_c_v2"
+        ],
+        "typed_ghost_matching_count": 0
+      },
+      {
+        "V_valence_sum": 2,
+        "admitted_labeled_graph_count": 0,
+        "classification": "PROVED_ABSENT_AT_THIS_ORDER",
+        "negative_witness": "NO_BIJECTION_BETWEEN_TYPED_ANTIGHOST_AND_GHOST_PORTS",
+        "primitive_vertex": "primitive_I_(2)",
+        "source_monomial_ids": [
+          "fp_plus_c_v2"
+        ],
+        "typed_ghost_matching_count": 0
+      },
+      {
+        "V_valence_sum": 2,
+        "admitted_labeled_graph_count": 2,
+        "classification": "ADMITTED_UNCOMPUTED",
+        "negative_witness": null,
+        "primitive_vertex": "primitive_I_(2)",
+        "source_monomial_ids": [
+          "fp_plus_tilde_c_v2"
+        ],
+        "typed_ghost_matching_count": 1
+      },
+      {
+        "V_valence_sum": 2,
+        "admitted_labeled_graph_count": 2,
+        "classification": "ADMITTED_UNCOMPUTED",
+        "negative_witness": null,
+        "primitive_vertex": "primitive_I_(2)",
+        "source_monomial_ids": [
+          "fp_minus_c_v1",
+          "fp_minus_c_v1"
+        ],
+        "typed_ghost_matching_count": 2
+      },
+      {
+        "V_valence_sum": 2,
+        "admitted_labeled_graph_count": 0,
+        "classification": "PROVED_ABSENT_AT_THIS_ORDER",
+        "negative_witness": "NO_BIJECTION_BETWEEN_TYPED_ANTIGHOST_AND_GHOST_PORTS",
+        "primitive_vertex": "primitive_I_(2)",
+        "source_monomial_ids": [
+          "fp_minus_c_v1",
+          "fp_minus_tilde_c_v1"
+        ],
+        "typed_ghost_matching_count": 0
+      },
+      {
+        "V_valence_sum": 2,
+        "admitted_labeled_graph_count": 0,
+        "classification": "PROVED_ABSENT_AT_THIS_ORDER",
+        "negative_witness": "NO_BIJECTION_BETWEEN_TYPED_ANTIGHOST_AND_GHOST_PORTS",
+        "primitive_vertex": "primitive_I_(2)",
+        "source_monomial_ids": [
+          "fp_minus_c_v1",
+          "fp_plus_c_v1"
+        ],
+        "typed_ghost_matching_count": 0
+      },
+      {
+        "V_valence_sum": 2,
+        "admitted_labeled_graph_count": 0,
+        "classification": "PROVED_ABSENT_AT_THIS_ORDER",
+        "negative_witness": "EVERY_TYPED_GHOST_MATCHING_LEAVES_AN_INTERNAL_BRIDGE",
+        "primitive_vertex": "primitive_I_(2)",
+        "source_monomial_ids": [
+          "fp_minus_c_v1",
+          "fp_plus_tilde_c_v1"
+        ],
+        "typed_ghost_matching_count": 1
+      },
+      {
+        "V_valence_sum": 2,
+        "admitted_labeled_graph_count": 0,
+        "classification": "PROVED_ABSENT_AT_THIS_ORDER",
+        "negative_witness": "NO_BIJECTION_BETWEEN_TYPED_ANTIGHOST_AND_GHOST_PORTS",
+        "primitive_vertex": "primitive_I_(2)",
+        "source_monomial_ids": [
+          "fp_minus_tilde_c_v1",
+          "fp_minus_tilde_c_v1"
+        ],
+        "typed_ghost_matching_count": 0
+      },
+      {
+        "V_valence_sum": 2,
+        "admitted_labeled_graph_count": 2,
+        "classification": "ADMITTED_UNCOMPUTED",
+        "negative_witness": null,
+        "primitive_vertex": "primitive_I_(2)",
+        "source_monomial_ids": [
+          "fp_minus_tilde_c_v1",
+          "fp_plus_c_v1"
+        ],
+        "typed_ghost_matching_count": 1
+      },
+      {
+        "V_valence_sum": 2,
+        "admitted_labeled_graph_count": 0,
+        "classification": "PROVED_ABSENT_AT_THIS_ORDER",
+        "negative_witness": "NO_BIJECTION_BETWEEN_TYPED_ANTIGHOST_AND_GHOST_PORTS",
+        "primitive_vertex": "primitive_I_(2)",
+        "source_monomial_ids": [
+          "fp_minus_tilde_c_v1",
+          "fp_plus_tilde_c_v1"
+        ],
+        "typed_ghost_matching_count": 0
+      },
+      {
+        "V_valence_sum": 2,
+        "admitted_labeled_graph_count": 0,
+        "classification": "PROVED_ABSENT_AT_THIS_ORDER",
+        "negative_witness": "NO_BIJECTION_BETWEEN_TYPED_ANTIGHOST_AND_GHOST_PORTS",
+        "primitive_vertex": "primitive_I_(2)",
+        "source_monomial_ids": [
+          "fp_plus_c_v1",
+          "fp_plus_c_v1"
+        ],
+        "typed_ghost_matching_count": 0
+      },
+      {
+        "V_valence_sum": 2,
+        "admitted_labeled_graph_count": 0,
+        "classification": "PROVED_ABSENT_AT_THIS_ORDER",
+        "negative_witness": "NO_BIJECTION_BETWEEN_TYPED_ANTIGHOST_AND_GHOST_PORTS",
+        "primitive_vertex": "primitive_I_(2)",
+        "source_monomial_ids": [
+          "fp_plus_c_v1",
+          "fp_plus_tilde_c_v1"
+        ],
+        "typed_ghost_matching_count": 0
+      },
+      {
+        "V_valence_sum": 2,
+        "admitted_labeled_graph_count": 2,
+        "classification": "ADMITTED_UNCOMPUTED",
+        "negative_witness": null,
+        "primitive_vertex": "primitive_I_(2)",
+        "source_monomial_ids": [
+          "fp_plus_tilde_c_v1",
+          "fp_plus_tilde_c_v1"
+        ],
+        "typed_ghost_matching_count": 2
+      }
+    ],
+    "topology_counts": {
+      "I2_FP_V1_FP_V1": 6,
+      "I2_FP_V2": 4
+    }
+  },
+  "MATTER": {
+    "candidate_count": 12,
+    "candidates": [
+      {
+        "candidate_id": "MATTER_L2_000",
+        "classification": "ADMITTED_UNCOMPUTED",
+        "connected": true,
+        "deletion_connected": [
+          [
+            "e0",
+            true
+          ],
+          [
+            "e1",
+            true
+          ],
+          [
+            "e2",
+            true
+          ],
+          [
+            "e3",
+            true
+          ]
+        ],
+        "edges": [
+          {
+            "edge_id": "e0",
+            "left_port": "I2:V1",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "M1:1:matter_v1"
+          },
+          {
+            "edge_id": "e1",
+            "left_port": "I2:V2",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "M2:1:matter_v1"
+          },
+          {
+            "edge_id": "e2",
+            "left_port": "M1:0:matter_tphi",
+            "oriented": true,
+            "propagator": "P_PhiTildePhi",
+            "right_port": "M2:2:matter_phi"
+          },
+          {
+            "edge_id": "e3",
+            "left_port": "M2:0:matter_tphi",
+            "oriented": true,
+            "propagator": "P_PhiTildePhi",
+            "right_port": "M1:2:matter_phi"
+          }
+        ],
+        "loop_number": 2,
+        "one_particle_irreducible": true,
+        "port_conservation": [
+          [
+            "I2:V1",
+            1
+          ],
+          [
+            "I2:V2",
+            1
+          ],
+          [
+            "M1:0:matter_tphi",
+            1
+          ],
+          [
+            "M1:1:matter_v1",
+            1
+          ],
+          [
+            "M1:2:matter_phi",
+            1
+          ],
+          [
+            "M2:0:matter_tphi",
+            1
+          ],
+          [
+            "M2:1:matter_v1",
+            1
+          ],
+          [
+            "M2:2:matter_phi",
+            1
+          ]
+        ],
+        "scope_relation": "OUTSIDE_CURRENT_PURE_GAUGE_SUBSECTOR",
+        "sector": "N4_CHIRAL_MATTER",
+        "topology_family": "I2_MATTER_V1_MATTER_V1",
+        "vertices": [
+          {
+            "ports": [
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V2",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              }
+            ],
+            "sector": "WW_INSERTION",
+            "source_monomial_id": "primitive_I_(2)",
+            "vertex_id": "I2"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "TildePhi",
+                "flavor": 1,
+                "port_id": "M1:0:matter_tphi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "M1:1:matter_v1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "CHIRAL",
+                "field": "Phi",
+                "flavor": 1,
+                "port_id": "M1:2:matter_phi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              }
+            ],
+            "sector": "MATTER_BRIDGE",
+            "source_monomial_id": "matter_bridge_v1",
+            "vertex_id": "M1"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "TildePhi",
+                "flavor": 1,
+                "port_id": "M2:0:matter_tphi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "M2:1:matter_v1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "M2"
+              },
+              {
+                "chirality": "CHIRAL",
+                "field": "Phi",
+                "flavor": 1,
+                "port_id": "M2:2:matter_phi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M2"
+              }
+            ],
+            "sector": "MATTER_BRIDGE",
+            "source_monomial_id": "matter_bridge_v1",
+            "vertex_id": "M2"
+          }
+        ]
+      },
+      {
+        "candidate_id": "MATTER_L2_001",
+        "classification": "ADMITTED_UNCOMPUTED",
+        "connected": true,
+        "deletion_connected": [
+          [
+            "e0",
+            true
+          ],
+          [
+            "e1",
+            true
+          ],
+          [
+            "e2",
+            true
+          ],
+          [
+            "e3",
+            true
+          ]
+        ],
+        "edges": [
+          {
+            "edge_id": "e0",
+            "left_port": "I2:V1",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "M2:1:matter_v1"
+          },
+          {
+            "edge_id": "e1",
+            "left_port": "I2:V2",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "M1:1:matter_v1"
+          },
+          {
+            "edge_id": "e2",
+            "left_port": "M1:0:matter_tphi",
+            "oriented": true,
+            "propagator": "P_PhiTildePhi",
+            "right_port": "M2:2:matter_phi"
+          },
+          {
+            "edge_id": "e3",
+            "left_port": "M2:0:matter_tphi",
+            "oriented": true,
+            "propagator": "P_PhiTildePhi",
+            "right_port": "M1:2:matter_phi"
+          }
+        ],
+        "loop_number": 2,
+        "one_particle_irreducible": true,
+        "port_conservation": [
+          [
+            "I2:V1",
+            1
+          ],
+          [
+            "I2:V2",
+            1
+          ],
+          [
+            "M1:0:matter_tphi",
+            1
+          ],
+          [
+            "M1:1:matter_v1",
+            1
+          ],
+          [
+            "M1:2:matter_phi",
+            1
+          ],
+          [
+            "M2:0:matter_tphi",
+            1
+          ],
+          [
+            "M2:1:matter_v1",
+            1
+          ],
+          [
+            "M2:2:matter_phi",
+            1
+          ]
+        ],
+        "scope_relation": "OUTSIDE_CURRENT_PURE_GAUGE_SUBSECTOR",
+        "sector": "N4_CHIRAL_MATTER",
+        "topology_family": "I2_MATTER_V1_MATTER_V1",
+        "vertices": [
+          {
+            "ports": [
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V2",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              }
+            ],
+            "sector": "WW_INSERTION",
+            "source_monomial_id": "primitive_I_(2)",
+            "vertex_id": "I2"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "TildePhi",
+                "flavor": 1,
+                "port_id": "M1:0:matter_tphi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "M1:1:matter_v1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "CHIRAL",
+                "field": "Phi",
+                "flavor": 1,
+                "port_id": "M1:2:matter_phi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              }
+            ],
+            "sector": "MATTER_BRIDGE",
+            "source_monomial_id": "matter_bridge_v1",
+            "vertex_id": "M1"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "TildePhi",
+                "flavor": 1,
+                "port_id": "M2:0:matter_tphi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "M2:1:matter_v1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "M2"
+              },
+              {
+                "chirality": "CHIRAL",
+                "field": "Phi",
+                "flavor": 1,
+                "port_id": "M2:2:matter_phi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M2"
+              }
+            ],
+            "sector": "MATTER_BRIDGE",
+            "source_monomial_id": "matter_bridge_v1",
+            "vertex_id": "M2"
+          }
+        ]
+      },
+      {
+        "candidate_id": "MATTER_L2_002",
+        "classification": "ADMITTED_UNCOMPUTED",
+        "connected": true,
+        "deletion_connected": [
+          [
+            "e0",
+            true
+          ],
+          [
+            "e1",
+            true
+          ],
+          [
+            "e2",
+            true
+          ],
+          [
+            "e3",
+            true
+          ]
+        ],
+        "edges": [
+          {
+            "edge_id": "e0",
+            "left_port": "I2:V1",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "M1:1:matter_v1"
+          },
+          {
+            "edge_id": "e1",
+            "left_port": "I2:V2",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "M2:1:matter_v1"
+          },
+          {
+            "edge_id": "e2",
+            "left_port": "M1:0:matter_tphi",
+            "oriented": true,
+            "propagator": "P_PhiTildePhi",
+            "right_port": "M2:2:matter_phi"
+          },
+          {
+            "edge_id": "e3",
+            "left_port": "M2:0:matter_tphi",
+            "oriented": true,
+            "propagator": "P_PhiTildePhi",
+            "right_port": "M1:2:matter_phi"
+          }
+        ],
+        "loop_number": 2,
+        "one_particle_irreducible": true,
+        "port_conservation": [
+          [
+            "I2:V1",
+            1
+          ],
+          [
+            "I2:V2",
+            1
+          ],
+          [
+            "M1:0:matter_tphi",
+            1
+          ],
+          [
+            "M1:1:matter_v1",
+            1
+          ],
+          [
+            "M1:2:matter_phi",
+            1
+          ],
+          [
+            "M2:0:matter_tphi",
+            1
+          ],
+          [
+            "M2:1:matter_v1",
+            1
+          ],
+          [
+            "M2:2:matter_phi",
+            1
+          ]
+        ],
+        "scope_relation": "OUTSIDE_CURRENT_PURE_GAUGE_SUBSECTOR",
+        "sector": "N4_CHIRAL_MATTER",
+        "topology_family": "I2_MATTER_V1_MATTER_V1",
+        "vertices": [
+          {
+            "ports": [
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V2",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              }
+            ],
+            "sector": "WW_INSERTION",
+            "source_monomial_id": "primitive_I_(2)",
+            "vertex_id": "I2"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "TildePhi",
+                "flavor": 2,
+                "port_id": "M1:0:matter_tphi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "M1:1:matter_v1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "CHIRAL",
+                "field": "Phi",
+                "flavor": 2,
+                "port_id": "M1:2:matter_phi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              }
+            ],
+            "sector": "MATTER_BRIDGE",
+            "source_monomial_id": "matter_bridge_v1",
+            "vertex_id": "M1"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "TildePhi",
+                "flavor": 2,
+                "port_id": "M2:0:matter_tphi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "M2:1:matter_v1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "M2"
+              },
+              {
+                "chirality": "CHIRAL",
+                "field": "Phi",
+                "flavor": 2,
+                "port_id": "M2:2:matter_phi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M2"
+              }
+            ],
+            "sector": "MATTER_BRIDGE",
+            "source_monomial_id": "matter_bridge_v1",
+            "vertex_id": "M2"
+          }
+        ]
+      },
+      {
+        "candidate_id": "MATTER_L2_003",
+        "classification": "ADMITTED_UNCOMPUTED",
+        "connected": true,
+        "deletion_connected": [
+          [
+            "e0",
+            true
+          ],
+          [
+            "e1",
+            true
+          ],
+          [
+            "e2",
+            true
+          ],
+          [
+            "e3",
+            true
+          ]
+        ],
+        "edges": [
+          {
+            "edge_id": "e0",
+            "left_port": "I2:V1",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "M2:1:matter_v1"
+          },
+          {
+            "edge_id": "e1",
+            "left_port": "I2:V2",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "M1:1:matter_v1"
+          },
+          {
+            "edge_id": "e2",
+            "left_port": "M1:0:matter_tphi",
+            "oriented": true,
+            "propagator": "P_PhiTildePhi",
+            "right_port": "M2:2:matter_phi"
+          },
+          {
+            "edge_id": "e3",
+            "left_port": "M2:0:matter_tphi",
+            "oriented": true,
+            "propagator": "P_PhiTildePhi",
+            "right_port": "M1:2:matter_phi"
+          }
+        ],
+        "loop_number": 2,
+        "one_particle_irreducible": true,
+        "port_conservation": [
+          [
+            "I2:V1",
+            1
+          ],
+          [
+            "I2:V2",
+            1
+          ],
+          [
+            "M1:0:matter_tphi",
+            1
+          ],
+          [
+            "M1:1:matter_v1",
+            1
+          ],
+          [
+            "M1:2:matter_phi",
+            1
+          ],
+          [
+            "M2:0:matter_tphi",
+            1
+          ],
+          [
+            "M2:1:matter_v1",
+            1
+          ],
+          [
+            "M2:2:matter_phi",
+            1
+          ]
+        ],
+        "scope_relation": "OUTSIDE_CURRENT_PURE_GAUGE_SUBSECTOR",
+        "sector": "N4_CHIRAL_MATTER",
+        "topology_family": "I2_MATTER_V1_MATTER_V1",
+        "vertices": [
+          {
+            "ports": [
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V2",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              }
+            ],
+            "sector": "WW_INSERTION",
+            "source_monomial_id": "primitive_I_(2)",
+            "vertex_id": "I2"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "TildePhi",
+                "flavor": 2,
+                "port_id": "M1:0:matter_tphi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "M1:1:matter_v1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "CHIRAL",
+                "field": "Phi",
+                "flavor": 2,
+                "port_id": "M1:2:matter_phi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              }
+            ],
+            "sector": "MATTER_BRIDGE",
+            "source_monomial_id": "matter_bridge_v1",
+            "vertex_id": "M1"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "TildePhi",
+                "flavor": 2,
+                "port_id": "M2:0:matter_tphi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "M2:1:matter_v1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "M2"
+              },
+              {
+                "chirality": "CHIRAL",
+                "field": "Phi",
+                "flavor": 2,
+                "port_id": "M2:2:matter_phi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M2"
+              }
+            ],
+            "sector": "MATTER_BRIDGE",
+            "source_monomial_id": "matter_bridge_v1",
+            "vertex_id": "M2"
+          }
+        ]
+      },
+      {
+        "candidate_id": "MATTER_L2_004",
+        "classification": "ADMITTED_UNCOMPUTED",
+        "connected": true,
+        "deletion_connected": [
+          [
+            "e0",
+            true
+          ],
+          [
+            "e1",
+            true
+          ],
+          [
+            "e2",
+            true
+          ],
+          [
+            "e3",
+            true
+          ]
+        ],
+        "edges": [
+          {
+            "edge_id": "e0",
+            "left_port": "I2:V1",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "M1:1:matter_v1"
+          },
+          {
+            "edge_id": "e1",
+            "left_port": "I2:V2",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "M2:1:matter_v1"
+          },
+          {
+            "edge_id": "e2",
+            "left_port": "M1:0:matter_tphi",
+            "oriented": true,
+            "propagator": "P_PhiTildePhi",
+            "right_port": "M2:2:matter_phi"
+          },
+          {
+            "edge_id": "e3",
+            "left_port": "M2:0:matter_tphi",
+            "oriented": true,
+            "propagator": "P_PhiTildePhi",
+            "right_port": "M1:2:matter_phi"
+          }
+        ],
+        "loop_number": 2,
+        "one_particle_irreducible": true,
+        "port_conservation": [
+          [
+            "I2:V1",
+            1
+          ],
+          [
+            "I2:V2",
+            1
+          ],
+          [
+            "M1:0:matter_tphi",
+            1
+          ],
+          [
+            "M1:1:matter_v1",
+            1
+          ],
+          [
+            "M1:2:matter_phi",
+            1
+          ],
+          [
+            "M2:0:matter_tphi",
+            1
+          ],
+          [
+            "M2:1:matter_v1",
+            1
+          ],
+          [
+            "M2:2:matter_phi",
+            1
+          ]
+        ],
+        "scope_relation": "OUTSIDE_CURRENT_PURE_GAUGE_SUBSECTOR",
+        "sector": "N4_CHIRAL_MATTER",
+        "topology_family": "I2_MATTER_V1_MATTER_V1",
+        "vertices": [
+          {
+            "ports": [
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V2",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              }
+            ],
+            "sector": "WW_INSERTION",
+            "source_monomial_id": "primitive_I_(2)",
+            "vertex_id": "I2"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "TildePhi",
+                "flavor": 3,
+                "port_id": "M1:0:matter_tphi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "M1:1:matter_v1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "CHIRAL",
+                "field": "Phi",
+                "flavor": 3,
+                "port_id": "M1:2:matter_phi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              }
+            ],
+            "sector": "MATTER_BRIDGE",
+            "source_monomial_id": "matter_bridge_v1",
+            "vertex_id": "M1"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "TildePhi",
+                "flavor": 3,
+                "port_id": "M2:0:matter_tphi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "M2:1:matter_v1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "M2"
+              },
+              {
+                "chirality": "CHIRAL",
+                "field": "Phi",
+                "flavor": 3,
+                "port_id": "M2:2:matter_phi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M2"
+              }
+            ],
+            "sector": "MATTER_BRIDGE",
+            "source_monomial_id": "matter_bridge_v1",
+            "vertex_id": "M2"
+          }
+        ]
+      },
+      {
+        "candidate_id": "MATTER_L2_005",
+        "classification": "ADMITTED_UNCOMPUTED",
+        "connected": true,
+        "deletion_connected": [
+          [
+            "e0",
+            true
+          ],
+          [
+            "e1",
+            true
+          ],
+          [
+            "e2",
+            true
+          ],
+          [
+            "e3",
+            true
+          ]
+        ],
+        "edges": [
+          {
+            "edge_id": "e0",
+            "left_port": "I2:V1",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "M2:1:matter_v1"
+          },
+          {
+            "edge_id": "e1",
+            "left_port": "I2:V2",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "M1:1:matter_v1"
+          },
+          {
+            "edge_id": "e2",
+            "left_port": "M1:0:matter_tphi",
+            "oriented": true,
+            "propagator": "P_PhiTildePhi",
+            "right_port": "M2:2:matter_phi"
+          },
+          {
+            "edge_id": "e3",
+            "left_port": "M2:0:matter_tphi",
+            "oriented": true,
+            "propagator": "P_PhiTildePhi",
+            "right_port": "M1:2:matter_phi"
+          }
+        ],
+        "loop_number": 2,
+        "one_particle_irreducible": true,
+        "port_conservation": [
+          [
+            "I2:V1",
+            1
+          ],
+          [
+            "I2:V2",
+            1
+          ],
+          [
+            "M1:0:matter_tphi",
+            1
+          ],
+          [
+            "M1:1:matter_v1",
+            1
+          ],
+          [
+            "M1:2:matter_phi",
+            1
+          ],
+          [
+            "M2:0:matter_tphi",
+            1
+          ],
+          [
+            "M2:1:matter_v1",
+            1
+          ],
+          [
+            "M2:2:matter_phi",
+            1
+          ]
+        ],
+        "scope_relation": "OUTSIDE_CURRENT_PURE_GAUGE_SUBSECTOR",
+        "sector": "N4_CHIRAL_MATTER",
+        "topology_family": "I2_MATTER_V1_MATTER_V1",
+        "vertices": [
+          {
+            "ports": [
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V2",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              }
+            ],
+            "sector": "WW_INSERTION",
+            "source_monomial_id": "primitive_I_(2)",
+            "vertex_id": "I2"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "TildePhi",
+                "flavor": 3,
+                "port_id": "M1:0:matter_tphi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "M1:1:matter_v1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "CHIRAL",
+                "field": "Phi",
+                "flavor": 3,
+                "port_id": "M1:2:matter_phi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              }
+            ],
+            "sector": "MATTER_BRIDGE",
+            "source_monomial_id": "matter_bridge_v1",
+            "vertex_id": "M1"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "TildePhi",
+                "flavor": 3,
+                "port_id": "M2:0:matter_tphi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "M2:1:matter_v1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "M2"
+              },
+              {
+                "chirality": "CHIRAL",
+                "field": "Phi",
+                "flavor": 3,
+                "port_id": "M2:2:matter_phi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M2"
+              }
+            ],
+            "sector": "MATTER_BRIDGE",
+            "source_monomial_id": "matter_bridge_v1",
+            "vertex_id": "M2"
+          }
+        ]
+      },
+      {
+        "candidate_id": "MATTER_L2_006",
+        "classification": "ADMITTED_UNCOMPUTED",
+        "connected": true,
+        "deletion_connected": [
+          [
+            "e0",
+            true
+          ],
+          [
+            "e1",
+            true
+          ],
+          [
+            "e2",
+            true
+          ]
+        ],
+        "edges": [
+          {
+            "edge_id": "e0",
+            "left_port": "I2:V1",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "M1:1:matter_v2a"
+          },
+          {
+            "edge_id": "e1",
+            "left_port": "I2:V2",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "M1:2:matter_v2b"
+          },
+          {
+            "edge_id": "e2",
+            "left_port": "M1:0:matter_tphi",
+            "oriented": true,
+            "propagator": "P_PhiTildePhi",
+            "right_port": "M1:3:matter_phi"
+          }
+        ],
+        "loop_number": 2,
+        "one_particle_irreducible": true,
+        "port_conservation": [
+          [
+            "I2:V1",
+            1
+          ],
+          [
+            "I2:V2",
+            1
+          ],
+          [
+            "M1:0:matter_tphi",
+            1
+          ],
+          [
+            "M1:1:matter_v2a",
+            1
+          ],
+          [
+            "M1:2:matter_v2b",
+            1
+          ],
+          [
+            "M1:3:matter_phi",
+            1
+          ]
+        ],
+        "scope_relation": "OUTSIDE_CURRENT_PURE_GAUGE_SUBSECTOR",
+        "sector": "N4_CHIRAL_MATTER",
+        "topology_family": "I2_MATTER_V2",
+        "vertices": [
+          {
+            "ports": [
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V2",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              }
+            ],
+            "sector": "WW_INSERTION",
+            "source_monomial_id": "primitive_I_(2)",
+            "vertex_id": "I2"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "TildePhi",
+                "flavor": 1,
+                "port_id": "M1:0:matter_tphi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "M1:1:matter_v2a",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "M1:2:matter_v2b",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "CHIRAL",
+                "field": "Phi",
+                "flavor": 1,
+                "port_id": "M1:3:matter_phi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              }
+            ],
+            "sector": "MATTER_BRIDGE",
+            "source_monomial_id": "matter_bridge_v2",
+            "vertex_id": "M1"
+          }
+        ]
+      },
+      {
+        "candidate_id": "MATTER_L2_007",
+        "classification": "ADMITTED_UNCOMPUTED",
+        "connected": true,
+        "deletion_connected": [
+          [
+            "e0",
+            true
+          ],
+          [
+            "e1",
+            true
+          ],
+          [
+            "e2",
+            true
+          ]
+        ],
+        "edges": [
+          {
+            "edge_id": "e0",
+            "left_port": "I2:V1",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "M1:2:matter_v2b"
+          },
+          {
+            "edge_id": "e1",
+            "left_port": "I2:V2",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "M1:1:matter_v2a"
+          },
+          {
+            "edge_id": "e2",
+            "left_port": "M1:0:matter_tphi",
+            "oriented": true,
+            "propagator": "P_PhiTildePhi",
+            "right_port": "M1:3:matter_phi"
+          }
+        ],
+        "loop_number": 2,
+        "one_particle_irreducible": true,
+        "port_conservation": [
+          [
+            "I2:V1",
+            1
+          ],
+          [
+            "I2:V2",
+            1
+          ],
+          [
+            "M1:0:matter_tphi",
+            1
+          ],
+          [
+            "M1:1:matter_v2a",
+            1
+          ],
+          [
+            "M1:2:matter_v2b",
+            1
+          ],
+          [
+            "M1:3:matter_phi",
+            1
+          ]
+        ],
+        "scope_relation": "OUTSIDE_CURRENT_PURE_GAUGE_SUBSECTOR",
+        "sector": "N4_CHIRAL_MATTER",
+        "topology_family": "I2_MATTER_V2",
+        "vertices": [
+          {
+            "ports": [
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V2",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              }
+            ],
+            "sector": "WW_INSERTION",
+            "source_monomial_id": "primitive_I_(2)",
+            "vertex_id": "I2"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "TildePhi",
+                "flavor": 1,
+                "port_id": "M1:0:matter_tphi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "M1:1:matter_v2a",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "M1:2:matter_v2b",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "CHIRAL",
+                "field": "Phi",
+                "flavor": 1,
+                "port_id": "M1:3:matter_phi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              }
+            ],
+            "sector": "MATTER_BRIDGE",
+            "source_monomial_id": "matter_bridge_v2",
+            "vertex_id": "M1"
+          }
+        ]
+      },
+      {
+        "candidate_id": "MATTER_L2_008",
+        "classification": "ADMITTED_UNCOMPUTED",
+        "connected": true,
+        "deletion_connected": [
+          [
+            "e0",
+            true
+          ],
+          [
+            "e1",
+            true
+          ],
+          [
+            "e2",
+            true
+          ]
+        ],
+        "edges": [
+          {
+            "edge_id": "e0",
+            "left_port": "I2:V1",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "M1:1:matter_v2a"
+          },
+          {
+            "edge_id": "e1",
+            "left_port": "I2:V2",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "M1:2:matter_v2b"
+          },
+          {
+            "edge_id": "e2",
+            "left_port": "M1:0:matter_tphi",
+            "oriented": true,
+            "propagator": "P_PhiTildePhi",
+            "right_port": "M1:3:matter_phi"
+          }
+        ],
+        "loop_number": 2,
+        "one_particle_irreducible": true,
+        "port_conservation": [
+          [
+            "I2:V1",
+            1
+          ],
+          [
+            "I2:V2",
+            1
+          ],
+          [
+            "M1:0:matter_tphi",
+            1
+          ],
+          [
+            "M1:1:matter_v2a",
+            1
+          ],
+          [
+            "M1:2:matter_v2b",
+            1
+          ],
+          [
+            "M1:3:matter_phi",
+            1
+          ]
+        ],
+        "scope_relation": "OUTSIDE_CURRENT_PURE_GAUGE_SUBSECTOR",
+        "sector": "N4_CHIRAL_MATTER",
+        "topology_family": "I2_MATTER_V2",
+        "vertices": [
+          {
+            "ports": [
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V2",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              }
+            ],
+            "sector": "WW_INSERTION",
+            "source_monomial_id": "primitive_I_(2)",
+            "vertex_id": "I2"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "TildePhi",
+                "flavor": 2,
+                "port_id": "M1:0:matter_tphi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "M1:1:matter_v2a",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "M1:2:matter_v2b",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "CHIRAL",
+                "field": "Phi",
+                "flavor": 2,
+                "port_id": "M1:3:matter_phi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              }
+            ],
+            "sector": "MATTER_BRIDGE",
+            "source_monomial_id": "matter_bridge_v2",
+            "vertex_id": "M1"
+          }
+        ]
+      },
+      {
+        "candidate_id": "MATTER_L2_009",
+        "classification": "ADMITTED_UNCOMPUTED",
+        "connected": true,
+        "deletion_connected": [
+          [
+            "e0",
+            true
+          ],
+          [
+            "e1",
+            true
+          ],
+          [
+            "e2",
+            true
+          ]
+        ],
+        "edges": [
+          {
+            "edge_id": "e0",
+            "left_port": "I2:V1",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "M1:2:matter_v2b"
+          },
+          {
+            "edge_id": "e1",
+            "left_port": "I2:V2",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "M1:1:matter_v2a"
+          },
+          {
+            "edge_id": "e2",
+            "left_port": "M1:0:matter_tphi",
+            "oriented": true,
+            "propagator": "P_PhiTildePhi",
+            "right_port": "M1:3:matter_phi"
+          }
+        ],
+        "loop_number": 2,
+        "one_particle_irreducible": true,
+        "port_conservation": [
+          [
+            "I2:V1",
+            1
+          ],
+          [
+            "I2:V2",
+            1
+          ],
+          [
+            "M1:0:matter_tphi",
+            1
+          ],
+          [
+            "M1:1:matter_v2a",
+            1
+          ],
+          [
+            "M1:2:matter_v2b",
+            1
+          ],
+          [
+            "M1:3:matter_phi",
+            1
+          ]
+        ],
+        "scope_relation": "OUTSIDE_CURRENT_PURE_GAUGE_SUBSECTOR",
+        "sector": "N4_CHIRAL_MATTER",
+        "topology_family": "I2_MATTER_V2",
+        "vertices": [
+          {
+            "ports": [
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V2",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              }
+            ],
+            "sector": "WW_INSERTION",
+            "source_monomial_id": "primitive_I_(2)",
+            "vertex_id": "I2"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "TildePhi",
+                "flavor": 2,
+                "port_id": "M1:0:matter_tphi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "M1:1:matter_v2a",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "M1:2:matter_v2b",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "CHIRAL",
+                "field": "Phi",
+                "flavor": 2,
+                "port_id": "M1:3:matter_phi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              }
+            ],
+            "sector": "MATTER_BRIDGE",
+            "source_monomial_id": "matter_bridge_v2",
+            "vertex_id": "M1"
+          }
+        ]
+      },
+      {
+        "candidate_id": "MATTER_L2_010",
+        "classification": "ADMITTED_UNCOMPUTED",
+        "connected": true,
+        "deletion_connected": [
+          [
+            "e0",
+            true
+          ],
+          [
+            "e1",
+            true
+          ],
+          [
+            "e2",
+            true
+          ]
+        ],
+        "edges": [
+          {
+            "edge_id": "e0",
+            "left_port": "I2:V1",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "M1:1:matter_v2a"
+          },
+          {
+            "edge_id": "e1",
+            "left_port": "I2:V2",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "M1:2:matter_v2b"
+          },
+          {
+            "edge_id": "e2",
+            "left_port": "M1:0:matter_tphi",
+            "oriented": true,
+            "propagator": "P_PhiTildePhi",
+            "right_port": "M1:3:matter_phi"
+          }
+        ],
+        "loop_number": 2,
+        "one_particle_irreducible": true,
+        "port_conservation": [
+          [
+            "I2:V1",
+            1
+          ],
+          [
+            "I2:V2",
+            1
+          ],
+          [
+            "M1:0:matter_tphi",
+            1
+          ],
+          [
+            "M1:1:matter_v2a",
+            1
+          ],
+          [
+            "M1:2:matter_v2b",
+            1
+          ],
+          [
+            "M1:3:matter_phi",
+            1
+          ]
+        ],
+        "scope_relation": "OUTSIDE_CURRENT_PURE_GAUGE_SUBSECTOR",
+        "sector": "N4_CHIRAL_MATTER",
+        "topology_family": "I2_MATTER_V2",
+        "vertices": [
+          {
+            "ports": [
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V2",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              }
+            ],
+            "sector": "WW_INSERTION",
+            "source_monomial_id": "primitive_I_(2)",
+            "vertex_id": "I2"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "TildePhi",
+                "flavor": 3,
+                "port_id": "M1:0:matter_tphi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "M1:1:matter_v2a",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "M1:2:matter_v2b",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "CHIRAL",
+                "field": "Phi",
+                "flavor": 3,
+                "port_id": "M1:3:matter_phi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              }
+            ],
+            "sector": "MATTER_BRIDGE",
+            "source_monomial_id": "matter_bridge_v2",
+            "vertex_id": "M1"
+          }
+        ]
+      },
+      {
+        "candidate_id": "MATTER_L2_011",
+        "classification": "ADMITTED_UNCOMPUTED",
+        "connected": true,
+        "deletion_connected": [
+          [
+            "e0",
+            true
+          ],
+          [
+            "e1",
+            true
+          ],
+          [
+            "e2",
+            true
+          ]
+        ],
+        "edges": [
+          {
+            "edge_id": "e0",
+            "left_port": "I2:V1",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "M1:2:matter_v2b"
+          },
+          {
+            "edge_id": "e1",
+            "left_port": "I2:V2",
+            "oriented": false,
+            "propagator": "P_VV",
+            "right_port": "M1:1:matter_v2a"
+          },
+          {
+            "edge_id": "e2",
+            "left_port": "M1:0:matter_tphi",
+            "oriented": true,
+            "propagator": "P_PhiTildePhi",
+            "right_port": "M1:3:matter_phi"
+          }
+        ],
+        "loop_number": 2,
+        "one_particle_irreducible": true,
+        "port_conservation": [
+          [
+            "I2:V1",
+            1
+          ],
+          [
+            "I2:V2",
+            1
+          ],
+          [
+            "M1:0:matter_tphi",
+            1
+          ],
+          [
+            "M1:1:matter_v2a",
+            1
+          ],
+          [
+            "M1:2:matter_v2b",
+            1
+          ],
+          [
+            "M1:3:matter_phi",
+            1
+          ]
+        ],
+        "scope_relation": "OUTSIDE_CURRENT_PURE_GAUGE_SUBSECTOR",
+        "sector": "N4_CHIRAL_MATTER",
+        "topology_family": "I2_MATTER_V2",
+        "vertices": [
+          {
+            "ports": [
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V1",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "I2:V2",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "I2"
+              }
+            ],
+            "sector": "WW_INSERTION",
+            "source_monomial_id": "primitive_I_(2)",
+            "vertex_id": "I2"
+          },
+          {
+            "ports": [
+              {
+                "chirality": "ANTICHIRAL",
+                "field": "TildePhi",
+                "flavor": 3,
+                "port_id": "M1:0:matter_tphi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "M1:1:matter_v2a",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "REAL",
+                "field": "V",
+                "flavor": null,
+                "port_id": "M1:2:matter_v2b",
+                "role": "INTERNAL_WICK",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              },
+              {
+                "chirality": "CHIRAL",
+                "field": "Phi",
+                "flavor": 3,
+                "port_id": "M1:3:matter_phi",
+                "role": "MATTER",
+                "statistics": "BOSON",
+                "vertex_id": "M1"
+              }
+            ],
+            "sector": "MATTER_BRIDGE",
+            "source_monomial_id": "matter_bridge_v2",
+            "vertex_id": "M1"
+          }
+        ]
+      }
+    ],
+    "classification": "ADMITTED_UNCOMPUTED",
+    "fields": [
+      "Phi_r(CHIRAL)",
+      "TildePhi_r(ANTICHIRAL)"
+    ],
+    "flavors": [
+      1,
+      2,
+      3
+    ],
+    "propagator": "TildePhi_r -> Phi_r with equal r",
+    "scope_relation": "OUTSIDE_CURRENT_PURE_GAUGE_SUBSECTOR",
+    "structural_family_census": [
+      {
+        "V_valence_sum": 2,
+        "admitted_labeled_graph_count": 2,
+        "classification": "ADMITTED_UNCOMPUTED",
+        "equal_flavor_propagator_condition": true,
+        "negative_witness": null,
+        "source_and_flavor": [
+          [
+            "matter_bridge_v2",
+            1
+          ]
+        ]
+      },
+      {
+        "V_valence_sum": 2,
+        "admitted_labeled_graph_count": 2,
+        "classification": "ADMITTED_UNCOMPUTED",
+        "equal_flavor_propagator_condition": true,
+        "negative_witness": null,
+        "source_and_flavor": [
+          [
+            "matter_bridge_v2",
+            2
+          ]
+        ]
+      },
+      {
+        "V_valence_sum": 2,
+        "admitted_labeled_graph_count": 2,
+        "classification": "ADMITTED_UNCOMPUTED",
+        "equal_flavor_propagator_condition": true,
+        "negative_witness": null,
+        "source_and_flavor": [
+          [
+            "matter_bridge_v2",
+            3
+          ]
+        ]
+      },
+      {
+        "V_valence_sum": 2,
+        "admitted_labeled_graph_count": 2,
+        "classification": "ADMITTED_UNCOMPUTED",
+        "equal_flavor_propagator_condition": true,
+        "negative_witness": null,
+        "source_and_flavor": [
+          [
+            "matter_bridge_v1",
+            1
+          ],
+          [
+            "matter_bridge_v1",
+            1
+          ]
+        ]
+      },
+      {
+        "V_valence_sum": 2,
+        "admitted_labeled_graph_count": 0,
+        "classification": "PROVED_ABSENT_AT_THIS_ORDER",
+        "equal_flavor_propagator_condition": false,
+        "negative_witness": "UNEQUAL_FLAVORS_FORCE_SELF_LOOPS_AND_EACH_VECTOR_ATTACHMENT_IS_A_BRIDGE",
+        "source_and_flavor": [
+          [
+            "matter_bridge_v1",
+            1
+          ],
+          [
+            "matter_bridge_v1",
+            2
+          ]
+        ]
+      },
+      {
+        "V_valence_sum": 2,
+        "admitted_labeled_graph_count": 0,
+        "classification": "PROVED_ABSENT_AT_THIS_ORDER",
+        "equal_flavor_propagator_condition": false,
+        "negative_witness": "UNEQUAL_FLAVORS_FORCE_SELF_LOOPS_AND_EACH_VECTOR_ATTACHMENT_IS_A_BRIDGE",
+        "source_and_flavor": [
+          [
+            "matter_bridge_v1",
+            1
+          ],
+          [
+            "matter_bridge_v1",
+            3
+          ]
+        ]
+      },
+      {
+        "V_valence_sum": 2,
+        "admitted_labeled_graph_count": 0,
+        "classification": "PROVED_ABSENT_AT_THIS_ORDER",
+        "equal_flavor_propagator_condition": false,
+        "negative_witness": "UNEQUAL_FLAVORS_FORCE_SELF_LOOPS_AND_EACH_VECTOR_ATTACHMENT_IS_A_BRIDGE",
+        "source_and_flavor": [
+          [
+            "matter_bridge_v1",
+            2
+          ],
+          [
+            "matter_bridge_v1",
+            1
+          ]
+        ]
+      },
+      {
+        "V_valence_sum": 2,
+        "admitted_labeled_graph_count": 2,
+        "classification": "ADMITTED_UNCOMPUTED",
+        "equal_flavor_propagator_condition": true,
+        "negative_witness": null,
+        "source_and_flavor": [
+          [
+            "matter_bridge_v1",
+            2
+          ],
+          [
+            "matter_bridge_v1",
+            2
+          ]
+        ]
+      },
+      {
+        "V_valence_sum": 2,
+        "admitted_labeled_graph_count": 0,
+        "classification": "PROVED_ABSENT_AT_THIS_ORDER",
+        "equal_flavor_propagator_condition": false,
+        "negative_witness": "UNEQUAL_FLAVORS_FORCE_SELF_LOOPS_AND_EACH_VECTOR_ATTACHMENT_IS_A_BRIDGE",
+        "source_and_flavor": [
+          [
+            "matter_bridge_v1",
+            2
+          ],
+          [
+            "matter_bridge_v1",
+            3
+          ]
+        ]
+      },
+      {
+        "V_valence_sum": 2,
+        "admitted_labeled_graph_count": 0,
+        "classification": "PROVED_ABSENT_AT_THIS_ORDER",
+        "equal_flavor_propagator_condition": false,
+        "negative_witness": "UNEQUAL_FLAVORS_FORCE_SELF_LOOPS_AND_EACH_VECTOR_ATTACHMENT_IS_A_BRIDGE",
+        "source_and_flavor": [
+          [
+            "matter_bridge_v1",
+            3
+          ],
+          [
+            "matter_bridge_v1",
+            1
+          ]
+        ]
+      },
+      {
+        "V_valence_sum": 2,
+        "admitted_labeled_graph_count": 0,
+        "classification": "PROVED_ABSENT_AT_THIS_ORDER",
+        "equal_flavor_propagator_condition": false,
+        "negative_witness": "UNEQUAL_FLAVORS_FORCE_SELF_LOOPS_AND_EACH_VECTOR_ATTACHMENT_IS_A_BRIDGE",
+        "source_and_flavor": [
+          [
+            "matter_bridge_v1",
+            3
+          ],
+          [
+            "matter_bridge_v1",
+            2
+          ]
+        ]
+      },
+      {
+        "V_valence_sum": 2,
+        "admitted_labeled_graph_count": 2,
+        "classification": "ADMITTED_UNCOMPUTED",
+        "equal_flavor_propagator_condition": true,
+        "negative_witness": null,
+        "source_and_flavor": [
+          [
+            "matter_bridge_v1",
+            3
+          ],
+          [
+            "matter_bridge_v1",
+            3
+          ]
+        ]
+      }
+    ],
+    "topology_counts": {
+      "I2_MATTER_V1_MATTER_V1": 6,
+      "I2_MATTER_V2": 6
+    }
+  },
+  "NK": {
+    "classification": "PROVED_ABSENT_AT_THIS_ORDER",
+    "cut_witness": {
+      "NK_component_ports": [
+        "b_NK",
+        "tilde_b_NK"
+      ],
+      "conclusion": "PROVED_ABSENT_AT_THIS_ORDER",
+      "insertion_component_ports": [
+        "V",
+        "V"
+      ],
+      "mixed_propagators": [],
+      "mixed_vertices": []
+    },
+    "fields": [
+      "b_NK(CHIRAL,Grassmann-even)",
+      "tilde_b_NK(ANTICHIRAL,Grassmann-even)"
+    ],
+    "interaction_vertices_with_V": [],
+    "nonclaim": "No equality with a global finite-BV/NK determinant or cycle is asserted.",
+    "propagator": "b_NK <-> tilde_b_NK",
+    "scope": "REFERENCE_FLAT_STEP5A_FIXED_GAUGE_ONLY"
+  },
+  "decided_properties": [
+    "typed_port_saturation",
+    "connected",
+    "L=2",
+    "internal_edge_1PI"
+  ],
+  "global_nonclaim": "The census is local fixed-gauge perturbative graph theory, not a finite-density, Berezinian, FP-cycle, NK-cycle, or BV-equivalence proof.",
+  "input_hashes": {
+    "AGENTS.md": "a8565eb09959193c273746ece9cb08dd4a5f18d644ea9bca0638ad7739cf8d46",
+    "AUTHORITY.md": "3970e8769fc21a5f41a1fa0d4e537b577f3d1d7b212bc6795819b37b6d58ae6f",
+    "audits/step5a-ghost-census.json": "4ef9cfbbb54cd0927ee490dde0a6006f339f2242e257f564fe09e44adcfd18e2",
+    "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md": "109e0c531da3a1b98313e87dd692fa3d9047c8f745291f8e87021008c7acc538",
+    "scripts/step5_vertex_grammar.py": "b91f0e9633f13ebb238a18f09b0265a0c8b1bb72d964307d3fc4b1d04fd39dd8",
+    "tasks/CURRENT.yaml": "930a2c899174550d1acd938c8393aa77bdab83f05cc9a0167e2347e08260ea77"
+  },
+  "overall_classification": "ADMITTED_UNCOMPUTED",
+  "primitive_ports": [
+    {
+      "chirality": "REAL",
+      "field": "V",
+      "flavor": null,
+      "port_id": "I2:V1",
+      "role": "INTERNAL_WICK",
+      "statistics": "BOSON",
+      "vertex_id": "I2"
+    },
+    {
+      "chirality": "REAL",
+      "field": "V",
+      "flavor": null,
+      "port_id": "I2:V2",
+      "role": "INTERNAL_WICK",
+      "statistics": "BOSON",
+      "vertex_id": "I2"
+    }
+  ],
+  "schema": 1,
+  "scope": "STEP6.PRIMITIVE_WW.TWO_LOOP.GHOST_TYPED_PORT_CENSUS",
+  "seed": "nabla_-[(nabla_+W_+)^A(nabla_+W_+)^B]::primitive_I_(2)",
+  "status": "PROPOSAL_ONLY_BLOCKED_ON_STEP5_ACCEPTANCE",
+  "topological_valence_certificate": {
+    "L_equals_2_solution_under_conditions": {
+      "M": 2,
+      "n_gauge": 0,
+      "sum_j(q_j-2)": 0
+    },
+    "bounded_integer_crosscheck_solutions_before_M_ge_2": [
+      {
+        "FP_vector_valence_M": 2,
+        "minimum_sum_q_minus_2": 0,
+        "n_gauge": 0
+      },
+      {
+        "FP_vector_valence_M": 1,
+        "minimum_sum_q_minus_2": 1,
+        "n_gauge": 1
+      },
+      {
+        "FP_vector_valence_M": 0,
+        "minimum_sum_q_minus_2": 2,
+        "n_gauge": 2
+      }
+    ],
+    "derivation": [
+      "E_ghost=n_FP",
+      "E_V=(2+M+sum_j q_j)/2",
+      "V_total=1+n_FP+n_gauge",
+      "L=E_ghost+E_V-V_total+1",
+      "L=1+(M+sum_j(q_j-2))/2"
+    ],
+    "identity": "L=1+(M+sum_j(q_j-2))/2",
+    "interaction_gauge_valence_condition": "q_j>=3",
+    "one_PI_attachment_condition": "M>=2"
+  },
+  "unevaluated_properties": [
+    "coefficient",
+    "Wick_sign",
+    "symmetry_factor",
+    "color_factor",
+    "momentum_routing",
+    "D_algebra",
+    "integral",
+    "renormalization",
+    "finite_BV_density",
+    "finite_FP_NK_cycles"
+  ]
+}
