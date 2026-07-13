@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 from dataclasses import dataclass, replace
 from enum import Enum
 from fractions import Fraction
@@ -637,6 +638,1095 @@ class DAlgebraResult:
 
     def canonical_json(self) -> str:
         return json.dumps(self.to_json(), sort_keys=True, separators=(",", ":")) + "\n"
+
+
+SCHEDULED_WW_PHASES = (
+    "SCOPE_EXPANSION",
+    "ENDPOINT_CANONICALIZATION",
+    "PIVOTED_IBP",
+    "PRIMITIVE_NORMAL_ORDERING",
+    "PROJECTOR_REDUCTION",
+    "EXTERNAL_CHIRALITY",
+    "GRASSMANN_SATURATION",
+    "TYPED_EDGE_COLLAPSE",
+)
+SCHEDULED_WW_SCOPE = "PHYSICAL_WW_TRIANGLE_ONLY_FAIL_CLOSED_ELSEWHERE"
+
+
+class UnsupportedScheduledWWGraphError(ValueError):
+    code = "UNSUPPORTED_SCHEDULED_WW_GRAPH"
+
+
+@dataclass(frozen=True)
+class ScheduledWWAlgebraCertificate:
+    notation_hash: str
+    k_plus_coefficient: GaussianRational
+    dminus_dplus_coefficient: GaussianRational
+    dminus_kplus_coefficient: GaussianRational
+    closed_delta_coefficient: GaussianRational
+    mixed_reordering_coefficient: GaussianRational
+    mixed_momentum_coefficient: GaussianRational
+    ordered_mixed_factor: GaussianRational
+    matrix_probe_momenta: tuple[tuple[int, int, int, int], ...]
+    matrix_checks: tuple[tuple[str, bool], ...]
+
+    def __post_init__(self) -> None:
+        if not _is_sha256(self.notation_hash):
+            raise ValueError("scheduled WW algebra certificate needs a notation hash")
+        if not self.matrix_checks or not all(value for _, value in self.matrix_checks):
+            failed = [name for name, value in self.matrix_checks if not value]
+            raise UnsupportedScheduledWWGraphError(
+                "the exact 16x16 scheduled WW matrix oracle did not pass: "
+                + ",".join(failed)
+            )
+
+    def evidence_json(self) -> dict[str, object]:
+        return {
+            "notation_hash": self.notation_hash,
+            "notation_rule_coefficients": {
+                "K_plus": self.k_plus_coefficient.to_json(),
+                "Dminus_Dplus": self.dminus_dplus_coefficient.to_json(),
+                "Dminus_Kplus": self.dminus_kplus_coefficient.to_json(),
+                "closed_D2_barD2_delta": self.closed_delta_coefficient.to_json(),
+                "mixed_reordering": self.mixed_reordering_coefficient.to_json(),
+                "mixed_momentum": self.mixed_momentum_coefficient.to_json(),
+                "ordered_mixed_factor": self.ordered_mixed_factor.to_json(),
+            },
+            "matrix_representation": "EXACT_16_BY_16_EXTERIOR_ALGEBRA_Q_I",
+            "matrix_probe_momenta": [list(momentum) for momentum in self.matrix_probe_momenta],
+            "matrix_checks": dict(self.matrix_checks),
+        }
+
+    def sha256(self) -> str:
+        canonical = json.dumps(
+            self.evidence_json(), sort_keys=True, separators=(",", ":")
+        )
+        return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
+
+    def to_json(self) -> dict[str, object]:
+        return {
+            **self.evidence_json(),
+            "status": "PASS_NOTATION_AND_EXACT_16X16_ORACLE",
+            "certificate_sha256": self.sha256(),
+        }
+
+
+def _qi_from_notation(value: object) -> GaussianRational:
+    if not hasattr(value, "real") or not hasattr(value, "imag"):
+        raise UnsupportedScheduledWWGraphError("notation coefficient is not in Q(i)")
+    return GaussianRational(Fraction(value.real), Fraction(value.imag))  # type: ignore[arg-type]
+
+
+def _notation_derivative_rule(notation_schema: object, lhs: tuple[str, ...]) -> object:
+    matches = [
+        rule
+        for rule in notation_schema.derivative_rules  # type: ignore[attr-defined]
+        if tuple(rule.lhs) == lhs
+    ]
+    if len(matches) != 1:
+        raise UnsupportedScheduledWWGraphError(
+            f"notation has no unique derivative rule {lhs}"
+        )
+    return matches[0]
+
+
+def build_scheduled_ww_algebra_certificate(
+    notation_schema: object,
+    matrix_oracle: object,
+) -> ScheduledWWAlgebraCertificate:
+    """Bind the narrow WW constants to notation rules and exact matrices."""
+
+    k_rule = _notation_derivative_rule(notation_schema, ("K_+",))
+    d_pair_rule = _notation_derivative_rule(notation_schema, ("D_-", "D_+"))
+    d_k_rule = _notation_derivative_rule(notation_schema, ("D_-", "K_+"))
+    mixed_rule = _notation_derivative_rule(
+        notation_schema, ("D_a", "barD_dot_alpha")
+    )
+    closed_rule = _notation_derivative_rule(notation_schema, ("D2", "barD2"))
+    if len(k_rule.rhs) != 1 or tuple(k_rule.rhs[0].ordered_derivatives) != (
+        "D_+",
+        "barD2",
+        "D_+",
+    ):
+        raise UnsupportedScheduledWWGraphError("notation K_plus rule has drifted")
+    if len(d_pair_rule.rhs) != 1 or tuple(d_pair_rule.rhs[0].ordered_derivatives) != (
+        "D2",
+    ):
+        raise UnsupportedScheduledWWGraphError("notation Dminus-Dplus rule has drifted")
+    if len(d_k_rule.rhs) != 1 or tuple(d_k_rule.rhs[0].ordered_derivatives) != (
+        "D2",
+        "barD2",
+        "D_+",
+    ):
+        raise UnsupportedScheduledWWGraphError("notation Dminus-Kplus rule has drifted")
+    if len(closed_rule.rhs) != 1 or tuple(closed_rule.rhs[0].tensor_factors) != (
+        "delta4theta",
+    ):
+        raise UnsupportedScheduledWWGraphError("notation closed-delta rule has drifted")
+    if len(mixed_rule.rhs) != 2:
+        raise UnsupportedScheduledWWGraphError("notation mixed rule has drifted")
+    reordered = next(
+        (
+            term
+            for term in mixed_rule.rhs
+            if tuple(term.ordered_derivatives) == ("barD_dot_alpha", "D_a")
+            and not term.symbol_factors
+        ),
+        None,
+    )
+    momentum = next(
+        (
+            term
+            for term in mixed_rule.rhs
+            if not term.ordered_derivatives and tuple(term.symbol_factors) == ("p",)
+        ),
+        None,
+    )
+    if reordered is None or momentum is None:
+        raise UnsupportedScheduledWWGraphError("notation mixed branches are not typed")
+
+    k_plus = _qi_from_notation(k_rule.rhs[0].coefficient)
+    dminus_dplus = _qi_from_notation(d_pair_rule.rhs[0].coefficient)
+    dminus_kplus = _qi_from_notation(d_k_rule.rhs[0].coefficient)
+    closed_delta = _qi_from_notation(closed_rule.rhs[0].coefficient)
+    mixed_reordering = _qi_from_notation(reordered.coefficient)
+    mixed_momentum = _qi_from_notation(momentum.coefficient)
+    ordered_mixed = mixed_reordering * mixed_momentum
+    if dminus_kplus != k_plus * dminus_dplus:
+        raise UnsupportedScheduledWWGraphError(
+            "notation Dminus-Kplus coefficient disagrees with Kplus and Dminus-Dplus"
+        )
+
+    probe_momenta = ((0, 0, 0, 1), (1, 2, 3, 4), (2, -1, 0, 3))
+    checks: list[tuple[str, bool]] = []
+
+    def oracle_scalar(value: GaussianRational) -> object:
+        return matrix_oracle.QComplex(value.re, value.im)  # type: ignore[attr-defined]
+
+    for probe in probe_momenta:
+        operators = matrix_oracle.flat_operators(probe)  # type: ignore[attr-defined]
+        label = "_".join(str(value).replace("-", "m") for value in probe)
+        checks.append(
+            (
+                f"Dminus_Dplus_{label}",
+                matrix_oracle.multiply(operators["D_minus"], operators["D_plus"])  # type: ignore[attr-defined]
+                == matrix_oracle.scale(oracle_scalar(dminus_dplus), operators["D2"]),  # type: ignore[attr-defined]
+            )
+        )
+        k_matrix = matrix_oracle.scale(  # type: ignore[attr-defined]
+            oracle_scalar(k_plus),
+            matrix_oracle.multiply(  # type: ignore[attr-defined]
+                matrix_oracle.multiply(operators["D_plus"], operators["barD2"]),  # type: ignore[attr-defined]
+                operators["D_plus"],
+            ),
+        )
+        checks.append(
+            (
+                f"Dminus_Kplus_{label}",
+                matrix_oracle.multiply(operators["D_minus"], k_matrix)  # type: ignore[attr-defined]
+                == matrix_oracle.scale(  # type: ignore[attr-defined]
+                    oracle_scalar(dminus_kplus),
+                    matrix_oracle.multiply(  # type: ignore[attr-defined]
+                        matrix_oracle.multiply(operators["D2"], operators["barD2"]),  # type: ignore[attr-defined]
+                        operators["D_plus"],
+                    ),
+                ),
+            )
+        )
+        sigma = matrix_oracle.sigma_e(probe)  # type: ignore[attr-defined]
+        d_operators = (operators["D_plus"], operators["D_minus"])
+        bar_operators = (operators["barD_plus"], operators["barD_minus"])
+        for undotted in range(2):
+            for dotted in range(2):
+                anticommutator = matrix_oracle.add(  # type: ignore[attr-defined]
+                    matrix_oracle.multiply(d_operators[undotted], bar_operators[dotted]),  # type: ignore[attr-defined]
+                    matrix_oracle.multiply(bar_operators[dotted], d_operators[undotted]),  # type: ignore[attr-defined]
+                )
+                expected = matrix_oracle.scale(  # type: ignore[attr-defined]
+                    oracle_scalar(mixed_momentum) * sigma[undotted][dotted],
+                    operators["identity"],
+                )
+                checks.append(
+                    (
+                        f"mixed_{label}_{undotted}_{dotted}",
+                        anticommutator == expected,
+                    )
+                )
+        normalized_delta = matrix_oracle.polynomial_basis(15, -4)  # type: ignore[attr-defined]
+        saturated = matrix_oracle.matrix_vector(  # type: ignore[attr-defined]
+            matrix_oracle.multiply(operators["D2"], operators["barD2"]),  # type: ignore[attr-defined]
+            normalized_delta,
+        )
+        checks.append(
+            (
+                f"closed_delta_evaluated_at_zero_{label}",
+                saturated[0] == oracle_scalar(closed_delta),
+            )
+        )
+
+    return ScheduledWWAlgebraCertificate(
+        notation_hash=notation_schema.canonical_hash,  # type: ignore[attr-defined]
+        k_plus_coefficient=k_plus,
+        dminus_dplus_coefficient=dminus_dplus,
+        dminus_kplus_coefficient=dminus_kplus,
+        closed_delta_coefficient=closed_delta,
+        mixed_reordering_coefficient=mixed_reordering,
+        mixed_momentum_coefficient=mixed_momentum,
+        ordered_mixed_factor=ordered_mixed,
+        matrix_probe_momenta=probe_momenta,
+        matrix_checks=tuple(checks),
+    )
+
+
+@dataclass(frozen=True)
+class ScheduledDerivativeApplication:
+    application_id: str
+    scope_id: str
+    derivative_kind: str
+    spinor_index: str
+    vertex_id: str
+    half_edge_id: str
+    edge_id: str
+    momentum: str
+    vertex_sign: int
+    source_tag: EndpointTag
+    pivot_tag: EndpointTag
+    endpoint_transfer_count: int
+    endpoint_transfer_sign: int
+    crossed_parities: tuple[int, ...]
+    koszul_sign: int
+
+    def to_json(self) -> dict[str, object]:
+        return {
+            "application_id": self.application_id,
+            "scope_id": self.scope_id,
+            "derivative_kind": self.derivative_kind,
+            "spinor_index": self.spinor_index,
+            "vertex_id": self.vertex_id,
+            "half_edge_id": self.half_edge_id,
+            "edge_id": self.edge_id,
+            "momentum": self.momentum,
+            "vertex_sign": self.vertex_sign,
+            "source_tag": tag_to_json(self.source_tag),
+            "pivot_tag": tag_to_json(self.pivot_tag),
+            "endpoint_transfer_count": self.endpoint_transfer_count,
+            "endpoint_transfer_sign": self.endpoint_transfer_sign,
+            "crossed_parities": list(self.crossed_parities),
+            "koszul_sign": self.koszul_sign,
+        }
+
+
+@dataclass(frozen=True)
+class ScheduledDMinusPlacement:
+    placement_id: str
+    placement_name: str
+    insertion_vertex_id: str
+    target_half_edge_id: str
+    preceding_field_parities: tuple[int, ...]
+    leibniz_sign: int
+
+    def to_json(self) -> dict[str, object]:
+        return {
+            "placement_id": self.placement_id,
+            "placement_name": self.placement_name,
+            "insertion_vertex_id": self.insertion_vertex_id,
+            "target_half_edge_id": self.target_half_edge_id,
+            "preceding_field_parities": list(self.preceding_field_parities),
+            "leibniz_sign": self.leibniz_sign,
+        }
+
+
+@dataclass(frozen=True)
+class ScheduledPhaseTrace:
+    phase: str
+    applied: bool
+    measure_before: int
+    measure_after: int
+    exact_factor: GaussianRational
+    rule: str
+    input: str
+    output: str
+    ledger: tuple[SignLedgerEntry, ...] = ()
+
+    def __post_init__(self) -> None:
+        if self.phase not in SCHEDULED_WW_PHASES:
+            raise ValueError(f"unknown scheduled WW phase {self.phase}")
+        if self.applied and not self.measure_after < self.measure_before:
+            raise ValueError(
+                f"applied phase {self.phase} does not lower its measure: "
+                f"{self.measure_before} -> {self.measure_after}"
+            )
+
+    def to_json(self) -> dict[str, object]:
+        return {
+            "phase": self.phase,
+            "applied": self.applied,
+            "measure_before": self.measure_before,
+            "measure_after": self.measure_after,
+            "exact_factor": self.exact_factor.to_json(),
+            "rule": self.rule,
+            "input": self.input,
+            "output": self.output,
+            "ledger": [entry.to_json() for entry in self.ledger],
+        }
+
+
+@dataclass(frozen=True)
+class ScheduledNumeratorFactor:
+    factor_kind: str
+    momentum: str
+    edge_id: str | None
+    external_leg_id: str | None
+    undotted: str
+    dotted: str
+    fourier_factor: GaussianRational
+
+    def to_json(self) -> dict[str, object]:
+        return {
+            "factor_kind": self.factor_kind,
+            "momentum": self.momentum,
+            "edge_id": self.edge_id,
+            "external_leg_id": self.external_leg_id,
+            "undotted": self.undotted,
+            "dotted": self.dotted,
+            "fourier_factor": self.fourier_factor.to_json(),
+        }
+
+
+@dataclass(frozen=True)
+class ScheduledWWNormalForm:
+    coefficient_in_g2: GaussianRational
+    numerator_factors: tuple[ScheduledNumeratorFactor, ...]
+    propagator_collapses: tuple[str, ...]
+    classification: str
+
+    def to_json(self) -> dict[str, object]:
+        return {
+            "arithmetic": "EXACT_Q_I",
+            "coefficient_in_g2": self.coefficient_in_g2.to_json(),
+            "numerator_factors": [factor.to_json() for factor in self.numerator_factors],
+            "propagator_collapses": list(self.propagator_collapses),
+            "classification": self.classification,
+        }
+
+    def canonical_json(self) -> str:
+        return json.dumps(self.to_json(), sort_keys=True, separators=(",", ":")) + "\n"
+
+    def sha256(self) -> str:
+        return hashlib.sha256(self.canonical_json().encode("utf-8")).hexdigest()
+
+
+@dataclass(frozen=True)
+class ScheduledWWRow:
+    trace_id: str
+    notation_hash: str
+    graph_hash: str
+    amplitude_id: str
+    orientation: str
+    orientation_koszul_sign: int
+    external_w_field_name: str
+    external_w_color_label: str
+    placement: ScheduledDMinusPlacement
+    bar_application: ScheduledDerivativeApplication
+    d_application: ScheduledDerivativeApplication
+    insertion_prefactor: Fraction
+    closed_delta: int
+    mixed_anticommutator_factors: tuple[GaussianRational, GaussianRational]
+    exact_d_chain: GaussianRational
+    graph_prefactor_in_g2: Fraction
+    phase_trace: tuple[ScheduledPhaseTrace, ...]
+    normal_form: ScheduledWWNormalForm
+
+    def __post_init__(self) -> None:
+        if tuple(phase.phase for phase in self.phase_trace) != SCHEDULED_WW_PHASES:
+            raise ValueError("scheduled WW phases are missing or out of order")
+
+    @property
+    def total_endpoint_sign(self) -> int:
+        return (
+            self.bar_application.vertex_sign
+            * self.bar_application.endpoint_transfer_sign
+            * self.bar_application.koszul_sign
+            * self.d_application.vertex_sign
+            * self.d_application.endpoint_transfer_sign
+            * self.d_application.koszul_sign
+        )
+
+    @property
+    def external_derivative_rendering(self) -> str:
+        factor = self.normal_form.numerator_factors[1]
+        return (
+            "partial_(a dot_beta)["
+            + self.external_w_field_name
+            + "^"
+            + self.external_w_color_label
+            + "("
+            + factor.momentum
+            + ")]=i*"
+            + factor.momentum
+            + "_(a dot_beta)*"
+            + self.external_w_field_name
+            + "^"
+            + self.external_w_color_label
+            + "("
+            + factor.momentum
+            + ")"
+        )
+
+    def to_json(self) -> dict[str, object]:
+        return {
+            "schema": 1,
+            "scope": SCHEDULED_WW_SCOPE,
+            "trace_id": self.trace_id,
+            "notation_hash": self.notation_hash,
+            "graph_hash": self.graph_hash,
+            "amplitude_id": self.amplitude_id,
+            "orientation": self.orientation,
+            "orientation_koszul_sign": self.orientation_koszul_sign,
+            "external_w_field_name": self.external_w_field_name,
+            "external_w_color_label": self.external_w_color_label,
+            "placement": self.placement.to_json(),
+            "bar_application": self.bar_application.to_json(),
+            "d_application": self.d_application.to_json(),
+            "total_endpoint_sign": self.total_endpoint_sign,
+            "exact_d_chain": {
+                "insertion_prefactor": str(self.insertion_prefactor),
+                "closed_delta": self.closed_delta,
+                "mixed_anticommutator_factors": [
+                    factor.to_json() for factor in self.mixed_anticommutator_factors
+                ],
+                "product": self.exact_d_chain.to_json(),
+            },
+            "graph_prefactor_in_g2": str(self.graph_prefactor_in_g2),
+            "phase_order": list(SCHEDULED_WW_PHASES),
+            "phase_trace": [phase.to_json() for phase in self.phase_trace],
+            "normal_form": self.normal_form.to_json(),
+            "normal_form_sha256": self.normal_form.sha256(),
+            "external_derivative_rendering": self.external_derivative_rendering,
+        }
+
+    def canonical_json(self) -> str:
+        return json.dumps(self.to_json(), sort_keys=True, separators=(",", ":")) + "\n"
+
+    def sha256(self) -> str:
+        return hashlib.sha256(self.canonical_json().encode("utf-8")).hexdigest()
+
+
+@dataclass(frozen=True)
+class ScheduledWWCompilation:
+    notation_hash: str
+    graph_hash: str
+    amplitude_id: str
+    orientation: str
+    algebra_certificate: ScheduledWWAlgebraCertificate
+    placements: tuple[ScheduledDMinusPlacement, ...]
+    bar_scope: tuple[ScheduledDerivativeApplication, ...]
+    d_scope: tuple[ScheduledDerivativeApplication, ...]
+    rows: tuple[ScheduledWWRow, ...]
+
+    def __post_init__(self) -> None:
+        if len(self.placements) != 2 or len(self.bar_scope) != 2 or len(self.d_scope) != 2:
+            raise ValueError("physical WW schedule requires 2 x 2 x 2 choices")
+        if len(self.rows) != 8:
+            raise ValueError("one WW orientation requires exactly eight scheduled rows")
+
+    def to_json(self) -> dict[str, object]:
+        return {
+            "schema": 1,
+            "status": "PASS_PHYSICAL_WW_EIGHT_ROW_PHASE_SEQUENCE",
+            "scope": SCHEDULED_WW_SCOPE,
+            "notation_hash": self.notation_hash,
+            "graph_hash": self.graph_hash,
+            "amplitude_id": self.amplitude_id,
+            "orientation": self.orientation,
+            "algebra_certificate": self.algebra_certificate.to_json(),
+            "placements": [placement.to_json() for placement in self.placements],
+            "bar_scope": [application.to_json() for application in self.bar_scope],
+            "d_scope": [application.to_json() for application in self.d_scope],
+            "rows": [
+                {**row.to_json(), "row_sha256": row.sha256()} for row in self.rows
+            ],
+            "critical_pair_scope": DECLARED_CRITICAL_PAIR_SCOPE,
+            "global_confluence_claimed": False,
+            "contact_cancellation_claimed": False,
+            "anomaly_coefficient_claimed": False,
+        }
+
+    def canonical_json(self) -> str:
+        return json.dumps(self.to_json(), sort_keys=True, separators=(",", ":")) + "\n"
+
+
+def _require_unique(items: Sequence[object], predicate: Callable[[object], bool], label: str) -> object:
+    selected = [item for item in items if predicate(item)]
+    if len(selected) != 1:
+        raise UnsupportedScheduledWWGraphError(
+            f"physical WW schedule requires exactly one {label}; found {len(selected)}"
+        )
+    return selected[0]
+
+
+def _difference_scope(expression: str) -> tuple[str, str, str]:
+    compact = expression.replace(" ", "")
+    match = re.fullmatch(r"(?P<head>[^()]+)\((?P<plus>[^()]+)\)-(?P=head)\((?P<minus>[^()]+)\)", compact)
+    if match is None:
+        raise UnsupportedScheduledWWGraphError(
+            f"derivative scope is not an ordered binary difference: {expression}"
+        )
+    return match.group("head"), match.group("plus"), match.group("minus")
+
+
+def _half_edge_for_label(vertex: object, label: str, external_half_edges: set[str]) -> str:
+    candidates = [
+        half_edge_id
+        for half_edge_id in vertex.ordered_half_edges  # type: ignore[attr-defined]
+        if half_edge_id not in external_half_edges and half_edge_id.endswith("_" + label)
+    ]
+    if len(candidates) != 1:
+        raise UnsupportedScheduledWWGraphError(
+            f"vertex {vertex.vertex_id} has no unique quantum port for label {label}"  # type: ignore[attr-defined]
+        )
+    return candidates[0]
+
+
+def _vertex_operator(vertex: object, prefix: str) -> str:
+    candidates = [
+        factor
+        for factor in vertex.effective_coefficient_factors  # type: ignore[attr-defined]
+        if factor.startswith(prefix)
+    ]
+    if len(candidates) != 1:
+        raise UnsupportedScheduledWWGraphError(
+            f"vertex {vertex.vertex_id} has no unique operator beginning {prefix}"  # type: ignore[attr-defined]
+        )
+    return candidates[0]
+
+
+def _scheduled_application(
+    *,
+    scope_id: str,
+    derivative_kind: str,
+    spinor_index: str,
+    vertex: object,
+    half_edge_id: str,
+    vertex_sign: int,
+    edge_by_half_edge: dict[str, object],
+    central_edge_id: str,
+    half_edges: dict[str, object],
+) -> ScheduledDerivativeApplication:
+    edge = edge_by_half_edge[half_edge_id]
+    source_tag = EndpointTag(edge.edge_id, half_edge_id)  # type: ignore[attr-defined]
+    transfer_count = 0 if edge.edge_id == central_edge_id else 1  # type: ignore[attr-defined]
+    transfer_sign = 1
+    koszul_sign = 1
+    crossed_parities: tuple[int, ...] = ()
+    pivot_tag = source_tag
+    if transfer_count:
+        other = (
+            edge.right_half_edge  # type: ignore[attr-defined]
+            if edge.left_half_edge == half_edge_id  # type: ignore[attr-defined]
+            else edge.left_half_edge  # type: ignore[attr-defined]
+        )
+        pivot_tag = EndpointTag(edge.edge_id, other)  # type: ignore[attr-defined]
+        crossed_parities = (half_edges[half_edge_id].field_type.parity,)
+        token: Token
+        if derivative_kind == "barD":
+            token = BarD(spinor_index, source_tag, edge.momentum)  # type: ignore[attr-defined]
+        else:
+            token = D(spinor_index, source_tag, edge.momentum)  # type: ignore[attr-defined]
+        moved = transfer_endpoint(Term(1, (token,)), 0, pivot_tag, crossed_parities)
+        transfer_sign = int(moved.sign_ledger[0].factor.re)
+        koszul_sign = int(moved.sign_ledger[1].factor.re)
+        if moved.sign_ledger[0].factor.im or moved.sign_ledger[1].factor.im:
+            raise UnsupportedScheduledWWGraphError("endpoint signs must be real")
+    return ScheduledDerivativeApplication(
+        application_id=f"{scope_id}:{half_edge_id}",
+        scope_id=scope_id,
+        derivative_kind=derivative_kind,
+        spinor_index=spinor_index,
+        vertex_id=vertex.vertex_id,  # type: ignore[attr-defined]
+        half_edge_id=half_edge_id,
+        edge_id=edge.edge_id,  # type: ignore[attr-defined]
+        momentum=edge.momentum,  # type: ignore[attr-defined]
+        vertex_sign=vertex_sign,
+        source_tag=source_tag,
+        pivot_tag=pivot_tag,
+        endpoint_transfer_count=transfer_count,
+        endpoint_transfer_sign=transfer_sign,
+        crossed_parities=crossed_parities,
+        koszul_sign=koszul_sign,
+    )
+
+
+def compile_scheduled_ww_rows(
+    amplitude: object,
+    notation_schema: object | None = None,
+    matrix_oracle: object | None = None,
+) -> ScheduledWWCompilation:
+    """Compile the physical 2 x 4 WW ledger from GraphIR and AmplitudeIR.
+
+    The constructor reads the typed graph topology, ordered vertex derivative
+    differences, the two insertion ports, the exact reduced amplitude
+    coefficient, and the external-leg parity/chirality data.  It does not read
+    the legacy endpoint table.
+    """
+
+    if notation_schema is None or matrix_oracle is None:
+        raise UnsupportedScheduledWWGraphError(
+            "physical WW scheduling requires notation and exact 16x16 oracle inputs"
+        )
+    algebra_certificate = build_scheduled_ww_algebra_certificate(
+        notation_schema, matrix_oracle
+    )
+    graph = amplitude.graph  # type: ignore[attr-defined]
+    graph.validate()
+    graph.assert_linear_momentum_routing()
+    if graph.cycle_rank() != 1 or len(graph.vertices) != 3 or len(graph.internal_edges) != 3:
+        raise UnsupportedScheduledWWGraphError("scheduled WW compiler accepts only the one-loop triangle")
+    if amplitude.orientation not in {"DIRECT", "REFLECTED"}:  # type: ignore[attr-defined]
+        raise UnsupportedScheduledWWGraphError("unknown WW orientation")
+    if amplitude.external_koszul_sign not in {-1, 1}:  # type: ignore[attr-defined]
+        raise UnsupportedScheduledWWGraphError("external orientation sign is not exact")
+    if amplitude.schema_hash != algebra_certificate.notation_hash:  # type: ignore[attr-defined]
+        raise UnsupportedScheduledWWGraphError(
+            "amplitude notation hash disagrees with the algebra certificate"
+        )
+
+    vertices = tuple(graph.vertices)
+    insertion = _require_unique(
+        vertices,
+        lambda vertex: vertex.kind == "COMPOSITE_INSERTION_I2_WW",  # type: ignore[attr-defined]
+        "WW insertion",
+    )
+    bar_vertex = _require_unique(
+        vertices,
+        lambda vertex: vertex.kind == "BACKGROUND_CUBIC_TILDE_W",  # type: ignore[attr-defined]
+        "antichiral cubic vertex",
+    )
+    d_vertex = _require_unique(
+        vertices,
+        lambda vertex: vertex.kind == "BACKGROUND_CUBIC_W",  # type: ignore[attr-defined]
+        "chiral cubic vertex",
+    )
+    half_edges = {half_edge.half_edge_id: half_edge for half_edge in graph.half_edges}
+    external_half_edges = {leg.attached_half_edge for leg in graph.external_legs}
+    edge_by_half_edge: dict[str, object] = {}
+    for edge in graph.internal_edges:
+        edge_by_half_edge[edge.left_half_edge] = edge
+        edge_by_half_edge[edge.right_half_edge] = edge
+    internal_vertices = {
+        half_edges[edge.left_half_edge].vertex_id
+        for edge in graph.internal_edges
+    } | {
+        half_edges[edge.right_half_edge].vertex_id
+        for edge in graph.internal_edges
+    }
+    if internal_vertices != {vertex.vertex_id for vertex in graph.vertices}:
+        raise UnsupportedScheduledWWGraphError("every WW vertex must lie on the triangle")
+    central_edges = [
+        edge
+        for edge in graph.internal_edges
+        if insertion.vertex_id
+        not in {
+            half_edges[edge.left_half_edge].vertex_id,
+            half_edges[edge.right_half_edge].vertex_id,
+        }
+    ]
+    if len(central_edges) != 1:
+        raise UnsupportedScheduledWWGraphError("WW triangle has no unique action-action edge")
+    central_edge_id = central_edges[0].edge_id
+
+    insertion_expression = _vertex_operator(insertion, "D_-[")
+    insertion_match = re.fullmatch(
+        r"D_-\[K_\+V\^(?P<left>[A-Za-z0-9_]+)K_\+V\^(?P<right>[A-Za-z0-9_]+)\]",
+        insertion_expression.replace(" ", ""),
+    )
+    if insertion_match is None:
+        raise UnsupportedScheduledWWGraphError("WW insertion scope is not the ordered two-letter form")
+    insertion_labels = (insertion_match.group("left"), insertion_match.group("right"))
+    insertion_half_edges = tuple(
+        _half_edge_for_label(insertion, label, external_half_edges)
+        for label in insertion_labels
+    )
+    placements: list[ScheduledDMinusPlacement] = []
+    for index, half_edge_id in enumerate(insertion_half_edges):
+        preceding = tuple(
+            half_edges[item].field_type.parity for item in insertion_half_edges[:index]
+        )
+        placements.append(
+            ScheduledDMinusPlacement(
+                placement_id=f"D_MINUS:{half_edge_id}",
+                placement_name="LEFT_LETTER" if index == 0 else "RIGHT_LETTER",
+                insertion_vertex_id=insertion.vertex_id,
+                target_half_edge_id=half_edge_id,
+                preceding_field_parities=preceding,
+                leibniz_sign=-1 if sum(preceding) % 2 else 1,
+            )
+        )
+
+    bar_expression = _vertex_operator(bar_vertex, "barD^")
+    bar_head, bar_plus, bar_minus = _difference_scope(bar_expression)
+    if not bar_head.startswith("barD^"):
+        raise UnsupportedScheduledWWGraphError("antichiral cubic scope has the wrong derivative family")
+    d_expression = _vertex_operator(d_vertex, "D_")
+    d_head, d_plus, d_minus = _difference_scope(d_expression)
+    if not d_head.startswith("D_"):
+        raise UnsupportedScheduledWWGraphError("chiral cubic scope has the wrong derivative family")
+
+    bar_scope = tuple(
+        sorted(
+            (
+                _scheduled_application(
+                    scope_id="CUBIC_BAR_DIFFERENCE",
+                    derivative_kind="barD",
+                    spinor_index="dot_alpha",
+                    vertex=bar_vertex,
+                    half_edge_id=_half_edge_for_label(bar_vertex, label, external_half_edges),
+                    vertex_sign=sign,
+                    edge_by_half_edge=edge_by_half_edge,
+                    central_edge_id=central_edge_id,
+                    half_edges=half_edges,
+                )
+                for label, sign in ((bar_plus, 1), (bar_minus, -1))
+            ),
+            key=lambda application: application.edge_id,
+        )
+    )
+    d_scope = tuple(
+        sorted(
+            (
+                _scheduled_application(
+                    scope_id="CUBIC_D_DIFFERENCE",
+                    derivative_kind="D",
+                    spinor_index="a",
+                    vertex=d_vertex,
+                    half_edge_id=_half_edge_for_label(d_vertex, label, external_half_edges),
+                    vertex_sign=sign,
+                    edge_by_half_edge=edge_by_half_edge,
+                    central_edge_id=central_edge_id,
+                    half_edges=half_edges,
+                )
+                for label, sign in ((d_plus, 1), (d_minus, -1))
+            ),
+            key=lambda application: application.edge_id,
+        )
+    )
+
+    external_w = _require_unique(
+        tuple(graph.external_legs),
+        lambda leg: leg.field_type.name == "W_plus",  # type: ignore[attr-defined]
+        "external W_plus leg",
+    )
+    external_tilde_w = _require_unique(
+        tuple(graph.external_legs),
+        lambda leg: leg.field_type.name == "TildeW_dot_alpha",  # type: ignore[attr-defined]
+        "external TildeW leg",
+    )
+    if external_w.field_type.chirality.value != "CHIRAL" or external_w.field_type.parity != 1:
+        raise UnsupportedScheduledWWGraphError("external W_plus typing is inconsistent")
+    if (
+        external_tilde_w.field_type.chirality.value != "ANTICHIRAL"
+        or external_tilde_w.field_type.parity != 1
+        or len(external_w.spinor_indices) != 1
+        or len(external_tilde_w.spinor_indices) != 1
+    ):
+        raise UnsupportedScheduledWWGraphError("external spinor typing is inconsistent")
+    plus_index = external_w.spinor_indices[0].label
+    dotted_external_index = external_tilde_w.spinor_indices[0].label
+    coefficient = amplitude.exact_coefficient_reduced  # type: ignore[attr-defined]
+    if coefficient.sqrt2_power != 0 or coefficient.i_power % 4 != 0 or coefficient.symbols != ("g2",):
+        raise UnsupportedScheduledWWGraphError("WW amplitude coefficient must be an exact Q*g2 scalar")
+    graph_prefactor = Fraction(coefficient.rational)
+    if graph_prefactor * amplitude.external_koszul_sign != Fraction(-1, 8):  # type: ignore[attr-defined]
+        raise UnsupportedScheduledWWGraphError("orientation-stripped WW graph prefactor is not -1/8")
+
+    projector_expression = _vertex_operator(insertion, "K_+=")
+    projector_match = re.fullmatch(
+        r"K_\+=-\((?P<num>\d+)/(?P<den>\d+)\)D_\+barD\^2D_\+",
+        projector_expression.replace(" ", ""),
+    )
+    if projector_match is None:
+        raise UnsupportedScheduledWWGraphError("K_plus normalization is not the locked Project word")
+    parsed_k_plus = GaussianRational(
+        -Fraction(int(projector_match.group("num")), int(projector_match.group("den")))
+    )
+    if parsed_k_plus != algebra_certificate.k_plus_coefficient:
+        raise UnsupportedScheduledWWGraphError(
+            "GraphIR K_plus expression disagrees with the notation rule"
+        )
+    insertion_prefactor_qi = (
+        algebra_certificate.dminus_kplus_coefficient
+        * algebra_certificate.k_plus_coefficient
+    )
+    if insertion_prefactor_qi.im:
+        raise UnsupportedScheduledWWGraphError("WW insertion prefactor must be real")
+    insertion_prefactor = insertion_prefactor_qi.re
+    if algebra_certificate.closed_delta_coefficient.im:
+        raise UnsupportedScheduledWWGraphError("closed-delta coefficient must be real")
+    closed_delta_fraction = algebra_certificate.closed_delta_coefficient.re
+    if closed_delta_fraction.denominator != 1:
+        raise UnsupportedScheduledWWGraphError("closed-delta coefficient must be integral")
+    closed_delta = closed_delta_fraction.numerator
+    mixed_factors = (
+        algebra_certificate.ordered_mixed_factor,
+        algebra_certificate.ordered_mixed_factor,
+    )
+    exact_d_chain = gaussian(insertion_prefactor * closed_delta) * mixed_factors[0] * mixed_factors[1]
+    if exact_d_chain != gaussian(Fraction(-1, 2)):
+        raise UnsupportedScheduledWWGraphError("scheduled Project D-chain is not -1/2")
+
+    rows: list[ScheduledWWRow] = []
+    row_number = 0
+    for placement in placements:
+        for bar_application in bar_scope:
+            for d_application in d_scope:
+                row_number += 1
+                scope_factor = gaussian(
+                    placement.leibniz_sign
+                    * bar_application.vertex_sign
+                    * d_application.vertex_sign
+                )
+                ibp_factor = gaussian(
+                    bar_application.endpoint_transfer_sign
+                    * bar_application.koszul_sign
+                    * d_application.endpoint_transfer_sign
+                    * d_application.koszul_sign
+                )
+                primitive_factor = mixed_factors[0] * mixed_factors[1]
+                phase_trace = (
+                    ScheduledPhaseTrace(
+                        "SCOPE_EXPANSION", True, 3, 0, scope_factor,
+                        "ordered Leibniz placement and two ordered cubic differences",
+                        insertion_expression + ";" + bar_expression + ";" + d_expression,
+                        placement.placement_name + ";" + bar_application.application_id + ";" + d_application.application_id,
+                    ),
+                    ScheduledPhaseTrace(
+                        "ENDPOINT_CANONICALIZATION", True, 2, 0, ONE,
+                        "map each selected quantum port to its unique GraphIR edge endpoint",
+                        bar_application.half_edge_id + ";" + d_application.half_edge_id,
+                        bar_application.edge_id + ";" + d_application.edge_id,
+                    ),
+                    ScheduledPhaseTrace(
+                        "PIVOTED_IBP", bool(bar_application.endpoint_transfer_count + d_application.endpoint_transfer_count),
+                        bar_application.endpoint_transfer_count + d_application.endpoint_transfer_count,
+                        0,
+                        ibp_factor,
+                        "D_i(r) Delta_ij(r)=-D_j(-r) Delta_ij(r), with explicit bosonic Koszul crossings",
+                        str(tag_to_json(bar_application.source_tag)) + ";" + str(tag_to_json(d_application.source_tag)),
+                        str(tag_to_json(bar_application.pivot_tag)) + ";" + str(tag_to_json(d_application.pivot_tag)),
+                        tuple(
+                            entry
+                            for application in (bar_application, d_application)
+                            for entry in (
+                                SignLedgerEntry(
+                                    LedgerKind.IBP,
+                                    gaussian(application.endpoint_transfer_sign),
+                                    "scheduled endpoint transfer",
+                                    application.derivative_kind,
+                                    application.source_tag,
+                                    application.pivot_tag,
+                                    application.crossed_parities,
+                                ),
+                                SignLedgerEntry(
+                                    LedgerKind.KOSZUL,
+                                    gaussian(application.koszul_sign),
+                                    "scheduled graded prefix crossing",
+                                    application.derivative_kind,
+                                    application.source_tag,
+                                    application.pivot_tag,
+                                    application.crossed_parities,
+                                ),
+                            )
+                            if application.endpoint_transfer_count
+                        ),
+                    ),
+                    ScheduledPhaseTrace(
+                        "PRIMITIVE_NORMAL_ORDERING", True, 2, 0, primitive_factor,
+                        "two ordered mixed anticommutators, each 2i times its typed momentum",
+                        "two mixed D-barD pairs",
+                        "(2i)*(2i)=-4",
+                    ),
+                    ScheduledPhaseTrace(
+                        "PROJECTOR_REDUCTION", True, 2, 0, gaussian(insertion_prefactor),
+                        "D_-K_+=-(1/16)D^2barD^2D_+ and K_+=-(1/8)D_+barD^2D_+",
+                        projector_expression,
+                        "insertion_prefactor=" + str(insertion_prefactor),
+                    ),
+                    ScheduledPhaseTrace(
+                        "EXTERNAL_CHIRALITY", True, 1, 0, ONE,
+                        "the vector derivative on chiral W_plus is retained as an external token",
+                        "D_a barD_dot_beta W_plus",
+                        "i*" + external_w.momentum + "_(a dot_beta) W_plus",
+                    ),
+                    ScheduledPhaseTrace(
+                        "GRASSMANN_SATURATION", True, 1, 0, gaussian(closed_delta),
+                        "[D^2 barD^2(theta^2 bartheta^2)]_0=16",
+                        "one normalized closed Grassmann delta",
+                        "16",
+                    ),
+                    ScheduledPhaseTrace(
+                        "TYPED_EDGE_COLLAPSE", False, 0, 0, ONE,
+                        "no p^2/propagator match occurs in the metric numerator branch",
+                        "three typed propagators",
+                        "no collapse",
+                    ),
+                )
+                scheduled_factor = ONE
+                for phase in phase_trace:
+                    scheduled_factor *= phase.exact_factor
+                coefficient_in_g2 = gaussian(graph_prefactor) * scheduled_factor
+                endpoint_sign = (
+                    bar_application.vertex_sign
+                    * bar_application.endpoint_transfer_sign
+                    * bar_application.koszul_sign
+                    * d_application.vertex_sign
+                    * d_application.endpoint_transfer_sign
+                    * d_application.koszul_sign
+                )
+                expected = gaussian(graph_prefactor) * exact_d_chain * endpoint_sign * placement.leibniz_sign
+                if coefficient_in_g2 != expected:
+                    raise AssertionError("scheduled phase product disagrees with the exact WW chain")
+                normal_form = ScheduledWWNormalForm(
+                    coefficient_in_g2,
+                    (
+                        ScheduledNumeratorFactor(
+                            "EDGE_MOMENTUM", bar_application.momentum,
+                            bar_application.edge_id, None, plus_index, "dot_beta", ONE,
+                        ),
+                        ScheduledNumeratorFactor(
+                            "EXTERNAL_VECTOR_DERIVATIVE", external_w.momentum,
+                            None, external_w.leg_id, "a", "dot_beta", I,
+                        ),
+                        ScheduledNumeratorFactor(
+                            "EDGE_MOMENTUM", d_application.momentum,
+                            d_application.edge_id, None, "a", dotted_external_index, ONE,
+                        ),
+                    ),
+                    (),
+                    "ORDINARY_UV_POLE_METRIC_BRANCH",
+                )
+                rows.append(
+                    ScheduledWWRow(
+                        trace_id=f"DA-{amplitude.orientation[0]}-{row_number:03d}",  # type: ignore[attr-defined]
+                        notation_hash=amplitude.schema_hash,  # type: ignore[attr-defined]
+                        graph_hash=amplitude.canonical_key,  # type: ignore[attr-defined]
+                        amplitude_id=amplitude.amplitude_id,  # type: ignore[attr-defined]
+                        orientation=amplitude.orientation,  # type: ignore[attr-defined]
+                        orientation_koszul_sign=amplitude.external_koszul_sign,  # type: ignore[attr-defined]
+                        external_w_field_name=external_w.field_type.name,
+                        external_w_color_label=external_w.color_label,
+                        placement=placement,
+                        bar_application=bar_application,
+                        d_application=d_application,
+                        insertion_prefactor=insertion_prefactor,
+                        closed_delta=closed_delta,
+                        mixed_anticommutator_factors=mixed_factors,
+                        exact_d_chain=exact_d_chain,
+                        graph_prefactor_in_g2=graph_prefactor,
+                        phase_trace=phase_trace,
+                        normal_form=normal_form,
+                    )
+                )
+
+    return ScheduledWWCompilation(
+        notation_hash=amplitude.schema_hash,  # type: ignore[attr-defined]
+        graph_hash=amplitude.canonical_key,  # type: ignore[attr-defined]
+        amplitude_id=amplitude.amplitude_id,  # type: ignore[attr-defined]
+        orientation=amplitude.orientation,  # type: ignore[attr-defined]
+        algebra_certificate=algebra_certificate,
+        placements=tuple(placements),
+        bar_scope=bar_scope,
+        d_scope=d_scope,
+        rows=tuple(rows),
+    )
+
+
+def compare_scheduled_ww_to_legacy(
+    scheduled: ScheduledWWCompilation,
+    legacy_rows: Sequence[dict[str, object]],
+) -> dict[str, object]:
+    """Equality oracle only; legacy data never participates in construction."""
+
+    if len(legacy_rows) != len(scheduled.rows):
+        return {"status": "FAIL", "reason": "row count mismatch", "rows": []}
+    audits: list[dict[str, object]] = []
+    for row, legacy in zip(scheduled.rows, legacy_rows, strict=True):
+        exact_chain = legacy["exact_D_chain"]
+        if not isinstance(exact_chain, dict):
+            raise ValueError("legacy exact_D_chain is not a record")
+        def momentum_equal(actual: str, legacy_value: object, edge_id: str) -> bool:
+            return str(legacy_value) in {actual, "r" + edge_id.removeprefix("e")}
+
+        legacy_bar = legacy["barD_endpoint"]
+        legacy_d = legacy["D_endpoint"]
+        if not isinstance(legacy_bar, dict) or not isinstance(legacy_d, dict):
+            raise ValueError("legacy endpoints are not records")
+        legacy_mixed = legacy["mixed_anticommutator_momenta"]
+        if not isinstance(legacy_mixed, list) or len(legacy_mixed) != 3:
+            raise ValueError("legacy mixed momentum word is not length three")
+        checks = {
+            "trace_id": row.trace_id == legacy["trace_id"],
+            "orientation": row.orientation == legacy["orientation"],
+            "D_minus_placement": row.placement.placement_name == legacy["D_minus_placement"],
+            "bar_edge": row.bar_application.edge_id == legacy_bar["edge"],
+            "bar_momentum": momentum_equal(
+                row.bar_application.momentum,
+                legacy_bar["momentum"],
+                row.bar_application.edge_id,
+            ),
+            "D_edge": row.d_application.edge_id == legacy_d["edge"],
+            "D_momentum": momentum_equal(
+                row.d_application.momentum,
+                legacy_d["momentum"],
+                row.d_application.edge_id,
+            ),
+            "vertex_signs": [row.bar_application.vertex_sign, row.d_application.vertex_sign]
+            == legacy["vertex_signs"],
+            "endpoint_transfer_signs": [
+                row.bar_application.endpoint_transfer_sign,
+                row.d_application.endpoint_transfer_sign,
+            ]
+            == legacy["endpoint_transfer_signs"],
+            "koszul_signs": [row.bar_application.koszul_sign, row.d_application.koszul_sign]
+            == legacy["koszul_signs"],
+            "total_endpoint_sign": row.total_endpoint_sign == legacy["total_endpoint_sign"],
+            "orientation_sign": row.orientation_koszul_sign == legacy["total_orientation_sign"],
+            "D_chain": row.exact_d_chain == gaussian(Fraction(str(exact_chain["product"]))),
+            "mixed_momenta": (
+                momentum_equal(
+                    row.bar_application.momentum,
+                    legacy_mixed[0],
+                    row.bar_application.edge_id,
+                )
+                and row.normal_form.numerator_factors[1].momentum == legacy_mixed[1]
+                and momentum_equal(
+                    row.d_application.momentum,
+                    legacy_mixed[2],
+                    row.d_application.edge_id,
+                )
+            ),
+            "external_derivative": [row.external_derivative_rendering]
+            == legacy["external_leg_derivative_tokens"],
+            "propagator_collapses": list(row.normal_form.propagator_collapses)
+            == legacy["propagator_collapses_in_metric_branch"],
+        }
+        audits.append(
+            {
+                "trace_id": row.trace_id,
+                "scheduled_row_sha256": row.sha256(),
+                "scheduled_normal_form_sha256": row.normal_form.sha256(),
+                "checks": checks,
+                "status": "PASS" if all(checks.values()) else "FAIL",
+            }
+        )
+    return {
+        "status": "PASS" if all(audit["status"] == "PASS" for audit in audits) else "FAIL",
+        "construction_independent_of_legacy": True,
+        "routing_dictionary": {
+            application.edge_id: application.momentum
+            for application in scheduled.bar_scope + scheduled.d_scope
+        },
+        "rows": audits,
+    }
 
 
 RULE_ORDER = (

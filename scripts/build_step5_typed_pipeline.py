@@ -2,10 +2,9 @@
 """Build the notation-bound WW graph/amplitude/D-word pipeline artifacts.
 
 The builder is deliberately honest about the current boundary.  Connected
-Wick-complete GraphIR and factorized AmplitudeIR pass.  The local projector
-word passes the new D-word compiler.  A mixed D/barD word attached to an
-external chiral leg is retained as UNIMPLEMENTED_PHASE_SEQUENCE until the
-scheduled pivoted-IBP and external-token phases are implemented.
+Wick-complete GraphIR and factorized AmplitudeIR pass.  The physical WW
+triangle has a topology-bound scheduled eight-row compiler per orientation.
+Generic mixed external words outside that exact schedule still fail closed.
 """
 
 from __future__ import annotations
@@ -36,10 +35,13 @@ from scripts.step5_dalgebra_compiler import (
     LegDeclaration,
     Propagator,
     PropagatorDeclaration,
+    compare_scheduled_ww_to_legacy,
     compile_job,
+    compile_scheduled_ww_rows,
 )
 from scripts.step5_pipeline_ir import NotationSchema, project_notation_schema
 from scripts.step5_ww_seed import endpoint_rows
+from scripts import verify_step5_propagators as step5_matrix_oracle
 from scripts.step5_supergraph_pipeline import (
     AmplitudeRecord,
     CompilationResult,
@@ -67,6 +69,7 @@ PROVENANCE_PATHS = (
     "scripts/step5_vertex_grammar.py",
     "scripts/step5_ww_seed.py",
     "scripts/verify_step5_dred_integrals.py",
+    "scripts/verify_step5_propagators.py",
 )
 
 
@@ -293,6 +296,7 @@ def _specialized_row_pole_binding(
 def _one_orientation_payload(
     result: CompilationResult,
     dred_audit: dict[str, object],
+    schema: NotationSchema,
 ) -> dict[str, object]:
     if len(result.amplitudes) != 1:
         raise AssertionError("the primitive WW request must have one graph class")
@@ -301,10 +305,18 @@ def _one_orientation_payload(
     mixed_job = _mixed_external_phase_job(amplitude)
     projector_result = compile_job(projector_job)
     mixed_result = compile_job(mixed_job)
+    scheduled = compile_scheduled_ww_rows(amplitude, schema, step5_matrix_oracle)
+    legacy_oracle = compare_scheduled_ww_to_legacy(
+        scheduled, endpoint_rows(amplitude.orientation)
+    )
     if projector_result.status != "PASS":
         raise AssertionError("the graph-bound local projector job must pass")
     if mixed_result.status != "UNIMPLEMENTED_PHASE_SEQUENCE":
         raise AssertionError("the unsafe mixed-external phase must fail closed")
+    if legacy_oracle["status"] != "PASS":
+        raise AssertionError(
+            "the independently scheduled WW rows disagree with the legacy oracle"
+        )
     return {
         "orientation": amplitude.orientation,
         "graph_amplitude": result.canonical_dict(),
@@ -313,6 +325,8 @@ def _one_orientation_payload(
             "local_projector_result": projector_result.to_json(),
             "mixed_external_phase_job": mixed_job.to_json(),
             "mixed_external_phase_result": mixed_result.to_json(),
+            "scheduled_ww_result": scheduled.to_json(),
+            "legacy_endpoint_equality_oracle": legacy_oracle,
         },
         "specialized_row_pole_binding": _specialized_row_pole_binding(
             amplitude, dred_audit
@@ -341,8 +355,8 @@ def build_payload(schema: NotationSchema | None = None) -> dict[str, object]:
         "source_sha256": source_hashes,
         "scalar_ring": schema.scalar_ring.canonical_dict(),
         "orientations": [
-            _one_orientation_payload(direct, dred_audit),
-            _one_orientation_payload(reflected, dred_audit),
+            _one_orientation_payload(direct, dred_audit, schema),
+            _one_orientation_payload(reflected, dred_audit, schema),
         ],
         "stage_status": {
             "notation": "PASS",
@@ -353,7 +367,7 @@ def build_payload(schema: NotationSchema | None = None) -> dict[str, object]:
             "generic_identical_action_vertex_expansion": "OPEN",
             "local_dword_rules": "PASS",
             "full_scheduled_eight_row_dalgebra_per_orientation": (
-                "UNIMPLEMENTED_PHASE_SEQUENCE"
+                "PASS_PHYSICAL_16_ROW_PHASE_SEQUENCE_FAIL_CLOSED_ELSEWHERE"
             ),
             "integral_pole_binding": (
                 "PASS_SPECIALIZED_16_ROW_DRED_MASTER_BINDING_"
@@ -471,15 +485,16 @@ def render_summary(payload: dict[str, object]) -> str:
             "$$",
             "",
             "$$",
-            r"D\bar D\,W_{\rm ext}"
+            r"\left.D\bar D\,W_{\rm ext}\right|_{\rm physical\ WW\ schedule}"
             r"\quad\Longrightarrow\quad"
-            r"\texttt{UNIMPLEMENTED\_PHASE\_SEQUENCE},",
+            r"\texttt{PASS\_PHYSICAL\_16\_ROW\_PHASE\_SEQUENCE},",
             "$$",
             "",
             "$$",
-            r"\texttt{MIXED\_D\_BARD\_NORMALIZATION}"
-            r"\prec\texttt{PIVOTED\_IBP}"
-            r"\prec\texttt{EXTERNAL\_CHIRALITY}.",
+            r"\texttt{scope}\prec\texttt{endpoint}\prec\texttt{IBP}"
+            r"\prec\texttt{normal\ order}\prec\texttt{projector}"
+            r"\prec\texttt{chirality}\prec\texttt{saturation}"
+            r"\prec\texttt{collapse}.",
             "$$",
             "",
             "## Specialized row-to-pole binding",
@@ -509,7 +524,7 @@ def render_summary(payload: dict[str, object]) -> str:
             "$$",
             "",
             r"Status: \texttt{PASS\_SPECIALIZED\_16\_ROW\_DRED\_MASTER\_BINDING}; "
-            r"generic $D$-phase completion remains open.",
+            r"generic out-of-scope $D$-words still fail closed.",
             "",
             "$$",
             r"\Gamma_{\rm anomaly}:\ \texttt{NOT\_ACCEPTED}.",

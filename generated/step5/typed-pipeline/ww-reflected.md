@@ -29,11 +29,11 @@ $$
 | `F_color_vI_0` | `COLOR_FLAVOR_TENSOR` | `B` | `1` | `contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53b` |
 | `F_color_vI_1` | `COLOR_FLAVOR_TENSOR` | `A` | `1` | `contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53b` |
 | `F_vertex_vBar` | `ACTION_VERTEX` | `BACKGROUND_CUBIC_TILDE_W` | `-1/8*i*h` | `contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e` |
-| `F_operator_vBar_0` | `DERIVATIVE_OPERATOR` | `barD^dot_alpha(C)-barD^dot_alpha(A)` | `1` | `contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e` |
+| `F_operator_vBar_0` | `DERIVATIVE_OPERATOR` | `barD^dot_alpha(C)-barD^dot_alpha(B)` | `1` | `contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e` |
 | `F_delta_vBar` | `VERTEX_DELTA` | `delta(-k+(k+q)-q)` | `1` | `contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e` |
 | `F_color_vBar_0` | `COLOR_FLAVOR_TENSOR` | `c_{BCD}` | `1` | `contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e` |
 | `F_vertex_vW` | `ACTION_VERTEX` | `BACKGROUND_CUBIC_W` | `1/8*i*h` | `contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e` |
-| `F_operator_vW_0` | `DERIVATIVE_OPERATOR` | `D_a(C)-D_a(B)` | `1` | `contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e` |
+| `F_operator_vW_0` | `DERIVATIVE_OPERATOR` | `D_a(C)-D_a(A)` | `1` | `contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e` |
 | `F_delta_vW` | `VERTEX_DELTA` | `delta(-(k+q)+(k+p+q)-p)` | `1` | `contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e` |
 | `F_color_vW_0` | `COLOR_FLAVOR_TENSOR` | `c_{ACE}` | `1` | `contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e` |
 | `F_prop_e0` | `PROPAGATOR` | `kappa^(-1)*delta4theta/(k)^2` | `-2*g2` | `contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.46` |

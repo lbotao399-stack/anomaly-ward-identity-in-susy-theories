@@ -41,11 +41,11 @@ D^2\bar D^2D^2=-16p_{(4)}^2D^2\quad\Longrightarrow\quad\texttt{local projector j
 $$
 
 $$
-D\bar D\,W_{\rm ext}\quad\Longrightarrow\quad\texttt{UNIMPLEMENTED\_PHASE\_SEQUENCE},
+\left.D\bar D\,W_{\rm ext}\right|_{\rm physical\ WW\ schedule}\quad\Longrightarrow\quad\texttt{PASS\_PHYSICAL\_16\_ROW\_PHASE\_SEQUENCE},
 $$
 
 $$
-\texttt{MIXED\_D\_BARD\_NORMALIZATION}\prec\texttt{PIVOTED\_IBP}\prec\texttt{EXTERNAL\_CHIRALITY}.
+\texttt{scope}\prec\texttt{endpoint}\prec\texttt{IBP}\prec\texttt{normal\ order}\prec\texttt{projector}\prec\texttt{chirality}\prec\texttt{saturation}\prec\texttt{collapse}.
 $$
 
 ## Specialized row-to-pole binding
@@ -66,7 +66,7 @@ $$
 \sum_{r=1}^{8}P_{r}^{\rm D}=+\frac{g^2}{128\pi^2\epsilon}\widehat\delta^{\mu\nu},\qquad \sum_{r=1}^{8}P_{r}^{\rm R}=-\frac{g^2}{128\pi^2\epsilon}\widehat\delta^{\mu\nu}.
 $$
 
-Status: \texttt{PASS\_SPECIALIZED\_16\_ROW\_DRED\_MASTER\_BINDING}; generic $D$-phase completion remains open.
+Status: \texttt{PASS\_SPECIALIZED\_16\_ROW\_DRED\_MASTER\_BINDING}; generic out-of-scope $D$-words still fail closed.
 
 $$
 \Gamma_{\rm anomaly}:\ \texttt{NOT\_ACCEPTED}.

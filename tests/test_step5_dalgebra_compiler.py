@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import importlib.util
 import json
+from dataclasses import replace
 from fractions import Fraction
 from pathlib import Path
 import sys
@@ -294,6 +295,109 @@ class Step5DAlgebraCompilerTest(unittest.TestCase):
         self.assertTrue(trace.terminated)
         self.assertEqual(trace.outputs, ())
         self.assertEqual(trace.implemented_phases, self.d.IMPLEMENTED_PHASES)
+
+    def test_physical_ww_schedule_is_constructed_from_graph_and_amplitude_ir(self) -> None:
+        from scripts.step5_pipeline_ir import project_notation_schema
+        from scripts.step5_supergraph_pipeline import (
+            compile_request,
+            ww_reflected_seed_request,
+            ww_seed_request,
+        )
+        from scripts.step5_ww_seed import endpoint_rows
+
+        schema = project_notation_schema()
+        expected_coefficients = {
+            "DIRECT": self.d.gaussian(Fraction(1, 16)),
+            "REFLECTED": self.d.gaussian(Fraction(-1, 16)),
+        }
+        for request in (ww_seed_request(schema), ww_reflected_seed_request(schema)):
+            amplitude = compile_request(request, schema).amplitudes[0]
+            scheduled = self.d.compile_scheduled_ww_rows(
+                amplitude, schema, self.engine
+            )
+            with self.subTest(orientation=amplitude.orientation):
+                self.assertEqual(len(scheduled.rows), 8)
+                certificate = scheduled.algebra_certificate
+                self.assertEqual(certificate.notation_hash, schema.canonical_hash)
+                self.assertEqual(len(certificate.matrix_checks), 21)
+                self.assertTrue(all(value for _, value in certificate.matrix_checks))
+                self.assertEqual(len(certificate.sha256()), 64)
+                self.assertEqual(
+                    certificate.k_plus_coefficient,
+                    self.d.gaussian(Fraction(-1, 8)),
+                )
+                self.assertEqual(
+                    certificate.dminus_dplus_coefficient,
+                    self.d.gaussian(Fraction(1, 2)),
+                )
+                self.assertEqual(
+                    certificate.dminus_kplus_coefficient,
+                    self.d.gaussian(Fraction(-1, 16)),
+                )
+                self.assertEqual(
+                    certificate.closed_delta_coefficient,
+                    self.d.gaussian(16),
+                )
+                self.assertEqual(
+                    certificate.mixed_momentum_coefficient,
+                    -2 * self.d.I,
+                )
+                self.assertEqual(certificate.ordered_mixed_factor, 2 * self.d.I)
+                self.assertEqual(
+                    [phase.phase for phase in scheduled.rows[0].phase_trace],
+                    list(self.d.SCHEDULED_WW_PHASES),
+                )
+                for row in scheduled.rows:
+                    self.assertEqual(
+                        row.normal_form.coefficient_in_g2,
+                        expected_coefficients[amplitude.orientation],
+                    )
+                    self.assertEqual(row.exact_d_chain, self.d.gaussian(Fraction(-1, 2)))
+                    self.assertEqual(row.total_endpoint_sign, 1)
+                    self.assertEqual(len(row.normal_form.sha256()), 64)
+                    self.assertEqual(len(row.sha256()), 64)
+                    for phase in row.phase_trace:
+                        if phase.applied:
+                            self.assertLess(phase.measure_after, phase.measure_before)
+                oracle = self.d.compare_scheduled_ww_to_legacy(
+                    scheduled, endpoint_rows(amplitude.orientation)
+                )
+                self.assertEqual(oracle["status"], "PASS")
+                self.assertTrue(oracle["construction_independent_of_legacy"])
+                self.assertTrue(
+                    all(item["status"] == "PASS" for item in oracle["rows"])
+                )
+
+    def test_physical_ww_schedule_fails_closed_outside_exact_scope(self) -> None:
+        from scripts.step5_pipeline_ir import project_notation_schema
+        from scripts.step5_supergraph_pipeline import compile_request, ww_seed_request
+
+        schema = project_notation_schema()
+        amplitude = compile_request(ww_seed_request(schema), schema).amplitudes[0]
+        with self.assertRaises(self.d.UnsupportedScheduledWWGraphError):
+            self.d.compile_scheduled_ww_rows(amplitude)
+        unsupported = replace(amplitude, orientation="UNDECLARED")
+        with self.assertRaises(self.d.UnsupportedScheduledWWGraphError):
+            self.d.compile_scheduled_ww_rows(unsupported, schema, self.engine)
+
+    def test_reflected_derivative_scopes_follow_reflected_graph_ports(self) -> None:
+        from scripts.step5_pipeline_ir import project_notation_schema
+        from scripts.step5_supergraph_pipeline import (
+            compile_request,
+            ww_reflected_seed_request,
+        )
+
+        schema = project_notation_schema()
+        amplitude = compile_request(ww_reflected_seed_request(schema), schema).amplitudes[0]
+        scheduled = self.d.compile_scheduled_ww_rows(amplitude, schema, self.engine)
+        self.assertEqual(
+            {application.half_edge_id for application in scheduled.bar_scope},
+            {"bar_B", "bar_C"},
+        )
+        self.assertEqual(
+            {application.half_edge_id for application in scheduled.d_scope},
+            {"W_A", "W_C"},
+        )
 
     def oracle_adapter(self, momentum):
         engine = self.engine

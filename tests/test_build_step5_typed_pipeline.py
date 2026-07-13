@@ -59,8 +59,28 @@ class BuildStep5TypedPipelineTest(unittest.TestCase):
         for item in payload["orientations"]:
             local_result = item["d_algebra"]["local_projector_result"]
             mixed_result = item["d_algebra"]["mixed_external_phase_result"]
+            scheduled = item["d_algebra"]["scheduled_ww_result"]
+            legacy_oracle = item["d_algebra"]["legacy_endpoint_equality_oracle"]
             self.assertEqual(local_result["status"], "PASS")
             self.assertEqual(mixed_result["status"], "UNIMPLEMENTED_PHASE_SEQUENCE")
+            self.assertEqual(
+                scheduled["status"],
+                "PASS_PHYSICAL_WW_EIGHT_ROW_PHASE_SEQUENCE",
+            )
+            certificate = scheduled["algebra_certificate"]
+            self.assertEqual(
+                certificate["status"],
+                "PASS_NOTATION_AND_EXACT_16X16_ORACLE",
+            )
+            self.assertEqual(certificate["notation_hash"], payload["notation_hash"])
+            self.assertEqual(len(certificate["certificate_sha256"]), 64)
+            self.assertTrue(all(certificate["matrix_checks"].values()))
+            self.assertEqual(legacy_oracle["status"], "PASS")
+            self.assertTrue(legacy_oracle["construction_independent_of_legacy"])
+            self.assertEqual(len(scheduled["rows"]), 8)
+            self.assertTrue(
+                all(len(row["normal_form_sha256"]) == 64 for row in scheduled["rows"])
+            )
             self.assertEqual(
                 local_result["notation_hash"],
                 item["graph_amplitude"]["schema_hash"],
@@ -81,7 +101,7 @@ class BuildStep5TypedPipelineTest(unittest.TestCase):
         self.assertEqual(status["basis_resolved_sd_contact_orbit"], "OPEN")
         self.assertEqual(
             status["full_scheduled_eight_row_dalgebra_per_orientation"],
-            "UNIMPLEMENTED_PHASE_SEQUENCE",
+            "PASS_PHYSICAL_16_ROW_PHASE_SEQUENCE_FAIL_CLOSED_ELSEWHERE",
         )
         markdown = render_summary(payload)
         self.assertIn(r"\Gamma_{\rm anomaly}:\ \texttt{NOT\_ACCEPTED}", markdown)

@@ -1498,7 +1498,7 @@ def _ww_seed_request(
         "theta_1",
         "delta(-k+(k+q)-q)",
         "0",
-        ("barD^dot_alpha(C)-barD^dot_alpha(A)",),
+        (f"barD^dot_alpha(C)-barD^dot_alpha({left_letter})",),
         ("contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e",),
     )
     w_vertex = VertexSpec(
@@ -1534,7 +1534,7 @@ def _ww_seed_request(
         "theta_2",
         "delta(-(k+q)+(k+p+q)-p)",
         "0",
-        ("D_a(C)-D_a(B)",),
+        (f"D_a(C)-D_a({right_letter})",),
         ("contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e",),
     )
     vector = PropagatorSpec(
