@@ -1,5 +1,5 @@
 {
-  "compiler_hash": "38d15ee86ba48914dad97bb666b74721ce40bf3124d0739ae09265e5dce64234",
+  "compiler_hash": "57a6a6d34755f87c920c0a3c778e25725348fc3acfa22a0ce74b863422651e86",
   "no_imported_anomaly_coefficient": true,
   "notation_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
   "orientations": [
@@ -1587,7 +1587,274 @@
         "request_kind": "PHYSICAL_PARTIAL_CONTRACTION",
         "schema_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79"
       },
-      "orientation": "DIRECT"
+      "orientation": "DIRECT",
+      "specialized_row_pole_binding": {
+        "amplitude_id": "A_WW_DIRECT_EXACT_001",
+        "arithmetic": "EXACT_Q_AND_Q_I_NO_FLOATING_POINT",
+        "basis_resolved_contact_quotient": false,
+        "derivation": [
+          "C_graph=-1/8*g2",
+          "C_D=-1/2",
+          "C_row=C_graph*C_D=1/16*g2",
+          "Pole[T^(mu nu)]=A0*hat_delta^(mu nu)/(4*epsilon)",
+          "Pole[row]=1/64*A0*g2/epsilon",
+          "A0=1/(16*pi^2) gives Pole[row]=1/1024*g2/(pi^2*epsilon)",
+          "sum_8 Pole[row]=1/128*g2/(pi^2*epsilon)"
+        ],
+        "dred_audit_exact_checks": {
+          "exact_checks": 47,
+          "failed_checks": 0
+        },
+        "dred_audit_sha256": "63d5a489872a82340e270425f7ac846b52f955d4997584c7d314d7a8a68c7300",
+        "generic_Dword_phase_completion": false,
+        "graph_hash": "4529d7a0532c1577471baf525497bcc5cec0ad2ecb8759c21f74be6c47509934",
+        "notation_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+        "orientation_pole_in_pi2_g2": "1/128",
+        "row_certificates": [
+          {
+            "amplitude_id": "A_WW_DIRECT_EXACT_001",
+            "endpoint_sign": 1,
+            "external_leg_derivative_tokens": [
+              "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+            ],
+            "graph_hash": "4529d7a0532c1577471baf525497bcc5cec0ad2ecb8759c21f74be6c47509934",
+            "metric_space": "hat_delta^(mu nu)",
+            "mixed_anticommutator_momenta": [
+              "r0",
+              "p",
+              "r1"
+            ],
+            "notation_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+            "rank_two_master_pole_in_A0": "1/4",
+            "row_pole_in_A0_g2": "1/64",
+            "row_pole_in_pi2_g2": "1/1024",
+            "row_prefactor_in_g2": "1/16",
+            "specialized_D_chain": {
+              "closed_delta": "16",
+              "insertion_prefactor": "1/128",
+              "mixed_anticommutators": [
+                "2i",
+                "2i"
+              ],
+              "product": "-1/2"
+            },
+            "status": "PASS",
+            "trace_id": "DA-D-001"
+          },
+          {
+            "amplitude_id": "A_WW_DIRECT_EXACT_001",
+            "endpoint_sign": 1,
+            "external_leg_derivative_tokens": [
+              "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+            ],
+            "graph_hash": "4529d7a0532c1577471baf525497bcc5cec0ad2ecb8759c21f74be6c47509934",
+            "metric_space": "hat_delta^(mu nu)",
+            "mixed_anticommutator_momenta": [
+              "r0",
+              "p",
+              "r2"
+            ],
+            "notation_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+            "rank_two_master_pole_in_A0": "1/4",
+            "row_pole_in_A0_g2": "1/64",
+            "row_pole_in_pi2_g2": "1/1024",
+            "row_prefactor_in_g2": "1/16",
+            "specialized_D_chain": {
+              "closed_delta": "16",
+              "insertion_prefactor": "1/128",
+              "mixed_anticommutators": [
+                "2i",
+                "2i"
+              ],
+              "product": "-1/2"
+            },
+            "status": "PASS",
+            "trace_id": "DA-D-002"
+          },
+          {
+            "amplitude_id": "A_WW_DIRECT_EXACT_001",
+            "endpoint_sign": 1,
+            "external_leg_derivative_tokens": [
+              "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+            ],
+            "graph_hash": "4529d7a0532c1577471baf525497bcc5cec0ad2ecb8759c21f74be6c47509934",
+            "metric_space": "hat_delta^(mu nu)",
+            "mixed_anticommutator_momenta": [
+              "r1",
+              "p",
+              "r1"
+            ],
+            "notation_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+            "rank_two_master_pole_in_A0": "1/4",
+            "row_pole_in_A0_g2": "1/64",
+            "row_pole_in_pi2_g2": "1/1024",
+            "row_prefactor_in_g2": "1/16",
+            "specialized_D_chain": {
+              "closed_delta": "16",
+              "insertion_prefactor": "1/128",
+              "mixed_anticommutators": [
+                "2i",
+                "2i"
+              ],
+              "product": "-1/2"
+            },
+            "status": "PASS",
+            "trace_id": "DA-D-003"
+          },
+          {
+            "amplitude_id": "A_WW_DIRECT_EXACT_001",
+            "endpoint_sign": 1,
+            "external_leg_derivative_tokens": [
+              "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+            ],
+            "graph_hash": "4529d7a0532c1577471baf525497bcc5cec0ad2ecb8759c21f74be6c47509934",
+            "metric_space": "hat_delta^(mu nu)",
+            "mixed_anticommutator_momenta": [
+              "r1",
+              "p",
+              "r2"
+            ],
+            "notation_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+            "rank_two_master_pole_in_A0": "1/4",
+            "row_pole_in_A0_g2": "1/64",
+            "row_pole_in_pi2_g2": "1/1024",
+            "row_prefactor_in_g2": "1/16",
+            "specialized_D_chain": {
+              "closed_delta": "16",
+              "insertion_prefactor": "1/128",
+              "mixed_anticommutators": [
+                "2i",
+                "2i"
+              ],
+              "product": "-1/2"
+            },
+            "status": "PASS",
+            "trace_id": "DA-D-004"
+          },
+          {
+            "amplitude_id": "A_WW_DIRECT_EXACT_001",
+            "endpoint_sign": 1,
+            "external_leg_derivative_tokens": [
+              "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+            ],
+            "graph_hash": "4529d7a0532c1577471baf525497bcc5cec0ad2ecb8759c21f74be6c47509934",
+            "metric_space": "hat_delta^(mu nu)",
+            "mixed_anticommutator_momenta": [
+              "r0",
+              "p",
+              "r1"
+            ],
+            "notation_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+            "rank_two_master_pole_in_A0": "1/4",
+            "row_pole_in_A0_g2": "1/64",
+            "row_pole_in_pi2_g2": "1/1024",
+            "row_prefactor_in_g2": "1/16",
+            "specialized_D_chain": {
+              "closed_delta": "16",
+              "insertion_prefactor": "1/128",
+              "mixed_anticommutators": [
+                "2i",
+                "2i"
+              ],
+              "product": "-1/2"
+            },
+            "status": "PASS",
+            "trace_id": "DA-D-005"
+          },
+          {
+            "amplitude_id": "A_WW_DIRECT_EXACT_001",
+            "endpoint_sign": 1,
+            "external_leg_derivative_tokens": [
+              "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+            ],
+            "graph_hash": "4529d7a0532c1577471baf525497bcc5cec0ad2ecb8759c21f74be6c47509934",
+            "metric_space": "hat_delta^(mu nu)",
+            "mixed_anticommutator_momenta": [
+              "r0",
+              "p",
+              "r2"
+            ],
+            "notation_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+            "rank_two_master_pole_in_A0": "1/4",
+            "row_pole_in_A0_g2": "1/64",
+            "row_pole_in_pi2_g2": "1/1024",
+            "row_prefactor_in_g2": "1/16",
+            "specialized_D_chain": {
+              "closed_delta": "16",
+              "insertion_prefactor": "1/128",
+              "mixed_anticommutators": [
+                "2i",
+                "2i"
+              ],
+              "product": "-1/2"
+            },
+            "status": "PASS",
+            "trace_id": "DA-D-006"
+          },
+          {
+            "amplitude_id": "A_WW_DIRECT_EXACT_001",
+            "endpoint_sign": 1,
+            "external_leg_derivative_tokens": [
+              "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+            ],
+            "graph_hash": "4529d7a0532c1577471baf525497bcc5cec0ad2ecb8759c21f74be6c47509934",
+            "metric_space": "hat_delta^(mu nu)",
+            "mixed_anticommutator_momenta": [
+              "r1",
+              "p",
+              "r1"
+            ],
+            "notation_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+            "rank_two_master_pole_in_A0": "1/4",
+            "row_pole_in_A0_g2": "1/64",
+            "row_pole_in_pi2_g2": "1/1024",
+            "row_prefactor_in_g2": "1/16",
+            "specialized_D_chain": {
+              "closed_delta": "16",
+              "insertion_prefactor": "1/128",
+              "mixed_anticommutators": [
+                "2i",
+                "2i"
+              ],
+              "product": "-1/2"
+            },
+            "status": "PASS",
+            "trace_id": "DA-D-007"
+          },
+          {
+            "amplitude_id": "A_WW_DIRECT_EXACT_001",
+            "endpoint_sign": 1,
+            "external_leg_derivative_tokens": [
+              "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+            ],
+            "graph_hash": "4529d7a0532c1577471baf525497bcc5cec0ad2ecb8759c21f74be6c47509934",
+            "metric_space": "hat_delta^(mu nu)",
+            "mixed_anticommutator_momenta": [
+              "r1",
+              "p",
+              "r2"
+            ],
+            "notation_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+            "rank_two_master_pole_in_A0": "1/4",
+            "row_pole_in_A0_g2": "1/64",
+            "row_pole_in_pi2_g2": "1/1024",
+            "row_prefactor_in_g2": "1/16",
+            "specialized_D_chain": {
+              "closed_delta": "16",
+              "insertion_prefactor": "1/128",
+              "mixed_anticommutators": [
+                "2i",
+                "2i"
+              ],
+              "product": "-1/2"
+            },
+            "status": "PASS",
+            "trace_id": "DA-D-008"
+          }
+        ],
+        "scope": "SPECIALIZED_WW_ROW_CERTIFICATE_NOT_GENERIC_DWORD_PHASE_COMPLETION",
+        "status": "PASS_SPECIALIZED_8_ROW_DRED_MASTER_BINDING"
+      }
     },
     {
       "d_algebra": {
@@ -3173,7 +3440,274 @@
         "request_kind": "PHYSICAL_PARTIAL_CONTRACTION",
         "schema_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79"
       },
-      "orientation": "REFLECTED"
+      "orientation": "REFLECTED",
+      "specialized_row_pole_binding": {
+        "amplitude_id": "A_WW_REFLECTED_EXACT_001",
+        "arithmetic": "EXACT_Q_AND_Q_I_NO_FLOATING_POINT",
+        "basis_resolved_contact_quotient": false,
+        "derivation": [
+          "C_graph=1/8*g2",
+          "C_D=-1/2",
+          "C_row=C_graph*C_D=-1/16*g2",
+          "Pole[T^(mu nu)]=A0*hat_delta^(mu nu)/(4*epsilon)",
+          "Pole[row]=-1/64*A0*g2/epsilon",
+          "A0=1/(16*pi^2) gives Pole[row]=-1/1024*g2/(pi^2*epsilon)",
+          "sum_8 Pole[row]=-1/128*g2/(pi^2*epsilon)"
+        ],
+        "dred_audit_exact_checks": {
+          "exact_checks": 47,
+          "failed_checks": 0
+        },
+        "dred_audit_sha256": "63d5a489872a82340e270425f7ac846b52f955d4997584c7d314d7a8a68c7300",
+        "generic_Dword_phase_completion": false,
+        "graph_hash": "5c60438e7705e78b6c07a68e8970f4f3003cbf30c9b753ac815f64ad016a3400",
+        "notation_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+        "orientation_pole_in_pi2_g2": "-1/128",
+        "row_certificates": [
+          {
+            "amplitude_id": "A_WW_REFLECTED_EXACT_001",
+            "endpoint_sign": 1,
+            "external_leg_derivative_tokens": [
+              "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+            ],
+            "graph_hash": "5c60438e7705e78b6c07a68e8970f4f3003cbf30c9b753ac815f64ad016a3400",
+            "metric_space": "hat_delta^(mu nu)",
+            "mixed_anticommutator_momenta": [
+              "r0",
+              "p",
+              "r1"
+            ],
+            "notation_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+            "rank_two_master_pole_in_A0": "1/4",
+            "row_pole_in_A0_g2": "-1/64",
+            "row_pole_in_pi2_g2": "-1/1024",
+            "row_prefactor_in_g2": "-1/16",
+            "specialized_D_chain": {
+              "closed_delta": "16",
+              "insertion_prefactor": "1/128",
+              "mixed_anticommutators": [
+                "2i",
+                "2i"
+              ],
+              "product": "-1/2"
+            },
+            "status": "PASS",
+            "trace_id": "DA-R-001"
+          },
+          {
+            "amplitude_id": "A_WW_REFLECTED_EXACT_001",
+            "endpoint_sign": 1,
+            "external_leg_derivative_tokens": [
+              "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+            ],
+            "graph_hash": "5c60438e7705e78b6c07a68e8970f4f3003cbf30c9b753ac815f64ad016a3400",
+            "metric_space": "hat_delta^(mu nu)",
+            "mixed_anticommutator_momenta": [
+              "r0",
+              "p",
+              "r2"
+            ],
+            "notation_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+            "rank_two_master_pole_in_A0": "1/4",
+            "row_pole_in_A0_g2": "-1/64",
+            "row_pole_in_pi2_g2": "-1/1024",
+            "row_prefactor_in_g2": "-1/16",
+            "specialized_D_chain": {
+              "closed_delta": "16",
+              "insertion_prefactor": "1/128",
+              "mixed_anticommutators": [
+                "2i",
+                "2i"
+              ],
+              "product": "-1/2"
+            },
+            "status": "PASS",
+            "trace_id": "DA-R-002"
+          },
+          {
+            "amplitude_id": "A_WW_REFLECTED_EXACT_001",
+            "endpoint_sign": 1,
+            "external_leg_derivative_tokens": [
+              "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+            ],
+            "graph_hash": "5c60438e7705e78b6c07a68e8970f4f3003cbf30c9b753ac815f64ad016a3400",
+            "metric_space": "hat_delta^(mu nu)",
+            "mixed_anticommutator_momenta": [
+              "r1",
+              "p",
+              "r1"
+            ],
+            "notation_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+            "rank_two_master_pole_in_A0": "1/4",
+            "row_pole_in_A0_g2": "-1/64",
+            "row_pole_in_pi2_g2": "-1/1024",
+            "row_prefactor_in_g2": "-1/16",
+            "specialized_D_chain": {
+              "closed_delta": "16",
+              "insertion_prefactor": "1/128",
+              "mixed_anticommutators": [
+                "2i",
+                "2i"
+              ],
+              "product": "-1/2"
+            },
+            "status": "PASS",
+            "trace_id": "DA-R-003"
+          },
+          {
+            "amplitude_id": "A_WW_REFLECTED_EXACT_001",
+            "endpoint_sign": 1,
+            "external_leg_derivative_tokens": [
+              "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+            ],
+            "graph_hash": "5c60438e7705e78b6c07a68e8970f4f3003cbf30c9b753ac815f64ad016a3400",
+            "metric_space": "hat_delta^(mu nu)",
+            "mixed_anticommutator_momenta": [
+              "r1",
+              "p",
+              "r2"
+            ],
+            "notation_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+            "rank_two_master_pole_in_A0": "1/4",
+            "row_pole_in_A0_g2": "-1/64",
+            "row_pole_in_pi2_g2": "-1/1024",
+            "row_prefactor_in_g2": "-1/16",
+            "specialized_D_chain": {
+              "closed_delta": "16",
+              "insertion_prefactor": "1/128",
+              "mixed_anticommutators": [
+                "2i",
+                "2i"
+              ],
+              "product": "-1/2"
+            },
+            "status": "PASS",
+            "trace_id": "DA-R-004"
+          },
+          {
+            "amplitude_id": "A_WW_REFLECTED_EXACT_001",
+            "endpoint_sign": 1,
+            "external_leg_derivative_tokens": [
+              "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+            ],
+            "graph_hash": "5c60438e7705e78b6c07a68e8970f4f3003cbf30c9b753ac815f64ad016a3400",
+            "metric_space": "hat_delta^(mu nu)",
+            "mixed_anticommutator_momenta": [
+              "r0",
+              "p",
+              "r1"
+            ],
+            "notation_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+            "rank_two_master_pole_in_A0": "1/4",
+            "row_pole_in_A0_g2": "-1/64",
+            "row_pole_in_pi2_g2": "-1/1024",
+            "row_prefactor_in_g2": "-1/16",
+            "specialized_D_chain": {
+              "closed_delta": "16",
+              "insertion_prefactor": "1/128",
+              "mixed_anticommutators": [
+                "2i",
+                "2i"
+              ],
+              "product": "-1/2"
+            },
+            "status": "PASS",
+            "trace_id": "DA-R-005"
+          },
+          {
+            "amplitude_id": "A_WW_REFLECTED_EXACT_001",
+            "endpoint_sign": 1,
+            "external_leg_derivative_tokens": [
+              "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+            ],
+            "graph_hash": "5c60438e7705e78b6c07a68e8970f4f3003cbf30c9b753ac815f64ad016a3400",
+            "metric_space": "hat_delta^(mu nu)",
+            "mixed_anticommutator_momenta": [
+              "r0",
+              "p",
+              "r2"
+            ],
+            "notation_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+            "rank_two_master_pole_in_A0": "1/4",
+            "row_pole_in_A0_g2": "-1/64",
+            "row_pole_in_pi2_g2": "-1/1024",
+            "row_prefactor_in_g2": "-1/16",
+            "specialized_D_chain": {
+              "closed_delta": "16",
+              "insertion_prefactor": "1/128",
+              "mixed_anticommutators": [
+                "2i",
+                "2i"
+              ],
+              "product": "-1/2"
+            },
+            "status": "PASS",
+            "trace_id": "DA-R-006"
+          },
+          {
+            "amplitude_id": "A_WW_REFLECTED_EXACT_001",
+            "endpoint_sign": 1,
+            "external_leg_derivative_tokens": [
+              "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+            ],
+            "graph_hash": "5c60438e7705e78b6c07a68e8970f4f3003cbf30c9b753ac815f64ad016a3400",
+            "metric_space": "hat_delta^(mu nu)",
+            "mixed_anticommutator_momenta": [
+              "r1",
+              "p",
+              "r1"
+            ],
+            "notation_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+            "rank_two_master_pole_in_A0": "1/4",
+            "row_pole_in_A0_g2": "-1/64",
+            "row_pole_in_pi2_g2": "-1/1024",
+            "row_prefactor_in_g2": "-1/16",
+            "specialized_D_chain": {
+              "closed_delta": "16",
+              "insertion_prefactor": "1/128",
+              "mixed_anticommutators": [
+                "2i",
+                "2i"
+              ],
+              "product": "-1/2"
+            },
+            "status": "PASS",
+            "trace_id": "DA-R-007"
+          },
+          {
+            "amplitude_id": "A_WW_REFLECTED_EXACT_001",
+            "endpoint_sign": 1,
+            "external_leg_derivative_tokens": [
+              "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+            ],
+            "graph_hash": "5c60438e7705e78b6c07a68e8970f4f3003cbf30c9b753ac815f64ad016a3400",
+            "metric_space": "hat_delta^(mu nu)",
+            "mixed_anticommutator_momenta": [
+              "r1",
+              "p",
+              "r2"
+            ],
+            "notation_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+            "rank_two_master_pole_in_A0": "1/4",
+            "row_pole_in_A0_g2": "-1/64",
+            "row_pole_in_pi2_g2": "-1/1024",
+            "row_prefactor_in_g2": "-1/16",
+            "specialized_D_chain": {
+              "closed_delta": "16",
+              "insertion_prefactor": "1/128",
+              "mixed_anticommutators": [
+                "2i",
+                "2i"
+              ],
+              "product": "-1/2"
+            },
+            "status": "PASS",
+            "trace_id": "DA-R-008"
+          }
+        ],
+        "scope": "SPECIALIZED_WW_ROW_CERTIFICATE_NOT_GENERIC_DWORD_PHASE_COMPLETION",
+        "status": "PASS_SPECIALIZED_8_ROW_DRED_MASTER_BINDING"
+      }
     }
   ],
   "scalar_ring": {
@@ -3199,12 +3733,14 @@
   "scope": "PRIMITIVE_WW_TYPED_PIPELINE",
   "source_sha256": {
     "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md": "dd06ff2ecf0d78605282cbb505daf16797ce859650fc8d398405031f3acdb002",
-    "scripts/build_step5_typed_pipeline.py": "546a51b7641e1dced2774df57a4543a23138c31e4660306a78ba3b89d72e2cbd",
+    "scripts/build_step5_typed_pipeline.py": "a7604d431bd85bf244c3a9c5af06c79ff50b69a60329e7b46f3d86942da43e0e",
     "scripts/step5_dalgebra_compiler.py": "2978ac0eadb7b7ec054129e9e3b7ea24e2e2e1ba116de7f55ba4c7eee2be3247",
     "scripts/step5_graph_ir.py": "2e5cf55ad5e486084ad4e3a0435031e29b6d22480586cbeef25e2a7b40954044",
     "scripts/step5_pipeline_ir.py": "38cac08265b86e1582dd7b7a24040565cabd80aecc3645a2e5e1d5186c01c74e",
     "scripts/step5_supergraph_pipeline.py": "791a38c50f8aacb7106b0db88af5db5dd4c355d002d330310cf0c2c524677a15",
-    "scripts/step5_vertex_grammar.py": "b91f0e9633f13ebb238a18f09b0265a0c8b1bb72d964307d3fc4b1d04fd39dd8"
+    "scripts/step5_vertex_grammar.py": "b91f0e9633f13ebb238a18f09b0265a0c8b1bb72d964307d3fc4b1d04fd39dd8",
+    "scripts/step5_ww_seed.py": "609f83c004d5dc2ee04dae0a5dfba9ecb07507f97d7e171ea00d64b4a4adc6cd",
+    "scripts/verify_step5_dred_integrals.py": "6fb037d0ec4fec687cd718c4d124cf760ff485e420eec12ecd9f7a2b23212356"
   },
   "stage_status": {
     "anomaly_coefficient": "NOT_ACCEPTED",
@@ -3214,7 +3750,7 @@
     "factorized_preintegration_amplitude": "PASS",
     "full_scheduled_eight_row_dalgebra_per_orientation": "UNIMPLEMENTED_PHASE_SEQUENCE",
     "generic_identical_action_vertex_expansion": "OPEN",
-    "integral_pole_binding": "NOT_BOUND_TO_NEW_DWORD_IR",
+    "integral_pole_binding": "PASS_SPECIALIZED_16_ROW_DRED_MASTER_BINDING_NOT_GENERIC_DWORD_COMPLETION",
     "local_dword_rules": "PASS",
     "notation": "PASS",
     "vertex_input": "TYPED_EXPLICIT_SEED_REQUEST"

@@ -11,6 +11,7 @@ scheduled pivoted-IBP and external-token phases are implemented.
 from __future__ import annotations
 
 import argparse
+from fractions import Fraction
 import hashlib
 import json
 from pathlib import Path
@@ -38,6 +39,7 @@ from scripts.step5_dalgebra_compiler import (
     compile_job,
 )
 from scripts.step5_pipeline_ir import NotationSchema, project_notation_schema
+from scripts.step5_ww_seed import endpoint_rows
 from scripts.step5_supergraph_pipeline import (
     AmplitudeRecord,
     CompilationResult,
@@ -45,6 +47,12 @@ from scripts.step5_supergraph_pipeline import (
     render_textbook_markdown,
     ww_reflected_seed_request,
     ww_seed_request,
+)
+from scripts.verify_step5_dred_integrals import (
+    FOURIER_PHASE,
+    LOOP_MEASURE,
+    SIGNATURE,
+    build_audit as build_dred_integral_audit,
 )
 
 
@@ -57,6 +65,8 @@ PROVENANCE_PATHS = (
     "scripts/step5_supergraph_pipeline.py",
     "scripts/step5_dalgebra_compiler.py",
     "scripts/step5_vertex_grammar.py",
+    "scripts/step5_ww_seed.py",
+    "scripts/verify_step5_dred_integrals.py",
 )
 
 
@@ -152,7 +162,138 @@ def _mixed_external_phase_job(amplitude: AmplitudeRecord) -> DAlgebraJob:
     )
 
 
-def _one_orientation_payload(result: CompilationResult) -> dict[str, object]:
+def _specialized_row_pole_binding(
+    amplitude: AmplitudeRecord,
+    dred_audit: dict[str, object],
+) -> dict[str, object]:
+    """Bind every exact specialized WW row to the Project DRED master.
+
+    This is deliberately narrower than a generic D-word compilation.  The
+    row D-chain remains the exact specialized certificate emitted by
+    ``step5_ww_seed.endpoint_rows``.  The binding proves that its coefficient,
+    graph provenance, and rank-two UV master compose without an untyped or
+    floating-point step.
+    """
+
+    if dred_audit["status"] != "PASS":
+        raise AssertionError("the independent DRED integral audit must pass")
+    integrals = dred_audit["integrals"]
+    if not isinstance(integrals, dict):
+        raise AssertionError("the DRED audit has no typed integral payload")
+    laurent = integrals["laurent_in_units_of_A0"]
+    if not isinstance(laurent, dict):
+        raise AssertionError("the DRED audit has no Laurent coefficient map")
+    tensor_pole = laurent["coefficient_of_hat_g_in_T"]
+    if not isinstance(tensor_pole, dict) or tensor_pole.get("-1") != "1/4":
+        raise AssertionError("the rank-two DRED master pole must be A0/4")
+
+    coefficient = amplitude.exact_coefficient_reduced
+    if (
+        coefficient.sqrt2_power != 0
+        or coefficient.i_power % 4 != 0
+        or coefficient.symbols != ("g2",)
+    ):
+        raise AssertionError("the primitive WW amplitude must lie in Q*g2")
+    graph_prefactor = coefficient.rational
+    d_chain = Fraction(-1, 2)
+    row_prefactor = graph_prefactor * d_chain
+    expected_row_prefactor = (
+        Fraction(1, 16)
+        if amplitude.orientation == "DIRECT"
+        else Fraction(-1, 16)
+    )
+    if row_prefactor != expected_row_prefactor:
+        raise AssertionError("typed amplitude times the WW D-chain has the wrong sign")
+
+    master_pole_in_A0 = Fraction(1, 4)
+    row_pole_in_A0 = row_prefactor * master_pole_in_A0
+    row_pole_in_pi = row_pole_in_A0 / 16
+    orientation_pole_in_pi = 8 * row_pole_in_pi
+    expected_orientation_pole = (
+        Fraction(1, 128)
+        if amplitude.orientation == "DIRECT"
+        else Fraction(-1, 128)
+    )
+    if orientation_pole_in_pi != expected_orientation_pole:
+        raise AssertionError("eight row poles do not sum to the orientation pole")
+
+    rows = endpoint_rows(amplitude.orientation)
+    if len(rows) != 8:
+        raise AssertionError("one WW orientation must have exactly eight rows")
+    row_certificates: list[dict[str, object]] = []
+    for row in rows:
+        exact_checks = row["exact_checks"]
+        if not isinstance(exact_checks, dict) or not all(exact_checks.values()):
+            raise AssertionError(f"specialized row {row['trace_id']} failed")
+        exact_chain = row["exact_D_chain"]
+        if not isinstance(exact_chain, dict) or exact_chain["product"] != "-1/2":
+            raise AssertionError(f"row {row['trace_id']} has an unbound D-chain")
+        expected_text = (
+            "+g^2/(1024*pi^2*epsilon)"
+            if amplitude.orientation == "DIRECT"
+            else "-g^2/(1024*pi^2*epsilon)"
+        )
+        if expected_text not in str(row["triangle_metric_pole"]):
+            raise AssertionError(f"row {row['trace_id']} pole sign disagrees")
+        row_certificates.append(
+            {
+                "trace_id": row["trace_id"],
+                "notation_hash": amplitude.schema_hash,
+                "graph_hash": amplitude.canonical_key,
+                "amplitude_id": amplitude.amplitude_id,
+                "specialized_D_chain": exact_chain,
+                "endpoint_sign": row["total_endpoint_sign"],
+                "mixed_anticommutator_momenta": row[
+                    "mixed_anticommutator_momenta"
+                ],
+                "external_leg_derivative_tokens": row[
+                    "external_leg_derivative_tokens"
+                ],
+                "row_prefactor_in_g2": str(row_prefactor),
+                "rank_two_master_pole_in_A0": str(master_pole_in_A0),
+                "row_pole_in_A0_g2": str(row_pole_in_A0),
+                "row_pole_in_pi2_g2": str(row_pole_in_pi),
+                "metric_space": "hat_delta^(mu nu)",
+                "status": "PASS",
+            }
+        )
+
+    dred_sha256 = hashlib.sha256(
+        json.dumps(dred_audit, sort_keys=True, separators=(",", ":")).encode(
+            "utf-8"
+        )
+    ).hexdigest()
+    return {
+        "status": "PASS_SPECIALIZED_8_ROW_DRED_MASTER_BINDING",
+        "scope": (
+            "SPECIALIZED_WW_ROW_CERTIFICATE_NOT_GENERIC_DWORD_PHASE_COMPLETION"
+        ),
+        "notation_hash": amplitude.schema_hash,
+        "graph_hash": amplitude.canonical_key,
+        "amplitude_id": amplitude.amplitude_id,
+        "dred_audit_sha256": dred_sha256,
+        "dred_audit_exact_checks": dred_audit["totals"],
+        "arithmetic": "EXACT_Q_AND_Q_I_NO_FLOATING_POINT",
+        "derivation": [
+            f"C_graph={graph_prefactor}*g2",
+            "C_D=-1/2",
+            f"C_row=C_graph*C_D={row_prefactor}*g2",
+            "Pole[T^(mu nu)]=A0*hat_delta^(mu nu)/(4*epsilon)",
+            f"Pole[row]={row_pole_in_A0}*A0*g2/epsilon",
+            f"A0=1/(16*pi^2) gives Pole[row]={row_pole_in_pi}*g2/(pi^2*epsilon)",
+            f"sum_8 Pole[row]={orientation_pole_in_pi}*g2/(pi^2*epsilon)",
+        ],
+        "row_certificates": row_certificates,
+        "orientation_pole_in_pi2_g2": str(orientation_pole_in_pi),
+        "generic_Dword_phase_completion": False,
+        "basis_resolved_contact_quotient": False,
+    }
+
+
+def _one_orientation_payload(
+    result: CompilationResult,
+    dred_audit: dict[str, object],
+) -> dict[str, object]:
     if len(result.amplitudes) != 1:
         raise AssertionError("the primitive WW request must have one graph class")
     amplitude = result.amplitudes[0]
@@ -173,6 +314,9 @@ def _one_orientation_payload(result: CompilationResult) -> dict[str, object]:
             "mixed_external_phase_job": mixed_job.to_json(),
             "mixed_external_phase_result": mixed_result.to_json(),
         },
+        "specialized_row_pole_binding": _specialized_row_pole_binding(
+            amplitude, dred_audit
+        ),
     }
 
 
@@ -180,6 +324,11 @@ def build_payload(schema: NotationSchema | None = None) -> dict[str, object]:
     schema = schema or project_notation_schema()
     direct = compile_request(ww_seed_request(schema), schema)
     reflected = compile_request(ww_reflected_seed_request(schema), schema)
+    dred_audit = build_dred_integral_audit(
+        FOURIER_PHASE,
+        LOOP_MEASURE,
+        SIGNATURE,
+    )
     source_hashes = _source_hashes()
     compiler_hash = hashlib.sha256(
         json.dumps(source_hashes, sort_keys=True, separators=(",", ":")).encode("utf-8")
@@ -192,8 +341,8 @@ def build_payload(schema: NotationSchema | None = None) -> dict[str, object]:
         "source_sha256": source_hashes,
         "scalar_ring": schema.scalar_ring.canonical_dict(),
         "orientations": [
-            _one_orientation_payload(direct),
-            _one_orientation_payload(reflected),
+            _one_orientation_payload(direct, dred_audit),
+            _one_orientation_payload(reflected, dred_audit),
         ],
         "stage_status": {
             "notation": "PASS",
@@ -206,7 +355,10 @@ def build_payload(schema: NotationSchema | None = None) -> dict[str, object]:
             "full_scheduled_eight_row_dalgebra_per_orientation": (
                 "UNIMPLEMENTED_PHASE_SEQUENCE"
             ),
-            "integral_pole_binding": "NOT_BOUND_TO_NEW_DWORD_IR",
+            "integral_pole_binding": (
+                "PASS_SPECIALIZED_16_ROW_DRED_MASTER_BINDING_"
+                "NOT_GENERIC_DWORD_COMPLETION"
+            ),
             "basis_resolved_sd_contact_orbit": "OPEN",
             "anomaly_coefficient": "NOT_ACCEPTED",
         },
@@ -329,6 +481,35 @@ def render_summary(payload: dict[str, object]) -> str:
             r"\prec\texttt{PIVOTED\_IBP}"
             r"\prec\texttt{EXTERNAL\_CHIRALITY}.",
             "$$",
+            "",
+            "## Specialized row-to-pole binding",
+            "",
+            "$$",
+            r"C_{G}^{\rm D}=-\frac{g^2}{8},\qquad "
+            r"C_{G}^{\rm R}=+\frac{g^2}{8},\qquad C_D=-\frac12,",
+            "$$",
+            "",
+            "$$",
+            r"C_{\rm row}^{\rm D}=+\frac{g^2}{16},\qquad "
+            r"C_{\rm row}^{\rm R}=-\frac{g^2}{16},",
+            "$$",
+            "",
+            "$$",
+            r"\operatorname{Pole}\!\left["
+            r"\int\frac{d^d\ell}{(2\pi)^d}"
+            r"\frac{\ell^\mu\ell^\nu}{(\ell^2+\Delta)^3}\right]"
+            r"=\frac{1}{16\pi^2}\frac{\widehat\delta^{\mu\nu}}{4\epsilon},",
+            "$$",
+            "",
+            "$$",
+            r"\sum_{r=1}^{8}P_{r}^{\rm D}="
+            r"+\frac{g^2}{128\pi^2\epsilon}\widehat\delta^{\mu\nu},\qquad "
+            r"\sum_{r=1}^{8}P_{r}^{\rm R}="
+            r"-\frac{g^2}{128\pi^2\epsilon}\widehat\delta^{\mu\nu}.",
+            "$$",
+            "",
+            r"Status: \texttt{PASS\_SPECIALIZED\_16\_ROW\_DRED\_MASTER\_BINDING}; "
+            r"generic $D$-phase completion remains open.",
             "",
             "$$",
             r"\Gamma_{\rm anomaly}:\ \texttt{NOT\_ACCEPTED}.",

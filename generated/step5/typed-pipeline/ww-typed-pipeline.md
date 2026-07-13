@@ -48,6 +48,26 @@ $$
 \texttt{MIXED\_D\_BARD\_NORMALIZATION}\prec\texttt{PIVOTED\_IBP}\prec\texttt{EXTERNAL\_CHIRALITY}.
 $$
 
+## Specialized row-to-pole binding
+
+$$
+C_{G}^{\rm D}=-\frac{g^2}{8},\qquad C_{G}^{\rm R}=+\frac{g^2}{8},\qquad C_D=-\frac12,
+$$
+
+$$
+C_{\rm row}^{\rm D}=+\frac{g^2}{16},\qquad C_{\rm row}^{\rm R}=-\frac{g^2}{16},
+$$
+
+$$
+\operatorname{Pole}\!\left[\int\frac{d^d\ell}{(2\pi)^d}\frac{\ell^\mu\ell^\nu}{(\ell^2+\Delta)^3}\right]=\frac{1}{16\pi^2}\frac{\widehat\delta^{\mu\nu}}{4\epsilon},
+$$
+
+$$
+\sum_{r=1}^{8}P_{r}^{\rm D}=+\frac{g^2}{128\pi^2\epsilon}\widehat\delta^{\mu\nu},\qquad \sum_{r=1}^{8}P_{r}^{\rm R}=-\frac{g^2}{128\pi^2\epsilon}\widehat\delta^{\mu\nu}.
+$$
+
+Status: \texttt{PASS\_SPECIALIZED\_16\_ROW\_DRED\_MASTER\_BINDING}; generic $D$-phase completion remains open.
+
 $$
 \Gamma_{\rm anomaly}:\ \texttt{NOT\_ACCEPTED}.
 $$

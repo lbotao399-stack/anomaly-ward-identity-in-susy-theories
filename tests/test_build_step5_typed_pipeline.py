@@ -85,7 +85,42 @@ class BuildStep5TypedPipelineTest(unittest.TestCase):
         )
         markdown = render_summary(payload)
         self.assertIn(r"\Gamma_{\rm anomaly}:\ \texttt{NOT\_ACCEPTED}", markdown)
+        self.assertIn(
+            r"PASS\_SPECIALIZED\_16\_ROW\_DRED\_MASTER\_BINDING",
+            markdown,
+        )
         self.assertNotIn("accepted anomaly coefficient", markdown.lower())
+
+    def test_all_specialized_rows_bind_exactly_to_the_dred_master(self) -> None:
+        payload = build_payload()
+        expected = {"DIRECT": "1/128", "REFLECTED": "-1/128"}
+        for item in payload["orientations"]:
+            binding = item["specialized_row_pole_binding"]
+            amplitude = item["graph_amplitude"]["amplitudes"][0]
+            self.assertEqual(
+                binding["status"],
+                "PASS_SPECIALIZED_8_ROW_DRED_MASTER_BINDING",
+            )
+            self.assertEqual(binding["notation_hash"], payload["notation_hash"])
+            self.assertEqual(binding["graph_hash"], amplitude["canonical_key"])
+            self.assertEqual(binding["amplitude_id"], amplitude["amplitude_id"])
+            self.assertEqual(len(binding["dred_audit_sha256"]), 64)
+            self.assertEqual(binding["dred_audit_exact_checks"]["failed_checks"], 0)
+            self.assertEqual(len(binding["row_certificates"]), 8)
+            self.assertTrue(
+                all(row["status"] == "PASS" for row in binding["row_certificates"])
+            )
+            self.assertEqual(
+                binding["orientation_pole_in_pi2_g2"],
+                expected[item["orientation"]],
+            )
+            self.assertFalse(binding["generic_Dword_phase_completion"])
+            self.assertFalse(binding["basis_resolved_contact_quotient"])
+        self.assertEqual(
+            payload["stage_status"]["integral_pole_binding"],
+            "PASS_SPECIALIZED_16_ROW_DRED_MASTER_BINDING_"
+            "NOT_GENERIC_DWORD_COMPLETION",
+        )
 
     def test_generated_outputs_are_byte_reproducible(self) -> None:
         self.assertEqual(main(), 0)
