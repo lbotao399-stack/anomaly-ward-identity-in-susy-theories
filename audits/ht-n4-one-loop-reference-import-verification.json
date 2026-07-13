@@ -1,0 +1,1084 @@
+{
+  "schema": 1,
+  "task": "REFERENCE-IMPORT-HT-N4-ONE-LOOP-001",
+  "status": "PASS",
+  "totals": {
+    "checks": 267,
+    "failed": 0,
+    "archive_regular_files": 8,
+    "source_anchors": 16,
+    "candidate_claims": 3,
+    "source_internal_normalization_conflicts": 2,
+    "source_internal_ordering_audits": 1
+  },
+  "checks": [
+    {
+      "id": "metadata.task",
+      "status": "PASS"
+    },
+    {
+      "id": "metadata.versioned_id",
+      "status": "PASS"
+    },
+    {
+      "id": "metadata.title",
+      "status": "PASS"
+    },
+    {
+      "id": "metadata.authors",
+      "status": "PASS"
+    },
+    {
+      "id": "metadata.v2_revision",
+      "status": "PASS"
+    },
+    {
+      "id": "metadata.urls",
+      "status": "PASS"
+    },
+    {
+      "id": "metadata.boundary",
+      "status": "PASS"
+    },
+    {
+      "id": "metadata.artifacts",
+      "status": "PASS"
+    },
+    {
+      "id": "artifact.exists.VERSIONED_PDF",
+      "status": "PASS"
+    },
+    {
+      "id": "artifact.size.VERSIONED_PDF",
+      "status": "PASS"
+    },
+    {
+      "id": "artifact.sha256.VERSIONED_PDF",
+      "status": "PASS"
+    },
+    {
+      "id": "artifact.exists.VERSIONED_TEX_SOURCE_ARCHIVE",
+      "status": "PASS"
+    },
+    {
+      "id": "artifact.size.VERSIONED_TEX_SOURCE_ARCHIVE",
+      "status": "PASS"
+    },
+    {
+      "id": "artifact.sha256.VERSIONED_TEX_SOURCE_ARCHIVE",
+      "status": "PASS"
+    },
+    {
+      "id": "extraction.file_order",
+      "status": "PASS"
+    },
+    {
+      "id": "extraction.regular_file_count",
+      "status": "PASS"
+    },
+    {
+      "id": "extraction.directory_members",
+      "status": "PASS"
+    },
+    {
+      "id": "extraction.ordering",
+      "status": "PASS"
+    },
+    {
+      "id": "extraction.no_omitted_or_extra_files",
+      "status": "PASS"
+    },
+    {
+      "id": "source.exists.00README.json",
+      "status": "PASS"
+    },
+    {
+      "id": "source.size.00README.json",
+      "status": "PASS"
+    },
+    {
+      "id": "source.sha256.00README.json",
+      "status": "PASS"
+    },
+    {
+      "id": "source.exists.JHEP.bst",
+      "status": "PASS"
+    },
+    {
+      "id": "source.size.JHEP.bst",
+      "status": "PASS"
+    },
+    {
+      "id": "source.sha256.JHEP.bst",
+      "status": "PASS"
+    },
+    {
+      "id": "source.exists.images/segment.pdf",
+      "status": "PASS"
+    },
+    {
+      "id": "source.size.images/segment.pdf",
+      "status": "PASS"
+    },
+    {
+      "id": "source.sha256.images/segment.pdf",
+      "status": "PASS"
+    },
+    {
+      "id": "source.exists.images/triangle.pdf",
+      "status": "PASS"
+    },
+    {
+      "id": "source.size.images/triangle.pdf",
+      "status": "PASS"
+    },
+    {
+      "id": "source.sha256.images/triangle.pdf",
+      "status": "PASS"
+    },
+    {
+      "id": "source.exists.jheppub.sty",
+      "status": "PASS"
+    },
+    {
+      "id": "source.size.jheppub.sty",
+      "status": "PASS"
+    },
+    {
+      "id": "source.sha256.jheppub.sty",
+      "status": "PASS"
+    },
+    {
+      "id": "source.exists.main.bbl",
+      "status": "PASS"
+    },
+    {
+      "id": "source.size.main.bbl",
+      "status": "PASS"
+    },
+    {
+      "id": "source.sha256.main.bbl",
+      "status": "PASS"
+    },
+    {
+      "id": "source.exists.main.tex",
+      "status": "PASS"
+    },
+    {
+      "id": "source.size.main.tex",
+      "status": "PASS"
+    },
+    {
+      "id": "source.sha256.main.tex",
+      "status": "PASS"
+    },
+    {
+      "id": "source.exists.mono.bib",
+      "status": "PASS"
+    },
+    {
+      "id": "source.size.mono.bib",
+      "status": "PASS"
+    },
+    {
+      "id": "source.sha256.mono.bib",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.regular_members",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.directory_members",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.safe_member_paths",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.readable.00README.json",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.size.00README.json",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.sha256.00README.json",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.extracted_byte_identity.00README.json",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.readable.JHEP.bst",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.size.JHEP.bst",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.sha256.JHEP.bst",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.extracted_byte_identity.JHEP.bst",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.readable.images/segment.pdf",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.size.images/segment.pdf",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.sha256.images/segment.pdf",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.extracted_byte_identity.images/segment.pdf",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.readable.images/triangle.pdf",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.size.images/triangle.pdf",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.sha256.images/triangle.pdf",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.extracted_byte_identity.images/triangle.pdf",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.readable.jheppub.sty",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.size.jheppub.sty",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.sha256.jheppub.sty",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.extracted_byte_identity.jheppub.sty",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.readable.main.bbl",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.size.main.bbl",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.sha256.main.bbl",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.extracted_byte_identity.main.bbl",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.readable.main.tex",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.size.main.tex",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.sha256.main.tex",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.extracted_byte_identity.main.tex",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.readable.mono.bib",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.size.mono.bib",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.sha256.mono.bib",
+      "status": "PASS"
+    },
+    {
+      "id": "archive.extracted_byte_identity.mono.bib",
+      "status": "PASS"
+    },
+    {
+      "id": "ledger.task",
+      "status": "PASS"
+    },
+    {
+      "id": "ledger.source.versioned_id",
+      "status": "PASS"
+    },
+    {
+      "id": "ledger.source.primary_tex",
+      "status": "PASS"
+    },
+    {
+      "id": "ledger.source.primary_tex_sha256",
+      "status": "PASS"
+    },
+    {
+      "id": "ledger.boundary",
+      "status": "PASS"
+    },
+    {
+      "id": "ledger.anchor_order",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.path.HT-TITLE-ABSTRACT",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.start.HT-TITLE-ABSTRACT",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.end.HT-TITLE-ABSTRACT",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.size.HT-TITLE-ABSTRACT",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_size.HT-TITLE-ABSTRACT",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.sha256.HT-TITLE-ABSTRACT",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_sha256.HT-TITLE-ABSTRACT",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.path.HT-INTRO-N4-COMPACT-Q1",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.start.HT-INTRO-N4-COMPACT-Q1",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.end.HT-INTRO-N4-COMPACT-Q1",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.size.HT-INTRO-N4-COMPACT-Q1",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_size.HT-INTRO-N4-COMPACT-Q1",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.sha256.HT-INTRO-N4-COMPACT-Q1",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_sha256.HT-INTRO-N4-COMPACT-Q1",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.label.HT-INTRO-N4-COMPACT-Q1.eq:Q0C",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.label.HT-INTRO-N4-COMPACT-Q1.eq:Q1C",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.path.HT-HIGHER-LOOP-BOUNDARY",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.start.HT-HIGHER-LOOP-BOUNDARY",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.end.HT-HIGHER-LOOP-BOUNDARY",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.size.HT-HIGHER-LOOP-BOUNDARY",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_size.HT-HIGHER-LOOP-BOUNDARY",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.sha256.HT-HIGHER-LOOP-BOUNDARY",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_sha256.HT-HIGHER-LOOP-BOUNDARY",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.path.HT-Q1-BRACKET-DEFINITION",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.start.HT-Q1-BRACKET-DEFINITION",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.end.HT-Q1-BRACKET-DEFINITION",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.size.HT-Q1-BRACKET-DEFINITION",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_size.HT-Q1-BRACKET-DEFINITION",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.sha256.HT-Q1-BRACKET-DEFINITION",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_sha256.HT-Q1-BRACKET-DEFINITION",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.path.HT-NORMAL-ORDERING-PARITY",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.start.HT-NORMAL-ORDERING-PARITY",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.end.HT-NORMAL-ORDERING-PARITY",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.size.HT-NORMAL-ORDERING-PARITY",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_size.HT-NORMAL-ORDERING-PARITY",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.sha256.HT-NORMAL-ORDERING-PARITY",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_sha256.HT-NORMAL-ORDERING-PARITY",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.label.HT-NORMAL-ORDERING-PARITY.eq:generalWord",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.label.HT-NORMAL-ORDERING-PARITY.eq:gen",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.path.HT-MASTER-INTEGRAL-DEFINITION-LAMAN",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.start.HT-MASTER-INTEGRAL-DEFINITION-LAMAN",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.end.HT-MASTER-INTEGRAL-DEFINITION-LAMAN",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.size.HT-MASTER-INTEGRAL-DEFINITION-LAMAN",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_size.HT-MASTER-INTEGRAL-DEFINITION-LAMAN",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.sha256.HT-MASTER-INTEGRAL-DEFINITION-LAMAN",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_sha256.HT-MASTER-INTEGRAL-DEFINITION-LAMAN",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.label.HT-MASTER-INTEGRAL-DEFINITION-LAMAN.eq:MasterIntegral",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.path.HT-MASTER-INTEGRAL-CLOSED-FORM",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.start.HT-MASTER-INTEGRAL-CLOSED-FORM",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.end.HT-MASTER-INTEGRAL-CLOSED-FORM",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.size.HT-MASTER-INTEGRAL-CLOSED-FORM",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_size.HT-MASTER-INTEGRAL-CLOSED-FORM",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.sha256.HT-MASTER-INTEGRAL-CLOSED-FORM",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_sha256.HT-MASTER-INTEGRAL-CLOSED-FORM",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.label.HT-MASTER-INTEGRAL-CLOSED-FORM.eq:I",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.path.HT-TWISTED-ACTION-FIELDS",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.start.HT-TWISTED-ACTION-FIELDS",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.end.HT-TWISTED-ACTION-FIELDS",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.size.HT-TWISTED-ACTION-FIELDS",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_size.HT-TWISTED-ACTION-FIELDS",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.sha256.HT-TWISTED-ACTION-FIELDS",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_sha256.HT-TWISTED-ACTION-FIELDS",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.label.HT-TWISTED-ACTION-FIELDS.eq:L",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.path.HT-PAIR-RULE-AND-DTRI-KERNEL",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.start.HT-PAIR-RULE-AND-DTRI-KERNEL",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.end.HT-PAIR-RULE-AND-DTRI-KERNEL",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.size.HT-PAIR-RULE-AND-DTRI-KERNEL",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_size.HT-PAIR-RULE-AND-DTRI-KERNEL",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.sha256.HT-PAIR-RULE-AND-DTRI-KERNEL",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_sha256.HT-PAIR-RULE-AND-DTRI-KERNEL",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.path.HT-LIE-NORMALIZATION",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.start.HT-LIE-NORMALIZATION",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.end.HT-LIE-NORMALIZATION",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.size.HT-LIE-NORMALIZATION",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_size.HT-LIE-NORMALIZATION",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.sha256.HT-LIE-NORMALIZATION",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_sha256.HT-LIE-NORMALIZATION",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.path.HT-GENERIC-ADJOINT-SHIFTED-PAIRS",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.start.HT-GENERIC-ADJOINT-SHIFTED-PAIRS",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.end.HT-GENERIC-ADJOINT-SHIFTED-PAIRS",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.size.HT-GENERIC-ADJOINT-SHIFTED-PAIRS",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_size.HT-GENERIC-ADJOINT-SHIFTED-PAIRS",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.sha256.HT-GENERIC-ADJOINT-SHIFTED-PAIRS",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_sha256.HT-GENERIC-ADJOINT-SHIFTED-PAIRS",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.label.HT-GENERIC-ADJOINT-SHIFTED-PAIRS.eq:oneW",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.label.HT-GENERIC-ADJOINT-SHIFTED-PAIRS.eq:twoW",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.label.HT-GENERIC-ADJOINT-SHIFTED-PAIRS.eq:threeW",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.path.HT-N4-SETUP-SUPERFIELD",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.start.HT-N4-SETUP-SUPERFIELD",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.end.HT-N4-SETUP-SUPERFIELD",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.size.HT-N4-SETUP-SUPERFIELD",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_size.HT-N4-SETUP-SUPERFIELD",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.sha256.HT-N4-SETUP-SUPERFIELD",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_sha256.HT-N4-SETUP-SUPERFIELD",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.label.HT-N4-SETUP-SUPERFIELD.eq:C",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.path.HT-N4-COMPONENT-PAIR-RESULTS",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.start.HT-N4-COMPONENT-PAIR-RESULTS",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.end.HT-N4-COMPONENT-PAIR-RESULTS",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.size.HT-N4-COMPONENT-PAIR-RESULTS",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_size.HT-N4-COMPONENT-PAIR-RESULTS",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.sha256.HT-N4-COMPONENT-PAIR-RESULTS",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_sha256.HT-N4-COMPONENT-PAIR-RESULTS",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.label.HT-N4-COMPONENT-PAIR-RESULTS.eq:oneterm",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.path.HT-N4-COMPACT-SUPERFIELD-RESULT",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.start.HT-N4-COMPACT-SUPERFIELD-RESULT",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.end.HT-N4-COMPACT-SUPERFIELD-RESULT",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.size.HT-N4-COMPACT-SUPERFIELD-RESULT",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_size.HT-N4-COMPACT-SUPERFIELD-RESULT",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.sha256.HT-N4-COMPACT-SUPERFIELD-RESULT",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_sha256.HT-N4-COMPACT-SUPERFIELD-RESULT",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.label.HT-N4-COMPACT-SUPERFIELD-RESULT.eq:Q1N4",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.path.HT-MASTER-INTEGRAL-DERIVATION",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.start.HT-MASTER-INTEGRAL-DERIVATION",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.end.HT-MASTER-INTEGRAL-DERIVATION",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.size.HT-MASTER-INTEGRAL-DERIVATION",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_size.HT-MASTER-INTEGRAL-DERIVATION",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.sha256.HT-MASTER-INTEGRAL-DERIVATION",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_sha256.HT-MASTER-INTEGRAL-DERIVATION",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.label.HT-MASTER-INTEGRAL-DERIVATION.eq:triangle",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.path.HT-N4-DERIVATIVE-COMPONENT-PAIR-RESULTS",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.start.HT-N4-DERIVATIVE-COMPONENT-PAIR-RESULTS",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.end.HT-N4-DERIVATIVE-COMPONENT-PAIR-RESULTS",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.size.HT-N4-DERIVATIVE-COMPONENT-PAIR-RESULTS",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_size.HT-N4-DERIVATIVE-COMPONENT-PAIR-RESULTS",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.sha256.HT-N4-DERIVATIVE-COMPONENT-PAIR-RESULTS",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.recorded_sha256.HT-N4-DERIVATIVE-COMPONENT-PAIR-RESULTS",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.label.HT-N4-DERIVATIVE-COMPONENT-PAIR-RESULTS.eq:rec",
+      "status": "PASS"
+    },
+    {
+      "id": "anchor.label.HT-N4-DERIVATIVE-COMPONENT-PAIR-RESULTS.eq:Cmn",
+      "status": "PASS"
+    },
+    {
+      "id": "ledger.normalization_conflict_ids",
+      "status": "PASS"
+    },
+    {
+      "id": "ledger.normalization_conflicts_unresolved",
+      "status": "PASS"
+    },
+    {
+      "id": "ledger.compact_compatibility_condition",
+      "status": "PASS"
+    },
+    {
+      "id": "ledger.zero_shift_discrepancy",
+      "status": "PASS"
+    },
+    {
+      "id": "ledger.normalization_conflicts_not_translated",
+      "status": "PASS"
+    },
+    {
+      "id": "ledger.ordering_audit_count",
+      "status": "PASS"
+    },
+    {
+      "id": "ledger.ordering_audit_id",
+      "status": "PASS"
+    },
+    {
+      "id": "ledger.ordering_audit_status",
+      "status": "PASS"
+    },
+    {
+      "id": "ledger.ordering_exact_chain",
+      "status": "PASS"
+    },
+    {
+      "id": "ledger.ordering_result",
+      "status": "PASS"
+    },
+    {
+      "id": "ledger.ordering_not_translated",
+      "status": "PASS"
+    },
+    {
+      "id": "ledger.candidate_claim_ids",
+      "status": "PASS"
+    },
+    {
+      "id": "ledger.claims_external_target_only",
+      "status": "PASS"
+    },
+    {
+      "id": "ledger.claims_not_adopted",
+      "status": "PASS"
+    },
+    {
+      "id": "manifest.unique.ARXIV-2512.07771V2-PDF",
+      "status": "PASS"
+    },
+    {
+      "id": "manifest.row.ARXIV-2512.07771V2-PDF",
+      "status": "PASS"
+    },
+    {
+      "id": "manifest.unique.ARXIV-2512.07771V2-SOURCE-ARCHIVE",
+      "status": "PASS"
+    },
+    {
+      "id": "manifest.row.ARXIV-2512.07771V2-SOURCE-ARCHIVE",
+      "status": "PASS"
+    },
+    {
+      "id": "manifest.unique.ARXIV-2512.07771V2-SOURCE-00README-JSON",
+      "status": "PASS"
+    },
+    {
+      "id": "manifest.row.ARXIV-2512.07771V2-SOURCE-00README-JSON",
+      "status": "PASS"
+    },
+    {
+      "id": "manifest.unique.ARXIV-2512.07771V2-SOURCE-JHEP-BST",
+      "status": "PASS"
+    },
+    {
+      "id": "manifest.row.ARXIV-2512.07771V2-SOURCE-JHEP-BST",
+      "status": "PASS"
+    },
+    {
+      "id": "manifest.unique.ARXIV-2512.07771V2-SOURCE-SEGMENT-PDF",
+      "status": "PASS"
+    },
+    {
+      "id": "manifest.row.ARXIV-2512.07771V2-SOURCE-SEGMENT-PDF",
+      "status": "PASS"
+    },
+    {
+      "id": "manifest.unique.ARXIV-2512.07771V2-SOURCE-TRIANGLE-PDF",
+      "status": "PASS"
+    },
+    {
+      "id": "manifest.row.ARXIV-2512.07771V2-SOURCE-TRIANGLE-PDF",
+      "status": "PASS"
+    },
+    {
+      "id": "manifest.unique.ARXIV-2512.07771V2-SOURCE-JHEPPUB-STY",
+      "status": "PASS"
+    },
+    {
+      "id": "manifest.row.ARXIV-2512.07771V2-SOURCE-JHEPPUB-STY",
+      "status": "PASS"
+    },
+    {
+      "id": "manifest.unique.ARXIV-2512.07771V2-SOURCE-MAIN-BBL",
+      "status": "PASS"
+    },
+    {
+      "id": "manifest.row.ARXIV-2512.07771V2-SOURCE-MAIN-BBL",
+      "status": "PASS"
+    },
+    {
+      "id": "manifest.unique.ARXIV-2512.07771V2-SOURCE-MAIN-TEX",
+      "status": "PASS"
+    },
+    {
+      "id": "manifest.row.ARXIV-2512.07771V2-SOURCE-MAIN-TEX",
+      "status": "PASS"
+    },
+    {
+      "id": "manifest.unique.ARXIV-2512.07771V2-SOURCE-MONO-BIB",
+      "status": "PASS"
+    },
+    {
+      "id": "manifest.row.ARXIV-2512.07771V2-SOURCE-MONO-BIB",
+      "status": "PASS"
+    },
+    {
+      "id": "manifest.unique.ARXIV-2512.07771V2-METADATA",
+      "status": "PASS"
+    },
+    {
+      "id": "manifest.row.ARXIV-2512.07771V2-METADATA",
+      "status": "PASS"
+    },
+    {
+      "id": "manifest.unique.HT-N4-ONE-LOOP-SOURCE-LEDGER",
+      "status": "PASS"
+    },
+    {
+      "id": "manifest.row.HT-N4-ONE-LOOP-SOURCE-LEDGER",
+      "status": "PASS"
+    },
+    {
+      "id": "manifest.exact_import_id_set",
+      "status": "PASS"
+    },
+    {
+      "id": "manifest.claim_map_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "claim_map.unique.HT-N4-ONE-LOOP-COMPLETE-SUPERFIELD-CANDIDATE",
+      "status": "PASS"
+    },
+    {
+      "id": "claim_map.row.HT-N4-ONE-LOOP-COMPLETE-SUPERFIELD-CANDIDATE",
+      "status": "PASS"
+    },
+    {
+      "id": "claim_map.unique.HT-N4-ONE-LOOP-COMPONENT-PAIR-CANDIDATE",
+      "status": "PASS"
+    },
+    {
+      "id": "claim_map.row.HT-N4-ONE-LOOP-COMPONENT-PAIR-CANDIDATE",
+      "status": "PASS"
+    },
+    {
+      "id": "claim_map.unique.HT-ONE-LOOP-MASTER-INTEGRAL-CANDIDATE",
+      "status": "PASS"
+    },
+    {
+      "id": "claim_map.row.HT-ONE-LOOP-MASTER-INTEGRAL-CANDIDATE",
+      "status": "PASS"
+    },
+    {
+      "id": "claim_map.exact_candidate_ids",
+      "status": "PASS"
+    },
+    {
+      "id": "task.id",
+      "status": "PASS"
+    },
+    {
+      "id": "task.type",
+      "status": "PASS"
+    },
+    {
+      "id": "task.status",
+      "status": "PASS"
+    },
+    {
+      "id": "task.candidate_claim_ids",
+      "status": "PASS"
+    },
+    {
+      "id": "task.reference_role",
+      "status": "PASS"
+    },
+    {
+      "id": "task.translation_status",
+      "status": "PASS"
+    },
+    {
+      "id": "task.comparison_status",
+      "status": "PASS"
+    },
+    {
+      "id": "task.external_urls",
+      "status": "PASS"
+    }
+  ]
+}

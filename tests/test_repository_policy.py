@@ -383,6 +383,34 @@ class RepositoryPolicyTest(unittest.TestCase):
             )
             self.assertEqual(len(task["candidate_claim_ids"]), 3)
             return
+        if task["id"] == "REFERENCE-IMPORT-HT-N4-ONE-LOOP-001":
+            exception = task["reference_exception"]
+            self.assertTrue(exception["user_authorized"])
+            self.assertEqual(exception["source"], "arXiv:2512.07771v2")
+            self.assertEqual(exception["role"], "EXTERNAL_TARGET_ONLY")
+            self.assertEqual(exception["translation_status"], "NOT_PERFORMED_IN_REFERENCE_IMPORT")
+            self.assertEqual(exception["comparison_status"], "NOT_PERFORMED_IN_REFERENCE_IMPORT")
+            self.assertEqual(exception["default_boundary_after_task"], "GIT_TO_NOTION_ONLY")
+            external = [item for item in task["allowed_inputs"] if item.startswith("https://")]
+            self.assertEqual(
+                external,
+                [
+                    "https://arxiv.org/abs/2512.07771v2",
+                    "https://arxiv.org/html/2512.07771v2",
+                    "https://arxiv.org/pdf/2512.07771v2",
+                    "https://export.arxiv.org/e-print/2512.07771v2",
+                ],
+            )
+            self.assertIn(
+                "references/vendor/arxiv/2512.07771v2/2512.07771v2.pdf",
+                task["allowed_inputs"],
+            )
+            self.assertIn(
+                "references/vendor/arxiv/2512.07771v2/2512.07771v2.tar.gz",
+                task["allowed_inputs"],
+            )
+            self.assertEqual(len(task["candidate_claim_ids"]), 3)
+            return
         self.fail(f"unreviewed reference-import task: {task['id']}")
 
     def test_superspace_1001_supergraph_reference_import(self) -> None:
@@ -446,6 +474,46 @@ class RepositoryPolicyTest(unittest.TestCase):
         )
         self.assertTrue(ledger["chat"]["dual_capture_result"]["share_is_exact_authenticated_suffix_by_message_id_and_content"])
         self.assertEqual(len(ledger["weinberg_chapter_30"]["fetched_pages"]), 4)
+
+    def test_ht_n4_one_loop_reference_import(self) -> None:
+        script = ROOT / "scripts/verify_ht_n4_one_loop_reference_import.py"
+        audit_path = ROOT / "audits/ht-n4-one-loop-reference-import-verification.json"
+        ledger_path = ROOT / "references/ht-n4-one-loop-source-ledger.json"
+        metadata_path = ROOT / "references/vendor/arxiv/2512.07771v2/metadata.json"
+        self.assertTrue(script.is_file())
+        self.assertTrue(audit_path.is_file())
+        self.assertTrue(ledger_path.is_file())
+        self.assertTrue(metadata_path.is_file())
+        expected = audit_path.read_text(encoding="utf-8")
+        subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
+        audit = json.loads(expected)
+        ledger = json.loads(ledger_path.read_text(encoding="utf-8"))
+        self.assertEqual(audit["status"], "PASS")
+        self.assertEqual(audit["totals"]["failed"], 0)
+        self.assertEqual(audit["totals"]["archive_regular_files"], 8)
+        self.assertEqual(audit["totals"]["source_anchors"], 16)
+        self.assertEqual(audit["totals"]["candidate_claims"], 3)
+        self.assertEqual(audit["totals"]["source_internal_normalization_conflicts"], 2)
+        self.assertEqual(audit["totals"]["source_internal_ordering_audits"], 1)
+        self.assertEqual(ledger["admissibility"]["role"], "EXTERNAL_TARGET_ONLY")
+        self.assertEqual(
+            ledger["admissibility"]["translation_status"],
+            "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+        )
+        self.assertEqual(
+            ledger["admissibility"]["comparison_status"],
+            "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+        )
+        self.assertEqual(
+            ledger["source_internal_ordering_audits"][0]["status"],
+            "PASS",
+        )
 
     def test_contract_change_has_no_network_inputs(self) -> None:
         task = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))

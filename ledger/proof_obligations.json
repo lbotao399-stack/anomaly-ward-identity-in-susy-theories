@@ -223,6 +223,13 @@
       "state": "SPECIFIED",
       "blocking_reason": null,
       "task_sha256": "06f8c400c681f2fbb32aaccc7a44139c280513afaf8499829528ff2c38f419c7",
+      "task": "tasks/archive/CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001.yaml"
+    },
+    {
+      "id": "REFERENCE-IMPORT-HT-N4-ONE-LOOP-001",
+      "state": "ACCEPTED",
+      "blocking_reason": null,
+      "task_sha256": "2fb04b2772dde80fb2faa45652ce1c6b03a15df6d9c3430d16dbb13dabc34afc",
       "task": "tasks/CURRENT.yaml"
     }
   ]

@@ -1,0 +1,119 @@
+{
+  "schema": 1,
+  "task": "REFERENCE-IMPORT-HT-N4-ONE-LOOP-001",
+  "source_identity": {
+    "arxiv_id": "2512.07771",
+    "version": "v2",
+    "versioned_id": "2512.07771v2",
+    "title": "Loop Corrected Supercharges from Holomorphic Anomalies",
+    "authors": [
+      "Kasia Budzik",
+      "Justin Kulp"
+    ],
+    "subjects": [
+      "High Energy Physics - Theory (hep-th)",
+      "Mathematical Physics (math-ph)",
+      "Quantum Algebra (math.QA)"
+    ],
+    "submission_history": [
+      {
+        "version": "v1",
+        "timestamp_utc": "2025-12-08T17:51:54Z"
+      },
+      {
+        "version": "v2",
+        "timestamp_utc": "2026-03-19T17:24:36Z"
+      }
+    ],
+    "comments": "32 pages; v2: corrected typos, added footnote 3"
+  },
+  "urls": {
+    "abstract": "https://arxiv.org/abs/2512.07771v2",
+    "html": "https://arxiv.org/html/2512.07771v2",
+    "pdf": "https://arxiv.org/pdf/2512.07771v2",
+    "source_archive": "https://export.arxiv.org/e-print/2512.07771v2"
+  },
+  "artifacts": [
+    {
+      "role": "VERSIONED_PDF",
+      "path": "references/vendor/arxiv/2512.07771v2/2512.07771v2.pdf",
+      "byte_size": 625721,
+      "sha256": "cb2a6f53c97dd0f706685fd123ef6eb6a909344b78b02769af78e90ccfcf1e35"
+    },
+    {
+      "role": "VERSIONED_TEX_SOURCE_ARCHIVE",
+      "path": "references/vendor/arxiv/2512.07771v2/2512.07771v2.tar.gz",
+      "byte_size": 52452,
+      "sha256": "27d9eefd23fef109bb65be780c72a360d0df9ba90c5db1bc07ecf0b248a63632"
+    }
+  ],
+  "extraction": {
+    "archive_format": "tar.gz",
+    "archive_path": "references/vendor/arxiv/2512.07771v2/2512.07771v2.tar.gz",
+    "root": "references/vendor/arxiv/2512.07771v2/source",
+    "ordering": "LEXICOGRAPHIC_BY_ARCHIVE_MEMBER_PATH",
+    "archive_directory_members": [
+      "images"
+    ],
+    "files": [
+      {
+        "archive_member_path": "00README.json",
+        "extracted_path": "references/vendor/arxiv/2512.07771v2/source/00README.json",
+        "byte_size": 629,
+        "sha256": "63c8b2f900ebb39ca5d0d9b295ab3668784ecaf54ffcf1edd9fe5f62d1f9429b"
+      },
+      {
+        "archive_member_path": "JHEP.bst",
+        "extracted_path": "references/vendor/arxiv/2512.07771v2/source/JHEP.bst",
+        "byte_size": 19999,
+        "sha256": "3a56889d89fdf1f402582b41ee143dfc7986c7d4270adc0e008fb21d6da3a621"
+      },
+      {
+        "archive_member_path": "images/segment.pdf",
+        "extracted_path": "references/vendor/arxiv/2512.07771v2/source/images/segment.pdf",
+        "byte_size": 2022,
+        "sha256": "c718bc5845a15e9860febdd7daaf39ea1a72fa1fdd65b4341d4e901b8c15b9b3"
+      },
+      {
+        "archive_member_path": "images/triangle.pdf",
+        "extracted_path": "references/vendor/arxiv/2512.07771v2/source/images/triangle.pdf",
+        "byte_size": 2130,
+        "sha256": "c48a34e1a7e5a79538b3f083d1f1168f5ecbfcaca00eb0855e690dd557f94143"
+      },
+      {
+        "archive_member_path": "jheppub.sty",
+        "extracted_path": "references/vendor/arxiv/2512.07771v2/source/jheppub.sty",
+        "byte_size": 10993,
+        "sha256": "ed3b8049bb3042bce57ba7ccbefbb2c56159884bb467a0260f27bbb6ef61ed80"
+      },
+      {
+        "archive_member_path": "main.bbl",
+        "extracted_path": "references/vendor/arxiv/2512.07771v2/source/main.bbl",
+        "byte_size": 19147,
+        "sha256": "90a84bff4a6aaf6d6f8ffd3c8dee65a351bbd5d9d566f1bd63fa7a47a2748079"
+      },
+      {
+        "archive_member_path": "main.tex",
+        "extracted_path": "references/vendor/arxiv/2512.07771v2/source/main.tex",
+        "byte_size": 107272,
+        "sha256": "90352c555f69eac3a99b9742c59e63afc785df333399a0730f8ac1ae094d9899"
+      },
+      {
+        "archive_member_path": "mono.bib",
+        "extracted_path": "references/vendor/arxiv/2512.07771v2/source/mono.bib",
+        "byte_size": 33759,
+        "sha256": "1500d8e2bca9246f987add2223d040b28b572167029af7bdd5054f38672d5ff9"
+      }
+    ],
+    "regular_file_count": 8,
+    "byte_identity_required": true
+  },
+  "admissibility": {
+    "role": "EXTERNAL_TARGET_ONLY",
+    "translation_status": "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+    "comparison_status": "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+    "project_formula_adoption": false,
+    "project_contract_modified": false,
+    "notion_read_performed": false
+  }
+}
