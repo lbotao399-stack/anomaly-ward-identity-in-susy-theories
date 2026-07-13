@@ -82,8 +82,20 @@ class Step6CoefficientTensorTests(unittest.TestCase):
 
     def test_local_coefficient_exterior_cross_sign_is_included(self):
         zero = MODULE.momentum_from_vector((0, 0, 0, 0, 0))
-        left = MODULE.oracle.LabeledLeaf("left", zero, 0, MODULE.oracle.Exterior.basis(1))
-        right = MODULE.oracle.LabeledLeaf("right", zero, 0, MODULE.oracle.Exterior.basis(2))
+        left = MODULE.oracle.LabeledLeaf(
+            "left",
+            zero,
+            0,
+            MODULE.oracle.Exterior.basis(1),
+            coefficient_parity=1,
+        )
+        right = MODULE.oracle.LabeledLeaf(
+            "right",
+            zero,
+            0,
+            MODULE.oracle.Exterior.basis(2),
+            coefficient_parity=1,
+        )
         terms = (MODULE.oracle.ProductTerm(MODULE.oracle.ONE, (left, right)),)
         value = MODULE.evaluate_product_terms(terms, {"left": 1, "right": 1})
         self.assertEqual(value, MODULE.oracle.Exterior.basis(3, -1))

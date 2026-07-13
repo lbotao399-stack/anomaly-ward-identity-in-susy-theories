@@ -1,0 +1,1140 @@
+{
+  "checks": [
+    {
+      "evidence": [
+        "G6_DIRECT_K4ME_I3_S3CUBED",
+        "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4"
+      ],
+      "name": "all_repository_direct_parents_discovered",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "G6_DIRECT_K4ME_I2_S3SQ_S4": [
+          "left",
+          "outer",
+          "right",
+          "full"
+        ],
+        "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4": [
+          "left",
+          "outer",
+          "right",
+          "full"
+        ],
+        "G6_DIRECT_K4ME_I3_S3CUBED": [
+          "left",
+          "outer",
+          "right",
+          "full"
+        ]
+      },
+      "name": "left_right_outer_full_covered_for_every_parent",
+      "status": "PASS"
+    },
+    {
+      "evidence": "routed-edge substitution ledgers",
+      "name": "outside_edges_fixed_inside_edges_vary",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "G6_DIRECT_K4ME_I2_S3SQ_S4": {
+          "full": 2,
+          "left": 2,
+          "outer": 2,
+          "right": 2
+        },
+        "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4": {
+          "full": 2,
+          "left": 2,
+          "outer": 2,
+          "right": 2
+        },
+        "G6_DIRECT_K4ME_I3_S3CUBED": {
+          "full": 2,
+          "left": 2,
+          "outer": 2,
+          "right": 2
+        }
+      },
+      "name": "all_fixture_rhos_are_exact_integers",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "G6_DIRECT_K4ME_I2_S3SQ_S4": [
+          {
+            "alternative_rho": 2,
+            "alternative_scaling_map": {
+              "adapted_basis_atoms": [
+                "h0",
+                "c0"
+              ],
+              "basis_equation": "(k,l)^T=B*(adapted atoms)^T",
+              "basis_matrix_B": [
+                [
+                  {
+                    "denominator": 1,
+                    "numerator": 2
+                  },
+                  {
+                    "denominator": 1,
+                    "numerator": 3
+                  }
+                ],
+                [
+                  {
+                    "denominator": 1,
+                    "numerator": 0
+                  },
+                  {
+                    "denominator": 1,
+                    "numerator": 1
+                  }
+                ]
+              ],
+              "derivation": "EXACT_ADAPTED_BASIS_CHANGE_FOR_INVARIANCE_AUDIT",
+              "determinant_B": {
+                "denominator": 1,
+                "numerator": 2
+              },
+              "fixed_atoms": [
+                "c0",
+                "p1",
+                "p2"
+              ],
+              "graph_hash": "c1c75f47543ab29ebb53137f46656705f6fca9e972a0643b96c69fd295c5a78a",
+              "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+              "original_loop_basis": [
+                "k",
+                "l"
+              ],
+              "outside_edges_fixed_under_scaling": true,
+              "outside_loop_rows": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  1
+                ]
+              ],
+              "scaled_atoms": [
+                "h0"
+              ],
+              "scaling_map_hash": "74d48e938a1b347eb77bb520896a96cc125392a4e3fabc43d3cb655bf10e1618",
+              "scaling_rule": {
+                "c0": "c0->fixed",
+                "h0": "h0->t*h0",
+                "p1": "p1->fixed",
+                "p2": "p2->fixed"
+              },
+              "schema": "step6.subgraph_adapted_scaling_map.v1",
+              "subgraph_edge_ids": [
+                "e_BC",
+                "e_BI",
+                "e_IC"
+              ],
+              "subgraph_hash": "6b64158a649af8dd7bb5f62316eeb9e39ef3a7e237dc103b0b4fa0805777b092",
+              "subgraph_id": "left",
+              "subgraph_loop_count": 1
+            },
+            "canonical_rho": 2,
+            "invariant": true,
+            "subgraph_id": "left"
+          },
+          {
+            "alternative_rho": 2,
+            "alternative_scaling_map": {
+              "adapted_basis_atoms": [
+                "h0",
+                "c0"
+              ],
+              "basis_equation": "(k,l)^T=B*(adapted atoms)^T",
+              "basis_matrix_B": [
+                [
+                  {
+                    "denominator": 1,
+                    "numerator": 2
+                  },
+                  {
+                    "denominator": 1,
+                    "numerator": 4
+                  }
+                ],
+                [
+                  {
+                    "denominator": 1,
+                    "numerator": -2
+                  },
+                  {
+                    "denominator": 1,
+                    "numerator": -3
+                  }
+                ]
+              ],
+              "derivation": "EXACT_ADAPTED_BASIS_CHANGE_FOR_INVARIANCE_AUDIT",
+              "determinant_B": {
+                "denominator": 1,
+                "numerator": 2
+              },
+              "fixed_atoms": [
+                "c0",
+                "p1",
+                "p2"
+              ],
+              "graph_hash": "c1c75f47543ab29ebb53137f46656705f6fca9e972a0643b96c69fd295c5a78a",
+              "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+              "original_loop_basis": [
+                "k",
+                "l"
+              ],
+              "outside_edges_fixed_under_scaling": true,
+              "outside_loop_rows": [
+                [
+                  -1,
+                  -1
+                ]
+              ],
+              "scaled_atoms": [
+                "h0"
+              ],
+              "scaling_map_hash": "5ff5583067a4c316489311261a96305487b22124090260214940f095b71f9feb",
+              "scaling_rule": {
+                "c0": "c0->fixed",
+                "h0": "h0->t*h0",
+                "p1": "p1->fixed",
+                "p2": "p2->fixed"
+              },
+              "schema": "step6.subgraph_adapted_scaling_map.v1",
+              "subgraph_edge_ids": [
+                "e_AC",
+                "e_BA",
+                "e_BI",
+                "e_IC"
+              ],
+              "subgraph_hash": "d4e767d414f6440b8dc961b682eec97010a2eec7dfeefbf2757c48ee6c758ced",
+              "subgraph_id": "outer",
+              "subgraph_loop_count": 1
+            },
+            "canonical_rho": 2,
+            "invariant": true,
+            "subgraph_id": "outer"
+          },
+          {
+            "alternative_rho": 2,
+            "alternative_scaling_map": {
+              "adapted_basis_atoms": [
+                "h0",
+                "c0"
+              ],
+              "basis_equation": "(k,l)^T=B*(adapted atoms)^T",
+              "basis_matrix_B": [
+                [
+                  {
+                    "denominator": 1,
+                    "numerator": 0
+                  },
+                  {
+                    "denominator": 1,
+                    "numerator": 1
+                  }
+                ],
+                [
+                  {
+                    "denominator": 1,
+                    "numerator": 2
+                  },
+                  {
+                    "denominator": 1,
+                    "numerator": 3
+                  }
+                ]
+              ],
+              "derivation": "EXACT_ADAPTED_BASIS_CHANGE_FOR_INVARIANCE_AUDIT",
+              "determinant_B": {
+                "denominator": 1,
+                "numerator": -2
+              },
+              "fixed_atoms": [
+                "c0",
+                "p1",
+                "p2"
+              ],
+              "graph_hash": "c1c75f47543ab29ebb53137f46656705f6fca9e972a0643b96c69fd295c5a78a",
+              "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+              "original_loop_basis": [
+                "k",
+                "l"
+              ],
+              "outside_edges_fixed_under_scaling": true,
+              "outside_loop_rows": [
+                [
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  0
+                ]
+              ],
+              "scaled_atoms": [
+                "h0"
+              ],
+              "scaling_map_hash": "88dab8ee54030dc919fec637d42ea45807232d502457bdd5b0e1f8bf56e7113f",
+              "scaling_rule": {
+                "c0": "c0->fixed",
+                "h0": "h0->t*h0",
+                "p1": "p1->fixed",
+                "p2": "p2->fixed"
+              },
+              "schema": "step6.subgraph_adapted_scaling_map.v1",
+              "subgraph_edge_ids": [
+                "e_AC",
+                "e_BA",
+                "e_BC"
+              ],
+              "subgraph_hash": "40d4f7e0b364a66d421d2cd501437fc4f7b20ee1731f5eb3fda6fc25335da8f3",
+              "subgraph_id": "right",
+              "subgraph_loop_count": 1
+            },
+            "canonical_rho": 2,
+            "invariant": true,
+            "subgraph_id": "right"
+          },
+          {
+            "alternative_rho": 2,
+            "alternative_scaling_map": {
+              "adapted_basis_atoms": [
+                "h0",
+                "h1"
+              ],
+              "basis_equation": "(k,l)^T=B*(adapted atoms)^T",
+              "basis_matrix_B": [
+                [
+                  {
+                    "denominator": 1,
+                    "numerator": 1
+                  },
+                  {
+                    "denominator": 1,
+                    "numerator": 1
+                  }
+                ],
+                [
+                  {
+                    "denominator": 1,
+                    "numerator": 0
+                  },
+                  {
+                    "denominator": 1,
+                    "numerator": 1
+                  }
+                ]
+              ],
+              "derivation": "EXACT_ADAPTED_BASIS_CHANGE_FOR_INVARIANCE_AUDIT",
+              "determinant_B": {
+                "denominator": 1,
+                "numerator": 1
+              },
+              "fixed_atoms": [
+                "p1",
+                "p2"
+              ],
+              "graph_hash": "c1c75f47543ab29ebb53137f46656705f6fca9e972a0643b96c69fd295c5a78a",
+              "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+              "original_loop_basis": [
+                "k",
+                "l"
+              ],
+              "outside_edges_fixed_under_scaling": true,
+              "outside_loop_rows": [],
+              "scaled_atoms": [
+                "h0",
+                "h1"
+              ],
+              "scaling_map_hash": "056d41e004d958c5c08f7822c4c385ff7d1ea50d92ddfe820f7a5b6237651789",
+              "scaling_rule": {
+                "h0": "h0->t*h0",
+                "h1": "h1->t*h1",
+                "p1": "p1->fixed",
+                "p2": "p2->fixed"
+              },
+              "schema": "step6.subgraph_adapted_scaling_map.v1",
+              "subgraph_edge_ids": [
+                "e_AC",
+                "e_BA",
+                "e_BC",
+                "e_BI",
+                "e_IC"
+              ],
+              "subgraph_hash": "e3a100b95939def2116b5057d67d28441f400365c17fede8031b9865233581d7",
+              "subgraph_id": "full",
+              "subgraph_loop_count": 2
+            },
+            "canonical_rho": 2,
+            "invariant": true,
+            "subgraph_id": "full"
+          }
+        ],
+        "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4": [
+          {
+            "alternative_rho": 2,
+            "alternative_scaling_map": {
+              "adapted_basis_atoms": [
+                "h0",
+                "c0"
+              ],
+              "basis_equation": "(k,l)^T=B*(adapted atoms)^T",
+              "basis_matrix_B": [
+                [
+                  {
+                    "denominator": 1,
+                    "numerator": 2
+                  },
+                  {
+                    "denominator": 1,
+                    "numerator": 3
+                  }
+                ],
+                [
+                  {
+                    "denominator": 1,
+                    "numerator": 0
+                  },
+                  {
+                    "denominator": 1,
+                    "numerator": 1
+                  }
+                ]
+              ],
+              "derivation": "EXACT_ADAPTED_BASIS_CHANGE_FOR_INVARIANCE_AUDIT",
+              "determinant_B": {
+                "denominator": 1,
+                "numerator": 2
+              },
+              "fixed_atoms": [
+                "c0",
+                "p1",
+                "p2"
+              ],
+              "graph_hash": "84137962e3a5d40a2be79e124cc85f3fdd180a42cf7119c3464e7da6f620baa3",
+              "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+              "original_loop_basis": [
+                "k",
+                "l"
+              ],
+              "outside_edges_fixed_under_scaling": true,
+              "outside_loop_rows": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  1
+                ]
+              ],
+              "scaled_atoms": [
+                "h0"
+              ],
+              "scaling_map_hash": "a75977de645b4dc81418d74d4a612842fb1ebd601687276e84c377e8e4a23673",
+              "scaling_rule": {
+                "c0": "c0->fixed",
+                "h0": "h0->t*h0",
+                "p1": "p1->fixed",
+                "p2": "p2->fixed"
+              },
+              "schema": "step6.subgraph_adapted_scaling_map.v1",
+              "subgraph_edge_ids": [
+                "e_AI",
+                "e_BA",
+                "e_IB"
+              ],
+              "subgraph_hash": "ace41b730f1de86942c2f22f8332648d4dbaa9ee054dfcb1508e7e4a1ad43536",
+              "subgraph_id": "left",
+              "subgraph_loop_count": 1
+            },
+            "canonical_rho": 2,
+            "invariant": true,
+            "subgraph_id": "left"
+          },
+          {
+            "alternative_rho": 2,
+            "alternative_scaling_map": {
+              "adapted_basis_atoms": [
+                "h0",
+                "c0"
+              ],
+              "basis_equation": "(k,l)^T=B*(adapted atoms)^T",
+              "basis_matrix_B": [
+                [
+                  {
+                    "denominator": 1,
+                    "numerator": 2
+                  },
+                  {
+                    "denominator": 1,
+                    "numerator": 4
+                  }
+                ],
+                [
+                  {
+                    "denominator": 1,
+                    "numerator": 2
+                  },
+                  {
+                    "denominator": 1,
+                    "numerator": 3
+                  }
+                ]
+              ],
+              "derivation": "EXACT_ADAPTED_BASIS_CHANGE_FOR_INVARIANCE_AUDIT",
+              "determinant_B": {
+                "denominator": 1,
+                "numerator": -2
+              },
+              "fixed_atoms": [
+                "c0",
+                "p1",
+                "p2"
+              ],
+              "graph_hash": "84137962e3a5d40a2be79e124cc85f3fdd180a42cf7119c3464e7da6f620baa3",
+              "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+              "original_loop_basis": [
+                "k",
+                "l"
+              ],
+              "outside_edges_fixed_under_scaling": true,
+              "outside_loop_rows": [
+                [
+                  1,
+                  -1
+                ]
+              ],
+              "scaled_atoms": [
+                "h0"
+              ],
+              "scaling_map_hash": "b2c78253a901372bdfcb7c6c5db200dce7f0d6a4dada192fc28a671453fba152",
+              "scaling_rule": {
+                "c0": "c0->fixed",
+                "h0": "h0->t*h0",
+                "p1": "p1->fixed",
+                "p2": "p2->fixed"
+              },
+              "schema": "step6.subgraph_adapted_scaling_map.v1",
+              "subgraph_edge_ids": [
+                "e_AI",
+                "e_BC",
+                "e_CA",
+                "e_IB"
+              ],
+              "subgraph_hash": "1e1e083ec00fdc683b8f6c0dc5963617684bab584dc3daf04bd9c232d5a6f515",
+              "subgraph_id": "outer",
+              "subgraph_loop_count": 1
+            },
+            "canonical_rho": 2,
+            "invariant": true,
+            "subgraph_id": "outer"
+          },
+          {
+            "alternative_rho": 2,
+            "alternative_scaling_map": {
+              "adapted_basis_atoms": [
+                "h0",
+                "c0"
+              ],
+              "basis_equation": "(k,l)^T=B*(adapted atoms)^T",
+              "basis_matrix_B": [
+                [
+                  {
+                    "denominator": 1,
+                    "numerator": 0
+                  },
+                  {
+                    "denominator": 1,
+                    "numerator": 1
+                  }
+                ],
+                [
+                  {
+                    "denominator": 1,
+                    "numerator": 2
+                  },
+                  {
+                    "denominator": 1,
+                    "numerator": 3
+                  }
+                ]
+              ],
+              "derivation": "EXACT_ADAPTED_BASIS_CHANGE_FOR_INVARIANCE_AUDIT",
+              "determinant_B": {
+                "denominator": 1,
+                "numerator": -2
+              },
+              "fixed_atoms": [
+                "c0",
+                "p1",
+                "p2"
+              ],
+              "graph_hash": "84137962e3a5d40a2be79e124cc85f3fdd180a42cf7119c3464e7da6f620baa3",
+              "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+              "original_loop_basis": [
+                "k",
+                "l"
+              ],
+              "outside_edges_fixed_under_scaling": true,
+              "outside_loop_rows": [
+                [
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  0
+                ]
+              ],
+              "scaled_atoms": [
+                "h0"
+              ],
+              "scaling_map_hash": "b07f0ce29e7f55f65fc41a671c1b3b1b57947fc26c7caef6d8765e75105a0811",
+              "scaling_rule": {
+                "c0": "c0->fixed",
+                "h0": "h0->t*h0",
+                "p1": "p1->fixed",
+                "p2": "p2->fixed"
+              },
+              "schema": "step6.subgraph_adapted_scaling_map.v1",
+              "subgraph_edge_ids": [
+                "e_BA",
+                "e_BC",
+                "e_CA"
+              ],
+              "subgraph_hash": "770abd2c47273a37e438a669b71555a8984ee5ccc0f641e2a7a7e8eac0dc3014",
+              "subgraph_id": "right",
+              "subgraph_loop_count": 1
+            },
+            "canonical_rho": 2,
+            "invariant": true,
+            "subgraph_id": "right"
+          },
+          {
+            "alternative_rho": 2,
+            "alternative_scaling_map": {
+              "adapted_basis_atoms": [
+                "h0",
+                "h1"
+              ],
+              "basis_equation": "(k,l)^T=B*(adapted atoms)^T",
+              "basis_matrix_B": [
+                [
+                  {
+                    "denominator": 1,
+                    "numerator": 1
+                  },
+                  {
+                    "denominator": 1,
+                    "numerator": 1
+                  }
+                ],
+                [
+                  {
+                    "denominator": 1,
+                    "numerator": 0
+                  },
+                  {
+                    "denominator": 1,
+                    "numerator": 1
+                  }
+                ]
+              ],
+              "derivation": "EXACT_ADAPTED_BASIS_CHANGE_FOR_INVARIANCE_AUDIT",
+              "determinant_B": {
+                "denominator": 1,
+                "numerator": 1
+              },
+              "fixed_atoms": [
+                "p1",
+                "p2"
+              ],
+              "graph_hash": "84137962e3a5d40a2be79e124cc85f3fdd180a42cf7119c3464e7da6f620baa3",
+              "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+              "original_loop_basis": [
+                "k",
+                "l"
+              ],
+              "outside_edges_fixed_under_scaling": true,
+              "outside_loop_rows": [],
+              "scaled_atoms": [
+                "h0",
+                "h1"
+              ],
+              "scaling_map_hash": "9ce1630e726eb87ea17ed64e87a4bfb5ba5c032fafa98a0fa03ae47ee09d40f8",
+              "scaling_rule": {
+                "h0": "h0->t*h0",
+                "h1": "h1->t*h1",
+                "p1": "p1->fixed",
+                "p2": "p2->fixed"
+              },
+              "schema": "step6.subgraph_adapted_scaling_map.v1",
+              "subgraph_edge_ids": [
+                "e_AI",
+                "e_BA",
+                "e_BC",
+                "e_CA",
+                "e_IB"
+              ],
+              "subgraph_hash": "bdbbbc5864ada4fd670455635229c8865c09fe208d254cd68eb771571cc6d9b7",
+              "subgraph_id": "full",
+              "subgraph_loop_count": 2
+            },
+            "canonical_rho": 2,
+            "invariant": true,
+            "subgraph_id": "full"
+          }
+        ],
+        "G6_DIRECT_K4ME_I3_S3CUBED": [
+          {
+            "alternative_rho": 2,
+            "alternative_scaling_map": {
+              "adapted_basis_atoms": [
+                "h0",
+                "c0"
+              ],
+              "basis_equation": "(k,l)^T=B*(adapted atoms)^T",
+              "basis_matrix_B": [
+                [
+                  {
+                    "denominator": 1,
+                    "numerator": 2
+                  },
+                  {
+                    "denominator": 1,
+                    "numerator": 4
+                  }
+                ],
+                [
+                  {
+                    "denominator": 1,
+                    "numerator": -2
+                  },
+                  {
+                    "denominator": 1,
+                    "numerator": -3
+                  }
+                ]
+              ],
+              "derivation": "EXACT_ADAPTED_BASIS_CHANGE_FOR_INVARIANCE_AUDIT",
+              "determinant_B": {
+                "denominator": 1,
+                "numerator": 2
+              },
+              "fixed_atoms": [
+                "c0",
+                "p1",
+                "p2"
+              ],
+              "graph_hash": "5cbf5cea3c11f28278e0366aaf48206a8fbb9c57a0c3d63a357a99ff0c519fcf",
+              "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+              "original_loop_basis": [
+                "k",
+                "l"
+              ],
+              "outside_edges_fixed_under_scaling": true,
+              "outside_loop_rows": [
+                [
+                  -1,
+                  -1
+                ],
+                [
+                  -1,
+                  -1
+                ]
+              ],
+              "scaled_atoms": [
+                "h0"
+              ],
+              "scaling_map_hash": "8d16cb0ace03ba113815bfb48d1d1f6132b5ccc6a04500eb83772a5b7175459b",
+              "scaling_rule": {
+                "c0": "c0->fixed",
+                "h0": "h0->t*h0",
+                "p1": "p1->fixed",
+                "p2": "p2->fixed"
+              },
+              "schema": "step6.subgraph_adapted_scaling_map.v1",
+              "subgraph_edge_ids": [
+                "e_AI",
+                "e_CA",
+                "e_CI"
+              ],
+              "subgraph_hash": "873a3e5856f30aea5a78ee99efe41d3145cebd806dbc751577cbd94f4f0616cc",
+              "subgraph_id": "left",
+              "subgraph_loop_count": 1
+            },
+            "canonical_rho": 2,
+            "invariant": true,
+            "subgraph_id": "left"
+          },
+          {
+            "alternative_rho": 2,
+            "alternative_scaling_map": {
+              "adapted_basis_atoms": [
+                "h0",
+                "c0"
+              ],
+              "basis_equation": "(k,l)^T=B*(adapted atoms)^T",
+              "basis_matrix_B": [
+                [
+                  {
+                    "denominator": 1,
+                    "numerator": 0
+                  },
+                  {
+                    "denominator": 1,
+                    "numerator": 1
+                  }
+                ],
+                [
+                  {
+                    "denominator": 1,
+                    "numerator": 2
+                  },
+                  {
+                    "denominator": 1,
+                    "numerator": 3
+                  }
+                ]
+              ],
+              "derivation": "EXACT_ADAPTED_BASIS_CHANGE_FOR_INVARIANCE_AUDIT",
+              "determinant_B": {
+                "denominator": 1,
+                "numerator": -2
+              },
+              "fixed_atoms": [
+                "c0",
+                "p1",
+                "p2"
+              ],
+              "graph_hash": "5cbf5cea3c11f28278e0366aaf48206a8fbb9c57a0c3d63a357a99ff0c519fcf",
+              "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+              "original_loop_basis": [
+                "k",
+                "l"
+              ],
+              "outside_edges_fixed_under_scaling": true,
+              "outside_loop_rows": [
+                [
+                  1,
+                  0
+                ]
+              ],
+              "scaled_atoms": [
+                "h0"
+              ],
+              "scaling_map_hash": "e7c3ccd544f74e40897c7ca9d549618d8d7150b933c6126da11f9cfc3ce24bbe",
+              "scaling_rule": {
+                "c0": "c0->fixed",
+                "h0": "h0->t*h0",
+                "p1": "p1->fixed",
+                "p2": "p2->fixed"
+              },
+              "schema": "step6.subgraph_adapted_scaling_map.v1",
+              "subgraph_edge_ids": [
+                "e_AI",
+                "e_BI",
+                "e_CA",
+                "e_CB"
+              ],
+              "subgraph_hash": "d6809744c248c06116d3098004083cca598560041cb7acb30725bf0d3e6ea9ba",
+              "subgraph_id": "outer",
+              "subgraph_loop_count": 1
+            },
+            "canonical_rho": 2,
+            "invariant": true,
+            "subgraph_id": "outer"
+          },
+          {
+            "alternative_rho": 2,
+            "alternative_scaling_map": {
+              "adapted_basis_atoms": [
+                "h0",
+                "c0"
+              ],
+              "basis_equation": "(k,l)^T=B*(adapted atoms)^T",
+              "basis_matrix_B": [
+                [
+                  {
+                    "denominator": 1,
+                    "numerator": 2
+                  },
+                  {
+                    "denominator": 1,
+                    "numerator": 3
+                  }
+                ],
+                [
+                  {
+                    "denominator": 1,
+                    "numerator": 0
+                  },
+                  {
+                    "denominator": 1,
+                    "numerator": 1
+                  }
+                ]
+              ],
+              "derivation": "EXACT_ADAPTED_BASIS_CHANGE_FOR_INVARIANCE_AUDIT",
+              "determinant_B": {
+                "denominator": 1,
+                "numerator": 2
+              },
+              "fixed_atoms": [
+                "c0",
+                "p1",
+                "p2"
+              ],
+              "graph_hash": "5cbf5cea3c11f28278e0366aaf48206a8fbb9c57a0c3d63a357a99ff0c519fcf",
+              "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+              "original_loop_basis": [
+                "k",
+                "l"
+              ],
+              "outside_edges_fixed_under_scaling": true,
+              "outside_loop_rows": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  1
+                ]
+              ],
+              "scaled_atoms": [
+                "h0"
+              ],
+              "scaling_map_hash": "4b06776298f52a511214c6f0d5dabdf1c91e54188167cee215675a2e3597cd32",
+              "scaling_rule": {
+                "c0": "c0->fixed",
+                "h0": "h0->t*h0",
+                "p1": "p1->fixed",
+                "p2": "p2->fixed"
+              },
+              "schema": "step6.subgraph_adapted_scaling_map.v1",
+              "subgraph_edge_ids": [
+                "e_BI",
+                "e_CB",
+                "e_CI"
+              ],
+              "subgraph_hash": "224e660c345a9fda3c77f19111cfed56231c5a74c691d43ab6c65b490987ee59",
+              "subgraph_id": "right",
+              "subgraph_loop_count": 1
+            },
+            "canonical_rho": 2,
+            "invariant": true,
+            "subgraph_id": "right"
+          },
+          {
+            "alternative_rho": 2,
+            "alternative_scaling_map": {
+              "adapted_basis_atoms": [
+                "h0",
+                "h1"
+              ],
+              "basis_equation": "(k,l)^T=B*(adapted atoms)^T",
+              "basis_matrix_B": [
+                [
+                  {
+                    "denominator": 1,
+                    "numerator": 1
+                  },
+                  {
+                    "denominator": 1,
+                    "numerator": 1
+                  }
+                ],
+                [
+                  {
+                    "denominator": 1,
+                    "numerator": 0
+                  },
+                  {
+                    "denominator": 1,
+                    "numerator": 1
+                  }
+                ]
+              ],
+              "derivation": "EXACT_ADAPTED_BASIS_CHANGE_FOR_INVARIANCE_AUDIT",
+              "determinant_B": {
+                "denominator": 1,
+                "numerator": 1
+              },
+              "fixed_atoms": [
+                "p1",
+                "p2"
+              ],
+              "graph_hash": "5cbf5cea3c11f28278e0366aaf48206a8fbb9c57a0c3d63a357a99ff0c519fcf",
+              "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+              "original_loop_basis": [
+                "k",
+                "l"
+              ],
+              "outside_edges_fixed_under_scaling": true,
+              "outside_loop_rows": [],
+              "scaled_atoms": [
+                "h0",
+                "h1"
+              ],
+              "scaling_map_hash": "9bec1c606cd822ccde7620441f65a26ec6cb1ba42fca7e58b17bee266013c646",
+              "scaling_rule": {
+                "h0": "h0->t*h0",
+                "h1": "h1->t*h1",
+                "p1": "p1->fixed",
+                "p2": "p2->fixed"
+              },
+              "schema": "step6.subgraph_adapted_scaling_map.v1",
+              "subgraph_edge_ids": [
+                "e_AI",
+                "e_BI",
+                "e_CA",
+                "e_CB",
+                "e_CI"
+              ],
+              "subgraph_hash": "baaa24af908ba8f26c81a638029fa0e1162281e07872f181a26a7a6e8d125cc8",
+              "subgraph_id": "full",
+              "subgraph_loop_count": 2
+            },
+            "canonical_rho": 2,
+            "invariant": true,
+            "subgraph_id": "full"
+          }
+        ]
+      },
+      "name": "rho_basis_change_invariant_for_every_subgraph",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "SCALAR_K2_MINUS_L2": [
+          {
+            "coefficient": {
+              "denominator": 1,
+              "numerator": 4
+            },
+            "scalar_monomial": [
+              {
+                "generator": "dot(c0,h0)",
+                "power": 1
+              }
+            ],
+            "t_degree": 1,
+            "tensor_word": []
+          }
+        ],
+        "SCALAR_K_PLUS_L_SQUARED": [
+          {
+            "coefficient": {
+              "denominator": 1,
+              "numerator": 4
+            },
+            "scalar_monomial": [
+              {
+                "generator": "dot(c0,c0)",
+                "power": 1
+              }
+            ],
+            "t_degree": 0,
+            "tensor_word": []
+          }
+        ]
+      },
+      "name": "manual_scalar_cancellation_rhos",
+      "status": "PASS"
+    },
+    {
+      "evidence": [
+        {
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 2
+          },
+          "scalar_monomial": [],
+          "t_degree": 0,
+          "tensor_word": [
+            {
+              "adapted_vector": "c0",
+              "free_index": "m"
+            }
+          ]
+        }
+      ],
+      "name": "manual_tensor_cancellation_rho",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "SCALAR_K2_MINUS_L2": true,
+        "SCALAR_K_PLUS_L_SQUARED": true,
+        "TENSOR_K_PLUS_L": true
+      },
+      "name": "manual_fixtures_basis_change_invariant",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "G6_DIRECT_K4ME_I2_S3SQ_S4": "POWER_COUNTING_CERTIFIED_KUV_STILL_UNEVALUATED",
+        "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4": "POWER_COUNTING_CERTIFIED_KUV_STILL_UNEVALUATED",
+        "G6_DIRECT_K4ME_I3_S3CUBED": "POWER_COUNTING_CERTIFIED_KUV_STILL_UNEVALUATED"
+      },
+      "name": "forest_API_received_complete_fixture_certificate",
+      "status": "PASS"
+    },
+    {
+      "evidence": "Q exact coefficients",
+      "name": "no_regulator_inserted",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "comparison_data_read": false,
+        "forest_API_source": "REPOSITORY_TWO_LOOP_FOREST",
+        "graph_bundle_hash": "ef50f639ade73d0b191990dd0488b1529d804c7396f3700f57c76b0d347cc623",
+        "graph_source": "REPOSITORY_GRAPHIR_ONLY",
+        "numerator_AST_source": "REPOSITORY_INTEGRALS_POLYNOMIAL_AND_TENSOR_AST"
+      },
+      "name": "no_comparison_data",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "compiled_Dalgebra_numerator": null,
+        "fixture_certificates_are_not_physical_certificates": true,
+        "status": "BLOCKED_PHYSICAL_NUMERATOR_NOT_CONNECTED"
+      },
+      "name": "physical_numerator_remains_unconnected",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "UV_pole": null,
+        "master_integral": null,
+        "physical_divergent_forest": null,
+        "physical_rho_by_subgraph": null,
+        "renormalized_coefficient": null,
+        "status": "FIXTURE_ONLY_NO_PHYSICS_RESULT_CLAIM"
+      },
+      "name": "no_pole_or_coefficient_claim",
+      "status": "PASS"
+    }
+  ],
+  "payload_sha256": "6fc8b51add1868cd507acde5e83d47f92eb0bc7592a41bd442f4dbaee78f0dd3",
+  "schema": "step6.numerator_scaling.audit.v1",
+  "status": "PASS",
+  "totals": {
+    "checks": 13,
+    "failed": 0
+  }
+}

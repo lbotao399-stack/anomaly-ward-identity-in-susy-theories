@@ -18,8 +18,12 @@ Exact row: `G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4::direct::A000000`; external slice
 
 Nonzero local tensor entries: `{'I': 123, 'A': 366, 'B': 366, 'C': 29}`.
 
-Nonzero global assignments: `352`.
+$$
+\sum_{\mathbf s\in\mathcal S_{352}}\mathcal T(\mathbf s)=0.
+$$
 
-Audit: `16/16`.
+The 352 locally nonzero edge assignments cancel after the exact graded sum.
+
+Audit: `17/17`.
 
 DRED, IBP, UV pole, complete pairing sum, and the renormalized two-loop coefficient remain blocked.

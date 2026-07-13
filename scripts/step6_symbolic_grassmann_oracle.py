@@ -620,10 +620,13 @@ class LabeledLeaf:
     parity: int
     value: Exterior
     derivative_word: tuple[str, ...] = ()
+    coefficient_parity: int = 0
 
     def __post_init__(self) -> None:
         if self.parity not in (0, 1):
             raise ValueError("leaf parity must be 0 or 1")
+        if self.coefficient_parity not in (0, 1):
+            raise ValueError("coefficient parity must be 0 or 1")
 
 
 @dataclass(frozen=True)
@@ -719,11 +722,13 @@ def apply_primitive_graded_leibniz(
                     parity=factor.parity ^ 1,
                     value=differentiated,
                     derivative_word=(primitive,) + factor.derivative_word,
+                    coefficient_parity=factor.coefficient_parity,
                 )
                 factors = term.factors[:index] + (replacement,) + term.factors[index + 1 :]
+                sign_exponent = prefix_parity ^ factor.coefficient_parity
                 emitted.append(
                     ProductTerm(
-                        term.coefficient * (-1 if prefix_parity else 1),
+                        term.coefficient * (-1 if sign_exponent else 1),
                         factors,
                         term.ordered_tensors,
                     )

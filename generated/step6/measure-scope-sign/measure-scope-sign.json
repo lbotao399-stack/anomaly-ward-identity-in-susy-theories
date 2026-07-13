@@ -1,0 +1,1609 @@
+{
+  "checks": {
+    "active_counterexamples_close": true,
+    "active_frozen_rows_close": true,
+    "frozen_words_are_even": true,
+    "legacy_frozen_accidental_minus_reproduced": true,
+    "legacy_sign_is_assignment_dependent": true,
+    "single_leaf_left_rule": true
+  },
+  "counterexamples": [
+    {
+      "active_direct": {
+        "terms": [
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "8"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_pp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_pm"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_mp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 2,
+                "symbol": "k_pp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_mm"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "2"
+            },
+            "monomial": [
+              {
+                "exponent": 2,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_pp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-4"
+            },
+            "monomial": [
+              {
+                "exponent": 2,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 2,
+                "symbol": "k_pp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_mm"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 2,
+                "symbol": "k_pm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_mp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "2"
+            },
+            "monomial": [
+              {
+                "exponent": 2,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_pm"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-4"
+            },
+            "monomial": [
+              {
+                "exponent": 2,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 2,
+                "symbol": "k_pm"
+              }
+            ]
+          }
+        ],
+        "type": "Poly"
+      },
+      "active_distributed": {
+        "terms": [
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "8"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_pp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_pm"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_mp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 2,
+                "symbol": "k_pp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_mm"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "2"
+            },
+            "monomial": [
+              {
+                "exponent": 2,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_pp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-4"
+            },
+            "monomial": [
+              {
+                "exponent": 2,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 2,
+                "symbol": "k_pp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_mm"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 2,
+                "symbol": "k_pm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_mp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "2"
+            },
+            "monomial": [
+              {
+                "exponent": 2,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_pm"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-4"
+            },
+            "monomial": [
+              {
+                "exponent": 2,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 2,
+                "symbol": "k_pm"
+              }
+            ]
+          }
+        ],
+        "type": "Poly"
+      },
+      "active_scope_identity": true,
+      "basis_masks": [
+        0,
+        0,
+        0
+      ],
+      "coefficient_parities": [
+        0,
+        0,
+        0
+      ],
+      "coefficient_word_parity": 0,
+      "legacy_direct": {
+        "terms": [
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "8"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_pp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_pm"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_mp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 2,
+                "symbol": "k_pp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_mm"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "2"
+            },
+            "monomial": [
+              {
+                "exponent": 2,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_pp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-4"
+            },
+            "monomial": [
+              {
+                "exponent": 2,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 2,
+                "symbol": "k_pp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_mm"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 2,
+                "symbol": "k_pm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_mp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "2"
+            },
+            "monomial": [
+              {
+                "exponent": 2,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_pm"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-4"
+            },
+            "monomial": [
+              {
+                "exponent": 2,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 2,
+                "symbol": "k_pm"
+              }
+            ]
+          }
+        ],
+        "type": "Poly"
+      },
+      "legacy_distributed": {
+        "terms": [
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "8"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_pp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_pm"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_mp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 2,
+                "symbol": "k_pp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_mm"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "2"
+            },
+            "monomial": [
+              {
+                "exponent": 2,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_pp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-4"
+            },
+            "monomial": [
+              {
+                "exponent": 2,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 2,
+                "symbol": "k_pp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_mm"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 2,
+                "symbol": "k_pm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_mp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "2"
+            },
+            "monomial": [
+              {
+                "exponent": 2,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_pm"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-4"
+            },
+            "monomial": [
+              {
+                "exponent": 2,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 2,
+                "symbol": "k_pm"
+              }
+            ]
+          }
+        ],
+        "type": "Poly"
+      },
+      "legacy_relation": "EQUAL",
+      "term_id": "S3_MINUS_1_2",
+      "vertex": "A"
+    },
+    {
+      "active_direct": {
+        "terms": [
+          {
+            "coefficient": {
+              "im": "-2",
+              "re": "0"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_mp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "2",
+              "re": "0"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_mp"
+              }
+            ]
+          }
+        ],
+        "type": "Poly"
+      },
+      "active_distributed": {
+        "terms": [
+          {
+            "coefficient": {
+              "im": "-2",
+              "re": "0"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_mp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "2",
+              "re": "0"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_mp"
+              }
+            ]
+          }
+        ],
+        "type": "Poly"
+      },
+      "active_scope_identity": true,
+      "basis_masks": [
+        0,
+        1,
+        4
+      ],
+      "coefficient_parities": [
+        0,
+        1,
+        1
+      ],
+      "coefficient_word_parity": 0,
+      "legacy_direct": {
+        "terms": [
+          {
+            "coefficient": {
+              "im": "2",
+              "re": "0"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_mp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "-2",
+              "re": "0"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_mp"
+              }
+            ]
+          }
+        ],
+        "type": "Poly"
+      },
+      "legacy_distributed": {
+        "terms": [
+          {
+            "coefficient": {
+              "im": "-2",
+              "re": "0"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_mp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "2",
+              "re": "0"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "l_mp"
+              }
+            ]
+          }
+        ],
+        "type": "Poly"
+      },
+      "legacy_relation": "MINUS",
+      "term_id": "S3_MINUS_1_2",
+      "vertex": "A"
+    }
+  ],
+  "derivation": {
+    "branch_missing_sign": "(-1)^(sum_r p_(j_r)) for derivative hits j_1,...,j_m",
+    "even_measure_after_left": "(-1)^(2*|v_1...v_n|)=+1",
+    "leaf": "V_s=v_s*e_s, |v_s|=|e_s|=p_s",
+    "primitive": "d(v_s*e_s)=(-1)^p_s*v_s*d(e_s)"
+  },
+  "failed": 0,
+  "fixed_locations": [
+    "scripts/step6_symbolic_grassmann_oracle.py:LabeledLeaf",
+    "scripts/step6_symbolic_grassmann_oracle.py:apply_primitive_graded_leibniz",
+    "scripts/step6_coefficient_tensor.py:_program_leaves",
+    "scripts/step6_coefficient_tensor.py:_explicit_apply_primitive",
+    "scripts/step6_global_supertensor.py:CachedDerivativeEngine.primitive",
+    "scripts/step6_full_supertensor.py:generic_local_tensor",
+    "scripts/step6_global_dword_adapter.py:ScopeOnlyDerivativeEngine.primitive"
+  ],
+  "frozen_action_vertices": [
+    {
+      "active_direct": {
+        "terms": [
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pm"
+              }
+            ]
+          }
+        ],
+        "type": "Poly"
+      },
+      "active_distributed": {
+        "terms": [
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pm"
+              }
+            ]
+          }
+        ],
+        "type": "Poly"
+      },
+      "active_scope_identity": true,
+      "basis_masks": [
+        0,
+        11,
+        4
+      ],
+      "coefficient_parities": [
+        0,
+        1,
+        1
+      ],
+      "coefficient_word_parity": 0,
+      "legacy_direct": {
+        "terms": [
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pm"
+              }
+            ]
+          }
+        ],
+        "type": "Poly"
+      },
+      "legacy_distributed": {
+        "terms": [
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "k_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "k_pm"
+              }
+            ]
+          }
+        ],
+        "type": "Poly"
+      },
+      "legacy_relation": "MINUS",
+      "term_id": "S3_MINUS_1_2",
+      "vertex": "A"
+    },
+    {
+      "active_direct": {
+        "terms": [
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "2"
+            },
+            "monomial": []
+          }
+        ],
+        "type": "Poly"
+      },
+      "active_distributed": {
+        "terms": [
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "2"
+            },
+            "monomial": []
+          }
+        ],
+        "type": "Poly"
+      },
+      "active_scope_identity": true,
+      "basis_masks": [
+        15,
+        4,
+        11
+      ],
+      "coefficient_parities": [
+        0,
+        1,
+        1
+      ],
+      "coefficient_word_parity": 0,
+      "legacy_direct": {
+        "terms": [
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-2"
+            },
+            "monomial": []
+          }
+        ],
+        "type": "Poly"
+      },
+      "legacy_distributed": {
+        "terms": [
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "2"
+            },
+            "monomial": []
+          }
+        ],
+        "type": "Poly"
+      },
+      "legacy_relation": "MINUS",
+      "term_id": "S3_MINUS_1_2",
+      "vertex": "B"
+    },
+    {
+      "active_direct": {
+        "terms": [
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "p1_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "p1_pp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "p1_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "p1_pm"
+              }
+            ]
+          }
+        ],
+        "type": "Poly"
+      },
+      "active_distributed": {
+        "terms": [
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "p1_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "p1_pp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "p1_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "p1_pm"
+              }
+            ]
+          }
+        ],
+        "type": "Poly"
+      },
+      "active_scope_identity": true,
+      "basis_masks": [
+        0,
+        0,
+        4,
+        11
+      ],
+      "coefficient_parities": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "coefficient_word_parity": 0,
+      "legacy_direct": {
+        "terms": [
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "p1_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "p1_pp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "p1_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "p1_pm"
+              }
+            ]
+          }
+        ],
+        "type": "Poly"
+      },
+      "legacy_distributed": {
+        "terms": [
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "-2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "p1_mm"
+              },
+              {
+                "exponent": 1,
+                "symbol": "p1_pp"
+              }
+            ]
+          },
+          {
+            "coefficient": {
+              "im": "0",
+              "re": "2"
+            },
+            "monomial": [
+              {
+                "exponent": 1,
+                "symbol": "p1_mp"
+              },
+              {
+                "exponent": 1,
+                "symbol": "p1_pm"
+              }
+            ]
+          }
+        ],
+        "type": "Poly"
+      },
+      "legacy_relation": "MINUS",
+      "term_id": "S4_MINUS_1_3",
+      "vertex": "C"
+    }
+  ],
+  "passed": 6,
+  "rejected_global_sign_field": {
+    "field_name": "coefficient_order_measure_scope_sign",
+    "status": "REJECTED_NOT_A_CANDIDATE"
+  },
+  "required_minimal_field": "LabeledLeaf.coefficient_parity",
+  "schema": "step6.measure_scope_sign_audit.v1",
+  "single_leaf": {
+    "cases": 64,
+    "identity": "d(v_s e_s)=(-1)^|s| v_s d(e_s)",
+    "nonzero_cases": 32,
+    "passed": true
+  },
+  "source_equations": {
+    "coefficient_left_expansion": "3D.14",
+    "coefficient_parity": "3D.15",
+    "left_leibniz": "2A.5",
+    "measure_projector": "3A.13"
+  },
+  "status": "PASS_BUG_FIXED_GLOBAL_SIGN_REJECTED"
+}

@@ -15,11 +15,12 @@
     "five_edges": true,
     "external_indices_retained": true,
     "open_exterior_retained": true,
+    "corrected_exact_row_cancels": true,
     "no_extra_bracket_i": true,
     "free_colors_ABRS": true,
     "coefficient_not_claimed": true
   },
-  "passed": 16,
-  "total": 16,
-  "payload_sha256": "42b8286d100ca7bf0d885049a4fc173a36ff349cd4fee4950d896f11a16fbd92"
+  "passed": 17,
+  "total": 17,
+  "payload_sha256": "f73ee1583bc76e92adbde663a9de1478fb93e572b439a497059a9e3f4e622106"
 }

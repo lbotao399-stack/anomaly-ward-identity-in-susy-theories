@@ -1,0 +1,1281 @@
+{
+  "algebra_contract": {
+    "adjoint_Casimir": {
+      "rewrite_applied": false,
+      "status": "NOT_DEFINED_IN_PROJECT_AUTHORITY_NO_REWRITE",
+      "unreduced_closed_two_c_subgraphs_preserved": true
+    },
+    "antisymmetry": "c[a,b,c]=sgn(pi)c[pi(a,b,c)]",
+    "critical_pair_policy": "EXACT_RREF_NORMAL_FORM_JOINABILITY",
+    "jacobi": "c[a,b,e]c[e,c,d]+c[b,c,e]c[e,a,d]+c[c,a,e]c[e,b,d]=0",
+    "operation_order": [
+      "KAPPA_KAPPA_INVERSE_CONTRACTION",
+      "TOTAL_ANTISYMMETRY_AND_DUMMY_CANONICALIZATION",
+      "FINITE_IHX_ORBIT",
+      "EXACT_RATIONAL_RREF",
+      "DESCENDING_ORIENTED_REWRITE"
+    ],
+    "termination_order": "DESCENDING_LEXICOGRAPHIC_CANONICAL_GRAPH_SERIALIZATION;EVERY_REPLACEMENT_KEY_STRICTLY_SMALLER"
+  },
+  "fixtures": {
+    "component_oracle": {
+      "component_assignments_checked": 81,
+      "failures": [],
+      "oracle": "integer Levi-Civita components in three dimensions",
+      "passed": true,
+      "used_as_normalization_input": false
+    },
+    "critical_pairs": [
+      {
+        "joinable": true,
+        "left_normal_form": [
+          {
+            "basis_key": "62954b4ce95d07e9a0194206d473ab0756d7fd3a332c3513b3e4d67f22c76bd5",
+            "coefficient": {
+              "denominator": 2,
+              "numerator": -1
+            }
+          },
+          {
+            "basis_key": "b2ebe777ab9b56e81e05d280b174c3b59f8c76e11cc63027bbd5e9ea9128fb2b",
+            "coefficient": {
+              "denominator": 1,
+              "numerator": 1
+            }
+          }
+        ],
+        "left_one_step_rhs": [
+          {
+            "basis_key": "35497294424333a4dd8f7b3ad18fbd349f4c5cac2894632ce2abf4d80757bef0",
+            "coefficient": {
+              "denominator": 1,
+              "numerator": -1
+            }
+          },
+          {
+            "basis_key": "b2ebe777ab9b56e81e05d280b174c3b59f8c76e11cc63027bbd5e9ea9128fb2b",
+            "coefficient": {
+              "denominator": 1,
+              "numerator": 1
+            }
+          }
+        ],
+        "overlap_edges": [
+          "4727e9009c3b8d433640d4d768d6d2a622518d5bbf2b39d7fcfe68f6ced1a248",
+          "650cb3c7a8aa90ee06b76fc1bd097f4f86d1c8c3c664fb457633684ad21315a8"
+        ],
+        "right_normal_form": [
+          {
+            "basis_key": "62954b4ce95d07e9a0194206d473ab0756d7fd3a332c3513b3e4d67f22c76bd5",
+            "coefficient": {
+              "denominator": 2,
+              "numerator": -1
+            }
+          },
+          {
+            "basis_key": "b2ebe777ab9b56e81e05d280b174c3b59f8c76e11cc63027bbd5e9ea9128fb2b",
+            "coefficient": {
+              "denominator": 1,
+              "numerator": 1
+            }
+          }
+        ],
+        "right_one_step_rhs": [
+          {
+            "basis_key": "3c9a2cba32f8d71dacda029bad1e392d398972862e88fa8a5f2a6c3b6b3064e5",
+            "coefficient": {
+              "denominator": 1,
+              "numerator": 1
+            }
+          },
+          {
+            "basis_key": "be22a898acd951d3d32ab1991c76e43a5e51ad2d484230bb153313c48bf15bb2",
+            "coefficient": {
+              "denominator": 1,
+              "numerator": 1
+            }
+          }
+        ],
+        "shared_c_positions": [
+          3
+        ],
+        "source_normal_form": [
+          {
+            "basis_key": "62954b4ce95d07e9a0194206d473ab0756d7fd3a332c3513b3e4d67f22c76bd5",
+            "coefficient": {
+              "denominator": 2,
+              "numerator": -1
+            }
+          },
+          {
+            "basis_key": "b2ebe777ab9b56e81e05d280b174c3b59f8c76e11cc63027bbd5e9ea9128fb2b",
+            "coefficient": {
+              "denominator": 1,
+              "numerator": 1
+            }
+          }
+        ]
+      },
+      {
+        "joinable": true,
+        "left_normal_form": [
+          {
+            "basis_key": "62954b4ce95d07e9a0194206d473ab0756d7fd3a332c3513b3e4d67f22c76bd5",
+            "coefficient": {
+              "denominator": 2,
+              "numerator": -1
+            }
+          },
+          {
+            "basis_key": "b2ebe777ab9b56e81e05d280b174c3b59f8c76e11cc63027bbd5e9ea9128fb2b",
+            "coefficient": {
+              "denominator": 1,
+              "numerator": 1
+            }
+          }
+        ],
+        "left_one_step_rhs": [
+          {
+            "basis_key": "35497294424333a4dd8f7b3ad18fbd349f4c5cac2894632ce2abf4d80757bef0",
+            "coefficient": {
+              "denominator": 1,
+              "numerator": -1
+            }
+          },
+          {
+            "basis_key": "b2ebe777ab9b56e81e05d280b174c3b59f8c76e11cc63027bbd5e9ea9128fb2b",
+            "coefficient": {
+              "denominator": 1,
+              "numerator": 1
+            }
+          }
+        ],
+        "overlap_edges": [
+          "4727e9009c3b8d433640d4d768d6d2a622518d5bbf2b39d7fcfe68f6ced1a248",
+          "efd23a648a22d12cb87095c91f2ce5bd450c458cf3777a5535613f0955686831"
+        ],
+        "right_normal_form": [
+          {
+            "basis_key": "62954b4ce95d07e9a0194206d473ab0756d7fd3a332c3513b3e4d67f22c76bd5",
+            "coefficient": {
+              "denominator": 2,
+              "numerator": -1
+            }
+          },
+          {
+            "basis_key": "b2ebe777ab9b56e81e05d280b174c3b59f8c76e11cc63027bbd5e9ea9128fb2b",
+            "coefficient": {
+              "denominator": 1,
+              "numerator": 1
+            }
+          }
+        ],
+        "right_one_step_rhs": [
+          {
+            "basis_key": "6a27731f4b22d991a9e68cd336d07ac980f901b13e80b2f11193117ea7dd1f75",
+            "coefficient": {
+              "denominator": 1,
+              "numerator": 1
+            }
+          },
+          {
+            "basis_key": "be22a898acd951d3d32ab1991c76e43a5e51ad2d484230bb153313c48bf15bb2",
+            "coefficient": {
+              "denominator": 1,
+              "numerator": 1
+            }
+          }
+        ],
+        "shared_c_positions": [
+          2
+        ],
+        "source_normal_form": [
+          {
+            "basis_key": "62954b4ce95d07e9a0194206d473ab0756d7fd3a332c3513b3e4d67f22c76bd5",
+            "coefficient": {
+              "denominator": 2,
+              "numerator": -1
+            }
+          },
+          {
+            "basis_key": "b2ebe777ab9b56e81e05d280b174c3b59f8c76e11cc63027bbd5e9ea9128fb2b",
+            "coefficient": {
+              "denominator": 1,
+              "numerator": 1
+            }
+          }
+        ]
+      },
+      {
+        "joinable": true,
+        "left_normal_form": [
+          {
+            "basis_key": "62954b4ce95d07e9a0194206d473ab0756d7fd3a332c3513b3e4d67f22c76bd5",
+            "coefficient": {
+              "denominator": 2,
+              "numerator": -1
+            }
+          },
+          {
+            "basis_key": "b2ebe777ab9b56e81e05d280b174c3b59f8c76e11cc63027bbd5e9ea9128fb2b",
+            "coefficient": {
+              "denominator": 1,
+              "numerator": 1
+            }
+          }
+        ],
+        "left_one_step_rhs": [
+          {
+            "basis_key": "3c9a2cba32f8d71dacda029bad1e392d398972862e88fa8a5f2a6c3b6b3064e5",
+            "coefficient": {
+              "denominator": 1,
+              "numerator": 1
+            }
+          },
+          {
+            "basis_key": "be22a898acd951d3d32ab1991c76e43a5e51ad2d484230bb153313c48bf15bb2",
+            "coefficient": {
+              "denominator": 1,
+              "numerator": 1
+            }
+          }
+        ],
+        "overlap_edges": [
+          "650cb3c7a8aa90ee06b76fc1bd097f4f86d1c8c3c664fb457633684ad21315a8",
+          "d2a860fbe9f606e03150e79b278dcd3d94550f625b21e3d2ca6688126d52cb68"
+        ],
+        "right_normal_form": [
+          {
+            "basis_key": "62954b4ce95d07e9a0194206d473ab0756d7fd3a332c3513b3e4d67f22c76bd5",
+            "coefficient": {
+              "denominator": 2,
+              "numerator": -1
+            }
+          },
+          {
+            "basis_key": "b2ebe777ab9b56e81e05d280b174c3b59f8c76e11cc63027bbd5e9ea9128fb2b",
+            "coefficient": {
+              "denominator": 1,
+              "numerator": 1
+            }
+          }
+        ],
+        "right_one_step_rhs": [
+          {
+            "basis_key": "1d32e34d611a26c6c868044fb902b7c58bebbf61810bcff9bb5e7243820fb307",
+            "coefficient": {
+              "denominator": 1,
+              "numerator": -1
+            }
+          },
+          {
+            "basis_key": "b2ebe777ab9b56e81e05d280b174c3b59f8c76e11cc63027bbd5e9ea9128fb2b",
+            "coefficient": {
+              "denominator": 1,
+              "numerator": 1
+            }
+          }
+        ],
+        "shared_c_positions": [
+          0
+        ],
+        "source_normal_form": [
+          {
+            "basis_key": "62954b4ce95d07e9a0194206d473ab0756d7fd3a332c3513b3e4d67f22c76bd5",
+            "coefficient": {
+              "denominator": 2,
+              "numerator": -1
+            }
+          },
+          {
+            "basis_key": "b2ebe777ab9b56e81e05d280b174c3b59f8c76e11cc63027bbd5e9ea9128fb2b",
+            "coefficient": {
+              "denominator": 1,
+              "numerator": 1
+            }
+          }
+        ]
+      },
+      {
+        "joinable": true,
+        "left_normal_form": [
+          {
+            "basis_key": "62954b4ce95d07e9a0194206d473ab0756d7fd3a332c3513b3e4d67f22c76bd5",
+            "coefficient": {
+              "denominator": 2,
+              "numerator": -1
+            }
+          },
+          {
+            "basis_key": "b2ebe777ab9b56e81e05d280b174c3b59f8c76e11cc63027bbd5e9ea9128fb2b",
+            "coefficient": {
+              "denominator": 1,
+              "numerator": 1
+            }
+          }
+        ],
+        "left_one_step_rhs": [
+          {
+            "basis_key": "1d32e34d611a26c6c868044fb902b7c58bebbf61810bcff9bb5e7243820fb307",
+            "coefficient": {
+              "denominator": 1,
+              "numerator": -1
+            }
+          },
+          {
+            "basis_key": "b2ebe777ab9b56e81e05d280b174c3b59f8c76e11cc63027bbd5e9ea9128fb2b",
+            "coefficient": {
+              "denominator": 1,
+              "numerator": 1
+            }
+          }
+        ],
+        "overlap_edges": [
+          "d2a860fbe9f606e03150e79b278dcd3d94550f625b21e3d2ca6688126d52cb68",
+          "efd23a648a22d12cb87095c91f2ce5bd450c458cf3777a5535613f0955686831"
+        ],
+        "right_normal_form": [
+          {
+            "basis_key": "62954b4ce95d07e9a0194206d473ab0756d7fd3a332c3513b3e4d67f22c76bd5",
+            "coefficient": {
+              "denominator": 2,
+              "numerator": -1
+            }
+          },
+          {
+            "basis_key": "b2ebe777ab9b56e81e05d280b174c3b59f8c76e11cc63027bbd5e9ea9128fb2b",
+            "coefficient": {
+              "denominator": 1,
+              "numerator": 1
+            }
+          }
+        ],
+        "right_one_step_rhs": [
+          {
+            "basis_key": "6a27731f4b22d991a9e68cd336d07ac980f901b13e80b2f11193117ea7dd1f75",
+            "coefficient": {
+              "denominator": 1,
+              "numerator": 1
+            }
+          },
+          {
+            "basis_key": "be22a898acd951d3d32ab1991c76e43a5e51ad2d484230bb153313c48bf15bb2",
+            "coefficient": {
+              "denominator": 1,
+              "numerator": 1
+            }
+          }
+        ],
+        "shared_c_positions": [
+          1
+        ],
+        "source_normal_form": [
+          {
+            "basis_key": "62954b4ce95d07e9a0194206d473ab0756d7fd3a332c3513b3e4d67f22c76bd5",
+            "coefficient": {
+              "denominator": 2,
+              "numerator": -1
+            }
+          },
+          {
+            "basis_key": "b2ebe777ab9b56e81e05d280b174c3b59f8c76e11cc63027bbd5e9ea9128fb2b",
+            "coefficient": {
+              "denominator": 1,
+              "numerator": 1
+            }
+          }
+        ]
+      }
+    ],
+    "full_compiler_schema_adapter": {
+      "adapted_basis_key": "be74fdcea30feb466b4f5011d41641d739630cb2e8d850839e886d8657fb9217",
+      "adapted_coefficient": {
+        "denominator": 1,
+        "numerator": 1
+      },
+      "exact_match": true,
+      "input_schema": {
+        "canonical_enumeration_size": 1,
+        "canonical_tensors": [
+          {
+            "antisymmetry_sign": 1,
+            "canonical_indices": [
+              "A",
+              "B",
+              "d0"
+            ],
+            "kind": "c",
+            "ordered_indices_before_antisymmetry": [
+              "A",
+              "B",
+              "d0"
+            ]
+          },
+          {
+            "antisymmetry_sign": 1,
+            "canonical_indices": [
+              "R",
+              "S",
+              "d0"
+            ],
+            "kind": "c",
+            "ordered_indices_before_antisymmetry": [
+              "d0",
+              "R",
+              "S"
+            ]
+          }
+        ],
+        "dummy_index_count": 1,
+        "free_index_order": [
+          "A",
+          "B",
+          "R",
+          "S"
+        ],
+        "jacobi_rewrite_applied": false,
+        "overall_antisymmetry_sign": 1,
+        "signature_sha256": "c35a7cfdd52bfd08cf2bba8d8f3073cf493ad6e38d6e2b82eace6d91b4c9f7a5",
+        "zero_by_antisymmetry": false
+      },
+      "metric_bridged_schema": {
+        "adapted_basis_key": "64c38a8b191b5e8efe85eee1d346cff2fc26f90726a231c5cf9300f288193391",
+        "bridge_metric_positions": [
+          [
+            0
+          ]
+        ],
+        "exact_match": true,
+        "input_schema": {
+          "canonical_enumeration_size": 1,
+          "canonical_tensors": [
+            {
+              "antisymmetry_sign": 1,
+              "canonical_indices": [
+                "A",
+                "B",
+                "d0"
+              ],
+              "kind": "c",
+              "ordered_indices_before_antisymmetry": [
+                "A",
+                "B",
+                "d0"
+              ]
+            },
+            {
+              "antisymmetry_sign": 1,
+              "canonical_indices": [
+                "R",
+                "S",
+                "d1"
+              ],
+              "kind": "c",
+              "ordered_indices_before_antisymmetry": [
+                "d1",
+                "R",
+                "S"
+              ]
+            },
+            {
+              "indices": [
+                "d0",
+                "d1"
+              ],
+              "kind": "kappa_inverse",
+              "variance": "upper"
+            }
+          ],
+          "dummy_index_count": 2,
+          "free_index_order": [
+            "A",
+            "B",
+            "R",
+            "S"
+          ],
+          "jacobi_rewrite_applied": false,
+          "overall_antisymmetry_sign": 1,
+          "signature_sha256": "a13f013fa4dc58777d6e1d09f5464e6afea214e790de22c295c26cb78489f5d3",
+          "zero_by_antisymmetry": false
+        },
+        "internal_edge_count": 1,
+        "raw_basis_key": "64c38a8b191b5e8efe85eee1d346cff2fc26f90726a231c5cf9300f288193391"
+      },
+      "raw_basis_key": "be74fdcea30feb466b4f5011d41641d739630cb2e8d850839e886d8657fb9217",
+      "raw_coefficient": {
+        "denominator": 1,
+        "numerator": 1
+      }
+    },
+    "jacobi_three_term": {
+      "adjoint_Casimir_status": "NOT_DEFINED_IN_PROJECT_AUTHORITY_NO_REWRITE",
+      "external_target_used": false,
+      "input_normalization": [
+        {
+          "basis_key": "be74fdcea30feb466b4f5011d41641d739630cb2e8d850839e886d8657fb9217",
+          "input_adapter": {
+            "schema": "RAW_COLOR_TENSOR_SEQUENCE",
+            "source_signature_sha256": null
+          },
+          "input_coefficient": {
+            "denominator": 1,
+            "numerator": 1
+          },
+          "metric_rewrite_count": 0,
+          "normalization_sign": {
+            "denominator": 1,
+            "numerator": 1
+          },
+          "term_ordinal": 0
+        },
+        {
+          "basis_key": "e397e74390f39900210271265c9924c7b8264bcd91a3fe86b597d478118f84d2",
+          "input_adapter": {
+            "schema": "RAW_COLOR_TENSOR_SEQUENCE",
+            "source_signature_sha256": null
+          },
+          "input_coefficient": {
+            "denominator": 1,
+            "numerator": 1
+          },
+          "metric_rewrite_count": 0,
+          "normalization_sign": {
+            "denominator": 1,
+            "numerator": 1
+          },
+          "term_ordinal": 1
+        },
+        {
+          "basis_key": "7fa5ce704bf660f76be316926b5e9d1a16bbac198c23e5ff0c2d44b9af62f7c7",
+          "input_adapter": {
+            "schema": "RAW_COLOR_TENSOR_SEQUENCE",
+            "source_signature_sha256": null
+          },
+          "input_coefficient": {
+            "denominator": 1,
+            "numerator": 1
+          },
+          "metric_rewrite_count": 0,
+          "normalization_sign": {
+            "denominator": 1,
+            "numerator": -1
+          },
+          "term_ordinal": 2
+        }
+      ],
+      "irreducible_basis_networks": [],
+      "normal_form": [],
+      "normal_form_sha256": "5ac95ab2413ffc304b5d0484f49e5bb05c240601b7633bcbf9c417db7c97c368",
+      "normalized_input": [
+        {
+          "basis_key": "7fa5ce704bf660f76be316926b5e9d1a16bbac198c23e5ff0c2d44b9af62f7c7",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": -1
+          }
+        },
+        {
+          "basis_key": "be74fdcea30feb466b4f5011d41641d739630cb2e8d850839e886d8657fb9217",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1
+          }
+        },
+        {
+          "basis_key": "e397e74390f39900210271265c9924c7b8264bcd91a3fe86b597d478118f84d2",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1
+          }
+        }
+      ],
+      "numerator_or_integral_used": false,
+      "orbit": {
+        "basis_network_count": 3,
+        "basis_networks": [
+          {
+            "basis_key": "7fa5ce704bf660f76be316926b5e9d1a16bbac198c23e5ff0c2d44b9af62f7c7",
+            "canonical_graph_serialization": "{\"canonical_tensors\":[{\"kind\":\"c\",\"ordered_indices\":[\"A\",\"R\",\"d0\"]},{\"kind\":\"c\",\"ordered_indices\":[\"B\",\"S\",\"d0\"]}],\"free_index_order\":[\"A\",\"B\",\"R\",\"S\"]}",
+            "canonical_tensors": [
+              {
+                "kind": "c",
+                "ordered_indices": [
+                  "A",
+                  "R",
+                  "d0"
+                ]
+              },
+              {
+                "kind": "c",
+                "ordered_indices": [
+                  "B",
+                  "S",
+                  "d0"
+                ]
+              }
+            ],
+            "free_index_order": [
+              "A",
+              "B",
+              "R",
+              "S"
+            ]
+          },
+          {
+            "basis_key": "be74fdcea30feb466b4f5011d41641d739630cb2e8d850839e886d8657fb9217",
+            "canonical_graph_serialization": "{\"canonical_tensors\":[{\"kind\":\"c\",\"ordered_indices\":[\"A\",\"B\",\"d0\"]},{\"kind\":\"c\",\"ordered_indices\":[\"R\",\"S\",\"d0\"]}],\"free_index_order\":[\"A\",\"B\",\"R\",\"S\"]}",
+            "canonical_tensors": [
+              {
+                "kind": "c",
+                "ordered_indices": [
+                  "A",
+                  "B",
+                  "d0"
+                ]
+              },
+              {
+                "kind": "c",
+                "ordered_indices": [
+                  "R",
+                  "S",
+                  "d0"
+                ]
+              }
+            ],
+            "free_index_order": [
+              "A",
+              "B",
+              "R",
+              "S"
+            ]
+          },
+          {
+            "basis_key": "e397e74390f39900210271265c9924c7b8264bcd91a3fe86b597d478118f84d2",
+            "canonical_graph_serialization": "{\"canonical_tensors\":[{\"kind\":\"c\",\"ordered_indices\":[\"A\",\"S\",\"d0\"]},{\"kind\":\"c\",\"ordered_indices\":[\"B\",\"R\",\"d0\"]}],\"free_index_order\":[\"A\",\"B\",\"R\",\"S\"]}",
+            "canonical_tensors": [
+              {
+                "kind": "c",
+                "ordered_indices": [
+                  "A",
+                  "S",
+                  "d0"
+                ]
+              },
+              {
+                "kind": "c",
+                "ordered_indices": [
+                  "B",
+                  "R",
+                  "d0"
+                ]
+              }
+            ],
+            "free_index_order": [
+              "A",
+              "B",
+              "R",
+              "S"
+            ]
+          }
+        ],
+        "relation_count": 1,
+        "relations": [
+          {
+            "bridge_metric_kinds": [],
+            "bridge_metric_positions": [],
+            "c_positions": [
+              0,
+              1
+            ],
+            "canonical_relation": [
+              {
+                "basis_key": "7fa5ce704bf660f76be316926b5e9d1a16bbac198c23e5ff0c2d44b9af62f7c7",
+                "coefficient": {
+                  "denominator": 1,
+                  "numerator": -1
+                }
+              },
+              {
+                "basis_key": "be74fdcea30feb466b4f5011d41641d739630cb2e8d850839e886d8657fb9217",
+                "coefficient": {
+                  "denominator": 1,
+                  "numerator": 1
+                }
+              },
+              {
+                "basis_key": "e397e74390f39900210271265c9924c7b8264bcd91a3fe86b597d478118f84d2",
+                "coefficient": {
+                  "denominator": 1,
+                  "numerator": 1
+                }
+              }
+            ],
+            "edge_id": "d2a860fbe9f606e03150e79b278dcd3d94550f625b21e3d2ca6688126d52cb68",
+            "endpoint_indices": [
+              "d0",
+              "d0"
+            ],
+            "four_exposed_half_edges": [
+              "A",
+              "R",
+              "B",
+              "S"
+            ],
+            "local_orientation": "c[a,b,e]c[e,c,d]+c[b,c,e]c[e,a,d]+c[c,a,e]c[e,b,d]=0",
+            "local_terms": [
+              {
+                "channel": "I",
+                "normalized_basis_key": "7fa5ce704bf660f76be316926b5e9d1a16bbac198c23e5ff0c2d44b9af62f7c7",
+                "normalized_coefficient": {
+                  "denominator": 1,
+                  "numerator": 1
+                },
+                "ordered_c_pair": [
+                  [
+                    "A",
+                    "R",
+                    "d0"
+                  ],
+                  [
+                    "d0",
+                    "B",
+                    "S"
+                  ]
+                ]
+              },
+              {
+                "channel": "H",
+                "normalized_basis_key": "e397e74390f39900210271265c9924c7b8264bcd91a3fe86b597d478118f84d2",
+                "normalized_coefficient": {
+                  "denominator": 1,
+                  "numerator": -1
+                },
+                "ordered_c_pair": [
+                  [
+                    "R",
+                    "B",
+                    "d0"
+                  ],
+                  [
+                    "d0",
+                    "A",
+                    "S"
+                  ]
+                ]
+              },
+              {
+                "channel": "X",
+                "normalized_basis_key": "be74fdcea30feb466b4f5011d41641d739630cb2e8d850839e886d8657fb9217",
+                "normalized_coefficient": {
+                  "denominator": 1,
+                  "numerator": -1
+                },
+                "ordered_c_pair": [
+                  [
+                    "B",
+                    "A",
+                    "d0"
+                  ],
+                  [
+                    "d0",
+                    "R",
+                    "S"
+                  ]
+                ]
+              }
+            ],
+            "relation_sha256": "5b9ef349f103c91684a54b62b0dce280e1b4b1a3fb72c7ef02446004da03bde4",
+            "relation_status": "NONTRIVIAL_IHX_RELATION_CONTAINING_SOURCE",
+            "source_basis_key": "7fa5ce704bf660f76be316926b5e9d1a16bbac198c23e5ff0c2d44b9af62f7c7"
+          }
+        ],
+        "start_keys": [
+          "7fa5ce704bf660f76be316926b5e9d1a16bbac198c23e5ff0c2d44b9af62f7c7",
+          "be74fdcea30feb466b4f5011d41641d739630cb2e8d850839e886d8657fb9217",
+          "e397e74390f39900210271265c9924c7b8264bcd91a3fe86b597d478118f84d2"
+        ]
+      },
+      "relation_matrix_rank": 1,
+      "rewrite_rules": [
+        {
+          "all_replacement_keys_strictly_smaller": true,
+          "pivot_basis_key": "e397e74390f39900210271265c9924c7b8264bcd91a3fe86b597d478118f84d2",
+          "pivot_canonical_graph_serialization": "{\"canonical_tensors\":[{\"kind\":\"c\",\"ordered_indices\":[\"A\",\"S\",\"d0\"]},{\"kind\":\"c\",\"ordered_indices\":[\"B\",\"R\",\"d0\"]}],\"free_index_order\":[\"A\",\"B\",\"R\",\"S\"]}",
+          "replacement": [
+            {
+              "basis_key": "7fa5ce704bf660f76be316926b5e9d1a16bbac198c23e5ff0c2d44b9af62f7c7",
+              "coefficient": {
+                "denominator": 1,
+                "numerator": 1
+              }
+            },
+            {
+              "basis_key": "be74fdcea30feb466b4f5011d41641d739630cb2e8d850839e886d8657fb9217",
+              "coefficient": {
+                "denominator": 1,
+                "numerator": -1
+              }
+            }
+          ],
+          "replacement_canonical_graph_serializations": [
+            {
+              "basis_key": "be74fdcea30feb466b4f5011d41641d739630cb2e8d850839e886d8657fb9217",
+              "canonical_graph_serialization": "{\"canonical_tensors\":[{\"kind\":\"c\",\"ordered_indices\":[\"A\",\"B\",\"d0\"]},{\"kind\":\"c\",\"ordered_indices\":[\"R\",\"S\",\"d0\"]}],\"free_index_order\":[\"A\",\"B\",\"R\",\"S\"]}"
+            },
+            {
+              "basis_key": "7fa5ce704bf660f76be316926b5e9d1a16bbac198c23e5ff0c2d44b9af62f7c7",
+              "canonical_graph_serialization": "{\"canonical_tensors\":[{\"kind\":\"c\",\"ordered_indices\":[\"A\",\"R\",\"d0\"]},{\"kind\":\"c\",\"ordered_indices\":[\"B\",\"S\",\"d0\"]}],\"free_index_order\":[\"A\",\"B\",\"R\",\"S\"]}"
+            }
+          ]
+        }
+      ],
+      "schema": "step6.color_jacobi.normal_form.v1",
+      "termination_order": "DESCENDING_LEXICOGRAPHIC_CANONICAL_GRAPH_SERIALIZATION;EACH_RHS_KEY_IS_STRICTLY_SMALLER_THAN_ITS_PIVOT",
+      "zero_in_jacobi_quotient": true
+    },
+    "metric_bridged_jacobi_three_term": {
+      "adjoint_Casimir_status": "NOT_DEFINED_IN_PROJECT_AUTHORITY_NO_REWRITE",
+      "external_target_used": false,
+      "input_normalization": [
+        {
+          "basis_key": "64c38a8b191b5e8efe85eee1d346cff2fc26f90726a231c5cf9300f288193391",
+          "input_adapter": {
+            "schema": "RAW_COLOR_TENSOR_SEQUENCE",
+            "source_signature_sha256": null
+          },
+          "input_coefficient": {
+            "denominator": 1,
+            "numerator": 1
+          },
+          "metric_rewrite_count": 0,
+          "normalization_sign": {
+            "denominator": 1,
+            "numerator": 1
+          },
+          "term_ordinal": 0
+        },
+        {
+          "basis_key": "20dbfd7bb96c9ef0f509256a5e34cc6d4989d60bcd2515231b1dd58988a352f8",
+          "input_adapter": {
+            "schema": "RAW_COLOR_TENSOR_SEQUENCE",
+            "source_signature_sha256": null
+          },
+          "input_coefficient": {
+            "denominator": 1,
+            "numerator": 1
+          },
+          "metric_rewrite_count": 0,
+          "normalization_sign": {
+            "denominator": 1,
+            "numerator": 1
+          },
+          "term_ordinal": 1
+        },
+        {
+          "basis_key": "0d885935e02ad25177e0a8dba9e72e2c5f71eafcdeb3e846910b47624414b53a",
+          "input_adapter": {
+            "schema": "RAW_COLOR_TENSOR_SEQUENCE",
+            "source_signature_sha256": null
+          },
+          "input_coefficient": {
+            "denominator": 1,
+            "numerator": 1
+          },
+          "metric_rewrite_count": 0,
+          "normalization_sign": {
+            "denominator": 1,
+            "numerator": -1
+          },
+          "term_ordinal": 2
+        }
+      ],
+      "irreducible_basis_networks": [],
+      "normal_form": [],
+      "normal_form_sha256": "5ac95ab2413ffc304b5d0484f49e5bb05c240601b7633bcbf9c417db7c97c368",
+      "normalized_input": [
+        {
+          "basis_key": "0d885935e02ad25177e0a8dba9e72e2c5f71eafcdeb3e846910b47624414b53a",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": -1
+          }
+        },
+        {
+          "basis_key": "20dbfd7bb96c9ef0f509256a5e34cc6d4989d60bcd2515231b1dd58988a352f8",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1
+          }
+        },
+        {
+          "basis_key": "64c38a8b191b5e8efe85eee1d346cff2fc26f90726a231c5cf9300f288193391",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1
+          }
+        }
+      ],
+      "numerator_or_integral_used": false,
+      "orbit": {
+        "basis_network_count": 3,
+        "basis_networks": [
+          {
+            "basis_key": "0d885935e02ad25177e0a8dba9e72e2c5f71eafcdeb3e846910b47624414b53a",
+            "canonical_graph_serialization": "{\"canonical_tensors\":[{\"indices\":[\"d0\",\"d1\"],\"kind\":\"kappa_inverse\",\"variance\":\"upper\"},{\"kind\":\"c\",\"ordered_indices\":[\"A\",\"R\",\"d0\"]},{\"kind\":\"c\",\"ordered_indices\":[\"B\",\"S\",\"d1\"]}],\"free_index_order\":[\"A\",\"B\",\"R\",\"S\"]}",
+            "canonical_tensors": [
+              {
+                "indices": [
+                  "d0",
+                  "d1"
+                ],
+                "kind": "kappa_inverse",
+                "variance": "upper"
+              },
+              {
+                "kind": "c",
+                "ordered_indices": [
+                  "A",
+                  "R",
+                  "d0"
+                ]
+              },
+              {
+                "kind": "c",
+                "ordered_indices": [
+                  "B",
+                  "S",
+                  "d1"
+                ]
+              }
+            ],
+            "free_index_order": [
+              "A",
+              "B",
+              "R",
+              "S"
+            ]
+          },
+          {
+            "basis_key": "20dbfd7bb96c9ef0f509256a5e34cc6d4989d60bcd2515231b1dd58988a352f8",
+            "canonical_graph_serialization": "{\"canonical_tensors\":[{\"indices\":[\"d0\",\"d1\"],\"kind\":\"kappa_inverse\",\"variance\":\"upper\"},{\"kind\":\"c\",\"ordered_indices\":[\"A\",\"S\",\"d0\"]},{\"kind\":\"c\",\"ordered_indices\":[\"B\",\"R\",\"d1\"]}],\"free_index_order\":[\"A\",\"B\",\"R\",\"S\"]}",
+            "canonical_tensors": [
+              {
+                "indices": [
+                  "d0",
+                  "d1"
+                ],
+                "kind": "kappa_inverse",
+                "variance": "upper"
+              },
+              {
+                "kind": "c",
+                "ordered_indices": [
+                  "A",
+                  "S",
+                  "d0"
+                ]
+              },
+              {
+                "kind": "c",
+                "ordered_indices": [
+                  "B",
+                  "R",
+                  "d1"
+                ]
+              }
+            ],
+            "free_index_order": [
+              "A",
+              "B",
+              "R",
+              "S"
+            ]
+          },
+          {
+            "basis_key": "64c38a8b191b5e8efe85eee1d346cff2fc26f90726a231c5cf9300f288193391",
+            "canonical_graph_serialization": "{\"canonical_tensors\":[{\"indices\":[\"d0\",\"d1\"],\"kind\":\"kappa_inverse\",\"variance\":\"upper\"},{\"kind\":\"c\",\"ordered_indices\":[\"A\",\"B\",\"d0\"]},{\"kind\":\"c\",\"ordered_indices\":[\"R\",\"S\",\"d1\"]}],\"free_index_order\":[\"A\",\"B\",\"R\",\"S\"]}",
+            "canonical_tensors": [
+              {
+                "indices": [
+                  "d0",
+                  "d1"
+                ],
+                "kind": "kappa_inverse",
+                "variance": "upper"
+              },
+              {
+                "kind": "c",
+                "ordered_indices": [
+                  "A",
+                  "B",
+                  "d0"
+                ]
+              },
+              {
+                "kind": "c",
+                "ordered_indices": [
+                  "R",
+                  "S",
+                  "d1"
+                ]
+              }
+            ],
+            "free_index_order": [
+              "A",
+              "B",
+              "R",
+              "S"
+            ]
+          }
+        ],
+        "relation_count": 1,
+        "relations": [
+          {
+            "bridge_metric_kinds": [
+              "kappa_inverse"
+            ],
+            "bridge_metric_positions": [
+              0
+            ],
+            "c_positions": [
+              1,
+              2
+            ],
+            "canonical_relation": [
+              {
+                "basis_key": "0d885935e02ad25177e0a8dba9e72e2c5f71eafcdeb3e846910b47624414b53a",
+                "coefficient": {
+                  "denominator": 1,
+                  "numerator": -1
+                }
+              },
+              {
+                "basis_key": "20dbfd7bb96c9ef0f509256a5e34cc6d4989d60bcd2515231b1dd58988a352f8",
+                "coefficient": {
+                  "denominator": 1,
+                  "numerator": 1
+                }
+              },
+              {
+                "basis_key": "64c38a8b191b5e8efe85eee1d346cff2fc26f90726a231c5cf9300f288193391",
+                "coefficient": {
+                  "denominator": 1,
+                  "numerator": 1
+                }
+              }
+            ],
+            "edge_id": "1d363e4ea6436b90f4a485044fa916d033bf14a3d51ab4323dadfa969921a33e",
+            "endpoint_indices": [
+              "d0",
+              "d1"
+            ],
+            "four_exposed_half_edges": [
+              "A",
+              "R",
+              "B",
+              "S"
+            ],
+            "local_orientation": "c[a,b,e]c[e,c,d]+c[b,c,e]c[e,a,d]+c[c,a,e]c[e,b,d]=0",
+            "local_terms": [
+              {
+                "channel": "I",
+                "normalized_basis_key": "0d885935e02ad25177e0a8dba9e72e2c5f71eafcdeb3e846910b47624414b53a",
+                "normalized_coefficient": {
+                  "denominator": 1,
+                  "numerator": 1
+                },
+                "ordered_c_pair": [
+                  [
+                    "A",
+                    "R",
+                    "d0"
+                  ],
+                  [
+                    "d1",
+                    "B",
+                    "S"
+                  ]
+                ]
+              },
+              {
+                "channel": "H",
+                "normalized_basis_key": "20dbfd7bb96c9ef0f509256a5e34cc6d4989d60bcd2515231b1dd58988a352f8",
+                "normalized_coefficient": {
+                  "denominator": 1,
+                  "numerator": -1
+                },
+                "ordered_c_pair": [
+                  [
+                    "R",
+                    "B",
+                    "d0"
+                  ],
+                  [
+                    "d1",
+                    "A",
+                    "S"
+                  ]
+                ]
+              },
+              {
+                "channel": "X",
+                "normalized_basis_key": "64c38a8b191b5e8efe85eee1d346cff2fc26f90726a231c5cf9300f288193391",
+                "normalized_coefficient": {
+                  "denominator": 1,
+                  "numerator": -1
+                },
+                "ordered_c_pair": [
+                  [
+                    "B",
+                    "A",
+                    "d0"
+                  ],
+                  [
+                    "d1",
+                    "R",
+                    "S"
+                  ]
+                ]
+              }
+            ],
+            "relation_sha256": "b05a29b9ed4223fb8ceea9ac609f2f8d86a005b2366be5d818ce6554775853b5",
+            "relation_status": "NONTRIVIAL_IHX_RELATION_CONTAINING_SOURCE",
+            "source_basis_key": "0d885935e02ad25177e0a8dba9e72e2c5f71eafcdeb3e846910b47624414b53a"
+          }
+        ],
+        "start_keys": [
+          "0d885935e02ad25177e0a8dba9e72e2c5f71eafcdeb3e846910b47624414b53a",
+          "20dbfd7bb96c9ef0f509256a5e34cc6d4989d60bcd2515231b1dd58988a352f8",
+          "64c38a8b191b5e8efe85eee1d346cff2fc26f90726a231c5cf9300f288193391"
+        ]
+      },
+      "relation_matrix_rank": 1,
+      "rewrite_rules": [
+        {
+          "all_replacement_keys_strictly_smaller": true,
+          "pivot_basis_key": "20dbfd7bb96c9ef0f509256a5e34cc6d4989d60bcd2515231b1dd58988a352f8",
+          "pivot_canonical_graph_serialization": "{\"canonical_tensors\":[{\"indices\":[\"d0\",\"d1\"],\"kind\":\"kappa_inverse\",\"variance\":\"upper\"},{\"kind\":\"c\",\"ordered_indices\":[\"A\",\"S\",\"d0\"]},{\"kind\":\"c\",\"ordered_indices\":[\"B\",\"R\",\"d1\"]}],\"free_index_order\":[\"A\",\"B\",\"R\",\"S\"]}",
+          "replacement": [
+            {
+              "basis_key": "0d885935e02ad25177e0a8dba9e72e2c5f71eafcdeb3e846910b47624414b53a",
+              "coefficient": {
+                "denominator": 1,
+                "numerator": 1
+              }
+            },
+            {
+              "basis_key": "64c38a8b191b5e8efe85eee1d346cff2fc26f90726a231c5cf9300f288193391",
+              "coefficient": {
+                "denominator": 1,
+                "numerator": -1
+              }
+            }
+          ],
+          "replacement_canonical_graph_serializations": [
+            {
+              "basis_key": "64c38a8b191b5e8efe85eee1d346cff2fc26f90726a231c5cf9300f288193391",
+              "canonical_graph_serialization": "{\"canonical_tensors\":[{\"indices\":[\"d0\",\"d1\"],\"kind\":\"kappa_inverse\",\"variance\":\"upper\"},{\"kind\":\"c\",\"ordered_indices\":[\"A\",\"B\",\"d0\"]},{\"kind\":\"c\",\"ordered_indices\":[\"R\",\"S\",\"d1\"]}],\"free_index_order\":[\"A\",\"B\",\"R\",\"S\"]}"
+            },
+            {
+              "basis_key": "0d885935e02ad25177e0a8dba9e72e2c5f71eafcdeb3e846910b47624414b53a",
+              "canonical_graph_serialization": "{\"canonical_tensors\":[{\"indices\":[\"d0\",\"d1\"],\"kind\":\"kappa_inverse\",\"variance\":\"upper\"},{\"kind\":\"c\",\"ordered_indices\":[\"A\",\"R\",\"d0\"]},{\"kind\":\"c\",\"ordered_indices\":[\"B\",\"S\",\"d1\"]}],\"free_index_order\":[\"A\",\"B\",\"R\",\"S\"]}"
+            }
+          ]
+        }
+      ],
+      "schema": "step6.color_jacobi.normal_form.v1",
+      "termination_order": "DESCENDING_LEXICOGRAPHIC_CANONICAL_GRAPH_SERIALIZATION;EACH_RHS_KEY_IS_STRICTLY_SMALLER_THAN_ITS_PIVOT",
+      "zero_in_jacobi_quotient": true
+    },
+    "metric_contraction": {
+      "input": [
+        {
+          "kind": "c",
+          "ordered_indices": [
+            "A",
+            "B",
+            "x"
+          ]
+        },
+        {
+          "kind": "c",
+          "ordered_indices": [
+            "x",
+            "R",
+            "u"
+          ]
+        },
+        {
+          "indices": [
+            "u",
+            "v"
+          ],
+          "kind": "kappa",
+          "variance": "lower"
+        },
+        {
+          "indices": [
+            "v",
+            "S"
+          ],
+          "kind": "kappa_inverse",
+          "variance": "upper"
+        }
+      ],
+      "metric_rewrite_count": 1,
+      "normalization_coefficient": {
+        "denominator": 1,
+        "numerator": 1
+      },
+      "normalized": {
+        "basis_key": "be74fdcea30feb466b4f5011d41641d739630cb2e8d850839e886d8657fb9217",
+        "canonical_graph_serialization": "{\"canonical_tensors\":[{\"kind\":\"c\",\"ordered_indices\":[\"A\",\"B\",\"d0\"]},{\"kind\":\"c\",\"ordered_indices\":[\"R\",\"S\",\"d0\"]}],\"free_index_order\":[\"A\",\"B\",\"R\",\"S\"]}",
+        "canonical_tensors": [
+          {
+            "kind": "c",
+            "ordered_indices": [
+              "A",
+              "B",
+              "d0"
+            ]
+          },
+          {
+            "kind": "c",
+            "ordered_indices": [
+              "R",
+              "S",
+              "d0"
+            ]
+          }
+        ],
+        "free_index_order": [
+          "A",
+          "B",
+          "R",
+          "S"
+        ]
+      }
+    }
+  },
+  "input_firewall": {
+    "accepted_upstream_schema": "step6.color_tensor.v1",
+    "allowed_tensor_nodes": [
+      "c",
+      "kappa",
+      "kappa_inverse"
+    ],
+    "external_target_read": false,
+    "review_result_read": false
+  },
+  "schema": "step6.color_jacobi.v1",
+  "stage": "EXACT_COLOR_METRIC_ANTISYMMETRY_JACOBI_QUOTIENT",
+  "status": "PROPOSAL_ONLY_BLOCKED_ON_STEP5_ACCEPTANCE",
+  "terminal_blocks": {
+    "UV_pole": null,
+    "anomaly_coefficient": null,
+    "external_target_comparison": null,
+    "integral": null,
+    "numerator": null,
+    "status": "OUT_OF_SCOPE_NO_PHYSICS_COEFFICIENT_CLAIM"
+  }
+}

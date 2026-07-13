@@ -4795,7 +4795,7 @@
     },
     "grassmann_oracle": {
       "path": "scripts/step6_symbolic_grassmann_oracle.py",
-      "sha256": "8cd8c2bb1acdccd38843d6051811303fa1bf9c200b8e14efdbe562c8c637c8ab"
+      "sha256": "3dade75c7ca1bdc464df66343f22068456dee5f8bde6d28ed4c7e244e5841720"
     }
   },
   "normalized_difference_delta": {
@@ -5394,7 +5394,7 @@
     ],
     "reproducing_identity": "sum_t DeltaCoeff[s,t]*M[t,u]=delta[s,u]"
   },
-  "payload_sha256": "ffcd3b94b637461f823aa7eab283134aeed382b71049caed13d65b070b6def31",
+  "payload_sha256": "c5c82bd14306b0c10f00088c5e08e321a49260a7a4a379638bd32f45923c0bab",
   "schema": "step6.coefficient_tensor_program_ir.v1",
   "spinor_expansion": {
     "dotted": "F^dot+=F_dot-; F^dot-=-F_dot+",

@@ -415,10 +415,12 @@ def _explicit_apply_primitive(terms: Sequence[Any], primitive: str) -> tuple[Any
                     factor.parity ^ 1,
                     differentiated,
                     (primitive,) + factor.derivative_word,
+                    factor.coefficient_parity,
                 )
+                sign_exponent = prefix_parity ^ factor.coefficient_parity
                 emitted.append(
                     oracle.ProductTerm(
-                        term.coefficient * (-1 if prefix_parity else 1),
+                        term.coefficient * (-1 if sign_exponent else 1),
                         term.factors[:position] + (replacement,) + term.factors[position + 1 :],
                     )
                 )
@@ -870,6 +872,7 @@ def _program_leaves(
             momentum_from_vector(binding_by_port[port_id]["all_incoming_leaf_momentum_vector"]),
             0,
             oracle.Exterior.basis(mask),
+            coefficient_parity=coefficient_parity(mask),
         )
         for port_id, mask in zip(program["port_order"], basis_indices)
     }

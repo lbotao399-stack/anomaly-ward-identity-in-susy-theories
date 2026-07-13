@@ -1,0 +1,441 @@
+{
+  "DRED_performed": false,
+  "IBP_integral_reduction_performed": false,
+  "UV_pole": null,
+  "endpoint_transfer_rule": "D_target*delta=-D_source*delta",
+  "global_join_key": {
+    "fixed_edge_pairing_order": [
+      {
+        "edge_id": "e_AI",
+        "source_coefficient_id": "A::S3_MINUS.1.2.L.TildeW_1.TildeGamma_1.v1",
+        "target_coefficient_id": "I::I2.L.1.flat.W_1.Gamma_1.v1"
+      },
+      {
+        "edge_id": "e_IB",
+        "source_coefficient_id": "I::I2.R.1.flat.W_1.Gamma_1.v1",
+        "target_coefficient_id": "B::S3_MINUS.1.2.L.TildeW_1.TildeGamma_1.v1"
+      },
+      {
+        "edge_id": "e_CA",
+        "source_coefficient_id": "C::S4_MINUS.1.3.R.TildeW_3.TildeGamma_3.v2",
+        "target_coefficient_id": "A::S3_MINUS.1.2.R.TildeW_2.TildeGamma_2.v1"
+      },
+      {
+        "edge_id": "e_BC",
+        "source_coefficient_id": "B::S3_MINUS.1.2.R.TildeW_2.TildeGamma_2.v1",
+        "target_coefficient_id": "C::S4_MINUS.1.3.R.TildeW_3.TildeGamma_3.v3"
+      },
+      {
+        "edge_id": "e_BA",
+        "source_coefficient_id": "B::S3_MINUS.1.2.R.TildeW_2.TildeGamma_2.v2",
+        "target_coefficient_id": "A::S3_MINUS.1.2.R.TildeW_2.TildeGamma_2.v2"
+      }
+    ],
+    "global_left_coefficient_word": [
+      {
+        "basis_index": 15,
+        "coefficient_id": "I::I2.L.1.flat.W_1.Gamma_1.v1",
+        "parity": 0,
+        "position": 0
+      },
+      {
+        "basis_index": 0,
+        "coefficient_id": "I::I2.R.1.flat.W_1.Gamma_1.v1",
+        "parity": 0,
+        "position": 1
+      },
+      {
+        "basis_index": 0,
+        "coefficient_id": "A::S3_MINUS.1.2.L.TildeW_1.TildeGamma_1.v1",
+        "parity": 0,
+        "position": 2
+      },
+      {
+        "basis_index": 11,
+        "coefficient_id": "A::S3_MINUS.1.2.R.TildeW_2.TildeGamma_2.v1",
+        "parity": 1,
+        "position": 3
+      },
+      {
+        "basis_index": 4,
+        "coefficient_id": "A::S3_MINUS.1.2.R.TildeW_2.TildeGamma_2.v2",
+        "parity": 1,
+        "position": 4
+      },
+      {
+        "basis_index": 15,
+        "coefficient_id": "B::S3_MINUS.1.2.L.TildeW_1.TildeGamma_1.v1",
+        "parity": 0,
+        "position": 5
+      },
+      {
+        "basis_index": 4,
+        "coefficient_id": "B::S3_MINUS.1.2.R.TildeW_2.TildeGamma_2.v1",
+        "parity": 1,
+        "position": 6
+      },
+      {
+        "basis_index": 11,
+        "coefficient_id": "B::S3_MINUS.1.2.R.TildeW_2.TildeGamma_2.v2",
+        "parity": 1,
+        "position": 7
+      },
+      {
+        "basis_index": 4,
+        "coefficient_id": "C::S4_MINUS.1.3.R.TildeW_3.TildeGamma_3.v2",
+        "parity": 1,
+        "position": 8
+      },
+      {
+        "basis_index": 11,
+        "coefficient_id": "C::S4_MINUS.1.3.R.TildeW_3.TildeGamma_3.v3",
+        "parity": 1,
+        "position": 9
+      }
+    ],
+    "join_key_hash": "03d8918568a45f1257e59df87e9e0e10791697a96123fc0ef15dc337f5f899e2",
+    "ordered_local_amplitude_option_ids": [
+      "direct::I::I2_direct_001::BQ001::P001",
+      "direct::A::S3_MINUS_1_2::BQ001::P001",
+      "direct::B::S3_MINUS_1_2::BQ001::P001",
+      "direct::C::S4_MINUS_1_3::BQ001::P001"
+    ],
+    "parent_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4::direct::A000000",
+    "parent_vertex_order": [
+      "I",
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  "ibp_rule": "integral (D F)G=-(-1)^|F| integral F(D G)",
+  "left_coefficient_order": true,
+  "mixed_anticommutator": "{D_a,barD_dota}=-2*i*p_(a,dota)",
+  "phase_execution": [
+    {
+      "phase": "SCOPE_EXPANSION",
+      "status": "INPUT_ALREADY_EXACTLY_EXPANDED"
+    },
+    {
+      "phase": "ENDPOINT_CANONICALIZATION",
+      "status": "EXECUTED"
+    },
+    {
+      "phase": "PIVOTED_IBP",
+      "status": "EXECUTED"
+    },
+    {
+      "phase": "PRIMITIVE_NORMAL_ORDERING",
+      "status": "EXECUTED"
+    },
+    {
+      "phase": "PROJECTOR_REDUCTION",
+      "status": "NO_UNDECLARED_PROJECTOR_REWRITE"
+    },
+    {
+      "phase": "EXTERNAL_CHIRALITY",
+      "status": "EXECUTED"
+    },
+    {
+      "phase": "GRASSMANN_SATURATION",
+      "status": "CLASSIFIED_BY_EXACT_WORD"
+    },
+    {
+      "phase": "TYPED_EDGE_COLLAPSE",
+      "status": "EXECUTED_EXACT_R_SQUARE_ONLY"
+    }
+  ],
+  "program_hash": "d0e01f105a81c67aef427551417b05a103e08796ca40c97b9b9e6a21739097b0",
+  "program_id": "PHYSICAL_RANK0_FIXED_ASSIGNMENT_I2_PORT_WORD",
+  "program_kind": "GLOBAL_NUMERATOR",
+  "result_hash": "932d319d6170dae06aaae9b17e9dc8e232ba0bef7b8bfafc966108f0d14d8bc3",
+  "schema_version": "step6.edge_tagged_dalgebra_result.v1",
+  "terms": [
+    {
+      "classifications": [
+        "D_ALGEBRA_REMAINDER"
+      ],
+      "collapsed_edges": [],
+      "external_derivative_tokens": [],
+      "ordered_tokens": [
+        {
+          "carrier": "PROPAGATOR_DELTA",
+          "derivative_kind": "BAR_D",
+          "endpoint_id": "I::I2.R.1.flat.W_1.Gamma_1.v1",
+          "operator_parity": 1,
+          "spinor_component": "dot+",
+          "token_id": "I.branch0.I2.R.1.flat.W_1.Gamma_1.v1.d1"
+        },
+        {
+          "carrier": "PROPAGATOR_DELTA",
+          "derivative_kind": "D",
+          "endpoint_id": "I::I2.R.1.flat.W_1.Gamma_1.v1",
+          "operator_parity": 1,
+          "spinor_component": "+",
+          "token_id": "I.branch0.I2.R.1.flat.W_1.Gamma_1.v1.d3"
+        }
+      ],
+      "polynomial": [
+        {
+          "factor": {
+            "domain": "Q(i)",
+            "im": "-1/32",
+            "re": "0"
+          },
+          "monomial": [
+            {
+              "exponent": 1,
+              "symbol": "P_pm"
+            }
+          ]
+        },
+        {
+          "factor": {
+            "domain": "Q(i)",
+            "im": "1/32",
+            "re": "0"
+          },
+          "monomial": [
+            {
+              "exponent": 1,
+              "symbol": "k_pm"
+            }
+          ]
+        }
+      ],
+      "provenance": [
+        {
+          "branch_id": "I_SCOPE_BRANCH_0_E_IB_SOURCE_FACTOR",
+          "ledger": [
+            {
+              "details": {
+                "same_endpoint": true
+              },
+              "factor": {
+                "domain": "Q(i)",
+                "im": "0",
+                "re": "-1"
+              },
+              "kind": "PRIMITIVE_REORDER",
+              "ledger_id": "I_SCOPE_BRANCH_0_E_IB_SOURCE_FACTOR:SWAP:0:0",
+              "phase": "PRIMITIVE_NORMAL_ORDERING",
+              "rule_id": "odd_primitive_swap",
+              "token_ids": [
+                "I.branch0.I2.R.1.flat.W_1.Gamma_1.v1.d0",
+                "I.branch0.I2.R.1.flat.W_1.Gamma_1.v1.d1"
+              ]
+            },
+            {
+              "details": {
+                "dotted": "dot-",
+                "endpoint_id": "I::I2.R.1.flat.W_1.Gamma_1.v1",
+                "momentum_basis": [
+                  "k",
+                  "l",
+                  "P",
+                  "p1",
+                  "p2"
+                ],
+                "momentum_coefficients": [
+                  1,
+                  0,
+                  -1,
+                  0,
+                  0
+                ],
+                "undotted": "+"
+              },
+              "factor": {
+                "domain": "Q(i)",
+                "im": "-2",
+                "re": "0"
+              },
+              "kind": "MIXED_ANTICOMMUTATOR",
+              "ledger_id": "I_SCOPE_BRANCH_0_E_IB_SOURCE_FACTOR:MIXED:1:1",
+              "phase": "PRIMITIVE_NORMAL_ORDERING",
+              "rule_id": "{D_a,barD_dota}=-2*i*p_(a,dota)",
+              "token_ids": [
+                "I.branch0.I2.R.1.flat.W_1.Gamma_1.v1.d0",
+                "I.branch0.I2.R.1.flat.W_1.Gamma_1.v1.d2"
+              ]
+            }
+          ]
+        }
+      ],
+      "remaining_denominator_edges": [
+        "e_AI",
+        "e_BA",
+        "e_BC",
+        "e_CA",
+        "e_IB"
+      ]
+    },
+    {
+      "classifications": [
+        "D_ALGEBRA_REMAINDER"
+      ],
+      "collapsed_edges": [],
+      "external_derivative_tokens": [],
+      "ordered_tokens": [
+        {
+          "carrier": "PROPAGATOR_DELTA",
+          "derivative_kind": "BAR_D",
+          "endpoint_id": "I::I2.R.1.flat.W_1.Gamma_1.v1",
+          "operator_parity": 1,
+          "spinor_component": "dot-",
+          "token_id": "I.branch0.I2.R.1.flat.W_1.Gamma_1.v1.d2"
+        },
+        {
+          "carrier": "PROPAGATOR_DELTA",
+          "derivative_kind": "D",
+          "endpoint_id": "I::I2.R.1.flat.W_1.Gamma_1.v1",
+          "operator_parity": 1,
+          "spinor_component": "+",
+          "token_id": "I.branch0.I2.R.1.flat.W_1.Gamma_1.v1.d3"
+        }
+      ],
+      "polynomial": [
+        {
+          "factor": {
+            "domain": "Q(i)",
+            "im": "1/32",
+            "re": "0"
+          },
+          "monomial": [
+            {
+              "exponent": 1,
+              "symbol": "P_pp"
+            }
+          ]
+        },
+        {
+          "factor": {
+            "domain": "Q(i)",
+            "im": "-1/32",
+            "re": "0"
+          },
+          "monomial": [
+            {
+              "exponent": 1,
+              "symbol": "k_pp"
+            }
+          ]
+        }
+      ],
+      "provenance": [
+        {
+          "branch_id": "I_SCOPE_BRANCH_0_E_IB_SOURCE_FACTOR",
+          "ledger": [
+            {
+              "details": {
+                "dotted": "dot+",
+                "endpoint_id": "I::I2.R.1.flat.W_1.Gamma_1.v1",
+                "momentum_basis": [
+                  "k",
+                  "l",
+                  "P",
+                  "p1",
+                  "p2"
+                ],
+                "momentum_coefficients": [
+                  1,
+                  0,
+                  -1,
+                  0,
+                  0
+                ],
+                "undotted": "+"
+              },
+              "factor": {
+                "domain": "Q(i)",
+                "im": "-2",
+                "re": "0"
+              },
+              "kind": "MIXED_ANTICOMMUTATOR",
+              "ledger_id": "I_SCOPE_BRANCH_0_E_IB_SOURCE_FACTOR:MIXED:0:0",
+              "phase": "PRIMITIVE_NORMAL_ORDERING",
+              "rule_id": "{D_a,barD_dota}=-2*i*p_(a,dota)",
+              "token_ids": [
+                "I.branch0.I2.R.1.flat.W_1.Gamma_1.v1.d0",
+                "I.branch0.I2.R.1.flat.W_1.Gamma_1.v1.d1"
+              ]
+            }
+          ]
+        }
+      ],
+      "remaining_denominator_edges": [
+        "e_AI",
+        "e_BA",
+        "e_BC",
+        "e_CA",
+        "e_IB"
+      ]
+    }
+  ],
+  "two_loop_coefficient": null,
+  "zero_terms": [
+    {
+      "branch_id": "I_SCOPE_BRANCH_0_E_IB_SOURCE_FACTOR",
+      "classification": "NILPOTENT_ZERO",
+      "ledger": [
+        {
+          "details": {
+            "same_endpoint": true
+          },
+          "factor": {
+            "domain": "Q(i)",
+            "im": "0",
+            "re": "-1"
+          },
+          "kind": "PRIMITIVE_REORDER",
+          "ledger_id": "I_SCOPE_BRANCH_0_E_IB_SOURCE_FACTOR:SWAP:0:0",
+          "phase": "PRIMITIVE_NORMAL_ORDERING",
+          "rule_id": "odd_primitive_swap",
+          "token_ids": [
+            "I.branch0.I2.R.1.flat.W_1.Gamma_1.v1.d0",
+            "I.branch0.I2.R.1.flat.W_1.Gamma_1.v1.d1"
+          ]
+        },
+        {
+          "details": {
+            "same_endpoint": true
+          },
+          "factor": {
+            "domain": "Q(i)",
+            "im": "0",
+            "re": "-1"
+          },
+          "kind": "PRIMITIVE_REORDER",
+          "ledger_id": "I_SCOPE_BRANCH_0_E_IB_SOURCE_FACTOR:SWAP:1:1",
+          "phase": "PRIMITIVE_NORMAL_ORDERING",
+          "rule_id": "odd_primitive_swap",
+          "token_ids": [
+            "I.branch0.I2.R.1.flat.W_1.Gamma_1.v1.d0",
+            "I.branch0.I2.R.1.flat.W_1.Gamma_1.v1.d2"
+          ]
+        },
+        {
+          "details": {},
+          "factor": {
+            "domain": "Q(i)",
+            "im": "0",
+            "re": "1"
+          },
+          "kind": "NILPOTENCE",
+          "ledger_id": "I_SCOPE_BRANCH_0_E_IB_SOURCE_FACTOR:NILPOTENT:2",
+          "phase": "PRIMITIVE_NORMAL_ORDERING",
+          "rule_id": "odd_primitive_square_zero",
+          "token_ids": [
+            "I.branch0.I2.R.1.flat.W_1.Gamma_1.v1.d0",
+            "I.branch0.I2.R.1.flat.W_1.Gamma_1.v1.d3"
+          ]
+        }
+      ],
+      "rule": "D_+^2=0",
+      "token_ids": [
+        "I.branch0.I2.R.1.flat.W_1.Gamma_1.v1.d0",
+        "I.branch0.I2.R.1.flat.W_1.Gamma_1.v1.d3"
+      ]
+    }
+  ]
+}

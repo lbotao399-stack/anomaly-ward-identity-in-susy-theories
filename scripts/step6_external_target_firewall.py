@@ -48,6 +48,8 @@ DERIVATION_GENERATED_DIRS = (
     "generated/step6/full-supertensor",
     "generated/step6/global-dword-adapter",
     "generated/step6/color-jacobi",
+    "generated/step6/measure-scope-sign",
+    "generated/step6/numerator-scaling",
 )
 
 

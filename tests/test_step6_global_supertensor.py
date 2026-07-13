@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import hashlib
 import json
 from pathlib import Path
 import unittest
@@ -90,28 +89,15 @@ class Step6GlobalSupertensorTest(unittest.TestCase):
         self.assertTrue(row["external_coefficient_indices_retained_not_contracted"])
         self.assertTrue(row["open_insertion_exterior_basis_retained"])
         self.assertGreater(row["candidate_assignments_after_local_sparsity"], 0)
-        self.assertGreater(row["nonzero_global_edge_assignments"], 0)
-        self.assertTrue(row["coefficient_result_is_nonzero"])
+        self.assertEqual(row["nonzero_global_edge_assignments_before_sum"], 352)
+        self.assertTrue(row["exact_assignment_sum_cancels_to_zero"])
+        self.assertFalse(row["coefficient_result_is_nonzero"])
 
     def test_exact_row_polynomial_regression(self) -> None:
         row = self.payload["exact_row"]
-        encoded = json.dumps(
+        self.assertEqual(
             row["coefficient_exterior_momentum_polynomial"],
-            sort_keys=True,
-            separators=(",", ":"),
-        ).encode()
-        self.assertEqual(
-            hashlib.sha256(encoded).hexdigest(),
-            "ec0463f61f4d7b79ed9ccb4886ba7ff3abba72e53cb3cce29435e45680bac081",
-        )
-        self.assertEqual(
-            [
-                item["mask"]
-                for item in row["coefficient_exterior_momentum_polynomial"][
-                    "terms"
-                ]
-            ],
-            [4, 8, 13, 14],
+            {"type": "Exterior", "terms": []},
         )
 
     def test_raw_qi_edge_kernel_and_orbit_ownership_are_once(self) -> None:

@@ -377,10 +377,12 @@ class CachedDerivativeEngine:
                         factor.parity ^ 1,
                         differentiated,
                         (primitive,) + factor.derivative_word,
+                        factor.coefficient_parity,
                     )
+                    sign_exponent = prefix_parity ^ factor.coefficient_parity
                     emitted.append(
                         coefficient.oracle.ProductTerm(
-                            term.coefficient * (-1 if prefix_parity else 1),
+                            term.coefficient * (-1 if sign_exponent else 1),
                             term.factors[:position]
                             + (replacement,)
                             + term.factors[position + 1 :],
@@ -674,7 +676,8 @@ def exact_selected_row_slice(
             vertex: len(local_tensors[vertex]) for vertex in parent.vertex_order
         },
         "candidate_assignments_after_local_sparsity": tested_assignments,
-        "nonzero_global_edge_assignments": nonzero_assignments,
+        "nonzero_global_edge_assignments_before_sum": nonzero_assignments,
+        "exact_assignment_sum_cancels_to_zero": not bool(total),
         "flat_assignment_count_not_materialized": 16**5,
         "assignment_storage_policy": "GENERATOR_PLUS_SPARSE_VERTEX_LOOKUP_NO_ROW_MATERIALIZATION",
         "coefficient_exterior_momentum_polynomial": serialize_value(total),
@@ -793,6 +796,10 @@ def exact_checks(payload: Mapping[str, Any]) -> dict[str, bool]:
             "external_coefficient_indices_retained_not_contracted"
         ],
         "open_exterior_retained": row["open_insertion_exterior_basis_retained"],
+        "corrected_exact_row_cancels": row[
+            "exact_assignment_sum_cancels_to_zero"
+        ]
+        and not row["coefficient_result_is_nonzero"],
         "no_extra_bracket_i": row["color"]["no_extra_bracket_i"],
         "free_colors_ABRS": row["color"]["free_index_order"]
         == ["A", "B", "R", "S"],
@@ -842,7 +849,11 @@ def render_markdown(payload: Mapping[str, Any], audit: Mapping[str, Any]) -> str
             "",
             f"Nonzero local tensor entries: `{row['local_sparse_tensor_nonzero_counts']}`.",
             "",
-            f"Nonzero global assignments: `{row['nonzero_global_edge_assignments']}`.",
+            "$$",
+            "\\sum_{\\mathbf s\\in\\mathcal S_{352}}\\mathcal T(\\mathbf s)=0.",
+            "$$",
+            "",
+            "The 352 locally nonzero edge assignments cancel after the exact graded sum.",
             "",
             f"Audit: `{audit['passed']}/{audit['total']}`.",
             "",

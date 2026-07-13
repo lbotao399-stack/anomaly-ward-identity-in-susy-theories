@@ -1,0 +1,31 @@
+{
+  "checks": {
+    "actual_complete_port_word_executed": true,
+    "all_incoming_momenta_close": true,
+    "coefficient_left_measure_scope_identity": true,
+    "coefficient_parity_field_is_authoritative": true,
+    "complete_global_equality_fail_closed": true,
+    "composite_source_preserved": true,
+    "direct_rank_zero_physical_parent": true,
+    "dword_oracle_operator_equality": true,
+    "external_p1_p2_preserved": true,
+    "external_result_firewall": true,
+    "five_graphir_edges": true,
+    "five_pairings_cover_word_exactly": true,
+    "frozen_assignment_survives": true,
+    "grammar_words_preserved": true,
+    "left_parities_match_basis_popcount": true,
+    "no_numerical_sampling": true,
+    "no_reduction_pole_or_coefficient_claim": true,
+    "payload_hash_recomputes": true,
+    "same_assigned_basis_equality": true,
+    "scope_branches_regenerated": true,
+    "ten_internal_left_coefficients": true
+  },
+  "failed": 0,
+  "failures": [],
+  "passed": 21,
+  "payload_sha256": "c70fc38ab155ad7b58f5b8c046b7fe5f1b68cce37c88fbac6d763b7b59c443c3",
+  "schema": "step6.global_dword_adapter.audit.v1",
+  "status": "PASS"
+}

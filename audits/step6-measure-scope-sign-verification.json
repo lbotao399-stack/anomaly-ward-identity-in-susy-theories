@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "active_counterexamples_close": true,
+    "active_frozen_rows_close": true,
+    "frozen_words_are_even": true,
+    "legacy_frozen_accidental_minus_reproduced": true,
+    "legacy_sign_is_assignment_dependent": true,
+    "single_leaf_left_rule": true
+  },
+  "failed": 0,
+  "passed": 6,
+  "schema": "step6.measure_scope_sign_audit.verification.v1",
+  "status": "PASS"
+}
