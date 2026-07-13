@@ -617,8 +617,8 @@ def pole_ledger() -> dict[str, object]:
             "(-tilde_delta)*T*p = -(-2*epsilon)*p_+ = +2*epsilon*p_+",
             "[g^2/(128*pi^2*epsilon)]*[2*epsilon]=g^2/(64*pi^2)",
         ],
-        "anomaly_coefficient_fixed_orientation": "+g^2/(64*pi^2)",
-        "anomaly_coefficients": {
+        "conditional_candidate_coefficient_fixed_orientation": "+g^2/(64*pi^2)",
+        "conditional_candidate_coefficients": {
             "DIRECT": "+g^2/(64*pi^2)",
             "REFLECTED": "-g^2/(64*pi^2)",
         },
@@ -628,7 +628,7 @@ def pole_ledger() -> dict[str, object]:
             "-c_{BCE}c_{ACD}*TildeW^E*X^D",
             "X is even, so TildeW^E*X^D=X^D*TildeW^E",
         ],
-        "two_orientation_single_color_tensor": (
+        "conditional_two_orientation_single_color_tensor": (
             "g^2/(64*pi^2)*c_{ACD}c_{BCE}*"
             "(i*p_+^dot_alpha)*[TildeW_dot_alpha^D*X^E-"
             "X^D*TildeW_dot_alpha^E]"
@@ -694,6 +694,8 @@ def markdown_report(payload: dict[str, object]) -> str:
     lines = [
         "# Step 5A primitive WW seed",
         "",
+        "Legacy specialized WW ledger; not a certificate from the generic typed $D$-compiler.",
+        "",
         "$$",
         r"r_0=k,\qquad r_1=k+q,\qquad r_2=k+p+q.",
         "$$",
@@ -708,7 +710,7 @@ def markdown_report(payload: dict[str, object]) -> str:
         r"\left(-\frac{g^2}{8}\right)\left(-\frac12\right)=\frac{g^2}{16}.",
         "$$",
         "",
-        "Two placements and four endpoint assignments give",
+        "In this specialized ledger, two placements and four endpoint assignments give",
         "",
         "$$",
         r"\Gamma_{\triangle}^{A|B}=\frac{g^2}{8}c_{ACD}c_{BCE}\widetilde W^D_{\dot\alpha}(q)(ip^n)X^E(p)",
@@ -725,13 +727,15 @@ def markdown_report(payload: dict[str, object]) -> str:
         r"(\sigma_E^m\bar\sigma_E^n\sigma_E^r)_+{}^{\dot\alpha}\widehat g_{mr}.",
         "$$",
         "",
+        "Aggregate Schwinger--Dyson metric representative; the explicit contact basis is open:",
+        "",
         "$$",
-        r"\Gamma_{C,\mathrm{pole}}^{A|B}=-\frac{g^2}{128\pi^2\epsilon}c_{ACD}c_{BCE}\widetilde W^D_{\dot\alpha}(q)(ip^n)X^E(p)",
+        r"\left.\Gamma_{C,\mathrm{pole}}^{A|B}\right|_{\mathrm{aggregate\ SD}}=-\frac{g^2}{128\pi^2\epsilon}c_{ACD}c_{BCE}\widetilde W^D_{\dot\alpha}(q)(ip^n)X^E(p)",
         r"(\sigma_E^m\bar\sigma_E^n\sigma_E^r)_+{}^{\dot\alpha}\delta^{(4)}_{mr}.",
         "$$",
         "",
         "$$",
-        r"\Gamma_{\triangle+C,\mathrm{pole}}^{A|B}=\frac{g^2}{128\pi^2\epsilon}c_{ACD}c_{BCE}\widetilde W^D_{\dot\alpha}(q)(ip^n)X^E(p)",
+        r"\left.\Gamma_{\triangle+C,\mathrm{pole}}^{A|B}\right|_{\mathrm{aggregate\ SD}}=\frac{g^2}{128\pi^2\epsilon}c_{ACD}c_{BCE}\widetilde W^D_{\dot\alpha}(q)(ip^n)X^E(p)",
         r"(\sigma_E^m\bar\sigma_E^n\sigma_E^r)_+{}^{\dot\alpha}(\widehat\delta-\delta_{(4)})_{mr}.",
         "$$",
         "",
@@ -740,17 +744,17 @@ def markdown_report(payload: dict[str, object]) -> str:
         "$$",
         "",
         "$$",
-        r"\Gamma_{\mathrm{anom}}^{A|B}=\frac{g^2}{64\pi^2}c_{ACD}c_{BCE}\widetilde W^D_{\dot\alpha}(q)(ip_+{}^{\dot\alpha})X^E(p).",
+        r"\left.\Gamma_{\mathrm{candidate}}^{A|B}\right|_{\mathrm{CONDITIONAL\_ON\_CONTACT\_ORBIT\_SUM}}=\frac{g^2}{64\pi^2}c_{ACD}c_{BCE}\widetilde W^D_{\dot\alpha}(q)(ip_+{}^{\dot\alpha})X^E(p).",
         "$$",
         "",
         "$$",
-        r"\Gamma_{\mathrm{anom}}^{B|A}=-\frac{g^2}{64\pi^2}c_{BCD}c_{ACE}\widetilde W^D_{\dot\alpha}(q)(ip_+{}^{\dot\alpha})X^E(p).",
+        r"\left.\Gamma_{\mathrm{candidate}}^{B|A}\right|_{\mathrm{CONDITIONAL\_ON\_CONTACT\_ORBIT\_SUM}}=-\frac{g^2}{64\pi^2}c_{BCD}c_{ACE}\widetilde W^D_{\dot\alpha}(q)(ip_+{}^{\dot\alpha})X^E(p).",
         "$$",
         "",
         r"In the reflected term relabel $D\leftrightarrow E$; since $|X|=0$:",
         "",
         "$$",
-        r"\Gamma_{\mathrm{anom}}^{A|B}+\Gamma_{\mathrm{anom}}^{B|A}",
+        r"\left.\Gamma_{\mathrm{candidate}}^{A|B}+\Gamma_{\mathrm{candidate}}^{B|A}\right|_{\mathrm{CONDITIONAL\_ON\_CONTACT\_ORBIT\_SUM}}",
         r"=\frac{g^2}{64\pi^2}c_{ACD}c_{BCE}(ip_+{}^{\dot\alpha})",
         r"\left[\widetilde W^D_{\dot\alpha}X^E-X^D\widetilde W^E_{\dot\alpha}\right].",
         "$$",
@@ -759,7 +763,7 @@ def markdown_report(payload: dict[str, object]) -> str:
         "",
     ]
     for orientation in ("DIRECT", "REFLECTED"):
-        lines.extend((f"## {orientation}", "", "| trace | $D_-$ | $\\bar D$ edge | $D$ edge | endpoint sign | external Koszul sign | numerator | triangle pole | contact pole |", "|---|---|---|---|---:|---:|---|---|---|"))
+        lines.extend((f"## {orientation}", "", "| trace | $D_-$ | $\\bar D$ edge | $D$ edge | endpoint sign | external Koszul sign | numerator | triangle pole | aggregate SD contact pole |", "|---|---|---|---|---:|---:|---|---|---|"))
         for row in payload["traces"][orientation]:
             lines.append(
                 f"| {row['trace_id']} | {row['D_minus_placement']} | "
@@ -952,14 +956,16 @@ def build_audit(payload: dict[str, object]) -> dict[str, object]:
             "metric_contact_children": 16,
             "triangle_poles": payload["poles"]["triangle_poles"],
             "contact_poles": payload["poles"]["contact_poles"],
-            "anomaly_coefficient_fixed_orientation": payload["poles"][
-                "anomaly_coefficient_fixed_orientation"
+            "conditional_candidate_coefficient_fixed_orientation": payload["poles"][
+                "conditional_candidate_coefficient_fixed_orientation"
             ],
-            "two_orientation_single_color_tensor": payload["poles"][
-                "two_orientation_single_color_tensor"
+            "conditional_two_orientation_single_color_tensor": payload["poles"][
+                "conditional_two_orientation_single_color_tensor"
             ],
         },
-        "unresolved_non_BV_rule": None,
+        "unresolved_non_BV_rule": (
+            "BASIS_RESOLVED_SD_CONTACT_ORBIT_AND_TYPED_D_PHASE_SEQUENCE"
+        ),
         "contract_sha256": payload["contract_sha256"],
     }
 

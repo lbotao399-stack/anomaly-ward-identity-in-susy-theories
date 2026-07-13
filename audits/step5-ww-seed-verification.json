@@ -32,11 +32,12 @@
     "row_pole_sum_is_orientation_pole": true,
     "triangle_pole_is_separate": true
   },
-  "contract_sha256": "92d72b88c5afd659f0c2099a0a5b661365a2b0a3d359c2a82aff5ff5c50241f6",
+  "contract_sha256": "dd06ff2ecf0d78605282cbb505daf16797ce859650fc8d398405031f3acdb002",
   "derived": {
     "D_algebra_traces": 16,
-    "anomaly_coefficient_fixed_orientation": "+g^2/(64*pi^2)",
     "collapsed_children": 6,
+    "conditional_candidate_coefficient_fixed_orientation": "+g^2/(64*pi^2)",
+    "conditional_two_orientation_single_color_tensor": "g^2/(64*pi^2)*c_{ACD}c_{BCE}*(i*p_+^dot_alpha)*[TildeW_dot_alpha^D*X^E-X^D*TildeW_dot_alpha^E]",
     "contact_poles": {
       "DIRECT": "-g^2/(128*pi^2*epsilon)*c_{ACD}c_{BCE}*T_(mu n nu)*delta4^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)",
       "REFLECTED": "+g^2/(128*pi^2*epsilon)*c_{BCD}c_{ACE}*T_(mu n nu)*delta4^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)"
@@ -46,8 +47,7 @@
     "triangle_poles": {
       "DIRECT": "+g^2/(128*pi^2*epsilon)*c_{ACD}c_{BCE}*T_(mu n nu)*hat_delta^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)",
       "REFLECTED": "-g^2/(128*pi^2*epsilon)*c_{BCD}c_{ACE}*T_(mu n nu)*hat_delta^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)"
-    },
-    "two_orientation_single_color_tensor": "g^2/(64*pi^2)*c_{ACD}c_{BCE}*(i*p_+^dot_alpha)*[TildeW_dot_alpha^D*X^E-X^D*TildeW_dot_alpha^E]"
+    }
   },
   "schema": 1,
   "scope": "primitive WW w=0 triangle, exact endpoint traces, edge collapses, and SD aggregate metric-contact orbit",
@@ -56,5 +56,5 @@
     "checks": 31,
     "failed": 0
   },
-  "unresolved_non_BV_rule": null
+  "unresolved_non_BV_rule": "BASIS_RESOLVED_SD_CONTACT_ORBIT_AND_TYPED_D_PHASE_SEQUENCE"
 }

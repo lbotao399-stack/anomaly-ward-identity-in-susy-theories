@@ -1,0 +1,13 @@
+graph LR
+  vI["vI:COMPOSITE_INSERTION_I2_WW"]
+  vBar["vBar:BACKGROUND_CUBIC_TILDE_W"]
+  vW["vW:BACKGROUND_CUBIC_W"]
+  X_L_I_source["L_I_source:Source[nabla_-(X^A X^B)](p+q)"]
+  X_L_I_source -- "I_source{identity}" --> vI
+  X_L_bar_ext["L_bar_ext:TildeW_dot_alpha{spinor=DOTTED:dot_alpha:UP}(q)"]
+  X_L_bar_ext -- "bar_ext{identity}" --> vBar
+  X_L_W_ext["L_W_ext:W_plus{spinor=UNDOTTED:+:DOWN}(p)"]
+  X_L_W_ext -- "W_ext{identity}" --> vW
+  vI ---|"e0:kappa^(-1)*delta4theta/(k)^2(k);I_A{identity};bar_A{identity}"| vBar
+  vBar ---|"e1:kappa^(-1)*delta4theta/(k+q)^2(k+q);bar_C{identity};W_C{identity}"| vW
+  vW ---|"e2:kappa^(-1)*delta4theta/(k+p+q)^2(k+p+q);W_B{identity};I_B{identity}"| vI

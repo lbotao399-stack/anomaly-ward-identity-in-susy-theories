@@ -2,7 +2,7 @@
   "id": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
   "type": "CONTRACT_CHANGE",
   "status": "SPECIFIED",
-  "outcome": "Split Step 5 into 5A fixed-gauge perturbative FF-DRED supergraphs, 5B the Schwinger-Dyson-complete graph orbit, and 5C finite-BV density/cycles; independently complete and accept the primitive w=0 ordered WW seed before any sixteen-channel valence product is promoted to physical graphs.",
+  "outcome": "Split Step 5 into 5A fixed-gauge perturbative FF-DRED supergraphs, 5B the Schwinger-Dyson-complete graph orbit, and 5C finite-BV density/cycles; automate the notation-to-connected-supergraph-to-amplitude-to-D-algebra pipeline; independently complete and accept the primitive w=0 ordered WW seed before any sixteen-channel valence product is promoted to physical graphs.",
   "allowed_inputs": [
     "AUTHORITY.md",
     "AGENTS.md",
@@ -33,13 +33,15 @@
     "scripts/verify_superspace_1001_supergraph_reference_import.py",
     "tasks/archive/REFERENCE-IMPORT-STEP5-CHAT-WEINBERG30-001.yaml",
     "tasks/instructions/2026-07-12-step5abc-pr46-revision.md",
+    "tasks/instructions/2026-07-12-step5-automated-supergraph-pipeline.md",
+    "tasks/reviews/2026-07-12-step5-gpt-pro-architecture-audit.md",
     "ledger/proof_obligations.json",
     "tests/test_repository_policy.py",
     ".github/workflows/verify.yml"
   ],
   "forbidden_inputs": [
     "Notion content, Notion search, Notion fetch, or Notion readback",
-    "the live ChatGPT conversation or any chat other than the vendored snapshots",
+    "live ChatGPT output as mathematical authority; the frozen 2026-07-12 architecture audit is admitted only as an external gap review and supplies no formula or coefficient",
     "ChatGPT hidden reasoning, memory, browser state, or account metadata",
     "local Markdown outside this repository",
     "web pages or URLs",
@@ -66,7 +68,8 @@
       "SUPERSPACE-1001-D-ALGEBRA-EVIDENCE"
     ],
     "role": "CANDIDATE_REQUIRING_INDEPENDENT_PROJECT_REDERIVATION",
-    "source_translation_required_before_formula_adoption": true
+    "source_translation_required_before_formula_adoption": true,
+    "external_architecture_audit_role": "GAP_REVIEW_ONLY_NO_FORMULA_AUTHORITY"
   },
   "acceptance": [
     "before any loop formula, a Step-5 notation ledger fixes the Euclidean plus/minus spin frame, epsilon components, all raised and lowered spinor slots, the complex Euclidean momentum bispinor map, Fourier phase, all-incoming momentum convention, adjoint and flavor order, Grassmann normal order, and the distinction between untilded and tilded independent Euclidean fields",
@@ -77,6 +80,10 @@
     "the 5A quadratic kernel K_phys+K_gf and G_V are verified as two-sided inverses in the exact 16 by 16 Grassmann representation and in the color-tensored representation; the reference-flat measure has E_measure=0 only in 5A",
     "one physical WW parent triangle and its reflected orientation retain exact fields, colors, momenta r0=k, r1=k+q, r2=k+p+q, propagators, Wick signs, symmetry factors, and external operators in machine-readable GraphIR",
     "the graph IR renders publication-readable supergraphs and emits the exact pre-integration amplitude; the former 10432 valence requests remain explicitly non-graphs",
+    "one immutable notation schema is the sole compiler input for field statistics, chirality, spinor slots, propagator compatibility, Fourier signs, DRED spaces, derivative algebra, and exact coefficients in Q(i,sqrt2); every graph, amplitude, D-algebra trace, pole certificate, and rendered equation records its schema hash",
+    "the supergraph, amplitude, D-algebra, and integral-pole stages are separate typed compilers with deterministic canonical forms; GraphIR is Wick-complete and D-unreduced; every stage rejects unresolved symbols, disconnected Wick pairings, invalid momentum routing, ambiguous derivative scope, and unproved aggregate contact coefficients",
+    "graph coefficients are sums over labeled Wick pairings with exact expansion and external-extraction signs; typed automorphism order is an audit and is not divided into the same coefficient a second time",
+    "D-algebra uses scheduled scope, endpoint, pivoted-IBP, primitive-ordering, projector, chirality, saturation, and typed-collapse phases; a declared finite critical-pair suite is not reported as global confluence",
     "each orientation has exactly eight edge-tagged D-algebra traces from two D-minus placements and four cubic endpoint assignments; every endpoint-transfer sign, Koszul sign, mixed momentum, external-leg derivative token, propagator collapse, and typed classification is retained",
     "all nonlinear-letter, quartic, scaleless, and collapsed contact children required by the primitive WW Schwinger-Dyson orbit are emitted or proved absent at this order from typed ports",
     "the isolated-triangle and complete-contact ordinary UV poles are computed separately with no epsilon in the bare triangle numerator; the finite coefficient is accepted only from the proved metric difference hat-delta minus delta_(4)",

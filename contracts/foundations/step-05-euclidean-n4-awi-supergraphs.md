@@ -1774,6 +1774,268 @@ $$
 \tag{5.54b}
 $$
 
+## 5.12 Typed compiler contract
+
+Define one immutable notation object
+
+$$
+\mathfrak N=
+\left(
+\mathcal F,\mathcal I,\mathcal D,\mathcal P,
+\mathcal V,\mathcal M,\mathcal R_{\rm DRED}
+\right),
+\qquad
+h_{\mathfrak N}:=\operatorname{SHA256}
+\bigl(\operatorname{CanonicalJSON}(\mathfrak N)\bigr).
+\tag{5.54P1}
+$$
+
+The exact scalar and Project coefficient rings are
+
+$$
+\mathbb K
+=
+\mathbb Q[i,s]\big/(i^2+1,s^2-2),
+\qquad
+\mathbb R_{\rm Project}
+=
+\mathbb K[h,g^2,\hbar]\big/(hg^2-1).
+\tag{5.54P1a}
+$$
+
+The primitive \(WW\) seed lies in
+
+$$
+\mathbb Q(i)[h,g^2]\big/(hg^2-1)
+\subset\mathbb R_{\rm Project},
+\tag{5.54P1b}
+$$
+
+while the full \(\mathcal N=4\) grammar retains \(s=\sqrt2\) exactly.
+
+Here \(\mathcal F\) is the typed field set, \(\mathcal I\) the index spaces,
+\(\mathcal D\) the ordered derivative algebra, \(\mathcal P\) the propagator
+relation, \(\mathcal V\) the ordered vertex set, \(\mathcal M\) the Fourier and
+momentum conventions, and \(\mathcal R_{\rm DRED}\) the regulator split.  The
+three heavy symbolic compiler maps and the pole compiler are
+
+$$
+\boxed{
+\mathfrak N\xrightarrow{\ C_G\ }
+\mathfrak G\xrightarrow{\ C_A\ }
+\mathfrak A\xrightarrow{\ C_D\ }
+\mathfrak D\xrightarrow{\ C_{\rm pole}\ }
+\mathfrak P_{\rm UV}.}
+\tag{5.54P2}
+$$
+
+\(\mathfrak G\) is Wick-complete and \(D\)-unreduced: every quantum port is
+contracted once, while its superspace derivative words remain unevaluated.
+
+For a fixed insertion and ordered interaction multiset, let \(Q\) be the set
+of quantum half-edges and let
+
+$$
+\mathcal P\subset Q\times Q
+\tag{5.54P3}
+$$
+
+be the typed propagator relation.  The physical parent set is
+
+$$
+\mathcal G_{\rm phys}
+=
+\left\{
+M\subset\mathcal P:
+\begin{array}{l}
+M\text{ is a perfect matching of }Q,\\
+G(M)\text{ is connected},\\
+b_1(G(M))=|E|-|V|+1=1,\\
+P_v^{\rm in}=0\text{ at every vertex}
+\end{array}
+\right}\Big/\operatorname{Aut}_{\mathfrak N}.
+\tag{5.54P4}
+$$
+
+Consequently a valence request is not a graph:
+
+$$
+Q\text{ specified},\quad M\text{ absent}
+\quad\Longrightarrow\quad
+\texttt{VALENCE\_REQUEST\_NOT\_GRAPH}.
+\tag{5.54P5}
+$$
+
+For \(G\in\mathcal G_{\rm phys}\), let \(P\) run through the labeled Wick
+pairings with \(\operatorname{Can}(P)=G\).  Define the graph coefficient by
+
+$$
+C_G
+=
+\sum_{P:\operatorname{Can}(P)=G}
+s_{\rm Wick}(P)s_{\rm Koszul}(P)s_{\rm ext}(P)
+C_{\rm exp}(P)
+\prod_{u\in V(P)}C_u.
+\tag{5.54P5a}
+$$
+
+\(\lvert\operatorname{Aut}_{\mathfrak N}(G)\rvert\) is an independent orbit
+audit; it is not divided into (5.54P5a) a second time.  The amplitude compiler
+emits the ordered factorization
+
+$$
+\boxed{
+\mathcal A_G
+=
+C_G
+\int\prod_{j=1}^{b_1(G)}\frac{d^dk_j}{(2\pi)^d}
+\left[
+\prod_{v\in V(G)}\delta^{(d)}(P_v)\,\mathcal O_v
+\right]
+\left[
+\prod_{e\in E(G)}G_e(r_e)
+\right]
+\left[
+\prod_{x\in X(G)}\mathcal L_x(p_x)
+\right].}
+\tag{5.54P6}
+$$
+
+Every factor in (5.54P6) retains its source vertex, port, edge, ordered slot,
+momentum, and \(h_{\mathfrak N}\).  The compiler rejects
+
+$$
+\begin{gathered}
+\sum_{h\ni v}p_h\ne0,
+\qquad
+|E|-|V|+1\ne1,
+\qquad
+\exists h\in Q:\deg_M(h)\ne1,\\
+\text{undefined coefficient},
+\qquad
+\text{undefined derivative scope}.
+\end{gathered}
+\tag{5.54P7}
+$$
+
+An edge-tagged derivative word is
+
+$$
+w=c\prod_{j=1}^{N_D}
+\mathsf D_j[a_j,e_j,\partial_j]
+\prod_{f=1}^{N_F}\mathcal F_f,
+\qquad
+c\in\mathbb K.
+\tag{5.54P8}
+$$
+
+Every rewrite is stored as
+
+$$
+(w_n,R_n,\mathcal C_n,s_n,w_{n+1}),
+\qquad
+w_{n+1}=s_nR_n(w_n),
+\qquad
+s_n\in\{+1,-1\},
+\tag{5.54P9}
+$$
+
+where \(\mathcal C_n\) contains chirality, endpoint, momentum, and parity
+conditions.  Reduction is scheduled in the irreversible phase order
+
+$$
+\boxed{
+\text{scope expansion}
+\prec\text{endpoint canonicalization}
+\prec\text{pivoted IBP}
+\prec\text{primitive normal ordering}
+\prec\text{projector reduction}
+\prec\text{chirality}
+\prec\text{Grassmann saturation}
+\prec\text{typed edge collapse}.}
+\tag{5.54P10}
+$$
+
+The phase measures are
+
+$$
+\begin{aligned}
+M_1&=N_{\rm unexpanded\ scope},
+&M_2&=N_{\rm noncanonical\ endpoint},\\
+M_3&=N_{\rm derivative\ on\ active\ pivot},
+&M_4&=(N_{\rm operator\ inversion},N_D+N_{\bar D}),\\
+M_5&=N_{\rm reducible\ projector},
+&M_6&=N_{\rm applicable\ chirality\ condition},\\
+M_7&=N_{\rm unsaturated\ Grassmann\ delta},
+&M_8&=N_{\rm matched\ kinetic\ propagator\ pair}.
+\end{aligned}
+\tag{5.54P11}
+$$
+
+Each rule is admitted only in its phase and strictly lowers that phase's
+measure.  IBP and endpoint transfer are not bidirectional rewrite rules.
+
+The local operator rules are
+
+$$
+\{D_a,\bar D_{\dot b}\}=-2D_{a\dot b},
+\qquad
+D^2\bar D^2D^2=-16p_{(4)}^2D^2,
+\qquad
+\bar D^2D^2\bar D^2=-16p_{(4)}^2\bar D^2.
+\tag{5.54P12}
+$$
+
+For every registered critical pair \((R_i,R_j)\) in a finite audit suite,
+acceptance of that suite requires
+
+$$
+\operatorname{NF}(R_iR_jw)
+=
+\operatorname{NF}(R_jR_iw)
+\tag{5.54P13}
+$$
+
+symbolically.  The exact \(16\times16\) exterior-algebra representation at
+registered nonzero momenta is a regression oracle, not a polynomial-identity
+proof.  A finite registered suite does not prove global confluence; that
+status requires an exhaustive overlap certificate.  The human renderer is a
+pure map
+
+$$
+C_R:(\mathfrak N,\mathfrak G,\mathfrak A,\mathfrak D)
+\longrightarrow
+\left(
+\text{supergraph},
+\text{factorized amplitude},
+\text{rewrite ledger},
+\text{status}
+\right),
+\tag{5.54P14}
+$$
+
+and may not introduce a coefficient absent from \(\mathfrak A\) or
+\(\mathfrak D\).
+
+The pole compiler emits
+
+$$
+\mathfrak P_{\rm UV}
+=
+\left(
+d=4-2\epsilon,\,
+\omega_{\rm UV},\,
+\text{IR status},\,
+\text{loop shift},\,
+\text{tensor reduction},\,
+\operatorname{Pole}_{1/\epsilon},\,
+\text{metric space}
+\right).
+\tag{5.54P15}
+$$
+
+No graph enters an SD pole sum without this certificate.
+
 ## 5C. FINITE_BV_DENSITY_AND_CYCLES
 
 Only the following remain outside the Step-5A/5B seed calculation:

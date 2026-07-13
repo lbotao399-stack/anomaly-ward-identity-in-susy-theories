@@ -1,0 +1,560 @@
+{
+  "adapter_aliases": [
+    {
+      "derivative_factors": [],
+      "expression": "-2*g2*kappa*delta4theta/r^2",
+      "field_factors": [],
+      "name": "P_VV(r)",
+      "port_factors": [
+        "V_Q"
+      ],
+      "propagator_factors": [
+        "P_VV"
+      ],
+      "symbol_factors": [
+        "g2"
+      ],
+      "target_kind": "PROPAGATOR_EXPRESSION",
+      "tensor_factors": [
+        "kappa",
+        "delta4theta"
+      ]
+    },
+    {
+      "derivative_factors": [
+        "nabla_+"
+      ],
+      "expression": "nabla_+ W_plus",
+      "field_factors": [
+        "W_plus"
+      ],
+      "name": "X",
+      "port_factors": [],
+      "propagator_factors": [],
+      "symbol_factors": [],
+      "target_kind": "FIELD_EXPRESSION",
+      "tensor_factors": []
+    },
+    {
+      "derivative_factors": [],
+      "expression": "g4-ghat",
+      "field_factors": [],
+      "name": "gtilde",
+      "port_factors": [],
+      "propagator_factors": [],
+      "symbol_factors": [
+        "g4",
+        "ghat"
+      ],
+      "target_kind": "METRIC_EXPRESSION",
+      "tensor_factors": []
+    },
+    {
+      "derivative_factors": [],
+      "expression": "k",
+      "field_factors": [],
+      "name": "r0",
+      "port_factors": [],
+      "propagator_factors": [],
+      "symbol_factors": [
+        "k"
+      ],
+      "target_kind": "MOMENTUM_EXPRESSION",
+      "tensor_factors": []
+    },
+    {
+      "derivative_factors": [],
+      "expression": "k+q",
+      "field_factors": [],
+      "name": "r1",
+      "port_factors": [],
+      "propagator_factors": [],
+      "symbol_factors": [
+        "k",
+        "q"
+      ],
+      "target_kind": "MOMENTUM_EXPRESSION",
+      "tensor_factors": []
+    },
+    {
+      "derivative_factors": [],
+      "expression": "k+p+q",
+      "field_factors": [],
+      "name": "r2",
+      "port_factors": [],
+      "propagator_factors": [],
+      "symbol_factors": [
+        "k",
+        "p",
+        "q"
+      ],
+      "target_kind": "MOMENTUM_EXPRESSION",
+      "tensor_factors": []
+    }
+  ],
+  "derivative_rules": [
+    {
+      "conditions": [
+        "K_+=-(1/8)D_+barD2D_+"
+      ],
+      "lhs": [
+        "K_+"
+      ],
+      "rhs": [
+        {
+          "coefficient": {
+            "imag": {
+              "denominator": 1,
+              "numerator": 0
+            },
+            "real": {
+              "denominator": 8,
+              "numerator": -1
+            }
+          },
+          "ordered_derivatives": [
+            "D_+",
+            "barD2",
+            "D_+"
+          ],
+          "symbol_factors": [],
+          "tensor_factors": []
+        }
+      ]
+    },
+    {
+      "conditions": [
+        "Project plus/minus spin frame"
+      ],
+      "lhs": [
+        "D_-",
+        "D_+"
+      ],
+      "rhs": [
+        {
+          "coefficient": {
+            "imag": {
+              "denominator": 1,
+              "numerator": 0
+            },
+            "real": {
+              "denominator": 2,
+              "numerator": 1
+            }
+          },
+          "ordered_derivatives": [
+            "D2"
+          ],
+          "symbol_factors": [],
+          "tensor_factors": []
+        }
+      ]
+    },
+    {
+      "conditions": [
+        "acts on normalized Grassmann delta and is then evaluated at zero"
+      ],
+      "lhs": [
+        "D2",
+        "barD2"
+      ],
+      "rhs": [
+        {
+          "coefficient": {
+            "imag": {
+              "denominator": 1,
+              "numerator": 0
+            },
+            "real": {
+              "denominator": 1,
+              "numerator": 16
+            }
+          },
+          "ordered_derivatives": [],
+          "symbol_factors": [],
+          "tensor_factors": [
+            "delta4theta"
+          ]
+        }
+      ]
+    },
+    {
+      "conditions": [
+        "linear WW insertion"
+      ],
+      "lhs": [
+        "D_-",
+        "K_+"
+      ],
+      "rhs": [
+        {
+          "coefficient": {
+            "imag": {
+              "denominator": 1,
+              "numerator": 0
+            },
+            "real": {
+              "denominator": 16,
+              "numerator": -1
+            }
+          },
+          "ordered_derivatives": [
+            "D2",
+            "barD2",
+            "D_+"
+          ],
+          "symbol_factors": [],
+          "tensor_factors": []
+        }
+      ]
+    },
+    {
+      "conditions": [
+        "reference-flat linear quantum prepotential"
+      ],
+      "lhs": [
+        "nabla_-",
+        "K_+"
+      ],
+      "rhs": [
+        {
+          "coefficient": {
+            "imag": {
+              "denominator": 1,
+              "numerator": 0
+            },
+            "real": {
+              "denominator": 1,
+              "numerator": 1
+            }
+          },
+          "ordered_derivatives": [
+            "D_-",
+            "K_+"
+          ],
+          "symbol_factors": [],
+          "tensor_factors": []
+        }
+      ]
+    },
+    {
+      "conditions": [
+        "{D_a,barD_dot_alpha}=-2 partial_(a dot_alpha)",
+        "Fourier partial_(a dot_alpha)=+i p_(a dot_alpha)"
+      ],
+      "lhs": [
+        "D_a",
+        "barD_dot_alpha"
+      ],
+      "rhs": [
+        {
+          "coefficient": {
+            "imag": {
+              "denominator": 1,
+              "numerator": 0
+            },
+            "real": {
+              "denominator": 1,
+              "numerator": -1
+            }
+          },
+          "ordered_derivatives": [
+            "barD_dot_alpha",
+            "D_a"
+          ],
+          "symbol_factors": [],
+          "tensor_factors": []
+        },
+        {
+          "coefficient": {
+            "imag": {
+              "denominator": 1,
+              "numerator": -2
+            },
+            "real": {
+              "denominator": 1,
+              "numerator": 0
+            }
+          },
+          "ordered_derivatives": [],
+          "symbol_factors": [
+            "p"
+          ],
+          "tensor_factors": []
+        }
+      ]
+    }
+  ],
+  "derivatives": [
+    {
+      "index_space": "SCALAR",
+      "name": "D2",
+      "parity": 0
+    },
+    {
+      "index_space": "UNDOTTED",
+      "name": "D_+",
+      "parity": 1
+    },
+    {
+      "index_space": "UNDOTTED",
+      "name": "D_-",
+      "parity": 1
+    },
+    {
+      "index_space": "UNDOTTED",
+      "name": "D_a",
+      "parity": 1
+    },
+    {
+      "index_space": "SCALAR",
+      "name": "K_+",
+      "parity": 0
+    },
+    {
+      "index_space": "SCALAR",
+      "name": "barD2",
+      "parity": 0
+    },
+    {
+      "index_space": "DOTTED",
+      "name": "barD_dot_alpha",
+      "parity": 1
+    },
+    {
+      "index_space": "UNDOTTED",
+      "name": "nabla_+",
+      "parity": 1
+    },
+    {
+      "index_space": "UNDOTTED",
+      "name": "nabla_-",
+      "parity": 1
+    }
+  ],
+  "fields": [
+    {
+      "chirality": "UNCONSTRAINED",
+      "index_spaces": [
+        "COLOR_ADJOINT",
+        "COLOR_ADJOINT"
+      ],
+      "name": "Source[nabla_-(X^A X^B)]",
+      "statistics": "BOSON"
+    },
+    {
+      "chirality": "ANTICHIRAL",
+      "index_spaces": [
+        "COLOR_ADJOINT",
+        "DOTTED"
+      ],
+      "name": "TildeW_dot_alpha",
+      "statistics": "FERMION"
+    },
+    {
+      "chirality": "REAL",
+      "index_spaces": [
+        "COLOR_ADJOINT"
+      ],
+      "name": "V",
+      "statistics": "BOSON"
+    },
+    {
+      "chirality": "CHIRAL",
+      "index_spaces": [
+        "COLOR_ADJOINT",
+        "UNDOTTED"
+      ],
+      "name": "W_plus",
+      "statistics": "FERMION"
+    }
+  ],
+  "fourier_dred": {
+    "derivative_momentum_map": "partial_mu -> +i p_mu",
+    "dimension": "d=4-2 epsilon",
+    "epsilon_symbol": "epsilon",
+    "evanescent_metric_symbol": "gtilde",
+    "fourier_phase": "exp(+i p.x)",
+    "loop_measure": "mu^(2 epsilon) d^d k/(2 pi)^d",
+    "loop_metric_symbol": "ghat",
+    "mu_symbol": "mu",
+    "spin_metric_symbol": "g4"
+  },
+  "index_spaces": [
+    "COLOR_ADJOINT",
+    "DOTTED",
+    "SCALAR",
+    "UNDOTTED"
+  ],
+  "ports": [
+    {
+      "allowed_flows": [
+        "IN"
+      ],
+      "allowed_sectors": [
+        "BACKGROUND"
+      ],
+      "field_name": "TildeW_dot_alpha",
+      "name": "TildeW_B"
+    },
+    {
+      "allowed_flows": [
+        "IN",
+        "OUT"
+      ],
+      "allowed_sectors": [
+        "QUANTUM"
+      ],
+      "field_name": "V",
+      "name": "V_Q"
+    },
+    {
+      "allowed_flows": [
+        "IN"
+      ],
+      "allowed_sectors": [
+        "BACKGROUND"
+      ],
+      "field_name": "Source[nabla_-(X^A X^B)]",
+      "name": "WW_source_B"
+    },
+    {
+      "allowed_flows": [
+        "IN"
+      ],
+      "allowed_sectors": [
+        "BACKGROUND"
+      ],
+      "field_name": "W_plus",
+      "name": "W_plus_B"
+    }
+  ],
+  "propagators": [
+    {
+      "coefficient": {
+        "imag": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "real": {
+          "denominator": 1,
+          "numerator": -2
+        }
+      },
+      "left_port_spec": "V_Q",
+      "name": "P_VV",
+      "ordered_left_derivatives": [],
+      "ordered_right_derivatives": [],
+      "right_port_spec": "V_Q",
+      "symbol_factors": [
+        "g2"
+      ],
+      "symmetric": true,
+      "tensor_factors": [
+        "kappa",
+        "delta4theta"
+      ]
+    }
+  ],
+  "required_tensors": [
+    "c",
+    "delta4theta",
+    "kappa"
+  ],
+  "scalar_ring": {
+    "generators": [
+      "i",
+      "sqrt2"
+    ],
+    "name": "Q(i,sqrt2)",
+    "ordered_basis": [
+      "1",
+      "i",
+      "sqrt2",
+      "i*sqrt2"
+    ],
+    "relations": [
+      "i^2=-1",
+      "sqrt2^2=2",
+      "i*sqrt2=sqrt2*i"
+    ],
+    "ww_subring_adapter": "Qi={a+b*i+c*sqrt2+d*i*sqrt2 | c=d=0}"
+  },
+  "schema_id": "STEP5_EUCLIDEAN_N4_WW_REQUEST_NOTATION_V1",
+  "symbols": [
+    {
+      "kind": "REGULATOR",
+      "name": "epsilon"
+    },
+    {
+      "kind": "COUPLING",
+      "name": "g2"
+    },
+    {
+      "kind": "METRIC",
+      "name": "g4"
+    },
+    {
+      "kind": "METRIC",
+      "name": "ghat"
+    },
+    {
+      "kind": "NORMALIZATION",
+      "name": "h"
+    },
+    {
+      "kind": "MOMENTUM",
+      "name": "k"
+    },
+    {
+      "kind": "SCALE",
+      "name": "mu"
+    },
+    {
+      "kind": "MOMENTUM",
+      "name": "p"
+    },
+    {
+      "kind": "OTHER",
+      "name": "pi"
+    },
+    {
+      "kind": "MOMENTUM",
+      "name": "q"
+    }
+  ],
+  "tensors": [
+    {
+      "index_spaces": [
+        "COLOR_ADJOINT",
+        "COLOR_ADJOINT",
+        "COLOR_ADJOINT"
+      ],
+      "name": "c",
+      "tensor_class": "COLOR_STRUCTURE_CONSTANT",
+      "variances": [
+        "DOWN",
+        "DOWN",
+        "DOWN"
+      ]
+    },
+    {
+      "index_spaces": [],
+      "name": "delta4theta",
+      "tensor_class": "GRASSMANN_DELTA",
+      "variances": []
+    },
+    {
+      "index_spaces": [
+        "COLOR_ADJOINT",
+        "COLOR_ADJOINT"
+      ],
+      "name": "kappa",
+      "tensor_class": "INVERSE_COLOR_METRIC_IN_P_VV",
+      "variances": [
+        "UP",
+        "UP"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3222 @@
+{
+  "compiler_hash": "38d15ee86ba48914dad97bb666b74721ce40bf3124d0739ae09265e5dce64234",
+  "no_imported_anomaly_coefficient": true,
+  "notation_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+  "orientations": [
+    {
+      "d_algebra": {
+        "local_projector_job": {
+          "amplitude_id": "A_WW_DIRECT_EXACT_001",
+          "coefficient": {
+            "im": "0",
+            "re": "1"
+          },
+          "edges": [
+            {
+              "edge_id": "e0",
+              "endpoints": [
+                "I_A",
+                "bar_A"
+              ],
+              "momentum": "k"
+            },
+            {
+              "edge_id": "e1",
+              "endpoints": [
+                "bar_C",
+                "W_C"
+              ],
+              "momentum": "k+q"
+            },
+            {
+              "edge_id": "e2",
+              "endpoints": [
+                "W_B",
+                "I_B"
+              ],
+              "momentum": "k+p+q"
+            }
+          ],
+          "graph_hash": "4529d7a0532c1577471baf525497bcc5cec0ad2ecb8759c21f74be6c47509934",
+          "job_id": "D_PROJECTOR_DIRECT",
+          "legs": [],
+          "notation_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+          "operator_word": [
+            {
+              "momentum": "k",
+              "tag": {
+                "edge_id": "e0",
+                "endpoint": "I_A"
+              },
+              "type": "D2"
+            },
+            {
+              "momentum": "k",
+              "tag": {
+                "edge_id": "e0",
+                "endpoint": "I_A"
+              },
+              "type": "BarD2"
+            },
+            {
+              "momentum": "k",
+              "tag": {
+                "edge_id": "e0",
+                "endpoint": "I_A"
+              },
+              "type": "D2"
+            },
+            {
+              "edge_id": "e0",
+              "momentum": "k",
+              "type": "Propagator"
+            }
+          ],
+          "propagators": [
+            {
+              "edge_id": "e0",
+              "momentum": "k",
+              "propagator_type": "P_VV"
+            },
+            {
+              "edge_id": "e1",
+              "momentum": "k+q",
+              "propagator_type": "P_VV"
+            },
+            {
+              "edge_id": "e2",
+              "momentum": "k+p+q",
+              "propagator_type": "P_VV"
+            }
+          ],
+          "schema": 1
+        },
+        "local_projector_result": {
+          "amplitude_id": "A_WW_DIRECT_EXACT_001",
+          "critical_pair_audits": [],
+          "critical_pair_scope": "DECLARED_FINITE_CRITICAL_PAIR_SUITE_NOT_GLOBAL_CONFLUENCE",
+          "endpoint_transfer_policy": "EXPLICIT_API_ONLY_NEVER_INVOKED_BY_COMPILE",
+          "error": null,
+          "graph_hash": "4529d7a0532c1577471baf525497bcc5cec0ad2ecb8759c21f74be6c47509934",
+          "implementation_status": "PARTIAL_DECLARED_PHASES_ONLY",
+          "implemented_phases": [
+            "EXACT_LOCAL_OPERATOR_NORMALIZATION",
+            "SINGLE_OPERATOR_EXTERNAL_CHIRALITY",
+            "TYPED_PROPAGATOR_COLLAPSE"
+          ],
+          "input_job_sha256": "d2f9b349f6f2f9f217eb8d10bf60d62a2b8e7518b18e17d76dedd8b704d76540",
+          "job_id": "D_PROJECTOR_DIRECT",
+          "normal_form": {
+            "arithmetic": "EXACT_Q_I",
+            "endpoint_transfer_policy": "EXPLICIT_API_ONLY_NEVER_INVOKED_BY_COMPILE",
+            "implementation_status": "PARTIAL_DECLARED_PHASES_ONLY",
+            "implemented_phases": [
+              "EXACT_LOCAL_OPERATOR_NORMALIZATION",
+              "SINGLE_OPERATOR_EXTERNAL_CHIRALITY",
+              "TYPED_PROPAGATOR_COLLAPSE"
+            ],
+            "inputs": [
+              {
+                "coefficient": {
+                  "im": "0",
+                  "re": "1"
+                },
+                "sign_ledger": [],
+                "word": [
+                  {
+                    "momentum": "k",
+                    "tag": {
+                      "edge_id": "e0",
+                      "endpoint": "I_A"
+                    },
+                    "type": "D2"
+                  },
+                  {
+                    "momentum": "k",
+                    "tag": {
+                      "edge_id": "e0",
+                      "endpoint": "I_A"
+                    },
+                    "type": "BarD2"
+                  },
+                  {
+                    "momentum": "k",
+                    "tag": {
+                      "edge_id": "e0",
+                      "endpoint": "I_A"
+                    },
+                    "type": "D2"
+                  },
+                  {
+                    "edge_id": "e0",
+                    "momentum": "k",
+                    "type": "Propagator"
+                  }
+                ]
+              }
+            ],
+            "operator_order": "RIGHTMOST_ACTS_FIRST",
+            "ordering": [
+              "PROJECTOR_D2_BARD2_D2",
+              "PROJECTOR_BARD2_D2_BARD2",
+              "SAME_CHIRAL_D",
+              "SAME_CHIRAL_BARD",
+              "SAME_CHIRAL_NILPOTENCE",
+              "MIXED_ANTICOMMUTATOR",
+              "EXTERNAL_LEG_ACTION",
+              "COLLAPSE_PROPAGATOR",
+              "CENTRAL_MOMENTUM_SQUARE_LEFT"
+            ],
+            "outputs": [
+              {
+                "coefficient": {
+                  "im": "0",
+                  "re": "-16"
+                },
+                "provenance_ledgers": [
+                  [
+                    {
+                      "crossed_parities": [],
+                      "factor": {
+                        "im": "0",
+                        "re": "-16"
+                      },
+                      "kind": "ALGEBRA",
+                      "operator": "D2 BarD2 D2",
+                      "rule": "PROJECTOR_D2_BARD2_D2",
+                      "source_tag": null,
+                      "target_tag": null
+                    },
+                    {
+                      "crossed_parities": [],
+                      "factor": {
+                        "im": "0",
+                        "re": "1"
+                      },
+                      "kind": "COLLAPSE",
+                      "operator": "e0",
+                      "rule": "COLLAPSE_PROPAGATOR",
+                      "source_tag": null,
+                      "target_tag": null
+                    }
+                  ]
+                ],
+                "word": [
+                  {
+                    "edge_id": "e0",
+                    "momentum": "k",
+                    "reason": "p^2 times 1/p^2",
+                    "type": "Collapse"
+                  },
+                  {
+                    "momentum": "k",
+                    "tag": {
+                      "edge_id": "e0",
+                      "endpoint": "I_A"
+                    },
+                    "type": "D2"
+                  }
+                ]
+              }
+            ],
+            "schema": 1,
+            "steps": [
+              {
+                "input": {
+                  "coefficient": {
+                    "im": "0",
+                    "re": "1"
+                  },
+                  "sign_ledger": [],
+                  "word": [
+                    {
+                      "momentum": "k",
+                      "tag": {
+                        "edge_id": "e0",
+                        "endpoint": "I_A"
+                      },
+                      "type": "D2"
+                    },
+                    {
+                      "momentum": "k",
+                      "tag": {
+                        "edge_id": "e0",
+                        "endpoint": "I_A"
+                      },
+                      "type": "BarD2"
+                    },
+                    {
+                      "momentum": "k",
+                      "tag": {
+                        "edge_id": "e0",
+                        "endpoint": "I_A"
+                      },
+                      "type": "D2"
+                    },
+                    {
+                      "edge_id": "e0",
+                      "momentum": "k",
+                      "type": "Propagator"
+                    }
+                  ]
+                },
+                "measure_before": [
+                  4,
+                  0
+                ],
+                "measures_after": [
+                  [
+                    3,
+                    0
+                  ]
+                ],
+                "outputs": [
+                  {
+                    "coefficient": {
+                      "im": "0",
+                      "re": "-16"
+                    },
+                    "sign_ledger": [
+                      {
+                        "crossed_parities": [],
+                        "factor": {
+                          "im": "0",
+                          "re": "-16"
+                        },
+                        "kind": "ALGEBRA",
+                        "operator": "D2 BarD2 D2",
+                        "rule": "PROJECTOR_D2_BARD2_D2",
+                        "source_tag": null,
+                        "target_tag": null
+                      }
+                    ],
+                    "word": [
+                      {
+                        "momentum": "k",
+                        "tag": {
+                          "edge_id": "e0",
+                          "endpoint": "I_A"
+                        },
+                        "type": "MomentumSquare"
+                      },
+                      {
+                        "momentum": "k",
+                        "tag": {
+                          "edge_id": "e0",
+                          "endpoint": "I_A"
+                        },
+                        "type": "D2"
+                      },
+                      {
+                        "edge_id": "e0",
+                        "momentum": "k",
+                        "type": "Propagator"
+                      }
+                    ]
+                  }
+                ],
+                "positions": [
+                  0,
+                  1,
+                  2
+                ],
+                "rule_id": "PROJECTOR_D2_BARD2_D2"
+              },
+              {
+                "input": {
+                  "coefficient": {
+                    "im": "0",
+                    "re": "-16"
+                  },
+                  "sign_ledger": [
+                    {
+                      "crossed_parities": [],
+                      "factor": {
+                        "im": "0",
+                        "re": "-16"
+                      },
+                      "kind": "ALGEBRA",
+                      "operator": "D2 BarD2 D2",
+                      "rule": "PROJECTOR_D2_BARD2_D2",
+                      "source_tag": null,
+                      "target_tag": null
+                    }
+                  ],
+                  "word": [
+                    {
+                      "momentum": "k",
+                      "tag": {
+                        "edge_id": "e0",
+                        "endpoint": "I_A"
+                      },
+                      "type": "MomentumSquare"
+                    },
+                    {
+                      "momentum": "k",
+                      "tag": {
+                        "edge_id": "e0",
+                        "endpoint": "I_A"
+                      },
+                      "type": "D2"
+                    },
+                    {
+                      "edge_id": "e0",
+                      "momentum": "k",
+                      "type": "Propagator"
+                    }
+                  ]
+                },
+                "measure_before": [
+                  3,
+                  0
+                ],
+                "measures_after": [
+                  [
+                    2,
+                    0
+                  ]
+                ],
+                "outputs": [
+                  {
+                    "coefficient": {
+                      "im": "0",
+                      "re": "-16"
+                    },
+                    "sign_ledger": [
+                      {
+                        "crossed_parities": [],
+                        "factor": {
+                          "im": "0",
+                          "re": "-16"
+                        },
+                        "kind": "ALGEBRA",
+                        "operator": "D2 BarD2 D2",
+                        "rule": "PROJECTOR_D2_BARD2_D2",
+                        "source_tag": null,
+                        "target_tag": null
+                      },
+                      {
+                        "crossed_parities": [],
+                        "factor": {
+                          "im": "0",
+                          "re": "1"
+                        },
+                        "kind": "COLLAPSE",
+                        "operator": "e0",
+                        "rule": "COLLAPSE_PROPAGATOR",
+                        "source_tag": null,
+                        "target_tag": null
+                      }
+                    ],
+                    "word": [
+                      {
+                        "edge_id": "e0",
+                        "momentum": "k",
+                        "reason": "p^2 times 1/p^2",
+                        "type": "Collapse"
+                      },
+                      {
+                        "momentum": "k",
+                        "tag": {
+                          "edge_id": "e0",
+                          "endpoint": "I_A"
+                        },
+                        "type": "D2"
+                      }
+                    ]
+                  }
+                ],
+                "positions": [
+                  0,
+                  2
+                ],
+                "rule_id": "COLLAPSE_PROPAGATOR"
+              }
+            ],
+            "terminated": true
+          },
+          "notation_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+          "schema": 1,
+          "status": "PASS"
+        },
+        "mixed_external_phase_job": {
+          "amplitude_id": "A_WW_DIRECT_EXACT_001",
+          "coefficient": {
+            "im": "0",
+            "re": "1"
+          },
+          "edges": [
+            {
+              "edge_id": "e0",
+              "endpoints": [
+                "I_A",
+                "bar_A"
+              ],
+              "momentum": "k"
+            },
+            {
+              "edge_id": "e1",
+              "endpoints": [
+                "bar_C",
+                "W_C"
+              ],
+              "momentum": "k+q"
+            },
+            {
+              "edge_id": "e2",
+              "endpoints": [
+                "W_B",
+                "I_B"
+              ],
+              "momentum": "k+p+q"
+            }
+          ],
+          "graph_hash": "4529d7a0532c1577471baf525497bcc5cec0ad2ecb8759c21f74be6c47509934",
+          "job_id": "D_MIXED_EXTERNAL_DIRECT",
+          "legs": [
+            {
+              "chirality": "CHIRAL",
+              "leg_id": "L_W_ext",
+              "parity": 1,
+              "tag": {
+                "edge_id": "e1",
+                "endpoint": "W_C"
+              }
+            }
+          ],
+          "notation_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+          "operator_word": [
+            {
+              "index": "+",
+              "momentum": "k+q",
+              "tag": {
+                "edge_id": "e1",
+                "endpoint": "W_C"
+              },
+              "type": "D"
+            },
+            {
+              "index": "-",
+              "momentum": "k+q",
+              "tag": {
+                "edge_id": "e1",
+                "endpoint": "W_C"
+              },
+              "type": "BarD"
+            },
+            {
+              "chirality": "CHIRAL",
+              "leg_id": "L_W_ext",
+              "parity": 1,
+              "tag": {
+                "edge_id": "e1",
+                "endpoint": "W_C"
+              },
+              "type": "ExternalLeg"
+            }
+          ],
+          "propagators": [
+            {
+              "edge_id": "e0",
+              "momentum": "k",
+              "propagator_type": "P_VV"
+            },
+            {
+              "edge_id": "e1",
+              "momentum": "k+q",
+              "propagator_type": "P_VV"
+            },
+            {
+              "edge_id": "e2",
+              "momentum": "k+p+q",
+              "propagator_type": "P_VV"
+            }
+          ],
+          "schema": 1
+        },
+        "mixed_external_phase_result": {
+          "amplitude_id": "A_WW_DIRECT_EXACT_001",
+          "critical_pair_audits": [],
+          "critical_pair_scope": "DECLARED_FINITE_CRITICAL_PAIR_SUITE_NOT_GLOBAL_CONFLUENCE",
+          "endpoint_transfer_policy": "EXPLICIT_API_ONLY_NEVER_INVOKED_BY_COMPILE",
+          "error": {
+            "code": "UNIMPLEMENTED_PHASE_SEQUENCE",
+            "leg_id": "L_W_ext",
+            "message": "mixed D/barD external-factor descendants must be normalized before chirality, but that descendant phase is not implemented",
+            "operator_types": [
+              "D",
+              "BarD"
+            ],
+            "required_order": [
+              "MIXED_D_BARD_NORMALIZATION",
+              "EXTERNAL_CHIRALITY"
+            ]
+          },
+          "graph_hash": "4529d7a0532c1577471baf525497bcc5cec0ad2ecb8759c21f74be6c47509934",
+          "implementation_status": "PARTIAL_DECLARED_PHASES_ONLY",
+          "implemented_phases": [
+            "EXACT_LOCAL_OPERATOR_NORMALIZATION",
+            "SINGLE_OPERATOR_EXTERNAL_CHIRALITY",
+            "TYPED_PROPAGATOR_COLLAPSE"
+          ],
+          "input_job_sha256": "68f8d7127c41966e3c38ef854b15ae95a2b0a0edacdcbcc65bbc2eed51f2ced0",
+          "job_id": "D_MIXED_EXTERNAL_DIRECT",
+          "normal_form": null,
+          "notation_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+          "schema": 1,
+          "status": "UNIMPLEMENTED_PHASE_SEQUENCE"
+        }
+      },
+      "graph_amplitude": {
+        "amplitudes": [
+          {
+            "amplitude_id": "A_WW_DIRECT_EXACT_001",
+            "audit_factors": [
+              "F_aut"
+            ],
+            "automorphism_factor_policy": "AUDIT_ONLY_CLASS_ALREADY_SUMS_LABELED_PAIRINGS",
+            "automorphism_order": 1,
+            "automorphism_symmetry_factor": {
+              "denominator": 1,
+              "numerator": 1
+            },
+            "canonical_key": "4529d7a0532c1577471baf525497bcc5cec0ad2ecb8759c21f74be6c47509934",
+            "class_multiplicity": 1,
+            "coefficient_reduction_trace": [
+              "used (h)*(g2)=1 exactly 2 time(s)"
+            ],
+            "exact_coefficient_raw": {
+              "denominator": 8,
+              "i_power": 0,
+              "numerator": -1,
+              "rendered": "-1/8*g2*g2*g2*h*h",
+              "sqrt2_power": 0,
+              "symbols": [
+                "g2",
+                "g2",
+                "g2",
+                "h",
+                "h"
+              ]
+            },
+            "exact_coefficient_reduced": {
+              "denominator": 8,
+              "i_power": 0,
+              "numerator": -1,
+              "rendered": "-1/8*g2",
+              "sqrt2_power": 0,
+              "symbols": [
+                "g2"
+              ]
+            },
+            "external_fermion_word": [
+              "TildeW_dot_alpha",
+              "W_plus"
+            ],
+            "external_koszul_sign": 1,
+            "factors": [
+              {
+                "category": "WICK_KOSZUL",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "1",
+                "factor_id": "F_wick",
+                "metadata": {},
+                "origins": [
+                  "scripts/step5_graph_ir.py:enumerate_wick_pairings"
+                ]
+              },
+              {
+                "category": "EXTERNAL_KOSZUL",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "1",
+                "factor_id": "F_external_koszul",
+                "metadata": {
+                  "ordered_external_fermion_word": "TildeW_dot_alpha,W_plus"
+                },
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53v",
+                  "scripts/step5_ww_seed.py:physical_triangle"
+                ]
+              },
+              {
+                "category": "AUTOMORPHISM_AUDIT_ONLY",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "|Aut(G)|=1",
+                "factor_id": "F_aut",
+                "metadata": {
+                  "automorphism_order": "1",
+                  "coefficient_policy": "AUDIT_ONLY_CLASS_ALREADY_SUMS_LABELED_PAIRINGS"
+                },
+                "origins": [
+                  "scripts/step5_supergraph_pipeline.py:graph_automorphism_order"
+                ]
+              },
+              {
+                "category": "ISOMORPHISM_CLASS_MULTIPLICITY",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "1",
+                "factor_id": "F_iso_mult",
+                "metadata": {},
+                "origins": [
+                  "scripts/step5_supergraph_pipeline.py:compile_request"
+                ]
+              },
+              {
+                "category": "INSERTION",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "COMPOSITE_INSERTION_I2_WW",
+                "factor_id": "F_vertex_vI",
+                "metadata": {
+                  "superspace_point": "theta_0"
+                },
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53b"
+                ]
+              },
+              {
+                "category": "DERIVATIVE_OPERATOR",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "D_-[K_+V^A K_+V^B]",
+                "factor_id": "F_operator_vI_0",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53b"
+                ]
+              },
+              {
+                "category": "DERIVATIVE_OPERATOR",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "K_+=-(1/8)D_+barD^2D_+",
+                "factor_id": "F_operator_vI_1",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53b"
+                ]
+              },
+              {
+                "category": "VERTEX_DELTA",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "delta(k-(k+p+q)+(p+q))",
+                "factor_id": "F_delta_vI",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53b"
+                ]
+              },
+              {
+                "category": "COLOR_FLAVOR_TENSOR",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "A",
+                "factor_id": "F_color_vI_0",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53b"
+                ]
+              },
+              {
+                "category": "COLOR_FLAVOR_TENSOR",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "B",
+                "factor_id": "F_color_vI_1",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53b"
+                ]
+              },
+              {
+                "category": "ACTION_VERTEX",
+                "coefficient": {
+                  "denominator": 8,
+                  "i_power": 1,
+                  "numerator": -1,
+                  "rendered": "-1/8*i*h",
+                  "sqrt2_power": 0,
+                  "symbols": [
+                    "h"
+                  ]
+                },
+                "expression": "BACKGROUND_CUBIC_TILDE_W",
+                "factor_id": "F_vertex_vBar",
+                "metadata": {
+                  "superspace_point": "theta_1"
+                },
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e"
+                ]
+              },
+              {
+                "category": "DERIVATIVE_OPERATOR",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "barD^dot_alpha(C)-barD^dot_alpha(A)",
+                "factor_id": "F_operator_vBar_0",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e"
+                ]
+              },
+              {
+                "category": "VERTEX_DELTA",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "delta(-k+(k+q)-q)",
+                "factor_id": "F_delta_vBar",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e"
+                ]
+              },
+              {
+                "category": "COLOR_FLAVOR_TENSOR",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "c_{ACD}",
+                "factor_id": "F_color_vBar_0",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e"
+                ]
+              },
+              {
+                "category": "ACTION_VERTEX",
+                "coefficient": {
+                  "denominator": 8,
+                  "i_power": 1,
+                  "numerator": 1,
+                  "rendered": "1/8*i*h",
+                  "sqrt2_power": 0,
+                  "symbols": [
+                    "h"
+                  ]
+                },
+                "expression": "BACKGROUND_CUBIC_W",
+                "factor_id": "F_vertex_vW",
+                "metadata": {
+                  "superspace_point": "theta_2"
+                },
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e"
+                ]
+              },
+              {
+                "category": "DERIVATIVE_OPERATOR",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "D_a(C)-D_a(B)",
+                "factor_id": "F_operator_vW_0",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e"
+                ]
+              },
+              {
+                "category": "VERTEX_DELTA",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "delta(-(k+q)+(k+p+q)-p)",
+                "factor_id": "F_delta_vW",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e"
+                ]
+              },
+              {
+                "category": "COLOR_FLAVOR_TENSOR",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "c_{BCE}",
+                "factor_id": "F_color_vW_0",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e"
+                ]
+              },
+              {
+                "category": "PROPAGATOR",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": -2,
+                  "rendered": "-2*g2",
+                  "sqrt2_power": 0,
+                  "symbols": [
+                    "g2"
+                  ]
+                },
+                "expression": "kappa^(-1)*delta4theta/(k)^2",
+                "factor_id": "F_prop_e0",
+                "metadata": {
+                  "color_tensor": "kappa^{AB}",
+                  "momentum": "k",
+                  "normalization_status": "EXACT_PROJECT_NORMALIZATION"
+                },
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.46"
+                ]
+              },
+              {
+                "category": "COLOR_FLAVOR_TENSOR",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "kappa^{AB}",
+                "factor_id": "F_prop_color_e0",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.46"
+                ]
+              },
+              {
+                "category": "PROPAGATOR",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": -2,
+                  "rendered": "-2*g2",
+                  "sqrt2_power": 0,
+                  "symbols": [
+                    "g2"
+                  ]
+                },
+                "expression": "kappa^(-1)*delta4theta/(k+q)^2",
+                "factor_id": "F_prop_e1",
+                "metadata": {
+                  "color_tensor": "kappa^{AB}",
+                  "momentum": "k+q",
+                  "normalization_status": "EXACT_PROJECT_NORMALIZATION"
+                },
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.46"
+                ]
+              },
+              {
+                "category": "COLOR_FLAVOR_TENSOR",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "kappa^{AB}",
+                "factor_id": "F_prop_color_e1",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.46"
+                ]
+              },
+              {
+                "category": "PROPAGATOR",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": -2,
+                  "rendered": "-2*g2",
+                  "sqrt2_power": 0,
+                  "symbols": [
+                    "g2"
+                  ]
+                },
+                "expression": "kappa^(-1)*delta4theta/(k+p+q)^2",
+                "factor_id": "F_prop_e2",
+                "metadata": {
+                  "color_tensor": "kappa^{AB}",
+                  "momentum": "k+p+q",
+                  "normalization_status": "EXACT_PROJECT_NORMALIZATION"
+                },
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.46"
+                ]
+              },
+              {
+                "category": "COLOR_FLAVOR_TENSOR",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "kappa^{AB}",
+                "factor_id": "F_prop_color_e2",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.46"
+                ]
+              },
+              {
+                "category": "LOOP_MEASURE",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "mu^(2 epsilon) d^d k/(2 pi)^d",
+                "factor_id": "F_loop_measure",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53v",
+                  "scripts/step5_ww_seed.py:physical_triangle"
+                ]
+              },
+              {
+                "category": "EXTERNAL_LEG",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "Source[nabla_-(X^A X^B)]",
+                "factor_id": "F_external_L_I_source",
+                "metadata": {
+                  "color": "AB",
+                  "flavor": "NONE",
+                  "momentum": "p+q"
+                },
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53v",
+                  "scripts/step5_ww_seed.py:physical_triangle"
+                ]
+              },
+              {
+                "category": "EXTERNAL_LEG",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "TildeW_dot_alpha{spinor=DOTTED:dot_alpha:UP}",
+                "factor_id": "F_external_L_bar_ext",
+                "metadata": {
+                  "color": "D",
+                  "flavor": "NONE",
+                  "momentum": "q"
+                },
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53v",
+                  "scripts/step5_ww_seed.py:physical_triangle"
+                ]
+              },
+              {
+                "category": "EXTERNAL_LEG",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "W_plus{spinor=UNDOTTED:+:DOWN}",
+                "factor_id": "F_external_L_W_ext",
+                "metadata": {
+                  "color": "E",
+                  "flavor": "NONE",
+                  "momentum": "p"
+                },
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53v",
+                  "scripts/step5_ww_seed.py:physical_triangle"
+                ]
+              }
+            ],
+            "graph": {
+              "external_legs": [
+                {
+                  "attached_half_edge": "I_source",
+                  "color_label": "AB",
+                  "field_type": {
+                    "chirality": "UNCONSTRAINED",
+                    "color_representation": "adjoint",
+                    "indices": [
+                      {
+                        "label": "A",
+                        "space": "COLOR_ADJOINT",
+                        "variance": "UP"
+                      },
+                      {
+                        "label": "B",
+                        "space": "COLOR_ADJOINT",
+                        "variance": "UP"
+                      }
+                    ],
+                    "name": "Source[nabla_-(X^A X^B)]",
+                    "statistics": "BOSON"
+                  },
+                  "flavor_label": null,
+                  "leg_id": "L_I_source",
+                  "momentum": "p+q",
+                  "operator_derivatives": [],
+                  "spinor_indices": []
+                },
+                {
+                  "attached_half_edge": "bar_ext",
+                  "color_label": "D",
+                  "field_type": {
+                    "chirality": "ANTICHIRAL",
+                    "color_representation": "adjoint",
+                    "indices": [
+                      {
+                        "label": "D",
+                        "space": "COLOR_ADJOINT",
+                        "variance": "UP"
+                      },
+                      {
+                        "label": "dot_alpha",
+                        "space": "DOTTED",
+                        "variance": "UP"
+                      }
+                    ],
+                    "name": "TildeW_dot_alpha",
+                    "statistics": "FERMION"
+                  },
+                  "flavor_label": null,
+                  "leg_id": "L_bar_ext",
+                  "momentum": "q",
+                  "operator_derivatives": [],
+                  "spinor_indices": [
+                    {
+                      "label": "dot_alpha",
+                      "space": "DOTTED",
+                      "variance": "UP"
+                    }
+                  ]
+                },
+                {
+                  "attached_half_edge": "W_ext",
+                  "color_label": "E",
+                  "field_type": {
+                    "chirality": "CHIRAL",
+                    "color_representation": "adjoint",
+                    "indices": [
+                      {
+                        "label": "E",
+                        "space": "COLOR_ADJOINT",
+                        "variance": "UP"
+                      },
+                      {
+                        "label": "+",
+                        "space": "UNDOTTED",
+                        "variance": "DOWN"
+                      }
+                    ],
+                    "name": "W_plus",
+                    "statistics": "FERMION"
+                  },
+                  "flavor_label": null,
+                  "leg_id": "L_W_ext",
+                  "momentum": "p",
+                  "operator_derivatives": [],
+                  "spinor_indices": [
+                    {
+                      "label": "+",
+                      "space": "UNDOTTED",
+                      "variance": "DOWN"
+                    }
+                  ]
+                }
+              ],
+              "graph_id": "WW_DIRECT_EXACT__pairing_005",
+              "half_edges": [
+                {
+                  "derivatives": [],
+                  "field_type": {
+                    "chirality": "REAL",
+                    "color_representation": "adjoint",
+                    "indices": [
+                      {
+                        "label": "Q",
+                        "space": "COLOR_ADJOINT",
+                        "variance": "UP"
+                      }
+                    ],
+                    "name": "V",
+                    "statistics": "BOSON"
+                  },
+                  "flow": "OUT",
+                  "half_edge_id": "I_A",
+                  "momentum": "k",
+                  "slot": 0,
+                  "vertex_id": "vI"
+                },
+                {
+                  "derivatives": [],
+                  "field_type": {
+                    "chirality": "REAL",
+                    "color_representation": "adjoint",
+                    "indices": [
+                      {
+                        "label": "Q",
+                        "space": "COLOR_ADJOINT",
+                        "variance": "UP"
+                      }
+                    ],
+                    "name": "V",
+                    "statistics": "BOSON"
+                  },
+                  "flow": "IN",
+                  "half_edge_id": "I_B",
+                  "momentum": "-k-p-q",
+                  "slot": 1,
+                  "vertex_id": "vI"
+                },
+                {
+                  "derivatives": [],
+                  "field_type": {
+                    "chirality": "UNCONSTRAINED",
+                    "color_representation": "adjoint",
+                    "indices": [
+                      {
+                        "label": "A",
+                        "space": "COLOR_ADJOINT",
+                        "variance": "UP"
+                      },
+                      {
+                        "label": "B",
+                        "space": "COLOR_ADJOINT",
+                        "variance": "UP"
+                      }
+                    ],
+                    "name": "Source[nabla_-(X^A X^B)]",
+                    "statistics": "BOSON"
+                  },
+                  "flow": "IN",
+                  "half_edge_id": "I_source",
+                  "momentum": "p+q",
+                  "slot": 2,
+                  "vertex_id": "vI"
+                },
+                {
+                  "derivatives": [],
+                  "field_type": {
+                    "chirality": "REAL",
+                    "color_representation": "adjoint",
+                    "indices": [
+                      {
+                        "label": "Q",
+                        "space": "COLOR_ADJOINT",
+                        "variance": "UP"
+                      }
+                    ],
+                    "name": "V",
+                    "statistics": "BOSON"
+                  },
+                  "flow": "IN",
+                  "half_edge_id": "bar_A",
+                  "momentum": "-k",
+                  "slot": 0,
+                  "vertex_id": "vBar"
+                },
+                {
+                  "derivatives": [],
+                  "field_type": {
+                    "chirality": "REAL",
+                    "color_representation": "adjoint",
+                    "indices": [
+                      {
+                        "label": "Q",
+                        "space": "COLOR_ADJOINT",
+                        "variance": "UP"
+                      }
+                    ],
+                    "name": "V",
+                    "statistics": "BOSON"
+                  },
+                  "flow": "OUT",
+                  "half_edge_id": "bar_C",
+                  "momentum": "k+q",
+                  "slot": 1,
+                  "vertex_id": "vBar"
+                },
+                {
+                  "derivatives": [],
+                  "field_type": {
+                    "chirality": "ANTICHIRAL",
+                    "color_representation": "adjoint",
+                    "indices": [
+                      {
+                        "label": "D",
+                        "space": "COLOR_ADJOINT",
+                        "variance": "UP"
+                      },
+                      {
+                        "label": "dot_alpha",
+                        "space": "DOTTED",
+                        "variance": "UP"
+                      }
+                    ],
+                    "name": "TildeW_dot_alpha",
+                    "statistics": "FERMION"
+                  },
+                  "flow": "IN",
+                  "half_edge_id": "bar_ext",
+                  "momentum": "-q",
+                  "slot": 2,
+                  "vertex_id": "vBar"
+                },
+                {
+                  "derivatives": [],
+                  "field_type": {
+                    "chirality": "REAL",
+                    "color_representation": "adjoint",
+                    "indices": [
+                      {
+                        "label": "Q",
+                        "space": "COLOR_ADJOINT",
+                        "variance": "UP"
+                      }
+                    ],
+                    "name": "V",
+                    "statistics": "BOSON"
+                  },
+                  "flow": "IN",
+                  "half_edge_id": "W_C",
+                  "momentum": "-k-q",
+                  "slot": 0,
+                  "vertex_id": "vW"
+                },
+                {
+                  "derivatives": [],
+                  "field_type": {
+                    "chirality": "REAL",
+                    "color_representation": "adjoint",
+                    "indices": [
+                      {
+                        "label": "Q",
+                        "space": "COLOR_ADJOINT",
+                        "variance": "UP"
+                      }
+                    ],
+                    "name": "V",
+                    "statistics": "BOSON"
+                  },
+                  "flow": "OUT",
+                  "half_edge_id": "W_B",
+                  "momentum": "k+p+q",
+                  "slot": 1,
+                  "vertex_id": "vW"
+                },
+                {
+                  "derivatives": [],
+                  "field_type": {
+                    "chirality": "CHIRAL",
+                    "color_representation": "adjoint",
+                    "indices": [
+                      {
+                        "label": "E",
+                        "space": "COLOR_ADJOINT",
+                        "variance": "UP"
+                      },
+                      {
+                        "label": "+",
+                        "space": "UNDOTTED",
+                        "variance": "DOWN"
+                      }
+                    ],
+                    "name": "W_plus",
+                    "statistics": "FERMION"
+                  },
+                  "flow": "IN",
+                  "half_edge_id": "W_ext",
+                  "momentum": "-p",
+                  "slot": 2,
+                  "vertex_id": "vW"
+                }
+              ],
+              "internal_edges": [
+                {
+                  "edge_id": "e0",
+                  "left_half_edge": "I_A",
+                  "momentum": "k",
+                  "orientation": "NONE",
+                  "propagator_symbol": "kappa^(-1)*delta4theta/(k)^2",
+                  "right_half_edge": "bar_A"
+                },
+                {
+                  "edge_id": "e1",
+                  "left_half_edge": "bar_C",
+                  "momentum": "k+q",
+                  "orientation": "NONE",
+                  "propagator_symbol": "kappa^(-1)*delta4theta/(k+q)^2",
+                  "right_half_edge": "W_C"
+                },
+                {
+                  "edge_id": "e2",
+                  "left_half_edge": "W_B",
+                  "momentum": "k+p+q",
+                  "orientation": "NONE",
+                  "propagator_symbol": "kappa^(-1)*delta4theta/(k+p+q)^2",
+                  "right_half_edge": "I_B"
+                }
+              ],
+              "loop_momenta": [
+                "k"
+              ],
+              "metadata": {
+                "automorphism_order": "1",
+                "automorphism_symmetry_factor": "1/1",
+                "canonical_key": "4529d7a0532c1577471baf525497bcc5cec0ad2ecb8759c21f74be6c47509934",
+                "external_fermion_word": "TildeW_dot_alpha,W_plus",
+                "external_koszul_sign": "1",
+                "isomorphism_class_multiplicity": "1",
+                "notation_schema_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+                "orientation": "DIRECT",
+                "pairing_signature": "[[\"I_A\", \"bar_A\", \"P_VV\"], [\"I_B\", \"W_B\", \"P_VV\"], [\"bar_C\", \"W_C\", \"P_VV\"]]",
+                "request_id": "WW_DIRECT_EXACT",
+                "request_kind": "PHYSICAL_PARTIAL_CONTRACTION",
+                "source_status": "PHYSICAL",
+                "wick_koszul_sign": "1"
+              },
+              "vertices": [
+                {
+                  "coefficient_factors": [
+                    "1",
+                    "D_-[K_+V^A K_+V^B]",
+                    "K_+=-(1/8)D_+barD^2D_+",
+                    "origin:contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53b"
+                  ],
+                  "coefficient_symbol": "1",
+                  "color_word": [
+                    "A",
+                    "B"
+                  ],
+                  "kind": "COMPOSITE_INSERTION_I2_WW",
+                  "momentum_delta": "delta(k-(k+p+q)+(p+q))",
+                  "momentum_injection": "0",
+                  "ordered_half_edges": [
+                    "I_A",
+                    "I_B",
+                    "I_source"
+                  ],
+                  "superspace_point": "theta_0",
+                  "vertex_id": "vI"
+                },
+                {
+                  "coefficient_factors": [
+                    "-1/8*i*h",
+                    "barD^dot_alpha(C)-barD^dot_alpha(A)",
+                    "origin:contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e"
+                  ],
+                  "coefficient_symbol": "-1/8*i*h",
+                  "color_word": [
+                    "c_{ACD}"
+                  ],
+                  "kind": "BACKGROUND_CUBIC_TILDE_W",
+                  "momentum_delta": "delta(-k+(k+q)-q)",
+                  "momentum_injection": "0",
+                  "ordered_half_edges": [
+                    "bar_A",
+                    "bar_C",
+                    "bar_ext"
+                  ],
+                  "superspace_point": "theta_1",
+                  "vertex_id": "vBar"
+                },
+                {
+                  "coefficient_factors": [
+                    "1/8*i*h",
+                    "D_a(C)-D_a(B)",
+                    "origin:contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e"
+                  ],
+                  "coefficient_symbol": "1/8*i*h",
+                  "color_word": [
+                    "c_{BCE}"
+                  ],
+                  "kind": "BACKGROUND_CUBIC_W",
+                  "momentum_delta": "delta(-(k+q)+(k+p+q)-p)",
+                  "momentum_injection": "0",
+                  "ordered_half_edges": [
+                    "W_C",
+                    "W_B",
+                    "W_ext"
+                  ],
+                  "superspace_point": "theta_2",
+                  "vertex_id": "vW"
+                }
+              ]
+            },
+            "normalization_status": "EXACT_PROJECT_NORMALIZATION",
+            "orientation": "DIRECT",
+            "orientation_signature": [
+              "e0:V--V:k",
+              "e1:V--V:k+q",
+              "e2:V--V:k+p+q"
+            ],
+            "preintegration_product": "F_wick * F_external_koszul * F_iso_mult * F_vertex_vI * F_operator_vI_0 * F_operator_vI_1 * F_delta_vI * F_color_vI_0 * F_color_vI_1 * F_vertex_vBar * F_operator_vBar_0 * F_delta_vBar * F_color_vBar_0 * F_vertex_vW * F_operator_vW_0 * F_delta_vW * F_color_vW_0 * F_prop_e0 * F_prop_color_e0 * F_prop_e1 * F_prop_color_e1 * F_prop_e2 * F_prop_color_e2 * F_loop_measure * F_external_L_I_source * F_external_L_bar_ext * F_external_L_W_ext",
+            "renderers": {
+              "dot": "digraph \"WW_DIRECT_EXACT__pairing_005\" {\n  \"vI\" [label=\"vI:COMPOSITE_INSERTION_I2_WW\"];\n  \"vBar\" [label=\"vBar:BACKGROUND_CUBIC_TILDE_W\"];\n  \"vW\" [label=\"vW:BACKGROUND_CUBIC_W\"];\n  \"X_L_I_source\" [shape=box,label=\"L_I_source:Source[nabla_-(X^A X^B)](p+q)\"];\n  \"X_L_I_source\" -> \"vI\" [label=\"I_source{identity}\"];\n  \"X_L_bar_ext\" [shape=box,label=\"L_bar_ext:TildeW_dot_alpha{spinor=DOTTED:dot_alpha:UP}(q)\"];\n  \"X_L_bar_ext\" -> \"vBar\" [label=\"bar_ext{identity}\"];\n  \"X_L_W_ext\" [shape=box,label=\"L_W_ext:W_plus{spinor=UNDOTTED:+:DOWN}(p)\"];\n  \"X_L_W_ext\" -> \"vW\" [label=\"W_ext{identity}\"];\n  \"vI\" -> \"vBar\" [dir=none,label=\"e0:kappa^(-1)*delta4theta/(k)^2(k);I_A{identity};bar_A{identity}\"];\n  \"vBar\" -> \"vW\" [dir=none,label=\"e1:kappa^(-1)*delta4theta/(k+q)^2(k+q);bar_C{identity};W_C{identity}\"];\n  \"vW\" -> \"vI\" [dir=none,label=\"e2:kappa^(-1)*delta4theta/(k+p+q)^2(k+p+q);W_B{identity};I_B{identity}\"];\n}\n",
+              "mermaid": "graph LR\n  vI[\"vI:COMPOSITE_INSERTION_I2_WW\"]\n  vBar[\"vBar:BACKGROUND_CUBIC_TILDE_W\"]\n  vW[\"vW:BACKGROUND_CUBIC_W\"]\n  X_L_I_source[\"L_I_source:Source[nabla_-(X^A X^B)](p+q)\"]\n  X_L_I_source -- \"I_source{identity}\" --> vI\n  X_L_bar_ext[\"L_bar_ext:TildeW_dot_alpha{spinor=DOTTED:dot_alpha:UP}(q)\"]\n  X_L_bar_ext -- \"bar_ext{identity}\" --> vBar\n  X_L_W_ext[\"L_W_ext:W_plus{spinor=UNDOTTED:+:DOWN}(p)\"]\n  X_L_W_ext -- \"W_ext{identity}\" --> vW\n  vI ---|\"e0:kappa^(-1)*delta4theta/(k)^2(k);I_A{identity};bar_A{identity}\"| vBar\n  vBar ---|\"e1:kappa^(-1)*delta4theta/(k+q)^2(k+q);bar_C{identity};W_C{identity}\"| vW\n  vW ---|\"e2:kappa^(-1)*delta4theta/(k+p+q)^2(k+p+q);W_B{identity};I_B{identity}\"| vI\n"
+            },
+            "request_id": "WW_DIRECT_EXACT",
+            "schema_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+            "wick_koszul_sign": 1
+          }
+        ],
+        "completeness": {
+          "accepted_pairings_reconstructed": 1,
+          "endpoint_admissible_pairings": 1,
+          "isomorphism_classes": 1,
+          "no_double_count": true,
+          "rejected_disconnected": 0,
+          "rejected_non_one_loop": 0,
+          "typed_pairings": 8
+        },
+        "request_id": "WW_DIRECT_EXACT",
+        "request_kind": "PHYSICAL_PARTIAL_CONTRACTION",
+        "schema_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79"
+      },
+      "orientation": "DIRECT"
+    },
+    {
+      "d_algebra": {
+        "local_projector_job": {
+          "amplitude_id": "A_WW_REFLECTED_EXACT_001",
+          "coefficient": {
+            "im": "0",
+            "re": "1"
+          },
+          "edges": [
+            {
+              "edge_id": "e0",
+              "endpoints": [
+                "I_B",
+                "bar_B"
+              ],
+              "momentum": "k"
+            },
+            {
+              "edge_id": "e1",
+              "endpoints": [
+                "bar_C",
+                "W_C"
+              ],
+              "momentum": "k+q"
+            },
+            {
+              "edge_id": "e2",
+              "endpoints": [
+                "W_A",
+                "I_A"
+              ],
+              "momentum": "k+p+q"
+            }
+          ],
+          "graph_hash": "5c60438e7705e78b6c07a68e8970f4f3003cbf30c9b753ac815f64ad016a3400",
+          "job_id": "D_PROJECTOR_REFLECTED",
+          "legs": [],
+          "notation_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+          "operator_word": [
+            {
+              "momentum": "k",
+              "tag": {
+                "edge_id": "e0",
+                "endpoint": "I_B"
+              },
+              "type": "D2"
+            },
+            {
+              "momentum": "k",
+              "tag": {
+                "edge_id": "e0",
+                "endpoint": "I_B"
+              },
+              "type": "BarD2"
+            },
+            {
+              "momentum": "k",
+              "tag": {
+                "edge_id": "e0",
+                "endpoint": "I_B"
+              },
+              "type": "D2"
+            },
+            {
+              "edge_id": "e0",
+              "momentum": "k",
+              "type": "Propagator"
+            }
+          ],
+          "propagators": [
+            {
+              "edge_id": "e0",
+              "momentum": "k",
+              "propagator_type": "P_VV"
+            },
+            {
+              "edge_id": "e1",
+              "momentum": "k+q",
+              "propagator_type": "P_VV"
+            },
+            {
+              "edge_id": "e2",
+              "momentum": "k+p+q",
+              "propagator_type": "P_VV"
+            }
+          ],
+          "schema": 1
+        },
+        "local_projector_result": {
+          "amplitude_id": "A_WW_REFLECTED_EXACT_001",
+          "critical_pair_audits": [],
+          "critical_pair_scope": "DECLARED_FINITE_CRITICAL_PAIR_SUITE_NOT_GLOBAL_CONFLUENCE",
+          "endpoint_transfer_policy": "EXPLICIT_API_ONLY_NEVER_INVOKED_BY_COMPILE",
+          "error": null,
+          "graph_hash": "5c60438e7705e78b6c07a68e8970f4f3003cbf30c9b753ac815f64ad016a3400",
+          "implementation_status": "PARTIAL_DECLARED_PHASES_ONLY",
+          "implemented_phases": [
+            "EXACT_LOCAL_OPERATOR_NORMALIZATION",
+            "SINGLE_OPERATOR_EXTERNAL_CHIRALITY",
+            "TYPED_PROPAGATOR_COLLAPSE"
+          ],
+          "input_job_sha256": "b467394ce1d36cfee0552009059a621d6b1df605243758b74c12eb1002c26515",
+          "job_id": "D_PROJECTOR_REFLECTED",
+          "normal_form": {
+            "arithmetic": "EXACT_Q_I",
+            "endpoint_transfer_policy": "EXPLICIT_API_ONLY_NEVER_INVOKED_BY_COMPILE",
+            "implementation_status": "PARTIAL_DECLARED_PHASES_ONLY",
+            "implemented_phases": [
+              "EXACT_LOCAL_OPERATOR_NORMALIZATION",
+              "SINGLE_OPERATOR_EXTERNAL_CHIRALITY",
+              "TYPED_PROPAGATOR_COLLAPSE"
+            ],
+            "inputs": [
+              {
+                "coefficient": {
+                  "im": "0",
+                  "re": "1"
+                },
+                "sign_ledger": [],
+                "word": [
+                  {
+                    "momentum": "k",
+                    "tag": {
+                      "edge_id": "e0",
+                      "endpoint": "I_B"
+                    },
+                    "type": "D2"
+                  },
+                  {
+                    "momentum": "k",
+                    "tag": {
+                      "edge_id": "e0",
+                      "endpoint": "I_B"
+                    },
+                    "type": "BarD2"
+                  },
+                  {
+                    "momentum": "k",
+                    "tag": {
+                      "edge_id": "e0",
+                      "endpoint": "I_B"
+                    },
+                    "type": "D2"
+                  },
+                  {
+                    "edge_id": "e0",
+                    "momentum": "k",
+                    "type": "Propagator"
+                  }
+                ]
+              }
+            ],
+            "operator_order": "RIGHTMOST_ACTS_FIRST",
+            "ordering": [
+              "PROJECTOR_D2_BARD2_D2",
+              "PROJECTOR_BARD2_D2_BARD2",
+              "SAME_CHIRAL_D",
+              "SAME_CHIRAL_BARD",
+              "SAME_CHIRAL_NILPOTENCE",
+              "MIXED_ANTICOMMUTATOR",
+              "EXTERNAL_LEG_ACTION",
+              "COLLAPSE_PROPAGATOR",
+              "CENTRAL_MOMENTUM_SQUARE_LEFT"
+            ],
+            "outputs": [
+              {
+                "coefficient": {
+                  "im": "0",
+                  "re": "-16"
+                },
+                "provenance_ledgers": [
+                  [
+                    {
+                      "crossed_parities": [],
+                      "factor": {
+                        "im": "0",
+                        "re": "-16"
+                      },
+                      "kind": "ALGEBRA",
+                      "operator": "D2 BarD2 D2",
+                      "rule": "PROJECTOR_D2_BARD2_D2",
+                      "source_tag": null,
+                      "target_tag": null
+                    },
+                    {
+                      "crossed_parities": [],
+                      "factor": {
+                        "im": "0",
+                        "re": "1"
+                      },
+                      "kind": "COLLAPSE",
+                      "operator": "e0",
+                      "rule": "COLLAPSE_PROPAGATOR",
+                      "source_tag": null,
+                      "target_tag": null
+                    }
+                  ]
+                ],
+                "word": [
+                  {
+                    "edge_id": "e0",
+                    "momentum": "k",
+                    "reason": "p^2 times 1/p^2",
+                    "type": "Collapse"
+                  },
+                  {
+                    "momentum": "k",
+                    "tag": {
+                      "edge_id": "e0",
+                      "endpoint": "I_B"
+                    },
+                    "type": "D2"
+                  }
+                ]
+              }
+            ],
+            "schema": 1,
+            "steps": [
+              {
+                "input": {
+                  "coefficient": {
+                    "im": "0",
+                    "re": "1"
+                  },
+                  "sign_ledger": [],
+                  "word": [
+                    {
+                      "momentum": "k",
+                      "tag": {
+                        "edge_id": "e0",
+                        "endpoint": "I_B"
+                      },
+                      "type": "D2"
+                    },
+                    {
+                      "momentum": "k",
+                      "tag": {
+                        "edge_id": "e0",
+                        "endpoint": "I_B"
+                      },
+                      "type": "BarD2"
+                    },
+                    {
+                      "momentum": "k",
+                      "tag": {
+                        "edge_id": "e0",
+                        "endpoint": "I_B"
+                      },
+                      "type": "D2"
+                    },
+                    {
+                      "edge_id": "e0",
+                      "momentum": "k",
+                      "type": "Propagator"
+                    }
+                  ]
+                },
+                "measure_before": [
+                  4,
+                  0
+                ],
+                "measures_after": [
+                  [
+                    3,
+                    0
+                  ]
+                ],
+                "outputs": [
+                  {
+                    "coefficient": {
+                      "im": "0",
+                      "re": "-16"
+                    },
+                    "sign_ledger": [
+                      {
+                        "crossed_parities": [],
+                        "factor": {
+                          "im": "0",
+                          "re": "-16"
+                        },
+                        "kind": "ALGEBRA",
+                        "operator": "D2 BarD2 D2",
+                        "rule": "PROJECTOR_D2_BARD2_D2",
+                        "source_tag": null,
+                        "target_tag": null
+                      }
+                    ],
+                    "word": [
+                      {
+                        "momentum": "k",
+                        "tag": {
+                          "edge_id": "e0",
+                          "endpoint": "I_B"
+                        },
+                        "type": "MomentumSquare"
+                      },
+                      {
+                        "momentum": "k",
+                        "tag": {
+                          "edge_id": "e0",
+                          "endpoint": "I_B"
+                        },
+                        "type": "D2"
+                      },
+                      {
+                        "edge_id": "e0",
+                        "momentum": "k",
+                        "type": "Propagator"
+                      }
+                    ]
+                  }
+                ],
+                "positions": [
+                  0,
+                  1,
+                  2
+                ],
+                "rule_id": "PROJECTOR_D2_BARD2_D2"
+              },
+              {
+                "input": {
+                  "coefficient": {
+                    "im": "0",
+                    "re": "-16"
+                  },
+                  "sign_ledger": [
+                    {
+                      "crossed_parities": [],
+                      "factor": {
+                        "im": "0",
+                        "re": "-16"
+                      },
+                      "kind": "ALGEBRA",
+                      "operator": "D2 BarD2 D2",
+                      "rule": "PROJECTOR_D2_BARD2_D2",
+                      "source_tag": null,
+                      "target_tag": null
+                    }
+                  ],
+                  "word": [
+                    {
+                      "momentum": "k",
+                      "tag": {
+                        "edge_id": "e0",
+                        "endpoint": "I_B"
+                      },
+                      "type": "MomentumSquare"
+                    },
+                    {
+                      "momentum": "k",
+                      "tag": {
+                        "edge_id": "e0",
+                        "endpoint": "I_B"
+                      },
+                      "type": "D2"
+                    },
+                    {
+                      "edge_id": "e0",
+                      "momentum": "k",
+                      "type": "Propagator"
+                    }
+                  ]
+                },
+                "measure_before": [
+                  3,
+                  0
+                ],
+                "measures_after": [
+                  [
+                    2,
+                    0
+                  ]
+                ],
+                "outputs": [
+                  {
+                    "coefficient": {
+                      "im": "0",
+                      "re": "-16"
+                    },
+                    "sign_ledger": [
+                      {
+                        "crossed_parities": [],
+                        "factor": {
+                          "im": "0",
+                          "re": "-16"
+                        },
+                        "kind": "ALGEBRA",
+                        "operator": "D2 BarD2 D2",
+                        "rule": "PROJECTOR_D2_BARD2_D2",
+                        "source_tag": null,
+                        "target_tag": null
+                      },
+                      {
+                        "crossed_parities": [],
+                        "factor": {
+                          "im": "0",
+                          "re": "1"
+                        },
+                        "kind": "COLLAPSE",
+                        "operator": "e0",
+                        "rule": "COLLAPSE_PROPAGATOR",
+                        "source_tag": null,
+                        "target_tag": null
+                      }
+                    ],
+                    "word": [
+                      {
+                        "edge_id": "e0",
+                        "momentum": "k",
+                        "reason": "p^2 times 1/p^2",
+                        "type": "Collapse"
+                      },
+                      {
+                        "momentum": "k",
+                        "tag": {
+                          "edge_id": "e0",
+                          "endpoint": "I_B"
+                        },
+                        "type": "D2"
+                      }
+                    ]
+                  }
+                ],
+                "positions": [
+                  0,
+                  2
+                ],
+                "rule_id": "COLLAPSE_PROPAGATOR"
+              }
+            ],
+            "terminated": true
+          },
+          "notation_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+          "schema": 1,
+          "status": "PASS"
+        },
+        "mixed_external_phase_job": {
+          "amplitude_id": "A_WW_REFLECTED_EXACT_001",
+          "coefficient": {
+            "im": "0",
+            "re": "1"
+          },
+          "edges": [
+            {
+              "edge_id": "e0",
+              "endpoints": [
+                "I_B",
+                "bar_B"
+              ],
+              "momentum": "k"
+            },
+            {
+              "edge_id": "e1",
+              "endpoints": [
+                "bar_C",
+                "W_C"
+              ],
+              "momentum": "k+q"
+            },
+            {
+              "edge_id": "e2",
+              "endpoints": [
+                "W_A",
+                "I_A"
+              ],
+              "momentum": "k+p+q"
+            }
+          ],
+          "graph_hash": "5c60438e7705e78b6c07a68e8970f4f3003cbf30c9b753ac815f64ad016a3400",
+          "job_id": "D_MIXED_EXTERNAL_REFLECTED",
+          "legs": [
+            {
+              "chirality": "CHIRAL",
+              "leg_id": "L_W_ext",
+              "parity": 1,
+              "tag": {
+                "edge_id": "e1",
+                "endpoint": "W_C"
+              }
+            }
+          ],
+          "notation_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+          "operator_word": [
+            {
+              "index": "+",
+              "momentum": "k+q",
+              "tag": {
+                "edge_id": "e1",
+                "endpoint": "W_C"
+              },
+              "type": "D"
+            },
+            {
+              "index": "-",
+              "momentum": "k+q",
+              "tag": {
+                "edge_id": "e1",
+                "endpoint": "W_C"
+              },
+              "type": "BarD"
+            },
+            {
+              "chirality": "CHIRAL",
+              "leg_id": "L_W_ext",
+              "parity": 1,
+              "tag": {
+                "edge_id": "e1",
+                "endpoint": "W_C"
+              },
+              "type": "ExternalLeg"
+            }
+          ],
+          "propagators": [
+            {
+              "edge_id": "e0",
+              "momentum": "k",
+              "propagator_type": "P_VV"
+            },
+            {
+              "edge_id": "e1",
+              "momentum": "k+q",
+              "propagator_type": "P_VV"
+            },
+            {
+              "edge_id": "e2",
+              "momentum": "k+p+q",
+              "propagator_type": "P_VV"
+            }
+          ],
+          "schema": 1
+        },
+        "mixed_external_phase_result": {
+          "amplitude_id": "A_WW_REFLECTED_EXACT_001",
+          "critical_pair_audits": [],
+          "critical_pair_scope": "DECLARED_FINITE_CRITICAL_PAIR_SUITE_NOT_GLOBAL_CONFLUENCE",
+          "endpoint_transfer_policy": "EXPLICIT_API_ONLY_NEVER_INVOKED_BY_COMPILE",
+          "error": {
+            "code": "UNIMPLEMENTED_PHASE_SEQUENCE",
+            "leg_id": "L_W_ext",
+            "message": "mixed D/barD external-factor descendants must be normalized before chirality, but that descendant phase is not implemented",
+            "operator_types": [
+              "D",
+              "BarD"
+            ],
+            "required_order": [
+              "MIXED_D_BARD_NORMALIZATION",
+              "EXTERNAL_CHIRALITY"
+            ]
+          },
+          "graph_hash": "5c60438e7705e78b6c07a68e8970f4f3003cbf30c9b753ac815f64ad016a3400",
+          "implementation_status": "PARTIAL_DECLARED_PHASES_ONLY",
+          "implemented_phases": [
+            "EXACT_LOCAL_OPERATOR_NORMALIZATION",
+            "SINGLE_OPERATOR_EXTERNAL_CHIRALITY",
+            "TYPED_PROPAGATOR_COLLAPSE"
+          ],
+          "input_job_sha256": "bff5e5b5e6f3ac57a57ca4d2db5e1f9c6a58000bf2bab06e387246ee4ae08632",
+          "job_id": "D_MIXED_EXTERNAL_REFLECTED",
+          "normal_form": null,
+          "notation_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+          "schema": 1,
+          "status": "UNIMPLEMENTED_PHASE_SEQUENCE"
+        }
+      },
+      "graph_amplitude": {
+        "amplitudes": [
+          {
+            "amplitude_id": "A_WW_REFLECTED_EXACT_001",
+            "audit_factors": [
+              "F_aut"
+            ],
+            "automorphism_factor_policy": "AUDIT_ONLY_CLASS_ALREADY_SUMS_LABELED_PAIRINGS",
+            "automorphism_order": 1,
+            "automorphism_symmetry_factor": {
+              "denominator": 1,
+              "numerator": 1
+            },
+            "canonical_key": "5c60438e7705e78b6c07a68e8970f4f3003cbf30c9b753ac815f64ad016a3400",
+            "class_multiplicity": 1,
+            "coefficient_reduction_trace": [
+              "used (h)*(g2)=1 exactly 2 time(s)"
+            ],
+            "exact_coefficient_raw": {
+              "denominator": 8,
+              "i_power": 0,
+              "numerator": 1,
+              "rendered": "1/8*g2*g2*g2*h*h",
+              "sqrt2_power": 0,
+              "symbols": [
+                "g2",
+                "g2",
+                "g2",
+                "h",
+                "h"
+              ]
+            },
+            "exact_coefficient_reduced": {
+              "denominator": 8,
+              "i_power": 0,
+              "numerator": 1,
+              "rendered": "1/8*g2",
+              "sqrt2_power": 0,
+              "symbols": [
+                "g2"
+              ]
+            },
+            "external_fermion_word": [
+              "W_plus",
+              "TildeW_dot_alpha"
+            ],
+            "external_koszul_sign": -1,
+            "factors": [
+              {
+                "category": "WICK_KOSZUL",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "1",
+                "factor_id": "F_wick",
+                "metadata": {},
+                "origins": [
+                  "scripts/step5_graph_ir.py:enumerate_wick_pairings"
+                ]
+              },
+              {
+                "category": "EXTERNAL_KOSZUL",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": -1,
+                  "rendered": "-1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "-1",
+                "factor_id": "F_external_koszul",
+                "metadata": {
+                  "ordered_external_fermion_word": "W_plus,TildeW_dot_alpha"
+                },
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53v",
+                  "scripts/step5_ww_seed.py:physical_triangle"
+                ]
+              },
+              {
+                "category": "AUTOMORPHISM_AUDIT_ONLY",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "|Aut(G)|=1",
+                "factor_id": "F_aut",
+                "metadata": {
+                  "automorphism_order": "1",
+                  "coefficient_policy": "AUDIT_ONLY_CLASS_ALREADY_SUMS_LABELED_PAIRINGS"
+                },
+                "origins": [
+                  "scripts/step5_supergraph_pipeline.py:graph_automorphism_order"
+                ]
+              },
+              {
+                "category": "ISOMORPHISM_CLASS_MULTIPLICITY",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "1",
+                "factor_id": "F_iso_mult",
+                "metadata": {},
+                "origins": [
+                  "scripts/step5_supergraph_pipeline.py:compile_request"
+                ]
+              },
+              {
+                "category": "INSERTION",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "COMPOSITE_INSERTION_I2_WW",
+                "factor_id": "F_vertex_vI",
+                "metadata": {
+                  "superspace_point": "theta_0"
+                },
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53b"
+                ]
+              },
+              {
+                "category": "DERIVATIVE_OPERATOR",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "D_-[K_+V^B K_+V^A]",
+                "factor_id": "F_operator_vI_0",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53b"
+                ]
+              },
+              {
+                "category": "DERIVATIVE_OPERATOR",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "K_+=-(1/8)D_+barD^2D_+",
+                "factor_id": "F_operator_vI_1",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53b"
+                ]
+              },
+              {
+                "category": "VERTEX_DELTA",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "delta(k-(k+p+q)+(p+q))",
+                "factor_id": "F_delta_vI",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53b"
+                ]
+              },
+              {
+                "category": "COLOR_FLAVOR_TENSOR",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "B",
+                "factor_id": "F_color_vI_0",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53b"
+                ]
+              },
+              {
+                "category": "COLOR_FLAVOR_TENSOR",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "A",
+                "factor_id": "F_color_vI_1",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53b"
+                ]
+              },
+              {
+                "category": "ACTION_VERTEX",
+                "coefficient": {
+                  "denominator": 8,
+                  "i_power": 1,
+                  "numerator": -1,
+                  "rendered": "-1/8*i*h",
+                  "sqrt2_power": 0,
+                  "symbols": [
+                    "h"
+                  ]
+                },
+                "expression": "BACKGROUND_CUBIC_TILDE_W",
+                "factor_id": "F_vertex_vBar",
+                "metadata": {
+                  "superspace_point": "theta_1"
+                },
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e"
+                ]
+              },
+              {
+                "category": "DERIVATIVE_OPERATOR",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "barD^dot_alpha(C)-barD^dot_alpha(A)",
+                "factor_id": "F_operator_vBar_0",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e"
+                ]
+              },
+              {
+                "category": "VERTEX_DELTA",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "delta(-k+(k+q)-q)",
+                "factor_id": "F_delta_vBar",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e"
+                ]
+              },
+              {
+                "category": "COLOR_FLAVOR_TENSOR",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "c_{BCD}",
+                "factor_id": "F_color_vBar_0",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e"
+                ]
+              },
+              {
+                "category": "ACTION_VERTEX",
+                "coefficient": {
+                  "denominator": 8,
+                  "i_power": 1,
+                  "numerator": 1,
+                  "rendered": "1/8*i*h",
+                  "sqrt2_power": 0,
+                  "symbols": [
+                    "h"
+                  ]
+                },
+                "expression": "BACKGROUND_CUBIC_W",
+                "factor_id": "F_vertex_vW",
+                "metadata": {
+                  "superspace_point": "theta_2"
+                },
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e"
+                ]
+              },
+              {
+                "category": "DERIVATIVE_OPERATOR",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "D_a(C)-D_a(B)",
+                "factor_id": "F_operator_vW_0",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e"
+                ]
+              },
+              {
+                "category": "VERTEX_DELTA",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "delta(-(k+q)+(k+p+q)-p)",
+                "factor_id": "F_delta_vW",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e"
+                ]
+              },
+              {
+                "category": "COLOR_FLAVOR_TENSOR",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "c_{ACE}",
+                "factor_id": "F_color_vW_0",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e"
+                ]
+              },
+              {
+                "category": "PROPAGATOR",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": -2,
+                  "rendered": "-2*g2",
+                  "sqrt2_power": 0,
+                  "symbols": [
+                    "g2"
+                  ]
+                },
+                "expression": "kappa^(-1)*delta4theta/(k)^2",
+                "factor_id": "F_prop_e0",
+                "metadata": {
+                  "color_tensor": "kappa^{AB}",
+                  "momentum": "k",
+                  "normalization_status": "EXACT_PROJECT_NORMALIZATION"
+                },
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.46"
+                ]
+              },
+              {
+                "category": "COLOR_FLAVOR_TENSOR",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "kappa^{AB}",
+                "factor_id": "F_prop_color_e0",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.46"
+                ]
+              },
+              {
+                "category": "PROPAGATOR",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": -2,
+                  "rendered": "-2*g2",
+                  "sqrt2_power": 0,
+                  "symbols": [
+                    "g2"
+                  ]
+                },
+                "expression": "kappa^(-1)*delta4theta/(k+q)^2",
+                "factor_id": "F_prop_e1",
+                "metadata": {
+                  "color_tensor": "kappa^{AB}",
+                  "momentum": "k+q",
+                  "normalization_status": "EXACT_PROJECT_NORMALIZATION"
+                },
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.46"
+                ]
+              },
+              {
+                "category": "COLOR_FLAVOR_TENSOR",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "kappa^{AB}",
+                "factor_id": "F_prop_color_e1",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.46"
+                ]
+              },
+              {
+                "category": "PROPAGATOR",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": -2,
+                  "rendered": "-2*g2",
+                  "sqrt2_power": 0,
+                  "symbols": [
+                    "g2"
+                  ]
+                },
+                "expression": "kappa^(-1)*delta4theta/(k+p+q)^2",
+                "factor_id": "F_prop_e2",
+                "metadata": {
+                  "color_tensor": "kappa^{AB}",
+                  "momentum": "k+p+q",
+                  "normalization_status": "EXACT_PROJECT_NORMALIZATION"
+                },
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.46"
+                ]
+              },
+              {
+                "category": "COLOR_FLAVOR_TENSOR",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "kappa^{AB}",
+                "factor_id": "F_prop_color_e2",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.46"
+                ]
+              },
+              {
+                "category": "LOOP_MEASURE",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "mu^(2 epsilon) d^d k/(2 pi)^d",
+                "factor_id": "F_loop_measure",
+                "metadata": {},
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53v",
+                  "scripts/step5_ww_seed.py:physical_triangle"
+                ]
+              },
+              {
+                "category": "EXTERNAL_LEG",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "Source[nabla_-(X^A X^B)]",
+                "factor_id": "F_external_L_I_source",
+                "metadata": {
+                  "color": "BA",
+                  "flavor": "NONE",
+                  "momentum": "p+q"
+                },
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53v",
+                  "scripts/step5_ww_seed.py:physical_triangle"
+                ]
+              },
+              {
+                "category": "EXTERNAL_LEG",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "TildeW_dot_alpha{spinor=DOTTED:dot_alpha:UP}",
+                "factor_id": "F_external_L_bar_ext",
+                "metadata": {
+                  "color": "D",
+                  "flavor": "NONE",
+                  "momentum": "q"
+                },
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53v",
+                  "scripts/step5_ww_seed.py:physical_triangle"
+                ]
+              },
+              {
+                "category": "EXTERNAL_LEG",
+                "coefficient": {
+                  "denominator": 1,
+                  "i_power": 0,
+                  "numerator": 1,
+                  "rendered": "1",
+                  "sqrt2_power": 0,
+                  "symbols": []
+                },
+                "expression": "W_plus{spinor=UNDOTTED:+:DOWN}",
+                "factor_id": "F_external_L_W_ext",
+                "metadata": {
+                  "color": "E",
+                  "flavor": "NONE",
+                  "momentum": "p"
+                },
+                "origins": [
+                  "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53v",
+                  "scripts/step5_ww_seed.py:physical_triangle"
+                ]
+              }
+            ],
+            "graph": {
+              "external_legs": [
+                {
+                  "attached_half_edge": "I_source",
+                  "color_label": "BA",
+                  "field_type": {
+                    "chirality": "UNCONSTRAINED",
+                    "color_representation": "adjoint",
+                    "indices": [
+                      {
+                        "label": "A",
+                        "space": "COLOR_ADJOINT",
+                        "variance": "UP"
+                      },
+                      {
+                        "label": "B",
+                        "space": "COLOR_ADJOINT",
+                        "variance": "UP"
+                      }
+                    ],
+                    "name": "Source[nabla_-(X^A X^B)]",
+                    "statistics": "BOSON"
+                  },
+                  "flavor_label": null,
+                  "leg_id": "L_I_source",
+                  "momentum": "p+q",
+                  "operator_derivatives": [],
+                  "spinor_indices": []
+                },
+                {
+                  "attached_half_edge": "bar_ext",
+                  "color_label": "D",
+                  "field_type": {
+                    "chirality": "ANTICHIRAL",
+                    "color_representation": "adjoint",
+                    "indices": [
+                      {
+                        "label": "D",
+                        "space": "COLOR_ADJOINT",
+                        "variance": "UP"
+                      },
+                      {
+                        "label": "dot_alpha",
+                        "space": "DOTTED",
+                        "variance": "UP"
+                      }
+                    ],
+                    "name": "TildeW_dot_alpha",
+                    "statistics": "FERMION"
+                  },
+                  "flavor_label": null,
+                  "leg_id": "L_bar_ext",
+                  "momentum": "q",
+                  "operator_derivatives": [],
+                  "spinor_indices": [
+                    {
+                      "label": "dot_alpha",
+                      "space": "DOTTED",
+                      "variance": "UP"
+                    }
+                  ]
+                },
+                {
+                  "attached_half_edge": "W_ext",
+                  "color_label": "E",
+                  "field_type": {
+                    "chirality": "CHIRAL",
+                    "color_representation": "adjoint",
+                    "indices": [
+                      {
+                        "label": "E",
+                        "space": "COLOR_ADJOINT",
+                        "variance": "UP"
+                      },
+                      {
+                        "label": "+",
+                        "space": "UNDOTTED",
+                        "variance": "DOWN"
+                      }
+                    ],
+                    "name": "W_plus",
+                    "statistics": "FERMION"
+                  },
+                  "flavor_label": null,
+                  "leg_id": "L_W_ext",
+                  "momentum": "p",
+                  "operator_derivatives": [],
+                  "spinor_indices": [
+                    {
+                      "label": "+",
+                      "space": "UNDOTTED",
+                      "variance": "DOWN"
+                    }
+                  ]
+                }
+              ],
+              "graph_id": "WW_REFLECTED_EXACT__pairing_005",
+              "half_edges": [
+                {
+                  "derivatives": [],
+                  "field_type": {
+                    "chirality": "REAL",
+                    "color_representation": "adjoint",
+                    "indices": [
+                      {
+                        "label": "Q",
+                        "space": "COLOR_ADJOINT",
+                        "variance": "UP"
+                      }
+                    ],
+                    "name": "V",
+                    "statistics": "BOSON"
+                  },
+                  "flow": "OUT",
+                  "half_edge_id": "I_B",
+                  "momentum": "k",
+                  "slot": 0,
+                  "vertex_id": "vI"
+                },
+                {
+                  "derivatives": [],
+                  "field_type": {
+                    "chirality": "REAL",
+                    "color_representation": "adjoint",
+                    "indices": [
+                      {
+                        "label": "Q",
+                        "space": "COLOR_ADJOINT",
+                        "variance": "UP"
+                      }
+                    ],
+                    "name": "V",
+                    "statistics": "BOSON"
+                  },
+                  "flow": "IN",
+                  "half_edge_id": "I_A",
+                  "momentum": "-k-p-q",
+                  "slot": 1,
+                  "vertex_id": "vI"
+                },
+                {
+                  "derivatives": [],
+                  "field_type": {
+                    "chirality": "UNCONSTRAINED",
+                    "color_representation": "adjoint",
+                    "indices": [
+                      {
+                        "label": "A",
+                        "space": "COLOR_ADJOINT",
+                        "variance": "UP"
+                      },
+                      {
+                        "label": "B",
+                        "space": "COLOR_ADJOINT",
+                        "variance": "UP"
+                      }
+                    ],
+                    "name": "Source[nabla_-(X^A X^B)]",
+                    "statistics": "BOSON"
+                  },
+                  "flow": "IN",
+                  "half_edge_id": "I_source",
+                  "momentum": "p+q",
+                  "slot": 2,
+                  "vertex_id": "vI"
+                },
+                {
+                  "derivatives": [],
+                  "field_type": {
+                    "chirality": "REAL",
+                    "color_representation": "adjoint",
+                    "indices": [
+                      {
+                        "label": "Q",
+                        "space": "COLOR_ADJOINT",
+                        "variance": "UP"
+                      }
+                    ],
+                    "name": "V",
+                    "statistics": "BOSON"
+                  },
+                  "flow": "IN",
+                  "half_edge_id": "bar_B",
+                  "momentum": "-k",
+                  "slot": 0,
+                  "vertex_id": "vBar"
+                },
+                {
+                  "derivatives": [],
+                  "field_type": {
+                    "chirality": "REAL",
+                    "color_representation": "adjoint",
+                    "indices": [
+                      {
+                        "label": "Q",
+                        "space": "COLOR_ADJOINT",
+                        "variance": "UP"
+                      }
+                    ],
+                    "name": "V",
+                    "statistics": "BOSON"
+                  },
+                  "flow": "OUT",
+                  "half_edge_id": "bar_C",
+                  "momentum": "k+q",
+                  "slot": 1,
+                  "vertex_id": "vBar"
+                },
+                {
+                  "derivatives": [],
+                  "field_type": {
+                    "chirality": "ANTICHIRAL",
+                    "color_representation": "adjoint",
+                    "indices": [
+                      {
+                        "label": "D",
+                        "space": "COLOR_ADJOINT",
+                        "variance": "UP"
+                      },
+                      {
+                        "label": "dot_alpha",
+                        "space": "DOTTED",
+                        "variance": "UP"
+                      }
+                    ],
+                    "name": "TildeW_dot_alpha",
+                    "statistics": "FERMION"
+                  },
+                  "flow": "IN",
+                  "half_edge_id": "bar_ext",
+                  "momentum": "-q",
+                  "slot": 2,
+                  "vertex_id": "vBar"
+                },
+                {
+                  "derivatives": [],
+                  "field_type": {
+                    "chirality": "REAL",
+                    "color_representation": "adjoint",
+                    "indices": [
+                      {
+                        "label": "Q",
+                        "space": "COLOR_ADJOINT",
+                        "variance": "UP"
+                      }
+                    ],
+                    "name": "V",
+                    "statistics": "BOSON"
+                  },
+                  "flow": "IN",
+                  "half_edge_id": "W_C",
+                  "momentum": "-k-q",
+                  "slot": 0,
+                  "vertex_id": "vW"
+                },
+                {
+                  "derivatives": [],
+                  "field_type": {
+                    "chirality": "REAL",
+                    "color_representation": "adjoint",
+                    "indices": [
+                      {
+                        "label": "Q",
+                        "space": "COLOR_ADJOINT",
+                        "variance": "UP"
+                      }
+                    ],
+                    "name": "V",
+                    "statistics": "BOSON"
+                  },
+                  "flow": "OUT",
+                  "half_edge_id": "W_A",
+                  "momentum": "k+p+q",
+                  "slot": 1,
+                  "vertex_id": "vW"
+                },
+                {
+                  "derivatives": [],
+                  "field_type": {
+                    "chirality": "CHIRAL",
+                    "color_representation": "adjoint",
+                    "indices": [
+                      {
+                        "label": "E",
+                        "space": "COLOR_ADJOINT",
+                        "variance": "UP"
+                      },
+                      {
+                        "label": "+",
+                        "space": "UNDOTTED",
+                        "variance": "DOWN"
+                      }
+                    ],
+                    "name": "W_plus",
+                    "statistics": "FERMION"
+                  },
+                  "flow": "IN",
+                  "half_edge_id": "W_ext",
+                  "momentum": "-p",
+                  "slot": 2,
+                  "vertex_id": "vW"
+                }
+              ],
+              "internal_edges": [
+                {
+                  "edge_id": "e0",
+                  "left_half_edge": "I_B",
+                  "momentum": "k",
+                  "orientation": "NONE",
+                  "propagator_symbol": "kappa^(-1)*delta4theta/(k)^2",
+                  "right_half_edge": "bar_B"
+                },
+                {
+                  "edge_id": "e1",
+                  "left_half_edge": "bar_C",
+                  "momentum": "k+q",
+                  "orientation": "NONE",
+                  "propagator_symbol": "kappa^(-1)*delta4theta/(k+q)^2",
+                  "right_half_edge": "W_C"
+                },
+                {
+                  "edge_id": "e2",
+                  "left_half_edge": "W_A",
+                  "momentum": "k+p+q",
+                  "orientation": "NONE",
+                  "propagator_symbol": "kappa^(-1)*delta4theta/(k+p+q)^2",
+                  "right_half_edge": "I_A"
+                }
+              ],
+              "loop_momenta": [
+                "k"
+              ],
+              "metadata": {
+                "automorphism_order": "1",
+                "automorphism_symmetry_factor": "1/1",
+                "canonical_key": "5c60438e7705e78b6c07a68e8970f4f3003cbf30c9b753ac815f64ad016a3400",
+                "external_fermion_word": "W_plus,TildeW_dot_alpha",
+                "external_koszul_sign": "-1",
+                "isomorphism_class_multiplicity": "1",
+                "notation_schema_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+                "orientation": "REFLECTED",
+                "pairing_signature": "[[\"I_B\", \"bar_B\", \"P_VV\"], [\"I_A\", \"W_A\", \"P_VV\"], [\"bar_C\", \"W_C\", \"P_VV\"]]",
+                "request_id": "WW_REFLECTED_EXACT",
+                "request_kind": "PHYSICAL_PARTIAL_CONTRACTION",
+                "source_status": "PHYSICAL",
+                "wick_koszul_sign": "1"
+              },
+              "vertices": [
+                {
+                  "coefficient_factors": [
+                    "1",
+                    "D_-[K_+V^B K_+V^A]",
+                    "K_+=-(1/8)D_+barD^2D_+",
+                    "origin:contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53b"
+                  ],
+                  "coefficient_symbol": "1",
+                  "color_word": [
+                    "B",
+                    "A"
+                  ],
+                  "kind": "COMPOSITE_INSERTION_I2_WW",
+                  "momentum_delta": "delta(k-(k+p+q)+(p+q))",
+                  "momentum_injection": "0",
+                  "ordered_half_edges": [
+                    "I_B",
+                    "I_A",
+                    "I_source"
+                  ],
+                  "superspace_point": "theta_0",
+                  "vertex_id": "vI"
+                },
+                {
+                  "coefficient_factors": [
+                    "-1/8*i*h",
+                    "barD^dot_alpha(C)-barD^dot_alpha(A)",
+                    "origin:contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e"
+                  ],
+                  "coefficient_symbol": "-1/8*i*h",
+                  "color_word": [
+                    "c_{BCD}"
+                  ],
+                  "kind": "BACKGROUND_CUBIC_TILDE_W",
+                  "momentum_delta": "delta(-k+(k+q)-q)",
+                  "momentum_injection": "0",
+                  "ordered_half_edges": [
+                    "bar_B",
+                    "bar_C",
+                    "bar_ext"
+                  ],
+                  "superspace_point": "theta_1",
+                  "vertex_id": "vBar"
+                },
+                {
+                  "coefficient_factors": [
+                    "1/8*i*h",
+                    "D_a(C)-D_a(B)",
+                    "origin:contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53e"
+                  ],
+                  "coefficient_symbol": "1/8*i*h",
+                  "color_word": [
+                    "c_{ACE}"
+                  ],
+                  "kind": "BACKGROUND_CUBIC_W",
+                  "momentum_delta": "delta(-(k+q)+(k+p+q)-p)",
+                  "momentum_injection": "0",
+                  "ordered_half_edges": [
+                    "W_C",
+                    "W_A",
+                    "W_ext"
+                  ],
+                  "superspace_point": "theta_2",
+                  "vertex_id": "vW"
+                }
+              ]
+            },
+            "normalization_status": "EXACT_PROJECT_NORMALIZATION",
+            "orientation": "REFLECTED",
+            "orientation_signature": [
+              "e0:V--V:k",
+              "e1:V--V:k+q",
+              "e2:V--V:k+p+q"
+            ],
+            "preintegration_product": "F_wick * F_external_koszul * F_iso_mult * F_vertex_vI * F_operator_vI_0 * F_operator_vI_1 * F_delta_vI * F_color_vI_0 * F_color_vI_1 * F_vertex_vBar * F_operator_vBar_0 * F_delta_vBar * F_color_vBar_0 * F_vertex_vW * F_operator_vW_0 * F_delta_vW * F_color_vW_0 * F_prop_e0 * F_prop_color_e0 * F_prop_e1 * F_prop_color_e1 * F_prop_e2 * F_prop_color_e2 * F_loop_measure * F_external_L_I_source * F_external_L_bar_ext * F_external_L_W_ext",
+            "renderers": {
+              "dot": "digraph \"WW_REFLECTED_EXACT__pairing_005\" {\n  \"vI\" [label=\"vI:COMPOSITE_INSERTION_I2_WW\"];\n  \"vBar\" [label=\"vBar:BACKGROUND_CUBIC_TILDE_W\"];\n  \"vW\" [label=\"vW:BACKGROUND_CUBIC_W\"];\n  \"X_L_I_source\" [shape=box,label=\"L_I_source:Source[nabla_-(X^A X^B)](p+q)\"];\n  \"X_L_I_source\" -> \"vI\" [label=\"I_source{identity}\"];\n  \"X_L_bar_ext\" [shape=box,label=\"L_bar_ext:TildeW_dot_alpha{spinor=DOTTED:dot_alpha:UP}(q)\"];\n  \"X_L_bar_ext\" -> \"vBar\" [label=\"bar_ext{identity}\"];\n  \"X_L_W_ext\" [shape=box,label=\"L_W_ext:W_plus{spinor=UNDOTTED:+:DOWN}(p)\"];\n  \"X_L_W_ext\" -> \"vW\" [label=\"W_ext{identity}\"];\n  \"vI\" -> \"vBar\" [dir=none,label=\"e0:kappa^(-1)*delta4theta/(k)^2(k);I_B{identity};bar_B{identity}\"];\n  \"vBar\" -> \"vW\" [dir=none,label=\"e1:kappa^(-1)*delta4theta/(k+q)^2(k+q);bar_C{identity};W_C{identity}\"];\n  \"vW\" -> \"vI\" [dir=none,label=\"e2:kappa^(-1)*delta4theta/(k+p+q)^2(k+p+q);W_A{identity};I_A{identity}\"];\n}\n",
+              "mermaid": "graph LR\n  vI[\"vI:COMPOSITE_INSERTION_I2_WW\"]\n  vBar[\"vBar:BACKGROUND_CUBIC_TILDE_W\"]\n  vW[\"vW:BACKGROUND_CUBIC_W\"]\n  X_L_I_source[\"L_I_source:Source[nabla_-(X^A X^B)](p+q)\"]\n  X_L_I_source -- \"I_source{identity}\" --> vI\n  X_L_bar_ext[\"L_bar_ext:TildeW_dot_alpha{spinor=DOTTED:dot_alpha:UP}(q)\"]\n  X_L_bar_ext -- \"bar_ext{identity}\" --> vBar\n  X_L_W_ext[\"L_W_ext:W_plus{spinor=UNDOTTED:+:DOWN}(p)\"]\n  X_L_W_ext -- \"W_ext{identity}\" --> vW\n  vI ---|\"e0:kappa^(-1)*delta4theta/(k)^2(k);I_B{identity};bar_B{identity}\"| vBar\n  vBar ---|\"e1:kappa^(-1)*delta4theta/(k+q)^2(k+q);bar_C{identity};W_C{identity}\"| vW\n  vW ---|\"e2:kappa^(-1)*delta4theta/(k+p+q)^2(k+p+q);W_A{identity};I_A{identity}\"| vI\n"
+            },
+            "request_id": "WW_REFLECTED_EXACT",
+            "schema_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79",
+            "wick_koszul_sign": 1
+          }
+        ],
+        "completeness": {
+          "accepted_pairings_reconstructed": 1,
+          "endpoint_admissible_pairings": 1,
+          "isomorphism_classes": 1,
+          "no_double_count": true,
+          "rejected_disconnected": 0,
+          "rejected_non_one_loop": 0,
+          "typed_pairings": 8
+        },
+        "request_id": "WW_REFLECTED_EXACT",
+        "request_kind": "PHYSICAL_PARTIAL_CONTRACTION",
+        "schema_hash": "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79"
+      },
+      "orientation": "REFLECTED"
+    }
+  ],
+  "scalar_ring": {
+    "generators": [
+      "i",
+      "sqrt2"
+    ],
+    "name": "Q(i,sqrt2)",
+    "ordered_basis": [
+      "1",
+      "i",
+      "sqrt2",
+      "i*sqrt2"
+    ],
+    "relations": [
+      "i^2=-1",
+      "sqrt2^2=2",
+      "i*sqrt2=sqrt2*i"
+    ],
+    "ww_subring_adapter": "Qi={a+b*i+c*sqrt2+d*i*sqrt2 | c=d=0}"
+  },
+  "schema": 1,
+  "scope": "PRIMITIVE_WW_TYPED_PIPELINE",
+  "source_sha256": {
+    "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md": "dd06ff2ecf0d78605282cbb505daf16797ce859650fc8d398405031f3acdb002",
+    "scripts/build_step5_typed_pipeline.py": "546a51b7641e1dced2774df57a4543a23138c31e4660306a78ba3b89d72e2cbd",
+    "scripts/step5_dalgebra_compiler.py": "2978ac0eadb7b7ec054129e9e3b7ea24e2e2e1ba116de7f55ba4c7eee2be3247",
+    "scripts/step5_graph_ir.py": "2e5cf55ad5e486084ad4e3a0435031e29b6d22480586cbeef25e2a7b40954044",
+    "scripts/step5_pipeline_ir.py": "38cac08265b86e1582dd7b7a24040565cabd80aecc3645a2e5e1d5186c01c74e",
+    "scripts/step5_supergraph_pipeline.py": "791a38c50f8aacb7106b0db88af5db5dd4c355d002d330310cf0c2c524677a15",
+    "scripts/step5_vertex_grammar.py": "b91f0e9633f13ebb238a18f09b0265a0c8b1bb72d964307d3fc4b1d04fd39dd8"
+  },
+  "stage_status": {
+    "anomaly_coefficient": "NOT_ACCEPTED",
+    "basis_resolved_sd_contact_orbit": "OPEN",
+    "canonical_routing": "EXPLICIT_BINDING_VALIDATED_NOT_SOLVED",
+    "connected_wick_complete_supergraph": "PASS",
+    "factorized_preintegration_amplitude": "PASS",
+    "full_scheduled_eight_row_dalgebra_per_orientation": "UNIMPLEMENTED_PHASE_SEQUENCE",
+    "generic_identical_action_vertex_expansion": "OPEN",
+    "integral_pole_binding": "NOT_BOUND_TO_NEW_DWORD_IR",
+    "local_dword_rules": "PASS",
+    "notation": "PASS",
+    "vertex_input": "TYPED_EXPLICIT_SEED_REQUEST"
+  }
+}

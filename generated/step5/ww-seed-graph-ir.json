@@ -12071,7 +12071,7 @@
       "status": "PROVED_ABSENT_BY_INTRINSIC_EUCLIDEAN_CHIRAL_SECTOR"
     }
   },
-  "contract_sha256": "92d72b88c5afd659f0c2099a0a5b661365a2b0a3d359c2a82aff5ff5c50241f6",
+  "contract_sha256": "dd06ff2ecf0d78605282cbb505daf16797ce859650fc8d398405031f3acdb002",
   "exact_matrix_binding": {
     "checks": 40,
     "engine": "exact 16x16 exterior-algebra matrices over Q(i)",
@@ -13015,13 +13015,14 @@
     }
   },
   "poles": {
-    "anomaly_coefficient_fixed_orientation": "+g^2/(64*pi^2)",
-    "anomaly_coefficients": {
+    "anomaly_status": "DERIVED_AGGREGATE_SD_CANDIDATE_NOT_ACCEPTED",
+    "bare_triangle_numerator_contains_epsilon": false,
+    "conditional_candidate_coefficient_fixed_orientation": "+g^2/(64*pi^2)",
+    "conditional_candidate_coefficients": {
       "DIRECT": "+g^2/(64*pi^2)",
       "REFLECTED": "-g^2/(64*pi^2)"
     },
-    "anomaly_status": "DERIVED_AGGREGATE_SD_CANDIDATE_NOT_ACCEPTED",
-    "bare_triangle_numerator_contains_epsilon": false,
+    "conditional_two_orientation_single_color_tensor": "g^2/(64*pi^2)*c_{ACD}c_{BCE}*(i*p_+^dot_alpha)*[TildeW_dot_alpha^D*X^E-X^D*TildeW_dot_alpha^E]",
     "contact_poles": {
       "DIRECT": "-g^2/(128*pi^2*epsilon)*c_{ACD}c_{BCE}*T_(mu n nu)*delta4^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)",
       "REFLECTED": "+g^2/(128*pi^2*epsilon)*c_{BCD}c_{ACE}*T_(mu n nu)*delta4^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)"
@@ -13069,8 +13070,7 @@
       "DIRECT": "+g^2/(128*pi^2*epsilon)*c_{ACD}c_{BCE}*T_(mu n nu)*hat_delta^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)",
       "REFLECTED": "-g^2/(128*pi^2*epsilon)*c_{BCD}c_{ACE}*T_(mu n nu)*hat_delta^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)"
     },
-    "triangle_status": "DERIVED_ISOLATED_TRIANGLE_ORDINARY_UV_POLE",
-    "two_orientation_single_color_tensor": "g^2/(64*pi^2)*c_{ACD}c_{BCE}*(i*p_+^dot_alpha)*[TildeW_dot_alpha^D*X^E-X^D*TildeW_dot_alpha^E]"
+    "triangle_status": "DERIVED_ISOLATED_TRIANGLE_ORDINARY_UV_POLE"
   },
   "preintegration": {
     "L1": "2*k+q",

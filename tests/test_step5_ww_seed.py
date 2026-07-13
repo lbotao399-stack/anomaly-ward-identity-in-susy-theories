@@ -111,13 +111,16 @@ class Step5WWSeedTest(unittest.TestCase):
         self.assertTrue(poles["missing_rule_is_not_finite_BV"])
         self.assertTrue(poles["metric_mismatch_proved_at_aggregate_sd_level"])
         self.assertFalse(poles["full_ordinary_triangle_bubble_cancellation_proved"])
-        self.assertEqual(poles["anomaly_coefficient_fixed_orientation"], "+g^2/(64*pi^2)")
         self.assertEqual(
-            poles["anomaly_coefficients"],
+            poles["conditional_candidate_coefficient_fixed_orientation"],
+            "+g^2/(64*pi^2)",
+        )
+        self.assertEqual(
+            poles["conditional_candidate_coefficients"],
             {"DIRECT": "+g^2/(64*pi^2)", "REFLECTED": "-g^2/(64*pi^2)"},
         )
         self.assertEqual(
-            poles["two_orientation_single_color_tensor"],
+            poles["conditional_two_orientation_single_color_tensor"],
             "g^2/(64*pi^2)*c_{ACD}c_{BCE}*(i*p_+^dot_alpha)*"
             "[TildeW_dot_alpha^D*X^E-X^D*TildeW_dot_alpha^E]",
         )
@@ -235,6 +238,15 @@ class Step5WWSeedTest(unittest.TestCase):
         self.assertIn("Unresolved \\(P0/P1\\): \\(1\\)", text)
         self.assertIn("ORDERED_PORT_BASIS_TERM_NOT_GRAPH", text)
         self.assertIn("| G4 | G-ALG |", text)
+
+    def test_human_report_does_not_present_the_candidate_as_accepted(self) -> None:
+        text = (ROOT / "generated/step5/ww-seed-dalgebra.md").read_text()
+        self.assertIn("Legacy specialized WW ledger", text)
+        self.assertIn("not a certificate from the generic typed $D$-compiler", text)
+        self.assertIn("CONDITIONAL\\_ON\\_CONTACT\\_ORBIT\\_SUM", text)
+        self.assertIn("aggregate\\ SD", text)
+        self.assertNotIn("\\Gamma_{\\mathrm{anom}}", text)
+        self.assertNotIn("anomaly_coefficient_fixed_orientation", json.dumps(self.payload))
 
     def test_publication_contact_figures_bind_to_trace_families(self) -> None:
         direct = (ROOT / "generated/step5/ww-seed-contact-direct.tex").read_text()

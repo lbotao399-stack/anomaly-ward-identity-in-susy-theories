@@ -1,0 +1,14 @@
+digraph "WW_REFLECTED_EXACT__pairing_005" {
+  "vI" [label="vI:COMPOSITE_INSERTION_I2_WW"];
+  "vBar" [label="vBar:BACKGROUND_CUBIC_TILDE_W"];
+  "vW" [label="vW:BACKGROUND_CUBIC_W"];
+  "X_L_I_source" [shape=box,label="L_I_source:Source[nabla_-(X^A X^B)](p+q)"];
+  "X_L_I_source" -> "vI" [label="I_source{identity}"];
+  "X_L_bar_ext" [shape=box,label="L_bar_ext:TildeW_dot_alpha{spinor=DOTTED:dot_alpha:UP}(q)"];
+  "X_L_bar_ext" -> "vBar" [label="bar_ext{identity}"];
+  "X_L_W_ext" [shape=box,label="L_W_ext:W_plus{spinor=UNDOTTED:+:DOWN}(p)"];
+  "X_L_W_ext" -> "vW" [label="W_ext{identity}"];
+  "vI" -> "vBar" [dir=none,label="e0:kappa^(-1)*delta4theta/(k)^2(k);I_B{identity};bar_B{identity}"];
+  "vBar" -> "vW" [dir=none,label="e1:kappa^(-1)*delta4theta/(k+q)^2(k+q);bar_C{identity};W_C{identity}"];
+  "vW" -> "vI" [dir=none,label="e2:kappa^(-1)*delta4theta/(k+p+q)^2(k+p+q);W_A{identity};I_A{identity}"];
+}
