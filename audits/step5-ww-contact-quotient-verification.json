@@ -1,0 +1,113 @@
+{
+  "checks": [
+    {
+      "id": "I3_count_30",
+      "passed": true
+    },
+    {
+      "id": "I4_pairings_180",
+      "passed": true
+    },
+    {
+      "id": "S3_count_6",
+      "passed": true
+    },
+    {
+      "id": "X_descendant_not_claimed_chiral",
+      "passed": true
+    },
+    {
+      "id": "aggregate_result_not_imported",
+      "passed": true
+    },
+    {
+      "id": "all_bubble_routes_pass",
+      "passed": true
+    },
+    {
+      "id": "all_color_provenance_retained",
+      "passed": true
+    },
+    {
+      "id": "all_derivative_scopes_retained",
+      "passed": true
+    },
+    {
+      "id": "all_source_AST_hash_bindings_resolve",
+      "passed": true
+    },
+    {
+      "id": "all_tadpole_routes_pass",
+      "passed": true
+    },
+    {
+      "id": "all_wick_koszul_signs_plus_one",
+      "passed": true
+    },
+    {
+      "id": "bubble_pairings_360",
+      "passed": true
+    },
+    {
+      "id": "every_graph_has_unique_decorated_class",
+      "passed": true
+    },
+    {
+      "id": "every_graph_has_unique_id",
+      "passed": true
+    },
+    {
+      "id": "no_pole_or_anomaly_coefficient",
+      "passed": true
+    },
+    {
+      "id": "open_obligations_are_machine_readable",
+      "passed": true
+    },
+    {
+      "id": "ordered_vertex_pairs_180",
+      "passed": true
+    },
+    {
+      "id": "physical_graph_canonicalization_remains_open",
+      "passed": true
+    },
+    {
+      "id": "quotient_covers_domain_once",
+      "passed": true
+    },
+    {
+      "id": "quotient_fibers_exact",
+      "passed": true
+    },
+    {
+      "id": "quotient_has_no_coefficient_transport",
+      "passed": true
+    },
+    {
+      "id": "source_is_fermionic",
+      "passed": true
+    },
+    {
+      "id": "symmetry_and_automorphism_are_open",
+      "passed": true
+    }
+  ],
+  "open_proof_obligation_ids": [
+    "OPEN_CONTACT_001",
+    "OPEN_CONTACT_002",
+    "OPEN_CONTACT_003",
+    "OPEN_CONTACT_004",
+    "OPEN_CONTACT_005",
+    "OPEN_CONTACT_006",
+    "OPEN_CONTACT_007",
+    "OPEN_CONTACT_008"
+  ],
+  "schema": 1,
+  "scope": "STEP5_WW_BASIS_RESOLVED_CONTACT_PHYSICALIZATION",
+  "status": "PASS_WITH_OPEN_PROOF_OBLIGATIONS",
+  "totals": {
+    "checks": 23,
+    "failed": 0
+  }
+}
