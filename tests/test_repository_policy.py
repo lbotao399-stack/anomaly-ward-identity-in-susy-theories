@@ -23,6 +23,13 @@ class RepositoryPolicyTest(unittest.TestCase):
         ):
             self.assertTrue((ROOT / relative).is_file(), relative)
 
+    def test_verify_workflow_fetches_hash_pinned_history(self) -> None:
+        workflow = (ROOT / ".github/workflows/verify.yml").read_text(encoding="utf-8")
+        self.assertRegex(
+            workflow,
+            r"uses: actions/checkout@[^\n]+\n\s+with:\n\s+fetch-depth: 0",
+        )
+
     def test_no_legacy_directory_or_symlink(self) -> None:
         self.assertFalse((ROOT / "legacy").exists())
         for path in ROOT.rglob("*"):
