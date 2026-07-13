@@ -3,7 +3,7 @@
 ## Notation
 
 $$
-\mathbb K=\mathbb Q(i,\sqrt2),\qquad h_{\mathfrak N}=\texttt{e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79}.
+\mathbb K=\mathbb Q(i,\sqrt2),\qquad h_{\mathfrak N}=\texttt{fcdd284541dcdcf6d0217432ab146b908ad8aadf2a90e6f9201f87b149250025}.
 $$
 
 ## Compiler
@@ -31,7 +31,7 @@ N_{\rm typed}=8,\qquad N_{\rm admitted}=1,\qquad b_1=1.
 $$
 
 $$
-(r_0,r_1,r_2)=(k,k+q,k+p+q),\qquad C_G=\frac{1}{8}g^2.
+(r_0,r_1,r_2)=(k,k+q,k+p+q),\qquad C_G=-\frac{1}{8}g^2.
 $$
 
 ## D-algebra status
@@ -51,11 +51,11 @@ $$
 ## Specialized row-to-pole binding
 
 $$
-C_{G}^{\rm D}=-\frac{g^2}{8},\qquad C_{G}^{\rm R}=+\frac{g^2}{8},\qquad C_D=-\frac12,
+C_{G}^{\rm D}=-\frac{g^2}{8},\qquad C_{G}^{\rm R}=-\frac{g^2}{8},\qquad C_D=-\frac12,
 $$
 
 $$
-C_{\rm row}^{\rm D}=+\frac{g^2}{16},\qquad C_{\rm row}^{\rm R}=-\frac{g^2}{16},
+C_{\rm row}^{\rm D}=+\frac{g^2}{16},\qquad C_{\rm row}^{\rm R}=+\frac{g^2}{16},
 $$
 
 $$
@@ -63,11 +63,15 @@ $$
 $$
 
 $$
-\sum_{r=1}^{8}P_{r}^{\rm D}=+\frac{g^2}{128\pi^2\epsilon}\widehat\delta^{\mu\nu},\qquad \sum_{r=1}^{8}P_{r}^{\rm R}=-\frac{g^2}{128\pi^2\epsilon}\widehat\delta^{\mu\nu}.
+\sum_{r=1}^{8}P_{r}^{\rm D}=+\frac{g^2}{128\pi^2\epsilon}\widehat\delta^{\mu\nu},\qquad \sum_{r=1}^{8}P_{r}^{\rm R}=+\frac{g^2}{128\pi^2\epsilon}\widehat\delta^{\mu\nu}.
 $$
 
-Status: \texttt{PASS\_SPECIALIZED\_16\_ROW\_DRED\_MASTER\_BINDING}; generic out-of-scope $D$-words still fail closed.
+Status: \texttt{PASS\_ISOLATED\_TRIANGLE\_16\_ROW\_DRED\_MASTER\_BINDING}; generic out-of-scope $D$-words still fail closed.
 
 $$
-\Gamma_{\rm anomaly}:\ \texttt{NOT\_ACCEPTED}.
+\Gamma_{C,\mathrm{pole}}:\ \texttt{INVALIDATED\_REQUIRES\_TYPED\_CONTACT\_REPLAY},
+$$
+
+$$
+\Gamma_{\rm anomaly}:\ \texttt{INVALIDATED\_NOT\_PROPAGATED}.
 $$

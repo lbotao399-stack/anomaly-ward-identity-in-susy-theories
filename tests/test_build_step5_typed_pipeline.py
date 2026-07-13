@@ -41,7 +41,7 @@ class BuildStep5TypedPipelineTest(unittest.TestCase):
             ]["rendered"]
             for item in payload["orientations"]
         }
-        self.assertEqual(values, {"DIRECT": "-1/8*g2", "REFLECTED": "1/8*g2"})
+        self.assertEqual(values, {"DIRECT": "-1/8*g2", "REFLECTED": "-1/8*g2"})
 
     def test_canonical_notation_json_is_an_actual_compiler_input(self) -> None:
         schema = project_notation_schema()
@@ -78,6 +78,17 @@ class BuildStep5TypedPipelineTest(unittest.TestCase):
             self.assertEqual(legacy_oracle["status"], "PASS")
             self.assertTrue(legacy_oracle["construction_independent_of_legacy"])
             self.assertEqual(len(scheduled["rows"]), 8)
+            self.assertEqual(scheduled["typed_port_gate"]["status"], "PASS")
+            self.assertEqual(
+                scheduled["typed_port_gate"]["source_statistics"], "FERMION"
+            )
+            self.assertEqual(
+                scheduled["typed_port_gate"]["source_color_variances"],
+                ["DOWN", "DOWN"],
+            )
+            self.assertEqual(
+                scheduled["typed_port_gate"]["tildeW_dotted_variance"], "DOWN"
+            )
             self.assertTrue(
                 all(len(row["normal_form_sha256"]) == 64 for row in scheduled["rows"])
             )
@@ -97,29 +108,37 @@ class BuildStep5TypedPipelineTest(unittest.TestCase):
     def test_stage_status_cannot_be_misread_as_an_accepted_coefficient(self) -> None:
         payload = build_payload()
         status = payload["stage_status"]
-        self.assertEqual(status["anomaly_coefficient"], "NOT_ACCEPTED")
-        self.assertEqual(status["basis_resolved_sd_contact_orbit"], "OPEN")
+        self.assertEqual(
+            status["anomaly_coefficient"], "INVALIDATED_NOT_PROPAGATED"
+        )
+        self.assertEqual(
+            status["basis_resolved_sd_contact_orbit"],
+            "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
+        )
         self.assertEqual(
             status["full_scheduled_eight_row_dalgebra_per_orientation"],
             "PASS_PHYSICAL_16_ROW_PHASE_SEQUENCE_FAIL_CLOSED_ELSEWHERE",
         )
         markdown = render_summary(payload)
-        self.assertIn(r"\Gamma_{\rm anomaly}:\ \texttt{NOT\_ACCEPTED}", markdown)
         self.assertIn(
-            r"PASS\_SPECIALIZED\_16\_ROW\_DRED\_MASTER\_BINDING",
+            r"\Gamma_{\rm anomaly}:\ \texttt{INVALIDATED\_NOT\_PROPAGATED}",
+            markdown,
+        )
+        self.assertIn(
+            r"PASS\_ISOLATED\_TRIANGLE\_16\_ROW\_DRED\_MASTER\_BINDING",
             markdown,
         )
         self.assertNotIn("accepted anomaly coefficient", markdown.lower())
 
     def test_all_specialized_rows_bind_exactly_to_the_dred_master(self) -> None:
         payload = build_payload()
-        expected = {"DIRECT": "1/128", "REFLECTED": "-1/128"}
+        expected = {"DIRECT": "1/128", "REFLECTED": "1/128"}
         for item in payload["orientations"]:
             binding = item["specialized_row_pole_binding"]
             amplitude = item["graph_amplitude"]["amplitudes"][0]
             self.assertEqual(
                 binding["status"],
-                "PASS_SPECIALIZED_8_ROW_DRED_MASTER_BINDING",
+                "PASS_ISOLATED_TRIANGLE_8_ROW_DRED_MASTER_BINDING",
             )
             self.assertEqual(binding["notation_hash"], payload["notation_hash"])
             self.assertEqual(binding["graph_hash"], amplitude["canonical_key"])
@@ -136,9 +155,17 @@ class BuildStep5TypedPipelineTest(unittest.TestCase):
             )
             self.assertFalse(binding["generic_Dword_phase_completion"])
             self.assertFalse(binding["basis_resolved_contact_quotient"])
+            self.assertEqual(
+                binding["contact_pole_status"],
+                "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
+            )
+            self.assertEqual(
+                binding["anomaly_coefficient_status"],
+                "INVALIDATED_NOT_PROPAGATED",
+            )
         self.assertEqual(
             payload["stage_status"]["integral_pole_binding"],
-            "PASS_SPECIALIZED_16_ROW_DRED_MASTER_BINDING_"
+            "PASS_ISOLATED_TRIANGLE_16_ROW_DRED_MASTER_BINDING_"
             "NOT_GENERIC_DWORD_COMPLETION",
         )
 

@@ -19,41 +19,43 @@
     "REFLECTED_row_contact_bijection": true,
     "REFLECTED_three_collapsed_children": true,
     "REFLECTED_three_edges": true,
-    "anomaly_is_aggregate_sd_candidate_not_accepted": true,
+    "anomaly_coefficient_invalidated_not_propagated": true,
     "bare_triangle_has_no_epsilon": true,
-    "contact_pole_is_aggregate_SD_not_basis_resolved": true,
+    "contact_pole_invalidated_pending_typed_replay": true,
+    "coupled_insertion_vertex_is_even": true,
     "direct_orientation_sign": true,
     "exact_16x16_matrix_binding": true,
-    "finite_remainder_coefficient": true,
     "full_ordinary_triangle_bubble_cancellation_remains_open": true,
-    "metric_mismatch_proved_at_aggregate_sd_level": true,
+    "legacy_nabla_vector_token_absent": true,
+    "metric_mismatch_not_claimed": true,
     "post_D_operator_is_X": true,
+    "reflected_external_quantum_subsign_replay": true,
     "reflected_orientation_sign": true,
     "row_pole_sum_is_orientation_pole": true,
-    "triangle_pole_is_separate": true
+    "tildeW_dotted_slot_is_down": true,
+    "triangle_pole_is_separate": true,
+    "typed_source_dual_color_slots_are_down": true,
+    "typed_source_port_is_fermionic": true
   },
-  "contract_sha256": "dd06ff2ecf0d78605282cbb505daf16797ce859650fc8d398405031f3acdb002",
+  "contract_sha256": "5b24afd355ef0d471e859c37a24a15632fcebdcad3aa654d30dc098647939ab5",
   "derived": {
     "D_algebra_traces": 16,
+    "anomaly_status": "INVALIDATED_NOT_PROPAGATED_AFTER_TYPED_SIGN_REPAIR",
     "collapsed_children": 6,
-    "conditional_candidate_coefficient_fixed_orientation": "+g^2/(64*pi^2)",
-    "conditional_two_orientation_single_color_tensor": "g^2/(64*pi^2)*c_{ACD}c_{BCE}*(i*p_+^dot_alpha)*[TildeW_dot_alpha^D*X^E-X^D*TildeW_dot_alpha^E]",
-    "contact_poles": {
-      "DIRECT": "-g^2/(128*pi^2*epsilon)*c_{ACD}c_{BCE}*T_(mu n nu)*delta4^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)",
-      "REFLECTED": "+g^2/(128*pi^2*epsilon)*c_{BCD}c_{ACE}*T_(mu n nu)*delta4^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)"
-    },
+    "contact_poles": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
     "graphs": 2,
     "metric_contact_children": 16,
+    "physical_symmetric_operator_word": "c_{ACD}c_{BCE}[TildeW_dot_alpha^D*mathcalD_+^dot_alpha X^E+(mathcalD_+^dot_alpha X^D)*TildeW_dot_alpha^E]",
     "triangle_poles": {
       "DIRECT": "+g^2/(128*pi^2*epsilon)*c_{ACD}c_{BCE}*T_(mu n nu)*hat_delta^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)",
-      "REFLECTED": "-g^2/(128*pi^2*epsilon)*c_{BCD}c_{ACE}*T_(mu n nu)*hat_delta^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)"
+      "REFLECTED": "+g^2/(128*pi^2*epsilon)*c_{BCD}c_{ACE}*T_(mu n nu)*hat_delta^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)"
     }
   },
   "schema": 1,
-  "scope": "primitive WW w=0 triangle, exact endpoint traces, edge collapses, and SD aggregate metric-contact orbit",
+  "scope": "primitive WW w=0 triangle, exact endpoint traces, edge collapses, and invalidated contact orbit pending typed replay",
   "status": "PASS",
   "totals": {
-    "checks": 31,
+    "checks": 36,
     "failed": 0
   },
   "unresolved_non_BV_rule": "BASIS_RESOLVED_SD_CONTACT_ORBIT_AND_TYPED_D_PHASE_SEQUENCE"

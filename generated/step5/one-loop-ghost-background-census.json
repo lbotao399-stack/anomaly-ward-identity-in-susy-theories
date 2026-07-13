@@ -1,0 +1,1107 @@
+{
+  "FP_result": "PROVED_ABSENT_AT_ONE_LOOP_1PI_ALL_BACKGROUND_ORDERS",
+  "NK_result": "PROVED_ABSENT_AT_ONE_LOOP_1PI_ALL_BACKGROUND_ORDERS",
+  "assumptions": [
+    "physical composite insertion has no FP or NK port",
+    "no mixed physical-ghost propagator",
+    "determinant fields form a closed internal cycle",
+    "external background ports are not Wick-contracted"
+  ],
+  "checks": {
+    "background_order_does_not_change_cycle_rank": true,
+    "every_1pi_attachment_has_at_least_two_loops": true,
+    "no_one_loop_1pi_determinant_family": true,
+    "single_attachment_is_always_1pr": true,
+    "typed_grammar_has_no_physical_ghost_mixed_propagator": true
+  },
+  "external_results_imported": false,
+  "finite_BV_cycle_statement": "NOT_USED; STEP5C_OBLIGATION",
+  "identity": "L_total=L_phys+L_det+(a-1)=L_phys+a for L_det=1",
+  "max_background_order_tested": 8,
+  "result": "PROVED_ABSENT_AT_ONE_LOOP_1PI_ALL_BACKGROUND_ORDERS",
+  "rows": [
+    {
+      "attachment_edges": 1,
+      "background_order": 0,
+      "classification": "ONE_PARTICLE_REDUCIBLE_BRIDGE",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 1,
+      "one_particle_irreducible": false,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 2,
+      "background_order": 0,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_2",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 2,
+      "one_particle_irreducible": true,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 3,
+      "background_order": 0,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_3",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 3,
+      "one_particle_irreducible": true,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 4,
+      "background_order": 0,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_4",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 4,
+      "one_particle_irreducible": true,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 1,
+      "background_order": 0,
+      "classification": "ONE_PARTICLE_REDUCIBLE_BRIDGE",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 2,
+      "one_particle_irreducible": false,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 2,
+      "background_order": 0,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_3",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 3,
+      "one_particle_irreducible": true,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 3,
+      "background_order": 0,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_4",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 4,
+      "one_particle_irreducible": true,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 4,
+      "background_order": 0,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_5",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 5,
+      "one_particle_irreducible": true,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 1,
+      "background_order": 0,
+      "classification": "ONE_PARTICLE_REDUCIBLE_BRIDGE",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 3,
+      "one_particle_irreducible": false,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 2,
+      "background_order": 0,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_4",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 4,
+      "one_particle_irreducible": true,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 3,
+      "background_order": 0,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_5",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 5,
+      "one_particle_irreducible": true,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 4,
+      "background_order": 0,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_6",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 6,
+      "one_particle_irreducible": true,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 1,
+      "background_order": 1,
+      "classification": "ONE_PARTICLE_REDUCIBLE_BRIDGE",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 1,
+      "one_particle_irreducible": false,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 2,
+      "background_order": 1,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_2",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 2,
+      "one_particle_irreducible": true,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 3,
+      "background_order": 1,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_3",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 3,
+      "one_particle_irreducible": true,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 4,
+      "background_order": 1,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_4",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 4,
+      "one_particle_irreducible": true,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 1,
+      "background_order": 1,
+      "classification": "ONE_PARTICLE_REDUCIBLE_BRIDGE",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 2,
+      "one_particle_irreducible": false,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 2,
+      "background_order": 1,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_3",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 3,
+      "one_particle_irreducible": true,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 3,
+      "background_order": 1,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_4",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 4,
+      "one_particle_irreducible": true,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 4,
+      "background_order": 1,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_5",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 5,
+      "one_particle_irreducible": true,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 1,
+      "background_order": 1,
+      "classification": "ONE_PARTICLE_REDUCIBLE_BRIDGE",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 3,
+      "one_particle_irreducible": false,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 2,
+      "background_order": 1,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_4",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 4,
+      "one_particle_irreducible": true,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 3,
+      "background_order": 1,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_5",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 5,
+      "one_particle_irreducible": true,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 4,
+      "background_order": 1,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_6",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 6,
+      "one_particle_irreducible": true,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 1,
+      "background_order": 2,
+      "classification": "ONE_PARTICLE_REDUCIBLE_BRIDGE",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 1,
+      "one_particle_irreducible": false,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 2,
+      "background_order": 2,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_2",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 2,
+      "one_particle_irreducible": true,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 3,
+      "background_order": 2,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_3",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 3,
+      "one_particle_irreducible": true,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 4,
+      "background_order": 2,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_4",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 4,
+      "one_particle_irreducible": true,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 1,
+      "background_order": 2,
+      "classification": "ONE_PARTICLE_REDUCIBLE_BRIDGE",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 2,
+      "one_particle_irreducible": false,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 2,
+      "background_order": 2,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_3",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 3,
+      "one_particle_irreducible": true,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 3,
+      "background_order": 2,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_4",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 4,
+      "one_particle_irreducible": true,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 4,
+      "background_order": 2,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_5",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 5,
+      "one_particle_irreducible": true,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 1,
+      "background_order": 2,
+      "classification": "ONE_PARTICLE_REDUCIBLE_BRIDGE",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 3,
+      "one_particle_irreducible": false,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 2,
+      "background_order": 2,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_4",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 4,
+      "one_particle_irreducible": true,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 3,
+      "background_order": 2,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_5",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 5,
+      "one_particle_irreducible": true,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 4,
+      "background_order": 2,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_6",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 6,
+      "one_particle_irreducible": true,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 1,
+      "background_order": 3,
+      "classification": "ONE_PARTICLE_REDUCIBLE_BRIDGE",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 1,
+      "one_particle_irreducible": false,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 2,
+      "background_order": 3,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_2",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 2,
+      "one_particle_irreducible": true,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 3,
+      "background_order": 3,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_3",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 3,
+      "one_particle_irreducible": true,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 4,
+      "background_order": 3,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_4",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 4,
+      "one_particle_irreducible": true,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 1,
+      "background_order": 3,
+      "classification": "ONE_PARTICLE_REDUCIBLE_BRIDGE",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 2,
+      "one_particle_irreducible": false,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 2,
+      "background_order": 3,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_3",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 3,
+      "one_particle_irreducible": true,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 3,
+      "background_order": 3,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_4",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 4,
+      "one_particle_irreducible": true,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 4,
+      "background_order": 3,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_5",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 5,
+      "one_particle_irreducible": true,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 1,
+      "background_order": 3,
+      "classification": "ONE_PARTICLE_REDUCIBLE_BRIDGE",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 3,
+      "one_particle_irreducible": false,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 2,
+      "background_order": 3,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_4",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 4,
+      "one_particle_irreducible": true,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 3,
+      "background_order": 3,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_5",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 5,
+      "one_particle_irreducible": true,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 4,
+      "background_order": 3,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_6",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 6,
+      "one_particle_irreducible": true,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 1,
+      "background_order": 4,
+      "classification": "ONE_PARTICLE_REDUCIBLE_BRIDGE",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 1,
+      "one_particle_irreducible": false,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 2,
+      "background_order": 4,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_2",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 2,
+      "one_particle_irreducible": true,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 3,
+      "background_order": 4,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_3",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 3,
+      "one_particle_irreducible": true,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 4,
+      "background_order": 4,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_4",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 4,
+      "one_particle_irreducible": true,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 1,
+      "background_order": 4,
+      "classification": "ONE_PARTICLE_REDUCIBLE_BRIDGE",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 2,
+      "one_particle_irreducible": false,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 2,
+      "background_order": 4,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_3",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 3,
+      "one_particle_irreducible": true,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 3,
+      "background_order": 4,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_4",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 4,
+      "one_particle_irreducible": true,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 4,
+      "background_order": 4,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_5",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 5,
+      "one_particle_irreducible": true,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 1,
+      "background_order": 4,
+      "classification": "ONE_PARTICLE_REDUCIBLE_BRIDGE",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 3,
+      "one_particle_irreducible": false,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 2,
+      "background_order": 4,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_4",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 4,
+      "one_particle_irreducible": true,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 3,
+      "background_order": 4,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_5",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 5,
+      "one_particle_irreducible": true,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 4,
+      "background_order": 4,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_6",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 6,
+      "one_particle_irreducible": true,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 1,
+      "background_order": 5,
+      "classification": "ONE_PARTICLE_REDUCIBLE_BRIDGE",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 1,
+      "one_particle_irreducible": false,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 2,
+      "background_order": 5,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_2",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 2,
+      "one_particle_irreducible": true,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 3,
+      "background_order": 5,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_3",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 3,
+      "one_particle_irreducible": true,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 4,
+      "background_order": 5,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_4",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 4,
+      "one_particle_irreducible": true,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 1,
+      "background_order": 5,
+      "classification": "ONE_PARTICLE_REDUCIBLE_BRIDGE",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 2,
+      "one_particle_irreducible": false,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 2,
+      "background_order": 5,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_3",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 3,
+      "one_particle_irreducible": true,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 3,
+      "background_order": 5,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_4",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 4,
+      "one_particle_irreducible": true,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 4,
+      "background_order": 5,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_5",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 5,
+      "one_particle_irreducible": true,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 1,
+      "background_order": 5,
+      "classification": "ONE_PARTICLE_REDUCIBLE_BRIDGE",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 3,
+      "one_particle_irreducible": false,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 2,
+      "background_order": 5,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_4",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 4,
+      "one_particle_irreducible": true,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 3,
+      "background_order": 5,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_5",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 5,
+      "one_particle_irreducible": true,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 4,
+      "background_order": 5,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_6",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 6,
+      "one_particle_irreducible": true,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 1,
+      "background_order": 6,
+      "classification": "ONE_PARTICLE_REDUCIBLE_BRIDGE",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 1,
+      "one_particle_irreducible": false,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 2,
+      "background_order": 6,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_2",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 2,
+      "one_particle_irreducible": true,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 3,
+      "background_order": 6,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_3",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 3,
+      "one_particle_irreducible": true,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 4,
+      "background_order": 6,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_4",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 4,
+      "one_particle_irreducible": true,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 1,
+      "background_order": 6,
+      "classification": "ONE_PARTICLE_REDUCIBLE_BRIDGE",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 2,
+      "one_particle_irreducible": false,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 2,
+      "background_order": 6,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_3",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 3,
+      "one_particle_irreducible": true,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 3,
+      "background_order": 6,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_4",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 4,
+      "one_particle_irreducible": true,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 4,
+      "background_order": 6,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_5",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 5,
+      "one_particle_irreducible": true,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 1,
+      "background_order": 6,
+      "classification": "ONE_PARTICLE_REDUCIBLE_BRIDGE",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 3,
+      "one_particle_irreducible": false,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 2,
+      "background_order": 6,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_4",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 4,
+      "one_particle_irreducible": true,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 3,
+      "background_order": 6,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_5",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 5,
+      "one_particle_irreducible": true,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 4,
+      "background_order": 6,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_6",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 6,
+      "one_particle_irreducible": true,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 1,
+      "background_order": 7,
+      "classification": "ONE_PARTICLE_REDUCIBLE_BRIDGE",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 1,
+      "one_particle_irreducible": false,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 2,
+      "background_order": 7,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_2",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 2,
+      "one_particle_irreducible": true,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 3,
+      "background_order": 7,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_3",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 3,
+      "one_particle_irreducible": true,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 4,
+      "background_order": 7,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_4",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 4,
+      "one_particle_irreducible": true,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 1,
+      "background_order": 7,
+      "classification": "ONE_PARTICLE_REDUCIBLE_BRIDGE",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 2,
+      "one_particle_irreducible": false,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 2,
+      "background_order": 7,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_3",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 3,
+      "one_particle_irreducible": true,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 3,
+      "background_order": 7,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_4",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 4,
+      "one_particle_irreducible": true,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 4,
+      "background_order": 7,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_5",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 5,
+      "one_particle_irreducible": true,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 1,
+      "background_order": 7,
+      "classification": "ONE_PARTICLE_REDUCIBLE_BRIDGE",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 3,
+      "one_particle_irreducible": false,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 2,
+      "background_order": 7,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_4",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 4,
+      "one_particle_irreducible": true,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 3,
+      "background_order": 7,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_5",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 5,
+      "one_particle_irreducible": true,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 4,
+      "background_order": 7,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_6",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 6,
+      "one_particle_irreducible": true,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 1,
+      "background_order": 8,
+      "classification": "ONE_PARTICLE_REDUCIBLE_BRIDGE",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 1,
+      "one_particle_irreducible": false,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 2,
+      "background_order": 8,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_2",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 2,
+      "one_particle_irreducible": true,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 3,
+      "background_order": 8,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_3",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 3,
+      "one_particle_irreducible": true,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 4,
+      "background_order": 8,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_4",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 4,
+      "one_particle_irreducible": true,
+      "physical_loops": 0
+    },
+    {
+      "attachment_edges": 1,
+      "background_order": 8,
+      "classification": "ONE_PARTICLE_REDUCIBLE_BRIDGE",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 2,
+      "one_particle_irreducible": false,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 2,
+      "background_order": 8,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_3",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 3,
+      "one_particle_irreducible": true,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 3,
+      "background_order": 8,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_4",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 4,
+      "one_particle_irreducible": true,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 4,
+      "background_order": 8,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_5",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 5,
+      "one_particle_irreducible": true,
+      "physical_loops": 1
+    },
+    {
+      "attachment_edges": 1,
+      "background_order": 8,
+      "classification": "ONE_PARTICLE_REDUCIBLE_BRIDGE",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 3,
+      "one_particle_irreducible": false,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 2,
+      "background_order": 8,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_4",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 4,
+      "one_particle_irreducible": true,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 3,
+      "background_order": 8,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_5",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 5,
+      "one_particle_irreducible": true,
+      "physical_loops": 2
+    },
+    {
+      "attachment_edges": 4,
+      "background_order": 8,
+      "classification": "ONE_PARTICLE_IRREDUCIBLE_L_6",
+      "determinant_loops": 1,
+      "external_background_ports_change_cycle_rank": false,
+      "loop_number": 6,
+      "one_particle_irreducible": true,
+      "physical_loops": 2
+    }
+  ],
+  "schema": "Step5OneLoopGhostBackgroundCensus.v1",
+  "scope": "STEP5A_ONE_LOOP_1PI_ALL_BACKGROUND_ORDERS",
+  "status": "PASS"
+}

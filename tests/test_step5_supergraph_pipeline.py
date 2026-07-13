@@ -19,6 +19,7 @@ from scripts.step5_graph_ir import (
     GraphIR,
     HalfEdge,
     Statistics,
+    Variance,
     Vertex,
     InternalEdge,
 )
@@ -27,6 +28,7 @@ from scripts.step5_pipeline_ir import (
     FieldSpec as SchemaFieldSpec,
     Flow as SchemaFlow,
     HashDriftError,
+    PipelineIRError,
     PortSector,
     PortSpec as SchemaPortSpec,
     PropagatorPortError,
@@ -45,7 +47,6 @@ from scripts.step5_supergraph_pipeline import (
     build_demo_payload,
     compile_request,
     graph_automorphism_order,
-    graph_canonical_key,
     matter_edge_structural_request,
     render_textbook_markdown,
     valence_only_fixture,
@@ -70,13 +71,18 @@ def matter_test_schema():
         fields=base.fields
         + (
             SchemaFieldSpec(
-                "Phi", SchemaStatistics.BOSON, SchemaChirality.CHIRAL, (color,)
+                "Phi",
+                SchemaStatistics.BOSON,
+                SchemaChirality.CHIRAL,
+                (color,),
+                (SchemaVariance.UP,),
             ),
             SchemaFieldSpec(
                 "TildePhi",
                 SchemaStatistics.BOSON,
                 SchemaChirality.ANTICHIRAL,
                 (color,),
+                (SchemaVariance.UP,),
             ),
         ),
         ports=base.ports
@@ -177,10 +183,18 @@ class Step5SupergraphPipelineTest(unittest.TestCase):
         )
         self.assertEqual(
             reflected.external_fermion_word,
-            ("W_plus", "TildeW_dot_alpha"),
+            ("TildeW_dot_alpha", "W_plus"),
         )
         self.assertEqual(direct.external_koszul_sign, 1)
-        self.assertEqual(reflected.external_koszul_sign, -1)
+        self.assertEqual(reflected.external_koszul_sign, 1)
+        self.assertEqual(
+            dict(direct.orientation_sign_ledger),
+            {"external_subword": 1, "quantum_subword": 1},
+        )
+        self.assertEqual(
+            dict(reflected.orientation_sign_ledger),
+            {"external_subword": -1, "quantum_subword": -1},
+        )
         self.assertEqual(
             direct.orientation_signature,
             (
@@ -191,8 +205,92 @@ class Step5SupergraphPipelineTest(unittest.TestCase):
         )
         self.assertEqual(reflected.orientation_signature, direct.orientation_signature)
         self.assertEqual(direct.exact_coefficient_reduced.render(), "-1/8*g2")
-        self.assertEqual(reflected.exact_coefficient_reduced.render(), "1/8*g2")
+        self.assertEqual(reflected.exact_coefficient_reduced.render(), "-1/8*g2")
+        reflected_factors = {factor.factor_id: factor for factor in reflected.factors}
+        self.assertEqual(
+            reflected_factors["F_orientation_external_subword"].coefficient.render(),
+            "-1",
+        )
+        self.assertEqual(
+            reflected_factors["F_orientation_quantum_subword"].coefficient.render(),
+            "-1",
+        )
+        self.assertEqual(
+            dict(reflected.graph.metadata)["source_port_statistics"], "FERMION"
+        )
+        self.assertEqual(
+            dict(reflected.graph.metadata)["source_color_variances"], "DOWN,DOWN"
+        )
+        self.assertEqual(
+            dict(reflected.graph.metadata)["tildeW_dotted_variance"], "DOWN"
+        )
         self.assertNotEqual(direct.canonical_key, reflected.canonical_key)
+
+    def test_reflected_minus_one_eighth_is_rederived_factor_by_factor(self) -> None:
+        reflected = self.ww_reflected.amplitudes[0]
+        factors = {factor.factor_id: factor for factor in reflected.factors}
+        expected = {
+            "F_wick": "1",
+            "F_orientation_external_subword": "-1",
+            "F_orientation_quantum_subword": "-1",
+            "F_iso_mult": "1",
+            "F_vertex_vI": "1",
+            "F_vertex_vBar": "-1/8*i*h",
+            "F_vertex_vW": "1/8*i*h",
+            "F_prop_e0": "-2*g2",
+            "F_prop_e1": "-2*g2",
+            "F_prop_e2": "-2*g2",
+        }
+        self.assertEqual(
+            {factor_id: factors[factor_id].coefficient.render() for factor_id in expected},
+            expected,
+        )
+        product = ExactCoefficient(1)
+        for factor in reflected.factors:
+            if not factor.category.endswith("AUDIT_ONLY"):
+                product *= factor.coefficient
+        self.assertEqual(product, reflected.exact_coefficient_raw)
+        self.assertEqual(product.render(), "-1/8*g2*g2*g2*h*h")
+        self.assertEqual(
+            reflected.coefficient_reduction_trace,
+            ("used (h)*(g2)=1 exactly 2 time(s)",),
+        )
+        self.assertEqual(reflected.exact_coefficient_reduced.render(), "-1/8*g2")
+
+    def test_source_dual_variance_is_schema_bound_and_fails_closed(self) -> None:
+        request = ww_seed_request(self.ww_schema)
+        source_port = request.vertices[0].ordered_ports[2]
+        self.assertEqual(
+            tuple(index.variance for index in source_port.field_type.indices),
+            (Variance.DOWN, Variance.DOWN),
+        )
+        self.assertEqual(
+            self.ww_schema.field_map[
+                "Source[nabla_-(X^A X^B)]"
+            ].index_variances,
+            (SchemaVariance.DOWN, SchemaVariance.DOWN),
+        )
+        mistyped_field = replace(
+            source_port.field_type,
+            indices=tuple(
+                replace(index, variance=Variance.UP)
+                for index in source_port.field_type.indices
+            ),
+        )
+        bad_source_port = replace(source_port, field_type=mistyped_field)
+        bad_insertion = replace(
+            request.vertices[0],
+            ordered_ports=request.vertices[0].ordered_ports[:2]
+            + (bad_source_port,),
+        )
+        with self.assertRaisesRegex(PipelineIRError, "index variances"):
+            compile_request(
+                replace(
+                    request,
+                    vertices=(bad_insertion,) + request.vertices[1:],
+                ),
+                self.ww_schema,
+            )
 
     def test_hash_drift_is_rejected_before_wick_enumeration(self) -> None:
         request = replace(

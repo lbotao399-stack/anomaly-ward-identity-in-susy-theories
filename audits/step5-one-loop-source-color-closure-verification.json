@@ -1,0 +1,13 @@
+{
+  "anomaly_coefficient": "NOT_ACCEPTED",
+  "failed_checks": [],
+  "full_quantum_BV_Slavnov_source_complex": "FAIL_CLOSED_MISSING_COMPOSITE_SOURCE_PARTNERS_AND_LINEARIZED_ST_MATRIX",
+  "generated_sha256": "1867fdea33817dfe5da203e8f3c622d32ac746ec04b5125e10ad8acdffa82f11",
+  "local_source_momentum": "RETAINED_NONZERO",
+  "schema": "Step5OneLoopSourceColorClosureAudit.v1",
+  "status": "PASS_SCOPED_BACKGROUND_SOURCE_AND_COLOR_GATES",
+  "totals": {
+    "checks": 31,
+    "failed": 0
+  }
+}

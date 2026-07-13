@@ -1,0 +1,574 @@
+{
+  "background_CE_source_closure": {
+    "checks": {
+      "Maurer_Cartan_sGamma_equals_Gamma_squared": true,
+      "connection_nilpotent_termwise": true,
+      "ghost_CE_nilpotent": true,
+      "insertion_nilpotent_from_Maurer_Cartan": true,
+      "odd_source_pairing_invariant": true,
+      "representation_commutator_00": true,
+      "representation_commutator_01": true,
+      "representation_commutator_02": true,
+      "representation_commutator_10": true,
+      "representation_commutator_11": true,
+      "representation_commutator_12": true,
+      "representation_commutator_20": true,
+      "representation_commutator_21": true,
+      "representation_commutator_22": true,
+      "source_nilpotent_from_Maurer_Cartan": true
+    },
+    "graded_pairing_expansion": "s_B(J I)=(s_B J)I-J(s_B I)=J Gamma I-J Gamma I=0",
+    "module": "M=Sym^2(Adj), J in Pi(M^dual), I in Pi(M)",
+    "nilpotence_expansions": {
+      "connection": {
+        "+(dGamma)Gamma": 1,
+        "+A Gamma^2": 1,
+        "+Gamma A Gamma": 1,
+        "+Gamma(dGamma)": 1,
+        "+Gamma^2 A": 1,
+        "-(dGamma)Gamma": -1,
+        "-A Gamma^2": -1,
+        "-Gamma A Gamma": -1,
+        "-Gamma(dGamma)": -1,
+        "-Gamma^2 A": -1
+      },
+      "insertion": "s_B^2 I=(s_B Gamma)I-Gamma(s_B I)=Gamma^2 I-Gamma^2 I=0",
+      "source": "s_B^2 J=(s_B J)Gamma-J(s_B Gamma)=J Gamma^2-J Gamma^2=0"
+    },
+    "parities": {
+      "Gamma": 1,
+      "I": 1,
+      "J": 1,
+      "J_times_I": 0
+    },
+    "rules": {
+      "Maurer_Cartan": "s_B Gamma=Gamma^2",
+      "connection": "s_B A=-d Gamma+Gamma A-A Gamma",
+      "insertion": "s_B I=Gamma I",
+      "source": "s_B J=J Gamma"
+    }
+  },
+  "checks": {
+    "background_CE.Maurer_Cartan_sGamma_equals_Gamma_squared": true,
+    "background_CE.connection_nilpotent_termwise": true,
+    "background_CE.ghost_CE_nilpotent": true,
+    "background_CE.insertion_nilpotent_from_Maurer_Cartan": true,
+    "background_CE.odd_source_pairing_invariant": true,
+    "background_CE.representation_commutator_00": true,
+    "background_CE.representation_commutator_01": true,
+    "background_CE.representation_commutator_02": true,
+    "background_CE.representation_commutator_10": true,
+    "background_CE.representation_commutator_11": true,
+    "background_CE.representation_commutator_12": true,
+    "background_CE.representation_commutator_20": true,
+    "background_CE.representation_commutator_21": true,
+    "background_CE.representation_commutator_22": true,
+    "background_CE.source_nilpotent_from_Maurer_Cartan": true,
+    "color.Sym2_projector_exact": true,
+    "color.Sym2_section_retraction": true,
+    "color.antisymmetric_relations_killed": true,
+    "color.ordered_jet_full_column_rank": true,
+    "color.ordered_jet_left_inverse": true,
+    "color.quotient_is_functorial_on_both_target_copies": true,
+    "color.quotient_jet_full_column_rank": true,
+    "color.quotient_jet_left_inverse": true,
+    "color.unmatched_target_quotient_can_create_kernel": true,
+    "local_source.IBP_plus_EOM_rank_two": true,
+    "local_source.all_incoming_momentum_conservation": true,
+    "local_source.covariant_dual_source_jet": true,
+    "local_source.covariant_insertion_jet": true,
+    "local_source.local_source_momentum_nonzero": true,
+    "local_source.local_source_quotient_dimension_one": true,
+    "local_source.rref_gives_C_split_zero_and_S_DJ_minus_C_on_W": true
+  },
+  "color_Sym2_split_monomorphism": {
+    "checks": {
+      "Sym2_projector_exact": true,
+      "Sym2_section_retraction": true,
+      "antisymmetric_relations_killed": true,
+      "ordered_jet_full_column_rank": true,
+      "ordered_jet_left_inverse": true,
+      "quotient_is_functorial_on_both_target_copies": true,
+      "quotient_jet_full_column_rank": true,
+      "quotient_jet_left_inverse": true,
+      "unmatched_target_quotient_can_create_kernel": true
+    },
+    "dimensions_for_exact_SU2_witness": {
+      "ordered": 9,
+      "symmetric": 6,
+      "two_ordered_outputs": 18,
+      "two_symmetric_outputs": 12
+    },
+    "general_module_theorem": {
+      "scope_condition": "the target quotient must be q direct_sum q, or any quotient for which the displayed left inverse descends",
+      "statement": "for every quotient module M=C/R, applying q:C->M to the source and separately to both output copies gives iota_M(m)=(m,-m); pi_1 iota_M=id_M, hence ker(iota_M)=0",
+      "unmatched_quotient_counterexample": "M=Q, iota(1)=(1,-1), then quotient target by span(1,-1); the induced jet is zero"
+    },
+    "maps": {
+      "composition": "pi_1 o iota_M=id_M",
+      "ordered_jet": "m -> (E m,-E m)",
+      "ordered_left_inverse": "(u,v) -> Q u",
+      "quotient_jet": "iota_M(m)=(m,-m)",
+      "quotient_left_inverse": "pi_1(u,v)=u"
+    },
+    "matrices": {
+      "Sym2_embedding": [
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "Sym2_projection": [
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "1/2",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "1/2",
+          "0"
+        ]
+      ],
+      "quotient_jet": [
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1"
+        ]
+      ],
+      "quotient_left_inverse": [
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "unmatched_collapsed_jet": [
+        [
+          "0"
+        ]
+      ]
+    },
+    "ordered_color_module": "Adj tensor Adj",
+    "physical_color_module": "M=Sym^2(Adj)=(Adj tensor Adj)/Lambda^2(Adj)"
+  },
+  "external_results_imported": false,
+  "local_source_jet_closure": {
+    "W_T_N_D_local_source_block": {
+      "IBP_equation": "C_on_W+C_split+S_DJ=0",
+      "IBP_row": [
+        "1",
+        "1",
+        "1"
+      ],
+      "antichiral_EOM": "C_split=D_a^dota tildeW_dota=-(1/2)nabla_a barE=0",
+      "antichiral_EOM_row": [
+        "0",
+        "1",
+        "0"
+      ],
+      "basis": [
+        "C_on_W",
+        "C_split",
+        "S_DJ"
+      ],
+      "pointwise_operator_vs_integrated_source_IBP": "C_split=0 is a pointwise EOM quotient; C_on_W+C_split+S_DJ=0 is an integrated local-source IBP relation",
+      "quotient_dimension": 1,
+      "relation_matrix": [
+        [
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "0"
+        ]
+      ],
+      "relation_rank": 2,
+      "representative_equations": [
+        "C_split=0",
+        "S_DJ=-C_on_W"
+      ],
+      "rref": [
+        [
+          "1",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "0"
+        ]
+      ],
+      "source_momentum": {
+        "all_incoming_equation": "p_J+p_W+p_tildeW=0 componentwise",
+        "exact_witness": {
+          "p_J": -5,
+          "p_W": 2,
+          "p_tildeW": 3
+        },
+        "status": "RETAINED_NONZERO"
+      }
+    },
+    "checks": {
+      "IBP_plus_EOM_rank_two": true,
+      "all_incoming_momentum_conservation": true,
+      "covariant_dual_source_jet": true,
+      "covariant_insertion_jet": true,
+      "local_source_momentum_nonzero": true,
+      "local_source_quotient_dimension_one": true,
+      "rref_gives_C_split_zero_and_S_DJ_minus_C_on_W": true
+    },
+    "covariant_derivatives": {
+      "insertion": "D I=dI+A I",
+      "insertion_transformation": "s_B(D I)=Gamma(D I)",
+      "source_dual": "D^vee J=dJ-J A",
+      "source_transformation": "s_B(D^vee J)=(D^vee J)Gamma"
+    },
+    "full_expansions": {
+      "insertion": {
+        "(dGamma)I": 1,
+        "+A Gamma I": 1,
+        "-(dGamma)I": -1,
+        "-A Gamma I": -1,
+        "Gamma A I": 1,
+        "Gamma(dI)": 1
+      },
+      "insertion_remainder": {
+        "Gamma A I": 1,
+        "Gamma(dI)": 1
+      },
+      "source": {
+        "(dJ)Gamma": 1,
+        "+J Gamma A": 1,
+        "-J A Gamma": -1,
+        "-J Gamma A": -1,
+        "-J(dGamma)": -1,
+        "J(dGamma)": 1
+      },
+      "source_remainder": {
+        "(dJ)Gamma": 1,
+        "-J A Gamma": 1
+      }
+    }
+  },
+  "project_inputs": [
+    "Step3D.104 even background transformation and dual source",
+    "Step3D.104a background Ward identity",
+    "Step3D.132c inert ordinary source under quantum BRST",
+    "Step5 physical source module Sym^2(Adj)",
+    "W T N D local-source relation and antichiral EOM"
+  ],
+  "schema": "Step5OneLoopSourceColorClosure.v1",
+  "scope": "PURE_GAUGE_LOCAL_SOURCE_BACKGROUND_CE_AND_COLOR_SPLIT",
+  "status": "PASS_SCOPED_BACKGROUND_SOURCE_AND_COLOR_GATES",
+  "verdicts": {
+    "W_T_N_D_local_source_IBP_EOM_block": "PASS_ONE_DIMENSIONAL_QUOTIENT",
+    "all_covariant_local_source_jets": "PASS",
+    "anomaly_coefficient": "NOT_ACCEPTED",
+    "arbitrary_unmatched_target_quotient": "REJECTED_COUNTEREXAMPLE",
+    "color_Sym2_quotient_for_m_to_m_minus_m": "PASS_SPLIT_MONOMORPHISM",
+    "complete_quadratic_jet_injectivity": "NOT_CLAIMED_BY_THIS_CERTIFICATE",
+    "full_quantum_BV_Slavnov_source_complex": "FAIL_CLOSED_MISSING_COMPOSITE_SOURCE_PARTNERS_AND_LINEARIZED_ST_MATRIX",
+    "odd_local_source_background_CE_closure": "PASS",
+    "source_linear_BRST_cohomology_rank": "OPEN"
+  }
+}

@@ -19,7 +19,9 @@ $$
 | factor | category | exact expression | coefficient | origin |
 |---|---|---|---|---|
 | `F_wick` | `WICK_KOSZUL` | `1` | `1` | `scripts/step5_graph_ir.py:enumerate_wick_pairings` |
-| `F_external_koszul` | `EXTERNAL_KOSZUL` | `1` | `1` | `contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53v; scripts/step5_ww_seed.py:physical_triangle` |
+| `F_orientation_external_subword` | `ORIENTATION_KOSZUL_SUBSIGN` | `1` | `1` | `contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53v; scripts/step5_ww_seed.py:physical_triangle` |
+| `F_orientation_quantum_subword` | `ORIENTATION_KOSZUL_SUBSIGN` | `1` | `1` | `contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53v; scripts/step5_ww_seed.py:physical_triangle` |
+| `F_orientation_total` | `ORIENTATION_TOTAL_AUDIT_ONLY` | `1` | `1` | `contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53v; scripts/step5_ww_seed.py:physical_triangle` |
 | `F_aut` | `AUTOMORPHISM_AUDIT_ONLY` | `\midAut(G)\mid=1` | `1` | `scripts/step5_supergraph_pipeline.py:graph_automorphism_order` |
 | `F_iso_mult` | `ISOMORPHISM_CLASS_MULTIPLICITY` | `1` | `1` | `scripts/step5_supergraph_pipeline.py:compile_request` |
 | `F_vertex_vI` | `INSERTION` | `COMPOSITE_INSERTION_I2_WW` | `1` | `contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53b` |
@@ -44,7 +46,7 @@ $$
 | `F_prop_color_e2` | `COLOR_FLAVOR_TENSOR` | `kappa^{AB}` | `1` | `contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.46` |
 | `F_loop_measure` | `LOOP_MEASURE` | `mu^(2 epsilon) d^d k/(2 pi)^d` | `1` | `contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53v; scripts/step5_ww_seed.py:physical_triangle` |
 | `F_external_L_I_source` | `EXTERNAL_LEG` | `Source[nabla_-(X^A X^B)]` | `1` | `contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53v; scripts/step5_ww_seed.py:physical_triangle` |
-| `F_external_L_bar_ext` | `EXTERNAL_LEG` | `TildeW_dot_alpha{spinor=DOTTED:dot_alpha:UP}` | `1` | `contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53v; scripts/step5_ww_seed.py:physical_triangle` |
+| `F_external_L_bar_ext` | `EXTERNAL_LEG` | `TildeW_dot_alpha{spinor=DOTTED:dot_alpha:DOWN}` | `1` | `contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53v; scripts/step5_ww_seed.py:physical_triangle` |
 | `F_external_L_W_ext` | `EXTERNAL_LEG` | `W_plus{spinor=UNDOTTED:+:DOWN}` | `1` | `contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md:5.53a-5.53v; scripts/step5_ww_seed.py:physical_triangle` |
 
 ```dot
@@ -54,7 +56,7 @@ digraph "WW_DIRECT_EXACT__pairing_005" {
   "vW" [label="vW:BACKGROUND_CUBIC_W"];
   "X_L_I_source" [shape=box,label="L_I_source:Source[nabla_-(X^A X^B)](p+q)"];
   "X_L_I_source" -> "vI" [label="I_source{identity}"];
-  "X_L_bar_ext" [shape=box,label="L_bar_ext:TildeW_dot_alpha{spinor=DOTTED:dot_alpha:UP}(q)"];
+  "X_L_bar_ext" [shape=box,label="L_bar_ext:TildeW_dot_alpha{spinor=DOTTED:dot_alpha:DOWN}(q)"];
   "X_L_bar_ext" -> "vBar" [label="bar_ext{identity}"];
   "X_L_W_ext" [shape=box,label="L_W_ext:W_plus{spinor=UNDOTTED:+:DOWN}(p)"];
   "X_L_W_ext" -> "vW" [label="W_ext{identity}"];
@@ -71,7 +73,7 @@ graph LR
   vW["vW:BACKGROUND_CUBIC_W"]
   X_L_I_source["L_I_source:Source[nabla_-(X^A X^B)](p+q)"]
   X_L_I_source -- "I_source{identity}" --> vI
-  X_L_bar_ext["L_bar_ext:TildeW_dot_alpha{spinor=DOTTED:dot_alpha:UP}(q)"]
+  X_L_bar_ext["L_bar_ext:TildeW_dot_alpha{spinor=DOTTED:dot_alpha:DOWN}(q)"]
   X_L_bar_ext -- "bar_ext{identity}" --> vBar
   X_L_W_ext["L_W_ext:W_plus{spinor=UNDOTTED:+:DOWN}(p)"]
   X_L_W_ext -- "W_ext{identity}" --> vW

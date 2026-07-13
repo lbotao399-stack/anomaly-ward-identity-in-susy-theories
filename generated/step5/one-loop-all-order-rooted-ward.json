@@ -1,0 +1,3250 @@
+{
+  "acceptance_boundary": {
+    "all_order_background_covariant_completion_accepted": false,
+    "all_order_rooted_one_loop_census_accepted": true,
+    "anomaly_coefficient_accepted": false,
+    "triangle_determines_every_local_dressing_accepted": false
+  },
+  "checks": {
+    "adjoint_measure_infinitesimal_trace_is_zero": true,
+    "all_family_counts_equal_2_power_n": true,
+    "all_polarized_counts_match_ordered_set_partitions": true,
+    "every_rooted_word_has_zero_even_similarity_trace_variation": true,
+    "inverse_transforms_by_commutator": true,
+    "odd_source_times_odd_insertion_is_even": true
+  },
+  "equations": {
+    "adjoint_jacobian": "Tr_Adj(ad_eta)=eta^C c_(C A)^A=eta^C kappa^(AB)c_(C A B)=0",
+    "background_order": "s+r_1+...+r_k=n; s>=0; r_i>=1",
+    "dred_translation": "int_k F(k+a)=mu^(2 epsilon) int d^d ell/(2 pi)^d F(ell)=int_ell F(ell); ell=k+a; det(d ell/d k)=1",
+    "hessian": "H_B=H_0+sum_(r>=1) H_r",
+    "insertion": "I_B=sum_(s>=0) I_s",
+    "inverse_variation": "delta G=-G(delta H)G=[R,G] when delta H=[R,H]",
+    "polarized_count": "N_pol(n)=sum_(s=0)^n binomial(n,s) sum_(k=0)^(n-s) k! S(n-s,k)",
+    "source_linear_one_loop": "Gamma_I^(1)=(1/2) sum_(k>=0) (-1)^k STr[I_s G0 H_r1 G0 ... H_rk G0]",
+    "trace_variation": "STr([R,M_1...M_m])=0 for even R",
+    "unlabeled_family_count": "N_family(n)=2^n",
+    "word_variation": "delta(M_1...M_m)=[R,M_1...M_m]"
+  },
+  "external_results_imported": false,
+  "inverse_variation_certificate": {
+    "expected_commutator": [
+      {
+        "coefficient": "-1",
+        "word": [
+          "G",
+          "R"
+        ]
+      },
+      {
+        "coefficient": "1",
+        "word": [
+          "R",
+          "G"
+        ]
+      }
+    ],
+    "passed": true,
+    "raw": [
+      {
+        "coefficient": "-1",
+        "word": [
+          "G",
+          "R",
+          "H",
+          "G"
+        ]
+      },
+      {
+        "coefficient": "1",
+        "word": [
+          "G",
+          "H",
+          "R",
+          "G"
+        ]
+      }
+    ],
+    "reduced": [
+      {
+        "coefficient": "-1",
+        "word": [
+          "G",
+          "R"
+        ]
+      },
+      {
+        "coefficient": "1",
+        "word": [
+          "R",
+          "G"
+        ]
+      }
+    ]
+  },
+  "orders": [
+    {
+      "background_order": 0,
+      "checks": {
+        "family_count": true,
+        "polarized_count": true,
+        "ward_telescoping": true
+      },
+      "family_count_enumerated": 1,
+      "family_count_formula": 1,
+      "family_signs": [
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 1,
+          "cycle_vertices": 1,
+          "k": 0,
+          "r_parts": [],
+          "rooted_word": [
+            "I_0",
+            "G0"
+          ],
+          "s": 0
+        }
+      ],
+      "polarized_count_enumerated": 1,
+      "polarized_count_formula": 1,
+      "ward_telescoping_passed": true
+    },
+    {
+      "background_order": 1,
+      "checks": {
+        "family_count": true,
+        "polarized_count": true,
+        "ward_telescoping": true
+      },
+      "family_count_enumerated": 2,
+      "family_count_formula": 2,
+      "family_signs": [
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 2,
+          "cycle_vertices": 2,
+          "k": 1,
+          "r_parts": [
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 1,
+          "cycle_vertices": 1,
+          "k": 0,
+          "r_parts": [],
+          "rooted_word": [
+            "I_1",
+            "G0"
+          ],
+          "s": 1
+        }
+      ],
+      "polarized_count_enumerated": 2,
+      "polarized_count_formula": 2,
+      "ward_telescoping_passed": true
+    },
+    {
+      "background_order": 2,
+      "checks": {
+        "family_count": true,
+        "polarized_count": true,
+        "ward_telescoping": true
+      },
+      "family_count_enumerated": 4,
+      "family_count_formula": 4,
+      "family_signs": [
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 2,
+          "cycle_vertices": 2,
+          "k": 1,
+          "r_parts": [
+            2
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 2,
+          "cycle_vertices": 2,
+          "k": 1,
+          "r_parts": [
+            1
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 1,
+          "cycle_vertices": 1,
+          "k": 0,
+          "r_parts": [],
+          "rooted_word": [
+            "I_2",
+            "G0"
+          ],
+          "s": 2
+        }
+      ],
+      "polarized_count_enumerated": 6,
+      "polarized_count_formula": 6,
+      "ward_telescoping_passed": true
+    },
+    {
+      "background_order": 3,
+      "checks": {
+        "family_count": true,
+        "polarized_count": true,
+        "ward_telescoping": true
+      },
+      "family_count_enumerated": 8,
+      "family_count_formula": 8,
+      "family_signs": [
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 2,
+          "cycle_vertices": 2,
+          "k": 1,
+          "r_parts": [
+            3
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_3",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            1,
+            2
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            2,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            1,
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 2,
+          "cycle_vertices": 2,
+          "k": 1,
+          "r_parts": [
+            2
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 2,
+          "cycle_vertices": 2,
+          "k": 1,
+          "r_parts": [
+            1
+          ],
+          "rooted_word": [
+            "I_2",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 2
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 1,
+          "cycle_vertices": 1,
+          "k": 0,
+          "r_parts": [],
+          "rooted_word": [
+            "I_3",
+            "G0"
+          ],
+          "s": 3
+        }
+      ],
+      "polarized_count_enumerated": 26,
+      "polarized_count_formula": 26,
+      "ward_telescoping_passed": true
+    },
+    {
+      "background_order": 4,
+      "checks": {
+        "family_count": true,
+        "polarized_count": true,
+        "ward_telescoping": true
+      },
+      "family_count_enumerated": 16,
+      "family_count_formula": 16,
+      "family_signs": [
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 2,
+          "cycle_vertices": 2,
+          "k": 1,
+          "r_parts": [
+            4
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_4",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            1,
+            3
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_3",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            2,
+            2
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_2",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            3,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_3",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            1,
+            1,
+            2
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            1,
+            2,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            2,
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 5,
+          "cycle_vertices": 5,
+          "k": 4,
+          "r_parts": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 2,
+          "cycle_vertices": 2,
+          "k": 1,
+          "r_parts": [
+            3
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_3",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            1,
+            2
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            2,
+            1
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            1,
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 2,
+          "cycle_vertices": 2,
+          "k": 1,
+          "r_parts": [
+            2
+          ],
+          "rooted_word": [
+            "I_2",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 2
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_2",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 2
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 2,
+          "cycle_vertices": 2,
+          "k": 1,
+          "r_parts": [
+            1
+          ],
+          "rooted_word": [
+            "I_3",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 3
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 1,
+          "cycle_vertices": 1,
+          "k": 0,
+          "r_parts": [],
+          "rooted_word": [
+            "I_4",
+            "G0"
+          ],
+          "s": 4
+        }
+      ],
+      "polarized_count_enumerated": 150,
+      "polarized_count_formula": 150,
+      "ward_telescoping_passed": true
+    },
+    {
+      "background_order": 5,
+      "checks": {
+        "family_count": true,
+        "polarized_count": true,
+        "ward_telescoping": true
+      },
+      "family_count_enumerated": 32,
+      "family_count_formula": 32,
+      "family_signs": [
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 2,
+          "cycle_vertices": 2,
+          "k": 1,
+          "r_parts": [
+            5
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_5",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            1,
+            4
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_4",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            2,
+            3
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_2",
+            "G0",
+            "H_3",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            3,
+            2
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_3",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            4,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_4",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            1,
+            1,
+            3
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_3",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            1,
+            2,
+            2
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            1,
+            3,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_3",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            2,
+            1,
+            2
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            2,
+            2,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_2",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            3,
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_3",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 5,
+          "cycle_vertices": 5,
+          "k": 4,
+          "r_parts": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 5,
+          "cycle_vertices": 5,
+          "k": 4,
+          "r_parts": [
+            1,
+            1,
+            2,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 5,
+          "cycle_vertices": 5,
+          "k": 4,
+          "r_parts": [
+            1,
+            2,
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 5,
+          "cycle_vertices": 5,
+          "k": 4,
+          "r_parts": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 6,
+          "cycle_vertices": 6,
+          "k": 5,
+          "r_parts": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 2,
+          "cycle_vertices": 2,
+          "k": 1,
+          "r_parts": [
+            4
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_4",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            1,
+            3
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_3",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            2,
+            2
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_2",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            3,
+            1
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_3",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            1,
+            1,
+            2
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            1,
+            2,
+            1
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            2,
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 5,
+          "cycle_vertices": 5,
+          "k": 4,
+          "r_parts": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 2,
+          "cycle_vertices": 2,
+          "k": 1,
+          "r_parts": [
+            3
+          ],
+          "rooted_word": [
+            "I_2",
+            "G0",
+            "H_3",
+            "G0"
+          ],
+          "s": 2
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            1,
+            2
+          ],
+          "rooted_word": [
+            "I_2",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 2
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            2,
+            1
+          ],
+          "rooted_word": [
+            "I_2",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 2
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            1,
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_2",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 2
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 2,
+          "cycle_vertices": 2,
+          "k": 1,
+          "r_parts": [
+            2
+          ],
+          "rooted_word": [
+            "I_3",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 3
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_3",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 3
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 2,
+          "cycle_vertices": 2,
+          "k": 1,
+          "r_parts": [
+            1
+          ],
+          "rooted_word": [
+            "I_4",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 4
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 1,
+          "cycle_vertices": 1,
+          "k": 0,
+          "r_parts": [],
+          "rooted_word": [
+            "I_5",
+            "G0"
+          ],
+          "s": 5
+        }
+      ],
+      "polarized_count_enumerated": 1082,
+      "polarized_count_formula": 1082,
+      "ward_telescoping_passed": true
+    },
+    {
+      "background_order": 6,
+      "checks": {
+        "family_count": true,
+        "polarized_count": true,
+        "ward_telescoping": true
+      },
+      "family_count_enumerated": 64,
+      "family_count_formula": 64,
+      "family_signs": [
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 2,
+          "cycle_vertices": 2,
+          "k": 1,
+          "r_parts": [
+            6
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_6",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            1,
+            5
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_5",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            2,
+            4
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_2",
+            "G0",
+            "H_4",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            3,
+            3
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_3",
+            "G0",
+            "H_3",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            4,
+            2
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_4",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            5,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_5",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            1,
+            1,
+            4
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_4",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            1,
+            2,
+            3
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0",
+            "H_3",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            1,
+            3,
+            2
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_3",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            1,
+            4,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_4",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            2,
+            1,
+            3
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0",
+            "H_3",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            2,
+            2,
+            2
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_2",
+            "G0",
+            "H_2",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            2,
+            3,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_2",
+            "G0",
+            "H_3",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            3,
+            1,
+            2
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_3",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            3,
+            2,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_3",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            4,
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_4",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 5,
+          "cycle_vertices": 5,
+          "k": 4,
+          "r_parts": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_3",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 5,
+          "cycle_vertices": 5,
+          "k": 4,
+          "r_parts": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 5,
+          "cycle_vertices": 5,
+          "k": 4,
+          "r_parts": [
+            1,
+            1,
+            3,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_3",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 5,
+          "cycle_vertices": 5,
+          "k": 4,
+          "r_parts": [
+            1,
+            2,
+            1,
+            2
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 5,
+          "cycle_vertices": 5,
+          "k": 4,
+          "r_parts": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 5,
+          "cycle_vertices": 5,
+          "k": 4,
+          "r_parts": [
+            1,
+            3,
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_3",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 5,
+          "cycle_vertices": 5,
+          "k": 4,
+          "r_parts": [
+            2,
+            1,
+            1,
+            2
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 5,
+          "cycle_vertices": 5,
+          "k": 4,
+          "r_parts": [
+            2,
+            1,
+            2,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 5,
+          "cycle_vertices": 5,
+          "k": 4,
+          "r_parts": [
+            2,
+            2,
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_2",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 5,
+          "cycle_vertices": 5,
+          "k": 4,
+          "r_parts": [
+            3,
+            1,
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_3",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 6,
+          "cycle_vertices": 6,
+          "k": 5,
+          "r_parts": [
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 6,
+          "cycle_vertices": 6,
+          "k": 5,
+          "r_parts": [
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 6,
+          "cycle_vertices": 6,
+          "k": 5,
+          "r_parts": [
+            1,
+            1,
+            2,
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 6,
+          "cycle_vertices": 6,
+          "k": 5,
+          "r_parts": [
+            1,
+            2,
+            1,
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 6,
+          "cycle_vertices": 6,
+          "k": 5,
+          "r_parts": [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 7,
+          "cycle_vertices": 7,
+          "k": 6,
+          "r_parts": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_0",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 0
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 2,
+          "cycle_vertices": 2,
+          "k": 1,
+          "r_parts": [
+            5
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_5",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            1,
+            4
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_4",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            2,
+            3
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_2",
+            "G0",
+            "H_3",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            3,
+            2
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_3",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            4,
+            1
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_4",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            1,
+            1,
+            3
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_3",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            1,
+            2,
+            2
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            1,
+            3,
+            1
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_3",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            2,
+            1,
+            2
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            2,
+            2,
+            1
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_2",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            3,
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_3",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 5,
+          "cycle_vertices": 5,
+          "k": 4,
+          "r_parts": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 5,
+          "cycle_vertices": 5,
+          "k": 4,
+          "r_parts": [
+            1,
+            1,
+            2,
+            1
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 5,
+          "cycle_vertices": 5,
+          "k": 4,
+          "r_parts": [
+            1,
+            2,
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 5,
+          "cycle_vertices": 5,
+          "k": 4,
+          "r_parts": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 6,
+          "cycle_vertices": 6,
+          "k": 5,
+          "r_parts": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 1
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 2,
+          "cycle_vertices": 2,
+          "k": 1,
+          "r_parts": [
+            4
+          ],
+          "rooted_word": [
+            "I_2",
+            "G0",
+            "H_4",
+            "G0"
+          ],
+          "s": 2
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            1,
+            3
+          ],
+          "rooted_word": [
+            "I_2",
+            "G0",
+            "H_1",
+            "G0",
+            "H_3",
+            "G0"
+          ],
+          "s": 2
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            2,
+            2
+          ],
+          "rooted_word": [
+            "I_2",
+            "G0",
+            "H_2",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 2
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            3,
+            1
+          ],
+          "rooted_word": [
+            "I_2",
+            "G0",
+            "H_3",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 2
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            1,
+            1,
+            2
+          ],
+          "rooted_word": [
+            "I_2",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 2
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            1,
+            2,
+            1
+          ],
+          "rooted_word": [
+            "I_2",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 2
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            2,
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_2",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 2
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 5,
+          "cycle_vertices": 5,
+          "k": 4,
+          "r_parts": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_2",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 2
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 2,
+          "cycle_vertices": 2,
+          "k": 1,
+          "r_parts": [
+            3
+          ],
+          "rooted_word": [
+            "I_3",
+            "G0",
+            "H_3",
+            "G0"
+          ],
+          "s": 3
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            1,
+            2
+          ],
+          "rooted_word": [
+            "I_3",
+            "G0",
+            "H_1",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 3
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            2,
+            1
+          ],
+          "rooted_word": [
+            "I_3",
+            "G0",
+            "H_2",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 3
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 4,
+          "cycle_vertices": 4,
+          "k": 3,
+          "r_parts": [
+            1,
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_3",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 3
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 2,
+          "cycle_vertices": 2,
+          "k": 1,
+          "r_parts": [
+            2
+          ],
+          "rooted_word": [
+            "I_4",
+            "G0",
+            "H_2",
+            "G0"
+          ],
+          "s": 4
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 3,
+          "cycle_vertices": 3,
+          "k": 2,
+          "r_parts": [
+            1,
+            1
+          ],
+          "rooted_word": [
+            "I_4",
+            "G0",
+            "H_1",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 4
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "cycle_propagators": 2,
+          "cycle_vertices": 2,
+          "k": 1,
+          "r_parts": [
+            1
+          ],
+          "rooted_word": [
+            "I_5",
+            "G0",
+            "H_1",
+            "G0"
+          ],
+          "s": 5
+        },
+        {
+          "coefficient": {
+            "denominator": 2,
+            "numerator": 1
+          },
+          "cycle_propagators": 1,
+          "cycle_vertices": 1,
+          "k": 0,
+          "r_parts": [],
+          "rooted_word": [
+            "I_6",
+            "G0"
+          ],
+          "s": 6
+        }
+      ],
+      "polarized_count_enumerated": 9366,
+      "polarized_count_formula": 9366,
+      "ward_telescoping_passed": true
+    }
+  ],
+  "parities": {
+    "G": 0,
+    "H": 0,
+    "I": 1,
+    "J": 1,
+    "J_I": 0,
+    "R": 0
+  },
+  "project_gates": {
+    "dred_loop_translation_invariance": "PASS_PROJECT_MOMENTUM_SUBSPACE_5.13A",
+    "dred_regulated_supertrace_cyclicity": "PASS_PROJECT_TEST_DOMAIN_5.19A",
+    "full_chiral_vector_measure_bridge": "OPEN",
+    "full_hessian_and_insertion_background_covariance": "OPEN_COMPILER_CERTIFICATE",
+    "quadratic_jet_injectivity": "OPEN_RELATION_MATRIX",
+    "source_extended_slavnov_taylor_closure": "OPEN"
+  },
+  "schema": "Step5OneLoopAllOrderRootedWard.v1",
+  "scope": "ROOTED_ONE_LOOP_COMBINATORICS_AND_EVEN_SIMILARITY_ONLY",
+  "status": "PASS_ALGEBRAIC_CENSUS_AND_TELESCOPING",
+  "topology_dictionary": [
+    {
+      "cycle_propagators": 1,
+      "cycle_vertices": 1,
+      "hessian_vertices_k": 0,
+      "neumann_sign": 1,
+      "primitive_name": "INSERTION_TADPOLE"
+    },
+    {
+      "cycle_propagators": 2,
+      "cycle_vertices": 2,
+      "hessian_vertices_k": 1,
+      "neumann_sign": -1,
+      "primitive_name": "BUBBLE_OR_CONTACT"
+    },
+    {
+      "cycle_propagators": 3,
+      "cycle_vertices": 3,
+      "hessian_vertices_k": 2,
+      "neumann_sign": 1,
+      "primitive_name": "TRIANGLE"
+    },
+    {
+      "cycle_propagators": 4,
+      "cycle_vertices": 4,
+      "hessian_vertices_k": 3,
+      "neumann_sign": -1,
+      "primitive_name": "BOX"
+    },
+    {
+      "cycle_propagators": 5,
+      "cycle_vertices": 5,
+      "hessian_vertices_k": 4,
+      "neumann_sign": 1,
+      "primitive_name": "PENTAGON"
+    },
+    {
+      "cycle_propagators": 6,
+      "cycle_vertices": 6,
+      "hessian_vertices_k": 5,
+      "neumann_sign": -1,
+      "primitive_name": "CYCLE_6"
+    },
+    {
+      "cycle_propagators": 7,
+      "cycle_vertices": 7,
+      "hessian_vertices_k": 6,
+      "neumann_sign": 1,
+      "primitive_name": "CYCLE_7"
+    }
+  ]
+}

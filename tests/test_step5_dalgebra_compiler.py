@@ -308,7 +308,7 @@ class Step5DAlgebraCompilerTest(unittest.TestCase):
         schema = project_notation_schema()
         expected_coefficients = {
             "DIRECT": self.d.gaussian(Fraction(1, 16)),
-            "REFLECTED": self.d.gaussian(Fraction(-1, 16)),
+            "REFLECTED": self.d.gaussian(Fraction(1, 16)),
         }
         for request in (ww_seed_request(schema), ww_reflected_seed_request(schema)):
             amplitude = compile_request(request, schema).amplitudes[0]
@@ -317,6 +317,21 @@ class Step5DAlgebraCompilerTest(unittest.TestCase):
             )
             with self.subTest(orientation=amplitude.orientation):
                 self.assertEqual(len(scheduled.rows), 8)
+                self.assertEqual(scheduled.typed_port_gate["status"], "PASS")
+                self.assertEqual(
+                    scheduled.typed_port_gate["source_statistics"], "FERMION"
+                )
+                self.assertEqual(
+                    scheduled.typed_port_gate["source_color_variances"],
+                    ["DOWN", "DOWN"],
+                )
+                self.assertEqual(
+                    scheduled.typed_port_gate["coupled_insertion_vertex_parity"],
+                    0,
+                )
+                self.assertEqual(
+                    scheduled.typed_port_gate["tildeW_dotted_variance"], "DOWN"
+                )
                 certificate = scheduled.algebra_certificate
                 self.assertEqual(certificate.notation_hash, schema.canonical_hash)
                 self.assertEqual(len(certificate.matrix_checks), 21)
@@ -354,6 +369,17 @@ class Step5DAlgebraCompilerTest(unittest.TestCase):
                     )
                     self.assertEqual(row.exact_d_chain, self.d.gaussian(Fraction(-1, 2)))
                     self.assertEqual(row.total_endpoint_sign, 1)
+                    self.assertEqual(
+                        [
+                            (
+                                factor.undotted_variance,
+                                factor.dotted_variance,
+                            )
+                            for factor in row.normal_form.numerator_factors
+                        ],
+                        [("DOWN", "UP"), ("DOWN", "DOWN"), ("UP", "UP")],
+                    )
+                    self.assertIn("mathcalD_(+ dot_beta)[X^", row.external_derivative_rendering)
                     self.assertEqual(len(row.normal_form.sha256()), 64)
                     self.assertEqual(len(row.sha256()), 64)
                     for phase in row.phase_trace:
@@ -367,6 +393,100 @@ class Step5DAlgebraCompilerTest(unittest.TestCase):
                 self.assertTrue(
                     all(item["status"] == "PASS" for item in oracle["rows"])
                 )
+
+    def test_physical_ww_typed_port_gate_rejects_bosonic_source_and_up_tildeW(self) -> None:
+        from scripts.step5_graph_ir import Statistics, Variance
+        from scripts.step5_pipeline_ir import project_notation_schema
+        from scripts.step5_supergraph_pipeline import compile_request, ww_seed_request
+
+        schema = project_notation_schema()
+        amplitude = compile_request(ww_seed_request(schema), schema).amplitudes[0]
+
+        source_leg = next(
+            leg
+            for leg in amplitude.graph.external_legs
+            if leg.field_type.name.startswith("Source[")
+        )
+        bosonic_source_type = replace(
+            source_leg.field_type, statistics=Statistics.BOSON
+        )
+        bad_source_legs = tuple(
+            replace(leg, field_type=bosonic_source_type)
+            if leg.leg_id == source_leg.leg_id
+            else leg
+            for leg in amplitude.graph.external_legs
+        )
+        bad_source_half_edges = tuple(
+            replace(half_edge, field_type=bosonic_source_type)
+            if half_edge.half_edge_id == source_leg.attached_half_edge
+            else half_edge
+            for half_edge in amplitude.graph.half_edges
+        )
+        bad_source_graph = replace(
+            amplitude.graph,
+            external_legs=bad_source_legs,
+            half_edges=bad_source_half_edges,
+        )
+        with self.assertRaisesRegex(
+            self.d.UnsupportedScheduledWWGraphError,
+            "source port must be fermionic",
+        ):
+            self.d.compile_scheduled_ww_rows(
+                replace(amplitude, graph=bad_source_graph), schema, self.engine
+            )
+
+        up_source_type = replace(
+            source_leg.field_type,
+            indices=tuple(
+                replace(index, variance=Variance.UP)
+                for index in source_leg.field_type.indices
+            ),
+        )
+        up_source_legs = tuple(
+            replace(leg, field_type=up_source_type)
+            if leg.leg_id == source_leg.leg_id
+            else leg
+            for leg in amplitude.graph.external_legs
+        )
+        up_source_half_edges = tuple(
+            replace(half_edge, field_type=up_source_type)
+            if half_edge.half_edge_id == source_leg.attached_half_edge
+            else half_edge
+            for half_edge in amplitude.graph.half_edges
+        )
+        up_source_graph = replace(
+            amplitude.graph,
+            external_legs=up_source_legs,
+            half_edges=up_source_half_edges,
+        )
+        with self.assertRaisesRegex(
+            self.d.UnsupportedScheduledWWGraphError,
+            "source color slots must both have DOWN variance",
+        ):
+            self.d.compile_scheduled_ww_rows(
+                replace(amplitude, graph=up_source_graph), schema, self.engine
+            )
+
+        tilde_w_leg = next(
+            leg
+            for leg in amplitude.graph.external_legs
+            if leg.field_type.name == "TildeW_dot_alpha"
+        )
+        up_spinor = replace(tilde_w_leg.spinor_indices[0], variance=Variance.UP)
+        bad_tilde_legs = tuple(
+            replace(leg, spinor_indices=(up_spinor,))
+            if leg.leg_id == tilde_w_leg.leg_id
+            else leg
+            for leg in amplitude.graph.external_legs
+        )
+        bad_tilde_graph = replace(amplitude.graph, external_legs=bad_tilde_legs)
+        with self.assertRaisesRegex(
+            self.d.UnsupportedScheduledWWGraphError,
+            "dotted slot must have DOWN variance",
+        ):
+            self.d.compile_scheduled_ww_rows(
+                replace(amplitude, graph=bad_tilde_graph), schema, self.engine
+            )
 
     def test_physical_ww_schedule_fails_closed_outside_exact_scope(self) -> None:
         from scripts.step5_pipeline_ir import project_notation_schema

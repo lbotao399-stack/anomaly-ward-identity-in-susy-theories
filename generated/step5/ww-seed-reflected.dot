@@ -4,7 +4,7 @@ digraph "T-Bbar_AW-w0-01" {
   "vW" [label="vW:BACKGROUND_CUBIC_W"];
   "X_L_source" [shape=box,label="L_source:Source[nabla_-(X^A X^B)](p+q)"];
   "X_L_source" -> "vI" [label="Bbar_AW_I_source{identity}"];
-  "X_L_tildeW" [shape=box,label="L_tildeW:TildeW_dot_alpha{spinor=DOTTED:dot_alpha:UP}(q)"];
+  "X_L_tildeW" [shape=box,label="L_tildeW:TildeW_dot_alpha{spinor=DOTTED:dot_alpha:DOWN}(q)"];
   "X_L_tildeW" -> "vBar" [label="Bbar_AW_bar_ext{identity}"];
   "X_L_W" [shape=box,label="L_W:W_plus{spinor=UNDOTTED:+:DOWN}(p)"];
   "X_L_W" -> "vW" [label="Bbar_AW_W_ext{identity}"];

@@ -1,0 +1,17 @@
+{
+  "generated_sha256": "d6c4f9fdadda9899852df91b0ff1ec2969ee79fd7141dce5f700952a49a2c3c3",
+  "result": "EXACT_ABSTRACT_CENSUS_ONLY; NO_FIELD_THEORY_AMPLITUDE_OR_COEFFICIENT_ACCEPTED",
+  "schema": "Step5OneLoopHessianInsertionCensusAudit.v1",
+  "scope": "ABSTRACT_ONE_LOOP_HESSIAN_SOURCE_INSERTION_N_2_3_4",
+  "status": "PASS_COMBINATORICS_FAIL_CLOSED_PHYSICS",
+  "totals": {
+    "checks": 10,
+    "counterterms": 3,
+    "failed": 0,
+    "families": 28,
+    "polarized_terms": 182,
+    "source_block_rows": 36,
+    "typed_path_templates": 260,
+    "unresolved_obligations": 5
+  }
+}

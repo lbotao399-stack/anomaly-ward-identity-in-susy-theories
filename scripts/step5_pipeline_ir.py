@@ -442,10 +442,13 @@ class FieldSpec:
     statistics: Statistics
     chirality: Chirality
     index_spaces: tuple[str, ...]
+    index_variances: tuple[Variance, ...]
 
     def __post_init__(self) -> None:
         if not self.name:
             raise PipelineIRError("field names must be nonempty")
+        if len(self.index_spaces) != len(self.index_variances):
+            raise PipelineIRError("field index-space and variance arities differ")
 
     def canonical_dict(self) -> dict[str, object]:
         return {
@@ -453,6 +456,7 @@ class FieldSpec:
             "statistics": self.statistics.value,
             "chirality": self.chirality.value,
             "index_spaces": list(self.index_spaces),
+            "index_variances": [item.value for item in self.index_variances],
         }
 
 
@@ -898,6 +902,26 @@ class NotationSchema:
         def qi(value: Mapping[str, object]) -> ExactCoefficient:
             return _exact_coefficient_from_payload(value)
 
+        def field_spec(item: Mapping[str, object]) -> FieldSpec:
+            required = {
+                "name",
+                "statistics",
+                "chirality",
+                "index_spaces",
+                "index_variances",
+            }
+            if set(item) != required:
+                raise PipelineIRError(
+                    "field JSON must carry explicit index_spaces and index_variances"
+                )
+            return FieldSpec(
+                str(item["name"]),
+                Statistics(item["statistics"]),
+                Chirality(item["chirality"]),
+                tuple(item["index_spaces"]),
+                tuple(Variance(value) for value in item["index_variances"]),
+            )
+
         derivative_rules = []
         for rule in payload["derivative_rules"]:  # type: ignore[index]
             derivative_rules.append(
@@ -930,12 +954,7 @@ class NotationSchema:
             ),
             tuple(derivative_rules),
             tuple(
-                FieldSpec(
-                    str(item["name"]),
-                    Statistics(item["statistics"]),
-                    Chirality(item["chirality"]),
-                    tuple(item["index_spaces"]),
-                )
+                field_spec(item)
                 for item in payload["fields"]  # type: ignore[index]
             ),
             tuple(
@@ -1079,14 +1098,27 @@ class NotationSchema:
                     tuple(str(value) for value in item["conditions"]),
                 )
             )
+        field_records = records("fields")
+        required_field_keys = {
+            "name",
+            "statistics",
+            "chirality",
+            "index_spaces",
+            "index_variances",
+        }
+        if any(set(item) != required_field_keys for item in field_records):
+            raise PipelineIRError(
+                "field JSON must carry explicit index_spaces and index_variances"
+            )
         fields = tuple(
             FieldSpec(
                 str(item["name"]),
                 Statistics(str(item["statistics"])),
                 Chirality(str(item["chirality"])),
                 tuple(str(value) for value in item["index_spaces"]),
+                tuple(Variance(str(value)) for value in item["index_variances"]),
             )
-            for item in records("fields")
+            for item in field_records
         )
         ports = tuple(
             PortSpec(
@@ -1502,6 +1534,10 @@ class PipelineGraph:
                 )
             if tuple(index.index_space for index in port.indices) != field.index_spaces:
                 raise PipelineIRError(f"port {port.port_id} indices do not match field {field.name}")
+            if tuple(index.variance for index in port.indices) != field.index_variances:
+                raise PipelineIRError(
+                    f"port {port.port_id} index variances do not match field {field.name}"
+                )
             schema._require_subset(
                 (name for name, _ in port.momentum.terms),
                 {
@@ -1769,7 +1805,7 @@ def _component_count(adjacency: Mapping[str, set[str]]) -> int:
 # Updated only when the canonical Project WW notation payload changes by an
 # intentional reviewed edit.  The factory checks this value before returning.
 PROJECT_WW_NOTATION_SCHEMA_SHA256 = (
-    "e235bf689c01b9644e9b1dcffdc420a7060bb8f5ee6db8316cbbddcf73f3eb79"
+    "fcdd284541dcdcf6d0217432ab146b908ad8aadf2a90e6f9201f87b149250025"
 )
 
 
@@ -1867,19 +1903,29 @@ def project_notation_schema() -> NotationSchema:
             ),
         ),
         fields=(
-            FieldSpec("V", Statistics.BOSON, Chirality.REAL, (color,)),
-            FieldSpec("W_plus", Statistics.FERMION, Chirality.CHIRAL, (color, undotted)),
+            FieldSpec(
+                "V", Statistics.BOSON, Chirality.REAL, (color,), (Variance.UP,)
+            ),
+            FieldSpec(
+                "W_plus",
+                Statistics.FERMION,
+                Chirality.CHIRAL,
+                (color, undotted),
+                (Variance.UP, Variance.DOWN),
+            ),
             FieldSpec(
                 "TildeW_dot_alpha",
                 Statistics.FERMION,
                 Chirality.ANTICHIRAL,
                 (color, dotted),
+                (Variance.UP, Variance.DOWN),
             ),
             FieldSpec(
                 "Source[nabla_-(X^A X^B)]",
-                Statistics.BOSON,
+                Statistics.FERMION,
                 Chirality.UNCONSTRAINED,
                 (color, color),
+                (Variance.DOWN, Variance.DOWN),
             ),
         ),
         ports=(

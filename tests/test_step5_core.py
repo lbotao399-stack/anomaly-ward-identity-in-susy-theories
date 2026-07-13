@@ -20,10 +20,10 @@ class Step5CoreTest(unittest.TestCase):
         self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
         audit = json.loads(expected)
         self.assertEqual(audit["status"], "PASS")
-        self.assertEqual(audit["stage"], "EVALUATED")
+        self.assertEqual(audit["stage"], "REGISTERED_FIXED_VECTOR_WARD_PROVED")
         self.assertEqual(
             audit["stage_qualifier"],
-            "WW_UV_METRIC_MISMATCH_DERIVED_ORDINARY_ORBIT_OPEN",
+            "WW_CONTACT_AND_INJECTIVITY_OPEN",
         )
         self.assertEqual(audit["totals"]["failed"], 0)
         self.assertEqual(len(audit["channel_ledger"]), 16)

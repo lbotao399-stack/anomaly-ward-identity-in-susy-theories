@@ -1,0 +1,253 @@
+{
+  "Ward_recursion": {
+    "formal_status": "PASS",
+    "frame": "GAUGE_CHIRAL",
+    "output_representation": "rho_2(eta_R)",
+    "quantum_restoration": "OPEN",
+    "vector_subgroup_level_mixing": false
+  },
+  "adjoint_gauge_anomaly": {
+    "d_Adj_ABC": 0,
+    "input": "c_ABC=c_[ABC]",
+    "step5A_restoration_counterterm": "OPEN",
+    "step5C_finite_BV_density": "OUT_OF_SCOPE_FOR_STEP5A",
+    "trace_chain": [
+      "d=Tr(TA{TB,TC})",
+      "d=Tr((TA{TB,TC})^T)",
+      "d=-Tr({TB,TC}TA)",
+      "d=-Tr(TA{TB,TC})=-d",
+      "d=0"
+    ],
+    "transpose_rules": {
+      "T_ad_A": "-T_ad_A",
+      "anticommutator_BC": "+anticommutator_BC"
+    }
+  },
+  "checks": {
+    "Project_R_weight_binding_is_not_claimed": true,
+    "adjoint_cubic_anomaly_tensor_is_zero": true,
+    "bridge_full_jacobian_and_finite_bv_remain_open": true,
+    "bridge_separates_chain_rules_and_conditional_similarity": true,
+    "candidate_connection_degrees_are_2_through_6": true,
+    "hessian_n2_four_families_have_exact_signs": true,
+    "hessian_polarized_counts_are_6_26_150": true,
+    "injective_completion_is_distinct_from_rank_one_corollary": true,
+    "literal_candidate_is_antisymmetric_with_zero_Sym2_projection": true,
+    "literal_dotted_index_positions_are_exact": true,
+    "ordered_color_word_quotient_remains_open": true,
+    "physical_seed_is_in_Sym2_Adjoint": true,
+    "pure_gauge_kernel_filtration_is_not_claimed": true,
+    "seed_connection_degrees_are_2_through_7": true,
+    "seed_quantum_spin_cohomology_remains_open": true,
+    "seed_spin_component_identity_is_exact": true,
+    "seed_spin_five_halves_is_closed_by_chiral_bianchi": true,
+    "seed_tree_EOM_identity_is_closed": true,
+    "source_full_measure_dimension_is_minus_five_halves": true,
+    "source_odd_Leibniz_pairing_is_invariant": true,
+    "spin_projector_ranks_are_10_equals_6_plus_4": true,
+    "vector_subgroup_has_no_level_mixing": true,
+    "ward_output_is_chiral_frame_rho2_etaR": true
+  },
+  "completion_theorem": {
+    "general_injective_completion": {
+      "input": "complete tensor-valued quadratic jet ell_2[A_loc]",
+      "rank_one_required": false,
+      "required": [
+        "restored Step5A background Ward identity",
+        "ker(ell_2)=0"
+      ],
+      "status": "OPEN"
+    },
+    "pure_gauge_kernel_route": {
+      "conditional_filtration": "ker(ell_2) subset field_strength_degree>=3 modulo derivative commutators",
+      "dimension_9_over_2_and_r_minus_1": {
+        "n_W": 1,
+        "n_tildeW": 2
+      },
+      "filtration_lemma": "OPEN",
+      "four_field_strength_dimension": "6>9/2",
+      "full_N4_matter": "SEPARATE_OPEN_GATE",
+      "required_spin": "(3/2,0)",
+      "three_field_strength_spin_after_jR_scalar": "(1/2,0)"
+    },
+    "rank_one_candidate_channel_corollary": {
+      "channel": "Sym^2(Adjoint), j_L=3/2, j_R=0, r_f=-1",
+      "required": [
+        "dim(H_channel)=1",
+        "nonzero symmetry-compatible representative O_star"
+      ],
+      "status": "OPEN"
+    }
+  },
+  "connection_degree": {
+    "X=nabla_plus_W_plus": [
+      1,
+      2,
+      3
+    ],
+    "X_tensor_X": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "candidate=tildeW_times_DX": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "candidate_maximum": 6,
+    "field_strength": [
+      1,
+      2
+    ],
+    "seed=nabla_minus_X_tensor_X": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "seed_maximum": 7,
+    "status": "PASS_UNREDUCED_CONNECTION_FILTRATION"
+  },
+  "external_coefficients_imported": false,
+  "frame_bridge": {
+    "Step5A_primary_frame": "GAUGE_VECTOR_NO_CHANGE_OF_VARIABLES_REQUIRED",
+    "full_finite_bv_density_and_cycle": "OPEN_STEP5C_3D110",
+    "full_physical_ghost_nonminimal_jacobian": "OPEN_3D109A",
+    "independent_flat_measure_functional_equality": "NOT_ASSERTED",
+    "operator_similarity": "PASS",
+    "quadratic_supertrace_similarity_sector": "PASS",
+    "reference_flat_adjoint_block": "PASS",
+    "scope": "COVARIANT_ADJOINT_SIMILARITY_AND_TANGENT_CHAIN_RULE",
+    "status": "PASS"
+  },
+  "hessian_census": {
+    "family_counts": {
+      "2": 4,
+      "3": 8,
+      "4": 16
+    },
+    "ordered_block_values": "OPEN",
+    "polarized_counts": {
+      "2": 6,
+      "3": 26,
+      "4": 150
+    },
+    "status": "PASS_COMBINATORICS_FAIL_CLOSED_PHYSICS"
+  },
+  "open_color_and_dotted_index": {
+    "W_lower": [
+      "c",
+      "d"
+    ],
+    "W_lower_Y_upper_coefficients": [
+      0,
+      -1,
+      1,
+      0
+    ],
+    "W_upper": [
+      "d",
+      "-c"
+    ],
+    "Y_lower": [
+      "a",
+      "b"
+    ],
+    "Y_lower_W_upper_coefficients": [
+      0,
+      1,
+      -1,
+      0
+    ],
+    "Y_upper": [
+      "b",
+      "-a"
+    ],
+    "Y_upper_W_lower_coefficients": [
+      0,
+      -1,
+      1,
+      0
+    ],
+    "epsilon_upper": {
+      "minus_plus": -1,
+      "plus_minus": 1
+    },
+    "literal_5_54A_second_term": "Y_upper^D times W_lower^E",
+    "literal_candidate_Sym2_projection": "ZERO",
+    "literal_candidate_internal_exchange": "ANTISYMMETRIC_DE",
+    "literal_candidate_open_exchange": "ANTISYMMETRIC_AB",
+    "lower_upper_is_minus_upper_lower": true,
+    "monomial_basis": [
+      "a*c",
+      "a*d",
+      "b*c",
+      "b*d"
+    ],
+    "ordered_A_bar_B_to_local_Sym2": "OPEN_COLOR_WORD_QUOTIENT",
+    "reflected_dotted_index_variance": "OPEN",
+    "seed_exchange_symmetry": "SYMMETRIC_AB",
+    "status": "PASS_EXACT_INDEX_TEST_FAIL_CLOSED_COLOR_GATE"
+  },
+  "open_theorem_gates": [
+    "OPEN_COLOR_WORD_QUOTIENT",
+    "OPEN_REFLECTED_DOTTED_INDEX_VARIANCE",
+    "SOURCE_EXTENDED_BV_MULTIPLET_CLOSURE",
+    "SEED_J_3_OVER_2_QUANTUM_COHOMOLOGY_AND_CANDIDATE_MATCH",
+    "ORDERED_NONZERO_PROJECT_HESSIAN_BLOCKS",
+    "STEP5A_LOCAL_BACKGROUND_WARD_RESTORATION",
+    "LOCAL_COVARIANT_COHOMOLOGY_RANK_ONE",
+    "QUADRATIC_JET_INJECTIVITY",
+    "PURE_GAUGE_ASSOCIATED_GRADED_FILTRATION",
+    "PROJECT_R_WEIGHT_BINDING",
+    "M0_SCHWINGER_DYSON_ORBIT"
+  ],
+  "schema": "Step5OneLoopTheoremTypeAudit.v3",
+  "source_and_BRST_dual": {
+    "Project_U1R_binding": "OPEN",
+    "R_weight_status": "TEMPORARY_FORMAL_GRADING",
+    "chiral_measure_status": "REJECTED_WITHOUT_CHIRAL_PROJECTOR",
+    "conditional_local_source_representation": "(Sym^2(Adjoint))^dual",
+    "insertion_R_weight": -1,
+    "insertion_dimension": "9/2",
+    "insertion_parity": 1,
+    "invariant_pairing_coefficient": 0,
+    "measure": "E_FULL_SUPERSPACE_d8z",
+    "measure_dimension": "-2",
+    "odd_Leibniz_sign": -1,
+    "ordered_graph_carrier": "Adjoint tensor Adjoint with A|B order",
+    "ordered_source_representation": "(Adjoint tensor Adjoint)^dual",
+    "ordered_to_local_quotient": "OPEN_COLOR_WORD_QUOTIENT",
+    "outer_connection": "D_minus+Gamma_minus^Adj tensor 1+1 tensor Gamma_minus^Adj",
+    "physical_local_seed_subspace": "Sym^2(Adjoint)",
+    "source_R_weight": 1,
+    "source_dimension": "-5/2",
+    "source_extended_BV_closure": "OPEN",
+    "source_left_dual_rule": "<sJ,O>=<J,rho_2(c)O>",
+    "source_parity": 1
+  },
+  "spin_projector": {
+    "certificate_status": "PASS",
+    "component_identity": "U_-;++++=H_-++++-(4/5)t_+++",
+    "direct_sum_ranks": {
+      "domain": 10,
+      "sym3": 4,
+      "sym5": 6
+    },
+    "j_five_halves_removal": "CLOSED_EXACT",
+    "quantum_gates": "OPEN",
+    "tree_EOM_identity": "CLOSED_EXACT_AT_TREE_LEVEL"
+  },
+  "status": "PASS_EXACT_TYPES_WITH_OPEN_THEOREM_GATES",
+  "step5C_only_gates": [
+    "FINITE_BV_DENSITY",
+    "FULL_FUNCTIONAL_FRAME_JACOBIAN"
+  ]
+}

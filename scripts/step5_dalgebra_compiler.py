@@ -979,7 +979,16 @@ class ScheduledNumeratorFactor:
     external_leg_id: str | None
     undotted: str
     dotted: str
+    undotted_variance: str
+    dotted_variance: str
     fourier_factor: GaussianRational
+
+    def __post_init__(self) -> None:
+        allowed = {"UP", "DOWN", "FIXED"}
+        if self.undotted_variance not in allowed:
+            raise ValueError("unknown undotted index variance")
+        if self.dotted_variance not in allowed:
+            raise ValueError("unknown dotted index variance")
 
     def to_json(self) -> dict[str, object]:
         return {
@@ -989,6 +998,8 @@ class ScheduledNumeratorFactor:
             "external_leg_id": self.external_leg_id,
             "undotted": self.undotted,
             "dotted": self.dotted,
+            "undotted_variance": self.undotted_variance,
+            "dotted_variance": self.dotted_variance,
             "fourier_factor": self.fourier_factor.to_json(),
         }
 
@@ -1056,21 +1067,20 @@ class ScheduledWWRow:
     def external_derivative_rendering(self) -> str:
         factor = self.normal_form.numerator_factors[1]
         return (
-            "partial_(a dot_beta)["
-            + self.external_w_field_name
-            + "^"
+            "mathcalD_(+ dot_beta)[X^"
             + self.external_w_color_label
             + "("
             + factor.momentum
             + ")]=i*"
             + factor.momentum
-            + "_(a dot_beta)*"
-            + self.external_w_field_name
-            + "^"
+            + "_(+ dot_beta)*X^"
             + self.external_w_color_label
             + "("
             + factor.momentum
-            + ")"
+            + ");X^"
+            + self.external_w_color_label
+            + "=nabla_+W_+^"
+            + self.external_w_color_label
         )
 
     def to_json(self) -> dict[str, object]:
@@ -1123,12 +1133,15 @@ class ScheduledWWCompilation:
     bar_scope: tuple[ScheduledDerivativeApplication, ...]
     d_scope: tuple[ScheduledDerivativeApplication, ...]
     rows: tuple[ScheduledWWRow, ...]
+    typed_port_gate: dict[str, object]
 
     def __post_init__(self) -> None:
         if len(self.placements) != 2 or len(self.bar_scope) != 2 or len(self.d_scope) != 2:
             raise ValueError("physical WW schedule requires 2 x 2 x 2 choices")
         if len(self.rows) != 8:
             raise ValueError("one WW orientation requires exactly eight scheduled rows")
+        if self.typed_port_gate.get("status") != "PASS":
+            raise ValueError("scheduled WW typed-port gate did not pass")
 
     def to_json(self) -> dict[str, object]:
         return {
@@ -1143,6 +1156,7 @@ class ScheduledWWCompilation:
             "placements": [placement.to_json() for placement in self.placements],
             "bar_scope": [application.to_json() for application in self.bar_scope],
             "d_scope": [application.to_json() for application in self.d_scope],
+            "typed_port_gate": self.typed_port_gate,
             "rows": [
                 {**row.to_json(), "row_sha256": row.sha256()} for row in self.rows
             ],
@@ -1286,6 +1300,19 @@ def compile_scheduled_ww_rows(
         raise UnsupportedScheduledWWGraphError("unknown WW orientation")
     if amplitude.external_koszul_sign not in {-1, 1}:  # type: ignore[attr-defined]
         raise UnsupportedScheduledWWGraphError("external orientation sign is not exact")
+    orientation_sign_ledger = dict(amplitude.orientation_sign_ledger)  # type: ignore[attr-defined]
+    if set(orientation_sign_ledger) != {"external_subword", "quantum_subword"}:
+        raise UnsupportedScheduledWWGraphError(
+            "WW orientation ledger must contain external and quantum odd subwords"
+        )
+    if (
+        orientation_sign_ledger["external_subword"]
+        * orientation_sign_ledger["quantum_subword"]
+        != amplitude.external_koszul_sign  # type: ignore[attr-defined]
+    ):
+        raise UnsupportedScheduledWWGraphError(
+            "WW orientation subsigns do not reproduce the full block sign"
+        )
     if amplitude.schema_hash != algebra_certificate.notation_hash:  # type: ignore[attr-defined]
         raise UnsupportedScheduledWWGraphError(
             "amplitude notation hash disagrees with the algebra certificate"
@@ -1421,6 +1448,11 @@ def compile_scheduled_ww_rows(
         lambda leg: leg.field_type.name == "TildeW_dot_alpha",  # type: ignore[attr-defined]
         "external TildeW leg",
     )
+    external_source = _require_unique(
+        tuple(graph.external_legs),
+        lambda leg: leg.field_type.name.startswith("Source[") ,  # type: ignore[attr-defined]
+        "external WW source leg",
+    )
     if external_w.field_type.chirality.value != "CHIRAL" or external_w.field_type.parity != 1:
         raise UnsupportedScheduledWWGraphError("external W_plus typing is inconsistent")
     if (
@@ -1430,14 +1462,51 @@ def compile_scheduled_ww_rows(
         or len(external_tilde_w.spinor_indices) != 1
     ):
         raise UnsupportedScheduledWWGraphError("external spinor typing is inconsistent")
+    if external_source.field_type.statistics.value != "FERMION" or external_source.field_type.parity != 1:
+        raise UnsupportedScheduledWWGraphError("external WW source port must be fermionic")
+    source_color_variances = tuple(
+        index.variance.value for index in external_source.field_type.indices
+    )
+    if source_color_variances != ("DOWN", "DOWN"):
+        raise UnsupportedScheduledWWGraphError(
+            "external WW source color slots must both have DOWN variance"
+        )
+    if external_tilde_w.spinor_indices[0].variance.value != "DOWN":
+        raise UnsupportedScheduledWWGraphError(
+            "external TildeW dotted slot must have DOWN variance"
+        )
+    graph_metadata = dict(graph.metadata)
+    if graph_metadata.get("insertion_operator_parity") != "1":
+        raise UnsupportedScheduledWWGraphError("WW insertion operator must be odd")
+    insertion_operator_parity = 1
+    coupled_vertex_parity = external_source.field_type.parity + insertion_operator_parity
+    coupled_vertex_parity %= 2
+    if coupled_vertex_parity != 0:
+        raise UnsupportedScheduledWWGraphError("source-coupled WW insertion vertex must be even")
+    if graph_metadata.get("source_coupled_insertion_vertex_parity") != "0":
+        raise UnsupportedScheduledWWGraphError(
+            "GraphIR source-coupled insertion parity metadata is inconsistent"
+        )
+    typed_port_gate: dict[str, object] = {
+        "source_leg_id": external_source.leg_id,
+        "source_statistics": external_source.field_type.statistics.value,
+        "source_parity": external_source.field_type.parity,
+        "source_color_variances": list(source_color_variances),
+        "insertion_operator_parity": insertion_operator_parity,
+        "coupled_insertion_vertex_parity": coupled_vertex_parity,
+        "tildeW_leg_id": external_tilde_w.leg_id,
+        "tildeW_dotted_variance": external_tilde_w.spinor_indices[0].variance.value,
+        "final_vector_dotted_variance": "UP",
+        "status": "PASS",
+    }
     plus_index = external_w.spinor_indices[0].label
     dotted_external_index = external_tilde_w.spinor_indices[0].label
     coefficient = amplitude.exact_coefficient_reduced  # type: ignore[attr-defined]
     if coefficient.sqrt2_power != 0 or coefficient.i_power % 4 != 0 or coefficient.symbols != ("g2",):
         raise UnsupportedScheduledWWGraphError("WW amplitude coefficient must be an exact Q*g2 scalar")
     graph_prefactor = Fraction(coefficient.rational)
-    if graph_prefactor * amplitude.external_koszul_sign != Fraction(-1, 8):  # type: ignore[attr-defined]
-        raise UnsupportedScheduledWWGraphError("orientation-stripped WW graph prefactor is not -1/8")
+    if graph_prefactor != Fraction(-1, 8):
+        raise UnsupportedScheduledWWGraphError("WW graph prefactor is not -1/8")
 
     projector_expression = _vertex_operator(insertion, "K_+=")
     projector_match = re.fullmatch(
@@ -1590,15 +1659,18 @@ def compile_scheduled_ww_rows(
                     (
                         ScheduledNumeratorFactor(
                             "EDGE_MOMENTUM", bar_application.momentum,
-                            bar_application.edge_id, None, plus_index, "dot_beta", ONE,
+                            bar_application.edge_id, None, plus_index, "dot_beta",
+                            "DOWN", "UP", ONE,
                         ),
                         ScheduledNumeratorFactor(
                             "EXTERNAL_VECTOR_DERIVATIVE", external_w.momentum,
-                            None, external_w.leg_id, "a", "dot_beta", I,
+                            None, external_w.leg_id, "a", "dot_beta",
+                            "DOWN", "DOWN", I,
                         ),
                         ScheduledNumeratorFactor(
                             "EDGE_MOMENTUM", d_application.momentum,
-                            d_application.edge_id, None, "a", dotted_external_index, ONE,
+                            d_application.edge_id, None, "a", dotted_external_index,
+                            "UP", "UP", ONE,
                         ),
                     ),
                     (),
@@ -1637,6 +1709,7 @@ def compile_scheduled_ww_rows(
         bar_scope=bar_scope,
         d_scope=d_scope,
         rows=tuple(rows),
+        typed_port_gate=typed_port_gate,
     )
 
 

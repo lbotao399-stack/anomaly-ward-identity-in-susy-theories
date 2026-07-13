@@ -1,0 +1,9 @@
+{
+  "checks": 23,
+  "failed": [],
+  "generated_sha256": "49627db447fd4e6c08b373c52c6ba362429c0770bfff6ec2b81aa078ef633189",
+  "open_theorem_gates": 11,
+  "schema": "Step5OneLoopTheoremTypeAuditVerification.v2",
+  "status": "PASS_EXACT_TYPES_WITH_OPEN_THEOREM_GATES",
+  "step5C_only_gates": 2
+}

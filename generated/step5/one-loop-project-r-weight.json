@@ -1,0 +1,58 @@
+{
+  "checks": {
+    "DRED_momentum_and_metric_carry_zero_R_weight": true,
+    "W_has_Project_weight_plus_one": true,
+    "X_is_R_neutral": true,
+    "candidate_has_same_weight": true,
+    "chiral_connection_has_weight_minus_one": true,
+    "covariant_spinor_derivatives_keep_flat_weights": true,
+    "flat_derivative_weights_follow_R_coordinate_action": true,
+    "full_superspace_source_pairing_is_R_neutral": true,
+    "insertion_has_weight_minus_one": true,
+    "odd_source_has_dual_weight_plus_one": true,
+    "prepotential_is_R_neutral": true,
+    "pure_gauge_antichiral_measure_is_R_neutral": true,
+    "pure_gauge_chiral_measure_is_R_neutral": true,
+    "tildeW_has_Project_weight_minus_one": true,
+    "vector_derivative_is_R_neutral": true
+  },
+  "external_results_imported": false,
+  "project_derivation": {
+    "antichiral_connection": "tildeGamma_dot_a=e^V barD_dot_a e^(-V)",
+    "antichiral_field_strength": "tildeW_dot_a=-(1/8) D^2 tildeGamma_dot_a",
+    "chiral_connection": "Gamma_a=e^(-V) D_a e^V",
+    "chiral_field_strength": "W_a=-(1/8) barD^2 Gamma_a",
+    "coordinate_generator": "R_L=N_theta-N_bar_theta; R_E=-i Wick(R_L); r_Project is the integer coefficient",
+    "flat_commutators": "[R,D_a]=-D_a; [R,barD_dot_a]=+barD_dot_a",
+    "prepotential": "R(V)=0",
+    "source_pairing": "int d^8z J_(AB) I^(AB)"
+  },
+  "schema": "Step5OneLoopProjectRWeight.v1",
+  "scope": "PURE_GAUGE_EUCLIDEAN_STEP5A",
+  "status": "PASS_PROJECT_U1R_BINDING",
+  "verdicts": {
+    "anomaly_coefficient": "NOT_COMPUTED",
+    "formal_r_f_equals_Project_U1R_on_pure_gauge_letters": "PASS",
+    "matter_letter_extension": "OUT_OF_SCOPE_SEPARATE",
+    "pure_gauge_target_selection_rule": "PASS"
+  },
+  "weights": {
+    "D_a": -1,
+    "D_cov_a_dot_a": 0,
+    "Gamma_a": -1,
+    "I=nabla_minus_X_X": -1,
+    "J": 1,
+    "O_star=tildeW_Dcov_X": -1,
+    "V": 0,
+    "W_a": 1,
+    "X=nabla_plus_W_plus": 0,
+    "bar_D_dot_a": 1,
+    "bar_nabla_dot_a": 1,
+    "bar_theta": -1,
+    "nabla_a": -1,
+    "partial_a_dot_a": 0,
+    "theta": 1,
+    "tilde_Gamma_dot_a": 1,
+    "tilde_W_dot_a": -1
+  }
+}

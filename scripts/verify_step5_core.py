@@ -66,7 +66,7 @@ def q(value: object) -> QComplex:
 
 ZERO = QComplex()
 ONE = q(1)
-I = QComplex(Fraction(0), Fraction(1))
+IMAGINARY_UNIT = QComplex(Fraction(0), Fraction(1))
 
 
 Matrix = list[list[QComplex]]
@@ -138,10 +138,10 @@ def grassmann_checks() -> dict[str, bool]:
     ]
 
     # p_m=(0,0,0,1), so p_{a dot-a}=delta_{a dot-a}.
-    d_plus = add(d_theta_plus, scale(I, bar_minus))
-    d_minus = add(d_theta_minus, scale(-I, bar_plus))
-    bar_d_plus = add(scale(-1, d_bar_minus), scale(-I, theta_plus))
-    bar_d_minus = add(d_bar_plus, scale(-I, theta_minus))
+    d_plus = add(d_theta_plus, scale(IMAGINARY_UNIT, bar_minus))
+    d_minus = add(d_theta_minus, scale(-IMAGINARY_UNIT, bar_plus))
+    bar_d_plus = add(scale(-1, d_bar_minus), scale(-IMAGINARY_UNIT, theta_plus))
+    bar_d_minus = add(d_bar_plus, scale(-IMAGINARY_UNIT, theta_minus))
     zero = zeros(16, 16)
     unit = identity(16)
 
@@ -165,11 +165,11 @@ def grassmann_checks() -> dict[str, bool]:
         "barD_minus_squared_zero": equal(multiply(bar_d_minus, bar_d_minus), zero),
         "mixed_plus_plus": equal(
             add(multiply(d_plus, bar_d_plus), multiply(bar_d_plus, d_plus)),
-            scale(-2 * I, unit),
+            scale(-2 * IMAGINARY_UNIT, unit),
         ),
         "mixed_minus_minus": equal(
             add(multiply(d_minus, bar_d_minus), multiply(bar_d_minus, d_minus)),
-            scale(-2 * I, unit),
+            scale(-2 * IMAGINARY_UNIT, unit),
         ),
         "mixed_plus_minus_zero": equal(
             add(multiply(d_plus, bar_d_minus), multiply(bar_d_minus, d_plus)),
@@ -209,9 +209,14 @@ def transpose(matrix: Matrix) -> Matrix:
 
 def spinor_checks() -> dict[str, bool]:
     sigma1 = [[ZERO, ONE], [ONE, ZERO]]
-    sigma2 = [[ZERO, -I], [I, ZERO]]
+    sigma2 = [[ZERO, -IMAGINARY_UNIT], [IMAGINARY_UNIT, ZERO]]
     sigma3 = [[ONE, ZERO], [ZERO, -ONE]]
-    sigma_e = [scale(-I, sigma1), scale(-I, sigma2), scale(-I, sigma3), identity(2)]
+    sigma_e = [
+        scale(-IMAGINARY_UNIT, sigma1),
+        scale(-IMAGINARY_UNIT, sigma2),
+        scale(-IMAGINARY_UNIT, sigma3),
+        identity(2),
+    ]
     epsilon_up = [[ZERO, ONE], [-ONE, ZERO]]
 
     # Raise the dotted index on the second sigma: sigma_b{}^{dot-a}
@@ -346,8 +351,11 @@ def contract_checks() -> dict[str, bool]:
         "scope_states_present": all(
             state in text
             for state in (
-                "\\texttt{EVALUATED}",
-                "\\texttt{EVALUATED\\_UV\\_METRIC\\_MISMATCH}",
+                "5A&:\\texttt{REGISTERED\\_FIXED\\_VECTOR\\_WARD\\_PROVED}",
+                (
+                    "5B\\ (WW,\\ w=0)&:\\texttt{"
+                    "FAIL\\_CLOSED\\_CONTACT\\_AND\\_INJECTIVITY\\_OPEN}"
+                ),
                 "\\texttt{SPECIFIED}",
             )
         ),
@@ -432,8 +440,8 @@ def main() -> None:
         "contract_sha256": hashlib.sha256(CONTRACT.read_bytes()).hexdigest(),
         "source_ledger_sha256": hashlib.sha256(SOURCE_LEDGER.read_bytes()).hexdigest(),
         "status": "PASS" if not failures else "FAIL",
-        "stage": "EVALUATED",
-        "stage_qualifier": "WW_UV_METRIC_MISMATCH_DERIVED_ORDINARY_ORBIT_OPEN",
+        "stage": "REGISTERED_FIXED_VECTOR_WARD_PROVED",
+        "stage_qualifier": "WW_CONTACT_AND_INJECTIVITY_OPEN",
         "totals": {"checks": checks, "failed": len(failures)},
         "failures": failures,
         "sections": sections,

@@ -466,7 +466,7 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertEqual(task["type"], "CONTRACT_CHANGE")
         self.assertEqual(task["status"], "SPECIFIED")
         self.assertTrue(task["reference_admission"]["source_translation_required_before_formula_adoption"])
-        self.assertEqual(len(task["acceptance"]), 20)
+        self.assertEqual(len(task["acceptance"]), 23)
         self.assertTrue(any("5A PERTURBATIVE_FF_DRED_SUPERGRAPHS" in item for item in task["acceptance"]))
         self.assertTrue(any("primitive WW" in item for item in task["acceptance"]))
         self.assertTrue(any("external-leg" in item for item in task["acceptance"]))

@@ -1,0 +1,27 @@
+{
+  "UV_local_pole_computed": false,
+  "check_count": 15,
+  "checks": {
+    "CT3_is_separated_from_bare_loop_pole": true,
+    "H3_is_absent_not_typed_zero": true,
+    "I3_constructor_fail_closes": true,
+    "available_branch_path_sum_is_699840": true,
+    "current_source_counts_are_4_60_720": true,
+    "current_vector_hessian_counts_are_24_144": true,
+    "eight_unpolarized_families": true,
+    "exactly_H3_and_I3_kernel_families_are_missing": true,
+    "family_partition_is_1_3_3_6_3_6_3_1": true,
+    "neumann_coefficients_are_exact": true,
+    "open_tau_projector_and_rank_five_color_projection_are_missing": true,
+    "raw_tau_target_is_nonzero_but_physical_quotient_is_zero": true,
+    "scheduled_compiler_is_triangle_only": true,
+    "twenty_four_rows_have_existing_kernel_branches": true,
+    "twenty_six_polarized_rows": true
+  },
+  "coefficient_accepted": false,
+  "generated_sha256": "64a97260f2d4f1d7abaec4d1a3c69355affd25a0bc8143f195ef2140d4b94c86",
+  "passed_count": 15,
+  "preintegration_amplitude_computed": false,
+  "schema": "Step5OneLoopTauCubicProjectionVerification.v1",
+  "status": "PASS_FAIL_CLOSED_FEASIBILITY_CERTIFICATE"
+}

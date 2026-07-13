@@ -1,0 +1,1113 @@
+{
+  "checks": {
+    "CT3_is_separated_from_bare_loop_pole": true,
+    "H3_is_absent_not_typed_zero": true,
+    "I3_constructor_fail_closes": true,
+    "available_branch_path_sum_is_699840": true,
+    "current_source_counts_are_4_60_720": true,
+    "current_vector_hessian_counts_are_24_144": true,
+    "eight_unpolarized_families": true,
+    "exactly_H3_and_I3_kernel_families_are_missing": true,
+    "family_partition_is_1_3_3_6_3_6_3_1": true,
+    "neumann_coefficients_are_exact": true,
+    "open_tau_projector_and_rank_five_color_projection_are_missing": true,
+    "raw_tau_target_is_nonzero_but_physical_quotient_is_zero": true,
+    "scheduled_compiler_is_triangle_only": true,
+    "twenty_four_rows_have_existing_kernel_branches": true,
+    "twenty_six_polarized_rows": true
+  },
+  "coefficient_boundary": {
+    "bare_UV_local_pole": "NOT_COMPUTED",
+    "coefficient_accepted": false,
+    "physical_4d_projection": "q4d(E_tau)=0",
+    "preintegration_amplitude": "NOT_CONSTRUCTED",
+    "raw_DRED_E_tau_zero_or_nonzero": "NOT_DERIVED",
+    "renormalized_coefficient": "NOT_DEFINED_WITHOUT_CT3"
+  },
+  "counterterm_gate": {
+    "abstract_row": {
+      "background_labels": [
+        1,
+        2,
+        3
+      ],
+      "background_order": 3,
+      "classification": "INDEPENDENT_ADDITIVE_LOCAL_COUNTERTERM",
+      "coefficient": "UNRESOLVED_LOCAL_COUNTERTERM_COEFFICIENT",
+      "counterterm_id": "CT_3",
+      "included_in_hessian_neumann_sum": false
+    },
+    "bare_loop_pole_requires_CT3": false,
+    "renormalized_local_coefficient_requires_CT3": true,
+    "status": "BLOCKED_UNRESOLVED_CT3_ONLY_AFTER_BARE_LOOP_PROJECTION"
+  },
+  "external_result_imported": false,
+  "formal_rooted_expansion": "Gamma_(J,3)^(1)=(1/2) sum_(s+sum r_j=3) (-1)^k STr[I_s G0 H_r1 G0 ... H_rk G0]+CT3",
+  "gaps": [
+    {
+      "claim": "the I0_H3 rooted family is instantiated",
+      "gap_id": "G1[G-DEF]",
+      "location": "Project gauge-action Hessian at background order three",
+      "minimal_repair": "derive the quintic Project gauge action and its ordered VV Hessian H3",
+      "missing": "Gamma_4, TildeGamma_4, W_4, TildeW_4 and total-V-valence-five gauge kinetic monomials",
+      "severity": "P0"
+    },
+    {
+      "claim": "the I3 rooted family is instantiated",
+      "gap_id": "G2[G-DEF]",
+      "location": "Project source Hessian at background order three",
+      "minimal_repair": "derive I_(5) and its three-background two-quantum ordered Hessian branches",
+      "missing": "X_4 and the valence-five expansion of nabla_-(X^A X^B)",
+      "severity": "P0"
+    },
+    {
+      "claim": "all 26 rows can be projected onto E_tau",
+      "gap_id": "G3[G-PROJ]",
+      "location": "DRED D-algebra target projection",
+      "minimal_repair": "add the typed spin-color projector without replacing tau by a closed scalar trace",
+      "missing": "an open symmetric-traceless tau token, spin-(3/2,0) symmetrizer, and K^(AB)_(C[DE]) color projector",
+      "severity": "P0"
+    },
+    {
+      "claim": "box, contact, and pinch descendants have exact routings and signs",
+      "gap_id": "G4[G-OP]",
+      "location": "n=3 GraphIR and D-algebra compiler",
+      "minimal_repair": "compile every polarized row before any family sum",
+      "missing": "26 physical GraphIRs, generalized cycle schedules, and a typed pinch-to-descendant map",
+      "severity": "P0"
+    },
+    {
+      "claim": "a UV-local E_tau pole has been extracted",
+      "gap_id": "G5[G-PROJ]",
+      "location": "open-rank DRED tensor integral",
+      "minimal_repair": "reduce the exact routed numerators only after G1-G4 close",
+      "missing": "a tensor-pole reducer retaining the open tau channel across the complete rooted/contact orbit",
+      "severity": "P0"
+    },
+    {
+      "claim": "the renormalized cubic coefficient is fixed",
+      "gap_id": "G6[G-NORM]",
+      "location": "CT3",
+      "minimal_repair": "derive CT3 after the bare loop pole; CT3 does not block the bare loop projection",
+      "missing": "the local CT3 basis, coefficient, and renormalization condition",
+      "severity": "P1"
+    }
+  ],
+  "kernel_registry": {
+    "H3": {
+      "current_all_vector_action_monomials_by_valence": {
+        "2": 2,
+        "3": 4,
+        "4": 6
+      },
+      "current_valence_five_monomial_count": 0,
+      "required_action_valence": 5,
+      "status": "BLOCKED_MISSING_PROJECT_QUINTIC_GAUGE_ACTION_GRAMMAR"
+    },
+    "I3": {
+      "direct_constructor_error": "the seed insertion grammar is I2, I3, I4",
+      "required_composite_valence": 5,
+      "status": "BLOCKED_MISSING_PROJECT_I5_COMPOSITE_GRAMMAR"
+    },
+    "current_connection_degrees": [
+      1,
+      2,
+      3
+    ],
+    "current_field_strength_degrees": [
+      1,
+      2,
+      3
+    ],
+    "hessian_available_orders": [
+      1,
+      2
+    ],
+    "minimal_degree_extension_for_H3_and_I3": {
+      "Gamma": 4,
+      "TildeGamma": 4,
+      "TildeW": 4,
+      "W": 4,
+      "X": 4,
+      "gauge_action_total_V_valence": 5,
+      "source_insertion_total_V_valence": 5
+    },
+    "source_available_orders": [
+      0,
+      1,
+      2
+    ],
+    "source_branch_counts": {
+      "I0": 4,
+      "I1": 60,
+      "I2": 720
+    },
+    "vector_hessian_branch_counts": {
+      "H1": 24,
+      "H2": 144
+    }
+  },
+  "pinch_gate": {
+    "generic_collapse_token_exists": true,
+    "n3_pinch_generation_exists": false,
+    "status": "BLOCKED_MISSING_N3_EDGE_TAGGED_PINCH_ORBIT"
+  },
+  "rooted_family_census": {
+    "available_vector_branch_path_count": 699840,
+    "background_order": 3,
+    "families": [
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": -1
+        },
+        "family": "I0_H3",
+        "k": 1,
+        "missing_kernels": [
+          "H3"
+        ],
+        "per_polarized_vector_branch_path_count": null,
+        "polarized_row_count": 1,
+        "r_parts": [
+          3
+        ],
+        "required_kernels": [
+          "I0",
+          "H3"
+        ],
+        "s": 0,
+        "status": "BLOCKED_MISSING_KERNEL_GRAMMAR",
+        "topology": "CONTACT_BUBBLE",
+        "total_vector_branch_path_count": null
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "family": "I0_H1_H2",
+        "k": 2,
+        "missing_kernels": [],
+        "per_polarized_vector_branch_path_count": 13824,
+        "polarized_row_count": 3,
+        "r_parts": [
+          1,
+          2
+        ],
+        "required_kernels": [
+          "I0",
+          "H1",
+          "H2"
+        ],
+        "s": 0,
+        "status": "KERNEL_BRANCH_GRAMMAR_AVAILABLE_PROJECTOR_NOT_AVAILABLE",
+        "topology": "ROOTED_TRIANGLE",
+        "total_vector_branch_path_count": 41472
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "family": "I0_H2_H1",
+        "k": 2,
+        "missing_kernels": [],
+        "per_polarized_vector_branch_path_count": 13824,
+        "polarized_row_count": 3,
+        "r_parts": [
+          2,
+          1
+        ],
+        "required_kernels": [
+          "I0",
+          "H2",
+          "H1"
+        ],
+        "s": 0,
+        "status": "KERNEL_BRANCH_GRAMMAR_AVAILABLE_PROJECTOR_NOT_AVAILABLE",
+        "topology": "ROOTED_TRIANGLE",
+        "total_vector_branch_path_count": 41472
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": -1
+        },
+        "family": "I0_H1_H1_H1",
+        "k": 3,
+        "missing_kernels": [],
+        "per_polarized_vector_branch_path_count": 55296,
+        "polarized_row_count": 6,
+        "r_parts": [
+          1,
+          1,
+          1
+        ],
+        "required_kernels": [
+          "I0",
+          "H1",
+          "H1",
+          "H1"
+        ],
+        "s": 0,
+        "status": "KERNEL_BRANCH_GRAMMAR_AVAILABLE_PROJECTOR_NOT_AVAILABLE",
+        "topology": "ROOTED_BOX",
+        "total_vector_branch_path_count": 331776
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": -1
+        },
+        "family": "I1_H2",
+        "k": 1,
+        "missing_kernels": [],
+        "per_polarized_vector_branch_path_count": 8640,
+        "polarized_row_count": 3,
+        "r_parts": [
+          2
+        ],
+        "required_kernels": [
+          "I1",
+          "H2"
+        ],
+        "s": 1,
+        "status": "KERNEL_BRANCH_GRAMMAR_AVAILABLE_PROJECTOR_NOT_AVAILABLE",
+        "topology": "CONTACT_BUBBLE",
+        "total_vector_branch_path_count": 25920
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "family": "I1_H1_H1",
+        "k": 2,
+        "missing_kernels": [],
+        "per_polarized_vector_branch_path_count": 34560,
+        "polarized_row_count": 6,
+        "r_parts": [
+          1,
+          1
+        ],
+        "required_kernels": [
+          "I1",
+          "H1",
+          "H1"
+        ],
+        "s": 1,
+        "status": "KERNEL_BRANCH_GRAMMAR_AVAILABLE_PROJECTOR_NOT_AVAILABLE",
+        "topology": "ROOTED_TRIANGLE",
+        "total_vector_branch_path_count": 207360
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": -1
+        },
+        "family": "I2_H1",
+        "k": 1,
+        "missing_kernels": [],
+        "per_polarized_vector_branch_path_count": 17280,
+        "polarized_row_count": 3,
+        "r_parts": [
+          1
+        ],
+        "required_kernels": [
+          "I2",
+          "H1"
+        ],
+        "s": 2,
+        "status": "KERNEL_BRANCH_GRAMMAR_AVAILABLE_PROJECTOR_NOT_AVAILABLE",
+        "topology": "CONTACT_BUBBLE",
+        "total_vector_branch_path_count": 51840
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "family": "I3",
+        "k": 0,
+        "missing_kernels": [
+          "I3"
+        ],
+        "per_polarized_vector_branch_path_count": null,
+        "polarized_row_count": 1,
+        "r_parts": [],
+        "required_kernels": [
+          "I3"
+        ],
+        "s": 3,
+        "status": "BLOCKED_MISSING_KERNEL_GRAMMAR",
+        "topology": "INSERTION_TADPOLE",
+        "total_vector_branch_path_count": null
+      }
+    ],
+    "kernel_branch_available_polarized_rows": 24,
+    "kernel_branch_blocked_polarized_rows": 2,
+    "polarized_rooted_row_count": 26,
+    "polarized_rows": [
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": -1
+        },
+        "family": "I0_H3",
+        "hessian_background_label_blocks": [
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        "insertion_background_labels": [],
+        "k": 1,
+        "missing_kernels": [
+          "H3"
+        ],
+        "projection_status": "BLOCKED_MISSING_KERNEL_GRAMMAR",
+        "r_parts": [
+          3
+        ],
+        "s": 0,
+        "term_id": "N3__I_EMPTY__H_1_2_3",
+        "vector_branch_path_count": null
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "family": "I0_H1_H2",
+        "hessian_background_label_blocks": [
+          [
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "insertion_background_labels": [],
+        "k": 2,
+        "missing_kernels": [],
+        "projection_status": "BLOCKED_OPEN_TAU_PROJECTOR",
+        "r_parts": [
+          1,
+          2
+        ],
+        "s": 0,
+        "term_id": "N3__I_EMPTY__H_1__2_3",
+        "vector_branch_path_count": 13824
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "family": "I0_H1_H2",
+        "hessian_background_label_blocks": [
+          [
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "insertion_background_labels": [],
+        "k": 2,
+        "missing_kernels": [],
+        "projection_status": "BLOCKED_OPEN_TAU_PROJECTOR",
+        "r_parts": [
+          1,
+          2
+        ],
+        "s": 0,
+        "term_id": "N3__I_EMPTY__H_2__1_3",
+        "vector_branch_path_count": 13824
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "family": "I0_H1_H2",
+        "hessian_background_label_blocks": [
+          [
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "insertion_background_labels": [],
+        "k": 2,
+        "missing_kernels": [],
+        "projection_status": "BLOCKED_OPEN_TAU_PROJECTOR",
+        "r_parts": [
+          1,
+          2
+        ],
+        "s": 0,
+        "term_id": "N3__I_EMPTY__H_3__1_2",
+        "vector_branch_path_count": 13824
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "family": "I0_H2_H1",
+        "hessian_background_label_blocks": [
+          [
+            1,
+            2
+          ],
+          [
+            3
+          ]
+        ],
+        "insertion_background_labels": [],
+        "k": 2,
+        "missing_kernels": [],
+        "projection_status": "BLOCKED_OPEN_TAU_PROJECTOR",
+        "r_parts": [
+          2,
+          1
+        ],
+        "s": 0,
+        "term_id": "N3__I_EMPTY__H_1_2__3",
+        "vector_branch_path_count": 13824
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "family": "I0_H2_H1",
+        "hessian_background_label_blocks": [
+          [
+            1,
+            3
+          ],
+          [
+            2
+          ]
+        ],
+        "insertion_background_labels": [],
+        "k": 2,
+        "missing_kernels": [],
+        "projection_status": "BLOCKED_OPEN_TAU_PROJECTOR",
+        "r_parts": [
+          2,
+          1
+        ],
+        "s": 0,
+        "term_id": "N3__I_EMPTY__H_1_3__2",
+        "vector_branch_path_count": 13824
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "family": "I0_H2_H1",
+        "hessian_background_label_blocks": [
+          [
+            2,
+            3
+          ],
+          [
+            1
+          ]
+        ],
+        "insertion_background_labels": [],
+        "k": 2,
+        "missing_kernels": [],
+        "projection_status": "BLOCKED_OPEN_TAU_PROJECTOR",
+        "r_parts": [
+          2,
+          1
+        ],
+        "s": 0,
+        "term_id": "N3__I_EMPTY__H_2_3__1",
+        "vector_branch_path_count": 13824
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": -1
+        },
+        "family": "I0_H1_H1_H1",
+        "hessian_background_label_blocks": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ],
+        "insertion_background_labels": [],
+        "k": 3,
+        "missing_kernels": [],
+        "projection_status": "BLOCKED_OPEN_TAU_PROJECTOR",
+        "r_parts": [
+          1,
+          1,
+          1
+        ],
+        "s": 0,
+        "term_id": "N3__I_EMPTY__H_1__2__3",
+        "vector_branch_path_count": 55296
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": -1
+        },
+        "family": "I0_H1_H1_H1",
+        "hessian_background_label_blocks": [
+          [
+            1
+          ],
+          [
+            3
+          ],
+          [
+            2
+          ]
+        ],
+        "insertion_background_labels": [],
+        "k": 3,
+        "missing_kernels": [],
+        "projection_status": "BLOCKED_OPEN_TAU_PROJECTOR",
+        "r_parts": [
+          1,
+          1,
+          1
+        ],
+        "s": 0,
+        "term_id": "N3__I_EMPTY__H_1__3__2",
+        "vector_branch_path_count": 55296
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": -1
+        },
+        "family": "I0_H1_H1_H1",
+        "hessian_background_label_blocks": [
+          [
+            2
+          ],
+          [
+            1
+          ],
+          [
+            3
+          ]
+        ],
+        "insertion_background_labels": [],
+        "k": 3,
+        "missing_kernels": [],
+        "projection_status": "BLOCKED_OPEN_TAU_PROJECTOR",
+        "r_parts": [
+          1,
+          1,
+          1
+        ],
+        "s": 0,
+        "term_id": "N3__I_EMPTY__H_2__1__3",
+        "vector_branch_path_count": 55296
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": -1
+        },
+        "family": "I0_H1_H1_H1",
+        "hessian_background_label_blocks": [
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            1
+          ]
+        ],
+        "insertion_background_labels": [],
+        "k": 3,
+        "missing_kernels": [],
+        "projection_status": "BLOCKED_OPEN_TAU_PROJECTOR",
+        "r_parts": [
+          1,
+          1,
+          1
+        ],
+        "s": 0,
+        "term_id": "N3__I_EMPTY__H_2__3__1",
+        "vector_branch_path_count": 55296
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": -1
+        },
+        "family": "I0_H1_H1_H1",
+        "hessian_background_label_blocks": [
+          [
+            3
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ],
+        "insertion_background_labels": [],
+        "k": 3,
+        "missing_kernels": [],
+        "projection_status": "BLOCKED_OPEN_TAU_PROJECTOR",
+        "r_parts": [
+          1,
+          1,
+          1
+        ],
+        "s": 0,
+        "term_id": "N3__I_EMPTY__H_3__1__2",
+        "vector_branch_path_count": 55296
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": -1
+        },
+        "family": "I0_H1_H1_H1",
+        "hessian_background_label_blocks": [
+          [
+            3
+          ],
+          [
+            2
+          ],
+          [
+            1
+          ]
+        ],
+        "insertion_background_labels": [],
+        "k": 3,
+        "missing_kernels": [],
+        "projection_status": "BLOCKED_OPEN_TAU_PROJECTOR",
+        "r_parts": [
+          1,
+          1,
+          1
+        ],
+        "s": 0,
+        "term_id": "N3__I_EMPTY__H_3__2__1",
+        "vector_branch_path_count": 55296
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": -1
+        },
+        "family": "I1_H2",
+        "hessian_background_label_blocks": [
+          [
+            2,
+            3
+          ]
+        ],
+        "insertion_background_labels": [
+          1
+        ],
+        "k": 1,
+        "missing_kernels": [],
+        "projection_status": "BLOCKED_OPEN_TAU_PROJECTOR",
+        "r_parts": [
+          2
+        ],
+        "s": 1,
+        "term_id": "N3__I_1__H_2_3",
+        "vector_branch_path_count": 8640
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": -1
+        },
+        "family": "I1_H2",
+        "hessian_background_label_blocks": [
+          [
+            1,
+            3
+          ]
+        ],
+        "insertion_background_labels": [
+          2
+        ],
+        "k": 1,
+        "missing_kernels": [],
+        "projection_status": "BLOCKED_OPEN_TAU_PROJECTOR",
+        "r_parts": [
+          2
+        ],
+        "s": 1,
+        "term_id": "N3__I_2__H_1_3",
+        "vector_branch_path_count": 8640
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": -1
+        },
+        "family": "I1_H2",
+        "hessian_background_label_blocks": [
+          [
+            1,
+            2
+          ]
+        ],
+        "insertion_background_labels": [
+          3
+        ],
+        "k": 1,
+        "missing_kernels": [],
+        "projection_status": "BLOCKED_OPEN_TAU_PROJECTOR",
+        "r_parts": [
+          2
+        ],
+        "s": 1,
+        "term_id": "N3__I_3__H_1_2",
+        "vector_branch_path_count": 8640
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "family": "I1_H1_H1",
+        "hessian_background_label_blocks": [
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ],
+        "insertion_background_labels": [
+          1
+        ],
+        "k": 2,
+        "missing_kernels": [],
+        "projection_status": "BLOCKED_OPEN_TAU_PROJECTOR",
+        "r_parts": [
+          1,
+          1
+        ],
+        "s": 1,
+        "term_id": "N3__I_1__H_2__3",
+        "vector_branch_path_count": 34560
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "family": "I1_H1_H1",
+        "hessian_background_label_blocks": [
+          [
+            3
+          ],
+          [
+            2
+          ]
+        ],
+        "insertion_background_labels": [
+          1
+        ],
+        "k": 2,
+        "missing_kernels": [],
+        "projection_status": "BLOCKED_OPEN_TAU_PROJECTOR",
+        "r_parts": [
+          1,
+          1
+        ],
+        "s": 1,
+        "term_id": "N3__I_1__H_3__2",
+        "vector_branch_path_count": 34560
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "family": "I1_H1_H1",
+        "hessian_background_label_blocks": [
+          [
+            1
+          ],
+          [
+            3
+          ]
+        ],
+        "insertion_background_labels": [
+          2
+        ],
+        "k": 2,
+        "missing_kernels": [],
+        "projection_status": "BLOCKED_OPEN_TAU_PROJECTOR",
+        "r_parts": [
+          1,
+          1
+        ],
+        "s": 1,
+        "term_id": "N3__I_2__H_1__3",
+        "vector_branch_path_count": 34560
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "family": "I1_H1_H1",
+        "hessian_background_label_blocks": [
+          [
+            3
+          ],
+          [
+            1
+          ]
+        ],
+        "insertion_background_labels": [
+          2
+        ],
+        "k": 2,
+        "missing_kernels": [],
+        "projection_status": "BLOCKED_OPEN_TAU_PROJECTOR",
+        "r_parts": [
+          1,
+          1
+        ],
+        "s": 1,
+        "term_id": "N3__I_2__H_3__1",
+        "vector_branch_path_count": 34560
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "family": "I1_H1_H1",
+        "hessian_background_label_blocks": [
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ],
+        "insertion_background_labels": [
+          3
+        ],
+        "k": 2,
+        "missing_kernels": [],
+        "projection_status": "BLOCKED_OPEN_TAU_PROJECTOR",
+        "r_parts": [
+          1,
+          1
+        ],
+        "s": 1,
+        "term_id": "N3__I_3__H_1__2",
+        "vector_branch_path_count": 34560
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "family": "I1_H1_H1",
+        "hessian_background_label_blocks": [
+          [
+            2
+          ],
+          [
+            1
+          ]
+        ],
+        "insertion_background_labels": [
+          3
+        ],
+        "k": 2,
+        "missing_kernels": [],
+        "projection_status": "BLOCKED_OPEN_TAU_PROJECTOR",
+        "r_parts": [
+          1,
+          1
+        ],
+        "s": 1,
+        "term_id": "N3__I_3__H_2__1",
+        "vector_branch_path_count": 34560
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": -1
+        },
+        "family": "I2_H1",
+        "hessian_background_label_blocks": [
+          [
+            3
+          ]
+        ],
+        "insertion_background_labels": [
+          1,
+          2
+        ],
+        "k": 1,
+        "missing_kernels": [],
+        "projection_status": "BLOCKED_OPEN_TAU_PROJECTOR",
+        "r_parts": [
+          1
+        ],
+        "s": 2,
+        "term_id": "N3__I_1_2__H_3",
+        "vector_branch_path_count": 17280
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": -1
+        },
+        "family": "I2_H1",
+        "hessian_background_label_blocks": [
+          [
+            2
+          ]
+        ],
+        "insertion_background_labels": [
+          1,
+          3
+        ],
+        "k": 1,
+        "missing_kernels": [],
+        "projection_status": "BLOCKED_OPEN_TAU_PROJECTOR",
+        "r_parts": [
+          1
+        ],
+        "s": 2,
+        "term_id": "N3__I_1_3__H_2",
+        "vector_branch_path_count": 17280
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": -1
+        },
+        "family": "I2_H1",
+        "hessian_background_label_blocks": [
+          [
+            1
+          ]
+        ],
+        "insertion_background_labels": [
+          2,
+          3
+        ],
+        "k": 1,
+        "missing_kernels": [],
+        "projection_status": "BLOCKED_OPEN_TAU_PROJECTOR",
+        "r_parts": [
+          1
+        ],
+        "s": 2,
+        "term_id": "N3__I_2_3__H_1",
+        "vector_branch_path_count": 17280
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "family": "I3",
+        "hessian_background_label_blocks": [],
+        "insertion_background_labels": [
+          1,
+          2,
+          3
+        ],
+        "k": 0,
+        "missing_kernels": [
+          "I3"
+        ],
+        "projection_status": "BLOCKED_MISSING_KERNEL_GRAMMAR",
+        "r_parts": [],
+        "s": 3,
+        "term_id": "N3__I_1_2_3__H_NONE",
+        "vector_branch_path_count": null
+      }
+    ],
+    "unpolarized_family_count": 8
+  },
+  "schema": "Step5OneLoopTauCubicProjection.v1",
+  "scope": "FIXED_VECTOR_FRAME_PURE_GAUGE_STEP5A_BACKGROUND_ORDER_N3",
+  "status": "BLOCKED_MISSING_COMPLETE_N3_PROJECT_GRAMMAR",
+  "target": {
+    "SU2_nonzero_component": "K^00_(0[DE]) B^[DE]=4*B^12",
+    "color_carrier": "EXACT_NONZERO_SU2_ADJOINT_CE_COVARIANT_TENSOR",
+    "dimension": "9/2",
+    "executable_projector": {
+      "D_algebra_token_types": [
+        "BarD",
+        "BarD2",
+        "Collapse",
+        "D",
+        "D2",
+        "ExternalDerivative",
+        "ExternalLeg",
+        "MixedMomentum",
+        "MomentumSquare",
+        "Propagator"
+      ],
+      "full_tau_projector_matrix_built": false,
+      "generic_collapse_token_present": true,
+      "open_tau_placements_in_contracted_ledger": false,
+      "rank_five_color_projection_covered": false,
+      "scheduled_WW_compiler_is_triangle_only": true,
+      "status": "BLOCKED_MISSING_OPEN_TAU_SPIN_COLOR_PROJECTOR",
+      "tau_tensor_token_present": false
+    },
+    "formal_r": -1,
+    "operator": "E_abc^(AB)=K^(AB)_(C[DE]) tau_(ab)(dotc dotd) W_c^C Wtilde^(D dotc) Wtilde^(E dotd), symmetrized in (a,b,c)",
+    "parity": "odd",
+    "physical_4d_quotient": {
+      "physical_4d_coefficient_reported": false,
+      "q4d_E_tau": "0",
+      "q4d_tau": "0"
+    },
+    "physical_target_multiplicity_at_N3": 0,
+    "raw_DRED_background_space": {
+      "background_CE_covariant_submodule": "FAIL_EXPLICIT_KERNEL",
+      "background_fields": [
+        "W",
+        "TildeW"
+      ],
+      "coefficient_spurion": "tau=tilde_delta-(epsilon/2)delta_(4)",
+      "full_quantum_BV_class": "OPEN",
+      "status": "ADMITTED_AS_REGULATOR_COEFFICIENT_SPURION_NOT_AS_NEW_BACKGROUND_FIELD"
+    },
+    "source_pairing": "J_(AB) E^(AB)",
+    "spin4": "(3/2,0)",
+    "tau_target_multiplicity_at_N3": 1
+  }
+}

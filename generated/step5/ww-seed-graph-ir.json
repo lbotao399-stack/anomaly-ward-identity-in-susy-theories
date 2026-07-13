@@ -13,16 +13,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flavor_label": null,
             "leg_id": "L_source",
@@ -45,7 +45,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -59,7 +59,7 @@
               {
                 "label": "dot_alpha",
                 "space": "DOTTED",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ]
           },
@@ -129,16 +129,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flow": "IN",
             "half_edge_id": "Abar_BW_I_source",
@@ -181,7 +181,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -294,15 +294,23 @@
           "external_canonical_pre_D_word": "TildeW,W",
           "external_declared_pre_D_word": "TildeW,W",
           "external_fermion_permutation_sign": "1",
+          "full_odd_word_permutation_sign": "1",
           "graph_relation": "CONTACT_CHILD",
+          "insertion_operator_parity": "1",
           "loop_basis_child": "k",
           "loop_basis_parent": "k",
           "loop_basis_rule": "RECOMPUTE_BY_E_MINUS_V_PLUS_C",
           "orientation": "DIRECT",
           "parent_graph_id": "T-Abar_BW-w0-01",
           "physical_external_momenta": "TildeW(q),W(p),source(P=p+q)",
+          "quantum_odd_word_permutation_sign": "1",
           "routing": "r0=k;r1=k+q;r2=k+p+q",
+          "source_color_variances": "DOWN,DOWN",
+          "source_coupled_insertion_vertex_parity": "0",
+          "source_port_parity": "1",
+          "source_port_statistics": "FERMION",
           "symmetry_factor": "1",
+          "tildeW_dotted_variance": "DOWN",
           "total_orientation_sign": "1",
           "wick_multiplicity": "1",
           "wick_sign": "+1"
@@ -368,16 +376,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flavor_label": null,
             "leg_id": "L_source",
@@ -400,7 +408,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -414,7 +422,7 @@
               {
                 "label": "dot_alpha",
                 "space": "DOTTED",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ]
           },
@@ -505,16 +513,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flow": "IN",
             "half_edge_id": "Abar_BW_I_source",
@@ -557,7 +565,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -649,15 +657,23 @@
           "external_canonical_pre_D_word": "TildeW,W",
           "external_declared_pre_D_word": "TildeW,W",
           "external_fermion_permutation_sign": "1",
+          "full_odd_word_permutation_sign": "1",
           "graph_relation": "CONTACT_CHILD",
+          "insertion_operator_parity": "1",
           "loop_basis_child": "k",
           "loop_basis_parent": "k",
           "loop_basis_rule": "RECOMPUTE_BY_E_MINUS_V_PLUS_C",
           "orientation": "DIRECT",
           "parent_graph_id": "T-Abar_BW-w0-01",
           "physical_external_momenta": "TildeW(q),W(p),source(P=p+q)",
+          "quantum_odd_word_permutation_sign": "1",
           "routing": "r0=k;r1=k+q;r2=k+p+q",
+          "source_color_variances": "DOWN,DOWN",
+          "source_coupled_insertion_vertex_parity": "0",
+          "source_port_parity": "1",
+          "source_port_statistics": "FERMION",
           "symmetry_factor": "1",
+          "tildeW_dotted_variance": "DOWN",
           "total_orientation_sign": "1",
           "wick_multiplicity": "1",
           "wick_sign": "+1"
@@ -723,16 +739,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flavor_label": null,
             "leg_id": "L_source",
@@ -755,7 +771,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -769,7 +785,7 @@
               {
                 "label": "dot_alpha",
                 "space": "DOTTED",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ]
           },
@@ -839,16 +855,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flow": "IN",
             "half_edge_id": "Abar_BW_I_source",
@@ -912,7 +928,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -1004,15 +1020,23 @@
           "external_canonical_pre_D_word": "TildeW,W",
           "external_declared_pre_D_word": "TildeW,W",
           "external_fermion_permutation_sign": "1",
+          "full_odd_word_permutation_sign": "1",
           "graph_relation": "CONTACT_CHILD",
+          "insertion_operator_parity": "1",
           "loop_basis_child": "k",
           "loop_basis_parent": "k",
           "loop_basis_rule": "RECOMPUTE_BY_E_MINUS_V_PLUS_C",
           "orientation": "DIRECT",
           "parent_graph_id": "T-Abar_BW-w0-01",
           "physical_external_momenta": "TildeW(q),W(p),source(P=p+q)",
+          "quantum_odd_word_permutation_sign": "1",
           "routing": "r0=k;r1=k+q;r2=k+p+q",
+          "source_color_variances": "DOWN,DOWN",
+          "source_coupled_insertion_vertex_parity": "0",
+          "source_port_parity": "1",
+          "source_port_statistics": "FERMION",
           "symmetry_factor": "1",
+          "tildeW_dotted_variance": "DOWN",
           "total_orientation_sign": "1",
           "wick_multiplicity": "1",
           "wick_sign": "+1"
@@ -1080,16 +1104,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flavor_label": null,
             "leg_id": "L_source",
@@ -1112,7 +1136,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -1126,7 +1150,7 @@
               {
                 "label": "dot_alpha",
                 "space": "DOTTED",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ]
           },
@@ -1196,16 +1220,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flow": "IN",
             "half_edge_id": "Bbar_AW_I_source",
@@ -1248,7 +1272,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -1361,16 +1385,24 @@
           "external_canonical_pre_D_word": "TildeW,W",
           "external_declared_pre_D_word": "W,TildeW",
           "external_fermion_permutation_sign": "-1",
+          "full_odd_word_permutation_sign": "1",
           "graph_relation": "CONTACT_CHILD",
+          "insertion_operator_parity": "1",
           "loop_basis_child": "k",
           "loop_basis_parent": "k",
           "loop_basis_rule": "RECOMPUTE_BY_E_MINUS_V_PLUS_C",
           "orientation": "REFLECTED",
           "parent_graph_id": "T-Bbar_AW-w0-01",
           "physical_external_momenta": "TildeW(q),W(p),source(P=p+q)",
+          "quantum_odd_word_permutation_sign": "-1",
           "routing": "r0=k;r1=k+q;r2=k+p+q",
+          "source_color_variances": "DOWN,DOWN",
+          "source_coupled_insertion_vertex_parity": "0",
+          "source_port_parity": "1",
+          "source_port_statistics": "FERMION",
           "symmetry_factor": "1",
-          "total_orientation_sign": "-1",
+          "tildeW_dotted_variance": "DOWN",
+          "total_orientation_sign": "1",
           "wick_multiplicity": "1",
           "wick_sign": "+1"
         },
@@ -1435,16 +1467,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flavor_label": null,
             "leg_id": "L_source",
@@ -1467,7 +1499,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -1481,7 +1513,7 @@
               {
                 "label": "dot_alpha",
                 "space": "DOTTED",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ]
           },
@@ -1572,16 +1604,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flow": "IN",
             "half_edge_id": "Bbar_AW_I_source",
@@ -1624,7 +1656,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -1716,16 +1748,24 @@
           "external_canonical_pre_D_word": "TildeW,W",
           "external_declared_pre_D_word": "W,TildeW",
           "external_fermion_permutation_sign": "-1",
+          "full_odd_word_permutation_sign": "1",
           "graph_relation": "CONTACT_CHILD",
+          "insertion_operator_parity": "1",
           "loop_basis_child": "k",
           "loop_basis_parent": "k",
           "loop_basis_rule": "RECOMPUTE_BY_E_MINUS_V_PLUS_C",
           "orientation": "REFLECTED",
           "parent_graph_id": "T-Bbar_AW-w0-01",
           "physical_external_momenta": "TildeW(q),W(p),source(P=p+q)",
+          "quantum_odd_word_permutation_sign": "-1",
           "routing": "r0=k;r1=k+q;r2=k+p+q",
+          "source_color_variances": "DOWN,DOWN",
+          "source_coupled_insertion_vertex_parity": "0",
+          "source_port_parity": "1",
+          "source_port_statistics": "FERMION",
           "symmetry_factor": "1",
-          "total_orientation_sign": "-1",
+          "tildeW_dotted_variance": "DOWN",
+          "total_orientation_sign": "1",
           "wick_multiplicity": "1",
           "wick_sign": "+1"
         },
@@ -1790,16 +1830,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flavor_label": null,
             "leg_id": "L_source",
@@ -1822,7 +1862,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -1836,7 +1876,7 @@
               {
                 "label": "dot_alpha",
                 "space": "DOTTED",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ]
           },
@@ -1906,16 +1946,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flow": "IN",
             "half_edge_id": "Bbar_AW_I_source",
@@ -1979,7 +2019,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -2071,16 +2111,24 @@
           "external_canonical_pre_D_word": "TildeW,W",
           "external_declared_pre_D_word": "W,TildeW",
           "external_fermion_permutation_sign": "-1",
+          "full_odd_word_permutation_sign": "1",
           "graph_relation": "CONTACT_CHILD",
+          "insertion_operator_parity": "1",
           "loop_basis_child": "k",
           "loop_basis_parent": "k",
           "loop_basis_rule": "RECOMPUTE_BY_E_MINUS_V_PLUS_C",
           "orientation": "REFLECTED",
           "parent_graph_id": "T-Bbar_AW-w0-01",
           "physical_external_momenta": "TildeW(q),W(p),source(P=p+q)",
+          "quantum_odd_word_permutation_sign": "-1",
           "routing": "r0=k;r1=k+q;r2=k+p+q",
+          "source_color_variances": "DOWN,DOWN",
+          "source_coupled_insertion_vertex_parity": "0",
+          "source_port_parity": "1",
+          "source_port_statistics": "FERMION",
           "symmetry_factor": "1",
-          "total_orientation_sign": "-1",
+          "tildeW_dotted_variance": "DOWN",
+          "total_orientation_sign": "1",
           "wick_multiplicity": "1",
           "wick_sign": "+1"
         },
@@ -2149,16 +2197,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flavor_label": null,
             "leg_id": "L_source",
@@ -2181,7 +2229,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -2195,7 +2243,7 @@
               {
                 "label": "dot_alpha",
                 "space": "DOTTED",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ]
           },
@@ -2286,16 +2334,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flow": "IN",
             "half_edge_id": "Abar_BW_I_source",
@@ -2338,7 +2386,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -2428,18 +2476,21 @@
           "basis_decomposition": "BASIS_DEPENDENT",
           "basis_term_count": "216",
           "basis_term_ids_sha256": "9b40e62608cec951962b565784512ff48247c90b45b6fed39e607afc2df39305",
-          "coefficient_conservation": "sum(C_basis_terms)=+g^2/(1024*pi^2*epsilon)",
+          "coefficient_conservation": "NOT_CLAIMED_BEFORE_TYPED_CONTACT_REPLAY",
           "collapsed_edge_id": "e1",
           "collapsed_propagator_symbol": "-2*g^2*kappa^{-1}*delta4theta/r1^2",
           "color_factor": "c_{ACD}*c_{BCE}",
-          "contact_amplitude_sign": "-1",
+          "contact_amplitude_sign": "UNASSIGNED_AFTER_TYPED_REPAIR",
+          "contact_coefficient_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
           "contact_metric": "delta4^(mu nu)",
-          "contact_pole": "-g^2*delta4^(mu nu)/(1024*pi^2*epsilon)",
+          "contact_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "denominator": "k^2*(k+q)^2*(k+p+q)^2",
           "external_canonical_pre_D_word": "TildeW,W",
           "external_declared_pre_D_word": "TildeW,W",
           "external_fermion_permutation_sign": "1",
-          "graph_relation": "SD_AGGREGATE_METRIC_CONTACT",
+          "full_odd_word_permutation_sign": "1",
+          "graph_relation": "SD_METRIC_CONTACT_TOPOLOGY",
+          "insertion_operator_parity": "1",
           "loop_basis_child": "k",
           "loop_basis_parent": "k",
           "loop_basis_rule": "RECOMPUTE_BY_E_MINUS_V_PLUS_C",
@@ -2447,13 +2498,19 @@
           "parent_graph_id": "T-Abar_BW-w0-01",
           "parent_trace_id": "DA-D-001",
           "physical_external_momenta": "TildeW(q),W(p),source(P=p+q)",
-          "relative_sign_derivation": "contact minus sign is the second term of the exact SD identity",
+          "quantum_odd_word_permutation_sign": "1",
+          "relative_sign_derivation": "OPEN_TYPED_CONTACT_REPLAY",
           "routing": "r0=k;r1=k+q;r2=k+p+q",
-          "signed_triangle_pole": "+g^2*hat_delta^(mu nu)/(1024*pi^2*epsilon)",
+          "signed_triangle_pole": "BOUND_ONLY_TO_PARENT_ISOLATED_TRIANGLE",
+          "source_color_variances": "DOWN,DOWN",
+          "source_coupled_insertion_vertex_parity": "0",
+          "source_port_parity": "1",
+          "source_port_statistics": "FERMION",
           "symmetry_factor": "1",
+          "tildeW_dotted_variance": "DOWN",
           "total_orientation_sign": "1",
           "triangle_orientation_sign": "1",
-          "unsigned_scalar_pole": "g^2/(1024*pi^2*epsilon)",
+          "unsigned_scalar_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "wick_multiplicity": "1",
           "wick_sign": "+1"
         },
@@ -2518,16 +2575,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flavor_label": null,
             "leg_id": "L_source",
@@ -2550,7 +2607,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -2564,7 +2621,7 @@
               {
                 "label": "dot_alpha",
                 "space": "DOTTED",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ]
           },
@@ -2655,16 +2712,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flow": "IN",
             "half_edge_id": "Abar_BW_I_source",
@@ -2707,7 +2764,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -2797,18 +2854,21 @@
           "basis_decomposition": "BASIS_DEPENDENT",
           "basis_term_count": "216",
           "basis_term_ids_sha256": "9b40e62608cec951962b565784512ff48247c90b45b6fed39e607afc2df39305",
-          "coefficient_conservation": "sum(C_basis_terms)=+g^2/(1024*pi^2*epsilon)",
+          "coefficient_conservation": "NOT_CLAIMED_BEFORE_TYPED_CONTACT_REPLAY",
           "collapsed_edge_id": "e1",
           "collapsed_propagator_symbol": "-2*g^2*kappa^{-1}*delta4theta/r1^2",
           "color_factor": "c_{ACD}*c_{BCE}",
-          "contact_amplitude_sign": "-1",
+          "contact_amplitude_sign": "UNASSIGNED_AFTER_TYPED_REPAIR",
+          "contact_coefficient_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
           "contact_metric": "delta4^(mu nu)",
-          "contact_pole": "-g^2*delta4^(mu nu)/(1024*pi^2*epsilon)",
+          "contact_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "denominator": "k^2*(k+q)^2*(k+p+q)^2",
           "external_canonical_pre_D_word": "TildeW,W",
           "external_declared_pre_D_word": "TildeW,W",
           "external_fermion_permutation_sign": "1",
-          "graph_relation": "SD_AGGREGATE_METRIC_CONTACT",
+          "full_odd_word_permutation_sign": "1",
+          "graph_relation": "SD_METRIC_CONTACT_TOPOLOGY",
+          "insertion_operator_parity": "1",
           "loop_basis_child": "k",
           "loop_basis_parent": "k",
           "loop_basis_rule": "RECOMPUTE_BY_E_MINUS_V_PLUS_C",
@@ -2816,13 +2876,19 @@
           "parent_graph_id": "T-Abar_BW-w0-01",
           "parent_trace_id": "DA-D-002",
           "physical_external_momenta": "TildeW(q),W(p),source(P=p+q)",
-          "relative_sign_derivation": "contact minus sign is the second term of the exact SD identity",
+          "quantum_odd_word_permutation_sign": "1",
+          "relative_sign_derivation": "OPEN_TYPED_CONTACT_REPLAY",
           "routing": "r0=k;r1=k+q;r2=k+p+q",
-          "signed_triangle_pole": "+g^2*hat_delta^(mu nu)/(1024*pi^2*epsilon)",
+          "signed_triangle_pole": "BOUND_ONLY_TO_PARENT_ISOLATED_TRIANGLE",
+          "source_color_variances": "DOWN,DOWN",
+          "source_coupled_insertion_vertex_parity": "0",
+          "source_port_parity": "1",
+          "source_port_statistics": "FERMION",
           "symmetry_factor": "1",
+          "tildeW_dotted_variance": "DOWN",
           "total_orientation_sign": "1",
           "triangle_orientation_sign": "1",
-          "unsigned_scalar_pole": "g^2/(1024*pi^2*epsilon)",
+          "unsigned_scalar_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "wick_multiplicity": "1",
           "wick_sign": "+1"
         },
@@ -2887,16 +2953,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flavor_label": null,
             "leg_id": "L_source",
@@ -2919,7 +2985,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -2933,7 +2999,7 @@
               {
                 "label": "dot_alpha",
                 "space": "DOTTED",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ]
           },
@@ -3024,16 +3090,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flow": "IN",
             "half_edge_id": "Abar_BW_I_source",
@@ -3076,7 +3142,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -3166,18 +3232,21 @@
           "basis_decomposition": "BASIS_DEPENDENT",
           "basis_term_count": "216",
           "basis_term_ids_sha256": "9b40e62608cec951962b565784512ff48247c90b45b6fed39e607afc2df39305",
-          "coefficient_conservation": "sum(C_basis_terms)=+g^2/(1024*pi^2*epsilon)",
+          "coefficient_conservation": "NOT_CLAIMED_BEFORE_TYPED_CONTACT_REPLAY",
           "collapsed_edge_id": "e1",
           "collapsed_propagator_symbol": "-2*g^2*kappa^{-1}*delta4theta/r1^2",
           "color_factor": "c_{ACD}*c_{BCE}",
-          "contact_amplitude_sign": "-1",
+          "contact_amplitude_sign": "UNASSIGNED_AFTER_TYPED_REPAIR",
+          "contact_coefficient_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
           "contact_metric": "delta4^(mu nu)",
-          "contact_pole": "-g^2*delta4^(mu nu)/(1024*pi^2*epsilon)",
+          "contact_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "denominator": "k^2*(k+q)^2*(k+p+q)^2",
           "external_canonical_pre_D_word": "TildeW,W",
           "external_declared_pre_D_word": "TildeW,W",
           "external_fermion_permutation_sign": "1",
-          "graph_relation": "SD_AGGREGATE_METRIC_CONTACT",
+          "full_odd_word_permutation_sign": "1",
+          "graph_relation": "SD_METRIC_CONTACT_TOPOLOGY",
+          "insertion_operator_parity": "1",
           "loop_basis_child": "k",
           "loop_basis_parent": "k",
           "loop_basis_rule": "RECOMPUTE_BY_E_MINUS_V_PLUS_C",
@@ -3185,13 +3254,19 @@
           "parent_graph_id": "T-Abar_BW-w0-01",
           "parent_trace_id": "DA-D-003",
           "physical_external_momenta": "TildeW(q),W(p),source(P=p+q)",
-          "relative_sign_derivation": "contact minus sign is the second term of the exact SD identity",
+          "quantum_odd_word_permutation_sign": "1",
+          "relative_sign_derivation": "OPEN_TYPED_CONTACT_REPLAY",
           "routing": "r0=k;r1=k+q;r2=k+p+q",
-          "signed_triangle_pole": "+g^2*hat_delta^(mu nu)/(1024*pi^2*epsilon)",
+          "signed_triangle_pole": "BOUND_ONLY_TO_PARENT_ISOLATED_TRIANGLE",
+          "source_color_variances": "DOWN,DOWN",
+          "source_coupled_insertion_vertex_parity": "0",
+          "source_port_parity": "1",
+          "source_port_statistics": "FERMION",
           "symmetry_factor": "1",
+          "tildeW_dotted_variance": "DOWN",
           "total_orientation_sign": "1",
           "triangle_orientation_sign": "1",
-          "unsigned_scalar_pole": "g^2/(1024*pi^2*epsilon)",
+          "unsigned_scalar_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "wick_multiplicity": "1",
           "wick_sign": "+1"
         },
@@ -3256,16 +3331,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flavor_label": null,
             "leg_id": "L_source",
@@ -3288,7 +3363,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -3302,7 +3377,7 @@
               {
                 "label": "dot_alpha",
                 "space": "DOTTED",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ]
           },
@@ -3393,16 +3468,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flow": "IN",
             "half_edge_id": "Abar_BW_I_source",
@@ -3445,7 +3520,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -3535,18 +3610,21 @@
           "basis_decomposition": "BASIS_DEPENDENT",
           "basis_term_count": "216",
           "basis_term_ids_sha256": "9b40e62608cec951962b565784512ff48247c90b45b6fed39e607afc2df39305",
-          "coefficient_conservation": "sum(C_basis_terms)=+g^2/(1024*pi^2*epsilon)",
+          "coefficient_conservation": "NOT_CLAIMED_BEFORE_TYPED_CONTACT_REPLAY",
           "collapsed_edge_id": "e1",
           "collapsed_propagator_symbol": "-2*g^2*kappa^{-1}*delta4theta/r1^2",
           "color_factor": "c_{ACD}*c_{BCE}",
-          "contact_amplitude_sign": "-1",
+          "contact_amplitude_sign": "UNASSIGNED_AFTER_TYPED_REPAIR",
+          "contact_coefficient_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
           "contact_metric": "delta4^(mu nu)",
-          "contact_pole": "-g^2*delta4^(mu nu)/(1024*pi^2*epsilon)",
+          "contact_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "denominator": "k^2*(k+q)^2*(k+p+q)^2",
           "external_canonical_pre_D_word": "TildeW,W",
           "external_declared_pre_D_word": "TildeW,W",
           "external_fermion_permutation_sign": "1",
-          "graph_relation": "SD_AGGREGATE_METRIC_CONTACT",
+          "full_odd_word_permutation_sign": "1",
+          "graph_relation": "SD_METRIC_CONTACT_TOPOLOGY",
+          "insertion_operator_parity": "1",
           "loop_basis_child": "k",
           "loop_basis_parent": "k",
           "loop_basis_rule": "RECOMPUTE_BY_E_MINUS_V_PLUS_C",
@@ -3554,13 +3632,19 @@
           "parent_graph_id": "T-Abar_BW-w0-01",
           "parent_trace_id": "DA-D-004",
           "physical_external_momenta": "TildeW(q),W(p),source(P=p+q)",
-          "relative_sign_derivation": "contact minus sign is the second term of the exact SD identity",
+          "quantum_odd_word_permutation_sign": "1",
+          "relative_sign_derivation": "OPEN_TYPED_CONTACT_REPLAY",
           "routing": "r0=k;r1=k+q;r2=k+p+q",
-          "signed_triangle_pole": "+g^2*hat_delta^(mu nu)/(1024*pi^2*epsilon)",
+          "signed_triangle_pole": "BOUND_ONLY_TO_PARENT_ISOLATED_TRIANGLE",
+          "source_color_variances": "DOWN,DOWN",
+          "source_coupled_insertion_vertex_parity": "0",
+          "source_port_parity": "1",
+          "source_port_statistics": "FERMION",
           "symmetry_factor": "1",
+          "tildeW_dotted_variance": "DOWN",
           "total_orientation_sign": "1",
           "triangle_orientation_sign": "1",
-          "unsigned_scalar_pole": "g^2/(1024*pi^2*epsilon)",
+          "unsigned_scalar_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "wick_multiplicity": "1",
           "wick_sign": "+1"
         },
@@ -3625,16 +3709,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flavor_label": null,
             "leg_id": "L_source",
@@ -3657,7 +3741,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -3671,7 +3755,7 @@
               {
                 "label": "dot_alpha",
                 "space": "DOTTED",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ]
           },
@@ -3762,16 +3846,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flow": "IN",
             "half_edge_id": "Abar_BW_I_source",
@@ -3814,7 +3898,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -3904,18 +3988,21 @@
           "basis_decomposition": "BASIS_DEPENDENT",
           "basis_term_count": "216",
           "basis_term_ids_sha256": "9b40e62608cec951962b565784512ff48247c90b45b6fed39e607afc2df39305",
-          "coefficient_conservation": "sum(C_basis_terms)=+g^2/(1024*pi^2*epsilon)",
+          "coefficient_conservation": "NOT_CLAIMED_BEFORE_TYPED_CONTACT_REPLAY",
           "collapsed_edge_id": "e1",
           "collapsed_propagator_symbol": "-2*g^2*kappa^{-1}*delta4theta/r1^2",
           "color_factor": "c_{ACD}*c_{BCE}",
-          "contact_amplitude_sign": "-1",
+          "contact_amplitude_sign": "UNASSIGNED_AFTER_TYPED_REPAIR",
+          "contact_coefficient_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
           "contact_metric": "delta4^(mu nu)",
-          "contact_pole": "-g^2*delta4^(mu nu)/(1024*pi^2*epsilon)",
+          "contact_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "denominator": "k^2*(k+q)^2*(k+p+q)^2",
           "external_canonical_pre_D_word": "TildeW,W",
           "external_declared_pre_D_word": "TildeW,W",
           "external_fermion_permutation_sign": "1",
-          "graph_relation": "SD_AGGREGATE_METRIC_CONTACT",
+          "full_odd_word_permutation_sign": "1",
+          "graph_relation": "SD_METRIC_CONTACT_TOPOLOGY",
+          "insertion_operator_parity": "1",
           "loop_basis_child": "k",
           "loop_basis_parent": "k",
           "loop_basis_rule": "RECOMPUTE_BY_E_MINUS_V_PLUS_C",
@@ -3923,13 +4010,19 @@
           "parent_graph_id": "T-Abar_BW-w0-01",
           "parent_trace_id": "DA-D-005",
           "physical_external_momenta": "TildeW(q),W(p),source(P=p+q)",
-          "relative_sign_derivation": "contact minus sign is the second term of the exact SD identity",
+          "quantum_odd_word_permutation_sign": "1",
+          "relative_sign_derivation": "OPEN_TYPED_CONTACT_REPLAY",
           "routing": "r0=k;r1=k+q;r2=k+p+q",
-          "signed_triangle_pole": "+g^2*hat_delta^(mu nu)/(1024*pi^2*epsilon)",
+          "signed_triangle_pole": "BOUND_ONLY_TO_PARENT_ISOLATED_TRIANGLE",
+          "source_color_variances": "DOWN,DOWN",
+          "source_coupled_insertion_vertex_parity": "0",
+          "source_port_parity": "1",
+          "source_port_statistics": "FERMION",
           "symmetry_factor": "1",
+          "tildeW_dotted_variance": "DOWN",
           "total_orientation_sign": "1",
           "triangle_orientation_sign": "1",
-          "unsigned_scalar_pole": "g^2/(1024*pi^2*epsilon)",
+          "unsigned_scalar_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "wick_multiplicity": "1",
           "wick_sign": "+1"
         },
@@ -3994,16 +4087,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flavor_label": null,
             "leg_id": "L_source",
@@ -4026,7 +4119,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -4040,7 +4133,7 @@
               {
                 "label": "dot_alpha",
                 "space": "DOTTED",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ]
           },
@@ -4131,16 +4224,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flow": "IN",
             "half_edge_id": "Abar_BW_I_source",
@@ -4183,7 +4276,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -4273,18 +4366,21 @@
           "basis_decomposition": "BASIS_DEPENDENT",
           "basis_term_count": "216",
           "basis_term_ids_sha256": "9b40e62608cec951962b565784512ff48247c90b45b6fed39e607afc2df39305",
-          "coefficient_conservation": "sum(C_basis_terms)=+g^2/(1024*pi^2*epsilon)",
+          "coefficient_conservation": "NOT_CLAIMED_BEFORE_TYPED_CONTACT_REPLAY",
           "collapsed_edge_id": "e1",
           "collapsed_propagator_symbol": "-2*g^2*kappa^{-1}*delta4theta/r1^2",
           "color_factor": "c_{ACD}*c_{BCE}",
-          "contact_amplitude_sign": "-1",
+          "contact_amplitude_sign": "UNASSIGNED_AFTER_TYPED_REPAIR",
+          "contact_coefficient_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
           "contact_metric": "delta4^(mu nu)",
-          "contact_pole": "-g^2*delta4^(mu nu)/(1024*pi^2*epsilon)",
+          "contact_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "denominator": "k^2*(k+q)^2*(k+p+q)^2",
           "external_canonical_pre_D_word": "TildeW,W",
           "external_declared_pre_D_word": "TildeW,W",
           "external_fermion_permutation_sign": "1",
-          "graph_relation": "SD_AGGREGATE_METRIC_CONTACT",
+          "full_odd_word_permutation_sign": "1",
+          "graph_relation": "SD_METRIC_CONTACT_TOPOLOGY",
+          "insertion_operator_parity": "1",
           "loop_basis_child": "k",
           "loop_basis_parent": "k",
           "loop_basis_rule": "RECOMPUTE_BY_E_MINUS_V_PLUS_C",
@@ -4292,13 +4388,19 @@
           "parent_graph_id": "T-Abar_BW-w0-01",
           "parent_trace_id": "DA-D-006",
           "physical_external_momenta": "TildeW(q),W(p),source(P=p+q)",
-          "relative_sign_derivation": "contact minus sign is the second term of the exact SD identity",
+          "quantum_odd_word_permutation_sign": "1",
+          "relative_sign_derivation": "OPEN_TYPED_CONTACT_REPLAY",
           "routing": "r0=k;r1=k+q;r2=k+p+q",
-          "signed_triangle_pole": "+g^2*hat_delta^(mu nu)/(1024*pi^2*epsilon)",
+          "signed_triangle_pole": "BOUND_ONLY_TO_PARENT_ISOLATED_TRIANGLE",
+          "source_color_variances": "DOWN,DOWN",
+          "source_coupled_insertion_vertex_parity": "0",
+          "source_port_parity": "1",
+          "source_port_statistics": "FERMION",
           "symmetry_factor": "1",
+          "tildeW_dotted_variance": "DOWN",
           "total_orientation_sign": "1",
           "triangle_orientation_sign": "1",
-          "unsigned_scalar_pole": "g^2/(1024*pi^2*epsilon)",
+          "unsigned_scalar_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "wick_multiplicity": "1",
           "wick_sign": "+1"
         },
@@ -4363,16 +4465,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flavor_label": null,
             "leg_id": "L_source",
@@ -4395,7 +4497,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -4409,7 +4511,7 @@
               {
                 "label": "dot_alpha",
                 "space": "DOTTED",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ]
           },
@@ -4500,16 +4602,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flow": "IN",
             "half_edge_id": "Abar_BW_I_source",
@@ -4552,7 +4654,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -4642,18 +4744,21 @@
           "basis_decomposition": "BASIS_DEPENDENT",
           "basis_term_count": "216",
           "basis_term_ids_sha256": "9b40e62608cec951962b565784512ff48247c90b45b6fed39e607afc2df39305",
-          "coefficient_conservation": "sum(C_basis_terms)=+g^2/(1024*pi^2*epsilon)",
+          "coefficient_conservation": "NOT_CLAIMED_BEFORE_TYPED_CONTACT_REPLAY",
           "collapsed_edge_id": "e1",
           "collapsed_propagator_symbol": "-2*g^2*kappa^{-1}*delta4theta/r1^2",
           "color_factor": "c_{ACD}*c_{BCE}",
-          "contact_amplitude_sign": "-1",
+          "contact_amplitude_sign": "UNASSIGNED_AFTER_TYPED_REPAIR",
+          "contact_coefficient_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
           "contact_metric": "delta4^(mu nu)",
-          "contact_pole": "-g^2*delta4^(mu nu)/(1024*pi^2*epsilon)",
+          "contact_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "denominator": "k^2*(k+q)^2*(k+p+q)^2",
           "external_canonical_pre_D_word": "TildeW,W",
           "external_declared_pre_D_word": "TildeW,W",
           "external_fermion_permutation_sign": "1",
-          "graph_relation": "SD_AGGREGATE_METRIC_CONTACT",
+          "full_odd_word_permutation_sign": "1",
+          "graph_relation": "SD_METRIC_CONTACT_TOPOLOGY",
+          "insertion_operator_parity": "1",
           "loop_basis_child": "k",
           "loop_basis_parent": "k",
           "loop_basis_rule": "RECOMPUTE_BY_E_MINUS_V_PLUS_C",
@@ -4661,13 +4766,19 @@
           "parent_graph_id": "T-Abar_BW-w0-01",
           "parent_trace_id": "DA-D-007",
           "physical_external_momenta": "TildeW(q),W(p),source(P=p+q)",
-          "relative_sign_derivation": "contact minus sign is the second term of the exact SD identity",
+          "quantum_odd_word_permutation_sign": "1",
+          "relative_sign_derivation": "OPEN_TYPED_CONTACT_REPLAY",
           "routing": "r0=k;r1=k+q;r2=k+p+q",
-          "signed_triangle_pole": "+g^2*hat_delta^(mu nu)/(1024*pi^2*epsilon)",
+          "signed_triangle_pole": "BOUND_ONLY_TO_PARENT_ISOLATED_TRIANGLE",
+          "source_color_variances": "DOWN,DOWN",
+          "source_coupled_insertion_vertex_parity": "0",
+          "source_port_parity": "1",
+          "source_port_statistics": "FERMION",
           "symmetry_factor": "1",
+          "tildeW_dotted_variance": "DOWN",
           "total_orientation_sign": "1",
           "triangle_orientation_sign": "1",
-          "unsigned_scalar_pole": "g^2/(1024*pi^2*epsilon)",
+          "unsigned_scalar_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "wick_multiplicity": "1",
           "wick_sign": "+1"
         },
@@ -4732,16 +4843,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flavor_label": null,
             "leg_id": "L_source",
@@ -4764,7 +4875,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -4778,7 +4889,7 @@
               {
                 "label": "dot_alpha",
                 "space": "DOTTED",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ]
           },
@@ -4869,16 +4980,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flow": "IN",
             "half_edge_id": "Abar_BW_I_source",
@@ -4921,7 +5032,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -5011,18 +5122,21 @@
           "basis_decomposition": "BASIS_DEPENDENT",
           "basis_term_count": "216",
           "basis_term_ids_sha256": "9b40e62608cec951962b565784512ff48247c90b45b6fed39e607afc2df39305",
-          "coefficient_conservation": "sum(C_basis_terms)=+g^2/(1024*pi^2*epsilon)",
+          "coefficient_conservation": "NOT_CLAIMED_BEFORE_TYPED_CONTACT_REPLAY",
           "collapsed_edge_id": "e1",
           "collapsed_propagator_symbol": "-2*g^2*kappa^{-1}*delta4theta/r1^2",
           "color_factor": "c_{ACD}*c_{BCE}",
-          "contact_amplitude_sign": "-1",
+          "contact_amplitude_sign": "UNASSIGNED_AFTER_TYPED_REPAIR",
+          "contact_coefficient_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
           "contact_metric": "delta4^(mu nu)",
-          "contact_pole": "-g^2*delta4^(mu nu)/(1024*pi^2*epsilon)",
+          "contact_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "denominator": "k^2*(k+q)^2*(k+p+q)^2",
           "external_canonical_pre_D_word": "TildeW,W",
           "external_declared_pre_D_word": "TildeW,W",
           "external_fermion_permutation_sign": "1",
-          "graph_relation": "SD_AGGREGATE_METRIC_CONTACT",
+          "full_odd_word_permutation_sign": "1",
+          "graph_relation": "SD_METRIC_CONTACT_TOPOLOGY",
+          "insertion_operator_parity": "1",
           "loop_basis_child": "k",
           "loop_basis_parent": "k",
           "loop_basis_rule": "RECOMPUTE_BY_E_MINUS_V_PLUS_C",
@@ -5030,13 +5144,19 @@
           "parent_graph_id": "T-Abar_BW-w0-01",
           "parent_trace_id": "DA-D-008",
           "physical_external_momenta": "TildeW(q),W(p),source(P=p+q)",
-          "relative_sign_derivation": "contact minus sign is the second term of the exact SD identity",
+          "quantum_odd_word_permutation_sign": "1",
+          "relative_sign_derivation": "OPEN_TYPED_CONTACT_REPLAY",
           "routing": "r0=k;r1=k+q;r2=k+p+q",
-          "signed_triangle_pole": "+g^2*hat_delta^(mu nu)/(1024*pi^2*epsilon)",
+          "signed_triangle_pole": "BOUND_ONLY_TO_PARENT_ISOLATED_TRIANGLE",
+          "source_color_variances": "DOWN,DOWN",
+          "source_coupled_insertion_vertex_parity": "0",
+          "source_port_parity": "1",
+          "source_port_statistics": "FERMION",
           "symmetry_factor": "1",
+          "tildeW_dotted_variance": "DOWN",
           "total_orientation_sign": "1",
           "triangle_orientation_sign": "1",
-          "unsigned_scalar_pole": "g^2/(1024*pi^2*epsilon)",
+          "unsigned_scalar_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "wick_multiplicity": "1",
           "wick_sign": "+1"
         },
@@ -5103,16 +5223,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flavor_label": null,
             "leg_id": "L_source",
@@ -5135,7 +5255,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -5149,7 +5269,7 @@
               {
                 "label": "dot_alpha",
                 "space": "DOTTED",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ]
           },
@@ -5240,16 +5360,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flow": "IN",
             "half_edge_id": "Bbar_AW_I_source",
@@ -5292,7 +5412,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -5382,18 +5502,21 @@
           "basis_decomposition": "BASIS_DEPENDENT",
           "basis_term_count": "216",
           "basis_term_ids_sha256": "9b40e62608cec951962b565784512ff48247c90b45b6fed39e607afc2df39305",
-          "coefficient_conservation": "sum(C_basis_terms)=-g^2/(1024*pi^2*epsilon)",
+          "coefficient_conservation": "NOT_CLAIMED_BEFORE_TYPED_CONTACT_REPLAY",
           "collapsed_edge_id": "e1",
           "collapsed_propagator_symbol": "-2*g^2*kappa^{-1}*delta4theta/r1^2",
           "color_factor": "c_{BCD}*c_{ACE}",
-          "contact_amplitude_sign": "1",
+          "contact_amplitude_sign": "UNASSIGNED_AFTER_TYPED_REPAIR",
+          "contact_coefficient_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
           "contact_metric": "delta4^(mu nu)",
-          "contact_pole": "+g^2*delta4^(mu nu)/(1024*pi^2*epsilon)",
+          "contact_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "denominator": "k^2*(k+q)^2*(k+p+q)^2",
           "external_canonical_pre_D_word": "TildeW,W",
           "external_declared_pre_D_word": "W,TildeW",
           "external_fermion_permutation_sign": "-1",
-          "graph_relation": "SD_AGGREGATE_METRIC_CONTACT",
+          "full_odd_word_permutation_sign": "1",
+          "graph_relation": "SD_METRIC_CONTACT_TOPOLOGY",
+          "insertion_operator_parity": "1",
           "loop_basis_child": "k",
           "loop_basis_parent": "k",
           "loop_basis_rule": "RECOMPUTE_BY_E_MINUS_V_PLUS_C",
@@ -5401,13 +5524,19 @@
           "parent_graph_id": "T-Bbar_AW-w0-01",
           "parent_trace_id": "DA-R-001",
           "physical_external_momenta": "TildeW(q),W(p),source(P=p+q)",
-          "relative_sign_derivation": "contact minus sign is the second term of the exact SD identity",
+          "quantum_odd_word_permutation_sign": "-1",
+          "relative_sign_derivation": "OPEN_TYPED_CONTACT_REPLAY",
           "routing": "r0=k;r1=k+q;r2=k+p+q",
-          "signed_triangle_pole": "-g^2*hat_delta^(mu nu)/(1024*pi^2*epsilon)",
+          "signed_triangle_pole": "BOUND_ONLY_TO_PARENT_ISOLATED_TRIANGLE",
+          "source_color_variances": "DOWN,DOWN",
+          "source_coupled_insertion_vertex_parity": "0",
+          "source_port_parity": "1",
+          "source_port_statistics": "FERMION",
           "symmetry_factor": "1",
-          "total_orientation_sign": "-1",
-          "triangle_orientation_sign": "-1",
-          "unsigned_scalar_pole": "g^2/(1024*pi^2*epsilon)",
+          "tildeW_dotted_variance": "DOWN",
+          "total_orientation_sign": "1",
+          "triangle_orientation_sign": "1",
+          "unsigned_scalar_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "wick_multiplicity": "1",
           "wick_sign": "+1"
         },
@@ -5472,16 +5601,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flavor_label": null,
             "leg_id": "L_source",
@@ -5504,7 +5633,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -5518,7 +5647,7 @@
               {
                 "label": "dot_alpha",
                 "space": "DOTTED",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ]
           },
@@ -5609,16 +5738,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flow": "IN",
             "half_edge_id": "Bbar_AW_I_source",
@@ -5661,7 +5790,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -5751,18 +5880,21 @@
           "basis_decomposition": "BASIS_DEPENDENT",
           "basis_term_count": "216",
           "basis_term_ids_sha256": "9b40e62608cec951962b565784512ff48247c90b45b6fed39e607afc2df39305",
-          "coefficient_conservation": "sum(C_basis_terms)=-g^2/(1024*pi^2*epsilon)",
+          "coefficient_conservation": "NOT_CLAIMED_BEFORE_TYPED_CONTACT_REPLAY",
           "collapsed_edge_id": "e1",
           "collapsed_propagator_symbol": "-2*g^2*kappa^{-1}*delta4theta/r1^2",
           "color_factor": "c_{BCD}*c_{ACE}",
-          "contact_amplitude_sign": "1",
+          "contact_amplitude_sign": "UNASSIGNED_AFTER_TYPED_REPAIR",
+          "contact_coefficient_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
           "contact_metric": "delta4^(mu nu)",
-          "contact_pole": "+g^2*delta4^(mu nu)/(1024*pi^2*epsilon)",
+          "contact_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "denominator": "k^2*(k+q)^2*(k+p+q)^2",
           "external_canonical_pre_D_word": "TildeW,W",
           "external_declared_pre_D_word": "W,TildeW",
           "external_fermion_permutation_sign": "-1",
-          "graph_relation": "SD_AGGREGATE_METRIC_CONTACT",
+          "full_odd_word_permutation_sign": "1",
+          "graph_relation": "SD_METRIC_CONTACT_TOPOLOGY",
+          "insertion_operator_parity": "1",
           "loop_basis_child": "k",
           "loop_basis_parent": "k",
           "loop_basis_rule": "RECOMPUTE_BY_E_MINUS_V_PLUS_C",
@@ -5770,13 +5902,19 @@
           "parent_graph_id": "T-Bbar_AW-w0-01",
           "parent_trace_id": "DA-R-002",
           "physical_external_momenta": "TildeW(q),W(p),source(P=p+q)",
-          "relative_sign_derivation": "contact minus sign is the second term of the exact SD identity",
+          "quantum_odd_word_permutation_sign": "-1",
+          "relative_sign_derivation": "OPEN_TYPED_CONTACT_REPLAY",
           "routing": "r0=k;r1=k+q;r2=k+p+q",
-          "signed_triangle_pole": "-g^2*hat_delta^(mu nu)/(1024*pi^2*epsilon)",
+          "signed_triangle_pole": "BOUND_ONLY_TO_PARENT_ISOLATED_TRIANGLE",
+          "source_color_variances": "DOWN,DOWN",
+          "source_coupled_insertion_vertex_parity": "0",
+          "source_port_parity": "1",
+          "source_port_statistics": "FERMION",
           "symmetry_factor": "1",
-          "total_orientation_sign": "-1",
-          "triangle_orientation_sign": "-1",
-          "unsigned_scalar_pole": "g^2/(1024*pi^2*epsilon)",
+          "tildeW_dotted_variance": "DOWN",
+          "total_orientation_sign": "1",
+          "triangle_orientation_sign": "1",
+          "unsigned_scalar_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "wick_multiplicity": "1",
           "wick_sign": "+1"
         },
@@ -5841,16 +5979,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flavor_label": null,
             "leg_id": "L_source",
@@ -5873,7 +6011,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -5887,7 +6025,7 @@
               {
                 "label": "dot_alpha",
                 "space": "DOTTED",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ]
           },
@@ -5978,16 +6116,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flow": "IN",
             "half_edge_id": "Bbar_AW_I_source",
@@ -6030,7 +6168,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -6120,18 +6258,21 @@
           "basis_decomposition": "BASIS_DEPENDENT",
           "basis_term_count": "216",
           "basis_term_ids_sha256": "9b40e62608cec951962b565784512ff48247c90b45b6fed39e607afc2df39305",
-          "coefficient_conservation": "sum(C_basis_terms)=-g^2/(1024*pi^2*epsilon)",
+          "coefficient_conservation": "NOT_CLAIMED_BEFORE_TYPED_CONTACT_REPLAY",
           "collapsed_edge_id": "e1",
           "collapsed_propagator_symbol": "-2*g^2*kappa^{-1}*delta4theta/r1^2",
           "color_factor": "c_{BCD}*c_{ACE}",
-          "contact_amplitude_sign": "1",
+          "contact_amplitude_sign": "UNASSIGNED_AFTER_TYPED_REPAIR",
+          "contact_coefficient_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
           "contact_metric": "delta4^(mu nu)",
-          "contact_pole": "+g^2*delta4^(mu nu)/(1024*pi^2*epsilon)",
+          "contact_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "denominator": "k^2*(k+q)^2*(k+p+q)^2",
           "external_canonical_pre_D_word": "TildeW,W",
           "external_declared_pre_D_word": "W,TildeW",
           "external_fermion_permutation_sign": "-1",
-          "graph_relation": "SD_AGGREGATE_METRIC_CONTACT",
+          "full_odd_word_permutation_sign": "1",
+          "graph_relation": "SD_METRIC_CONTACT_TOPOLOGY",
+          "insertion_operator_parity": "1",
           "loop_basis_child": "k",
           "loop_basis_parent": "k",
           "loop_basis_rule": "RECOMPUTE_BY_E_MINUS_V_PLUS_C",
@@ -6139,13 +6280,19 @@
           "parent_graph_id": "T-Bbar_AW-w0-01",
           "parent_trace_id": "DA-R-003",
           "physical_external_momenta": "TildeW(q),W(p),source(P=p+q)",
-          "relative_sign_derivation": "contact minus sign is the second term of the exact SD identity",
+          "quantum_odd_word_permutation_sign": "-1",
+          "relative_sign_derivation": "OPEN_TYPED_CONTACT_REPLAY",
           "routing": "r0=k;r1=k+q;r2=k+p+q",
-          "signed_triangle_pole": "-g^2*hat_delta^(mu nu)/(1024*pi^2*epsilon)",
+          "signed_triangle_pole": "BOUND_ONLY_TO_PARENT_ISOLATED_TRIANGLE",
+          "source_color_variances": "DOWN,DOWN",
+          "source_coupled_insertion_vertex_parity": "0",
+          "source_port_parity": "1",
+          "source_port_statistics": "FERMION",
           "symmetry_factor": "1",
-          "total_orientation_sign": "-1",
-          "triangle_orientation_sign": "-1",
-          "unsigned_scalar_pole": "g^2/(1024*pi^2*epsilon)",
+          "tildeW_dotted_variance": "DOWN",
+          "total_orientation_sign": "1",
+          "triangle_orientation_sign": "1",
+          "unsigned_scalar_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "wick_multiplicity": "1",
           "wick_sign": "+1"
         },
@@ -6210,16 +6357,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flavor_label": null,
             "leg_id": "L_source",
@@ -6242,7 +6389,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -6256,7 +6403,7 @@
               {
                 "label": "dot_alpha",
                 "space": "DOTTED",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ]
           },
@@ -6347,16 +6494,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flow": "IN",
             "half_edge_id": "Bbar_AW_I_source",
@@ -6399,7 +6546,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -6489,18 +6636,21 @@
           "basis_decomposition": "BASIS_DEPENDENT",
           "basis_term_count": "216",
           "basis_term_ids_sha256": "9b40e62608cec951962b565784512ff48247c90b45b6fed39e607afc2df39305",
-          "coefficient_conservation": "sum(C_basis_terms)=-g^2/(1024*pi^2*epsilon)",
+          "coefficient_conservation": "NOT_CLAIMED_BEFORE_TYPED_CONTACT_REPLAY",
           "collapsed_edge_id": "e1",
           "collapsed_propagator_symbol": "-2*g^2*kappa^{-1}*delta4theta/r1^2",
           "color_factor": "c_{BCD}*c_{ACE}",
-          "contact_amplitude_sign": "1",
+          "contact_amplitude_sign": "UNASSIGNED_AFTER_TYPED_REPAIR",
+          "contact_coefficient_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
           "contact_metric": "delta4^(mu nu)",
-          "contact_pole": "+g^2*delta4^(mu nu)/(1024*pi^2*epsilon)",
+          "contact_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "denominator": "k^2*(k+q)^2*(k+p+q)^2",
           "external_canonical_pre_D_word": "TildeW,W",
           "external_declared_pre_D_word": "W,TildeW",
           "external_fermion_permutation_sign": "-1",
-          "graph_relation": "SD_AGGREGATE_METRIC_CONTACT",
+          "full_odd_word_permutation_sign": "1",
+          "graph_relation": "SD_METRIC_CONTACT_TOPOLOGY",
+          "insertion_operator_parity": "1",
           "loop_basis_child": "k",
           "loop_basis_parent": "k",
           "loop_basis_rule": "RECOMPUTE_BY_E_MINUS_V_PLUS_C",
@@ -6508,13 +6658,19 @@
           "parent_graph_id": "T-Bbar_AW-w0-01",
           "parent_trace_id": "DA-R-004",
           "physical_external_momenta": "TildeW(q),W(p),source(P=p+q)",
-          "relative_sign_derivation": "contact minus sign is the second term of the exact SD identity",
+          "quantum_odd_word_permutation_sign": "-1",
+          "relative_sign_derivation": "OPEN_TYPED_CONTACT_REPLAY",
           "routing": "r0=k;r1=k+q;r2=k+p+q",
-          "signed_triangle_pole": "-g^2*hat_delta^(mu nu)/(1024*pi^2*epsilon)",
+          "signed_triangle_pole": "BOUND_ONLY_TO_PARENT_ISOLATED_TRIANGLE",
+          "source_color_variances": "DOWN,DOWN",
+          "source_coupled_insertion_vertex_parity": "0",
+          "source_port_parity": "1",
+          "source_port_statistics": "FERMION",
           "symmetry_factor": "1",
-          "total_orientation_sign": "-1",
-          "triangle_orientation_sign": "-1",
-          "unsigned_scalar_pole": "g^2/(1024*pi^2*epsilon)",
+          "tildeW_dotted_variance": "DOWN",
+          "total_orientation_sign": "1",
+          "triangle_orientation_sign": "1",
+          "unsigned_scalar_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "wick_multiplicity": "1",
           "wick_sign": "+1"
         },
@@ -6579,16 +6735,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flavor_label": null,
             "leg_id": "L_source",
@@ -6611,7 +6767,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -6625,7 +6781,7 @@
               {
                 "label": "dot_alpha",
                 "space": "DOTTED",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ]
           },
@@ -6716,16 +6872,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flow": "IN",
             "half_edge_id": "Bbar_AW_I_source",
@@ -6768,7 +6924,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -6858,18 +7014,21 @@
           "basis_decomposition": "BASIS_DEPENDENT",
           "basis_term_count": "216",
           "basis_term_ids_sha256": "9b40e62608cec951962b565784512ff48247c90b45b6fed39e607afc2df39305",
-          "coefficient_conservation": "sum(C_basis_terms)=-g^2/(1024*pi^2*epsilon)",
+          "coefficient_conservation": "NOT_CLAIMED_BEFORE_TYPED_CONTACT_REPLAY",
           "collapsed_edge_id": "e1",
           "collapsed_propagator_symbol": "-2*g^2*kappa^{-1}*delta4theta/r1^2",
           "color_factor": "c_{BCD}*c_{ACE}",
-          "contact_amplitude_sign": "1",
+          "contact_amplitude_sign": "UNASSIGNED_AFTER_TYPED_REPAIR",
+          "contact_coefficient_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
           "contact_metric": "delta4^(mu nu)",
-          "contact_pole": "+g^2*delta4^(mu nu)/(1024*pi^2*epsilon)",
+          "contact_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "denominator": "k^2*(k+q)^2*(k+p+q)^2",
           "external_canonical_pre_D_word": "TildeW,W",
           "external_declared_pre_D_word": "W,TildeW",
           "external_fermion_permutation_sign": "-1",
-          "graph_relation": "SD_AGGREGATE_METRIC_CONTACT",
+          "full_odd_word_permutation_sign": "1",
+          "graph_relation": "SD_METRIC_CONTACT_TOPOLOGY",
+          "insertion_operator_parity": "1",
           "loop_basis_child": "k",
           "loop_basis_parent": "k",
           "loop_basis_rule": "RECOMPUTE_BY_E_MINUS_V_PLUS_C",
@@ -6877,13 +7036,19 @@
           "parent_graph_id": "T-Bbar_AW-w0-01",
           "parent_trace_id": "DA-R-005",
           "physical_external_momenta": "TildeW(q),W(p),source(P=p+q)",
-          "relative_sign_derivation": "contact minus sign is the second term of the exact SD identity",
+          "quantum_odd_word_permutation_sign": "-1",
+          "relative_sign_derivation": "OPEN_TYPED_CONTACT_REPLAY",
           "routing": "r0=k;r1=k+q;r2=k+p+q",
-          "signed_triangle_pole": "-g^2*hat_delta^(mu nu)/(1024*pi^2*epsilon)",
+          "signed_triangle_pole": "BOUND_ONLY_TO_PARENT_ISOLATED_TRIANGLE",
+          "source_color_variances": "DOWN,DOWN",
+          "source_coupled_insertion_vertex_parity": "0",
+          "source_port_parity": "1",
+          "source_port_statistics": "FERMION",
           "symmetry_factor": "1",
-          "total_orientation_sign": "-1",
-          "triangle_orientation_sign": "-1",
-          "unsigned_scalar_pole": "g^2/(1024*pi^2*epsilon)",
+          "tildeW_dotted_variance": "DOWN",
+          "total_orientation_sign": "1",
+          "triangle_orientation_sign": "1",
+          "unsigned_scalar_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "wick_multiplicity": "1",
           "wick_sign": "+1"
         },
@@ -6948,16 +7113,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flavor_label": null,
             "leg_id": "L_source",
@@ -6980,7 +7145,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -6994,7 +7159,7 @@
               {
                 "label": "dot_alpha",
                 "space": "DOTTED",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ]
           },
@@ -7085,16 +7250,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flow": "IN",
             "half_edge_id": "Bbar_AW_I_source",
@@ -7137,7 +7302,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -7227,18 +7392,21 @@
           "basis_decomposition": "BASIS_DEPENDENT",
           "basis_term_count": "216",
           "basis_term_ids_sha256": "9b40e62608cec951962b565784512ff48247c90b45b6fed39e607afc2df39305",
-          "coefficient_conservation": "sum(C_basis_terms)=-g^2/(1024*pi^2*epsilon)",
+          "coefficient_conservation": "NOT_CLAIMED_BEFORE_TYPED_CONTACT_REPLAY",
           "collapsed_edge_id": "e1",
           "collapsed_propagator_symbol": "-2*g^2*kappa^{-1}*delta4theta/r1^2",
           "color_factor": "c_{BCD}*c_{ACE}",
-          "contact_amplitude_sign": "1",
+          "contact_amplitude_sign": "UNASSIGNED_AFTER_TYPED_REPAIR",
+          "contact_coefficient_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
           "contact_metric": "delta4^(mu nu)",
-          "contact_pole": "+g^2*delta4^(mu nu)/(1024*pi^2*epsilon)",
+          "contact_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "denominator": "k^2*(k+q)^2*(k+p+q)^2",
           "external_canonical_pre_D_word": "TildeW,W",
           "external_declared_pre_D_word": "W,TildeW",
           "external_fermion_permutation_sign": "-1",
-          "graph_relation": "SD_AGGREGATE_METRIC_CONTACT",
+          "full_odd_word_permutation_sign": "1",
+          "graph_relation": "SD_METRIC_CONTACT_TOPOLOGY",
+          "insertion_operator_parity": "1",
           "loop_basis_child": "k",
           "loop_basis_parent": "k",
           "loop_basis_rule": "RECOMPUTE_BY_E_MINUS_V_PLUS_C",
@@ -7246,13 +7414,19 @@
           "parent_graph_id": "T-Bbar_AW-w0-01",
           "parent_trace_id": "DA-R-006",
           "physical_external_momenta": "TildeW(q),W(p),source(P=p+q)",
-          "relative_sign_derivation": "contact minus sign is the second term of the exact SD identity",
+          "quantum_odd_word_permutation_sign": "-1",
+          "relative_sign_derivation": "OPEN_TYPED_CONTACT_REPLAY",
           "routing": "r0=k;r1=k+q;r2=k+p+q",
-          "signed_triangle_pole": "-g^2*hat_delta^(mu nu)/(1024*pi^2*epsilon)",
+          "signed_triangle_pole": "BOUND_ONLY_TO_PARENT_ISOLATED_TRIANGLE",
+          "source_color_variances": "DOWN,DOWN",
+          "source_coupled_insertion_vertex_parity": "0",
+          "source_port_parity": "1",
+          "source_port_statistics": "FERMION",
           "symmetry_factor": "1",
-          "total_orientation_sign": "-1",
-          "triangle_orientation_sign": "-1",
-          "unsigned_scalar_pole": "g^2/(1024*pi^2*epsilon)",
+          "tildeW_dotted_variance": "DOWN",
+          "total_orientation_sign": "1",
+          "triangle_orientation_sign": "1",
+          "unsigned_scalar_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "wick_multiplicity": "1",
           "wick_sign": "+1"
         },
@@ -7317,16 +7491,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flavor_label": null,
             "leg_id": "L_source",
@@ -7349,7 +7523,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -7363,7 +7537,7 @@
               {
                 "label": "dot_alpha",
                 "space": "DOTTED",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ]
           },
@@ -7454,16 +7628,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flow": "IN",
             "half_edge_id": "Bbar_AW_I_source",
@@ -7506,7 +7680,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -7596,18 +7770,21 @@
           "basis_decomposition": "BASIS_DEPENDENT",
           "basis_term_count": "216",
           "basis_term_ids_sha256": "9b40e62608cec951962b565784512ff48247c90b45b6fed39e607afc2df39305",
-          "coefficient_conservation": "sum(C_basis_terms)=-g^2/(1024*pi^2*epsilon)",
+          "coefficient_conservation": "NOT_CLAIMED_BEFORE_TYPED_CONTACT_REPLAY",
           "collapsed_edge_id": "e1",
           "collapsed_propagator_symbol": "-2*g^2*kappa^{-1}*delta4theta/r1^2",
           "color_factor": "c_{BCD}*c_{ACE}",
-          "contact_amplitude_sign": "1",
+          "contact_amplitude_sign": "UNASSIGNED_AFTER_TYPED_REPAIR",
+          "contact_coefficient_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
           "contact_metric": "delta4^(mu nu)",
-          "contact_pole": "+g^2*delta4^(mu nu)/(1024*pi^2*epsilon)",
+          "contact_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "denominator": "k^2*(k+q)^2*(k+p+q)^2",
           "external_canonical_pre_D_word": "TildeW,W",
           "external_declared_pre_D_word": "W,TildeW",
           "external_fermion_permutation_sign": "-1",
-          "graph_relation": "SD_AGGREGATE_METRIC_CONTACT",
+          "full_odd_word_permutation_sign": "1",
+          "graph_relation": "SD_METRIC_CONTACT_TOPOLOGY",
+          "insertion_operator_parity": "1",
           "loop_basis_child": "k",
           "loop_basis_parent": "k",
           "loop_basis_rule": "RECOMPUTE_BY_E_MINUS_V_PLUS_C",
@@ -7615,13 +7792,19 @@
           "parent_graph_id": "T-Bbar_AW-w0-01",
           "parent_trace_id": "DA-R-007",
           "physical_external_momenta": "TildeW(q),W(p),source(P=p+q)",
-          "relative_sign_derivation": "contact minus sign is the second term of the exact SD identity",
+          "quantum_odd_word_permutation_sign": "-1",
+          "relative_sign_derivation": "OPEN_TYPED_CONTACT_REPLAY",
           "routing": "r0=k;r1=k+q;r2=k+p+q",
-          "signed_triangle_pole": "-g^2*hat_delta^(mu nu)/(1024*pi^2*epsilon)",
+          "signed_triangle_pole": "BOUND_ONLY_TO_PARENT_ISOLATED_TRIANGLE",
+          "source_color_variances": "DOWN,DOWN",
+          "source_coupled_insertion_vertex_parity": "0",
+          "source_port_parity": "1",
+          "source_port_statistics": "FERMION",
           "symmetry_factor": "1",
-          "total_orientation_sign": "-1",
-          "triangle_orientation_sign": "-1",
-          "unsigned_scalar_pole": "g^2/(1024*pi^2*epsilon)",
+          "tildeW_dotted_variance": "DOWN",
+          "total_orientation_sign": "1",
+          "triangle_orientation_sign": "1",
+          "unsigned_scalar_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "wick_multiplicity": "1",
           "wick_sign": "+1"
         },
@@ -7686,16 +7869,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flavor_label": null,
             "leg_id": "L_source",
@@ -7718,7 +7901,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -7732,7 +7915,7 @@
               {
                 "label": "dot_alpha",
                 "space": "DOTTED",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ]
           },
@@ -7823,16 +8006,16 @@
                 {
                   "label": "A",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 },
                 {
                   "label": "B",
                   "space": "COLOR_ADJOINT",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "Source[nabla_-(X^A X^B)]",
-              "statistics": "BOSON"
+              "statistics": "FERMION"
             },
             "flow": "IN",
             "half_edge_id": "Bbar_AW_I_source",
@@ -7875,7 +8058,7 @@
                 {
                   "label": "dot_alpha",
                   "space": "DOTTED",
-                  "variance": "UP"
+                  "variance": "DOWN"
                 }
               ],
               "name": "TildeW_dot_alpha",
@@ -7965,18 +8148,21 @@
           "basis_decomposition": "BASIS_DEPENDENT",
           "basis_term_count": "216",
           "basis_term_ids_sha256": "9b40e62608cec951962b565784512ff48247c90b45b6fed39e607afc2df39305",
-          "coefficient_conservation": "sum(C_basis_terms)=-g^2/(1024*pi^2*epsilon)",
+          "coefficient_conservation": "NOT_CLAIMED_BEFORE_TYPED_CONTACT_REPLAY",
           "collapsed_edge_id": "e1",
           "collapsed_propagator_symbol": "-2*g^2*kappa^{-1}*delta4theta/r1^2",
           "color_factor": "c_{BCD}*c_{ACE}",
-          "contact_amplitude_sign": "1",
+          "contact_amplitude_sign": "UNASSIGNED_AFTER_TYPED_REPAIR",
+          "contact_coefficient_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
           "contact_metric": "delta4^(mu nu)",
-          "contact_pole": "+g^2*delta4^(mu nu)/(1024*pi^2*epsilon)",
+          "contact_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "denominator": "k^2*(k+q)^2*(k+p+q)^2",
           "external_canonical_pre_D_word": "TildeW,W",
           "external_declared_pre_D_word": "W,TildeW",
           "external_fermion_permutation_sign": "-1",
-          "graph_relation": "SD_AGGREGATE_METRIC_CONTACT",
+          "full_odd_word_permutation_sign": "1",
+          "graph_relation": "SD_METRIC_CONTACT_TOPOLOGY",
+          "insertion_operator_parity": "1",
           "loop_basis_child": "k",
           "loop_basis_parent": "k",
           "loop_basis_rule": "RECOMPUTE_BY_E_MINUS_V_PLUS_C",
@@ -7984,13 +8170,19 @@
           "parent_graph_id": "T-Bbar_AW-w0-01",
           "parent_trace_id": "DA-R-008",
           "physical_external_momenta": "TildeW(q),W(p),source(P=p+q)",
-          "relative_sign_derivation": "contact minus sign is the second term of the exact SD identity",
+          "quantum_odd_word_permutation_sign": "-1",
+          "relative_sign_derivation": "OPEN_TYPED_CONTACT_REPLAY",
           "routing": "r0=k;r1=k+q;r2=k+p+q",
-          "signed_triangle_pole": "-g^2*hat_delta^(mu nu)/(1024*pi^2*epsilon)",
+          "signed_triangle_pole": "BOUND_ONLY_TO_PARENT_ISOLATED_TRIANGLE",
+          "source_color_variances": "DOWN,DOWN",
+          "source_coupled_insertion_vertex_parity": "0",
+          "source_port_parity": "1",
+          "source_port_statistics": "FERMION",
           "symmetry_factor": "1",
-          "total_orientation_sign": "-1",
-          "triangle_orientation_sign": "-1",
-          "unsigned_scalar_pole": "g^2/(1024*pi^2*epsilon)",
+          "tildeW_dotted_variance": "DOWN",
+          "total_orientation_sign": "1",
+          "triangle_orientation_sign": "1",
+          "unsigned_scalar_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
           "wick_multiplicity": "1",
           "wick_sign": "+1"
         },
@@ -8046,8 +8238,9 @@
     ]
   },
   "SD_orbit_status": {
-    "aggregate_contact_pole": "EXACT",
+    "aggregate_contact_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
     "antichiral_action_basis_children": 6,
+    "contact_coefficient_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
     "edge_collapsed_children": 6,
     "finite_BV_required": false,
     "individual_basis_decomposition": "BASIS_DEPENDENT",
@@ -8059,6 +8252,7 @@
     "quartic_I4_tadpole_basis_children": 180
   },
   "contact_basis_catalogue": {
+    "aggregate_rule_status": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
     "all_basis_term_ids": [
       "NONLINEAR_I3__I3_direct_001__BQ_04__P1",
       "NONLINEAR_I3__I3_direct_001__BQ_06__P1",
@@ -8283,7 +8477,6 @@
       "NONLINEAR_I3": 30,
       "QUARTIC_I4_TADPOLE": 180
     },
-    "exact_aggregate_rule": "sum_(ordered basis terms in one trace) C_term = +g^2/(1024*pi^2*epsilon)",
     "families": {
       "ACTION_S3_ANTICHIRAL": [
         {
@@ -12071,7 +12264,7 @@
       "status": "PROVED_ABSENT_BY_INTRINSIC_EUCLIDEAN_CHIRAL_SECTOR"
     }
   },
-  "contract_sha256": "dd06ff2ecf0d78605282cbb505daf16797ce859650fc8d398405031f3acdb002",
+  "contract_sha256": "5b24afd355ef0d471e859c37a24a15632fcebdcad3aa654d30dc098647939ab5",
   "exact_matrix_binding": {
     "checks": 40,
     "engine": "exact 16x16 exterior-algebra matrices over Q(i)",
@@ -12139,23 +12332,54 @@
         "product": 1,
         "target_prefix_parity": 1
       },
+      "canonical_full_odd_word": [
+        "TildeW",
+        "Q_barD",
+        "W",
+        "Q_D"
+      ],
       "canonical_pre_D_word": [
         "TildeW",
         "W"
+      ],
+      "canonical_quantum_odd_word": [
+        "Q_barD",
+        "Q_D"
+      ],
+      "declared_full_odd_word": [
+        "TildeW",
+        "Q_barD",
+        "W",
+        "Q_D"
       ],
       "declared_pre_D_word": [
         "TildeW",
         "W"
       ],
+      "declared_quantum_odd_word": [
+        "Q_barD",
+        "Q_D"
+      ],
       "external_fermion_permutation_sign": 1,
+      "full_block_parities": {
+        "TildeW_QbarD": 0,
+        "W_QD": 0
+      },
+      "full_odd_word_inversions": 0,
+      "full_odd_word_permutation_sign": 1,
       "odd_odd_inversions": 0,
       "orientation": "DIRECT",
       "parities": {
         "D": 1,
+        "Q_D": 1,
+        "Q_barD": 1,
         "TildeW": 1,
         "W": 1,
         "X=D_W": 0
       },
+      "quantum_odd_word_inversions": 0,
+      "quantum_odd_word_permutation_sign": 1,
+      "subsign_product": 1,
       "total_orientation_sign": 1
     },
     "REFLECTED": {
@@ -12166,24 +12390,55 @@
         "product": 1,
         "target_prefix_parity": 1
       },
+      "canonical_full_odd_word": [
+        "TildeW",
+        "Q_barD",
+        "W",
+        "Q_D"
+      ],
       "canonical_pre_D_word": [
         "TildeW",
         "W"
+      ],
+      "canonical_quantum_odd_word": [
+        "Q_barD",
+        "Q_D"
+      ],
+      "declared_full_odd_word": [
+        "W",
+        "Q_D",
+        "TildeW",
+        "Q_barD"
       ],
       "declared_pre_D_word": [
         "W",
         "TildeW"
       ],
+      "declared_quantum_odd_word": [
+        "Q_D",
+        "Q_barD"
+      ],
       "external_fermion_permutation_sign": -1,
+      "full_block_parities": {
+        "TildeW_QbarD": 0,
+        "W_QD": 0
+      },
+      "full_odd_word_inversions": 4,
+      "full_odd_word_permutation_sign": 1,
       "odd_odd_inversions": 1,
       "orientation": "REFLECTED",
       "parities": {
         "D": 1,
+        "Q_D": 1,
+        "Q_barD": 1,
         "TildeW": 1,
         "W": 1,
         "X=D_W": 0
       },
-      "total_orientation_sign": -1
+      "quantum_odd_word_inversions": 1,
+      "quantum_odd_word_permutation_sign": -1,
+      "subsign_product": 1,
+      "total_orientation_sign": 1
     }
   },
   "graphs": {
@@ -12199,16 +12454,16 @@
               {
                 "label": "A",
                 "space": "COLOR_ADJOINT",
-                "variance": "UP"
+                "variance": "DOWN"
               },
               {
                 "label": "B",
                 "space": "COLOR_ADJOINT",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ],
             "name": "Source[nabla_-(X^A X^B)]",
-            "statistics": "BOSON"
+            "statistics": "FERMION"
           },
           "flavor_label": null,
           "leg_id": "L_source",
@@ -12231,7 +12486,7 @@
               {
                 "label": "dot_alpha",
                 "space": "DOTTED",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ],
             "name": "TildeW_dot_alpha",
@@ -12245,7 +12500,7 @@
             {
               "label": "dot_alpha",
               "space": "DOTTED",
-              "variance": "UP"
+              "variance": "DOWN"
             }
           ]
         },
@@ -12336,16 +12591,16 @@
               {
                 "label": "A",
                 "space": "COLOR_ADJOINT",
-                "variance": "UP"
+                "variance": "DOWN"
               },
               {
                 "label": "B",
                 "space": "COLOR_ADJOINT",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ],
             "name": "Source[nabla_-(X^A X^B)]",
-            "statistics": "BOSON"
+            "statistics": "FERMION"
           },
           "flow": "IN",
           "half_edge_id": "Abar_BW_I_source",
@@ -12409,7 +12664,7 @@
               {
                 "label": "dot_alpha",
                 "space": "DOTTED",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ],
             "name": "TildeW_dot_alpha",
@@ -12528,10 +12783,18 @@
         "external_canonical_pre_D_word": "TildeW,W",
         "external_declared_pre_D_word": "TildeW,W",
         "external_fermion_permutation_sign": "1",
+        "full_odd_word_permutation_sign": "1",
+        "insertion_operator_parity": "1",
         "orientation": "DIRECT",
         "physical_external_momenta": "TildeW(q),W(p),source(P=p+q)",
+        "quantum_odd_word_permutation_sign": "1",
         "routing": "r0=k;r1=k+q;r2=k+p+q",
+        "source_color_variances": "DOWN,DOWN",
+        "source_coupled_insertion_vertex_parity": "0",
+        "source_port_parity": "1",
+        "source_port_statistics": "FERMION",
         "symmetry_factor": "1",
+        "tildeW_dotted_variance": "DOWN",
         "total_orientation_sign": "1",
         "wick_multiplicity": "1",
         "wick_sign": "+1"
@@ -12612,16 +12875,16 @@
               {
                 "label": "A",
                 "space": "COLOR_ADJOINT",
-                "variance": "UP"
+                "variance": "DOWN"
               },
               {
                 "label": "B",
                 "space": "COLOR_ADJOINT",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ],
             "name": "Source[nabla_-(X^A X^B)]",
-            "statistics": "BOSON"
+            "statistics": "FERMION"
           },
           "flavor_label": null,
           "leg_id": "L_source",
@@ -12644,7 +12907,7 @@
               {
                 "label": "dot_alpha",
                 "space": "DOTTED",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ],
             "name": "TildeW_dot_alpha",
@@ -12658,7 +12921,7 @@
             {
               "label": "dot_alpha",
               "space": "DOTTED",
-              "variance": "UP"
+              "variance": "DOWN"
             }
           ]
         },
@@ -12749,16 +13012,16 @@
               {
                 "label": "A",
                 "space": "COLOR_ADJOINT",
-                "variance": "UP"
+                "variance": "DOWN"
               },
               {
                 "label": "B",
                 "space": "COLOR_ADJOINT",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ],
             "name": "Source[nabla_-(X^A X^B)]",
-            "statistics": "BOSON"
+            "statistics": "FERMION"
           },
           "flow": "IN",
           "half_edge_id": "Bbar_AW_I_source",
@@ -12822,7 +13085,7 @@
               {
                 "label": "dot_alpha",
                 "space": "DOTTED",
-                "variance": "UP"
+                "variance": "DOWN"
               }
             ],
             "name": "TildeW_dot_alpha",
@@ -12941,11 +13204,19 @@
         "external_canonical_pre_D_word": "TildeW,W",
         "external_declared_pre_D_word": "W,TildeW",
         "external_fermion_permutation_sign": "-1",
+        "full_odd_word_permutation_sign": "1",
+        "insertion_operator_parity": "1",
         "orientation": "REFLECTED",
         "physical_external_momenta": "TildeW(q),W(p),source(P=p+q)",
+        "quantum_odd_word_permutation_sign": "-1",
         "routing": "r0=k;r1=k+q;r2=k+p+q",
+        "source_color_variances": "DOWN,DOWN",
+        "source_coupled_insertion_vertex_parity": "0",
+        "source_port_parity": "1",
+        "source_port_statistics": "FERMION",
         "symmetry_factor": "1",
-        "total_orientation_sign": "-1",
+        "tildeW_dotted_variance": "DOWN",
+        "total_orientation_sign": "1",
         "wick_multiplicity": "1",
         "wick_sign": "+1"
       },
@@ -13015,35 +13286,13 @@
     }
   },
   "poles": {
-    "anomaly_status": "DERIVED_AGGREGATE_SD_CANDIDATE_NOT_ACCEPTED",
+    "anomaly_status": "INVALIDATED_NOT_PROPAGATED_AFTER_TYPED_SIGN_REPAIR",
     "bare_triangle_numerator_contains_epsilon": false,
-    "conditional_candidate_coefficient_fixed_orientation": "+g^2/(64*pi^2)",
-    "conditional_candidate_coefficients": {
-      "DIRECT": "+g^2/(64*pi^2)",
-      "REFLECTED": "-g^2/(64*pi^2)"
-    },
-    "conditional_two_orientation_single_color_tensor": "g^2/(64*pi^2)*c_{ACD}c_{BCE}*(i*p_+^dot_alpha)*[TildeW_dot_alpha^D*X^E-X^D*TildeW_dot_alpha^E]",
-    "contact_poles": {
-      "DIRECT": "-g^2/(128*pi^2*epsilon)*c_{ACD}c_{BCE}*T_(mu n nu)*delta4^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)",
-      "REFLECTED": "+g^2/(128*pi^2*epsilon)*c_{BCD}c_{ACE}*T_(mu n nu)*delta4^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)"
-    },
-    "contact_status": "AGGREGATE_SD_IDENTITY_NOT_BASIS_RESOLVED",
-    "evanescent_sigma_contraction": "p^rho*tilde_delta^(mu nu)*T_(mu rho nu)=-2*epsilon*p_+",
-    "finite_remainder_derivation": [
-      "hat_delta-delta4=-tilde_delta",
-      "(-tilde_delta)*T*p = -(-2*epsilon)*p_+ = +2*epsilon*p_+",
-      "[g^2/(128*pi^2*epsilon)]*[2*epsilon]=g^2/(64*pi^2)"
-    ],
+    "contact_poles": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
+    "contact_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
     "full_ordinary_triangle_bubble_cancellation_proved": false,
-    "metric_conventions": {
-      "mismatch": "hat_delta-delta4=-tilde_delta",
-      "tilde_delta": "delta4-hat_delta"
-    },
-    "metric_mismatch_proved_at_aggregate_sd_level": true,
-    "metric_mismatches": {
-      "DIRECT": "+g^2*(hat_delta-delta4)^(mu nu)/(128*pi^2*epsilon)",
-      "REFLECTED": "-g^2*(hat_delta-delta4)^(mu nu)/(128*pi^2*epsilon)"
-    },
+    "metric_mismatch_proved_at_aggregate_sd_level": false,
+    "metric_mismatch_status": "NOT_FORMED_CONTACT_COEFFICIENT_INVALIDATED",
     "missing_rule_is_not_finite_BV": true,
     "normalization": {
       "A0": "1/(16*pi^2)",
@@ -13051,15 +13300,10 @@
       "rank_two_pole": "Integral d^d ell/(2*pi)^d ell^mu ell^nu/(ell^2+Delta)^3 = A0*hat_g^(mu nu)/(4*epsilon)+finite",
       "simplex_integral": "2*Integral_simplex 1 = 1"
     },
+    "physical_symmetric_operator_word": "c_{ACD}c_{BCE}[TildeW_dot_alpha^D*mathcalD_+^dot_alpha X^E+(mathcalD_+^dot_alpha X^D)*TildeW_dot_alpha^E]",
+    "physical_symmetric_operator_word_status": "TYPE_AND_REFLECTION_QUOTIENT_FIXED_COEFFICIENT_NOT_PROPAGATED",
     "post_D_external_operator": "X^E=nabla_+ W_+^E",
     "pre_D_action_external_field": "W_+^E",
-    "reflected_relabelling": [
-      "-c_{BCD}c_{ACE}*TildeW^D*X^E",
-      "D<->E",
-      "-c_{BCE}c_{ACD}*TildeW^E*X^D",
-      "X is even, so TildeW^E*X^D=X^D*TildeW^E"
-    ],
-    "single_color_tensor_with_X_definition": "X^E=nabla_+W_+^E; therefore c_{ACD}c_{BCE}[TildeW_dot_alpha^D*nabla_+^dot_alpha X^E-(nabla_+^dot_alpha X^D)*TildeW_dot_alpha^E]",
     "triangle_derivation": [
       "L1^mu L2^nu = 4*ell^mu*ell^nu + terms with at most one ell",
       "2*Integral_simplex 1 = 1",
@@ -13068,7 +13312,7 @@
     ],
     "triangle_poles": {
       "DIRECT": "+g^2/(128*pi^2*epsilon)*c_{ACD}c_{BCE}*T_(mu n nu)*hat_delta^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)",
-      "REFLECTED": "-g^2/(128*pi^2*epsilon)*c_{BCD}c_{ACE}*T_(mu n nu)*hat_delta^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)"
+      "REFLECTED": "+g^2/(128*pi^2*epsilon)*c_{BCD}c_{ACE}*T_(mu n nu)*hat_delta^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)"
     },
     "triangle_status": "DERIVED_ISOLATED_TRIANGLE_ORDINARY_UV_POLE"
   },
@@ -13079,15 +13323,15 @@
     "bare_numerator_contains_epsilon": false,
     "coefficient_after_two_D_minus_placements": {
       "DIRECT": "+g^2/8",
-      "REFLECTED": "-g^2/8"
+      "REFLECTED": "+g^2/8"
     },
     "coefficient_per_D_minus_placement_after_four_endpoint_sum": {
       "DIRECT": "+g^2/16",
-      "REFLECTED": "-g^2/16"
+      "REFLECTED": "+g^2/16"
     },
     "coefficient_per_endpoint_row": {
       "DIRECT": "+g^2/16",
-      "REFLECTED": "-g^2/16"
+      "REFLECTED": "+g^2/16"
     },
     "denominator": "k^2*(k+q)^2*(k+p+q)^2",
     "post_D_external_operator": "X^E=nabla_+W_+^E",
@@ -13113,7 +13357,8 @@
           "momentum": "r0"
         },
         "classification": "ORDINARY_UV_POLE",
-        "contact_metric_pole": "-g^2/(1024*pi^2*epsilon)*delta4^(mu nu)",
+        "contact_metric_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
+        "contact_metric_pole_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
         "edge_tagged_raw_word": "D_-[I,LEFT_LETTER] K_+[I,e0] K_+[I,e2] barD_dot_alpha[vBar,e0] D_a[vW,e1]",
         "endpoint_transfer_signs": [
           -1,
@@ -13135,7 +13380,7 @@
           "row_prefactor_has_orientation_sign": true
         },
         "external_leg_derivative_tokens": [
-          "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+          "mathcalD_(+ dot_beta)[X^E(p)]=i*p_(+ dot_beta)*X^E(p);X^E=nabla_+W_+^E"
         ],
         "external_sign_audit": {
           "D_transfer": {
@@ -13145,23 +13390,54 @@
             "product": 1,
             "target_prefix_parity": 1
           },
+          "canonical_full_odd_word": [
+            "TildeW",
+            "Q_barD",
+            "W",
+            "Q_D"
+          ],
           "canonical_pre_D_word": [
             "TildeW",
             "W"
+          ],
+          "canonical_quantum_odd_word": [
+            "Q_barD",
+            "Q_D"
+          ],
+          "declared_full_odd_word": [
+            "TildeW",
+            "Q_barD",
+            "W",
+            "Q_D"
           ],
           "declared_pre_D_word": [
             "TildeW",
             "W"
           ],
+          "declared_quantum_odd_word": [
+            "Q_barD",
+            "Q_D"
+          ],
           "external_fermion_permutation_sign": 1,
+          "full_block_parities": {
+            "TildeW_QbarD": 0,
+            "W_QD": 0
+          },
+          "full_odd_word_inversions": 0,
+          "full_odd_word_permutation_sign": 1,
           "odd_odd_inversions": 0,
           "orientation": "DIRECT",
           "parities": {
             "D": 1,
+            "Q_D": 1,
+            "Q_barD": 1,
             "TildeW": 1,
             "W": 1,
             "X=D_W": 0
           },
+          "quantum_odd_word_inversions": 0,
+          "quantum_odd_word_permutation_sign": 1,
+          "subsign_product": 1,
           "total_orientation_sign": 1
         },
         "graph_id": "T-Abar_BW-w0-01",
@@ -13171,7 +13447,7 @@
           1
         ],
         "metric_contact_child_id": "T-Abar_BW-w0-01__SD_metric__DA-D-001",
-        "metric_orbit": "+g^2/(1024*pi^2*epsilon)*(hat_delta-delta4)^(mu nu)",
+        "metric_orbit": "NOT_FORMED_CONTACT_COEFFICIENT_INVALIDATED",
         "mixed_anticommutator_momenta": [
           "r0",
           "p",
@@ -13227,6 +13503,7 @@
         ],
         "trace_id": "DA-D-001",
         "triangle_metric_pole": "+g^2/(1024*pi^2*epsilon)*hat_delta^(mu nu)",
+        "triangle_metric_pole_status": "RECOMPUTED_ISOLATED_TRIANGLE_AFTER_TYPED_SIGN_REPAIR",
         "vertex_signs": [
           -1,
           1
@@ -13248,7 +13525,8 @@
           "momentum": "r0"
         },
         "classification": "ORDINARY_UV_POLE",
-        "contact_metric_pole": "-g^2/(1024*pi^2*epsilon)*delta4^(mu nu)",
+        "contact_metric_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
+        "contact_metric_pole_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
         "edge_tagged_raw_word": "D_-[I,LEFT_LETTER] K_+[I,e0] K_+[I,e2] barD_dot_alpha[vBar,e0] D_a[vW,e2]",
         "endpoint_transfer_signs": [
           -1,
@@ -13270,7 +13548,7 @@
           "row_prefactor_has_orientation_sign": true
         },
         "external_leg_derivative_tokens": [
-          "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+          "mathcalD_(+ dot_beta)[X^E(p)]=i*p_(+ dot_beta)*X^E(p);X^E=nabla_+W_+^E"
         ],
         "external_sign_audit": {
           "D_transfer": {
@@ -13280,23 +13558,54 @@
             "product": 1,
             "target_prefix_parity": 1
           },
+          "canonical_full_odd_word": [
+            "TildeW",
+            "Q_barD",
+            "W",
+            "Q_D"
+          ],
           "canonical_pre_D_word": [
             "TildeW",
             "W"
+          ],
+          "canonical_quantum_odd_word": [
+            "Q_barD",
+            "Q_D"
+          ],
+          "declared_full_odd_word": [
+            "TildeW",
+            "Q_barD",
+            "W",
+            "Q_D"
           ],
           "declared_pre_D_word": [
             "TildeW",
             "W"
           ],
+          "declared_quantum_odd_word": [
+            "Q_barD",
+            "Q_D"
+          ],
           "external_fermion_permutation_sign": 1,
+          "full_block_parities": {
+            "TildeW_QbarD": 0,
+            "W_QD": 0
+          },
+          "full_odd_word_inversions": 0,
+          "full_odd_word_permutation_sign": 1,
           "odd_odd_inversions": 0,
           "orientation": "DIRECT",
           "parities": {
             "D": 1,
+            "Q_D": 1,
+            "Q_barD": 1,
             "TildeW": 1,
             "W": 1,
             "X=D_W": 0
           },
+          "quantum_odd_word_inversions": 0,
+          "quantum_odd_word_permutation_sign": 1,
+          "subsign_product": 1,
           "total_orientation_sign": 1
         },
         "graph_id": "T-Abar_BW-w0-01",
@@ -13306,7 +13615,7 @@
           1
         ],
         "metric_contact_child_id": "T-Abar_BW-w0-01__SD_metric__DA-D-002",
-        "metric_orbit": "+g^2/(1024*pi^2*epsilon)*(hat_delta-delta4)^(mu nu)",
+        "metric_orbit": "NOT_FORMED_CONTACT_COEFFICIENT_INVALIDATED",
         "mixed_anticommutator_momenta": [
           "r0",
           "p",
@@ -13362,6 +13671,7 @@
         ],
         "trace_id": "DA-D-002",
         "triangle_metric_pole": "+g^2/(1024*pi^2*epsilon)*hat_delta^(mu nu)",
+        "triangle_metric_pole_status": "RECOMPUTED_ISOLATED_TRIANGLE_AFTER_TYPED_SIGN_REPAIR",
         "vertex_signs": [
           -1,
           -1
@@ -13383,7 +13693,8 @@
           "momentum": "r1"
         },
         "classification": "ORDINARY_UV_POLE",
-        "contact_metric_pole": "-g^2/(1024*pi^2*epsilon)*delta4^(mu nu)",
+        "contact_metric_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
+        "contact_metric_pole_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
         "edge_tagged_raw_word": "D_-[I,LEFT_LETTER] K_+[I,e0] K_+[I,e2] barD_dot_alpha[vBar,e1] D_a[vW,e1]",
         "endpoint_transfer_signs": [
           1,
@@ -13405,7 +13716,7 @@
           "row_prefactor_has_orientation_sign": true
         },
         "external_leg_derivative_tokens": [
-          "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+          "mathcalD_(+ dot_beta)[X^E(p)]=i*p_(+ dot_beta)*X^E(p);X^E=nabla_+W_+^E"
         ],
         "external_sign_audit": {
           "D_transfer": {
@@ -13415,23 +13726,54 @@
             "product": 1,
             "target_prefix_parity": 1
           },
+          "canonical_full_odd_word": [
+            "TildeW",
+            "Q_barD",
+            "W",
+            "Q_D"
+          ],
           "canonical_pre_D_word": [
             "TildeW",
             "W"
+          ],
+          "canonical_quantum_odd_word": [
+            "Q_barD",
+            "Q_D"
+          ],
+          "declared_full_odd_word": [
+            "TildeW",
+            "Q_barD",
+            "W",
+            "Q_D"
           ],
           "declared_pre_D_word": [
             "TildeW",
             "W"
           ],
+          "declared_quantum_odd_word": [
+            "Q_barD",
+            "Q_D"
+          ],
           "external_fermion_permutation_sign": 1,
+          "full_block_parities": {
+            "TildeW_QbarD": 0,
+            "W_QD": 0
+          },
+          "full_odd_word_inversions": 0,
+          "full_odd_word_permutation_sign": 1,
           "odd_odd_inversions": 0,
           "orientation": "DIRECT",
           "parities": {
             "D": 1,
+            "Q_D": 1,
+            "Q_barD": 1,
             "TildeW": 1,
             "W": 1,
             "X=D_W": 0
           },
+          "quantum_odd_word_inversions": 0,
+          "quantum_odd_word_permutation_sign": 1,
+          "subsign_product": 1,
           "total_orientation_sign": 1
         },
         "graph_id": "T-Abar_BW-w0-01",
@@ -13441,7 +13783,7 @@
           1
         ],
         "metric_contact_child_id": "T-Abar_BW-w0-01__SD_metric__DA-D-003",
-        "metric_orbit": "+g^2/(1024*pi^2*epsilon)*(hat_delta-delta4)^(mu nu)",
+        "metric_orbit": "NOT_FORMED_CONTACT_COEFFICIENT_INVALIDATED",
         "mixed_anticommutator_momenta": [
           "r1",
           "p",
@@ -13497,6 +13839,7 @@
         ],
         "trace_id": "DA-D-003",
         "triangle_metric_pole": "+g^2/(1024*pi^2*epsilon)*hat_delta^(mu nu)",
+        "triangle_metric_pole_status": "RECOMPUTED_ISOLATED_TRIANGLE_AFTER_TYPED_SIGN_REPAIR",
         "vertex_signs": [
           1,
           1
@@ -13518,7 +13861,8 @@
           "momentum": "r1"
         },
         "classification": "ORDINARY_UV_POLE",
-        "contact_metric_pole": "-g^2/(1024*pi^2*epsilon)*delta4^(mu nu)",
+        "contact_metric_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
+        "contact_metric_pole_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
         "edge_tagged_raw_word": "D_-[I,LEFT_LETTER] K_+[I,e0] K_+[I,e2] barD_dot_alpha[vBar,e1] D_a[vW,e2]",
         "endpoint_transfer_signs": [
           1,
@@ -13540,7 +13884,7 @@
           "row_prefactor_has_orientation_sign": true
         },
         "external_leg_derivative_tokens": [
-          "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+          "mathcalD_(+ dot_beta)[X^E(p)]=i*p_(+ dot_beta)*X^E(p);X^E=nabla_+W_+^E"
         ],
         "external_sign_audit": {
           "D_transfer": {
@@ -13550,23 +13894,54 @@
             "product": 1,
             "target_prefix_parity": 1
           },
+          "canonical_full_odd_word": [
+            "TildeW",
+            "Q_barD",
+            "W",
+            "Q_D"
+          ],
           "canonical_pre_D_word": [
             "TildeW",
             "W"
+          ],
+          "canonical_quantum_odd_word": [
+            "Q_barD",
+            "Q_D"
+          ],
+          "declared_full_odd_word": [
+            "TildeW",
+            "Q_barD",
+            "W",
+            "Q_D"
           ],
           "declared_pre_D_word": [
             "TildeW",
             "W"
           ],
+          "declared_quantum_odd_word": [
+            "Q_barD",
+            "Q_D"
+          ],
           "external_fermion_permutation_sign": 1,
+          "full_block_parities": {
+            "TildeW_QbarD": 0,
+            "W_QD": 0
+          },
+          "full_odd_word_inversions": 0,
+          "full_odd_word_permutation_sign": 1,
           "odd_odd_inversions": 0,
           "orientation": "DIRECT",
           "parities": {
             "D": 1,
+            "Q_D": 1,
+            "Q_barD": 1,
             "TildeW": 1,
             "W": 1,
             "X=D_W": 0
           },
+          "quantum_odd_word_inversions": 0,
+          "quantum_odd_word_permutation_sign": 1,
+          "subsign_product": 1,
           "total_orientation_sign": 1
         },
         "graph_id": "T-Abar_BW-w0-01",
@@ -13576,7 +13951,7 @@
           1
         ],
         "metric_contact_child_id": "T-Abar_BW-w0-01__SD_metric__DA-D-004",
-        "metric_orbit": "+g^2/(1024*pi^2*epsilon)*(hat_delta-delta4)^(mu nu)",
+        "metric_orbit": "NOT_FORMED_CONTACT_COEFFICIENT_INVALIDATED",
         "mixed_anticommutator_momenta": [
           "r1",
           "p",
@@ -13632,6 +14007,7 @@
         ],
         "trace_id": "DA-D-004",
         "triangle_metric_pole": "+g^2/(1024*pi^2*epsilon)*hat_delta^(mu nu)",
+        "triangle_metric_pole_status": "RECOMPUTED_ISOLATED_TRIANGLE_AFTER_TYPED_SIGN_REPAIR",
         "vertex_signs": [
           1,
           -1
@@ -13653,7 +14029,8 @@
           "momentum": "r0"
         },
         "classification": "ORDINARY_UV_POLE",
-        "contact_metric_pole": "-g^2/(1024*pi^2*epsilon)*delta4^(mu nu)",
+        "contact_metric_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
+        "contact_metric_pole_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
         "edge_tagged_raw_word": "D_-[I,RIGHT_LETTER] K_+[I,e0] K_+[I,e2] barD_dot_alpha[vBar,e0] D_a[vW,e1]",
         "endpoint_transfer_signs": [
           -1,
@@ -13675,7 +14052,7 @@
           "row_prefactor_has_orientation_sign": true
         },
         "external_leg_derivative_tokens": [
-          "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+          "mathcalD_(+ dot_beta)[X^E(p)]=i*p_(+ dot_beta)*X^E(p);X^E=nabla_+W_+^E"
         ],
         "external_sign_audit": {
           "D_transfer": {
@@ -13685,23 +14062,54 @@
             "product": 1,
             "target_prefix_parity": 1
           },
+          "canonical_full_odd_word": [
+            "TildeW",
+            "Q_barD",
+            "W",
+            "Q_D"
+          ],
           "canonical_pre_D_word": [
             "TildeW",
             "W"
+          ],
+          "canonical_quantum_odd_word": [
+            "Q_barD",
+            "Q_D"
+          ],
+          "declared_full_odd_word": [
+            "TildeW",
+            "Q_barD",
+            "W",
+            "Q_D"
           ],
           "declared_pre_D_word": [
             "TildeW",
             "W"
           ],
+          "declared_quantum_odd_word": [
+            "Q_barD",
+            "Q_D"
+          ],
           "external_fermion_permutation_sign": 1,
+          "full_block_parities": {
+            "TildeW_QbarD": 0,
+            "W_QD": 0
+          },
+          "full_odd_word_inversions": 0,
+          "full_odd_word_permutation_sign": 1,
           "odd_odd_inversions": 0,
           "orientation": "DIRECT",
           "parities": {
             "D": 1,
+            "Q_D": 1,
+            "Q_barD": 1,
             "TildeW": 1,
             "W": 1,
             "X=D_W": 0
           },
+          "quantum_odd_word_inversions": 0,
+          "quantum_odd_word_permutation_sign": 1,
+          "subsign_product": 1,
           "total_orientation_sign": 1
         },
         "graph_id": "T-Abar_BW-w0-01",
@@ -13711,7 +14119,7 @@
           1
         ],
         "metric_contact_child_id": "T-Abar_BW-w0-01__SD_metric__DA-D-005",
-        "metric_orbit": "+g^2/(1024*pi^2*epsilon)*(hat_delta-delta4)^(mu nu)",
+        "metric_orbit": "NOT_FORMED_CONTACT_COEFFICIENT_INVALIDATED",
         "mixed_anticommutator_momenta": [
           "r0",
           "p",
@@ -13767,6 +14175,7 @@
         ],
         "trace_id": "DA-D-005",
         "triangle_metric_pole": "+g^2/(1024*pi^2*epsilon)*hat_delta^(mu nu)",
+        "triangle_metric_pole_status": "RECOMPUTED_ISOLATED_TRIANGLE_AFTER_TYPED_SIGN_REPAIR",
         "vertex_signs": [
           -1,
           1
@@ -13788,7 +14197,8 @@
           "momentum": "r0"
         },
         "classification": "ORDINARY_UV_POLE",
-        "contact_metric_pole": "-g^2/(1024*pi^2*epsilon)*delta4^(mu nu)",
+        "contact_metric_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
+        "contact_metric_pole_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
         "edge_tagged_raw_word": "D_-[I,RIGHT_LETTER] K_+[I,e0] K_+[I,e2] barD_dot_alpha[vBar,e0] D_a[vW,e2]",
         "endpoint_transfer_signs": [
           -1,
@@ -13810,7 +14220,7 @@
           "row_prefactor_has_orientation_sign": true
         },
         "external_leg_derivative_tokens": [
-          "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+          "mathcalD_(+ dot_beta)[X^E(p)]=i*p_(+ dot_beta)*X^E(p);X^E=nabla_+W_+^E"
         ],
         "external_sign_audit": {
           "D_transfer": {
@@ -13820,23 +14230,54 @@
             "product": 1,
             "target_prefix_parity": 1
           },
+          "canonical_full_odd_word": [
+            "TildeW",
+            "Q_barD",
+            "W",
+            "Q_D"
+          ],
           "canonical_pre_D_word": [
             "TildeW",
             "W"
+          ],
+          "canonical_quantum_odd_word": [
+            "Q_barD",
+            "Q_D"
+          ],
+          "declared_full_odd_word": [
+            "TildeW",
+            "Q_barD",
+            "W",
+            "Q_D"
           ],
           "declared_pre_D_word": [
             "TildeW",
             "W"
           ],
+          "declared_quantum_odd_word": [
+            "Q_barD",
+            "Q_D"
+          ],
           "external_fermion_permutation_sign": 1,
+          "full_block_parities": {
+            "TildeW_QbarD": 0,
+            "W_QD": 0
+          },
+          "full_odd_word_inversions": 0,
+          "full_odd_word_permutation_sign": 1,
           "odd_odd_inversions": 0,
           "orientation": "DIRECT",
           "parities": {
             "D": 1,
+            "Q_D": 1,
+            "Q_barD": 1,
             "TildeW": 1,
             "W": 1,
             "X=D_W": 0
           },
+          "quantum_odd_word_inversions": 0,
+          "quantum_odd_word_permutation_sign": 1,
+          "subsign_product": 1,
           "total_orientation_sign": 1
         },
         "graph_id": "T-Abar_BW-w0-01",
@@ -13846,7 +14287,7 @@
           1
         ],
         "metric_contact_child_id": "T-Abar_BW-w0-01__SD_metric__DA-D-006",
-        "metric_orbit": "+g^2/(1024*pi^2*epsilon)*(hat_delta-delta4)^(mu nu)",
+        "metric_orbit": "NOT_FORMED_CONTACT_COEFFICIENT_INVALIDATED",
         "mixed_anticommutator_momenta": [
           "r0",
           "p",
@@ -13902,6 +14343,7 @@
         ],
         "trace_id": "DA-D-006",
         "triangle_metric_pole": "+g^2/(1024*pi^2*epsilon)*hat_delta^(mu nu)",
+        "triangle_metric_pole_status": "RECOMPUTED_ISOLATED_TRIANGLE_AFTER_TYPED_SIGN_REPAIR",
         "vertex_signs": [
           -1,
           -1
@@ -13923,7 +14365,8 @@
           "momentum": "r1"
         },
         "classification": "ORDINARY_UV_POLE",
-        "contact_metric_pole": "-g^2/(1024*pi^2*epsilon)*delta4^(mu nu)",
+        "contact_metric_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
+        "contact_metric_pole_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
         "edge_tagged_raw_word": "D_-[I,RIGHT_LETTER] K_+[I,e0] K_+[I,e2] barD_dot_alpha[vBar,e1] D_a[vW,e1]",
         "endpoint_transfer_signs": [
           1,
@@ -13945,7 +14388,7 @@
           "row_prefactor_has_orientation_sign": true
         },
         "external_leg_derivative_tokens": [
-          "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+          "mathcalD_(+ dot_beta)[X^E(p)]=i*p_(+ dot_beta)*X^E(p);X^E=nabla_+W_+^E"
         ],
         "external_sign_audit": {
           "D_transfer": {
@@ -13955,23 +14398,54 @@
             "product": 1,
             "target_prefix_parity": 1
           },
+          "canonical_full_odd_word": [
+            "TildeW",
+            "Q_barD",
+            "W",
+            "Q_D"
+          ],
           "canonical_pre_D_word": [
             "TildeW",
             "W"
+          ],
+          "canonical_quantum_odd_word": [
+            "Q_barD",
+            "Q_D"
+          ],
+          "declared_full_odd_word": [
+            "TildeW",
+            "Q_barD",
+            "W",
+            "Q_D"
           ],
           "declared_pre_D_word": [
             "TildeW",
             "W"
           ],
+          "declared_quantum_odd_word": [
+            "Q_barD",
+            "Q_D"
+          ],
           "external_fermion_permutation_sign": 1,
+          "full_block_parities": {
+            "TildeW_QbarD": 0,
+            "W_QD": 0
+          },
+          "full_odd_word_inversions": 0,
+          "full_odd_word_permutation_sign": 1,
           "odd_odd_inversions": 0,
           "orientation": "DIRECT",
           "parities": {
             "D": 1,
+            "Q_D": 1,
+            "Q_barD": 1,
             "TildeW": 1,
             "W": 1,
             "X=D_W": 0
           },
+          "quantum_odd_word_inversions": 0,
+          "quantum_odd_word_permutation_sign": 1,
+          "subsign_product": 1,
           "total_orientation_sign": 1
         },
         "graph_id": "T-Abar_BW-w0-01",
@@ -13981,7 +14455,7 @@
           1
         ],
         "metric_contact_child_id": "T-Abar_BW-w0-01__SD_metric__DA-D-007",
-        "metric_orbit": "+g^2/(1024*pi^2*epsilon)*(hat_delta-delta4)^(mu nu)",
+        "metric_orbit": "NOT_FORMED_CONTACT_COEFFICIENT_INVALIDATED",
         "mixed_anticommutator_momenta": [
           "r1",
           "p",
@@ -14037,6 +14511,7 @@
         ],
         "trace_id": "DA-D-007",
         "triangle_metric_pole": "+g^2/(1024*pi^2*epsilon)*hat_delta^(mu nu)",
+        "triangle_metric_pole_status": "RECOMPUTED_ISOLATED_TRIANGLE_AFTER_TYPED_SIGN_REPAIR",
         "vertex_signs": [
           1,
           1
@@ -14058,7 +14533,8 @@
           "momentum": "r1"
         },
         "classification": "ORDINARY_UV_POLE",
-        "contact_metric_pole": "-g^2/(1024*pi^2*epsilon)*delta4^(mu nu)",
+        "contact_metric_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
+        "contact_metric_pole_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
         "edge_tagged_raw_word": "D_-[I,RIGHT_LETTER] K_+[I,e0] K_+[I,e2] barD_dot_alpha[vBar,e1] D_a[vW,e2]",
         "endpoint_transfer_signs": [
           1,
@@ -14080,7 +14556,7 @@
           "row_prefactor_has_orientation_sign": true
         },
         "external_leg_derivative_tokens": [
-          "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+          "mathcalD_(+ dot_beta)[X^E(p)]=i*p_(+ dot_beta)*X^E(p);X^E=nabla_+W_+^E"
         ],
         "external_sign_audit": {
           "D_transfer": {
@@ -14090,23 +14566,54 @@
             "product": 1,
             "target_prefix_parity": 1
           },
+          "canonical_full_odd_word": [
+            "TildeW",
+            "Q_barD",
+            "W",
+            "Q_D"
+          ],
           "canonical_pre_D_word": [
             "TildeW",
             "W"
+          ],
+          "canonical_quantum_odd_word": [
+            "Q_barD",
+            "Q_D"
+          ],
+          "declared_full_odd_word": [
+            "TildeW",
+            "Q_barD",
+            "W",
+            "Q_D"
           ],
           "declared_pre_D_word": [
             "TildeW",
             "W"
           ],
+          "declared_quantum_odd_word": [
+            "Q_barD",
+            "Q_D"
+          ],
           "external_fermion_permutation_sign": 1,
+          "full_block_parities": {
+            "TildeW_QbarD": 0,
+            "W_QD": 0
+          },
+          "full_odd_word_inversions": 0,
+          "full_odd_word_permutation_sign": 1,
           "odd_odd_inversions": 0,
           "orientation": "DIRECT",
           "parities": {
             "D": 1,
+            "Q_D": 1,
+            "Q_barD": 1,
             "TildeW": 1,
             "W": 1,
             "X=D_W": 0
           },
+          "quantum_odd_word_inversions": 0,
+          "quantum_odd_word_permutation_sign": 1,
+          "subsign_product": 1,
           "total_orientation_sign": 1
         },
         "graph_id": "T-Abar_BW-w0-01",
@@ -14116,7 +14623,7 @@
           1
         ],
         "metric_contact_child_id": "T-Abar_BW-w0-01__SD_metric__DA-D-008",
-        "metric_orbit": "+g^2/(1024*pi^2*epsilon)*(hat_delta-delta4)^(mu nu)",
+        "metric_orbit": "NOT_FORMED_CONTACT_COEFFICIENT_INVALIDATED",
         "mixed_anticommutator_momenta": [
           "r1",
           "p",
@@ -14172,6 +14679,7 @@
         ],
         "trace_id": "DA-D-008",
         "triangle_metric_pole": "+g^2/(1024*pi^2*epsilon)*hat_delta^(mu nu)",
+        "triangle_metric_pole_status": "RECOMPUTED_ISOLATED_TRIANGLE_AFTER_TYPED_SIGN_REPAIR",
         "vertex_signs": [
           1,
           -1
@@ -14195,7 +14703,8 @@
           "momentum": "r0"
         },
         "classification": "ORDINARY_UV_POLE",
-        "contact_metric_pole": "+g^2/(1024*pi^2*epsilon)*delta4^(mu nu)",
+        "contact_metric_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
+        "contact_metric_pole_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
         "edge_tagged_raw_word": "D_-[I,LEFT_LETTER] K_+[I,e0] K_+[I,e2] barD_dot_alpha[vBar,e0] D_a[vW,e1]",
         "endpoint_transfer_signs": [
           -1,
@@ -14217,7 +14726,7 @@
           "row_prefactor_has_orientation_sign": true
         },
         "external_leg_derivative_tokens": [
-          "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+          "mathcalD_(+ dot_beta)[X^E(p)]=i*p_(+ dot_beta)*X^E(p);X^E=nabla_+W_+^E"
         ],
         "external_sign_audit": {
           "D_transfer": {
@@ -14227,24 +14736,55 @@
             "product": 1,
             "target_prefix_parity": 1
           },
+          "canonical_full_odd_word": [
+            "TildeW",
+            "Q_barD",
+            "W",
+            "Q_D"
+          ],
           "canonical_pre_D_word": [
             "TildeW",
             "W"
+          ],
+          "canonical_quantum_odd_word": [
+            "Q_barD",
+            "Q_D"
+          ],
+          "declared_full_odd_word": [
+            "W",
+            "Q_D",
+            "TildeW",
+            "Q_barD"
           ],
           "declared_pre_D_word": [
             "W",
             "TildeW"
           ],
+          "declared_quantum_odd_word": [
+            "Q_D",
+            "Q_barD"
+          ],
           "external_fermion_permutation_sign": -1,
+          "full_block_parities": {
+            "TildeW_QbarD": 0,
+            "W_QD": 0
+          },
+          "full_odd_word_inversions": 4,
+          "full_odd_word_permutation_sign": 1,
           "odd_odd_inversions": 1,
           "orientation": "REFLECTED",
           "parities": {
             "D": 1,
+            "Q_D": 1,
+            "Q_barD": 1,
             "TildeW": 1,
             "W": 1,
             "X=D_W": 0
           },
-          "total_orientation_sign": -1
+          "quantum_odd_word_inversions": 1,
+          "quantum_odd_word_permutation_sign": -1,
+          "subsign_product": 1,
+          "total_orientation_sign": 1
         },
         "graph_id": "T-Bbar_AW-w0-01",
         "graph_prefactor_before_D_chain": "-g^2/8",
@@ -14253,7 +14793,7 @@
           1
         ],
         "metric_contact_child_id": "T-Bbar_AW-w0-01__SD_metric__DA-R-001",
-        "metric_orbit": "-g^2/(1024*pi^2*epsilon)*(hat_delta-delta4)^(mu nu)",
+        "metric_orbit": "NOT_FORMED_CONTACT_COEFFICIENT_INVALIDATED",
         "mixed_anticommutator_momenta": [
           "r0",
           "p",
@@ -14263,9 +14803,9 @@
         "orbit_classification": "ANOMALY_CANDIDATE_METRIC_POLE",
         "orientation": "REFLECTED",
         "propagator_collapses_in_metric_branch": [],
-        "row_prefactor": "-g^2/16",
+        "row_prefactor": "+g^2/16",
         "total_endpoint_sign": 1,
-        "total_orientation_sign": -1,
+        "total_orientation_sign": 1,
         "trace": [
           {
             "input": "D_-[K_+V] K_+V or K_+V D_-[K_+V]",
@@ -14308,7 +14848,8 @@
           }
         ],
         "trace_id": "DA-R-001",
-        "triangle_metric_pole": "-g^2/(1024*pi^2*epsilon)*hat_delta^(mu nu)",
+        "triangle_metric_pole": "+g^2/(1024*pi^2*epsilon)*hat_delta^(mu nu)",
+        "triangle_metric_pole_status": "RECOMPUTED_ISOLATED_TRIANGLE_AFTER_TYPED_SIGN_REPAIR",
         "vertex_signs": [
           -1,
           1
@@ -14330,7 +14871,8 @@
           "momentum": "r0"
         },
         "classification": "ORDINARY_UV_POLE",
-        "contact_metric_pole": "+g^2/(1024*pi^2*epsilon)*delta4^(mu nu)",
+        "contact_metric_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
+        "contact_metric_pole_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
         "edge_tagged_raw_word": "D_-[I,LEFT_LETTER] K_+[I,e0] K_+[I,e2] barD_dot_alpha[vBar,e0] D_a[vW,e2]",
         "endpoint_transfer_signs": [
           -1,
@@ -14352,7 +14894,7 @@
           "row_prefactor_has_orientation_sign": true
         },
         "external_leg_derivative_tokens": [
-          "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+          "mathcalD_(+ dot_beta)[X^E(p)]=i*p_(+ dot_beta)*X^E(p);X^E=nabla_+W_+^E"
         ],
         "external_sign_audit": {
           "D_transfer": {
@@ -14362,24 +14904,55 @@
             "product": 1,
             "target_prefix_parity": 1
           },
+          "canonical_full_odd_word": [
+            "TildeW",
+            "Q_barD",
+            "W",
+            "Q_D"
+          ],
           "canonical_pre_D_word": [
             "TildeW",
             "W"
+          ],
+          "canonical_quantum_odd_word": [
+            "Q_barD",
+            "Q_D"
+          ],
+          "declared_full_odd_word": [
+            "W",
+            "Q_D",
+            "TildeW",
+            "Q_barD"
           ],
           "declared_pre_D_word": [
             "W",
             "TildeW"
           ],
+          "declared_quantum_odd_word": [
+            "Q_D",
+            "Q_barD"
+          ],
           "external_fermion_permutation_sign": -1,
+          "full_block_parities": {
+            "TildeW_QbarD": 0,
+            "W_QD": 0
+          },
+          "full_odd_word_inversions": 4,
+          "full_odd_word_permutation_sign": 1,
           "odd_odd_inversions": 1,
           "orientation": "REFLECTED",
           "parities": {
             "D": 1,
+            "Q_D": 1,
+            "Q_barD": 1,
             "TildeW": 1,
             "W": 1,
             "X=D_W": 0
           },
-          "total_orientation_sign": -1
+          "quantum_odd_word_inversions": 1,
+          "quantum_odd_word_permutation_sign": -1,
+          "subsign_product": 1,
+          "total_orientation_sign": 1
         },
         "graph_id": "T-Bbar_AW-w0-01",
         "graph_prefactor_before_D_chain": "-g^2/8",
@@ -14388,7 +14961,7 @@
           1
         ],
         "metric_contact_child_id": "T-Bbar_AW-w0-01__SD_metric__DA-R-002",
-        "metric_orbit": "-g^2/(1024*pi^2*epsilon)*(hat_delta-delta4)^(mu nu)",
+        "metric_orbit": "NOT_FORMED_CONTACT_COEFFICIENT_INVALIDATED",
         "mixed_anticommutator_momenta": [
           "r0",
           "p",
@@ -14398,9 +14971,9 @@
         "orbit_classification": "ANOMALY_CANDIDATE_METRIC_POLE",
         "orientation": "REFLECTED",
         "propagator_collapses_in_metric_branch": [],
-        "row_prefactor": "-g^2/16",
+        "row_prefactor": "+g^2/16",
         "total_endpoint_sign": 1,
-        "total_orientation_sign": -1,
+        "total_orientation_sign": 1,
         "trace": [
           {
             "input": "D_-[K_+V] K_+V or K_+V D_-[K_+V]",
@@ -14443,7 +15016,8 @@
           }
         ],
         "trace_id": "DA-R-002",
-        "triangle_metric_pole": "-g^2/(1024*pi^2*epsilon)*hat_delta^(mu nu)",
+        "triangle_metric_pole": "+g^2/(1024*pi^2*epsilon)*hat_delta^(mu nu)",
+        "triangle_metric_pole_status": "RECOMPUTED_ISOLATED_TRIANGLE_AFTER_TYPED_SIGN_REPAIR",
         "vertex_signs": [
           -1,
           -1
@@ -14465,7 +15039,8 @@
           "momentum": "r1"
         },
         "classification": "ORDINARY_UV_POLE",
-        "contact_metric_pole": "+g^2/(1024*pi^2*epsilon)*delta4^(mu nu)",
+        "contact_metric_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
+        "contact_metric_pole_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
         "edge_tagged_raw_word": "D_-[I,LEFT_LETTER] K_+[I,e0] K_+[I,e2] barD_dot_alpha[vBar,e1] D_a[vW,e1]",
         "endpoint_transfer_signs": [
           1,
@@ -14487,7 +15062,7 @@
           "row_prefactor_has_orientation_sign": true
         },
         "external_leg_derivative_tokens": [
-          "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+          "mathcalD_(+ dot_beta)[X^E(p)]=i*p_(+ dot_beta)*X^E(p);X^E=nabla_+W_+^E"
         ],
         "external_sign_audit": {
           "D_transfer": {
@@ -14497,24 +15072,55 @@
             "product": 1,
             "target_prefix_parity": 1
           },
+          "canonical_full_odd_word": [
+            "TildeW",
+            "Q_barD",
+            "W",
+            "Q_D"
+          ],
           "canonical_pre_D_word": [
             "TildeW",
             "W"
+          ],
+          "canonical_quantum_odd_word": [
+            "Q_barD",
+            "Q_D"
+          ],
+          "declared_full_odd_word": [
+            "W",
+            "Q_D",
+            "TildeW",
+            "Q_barD"
           ],
           "declared_pre_D_word": [
             "W",
             "TildeW"
           ],
+          "declared_quantum_odd_word": [
+            "Q_D",
+            "Q_barD"
+          ],
           "external_fermion_permutation_sign": -1,
+          "full_block_parities": {
+            "TildeW_QbarD": 0,
+            "W_QD": 0
+          },
+          "full_odd_word_inversions": 4,
+          "full_odd_word_permutation_sign": 1,
           "odd_odd_inversions": 1,
           "orientation": "REFLECTED",
           "parities": {
             "D": 1,
+            "Q_D": 1,
+            "Q_barD": 1,
             "TildeW": 1,
             "W": 1,
             "X=D_W": 0
           },
-          "total_orientation_sign": -1
+          "quantum_odd_word_inversions": 1,
+          "quantum_odd_word_permutation_sign": -1,
+          "subsign_product": 1,
+          "total_orientation_sign": 1
         },
         "graph_id": "T-Bbar_AW-w0-01",
         "graph_prefactor_before_D_chain": "-g^2/8",
@@ -14523,7 +15129,7 @@
           1
         ],
         "metric_contact_child_id": "T-Bbar_AW-w0-01__SD_metric__DA-R-003",
-        "metric_orbit": "-g^2/(1024*pi^2*epsilon)*(hat_delta-delta4)^(mu nu)",
+        "metric_orbit": "NOT_FORMED_CONTACT_COEFFICIENT_INVALIDATED",
         "mixed_anticommutator_momenta": [
           "r1",
           "p",
@@ -14533,9 +15139,9 @@
         "orbit_classification": "ANOMALY_CANDIDATE_METRIC_POLE",
         "orientation": "REFLECTED",
         "propagator_collapses_in_metric_branch": [],
-        "row_prefactor": "-g^2/16",
+        "row_prefactor": "+g^2/16",
         "total_endpoint_sign": 1,
-        "total_orientation_sign": -1,
+        "total_orientation_sign": 1,
         "trace": [
           {
             "input": "D_-[K_+V] K_+V or K_+V D_-[K_+V]",
@@ -14578,7 +15184,8 @@
           }
         ],
         "trace_id": "DA-R-003",
-        "triangle_metric_pole": "-g^2/(1024*pi^2*epsilon)*hat_delta^(mu nu)",
+        "triangle_metric_pole": "+g^2/(1024*pi^2*epsilon)*hat_delta^(mu nu)",
+        "triangle_metric_pole_status": "RECOMPUTED_ISOLATED_TRIANGLE_AFTER_TYPED_SIGN_REPAIR",
         "vertex_signs": [
           1,
           1
@@ -14600,7 +15207,8 @@
           "momentum": "r1"
         },
         "classification": "ORDINARY_UV_POLE",
-        "contact_metric_pole": "+g^2/(1024*pi^2*epsilon)*delta4^(mu nu)",
+        "contact_metric_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
+        "contact_metric_pole_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
         "edge_tagged_raw_word": "D_-[I,LEFT_LETTER] K_+[I,e0] K_+[I,e2] barD_dot_alpha[vBar,e1] D_a[vW,e2]",
         "endpoint_transfer_signs": [
           1,
@@ -14622,7 +15230,7 @@
           "row_prefactor_has_orientation_sign": true
         },
         "external_leg_derivative_tokens": [
-          "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+          "mathcalD_(+ dot_beta)[X^E(p)]=i*p_(+ dot_beta)*X^E(p);X^E=nabla_+W_+^E"
         ],
         "external_sign_audit": {
           "D_transfer": {
@@ -14632,24 +15240,55 @@
             "product": 1,
             "target_prefix_parity": 1
           },
+          "canonical_full_odd_word": [
+            "TildeW",
+            "Q_barD",
+            "W",
+            "Q_D"
+          ],
           "canonical_pre_D_word": [
             "TildeW",
             "W"
+          ],
+          "canonical_quantum_odd_word": [
+            "Q_barD",
+            "Q_D"
+          ],
+          "declared_full_odd_word": [
+            "W",
+            "Q_D",
+            "TildeW",
+            "Q_barD"
           ],
           "declared_pre_D_word": [
             "W",
             "TildeW"
           ],
+          "declared_quantum_odd_word": [
+            "Q_D",
+            "Q_barD"
+          ],
           "external_fermion_permutation_sign": -1,
+          "full_block_parities": {
+            "TildeW_QbarD": 0,
+            "W_QD": 0
+          },
+          "full_odd_word_inversions": 4,
+          "full_odd_word_permutation_sign": 1,
           "odd_odd_inversions": 1,
           "orientation": "REFLECTED",
           "parities": {
             "D": 1,
+            "Q_D": 1,
+            "Q_barD": 1,
             "TildeW": 1,
             "W": 1,
             "X=D_W": 0
           },
-          "total_orientation_sign": -1
+          "quantum_odd_word_inversions": 1,
+          "quantum_odd_word_permutation_sign": -1,
+          "subsign_product": 1,
+          "total_orientation_sign": 1
         },
         "graph_id": "T-Bbar_AW-w0-01",
         "graph_prefactor_before_D_chain": "-g^2/8",
@@ -14658,7 +15297,7 @@
           1
         ],
         "metric_contact_child_id": "T-Bbar_AW-w0-01__SD_metric__DA-R-004",
-        "metric_orbit": "-g^2/(1024*pi^2*epsilon)*(hat_delta-delta4)^(mu nu)",
+        "metric_orbit": "NOT_FORMED_CONTACT_COEFFICIENT_INVALIDATED",
         "mixed_anticommutator_momenta": [
           "r1",
           "p",
@@ -14668,9 +15307,9 @@
         "orbit_classification": "ANOMALY_CANDIDATE_METRIC_POLE",
         "orientation": "REFLECTED",
         "propagator_collapses_in_metric_branch": [],
-        "row_prefactor": "-g^2/16",
+        "row_prefactor": "+g^2/16",
         "total_endpoint_sign": 1,
-        "total_orientation_sign": -1,
+        "total_orientation_sign": 1,
         "trace": [
           {
             "input": "D_-[K_+V] K_+V or K_+V D_-[K_+V]",
@@ -14713,7 +15352,8 @@
           }
         ],
         "trace_id": "DA-R-004",
-        "triangle_metric_pole": "-g^2/(1024*pi^2*epsilon)*hat_delta^(mu nu)",
+        "triangle_metric_pole": "+g^2/(1024*pi^2*epsilon)*hat_delta^(mu nu)",
+        "triangle_metric_pole_status": "RECOMPUTED_ISOLATED_TRIANGLE_AFTER_TYPED_SIGN_REPAIR",
         "vertex_signs": [
           1,
           -1
@@ -14735,7 +15375,8 @@
           "momentum": "r0"
         },
         "classification": "ORDINARY_UV_POLE",
-        "contact_metric_pole": "+g^2/(1024*pi^2*epsilon)*delta4^(mu nu)",
+        "contact_metric_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
+        "contact_metric_pole_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
         "edge_tagged_raw_word": "D_-[I,RIGHT_LETTER] K_+[I,e0] K_+[I,e2] barD_dot_alpha[vBar,e0] D_a[vW,e1]",
         "endpoint_transfer_signs": [
           -1,
@@ -14757,7 +15398,7 @@
           "row_prefactor_has_orientation_sign": true
         },
         "external_leg_derivative_tokens": [
-          "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+          "mathcalD_(+ dot_beta)[X^E(p)]=i*p_(+ dot_beta)*X^E(p);X^E=nabla_+W_+^E"
         ],
         "external_sign_audit": {
           "D_transfer": {
@@ -14767,24 +15408,55 @@
             "product": 1,
             "target_prefix_parity": 1
           },
+          "canonical_full_odd_word": [
+            "TildeW",
+            "Q_barD",
+            "W",
+            "Q_D"
+          ],
           "canonical_pre_D_word": [
             "TildeW",
             "W"
+          ],
+          "canonical_quantum_odd_word": [
+            "Q_barD",
+            "Q_D"
+          ],
+          "declared_full_odd_word": [
+            "W",
+            "Q_D",
+            "TildeW",
+            "Q_barD"
           ],
           "declared_pre_D_word": [
             "W",
             "TildeW"
           ],
+          "declared_quantum_odd_word": [
+            "Q_D",
+            "Q_barD"
+          ],
           "external_fermion_permutation_sign": -1,
+          "full_block_parities": {
+            "TildeW_QbarD": 0,
+            "W_QD": 0
+          },
+          "full_odd_word_inversions": 4,
+          "full_odd_word_permutation_sign": 1,
           "odd_odd_inversions": 1,
           "orientation": "REFLECTED",
           "parities": {
             "D": 1,
+            "Q_D": 1,
+            "Q_barD": 1,
             "TildeW": 1,
             "W": 1,
             "X=D_W": 0
           },
-          "total_orientation_sign": -1
+          "quantum_odd_word_inversions": 1,
+          "quantum_odd_word_permutation_sign": -1,
+          "subsign_product": 1,
+          "total_orientation_sign": 1
         },
         "graph_id": "T-Bbar_AW-w0-01",
         "graph_prefactor_before_D_chain": "-g^2/8",
@@ -14793,7 +15465,7 @@
           1
         ],
         "metric_contact_child_id": "T-Bbar_AW-w0-01__SD_metric__DA-R-005",
-        "metric_orbit": "-g^2/(1024*pi^2*epsilon)*(hat_delta-delta4)^(mu nu)",
+        "metric_orbit": "NOT_FORMED_CONTACT_COEFFICIENT_INVALIDATED",
         "mixed_anticommutator_momenta": [
           "r0",
           "p",
@@ -14803,9 +15475,9 @@
         "orbit_classification": "ANOMALY_CANDIDATE_METRIC_POLE",
         "orientation": "REFLECTED",
         "propagator_collapses_in_metric_branch": [],
-        "row_prefactor": "-g^2/16",
+        "row_prefactor": "+g^2/16",
         "total_endpoint_sign": 1,
-        "total_orientation_sign": -1,
+        "total_orientation_sign": 1,
         "trace": [
           {
             "input": "D_-[K_+V] K_+V or K_+V D_-[K_+V]",
@@ -14848,7 +15520,8 @@
           }
         ],
         "trace_id": "DA-R-005",
-        "triangle_metric_pole": "-g^2/(1024*pi^2*epsilon)*hat_delta^(mu nu)",
+        "triangle_metric_pole": "+g^2/(1024*pi^2*epsilon)*hat_delta^(mu nu)",
+        "triangle_metric_pole_status": "RECOMPUTED_ISOLATED_TRIANGLE_AFTER_TYPED_SIGN_REPAIR",
         "vertex_signs": [
           -1,
           1
@@ -14870,7 +15543,8 @@
           "momentum": "r0"
         },
         "classification": "ORDINARY_UV_POLE",
-        "contact_metric_pole": "+g^2/(1024*pi^2*epsilon)*delta4^(mu nu)",
+        "contact_metric_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
+        "contact_metric_pole_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
         "edge_tagged_raw_word": "D_-[I,RIGHT_LETTER] K_+[I,e0] K_+[I,e2] barD_dot_alpha[vBar,e0] D_a[vW,e2]",
         "endpoint_transfer_signs": [
           -1,
@@ -14892,7 +15566,7 @@
           "row_prefactor_has_orientation_sign": true
         },
         "external_leg_derivative_tokens": [
-          "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+          "mathcalD_(+ dot_beta)[X^E(p)]=i*p_(+ dot_beta)*X^E(p);X^E=nabla_+W_+^E"
         ],
         "external_sign_audit": {
           "D_transfer": {
@@ -14902,24 +15576,55 @@
             "product": 1,
             "target_prefix_parity": 1
           },
+          "canonical_full_odd_word": [
+            "TildeW",
+            "Q_barD",
+            "W",
+            "Q_D"
+          ],
           "canonical_pre_D_word": [
             "TildeW",
             "W"
+          ],
+          "canonical_quantum_odd_word": [
+            "Q_barD",
+            "Q_D"
+          ],
+          "declared_full_odd_word": [
+            "W",
+            "Q_D",
+            "TildeW",
+            "Q_barD"
           ],
           "declared_pre_D_word": [
             "W",
             "TildeW"
           ],
+          "declared_quantum_odd_word": [
+            "Q_D",
+            "Q_barD"
+          ],
           "external_fermion_permutation_sign": -1,
+          "full_block_parities": {
+            "TildeW_QbarD": 0,
+            "W_QD": 0
+          },
+          "full_odd_word_inversions": 4,
+          "full_odd_word_permutation_sign": 1,
           "odd_odd_inversions": 1,
           "orientation": "REFLECTED",
           "parities": {
             "D": 1,
+            "Q_D": 1,
+            "Q_barD": 1,
             "TildeW": 1,
             "W": 1,
             "X=D_W": 0
           },
-          "total_orientation_sign": -1
+          "quantum_odd_word_inversions": 1,
+          "quantum_odd_word_permutation_sign": -1,
+          "subsign_product": 1,
+          "total_orientation_sign": 1
         },
         "graph_id": "T-Bbar_AW-w0-01",
         "graph_prefactor_before_D_chain": "-g^2/8",
@@ -14928,7 +15633,7 @@
           1
         ],
         "metric_contact_child_id": "T-Bbar_AW-w0-01__SD_metric__DA-R-006",
-        "metric_orbit": "-g^2/(1024*pi^2*epsilon)*(hat_delta-delta4)^(mu nu)",
+        "metric_orbit": "NOT_FORMED_CONTACT_COEFFICIENT_INVALIDATED",
         "mixed_anticommutator_momenta": [
           "r0",
           "p",
@@ -14938,9 +15643,9 @@
         "orbit_classification": "ANOMALY_CANDIDATE_METRIC_POLE",
         "orientation": "REFLECTED",
         "propagator_collapses_in_metric_branch": [],
-        "row_prefactor": "-g^2/16",
+        "row_prefactor": "+g^2/16",
         "total_endpoint_sign": 1,
-        "total_orientation_sign": -1,
+        "total_orientation_sign": 1,
         "trace": [
           {
             "input": "D_-[K_+V] K_+V or K_+V D_-[K_+V]",
@@ -14983,7 +15688,8 @@
           }
         ],
         "trace_id": "DA-R-006",
-        "triangle_metric_pole": "-g^2/(1024*pi^2*epsilon)*hat_delta^(mu nu)",
+        "triangle_metric_pole": "+g^2/(1024*pi^2*epsilon)*hat_delta^(mu nu)",
+        "triangle_metric_pole_status": "RECOMPUTED_ISOLATED_TRIANGLE_AFTER_TYPED_SIGN_REPAIR",
         "vertex_signs": [
           -1,
           -1
@@ -15005,7 +15711,8 @@
           "momentum": "r1"
         },
         "classification": "ORDINARY_UV_POLE",
-        "contact_metric_pole": "+g^2/(1024*pi^2*epsilon)*delta4^(mu nu)",
+        "contact_metric_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
+        "contact_metric_pole_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
         "edge_tagged_raw_word": "D_-[I,RIGHT_LETTER] K_+[I,e0] K_+[I,e2] barD_dot_alpha[vBar,e1] D_a[vW,e1]",
         "endpoint_transfer_signs": [
           1,
@@ -15027,7 +15734,7 @@
           "row_prefactor_has_orientation_sign": true
         },
         "external_leg_derivative_tokens": [
-          "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+          "mathcalD_(+ dot_beta)[X^E(p)]=i*p_(+ dot_beta)*X^E(p);X^E=nabla_+W_+^E"
         ],
         "external_sign_audit": {
           "D_transfer": {
@@ -15037,24 +15744,55 @@
             "product": 1,
             "target_prefix_parity": 1
           },
+          "canonical_full_odd_word": [
+            "TildeW",
+            "Q_barD",
+            "W",
+            "Q_D"
+          ],
           "canonical_pre_D_word": [
             "TildeW",
             "W"
+          ],
+          "canonical_quantum_odd_word": [
+            "Q_barD",
+            "Q_D"
+          ],
+          "declared_full_odd_word": [
+            "W",
+            "Q_D",
+            "TildeW",
+            "Q_barD"
           ],
           "declared_pre_D_word": [
             "W",
             "TildeW"
           ],
+          "declared_quantum_odd_word": [
+            "Q_D",
+            "Q_barD"
+          ],
           "external_fermion_permutation_sign": -1,
+          "full_block_parities": {
+            "TildeW_QbarD": 0,
+            "W_QD": 0
+          },
+          "full_odd_word_inversions": 4,
+          "full_odd_word_permutation_sign": 1,
           "odd_odd_inversions": 1,
           "orientation": "REFLECTED",
           "parities": {
             "D": 1,
+            "Q_D": 1,
+            "Q_barD": 1,
             "TildeW": 1,
             "W": 1,
             "X=D_W": 0
           },
-          "total_orientation_sign": -1
+          "quantum_odd_word_inversions": 1,
+          "quantum_odd_word_permutation_sign": -1,
+          "subsign_product": 1,
+          "total_orientation_sign": 1
         },
         "graph_id": "T-Bbar_AW-w0-01",
         "graph_prefactor_before_D_chain": "-g^2/8",
@@ -15063,7 +15801,7 @@
           1
         ],
         "metric_contact_child_id": "T-Bbar_AW-w0-01__SD_metric__DA-R-007",
-        "metric_orbit": "-g^2/(1024*pi^2*epsilon)*(hat_delta-delta4)^(mu nu)",
+        "metric_orbit": "NOT_FORMED_CONTACT_COEFFICIENT_INVALIDATED",
         "mixed_anticommutator_momenta": [
           "r1",
           "p",
@@ -15073,9 +15811,9 @@
         "orbit_classification": "ANOMALY_CANDIDATE_METRIC_POLE",
         "orientation": "REFLECTED",
         "propagator_collapses_in_metric_branch": [],
-        "row_prefactor": "-g^2/16",
+        "row_prefactor": "+g^2/16",
         "total_endpoint_sign": 1,
-        "total_orientation_sign": -1,
+        "total_orientation_sign": 1,
         "trace": [
           {
             "input": "D_-[K_+V] K_+V or K_+V D_-[K_+V]",
@@ -15118,7 +15856,8 @@
           }
         ],
         "trace_id": "DA-R-007",
-        "triangle_metric_pole": "-g^2/(1024*pi^2*epsilon)*hat_delta^(mu nu)",
+        "triangle_metric_pole": "+g^2/(1024*pi^2*epsilon)*hat_delta^(mu nu)",
+        "triangle_metric_pole_status": "RECOMPUTED_ISOLATED_TRIANGLE_AFTER_TYPED_SIGN_REPAIR",
         "vertex_signs": [
           1,
           1
@@ -15140,7 +15879,8 @@
           "momentum": "r1"
         },
         "classification": "ORDINARY_UV_POLE",
-        "contact_metric_pole": "+g^2/(1024*pi^2*epsilon)*delta4^(mu nu)",
+        "contact_metric_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
+        "contact_metric_pole_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
         "edge_tagged_raw_word": "D_-[I,RIGHT_LETTER] K_+[I,e0] K_+[I,e2] barD_dot_alpha[vBar,e1] D_a[vW,e2]",
         "endpoint_transfer_signs": [
           1,
@@ -15162,7 +15902,7 @@
           "row_prefactor_has_orientation_sign": true
         },
         "external_leg_derivative_tokens": [
-          "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+          "mathcalD_(+ dot_beta)[X^E(p)]=i*p_(+ dot_beta)*X^E(p);X^E=nabla_+W_+^E"
         ],
         "external_sign_audit": {
           "D_transfer": {
@@ -15172,24 +15912,55 @@
             "product": 1,
             "target_prefix_parity": 1
           },
+          "canonical_full_odd_word": [
+            "TildeW",
+            "Q_barD",
+            "W",
+            "Q_D"
+          ],
           "canonical_pre_D_word": [
             "TildeW",
             "W"
+          ],
+          "canonical_quantum_odd_word": [
+            "Q_barD",
+            "Q_D"
+          ],
+          "declared_full_odd_word": [
+            "W",
+            "Q_D",
+            "TildeW",
+            "Q_barD"
           ],
           "declared_pre_D_word": [
             "W",
             "TildeW"
           ],
+          "declared_quantum_odd_word": [
+            "Q_D",
+            "Q_barD"
+          ],
           "external_fermion_permutation_sign": -1,
+          "full_block_parities": {
+            "TildeW_QbarD": 0,
+            "W_QD": 0
+          },
+          "full_odd_word_inversions": 4,
+          "full_odd_word_permutation_sign": 1,
           "odd_odd_inversions": 1,
           "orientation": "REFLECTED",
           "parities": {
             "D": 1,
+            "Q_D": 1,
+            "Q_barD": 1,
             "TildeW": 1,
             "W": 1,
             "X=D_W": 0
           },
-          "total_orientation_sign": -1
+          "quantum_odd_word_inversions": 1,
+          "quantum_odd_word_permutation_sign": -1,
+          "subsign_product": 1,
+          "total_orientation_sign": 1
         },
         "graph_id": "T-Bbar_AW-w0-01",
         "graph_prefactor_before_D_chain": "-g^2/8",
@@ -15198,7 +15969,7 @@
           1
         ],
         "metric_contact_child_id": "T-Bbar_AW-w0-01__SD_metric__DA-R-008",
-        "metric_orbit": "-g^2/(1024*pi^2*epsilon)*(hat_delta-delta4)^(mu nu)",
+        "metric_orbit": "NOT_FORMED_CONTACT_COEFFICIENT_INVALIDATED",
         "mixed_anticommutator_momenta": [
           "r1",
           "p",
@@ -15208,9 +15979,9 @@
         "orbit_classification": "ANOMALY_CANDIDATE_METRIC_POLE",
         "orientation": "REFLECTED",
         "propagator_collapses_in_metric_branch": [],
-        "row_prefactor": "-g^2/16",
+        "row_prefactor": "+g^2/16",
         "total_endpoint_sign": 1,
-        "total_orientation_sign": -1,
+        "total_orientation_sign": 1,
         "trace": [
           {
             "input": "D_-[K_+V] K_+V or K_+V D_-[K_+V]",
@@ -15253,12 +16024,26 @@
           }
         ],
         "trace_id": "DA-R-008",
-        "triangle_metric_pole": "-g^2/(1024*pi^2*epsilon)*hat_delta^(mu nu)",
+        "triangle_metric_pole": "+g^2/(1024*pi^2*epsilon)*hat_delta^(mu nu)",
+        "triangle_metric_pole_status": "RECOMPUTED_ISOLATED_TRIANGLE_AFTER_TYPED_SIGN_REPAIR",
         "vertex_signs": [
           1,
           -1
         ]
       }
     ]
+  },
+  "typed_port_gate": {
+    "TildeW_dotted_variance": "DOWN",
+    "coupled_insertion_vertex_parity": 0,
+    "covariant_vector_token": "mathcalD_+^dot_alpha",
+    "insertion_operator_parity": 1,
+    "source_color_variances": [
+      "DOWN",
+      "DOWN"
+    ],
+    "source_parity": 1,
+    "source_statistics": "FERMION",
+    "status": "PASS"
   }
 }

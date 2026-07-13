@@ -1,0 +1,80 @@
+{
+  "blocking_findings": [
+    {
+      "code": "REFLECTED_FULL_ODD_WORD_SIGN_REPAIRED",
+      "evidence": "s_external=-1 and s_quantum=-1 give s_reflected=+1",
+      "severity": "CLOSED",
+      "status": "CLOSED"
+    },
+    {
+      "code": "REFLECTED_CANONICAL_GRAPHIR_WORD_REPAIRED",
+      "evidence": "GraphIR and AmplitudeIR retain canonical (TildeW,W) in both orientations",
+      "severity": "CLOSED",
+      "status": "CLOSED"
+    },
+    {
+      "code": "TYPED_CONTACT_REPLAY_AFTER_REPAIR",
+      "evidence": "GraphIR, AmplitudeIR, and sixteen triangle rows are regenerated; contact coefficients remain invalidated pending typed replay",
+      "severity": "P1",
+      "status": "OPEN"
+    },
+    {
+      "code": "WW_SOURCE_STATISTICS_REPAIRED_FERMION",
+      "evidence": "|nabla_-(X^A X^B)|=1, so an even source coupling requires |J_(AB)|=1; GraphIR source statistics are FERMION",
+      "severity": "CLOSED",
+      "status": "CLOSED"
+    },
+    {
+      "code": "COVARIANT_VECTOR_DERIVATIVE_TOKEN_REPAIRED",
+      "evidence": "the exact D-algebra emits i*p_(a dot_b), whose covariant completion is mathcalD_(a dot_b)",
+      "severity": "CLOSED",
+      "status": "CLOSED"
+    },
+    {
+      "code": "TILDEW_DOTTED_VARIANCE_REPAIRED_DOWN",
+      "evidence": "locked TildeW_dot_a*barD^(dot_a) port is DOWN in both orientations",
+      "severity": "CLOSED",
+      "status": "CLOSED"
+    }
+  ],
+  "certificate": "generated/step5/one-loop-reflection-quotient-audit.json",
+  "certificate_sha256": "6c79f5d9ecd26ebdd38f1ef3188c6c2ce87d53fc8a68ed0d6c47647b743fd84a",
+  "checks": {
+    "D_algebra_external_token_is_covariant_vector_derivative": true,
+    "D_transfer_is_orientation_independent": true,
+    "direct_and_reflected_graph_external_words_are_identical": true,
+    "direct_and_reflected_vertex_orders_are_identical": true,
+    "epsilon_down_times_up_is_identity": true,
+    "epsilon_up_times_down_is_identity": true,
+    "external_and_quantum_reversals_cancel": true,
+    "external_only_reversal_has_minus_sign": true,
+    "full_even_vertex_block_reflection_has_plus_sign": true,
+    "graphir_source_dual_color_slots_are_down": true,
+    "graphir_source_is_fermionic": true,
+    "graphir_tildeW_port_is_lower_dotted": true,
+    "legacy_invalid_spinor_derivative_type_is_absent": true,
+    "local_seed_is_symmetric": true,
+    "locked_tildeW_cubic_port_is_lower_dotted": true,
+    "lower_upper_equals_upper_lower_for_even_Y": true,
+    "lower_upper_reversed_variance_has_epsilon_minus": true,
+    "physical_insertion_parity_is_odd": true,
+    "quantum_odd_word_reversal_has_minus_sign": true,
+    "rejected_external_only_minus_has_zero_Sym2_projection": true,
+    "rejected_external_only_minus_is_AB_antisymmetric": true,
+    "repaired_plus_word_is_AB_symmetric": true,
+    "repaired_plus_word_survives_Sym2_projection": true,
+    "source_port_is_external_J_leg_not_the_insertion_vertex": true,
+    "specialized_code_replays_reflected_full_sign_plus_one": true,
+    "specialized_reflection_subsigns_are_both_minus_one": true
+  },
+  "coefficient_status": "NOT_EVALUATED_BY_THIS_AUDIT",
+  "report": "audits/step5-one-loop-reflection-quotient-audit.md",
+  "report_sha256": "0b5be07c29de647102d4595f24ce2af2e7bc83a82109d8779e43961bae3bd9d4",
+  "scope": "SIGN_INDEX_VARIANCE_AND_LOCAL_SYM2_ONLY_NO_LOOP_COEFFICIENT",
+  "status": "PASS_TYPED_REPAIR_WITH_CONTACT_REPLAY_OPEN",
+  "totals": {
+    "exact": 26,
+    "failed": 0,
+    "passed": 26
+  }
+}

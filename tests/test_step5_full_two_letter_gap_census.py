@@ -53,10 +53,14 @@ class Step5FullTwoLetterGapCensusTest(unittest.TestCase):
         poles = payload["poles"]
         self.assertEqual(
             poles["contact_status"],
-            "AGGREGATE_SD_IDENTITY_NOT_BASIS_RESOLVED",
+            "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
         )
-        self.assertTrue(poles["metric_mismatch_proved_at_aggregate_sd_level"])
+        self.assertFalse(poles["metric_mismatch_proved_at_aggregate_sd_level"])
         self.assertFalse(poles["full_ordinary_triangle_bubble_cancellation_proved"])
+        self.assertEqual(
+            poles["anomaly_status"],
+            "INVALIDATED_NOT_PROPAGATED_AFTER_TYPED_SIGN_REPAIR",
+        )
 
     def test_gap_audit_records_fifteen_open_obligations(self) -> None:
         audit = (ROOT / "audits/step5-full-two-letter-gap-census.md").read_text(

@@ -1,0 +1,867 @@
+{
+  "abstract_similarity_checks": {
+    "conjugation_preserves_commutator": true,
+    "conjugation_product_xy": true,
+    "conjugation_product_yx": true,
+    "inverse_similarity_product_xy": true,
+    "inverse_similarity_product_yx": true
+  },
+  "background_ward_witness": {
+    "checks": {
+      "green_is_hessian_inverse_chiral": true,
+      "green_is_hessian_inverse_vector": true,
+      "green_ward_transport": true,
+      "hessian_ward_transport": true,
+      "insertion_ward_transport": true,
+      "intertwiner_variation_nonzero": true,
+      "inverse_variation_identity": true,
+      "rooted_word_trace_variation_zero": true,
+      "rooted_word_ward_telescoping": true
+    },
+    "delta_frame": [
+      [
+        {
+          "constant": {
+            "im": "0",
+            "re": "0"
+          },
+          "tau": {
+            "im": "-1",
+            "re": "0"
+          }
+        },
+        {
+          "constant": {
+            "im": "0",
+            "re": "-1"
+          },
+          "tau": {
+            "im": "0",
+            "re": "0"
+          }
+        },
+        {
+          "constant": {
+            "im": "0",
+            "re": "1"
+          },
+          "tau": {
+            "im": "0",
+            "re": "0"
+          }
+        }
+      ],
+      [
+        {
+          "constant": {
+            "im": "0",
+            "re": "1"
+          },
+          "tau": {
+            "im": "0",
+            "re": "0"
+          }
+        },
+        {
+          "constant": {
+            "im": "0",
+            "re": "0"
+          },
+          "tau": {
+            "im": "-1",
+            "re": "0"
+          }
+        },
+        {
+          "constant": {
+            "im": "0",
+            "re": "0"
+          },
+          "tau": {
+            "im": "0",
+            "re": "0"
+          }
+        }
+      ],
+      [
+        {
+          "constant": {
+            "im": "0",
+            "re": "-1"
+          },
+          "tau": {
+            "im": "0",
+            "re": "0"
+          }
+        },
+        {
+          "constant": {
+            "im": "0",
+            "re": "0"
+          },
+          "tau": {
+            "im": "1",
+            "re": "0"
+          }
+        },
+        {
+          "constant": {
+            "im": "0",
+            "re": "0"
+          },
+          "tau": {
+            "im": "0",
+            "re": "0"
+          }
+        }
+      ]
+    ],
+    "intertwiner_law": "delta(A)=R_V*A-A*R_C",
+    "ward_law_chiral": "delta(X_C)=[R_C,X_C]",
+    "ward_law_vector": "delta(X_V)=[R_V,X_V]"
+  },
+  "checked_equation_groups": 8,
+  "checks": {
+    "abstract_similarity.conjugation_preserves_commutator": true,
+    "abstract_similarity.conjugation_product_xy": true,
+    "abstract_similarity.conjugation_product_yx": true,
+    "abstract_similarity.inverse_similarity_product_xy": true,
+    "abstract_similarity.inverse_similarity_product_yx": true,
+    "background_ward.green_is_hessian_inverse_chiral": true,
+    "background_ward.green_is_hessian_inverse_vector": true,
+    "background_ward.green_ward_transport": true,
+    "background_ward.hessian_ward_transport": true,
+    "background_ward.insertion_ward_transport": true,
+    "background_ward.intertwiner_variation_nonzero": true,
+    "background_ward.inverse_variation_identity": true,
+    "background_ward.rooted_word_trace_variation_zero": true,
+    "background_ward.rooted_word_ward_telescoping": true,
+    "momentum_0.back_transport_green": true,
+    "momentum_0.back_transport_kernel": true,
+    "momentum_0.chiral_green_kernel_right_inverse": true,
+    "momentum_0.chiral_kernel_green_left_inverse": true,
+    "momentum_0.even_block_determinant_one": true,
+    "momentum_0.frame_is_parity_preserving": true,
+    "momentum_0.frame_left_inverse": true,
+    "momentum_0.frame_right_inverse": true,
+    "momentum_0.green_endomorphism_similarity": true,
+    "momentum_0.hessian_endomorphism_similarity": true,
+    "momentum_0.insertion_bilinear_congruence": true,
+    "momentum_0.insertion_endomorphism_similarity": true,
+    "momentum_0.insertion_supertrace_invariance": true,
+    "momentum_0.nonzero_supertrace_witness": true,
+    "momentum_0.odd_block_determinant_one": true,
+    "momentum_0.pairing_inverse": true,
+    "momentum_0.reference_flat_berezinian_one": true,
+    "momentum_0.source_contraction_similarity": true,
+    "momentum_0.source_contraction_supertrace_invariance": true,
+    "momentum_0.upper_green_from_endomorphism_and_pairing": true,
+    "momentum_1.back_transport_green": true,
+    "momentum_1.back_transport_kernel": true,
+    "momentum_1.chiral_green_kernel_right_inverse": true,
+    "momentum_1.chiral_kernel_green_left_inverse": true,
+    "momentum_1.even_block_determinant_one": true,
+    "momentum_1.frame_is_parity_preserving": true,
+    "momentum_1.frame_left_inverse": true,
+    "momentum_1.frame_right_inverse": true,
+    "momentum_1.green_endomorphism_similarity": true,
+    "momentum_1.hessian_endomorphism_similarity": true,
+    "momentum_1.insertion_bilinear_congruence": true,
+    "momentum_1.insertion_endomorphism_similarity": true,
+    "momentum_1.insertion_supertrace_invariance": true,
+    "momentum_1.nonzero_supertrace_witness": true,
+    "momentum_1.odd_block_determinant_one": true,
+    "momentum_1.pairing_inverse": true,
+    "momentum_1.reference_flat_berezinian_one": true,
+    "momentum_1.source_contraction_similarity": true,
+    "momentum_1.source_contraction_supertrace_invariance": true,
+    "momentum_1.upper_green_from_endomorphism_and_pairing": true,
+    "momentum_2.back_transport_green": true,
+    "momentum_2.back_transport_kernel": true,
+    "momentum_2.chiral_green_kernel_right_inverse": true,
+    "momentum_2.chiral_kernel_green_left_inverse": true,
+    "momentum_2.even_block_determinant_one": true,
+    "momentum_2.frame_is_parity_preserving": true,
+    "momentum_2.frame_left_inverse": true,
+    "momentum_2.frame_right_inverse": true,
+    "momentum_2.green_endomorphism_similarity": true,
+    "momentum_2.hessian_endomorphism_similarity": true,
+    "momentum_2.insertion_bilinear_congruence": true,
+    "momentum_2.insertion_endomorphism_similarity": true,
+    "momentum_2.insertion_supertrace_invariance": true,
+    "momentum_2.nonzero_supertrace_witness": true,
+    "momentum_2.odd_block_determinant_one": true,
+    "momentum_2.pairing_inverse": true,
+    "momentum_2.reference_flat_berezinian_one": true,
+    "momentum_2.source_contraction_similarity": true,
+    "momentum_2.source_contraction_supertrace_invariance": true,
+    "momentum_2.upper_green_from_endomorphism_and_pairing": true,
+    "nonlinear_tangent.affine_map_removes_connection": true,
+    "nonlinear_tangent.congruence_only_is_false_off_shell": true,
+    "nonlinear_tangent.connection_term_is_nonzero": true,
+    "nonlinear_tangent.eom_zero_removes_connection": true,
+    "nonlinear_tangent.exact_chain_rule_matches_direct_hessian": true,
+    "nonlinear_tangent.source_congruence_only_is_false": true,
+    "nonlinear_tangent.source_connection_term_is_nonzero": true,
+    "nonlinear_tangent.source_exact_chain_rule_matches_direct_hessian": true,
+    "project_bridge.adjoint_determinant_one": true,
+    "project_bridge.adjoint_left_inverse": true,
+    "project_bridge.adjoint_metric_invariance": true,
+    "project_bridge.adjoint_right_inverse": true,
+    "project_bridge.fundamental_bridge_determinant_one": true,
+    "project_bridge.fundamental_bridge_left_inverse": true,
+    "project_bridge.fundamental_bridge_right_inverse": true,
+    "project_bridge.fundamental_commutator_0_0": true,
+    "project_bridge.fundamental_commutator_0_1": true,
+    "project_bridge.fundamental_commutator_0_2": true,
+    "project_bridge.fundamental_commutator_1_0": true,
+    "project_bridge.fundamental_commutator_1_1": true,
+    "project_bridge.fundamental_commutator_1_2": true,
+    "project_bridge.fundamental_commutator_2_0": true,
+    "project_bridge.fundamental_commutator_2_1": true,
+    "project_bridge.fundamental_commutator_2_2": true,
+    "project_bridge.tau_is_even": true,
+    "project_bridge.tau_square_zero": true
+  },
+  "equations": {
+    "covariant_coefficients": "o_V=A_B*o_C; A_B=Ad_B",
+    "covariant_operator": "O_C=B^(-1)*O_V*B",
+    "euler_covector": "E_C=E_V*J_q",
+    "field_strength": "W_V=B*W_C*B^(-1)",
+    "full_density_pushforward": "varpi_V(x_V)=varpi_C(T^(-1)x_V)*Ber(d x_C/d x_V)",
+    "green_endomorphism_conditional": "Gop_C=J_q^(-1)*Gop_V*J_q when E_V*C=0",
+    "hessian_chain_rule": "K_C=J_q^st*K_V*J_q+E_(V,alpha)*C^alpha",
+    "hessian_congruence_condition": "E_V*C=0",
+    "hessian_endomorphism_conditional": "H_C=J_q^(-1)*H_V*J_q when E_V*C=0",
+    "intertwiner_variation": "delta(A)=R_V*A-A*R_C",
+    "one_loop_word": "STr(Gop_C*Iop_C)=STr(Gop_V*Iop_V)",
+    "pairing": "Omega_C=J_q^st*Omega_V*J_q",
+    "quantum_map": "zeta_V=T_q(Qbar_C,zeta_C)",
+    "quantum_second_jet": "C^alpha_(ij)=d^2(zeta_V^alpha)/(d zeta_C^i d zeta_C^j)",
+    "quantum_tangent": "J_q=d(zeta_V)/d(zeta_C)|_(Qbar_C)",
+    "reference_flat_adjoint_berezinian": "Ber(A_B|Adj tensor M_8)=det(A_even)/det(A_odd)=1/1=1",
+    "source_bilinear_conditional": "Ibil_C=J_q^st*Ibil_V*J_q when F_V*C=0",
+    "source_endomorphism_conditional": "Iop_C=J_q^(-1)*Iop_V*J_q when F_V*C=0",
+    "source_hessian_chain_rule": "Ibil_C=J_q^st*Ibil_V*J_q+F_(V,alpha)*C^alpha; F_V=d(I_V)/d(zeta_V)",
+    "source_hessian_congruence_condition": "F_V*C=0",
+    "tilded_field_strength": "tildeW_V=tildeB^(-1)*tildeW_A*tildeB",
+    "upper_green_conditional": "G_C=J_q^(-1)*G_V*J_q^(-st) when E_V*C=0",
+    "ward_transport": "delta(X_V)=[R_V,X_V] implies delta(X_C)=[R_C,X_C]"
+  },
+  "external_results_imported": false,
+  "frame_matrix_deprecation": "The former arbitrary 2x2 GL witness is removed; it was not Ad_B and carried no Project frame evidence.",
+  "gap_ledger": [
+    {
+      "claim": "an arbitrary two-by-two GL matrix represented the Project frame bridge",
+      "id": "G1",
+      "location": "Step5FrameBridgeIntertwiner.v1 frame_matrix",
+      "minimal_repair": "general ordered conjugation proof plus an explicitly labeled SU2_NILPOTENT_WITNESS",
+      "missing": "the matrix was not Ad_B",
+      "severity": "P0",
+      "status": "RESOLVED",
+      "type": "G-DEF"
+    },
+    {
+      "claim": "K_C=J_q^st K_V J_q for a nonlinear quantum map",
+      "id": "G2",
+      "location": "quadratic Hessian transport",
+      "minimal_repair": "K_C=J_q^st K_V J_q+E_V,alpha C^alpha",
+      "missing": "the Euler-gradient second-jet term E_V,alpha C^alpha",
+      "severity": "P0",
+      "status": "RESOLVED",
+      "type": "G-ALG"
+    },
+    {
+      "claim": "Ibil_C=J_q^st Ibil_V J_q for a nonlinear quantum map",
+      "id": "G3",
+      "location": "scalar source-Hessian transport",
+      "minimal_repair": "Ibil_C=J_q^st Ibil_V J_q+F_V,alpha C^alpha",
+      "missing": "the source first-jet term F_V,alpha C^alpha",
+      "severity": "P0",
+      "status": "RESOLVED",
+      "type": "G-ALG"
+    },
+    {
+      "claim": "the reference-flat adjoint-block Berezinian proves full cross-frame measure equality",
+      "id": "G4",
+      "location": "Step 3D.109a full integrated frame Jacobian",
+      "minimal_repair": "compute every factor in Ber J_T^perp of 3D.109a",
+      "missing": "physical, chiral/antichiral ghost, and every non-minimal Berezinian factor",
+      "severity": "P1",
+      "status": "OPEN_STEP5C",
+      "type": "G-NORM"
+    },
+    {
+      "claim": "one SU2 nilpotent witness proves arbitrary-background regulator closure",
+      "id": "G5",
+      "location": "Step 3D.108 finite coefficient commutative square",
+      "minimal_repair": "construct J_q and its inverse on every admitted finite background block",
+      "missing": "the generic mode-space action and residual-complement bijections",
+      "severity": "P1",
+      "status": "OPEN",
+      "type": "G-SCOPE"
+    },
+    {
+      "claim": "fixed-gauge reference-flat equality proves finite-BV frame equality",
+      "id": "G6",
+      "location": "Step 3D.110 finite-BV pushforward",
+      "minimal_repair": "instantiate all pushforwards in 3D.110 and 3D.110a",
+      "missing": "density, source lift, regulator, determinant factor, and cycle pushforwards",
+      "severity": "P1",
+      "status": "OPEN_STEP5C",
+      "type": "G-SCOPE"
+    }
+  ],
+  "gates": {
+    "anomaly_coefficient": "NOT_COMPUTED",
+    "arbitrary_gauge_algebra_background_regulator_closure": "OPEN",
+    "background_dependent_su2_nilpotent_coefficient_witness": "PASS",
+    "background_ward_recursion_similarity_sector": "PASS",
+    "covariant_operator_similarity_general_gauge_algebra": "PASS",
+    "cross_frame_functional_equality_with_independent_flat_measures": "NOT_ASSERTED",
+    "full_finite_bv_density_and_cycle": "OPEN_STEP5C_3D110",
+    "full_physical_ghost_nonminimal_frame_jacobian": "OPEN_3D109A",
+    "nonlinear_quantum_tangent_hessian": "CONDITIONAL_E_V_C_EQUALS_ZERO",
+    "nonlinear_source_hessian_insertion": "CONDITIONAL_F_V_C_EQUALS_ZERO",
+    "quadratic_hessian_green_source_supertrace_on_similarity_sector": "PASS",
+    "reference_flat_measure_covariant_adjoint_block": "PASS"
+  },
+  "nonlinear_tangent_witness": {
+    "action": "S_V=3*y1+5*y2+y1^2+y1*y2+2*y2^2",
+    "checks": {
+      "affine_map_removes_connection": true,
+      "congruence_only_is_false_off_shell": true,
+      "connection_term_is_nonzero": true,
+      "eom_zero_removes_connection": true,
+      "exact_chain_rule_matches_direct_hessian": true,
+      "source_congruence_only_is_false": true,
+      "source_connection_term_is_nonzero": true,
+      "source_exact_chain_rule_matches_direct_hessian": true
+    },
+    "connection": [
+      [
+        {
+          "im": "0",
+          "re": "5"
+        },
+        {
+          "im": "0",
+          "re": "0"
+        }
+      ],
+      [
+        {
+          "im": "0",
+          "re": "0"
+        },
+        {
+          "im": "0",
+          "re": "0"
+        }
+      ]
+    ],
+    "coordinate_map": "y1=x1; y2=x2+(1/2)*x1^2",
+    "euler_vector": [
+      {
+        "im": "0",
+        "re": "3"
+      },
+      {
+        "im": "0",
+        "re": "5"
+      }
+    ],
+    "expansion_point": [
+      0,
+      0
+    ],
+    "hessian_chiral": [
+      [
+        {
+          "im": "0",
+          "re": "7"
+        },
+        {
+          "im": "0",
+          "re": "1"
+        }
+      ],
+      [
+        {
+          "im": "0",
+          "re": "1"
+        },
+        {
+          "im": "0",
+          "re": "4"
+        }
+      ]
+    ],
+    "hessian_vector": [
+      [
+        {
+          "im": "0",
+          "re": "2"
+        },
+        {
+          "im": "0",
+          "re": "1"
+        }
+      ],
+      [
+        {
+          "im": "0",
+          "re": "1"
+        },
+        {
+          "im": "0",
+          "re": "4"
+        }
+      ]
+    ],
+    "source_composite": "I_V=7*y2",
+    "source_connection": [
+      [
+        {
+          "im": "0",
+          "re": "7"
+        },
+        {
+          "im": "0",
+          "re": "0"
+        }
+      ],
+      [
+        {
+          "im": "0",
+          "re": "0"
+        },
+        {
+          "im": "0",
+          "re": "0"
+        }
+      ]
+    ],
+    "source_gradient_vector": [
+      {
+        "im": "0",
+        "re": "0"
+      },
+      {
+        "im": "0",
+        "re": "7"
+      }
+    ],
+    "source_hessian_chiral": [
+      [
+        {
+          "im": "0",
+          "re": "7"
+        },
+        {
+          "im": "0",
+          "re": "0"
+        }
+      ],
+      [
+        {
+          "im": "0",
+          "re": "0"
+        },
+        {
+          "im": "0",
+          "re": "0"
+        }
+      ]
+    ],
+    "source_hessian_vector": [
+      [
+        {
+          "im": "0",
+          "re": "0"
+        },
+        {
+          "im": "0",
+          "re": "0"
+        }
+      ],
+      [
+        {
+          "im": "0",
+          "re": "0"
+        },
+        {
+          "im": "0",
+          "re": "0"
+        }
+      ]
+    ]
+  },
+  "project_frame": {
+    "adjoint": [
+      [
+        {
+          "constant": {
+            "im": "0",
+            "re": "1"
+          },
+          "tau": {
+            "im": "0",
+            "re": "0"
+          }
+        },
+        {
+          "constant": {
+            "im": "0",
+            "re": "0"
+          },
+          "tau": {
+            "im": "-1",
+            "re": "0"
+          }
+        },
+        {
+          "constant": {
+            "im": "0",
+            "re": "0"
+          },
+          "tau": {
+            "im": "0",
+            "re": "0"
+          }
+        }
+      ],
+      [
+        {
+          "constant": {
+            "im": "0",
+            "re": "0"
+          },
+          "tau": {
+            "im": "1",
+            "re": "0"
+          }
+        },
+        {
+          "constant": {
+            "im": "0",
+            "re": "1"
+          },
+          "tau": {
+            "im": "0",
+            "re": "0"
+          }
+        },
+        {
+          "constant": {
+            "im": "0",
+            "re": "0"
+          },
+          "tau": {
+            "im": "0",
+            "re": "0"
+          }
+        }
+      ],
+      [
+        {
+          "constant": {
+            "im": "0",
+            "re": "0"
+          },
+          "tau": {
+            "im": "0",
+            "re": "0"
+          }
+        },
+        {
+          "constant": {
+            "im": "0",
+            "re": "0"
+          },
+          "tau": {
+            "im": "0",
+            "re": "0"
+          }
+        },
+        {
+          "constant": {
+            "im": "0",
+            "re": "1"
+          },
+          "tau": {
+            "im": "0",
+            "re": "0"
+          }
+        }
+      ]
+    ],
+    "adjoint_inverse": [
+      [
+        {
+          "constant": {
+            "im": "0",
+            "re": "1"
+          },
+          "tau": {
+            "im": "0",
+            "re": "0"
+          }
+        },
+        {
+          "constant": {
+            "im": "0",
+            "re": "0"
+          },
+          "tau": {
+            "im": "1",
+            "re": "0"
+          }
+        },
+        {
+          "constant": {
+            "im": "0",
+            "re": "0"
+          },
+          "tau": {
+            "im": "0",
+            "re": "0"
+          }
+        }
+      ],
+      [
+        {
+          "constant": {
+            "im": "0",
+            "re": "0"
+          },
+          "tau": {
+            "im": "-1",
+            "re": "0"
+          }
+        },
+        {
+          "constant": {
+            "im": "0",
+            "re": "1"
+          },
+          "tau": {
+            "im": "0",
+            "re": "0"
+          }
+        },
+        {
+          "constant": {
+            "im": "0",
+            "re": "0"
+          },
+          "tau": {
+            "im": "0",
+            "re": "0"
+          }
+        }
+      ],
+      [
+        {
+          "constant": {
+            "im": "0",
+            "re": "0"
+          },
+          "tau": {
+            "im": "0",
+            "re": "0"
+          }
+        },
+        {
+          "constant": {
+            "im": "0",
+            "re": "0"
+          },
+          "tau": {
+            "im": "0",
+            "re": "0"
+          }
+        },
+        {
+          "constant": {
+            "im": "0",
+            "re": "1"
+          },
+          "tau": {
+            "im": "0",
+            "re": "0"
+          }
+        }
+      ]
+    ],
+    "coefficient_dimension": 48,
+    "exact_witness": "tau=theta^1*theta^2; epsilon(tau)=0; tau^2=0; B=diag(1+tau/2,1-tau/2)",
+    "exact_witness_role": "SU2_NILPOTENT_WITNESS_ONLY",
+    "general_identity": "Ad_B(X) Ad_B(Y)=Ad_B(XY) by adjacent B^(-1)B cancellation",
+    "grassmann_basis": "Lambda(theta^1,theta^2,bartheta_dot1,bartheta_dot2), four-generator masks 0,...,15",
+    "symmetric_bridge": "B=tildeB=exp(V/2)"
+  },
+  "schema": "Step5FrameBridgeIntertwiner.v2",
+  "scope": "COVARIANT_ADJOINT_SIMILARITY_AND_TANGENT_CHAIN_RULE",
+  "source_equations": [
+    "3C.25",
+    "3C.33",
+    "3D.22",
+    "3D.108",
+    "3D.109",
+    "3D.109a",
+    "3D.110",
+    "3D.110a"
+  ],
+  "status": "PASS",
+  "su2_nilpotent_witness_checks": {
+    "adjoint_determinant_one": true,
+    "adjoint_left_inverse": true,
+    "adjoint_metric_invariance": true,
+    "adjoint_right_inverse": true,
+    "fundamental_bridge_determinant_one": true,
+    "fundamental_bridge_left_inverse": true,
+    "fundamental_bridge_right_inverse": true,
+    "fundamental_commutator_0_0": true,
+    "fundamental_commutator_0_1": true,
+    "fundamental_commutator_0_2": true,
+    "fundamental_commutator_1_0": true,
+    "fundamental_commutator_1_1": true,
+    "fundamental_commutator_1_2": true,
+    "fundamental_commutator_2_0": true,
+    "fundamental_commutator_2_1": true,
+    "fundamental_commutator_2_2": true,
+    "tau_is_even": true,
+    "tau_square_zero": true
+  },
+  "verification_spot_checks": [
+    "fundamental conjugation and commutator",
+    "forty-eight-dimensional two-sided inverse and Berezinian",
+    "direct action and scalar-source second derivatives"
+  ],
+  "witnesses": [
+    {
+      "checks": {
+        "back_transport_green": true,
+        "back_transport_kernel": true,
+        "chiral_green_kernel_right_inverse": true,
+        "chiral_kernel_green_left_inverse": true,
+        "even_block_determinant_one": true,
+        "frame_is_parity_preserving": true,
+        "frame_left_inverse": true,
+        "frame_right_inverse": true,
+        "green_endomorphism_similarity": true,
+        "hessian_endomorphism_similarity": true,
+        "insertion_bilinear_congruence": true,
+        "insertion_endomorphism_similarity": true,
+        "insertion_supertrace_invariance": true,
+        "nonzero_supertrace_witness": true,
+        "odd_block_determinant_one": true,
+        "pairing_inverse": true,
+        "reference_flat_berezinian_one": true,
+        "source_contraction_similarity": true,
+        "source_contraction_supertrace_invariance": true,
+        "upper_green_from_endomorphism_and_pairing": true
+      },
+      "determinant_even": {
+        "im": "0",
+        "re": "1"
+      },
+      "determinant_odd": {
+        "im": "0",
+        "re": "1"
+      },
+      "dimension": 48,
+      "even_dimension": 24,
+      "momentum": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "odd_dimension": 24
+    },
+    {
+      "checks": {
+        "back_transport_green": true,
+        "back_transport_kernel": true,
+        "chiral_green_kernel_right_inverse": true,
+        "chiral_kernel_green_left_inverse": true,
+        "even_block_determinant_one": true,
+        "frame_is_parity_preserving": true,
+        "frame_left_inverse": true,
+        "frame_right_inverse": true,
+        "green_endomorphism_similarity": true,
+        "hessian_endomorphism_similarity": true,
+        "insertion_bilinear_congruence": true,
+        "insertion_endomorphism_similarity": true,
+        "insertion_supertrace_invariance": true,
+        "nonzero_supertrace_witness": true,
+        "odd_block_determinant_one": true,
+        "pairing_inverse": true,
+        "reference_flat_berezinian_one": true,
+        "source_contraction_similarity": true,
+        "source_contraction_supertrace_invariance": true,
+        "upper_green_from_endomorphism_and_pairing": true
+      },
+      "determinant_even": {
+        "im": "0",
+        "re": "1"
+      },
+      "determinant_odd": {
+        "im": "0",
+        "re": "1"
+      },
+      "dimension": 48,
+      "even_dimension": 24,
+      "momentum": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "odd_dimension": 24
+    },
+    {
+      "checks": {
+        "back_transport_green": true,
+        "back_transport_kernel": true,
+        "chiral_green_kernel_right_inverse": true,
+        "chiral_kernel_green_left_inverse": true,
+        "even_block_determinant_one": true,
+        "frame_is_parity_preserving": true,
+        "frame_left_inverse": true,
+        "frame_right_inverse": true,
+        "green_endomorphism_similarity": true,
+        "hessian_endomorphism_similarity": true,
+        "insertion_bilinear_congruence": true,
+        "insertion_endomorphism_similarity": true,
+        "insertion_supertrace_invariance": true,
+        "nonzero_supertrace_witness": true,
+        "odd_block_determinant_one": true,
+        "pairing_inverse": true,
+        "reference_flat_berezinian_one": true,
+        "source_contraction_similarity": true,
+        "source_contraction_supertrace_invariance": true,
+        "upper_green_from_endomorphism_and_pairing": true
+      },
+      "determinant_even": {
+        "im": "0",
+        "re": "1"
+      },
+      "determinant_odd": {
+        "im": "0",
+        "re": "1"
+      },
+      "dimension": 48,
+      "even_dimension": 24,
+      "momentum": [
+        2,
+        -1,
+        0,
+        3
+      ],
+      "odd_dimension": 24
+    }
+  ]
+}

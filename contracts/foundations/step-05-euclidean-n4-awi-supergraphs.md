@@ -5,14 +5,14 @@
 $$
 \boxed{
 \begin{aligned}
-5A&:\texttt{EVALUATED},\\
-5B\ (WW,\ w=0)&:\texttt{EVALUATED\_UV\_METRIC\_MISMATCH},\\
+5A&:\texttt{REGISTERED\_FIXED\_VECTOR\_WARD\_PROVED},\\
+5B\ (WW,\ w=0)&:\texttt{FAIL\_CLOSED\_CONTACT\_AND\_INJECTIVITY\_OPEN},\\
 5C&:\texttt{SPECIFIED}.
 \end{aligned}}
 \tag{5.0}
 $$
 
-Equation (5.54A) is a reviewed-branch proposal until it reaches verified
+This file is an unreviewed branch proposal until it reaches verified
 \(origin/main\).
 
 ## 5.1 Spin frame, Fourier transform, order
@@ -1642,33 +1642,47 @@ K^{\rm tot}_{ij}G^{jk}=\delta_i{}^k.
 \tag{5.53W}
 $$
 
-Therefore cutting one tagged parent edge gives an aggregate contact identity
-with the same positive scalar pole and the opposite amplitude sign.  This fixes
-the row-by-row aggregate coefficient before any integration-by-parts
-redistribution among \(I_{(3)}\widetilde S_{(3)}\), \(I_{(4)}\), and
-collapsed-edge bases.  It does not determine the coefficient of each ordered
-basis term separately.
-
-Each row gives
+The typed source and antichiral external port are
 
 $$
-P_{\triangle,{\rm row}}^{mr}
-=\frac{g^2}{1024\pi^2\epsilon}\widehat\delta^{mr},
+|J_{AB}|=1,
 \qquad
-P_{C,{\rm row}}^{mr}
-=\frac{g^2}{1024\pi^2\epsilon}\delta_{(4)}^{mr}.
+|\nabla_-(X^AX^B)|=1,
+\qquad
+|J_{AB}\nabla_-(X^AX^B)|=0,
+\qquad
+\widetilde{\mathcal W}_{\dot\alpha}.
 \tag{5.53w}
 $$
 
-The contact amplitude enters with the SD minus sign.  Hence
+The complete odd blocks are
 
 $$
-\boxed{
-P_{\triangle}^{mr}-P_C^{mr}
-=\frac{g^2}{128\pi^2\epsilon}
-(\widehat\delta-\delta_{(4)})^{mr}
-=-\frac{g^2}{128\pi^2\epsilon}\widetilde\delta^{mr}.}
+\mathbb B_{\widetilde W}=\widetilde{\mathcal W}Q_{\bar D},
+\qquad
+\mathbb B_W=\mathcal WQ_D,
+\qquad
+|\mathbb B_{\widetilde W}|=|\mathbb B_W|=0.
 \tag{5.53x}
+$$
+
+For the reflected orientation,
+
+$$
+s_{\rm ext}=-1,
+\qquad
+s_{\rm quantum}=-1,
+\qquad
+s_{\rm reflected}=s_{\rm ext}s_{\rm quantum}=+1.
+\tag{5.53x$'$}
+$$
+
+Thus every isolated-triangle row in both orientations gives
+
+$$
+P_{\triangle,{\rm row}}^{mr}
+=\frac{g^2}{1024\pi^2\epsilon}\widehat\delta^{mr}.
+\tag{5.53x$''$}
 $$
 
 The Project background/quantum split gives
@@ -1679,74 +1693,261 @@ I_{(3)}[X_{\rm ext};v,v]:30,
 \qquad
 \widetilde S_{(3)}[\widetilde W_{\rm ext};v,v]:6,\\
 I_{(4)}[V_{\rm B},V_{\rm B};v,v]:180,
+\\
+N_{I_0H_2}=576,
 \qquad
-S_{(4)}[X_{\rm ext},\widetilde W_{\rm ext};v,v]=0.
+N_{I_1[p_1]H_1[p_2]}=N_{I_1[p_2]H_1[p_1]}=1440,
+\qquad
+N_{I_2}=720.
 \end{gathered}
 \tag{5.53y}
 $$
 
-The last equality is intrinsic Euclidean chirality: one chiral or antichiral
-gauge-kinetic quartic vertex cannot carry both independent external fields.
-The sole-loop \(I_{(4)}\) children are scaleless only after their individual
-routing checks.  The explicit Wick pairing, symmetry factor, \(D\)-algebra,
-and integrand reduction of the legal nonlinear
-\(I_{(3)}\)--\(\widetilde S_{(3)}\) family remain open.  Thus (5.53w) is an
-aggregate Schwinger--Dyson identity, not a basis-resolved sum of the
-\(30+6+180\) ordered terms in (5.53y).
-
-Finally,
+These four numbers count generated branch paths, not quotient graph classes.
+All objects through (5.54B) are restricted to the registered fixed-vector
+sector.  The Hessian contact operator is
 
 $$
-p^n\widetilde\delta^{mr}
-(\sigma_{Em}\bar\sigma_{En}\sigma_{Er})_+{}^{\dot\alpha}
-=-2\epsilon p_+{}^{\dot\alpha},
+\begin{aligned}
+Q_{\rm Hess}^{(2)}
+:={}&\frac12\operatorname{STr}_{\rm DRED}\!\Big[
+-I_0G_0H_2[p_1,p_2]G_0\\
+&-I_1[p_1]G_0H_1[p_2]G_0
+-I_1[p_2]G_0H_1[p_1]G_0
++I_2[p_1,p_2]G_0\Big].
+\end{aligned}
 \tag{5.53z}
 $$
 
-so the aggregate-SD candidate for the fixed-orientation local remainder is
+The exact quadratic functional is
+
+$$
+Q_{\triangle}^{\rm bare}
+:=\frac12\operatorname{STr}_{\rm DRED}\!\left[
+I_0G_0H_1[p_1]G_0H_1[p_2]G_0
++I_0G_0H_1[p_2]G_0H_1[p_1]G_0
+\right].
+\tag{5.53z$_0$}
+$$
 
 $$
 \boxed{
-\Gamma_{\rm anom}^{A|B}
-=\frac{g^2}{64\pi^2}c_{ACD}c_{BCE}
+\Gamma_{\mathscr I,{\rm ren,DRED},2}^{(1),{\rm reg}}
+=Q_{\triangle}^{\rm bare}
++\underbrace{\left(Q_{\rm Hess}^{(2)}+\mathrm{CT}_2[p_1,p_2]\right)}_{
+Q_{\rm contact,Hess}^{(2)}}.}
+\tag{5.53z$'$}
+$$
+
+A later numerator decomposition requires a constructed map
+\(\mathcal R_{\rm cut}\) selecting terms that cancel one triangle propagator:
+
+$$
+Q_{\triangle}^{\rm cut}
+:=\mathcal R_{\rm cut}Q_{\triangle}^{\rm bare},
+\qquad
+Q_{\triangle}^{\rm irr}
+:=(1-\mathcal R_{\rm cut})Q_{\triangle}^{\rm bare}.
+\tag{5.53z$''$}
+$$
+
+Only after this map and its coefficients are derived may one rewrite
+
+$$
+\Gamma_{\mathscr I,{\rm ren,DRED},2}^{(1),{\rm reg}}
+=Q_{\triangle}^{\rm irr}
++\underbrace{
+\left(Q_{\triangle}^{\rm cut}+Q_{\rm contact,Hess}^{(2)}\right)}_{
+Q_{\rm contact,eff}^{(2)}}.
+\tag{5.53z$'''$}
+$$
+
+Intrinsic chirality of one gauge-kinetic monomial does not imply
+\(\Pi_{X\widetilde W}H_2=0\) after connection expansion and edge-tagged
+\(D\)-algebra.  The exact present status is
+
+$$
+\begin{gathered}
+\Pi_{X\widetilde W}H_2=\texttt{NOT\_DERIVED},
+\qquad
+\Pi_{X\widetilde W}I_2=\texttt{NOT\_DERIVED},
+\qquad
+\mathrm{CT}_2=\texttt{NOT\_FIXED},\\
+N_{\rm collapse\ bindings}=48,
+\qquad
+N_{\rm collapse\ GraphIR}=6,
+\qquad
+\mathcal R_{\rm cut}=\texttt{NOT\_CONSTRUCTED},
+\qquad
+Q_{\triangle}^{\rm cut}=\texttt{COEFFICIENT\_TRANSPORT\_OPEN}.
+\end{gathered}
+\tag{5.53z$''''$}
+$$
+
+For an \(I_{(4)}\) row satisfying
+
+$$
+\mathcal A_{I_{(4)},r}
+=\int_k\frac{P_r(k,p_1,p_2)}{k^2},
+\qquad
+P_r\in\mathbb Q[k,p_1,p_2],
+$$
+
+DRED scalelessness gives \(\mathcal A_{I_{(4)},r}=0\).  The edge-tagged
+locality-to-polynomial proof for all \(180\) rows, their separated ordinary
+UV/IR poles, the \(H_2\) projector, the \(328\) shared-scope \(I_1H_1\)
+branches, and the \(I_2\) normalization remain open.
+
+The symmetric source quotient and dotted-index variance select the following
+quadratic target candidate:
+
+$$
+\boxed{
+\mathscr O_{\star,AB}
+=c_{ACD}c_{BCE}
+\left[
 \widetilde{\mathcal W}_{\dot\alpha}^{D}
-\nabla_+{}^{\dot\alpha}X^E,
+\mathcal D_+{}^{\dot\alpha}X^E
++(\mathcal D_+{}^{\dot\alpha}X^D)
+\widetilde{\mathcal W}_{\dot\alpha}^{E}
+\right],
 \qquad
 X^E=(\nabla_+\mathcal W_+)^E.}
 \tag{5.54}
 $$
 
-For the reflected orientation, the natural pre-\(D\) external word
-\((\mathcal W,\widetilde{\mathcal W})\) has one odd--odd inversion relative to
-the fixed word \((\widetilde{\mathcal W},\mathcal W)\).  Its orientation sign is
-therefore \(-1\).  Relabelling \(D\leftrightarrow E\) gives
+Its coefficient is not propagated:
 
 $$
 \boxed{
-\Gamma_{\rm anom}
-=\frac{g^2}{64\pi^2}c_{ACD}c_{BCE}
-\left[
-\widetilde{\mathcal W}_{\dot\alpha}^{D}
-\nabla_+{}^{\dot\alpha}X^E
--(\nabla_+{}^{\dot\alpha}X^D)
-\widetilde{\mathcal W}_{\dot\alpha}^{E}
-\right].}
+\operatorname{status}\!\left(\Gamma_{C,{\rm pole}}\text{ evaluated}\right)
+=\texttt{NOT\_COMPUTED},
+\qquad
+\operatorname{status}\!\left(\Gamma_{\tau,{\rm pole}}\text{ evaluated}\right)
+=\texttt{NOT\_COMPUTED},
+\qquad
+\operatorname{status}\!\left(C_{\rm anomaly}\text{ accepted}\right)
+=\texttt{NOT\_ACCEPTED}.}
 \tag{5.54A}
 $$
 
-Equations (5.54)--(5.54A) are not accepted Ward-identity coefficients until
-the ordinary four-dimensional triangle terms, all physical bubble/contact
-amplitudes generated from (5.53y), and every propagator-collapsed term are
-matched explicitly:
+Equation (5.54) is a type-and-quotient statement, not a Ward-identity
+coefficient.  Define
+
+$$
+\ell_2[\mathscr O]
+:=\left.\frac12\frac{d^2}{dt^2}\right|_{t=0}
+\mathscr O(t\mathcal B).
+\tag{5.54A$'$}
+$$
+
+Let \(\mathcal T_{2,{\rm reg}}^{4d}\) denote the registered physical-\(4d\)
+quadratic typed target and \(B_2\subset\mathcal T_{2,{\rm reg}}^{4d}\) its
+quadratic boundary subspace.  Extend scalars and form the quotient:
+
+$$
+t_\star:=q_{4d}\ell_2(\mathscr O_\star)\ne0,
+\qquad
+\mathcal T_{2,{\rm reg}}^{4d,\epsilon}
+:=\mathcal T_{2,{\rm reg}}^{4d}\otimes_{\mathbb Q}\mathbb Q(\epsilon),
+\qquad
+\overline{\mathcal T}_{2,{\rm reg}}^{4d,\epsilon}
+:=\left(\mathcal T_{2,{\rm reg}}^{4d}/B_2\right)
+\otimes_{\mathbb Q}\mathbb Q(\epsilon),
+$$
+
+$$
+\rho_2^\epsilon:\mathcal T_{2,{\rm reg}}^{4d,\epsilon}
+\longrightarrow\overline{\mathcal T}_{2,{\rm reg}}^{4d,\epsilon},
+\qquad
+\bar t_\star:=\rho_2^\epsilon(t_\star).
+\tag{5.54A$''$}
+$$
+
+Conditionally on \(\bar t_\star\ne0\), fix
+
+$$
+\overline{\mathcal T}_{2,{\rm reg}}^{4d,\epsilon}
+=\mathbb Q(\epsilon)\bar t_\star
+\oplus\overline{\mathcal T}_{2,\perp}^{4d,\epsilon},
+\qquad
+\bar\pi_\star^{4d}:
+\overline{\mathcal T}_{2,{\rm reg}}^{4d,\epsilon}
+\longrightarrow\mathbb Q(\epsilon),
+\qquad
+\bar\pi_\star^{4d}(\alpha\bar t_\star+\bar t_\perp)=\alpha.
+\tag{5.54A$''_1$}
+$$
+
+$$
+\operatorname{status}\!\left(\bar t_\star\ne0\right)
+=\texttt{OPEN\_PHYSICAL4D\_RELATION\_MATRIX}.
+\tag{5.54A$''_2$}
+$$
+
+Define separately the DRED-local and physical-\(4d\) quadratic insertions
+
+$$
+\mathscr A_{{\rm loc,DRED},2}^{(1),{\rm reg}}
+:=\operatorname{Loc}_{\rm UV}^{\rm DRED}
+\Gamma_{\mathscr I,{\rm ren,DRED},2}^{(1),{\rm reg}},
+\qquad
+\mathscr A_{{\rm loc},4d,2}^{(1),{\rm reg}}
+:=\operatorname{Loc}_{\rm UV}^{4d}q_{4d}
+\Gamma_{\mathscr I,{\rm ren,DRED},2}^{(1),{\rm reg}}.
+\tag{5.54A$'''$}
+$$
+
+The interchange
+
+$$
+q_{4d}\operatorname{Loc}_{\rm UV}^{\rm DRED}
+=\operatorname{Loc}_{\rm UV}^{4d}q_{4d}
+\qquad\texttt{NOT\_PROVED}
+\tag{5.54A$''''$}
+$$
+
+is not used.  Conditionally on \(\bar t_\star\ne0\), in the registered
+fixed-vector sector,
 
 $$
 \boxed{
-\mathcal A_{\triangle}^{(4)}
-+\mathcal A_{I_{(3)}\widetilde S_{(3)}}^{(4)}
-+\mathcal A_{I_{(4)}}^{(4)}
-+\mathcal A_{\rm collapsed}^{(4)}=0.}
+C_{2,{\rm reg}}=C_{\triangle,{\rm bare,reg}}+C_{{\rm contact,Hess},{\rm reg}},
+\qquad
+C_{2,{\rm reg}}:=\bar\pi_\star^{4d}\rho_2^\epsilon\!\left(
+\mathscr A_{{\rm loc},4d,2}^{(1),{\rm reg}}\right),
+\qquad
+C_{\triangle,{\rm bare,reg}}:=\bar\pi_\star^{4d}\rho_2^\epsilon\!\left(
+\operatorname{Loc}_{\rm UV}^{4d}q_{4d}Q_{\triangle}^{\rm bare}\right),
+\qquad
+C_{{\rm contact,Hess},{\rm reg}}:=\bar\pi_\star^{4d}\rho_2^\epsilon\!\left(
+\operatorname{Loc}_{\rm UV}^{4d}q_{4d}Q_{\rm contact,Hess}^{(2)}\right)
+.}
 \tag{5.54B}
 $$
+
+$$
+\operatorname{status}\!\left(
+C_{{\rm contact,Hess},{\rm reg}}\text{ evaluated}\right)
+=\texttt{NOT\_COMPUTED}.
+\tag{5.54B$'$}
+$$
+
+For the full theory,
+
+$$
+C_2^{\mathcal N=4}
+:=\sum_{\alpha\in\{V,\Phi_r,\widetilde\Phi_r,{\rm FP},{\rm NK}\}}
+C_{2,\alpha},
+\qquad
+\operatorname{status}\!\left(C_2^{\mathcal N=4}\text{ evaluated}\right)
+=\texttt{NOT\_ESTABLISHED}.
+\tag{5.54C}
+$$
+
+Therefore \(C_{2,{\rm reg}}=C_{\triangle,{\rm bare,reg}}\), uniqueness of the nonlinear
+completion of \(\mathscr O_\star\), and a one-loop anomaly coefficient are not
+established.
 
 ### 5.11e FP/NK one-loop census
 
@@ -2038,7 +2239,7 @@ No graph enters an SD pole sum without this certificate.
 
 ## 5C. FINITE_BV_DENSITY_AND_CYCLES
 
-Only the following remain outside the Step-5A/5B seed calculation:
+The finite-BV Step-5C obligations are
 
 $$
 \boxed{
