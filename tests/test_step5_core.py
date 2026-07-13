@@ -27,6 +27,12 @@ class Step5CoreTest(unittest.TestCase):
         )
         self.assertEqual(audit["totals"]["failed"], 0)
         self.assertEqual(len(audit["channel_ledger"]), 16)
+        ww = next(item for item in audit["channel_ledger"] if item["id"] == "W__W")
+        self.assertEqual(
+            ww["one_loop_seed_state"],
+            "ISOLATED_TRIANGLE_DERIVED__ANOMALY_INVALIDATED_NOT_PROPAGATED",
+        )
+        self.assertNotIn("DERIVED_WW_SEED_G2_OVER_64PI2", expected)
 
 
 if __name__ == "__main__":

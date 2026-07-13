@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "id": "diophantine_solution_set_is_exact",
+      "passed": true
+    },
+    {
+      "id": "every_solution_has_two_external_legs_and_one_loop",
+      "passed": true
+    },
+    {
+      "id": "every_topology_has_a_typed_connected_one_loop_witness",
+      "passed": true
+    },
+    {
+      "id": "typed_matching_fixtures_obey_expectations",
+      "passed": true
+    },
+    {
+      "id": "sixteen_ordered_family_channels",
+      "passed": true
+    },
+    {
+      "id": "eighty_one_component_channels",
+      "passed": true
+    },
+    {
+      "id": "twelve_bare_nonzero_families_with_fifty_six_components",
+      "passed": true
+    },
+    {
+      "id": "four_bare_zero_families_with_twenty_five_components",
+      "passed": true
+    },
+    {
+      "id": "one_partial_and_eleven_ungenerated_nonzero_families",
+      "passed": true
+    },
+    {
+      "id": "no_channel_has_an_accepted_renormalized_result",
+      "passed": true
+    }
+  ],
+  "external_results_imported": false,
+  "generated_sha256": "a012e7c0226acfa95c7f64d2002e06e9d4a1ec32481e8af4be3c7b02b6483922",
+  "schema": "Step5FullN4OneLoopTopologyCensusAudit.v1",
+  "scope": "INTERNAL_ONLY_TWO_EXTERNAL_ONE_LOOP_TOPOLOGY_AND_CHANNEL_CENSUS",
+  "status": "PASS_INTERNAL_CENSUS__PHYSICAL_AMPLITUDES_FAIL_CLOSED",
+  "totals": {
+    "accepted_family_channels": 0,
+    "bare_zero_family_channels": 4,
+    "checks": 10,
+    "component_channels": 81,
+    "failed": 0,
+    "ordered_family_channels": 16,
+    "partial_family_channels": 1,
+    "topology_solutions": 4,
+    "ungenerated_nonzero_family_channels": 11
+  }
+}

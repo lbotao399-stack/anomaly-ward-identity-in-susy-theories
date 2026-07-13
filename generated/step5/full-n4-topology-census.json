@@ -1,0 +1,921 @@
+{
+  "authority_status": "UNMERGED_PROPOSAL_NOT_COMPUTATIONAL_EVIDENCE",
+  "channel_ledger": [
+    {
+      "accepted_renormalized_result": false,
+      "bare_insertion_zero": false,
+      "channel_id": "XX",
+      "component_multiplicity": 1,
+      "implementation_state": "PARTIAL_PURE_VECTOR_I2S3S3_ONLY__NO_ACCEPTED_COEFFICIENT",
+      "left_family": "X",
+      "left_parity": 0,
+      "required_two_external_one_loop_topologies": [
+        "I2S3S3",
+        "I3S3",
+        "I2S4",
+        "I4"
+      ],
+      "right_family": "X",
+      "tree_terms": [
+        {
+          "ordered_word": [
+            "dX",
+            "X"
+          ],
+          "sign": 1
+        },
+        {
+          "ordered_word": [
+            "X",
+            "dX"
+          ],
+          "sign": 1
+        }
+      ]
+    },
+    {
+      "accepted_renormalized_result": false,
+      "bare_insertion_zero": false,
+      "channel_id": "XY",
+      "component_multiplicity": 3,
+      "implementation_state": "OPEN_NO_PHYSICAL_GRAPHIR",
+      "left_family": "X",
+      "left_parity": 0,
+      "required_two_external_one_loop_topologies": [
+        "I2S3S3",
+        "I3S3",
+        "I2S4",
+        "I4"
+      ],
+      "right_family": "Y",
+      "tree_terms": [
+        {
+          "ordered_word": [
+            "dX",
+            "Y"
+          ],
+          "sign": 1
+        },
+        {
+          "ordered_word": [
+            "X",
+            "dY"
+          ],
+          "sign": 1
+        }
+      ]
+    },
+    {
+      "accepted_renormalized_result": false,
+      "bare_insertion_zero": false,
+      "channel_id": "XZ",
+      "component_multiplicity": 3,
+      "implementation_state": "OPEN_NO_PHYSICAL_GRAPHIR",
+      "left_family": "X",
+      "left_parity": 0,
+      "required_two_external_one_loop_topologies": [
+        "I2S3S3",
+        "I3S3",
+        "I2S4",
+        "I4"
+      ],
+      "right_family": "Z",
+      "tree_terms": [
+        {
+          "ordered_word": [
+            "dX",
+            "Z"
+          ],
+          "sign": 1
+        }
+      ]
+    },
+    {
+      "accepted_renormalized_result": false,
+      "bare_insertion_zero": false,
+      "channel_id": "XT",
+      "component_multiplicity": 2,
+      "implementation_state": "OPEN_NO_PHYSICAL_GRAPHIR",
+      "left_family": "X",
+      "left_parity": 0,
+      "required_two_external_one_loop_topologies": [
+        "I2S3S3",
+        "I3S3",
+        "I2S4",
+        "I4"
+      ],
+      "right_family": "T",
+      "tree_terms": [
+        {
+          "ordered_word": [
+            "dX",
+            "T"
+          ],
+          "sign": 1
+        }
+      ]
+    },
+    {
+      "accepted_renormalized_result": false,
+      "bare_insertion_zero": false,
+      "channel_id": "YX",
+      "component_multiplicity": 3,
+      "implementation_state": "OPEN_NO_PHYSICAL_GRAPHIR",
+      "left_family": "Y",
+      "left_parity": 1,
+      "required_two_external_one_loop_topologies": [
+        "I2S3S3",
+        "I3S3",
+        "I2S4",
+        "I4"
+      ],
+      "right_family": "X",
+      "tree_terms": [
+        {
+          "ordered_word": [
+            "dY",
+            "X"
+          ],
+          "sign": 1
+        },
+        {
+          "ordered_word": [
+            "Y",
+            "dX"
+          ],
+          "sign": -1
+        }
+      ]
+    },
+    {
+      "accepted_renormalized_result": false,
+      "bare_insertion_zero": false,
+      "channel_id": "YY",
+      "component_multiplicity": 9,
+      "implementation_state": "OPEN_NO_PHYSICAL_GRAPHIR",
+      "left_family": "Y",
+      "left_parity": 1,
+      "required_two_external_one_loop_topologies": [
+        "I2S3S3",
+        "I3S3",
+        "I2S4",
+        "I4"
+      ],
+      "right_family": "Y",
+      "tree_terms": [
+        {
+          "ordered_word": [
+            "dY",
+            "Y"
+          ],
+          "sign": 1
+        },
+        {
+          "ordered_word": [
+            "Y",
+            "dY"
+          ],
+          "sign": -1
+        }
+      ]
+    },
+    {
+      "accepted_renormalized_result": false,
+      "bare_insertion_zero": false,
+      "channel_id": "YZ",
+      "component_multiplicity": 9,
+      "implementation_state": "OPEN_NO_PHYSICAL_GRAPHIR",
+      "left_family": "Y",
+      "left_parity": 1,
+      "required_two_external_one_loop_topologies": [
+        "I2S3S3",
+        "I3S3",
+        "I2S4",
+        "I4"
+      ],
+      "right_family": "Z",
+      "tree_terms": [
+        {
+          "ordered_word": [
+            "dY",
+            "Z"
+          ],
+          "sign": 1
+        }
+      ]
+    },
+    {
+      "accepted_renormalized_result": false,
+      "bare_insertion_zero": false,
+      "channel_id": "YT",
+      "component_multiplicity": 6,
+      "implementation_state": "OPEN_NO_PHYSICAL_GRAPHIR",
+      "left_family": "Y",
+      "left_parity": 1,
+      "required_two_external_one_loop_topologies": [
+        "I2S3S3",
+        "I3S3",
+        "I2S4",
+        "I4"
+      ],
+      "right_family": "T",
+      "tree_terms": [
+        {
+          "ordered_word": [
+            "dY",
+            "T"
+          ],
+          "sign": 1
+        }
+      ]
+    },
+    {
+      "accepted_renormalized_result": false,
+      "bare_insertion_zero": false,
+      "channel_id": "ZX",
+      "component_multiplicity": 3,
+      "implementation_state": "OPEN_NO_PHYSICAL_GRAPHIR",
+      "left_family": "Z",
+      "left_parity": 0,
+      "required_two_external_one_loop_topologies": [
+        "I2S3S3",
+        "I3S3",
+        "I2S4",
+        "I4"
+      ],
+      "right_family": "X",
+      "tree_terms": [
+        {
+          "ordered_word": [
+            "Z",
+            "dX"
+          ],
+          "sign": 1
+        }
+      ]
+    },
+    {
+      "accepted_renormalized_result": false,
+      "bare_insertion_zero": false,
+      "channel_id": "ZY",
+      "component_multiplicity": 9,
+      "implementation_state": "OPEN_NO_PHYSICAL_GRAPHIR",
+      "left_family": "Z",
+      "left_parity": 0,
+      "required_two_external_one_loop_topologies": [
+        "I2S3S3",
+        "I3S3",
+        "I2S4",
+        "I4"
+      ],
+      "right_family": "Y",
+      "tree_terms": [
+        {
+          "ordered_word": [
+            "Z",
+            "dY"
+          ],
+          "sign": 1
+        }
+      ]
+    },
+    {
+      "accepted_renormalized_result": false,
+      "bare_insertion_zero": true,
+      "channel_id": "ZZ",
+      "component_multiplicity": 9,
+      "implementation_state": "PROVED_BARE_ZERO__RENORMALIZED_MIXING_OPEN",
+      "left_family": "Z",
+      "left_parity": 0,
+      "required_two_external_one_loop_topologies": [],
+      "right_family": "Z",
+      "tree_terms": []
+    },
+    {
+      "accepted_renormalized_result": false,
+      "bare_insertion_zero": true,
+      "channel_id": "ZT",
+      "component_multiplicity": 6,
+      "implementation_state": "PROVED_BARE_ZERO__RENORMALIZED_MIXING_OPEN",
+      "left_family": "Z",
+      "left_parity": 0,
+      "required_two_external_one_loop_topologies": [],
+      "right_family": "T",
+      "tree_terms": []
+    },
+    {
+      "accepted_renormalized_result": false,
+      "bare_insertion_zero": false,
+      "channel_id": "TX",
+      "component_multiplicity": 2,
+      "implementation_state": "OPEN_NO_PHYSICAL_GRAPHIR",
+      "left_family": "T",
+      "left_parity": 1,
+      "required_two_external_one_loop_topologies": [
+        "I2S3S3",
+        "I3S3",
+        "I2S4",
+        "I4"
+      ],
+      "right_family": "X",
+      "tree_terms": [
+        {
+          "ordered_word": [
+            "T",
+            "dX"
+          ],
+          "sign": -1
+        }
+      ]
+    },
+    {
+      "accepted_renormalized_result": false,
+      "bare_insertion_zero": false,
+      "channel_id": "TY",
+      "component_multiplicity": 6,
+      "implementation_state": "OPEN_NO_PHYSICAL_GRAPHIR",
+      "left_family": "T",
+      "left_parity": 1,
+      "required_two_external_one_loop_topologies": [
+        "I2S3S3",
+        "I3S3",
+        "I2S4",
+        "I4"
+      ],
+      "right_family": "Y",
+      "tree_terms": [
+        {
+          "ordered_word": [
+            "T",
+            "dY"
+          ],
+          "sign": -1
+        }
+      ]
+    },
+    {
+      "accepted_renormalized_result": false,
+      "bare_insertion_zero": true,
+      "channel_id": "TZ",
+      "component_multiplicity": 6,
+      "implementation_state": "PROVED_BARE_ZERO__RENORMALIZED_MIXING_OPEN",
+      "left_family": "T",
+      "left_parity": 1,
+      "required_two_external_one_loop_topologies": [],
+      "right_family": "Z",
+      "tree_terms": []
+    },
+    {
+      "accepted_renormalized_result": false,
+      "bare_insertion_zero": true,
+      "channel_id": "TT",
+      "component_multiplicity": 4,
+      "implementation_state": "PROVED_BARE_ZERO__RENORMALIZED_MIXING_OPEN",
+      "left_family": "T",
+      "left_parity": 1,
+      "required_two_external_one_loop_topologies": [],
+      "right_family": "T",
+      "tree_terms": []
+    }
+  ],
+  "checks": [
+    {
+      "id": "diophantine_solution_set_is_exact",
+      "passed": true
+    },
+    {
+      "id": "every_solution_has_two_external_legs_and_one_loop",
+      "passed": true
+    },
+    {
+      "id": "every_topology_has_a_typed_connected_one_loop_witness",
+      "passed": true
+    },
+    {
+      "id": "typed_matching_fixtures_obey_expectations",
+      "passed": true
+    },
+    {
+      "id": "sixteen_ordered_family_channels",
+      "passed": true
+    },
+    {
+      "id": "eighty_one_component_channels",
+      "passed": true
+    },
+    {
+      "id": "twelve_bare_nonzero_families_with_fifty_six_components",
+      "passed": true
+    },
+    {
+      "id": "four_bare_zero_families_with_twenty_five_components",
+      "passed": true
+    },
+    {
+      "id": "one_partial_and_eleven_ungenerated_nonzero_families",
+      "passed": true
+    },
+    {
+      "id": "no_channel_has_an_accepted_renormalized_result",
+      "passed": true
+    }
+  ],
+  "diophantine_derivation": {
+    "connected_one_loop_euler_equation": "1=E-(N+1)+1; E=N+1",
+    "defect_equation": "(n_I-2)+sum_a(n_a-2)=2",
+    "derived_bounds": "N<=2; 2<=n_I<=4; 3<=n_a<=4",
+    "half_edge_equation": "n_I+sum_a n_a=2E+2",
+    "solutions": [
+      {
+        "action_valences": [
+          3,
+          3
+        ],
+        "action_vertex_count": 2,
+        "defect_sum": 2,
+        "external_leg_count": 2,
+        "insertion_valence": 2,
+        "internal_edge_count": 3,
+        "loop_number": 1,
+        "topology_id": "I2S3S3",
+        "total_vertex_count": 3
+      },
+      {
+        "action_valences": [
+          3
+        ],
+        "action_vertex_count": 1,
+        "defect_sum": 2,
+        "external_leg_count": 2,
+        "insertion_valence": 3,
+        "internal_edge_count": 2,
+        "loop_number": 1,
+        "topology_id": "I3S3",
+        "total_vertex_count": 2
+      },
+      {
+        "action_valences": [
+          4
+        ],
+        "action_vertex_count": 1,
+        "defect_sum": 2,
+        "external_leg_count": 2,
+        "insertion_valence": 2,
+        "internal_edge_count": 2,
+        "loop_number": 1,
+        "topology_id": "I2S4",
+        "total_vertex_count": 2
+      },
+      {
+        "action_valences": [],
+        "action_vertex_count": 0,
+        "defect_sum": 2,
+        "external_leg_count": 2,
+        "insertion_valence": 4,
+        "internal_edge_count": 1,
+        "loop_number": 1,
+        "topology_id": "I4",
+        "total_vertex_count": 1
+      }
+    ]
+  },
+  "external_results_imported": false,
+  "external_target_data_imported": false,
+  "full_n4_fluctuation_blocks": [
+    "V",
+    "(Phi_1,TildePhi_1)",
+    "(Phi_2,TildePhi_2)",
+    "(Phi_3,TildePhi_3)",
+    "FP",
+    "NK"
+  ],
+  "letter_dictionary": {
+    "T_dot_a": "TildeW_dot_a",
+    "X": "nabla_+ W_+",
+    "Y_r": "nabla_+ Phi_r",
+    "Z_r": "TildePhi_r"
+  },
+  "result_boundary": {
+    "complete_contact_pole_computed": false,
+    "counterterm_fixed": false,
+    "full_n4_one_loop_coefficient_accepted": false,
+    "physical_graphir_complete": false
+  },
+  "schema": "Step5FullN4OneLoopTopologyCensus.v1",
+  "scope": "INTERNAL_ONLY_TWO_EXTERNAL_ONE_LOOP_TOPOLOGY_AND_CHANNEL_CENSUS",
+  "source_sha256": {
+    "audits/step5-one-loop-covariant-completion-final-audit.md": "d8e5477236a123236bb790bcde9a535983b484505b9c42e7c277d0f83ebeb8d3",
+    "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md": "5b24afd355ef0d471e859c37a24a15632fcebdcad3aa654d30dc098647939ab5",
+    "scripts/step5_graph_ir.py": "2e5cf55ad5e486084ad4e3a0435031e29b6d22480586cbeef25e2a7b40954044"
+  },
+  "status": "PASS_INTERNAL_CENSUS__PHYSICAL_AMPLITUDES_FAIL_CLOSED",
+  "totals": {
+    "accepted_family_channels": 0,
+    "bare_zero_family_channels": 4,
+    "checks": 10,
+    "component_channels": 81,
+    "failed": 0,
+    "ordered_family_channels": 16,
+    "partial_family_channels": 1,
+    "topology_solutions": 4,
+    "ungenerated_nonzero_family_channels": 11
+  },
+  "typed_perfect_matching_contract": {
+    "absence_rule": "PROVED_ABSENT requires no valid matching over every legal insertion/action expansion",
+    "external_port_rule": "external background ports are excluded from the matching",
+    "graph_rule": "matching graph is connected and b1=E-V+1=1",
+    "quantum_port_rule": "every quantum port occurs in exactly one matched edge",
+    "topology_witnesses": [
+      {
+        "canonical_witness": [
+          {
+            "left_port": "I2.q0",
+            "propagator_rule": "P_VV",
+            "right_port": "S3a.q0"
+          },
+          {
+            "left_port": "I2.q1",
+            "propagator_rule": "P_VV",
+            "right_port": "S3b.q0"
+          },
+          {
+            "left_port": "S3a.q1",
+            "propagator_rule": "P_VV",
+            "right_port": "S3b.q1"
+          }
+        ],
+        "certificate": {
+          "connected": true,
+          "edge_count": 3,
+          "every_edge_typed": true,
+          "is_connected_one_loop": true,
+          "loop_number_E_minus_V_plus_1": 1,
+          "quantum_ports_saturated_once": true,
+          "vertex_count": 3
+        },
+        "connected_one_loop_matching_count": 8,
+        "quantum_ports": [
+          {
+            "field": "V",
+            "flavor": null,
+            "port_id": "I2.q0",
+            "vertex_id": "I2"
+          },
+          {
+            "field": "V",
+            "flavor": null,
+            "port_id": "I2.q1",
+            "vertex_id": "I2"
+          },
+          {
+            "field": "V",
+            "flavor": null,
+            "port_id": "S3a.q0",
+            "vertex_id": "S3a"
+          },
+          {
+            "field": "V",
+            "flavor": null,
+            "port_id": "S3a.q1",
+            "vertex_id": "S3a"
+          },
+          {
+            "field": "V",
+            "flavor": null,
+            "port_id": "S3b.q0",
+            "vertex_id": "S3b"
+          },
+          {
+            "field": "V",
+            "flavor": null,
+            "port_id": "S3b.q1",
+            "vertex_id": "S3b"
+          }
+        ],
+        "role": "ABSTRACT_EXISTENCE_WITNESS_NOT_A_PHYSICAL_SUPERGRAPH",
+        "topology_id": "I2S3S3",
+        "typed_perfect_matching_count": 15
+      },
+      {
+        "canonical_witness": [
+          {
+            "left_port": "I3.q0",
+            "propagator_rule": "P_VV",
+            "right_port": "S3.q0"
+          },
+          {
+            "left_port": "I3.q1",
+            "propagator_rule": "P_VV",
+            "right_port": "S3.q1"
+          }
+        ],
+        "certificate": {
+          "connected": true,
+          "edge_count": 2,
+          "every_edge_typed": true,
+          "is_connected_one_loop": true,
+          "loop_number_E_minus_V_plus_1": 1,
+          "quantum_ports_saturated_once": true,
+          "vertex_count": 2
+        },
+        "connected_one_loop_matching_count": 2,
+        "quantum_ports": [
+          {
+            "field": "V",
+            "flavor": null,
+            "port_id": "I3.q0",
+            "vertex_id": "I3"
+          },
+          {
+            "field": "V",
+            "flavor": null,
+            "port_id": "I3.q1",
+            "vertex_id": "I3"
+          },
+          {
+            "field": "V",
+            "flavor": null,
+            "port_id": "S3.q0",
+            "vertex_id": "S3"
+          },
+          {
+            "field": "V",
+            "flavor": null,
+            "port_id": "S3.q1",
+            "vertex_id": "S3"
+          }
+        ],
+        "role": "ABSTRACT_EXISTENCE_WITNESS_NOT_A_PHYSICAL_SUPERGRAPH",
+        "topology_id": "I3S3",
+        "typed_perfect_matching_count": 3
+      },
+      {
+        "canonical_witness": [
+          {
+            "left_port": "I2.q0",
+            "propagator_rule": "P_VV",
+            "right_port": "S4.q0"
+          },
+          {
+            "left_port": "I2.q1",
+            "propagator_rule": "P_VV",
+            "right_port": "S4.q1"
+          }
+        ],
+        "certificate": {
+          "connected": true,
+          "edge_count": 2,
+          "every_edge_typed": true,
+          "is_connected_one_loop": true,
+          "loop_number_E_minus_V_plus_1": 1,
+          "quantum_ports_saturated_once": true,
+          "vertex_count": 2
+        },
+        "connected_one_loop_matching_count": 2,
+        "quantum_ports": [
+          {
+            "field": "V",
+            "flavor": null,
+            "port_id": "I2.q0",
+            "vertex_id": "I2"
+          },
+          {
+            "field": "V",
+            "flavor": null,
+            "port_id": "I2.q1",
+            "vertex_id": "I2"
+          },
+          {
+            "field": "V",
+            "flavor": null,
+            "port_id": "S4.q0",
+            "vertex_id": "S4"
+          },
+          {
+            "field": "V",
+            "flavor": null,
+            "port_id": "S4.q1",
+            "vertex_id": "S4"
+          }
+        ],
+        "role": "ABSTRACT_EXISTENCE_WITNESS_NOT_A_PHYSICAL_SUPERGRAPH",
+        "topology_id": "I2S4",
+        "typed_perfect_matching_count": 3
+      },
+      {
+        "canonical_witness": [
+          {
+            "left_port": "I4.q0",
+            "propagator_rule": "P_VV",
+            "right_port": "I4.q1"
+          }
+        ],
+        "certificate": {
+          "connected": true,
+          "edge_count": 1,
+          "every_edge_typed": true,
+          "is_connected_one_loop": true,
+          "loop_number_E_minus_V_plus_1": 1,
+          "quantum_ports_saturated_once": true,
+          "vertex_count": 1
+        },
+        "connected_one_loop_matching_count": 1,
+        "quantum_ports": [
+          {
+            "field": "V",
+            "flavor": null,
+            "port_id": "I4.q0",
+            "vertex_id": "I4"
+          },
+          {
+            "field": "V",
+            "flavor": null,
+            "port_id": "I4.q1",
+            "vertex_id": "I4"
+          }
+        ],
+        "role": "ABSTRACT_EXISTENCE_WITNESS_NOT_A_PHYSICAL_SUPERGRAPH",
+        "topology_id": "I4",
+        "typed_perfect_matching_count": 1
+      }
+    ],
+    "typed_fixtures": [
+      {
+        "expected": true,
+        "fixture_id": "vector_pair",
+        "matching_exists": true,
+        "ports": [
+          {
+            "field": "V",
+            "flavor": null,
+            "port_id": "a",
+            "vertex_id": "u"
+          },
+          {
+            "field": "V",
+            "flavor": null,
+            "port_id": "b",
+            "vertex_id": "v"
+          }
+        ]
+      },
+      {
+        "expected": true,
+        "fixture_id": "matter_same_flavor",
+        "matching_exists": true,
+        "ports": [
+          {
+            "field": "Phi",
+            "flavor": 2,
+            "port_id": "a",
+            "vertex_id": "u"
+          },
+          {
+            "field": "TildePhi",
+            "flavor": 2,
+            "port_id": "b",
+            "vertex_id": "v"
+          }
+        ]
+      },
+      {
+        "expected": false,
+        "fixture_id": "matter_wrong_flavor",
+        "matching_exists": false,
+        "ports": [
+          {
+            "field": "Phi",
+            "flavor": 1,
+            "port_id": "a",
+            "vertex_id": "u"
+          },
+          {
+            "field": "TildePhi",
+            "flavor": 3,
+            "port_id": "b",
+            "vertex_id": "v"
+          }
+        ]
+      },
+      {
+        "expected": false,
+        "fixture_id": "mixed_vector_matter",
+        "matching_exists": false,
+        "ports": [
+          {
+            "field": "V",
+            "flavor": null,
+            "port_id": "a",
+            "vertex_id": "u"
+          },
+          {
+            "field": "Phi",
+            "flavor": 1,
+            "port_id": "b",
+            "vertex_id": "v"
+          }
+        ]
+      },
+      {
+        "expected": true,
+        "fixture_id": "fp_pair",
+        "matching_exists": true,
+        "ports": [
+          {
+            "field": "cprime_plus",
+            "flavor": null,
+            "port_id": "a",
+            "vertex_id": "u"
+          },
+          {
+            "field": "tilde_c",
+            "flavor": null,
+            "port_id": "b",
+            "vertex_id": "v"
+          }
+        ]
+      },
+      {
+        "expected": true,
+        "fixture_id": "nk_pair",
+        "matching_exists": true,
+        "ports": [
+          {
+            "field": "b_NK",
+            "flavor": null,
+            "port_id": "a",
+            "vertex_id": "u"
+          },
+          {
+            "field": "tilde_b_NK",
+            "flavor": null,
+            "port_id": "b",
+            "vertex_id": "v"
+          }
+        ]
+      },
+      {
+        "expected": false,
+        "fixture_id": "odd_vector_ports",
+        "matching_exists": false,
+        "ports": [
+          {
+            "field": "V",
+            "flavor": null,
+            "port_id": "a",
+            "vertex_id": "u"
+          },
+          {
+            "field": "V",
+            "flavor": null,
+            "port_id": "b",
+            "vertex_id": "v"
+          },
+          {
+            "field": "V",
+            "flavor": null,
+            "port_id": "c",
+            "vertex_id": "w"
+          }
+        ]
+      }
+    ],
+    "zero_after_dalgebra_rule": "a matched graph killed later is GRAPH_EXISTS_AMPLITUDE_ZERO"
+  },
+  "ww_missing_families": [
+    {
+      "family": "I2S3S3",
+      "graph_role": "triangle",
+      "state": "PARTIAL_PURE_VECTOR_DIRECT_AND_REFLECTED_ONLY"
+    },
+    {
+      "family": "I3S3",
+      "graph_role": "insertion-action bubble",
+      "labeled_candidate_count": 360,
+      "state": "OPEN_SHARED_SCOPE_DALGEBRA_AND_POLE"
+    },
+    {
+      "family": "I2S4",
+      "graph_role": "seagull bubble",
+      "state": "OPEN_H2_PROJECTOR_DALGEBRA_AND_NORMALIZATION"
+    },
+    {
+      "family": "I4",
+      "graph_role": "insertion tadpole/contact",
+      "labeled_candidate_count": 180,
+      "state": "OPEN_180_LOCALITY_TO_POLYNOMIAL_PROOFS"
+    },
+    {
+      "binding_count": 48,
+      "current_child_graphir_count": 6,
+      "family": "DALGEBRA_COLLAPSED_CHILDREN",
+      "graph_role": "propagator-cut descendants",
+      "state": "OPEN_COEFFICIENT_TRANSPORT_AND_BASIS_BIJECTION"
+    },
+    {
+      "family": "CT2",
+      "graph_role": "additive local source counterterm",
+      "state": "OPEN_OPERATOR_MIXING_BASIS_AND_RENORMALIZATION_CONDITION"
+    }
+  ]
+}

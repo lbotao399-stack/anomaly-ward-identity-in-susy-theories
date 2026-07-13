@@ -1,0 +1,868 @@
+{
+  "authority_columns": {
+    "accepted_origin_main": {
+      "accepted_anomaly_coefficients": [],
+      "accepted_full_n4_one_loop_results": [],
+      "authority": "ACCEPTED_ORIGIN_MAIN_SNAPSHOT",
+      "commit": "9e11316c94efe37df2512a812738ff153c8e6985",
+      "result": "EMPTY",
+      "step5_computational_paths": [],
+      "task_status": "SPECIFIED"
+    },
+    "draft_pr46_proposal": {
+      "accepted_anomaly_coefficients": [],
+      "authority": "PROPOSAL_ONLY_NOT_ACCEPTED",
+      "commit": "1ca784bcf73d1ff0809e6469af6fb7a10799d142",
+      "exact_intermediate_results": [
+        "WW_ISOLATED_VECTOR_TRIANGLE_DIRECT",
+        "WW_ISOLATED_VECTOR_TRIANGLE_REFLECTED",
+        "REGISTERED_FIXED_VECTOR_ROOTED_WARD_COVARIANCE",
+        "PRIMITIVE_WW_FP_NK_ABSENCE_AT_ONE_LOOP"
+      ],
+      "exact_renormalized_channel_results": [],
+      "proposal_status": "STEP5A_REGISTERED_ROOTED_WARD_PROVED_PHYSICAL4D_C1_OPEN_FULLDRED_TAU_KERNEL_CONTACT_AND_N4_SECTORS_OPEN",
+      "task_status": "SPECIFIED"
+    },
+    "draft_worktree_extension": {
+      "accepted_anomaly_coefficients": [],
+      "authority": "UNCOMMITTED_PROJECT_ONLY_PROPOSAL",
+      "exact_intermediate_results": [
+        "WW_MIXED_I2_S3M_S3M_YZ_GRAPH_CENSUS",
+        "WW_MIXED_I2_S4M_YZ_SEAGULL_CENSUS"
+      ],
+      "exact_renormalized_channel_results": [],
+      "source": "generated/step5/full-n4-matter-yz-census.json"
+    }
+  },
+  "checks": {
+    "accepted_snapshot_has_no_step5_computational_paths": true,
+    "accepted_snapshot_task_is_step5_specified": true,
+    "all_required_open_gate_categories_are_nonempty": true,
+    "all_sixteen_renormalized_results_are_open": true,
+    "contract_records_full_n4_coefficient_not_established": true,
+    "eighty_one_components": true,
+    "eleven_nonzero_unimplemented_families_have_fifty_five_components": true,
+    "four_tree_zero_families_have_twenty_five_components": true,
+    "no_accepted_coefficient": true,
+    "no_external_or_ht_target_input": true,
+    "one_partial_seed_and_fifteen_unimplemented_families": true,
+    "physical4d_quotient_is_fail_closed": true,
+    "primitive_ww_ghost_absence_is_narrowly_proved": true,
+    "proposal_is_still_specified_not_accepted": true,
+    "raw_full_dred_injectivity_is_explicitly_false": true,
+    "sixteen_ordered_families": true,
+    "stale_aggregate_candidate_is_present_only_as_old_candidate_surface": true,
+    "ww_contact_and_anomaly_are_invalidated": true,
+    "ww_endpoint_branch_numerator_factorization_is_recorded": true,
+    "ww_has_two_orientations_and_eight_rows_each": true,
+    "ww_mixed_matter_yz_census_acceptance_is_fail_closed": true,
+    "ww_mixed_matter_yz_census_has_four_exact_open_gates": true,
+    "ww_mixed_matter_yz_census_has_two_exact_graph_families": true,
+    "ww_mixed_matter_yz_census_imports_no_external_target": true,
+    "ww_orientation_poles_are_exact": true,
+    "ww_row_pole_is_exact": true,
+    "ww_row_prefactor_is_exact": true,
+    "ww_row_to_orientation_pole_aggregation_is_exact": true
+  },
+  "coefficient_boundary": {
+    "accepted_coefficients": [],
+    "accepted_full_n4_result_count": 0,
+    "full_n4_coefficient": {
+      "definition": "C_2^N4=sum_(V,Phi_r,TildePhi_r,FP,NK) C_(2,alpha)",
+      "status": "NOT_ESTABLISHED"
+    },
+    "isolated_triangle_poles_are_intermediate_not_anomaly_coefficients": true,
+    "stale_aggregate_candidate": {
+      "accepted": false,
+      "ledger_status": "INVALIDATED_STALE_AGGREGATE_SD_CANDIDATE__NO_COEFFICIENT_PROPAGATION",
+      "missing": [
+        "basis_resolved_physical_contact_orbit",
+        "contact_UV_pole",
+        "matter_fluctuating_sectors",
+        "physical_4d_quotient",
+        "counterterm_and_scheme"
+      ],
+      "old_surface_status": "DERIVED_AGGREGATE_SD_CANDIDATE",
+      "usable_as_full_n4_result": false,
+      "usable_as_ward_coefficient": false,
+      "value": "g^2/(64*pi^2)"
+    }
+  },
+  "counts": {
+    "component_channels": 81,
+    "exact_renormalized_families": 0,
+    "nonzero_unimplemented_components": 55,
+    "nonzero_unimplemented_families": 11,
+    "ordered_families": 16,
+    "partial_seed_families": 1,
+    "renormalized_open_component_channels": 81,
+    "renormalized_open_families": 16,
+    "tree_zero_components": 25,
+    "tree_zero_families": 4,
+    "unimplemented_component_channels": 80,
+    "unimplemented_families": 15,
+    "ww_mixed_matter_yz_connected_labeled_rows": 8,
+    "ww_mixed_matter_yz_disconnected_typed_matchings": 2,
+    "ww_mixed_matter_yz_graph_families": 2,
+    "ww_mixed_matter_yz_open_obligations": 4
+  },
+  "exact_proposal_intermediates": {
+    "primitive_ww_ghost_census": {
+      "FP": "PROVED_ABSENT_AT_THIS_ORDER",
+      "NK": "PROVED_ABSENT_AT_THIS_ORDER",
+      "scope": "PRIMITIVE_WW_ONLY_NOT_CHANNEL_INDEPENDENT"
+    },
+    "registered_rooted_ward_covariance": {
+      "functional": "Gamma_root^(1)=1/2*STr_DRED(G_B*I_B)",
+      "physical_full_n4_coefficient": "NOT_DETERMINED",
+      "status": "PROVED_REGISTERED_FIXED_VECTOR_ROOTED_FUNCTIONAL_ONLY",
+      "ward_identity": "delta_R Gamma_root^(1)=1/2*STr_DRED([R,G_B*I_B])=0"
+    },
+    "ww_isolated_triangle": {
+      "accepted_anomaly_coefficient": null,
+      "closed_d_chain_factor": "-1/2",
+      "coefficient_after_two_d_minus_placements": "+g^2/8",
+      "d_algebra_rows_per_orientation": {
+        "DIRECT": 8,
+        "REFLECTED": 8
+      },
+      "four_endpoint_factorized_coefficient_per_placement": "+g^2/16",
+      "four_endpoint_numerator_identity_per_d_minus_placement": "r0*p*r1+r0*p*r2+r1*p*r1+r1*p*r2=(r0+r1)*p*(r1+r2)=L1*p*L2",
+      "graph_count": 2,
+      "graph_prefactor_before_d_chain": "-g^2/8",
+      "operator_word_status": "TYPE_AND_REFLECTION_QUOTIENT_FIXED_COEFFICIENT_NOT_PROPAGATED",
+      "orientation_uv_poles": {
+        "DIRECT": "+g^2/(128*pi^2*epsilon)*c_{ACD}c_{BCE}*T_(mu n nu)*hat_delta^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)",
+        "REFLECTED": "+g^2/(128*pi^2*epsilon)*c_{BCD}c_{ACE}*T_(mu n nu)*hat_delta^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)"
+      },
+      "orientations": [
+        "DIRECT",
+        "REFLECTED"
+      ],
+      "physical_symmetric_operator_word": "c_{ACD}c_{BCE}[TildeW_dot_alpha^D*mathcalD_+^dot_alpha X^E+(mathcalD_+^dot_alpha X^D)*TildeW_dot_alpha^E]",
+      "pole_aggregation_per_orientation": "8*(1/1024)*g^2/(pi^2*epsilon)=1/128*g^2/(pi^2*epsilon)",
+      "preintegration": {
+        "L1": "2*k+q",
+        "L2": "2*k+p+2*q",
+        "bare_numerator": "L1^mu*p^nu*L2^rho",
+        "bare_numerator_contains_epsilon": false,
+        "coefficient_after_two_D_minus_placements": {
+          "DIRECT": "+g^2/8",
+          "REFLECTED": "+g^2/8"
+        },
+        "coefficient_per_D_minus_placement_after_four_endpoint_sum": {
+          "DIRECT": "+g^2/16",
+          "REFLECTED": "+g^2/16"
+        },
+        "coefficient_per_endpoint_row": {
+          "DIRECT": "+g^2/16",
+          "REFLECTED": "+g^2/16"
+        },
+        "denominator": "k^2*(k+q)^2*(k+p+q)^2",
+        "post_D_external_operator": "X^E=nabla_+W_+^E",
+        "pre_D_action_external_field": "W_plus^E"
+      },
+      "renormalized_ward_result": "OPEN",
+      "row_aggregation_semantics": "ADDITIVE_ENDPOINT_ASSIGNMENT_BRANCHES_WITH_DISTINCT_NUMERATORS__NOT_EIGHT_IDENTICAL_AMPLITUDES",
+      "row_prefactor": "+g^2/16",
+      "row_to_orientation_aggregation_status": "PROVED_EXACT",
+      "row_uv_pole": "+g^2/(1024*pi^2*epsilon)*hat_delta^(mu nu)",
+      "scope": "FIXED_VECTOR_PURE_GAUGE_ISOLATED_TRIANGLE_ONLY",
+      "two_placement_factorized_coefficient": "+g^2/8"
+    },
+    "ww_mixed_matter_yz_census": {
+      "acceptance_boundary": {
+        "I3_Euler_contact_instantiated": false,
+        "I4_Euler_contact_instantiated": false,
+        "external_Y_projection_accepted": false,
+        "matter_triangle_physical_GraphIR": false,
+        "ordinary_UV_pole_computed": false,
+        "renormalized_one_loop_coefficient_accepted": false
+      },
+      "accepted_anomaly_coefficient": null,
+      "open_obligation_ids": [
+        "MATTER_SUPERPROPAGATOR_NORMALIZATION",
+        "EXTERNAL_Y_DALGEBRA_PROJECTION",
+        "E_XI_I3_SOURCE_FUNCTIONAL_DERIVATIVE",
+        "E_XI_I4_SOURCE_FUNCTIONAL_DERIVATIVE"
+      ],
+      "renormalized_ward_result": "OPEN",
+      "scope": "PROJECT_ONLY_WW_MIXED_MATTER_YZ_TRIANGLE_AND_SEAGULL",
+      "seagull_I2_S4m": {
+        "classification": "GRAMMAR_DERIVED_MANDATORY_CONTACT_FAMILY",
+        "coefficient_ledger": {
+          "I2_coefficient": {
+            "i_power": 0,
+            "rational": {
+              "denominator": 64,
+              "numerator": 1
+            },
+            "sqrt2_power": 0,
+            "symbol_powers": {}
+          },
+          "S4m_coefficient": {
+            "i_power": 0,
+            "rational": {
+              "denominator": 2,
+              "numerator": 1
+            },
+            "sqrt2_power": 0,
+            "symbol_powers": {
+              "h": 1
+            }
+          },
+          "coefficient_status": "OPEN_EXTERNAL_Y_DALGEBRA_NO_POLE_ASSIGNED",
+          "euclidean_action_expansion": {
+            "expansion_coefficient": "-1",
+            "external_YZ_copy_assignment_multiplicity": 1,
+            "net_factor": "-1"
+          },
+          "factor_after_exact_vector_propagators": {
+            "i_power": 0,
+            "rational": {
+              "denominator": 32,
+              "numerator": -1
+            },
+            "sqrt2_power": 0,
+            "symbol_powers": {
+              "g2": 2,
+              "h": 1
+            }
+          },
+          "h_g2_reduction": "h*g2=1 gives -g2/32",
+          "per_labeled_Wick_row_before_propagators": {
+            "i_power": 0,
+            "rational": {
+              "denominator": 128,
+              "numerator": -1
+            },
+            "sqrt2_power": 0,
+            "symbol_powers": {
+              "h": 1
+            }
+          },
+          "stored_monomial_product": {
+            "i_power": 0,
+            "rational": {
+              "denominator": 128,
+              "numerator": 1
+            },
+            "sqrt2_power": 0,
+            "symbol_powers": {
+              "h": 1
+            }
+          },
+          "two_exact_vector_propagator_factors": [
+            "-2*g2",
+            "-2*g2"
+          ]
+        },
+        "connected_labeled_row_count": 4,
+        "disconnected_typed_matching_count": 1
+      },
+      "status": "PASS_EXACT_PROJECT_GRAPH_CENSUS__AMPLITUDES_FAIL_CLOSED",
+      "triangle_I2_S3m_S3m": {
+        "classification": "GRAMMAR_DERIVED_TYPED_GRAPH_FAMILY",
+        "coefficient_ledger": {
+          "I2_coefficient": {
+            "i_power": 0,
+            "rational": {
+              "denominator": 64,
+              "numerator": 1
+            },
+            "sqrt2_power": 0,
+            "symbol_powers": {}
+          },
+          "S3m_coefficient_each": {
+            "i_power": 1,
+            "rational": {
+              "denominator": 1,
+              "numerator": -1
+            },
+            "sqrt2_power": 0,
+            "symbol_powers": {
+              "h": 1
+            }
+          },
+          "coefficient_status": "OPEN_MATTER_SUPERPROPAGATOR_AND_Y_DALGEBRA",
+          "euclidean_action_expansion": {
+            "expansion_coefficient": "1/2!",
+            "external_YZ_copy_assignment_multiplicity": 2,
+            "net_factor": "1"
+          },
+          "h_g2_reduction": "h*g2=1 gives -1/16",
+          "known_factor_before_open_matter_propagator": {
+            "i_power": 0,
+            "rational": {
+              "denominator": 16,
+              "numerator": -1
+            },
+            "sqrt2_power": 0,
+            "symbol_powers": {
+              "g2": 2,
+              "h": 2
+            }
+          },
+          "per_labeled_Wick_row_before_propagators": {
+            "i_power": 0,
+            "rational": {
+              "denominator": 64,
+              "numerator": -1
+            },
+            "sqrt2_power": 0,
+            "symbol_powers": {
+              "h": 2
+            }
+          },
+          "remaining_factor": "G_PhiTildePhi_STRUCTURAL",
+          "stored_monomial_product": {
+            "i_power": 0,
+            "rational": {
+              "denominator": 64,
+              "numerator": -1
+            },
+            "sqrt2_power": 0,
+            "symbol_powers": {
+              "h": 2
+            }
+          },
+          "two_exact_vector_propagator_factors": [
+            "-2*g2",
+            "-2*g2"
+          ]
+        },
+        "connected_labeled_row_count": 4,
+        "disconnected_typed_matching_count": 1
+      }
+    }
+  },
+  "explicit_negative_results": {
+    "complete_physical_contact_family": "FAIL_CLOSED_PHYSICAL_CONTACT_FAMILY_WITH_SCHEMA_INVARIANTS",
+    "full_nonlocal_1PI_completion": "NOT_CLAIMED",
+    "higher_loop_exactness": "NOT_PROVED",
+    "physical4d_total_filtered_injectivity": "FAIL_CLOSED_MISSING_TRUE_N1_PARENT_INCIDENCE",
+    "raw_full_dred_quadratic_jet_injectivity": "FALSE_EXPLICIT_TAU_KERNEL"
+  },
+  "letter_families": {
+    "T": {
+      "count": 2,
+      "expression": "TildeW_dot_a",
+      "project_name": "TildeW"
+    },
+    "X": {
+      "count": 1,
+      "expression": "nabla_+ W_+",
+      "project_name": "W"
+    },
+    "Y": {
+      "count": 3,
+      "expression": "nabla_+ Phi_r",
+      "project_name": "Phi"
+    },
+    "Z": {
+      "count": 3,
+      "expression": "TildePhi_r",
+      "project_name": "TildePhi"
+    }
+  },
+  "open_gates": [
+    {
+      "category": "contact",
+      "code": "WW_PHYSICAL_CONTACT_FAMILY",
+      "status": "OPEN"
+    },
+    {
+      "category": "contact",
+      "code": "H2_X_TILDEW_PROJECTOR",
+      "status": "OPEN"
+    },
+    {
+      "category": "contact",
+      "code": "I1H1_SHARED_SCOPE_DALGEBRA",
+      "status": "OPEN"
+    },
+    {
+      "category": "contact",
+      "code": "I2_X_TILDEW_PROJECTOR",
+      "status": "OPEN"
+    },
+    {
+      "category": "contact",
+      "code": "I2_NORMALIZATION",
+      "status": "OPEN"
+    },
+    {
+      "category": "contact",
+      "code": "I4_LOCALITY_TO_POLYNOMIAL",
+      "status": "OPEN"
+    },
+    {
+      "category": "contact",
+      "code": "I4_ORDINARY_UV_IR_SEPARATION",
+      "status": "OPEN"
+    },
+    {
+      "category": "contact",
+      "code": "CUT_MAP_R_CUT",
+      "status": "OPEN"
+    },
+    {
+      "category": "contact",
+      "code": "COLLAPSE_COEFFICIENT_TRANSPORT",
+      "status": "OPEN"
+    },
+    {
+      "category": "contact",
+      "code": "CT2_FIXED",
+      "status": "OPEN"
+    },
+    {
+      "category": "contact",
+      "code": "PHYSICAL_COLOR_REDUCTION",
+      "status": "OPEN"
+    },
+    {
+      "category": "contact",
+      "code": "PHYSICAL_AUTOMORPHISM",
+      "status": "OPEN"
+    },
+    {
+      "category": "contact",
+      "code": "TAYLOR_WICK_FACTORIAL_MATCHING",
+      "status": "OPEN"
+    },
+    {
+      "category": "contact",
+      "code": "CONTACT_HESSIAN_COEFFICIENT",
+      "status": "OPEN"
+    },
+    {
+      "category": "contact",
+      "code": "GAMMA_C_POLE",
+      "status": "OPEN"
+    },
+    {
+      "category": "contact",
+      "code": "GAMMA_TAU_POLE",
+      "status": "OPEN"
+    },
+    {
+      "category": "contact",
+      "code": "ANOMALY_COEFFICIENT",
+      "status": "OPEN"
+    },
+    {
+      "category": "matter_and_channels",
+      "code": "LETTER_Y_EXPANSION",
+      "status": "OPEN"
+    },
+    {
+      "category": "matter_and_channels",
+      "code": "LETTER_Z_EXPANSION",
+      "status": "OPEN"
+    },
+    {
+      "category": "matter_and_channels",
+      "code": "LETTER_T_INTERFACE",
+      "status": "OPEN"
+    },
+    {
+      "category": "matter_and_channels",
+      "code": "ALL_CHANNEL_INSERTION_COMPILER",
+      "status": "OPEN"
+    },
+    {
+      "category": "matter_and_channels",
+      "code": "ACTION_VERTEX_PHYSICALIZATION",
+      "status": "OPEN"
+    },
+    {
+      "category": "matter_and_channels",
+      "code": "CHIRAL_PROPAGATOR_EDGES",
+      "status": "OPEN"
+    },
+    {
+      "category": "matter_and_channels",
+      "code": "GENERIC_DALGEBRA",
+      "status": "OPEN"
+    },
+    {
+      "category": "matter_and_channels",
+      "code": "GENERIC_DRED_REDUCER",
+      "status": "OPEN"
+    },
+    {
+      "category": "matter_and_channels",
+      "code": "ELEVEN_NONZERO_FAMILY_CENSUS",
+      "status": "OPEN"
+    },
+    {
+      "category": "matter_and_channels",
+      "code": "FOUR_TREE_ZERO_RENORMALIZED_MIXING",
+      "status": "OPEN"
+    },
+    {
+      "category": "matter_and_channels",
+      "code": "CHANNELWISE_FP_NK_CENSUS",
+      "status": "OPEN"
+    },
+    {
+      "category": "matter_and_channels",
+      "code": "FULL_N4_FLUCTUATING_SECTOR_TRACE",
+      "status": "OPEN"
+    },
+    {
+      "category": "matter_and_channels",
+      "code": "FULL_N4_MATTER_SOURCE_COLOR_COHOMOLOGY",
+      "status": "OPEN"
+    },
+    {
+      "category": "matter_and_channels",
+      "code": "MATTER_SUPERPROPAGATOR_NORMALIZATION",
+      "status": "OPEN"
+    },
+    {
+      "category": "matter_and_channels",
+      "code": "EXTERNAL_Y_DALGEBRA_PROJECTION",
+      "status": "OPEN"
+    },
+    {
+      "category": "matter_and_channels",
+      "code": "E_XI_I3_SOURCE_FUNCTIONAL_DERIVATIVE",
+      "status": "OPEN"
+    },
+    {
+      "category": "matter_and_channels",
+      "code": "E_XI_I4_SOURCE_FUNCTIONAL_DERIVATIVE",
+      "status": "OPEN"
+    },
+    {
+      "category": "quotient_and_scheme",
+      "code": "PHYSICAL4D_RELATION_MATRIX",
+      "status": "OPEN"
+    },
+    {
+      "category": "quotient_and_scheme",
+      "code": "TRUE_N1_PARENT_INCIDENCE_C1",
+      "status": "OPEN"
+    },
+    {
+      "category": "quotient_and_scheme",
+      "code": "PHYSICAL4D_TOTAL_FILTERED_INJECTIVITY",
+      "status": "OPEN"
+    },
+    {
+      "category": "quotient_and_scheme",
+      "code": "FULL_DRED_EOM_IBP_BV_QUOTIENT_INJECTIVITY",
+      "status": "OPEN"
+    },
+    {
+      "category": "quotient_and_scheme",
+      "code": "DRED_LOCALIZATION_4D_PROJECTION_INTERCHANGE",
+      "status": "OPEN"
+    },
+    {
+      "category": "quotient_and_scheme",
+      "code": "FULL_QUANTUM_BV_SOURCE_COMPLEX",
+      "status": "OPEN"
+    },
+    {
+      "category": "quotient_and_scheme",
+      "code": "VECTOR_CHIRAL_FINITE_MEASURE_BRIDGE",
+      "status": "OPEN"
+    },
+    {
+      "category": "quotient_and_scheme",
+      "code": "NONDEGENERATE_EXTERNAL_1PI_PROBES",
+      "status": "OPEN"
+    },
+    {
+      "category": "quotient_and_scheme",
+      "code": "EVANESCENT_OPERATOR_BASIS",
+      "status": "OPEN"
+    },
+    {
+      "category": "quotient_and_scheme",
+      "code": "FINITE_COUNTERTERM_CONVENTION",
+      "status": "OPEN"
+    },
+    {
+      "category": "quotient_and_scheme",
+      "code": "OPEN_COLOR_TENSOR_PRODUCT_BASIS",
+      "status": "OPEN"
+    },
+    {
+      "category": "quotient_and_scheme",
+      "code": "MULTITRACE_SECTOR",
+      "status": "OPEN"
+    },
+    {
+      "category": "quotient_and_scheme",
+      "code": "REGULARIZATION_SD_CUTTING_COMMUTATOR",
+      "status": "OPEN"
+    },
+    {
+      "category": "quotient_and_scheme",
+      "code": "EXPLICIT_CONTACT_COLLAPSED_BASIS_BIJECTION",
+      "status": "OPEN"
+    },
+    {
+      "category": "step5c",
+      "code": "FINITE_COEFFICIENT_SPACE_DENSITY_AND_BEREZINIAN",
+      "status": "OPEN"
+    },
+    {
+      "category": "step5c",
+      "code": "FINITE_VECTOR_COEFFICIENT_CYCLE",
+      "status": "OPEN"
+    },
+    {
+      "category": "step5c",
+      "code": "FINITE_FP_AND_NK_CYCLES",
+      "status": "OPEN"
+    },
+    {
+      "category": "step5c",
+      "code": "GLOBAL_LOCAL_NONMINIMAL_REALIZATION",
+      "status": "OPEN"
+    }
+  ],
+  "ordered_channels": [
+    {
+      "accepted_coefficient": null,
+      "channel_id": "W__W",
+      "component_count": 1,
+      "exact_intermediate_result_ids": [
+        "WW_DIRECT_TRIANGLE_PREINTEGRATION",
+        "WW_DIRECT_TRIANGLE_UV_POLE",
+        "WW_REFLECTED_TRIANGLE_UV_POLE"
+      ],
+      "exact_renormalized_result": false,
+      "left_family": "W",
+      "one_loop_status": "PARTIAL_EXACT_ISOLATED_VECTOR_TRIANGLE_ONLY__CONTACT_MATTER_QUOTIENT_OPEN",
+      "ordered_expression": "(nabla_+ W_+^A) (nabla_+ W_+^B)",
+      "right_family": "W",
+      "tree_descendant_term_count": 4,
+      "tree_status": "EXACT_NONZERO_TREE_DESCENDANT"
+    },
+    {
+      "accepted_coefficient": null,
+      "channel_id": "W__Phi",
+      "component_count": 3,
+      "exact_intermediate_result_ids": [],
+      "exact_renormalized_result": false,
+      "left_family": "W",
+      "one_loop_status": "OPEN_NO_ONE_LOOP_GRAPH_OR_AMPLITUDE",
+      "ordered_expression": "(nabla_+ W_+^A) (nabla_+ Phi_s^B)",
+      "right_family": "Phi",
+      "tree_descendant_term_count": 4,
+      "tree_status": "EXACT_NONZERO_TREE_DESCENDANT"
+    },
+    {
+      "accepted_coefficient": null,
+      "channel_id": "W__TildePhi",
+      "component_count": 3,
+      "exact_intermediate_result_ids": [],
+      "exact_renormalized_result": false,
+      "left_family": "W",
+      "one_loop_status": "OPEN_NO_ONE_LOOP_GRAPH_OR_AMPLITUDE",
+      "ordered_expression": "(nabla_+ W_+^A) (TildePhi_s^B)",
+      "right_family": "TildePhi",
+      "tree_descendant_term_count": 2,
+      "tree_status": "EXACT_NONZERO_TREE_DESCENDANT"
+    },
+    {
+      "accepted_coefficient": null,
+      "channel_id": "W__TildeW",
+      "component_count": 2,
+      "exact_intermediate_result_ids": [],
+      "exact_renormalized_result": false,
+      "left_family": "W",
+      "one_loop_status": "OPEN_NO_ONE_LOOP_GRAPH_OR_AMPLITUDE",
+      "ordered_expression": "(nabla_+ W_+^A) (TildeW^B_dot_beta)",
+      "right_family": "TildeW",
+      "tree_descendant_term_count": 2,
+      "tree_status": "EXACT_NONZERO_TREE_DESCENDANT"
+    },
+    {
+      "accepted_coefficient": null,
+      "channel_id": "Phi__W",
+      "component_count": 3,
+      "exact_intermediate_result_ids": [],
+      "exact_renormalized_result": false,
+      "left_family": "Phi",
+      "one_loop_status": "OPEN_NO_ONE_LOOP_GRAPH_OR_AMPLITUDE",
+      "ordered_expression": "(nabla_+ Phi_r^A) (nabla_+ W_+^B)",
+      "right_family": "W",
+      "tree_descendant_term_count": 4,
+      "tree_status": "EXACT_NONZERO_TREE_DESCENDANT"
+    },
+    {
+      "accepted_coefficient": null,
+      "channel_id": "Phi__Phi",
+      "component_count": 9,
+      "exact_intermediate_result_ids": [],
+      "exact_renormalized_result": false,
+      "left_family": "Phi",
+      "one_loop_status": "OPEN_NO_ONE_LOOP_GRAPH_OR_AMPLITUDE",
+      "ordered_expression": "(nabla_+ Phi_r^A) (nabla_+ Phi_s^B)",
+      "right_family": "Phi",
+      "tree_descendant_term_count": 4,
+      "tree_status": "EXACT_NONZERO_TREE_DESCENDANT"
+    },
+    {
+      "accepted_coefficient": null,
+      "channel_id": "Phi__TildePhi",
+      "component_count": 9,
+      "exact_intermediate_result_ids": [],
+      "exact_renormalized_result": false,
+      "left_family": "Phi",
+      "one_loop_status": "OPEN_NO_ONE_LOOP_GRAPH_OR_AMPLITUDE",
+      "ordered_expression": "(nabla_+ Phi_r^A) (TildePhi_s^B)",
+      "right_family": "TildePhi",
+      "tree_descendant_term_count": 2,
+      "tree_status": "EXACT_NONZERO_TREE_DESCENDANT"
+    },
+    {
+      "accepted_coefficient": null,
+      "channel_id": "Phi__TildeW",
+      "component_count": 6,
+      "exact_intermediate_result_ids": [],
+      "exact_renormalized_result": false,
+      "left_family": "Phi",
+      "one_loop_status": "OPEN_NO_ONE_LOOP_GRAPH_OR_AMPLITUDE",
+      "ordered_expression": "(nabla_+ Phi_r^A) (TildeW^B_dot_beta)",
+      "right_family": "TildeW",
+      "tree_descendant_term_count": 2,
+      "tree_status": "EXACT_NONZERO_TREE_DESCENDANT"
+    },
+    {
+      "accepted_coefficient": null,
+      "channel_id": "TildePhi__W",
+      "component_count": 3,
+      "exact_intermediate_result_ids": [],
+      "exact_renormalized_result": false,
+      "left_family": "TildePhi",
+      "one_loop_status": "OPEN_NO_ONE_LOOP_GRAPH_OR_AMPLITUDE",
+      "ordered_expression": "(TildePhi_r^A) (nabla_+ W_+^B)",
+      "right_family": "W",
+      "tree_descendant_term_count": 2,
+      "tree_status": "EXACT_NONZERO_TREE_DESCENDANT"
+    },
+    {
+      "accepted_coefficient": null,
+      "channel_id": "TildePhi__Phi",
+      "component_count": 9,
+      "exact_intermediate_result_ids": [],
+      "exact_renormalized_result": false,
+      "left_family": "TildePhi",
+      "one_loop_status": "OPEN_NO_ONE_LOOP_GRAPH_OR_AMPLITUDE",
+      "ordered_expression": "(TildePhi_r^A) (nabla_+ Phi_s^B)",
+      "right_family": "Phi",
+      "tree_descendant_term_count": 2,
+      "tree_status": "EXACT_NONZERO_TREE_DESCENDANT"
+    },
+    {
+      "accepted_coefficient": null,
+      "channel_id": "TildePhi__TildePhi",
+      "component_count": 9,
+      "exact_intermediate_result_ids": [],
+      "exact_renormalized_result": false,
+      "left_family": "TildePhi",
+      "one_loop_status": "OPEN_RENORMALIZED_ZERO_NOT_PROVED",
+      "ordered_expression": "(TildePhi_r^A) (TildePhi_s^B)",
+      "right_family": "TildePhi",
+      "tree_descendant_term_count": 0,
+      "tree_status": "EXACT_ALL_VALENCE_TREE_ZERO"
+    },
+    {
+      "accepted_coefficient": null,
+      "channel_id": "TildePhi__TildeW",
+      "component_count": 6,
+      "exact_intermediate_result_ids": [],
+      "exact_renormalized_result": false,
+      "left_family": "TildePhi",
+      "one_loop_status": "OPEN_RENORMALIZED_ZERO_NOT_PROVED",
+      "ordered_expression": "(TildePhi_r^A) (TildeW^B_dot_beta)",
+      "right_family": "TildeW",
+      "tree_descendant_term_count": 0,
+      "tree_status": "EXACT_ALL_VALENCE_TREE_ZERO"
+    },
+    {
+      "accepted_coefficient": null,
+      "channel_id": "TildeW__W",
+      "component_count": 2,
+      "exact_intermediate_result_ids": [],
+      "exact_renormalized_result": false,
+      "left_family": "TildeW",
+      "one_loop_status": "OPEN_NO_ONE_LOOP_GRAPH_OR_AMPLITUDE",
+      "ordered_expression": "(TildeW^A_dot_alpha) (nabla_+ W_+^B)",
+      "right_family": "W",
+      "tree_descendant_term_count": 2,
+      "tree_status": "EXACT_NONZERO_TREE_DESCENDANT"
+    },
+    {
+      "accepted_coefficient": null,
+      "channel_id": "TildeW__Phi",
+      "component_count": 6,
+      "exact_intermediate_result_ids": [],
+      "exact_renormalized_result": false,
+      "left_family": "TildeW",
+      "one_loop_status": "OPEN_NO_ONE_LOOP_GRAPH_OR_AMPLITUDE",
+      "ordered_expression": "(TildeW^A_dot_alpha) (nabla_+ Phi_s^B)",
+      "right_family": "Phi",
+      "tree_descendant_term_count": 2,
+      "tree_status": "EXACT_NONZERO_TREE_DESCENDANT"
+    },
+    {
+      "accepted_coefficient": null,
+      "channel_id": "TildeW__TildePhi",
+      "component_count": 6,
+      "exact_intermediate_result_ids": [],
+      "exact_renormalized_result": false,
+      "left_family": "TildeW",
+      "one_loop_status": "OPEN_RENORMALIZED_ZERO_NOT_PROVED",
+      "ordered_expression": "(TildeW^A_dot_alpha) (TildePhi_s^B)",
+      "right_family": "TildePhi",
+      "tree_descendant_term_count": 0,
+      "tree_status": "EXACT_ALL_VALENCE_TREE_ZERO"
+    },
+    {
+      "accepted_coefficient": null,
+      "channel_id": "TildeW__TildeW",
+      "component_count": 4,
+      "exact_intermediate_result_ids": [],
+      "exact_renormalized_result": false,
+      "left_family": "TildeW",
+      "one_loop_status": "OPEN_RENORMALIZED_ZERO_NOT_PROVED",
+      "ordered_expression": "(TildeW^A_dot_alpha) (TildeW^B_dot_beta)",
+      "right_family": "TildeW",
+      "tree_descendant_term_count": 0,
+      "tree_status": "EXACT_ALL_VALENCE_TREE_ZERO"
+    }
+  ],
+  "schema": "Step5FullN4OneLoopStatusLedger.v1",
+  "scope": {
+    "external_coefficient_input_count": 0,
+    "external_target_input_count": 0,
+    "holomorphic_twist_input_count": 0,
+    "internal_project_artifacts_only": true,
+    "notion_input_count": 0,
+    "purpose": "authority_and_completion_status_not_new_amplitude"
+  },
+  "source_sha256": {
+    "audits/step5-full-two-letter-gap-census.md": "4c1e8a2f0fc17113539e14bbba52bfcfc88ef2943078cb9207bac1ef66bd0cb0",
+    "audits/step5-ww-contact-replay-verification.json": "587318cc379ce18ded65ff40104cfcf765242232bc8e72189938473a90bb36cb",
+    "audits/step5a-ghost-census.json": "4ef9cfbbb54cd0927ee490dde0a6006f339f2242e257f564fe09e44adcfd18e2",
+    "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md": "5b24afd355ef0d471e859c37a24a15632fcebdcad3aa654d30dc098647939ab5",
+    "generated/step5/full-n4-matter-yz-census.json": "088de6c0c03c0d83a938b41d15b6e7b36978193dc799f787e4e560fa09d86466",
+    "generated/step5/graph-catalogue.json": "8a019a04b8bea4772ac568f87f72be08e13ac046c3296ed6e21a4374c3db7477",
+    "generated/step5/one-loop-dred-evanescent-jets.json": "beedfda1977b6adba2e1d723733051e4b39f0ddde4cc18205860189f3be6c3ac",
+    "generated/step5/one-loop-filtered-covariant-quotient.json": "762d8fe923981730790eea01e46865baa2b423aa3cc15b6e49691aee712c6902",
+    "generated/step5/typed-pipeline/ww-typed-pipeline.json": "112ad97e49521841546a416f2649338a0b6168eaf8bc05a6ae28f02bd5e167ab",
+    "generated/step5/ww-seed-graph-ir.json": "7c248cd99b8507e15490e6784c5d354dbe0a20df41f86d94c2357f47935a6991",
+    "ledger/proof_obligations.json": "e7e6234ac1e6f8df4c161f1dfdce6ba183a444f677205eb1d156f7c2c2f73261",
+    "tasks/CURRENT.yaml": "b3dc4b43d82b8bf2a3d9407e864b40a5e5e2f0899efcc4317eed3ab080180085"
+  },
+  "status": "PASS_INTERNAL_STATUS_LEDGER__NO_ACCEPTED_FULL_N4_ONE_LOOP_COEFFICIENT"
+}

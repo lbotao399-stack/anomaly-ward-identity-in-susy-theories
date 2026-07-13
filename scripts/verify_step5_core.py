@@ -13,6 +13,8 @@ AUDIT = ROOT / "audits/step5-core-verification.json"
 CONTRACT = ROOT / "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md"
 SOURCE_LEDGER = ROOT / "audits/step5-source-translation-ledger.json"
 
+WW_ONE_LOOP_SEED_STATE = "ISOLATED_TRIANGLE_DERIVED__ANOMALY_INVALIDATED_NOT_PROPAGATED"
+
 
 @dataclass(frozen=True)
 class QComplex:
@@ -278,7 +280,7 @@ def channel_checks() -> tuple[dict[str, bool], list[dict[str, object]]]:
                     "left_parity": parities[left],
                     "tree_terms": terms,
                     "one_loop_seed_state": (
-                        "DERIVED_WW_SEED_G2_OVER_64PI2"
+                        WW_ONE_LOOP_SEED_STATE
                         if left == right == "W"
                         else "DEFERRED_NOT_GENERATED_BEFORE_SEED_ACCEPTANCE"
                     ),
@@ -295,8 +297,8 @@ def channel_checks() -> tuple[dict[str, bool], list[dict[str, object]]]:
                 for right in parities
             ),
             "four_exact_zero_tree_rows": sum(not entry["tree_terms"] for entry in channels) == 4,
-            "only_WW_seed_is_evaluated": sum(
-                entry["one_loop_seed_state"] == "DERIVED_WW_SEED_G2_OVER_64PI2"
+            "only_WW_isolated_triangle_is_derived_and_anomaly_is_invalidated": sum(
+                entry["one_loop_seed_state"] == WW_ONE_LOOP_SEED_STATE
                 for entry in channels
             ) == 1,
             "remaining_channels_are_deferred": sum(

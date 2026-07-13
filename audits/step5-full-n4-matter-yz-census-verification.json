@@ -1,0 +1,30 @@
+{
+  "checks": {
+    "I2_has_exact_two_D_minus_placements": true,
+    "all_four_physics_gates_remain_explicitly_open": true,
+    "all_internal_Wick_signs_are_bosonic_plus_one": true,
+    "all_routes_close_at_vertices_and_edges": true,
+    "cubic_external_extractions_leave_exact_quantum_ports": true,
+    "current_direct_I3_I4_source_grammar_has_no_matter_terms": true,
+    "matter_bridge_vertices_are_exact_Project_monomials": true,
+    "quartic_YZ_extraction_leaves_two_vector_ports": true,
+    "seagull_has_four_labeled_rows_and_one_disconnected_matching": true,
+    "seagull_labeled_Wick_coefficient_is_minus_h_over_128": true,
+    "triangle_has_four_labeled_rows_and_one_disconnected_matching": true,
+    "triangle_stored_coefficient_is_minus_h2_over_64": true
+  },
+  "external_results_imported": false,
+  "generated_sha256": "088de6c0c03c0d83a938b41d15b6e7b36978193dc799f787e4e560fa09d86466",
+  "holomorphic_twist_input_count": 0,
+  "schema": "Step5FullN4MatterYZCensusAudit.v1",
+  "scope": "PROJECT_ONLY_WW_MIXED_MATTER_YZ_TRIANGLE_AND_SEAGULL",
+  "status": "PASS_EXACT_PROJECT_GRAPH_CENSUS__AMPLITUDES_FAIL_CLOSED",
+  "totals": {
+    "accepted_coefficients": 0,
+    "checks": 12,
+    "failed": 0,
+    "open_obligations": 4,
+    "seagull_labeled_rows": 4,
+    "triangle_labeled_rows": 4
+  }
+}

@@ -60,7 +60,7 @@
       "sixteen_unique_ids": true,
       "reversed_orders_distinct": true,
       "four_exact_zero_tree_rows": true,
-      "only_WW_seed_is_evaluated": true,
+      "only_WW_isolated_triangle_is_derived_and_anomaly_is_invalidated": true,
       "remaining_channels_are_deferred": true
     },
     "sources": {
@@ -100,7 +100,7 @@
           ]
         }
       ],
-      "one_loop_seed_state": "DERIVED_WW_SEED_G2_OVER_64PI2"
+      "one_loop_seed_state": "ISOLATED_TRIANGLE_DERIVED__ANOMALY_INVALIDATED_NOT_PROPAGATED"
     },
     {
       "id": "W__Phi",

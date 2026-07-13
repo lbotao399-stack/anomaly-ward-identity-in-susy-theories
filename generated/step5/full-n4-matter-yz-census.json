@@ -1,0 +1,1059 @@
+{
+  "Euler_matter_contact_boundary": {
+    "I3_typed_candidates": [
+      "external V,V with two oriented Phi-TildePhi edges",
+      "external Phi,TildePhi with one V edge and one matter edge",
+      "external TildePhi,Phi with one V edge and one matter edge"
+    ],
+    "I4_typed_candidates": [
+      "external V,V with one matter tadpole edge",
+      "external Phi,TildePhi with one vector tadpole edge"
+    ],
+    "status": "STRUCTURAL_CANDIDATES_ONLY_SOURCE_FUNCTIONAL_DERIVATIVES_OPEN"
+  },
+  "acceptance_boundary": {
+    "I3_Euler_contact_instantiated": false,
+    "I4_Euler_contact_instantiated": false,
+    "external_Y_projection_accepted": false,
+    "matter_triangle_physical_GraphIR": false,
+    "ordinary_UV_pole_computed": false,
+    "renormalized_one_loop_coefficient_accepted": false
+  },
+  "authority_status": "UNMERGED_PROPOSAL_NOT_COMPUTATIONAL_EVIDENCE",
+  "checks": {
+    "I2_has_exact_two_D_minus_placements": true,
+    "all_four_physics_gates_remain_explicitly_open": true,
+    "all_internal_Wick_signs_are_bosonic_plus_one": true,
+    "all_routes_close_at_vertices_and_edges": true,
+    "cubic_external_extractions_leave_exact_quantum_ports": true,
+    "current_direct_I3_I4_source_grammar_has_no_matter_terms": true,
+    "matter_bridge_vertices_are_exact_Project_monomials": true,
+    "quartic_YZ_extraction_leaves_two_vector_ports": true,
+    "seagull_has_four_labeled_rows_and_one_disconnected_matching": true,
+    "seagull_labeled_Wick_coefficient_is_minus_h_over_128": true,
+    "triangle_has_four_labeled_rows_and_one_disconnected_matching": true,
+    "triangle_stored_coefficient_is_minus_h2_over_64": true
+  },
+  "external_results_imported": false,
+  "external_target_input_count": 0,
+  "holomorphic_twist_input_count": 0,
+  "letter_dictionary": {
+    "X^A": "(nabla_+ W_+)^A",
+    "Y_u^P": "(nabla_+ Phi_u)^P",
+    "Z_v^Q": "TildePhi_v^Q"
+  },
+  "open_obligations": [
+    {
+      "id": "MATTER_SUPERPROPAGATOR_NORMALIZATION",
+      "known": "component kernels (5.47b) and a structural G_PhiTildePhi symbol",
+      "missing": "the normalized constrained Euclidean superfield inverse G_0^{Phi,TildePhi}, including ordered D-projectors",
+      "status": "OPEN"
+    },
+    {
+      "id": "EXTERNAL_Y_DALGEBRA_PROJECTION",
+      "known": "the action extraction exposes external Phi_u^P",
+      "missing": "an edge-tagged transfer retaining D_+ Phi_u^P=Y_u^P, with endpoint and Koszul signs",
+      "status": "OPEN"
+    },
+    {
+      "current_mixed_I3_source_term_count": 0,
+      "id": "E_XI_I3_SOURCE_FUNCTIONAL_DERIVATIVE",
+      "known_E_Xi_coefficient": {
+        "i_power": 1,
+        "rational": {
+          "denominator": 1,
+          "numerator": -1
+        },
+        "sqrt2_power": 0,
+        "symbol_powers": {
+          "h": 1,
+          "kappa[A,B]": 1
+        }
+      },
+      "known_E_Xi_term_id": "E_Xi_matter_0",
+      "missing_functional_derivative": "delta^3{[-2*h^-1*kappaInv[A,L]*nabla_+ E_V,L]*X^B+(A<->B)-2i*nabla_+(Phi x TildePhi)^A*X^B-(A<->B)}/(delta V delta Phi_r delta TildePhi_s)|_0",
+      "status": "OPEN"
+    },
+    {
+      "current_mixed_I4_source_term_count": 0,
+      "id": "E_XI_I4_SOURCE_FUNCTIONAL_DERIVATIVE",
+      "known_transported_E_Xi_matter_term_count": 4,
+      "missing_functional_derivative": "delta^4{[-2*h^-1*kappaInv[A,L]*nabla_+ E_V,L]*X^B+(A<->B)-2i*nabla_+(Phi x TildePhi)^A*X^B-(A<->B)}/(delta V_1 delta V_2 delta Phi_r delta TildePhi_s)|_0",
+      "status": "OPEN"
+    }
+  ],
+  "project_derivation": {
+    "I2": [
+      {
+        "coefficient": {
+          "i_power": 0,
+          "rational": {
+            "denominator": 64,
+            "numerator": 1
+          },
+          "sqrt2_power": 0,
+          "symbol_powers": {}
+        },
+        "matter_degree": 0,
+        "origin": "D_- placement LEFT",
+        "tags": [
+          "D_MINUS_LEFT",
+          "DIRECT_D_MINUS_PLACEMENT",
+          "LINEAR_LETTERS",
+          "PARENT_OR_CUBIC"
+        ],
+        "term_id": "I2_direct_001",
+        "v_degree": 2
+      },
+      {
+        "coefficient": {
+          "i_power": 0,
+          "rational": {
+            "denominator": 64,
+            "numerator": 1
+          },
+          "sqrt2_power": 0,
+          "symbol_powers": {}
+        },
+        "matter_degree": 0,
+        "origin": "D_- placement RIGHT",
+        "tags": [
+          "D_MINUS_RIGHT",
+          "DIRECT_D_MINUS_PLACEMENT",
+          "LINEAR_LETTERS",
+          "PARENT_OR_CUBIC"
+        ],
+        "term_id": "I2_direct_002",
+        "v_degree": 2
+      }
+    ],
+    "S3m_Y_extraction": {
+      "external_field": "Phi",
+      "functional_derivative_koszul_sign": 1,
+      "remaining_quantum_fields": [
+        "TildePhi",
+        "V"
+      ]
+    },
+    "S3m_Z_extraction": {
+      "external_field": "TildePhi",
+      "functional_derivative_koszul_sign": 1,
+      "remaining_quantum_fields": [
+        "V",
+        "Phi"
+      ]
+    },
+    "S3m_source": {
+      "coefficient": {
+        "i_power": 1,
+        "rational": {
+          "denominator": 1,
+          "numerator": -1
+        },
+        "sqrt2_power": 0,
+        "symbol_powers": {
+          "h": 1
+        }
+      },
+      "color_word": [
+        "kappa[A,B]",
+        "c[D,C,B]"
+      ],
+      "monomial_id": "matter_bridge_v1",
+      "ordered_fields": [
+        "TildePhi",
+        "V",
+        "Phi"
+      ]
+    },
+    "S4m_YZ_extraction": {
+      "external_fields": [
+        "Phi",
+        "TildePhi"
+      ],
+      "functional_derivative_koszul_sign": 1,
+      "remaining_quantum_fields": [
+        "V",
+        "V"
+      ]
+    },
+    "S4m_source": {
+      "coefficient": {
+        "i_power": 0,
+        "rational": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "sqrt2_power": 0,
+        "symbol_powers": {
+          "h": 1
+        }
+      },
+      "color_word": [
+        "kappa[A,B]",
+        "c[D,E,B]",
+        "c[F,C,E]"
+      ],
+      "monomial_id": "matter_bridge_v2",
+      "ordered_fields": [
+        "TildePhi",
+        "V",
+        "V",
+        "Phi"
+      ]
+    }
+  },
+  "schema": "Step5FullN4MatterYZCensus.v1",
+  "scope": "PROJECT_ONLY_WW_MIXED_MATTER_YZ_TRIANGLE_AND_SEAGULL",
+  "seagull_I2_S4m": {
+    "action_vertex_count": 1,
+    "classification": "GRAMMAR_DERIVED_MANDATORY_CONTACT_FAMILY",
+    "coefficient_ledger": {
+      "I2_coefficient": {
+        "i_power": 0,
+        "rational": {
+          "denominator": 64,
+          "numerator": 1
+        },
+        "sqrt2_power": 0,
+        "symbol_powers": {}
+      },
+      "S4m_coefficient": {
+        "i_power": 0,
+        "rational": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "sqrt2_power": 0,
+        "symbol_powers": {
+          "h": 1
+        }
+      },
+      "coefficient_status": "OPEN_EXTERNAL_Y_DALGEBRA_NO_POLE_ASSIGNED",
+      "euclidean_action_expansion": {
+        "expansion_coefficient": "-1",
+        "external_YZ_copy_assignment_multiplicity": 1,
+        "net_factor": "-1"
+      },
+      "factor_after_exact_vector_propagators": {
+        "i_power": 0,
+        "rational": {
+          "denominator": 32,
+          "numerator": -1
+        },
+        "sqrt2_power": 0,
+        "symbol_powers": {
+          "g2": 2,
+          "h": 1
+        }
+      },
+      "h_g2_reduction": "h*g2=1 gives -g2/32",
+      "per_labeled_Wick_row_before_propagators": {
+        "i_power": 0,
+        "rational": {
+          "denominator": 128,
+          "numerator": -1
+        },
+        "sqrt2_power": 0,
+        "symbol_powers": {
+          "h": 1
+        }
+      },
+      "stored_monomial_product": {
+        "i_power": 0,
+        "rational": {
+          "denominator": 128,
+          "numerator": 1
+        },
+        "sqrt2_power": 0,
+        "symbol_powers": {
+          "h": 1
+        }
+      },
+      "two_exact_vector_propagator_factors": [
+        "-2*g2",
+        "-2*g2"
+      ]
+    },
+    "connected_labeled_Wick_rows": [
+      {
+        "D_minus_placement": "LEFT",
+        "certificate": {
+          "connected": true,
+          "edge_count": 2,
+          "is_connected_one_loop": true,
+          "loop_number_E_minus_V_plus_1": 1,
+          "vertex_count": 2
+        },
+        "color_tensor": "delta[u,v] kappaInv[A,D] kappaInv[B,F] kappa[Q,H] c[D,R,H] c[F,P,R]",
+        "external_ports": {
+          "Y_precursor": "Phi_u^P at S4m_YZ",
+          "Z": "TildePhi_v^Q at S4m_YZ"
+        },
+        "flavor_tensor": "delta[u,v]",
+        "ordered_external_word": [
+          "Y_u^P",
+          "Z_v^Q"
+        ],
+        "orientation": "DIRECT",
+        "quantum_ports": [
+          {
+            "field": "V",
+            "port_id": "I_A",
+            "vertex_id": "I2"
+          },
+          {
+            "field": "V",
+            "port_id": "I_B",
+            "vertex_id": "I2"
+          },
+          {
+            "field": "V",
+            "port_id": "S4_V_D",
+            "vertex_id": "S4m_YZ"
+          },
+          {
+            "field": "V",
+            "port_id": "S4_V_F",
+            "vertex_id": "S4m_YZ"
+          }
+        ],
+        "row_id": "I2_LEFT__DIRECT",
+        "symmetry_division_applied": false,
+        "typed_automorphism_order": 1,
+        "wick_koszul_sign": 1,
+        "wick_pairs": [
+          {
+            "left_half_edge": "I_A",
+            "oriented": false,
+            "propagator_symbol": "P_VV",
+            "right_half_edge": "S4_V_D",
+            "rule_id": "P_VV"
+          },
+          {
+            "left_half_edge": "I_B",
+            "oriented": false,
+            "propagator_symbol": "P_VV",
+            "right_half_edge": "S4_V_F",
+            "rule_id": "P_VV"
+          }
+        ]
+      },
+      {
+        "D_minus_placement": "LEFT",
+        "certificate": {
+          "connected": true,
+          "edge_count": 2,
+          "is_connected_one_loop": true,
+          "loop_number_E_minus_V_plus_1": 1,
+          "vertex_count": 2
+        },
+        "color_tensor": "delta[u,v] kappaInv[A,F] kappaInv[B,D] kappa[Q,H] c[D,R,H] c[F,P,R]",
+        "external_ports": {
+          "Y_precursor": "Phi_u^P at S4m_YZ",
+          "Z": "TildePhi_v^Q at S4m_YZ"
+        },
+        "flavor_tensor": "delta[u,v]",
+        "ordered_external_word": [
+          "Y_u^P",
+          "Z_v^Q"
+        ],
+        "orientation": "CROSSED",
+        "quantum_ports": [
+          {
+            "field": "V",
+            "port_id": "I_A",
+            "vertex_id": "I2"
+          },
+          {
+            "field": "V",
+            "port_id": "I_B",
+            "vertex_id": "I2"
+          },
+          {
+            "field": "V",
+            "port_id": "S4_V_D",
+            "vertex_id": "S4m_YZ"
+          },
+          {
+            "field": "V",
+            "port_id": "S4_V_F",
+            "vertex_id": "S4m_YZ"
+          }
+        ],
+        "row_id": "I2_LEFT__CROSSED",
+        "symmetry_division_applied": false,
+        "typed_automorphism_order": 1,
+        "wick_koszul_sign": 1,
+        "wick_pairs": [
+          {
+            "left_half_edge": "I_A",
+            "oriented": false,
+            "propagator_symbol": "P_VV",
+            "right_half_edge": "S4_V_F",
+            "rule_id": "P_VV"
+          },
+          {
+            "left_half_edge": "I_B",
+            "oriented": false,
+            "propagator_symbol": "P_VV",
+            "right_half_edge": "S4_V_D",
+            "rule_id": "P_VV"
+          }
+        ]
+      },
+      {
+        "D_minus_placement": "RIGHT",
+        "certificate": {
+          "connected": true,
+          "edge_count": 2,
+          "is_connected_one_loop": true,
+          "loop_number_E_minus_V_plus_1": 1,
+          "vertex_count": 2
+        },
+        "color_tensor": "delta[u,v] kappaInv[A,D] kappaInv[B,F] kappa[Q,H] c[D,R,H] c[F,P,R]",
+        "external_ports": {
+          "Y_precursor": "Phi_u^P at S4m_YZ",
+          "Z": "TildePhi_v^Q at S4m_YZ"
+        },
+        "flavor_tensor": "delta[u,v]",
+        "ordered_external_word": [
+          "Y_u^P",
+          "Z_v^Q"
+        ],
+        "orientation": "DIRECT",
+        "quantum_ports": [
+          {
+            "field": "V",
+            "port_id": "I_A",
+            "vertex_id": "I2"
+          },
+          {
+            "field": "V",
+            "port_id": "I_B",
+            "vertex_id": "I2"
+          },
+          {
+            "field": "V",
+            "port_id": "S4_V_D",
+            "vertex_id": "S4m_YZ"
+          },
+          {
+            "field": "V",
+            "port_id": "S4_V_F",
+            "vertex_id": "S4m_YZ"
+          }
+        ],
+        "row_id": "I2_RIGHT__DIRECT",
+        "symmetry_division_applied": false,
+        "typed_automorphism_order": 1,
+        "wick_koszul_sign": 1,
+        "wick_pairs": [
+          {
+            "left_half_edge": "I_A",
+            "oriented": false,
+            "propagator_symbol": "P_VV",
+            "right_half_edge": "S4_V_D",
+            "rule_id": "P_VV"
+          },
+          {
+            "left_half_edge": "I_B",
+            "oriented": false,
+            "propagator_symbol": "P_VV",
+            "right_half_edge": "S4_V_F",
+            "rule_id": "P_VV"
+          }
+        ]
+      },
+      {
+        "D_minus_placement": "RIGHT",
+        "certificate": {
+          "connected": true,
+          "edge_count": 2,
+          "is_connected_one_loop": true,
+          "loop_number_E_minus_V_plus_1": 1,
+          "vertex_count": 2
+        },
+        "color_tensor": "delta[u,v] kappaInv[A,F] kappaInv[B,D] kappa[Q,H] c[D,R,H] c[F,P,R]",
+        "external_ports": {
+          "Y_precursor": "Phi_u^P at S4m_YZ",
+          "Z": "TildePhi_v^Q at S4m_YZ"
+        },
+        "flavor_tensor": "delta[u,v]",
+        "ordered_external_word": [
+          "Y_u^P",
+          "Z_v^Q"
+        ],
+        "orientation": "CROSSED",
+        "quantum_ports": [
+          {
+            "field": "V",
+            "port_id": "I_A",
+            "vertex_id": "I2"
+          },
+          {
+            "field": "V",
+            "port_id": "I_B",
+            "vertex_id": "I2"
+          },
+          {
+            "field": "V",
+            "port_id": "S4_V_D",
+            "vertex_id": "S4m_YZ"
+          },
+          {
+            "field": "V",
+            "port_id": "S4_V_F",
+            "vertex_id": "S4m_YZ"
+          }
+        ],
+        "row_id": "I2_RIGHT__CROSSED",
+        "symmetry_division_applied": false,
+        "typed_automorphism_order": 1,
+        "wick_koszul_sign": 1,
+        "wick_pairs": [
+          {
+            "left_half_edge": "I_A",
+            "oriented": false,
+            "propagator_symbol": "P_VV",
+            "right_half_edge": "S4_V_F",
+            "rule_id": "P_VV"
+          },
+          {
+            "left_half_edge": "I_B",
+            "oriented": false,
+            "propagator_symbol": "P_VV",
+            "right_half_edge": "S4_V_D",
+            "rule_id": "P_VV"
+          }
+        ]
+      }
+    ],
+    "disconnected_typed_matching_count": 1,
+    "internal_edges": [
+      "P_VV",
+      "P_VV"
+    ],
+    "result_status": "GRAPH_EXISTS__DALGEBRA_AND_POLE_OPEN",
+    "routing": {
+      "all_incoming_vertex_words": {
+        "I2": [
+          "-p1-p2",
+          "-k",
+          "p1+p2+k"
+        ],
+        "S4m_YZ": [
+          "p1",
+          "p2",
+          "k",
+          "-p1-p2-k"
+        ]
+      },
+      "denominators": [
+        "k^2",
+        "(k+p1+p2)^2"
+      ],
+      "edge_endpoint_sums": {
+        "e0": [
+          0,
+          0,
+          0
+        ],
+        "e1": [
+          0,
+          0,
+          0
+        ]
+      },
+      "source_momentum": "-p1-p2",
+      "vertex_sums": {
+        "I2": [
+          0,
+          0,
+          0
+        ],
+        "S4m_YZ": [
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  },
+  "source_sha256": {
+    "contracts/foundations/step-04c-n4-super-yang-mills.md": "9fb057d14ee438b31d3f38836e8ca848dfee74b1ea363716222264c96405e5db",
+    "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md": "5b24afd355ef0d471e859c37a24a15632fcebdcad3aa654d30dc098647939ab5",
+    "scripts/step5_graph_ir.py": "2e5cf55ad5e486084ad4e3a0435031e29b6d22480586cbeef25e2a7b40954044",
+    "scripts/step5_project_composites.py": "a3acabb2fe65661222defc5c90b0b4b84b103f4c01ea276e3481b43ef5c6168d",
+    "scripts/step5_vertex_grammar.py": "b91f0e9633f13ebb238a18f09b0265a0c8b1bb72d964307d3fc4b1d04fd39dd8"
+  },
+  "status": "PASS_EXACT_PROJECT_GRAPH_CENSUS__AMPLITUDES_FAIL_CLOSED",
+  "totals": {
+    "accepted_coefficients": 0,
+    "checks": 12,
+    "failed": 0,
+    "open_obligations": 4,
+    "seagull_labeled_rows": 4,
+    "triangle_labeled_rows": 4
+  },
+  "triangle_I2_S3m_S3m": {
+    "action_vertex_count": 2,
+    "classification": "GRAMMAR_DERIVED_TYPED_GRAPH_FAMILY",
+    "coefficient_ledger": {
+      "I2_coefficient": {
+        "i_power": 0,
+        "rational": {
+          "denominator": 64,
+          "numerator": 1
+        },
+        "sqrt2_power": 0,
+        "symbol_powers": {}
+      },
+      "S3m_coefficient_each": {
+        "i_power": 1,
+        "rational": {
+          "denominator": 1,
+          "numerator": -1
+        },
+        "sqrt2_power": 0,
+        "symbol_powers": {
+          "h": 1
+        }
+      },
+      "coefficient_status": "OPEN_MATTER_SUPERPROPAGATOR_AND_Y_DALGEBRA",
+      "euclidean_action_expansion": {
+        "expansion_coefficient": "1/2!",
+        "external_YZ_copy_assignment_multiplicity": 2,
+        "net_factor": "1"
+      },
+      "h_g2_reduction": "h*g2=1 gives -1/16",
+      "known_factor_before_open_matter_propagator": {
+        "i_power": 0,
+        "rational": {
+          "denominator": 16,
+          "numerator": -1
+        },
+        "sqrt2_power": 0,
+        "symbol_powers": {
+          "g2": 2,
+          "h": 2
+        }
+      },
+      "per_labeled_Wick_row_before_propagators": {
+        "i_power": 0,
+        "rational": {
+          "denominator": 64,
+          "numerator": -1
+        },
+        "sqrt2_power": 0,
+        "symbol_powers": {
+          "h": 2
+        }
+      },
+      "remaining_factor": "G_PhiTildePhi_STRUCTURAL",
+      "stored_monomial_product": {
+        "i_power": 0,
+        "rational": {
+          "denominator": 64,
+          "numerator": -1
+        },
+        "sqrt2_power": 0,
+        "symbol_powers": {
+          "h": 2
+        }
+      },
+      "two_exact_vector_propagator_factors": [
+        "-2*g2",
+        "-2*g2"
+      ]
+    },
+    "connected_labeled_Wick_rows": [
+      {
+        "D_minus_placement": "LEFT",
+        "certificate": {
+          "connected": true,
+          "edge_count": 3,
+          "is_connected_one_loop": true,
+          "loop_number_E_minus_V_plus_1": 1,
+          "vertex_count": 3
+        },
+        "color_tensor": "delta[u,v] kappaInv[A,D] kappaInv[B,E] kappaInv[M,N] cLower[D,P,M] cLower[E,N,Q]",
+        "external_ports": {
+          "Y_precursor": "Phi_u^P at S3m_Y",
+          "Z": "TildePhi_v^Q at S3m_Z"
+        },
+        "flavor_tensor": "delta[u,v]",
+        "ordered_external_word": [
+          "Y_u^P",
+          "Z_v^Q"
+        ],
+        "orientation": "DIRECT",
+        "quantum_ports": [
+          {
+            "field": "V",
+            "port_id": "I_A",
+            "vertex_id": "I2"
+          },
+          {
+            "field": "V",
+            "port_id": "I_B",
+            "vertex_id": "I2"
+          },
+          {
+            "field": "TildePhi",
+            "port_id": "Y_TildePhi_M",
+            "vertex_id": "S3m_Y"
+          },
+          {
+            "field": "V",
+            "port_id": "Y_V_D",
+            "vertex_id": "S3m_Y"
+          },
+          {
+            "field": "V",
+            "port_id": "Z_V_E",
+            "vertex_id": "S3m_Z"
+          },
+          {
+            "field": "Phi",
+            "port_id": "Z_Phi_N",
+            "vertex_id": "S3m_Z"
+          }
+        ],
+        "row_id": "I2_LEFT__DIRECT",
+        "symmetry_division_applied": false,
+        "typed_automorphism_order": 1,
+        "wick_koszul_sign": 1,
+        "wick_pairs": [
+          {
+            "left_half_edge": "I_A",
+            "oriented": false,
+            "propagator_symbol": "P_VV",
+            "right_half_edge": "Y_V_D",
+            "rule_id": "P_VV"
+          },
+          {
+            "left_half_edge": "I_B",
+            "oriented": false,
+            "propagator_symbol": "P_VV",
+            "right_half_edge": "Z_V_E",
+            "rule_id": "P_VV"
+          },
+          {
+            "left_half_edge": "Z_Phi_N",
+            "oriented": true,
+            "propagator_symbol": "P_PhiTildePhi_STRUCTURAL",
+            "right_half_edge": "Y_TildePhi_M",
+            "rule_id": "P_PHI_TILDEPHI_STRUCTURAL"
+          }
+        ]
+      },
+      {
+        "D_minus_placement": "LEFT",
+        "certificate": {
+          "connected": true,
+          "edge_count": 3,
+          "is_connected_one_loop": true,
+          "loop_number_E_minus_V_plus_1": 1,
+          "vertex_count": 3
+        },
+        "color_tensor": "delta[u,v] kappaInv[A,E] kappaInv[B,D] kappaInv[M,N] cLower[D,P,M] cLower[E,N,Q]",
+        "external_ports": {
+          "Y_precursor": "Phi_u^P at S3m_Y",
+          "Z": "TildePhi_v^Q at S3m_Z"
+        },
+        "flavor_tensor": "delta[u,v]",
+        "ordered_external_word": [
+          "Y_u^P",
+          "Z_v^Q"
+        ],
+        "orientation": "CROSSED",
+        "quantum_ports": [
+          {
+            "field": "V",
+            "port_id": "I_A",
+            "vertex_id": "I2"
+          },
+          {
+            "field": "V",
+            "port_id": "I_B",
+            "vertex_id": "I2"
+          },
+          {
+            "field": "TildePhi",
+            "port_id": "Y_TildePhi_M",
+            "vertex_id": "S3m_Y"
+          },
+          {
+            "field": "V",
+            "port_id": "Y_V_D",
+            "vertex_id": "S3m_Y"
+          },
+          {
+            "field": "V",
+            "port_id": "Z_V_E",
+            "vertex_id": "S3m_Z"
+          },
+          {
+            "field": "Phi",
+            "port_id": "Z_Phi_N",
+            "vertex_id": "S3m_Z"
+          }
+        ],
+        "row_id": "I2_LEFT__CROSSED",
+        "symmetry_division_applied": false,
+        "typed_automorphism_order": 1,
+        "wick_koszul_sign": 1,
+        "wick_pairs": [
+          {
+            "left_half_edge": "I_A",
+            "oriented": false,
+            "propagator_symbol": "P_VV",
+            "right_half_edge": "Z_V_E",
+            "rule_id": "P_VV"
+          },
+          {
+            "left_half_edge": "I_B",
+            "oriented": false,
+            "propagator_symbol": "P_VV",
+            "right_half_edge": "Y_V_D",
+            "rule_id": "P_VV"
+          },
+          {
+            "left_half_edge": "Z_Phi_N",
+            "oriented": true,
+            "propagator_symbol": "P_PhiTildePhi_STRUCTURAL",
+            "right_half_edge": "Y_TildePhi_M",
+            "rule_id": "P_PHI_TILDEPHI_STRUCTURAL"
+          }
+        ]
+      },
+      {
+        "D_minus_placement": "RIGHT",
+        "certificate": {
+          "connected": true,
+          "edge_count": 3,
+          "is_connected_one_loop": true,
+          "loop_number_E_minus_V_plus_1": 1,
+          "vertex_count": 3
+        },
+        "color_tensor": "delta[u,v] kappaInv[A,D] kappaInv[B,E] kappaInv[M,N] cLower[D,P,M] cLower[E,N,Q]",
+        "external_ports": {
+          "Y_precursor": "Phi_u^P at S3m_Y",
+          "Z": "TildePhi_v^Q at S3m_Z"
+        },
+        "flavor_tensor": "delta[u,v]",
+        "ordered_external_word": [
+          "Y_u^P",
+          "Z_v^Q"
+        ],
+        "orientation": "DIRECT",
+        "quantum_ports": [
+          {
+            "field": "V",
+            "port_id": "I_A",
+            "vertex_id": "I2"
+          },
+          {
+            "field": "V",
+            "port_id": "I_B",
+            "vertex_id": "I2"
+          },
+          {
+            "field": "TildePhi",
+            "port_id": "Y_TildePhi_M",
+            "vertex_id": "S3m_Y"
+          },
+          {
+            "field": "V",
+            "port_id": "Y_V_D",
+            "vertex_id": "S3m_Y"
+          },
+          {
+            "field": "V",
+            "port_id": "Z_V_E",
+            "vertex_id": "S3m_Z"
+          },
+          {
+            "field": "Phi",
+            "port_id": "Z_Phi_N",
+            "vertex_id": "S3m_Z"
+          }
+        ],
+        "row_id": "I2_RIGHT__DIRECT",
+        "symmetry_division_applied": false,
+        "typed_automorphism_order": 1,
+        "wick_koszul_sign": 1,
+        "wick_pairs": [
+          {
+            "left_half_edge": "I_A",
+            "oriented": false,
+            "propagator_symbol": "P_VV",
+            "right_half_edge": "Y_V_D",
+            "rule_id": "P_VV"
+          },
+          {
+            "left_half_edge": "I_B",
+            "oriented": false,
+            "propagator_symbol": "P_VV",
+            "right_half_edge": "Z_V_E",
+            "rule_id": "P_VV"
+          },
+          {
+            "left_half_edge": "Z_Phi_N",
+            "oriented": true,
+            "propagator_symbol": "P_PhiTildePhi_STRUCTURAL",
+            "right_half_edge": "Y_TildePhi_M",
+            "rule_id": "P_PHI_TILDEPHI_STRUCTURAL"
+          }
+        ]
+      },
+      {
+        "D_minus_placement": "RIGHT",
+        "certificate": {
+          "connected": true,
+          "edge_count": 3,
+          "is_connected_one_loop": true,
+          "loop_number_E_minus_V_plus_1": 1,
+          "vertex_count": 3
+        },
+        "color_tensor": "delta[u,v] kappaInv[A,E] kappaInv[B,D] kappaInv[M,N] cLower[D,P,M] cLower[E,N,Q]",
+        "external_ports": {
+          "Y_precursor": "Phi_u^P at S3m_Y",
+          "Z": "TildePhi_v^Q at S3m_Z"
+        },
+        "flavor_tensor": "delta[u,v]",
+        "ordered_external_word": [
+          "Y_u^P",
+          "Z_v^Q"
+        ],
+        "orientation": "CROSSED",
+        "quantum_ports": [
+          {
+            "field": "V",
+            "port_id": "I_A",
+            "vertex_id": "I2"
+          },
+          {
+            "field": "V",
+            "port_id": "I_B",
+            "vertex_id": "I2"
+          },
+          {
+            "field": "TildePhi",
+            "port_id": "Y_TildePhi_M",
+            "vertex_id": "S3m_Y"
+          },
+          {
+            "field": "V",
+            "port_id": "Y_V_D",
+            "vertex_id": "S3m_Y"
+          },
+          {
+            "field": "V",
+            "port_id": "Z_V_E",
+            "vertex_id": "S3m_Z"
+          },
+          {
+            "field": "Phi",
+            "port_id": "Z_Phi_N",
+            "vertex_id": "S3m_Z"
+          }
+        ],
+        "row_id": "I2_RIGHT__CROSSED",
+        "symmetry_division_applied": false,
+        "typed_automorphism_order": 1,
+        "wick_koszul_sign": 1,
+        "wick_pairs": [
+          {
+            "left_half_edge": "I_A",
+            "oriented": false,
+            "propagator_symbol": "P_VV",
+            "right_half_edge": "Z_V_E",
+            "rule_id": "P_VV"
+          },
+          {
+            "left_half_edge": "I_B",
+            "oriented": false,
+            "propagator_symbol": "P_VV",
+            "right_half_edge": "Y_V_D",
+            "rule_id": "P_VV"
+          },
+          {
+            "left_half_edge": "Z_Phi_N",
+            "oriented": true,
+            "propagator_symbol": "P_PhiTildePhi_STRUCTURAL",
+            "right_half_edge": "Y_TildePhi_M",
+            "rule_id": "P_PHI_TILDEPHI_STRUCTURAL"
+          }
+        ]
+      }
+    ],
+    "disconnected_typed_matching_count": 1,
+    "internal_edges": [
+      "P_VV",
+      "P_VV",
+      "P_PhiTildePhi_STRUCTURAL"
+    ],
+    "result_status": "GRAPH_EXISTS__AMPLITUDE_OPEN",
+    "routing": {
+      "all_incoming_vertex_words": {
+        "I2": [
+          "-p1-p2",
+          "p1+k",
+          "p2-k"
+        ],
+        "S3m_Y": [
+          "p1",
+          "k",
+          "-p1-k"
+        ],
+        "S3m_Z": [
+          "p2",
+          "-k",
+          "-p2+k"
+        ]
+      },
+      "denominators": [
+        "k^2",
+        "(k+p1)^2",
+        "(k-p2)^2"
+      ],
+      "edge_endpoint_sums": {
+        "eM": [
+          0,
+          0,
+          0
+        ],
+        "eY": [
+          0,
+          0,
+          0
+        ],
+        "eZ": [
+          0,
+          0,
+          0
+        ]
+      },
+      "source_momentum": "-p1-p2",
+      "vertex_sums": {
+        "I2": [
+          0,
+          0,
+          0
+        ],
+        "S3m_Y": [
+          0,
+          0,
+          0
+        ],
+        "S3m_Z": [
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  }
+}

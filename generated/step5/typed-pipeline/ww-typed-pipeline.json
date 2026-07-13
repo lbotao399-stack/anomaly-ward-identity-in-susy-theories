@@ -1,5 +1,5 @@
 {
-  "compiler_hash": "c18b288c9c4aec398a79b720b356da30572744243b5be8de1298d14e5fa2b163",
+  "compiler_hash": "1fe2c9780176b9b2e2a5e1d6b97d1f3d3fa747beb4fb4e85bcfea1eb2112fc22",
   "no_imported_anomaly_coefficient": true,
   "notation_hash": "fcdd284541dcdcf6d0217432ab146b908ad8aadf2a90e6f9201f87b149250025",
   "orientations": [
@@ -4573,7 +4573,7 @@
           "exact_checks": 47,
           "failed_checks": 0
         },
-        "dred_audit_sha256": "dbfe67c8c858c2955401944b9ee0350d51715d58c1d445f8d0292387b5de4cad",
+        "dred_audit_sha256": "e8de2fa99d62db64684733130139d0a9f3ae3617f844862335760bd2f17d65f0",
         "generic_Dword_phase_completion": false,
         "graph_hash": "c283353471e0b2ecb72634ab08f582369eea3c08dc00489ba5ccc047ba0eced3",
         "notation_hash": "fcdd284541dcdcf6d0217432ab146b908ad8aadf2a90e6f9201f87b149250025",
@@ -9394,7 +9394,7 @@
           "exact_checks": 47,
           "failed_checks": 0
         },
-        "dred_audit_sha256": "dbfe67c8c858c2955401944b9ee0350d51715d58c1d445f8d0292387b5de4cad",
+        "dred_audit_sha256": "e8de2fa99d62db64684733130139d0a9f3ae3617f844862335760bd2f17d65f0",
         "generic_Dword_phase_completion": false,
         "graph_hash": "45f6fe3c8868052cfd8a9deaef6b3e36581922c607a3a3e6cb1d1c60b113ae28",
         "notation_hash": "fcdd284541dcdcf6d0217432ab146b908ad8aadf2a90e6f9201f87b149250025",
@@ -9668,7 +9668,7 @@
   "schema": 1,
   "scope": "PRIMITIVE_WW_TYPED_PIPELINE",
   "source_sha256": {
-    "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md": "c242cfccbc2338c77f44a467599aa295fd6f9809fa0f0eeb8558b084e1275ea6",
+    "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md": "5b24afd355ef0d471e859c37a24a15632fcebdcad3aa654d30dc098647939ab5",
     "scripts/build_step5_typed_pipeline.py": "19d642cdae05eb6e161b3e967d97d41304ddd51716cf2744bbc9614dc749b3e0",
     "scripts/step5_dalgebra_compiler.py": "30afc3857625d6c0d5f1d4c9a17338cfd1feadcaa003e871fbd52f5956b38212",
     "scripts/step5_graph_ir.py": "2e5cf55ad5e486084ad4e3a0435031e29b6d22480586cbeef25e2a7b40954044",

@@ -1,0 +1,43 @@
+{
+  "accepted_coefficient_count": 0,
+  "checks": {
+    "accepted_snapshot_has_no_step5_computational_paths": true,
+    "accepted_snapshot_task_is_step5_specified": true,
+    "all_required_open_gate_categories_are_nonempty": true,
+    "all_sixteen_renormalized_results_are_open": true,
+    "contract_records_full_n4_coefficient_not_established": true,
+    "eighty_one_components": true,
+    "eleven_nonzero_unimplemented_families_have_fifty_five_components": true,
+    "four_tree_zero_families_have_twenty_five_components": true,
+    "no_accepted_coefficient": true,
+    "no_external_or_ht_target_input": true,
+    "one_partial_seed_and_fifteen_unimplemented_families": true,
+    "physical4d_quotient_is_fail_closed": true,
+    "primitive_ww_ghost_absence_is_narrowly_proved": true,
+    "proposal_is_still_specified_not_accepted": true,
+    "raw_full_dred_injectivity_is_explicitly_false": true,
+    "sixteen_ordered_families": true,
+    "stale_aggregate_candidate_is_present_only_as_old_candidate_surface": true,
+    "ww_contact_and_anomaly_are_invalidated": true,
+    "ww_endpoint_branch_numerator_factorization_is_recorded": true,
+    "ww_has_two_orientations_and_eight_rows_each": true,
+    "ww_mixed_matter_yz_census_acceptance_is_fail_closed": true,
+    "ww_mixed_matter_yz_census_has_four_exact_open_gates": true,
+    "ww_mixed_matter_yz_census_has_two_exact_graph_families": true,
+    "ww_mixed_matter_yz_census_imports_no_external_target": true,
+    "ww_orientation_poles_are_exact": true,
+    "ww_row_pole_is_exact": true,
+    "ww_row_prefactor_is_exact": true,
+    "ww_row_to_orientation_pole_aggregation_is_exact": true
+  },
+  "external_target_input_count": 0,
+  "failed": [],
+  "holomorphic_twist_input_count": 0,
+  "ledger_sha256": "4dd559acfc395b8fd00ac7fe6fc87788f45ed9056dffce0a7327368b1ebddce3",
+  "schema": "Step5FullN4OneLoopStatusLedgerVerification.v1",
+  "status": "PASS_INTERNAL_STATUS_LEDGER__NO_ACCEPTED_FULL_N4_ONE_LOOP_COEFFICIENT",
+  "totals": {
+    "checks": 28,
+    "failed": 0
+  }
+}
