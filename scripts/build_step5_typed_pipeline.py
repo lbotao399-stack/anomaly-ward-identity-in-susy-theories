@@ -200,11 +200,7 @@ def _specialized_row_pole_binding(
     graph_prefactor = coefficient.rational
     d_chain = Fraction(-1, 2)
     row_prefactor = graph_prefactor * d_chain
-    expected_row_prefactor = (
-        Fraction(1, 16)
-        if amplitude.orientation == "DIRECT"
-        else Fraction(-1, 16)
-    )
+    expected_row_prefactor = Fraction(1, 16)
     if row_prefactor != expected_row_prefactor:
         raise AssertionError("typed amplitude times the WW D-chain has the wrong sign")
 
@@ -212,11 +208,7 @@ def _specialized_row_pole_binding(
     row_pole_in_A0 = row_prefactor * master_pole_in_A0
     row_pole_in_pi = row_pole_in_A0 / 16
     orientation_pole_in_pi = 8 * row_pole_in_pi
-    expected_orientation_pole = (
-        Fraction(1, 128)
-        if amplitude.orientation == "DIRECT"
-        else Fraction(-1, 128)
-    )
+    expected_orientation_pole = Fraction(1, 128)
     if orientation_pole_in_pi != expected_orientation_pole:
         raise AssertionError("eight row poles do not sum to the orientation pole")
 
@@ -231,11 +223,7 @@ def _specialized_row_pole_binding(
         exact_chain = row["exact_D_chain"]
         if not isinstance(exact_chain, dict) or exact_chain["product"] != "-1/2":
             raise AssertionError(f"row {row['trace_id']} has an unbound D-chain")
-        expected_text = (
-            "+g^2/(1024*pi^2*epsilon)"
-            if amplitude.orientation == "DIRECT"
-            else "-g^2/(1024*pi^2*epsilon)"
-        )
+        expected_text = "+g^2/(1024*pi^2*epsilon)"
         if expected_text not in str(row["triangle_metric_pole"]):
             raise AssertionError(f"row {row['trace_id']} pole sign disagrees")
         row_certificates.append(
@@ -267,7 +255,7 @@ def _specialized_row_pole_binding(
         )
     ).hexdigest()
     return {
-        "status": "PASS_SPECIALIZED_8_ROW_DRED_MASTER_BINDING",
+        "status": "PASS_ISOLATED_TRIANGLE_8_ROW_DRED_MASTER_BINDING",
         "scope": (
             "SPECIALIZED_WW_ROW_CERTIFICATE_NOT_GENERIC_DWORD_PHASE_COMPLETION"
         ),
@@ -290,6 +278,8 @@ def _specialized_row_pole_binding(
         "orientation_pole_in_pi2_g2": str(orientation_pole_in_pi),
         "generic_Dword_phase_completion": False,
         "basis_resolved_contact_quotient": False,
+        "contact_pole_status": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
+        "anomaly_coefficient_status": "INVALIDATED_NOT_PROPAGATED",
     }
 
 
@@ -370,11 +360,13 @@ def build_payload(schema: NotationSchema | None = None) -> dict[str, object]:
                 "PASS_PHYSICAL_16_ROW_PHASE_SEQUENCE_FAIL_CLOSED_ELSEWHERE"
             ),
             "integral_pole_binding": (
-                "PASS_SPECIALIZED_16_ROW_DRED_MASTER_BINDING_"
+                "PASS_ISOLATED_TRIANGLE_16_ROW_DRED_MASTER_BINDING_"
                 "NOT_GENERIC_DWORD_COMPLETION"
             ),
-            "basis_resolved_sd_contact_orbit": "OPEN",
-            "anomaly_coefficient": "NOT_ACCEPTED",
+            "basis_resolved_sd_contact_orbit": (
+                "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY"
+            ),
+            "anomaly_coefficient": "INVALIDATED_NOT_PROPAGATED",
         },
         "no_imported_anomaly_coefficient": True,
     }
@@ -501,12 +493,12 @@ def render_summary(payload: dict[str, object]) -> str:
             "",
             "$$",
             r"C_{G}^{\rm D}=-\frac{g^2}{8},\qquad "
-            r"C_{G}^{\rm R}=+\frac{g^2}{8},\qquad C_D=-\frac12,",
+            r"C_{G}^{\rm R}=-\frac{g^2}{8},\qquad C_D=-\frac12,",
             "$$",
             "",
             "$$",
             r"C_{\rm row}^{\rm D}=+\frac{g^2}{16},\qquad "
-            r"C_{\rm row}^{\rm R}=-\frac{g^2}{16},",
+            r"C_{\rm row}^{\rm R}=+\frac{g^2}{16},",
             "$$",
             "",
             "$$",
@@ -520,14 +512,18 @@ def render_summary(payload: dict[str, object]) -> str:
             r"\sum_{r=1}^{8}P_{r}^{\rm D}="
             r"+\frac{g^2}{128\pi^2\epsilon}\widehat\delta^{\mu\nu},\qquad "
             r"\sum_{r=1}^{8}P_{r}^{\rm R}="
-            r"-\frac{g^2}{128\pi^2\epsilon}\widehat\delta^{\mu\nu}.",
+            r"+\frac{g^2}{128\pi^2\epsilon}\widehat\delta^{\mu\nu}.",
             "$$",
             "",
-            r"Status: \texttt{PASS\_SPECIALIZED\_16\_ROW\_DRED\_MASTER\_BINDING}; "
+            r"Status: \texttt{PASS\_ISOLATED\_TRIANGLE\_16\_ROW\_DRED\_MASTER\_BINDING}; "
             r"generic out-of-scope $D$-words still fail closed.",
             "",
             "$$",
-            r"\Gamma_{\rm anomaly}:\ \texttt{NOT\_ACCEPTED}.",
+            r"\Gamma_{C,\mathrm{pole}}:\ \texttt{INVALIDATED\_REQUIRES\_TYPED\_CONTACT\_REPLAY},",
+            "$$",
+            "",
+            "$$",
+            r"\Gamma_{\rm anomaly}:\ \texttt{INVALIDATED\_NOT\_PROPAGATED}.",
             "$$",
             "",
         ]

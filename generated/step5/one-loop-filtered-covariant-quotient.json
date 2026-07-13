@@ -1,0 +1,7097 @@
+{
+  "N2_candidate_PBW_quotient": {
+    "basis_size_with_source_jet": 127,
+    "descent_support": [
+      {
+        "row": 0,
+        "value": "1"
+      },
+      {
+        "row": 2,
+        "value": "1"
+      },
+      {
+        "row": 13,
+        "value": "-2"
+      },
+      {
+        "row": 19,
+        "value": "-2"
+      }
+    ],
+    "descent_vector_on_indexed_rows": [
+      "1",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "-2",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "-2",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "indexed_target_rows": 126,
+    "master": "C_on_W=T_dota D_a^dota N_b W_c projected to (3/2,0)",
+    "master_row": 0,
+    "placement_traces": [
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "physical target-spin multiplicity is zero",
+          "sector": "W0_T2_N0_B1_D1",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "B0",
+                "D0"
+              ],
+              "field": "T"
+            },
+            {
+              "derivative_word": [],
+              "field": "T"
+            }
+          ],
+          "sector": "W0_T2_N0_B1_D1"
+        },
+        "placement_id": 0,
+        "target_multiplicity": 0,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "physical target-spin multiplicity is zero",
+          "sector": "W0_T2_N0_B1_D1",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "B0"
+              ],
+              "field": "T"
+            },
+            {
+              "derivative_word": [
+                "D0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W0_T2_N0_B1_D1"
+        },
+        "placement_id": 1,
+        "target_multiplicity": 0,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "physical target-spin multiplicity is zero",
+          "sector": "W0_T2_N0_B1_D1",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "D0",
+                "B0"
+              ],
+              "field": "T"
+            },
+            {
+              "derivative_word": [],
+              "field": "T"
+            }
+          ],
+          "sector": "W0_T2_N0_B1_D1"
+        },
+        "placement_id": 2,
+        "target_multiplicity": 0,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "physical target-spin multiplicity is zero",
+          "sector": "W0_T2_N0_B1_D1",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "D0"
+              ],
+              "field": "T"
+            },
+            {
+              "derivative_word": [
+                "B0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W0_T2_N0_B1_D1"
+        },
+        "placement_id": 3,
+        "target_multiplicity": 0,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "physical target-spin multiplicity is zero",
+          "sector": "W0_T2_N0_B1_D1",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [],
+              "field": "T"
+            },
+            {
+              "derivative_word": [
+                "D0",
+                "B0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W0_T2_N0_B1_D1"
+        },
+        "placement_id": 4,
+        "target_multiplicity": 0,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "physical target-spin multiplicity is zero",
+          "sector": "W0_T2_N1_B2_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "B0",
+                "B1"
+              ],
+              "field": "T"
+            },
+            {
+              "derivative_word": [
+                "N0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W0_T2_N1_B2_D0"
+        },
+        "placement_id": 5,
+        "target_multiplicity": 0,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "physical target-spin multiplicity is zero",
+          "sector": "W0_T2_N1_B2_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "B0",
+                "B1",
+                "N0"
+              ],
+              "field": "T"
+            },
+            {
+              "derivative_word": [],
+              "field": "T"
+            }
+          ],
+          "sector": "W0_T2_N1_B2_D0"
+        },
+        "placement_id": 6,
+        "target_multiplicity": 0,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "physical target-spin multiplicity is zero",
+          "sector": "W0_T2_N1_B2_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "B0",
+                "N0"
+              ],
+              "field": "T"
+            },
+            {
+              "derivative_word": [
+                "B1"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W0_T2_N1_B2_D0"
+        },
+        "placement_id": 7,
+        "target_multiplicity": 0,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "physical target-spin multiplicity is zero",
+          "sector": "W0_T2_N1_B2_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "B0",
+                "N0",
+                "B1"
+              ],
+              "field": "T"
+            },
+            {
+              "derivative_word": [],
+              "field": "T"
+            }
+          ],
+          "sector": "W0_T2_N1_B2_D0"
+        },
+        "placement_id": 8,
+        "target_multiplicity": 0,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "physical target-spin multiplicity is zero",
+          "sector": "W0_T2_N1_B2_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "B0"
+              ],
+              "field": "T"
+            },
+            {
+              "derivative_word": [
+                "B1",
+                "N0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W0_T2_N1_B2_D0"
+        },
+        "placement_id": 9,
+        "target_multiplicity": 0,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "physical target-spin multiplicity is zero",
+          "sector": "W0_T2_N1_B2_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "B0"
+              ],
+              "field": "T"
+            },
+            {
+              "derivative_word": [
+                "N0",
+                "B1"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W0_T2_N1_B2_D0"
+        },
+        "placement_id": 10,
+        "target_multiplicity": 0,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "physical target-spin multiplicity is zero",
+          "sector": "W0_T2_N1_B2_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "B1",
+                "B0"
+              ],
+              "field": "T"
+            },
+            {
+              "derivative_word": [
+                "N0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W0_T2_N1_B2_D0"
+        },
+        "placement_id": 11,
+        "target_multiplicity": 0,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "physical target-spin multiplicity is zero",
+          "sector": "W0_T2_N1_B2_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "B1",
+                "B0",
+                "N0"
+              ],
+              "field": "T"
+            },
+            {
+              "derivative_word": [],
+              "field": "T"
+            }
+          ],
+          "sector": "W0_T2_N1_B2_D0"
+        },
+        "placement_id": 12,
+        "target_multiplicity": 0,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "physical target-spin multiplicity is zero",
+          "sector": "W0_T2_N1_B2_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "B1",
+                "N0"
+              ],
+              "field": "T"
+            },
+            {
+              "derivative_word": [
+                "B0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W0_T2_N1_B2_D0"
+        },
+        "placement_id": 13,
+        "target_multiplicity": 0,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "physical target-spin multiplicity is zero",
+          "sector": "W0_T2_N1_B2_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "B1",
+                "N0",
+                "B0"
+              ],
+              "field": "T"
+            },
+            {
+              "derivative_word": [],
+              "field": "T"
+            }
+          ],
+          "sector": "W0_T2_N1_B2_D0"
+        },
+        "placement_id": 14,
+        "target_multiplicity": 0,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "physical target-spin multiplicity is zero",
+          "sector": "W0_T2_N1_B2_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "B1"
+              ],
+              "field": "T"
+            },
+            {
+              "derivative_word": [
+                "B0",
+                "N0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W0_T2_N1_B2_D0"
+        },
+        "placement_id": 15,
+        "target_multiplicity": 0,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "physical target-spin multiplicity is zero",
+          "sector": "W0_T2_N1_B2_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "B1"
+              ],
+              "field": "T"
+            },
+            {
+              "derivative_word": [
+                "N0",
+                "B0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W0_T2_N1_B2_D0"
+        },
+        "placement_id": 16,
+        "target_multiplicity": 0,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "physical target-spin multiplicity is zero",
+          "sector": "W0_T2_N1_B2_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N0",
+                "B0"
+              ],
+              "field": "T"
+            },
+            {
+              "derivative_word": [
+                "B1"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W0_T2_N1_B2_D0"
+        },
+        "placement_id": 17,
+        "target_multiplicity": 0,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "physical target-spin multiplicity is zero",
+          "sector": "W0_T2_N1_B2_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N0",
+                "B0",
+                "B1"
+              ],
+              "field": "T"
+            },
+            {
+              "derivative_word": [],
+              "field": "T"
+            }
+          ],
+          "sector": "W0_T2_N1_B2_D0"
+        },
+        "placement_id": 18,
+        "target_multiplicity": 0,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "physical target-spin multiplicity is zero",
+          "sector": "W0_T2_N1_B2_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N0",
+                "B1"
+              ],
+              "field": "T"
+            },
+            {
+              "derivative_word": [
+                "B0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W0_T2_N1_B2_D0"
+        },
+        "placement_id": 19,
+        "target_multiplicity": 0,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "physical target-spin multiplicity is zero",
+          "sector": "W0_T2_N1_B2_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N0",
+                "B1",
+                "B0"
+              ],
+              "field": "T"
+            },
+            {
+              "derivative_word": [],
+              "field": "T"
+            }
+          ],
+          "sector": "W0_T2_N1_B2_D0"
+        },
+        "placement_id": 20,
+        "target_multiplicity": 0,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "physical target-spin multiplicity is zero",
+          "sector": "W0_T2_N1_B2_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N0"
+              ],
+              "field": "T"
+            },
+            {
+              "derivative_word": [
+                "B0",
+                "B1"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W0_T2_N1_B2_D0"
+        },
+        "placement_id": 21,
+        "target_multiplicity": 0,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "physical target-spin multiplicity is zero",
+          "sector": "W0_T2_N1_B2_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N0"
+              ],
+              "field": "T"
+            },
+            {
+              "derivative_word": [
+                "B1",
+                "B0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W0_T2_N1_B2_D0"
+        },
+        "placement_id": 22,
+        "target_multiplicity": 0,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "physical target-spin multiplicity is zero",
+          "sector": "W0_T2_N1_B2_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [],
+              "field": "T"
+            },
+            {
+              "derivative_word": [
+                "B0",
+                "B1",
+                "N0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W0_T2_N1_B2_D0"
+        },
+        "placement_id": 23,
+        "target_multiplicity": 0,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "physical target-spin multiplicity is zero",
+          "sector": "W0_T2_N1_B2_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [],
+              "field": "T"
+            },
+            {
+              "derivative_word": [
+                "B0",
+                "N0",
+                "B1"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W0_T2_N1_B2_D0"
+        },
+        "placement_id": 24,
+        "target_multiplicity": 0,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "physical target-spin multiplicity is zero",
+          "sector": "W0_T2_N1_B2_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [],
+              "field": "T"
+            },
+            {
+              "derivative_word": [
+                "B1",
+                "B0",
+                "N0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W0_T2_N1_B2_D0"
+        },
+        "placement_id": 25,
+        "target_multiplicity": 0,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "physical target-spin multiplicity is zero",
+          "sector": "W0_T2_N1_B2_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [],
+              "field": "T"
+            },
+            {
+              "derivative_word": [
+                "B1",
+                "N0",
+                "B0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W0_T2_N1_B2_D0"
+        },
+        "placement_id": 26,
+        "target_multiplicity": 0,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "physical target-spin multiplicity is zero",
+          "sector": "W0_T2_N1_B2_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [],
+              "field": "T"
+            },
+            {
+              "derivative_word": [
+                "N0",
+                "B0",
+                "B1"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W0_T2_N1_B2_D0"
+        },
+        "placement_id": 27,
+        "target_multiplicity": 0,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "physical target-spin multiplicity is zero",
+          "sector": "W0_T2_N1_B2_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [],
+              "field": "T"
+            },
+            {
+              "derivative_word": [
+                "N0",
+                "B1",
+                "B0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W0_T2_N1_B2_D0"
+        },
+        "placement_id": 28,
+        "target_multiplicity": 0,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "1",
+            "C_split": "0"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N1_B0_D1",
+          "terms": [
+            {
+              "T_word": [],
+              "W_word": [
+                "D0",
+                "N0"
+              ],
+              "coefficient": "1",
+              "normal_class": "C_on_W"
+            }
+          ],
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "D0",
+                "N0"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N1_B0_D1"
+        },
+        "placement_id": 29,
+        "target_multiplicity": 1,
+        "target_row_offset": 0
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N1_B0_D1",
+          "terms": [],
+          "trace": [
+            {
+              "identity": "N_a T_dotb=0",
+              "input": [
+                "N0"
+              ],
+              "output": "0",
+              "rule": "antichiral_terminal"
+            }
+          ]
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "D0"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N1_B0_D1"
+        },
+        "placement_id": 30,
+        "target_multiplicity": 1,
+        "target_row_offset": 1
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "1",
+            "C_split": "0"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N1_B0_D1",
+          "terms": [
+            {
+              "T_word": [],
+              "W_word": [
+                "D0",
+                "N0"
+              ],
+              "coefficient": "1",
+              "normal_class": "C_on_W"
+            }
+          ],
+          "trace": [
+            {
+              "curvature_child": "W T T",
+              "curvature_child_coefficient": "-2",
+              "curvature_child_target_multiplicity": 0,
+              "identity": "[N_a,D_(b dotb)]=-2 epsilon_ab T_dotb",
+              "input": [
+                "N0",
+                "D0"
+              ],
+              "ordered_coefficient": "1",
+              "ordered_word": [
+                "D0",
+                "N0"
+              ],
+              "rule": "nabla_vector_order"
+            }
+          ]
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N0",
+                "D0"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N1_B0_D1"
+        },
+        "placement_id": 31,
+        "target_multiplicity": 1,
+        "target_row_offset": 2
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "1"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N1_B0_D1",
+          "terms": [
+            {
+              "T_word": [
+                "D0"
+              ],
+              "W_word": [
+                "N0"
+              ],
+              "coefficient": "1",
+              "normal_class": "C_split"
+            }
+          ],
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N0"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "D0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N1_B0_D1"
+        },
+        "placement_id": 32,
+        "target_multiplicity": 1,
+        "target_row_offset": 3
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N1_B0_D1",
+          "terms": [],
+          "trace": [
+            {
+              "identity": "N_a T_dotb=0",
+              "input": [
+                "D0",
+                "N0"
+              ],
+              "output": "0",
+              "rule": "antichiral_terminal"
+            }
+          ]
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "D0",
+                "N0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N1_B0_D1"
+        },
+        "placement_id": 33,
+        "target_multiplicity": 1,
+        "target_row_offset": 4
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N1_B0_D1",
+          "terms": [],
+          "trace": [
+            {
+              "curvature_child": "W T T",
+              "curvature_child_coefficient": "-2",
+              "curvature_child_target_multiplicity": 0,
+              "identity": "[N_a,D_(b dotb)]=-2 epsilon_ab T_dotb",
+              "input": [
+                "N0",
+                "D0"
+              ],
+              "ordered_coefficient": "1",
+              "ordered_word": [
+                "D0",
+                "N0"
+              ],
+              "rule": "nabla_vector_order"
+            },
+            {
+              "identity": "N_a T_dotb=0",
+              "input": [
+                "D0",
+                "N0"
+              ],
+              "output": "0",
+              "rule": "antichiral_terminal"
+            }
+          ]
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N0",
+                "D0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N1_B0_D1"
+        },
+        "placement_id": 34,
+        "target_multiplicity": 1,
+        "target_row_offset": 5
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N2_B1_D0",
+          "terms": [],
+          "trace": [
+            {
+              "collapsed_coefficient": "-2",
+              "collapsed_word": [
+                "D(N0,B0)"
+              ],
+              "identity": "N_a B_dot+B_dot N_a=-2 D_(a dot)",
+              "input": [
+                "B0",
+                "N0"
+              ],
+              "rule": "mixed_anticommutator",
+              "swapped_coefficient": "-1"
+            },
+            {
+              "identity": "B_dot W_a=0",
+              "input": [
+                "N0",
+                "B0"
+              ],
+              "output": "0",
+              "rule": "chiral_terminal"
+            },
+            {
+              "identity": "N_a T_dotb=0",
+              "input": [
+                "N1"
+              ],
+              "output": "0",
+              "rule": "antichiral_terminal"
+            }
+          ]
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "B0",
+                "N0"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N1"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N2_B1_D0"
+        },
+        "placement_id": 35,
+        "target_multiplicity": 1,
+        "target_row_offset": 6
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N2_B1_D0",
+          "terms": [
+            {
+              "T_word": [],
+              "W_word": [
+                "D(N0,B0)",
+                "N1"
+              ],
+              "coefficient": "-2",
+              "normal_class": "C_on_W"
+            },
+            {
+              "T_word": [],
+              "W_word": [
+                "D(N1,B0)",
+                "N0"
+              ],
+              "coefficient": "2",
+              "normal_class": "C_on_W"
+            }
+          ],
+          "trace": [
+            {
+              "collapsed_coefficient": "-2",
+              "collapsed_word": [
+                "D(N0,B0)",
+                "N1"
+              ],
+              "identity": "N_a B_dot+B_dot N_a=-2 D_(a dot)",
+              "input": [
+                "B0",
+                "N0",
+                "N1"
+              ],
+              "rule": "mixed_anticommutator",
+              "swapped_coefficient": "-1"
+            },
+            {
+              "collapsed_coefficient": "2",
+              "collapsed_word": [
+                "N0",
+                "D(N1,B0)"
+              ],
+              "identity": "N_a B_dot+B_dot N_a=-2 D_(a dot)",
+              "input": [
+                "N0",
+                "B0",
+                "N1"
+              ],
+              "rule": "mixed_anticommutator",
+              "swapped_coefficient": "1"
+            },
+            {
+              "identity": "B_dot W_a=0",
+              "input": [
+                "N0",
+                "N1",
+                "B0"
+              ],
+              "output": "0",
+              "rule": "chiral_terminal"
+            },
+            {
+              "curvature_child": "W T T",
+              "curvature_child_coefficient": "-4",
+              "curvature_child_target_multiplicity": 0,
+              "identity": "[N_a,D_(b dotb)]=-2 epsilon_ab T_dotb",
+              "input": [
+                "N0",
+                "D(N1,B0)"
+              ],
+              "ordered_coefficient": "2",
+              "ordered_word": [
+                "D(N1,B0)",
+                "N0"
+              ],
+              "rule": "nabla_vector_order"
+            }
+          ]
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "B0",
+                "N0",
+                "N1"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N2_B1_D0"
+        },
+        "placement_id": 36,
+        "target_multiplicity": 1,
+        "target_row_offset": 7
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N2_B1_D0",
+          "terms": [],
+          "trace": [
+            {
+              "collapsed_coefficient": "-2",
+              "collapsed_word": [
+                "D(N1,B0)"
+              ],
+              "identity": "N_a B_dot+B_dot N_a=-2 D_(a dot)",
+              "input": [
+                "B0",
+                "N1"
+              ],
+              "rule": "mixed_anticommutator",
+              "swapped_coefficient": "-1"
+            },
+            {
+              "identity": "B_dot W_a=0",
+              "input": [
+                "N1",
+                "B0"
+              ],
+              "output": "0",
+              "rule": "chiral_terminal"
+            },
+            {
+              "identity": "N_a T_dotb=0",
+              "input": [
+                "N0"
+              ],
+              "output": "0",
+              "rule": "antichiral_terminal"
+            }
+          ]
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "B0",
+                "N1"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N2_B1_D0"
+        },
+        "placement_id": 37,
+        "target_multiplicity": 1,
+        "target_row_offset": 8
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N2_B1_D0",
+          "terms": [
+            {
+              "T_word": [],
+              "W_word": [
+                "D(N0,B0)",
+                "N1"
+              ],
+              "coefficient": "2",
+              "normal_class": "C_on_W"
+            },
+            {
+              "T_word": [],
+              "W_word": [
+                "D(N1,B0)",
+                "N0"
+              ],
+              "coefficient": "-2",
+              "normal_class": "C_on_W"
+            }
+          ],
+          "trace": [
+            {
+              "collapsed_coefficient": "-2",
+              "collapsed_word": [
+                "D(N1,B0)",
+                "N0"
+              ],
+              "identity": "N_a B_dot+B_dot N_a=-2 D_(a dot)",
+              "input": [
+                "B0",
+                "N1",
+                "N0"
+              ],
+              "rule": "mixed_anticommutator",
+              "swapped_coefficient": "-1"
+            },
+            {
+              "collapsed_coefficient": "2",
+              "collapsed_word": [
+                "N1",
+                "D(N0,B0)"
+              ],
+              "identity": "N_a B_dot+B_dot N_a=-2 D_(a dot)",
+              "input": [
+                "N1",
+                "B0",
+                "N0"
+              ],
+              "rule": "mixed_anticommutator",
+              "swapped_coefficient": "1"
+            },
+            {
+              "identity": "B_dot W_a=0",
+              "input": [
+                "N1",
+                "N0",
+                "B0"
+              ],
+              "output": "0",
+              "rule": "chiral_terminal"
+            },
+            {
+              "curvature_child": "W T T",
+              "curvature_child_coefficient": "-4",
+              "curvature_child_target_multiplicity": 0,
+              "identity": "[N_a,D_(b dotb)]=-2 epsilon_ab T_dotb",
+              "input": [
+                "N1",
+                "D(N0,B0)"
+              ],
+              "ordered_coefficient": "2",
+              "ordered_word": [
+                "D(N0,B0)",
+                "N1"
+              ],
+              "rule": "nabla_vector_order"
+            }
+          ]
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "B0",
+                "N1",
+                "N0"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N2_B1_D0"
+        },
+        "placement_id": 38,
+        "target_multiplicity": 1,
+        "target_row_offset": 9
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N2_B1_D0",
+          "terms": [],
+          "trace": [
+            {
+              "identity": "B_dot W_a=0",
+              "input": [
+                "B0"
+              ],
+              "output": "0",
+              "rule": "chiral_terminal"
+            },
+            {
+              "identity": "N_a T_dotb=0",
+              "input": [
+                "N0",
+                "N1"
+              ],
+              "output": "0",
+              "rule": "antichiral_terminal"
+            }
+          ]
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "B0"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N0",
+                "N1"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N2_B1_D0"
+        },
+        "placement_id": 39,
+        "target_multiplicity": 1,
+        "target_row_offset": 10
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N2_B1_D0",
+          "terms": [],
+          "trace": [
+            {
+              "identity": "B_dot W_a=0",
+              "input": [
+                "B0"
+              ],
+              "output": "0",
+              "rule": "chiral_terminal"
+            },
+            {
+              "identity": "N_a T_dotb=0",
+              "input": [
+                "N1",
+                "N0"
+              ],
+              "output": "0",
+              "rule": "antichiral_terminal"
+            }
+          ]
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "B0"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N1",
+                "N0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N2_B1_D0"
+        },
+        "placement_id": 40,
+        "target_multiplicity": 1,
+        "target_row_offset": 11
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N2_B1_D0",
+          "terms": [],
+          "trace": [
+            {
+              "identity": "B_dot W_a=0",
+              "input": [
+                "N0",
+                "B0"
+              ],
+              "output": "0",
+              "rule": "chiral_terminal"
+            },
+            {
+              "identity": "N_a T_dotb=0",
+              "input": [
+                "N1"
+              ],
+              "output": "0",
+              "rule": "antichiral_terminal"
+            }
+          ]
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N0",
+                "B0"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N1"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N2_B1_D0"
+        },
+        "placement_id": 41,
+        "target_multiplicity": 1,
+        "target_row_offset": 12
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "-2",
+            "C_split": "0"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N2_B1_D0",
+          "terms": [
+            {
+              "T_word": [],
+              "W_word": [
+                "D(N1,B0)",
+                "N0"
+              ],
+              "coefficient": "-2",
+              "normal_class": "C_on_W"
+            }
+          ],
+          "trace": [
+            {
+              "collapsed_coefficient": "-2",
+              "collapsed_word": [
+                "N0",
+                "D(N1,B0)"
+              ],
+              "identity": "N_a B_dot+B_dot N_a=-2 D_(a dot)",
+              "input": [
+                "N0",
+                "B0",
+                "N1"
+              ],
+              "rule": "mixed_anticommutator",
+              "swapped_coefficient": "-1"
+            },
+            {
+              "identity": "B_dot W_a=0",
+              "input": [
+                "N0",
+                "N1",
+                "B0"
+              ],
+              "output": "0",
+              "rule": "chiral_terminal"
+            },
+            {
+              "curvature_child": "W T T",
+              "curvature_child_coefficient": "4",
+              "curvature_child_target_multiplicity": 0,
+              "identity": "[N_a,D_(b dotb)]=-2 epsilon_ab T_dotb",
+              "input": [
+                "N0",
+                "D(N1,B0)"
+              ],
+              "ordered_coefficient": "-2",
+              "ordered_word": [
+                "D(N1,B0)",
+                "N0"
+              ],
+              "rule": "nabla_vector_order"
+            }
+          ]
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N0",
+                "B0",
+                "N1"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N2_B1_D0"
+        },
+        "placement_id": 42,
+        "target_multiplicity": 1,
+        "target_row_offset": 13
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N2_B1_D0",
+          "terms": [],
+          "trace": [
+            {
+              "identity": "N_a N_b W_c=-epsilon_ab N_c E",
+              "input": [
+                "N0",
+                "N1"
+              ],
+              "output": "0",
+              "rule": "chiral_EOM"
+            }
+          ]
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N0",
+                "N1"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "B0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N2_B1_D0"
+        },
+        "placement_id": 43,
+        "target_multiplicity": 1,
+        "target_row_offset": 14
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N2_B1_D0",
+          "terms": [],
+          "trace": [
+            {
+              "identity": "B_dot W_a=0",
+              "input": [
+                "N0",
+                "N1",
+                "B0"
+              ],
+              "output": "0",
+              "rule": "chiral_terminal"
+            }
+          ]
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N0",
+                "N1",
+                "B0"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N2_B1_D0"
+        },
+        "placement_id": 44,
+        "target_multiplicity": 1,
+        "target_row_offset": 15
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N2_B1_D0",
+          "terms": [],
+          "trace": [
+            {
+              "identity": "N_a T_dotb=0",
+              "input": [
+                "B0",
+                "N1"
+              ],
+              "output": "0",
+              "rule": "antichiral_terminal"
+            }
+          ]
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N0"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "B0",
+                "N1"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N2_B1_D0"
+        },
+        "placement_id": 45,
+        "target_multiplicity": 1,
+        "target_row_offset": 16
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "-2"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N2_B1_D0",
+          "terms": [
+            {
+              "T_word": [
+                "D(N1,B0)"
+              ],
+              "W_word": [
+                "N0"
+              ],
+              "coefficient": "-2",
+              "normal_class": "C_split"
+            }
+          ],
+          "trace": [
+            {
+              "collapsed_coefficient": "-2",
+              "collapsed_word": [
+                "D(N1,B0)"
+              ],
+              "identity": "N_a B_dot+B_dot N_a=-2 D_(a dot)",
+              "input": [
+                "N1",
+                "B0"
+              ],
+              "rule": "mixed_anticommutator",
+              "swapped_coefficient": "-1"
+            },
+            {
+              "identity": "N_a T_dotb=0",
+              "input": [
+                "B0",
+                "N1"
+              ],
+              "output": "0",
+              "rule": "antichiral_terminal"
+            }
+          ]
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N0"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N1",
+                "B0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N2_B1_D0"
+        },
+        "placement_id": 46,
+        "target_multiplicity": 1,
+        "target_row_offset": 17
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N2_B1_D0",
+          "terms": [],
+          "trace": [
+            {
+              "identity": "B_dot W_a=0",
+              "input": [
+                "N1",
+                "B0"
+              ],
+              "output": "0",
+              "rule": "chiral_terminal"
+            },
+            {
+              "identity": "N_a T_dotb=0",
+              "input": [
+                "N0"
+              ],
+              "output": "0",
+              "rule": "antichiral_terminal"
+            }
+          ]
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N1",
+                "B0"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N2_B1_D0"
+        },
+        "placement_id": 47,
+        "target_multiplicity": 1,
+        "target_row_offset": 18
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "-2",
+            "C_split": "0"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N2_B1_D0",
+          "terms": [
+            {
+              "T_word": [],
+              "W_word": [
+                "D(N0,B0)",
+                "N1"
+              ],
+              "coefficient": "-2",
+              "normal_class": "C_on_W"
+            }
+          ],
+          "trace": [
+            {
+              "collapsed_coefficient": "-2",
+              "collapsed_word": [
+                "N1",
+                "D(N0,B0)"
+              ],
+              "identity": "N_a B_dot+B_dot N_a=-2 D_(a dot)",
+              "input": [
+                "N1",
+                "B0",
+                "N0"
+              ],
+              "rule": "mixed_anticommutator",
+              "swapped_coefficient": "-1"
+            },
+            {
+              "identity": "B_dot W_a=0",
+              "input": [
+                "N1",
+                "N0",
+                "B0"
+              ],
+              "output": "0",
+              "rule": "chiral_terminal"
+            },
+            {
+              "curvature_child": "W T T",
+              "curvature_child_coefficient": "4",
+              "curvature_child_target_multiplicity": 0,
+              "identity": "[N_a,D_(b dotb)]=-2 epsilon_ab T_dotb",
+              "input": [
+                "N1",
+                "D(N0,B0)"
+              ],
+              "ordered_coefficient": "-2",
+              "ordered_word": [
+                "D(N0,B0)",
+                "N1"
+              ],
+              "rule": "nabla_vector_order"
+            }
+          ]
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N1",
+                "B0",
+                "N0"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N2_B1_D0"
+        },
+        "placement_id": 48,
+        "target_multiplicity": 1,
+        "target_row_offset": 19
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N2_B1_D0",
+          "terms": [],
+          "trace": [
+            {
+              "identity": "N_a N_b W_c=-epsilon_ab N_c E",
+              "input": [
+                "N1",
+                "N0"
+              ],
+              "output": "0",
+              "rule": "chiral_EOM"
+            }
+          ]
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N1",
+                "N0"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "B0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N2_B1_D0"
+        },
+        "placement_id": 49,
+        "target_multiplicity": 1,
+        "target_row_offset": 20
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N2_B1_D0",
+          "terms": [],
+          "trace": [
+            {
+              "identity": "B_dot W_a=0",
+              "input": [
+                "N1",
+                "N0",
+                "B0"
+              ],
+              "output": "0",
+              "rule": "chiral_terminal"
+            }
+          ]
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N1",
+                "N0",
+                "B0"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N2_B1_D0"
+        },
+        "placement_id": 50,
+        "target_multiplicity": 1,
+        "target_row_offset": 21
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N2_B1_D0",
+          "terms": [],
+          "trace": [
+            {
+              "identity": "N_a T_dotb=0",
+              "input": [
+                "B0",
+                "N0"
+              ],
+              "output": "0",
+              "rule": "antichiral_terminal"
+            }
+          ]
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N1"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "B0",
+                "N0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N2_B1_D0"
+        },
+        "placement_id": 51,
+        "target_multiplicity": 1,
+        "target_row_offset": 22
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "-2"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N2_B1_D0",
+          "terms": [
+            {
+              "T_word": [
+                "D(N0,B0)"
+              ],
+              "W_word": [
+                "N1"
+              ],
+              "coefficient": "-2",
+              "normal_class": "C_split"
+            }
+          ],
+          "trace": [
+            {
+              "collapsed_coefficient": "-2",
+              "collapsed_word": [
+                "D(N0,B0)"
+              ],
+              "identity": "N_a B_dot+B_dot N_a=-2 D_(a dot)",
+              "input": [
+                "N0",
+                "B0"
+              ],
+              "rule": "mixed_anticommutator",
+              "swapped_coefficient": "-1"
+            },
+            {
+              "identity": "N_a T_dotb=0",
+              "input": [
+                "B0",
+                "N0"
+              ],
+              "output": "0",
+              "rule": "antichiral_terminal"
+            }
+          ]
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N1"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N0",
+                "B0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N2_B1_D0"
+        },
+        "placement_id": 52,
+        "target_multiplicity": 1,
+        "target_row_offset": 23
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N2_B1_D0",
+          "terms": [],
+          "trace": [
+            {
+              "identity": "N_a T_dotb=0",
+              "input": [
+                "B0",
+                "N0",
+                "N1"
+              ],
+              "output": "0",
+              "rule": "antichiral_terminal"
+            }
+          ]
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "B0",
+                "N0",
+                "N1"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N2_B1_D0"
+        },
+        "placement_id": 53,
+        "target_multiplicity": 1,
+        "target_row_offset": 24
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N2_B1_D0",
+          "terms": [],
+          "trace": [
+            {
+              "identity": "N_a T_dotb=0",
+              "input": [
+                "B0",
+                "N1",
+                "N0"
+              ],
+              "output": "0",
+              "rule": "antichiral_terminal"
+            }
+          ]
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "B0",
+                "N1",
+                "N0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N2_B1_D0"
+        },
+        "placement_id": 54,
+        "target_multiplicity": 1,
+        "target_row_offset": 25
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N2_B1_D0",
+          "terms": [],
+          "trace": [
+            {
+              "collapsed_coefficient": "-2",
+              "collapsed_word": [
+                "D(N0,B0)",
+                "N1"
+              ],
+              "identity": "N_a B_dot+B_dot N_a=-2 D_(a dot)",
+              "input": [
+                "N0",
+                "B0",
+                "N1"
+              ],
+              "rule": "mixed_anticommutator",
+              "swapped_coefficient": "-1"
+            },
+            {
+              "identity": "N_a T_dotb=0",
+              "input": [
+                "B0",
+                "N0",
+                "N1"
+              ],
+              "output": "0",
+              "rule": "antichiral_terminal"
+            },
+            {
+              "identity": "N_a T_dotb=0",
+              "input": [
+                "D(N0,B0)",
+                "N1"
+              ],
+              "output": "0",
+              "rule": "antichiral_terminal"
+            }
+          ]
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N0",
+                "B0",
+                "N1"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N2_B1_D0"
+        },
+        "placement_id": 55,
+        "target_multiplicity": 1,
+        "target_row_offset": 26
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N2_B1_D0",
+          "terms": [],
+          "trace": [
+            {
+              "collapsed_coefficient": "-2",
+              "collapsed_word": [
+                "N0",
+                "D(N1,B0)"
+              ],
+              "identity": "N_a B_dot+B_dot N_a=-2 D_(a dot)",
+              "input": [
+                "N0",
+                "N1",
+                "B0"
+              ],
+              "rule": "mixed_anticommutator",
+              "swapped_coefficient": "-1"
+            },
+            {
+              "collapsed_coefficient": "2",
+              "collapsed_word": [
+                "D(N0,B0)",
+                "N1"
+              ],
+              "identity": "N_a B_dot+B_dot N_a=-2 D_(a dot)",
+              "input": [
+                "N0",
+                "B0",
+                "N1"
+              ],
+              "rule": "mixed_anticommutator",
+              "swapped_coefficient": "1"
+            },
+            {
+              "identity": "N_a T_dotb=0",
+              "input": [
+                "B0",
+                "N0",
+                "N1"
+              ],
+              "output": "0",
+              "rule": "antichiral_terminal"
+            },
+            {
+              "identity": "N_a T_dotb=0",
+              "input": [
+                "D(N0,B0)",
+                "N1"
+              ],
+              "output": "0",
+              "rule": "antichiral_terminal"
+            },
+            {
+              "curvature_child": "W T T",
+              "curvature_child_coefficient": "4",
+              "curvature_child_target_multiplicity": 0,
+              "identity": "[N_a,D_(b dotb)]=-2 epsilon_ab T_dotb",
+              "input": [
+                "N0",
+                "D(N1,B0)"
+              ],
+              "ordered_coefficient": "-2",
+              "ordered_word": [
+                "D(N1,B0)",
+                "N0"
+              ],
+              "rule": "nabla_vector_order"
+            },
+            {
+              "identity": "N_a T_dotb=0",
+              "input": [
+                "D(N1,B0)",
+                "N0"
+              ],
+              "output": "0",
+              "rule": "antichiral_terminal"
+            }
+          ]
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N0",
+                "N1",
+                "B0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N2_B1_D0"
+        },
+        "placement_id": 56,
+        "target_multiplicity": 1,
+        "target_row_offset": 27
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N2_B1_D0",
+          "terms": [],
+          "trace": [
+            {
+              "collapsed_coefficient": "-2",
+              "collapsed_word": [
+                "D(N1,B0)",
+                "N0"
+              ],
+              "identity": "N_a B_dot+B_dot N_a=-2 D_(a dot)",
+              "input": [
+                "N1",
+                "B0",
+                "N0"
+              ],
+              "rule": "mixed_anticommutator",
+              "swapped_coefficient": "-1"
+            },
+            {
+              "identity": "N_a T_dotb=0",
+              "input": [
+                "B0",
+                "N1",
+                "N0"
+              ],
+              "output": "0",
+              "rule": "antichiral_terminal"
+            },
+            {
+              "identity": "N_a T_dotb=0",
+              "input": [
+                "D(N1,B0)",
+                "N0"
+              ],
+              "output": "0",
+              "rule": "antichiral_terminal"
+            }
+          ]
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N1",
+                "B0",
+                "N0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N2_B1_D0"
+        },
+        "placement_id": 57,
+        "target_multiplicity": 1,
+        "target_row_offset": 28
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "mixed PBW reduction followed by chirality; C_split is removed by D_a^dota T_dota=-(1/2)N_a barE",
+          "sector": "W1_T1_N2_B1_D0",
+          "terms": [],
+          "trace": [
+            {
+              "collapsed_coefficient": "-2",
+              "collapsed_word": [
+                "N1",
+                "D(N0,B0)"
+              ],
+              "identity": "N_a B_dot+B_dot N_a=-2 D_(a dot)",
+              "input": [
+                "N1",
+                "N0",
+                "B0"
+              ],
+              "rule": "mixed_anticommutator",
+              "swapped_coefficient": "-1"
+            },
+            {
+              "collapsed_coefficient": "2",
+              "collapsed_word": [
+                "D(N1,B0)",
+                "N0"
+              ],
+              "identity": "N_a B_dot+B_dot N_a=-2 D_(a dot)",
+              "input": [
+                "N1",
+                "B0",
+                "N0"
+              ],
+              "rule": "mixed_anticommutator",
+              "swapped_coefficient": "1"
+            },
+            {
+              "identity": "N_a T_dotb=0",
+              "input": [
+                "B0",
+                "N1",
+                "N0"
+              ],
+              "output": "0",
+              "rule": "antichiral_terminal"
+            },
+            {
+              "identity": "N_a T_dotb=0",
+              "input": [
+                "D(N1,B0)",
+                "N0"
+              ],
+              "output": "0",
+              "rule": "antichiral_terminal"
+            },
+            {
+              "curvature_child": "W T T",
+              "curvature_child_coefficient": "4",
+              "curvature_child_target_multiplicity": 0,
+              "identity": "[N_a,D_(b dotb)]=-2 epsilon_ab T_dotb",
+              "input": [
+                "N1",
+                "D(N0,B0)"
+              ],
+              "ordered_coefficient": "-2",
+              "ordered_word": [
+                "D(N0,B0)",
+                "N1"
+              ],
+              "rule": "nabla_vector_order"
+            },
+            {
+              "identity": "N_a T_dotb=0",
+              "input": [
+                "D(N0,B0)",
+                "N1"
+              ],
+              "output": "0",
+              "rule": "antichiral_terminal"
+            }
+          ]
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N1",
+                "N0",
+                "B0"
+              ],
+              "field": "T"
+            }
+          ],
+          "sector": "W1_T1_N2_B1_D0"
+        },
+        "placement_id": 58,
+        "target_multiplicity": 1,
+        "target_row_offset": 29
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "three N derivatives on two W factors force one N_a N_b W_c; N_a N_b W_c=-epsilon_ab N_c E=0",
+          "sector": "W2_T0_N3_B0_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N0",
+                "N1"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N2"
+              ],
+              "field": "W"
+            }
+          ],
+          "sector": "W2_T0_N3_B0_D0"
+        },
+        "placement_id": 59,
+        "target_multiplicity": 4,
+        "target_row_offset": 30
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "three N derivatives on two W factors force one N_a N_b W_c; N_a N_b W_c=-epsilon_ab N_c E=0",
+          "sector": "W2_T0_N3_B0_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N0",
+                "N1",
+                "N2"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [],
+              "field": "W"
+            }
+          ],
+          "sector": "W2_T0_N3_B0_D0"
+        },
+        "placement_id": 60,
+        "target_multiplicity": 4,
+        "target_row_offset": 34
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "three N derivatives on two W factors force one N_a N_b W_c; N_a N_b W_c=-epsilon_ab N_c E=0",
+          "sector": "W2_T0_N3_B0_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N0",
+                "N2"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N1"
+              ],
+              "field": "W"
+            }
+          ],
+          "sector": "W2_T0_N3_B0_D0"
+        },
+        "placement_id": 61,
+        "target_multiplicity": 4,
+        "target_row_offset": 38
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "three N derivatives on two W factors force one N_a N_b W_c; N_a N_b W_c=-epsilon_ab N_c E=0",
+          "sector": "W2_T0_N3_B0_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N0",
+                "N2",
+                "N1"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [],
+              "field": "W"
+            }
+          ],
+          "sector": "W2_T0_N3_B0_D0"
+        },
+        "placement_id": 62,
+        "target_multiplicity": 4,
+        "target_row_offset": 42
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "three N derivatives on two W factors force one N_a N_b W_c; N_a N_b W_c=-epsilon_ab N_c E=0",
+          "sector": "W2_T0_N3_B0_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N0"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N1",
+                "N2"
+              ],
+              "field": "W"
+            }
+          ],
+          "sector": "W2_T0_N3_B0_D0"
+        },
+        "placement_id": 63,
+        "target_multiplicity": 4,
+        "target_row_offset": 46
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "three N derivatives on two W factors force one N_a N_b W_c; N_a N_b W_c=-epsilon_ab N_c E=0",
+          "sector": "W2_T0_N3_B0_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N0"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N2",
+                "N1"
+              ],
+              "field": "W"
+            }
+          ],
+          "sector": "W2_T0_N3_B0_D0"
+        },
+        "placement_id": 64,
+        "target_multiplicity": 4,
+        "target_row_offset": 50
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "three N derivatives on two W factors force one N_a N_b W_c; N_a N_b W_c=-epsilon_ab N_c E=0",
+          "sector": "W2_T0_N3_B0_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N1",
+                "N0"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N2"
+              ],
+              "field": "W"
+            }
+          ],
+          "sector": "W2_T0_N3_B0_D0"
+        },
+        "placement_id": 65,
+        "target_multiplicity": 4,
+        "target_row_offset": 54
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "three N derivatives on two W factors force one N_a N_b W_c; N_a N_b W_c=-epsilon_ab N_c E=0",
+          "sector": "W2_T0_N3_B0_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N1",
+                "N0",
+                "N2"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [],
+              "field": "W"
+            }
+          ],
+          "sector": "W2_T0_N3_B0_D0"
+        },
+        "placement_id": 66,
+        "target_multiplicity": 4,
+        "target_row_offset": 58
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "three N derivatives on two W factors force one N_a N_b W_c; N_a N_b W_c=-epsilon_ab N_c E=0",
+          "sector": "W2_T0_N3_B0_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N1",
+                "N2"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N0"
+              ],
+              "field": "W"
+            }
+          ],
+          "sector": "W2_T0_N3_B0_D0"
+        },
+        "placement_id": 67,
+        "target_multiplicity": 4,
+        "target_row_offset": 62
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "three N derivatives on two W factors force one N_a N_b W_c; N_a N_b W_c=-epsilon_ab N_c E=0",
+          "sector": "W2_T0_N3_B0_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N1",
+                "N2",
+                "N0"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [],
+              "field": "W"
+            }
+          ],
+          "sector": "W2_T0_N3_B0_D0"
+        },
+        "placement_id": 68,
+        "target_multiplicity": 4,
+        "target_row_offset": 66
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "three N derivatives on two W factors force one N_a N_b W_c; N_a N_b W_c=-epsilon_ab N_c E=0",
+          "sector": "W2_T0_N3_B0_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N1"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N0",
+                "N2"
+              ],
+              "field": "W"
+            }
+          ],
+          "sector": "W2_T0_N3_B0_D0"
+        },
+        "placement_id": 69,
+        "target_multiplicity": 4,
+        "target_row_offset": 70
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "three N derivatives on two W factors force one N_a N_b W_c; N_a N_b W_c=-epsilon_ab N_c E=0",
+          "sector": "W2_T0_N3_B0_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N1"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N2",
+                "N0"
+              ],
+              "field": "W"
+            }
+          ],
+          "sector": "W2_T0_N3_B0_D0"
+        },
+        "placement_id": 70,
+        "target_multiplicity": 4,
+        "target_row_offset": 74
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "three N derivatives on two W factors force one N_a N_b W_c; N_a N_b W_c=-epsilon_ab N_c E=0",
+          "sector": "W2_T0_N3_B0_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N2",
+                "N0"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N1"
+              ],
+              "field": "W"
+            }
+          ],
+          "sector": "W2_T0_N3_B0_D0"
+        },
+        "placement_id": 71,
+        "target_multiplicity": 4,
+        "target_row_offset": 78
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "three N derivatives on two W factors force one N_a N_b W_c; N_a N_b W_c=-epsilon_ab N_c E=0",
+          "sector": "W2_T0_N3_B0_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N2",
+                "N0",
+                "N1"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [],
+              "field": "W"
+            }
+          ],
+          "sector": "W2_T0_N3_B0_D0"
+        },
+        "placement_id": 72,
+        "target_multiplicity": 4,
+        "target_row_offset": 82
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "three N derivatives on two W factors force one N_a N_b W_c; N_a N_b W_c=-epsilon_ab N_c E=0",
+          "sector": "W2_T0_N3_B0_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N2",
+                "N1"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N0"
+              ],
+              "field": "W"
+            }
+          ],
+          "sector": "W2_T0_N3_B0_D0"
+        },
+        "placement_id": 73,
+        "target_multiplicity": 4,
+        "target_row_offset": 86
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "three N derivatives on two W factors force one N_a N_b W_c; N_a N_b W_c=-epsilon_ab N_c E=0",
+          "sector": "W2_T0_N3_B0_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N2",
+                "N1",
+                "N0"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [],
+              "field": "W"
+            }
+          ],
+          "sector": "W2_T0_N3_B0_D0"
+        },
+        "placement_id": 74,
+        "target_multiplicity": 4,
+        "target_row_offset": 90
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "three N derivatives on two W factors force one N_a N_b W_c; N_a N_b W_c=-epsilon_ab N_c E=0",
+          "sector": "W2_T0_N3_B0_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N2"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N0",
+                "N1"
+              ],
+              "field": "W"
+            }
+          ],
+          "sector": "W2_T0_N3_B0_D0"
+        },
+        "placement_id": 75,
+        "target_multiplicity": 4,
+        "target_row_offset": 94
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "three N derivatives on two W factors force one N_a N_b W_c; N_a N_b W_c=-epsilon_ab N_c E=0",
+          "sector": "W2_T0_N3_B0_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [
+                "N2"
+              ],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N1",
+                "N0"
+              ],
+              "field": "W"
+            }
+          ],
+          "sector": "W2_T0_N3_B0_D0"
+        },
+        "placement_id": 76,
+        "target_multiplicity": 4,
+        "target_row_offset": 98
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "three N derivatives on two W factors force one N_a N_b W_c; N_a N_b W_c=-epsilon_ab N_c E=0",
+          "sector": "W2_T0_N3_B0_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N0",
+                "N1",
+                "N2"
+              ],
+              "field": "W"
+            }
+          ],
+          "sector": "W2_T0_N3_B0_D0"
+        },
+        "placement_id": 77,
+        "target_multiplicity": 4,
+        "target_row_offset": 102
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "three N derivatives on two W factors force one N_a N_b W_c; N_a N_b W_c=-epsilon_ab N_c E=0",
+          "sector": "W2_T0_N3_B0_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N0",
+                "N2",
+                "N1"
+              ],
+              "field": "W"
+            }
+          ],
+          "sector": "W2_T0_N3_B0_D0"
+        },
+        "placement_id": 78,
+        "target_multiplicity": 4,
+        "target_row_offset": 106
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "three N derivatives on two W factors force one N_a N_b W_c; N_a N_b W_c=-epsilon_ab N_c E=0",
+          "sector": "W2_T0_N3_B0_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N1",
+                "N0",
+                "N2"
+              ],
+              "field": "W"
+            }
+          ],
+          "sector": "W2_T0_N3_B0_D0"
+        },
+        "placement_id": 79,
+        "target_multiplicity": 4,
+        "target_row_offset": 110
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "three N derivatives on two W factors force one N_a N_b W_c; N_a N_b W_c=-epsilon_ab N_c E=0",
+          "sector": "W2_T0_N3_B0_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N1",
+                "N2",
+                "N0"
+              ],
+              "field": "W"
+            }
+          ],
+          "sector": "W2_T0_N3_B0_D0"
+        },
+        "placement_id": 80,
+        "target_multiplicity": 4,
+        "target_row_offset": 114
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "three N derivatives on two W factors force one N_a N_b W_c; N_a N_b W_c=-epsilon_ab N_c E=0",
+          "sector": "W2_T0_N3_B0_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N2",
+                "N0",
+                "N1"
+              ],
+              "field": "W"
+            }
+          ],
+          "sector": "W2_T0_N3_B0_D0"
+        },
+        "placement_id": 81,
+        "target_multiplicity": 4,
+        "target_row_offset": 118
+      },
+      {
+        "normal_form": {
+          "normal_coefficients": {
+            "C_on_W": "0",
+            "C_split": "0"
+          },
+          "reason": "three N derivatives on two W factors force one N_a N_b W_c; N_a N_b W_c=-epsilon_ab N_c E=0",
+          "sector": "W2_T0_N3_B0_D0",
+          "trace": []
+        },
+        "placement": {
+          "factors": [
+            {
+              "derivative_word": [],
+              "field": "W"
+            },
+            {
+              "derivative_word": [
+                "N2",
+                "N1",
+                "N0"
+              ],
+              "field": "W"
+            }
+          ],
+          "sector": "W2_T0_N3_B0_D0"
+        },
+        "placement_id": 82,
+        "target_multiplicity": 4,
+        "target_row_offset": 122
+      }
+    ],
+    "quotient_dimension": 1,
+    "quotient_map_with_source": [
+      [
+        "1",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-1"
+      ]
+    ],
+    "relation_labels": [
+      {
+        "identity": "e_1-0 e_0=0",
+        "row": 0,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_2-1 e_0=0",
+        "row": 1,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_3-0 e_0=0",
+        "row": 2,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_4-0 e_0=0",
+        "row": 3,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_5-0 e_0=0",
+        "row": 4,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_6-0 e_0=0",
+        "row": 5,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_7-0 e_0=0",
+        "row": 6,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_8-0 e_0=0",
+        "row": 7,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_9-0 e_0=0",
+        "row": 8,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_10-0 e_0=0",
+        "row": 9,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_11-0 e_0=0",
+        "row": 10,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_12-0 e_0=0",
+        "row": 11,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_13--2 e_0=0",
+        "row": 12,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_14-0 e_0=0",
+        "row": 13,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_15-0 e_0=0",
+        "row": 14,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_16-0 e_0=0",
+        "row": 15,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_17-0 e_0=0",
+        "row": 16,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_18-0 e_0=0",
+        "row": 17,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_19--2 e_0=0",
+        "row": 18,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_20-0 e_0=0",
+        "row": 19,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_21-0 e_0=0",
+        "row": 20,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_22-0 e_0=0",
+        "row": 21,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_23-0 e_0=0",
+        "row": 22,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_24-0 e_0=0",
+        "row": 23,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_25-0 e_0=0",
+        "row": 24,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_26-0 e_0=0",
+        "row": 25,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_27-0 e_0=0",
+        "row": 26,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_28-0 e_0=0",
+        "row": 27,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_29-0 e_0=0",
+        "row": 28,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_30-0 e_0=0",
+        "row": 29,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_31-0 e_0=0",
+        "row": 30,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_32-0 e_0=0",
+        "row": 31,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_33-0 e_0=0",
+        "row": 32,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_34-0 e_0=0",
+        "row": 33,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_35-0 e_0=0",
+        "row": 34,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_36-0 e_0=0",
+        "row": 35,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_37-0 e_0=0",
+        "row": 36,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_38-0 e_0=0",
+        "row": 37,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_39-0 e_0=0",
+        "row": 38,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_40-0 e_0=0",
+        "row": 39,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_41-0 e_0=0",
+        "row": 40,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_42-0 e_0=0",
+        "row": 41,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_43-0 e_0=0",
+        "row": 42,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_44-0 e_0=0",
+        "row": 43,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_45-0 e_0=0",
+        "row": 44,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_46-0 e_0=0",
+        "row": 45,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_47-0 e_0=0",
+        "row": 46,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_48-0 e_0=0",
+        "row": 47,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_49-0 e_0=0",
+        "row": 48,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_50-0 e_0=0",
+        "row": 49,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_51-0 e_0=0",
+        "row": 50,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_52-0 e_0=0",
+        "row": 51,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_53-0 e_0=0",
+        "row": 52,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_54-0 e_0=0",
+        "row": 53,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_55-0 e_0=0",
+        "row": 54,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_56-0 e_0=0",
+        "row": 55,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_57-0 e_0=0",
+        "row": 56,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_58-0 e_0=0",
+        "row": 57,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_59-0 e_0=0",
+        "row": 58,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_60-0 e_0=0",
+        "row": 59,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_61-0 e_0=0",
+        "row": 60,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_62-0 e_0=0",
+        "row": 61,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_63-0 e_0=0",
+        "row": 62,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_64-0 e_0=0",
+        "row": 63,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_65-0 e_0=0",
+        "row": 64,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_66-0 e_0=0",
+        "row": 65,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_67-0 e_0=0",
+        "row": 66,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_68-0 e_0=0",
+        "row": 67,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_69-0 e_0=0",
+        "row": 68,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_70-0 e_0=0",
+        "row": 69,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_71-0 e_0=0",
+        "row": 70,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_72-0 e_0=0",
+        "row": 71,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_73-0 e_0=0",
+        "row": 72,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_74-0 e_0=0",
+        "row": 73,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_75-0 e_0=0",
+        "row": 74,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_76-0 e_0=0",
+        "row": 75,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_77-0 e_0=0",
+        "row": 76,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_78-0 e_0=0",
+        "row": 77,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_79-0 e_0=0",
+        "row": 78,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_80-0 e_0=0",
+        "row": 79,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_81-0 e_0=0",
+        "row": 80,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_82-0 e_0=0",
+        "row": 81,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_83-0 e_0=0",
+        "row": 82,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_84-0 e_0=0",
+        "row": 83,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_85-0 e_0=0",
+        "row": 84,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_86-0 e_0=0",
+        "row": 85,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_87-0 e_0=0",
+        "row": 86,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_88-0 e_0=0",
+        "row": 87,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_89-0 e_0=0",
+        "row": 88,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_90-0 e_0=0",
+        "row": 89,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_91-0 e_0=0",
+        "row": 90,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_92-0 e_0=0",
+        "row": 91,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_93-0 e_0=0",
+        "row": 92,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_94-0 e_0=0",
+        "row": 93,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_95-0 e_0=0",
+        "row": 94,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_96-0 e_0=0",
+        "row": 95,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_97-0 e_0=0",
+        "row": 96,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_98-0 e_0=0",
+        "row": 97,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_99-0 e_0=0",
+        "row": 98,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_100-0 e_0=0",
+        "row": 99,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_101-0 e_0=0",
+        "row": 100,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_102-0 e_0=0",
+        "row": 101,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_103-0 e_0=0",
+        "row": 102,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_104-0 e_0=0",
+        "row": 103,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_105-0 e_0=0",
+        "row": 104,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_106-0 e_0=0",
+        "row": 105,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_107-0 e_0=0",
+        "row": 106,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_108-0 e_0=0",
+        "row": 107,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_109-0 e_0=0",
+        "row": 108,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_110-0 e_0=0",
+        "row": 109,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_111-0 e_0=0",
+        "row": 110,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_112-0 e_0=0",
+        "row": 111,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_113-0 e_0=0",
+        "row": 112,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_114-0 e_0=0",
+        "row": 113,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_115-0 e_0=0",
+        "row": 114,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_116-0 e_0=0",
+        "row": 115,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_117-0 e_0=0",
+        "row": 116,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_118-0 e_0=0",
+        "row": 117,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_119-0 e_0=0",
+        "row": 118,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_120-0 e_0=0",
+        "row": 119,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_121-0 e_0=0",
+        "row": 120,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_122-0 e_0=0",
+        "row": 121,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_123-0 e_0=0",
+        "row": 122,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_124-0 e_0=0",
+        "row": 123,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_125-0 e_0=0",
+        "row": 124,
+        "type": "PBW_BIANCHI_EOM_COMMUTATOR"
+      },
+      {
+        "identity": "e_0+S_DJ=0",
+        "row": 125,
+        "type": "LOCAL_SOURCE_COVARIANT_IBP_AFTER_C_SPLIT_EOM"
+      }
+    ],
+    "relation_matrix": {
+      "columns": 127,
+      "entries": [
+        {
+          "column": 1,
+          "row": 0,
+          "value": "1"
+        },
+        {
+          "column": 0,
+          "row": 1,
+          "value": "-1"
+        },
+        {
+          "column": 2,
+          "row": 1,
+          "value": "1"
+        },
+        {
+          "column": 3,
+          "row": 2,
+          "value": "1"
+        },
+        {
+          "column": 4,
+          "row": 3,
+          "value": "1"
+        },
+        {
+          "column": 5,
+          "row": 4,
+          "value": "1"
+        },
+        {
+          "column": 6,
+          "row": 5,
+          "value": "1"
+        },
+        {
+          "column": 7,
+          "row": 6,
+          "value": "1"
+        },
+        {
+          "column": 8,
+          "row": 7,
+          "value": "1"
+        },
+        {
+          "column": 9,
+          "row": 8,
+          "value": "1"
+        },
+        {
+          "column": 10,
+          "row": 9,
+          "value": "1"
+        },
+        {
+          "column": 11,
+          "row": 10,
+          "value": "1"
+        },
+        {
+          "column": 12,
+          "row": 11,
+          "value": "1"
+        },
+        {
+          "column": 0,
+          "row": 12,
+          "value": "2"
+        },
+        {
+          "column": 13,
+          "row": 12,
+          "value": "1"
+        },
+        {
+          "column": 14,
+          "row": 13,
+          "value": "1"
+        },
+        {
+          "column": 15,
+          "row": 14,
+          "value": "1"
+        },
+        {
+          "column": 16,
+          "row": 15,
+          "value": "1"
+        },
+        {
+          "column": 17,
+          "row": 16,
+          "value": "1"
+        },
+        {
+          "column": 18,
+          "row": 17,
+          "value": "1"
+        },
+        {
+          "column": 0,
+          "row": 18,
+          "value": "2"
+        },
+        {
+          "column": 19,
+          "row": 18,
+          "value": "1"
+        },
+        {
+          "column": 20,
+          "row": 19,
+          "value": "1"
+        },
+        {
+          "column": 21,
+          "row": 20,
+          "value": "1"
+        },
+        {
+          "column": 22,
+          "row": 21,
+          "value": "1"
+        },
+        {
+          "column": 23,
+          "row": 22,
+          "value": "1"
+        },
+        {
+          "column": 24,
+          "row": 23,
+          "value": "1"
+        },
+        {
+          "column": 25,
+          "row": 24,
+          "value": "1"
+        },
+        {
+          "column": 26,
+          "row": 25,
+          "value": "1"
+        },
+        {
+          "column": 27,
+          "row": 26,
+          "value": "1"
+        },
+        {
+          "column": 28,
+          "row": 27,
+          "value": "1"
+        },
+        {
+          "column": 29,
+          "row": 28,
+          "value": "1"
+        },
+        {
+          "column": 30,
+          "row": 29,
+          "value": "1"
+        },
+        {
+          "column": 31,
+          "row": 30,
+          "value": "1"
+        },
+        {
+          "column": 32,
+          "row": 31,
+          "value": "1"
+        },
+        {
+          "column": 33,
+          "row": 32,
+          "value": "1"
+        },
+        {
+          "column": 34,
+          "row": 33,
+          "value": "1"
+        },
+        {
+          "column": 35,
+          "row": 34,
+          "value": "1"
+        },
+        {
+          "column": 36,
+          "row": 35,
+          "value": "1"
+        },
+        {
+          "column": 37,
+          "row": 36,
+          "value": "1"
+        },
+        {
+          "column": 38,
+          "row": 37,
+          "value": "1"
+        },
+        {
+          "column": 39,
+          "row": 38,
+          "value": "1"
+        },
+        {
+          "column": 40,
+          "row": 39,
+          "value": "1"
+        },
+        {
+          "column": 41,
+          "row": 40,
+          "value": "1"
+        },
+        {
+          "column": 42,
+          "row": 41,
+          "value": "1"
+        },
+        {
+          "column": 43,
+          "row": 42,
+          "value": "1"
+        },
+        {
+          "column": 44,
+          "row": 43,
+          "value": "1"
+        },
+        {
+          "column": 45,
+          "row": 44,
+          "value": "1"
+        },
+        {
+          "column": 46,
+          "row": 45,
+          "value": "1"
+        },
+        {
+          "column": 47,
+          "row": 46,
+          "value": "1"
+        },
+        {
+          "column": 48,
+          "row": 47,
+          "value": "1"
+        },
+        {
+          "column": 49,
+          "row": 48,
+          "value": "1"
+        },
+        {
+          "column": 50,
+          "row": 49,
+          "value": "1"
+        },
+        {
+          "column": 51,
+          "row": 50,
+          "value": "1"
+        },
+        {
+          "column": 52,
+          "row": 51,
+          "value": "1"
+        },
+        {
+          "column": 53,
+          "row": 52,
+          "value": "1"
+        },
+        {
+          "column": 54,
+          "row": 53,
+          "value": "1"
+        },
+        {
+          "column": 55,
+          "row": 54,
+          "value": "1"
+        },
+        {
+          "column": 56,
+          "row": 55,
+          "value": "1"
+        },
+        {
+          "column": 57,
+          "row": 56,
+          "value": "1"
+        },
+        {
+          "column": 58,
+          "row": 57,
+          "value": "1"
+        },
+        {
+          "column": 59,
+          "row": 58,
+          "value": "1"
+        },
+        {
+          "column": 60,
+          "row": 59,
+          "value": "1"
+        },
+        {
+          "column": 61,
+          "row": 60,
+          "value": "1"
+        },
+        {
+          "column": 62,
+          "row": 61,
+          "value": "1"
+        },
+        {
+          "column": 63,
+          "row": 62,
+          "value": "1"
+        },
+        {
+          "column": 64,
+          "row": 63,
+          "value": "1"
+        },
+        {
+          "column": 65,
+          "row": 64,
+          "value": "1"
+        },
+        {
+          "column": 66,
+          "row": 65,
+          "value": "1"
+        },
+        {
+          "column": 67,
+          "row": 66,
+          "value": "1"
+        },
+        {
+          "column": 68,
+          "row": 67,
+          "value": "1"
+        },
+        {
+          "column": 69,
+          "row": 68,
+          "value": "1"
+        },
+        {
+          "column": 70,
+          "row": 69,
+          "value": "1"
+        },
+        {
+          "column": 71,
+          "row": 70,
+          "value": "1"
+        },
+        {
+          "column": 72,
+          "row": 71,
+          "value": "1"
+        },
+        {
+          "column": 73,
+          "row": 72,
+          "value": "1"
+        },
+        {
+          "column": 74,
+          "row": 73,
+          "value": "1"
+        },
+        {
+          "column": 75,
+          "row": 74,
+          "value": "1"
+        },
+        {
+          "column": 76,
+          "row": 75,
+          "value": "1"
+        },
+        {
+          "column": 77,
+          "row": 76,
+          "value": "1"
+        },
+        {
+          "column": 78,
+          "row": 77,
+          "value": "1"
+        },
+        {
+          "column": 79,
+          "row": 78,
+          "value": "1"
+        },
+        {
+          "column": 80,
+          "row": 79,
+          "value": "1"
+        },
+        {
+          "column": 81,
+          "row": 80,
+          "value": "1"
+        },
+        {
+          "column": 82,
+          "row": 81,
+          "value": "1"
+        },
+        {
+          "column": 83,
+          "row": 82,
+          "value": "1"
+        },
+        {
+          "column": 84,
+          "row": 83,
+          "value": "1"
+        },
+        {
+          "column": 85,
+          "row": 84,
+          "value": "1"
+        },
+        {
+          "column": 86,
+          "row": 85,
+          "value": "1"
+        },
+        {
+          "column": 87,
+          "row": 86,
+          "value": "1"
+        },
+        {
+          "column": 88,
+          "row": 87,
+          "value": "1"
+        },
+        {
+          "column": 89,
+          "row": 88,
+          "value": "1"
+        },
+        {
+          "column": 90,
+          "row": 89,
+          "value": "1"
+        },
+        {
+          "column": 91,
+          "row": 90,
+          "value": "1"
+        },
+        {
+          "column": 92,
+          "row": 91,
+          "value": "1"
+        },
+        {
+          "column": 93,
+          "row": 92,
+          "value": "1"
+        },
+        {
+          "column": 94,
+          "row": 93,
+          "value": "1"
+        },
+        {
+          "column": 95,
+          "row": 94,
+          "value": "1"
+        },
+        {
+          "column": 96,
+          "row": 95,
+          "value": "1"
+        },
+        {
+          "column": 97,
+          "row": 96,
+          "value": "1"
+        },
+        {
+          "column": 98,
+          "row": 97,
+          "value": "1"
+        },
+        {
+          "column": 99,
+          "row": 98,
+          "value": "1"
+        },
+        {
+          "column": 100,
+          "row": 99,
+          "value": "1"
+        },
+        {
+          "column": 101,
+          "row": 100,
+          "value": "1"
+        },
+        {
+          "column": 102,
+          "row": 101,
+          "value": "1"
+        },
+        {
+          "column": 103,
+          "row": 102,
+          "value": "1"
+        },
+        {
+          "column": 104,
+          "row": 103,
+          "value": "1"
+        },
+        {
+          "column": 105,
+          "row": 104,
+          "value": "1"
+        },
+        {
+          "column": 106,
+          "row": 105,
+          "value": "1"
+        },
+        {
+          "column": 107,
+          "row": 106,
+          "value": "1"
+        },
+        {
+          "column": 108,
+          "row": 107,
+          "value": "1"
+        },
+        {
+          "column": 109,
+          "row": 108,
+          "value": "1"
+        },
+        {
+          "column": 110,
+          "row": 109,
+          "value": "1"
+        },
+        {
+          "column": 111,
+          "row": 110,
+          "value": "1"
+        },
+        {
+          "column": 112,
+          "row": 111,
+          "value": "1"
+        },
+        {
+          "column": 113,
+          "row": 112,
+          "value": "1"
+        },
+        {
+          "column": 114,
+          "row": 113,
+          "value": "1"
+        },
+        {
+          "column": 115,
+          "row": 114,
+          "value": "1"
+        },
+        {
+          "column": 116,
+          "row": 115,
+          "value": "1"
+        },
+        {
+          "column": 117,
+          "row": 116,
+          "value": "1"
+        },
+        {
+          "column": 118,
+          "row": 117,
+          "value": "1"
+        },
+        {
+          "column": 119,
+          "row": 118,
+          "value": "1"
+        },
+        {
+          "column": 120,
+          "row": 119,
+          "value": "1"
+        },
+        {
+          "column": 121,
+          "row": 120,
+          "value": "1"
+        },
+        {
+          "column": 122,
+          "row": 121,
+          "value": "1"
+        },
+        {
+          "column": 123,
+          "row": 122,
+          "value": "1"
+        },
+        {
+          "column": 124,
+          "row": 123,
+          "value": "1"
+        },
+        {
+          "column": 125,
+          "row": 124,
+          "value": "1"
+        },
+        {
+          "column": 0,
+          "row": 125,
+          "value": "1"
+        },
+        {
+          "column": 126,
+          "row": 125,
+          "value": "1"
+        }
+      ],
+      "rank": 126,
+      "rows": 126
+    },
+    "relation_rank": 126,
+    "source_IBP_induction": {
+      "even_active_derivative_row_on_J_F1_F2": [
+        "1",
+        "1",
+        "1"
+      ],
+      "leading_source_pivot": "1",
+      "local_source_momentum_retained": true,
+      "momentum_equation": "p_J+p_T+p_W=0; p_J is not set to zero",
+      "odd_active_derivative_row_on_J_F1_F2": [
+        "1",
+        "-1",
+        "1"
+      ],
+      "statement": "order source jets by their number of covariant derivatives; the total-derivative row has coefficient +1 on its leading source jet and therefore eliminates it recursively"
+    },
+    "source_jet": "S_DJ=(D_a^dota J) T_dota N_b W_c"
+  },
+  "N2_candidate_quadratic_jet_codomain": {
+    "codomain_boundary_equations": [
+      "p_W+p_T+p_J=0 in the direct orientation",
+      "p_T=0 by D_a^dota T_dota=-(1/2)N_a barE",
+      "p_W+p_T+p_J=0 in the reflected orientation",
+      "p_T=0 by the reflected antichiral EOM"
+    ],
+    "codomain_boundary_matrix": {
+      "columns": 6,
+      "entries": [
+        {
+          "column": 0,
+          "row": 0,
+          "value": "1"
+        },
+        {
+          "column": 1,
+          "row": 0,
+          "value": "1"
+        },
+        {
+          "column": 2,
+          "row": 0,
+          "value": "1"
+        },
+        {
+          "column": 1,
+          "row": 1,
+          "value": "1"
+        },
+        {
+          "column": 3,
+          "row": 2,
+          "value": "1"
+        },
+        {
+          "column": 4,
+          "row": 2,
+          "value": "1"
+        },
+        {
+          "column": 5,
+          "row": 2,
+          "value": "1"
+        },
+        {
+          "column": 4,
+          "row": 3,
+          "value": "1"
+        }
+      ],
+      "rank": 4,
+      "rows": 4
+    },
+    "commutative_square": {
+      "equation": "q_T ell2_raw=ell2_phys q_H",
+      "left": [
+        [
+          "1",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1"
+        ],
+        [
+          "-1",
+          "0",
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "passes": true,
+      "right": [
+        [
+          "1",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1"
+        ],
+        [
+          "-1",
+          "0",
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ]
+    },
+    "left_inverse": [
+      [
+        "1",
+        "0"
+      ]
+    ],
+    "local_source_momentum_is_retained": true,
+    "p_J_is_not_zero": true,
+    "physical_ell2": [
+      [
+        "1"
+      ],
+      [
+        "-1"
+      ]
+    ],
+    "physical_ell2_kernel_dimension": 0,
+    "physical_ell2_rank": 1,
+    "raw_codomain_basis": [
+      "direct:p_W",
+      "direct:p_T",
+      "direct:p_J",
+      "reflected:p_W",
+      "reflected:p_T",
+      "reflected:p_J"
+    ],
+    "raw_ell2": {
+      "columns": 127,
+      "entries": [
+        {
+          "column": 0,
+          "row": 0,
+          "value": "1"
+        },
+        {
+          "column": 2,
+          "row": 0,
+          "value": "1"
+        },
+        {
+          "column": 13,
+          "row": 0,
+          "value": "-2"
+        },
+        {
+          "column": 19,
+          "row": 0,
+          "value": "-2"
+        },
+        {
+          "column": 126,
+          "row": 2,
+          "value": "1"
+        },
+        {
+          "column": 0,
+          "row": 3,
+          "value": "-1"
+        },
+        {
+          "column": 2,
+          "row": 3,
+          "value": "-1"
+        },
+        {
+          "column": 13,
+          "row": 3,
+          "value": "2"
+        },
+        {
+          "column": 19,
+          "row": 3,
+          "value": "2"
+        },
+        {
+          "column": 126,
+          "row": 5,
+          "value": "-1"
+        }
+      ],
+      "rank": 2,
+      "rows": 6
+    },
+    "target_quotient_dimension": 2,
+    "target_quotient_map": [
+      [
+        "1",
+        "0",
+        "-1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1",
+        "0",
+        "-1"
+      ]
+    ]
+  },
+  "algebra": {
+    "BD": "[B_dota,D_(b dotb)]=-2 epsilon_dota_dotb W_b",
+    "DD": "[D_(a dota),D_(b dotb)]=epsilon_(dota dotb)N_(a W_b)+epsilon_ab B_(dota T_dotb)",
+    "EOM": [
+      "E=N^a W_a=0",
+      "barE=B_dota T^dota=0",
+      "N_a N_b W_c=-epsilon_ab N_c E",
+      "D_a^dota T_dota=-(1/2)N_a barE"
+    ],
+    "ND": "[N_a,D_(b dotb)]=-2 epsilon_ab T_dotb",
+    "chirality": [
+      "B_dota W_b=0",
+      "N_a T_dotb=0"
+    ],
+    "graded_Leibniz": "delta(FG)=(delta F)G+(-1)^(|delta||F|)F(delta G)",
+    "mixed": "{N_a,B_dotb}=-2 D_(a dotb)"
+  },
+  "checks": {
+    "N0_identity_matrix_rank_40": true,
+    "N0_source_IBP_matrix_rank_320": true,
+    "N1_event_carrier_not_misused_as_parent_basis": true,
+    "N1_terminal_matrix_rank_40": true,
+    "N2_candidate_ell2_kernel_zero": true,
+    "N3_physical_target_multiplicity_zero": true,
+    "Nge4_dimension_excluded": true,
+    "PBW_descent_support_exact": true,
+    "PBW_quotient_dimension_one": true,
+    "PBW_relation_matrix_rank_126": true,
+    "SU2_color_witness_rank_six": true,
+    "actual_K_survives_combined_Pplus": true,
+    "all_4866_indexed_events_descend": true,
+    "codomain_boundary_rank_four": true,
+    "ell2_square_commutes": true,
+    "filtered_total_is_fail_closed": true,
+    "full_intertwiner_rank_four": true,
+    "indexed_N2_target_has_126_rows": true,
+    "left_target_is_symmetric": true,
+    "naive_parent_incidence_fails_exactly": true,
+    "no_full_BV_claim": true,
+    "no_full_DRED_claim": true,
+    "no_loop_coefficient": true,
+    "physical_4d_tau_projection_explicit": true,
+    "physical_ell2_rank_one": true,
+    "right_target_is_singlet": true,
+    "source_momentum_retained": true,
+    "spin_projector_rank_four": true,
+    "target_typed_dim_spin_parity_rP": true,
+    "true_C1_is_explicitly_missing": true
+  },
+  "color_species_exchange": {
+    "SU2_exact_witness": {
+      "K_matrix": [
+        [
+          "0",
+          "1",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1"
+        ],
+        [
+          "1",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "K_rank": 6,
+      "P_plus_ell2_equals_ell2": true,
+      "ell2_matrix": [
+        [
+          "0",
+          "1",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1"
+        ],
+        [
+          "1",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "-1",
+          "-1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "-1",
+          "0",
+          "-1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "-1",
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "ell2_rank": 6,
+      "graded_exchange_squared_is_identity": true,
+      "ordered_color_dimension_per_orientation": 9,
+      "plus_projector_idempotent": true,
+      "source_dimension": 6,
+      "tau_K_equals_K": true
+    },
+    "actual_K_line_survives_combined_plus_exchange": true,
+    "actual_tensor": "K_S^(AB)_(DE)=(1/2)(f_(A R D)f_(B R E)+f_(B R D)f_(A R E))",
+    "combined_symmetry": "K_S^(BA)_(ED)=K_S^(AB)_(DE)",
+    "elementary_statistics": {
+      "T": "odd",
+      "W": "odd"
+    },
+    "general_nonzero_witness": "for a nonabelian compact algebra, choose A and D with some f_(A R D) nonzero; then K_S^(AA)_(DD)=sum_R f_(A R D)^2 is nonzero",
+    "graded_exchange": "X_g(u,v)=(-tau v,-tau u)",
+    "plus_projector": "P_+=(1+X_g)/2",
+    "species_ports": [
+      "(T^D,W^E)",
+      "(W^E,T^D)"
+    ]
+  },
+  "external_results_imported": false,
+  "filtration_elimination_blocks": {
+    "N0": {
+      "identity": "nabla_A 1=partial_A 1+[Gamma_A,1]=0",
+      "identity_matrix": {
+        "columns": 40,
+        "rank": 40,
+        "rows": 40
+      },
+      "local_source_IBP_matrix": {
+        "columns": 320,
+        "rank": 320,
+        "rows": 320
+      },
+      "quotient_dimension": 0
+    },
+    "N1_event_carrier": {
+      "are_independent_parent_generators": false,
+      "child_matrix": {
+        "columns": 4866,
+        "rank": 126,
+        "rows": 126,
+        "sparse_entries": 35951
+      },
+      "coordinates": 4866,
+      "forbidden_tautological_matrix": "[identity_(4866)|-transpose(C_(1->2))]",
+      "reason": "the columns are ordered-word/event coordinates with many coordinates over each of the twenty true N1 parent states"
+    },
+    "N1_terminal": {
+      "boundary": "this 40x40 block is not yet connected to the 4866 event coordinates by a proved incidence matrix",
+      "identities": {
+        "antichiral": "D_a^dota T_dota=-(1/2) nabla_a(bar_nabla^dota T_dota)",
+        "chiral": "nabla^2 W_a=-2 nabla_a E"
+      },
+      "target_components": 20,
+      "target_plus_EOM_matrix": {
+        "columns": 40,
+        "rank": 40,
+        "rows": 40
+      },
+      "terminal_quotient_dimension": 0
+    },
+    "N2_candidate_plus_local_source": {
+      "columns": 127,
+      "quotient_dimension": 1,
+      "rank": 126,
+      "rows": 126,
+      "scope": "candidate N2 PBW block only, not the total filtered quotient"
+    },
+    "N3": {
+      "only_content": "W T T",
+      "physical_target_multiplicity": 0
+    },
+    "N_ge_4": {
+      "excluded": true,
+      "minimum_dimension_twice": 12,
+      "target_dimension_twice": 9
+    },
+    "filtered_total": {
+      "ker_ell2": "NOT_COMPUTED",
+      "quotient_dimension": "NOT_COMPUTED",
+      "status": "FAIL_CLOSED_MISSING_C1_AND_TERMINAL_RELATIONS"
+    },
+    "naive_parent_label_incidence": {
+      "A0_shape": "20x4866",
+      "explicit_witnesses": [
+        {
+          "fiber_size": 20,
+          "first_column": 0,
+          "first_value": "-2",
+          "parent": {
+            "skeleton": "W0_T1_N1_B1_D2",
+            "spin_copy": 0
+          },
+          "second_column": 6,
+          "second_value": "0"
+        },
+        {
+          "fiber_size": 20,
+          "first_column": 1,
+          "first_value": "0",
+          "parent": {
+            "skeleton": "W0_T1_N1_B1_D2",
+            "spin_copy": 1
+          },
+          "second_column": 3,
+          "second_value": "2"
+        },
+        {
+          "fiber_size": 116,
+          "first_column": 40,
+          "first_value": "0",
+          "parent": {
+            "skeleton": "W0_T1_N2_B2_D1",
+            "spin_copy": 0
+          },
+          "second_column": 64,
+          "second_value": "4"
+        },
+        {
+          "fiber_size": 116,
+          "first_column": 41,
+          "first_value": "0",
+          "parent": {
+            "skeleton": "W0_T1_N2_B2_D1",
+            "spin_copy": 1
+          },
+          "second_column": 53,
+          "second_value": "4"
+        },
+        {
+          "fiber_size": 20,
+          "first_column": 1640,
+          "first_value": "0",
+          "parent": {
+            "skeleton": "W1_T0_N2_B0_D2",
+            "spin_copy": 0
+          },
+          "second_column": 1652,
+          "second_value": "2"
+        },
+        {
+          "fiber_size": 20,
+          "first_column": 1649,
+          "first_value": "-2",
+          "parent": {
+            "skeleton": "W1_T0_N2_B0_D2",
+            "spin_copy": 1
+          },
+          "second_column": 1641,
+          "second_value": "0"
+        },
+        {
+          "fiber_size": 20,
+          "first_column": 1658,
+          "first_value": "-2",
+          "parent": {
+            "skeleton": "W1_T0_N2_B0_D2",
+            "spin_copy": 2
+          },
+          "second_column": 1642,
+          "second_value": "0"
+        },
+        {
+          "fiber_size": 20,
+          "first_column": 1683,
+          "first_value": "-2",
+          "parent": {
+            "skeleton": "W1_T0_N2_B0_D2",
+            "spin_copy": 3
+          },
+          "second_column": 1643,
+          "second_value": "0"
+        }
+      ],
+      "fiber_column_counts": {
+        "W0_T1_N0_B0_D3:copy0": 1,
+        "W0_T1_N0_B0_D3:copy1": 1,
+        "W0_T1_N1_B1_D2:copy0": 20,
+        "W0_T1_N1_B1_D2:copy1": 20,
+        "W0_T1_N2_B2_D1:copy0": 116,
+        "W0_T1_N2_B2_D1:copy1": 116,
+        "W0_T1_N3_B3_D0:copy0": 684,
+        "W0_T1_N3_B3_D0:copy1": 684,
+        "W1_T0_N2_B0_D2:copy0": 20,
+        "W1_T0_N2_B0_D2:copy1": 20,
+        "W1_T0_N2_B0_D2:copy2": 20,
+        "W1_T0_N2_B0_D2:copy3": 20,
+        "W1_T0_N3_B1_D1:copy0": 114,
+        "W1_T0_N3_B1_D1:copy1": 114,
+        "W1_T0_N3_B1_D1:copy2": 114,
+        "W1_T0_N3_B1_D1:copy3": 114,
+        "W1_T0_N4_B2_D0:copy0": 672,
+        "W1_T0_N4_B2_D0:copy1": 672,
+        "W1_T0_N4_B2_D0:copy2": 672,
+        "W1_T0_N4_B2_D0:copy3": 672
+      },
+      "interpretation": "word order, Koszul signs, and terminal PBW maps are essential; skeleton/copy labels alone do not define C1",
+      "nonconstant_fiber_count": 16,
+      "qM_factors_through_A0": false,
+      "rank": 20
+    },
+    "required_true_N1_incidence": {
+      "C1_shape": "4866x20",
+      "event_dimension": 4866,
+      "parent_dimension": 20,
+      "status": "NOT_CONSTRUCTED",
+      "terminal_normal_order_relations_required": true
+    }
+  },
+  "indexed_child_intertwiner": {
+    "all_columns_have_a_defined_descent": true,
+    "coefficient_histogram": {
+      "-2": 22,
+      "-4": 24,
+      "-8": 48,
+      "1": 1,
+      "2": 19,
+      "4": 28,
+      "8": 48
+    },
+    "commuting_diagram": "q_PBW o M_(1->2) is the displayed exact 1x4866 vector; every indexed event and every [N,D], [B,D], [D,D] child is included",
+    "indexed_event_columns": 4866,
+    "nonzero_descended_columns": 190,
+    "sparse_descended_vector": [
+      {
+        "column": 0,
+        "value": "-2"
+      },
+      {
+        "column": 2,
+        "value": "-2"
+      },
+      {
+        "column": 3,
+        "value": "2"
+      },
+      {
+        "column": 4,
+        "value": "-2"
+      },
+      {
+        "column": 8,
+        "value": "-2"
+      },
+      {
+        "column": 9,
+        "value": "2"
+      },
+      {
+        "column": 24,
+        "value": "-2"
+      },
+      {
+        "column": 32,
+        "value": "-2"
+      },
+      {
+        "column": 33,
+        "value": "2"
+      },
+      {
+        "column": 53,
+        "value": "4"
+      },
+      {
+        "column": 64,
+        "value": "4"
+      },
+      {
+        "column": 101,
+        "value": "4"
+      },
+      {
+        "column": 112,
+        "value": "4"
+      },
+      {
+        "column": 1649,
+        "value": "-2"
+      },
+      {
+        "column": 1650,
+        "value": "2"
+      },
+      {
+        "column": 1652,
+        "value": "2"
+      },
+      {
+        "column": 1653,
+        "value": "-2"
+      },
+      {
+        "column": 1656,
+        "value": "2"
+      },
+      {
+        "column": 1658,
+        "value": "-2"
+      },
+      {
+        "column": 1660,
+        "value": "2"
+      },
+      {
+        "column": 1661,
+        "value": "-2"
+      },
+      {
+        "column": 1673,
+        "value": "-2"
+      },
+      {
+        "column": 1675,
+        "value": "2"
+      },
+      {
+        "column": 1676,
+        "value": "2"
+      },
+      {
+        "column": 1677,
+        "value": "-2"
+      },
+      {
+        "column": 1680,
+        "value": "2"
+      },
+      {
+        "column": 1683,
+        "value": "-2"
+      },
+      {
+        "column": 1684,
+        "value": "2"
+      },
+      {
+        "column": 1685,
+        "value": "-2"
+      },
+      {
+        "column": 1690,
+        "value": "2"
+      },
+      {
+        "column": 1691,
+        "value": "-2"
+      },
+      {
+        "column": 1692,
+        "value": "2"
+      },
+      {
+        "column": 1695,
+        "value": "-2"
+      },
+      {
+        "column": 1698,
+        "value": "-2"
+      },
+      {
+        "column": 1699,
+        "value": "2"
+      },
+      {
+        "column": 1700,
+        "value": "2"
+      },
+      {
+        "column": 1702,
+        "value": "-2"
+      },
+      {
+        "column": 1706,
+        "value": "-2"
+      },
+      {
+        "column": 1707,
+        "value": "2"
+      },
+      {
+        "column": 1709,
+        "value": "-2"
+      },
+      {
+        "column": 1711,
+        "value": "2"
+      },
+      {
+        "column": 1714,
+        "value": "2"
+      },
+      {
+        "column": 1715,
+        "value": "-2"
+      },
+      {
+        "column": 1717,
+        "value": "-2"
+      },
+      {
+        "column": 1718,
+        "value": "2"
+      },
+      {
+        "column": 1769,
+        "value": "-4"
+      },
+      {
+        "column": 1770,
+        "value": "4"
+      },
+      {
+        "column": 1772,
+        "value": "-4"
+      },
+      {
+        "column": 1774,
+        "value": "4"
+      },
+      {
+        "column": 1777,
+        "value": "4"
+      },
+      {
+        "column": 1778,
+        "value": "-4"
+      },
+      {
+        "column": 1780,
+        "value": "-4"
+      },
+      {
+        "column": 1781,
+        "value": "4"
+      },
+      {
+        "column": 1796,
+        "value": "-4"
+      },
+      {
+        "column": 1798,
+        "value": "4"
+      },
+      {
+        "column": 1804,
+        "value": "-4"
+      },
+      {
+        "column": 1805,
+        "value": "4"
+      },
+      {
+        "column": 1865,
+        "value": "-4"
+      },
+      {
+        "column": 1867,
+        "value": "4"
+      },
+      {
+        "column": 1868,
+        "value": "-4"
+      },
+      {
+        "column": 1871,
+        "value": "4"
+      },
+      {
+        "column": 1873,
+        "value": "4"
+      },
+      {
+        "column": 1875,
+        "value": "-4"
+      },
+      {
+        "column": 1876,
+        "value": "-4"
+      },
+      {
+        "column": 1877,
+        "value": "4"
+      },
+      {
+        "column": 1892,
+        "value": "-4"
+      },
+      {
+        "column": 1895,
+        "value": "4"
+      },
+      {
+        "column": 1900,
+        "value": "-4"
+      },
+      {
+        "column": 1901,
+        "value": "4"
+      },
+      {
+        "column": 1962,
+        "value": "-4"
+      },
+      {
+        "column": 1963,
+        "value": "4"
+      },
+      {
+        "column": 1964,
+        "value": "-4"
+      },
+      {
+        "column": 1967,
+        "value": "4"
+      },
+      {
+        "column": 1970,
+        "value": "4"
+      },
+      {
+        "column": 1971,
+        "value": "-4"
+      },
+      {
+        "column": 1972,
+        "value": "-4"
+      },
+      {
+        "column": 1974,
+        "value": "4"
+      },
+      {
+        "column": 1988,
+        "value": "-4"
+      },
+      {
+        "column": 1991,
+        "value": "4"
+      },
+      {
+        "column": 1996,
+        "value": "-4"
+      },
+      {
+        "column": 1998,
+        "value": "4"
+      },
+      {
+        "column": 2106,
+        "value": "4"
+      },
+      {
+        "column": 2107,
+        "value": "-4"
+      },
+      {
+        "column": 2109,
+        "value": "4"
+      },
+      {
+        "column": 2111,
+        "value": "-4"
+      },
+      {
+        "column": 2122,
+        "value": "-4"
+      },
+      {
+        "column": 2123,
+        "value": "4"
+      },
+      {
+        "column": 2125,
+        "value": "4"
+      },
+      {
+        "column": 2126,
+        "value": "-4"
+      },
+      {
+        "column": 2137,
+        "value": "-4"
+      },
+      {
+        "column": 2139,
+        "value": "4"
+      },
+      {
+        "column": 2141,
+        "value": "-4"
+      },
+      {
+        "column": 2142,
+        "value": "4"
+      },
+      {
+        "column": 2421,
+        "value": "8"
+      },
+      {
+        "column": 2422,
+        "value": "-8"
+      },
+      {
+        "column": 2428,
+        "value": "8"
+      },
+      {
+        "column": 2430,
+        "value": "-8"
+      },
+      {
+        "column": 2445,
+        "value": "-8"
+      },
+      {
+        "column": 2446,
+        "value": "8"
+      },
+      {
+        "column": 2452,
+        "value": "8"
+      },
+      {
+        "column": 2453,
+        "value": "-8"
+      },
+      {
+        "column": 2468,
+        "value": "-8"
+      },
+      {
+        "column": 2470,
+        "value": "8"
+      },
+      {
+        "column": 2476,
+        "value": "-8"
+      },
+      {
+        "column": 2477,
+        "value": "8"
+      },
+      {
+        "column": 2517,
+        "value": "-8"
+      },
+      {
+        "column": 2518,
+        "value": "8"
+      },
+      {
+        "column": 2524,
+        "value": "-8"
+      },
+      {
+        "column": 2526,
+        "value": "8"
+      },
+      {
+        "column": 2541,
+        "value": "8"
+      },
+      {
+        "column": 2542,
+        "value": "-8"
+      },
+      {
+        "column": 2548,
+        "value": "-8"
+      },
+      {
+        "column": 2549,
+        "value": "8"
+      },
+      {
+        "column": 2564,
+        "value": "8"
+      },
+      {
+        "column": 2566,
+        "value": "-8"
+      },
+      {
+        "column": 2572,
+        "value": "8"
+      },
+      {
+        "column": 2573,
+        "value": "-8"
+      },
+      {
+        "column": 2853,
+        "value": "8"
+      },
+      {
+        "column": 2855,
+        "value": "-8"
+      },
+      {
+        "column": 2860,
+        "value": "8"
+      },
+      {
+        "column": 2863,
+        "value": "-8"
+      },
+      {
+        "column": 2877,
+        "value": "-8"
+      },
+      {
+        "column": 2879,
+        "value": "8"
+      },
+      {
+        "column": 2884,
+        "value": "8"
+      },
+      {
+        "column": 2885,
+        "value": "-8"
+      },
+      {
+        "column": 2900,
+        "value": "-8"
+      },
+      {
+        "column": 2903,
+        "value": "8"
+      },
+      {
+        "column": 2908,
+        "value": "-8"
+      },
+      {
+        "column": 2909,
+        "value": "8"
+      },
+      {
+        "column": 2949,
+        "value": "-8"
+      },
+      {
+        "column": 2951,
+        "value": "8"
+      },
+      {
+        "column": 2956,
+        "value": "-8"
+      },
+      {
+        "column": 2959,
+        "value": "8"
+      },
+      {
+        "column": 2973,
+        "value": "8"
+      },
+      {
+        "column": 2975,
+        "value": "-8"
+      },
+      {
+        "column": 2980,
+        "value": "-8"
+      },
+      {
+        "column": 2981,
+        "value": "8"
+      },
+      {
+        "column": 2996,
+        "value": "8"
+      },
+      {
+        "column": 2999,
+        "value": "-8"
+      },
+      {
+        "column": 3004,
+        "value": "8"
+      },
+      {
+        "column": 3005,
+        "value": "-8"
+      },
+      {
+        "column": 3286,
+        "value": "8"
+      },
+      {
+        "column": 3287,
+        "value": "-8"
+      },
+      {
+        "column": 3292,
+        "value": "8"
+      },
+      {
+        "column": 3295,
+        "value": "-8"
+      },
+      {
+        "column": 3310,
+        "value": "-8"
+      },
+      {
+        "column": 3311,
+        "value": "8"
+      },
+      {
+        "column": 3316,
+        "value": "8"
+      },
+      {
+        "column": 3318,
+        "value": "-8"
+      },
+      {
+        "column": 3332,
+        "value": "-8"
+      },
+      {
+        "column": 3335,
+        "value": "8"
+      },
+      {
+        "column": 3340,
+        "value": "-8"
+      },
+      {
+        "column": 3342,
+        "value": "8"
+      },
+      {
+        "column": 3382,
+        "value": "-8"
+      },
+      {
+        "column": 3383,
+        "value": "8"
+      },
+      {
+        "column": 3388,
+        "value": "-8"
+      },
+      {
+        "column": 3391,
+        "value": "8"
+      },
+      {
+        "column": 3406,
+        "value": "8"
+      },
+      {
+        "column": 3407,
+        "value": "-8"
+      },
+      {
+        "column": 3412,
+        "value": "-8"
+      },
+      {
+        "column": 3414,
+        "value": "8"
+      },
+      {
+        "column": 3428,
+        "value": "8"
+      },
+      {
+        "column": 3431,
+        "value": "-8"
+      },
+      {
+        "column": 3436,
+        "value": "8"
+      },
+      {
+        "column": 3438,
+        "value": "-8"
+      },
+      {
+        "column": 3718,
+        "value": "8"
+      },
+      {
+        "column": 3719,
+        "value": "-8"
+      },
+      {
+        "column": 3725,
+        "value": "8"
+      },
+      {
+        "column": 3727,
+        "value": "-8"
+      },
+      {
+        "column": 3742,
+        "value": "-8"
+      },
+      {
+        "column": 3743,
+        "value": "8"
+      },
+      {
+        "column": 3749,
+        "value": "8"
+      },
+      {
+        "column": 3750,
+        "value": "-8"
+      },
+      {
+        "column": 3765,
+        "value": "-8"
+      },
+      {
+        "column": 3767,
+        "value": "8"
+      },
+      {
+        "column": 3773,
+        "value": "-8"
+      },
+      {
+        "column": 3774,
+        "value": "8"
+      },
+      {
+        "column": 3814,
+        "value": "-8"
+      },
+      {
+        "column": 3815,
+        "value": "8"
+      },
+      {
+        "column": 3821,
+        "value": "-8"
+      },
+      {
+        "column": 3823,
+        "value": "8"
+      },
+      {
+        "column": 3838,
+        "value": "8"
+      },
+      {
+        "column": 3839,
+        "value": "-8"
+      },
+      {
+        "column": 3845,
+        "value": "-8"
+      },
+      {
+        "column": 3846,
+        "value": "8"
+      },
+      {
+        "column": 3861,
+        "value": "8"
+      },
+      {
+        "column": 3863,
+        "value": "-8"
+      },
+      {
+        "column": 3869,
+        "value": "8"
+      },
+      {
+        "column": 3870,
+        "value": "-8"
+      },
+      {
+        "column": 4865,
+        "value": "1"
+      }
+    ],
+    "sparse_descended_vector_sha256": "6aa93da2a9b7321341615dee96cf419f1be409f3dccf32f08f8197afd1159811"
+  },
+  "schema": "Step5OneLoopFilteredCovariantQuotient.v1",
+  "scope": {
+    "DRED_traceless_tau_sector": "EXCLUDED_NOT_ZERO_IN_FULL_DRED",
+    "Project_rP": -1,
+    "dimension": "9/2",
+    "frame": "FIXED_VECTOR_FRAME",
+    "local_source_momentum": "retained",
+    "lorentz_space": "PHYSICAL_4D_SPIN_ALGEBRA",
+    "parity": "odd",
+    "quantum_BV_source_complex": "OUT_OF_SCOPE",
+    "sector": "PURE_GAUGE",
+    "spin": "(3/2,0)",
+    "symmetry": "BACKGROUND_COVARIANT"
+  },
+  "spin_intertwiner": {
+    "WTN2B_and_WTND_raw_slot_counts": {
+      "left": 3,
+      "right": 2
+    },
+    "full_component_intertwiner": [
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    ],
+    "full_component_intertwiner_rank": 4,
+    "full_target_projector_rank": 4,
+    "highest_weight_multiplicity": 1,
+    "indexed_126_to_PBW_one_copy_lift": "q_PBW tensor identity_(3/2,0)",
+    "indexed_504_to_full_irrep_rank": 4,
+    "left_S3_acts_as_plus_one": true,
+    "mixed_collapse_preserves_the_ordered_right_slots": [
+      "T",
+      "B_or_D"
+    ],
+    "multiplicity_intertwiner": [
+      [
+        "1"
+      ]
+    ],
+    "right_transposition_acts_as_minus_one": true,
+    "source_and_target_spin": "(3/2,0)"
+  },
+  "status": "FAIL_CLOSED_MISSING_TRUE_N1_PARENT_INCIDENCE",
+  "verdicts": {
+    "N2_candidate_block_ker_ell2": "ZERO",
+    "anomaly_coefficient": "NOT_COMPUTED",
+    "full_DRED_ker_ell2": "NOT_CLAIMED",
+    "full_quantum_BV_cohomology": "NOT_CLAIMED",
+    "physical_4d_background_covariant_ker_ell2": "FAIL_CLOSED_MISSING_TRUE_N1_PARENT_INCIDENCE"
+  }
+}

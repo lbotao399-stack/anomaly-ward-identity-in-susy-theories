@@ -82,12 +82,36 @@ class Step5PipelineIRTest(unittest.TestCase):
             DerivativeSpec("barD_dot+", 1, DOTTED),
         )
         fields = (
-            FieldSpec("V", Statistics.BOSON, Chirality.REAL, (COLOR,)),
-            FieldSpec("Phi", Statistics.BOSON, Chirality.CHIRAL, (COLOR,)),
-            FieldSpec("TildePhi", Statistics.BOSON, Chirality.ANTICHIRAL, (COLOR,)),
-            FieldSpec("X", Statistics.BOSON, Chirality.CHIRAL, (COLOR,)),
-            FieldSpec("TildeW", Statistics.FERMION, Chirality.ANTICHIRAL, (COLOR,)),
-            FieldSpec("Source", Statistics.FERMION, Chirality.UNCONSTRAINED, (COLOR,)),
+            FieldSpec(
+                "V", Statistics.BOSON, Chirality.REAL, (COLOR,), (Variance.UP,)
+            ),
+            FieldSpec(
+                "Phi", Statistics.BOSON, Chirality.CHIRAL, (COLOR,), (Variance.UP,)
+            ),
+            FieldSpec(
+                "TildePhi",
+                Statistics.BOSON,
+                Chirality.ANTICHIRAL,
+                (COLOR,),
+                (Variance.UP,),
+            ),
+            FieldSpec(
+                "X", Statistics.BOSON, Chirality.CHIRAL, (COLOR,), (Variance.UP,)
+            ),
+            FieldSpec(
+                "TildeW",
+                Statistics.FERMION,
+                Chirality.ANTICHIRAL,
+                (COLOR,),
+                (Variance.UP,),
+            ),
+            FieldSpec(
+                "Source",
+                Statistics.FERMION,
+                Chirality.UNCONSTRAINED,
+                (COLOR,),
+                (Variance.UP,),
+            ),
         )
         ports = (
             PortSpec("V_Q", "V", (PortSector.QUANTUM,), (Flow.IN, Flow.OUT)),
@@ -460,6 +484,14 @@ class Step5PipelineIRTest(unittest.TestCase):
         self.assertEqual(schema.canonical_hash, PROJECT_WW_NOTATION_SCHEMA_SHA256)
         self.assertEqual(schema.scalar_ring, PROJECT_N4_SCALAR_RING)
         self.assertEqual(
+            schema.field_map["Source[nabla_-(X^A X^B)]"].index_variances,
+            (Variance.DOWN, Variance.DOWN),
+        )
+        self.assertEqual(
+            schema.field_map["TildeW_dot_alpha"].index_variances,
+            (Variance.UP, Variance.DOWN),
+        )
+        self.assertEqual(
             schema.scalar_ring.relations,
             ("i^2=-1", "sqrt2^2=2", "i*sqrt2=sqrt2*i"),
         )
@@ -475,6 +507,17 @@ class Step5PipelineIRTest(unittest.TestCase):
         payload = json.loads(project_notation_schema().canonical_json())
         payload["fields"] = [item for item in payload["fields"] if item["name"] != "V"]
         with self.assertRaisesRegex(UndefinedSymbolError, "undefined field V"):
+            NotationSchema.from_canonical_dict(payload)
+
+    def test_project_ww_missing_field_variance_is_rejected(self) -> None:
+        payload = json.loads(project_notation_schema().canonical_json())
+        source = next(
+            item
+            for item in payload["fields"]
+            if item["name"] == "Source[nabla_-(X^A X^B)]"
+        )
+        source.pop("index_variances")
+        with self.assertRaisesRegex(PipelineIRError, "explicit index_spaces"):
             NotationSchema.from_canonical_dict(payload)
 
     def test_project_ww_missing_derivative_is_rejected(self) -> None:

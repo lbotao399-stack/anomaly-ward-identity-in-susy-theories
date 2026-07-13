@@ -1,0 +1,12 @@
+{
+  "generated_sha256": "1b9a6f75f1a7dd26f073bf5d0693e0751c8bbcd0e6f7d5d112781efea3121328",
+  "result": "PROVED_ABSENT_AT_ONE_LOOP_1PI_ALL_BACKGROUND_ORDERS",
+  "schema": "Step5OneLoopGhostBackgroundCensusAudit.v1",
+  "scope": "STEP5A_ONE_LOOP_1PI_ALL_BACKGROUND_ORDERS",
+  "status": "PASS",
+  "totals": {
+    "checks": 5,
+    "failed": 0,
+    "rows": 108
+  }
+}

@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "task": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
-  "contract_sha256": "dd06ff2ecf0d78605282cbb505daf16797ce859650fc8d398405031f3acdb002",
+  "contract_sha256": "5b24afd355ef0d471e859c37a24a15632fcebdcad3aa654d30dc098647939ab5",
   "source_ledger_sha256": "3df707cfa375c292d18d799160aaceab814011f6d4e88754b34096e7d0b6322f",
   "status": "PASS",
-  "stage": "EVALUATED",
-  "stage_qualifier": "WW_UV_METRIC_MISMATCH_DERIVED_ORDINARY_ORBIT_OPEN",
+  "stage": "REGISTERED_FIXED_VECTOR_WARD_PROVED",
+  "stage_qualifier": "WW_CONTACT_AND_INJECTIVITY_OPEN",
   "totals": {
     "checks": 55,
     "failed": 0

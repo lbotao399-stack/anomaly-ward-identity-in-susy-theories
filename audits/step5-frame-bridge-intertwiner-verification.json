@@ -1,0 +1,25 @@
+{
+  "audit_markdown_sha256": "c9fd39a46b51d65ba32e2d4895a9d9b97cc60280d85f828ab646a789477da8ab",
+  "gates": {
+    "anomaly_coefficient": "NOT_COMPUTED",
+    "arbitrary_gauge_algebra_background_regulator_closure": "OPEN",
+    "background_dependent_su2_nilpotent_coefficient_witness": "PASS",
+    "background_ward_recursion_similarity_sector": "PASS",
+    "covariant_operator_similarity_general_gauge_algebra": "PASS",
+    "cross_frame_functional_equality_with_independent_flat_measures": "NOT_ASSERTED",
+    "full_finite_bv_density_and_cycle": "OPEN_STEP5C_3D110",
+    "full_physical_ghost_nonminimal_frame_jacobian": "OPEN_3D109A",
+    "nonlinear_quantum_tangent_hessian": "CONDITIONAL_E_V_C_EQUALS_ZERO",
+    "nonlinear_source_hessian_insertion": "CONDITIONAL_F_V_C_EQUALS_ZERO",
+    "quadratic_hessian_green_source_supertrace_on_similarity_sector": "PASS",
+    "reference_flat_measure_covariant_adjoint_block": "PASS"
+  },
+  "generated_sha256": "54c39ebd031afbcc318f9048a840a63e371ba970a4a5eedb07ba5533e68d9780",
+  "schema": "Step5FrameBridgeIntertwinerAudit.v2",
+  "scope": "COVARIANT_ADJOINT_SIMILARITY_AND_TANGENT_CHAIN_RULE",
+  "status": "PASS",
+  "totals": {
+    "checks": 100,
+    "failed": 0
+  }
+}

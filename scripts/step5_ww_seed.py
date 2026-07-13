@@ -50,6 +50,10 @@ def color(label: str) -> IndexSlot:
     return IndexSlot(IndexSpace.COLOR_ADJOINT, label, Variance.UP)
 
 
+def color_down(label: str) -> IndexSlot:
+    return IndexSlot(IndexSpace.COLOR_ADJOINT, label, Variance.DOWN)
+
+
 def undotted(label: str, variance: Variance = Variance.DOWN) -> IndexSlot:
     return IndexSlot(IndexSpace.UNDOTTED, label, variance)
 
@@ -66,13 +70,13 @@ TILDE_W_FIELD = FieldType(
     "TildeW_dot_alpha",
     Statistics.FERMION,
     Chirality.ANTICHIRAL,
-    (color("D"), dotted("dot_alpha")),
+    (color("D"), dotted("dot_alpha", Variance.DOWN)),
 )
 WW_SOURCE_FIELD = FieldType(
     "Source[nabla_-(X^A X^B)]",
-    Statistics.BOSON,
+    Statistics.FERMION,
     Chirality.UNCONSTRAINED,
-    (color("A"), color("B")),
+    (color_down("A"), color_down("B")),
 )
 
 
@@ -102,20 +106,42 @@ def project_matrix_engine_checks() -> dict[str, object]:
 
 
 def external_orientation_sign_audit(orientation: str) -> dict[str, object]:
-    """Koszul audit in the fixed pre-D external word (TildeW,W)."""
+    """Replay the complete odd word, not its external projection alone."""
 
     if orientation not in ("DIRECT", "REFLECTED"):
         raise ValueError(orientation)
-    canonical_word = ("TildeW", "W")
-    declared_word = canonical_word if orientation == "DIRECT" else tuple(reversed(canonical_word))
-    positions = {field: position for position, field in enumerate(canonical_word)}
-    inversions = sum(
-        1
-        for left in range(len(declared_word))
-        for right in range(left + 1, len(declared_word))
-        if positions[declared_word[left]] > positions[declared_word[right]]
+    def sign_to_canonical(
+        word: tuple[str, ...], canonical: tuple[str, ...]
+    ) -> tuple[int, int]:
+        positions = {field: position for position, field in enumerate(canonical)}
+        inversions = sum(
+            1
+            for left in range(len(word))
+            for right in range(left + 1, len(word))
+            if positions[word[left]] > positions[word[right]]
+        )
+        return (-1 if inversions % 2 else 1), inversions
+
+    canonical_external = ("TildeW", "W")
+    canonical_quantum = ("Q_barD", "Q_D")
+    canonical_full = ("TildeW", "Q_barD", "W", "Q_D")
+    if orientation == "DIRECT":
+        declared_external = canonical_external
+        declared_quantum = canonical_quantum
+        declared_full = canonical_full
+    else:
+        declared_external = tuple(reversed(canonical_external))
+        declared_quantum = tuple(reversed(canonical_quantum))
+        declared_full = ("W", "Q_D", "TildeW", "Q_barD")
+    external_permutation_sign, external_inversions = sign_to_canonical(
+        declared_external, canonical_external
     )
-    external_permutation_sign = -1 if inversions % 2 else 1
+    quantum_permutation_sign, quantum_inversions = sign_to_canonical(
+        declared_quantum, canonical_quantum
+    )
+    full_permutation_sign, full_inversions = sign_to_canonical(
+        declared_full, canonical_full
+    )
 
     # Once the word is canonical, the odd D acts on the second odd factor W.
     # IBP contributes -1.  The graded Leibniz prefix TildeW contributes -1.
@@ -123,14 +149,30 @@ def external_orientation_sign_audit(orientation: str) -> dict[str, object]:
     target_prefix_parity = 1
     graded_prefix_sign = -1 if target_prefix_parity % 2 else 1
     d_transfer_sign = ibp_outer_sign * graded_prefix_sign
-    total = external_permutation_sign * d_transfer_sign
+    total = full_permutation_sign * d_transfer_sign
     return {
         "orientation": orientation,
-        "declared_pre_D_word": list(declared_word),
-        "canonical_pre_D_word": list(canonical_word),
-        "parities": {"TildeW": 1, "W": 1, "D": 1, "X=D_W": 0},
-        "odd_odd_inversions": inversions,
+        "declared_pre_D_word": list(declared_external),
+        "canonical_pre_D_word": list(canonical_external),
+        "declared_quantum_odd_word": list(declared_quantum),
+        "canonical_quantum_odd_word": list(canonical_quantum),
+        "declared_full_odd_word": list(declared_full),
+        "canonical_full_odd_word": list(canonical_full),
+        "parities": {
+            "TildeW": 1,
+            "Q_barD": 1,
+            "W": 1,
+            "Q_D": 1,
+            "D": 1,
+            "X=D_W": 0,
+        },
+        "odd_odd_inversions": external_inversions,
         "external_fermion_permutation_sign": external_permutation_sign,
+        "quantum_odd_word_inversions": quantum_inversions,
+        "quantum_odd_word_permutation_sign": quantum_permutation_sign,
+        "full_odd_word_inversions": full_inversions,
+        "full_odd_word_permutation_sign": full_permutation_sign,
+        "subsign_product": external_permutation_sign * quantum_permutation_sign,
         "D_transfer": {
             "IBP_outer_sign": ibp_outer_sign,
             "target_prefix_parity": target_prefix_parity,
@@ -138,6 +180,7 @@ def external_orientation_sign_audit(orientation: str) -> dict[str, object]:
             "product": d_transfer_sign,
             "output": "X^E=nabla_+W_+^E",
         },
+        "full_block_parities": {"TildeW_QbarD": 0, "W_QD": 0},
         "total_orientation_sign": total,
     }
 
@@ -241,7 +284,7 @@ def physical_triangle(orientation: str) -> GraphIR:
                 TILDE_W_FIELD,
                 "q",
                 "D",
-                spinor_indices=(dotted("dot_alpha"),),
+                spinor_indices=(dotted("dot_alpha", Variance.DOWN),),
             ),
             ExternalLeg(
                 "L_W",
@@ -269,8 +312,22 @@ def physical_triangle(orientation: str) -> GraphIR:
                     "external_fermion_permutation_sign": str(
                         sign_audit["external_fermion_permutation_sign"]
                     ),
+                    "quantum_odd_word_permutation_sign": str(
+                        sign_audit["quantum_odd_word_permutation_sign"]
+                    ),
+                    "full_odd_word_permutation_sign": str(
+                        sign_audit["full_odd_word_permutation_sign"]
+                    ),
                     "D_transfer_Koszul_sign": str(sign_audit["D_transfer"]["product"]),
                     "total_orientation_sign": str(sign_audit["total_orientation_sign"]),
+                    "source_port_statistics": WW_SOURCE_FIELD.statistics.value,
+                    "source_port_parity": str(WW_SOURCE_FIELD.parity),
+                    "source_color_variances": ",".join(
+                        index.variance.value for index in WW_SOURCE_FIELD.indices
+                    ),
+                    "insertion_operator_parity": "1",
+                    "source_coupled_insertion_vertex_parity": "0",
+                    "tildeW_dotted_variance": Variance.DOWN.value,
                     "bare_numerator_contains_epsilon": "false",
                     "color_factor": f"c_{{{left_letter}CD}}*c_{{{right_letter}CE}}",
                 }.items()
@@ -320,7 +377,6 @@ def endpoint_rows(orientation: str) -> list[dict[str, object]]:
             graph_before_d = Fraction(-1, 8)
             graph_row = graph_before_d * d_chain * endpoint_sign * orientation_sign
             row_sign = "+" if orientation_sign == 1 else "-"
-            contact_sign = "-" if orientation_sign == 1 else "+"
             trace_id = f"DA-{orientation[0]}-{(placement_index - 1) * 4 + endpoint_index:03d}"
             rows.append(
                 {
@@ -351,12 +407,14 @@ def endpoint_rows(orientation: str) -> list[dict[str, object]]:
                     "triangle_metric_pole": (
                         f"{row_sign}g^2/(1024*pi^2*epsilon)*hat_delta^(mu nu)"
                     ),
-                    "contact_metric_pole": (
-                        f"{contact_sign}g^2/(1024*pi^2*epsilon)*delta4^(mu nu)"
+                    "triangle_metric_pole_status": (
+                        "RECOMPUTED_ISOLATED_TRIANGLE_AFTER_TYPED_SIGN_REPAIR"
                     ),
-                    "metric_orbit": (
-                        f"{row_sign}g^2/(1024*pi^2*epsilon)*(hat_delta-delta4)^(mu nu)"
+                    "contact_metric_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
+                    "contact_metric_pole_status": (
+                        "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR"
                     ),
+                    "metric_orbit": "NOT_FORMED_CONTACT_COEFFICIENT_INVALIDATED",
                     "metric_contact_child_id": f"{graph.graph_id}__SD_metric__{trace_id}",
                     "momentum_numerator": (
                         f"({bar_momentum})_+^dot_beta * (i*p)_a_dot_beta * "
@@ -364,7 +422,8 @@ def endpoint_rows(orientation: str) -> list[dict[str, object]]:
                     ),
                     "mixed_anticommutator_momenta": [bar_momentum, "p", d_momentum],
                     "external_leg_derivative_tokens": [
-                        "partial_(a dot_beta)[W_plus^E(p)]=i*p_(a dot_beta)*W_plus^E(p)"
+                        "mathcalD_(+ dot_beta)[X^E(p)]="
+                        "i*p_(+ dot_beta)*X^E(p);X^E=nabla_+W_+^E"
                     ],
                     "propagator_collapses_in_metric_branch": [],
                     "SD_collapse_children": [
@@ -489,10 +548,7 @@ def contact_basis_catalogue() -> dict[str, object]:
         "individual_decomposition": "BASIS_DEPENDENT",
         "legal_two_vertex_contact_family": legal_pair,
         "mixed_S4_typed_zero": s4_mixed,
-        "exact_aggregate_rule": (
-            "sum_(ordered basis terms in one trace) C_term "
-            "= +g^2/(1024*pi^2*epsilon)"
-        ),
+        "aggregate_rule_status": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
     }
 
 
@@ -507,8 +563,6 @@ def metric_contact_children(
     for row in rows:
         trace_id = str(row["trace_id"])
         orientation_sign = int(row["total_orientation_sign"])
-        triangle_sign = "+" if orientation_sign == 1 else "-"
-        contact_sign = "-" if orientation_sign == 1 else "+"
         # e1 is a canonical representative of the bubble after the SD cut.
         # The nonlinear/I4/S4 decomposition is retained separately as a
         # background-quantum port basis and is not identified with this edge.
@@ -517,7 +571,7 @@ def metric_contact_children(
         metadata.update(
             {
                 "parent_trace_id": trace_id,
-                "graph_relation": "SD_AGGREGATE_METRIC_CONTACT",
+                "graph_relation": "SD_METRIC_CONTACT_TOPOLOGY",
                 "SD_cut_rule": "K_V^tot*G_V=identity_16",
                 "SD_functional_identity": (
                     "0=Integral Dv d/dv_i[I exp(-S/hbar)]="
@@ -525,25 +579,20 @@ def metric_contact_children(
                 ),
                 "contact_metric": "delta4^(mu nu)",
                 "triangle_orientation_sign": str(orientation_sign),
-                "contact_amplitude_sign": str(-orientation_sign),
-                "unsigned_scalar_pole": "g^2/(1024*pi^2*epsilon)",
-                "signed_triangle_pole": (
-                    f"{triangle_sign}g^2*hat_delta^(mu nu)/(1024*pi^2*epsilon)"
-                ),
-                "contact_pole": (
-                    f"{contact_sign}g^2*delta4^(mu nu)/(1024*pi^2*epsilon)"
+                "contact_amplitude_sign": "UNASSIGNED_AFTER_TYPED_REPAIR",
+                "unsigned_scalar_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
+                "signed_triangle_pole": "BOUND_ONLY_TO_PARENT_ISOLATED_TRIANGLE",
+                "contact_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
+                "contact_coefficient_status": (
+                    "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR"
                 ),
                 "basis_decomposition": "BASIS_DEPENDENT",
                 "basis_term_count": str(len(basis_ids)),
                 "basis_term_ids_sha256": hashlib.sha256(
                     "\n".join(basis_ids).encode()
                 ).hexdigest(),
-                "coefficient_conservation": (
-                    f"sum(C_basis_terms)={triangle_sign}g^2/(1024*pi^2*epsilon)"
-                ),
-                "relative_sign_derivation": (
-                    "contact minus sign is the second term of the exact SD identity"
-                ),
+                "coefficient_conservation": "NOT_CLAIMED_BEFORE_TYPED_CONTACT_REPLAY",
+                "relative_sign_derivation": "OPEN_TYPED_CONTACT_REPLAY",
             }
         )
         children.append(
@@ -557,7 +606,7 @@ def metric_contact_children(
 
 
 def pole_ledger() -> dict[str, object]:
-    """Derive the SD-complete metric mismatch and its finite DRED remainder."""
+    """Record only the isolated-triangle pole after the typed sign repair."""
 
     return {
         "normalization": {
@@ -581,66 +630,28 @@ def pole_ledger() -> dict[str, object]:
                 "hat_delta^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)"
             ),
             "REFLECTED": (
-                "-g^2/(128*pi^2*epsilon)*c_{BCD}c_{ACE}*T_(mu n nu)*"
+                "+g^2/(128*pi^2*epsilon)*c_{BCD}c_{ACE}*T_(mu n nu)*"
                 "hat_delta^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)"
             ),
         },
         "triangle_status": "DERIVED_ISOLATED_TRIANGLE_ORDINARY_UV_POLE",
-        "contact_poles": {
-            "DIRECT": (
-                "-g^2/(128*pi^2*epsilon)*c_{ACD}c_{BCE}*T_(mu n nu)*"
-                "delta4^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)"
-            ),
-            "REFLECTED": (
-                "+g^2/(128*pi^2*epsilon)*c_{BCD}c_{ACE}*T_(mu n nu)*"
-                "delta4^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)"
-            ),
-        },
-        "contact_status": "AGGREGATE_SD_IDENTITY_NOT_BASIS_RESOLVED",
+        "contact_poles": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
+        "contact_status": "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR",
         "missing_rule_is_not_finite_BV": True,
         "bare_triangle_numerator_contains_epsilon": False,
-        "metric_conventions": {
-            "tilde_delta": "delta4-hat_delta",
-            "mismatch": "hat_delta-delta4=-tilde_delta",
-        },
-        "metric_mismatches": {
-            "DIRECT": "+g^2*(hat_delta-delta4)^(mu nu)/(128*pi^2*epsilon)",
-            "REFLECTED": "-g^2*(hat_delta-delta4)^(mu nu)/(128*pi^2*epsilon)",
-        },
-        "metric_mismatch_proved_at_aggregate_sd_level": True,
+        "metric_mismatch_status": "NOT_FORMED_CONTACT_COEFFICIENT_INVALIDATED",
+        "metric_mismatch_proved_at_aggregate_sd_level": False,
         "full_ordinary_triangle_bubble_cancellation_proved": False,
-        "evanescent_sigma_contraction": (
-            "p^rho*tilde_delta^(mu nu)*T_(mu rho nu)=-2*epsilon*p_+"
+        "physical_symmetric_operator_word": (
+            "c_{ACD}c_{BCE}[TildeW_dot_alpha^D*mathcalD_+^dot_alpha X^E+"
+            "(mathcalD_+^dot_alpha X^D)*TildeW_dot_alpha^E]"
         ),
-        "finite_remainder_derivation": [
-            "hat_delta-delta4=-tilde_delta",
-            "(-tilde_delta)*T*p = -(-2*epsilon)*p_+ = +2*epsilon*p_+",
-            "[g^2/(128*pi^2*epsilon)]*[2*epsilon]=g^2/(64*pi^2)",
-        ],
-        "conditional_candidate_coefficient_fixed_orientation": "+g^2/(64*pi^2)",
-        "conditional_candidate_coefficients": {
-            "DIRECT": "+g^2/(64*pi^2)",
-            "REFLECTED": "-g^2/(64*pi^2)",
-        },
-        "reflected_relabelling": [
-            "-c_{BCD}c_{ACE}*TildeW^D*X^E",
-            "D<->E",
-            "-c_{BCE}c_{ACD}*TildeW^E*X^D",
-            "X is even, so TildeW^E*X^D=X^D*TildeW^E",
-        ],
-        "conditional_two_orientation_single_color_tensor": (
-            "g^2/(64*pi^2)*c_{ACD}c_{BCE}*"
-            "(i*p_+^dot_alpha)*[TildeW_dot_alpha^D*X^E-"
-            "X^D*TildeW_dot_alpha^E]"
-        ),
-        "single_color_tensor_with_X_definition": (
-            "X^E=nabla_+W_+^E; therefore "
-            "c_{ACD}c_{BCE}[TildeW_dot_alpha^D*nabla_+^dot_alpha X^E-"
-            "(nabla_+^dot_alpha X^D)*TildeW_dot_alpha^E]"
+        "physical_symmetric_operator_word_status": (
+            "TYPE_AND_REFLECTION_QUOTIENT_FIXED_COEFFICIENT_NOT_PROPAGATED"
         ),
         "post_D_external_operator": "X^E=nabla_+ W_+^E",
         "pre_D_action_external_field": "W_+^E",
-        "anomaly_status": "DERIVED_AGGREGATE_SD_CANDIDATE_NOT_ACCEPTED",
+        "anomaly_status": "INVALIDATED_NOT_PROPAGATED_AFTER_TYPED_SIGN_REPAIR",
     }
 
 
@@ -669,7 +680,6 @@ def tex_for_graph(graph: GraphIR) -> str:
 def tex_for_contact(orientation: str) -> str:
     if orientation not in ("DIRECT", "REFLECTED"):
         raise ValueError(orientation)
-    sign = "-" if orientation == "DIRECT" else "+"
     trace_family = "DA-D-001--008" if orientation == "DIRECT" else "DA-R-001--008"
     return "\n".join(
         (
@@ -682,7 +692,7 @@ def tex_for_contact(orientation: str) -> str:
             r"\draw[->,bend left=35] (I3) to node[above] {$k$} (S3);",
             r"\draw[->,bend left=35] (S3) to node[below] {$k+q$} (I3);",
             rf"\node at (0,-2.1) {{\textsf{{{trace_family}}}}};",
-            rf"\node at (0,-2.6) {{$ {sign}\,g^2\delta_{{(4)}}^{{mn}}/(128\pi^2\epsilon) $}};",
+            r"\node at (0,-2.6) {\textsf{coefficient invalidated; typed replay required}};",
             r"\end{tikzpicture}",
             r"\end{document}",
             "",
@@ -694,7 +704,7 @@ def markdown_report(payload: dict[str, object]) -> str:
     lines = [
         "# Step 5A primitive WW seed",
         "",
-        "Legacy specialized WW ledger; not a certificate from the generic typed $D$-compiler.",
+        "Typed reflection/source/variance repair applied.",
         "",
         "$$",
         r"r_0=k,\qquad r_1=k+q,\qquad r_2=k+p+q.",
@@ -710,7 +720,22 @@ def markdown_report(payload: dict[str, object]) -> str:
         r"\left(-\frac{g^2}{8}\right)\left(-\frac12\right)=\frac{g^2}{16}.",
         "$$",
         "",
-        "In this specialized ledger, two placements and four endpoint assignments give",
+        "Reflection parity replay:",
+        "",
+        "$$",
+        r"s_{\mathrm{ref}}=(-1)_{(W,\widetilde W)}(-1)_{(Q_D,Q_{\bar D})}=+1.",
+        "$$",
+        "",
+        "$$",
+        r"|J_{AB}|=1,\qquad |\nabla_-(X^AX^B)|=1,\qquad |J_{AB}\nabla_-(X^AX^B)|=0.",
+        "$$",
+        "",
+        "$$",
+        r"\widetilde W^D_{\dot\alpha},\qquad \mathcal D_+{}^{\dot\alpha}X^E,",
+        r"\qquad c_{ACD}c_{BCE}\left[\widetilde W^D_{\dot\alpha}\mathcal D_+{}^{\dot\alpha}X^E+(\mathcal D_+{}^{\dot\alpha}X^D)\widetilde W^E_{\dot\alpha}\right].",
+        "$$",
+        "",
+        "Direct isolated triangle:",
         "",
         "$$",
         r"\Gamma_{\triangle}^{A|B}=\frac{g^2}{8}c_{ACD}c_{BCE}\widetilde W^D_{\dot\alpha}(q)(ip^n)X^E(p)",
@@ -727,43 +752,26 @@ def markdown_report(payload: dict[str, object]) -> str:
         r"(\sigma_E^m\bar\sigma_E^n\sigma_E^r)_+{}^{\dot\alpha}\widehat g_{mr}.",
         "$$",
         "",
-        "Aggregate Schwinger--Dyson metric representative; the explicit contact basis is open:",
+        "Reflected isolated triangle:",
         "",
         "$$",
-        r"\left.\Gamma_{C,\mathrm{pole}}^{A|B}\right|_{\mathrm{aggregate\ SD}}=-\frac{g^2}{128\pi^2\epsilon}c_{ACD}c_{BCE}\widetilde W^D_{\dot\alpha}(q)(ip^n)X^E(p)",
-        r"(\sigma_E^m\bar\sigma_E^n\sigma_E^r)_+{}^{\dot\alpha}\delta^{(4)}_{mr}.",
-        "$$",
-        "",
-        "$$",
-        r"\left.\Gamma_{\triangle+C,\mathrm{pole}}^{A|B}\right|_{\mathrm{aggregate\ SD}}=\frac{g^2}{128\pi^2\epsilon}c_{ACD}c_{BCE}\widetilde W^D_{\dot\alpha}(q)(ip^n)X^E(p)",
-        r"(\sigma_E^m\bar\sigma_E^n\sigma_E^r)_+{}^{\dot\alpha}(\widehat\delta-\delta_{(4)})_{mr}.",
+        r"\Gamma_{\triangle,\mathrm{pole}}^{B|A}=\frac{g^2}{128\pi^2\epsilon}c_{BCD}c_{ACE}\widetilde W^D_{\dot\alpha}(q)(ip^n)X^E(p)",
+        r"(\sigma_E^m\bar\sigma_E^n\sigma_E^r)_+{}^{\dot\alpha}\widehat g_{mr}.",
         "$$",
         "",
         "$$",
-        r"\widehat\delta-\delta_{(4)}=-\widetilde\delta,\qquad p^n\widetilde\delta^{mr}(\sigma_m\bar\sigma_n\sigma_r)_+{}^{\dot\alpha}=-2\epsilon p_+{}^{\dot\alpha}.",
+        r"\Gamma_{C,\mathrm{pole}}:\ \texttt{INVALIDATED\_REQUIRES\_TYPED\_CONTACT\_REPLAY}.",
         "$$",
         "",
         "$$",
-        r"\left.\Gamma_{\mathrm{candidate}}^{A|B}\right|_{\mathrm{CONDITIONAL\_ON\_CONTACT\_ORBIT\_SUM}}=\frac{g^2}{64\pi^2}c_{ACD}c_{BCE}\widetilde W^D_{\dot\alpha}(q)(ip_+{}^{\dot\alpha})X^E(p).",
-        "$$",
-        "",
-        "$$",
-        r"\left.\Gamma_{\mathrm{candidate}}^{B|A}\right|_{\mathrm{CONDITIONAL\_ON\_CONTACT\_ORBIT\_SUM}}=-\frac{g^2}{64\pi^2}c_{BCD}c_{ACE}\widetilde W^D_{\dot\alpha}(q)(ip_+{}^{\dot\alpha})X^E(p).",
-        "$$",
-        "",
-        r"In the reflected term relabel $D\leftrightarrow E$; since $|X|=0$:",
-        "",
-        "$$",
-        r"\left.\Gamma_{\mathrm{candidate}}^{A|B}+\Gamma_{\mathrm{candidate}}^{B|A}\right|_{\mathrm{CONDITIONAL\_ON\_CONTACT\_ORBIT\_SUM}}",
-        r"=\frac{g^2}{64\pi^2}c_{ACD}c_{BCE}(ip_+{}^{\dot\alpha})",
-        r"\left[\widetilde W^D_{\dot\alpha}X^E-X^D\widetilde W^E_{\dot\alpha}\right].",
+        r"\Gamma_{\mathrm{anomaly}}:\ \texttt{INVALIDATED\_NOT\_PROPAGATED\_AFTER\_TYPED\_SIGN\_REPAIR}.",
         "$$",
         "",
         r"Pre-$D$ action leg: $W_+^E$. Post-$D$ operator: $X^E=\nabla_+W_+^E$.",
         "",
     ]
     for orientation in ("DIRECT", "REFLECTED"):
-        lines.extend((f"## {orientation}", "", "| trace | $D_-$ | $\\bar D$ edge | $D$ edge | endpoint sign | external Koszul sign | numerator | triangle pole | aggregate SD contact pole |", "|---|---|---|---|---:|---:|---|---|---|"))
+        lines.extend((f"## {orientation}", "", "| trace | $D_-$ | $\\bar D$ edge | $D$ edge | endpoint sign | full orientation sign | numerator | isolated triangle pole | contact status |", "|---|---|---|---|---:|---:|---|---|---|"))
         for row in payload["traces"][orientation]:
             lines.append(
                 f"| {row['trace_id']} | {row['D_minus_placement']} | "
@@ -810,26 +818,39 @@ def build_payload() -> dict[str, object]:
             "mixed_S4_children": 0,
             "mixed_S4_status": basis["mixed_S4_typed_zero"]["status"],
             "individual_basis_decomposition": "BASIS_DEPENDENT",
-            "aggregate_contact_pole": "EXACT",
+            "aggregate_contact_pole": "INVALIDATED_REQUIRES_TYPED_CONTACT_REPLAY",
+            "contact_coefficient_status": (
+                "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR"
+            ),
             "finite_BV_required": False,
         },
         "preintegration": {
             "denominator": "k^2*(k+q)^2*(k+p+q)^2",
             "L1": "2*k+q",
             "L2": "2*k+p+2*q",
-            "coefficient_per_endpoint_row": {"DIRECT": "+g^2/16", "REFLECTED": "-g^2/16"},
+            "coefficient_per_endpoint_row": {"DIRECT": "+g^2/16", "REFLECTED": "+g^2/16"},
             "coefficient_per_D_minus_placement_after_four_endpoint_sum": {
                 "DIRECT": "+g^2/16",
-                "REFLECTED": "-g^2/16",
+                "REFLECTED": "+g^2/16",
             },
             "coefficient_after_two_D_minus_placements": {
                 "DIRECT": "+g^2/8",
-                "REFLECTED": "-g^2/8",
+                "REFLECTED": "+g^2/8",
             },
             "bare_numerator": "L1^mu*p^nu*L2^rho",
             "bare_numerator_contains_epsilon": False,
             "pre_D_action_external_field": "W_plus^E",
             "post_D_external_operator": "X^E=nabla_+W_+^E",
+        },
+        "typed_port_gate": {
+            "source_statistics": "FERMION",
+            "source_parity": 1,
+            "source_color_variances": ["DOWN", "DOWN"],
+            "insertion_operator_parity": 1,
+            "coupled_insertion_vertex_parity": 0,
+            "TildeW_dotted_variance": "DOWN",
+            "covariant_vector_token": "mathcalD_+^dot_alpha",
+            "status": "PASS",
         },
         "exact_matrix_binding": project_matrix_engine_checks(),
         "external_orientation_sign_audits": {
@@ -915,27 +936,55 @@ def build_audit(payload: dict[str, object]) -> dict[str, object]:
     ] == 1
     checks["reflected_orientation_sign"] = payload["external_orientation_sign_audits"][
         "REFLECTED"
-    ]["total_orientation_sign"] == -1
+    ]["total_orientation_sign"] == 1
+    checks["reflected_external_quantum_subsign_replay"] = (
+        payload["external_orientation_sign_audits"]["REFLECTED"][
+            "external_fermion_permutation_sign"
+        ]
+        == -1
+        and payload["external_orientation_sign_audits"]["REFLECTED"][
+            "quantum_odd_word_permutation_sign"
+        ]
+        == -1
+        and payload["external_orientation_sign_audits"]["REFLECTED"][
+            "full_odd_word_permutation_sign"
+        ]
+        == 1
+    )
     checks["D_transfer_sign_is_common_plus"] = all(
         payload["external_orientation_sign_audits"][orientation]["D_transfer"]["product"] == 1
         for orientation in ("DIRECT", "REFLECTED")
     )
-    checks["finite_remainder_coefficient"] = Fraction(2, 128) == Fraction(1, 64)
-    checks["contact_pole_is_aggregate_SD_not_basis_resolved"] = payload["poles"][
+    checks["contact_pole_invalidated_pending_typed_replay"] = payload["poles"][
         "contact_status"
     ] == (
-        "AGGREGATE_SD_IDENTITY_NOT_BASIS_RESOLVED"
+        "INVALIDATED_BY_REFLECTION_SOURCE_VARIANCE_REPAIR"
     )
-    checks["metric_mismatch_proved_at_aggregate_sd_level"] = bool(
+    checks["metric_mismatch_not_claimed"] = not bool(
         payload["poles"]["metric_mismatch_proved_at_aggregate_sd_level"]
     )
     checks["full_ordinary_triangle_bubble_cancellation_remains_open"] = not bool(
         payload["poles"]["full_ordinary_triangle_bubble_cancellation_proved"]
     )
-    checks["anomaly_is_aggregate_sd_candidate_not_accepted"] = payload["poles"][
+    checks["anomaly_coefficient_invalidated_not_propagated"] = payload["poles"][
         "anomaly_status"
     ] == (
-        "DERIVED_AGGREGATE_SD_CANDIDATE_NOT_ACCEPTED"
+        "INVALIDATED_NOT_PROPAGATED_AFTER_TYPED_SIGN_REPAIR"
+    )
+    checks["typed_source_port_is_fermionic"] = payload["typed_port_gate"][
+        "source_statistics"
+    ] == "FERMION" and payload["typed_port_gate"]["source_parity"] == 1
+    checks["typed_source_dual_color_slots_are_down"] = payload["typed_port_gate"][
+        "source_color_variances"
+    ] == ["DOWN", "DOWN"]
+    checks["coupled_insertion_vertex_is_even"] = payload["typed_port_gate"][
+        "coupled_insertion_vertex_parity"
+    ] == 0
+    checks["tildeW_dotted_slot_is_down"] = payload["typed_port_gate"][
+        "TildeW_dotted_variance"
+    ] == "DOWN"
+    checks["legacy_nabla_vector_token_absent"] = "nabla_+^dot_alpha" not in json.dumps(
+        payload, sort_keys=True
     )
     checks["post_D_operator_is_X"] = payload["poles"]["post_D_external_operator"] == (
         "X^E=nabla_+ W_+^E"
@@ -945,7 +994,7 @@ def build_audit(payload: dict[str, object]) -> dict[str, object]:
         "status": "PASS" if all(checks.values()) else "FAIL",
         "scope": (
             "primitive WW w=0 triangle, exact endpoint traces, edge collapses, "
-            "and SD aggregate metric-contact orbit"
+            "and invalidated contact orbit pending typed replay"
         ),
         "checks": checks,
         "totals": {"checks": len(checks), "failed": sum(not value for value in checks.values())},
@@ -956,11 +1005,9 @@ def build_audit(payload: dict[str, object]) -> dict[str, object]:
             "metric_contact_children": 16,
             "triangle_poles": payload["poles"]["triangle_poles"],
             "contact_poles": payload["poles"]["contact_poles"],
-            "conditional_candidate_coefficient_fixed_orientation": payload["poles"][
-                "conditional_candidate_coefficient_fixed_orientation"
-            ],
-            "conditional_two_orientation_single_color_tensor": payload["poles"][
-                "conditional_two_orientation_single_color_tensor"
+            "anomaly_status": payload["poles"]["anomaly_status"],
+            "physical_symmetric_operator_word": payload["poles"][
+                "physical_symmetric_operator_word"
             ],
         },
         "unresolved_non_BV_rule": (

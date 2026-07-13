@@ -1,0 +1,11 @@
+{
+  "anomaly_coefficient": "NOT_ACCEPTED",
+  "generated_sha256": "34f40ab7ba991547a90914aad6548612717d86e2ec54bae4a190e80913ebd6fe",
+  "graphir_replay": "OPEN_COMPILER_REPLAY",
+  "schema": "Step5OneLoopBackgroundHessianWardAudit.v1",
+  "status": "PASS_FUNCTIONAL_LEVEL_BACKGROUND_COVARIANCE",
+  "totals": {
+    "checks": 12,
+    "failed": 0
+  }
+}

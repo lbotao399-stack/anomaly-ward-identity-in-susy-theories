@@ -1,0 +1,21 @@
+{
+  "all_passed": true,
+  "checks": {
+    "N2_multiset_and_spin_table_exact": true,
+    "N3_target_spin_multiplicity_zero": true,
+    "N3_unique_W_Wtilde_Wtilde": true,
+    "N_ge_4_dimension_excluded": true,
+    "all_rows_satisfy_target_equations": true,
+    "candidate_target_spin_multiplicity_one": true,
+    "complete_diophantine_solution_count_18": true,
+    "eight_labeled_WW_N3_distributions_have_E_carrier": true,
+    "full_rank_one_claim_fail_closed": true,
+    "mixed_terminal_words_reduce_to_ND_or_zero": true,
+    "project_R_weight_binding_fail_closed": true
+  },
+  "passed": 11,
+  "payload_sha256": "c0693ad911c8da896a5dbf2e57abf0c72ea26d434a93979dd78a46ec9490c42f",
+  "schema": "STEP5_ONE_LOOP_PURE_GAUGE_COVARIANT_JET_CENSUS_AUDIT_V1",
+  "status": "PASS_EXACT_PARTIAL_FAIL_CLOSED",
+  "total": 11
+}

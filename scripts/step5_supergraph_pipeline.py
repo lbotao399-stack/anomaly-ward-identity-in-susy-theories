@@ -256,6 +256,10 @@ class DiagramRequest:
     orientation: str
     external_fermion_word: tuple[str, ...]
     external_koszul_sign: int
+    orientation_sign_ledger: tuple[tuple[str, int], ...] = (
+        ("external_subword", 1),
+        ("quantum_subword", 1),
+    )
 
     def __post_init__(self) -> None:
         if any(
@@ -273,6 +277,18 @@ class DiagramRequest:
             )
         if self.external_koszul_sign not in (-1, 1):
             raise ValueError("an external Koszul sign must be +1 or -1")
+        sign_ledger = dict(self.orientation_sign_ledger)
+        if set(sign_ledger) != {"external_subword", "quantum_subword"}:
+            raise ValueError(
+                "the orientation sign ledger needs external and quantum subwords"
+            )
+        if any(value not in (-1, 1) for value in sign_ledger.values()):
+            raise ValueError("every orientation sub-sign is exactly +1 or -1")
+        if (
+            sign_ledger["external_subword"] * sign_ledger["quantum_subword"]
+            != self.external_koszul_sign
+        ):
+            raise ValueError("orientation sub-signs do not multiply to the total sign")
         if len({vertex.vertex_id for vertex in self.vertices}) != len(self.vertices):
             raise ValueError("vertex ids are globally unique")
         port_ids = [port.port_id for vertex in self.vertices for port in vertex.ordered_ports]
@@ -314,6 +330,7 @@ class AmplitudeRecord:
     orientation: str
     external_fermion_word: tuple[str, ...]
     external_koszul_sign: int
+    orientation_sign_ledger: tuple[tuple[str, int], ...]
     graph: GraphIR
     canonical_key: str
     orientation_signature: tuple[str, ...]
@@ -335,6 +352,7 @@ class AmplitudeRecord:
             "orientation": self.orientation,
             "external_fermion_word": list(self.external_fermion_word),
             "external_koszul_sign": self.external_koszul_sign,
+            "orientation_sign_ledger": dict(self.orientation_sign_ledger),
             "canonical_key": self.canonical_key,
             "orientation_signature": list(self.orientation_signature),
             "class_multiplicity": self.class_multiplicity,
@@ -355,12 +373,12 @@ class AmplitudeRecord:
             "preintegration_product": " * ".join(
                 factor.factor_id
                 for factor in self.factors
-                if factor.category != "AUTOMORPHISM_AUDIT_ONLY"
+                if not factor.category.endswith("AUDIT_ONLY")
             ),
             "audit_factors": [
                 factor.factor_id
                 for factor in self.factors
-                if factor.category == "AUTOMORPHISM_AUDIT_ONLY"
+                if factor.category.endswith("AUDIT_ONLY")
             ],
             "graph": self.graph.canonical_dict(),
             "renderers": {
@@ -551,6 +569,14 @@ def _validate_field_type(
     if declared.index_spaces != actual_spaces:
         raise pipeline_ir.PipelineIRError(
             f"{context} index spaces {actual_spaces} != {declared.index_spaces}"
+        )
+    actual_variances = tuple(
+        pipeline_ir.Variance(index.variance.value) for index in field_type.indices
+    )
+    if declared.index_variances != actual_variances:
+        raise pipeline_ir.PipelineIRError(
+            f"{context} index variances {actual_variances} "
+            f"!= {declared.index_variances}"
         )
 
 
@@ -910,6 +936,51 @@ def _build_graph(
         for port in vertex.ordered_ports
         if port.role is PortRole.EXTERNAL
     )
+    typed_metadata: dict[str, str] = {}
+    source_legs = [
+        leg for leg in external_legs if leg.field_type.name.startswith("Source[")
+    ]
+    tilde_w_legs = [
+        leg for leg in external_legs if leg.field_type.name == "TildeW_dot_alpha"
+    ]
+    if len(source_legs) == 1:
+        source_leg = source_legs[0]
+        insertion_operator_parity = 1
+        typed_metadata.update(
+            {
+                "source_port_statistics": source_leg.field_type.statistics.value,
+                "source_port_parity": str(source_leg.field_type.parity),
+                "source_color_variances": ",".join(
+                    index.variance.value for index in source_leg.field_type.indices
+                ),
+                "insertion_operator_parity": str(insertion_operator_parity),
+                "source_coupled_insertion_vertex_parity": str(
+                    (source_leg.field_type.parity + insertion_operator_parity) % 2
+                ),
+            }
+        )
+    if len(tilde_w_legs) == 1 and len(tilde_w_legs[0].spinor_indices) == 1:
+        typed_metadata["tildeW_dotted_variance"] = (
+            tilde_w_legs[0].spinor_indices[0].variance.value
+        )
+    graph_metadata = {
+        "request_id": request.request_id,
+        "request_kind": request.request_kind.value,
+        "pairing_signature": json.dumps(pairing.signature()),
+        "wick_koszul_sign": str(pairing.koszul_sign),
+        "source_status": "PHYSICAL" if request.request_kind is RequestKind.PHYSICAL_PARTIAL_CONTRACTION else "STRUCTURAL",
+        "notation_schema_hash": request.schema_hash,
+        "orientation": request.orientation,
+        "external_fermion_word": ",".join(request.external_fermion_word),
+        "external_koszul_sign": str(request.external_koszul_sign),
+        "orientation_external_subsign": str(
+            dict(request.orientation_sign_ledger)["external_subword"]
+        ),
+        "orientation_quantum_subsign": str(
+            dict(request.orientation_sign_ledger)["quantum_subword"]
+        ),
+        **typed_metadata,
+    }
     graph = GraphIR(
         f"{request.request_id}__pairing_{serial:03d}",
         vertices,
@@ -917,21 +988,7 @@ def _build_graph(
         tuple(sorted(internal_edges, key=lambda edge: edge.edge_id)),
         external_legs,
         (request.loop_momentum,),
-        tuple(
-            sorted(
-                {
-                    "request_id": request.request_id,
-                    "request_kind": request.request_kind.value,
-                    "pairing_signature": json.dumps(pairing.signature()),
-                    "wick_koszul_sign": str(pairing.koszul_sign),
-                    "source_status": "PHYSICAL" if request.request_kind is RequestKind.PHYSICAL_PARTIAL_CONTRACTION else "STRUCTURAL",
-                    "notation_schema_hash": request.schema_hash,
-                    "orientation": request.orientation,
-                    "external_fermion_word": ",".join(request.external_fermion_word),
-                    "external_koszul_sign": str(request.external_koszul_sign),
-                }.items()
-            )
-        ),
+        tuple(sorted(graph_metadata.items())),
     )
     graph.assert_linear_momentum_routing()
     if set(used_bindings) != set(binding_by_id):
@@ -1093,6 +1150,7 @@ def _amplitude_factors(
 ) -> tuple[AmplitudeFactor, ...]:
     propagators = {item.rule_id: item for item in request.propagators}
     bindings = {item.binding_id: item for item in request.momentum_bindings}
+    orientation_sign_ledger = dict(request.orientation_sign_ledger)
     factors: list[AmplitudeFactor] = [
         AmplitudeFactor(
             "F_wick",
@@ -1102,12 +1160,41 @@ def _amplitude_factors(
             ("scripts/step5_graph_ir.py:enumerate_wick_pairings",),
         ),
         AmplitudeFactor(
-            "F_external_koszul",
-            "EXTERNAL_KOSZUL",
-            str(request.external_koszul_sign),
-            ExactCoefficient(request.external_koszul_sign),
+            "F_orientation_external_subword",
+            "ORIENTATION_KOSZUL_SUBSIGN",
+            str(orientation_sign_ledger["external_subword"]),
+            ExactCoefficient(orientation_sign_ledger["external_subword"]),
             request.origins,
-            (("ordered_external_fermion_word", ",".join(request.external_fermion_word)),),
+            (
+                ("subword", "external"),
+                ("canonical_word", ",".join(request.external_fermion_word)),
+            ),
+        ),
+        AmplitudeFactor(
+            "F_orientation_quantum_subword",
+            "ORIENTATION_KOSZUL_SUBSIGN",
+            str(orientation_sign_ledger["quantum_subword"]),
+            ExactCoefficient(orientation_sign_ledger["quantum_subword"]),
+            request.origins,
+            (("subword", "odd derivative-dressed quantum word"),),
+        ),
+        AmplitudeFactor(
+            "F_orientation_total",
+            "ORIENTATION_TOTAL_AUDIT_ONLY",
+            str(request.external_koszul_sign),
+            ExactCoefficient(1),
+            request.origins,
+            (
+                (
+                    "external_subsign",
+                    str(orientation_sign_ledger["external_subword"]),
+                ),
+                (
+                    "quantum_subsign",
+                    str(orientation_sign_ledger["quantum_subword"]),
+                ),
+                ("product", str(request.external_koszul_sign)),
+            ),
         ),
         AmplitudeFactor(
             "F_aut",
@@ -1341,6 +1428,7 @@ def compile_request(
                 request.orientation,
                 request.external_fermion_word,
                 request.external_koszul_sign,
+                request.orientation_sign_ledger,
                 representative,
                 canonical_key,
                 _orientation_signature(representative, request),
@@ -1380,6 +1468,10 @@ def _color(label: str) -> IndexSlot:
     return IndexSlot(IndexSpace.COLOR_ADJOINT, label, Variance.UP)
 
 
+def _color_down(label: str) -> IndexSlot:
+    return IndexSlot(IndexSpace.COLOR_ADJOINT, label, Variance.DOWN)
+
+
 def _undotted(label: str, variance: Variance = Variance.DOWN) -> IndexSlot:
     return IndexSlot(IndexSpace.UNDOTTED, label, variance)
 
@@ -1400,13 +1492,13 @@ TILDE_W_FIELD = FieldType(
     "TildeW_dot_alpha",
     Statistics.FERMION,
     Chirality.ANTICHIRAL,
-    (_color("D"), _dotted("dot_alpha")),
+    (_color("D"), _dotted("dot_alpha", Variance.DOWN)),
 )
 WW_SOURCE_FIELD = FieldType(
     "Source[nabla_-(X^A X^B)]",
-    Statistics.BOSON,
+    Statistics.FERMION,
     Chirality.UNCONSTRAINED,
-    (_color("A"), _color("B")),
+    (_color_down("A"), _color_down("B")),
 )
 
 
@@ -1419,12 +1511,13 @@ def _ww_seed_request(
     if orientation not in ("DIRECT", "REFLECTED"):
         raise ValueError(orientation)
     left_letter, right_letter = ("A", "B") if orientation == "DIRECT" else ("B", "A")
-    external_word = (
-        ("TildeW_dot_alpha", "W_plus")
+    external_word = ("TildeW_dot_alpha", "W_plus")
+    orientation_sign_ledger = (
+        (("external_subword", 1), ("quantum_subword", 1))
         if orientation == "DIRECT"
-        else ("W_plus", "TildeW_dot_alpha")
+        else (("external_subword", -1), ("quantum_subword", -1))
     )
-    external_koszul_sign = 1 if orientation == "DIRECT" else -1
+    external_koszul_sign = 1
 
     insertion = VertexSpec(
         "vI",
@@ -1488,7 +1581,7 @@ def _ww_seed_request(
                 "-q",
                 "D",
                 physical_external_momentum="q",
-                spinor_indices=(_dotted("dot_alpha"),),
+                spinor_indices=(_dotted("dot_alpha", Variance.DOWN),),
                 origin="5.53e",
                 notation_port_spec="TildeW_B",
                 notation_sector="BACKGROUND",
@@ -1576,6 +1669,7 @@ def _ww_seed_request(
         orientation,
         external_word,
         external_koszul_sign,
+        orientation_sign_ledger,
     )
 
 
@@ -1586,7 +1680,7 @@ def ww_seed_request(schema: pipeline_ir.NotationSchema) -> DiagramRequest:
 
 
 def ww_reflected_seed_request(schema: pipeline_ir.NotationSchema) -> DiagramRequest:
-    """Reflected WW orientation with its explicit odd-odd external permutation."""
+    """Reflected WW orientation with external and quantum sub-sign replay."""
 
     return _ww_seed_request(schema, "REFLECTED")
 

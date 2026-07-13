@@ -1,0 +1,27 @@
+{
+  "anomaly_coefficient": "NOT_ACCEPTED",
+  "fail_closed_gates": [
+    "OPEN_CONTACT_001",
+    "OPEN_CONTACT_002",
+    "OPEN_CONTACT_003",
+    "OPEN_CONTACT_004",
+    "OPEN_CONTACT_005",
+    "OPEN_CONTACT_006",
+    "OPEN_CONTACT_007",
+    "OPEN_CONTACT_008",
+    "OPEN_QCONTACT_009",
+    "OPEN_QCONTACT_010"
+  ],
+  "failed_schema_invariants": [],
+  "generated_sha256": "1101b64a140db7afbc67e2e3f93572f025a4ff281ce4565c126eda6c17e8af66",
+  "ordinary_contact_UV_pole": "NOT_COMPUTED",
+  "resolved_gates": [],
+  "schema": "Step5WWContactReplayAudit.v2",
+  "scope_of_invariants": "serialization, row incidence, structural census, and fail-closed boundaries; not a contact amplitude proof",
+  "status": "FAIL_CLOSED_PHYSICAL_CONTACT_FAMILY_WITH_SCHEMA_INVARIANTS",
+  "tau_channel": "RETAINED_OPEN",
+  "totals": {
+    "failed": 0,
+    "schema_invariants": 19
+  }
+}

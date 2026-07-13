@@ -1,0 +1,477 @@
+{
+  "acceptance_status": "PASS_REFLECTION_SOURCE_DERIVATIVE_TYPE_GATES_CONTACT_REPLAY_OPEN",
+  "checks": {
+    "D_algebra_external_token_is_covariant_vector_derivative": true,
+    "D_transfer_is_orientation_independent": true,
+    "direct_and_reflected_graph_external_words_are_identical": true,
+    "direct_and_reflected_vertex_orders_are_identical": true,
+    "epsilon_down_times_up_is_identity": true,
+    "epsilon_up_times_down_is_identity": true,
+    "external_and_quantum_reversals_cancel": true,
+    "external_only_reversal_has_minus_sign": true,
+    "full_even_vertex_block_reflection_has_plus_sign": true,
+    "graphir_source_dual_color_slots_are_down": true,
+    "graphir_source_is_fermionic": true,
+    "graphir_tildeW_port_is_lower_dotted": true,
+    "legacy_invalid_spinor_derivative_type_is_absent": true,
+    "local_seed_is_symmetric": true,
+    "locked_tildeW_cubic_port_is_lower_dotted": true,
+    "lower_upper_equals_upper_lower_for_even_Y": true,
+    "lower_upper_reversed_variance_has_epsilon_minus": true,
+    "physical_insertion_parity_is_odd": true,
+    "quantum_odd_word_reversal_has_minus_sign": true,
+    "rejected_external_only_minus_has_zero_Sym2_projection": true,
+    "rejected_external_only_minus_is_AB_antisymmetric": true,
+    "repaired_plus_word_is_AB_symmetric": true,
+    "repaired_plus_word_survives_Sym2_projection": true,
+    "source_port_is_external_J_leg_not_the_insertion_vertex": true,
+    "specialized_code_replays_reflected_full_sign_plus_one": true,
+    "specialized_reflection_subsigns_are_both_minus_one": true
+  },
+  "coefficient_status": "NOT_EVALUATED_BY_THIS_AUDIT",
+  "color_and_projection": {
+    "color_swap_rule": "F_BADE=F_ABED",
+    "definitions": {
+      "F_ABDE": "c_ACD*c_BCE",
+      "S_DE": "TildeW^D_dot_a*Y^(E dot_a)",
+      "Y^(E dot_a)": "epsilon^(dot_a dot_b)*mathcalD_(+ dot_b)X^E"
+    },
+    "rejected_external_only_minus": {
+      "AB_coefficients": {
+        "S_DE": 1,
+        "S_ED": -1
+      },
+      "Alt2_projection": {
+        "S_DE": "1",
+        "S_ED": "-1"
+      },
+      "BA_coefficients_after_dummy_relabelling": {
+        "S_DE": -1,
+        "S_ED": 1
+      },
+      "Sym2_projection": {
+        "S_DE": "0",
+        "S_ED": "0"
+      },
+      "verdict": "KILLED_BY_PHYSICAL_SYM2_QUOTIENT"
+    },
+    "repaired_plus": {
+      "AB_coefficients": {
+        "S_DE": 1,
+        "S_ED": 1
+      },
+      "BA_coefficients_after_dummy_relabelling": {
+        "S_DE": 1,
+        "S_ED": 1
+      },
+      "Sym2_projection": {
+        "S_DE": "1",
+        "S_ED": "1"
+      },
+      "operator_word": "c_ACD*c_BCE*[TildeW^D_dot_a*mathcalD_+^(dot_a)X^E+mathcalD_+^(dot_a)X^D*TildeW^E_dot_a]",
+      "verdict": "SYMMETRIC_OPERATOR_WORD_REQUIRED"
+    }
+  },
+  "derivative_type_audit": {
+    "D_algebra_external_token": "i*p_(a dot_b)*W_plus",
+    "covariant_completion": "Y^(A dot_a)=mathcalD_+^(dot_a)X^A",
+    "legacy_symbol": "nabla_+^(dot_a)X",
+    "legacy_verdict": "TYPE_INVALID_DOTTED_OUTPUT_ON_UNDOTTED_SPINOR_DERIVATIVE",
+    "spinor_derivative": {
+      "dotted_output_allowed": false,
+      "index_space": "S_L",
+      "parity": 1,
+      "plus_component": "nabla_+",
+      "symbol": "nabla_a"
+    },
+    "vector_derivative": {
+      "index_space": "S_L tensor S_R",
+      "parity": 0,
+      "raised_dotted_component": "mathcalD_+^(dot_a)=epsilon^(dot_a dot_b)*mathcalD_(+ dot_b)",
+      "symbol": "mathcalD_(a dot_a)"
+    }
+  },
+  "dotted_port_type_audit": {
+    "current_graphir_tildeW_slots": {
+      "DIRECT": {
+        "label": "dot_alpha",
+        "variance": "DOWN"
+      },
+      "REFLECTED": {
+        "label": "dot_alpha",
+        "variance": "DOWN"
+      }
+    },
+    "locked_cubic_port": "TildeW_dot_a*barD^(dot_a)",
+    "required_tildeW_variance": "DOWN",
+    "required_vector_derivative_variance": "UP",
+    "scheduled_compiler_behavior": "retains both dotted labels and UP/DOWN variance in every normal-form numerator factor",
+    "verdict": "GRAPHIR_TILDEW_VARIANCE_REPAIRED_DOWN"
+  },
+  "epsilon": {
+    "W_down_Y_up": -1,
+    "Y_down_W_up": 1,
+    "Y_up_W_down": -1,
+    "epsilon_down": [
+      [
+        0,
+        -1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "epsilon_up": [
+      [
+        0,
+        1
+      ],
+      [
+        -1,
+        0
+      ]
+    ],
+    "generic_identities": [
+      "W_dot0*Y_dot1-W_dot1*Y_dot0",
+      "Y^dot_a W_dot_a = W_dot_a Y^dot_a because |Y|=0",
+      "Y_dot_a W^dot_a = -W_dot_a Y^dot_a"
+    ],
+    "w_lower_witness": [
+      2,
+      3
+    ],
+    "w_upper_witness": [
+      3,
+      -2
+    ],
+    "y_lower_witness": [
+      5,
+      7
+    ],
+    "y_upper_witness": [
+      7,
+      -5
+    ]
+  },
+  "findings": [
+    {
+      "code": "REFLECTED_FULL_ODD_WORD_SIGN_REPAIRED",
+      "evidence": "s_external=-1 and s_quantum=-1 give s_reflected=+1",
+      "severity": "CLOSED",
+      "status": "CLOSED"
+    },
+    {
+      "code": "REFLECTED_CANONICAL_GRAPHIR_WORD_REPAIRED",
+      "evidence": "GraphIR and AmplitudeIR retain canonical (TildeW,W) in both orientations",
+      "severity": "CLOSED",
+      "status": "CLOSED"
+    },
+    {
+      "code": "TYPED_CONTACT_REPLAY_AFTER_REPAIR",
+      "evidence": "GraphIR, AmplitudeIR, and sixteen triangle rows are regenerated; contact coefficients remain invalidated pending typed replay",
+      "severity": "P1",
+      "status": "OPEN"
+    },
+    {
+      "code": "WW_SOURCE_STATISTICS_REPAIRED_FERMION",
+      "evidence": "|nabla_-(X^A X^B)|=1, so an even source coupling requires |J_(AB)|=1; GraphIR source statistics are FERMION",
+      "severity": "CLOSED",
+      "status": "CLOSED"
+    },
+    {
+      "code": "COVARIANT_VECTOR_DERIVATIVE_TOKEN_REPAIRED",
+      "evidence": "the exact D-algebra emits i*p_(a dot_b), whose covariant completion is mathcalD_(a dot_b)",
+      "severity": "CLOSED",
+      "status": "CLOSED"
+    },
+    {
+      "code": "TILDEW_DOTTED_VARIANCE_REPAIRED_DOWN",
+      "evidence": "locked TildeW_dot_a*barD^(dot_a) port is DOWN in both orientations",
+      "severity": "CLOSED",
+      "status": "CLOSED"
+    }
+  ],
+  "inputs": {
+    "contracts/foundations/step-01-supersymmetry-commutator.md": "a73d8017c2d07de578f4f98ea25054033b0384ebffb6b426650a22f404c3231b",
+    "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md": "5b24afd355ef0d471e859c37a24a15632fcebdcad3aa654d30dc098647939ab5",
+    "scripts/step5_ww_seed.py": "7f61be29c0fff97e9586375d74fdd37889fab4475bdaa998c6fc73654667de0f"
+  },
+  "orientation": {
+    "derived_fixed_vertex_order_signs": {
+      "DIRECT": 1,
+      "REFLECTED": 1
+    },
+    "graded_block_replay": {
+      "definitions": {
+        "Q_D": "odd D-dressed bosonic-V quantum word",
+        "Q_barD": "odd barD-dressed bosonic-V quantum word"
+      },
+      "direct_full_word": [
+        "TildeW",
+        "Q_barD",
+        "W",
+        "Q_D"
+      ],
+      "external_only_inversions": 1,
+      "external_only_sign": -1,
+      "factorization_check": "(-1)_external*(-1)_quantum=(+1)_full_even_block",
+      "full_word_inversions": 4,
+      "full_word_sign": 1,
+      "quantum_only_inversions": 1,
+      "quantum_only_sign": -1,
+      "reflected_full_block_word": [
+        "W",
+        "Q_D",
+        "TildeW",
+        "Q_barD"
+      ],
+      "specialized_compiler_status": "external and quantum odd-subword signs are retained separately; their product is the full reflected sign",
+      "token_parities": {
+        "Q_D": 1,
+        "Q_barD": 1,
+        "TildeW": 1,
+        "W": 1
+      }
+    },
+    "graphir_external_words": {
+      "DIRECT": [
+        "TildeW_dot_alpha",
+        "W_plus"
+      ],
+      "REFLECTED": [
+        "TildeW_dot_alpha",
+        "W_plus"
+      ]
+    },
+    "ordered_vertex_kinds": {
+      "DIRECT": [
+        "COMPOSITE_INSERTION_I2_WW",
+        "BACKGROUND_CUBIC_TILDE_W",
+        "BACKGROUND_CUBIC_W"
+      ],
+      "REFLECTED": [
+        "COMPOSITE_INSERTION_I2_WW",
+        "BACKGROUND_CUBIC_TILDE_W",
+        "BACKGROUND_CUBIC_W"
+      ]
+    },
+    "reason": "the source-coupled insertion and both action vertices are even; all internal V legs are bosonic; the reflected attachment preserves the fixed GraphIR vertex/external order",
+    "specialized_sign_audits": {
+      "DIRECT": {
+        "D_transfer": {
+          "IBP_outer_sign": -1,
+          "graded_Leibniz_prefix_sign": -1,
+          "output": "X^E=nabla_+W_+^E",
+          "product": 1,
+          "target_prefix_parity": 1
+        },
+        "canonical_full_odd_word": [
+          "TildeW",
+          "Q_barD",
+          "W",
+          "Q_D"
+        ],
+        "canonical_pre_D_word": [
+          "TildeW",
+          "W"
+        ],
+        "canonical_quantum_odd_word": [
+          "Q_barD",
+          "Q_D"
+        ],
+        "declared_full_odd_word": [
+          "TildeW",
+          "Q_barD",
+          "W",
+          "Q_D"
+        ],
+        "declared_pre_D_word": [
+          "TildeW",
+          "W"
+        ],
+        "declared_quantum_odd_word": [
+          "Q_barD",
+          "Q_D"
+        ],
+        "external_fermion_permutation_sign": 1,
+        "full_block_parities": {
+          "TildeW_QbarD": 0,
+          "W_QD": 0
+        },
+        "full_odd_word_inversions": 0,
+        "full_odd_word_permutation_sign": 1,
+        "odd_odd_inversions": 0,
+        "orientation": "DIRECT",
+        "parities": {
+          "D": 1,
+          "Q_D": 1,
+          "Q_barD": 1,
+          "TildeW": 1,
+          "W": 1,
+          "X=D_W": 0
+        },
+        "quantum_odd_word_inversions": 0,
+        "quantum_odd_word_permutation_sign": 1,
+        "subsign_product": 1,
+        "total_orientation_sign": 1
+      },
+      "REFLECTED": {
+        "D_transfer": {
+          "IBP_outer_sign": -1,
+          "graded_Leibniz_prefix_sign": -1,
+          "output": "X^E=nabla_+W_+^E",
+          "product": 1,
+          "target_prefix_parity": 1
+        },
+        "canonical_full_odd_word": [
+          "TildeW",
+          "Q_barD",
+          "W",
+          "Q_D"
+        ],
+        "canonical_pre_D_word": [
+          "TildeW",
+          "W"
+        ],
+        "canonical_quantum_odd_word": [
+          "Q_barD",
+          "Q_D"
+        ],
+        "declared_full_odd_word": [
+          "W",
+          "Q_D",
+          "TildeW",
+          "Q_barD"
+        ],
+        "declared_pre_D_word": [
+          "W",
+          "TildeW"
+        ],
+        "declared_quantum_odd_word": [
+          "Q_D",
+          "Q_barD"
+        ],
+        "external_fermion_permutation_sign": -1,
+        "full_block_parities": {
+          "TildeW_QbarD": 0,
+          "W_QD": 0
+        },
+        "full_odd_word_inversions": 4,
+        "full_odd_word_permutation_sign": 1,
+        "odd_odd_inversions": 1,
+        "orientation": "REFLECTED",
+        "parities": {
+          "D": 1,
+          "Q_D": 1,
+          "Q_barD": 1,
+          "TildeW": 1,
+          "W": 1,
+          "X=D_W": 0
+        },
+        "quantum_odd_word_inversions": 1,
+        "quantum_odd_word_permutation_sign": -1,
+        "subsign_product": 1,
+        "total_orientation_sign": 1
+      }
+    },
+    "vertex_parity_certificate": {
+      "TildeW_cubic": "|TildeW|+|barD|=1+1=0 mod 2",
+      "W_cubic": "|W|+|D|=1+1=0 mod 2",
+      "internal_Wick_fields": "V only; |V|=0",
+      "source_coupled_insertion": "|J|+|nabla_-|+2|X|=1+1+0=0 mod 2"
+    }
+  },
+  "schema": "STEP5_ONE_LOOP_REFLECTION_QUOTIENT_AUDIT_V1",
+  "scope": "SIGN_INDEX_VARIANCE_AND_LOCAL_SYM2_ONLY_NO_LOOP_COEFFICIENT",
+  "source_quotient": {
+    "AB_normal_form": [
+      [
+        [
+          "dX",
+          "A"
+        ],
+        [
+          "X",
+          "B"
+        ]
+      ],
+      [
+        [
+          "dX",
+          "B"
+        ],
+        [
+          "X",
+          "A"
+        ]
+      ]
+    ],
+    "BA_normal_form": [
+      [
+        [
+          "dX",
+          "A"
+        ],
+        [
+          "X",
+          "B"
+        ]
+      ],
+      [
+        [
+          "dX",
+          "B"
+        ],
+        [
+          "X",
+          "A"
+        ]
+      ]
+    ],
+    "X_parity": 0,
+    "coupled_source_vertex_parity": 0,
+    "current_graphir_source_color_variances": {
+      "DIRECT": [
+        "DOWN",
+        "DOWN"
+      ],
+      "REFLECTED": [
+        "DOWN",
+        "DOWN"
+      ]
+    },
+    "current_graphir_source_statistics": {
+      "DIRECT": "FERMION",
+      "REFLECTED": "FERMION"
+    },
+    "current_graphir_source_type_verdict": "REPAIRED_FERMION",
+    "dX_parity": 1,
+    "insertion_parity": 1,
+    "momentum_exchange_rule": "(A,p1)<->(B,p2)",
+    "nabla_minus_parity": 1,
+    "physical_color_space": "Sym^2(Adj)",
+    "required_source_coupling_parity": 1,
+    "source_port_semantics": {
+      "DIRECT": {
+        "attached_half_edge": "Abar_BW_I_source",
+        "attached_vertex_kind": "COMPOSITE_INSERTION_I2_WW",
+        "external_leg_id": "L_source",
+        "field_name": "Source[nabla_-(X^A X^B)]",
+        "verdict": "J_LEG; the composite insertion is the attached vertex, not this external field"
+      },
+      "REFLECTED": {
+        "attached_half_edge": "Bbar_AW_I_source",
+        "attached_vertex_kind": "COMPOSITE_INSERTION_I2_WW",
+        "external_leg_id": "L_source",
+        "field_name": "Source[nabla_-(X^A X^B)]",
+        "verdict": "J_LEG; the composite insertion is the attached vertex, not this external field"
+      }
+    }
+  },
+  "totals": {
+    "exact": 26,
+    "failed": 0,
+    "passed": 26
+  }
+}

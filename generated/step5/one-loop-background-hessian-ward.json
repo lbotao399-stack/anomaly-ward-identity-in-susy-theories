@@ -1,0 +1,198 @@
+{
+  "adjoint_trace_witness": {
+    "checks": {
+      "antisymmetric": true,
+      "trace_zero": true
+    },
+    "matrix": [
+      [
+        {
+          "im": "0",
+          "re": "0"
+        },
+        {
+          "im": "0",
+          "re": "2"
+        },
+        {
+          "im": "0",
+          "re": "-3"
+        }
+      ],
+      [
+        {
+          "im": "0",
+          "re": "-2"
+        },
+        {
+          "im": "0",
+          "re": "0"
+        },
+        {
+          "im": "0",
+          "re": "5"
+        }
+      ],
+      [
+        {
+          "im": "0",
+          "re": "3"
+        },
+        {
+          "im": "0",
+          "re": "-5"
+        },
+        {
+          "im": "0",
+          "re": "0"
+        }
+      ]
+    ]
+  },
+  "checks": {
+    "adjoint.antisymmetric": true,
+    "adjoint.trace_zero": true,
+    "covariance.endomorphism_transforms_by_similarity": true,
+    "covariance.green_transforms_by_similarity": true,
+    "covariance.left_inverse_after_transform": true,
+    "covariance.one_loop_trace_invariant": true,
+    "covariance.representation_determinant_one": true,
+    "covariance.representation_left_inverse": true,
+    "covariance.representation_right_inverse": true,
+    "covariance.right_inverse_after_transform": true,
+    "covariance.source_saturated_insertion_similarity": true,
+    "source_and_insertion_parity_even": true
+  },
+  "covariance_witness": {
+    "checks": {
+      "endomorphism_transforms_by_similarity": true,
+      "green_transforms_by_similarity": true,
+      "left_inverse_after_transform": true,
+      "one_loop_trace_invariant": true,
+      "representation_determinant_one": true,
+      "representation_left_inverse": true,
+      "representation_right_inverse": true,
+      "right_inverse_after_transform": true,
+      "source_saturated_insertion_similarity": true
+    },
+    "hessian": [
+      [
+        {
+          "im": "0",
+          "re": "5"
+        },
+        {
+          "im": "0",
+          "re": "2"
+        }
+      ],
+      [
+        {
+          "im": "0",
+          "re": "2"
+        },
+        {
+          "im": "0",
+          "re": "4"
+        }
+      ]
+    ],
+    "insertion": [
+      [
+        {
+          "im": "0",
+          "re": "1"
+        },
+        {
+          "im": "0",
+          "re": "2"
+        }
+      ],
+      [
+        {
+          "im": "0",
+          "re": "-1"
+        },
+        {
+          "im": "0",
+          "re": "3"
+        }
+      ]
+    ],
+    "pairing": [
+      [
+        {
+          "im": "0",
+          "re": "2"
+        },
+        {
+          "im": "0",
+          "re": "1"
+        }
+      ],
+      [
+        {
+          "im": "0",
+          "re": "1"
+        },
+        {
+          "im": "0",
+          "re": "3"
+        }
+      ]
+    ],
+    "representation": [
+      [
+        {
+          "im": "0",
+          "re": "1"
+        },
+        {
+          "im": "0",
+          "re": "1"
+        }
+      ],
+      [
+        {
+          "im": "0",
+          "re": "1"
+        },
+        {
+          "im": "0",
+          "re": "2"
+        }
+      ]
+    ]
+  },
+  "equations": {
+    "endomorphism": "H'=R H R^(-1); H=Omega^(-1) K",
+    "functional_invariance": "Sigma_(J')[B',Q']=Sigma_J[B,Q]; Q'=R Q",
+    "green": "G'=R G R^(-1)",
+    "measure": "Tr_Adj(ad_eta)=eta^C kappa^(AB)c_(C A B)=0",
+    "one_loop": "Gamma_J^(1)=(1/2) STr(G I[J])",
+    "pairing": "Omega'=R^(-st) Omega R^(-1)",
+    "raw_hessian": "K'=R^(-st) K R^(-1)",
+    "source_saturated_insertion": "I[J]'=R I[J] R^(-1)"
+  },
+  "external_results_imported": false,
+  "project_inputs": [
+    "3D.80 background-quantum split",
+    "3D.81 homogeneous quantum background transformation",
+    "3D.86 background-covariant gauge condition",
+    "3D.88a background-covariant nonminimal kernel",
+    "source-left odd dual transformation derived in the Step5 audit"
+  ],
+  "schema": "Step5OneLoopBackgroundHessianWard.v1",
+  "scope": "STEP5A_REFERENCE_FLAT_SOURCE_SATURATED_FUNCTIONAL",
+  "status": "PASS_FUNCTIONAL_LEVEL_BACKGROUND_COVARIANCE",
+  "verdicts": {
+    "anomaly_coefficient": "NOT_ACCEPTED",
+    "finite_bv_density_equivalence": "STEP5C_OPEN",
+    "full_chiral_vector_measure_bridge": "OPEN",
+    "functional_background_hessian_covariance": "PASS",
+    "quadratic_jet_injectivity": "OPEN_RELATION_MATRIX",
+    "reference_flat_adjoint_coefficient_measure": "PASS",
+    "source_saturated_one_loop_background_ward_identity": "PASS",
+    "vertex_by_vertex_graphir_intertwining": "OPEN_COMPILER_REPLAY"
+  }
+}

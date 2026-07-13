@@ -339,14 +339,22 @@
         "COLOR_ADJOINT",
         "COLOR_ADJOINT"
       ],
+      "index_variances": [
+        "DOWN",
+        "DOWN"
+      ],
       "name": "Source[nabla_-(X^A X^B)]",
-      "statistics": "BOSON"
+      "statistics": "FERMION"
     },
     {
       "chirality": "ANTICHIRAL",
       "index_spaces": [
         "COLOR_ADJOINT",
         "DOTTED"
+      ],
+      "index_variances": [
+        "UP",
+        "DOWN"
       ],
       "name": "TildeW_dot_alpha",
       "statistics": "FERMION"
@@ -356,6 +364,9 @@
       "index_spaces": [
         "COLOR_ADJOINT"
       ],
+      "index_variances": [
+        "UP"
+      ],
       "name": "V",
       "statistics": "BOSON"
     },
@@ -364,6 +375,10 @@
       "index_spaces": [
         "COLOR_ADJOINT",
         "UNDOTTED"
+      ],
+      "index_variances": [
+        "UP",
+        "DOWN"
       ],
       "name": "W_plus",
       "statistics": "FERMION"

@@ -1,0 +1,715 @@
+{
+  "N2_rows": [
+    {
+      "dimension_twice": 9,
+      "n_barnabla": 1,
+      "n_nabla": 0,
+      "n_vector": 1,
+      "n_w": 0,
+      "n_wtilde": 2,
+      "parity": 1,
+      "r_charge": -1,
+      "target_spin_multiplicity_free_ordered": 0
+    },
+    {
+      "dimension_twice": 9,
+      "n_barnabla": 2,
+      "n_nabla": 1,
+      "n_vector": 0,
+      "n_w": 0,
+      "n_wtilde": 2,
+      "parity": 1,
+      "r_charge": -1,
+      "target_spin_multiplicity_free_ordered": 0
+    },
+    {
+      "dimension_twice": 9,
+      "n_barnabla": 0,
+      "n_nabla": 1,
+      "n_vector": 1,
+      "n_w": 1,
+      "n_wtilde": 1,
+      "parity": 1,
+      "r_charge": -1,
+      "target_spin_multiplicity_free_ordered": 1
+    },
+    {
+      "dimension_twice": 9,
+      "n_barnabla": 1,
+      "n_nabla": 2,
+      "n_vector": 0,
+      "n_w": 1,
+      "n_wtilde": 1,
+      "parity": 1,
+      "r_charge": -1,
+      "target_spin_multiplicity_free_ordered": 1
+    },
+    {
+      "dimension_twice": 9,
+      "n_barnabla": 0,
+      "n_nabla": 3,
+      "n_vector": 0,
+      "n_w": 2,
+      "n_wtilde": 0,
+      "parity": 1,
+      "r_charge": -1,
+      "target_spin_multiplicity_free_ordered": 4
+    }
+  ],
+  "N3_proof": {
+    "excluded_from_target_spin": true,
+    "free_ordered_target_spin_multiplicity": 0,
+    "solution_count": 1,
+    "unique_content": "W Wtilde Wtilde"
+  },
+  "WW_N3_eom_reduction": {
+    "eom_identity": "N_c E=-(1/2)N^2 W_c",
+    "global_ordered_ibp_E_ideal_membership_certified": false,
+    "labeled_distributions": [
+      {
+        "W1_derivatives": [
+          "a",
+          "b",
+          "d"
+        ],
+        "W2_derivatives": [],
+        "assignment": [
+          1,
+          1,
+          1
+        ],
+        "eom_carrier": "W1",
+        "full_ordered_product_coefficient_certified": false,
+        "local_differential_E_ideal_membership": true,
+        "local_replacement": "N_a N_b N_d W_c=-epsilon_{bd} N_a N_c E"
+      },
+      {
+        "W1_derivatives": [
+          "a",
+          "b"
+        ],
+        "W2_derivatives": [
+          "d"
+        ],
+        "assignment": [
+          1,
+          1,
+          2
+        ],
+        "eom_carrier": "W1",
+        "full_ordered_product_coefficient_certified": false,
+        "local_differential_E_ideal_membership": true,
+        "local_replacement": "N_a N_b W_c=-epsilon_{ab} N_c E"
+      },
+      {
+        "W1_derivatives": [
+          "a",
+          "d"
+        ],
+        "W2_derivatives": [
+          "b"
+        ],
+        "assignment": [
+          1,
+          2,
+          1
+        ],
+        "eom_carrier": "W1",
+        "full_ordered_product_coefficient_certified": false,
+        "local_differential_E_ideal_membership": true,
+        "local_replacement": "N_a N_d W_c=-epsilon_{ad} N_c E"
+      },
+      {
+        "W1_derivatives": [
+          "a"
+        ],
+        "W2_derivatives": [
+          "b",
+          "d"
+        ],
+        "assignment": [
+          1,
+          2,
+          2
+        ],
+        "eom_carrier": "W2",
+        "full_ordered_product_coefficient_certified": false,
+        "local_differential_E_ideal_membership": true,
+        "local_replacement": "N_b N_d W_c=-epsilon_{bd} N_c E"
+      },
+      {
+        "W1_derivatives": [
+          "b",
+          "d"
+        ],
+        "W2_derivatives": [
+          "a"
+        ],
+        "assignment": [
+          2,
+          1,
+          1
+        ],
+        "eom_carrier": "W1",
+        "full_ordered_product_coefficient_certified": false,
+        "local_differential_E_ideal_membership": true,
+        "local_replacement": "N_b N_d W_c=-epsilon_{bd} N_c E"
+      },
+      {
+        "W1_derivatives": [
+          "b"
+        ],
+        "W2_derivatives": [
+          "a",
+          "d"
+        ],
+        "assignment": [
+          2,
+          1,
+          2
+        ],
+        "eom_carrier": "W2",
+        "full_ordered_product_coefficient_certified": false,
+        "local_differential_E_ideal_membership": true,
+        "local_replacement": "N_a N_d W_c=-epsilon_{ad} N_c E"
+      },
+      {
+        "W1_derivatives": [
+          "d"
+        ],
+        "W2_derivatives": [
+          "a",
+          "b"
+        ],
+        "assignment": [
+          2,
+          2,
+          1
+        ],
+        "eom_carrier": "W2",
+        "full_ordered_product_coefficient_certified": false,
+        "local_differential_E_ideal_membership": true,
+        "local_replacement": "N_a N_b W_c=-epsilon_{ab} N_c E"
+      },
+      {
+        "W1_derivatives": [],
+        "W2_derivatives": [
+          "a",
+          "b",
+          "d"
+        ],
+        "assignment": [
+          2,
+          2,
+          2
+        ],
+        "eom_carrier": "W2",
+        "full_ordered_product_coefficient_certified": false,
+        "local_differential_E_ideal_membership": true,
+        "local_replacement": "N_a N_b N_d W_c=-epsilon_{bd} N_a N_c E"
+      }
+    ],
+    "local_block_E_ideal_membership_certified": true,
+    "spinor_pair_identity": "N_a N_b W_c=(1/2)epsilon_ab N^2 W_c=-epsilon_ab N_c E"
+  },
+  "candidate_spin_proof": {
+    "content": "W Wtilde N D",
+    "left_decomposition": "(1/2) tensor (1/2) tensor (1/2) = (3/2) + 2(1/2)",
+    "right_decomposition": "(1/2) tensor (1/2) = 0 + 1",
+    "target_multiplicity": 1
+  },
+  "dimension_exclusion": {
+    "N_ge_4_minimum_dimension_twice": 12,
+    "excluded": true,
+    "target_dimension_twice": 9
+  },
+  "diophantine_system": {
+    "dimension": "3(n_W+n_Wtilde)+n_N+n_B+2n_D=9",
+    "parity": "n_W+n_Wtilde+n_N+n_B=1 mod 2",
+    "r_charge": "n_W-n_Wtilde-n_N+n_B=-1",
+    "solution_count": 18
+  },
+  "letters": {
+    "B": {
+      "dimension_twice": 1,
+      "parity": 1,
+      "r": 1,
+      "spin_twice": [
+        0,
+        1
+      ]
+    },
+    "D": {
+      "dimension_twice": 2,
+      "parity": 0,
+      "r": 0,
+      "spin_twice": [
+        1,
+        1
+      ]
+    },
+    "N": {
+      "dimension_twice": 1,
+      "parity": 1,
+      "r": -1,
+      "spin_twice": [
+        1,
+        0
+      ]
+    },
+    "W": {
+      "dimension_twice": 3,
+      "parity": 1,
+      "r": 1,
+      "spin_twice": [
+        1,
+        0
+      ]
+    },
+    "Wtilde": {
+      "dimension_twice": 3,
+      "parity": 1,
+      "r": -1,
+      "spin_twice": [
+        0,
+        1
+      ]
+    }
+  },
+  "mixed_derivative_reduction": {
+    "antichiral_terminal_rule": "N_a Wtilde_dotc=0",
+    "antichiral_terminal_words": [
+      {
+        "input": [
+          "B:dot",
+          "N:a",
+          "N:b"
+        ],
+        "output": []
+      },
+      {
+        "input": [
+          "B:dot",
+          "N:b",
+          "N:a"
+        ],
+        "output": []
+      },
+      {
+        "input": [
+          "N:a",
+          "B:dot",
+          "N:b"
+        ],
+        "output": []
+      },
+      {
+        "input": [
+          "N:a",
+          "N:b",
+          "B:dot"
+        ],
+        "output": [
+          {
+            "coefficient": -2,
+            "word": [
+              "N:a",
+              "D:b,dot"
+            ]
+          }
+        ]
+      },
+      {
+        "input": [
+          "N:b",
+          "B:dot",
+          "N:a"
+        ],
+        "output": []
+      },
+      {
+        "input": [
+          "N:b",
+          "N:a",
+          "B:dot"
+        ],
+        "output": [
+          {
+            "coefficient": -2,
+            "word": [
+              "N:b",
+              "D:a,dot"
+            ]
+          }
+        ]
+      }
+    ],
+    "chiral_terminal_rule": "B_dot W_c=0",
+    "chiral_terminal_words": [
+      {
+        "input": [
+          "B:dot",
+          "N:a",
+          "N:b"
+        ],
+        "output": [
+          {
+            "coefficient": -2,
+            "word": [
+              "D:a,dot",
+              "N:b"
+            ]
+          },
+          {
+            "coefficient": 2,
+            "word": [
+              "N:a",
+              "D:b,dot"
+            ]
+          }
+        ]
+      },
+      {
+        "input": [
+          "B:dot",
+          "N:b",
+          "N:a"
+        ],
+        "output": [
+          {
+            "coefficient": -2,
+            "word": [
+              "D:b,dot",
+              "N:a"
+            ]
+          },
+          {
+            "coefficient": 2,
+            "word": [
+              "N:b",
+              "D:a,dot"
+            ]
+          }
+        ]
+      },
+      {
+        "input": [
+          "N:a",
+          "B:dot",
+          "N:b"
+        ],
+        "output": [
+          {
+            "coefficient": -2,
+            "word": [
+              "N:a",
+              "D:b,dot"
+            ]
+          }
+        ]
+      },
+      {
+        "input": [
+          "N:a",
+          "N:b",
+          "B:dot"
+        ],
+        "output": []
+      },
+      {
+        "input": [
+          "N:b",
+          "B:dot",
+          "N:a"
+        ],
+        "output": [
+          {
+            "coefficient": -2,
+            "word": [
+              "N:b",
+              "D:a,dot"
+            ]
+          }
+        ]
+      },
+      {
+        "input": [
+          "N:b",
+          "N:a",
+          "B:dot"
+        ],
+        "output": []
+      }
+    ],
+    "euclidean_mixed_anticommutator": "{N_a,B_dot}=-2 D_(a dot)",
+    "local_word_span_closes_on": [
+      "one N",
+      "one D"
+    ],
+    "product_leibniz_ibp_completion_certified": false
+  },
+  "open_gates": [
+    "DERIVATIVE_PLACEMENT_AND_GRADED_LEIBNIZ",
+    "COVARIANT_IBP_WITH_OPERATOR_ORDER",
+    "DERIVATIVE_COMMUTATOR_CURVATURE_CHILDREN",
+    "ORDERED_ADJ_AB_COLOR_RELATIONS",
+    "DRED_EVANESCENT_OPERATORS",
+    "SOURCE_PARTNER_AND_BRST_RELATIONS",
+    "PROJECT_R_WEIGHT_BINDING"
+  ],
+  "quadratic_filtration_boundary": {
+    "N_0_and_N_1_are_outside_filtered_sector": true,
+    "N_0_and_N_1_global_absence_proved": false
+  },
+  "r_grading": {
+    "definition": "r_f(W,Wtilde,N,B,D)=(+1,-1,-1,+1,0)",
+    "project_U1R_binding_certified": false,
+    "status": "TEMPORARY_FORMAL_DEFINITION"
+  },
+  "rank_statement": {
+    "candidate_free_ordered_spin_multiplicity_is_one": true,
+    "conditional_rank_one_theorem_certified": false,
+    "full_local_cohomology_rank_one_certified": false,
+    "rank_one_is_only_a_post_quotient_candidate": true
+  },
+  "schema": "STEP5_ONE_LOOP_PURE_GAUGE_COVARIANT_JET_CENSUS_V1",
+  "solutions_by_field_strength_degree": {
+    "0": [
+      {
+        "dimension_twice": 9,
+        "field_strength_degree": 0,
+        "n_barnabla": 0,
+        "n_nabla": 1,
+        "n_vector": 4,
+        "n_w": 0,
+        "n_wtilde": 0,
+        "parity": 1,
+        "r_charge": -1,
+        "target_spin_multiplicity_free_ordered": 8
+      },
+      {
+        "dimension_twice": 9,
+        "field_strength_degree": 0,
+        "n_barnabla": 1,
+        "n_nabla": 2,
+        "n_vector": 3,
+        "n_w": 0,
+        "n_wtilde": 0,
+        "parity": 1,
+        "r_charge": -1,
+        "target_spin_multiplicity_free_ordered": 8
+      },
+      {
+        "dimension_twice": 9,
+        "field_strength_degree": 0,
+        "n_barnabla": 2,
+        "n_nabla": 3,
+        "n_vector": 2,
+        "n_w": 0,
+        "n_wtilde": 0,
+        "parity": 1,
+        "r_charge": -1,
+        "target_spin_multiplicity_free_ordered": 8
+      },
+      {
+        "dimension_twice": 9,
+        "field_strength_degree": 0,
+        "n_barnabla": 3,
+        "n_nabla": 4,
+        "n_vector": 1,
+        "n_w": 0,
+        "n_wtilde": 0,
+        "parity": 1,
+        "r_charge": -1,
+        "target_spin_multiplicity_free_ordered": 8
+      },
+      {
+        "dimension_twice": 9,
+        "field_strength_degree": 0,
+        "n_barnabla": 4,
+        "n_nabla": 5,
+        "n_vector": 0,
+        "n_w": 0,
+        "n_wtilde": 0,
+        "parity": 1,
+        "r_charge": -1,
+        "target_spin_multiplicity_free_ordered": 8
+      }
+    ],
+    "1": [
+      {
+        "dimension_twice": 9,
+        "field_strength_degree": 1,
+        "n_barnabla": 0,
+        "n_nabla": 0,
+        "n_vector": 3,
+        "n_w": 0,
+        "n_wtilde": 1,
+        "parity": 1,
+        "r_charge": -1,
+        "target_spin_multiplicity_free_ordered": 2
+      },
+      {
+        "dimension_twice": 9,
+        "field_strength_degree": 1,
+        "n_barnabla": 1,
+        "n_nabla": 1,
+        "n_vector": 2,
+        "n_w": 0,
+        "n_wtilde": 1,
+        "parity": 1,
+        "r_charge": -1,
+        "target_spin_multiplicity_free_ordered": 2
+      },
+      {
+        "dimension_twice": 9,
+        "field_strength_degree": 1,
+        "n_barnabla": 2,
+        "n_nabla": 2,
+        "n_vector": 1,
+        "n_w": 0,
+        "n_wtilde": 1,
+        "parity": 1,
+        "r_charge": -1,
+        "target_spin_multiplicity_free_ordered": 2
+      },
+      {
+        "dimension_twice": 9,
+        "field_strength_degree": 1,
+        "n_barnabla": 3,
+        "n_nabla": 3,
+        "n_vector": 0,
+        "n_w": 0,
+        "n_wtilde": 1,
+        "parity": 1,
+        "r_charge": -1,
+        "target_spin_multiplicity_free_ordered": 2
+      },
+      {
+        "dimension_twice": 9,
+        "field_strength_degree": 1,
+        "n_barnabla": 0,
+        "n_nabla": 2,
+        "n_vector": 2,
+        "n_w": 1,
+        "n_wtilde": 0,
+        "parity": 1,
+        "r_charge": -1,
+        "target_spin_multiplicity_free_ordered": 4
+      },
+      {
+        "dimension_twice": 9,
+        "field_strength_degree": 1,
+        "n_barnabla": 1,
+        "n_nabla": 3,
+        "n_vector": 1,
+        "n_w": 1,
+        "n_wtilde": 0,
+        "parity": 1,
+        "r_charge": -1,
+        "target_spin_multiplicity_free_ordered": 4
+      },
+      {
+        "dimension_twice": 9,
+        "field_strength_degree": 1,
+        "n_barnabla": 2,
+        "n_nabla": 4,
+        "n_vector": 0,
+        "n_w": 1,
+        "n_wtilde": 0,
+        "parity": 1,
+        "r_charge": -1,
+        "target_spin_multiplicity_free_ordered": 4
+      }
+    ],
+    "2": [
+      {
+        "dimension_twice": 9,
+        "field_strength_degree": 2,
+        "n_barnabla": 1,
+        "n_nabla": 0,
+        "n_vector": 1,
+        "n_w": 0,
+        "n_wtilde": 2,
+        "parity": 1,
+        "r_charge": -1,
+        "target_spin_multiplicity_free_ordered": 0
+      },
+      {
+        "dimension_twice": 9,
+        "field_strength_degree": 2,
+        "n_barnabla": 2,
+        "n_nabla": 1,
+        "n_vector": 0,
+        "n_w": 0,
+        "n_wtilde": 2,
+        "parity": 1,
+        "r_charge": -1,
+        "target_spin_multiplicity_free_ordered": 0
+      },
+      {
+        "dimension_twice": 9,
+        "field_strength_degree": 2,
+        "n_barnabla": 0,
+        "n_nabla": 1,
+        "n_vector": 1,
+        "n_w": 1,
+        "n_wtilde": 1,
+        "parity": 1,
+        "r_charge": -1,
+        "target_spin_multiplicity_free_ordered": 1
+      },
+      {
+        "dimension_twice": 9,
+        "field_strength_degree": 2,
+        "n_barnabla": 1,
+        "n_nabla": 2,
+        "n_vector": 0,
+        "n_w": 1,
+        "n_wtilde": 1,
+        "parity": 1,
+        "r_charge": -1,
+        "target_spin_multiplicity_free_ordered": 1
+      },
+      {
+        "dimension_twice": 9,
+        "field_strength_degree": 2,
+        "n_barnabla": 0,
+        "n_nabla": 3,
+        "n_vector": 0,
+        "n_w": 2,
+        "n_wtilde": 0,
+        "parity": 1,
+        "r_charge": -1,
+        "target_spin_multiplicity_free_ordered": 4
+      }
+    ],
+    "3": [
+      {
+        "dimension_twice": 9,
+        "field_strength_degree": 3,
+        "n_barnabla": 0,
+        "n_nabla": 0,
+        "n_vector": 0,
+        "n_w": 1,
+        "n_wtilde": 2,
+        "parity": 1,
+        "r_charge": -1,
+        "target_spin_multiplicity_free_ordered": 0
+      }
+    ]
+  },
+  "status": "FAIL_CLOSED_PARTIAL_REDUCTION",
+  "target": {
+    "dimension": "9/2",
+    "dimension_twice": 9,
+    "open_color_carrier": "ORDERED_ADJ_AB_UNRESOLVED",
+    "parity": "odd",
+    "quadratic_filtration": "field-strength degree N>=2",
+    "r_charge": -1,
+    "spin": {
+      "jL_twice": 3,
+      "jR_twice": 0
+    }
+  }
+}

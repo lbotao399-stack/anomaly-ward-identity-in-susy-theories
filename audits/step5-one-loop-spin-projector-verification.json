@@ -1,0 +1,36 @@
+{
+  "artifact": "generated/step5/one-loop-spin-projector.json",
+  "certificate_status": "PASS",
+  "check_count": 35,
+  "exact_results": {
+    "candidate_spin": "3/2",
+    "chiral_closed_seed_component": "U_-;++++=-(4/5)t_+++",
+    "chiral_constrained_seed_spin_content": [
+      "3/2"
+    ],
+    "direct_sum_ranks": "10=6+4",
+    "epsilon_contractions": "PASS",
+    "rank_five_closure": "H_abcde=0",
+    "seed_left_weight": "3/2",
+    "trace_right_inverse": "PASS",
+    "tree_level_eom_identity": "I^AB=-(nabla_+E^A)X^B-X^A(nabla_+E^B)",
+    "unrestricted_seed_component": "U_-;++++=H_-++++-(4/5)t_+++",
+    "unrestricted_tensor_product_spin_content": [
+      "5/2",
+      "3/2"
+    ]
+  },
+  "failed_checks": [],
+  "open_obligations": [
+    "cohomology triviality of t_cde",
+    "membership in the full N=4 EOM ideal including matter terms",
+    "renormalized contact-anomaly coefficient",
+    "coefficient matching to the Sym^3 anomaly candidate"
+  ],
+  "overall_status": "PASS_WITH_OPEN_QUANTUM_GATES",
+  "passed_check_count": 35,
+  "quantum_gate_status": "OPEN",
+  "schema": "step5-one-loop-spin-projector-audit-v1",
+  "spin_five_halves_gate_status": "CLOSED_EXACT",
+  "tree_level_eom_identity_status": "CLOSED_EXACT_AT_TREE_LEVEL"
+}

@@ -1,0 +1,676 @@
+{
+  "ambiguity_ledger": {
+    "coefficient_matching_to_anomaly_candidate": "OPEN_NOT_COMPUTED",
+    "epsilon_and_eom_trace": "RESOLVED_BY_PROJECT_CONVENTION",
+    "open_color_AB_symmetry": "NO_SYMMETRY_ASSUMED; NONCOMMUTATIVE A-B ORDER PRESERVED",
+    "tensor_product_derivative": "RESOLVED_AS_GRADED_DERIVATION_WITH_X_EVEN"
+  },
+  "anomaly_candidate_spin_type": {
+    "definition": "C_abc=tildeW_dotalpha D_(a^dotalpha X_bc)",
+    "highest_component": "C_+++=tildeW_dotalpha D_+^dotalpha X_++",
+    "highest_weight": "3/2",
+    "j_L": "3/2",
+    "normalized_symmetrization": "C_abc=(1/3)tildeW_dotalpha(D_a^dotalpha X_bc+D_b^dotalpha X_ca+D_c^dotalpha X_ab)",
+    "representation": "Sym^3 S_L"
+  },
+  "arithmetic": "Q",
+  "bases": {
+    "U": [
+      "U_+;m0",
+      "U_+;m1",
+      "U_+;m2",
+      "U_+;m3",
+      "U_+;m4",
+      "U_-;m0",
+      "U_-;m1",
+      "U_-;m2",
+      "U_-;m3",
+      "U_-;m4"
+    ],
+    "trace": [
+      "t_m0",
+      "t_m1",
+      "t_m2",
+      "t_m3"
+    ]
+  },
+  "certificate_status": "PASS",
+  "checks": {
+    "candidate_highest_weight_is_three_halves": true,
+    "chiral_bianchi_has_six_raw_terms": true,
+    "chiral_bianchi_reduces_to_zero": true,
+    "dimension_is_ten_equals_six_plus_four": true,
+    "eom_trace_sign": true,
+    "epsilon_ab_epsilon_ab_is_minus_two": true,
+    "epsilon_down_up_is_identity": true,
+    "epsilon_first_slot_is_minus_identity": true,
+    "epsilon_up_down_is_identity": true,
+    "five_symmetrizer_is_normalized": true,
+    "h_derivative_on_a_reduces_to_zero": true,
+    "h_derivative_on_b_reduces_to_zero": true,
+    "h_leibniz_has_four_hundred_eighty_raw_terms": true,
+    "h_minus_plus4_is_one_fifth_a_plus_four_fifths_b": true,
+    "h_preserves_open_a_before_b_order": true,
+    "nested_sym4_then_sym5_equals_direct_sym5": true,
+    "project_eom_derivative_identity": true,
+    "projector_five_idempotent": true,
+    "projector_three_idempotent": true,
+    "projectors_mutually_annihilate_left": true,
+    "projectors_mutually_annihilate_right": true,
+    "projectors_sum_to_identity": true,
+    "rank_embedding_is_four": true,
+    "rank_projector_five_is_six": true,
+    "rank_projector_three_is_four": true,
+    "rank_trace_is_four": true,
+    "t_plus3_is_b_minus_a": true,
+    "total_symmetrizer_equals_projector_five": true,
+    "trace_after_embedding_is_identity": true,
+    "trace_kills_sym5": true,
+    "tree_eom_insertion_has_two_ordered_leibniz_terms": true,
+    "tree_eom_insertion_identity": true,
+    "tree_eom_insertion_preserves_open_a_before_b_order": true,
+    "u_minus_plus4_reconstruction": true,
+    "u_minus_plus4_weight_is_three_halves": true
+  },
+  "chiral_bianchi_closure": {
+    "X_definition": "X_ab=nabla_(a W_b)",
+    "expanded_identity": "nabla_(a X_bc)=(1/6)(nabla_a nabla_b W_c+nabla_b nabla_a W_c+nabla_a nabla_c W_b+nabla_c nabla_a W_b+nabla_b nabla_c W_a+nabla_c nabla_b W_a)=0",
+    "project_algebra": "{nabla_a,nabla_b}=0",
+    "raw_term_count": 6,
+    "reduced_polynomial": {
+      "term_count": 0,
+      "terms": {}
+    }
+  },
+  "component_formula": {
+    "A": "U_-;++++",
+    "B": "U_+;-+++",
+    "H_-++++": "(1/5)A+(4/5)B",
+    "chiral_closure": "H_-++++=0",
+    "chiral_constrained_content": [
+      {
+        "j_L": "3/2",
+        "tensor": "t_+++",
+        "weight": "3/2"
+      }
+    ],
+    "closed_identity": "U_-;++++=-(4/5)t_+++",
+    "identity": "U_-;++++=H_-++++-(4/5)t_+++",
+    "irreducible_content": [
+      {
+        "j_L": "5/2",
+        "tensor": "H_-++++",
+        "weight": "3/2"
+      },
+      {
+        "j_L": "3/2",
+        "tensor": "t_+++",
+        "weight": "3/2"
+      }
+    ],
+    "irreducible_content_scope": "UNRESTRICTED_TENSOR_PRODUCT",
+    "left_weight": "3/2",
+    "t_+++": "B-A"
+  },
+  "conventions": {
+    "epsilon_down_plus_minus": "-1",
+    "epsilon_up_plus_minus": "1",
+    "lower_minus_weight": "-1/2",
+    "lower_plus_weight": "1/2",
+    "lowering": "v_a=epsilon_{ab}v^b",
+    "raising": "v^a=epsilon^{ab}v_b"
+  },
+  "dimensions": {
+    "domain": 10,
+    "sym3": 4,
+    "sym5": 6
+  },
+  "eom_trace_separation": {
+    "E": "nabla^a W_a=epsilon^{ab}nabla_b W_a",
+    "M_ab": "nabla_a W_b",
+    "X_ab": "M_(ab)",
+    "decomposition": "M_ab=X_ab+(1/2)epsilon_ab E",
+    "direct_epsilon_trace": "epsilon^{ab}M_ab=-E"
+  },
+  "maps": {
+    "projector_j_five_halves": [
+      [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "4/5",
+        "0",
+        "0",
+        "0",
+        "1/5",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "3/5",
+        "0",
+        "0",
+        "0",
+        "2/5",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "2/5",
+        "0",
+        "0",
+        "0",
+        "3/5",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/5",
+        "0",
+        "0",
+        "0",
+        "4/5",
+        "0"
+      ],
+      [
+        "0",
+        "4/5",
+        "0",
+        "0",
+        "0",
+        "1/5",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "3/5",
+        "0",
+        "0",
+        "0",
+        "2/5",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "2/5",
+        "0",
+        "0",
+        "0",
+        "3/5",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/5",
+        "0",
+        "0",
+        "0",
+        "4/5",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    ],
+    "projector_j_three_halves": [
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1/5",
+        "0",
+        "0",
+        "0",
+        "-1/5",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "2/5",
+        "0",
+        "0",
+        "0",
+        "-2/5",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "3/5",
+        "0",
+        "0",
+        "0",
+        "-3/5",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "4/5",
+        "0",
+        "0",
+        "0",
+        "-4/5",
+        "0"
+      ],
+      [
+        "0",
+        "-4/5",
+        "0",
+        "0",
+        "0",
+        "4/5",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-3/5",
+        "0",
+        "0",
+        "0",
+        "3/5",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "-2/5",
+        "0",
+        "0",
+        "0",
+        "2/5",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "-1/5",
+        "0",
+        "0",
+        "0",
+        "1/5",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "right_inverse_embedding": [
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1/5",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "2/5",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "3/5",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "4/5"
+      ],
+      [
+        "-4/5",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-3/5",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-2/5",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "-1/5"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "total_symmetrizer": [
+      [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "4/5",
+        "0",
+        "0",
+        "0",
+        "1/5",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "3/5",
+        "0",
+        "0",
+        "0",
+        "2/5",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "2/5",
+        "0",
+        "0",
+        "0",
+        "3/5",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/5",
+        "0",
+        "0",
+        "0",
+        "4/5",
+        "0"
+      ],
+      [
+        "0",
+        "4/5",
+        "0",
+        "0",
+        "0",
+        "1/5",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "3/5",
+        "0",
+        "0",
+        "0",
+        "2/5",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "2/5",
+        "0",
+        "0",
+        "0",
+        "3/5",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/5",
+        "0",
+        "0",
+        "0",
+        "4/5",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    ],
+    "trace": [
+      [
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "-1",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "-1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "-1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "-1",
+        "0"
+      ]
+    ]
+  },
+  "quantum_gates": {
+    "coefficient_matching_to_sym3_candidate": "OPEN_NOT_COMPUTED",
+    "forbidden_inference": "tree-level EOM rewrite implies zero renormalized insertion",
+    "full_n4_eom_ideal_membership": "OPEN_NOT_DERIVED",
+    "renormalized_contact_anomaly_coefficient": "OPEN_NOT_COMPUTED",
+    "status": "OPEN",
+    "t_cohomology_triviality": "OPEN_NOT_DERIVED"
+  },
+  "rank_five_closure": {
+    "definition": "H_abcde=nabla_(a T_bcde)",
+    "factorized_zero": "H=Sym5[(nabla_(a X^A_bc))X^B_de]+Sym5[X^A_bc(nabla_(a X^B_de))]=0",
+    "graded_leibniz": "nabla_a(X^A_bc X^B_de)=(nabla_a X^A_bc)X^B_de+X^A_bc(nabla_a X^B_de), because |X|=0",
+    "open_color_order": "A factor remains left of B factor in every word",
+    "ordered_derivation": "H=Sym5[(nabla_a X^A_bc)X^B_de]+Sym5[X^A_bc(nabla_a X^B_de)]",
+    "status": "CLOSED_EXACT",
+    "symmetrizer_checks": {
+      "derivative_on_a_remainder_count": 0,
+      "derivative_on_b_remainder_count": 0,
+      "direct_sym5_unique_words": 30,
+      "leibniz_raw_term_count": 480,
+      "nested_equals_direct": true,
+      "nested_sym4_then_sym5_unique_words": 30,
+      "normalization": "1"
+    }
+  },
+  "rank_four_letter": {
+    "U_definition": "U_a;bcde=nabla_a T_bcde",
+    "definition": "T_bcde=X^A_(bc X^B_de) with normalized Sym^4 projection",
+    "explicit_projection": "(1/6)(X^A_bc X^B_de+X^A_bd X^B_ce+X^A_be X^B_cd+X^A_cd X^B_be+X^A_ce X^B_bd+X^A_de X^B_bc)",
+    "seed_component": "T_++++=X^A_++ X^B_++"
+  },
+  "right_inverse_formula": {
+    "contraction": "epsilon^{ab}E(t)_a;bcde=(-1/5)(-2-1-1-1)t_cde=t_cde",
+    "decomposition": "U=P_5 U+E(t), P_5=1-E trace",
+    "embedding": "E(t)_a;bcde=-(1/5)(epsilon_ab t_cde+epsilon_ac t_bde+epsilon_ad t_bce+epsilon_ae t_bcd)",
+    "trace": "t_cde=epsilon^{ab}U_a;bcde"
+  },
+  "schema": "step5-one-loop-spin-projector-v1",
+  "spin_five_halves_gate": {
+    "identity": "H_abcde=0",
+    "seed_consequence": "H_-++++=0",
+    "status": "CLOSED_EXACT"
+  },
+  "tree_level_eom_identity": {
+    "E_definition": "E=nabla^a W_a=epsilon^{ab}nabla_b W_a=nabla_- W_+-nabla_+ W_-",
+    "closed_identity": "I^AB=-(nabla_+E^A)X^B-X^A(nabla_+E^B)",
+    "derivation": [
+      "nabla_+ E=nabla_+nabla_-W_+-nabla_+^2W_-",
+      "nabla_+^2=0",
+      "nabla_+nabla_-=-nabla_-nabla_+",
+      "nabla_+E=-nabla_-nabla_+W_+=-nabla_-X_++"
+    ],
+    "graded_leibniz": "I^AB=(nabla_-X^A)X^B+X^A(nabla_-X^B), because |X|=0",
+    "rewrite_rules": [
+      "nabla_-X^A=-nabla_+E^A",
+      "nabla_-X^B=-nabla_+E^B"
+    ],
+    "seed": "I^AB=nabla_-(X^A X^B), X=X_++",
+    "status": "CLOSED_EXACT_AT_TREE_LEVEL",
+    "trace_component_rewrite": "t_+++=-(5/4)I^AB=(5/4)[(nabla_+E^A)X^B+X^A(nabla_+E^B)]"
+  }
+}

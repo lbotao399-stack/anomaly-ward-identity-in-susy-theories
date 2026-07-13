@@ -1,0 +1,18 @@
+{
+  "generated_sha256": "9e1ecf525e7b28de1e838c7cc26ab4d14b0848585f34a5555fd1669b2eba66d6",
+  "result": "EXACT_BARE_VECTOR_FAMILY_TOPOLOGY_AND_PROJECT_BRANCH_CENSUS_ONLY; PROJECTED_TYPES_REPAIRED; NO_POLE_OR_ANOMALY_COEFFICIENT",
+  "schema": "Step5OneLoopN2PhysicalHessianFamilyAudit.v1",
+  "scope": "STEP5A_PRIMITIVE_TWO_BACKGROUND_HESSIAN_FAMILY",
+  "status": "PASS_CENSUS_PROJECTED_TYPE_REPAIRED_FAIL_CLOSED_PHYSICS",
+  "totals": {
+    "action_hessian_branches": 186,
+    "block_paths": 294,
+    "checks": 14,
+    "failed": 0,
+    "family_graphir": 7,
+    "gaps": 5,
+    "open_p0_gaps": 0,
+    "p0_gaps": 3,
+    "source_branches": 784
+  }
+}

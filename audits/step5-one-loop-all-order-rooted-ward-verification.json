@@ -1,0 +1,13 @@
+{
+  "full_completion_status": false,
+  "generated_sha256": "00e2b16d795dd3912a634bcdbde9e0b5f21f98494ad799f4ca805a225a3d4e3a",
+  "schema": "Step5OneLoopAllOrderRootedWardAudit.v1",
+  "status": "PASS_ALGEBRAIC_CENSUS_AND_TELESCOPING",
+  "totals": {
+    "checked_orders": 7,
+    "checks": 6,
+    "failed": 0,
+    "families": 127,
+    "polarized_terms": 10633
+  }
+}
