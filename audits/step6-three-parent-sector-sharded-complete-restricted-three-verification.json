@@ -1,0 +1,20 @@
+{
+  "schema": "step6.three_parent_sector_sharded_evaluator.audit.v1",
+  "status": "PASS",
+  "checks": {
+    "blocked_certificate_immutable": true,
+    "all_requested_shards_exactly_validated": true,
+    "one_fresh_interner_subprocess_per_built_shard": true,
+    "disk_streamed_merge_validated": true,
+    "no_global_DAG_or_semantic_expansion": true,
+    "strict_three_of_six_scope_no_Q2": true
+  },
+  "passed": 6,
+  "failed": 0,
+  "payload_sha256": "852d7b3a63b158fea79166232b017500bbbe1e271721d475cd05007db2ac73f3",
+  "result_artifact": {
+    "path": "generated/step6/three-parent-sector-sharded-evaluator/results/complete-restricted-three-result.json",
+    "file_sha256": "75f21205cb5db4262724b34beaaed8fb0f6059ef1b10ba592bbecd86972dcd6e"
+  },
+  "audit_sha256": "9bcbb324e555b5edf576f7461ecc6e03865fab4b9b2758fa278dbc313bc62834"
+}

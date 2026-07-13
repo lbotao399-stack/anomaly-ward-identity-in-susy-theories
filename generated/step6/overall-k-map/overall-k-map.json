@@ -1,0 +1,260 @@
+{
+  "schema": "step6.overall_k_map.v1",
+  "status": "PASS_EXACT_OVERALL_K_RPRIME_DIRECT_B2_RAW_PARENT",
+  "authority_role": "PROPOSAL_ONLY_BLOCKED_ON_STEP5_ACCEPTANCE",
+  "scope": {
+    "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+    "orientation": "direct",
+    "parent": "completed_direct_B2_raw_parent",
+    "operation": "K R'(G)",
+    "formula": "K R'(G)=K Phi(G)+K sum_gamma C(gamma)Phi(G/gamma)",
+    "parent_union_included": false
+  },
+  "source_bindings": {
+    "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+    "orientation": "direct",
+    "source_payload_sha256": {
+      "lift": "3d358560ae72928bd3bb4bcb7e19c76a92459f156022d17167d9a029a792f95e",
+      "bridge": "33ae403a28ae802266075164024d2c83ce71b7d8d1e0582f0b30c7fae38a3f1c",
+      "forest": "1fb18c7de079c129aec42015a7e89e75110e1efae653964a2937d22155240732",
+      "projector": "e5c271a8e8f35e9ebb3e94a4bd2b938ce32248f87b2d5a2978b1ccaac3d4403d",
+      "census": "2c7a37d36ecb39be0b74076470eca4fa55f16a6ecb4164e2b3b8f58f2f9dc4ba",
+      "disconnected": "9a0fc05c14c447619f6aa27485ae6c0660ca8c54cc00e3422b2cac0a9916384c",
+      "leaf": "d8af3a1a3a3a127159fce104eef00ff3587df718d3dd2278ad3c460cf13905cd",
+      "connected": "3ecd3dd0851966bb694e71fa965e73e5656cf567854fd61e480995742d061f43"
+    },
+    "source_file_sha256": {
+      "generated/step6/full-bispinor-vector-lift/full-bispinor-vector-lift.json": "3b5c4bcce30422479967162ce6682e4d3727806868e1e96f1d168970d09ff87d",
+      "audits/step6-full-bispinor-vector-lift-verification.json": "605cabb97fe40f9965cc4973e7718c2a6f8c1f08162ee4fdc64bb23f1904a283",
+      "generated/step6/full-bispinor-vector-lift/tensor-word-ledger.jsonl.gz": "2dc0492274dd2ccebf256e16f6da27710df3482a152a668da6c3c7a7ed1f9ab0",
+      "generated/step6/tensor-word-kuv-routing-bridge/tensor-word-kuv-routing-bridge.json": "af71e8b4b984867f32c6a82ecd8127cca69be063d6125329e355d8758149756a",
+      "audits/step6-tensor-word-kuv-routing-bridge-verification.json": "74572740a7f3b84fda8d33c68dfd4031e0975fdc278be2b1aadc418912d26485",
+      "generated/step6/tensor-word-kuv-routing-bridge/active-event-ledger.jsonl.gz": "58b8443df0fea5cb9e1cbffdb30c4b63fe129cb709e3ca69a2a7fd1f340fc8a0",
+      "generated/step6/forest-subtraction-ir/forest-subtraction-ir.json": "38ecb91ec7dd5911c0f4974bbe8064952e30baaffd194f999ff6a4c9e8597d06",
+      "audits/step6-forest-subtraction-ir-verification.json": "7f6f2626ddc0ac56ffa1d0b2dc17f64b4dcf20aac3852ca3551ea738c6ee5e4a",
+      "generated/step6/forest-subtraction-ir/forest-subtraction-template-ledger.jsonl.gz": "71b03b98d2460519f05d76588e1155adc4c091e27eacaf16dd713fb6fe0dbd00",
+      "generated/step6/rank8-symmetric-tensor-projector/rank8-symmetric-tensor-projector.json": "c8a94779ae7c3497bd7b529a4337998efd65757e863794daf3c45d07ff5f21a6",
+      "audits/step6-rank8-symmetric-tensor-projector-verification.json": "4750c32624c1fa2be7857d0fd519c880c144dfcfc4bbfe9fdef25ca772578b45",
+      "generated/step6/rank8-scalar-target-census/rank8-scalar-target-census.json": "44b116292ec30322f00d82f7c5ac168dc8a4b5a365db7311e581b1036491eda9",
+      "generated/step6/disconnected-support-scaleless/disconnected-support-scaleless.json": "7bd6953d5d965e6eed918968d8b85959d969fe7c70c709a0d630fc31d7adcdc8",
+      "generated/step6/internal-leaf-scaleless/internal-leaf-scaleless.json": "3529a190dd4cd3fc7ee1b941a6fb33485817844486b8ca813b190fed75e43540",
+      "generated/step6/connected-scalar-laurent/connected-scalar-laurent.json": "ce4eae1c9cab162889dd2408c227d8ec9c86f34eb08f91fdcedb8c00d585760d",
+      "audits/step6-overall-r-operation-frontier-verification.json": "66f87f1bb42a8f7cc83f0eb1b21e68bd54c23ae4222dfc1775c44f2f2a41b378"
+    },
+    "frontier_Rprime_join_sha256": "34749d9de5ca6633909afaa082926dbf074fd79165c931ff65b3c3d928a62739",
+    "frontier_singleton_forest_event_join_sha256": "c12766adc25c7568cd1b188499c8129a54b1c4f1e1b56a39edeb5eda14ebd132",
+    "external_or_holomorphic_input_used": false
+  },
+  "momentum_and_DRED_contract": {
+    "all_incoming_relation": "P+p1+p2=0",
+    "substitution_applied": "P=-p1-p2",
+    "p1_p2_retained_as_external_spectators_until_substitution": true,
+    "external_scale": "s12=(p1+p2)^2",
+    "logarithm": "L_12=log(4*pi*mu^2/s12)-gamma_E",
+    "external_support": "p1,p2 in DRED_HAT_IMAGE",
+    "external_dot_identity": "hat_delta(p_i,p_j)=delta_(4)(p_i,p_j), tilde_delta(p_i,p_j)=0",
+    "tensor_boundary_identity": "hat_delta=delta_(4)-tilde_delta",
+    "uncontracted_metric_after_K": "typed tilde_delta sigma pairs only"
+  },
+  "projector_scalar_composition": {
+    "formula": {
+      "projector": "q(d)=q0+q1*epsilon+O(epsilon^2)",
+      "scalar_integral": "I=A0^2*s^u*[c2/epsilon^2+(cL*L_12+c1)/epsilon]+O(1)",
+      "epsilon_minus_2": "q0*c2",
+      "epsilon_minus_1_L": "q0*cL",
+      "epsilon_minus_1_constant": "q0*c1+q1*c2"
+    },
+    "orbit_convention": "unnormalized output orbit sum; contraction-orbit member_count included",
+    "rank_zero_through_eight_template_count": 45,
+    "scalar_template_sha256": "14798ec805e89baa89c8af83e04df99b1f1b403d2aa3325592e6d0b8ff63ef2e",
+    "census": {
+      "composition_count": 45,
+      "projector_Qd_nonzero_rows": 2758,
+      "projector_poles_at_d4": 0,
+      "raw_scalar_contraction_monomial_contributions": 138525,
+      "collected_nonzero_scalar_Laurent_coefficients": 647,
+      "classification_histogram": {
+        "CONNECTED_92_TARGET_LOOKUP": 24482,
+        "DISCONNECTED_DR_ZERO": 96785,
+        "FINITE_J5_REGULAR_PROJECTOR_ZERO_K": 294,
+        "INTERNAL_LEAF_DR_ZERO": 16964
+      },
+      "j5_contraction_contributions_seen": 294,
+      "j5_K_contribution_count": 0,
+      "intermediate_negative_external_scale_contributions": 2340,
+      "surviving_negative_external_scale_power_count": 0,
+      "target_partition": {
+        "disconnected_DR_zero": 594,
+        "internal_leaf_DR_zero": 104,
+        "connected_exact_Laurent": 92,
+        "finite_J5": 1,
+        "total": 791
+      }
+    }
+  },
+  "J5_gate": {
+    "J5_target": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "J5_status": "FINITE",
+    "projector_pole_at_d4_count": 0,
+    "J5_included_in_K": false,
+    "reason": "finite J5 times a projector regular at d=4 has no pole"
+  },
+  "singleton_forest_normalization": {
+    "records": 320327,
+    "unique_normalized_term_signatures": 846,
+    "normalized_template_term_count": 2224794,
+    "precollection_expanded_term_count": 2224794,
+    "status_histogram": {
+      "EVALUATED_SIGNED_SINGLETON_FOREST_SUBTRACTION": 103538,
+      "ZERO_OUTER_SCALELESS_COGRAPH_KUV_RETAINED": 79063,
+      "ZERO_SOURCE_KUV_RESIDUE": 137726
+    },
+    "uncompressed_sha256": "6e61a74328f8f1e17156c8e400e661240ab295b42f7143f116b793e8bb6d798d"
+  },
+  "execution": {
+    "row_ledger": {
+      "path": "generated/step6/overall-k-map/overall-k-row-ledger.jsonl.gz",
+      "encoding": "canonical-JSON-lines inside deterministic gzip(mtime=0)",
+      "record_schema": "step6.overall_k_source_row.v1",
+      "records": 483685,
+      "uncompressed_sha256": "cac1408de8f9a20b5365b7b8448b2db5ff663c565177d5d33a1c787d74304521",
+      "uncompressed_bytes": 456104905,
+      "compressed_sha256": "9981fc7fe790ddca5f0b0c51ea44d91f6d5af75ee9e238aa6416c10564c7fd75",
+      "compressed_bytes": 67504578
+    },
+    "template_ledger": {
+      "path": "generated/step6/overall-k-map/overall-k-template-ledger.jsonl.gz",
+      "encoding": "canonical-JSON-lines inside deterministic gzip(mtime=0)",
+      "record_schema": "step6.overall_k_laurent_template.v1",
+      "records": 583,
+      "uncompressed_sha256": "93bf0a840350e104072e7c08050f06748e53218be9fcb95b30d0681f73e44cb9",
+      "uncompressed_bytes": 10749346,
+      "compressed_sha256": "a0a48e64a8f02778d6169a06764987d3487993dd9d7582c679a159cd4509867b",
+      "compressed_bytes": 193525
+    },
+    "coefficient_modules": {
+      "epsilon_-2|L_0": {
+        "term_instances_after_rowwise_collection": 3035883,
+        "selector": {
+          "epsilon_power": -2,
+          "L_12_power": 0
+        },
+        "module_sha256": "adf22a012d8055b6218f0c08b98e2f4f0811a3d2cf0bf91ef7f9f4f8bb143aab"
+      },
+      "epsilon_-1|L_1": {
+        "term_instances_after_rowwise_collection": 0,
+        "selector": {
+          "epsilon_power": -1,
+          "L_12_power": 1
+        },
+        "module_sha256": "8af84edb96238c0efc72a0e85257ffcedf6cdb3e71c952515ad0615a78ed8572"
+      },
+      "epsilon_-1|L_0": {
+        "term_instances_after_rowwise_collection": 5334947,
+        "selector": {
+          "epsilon_power": -1,
+          "L_12_power": 0
+        },
+        "module_sha256": "82a7040128f7a0f778230e756bfb9d30496a90342df10855a894eee9386321ae"
+      }
+    },
+    "census": {
+      "bare_normalized_term_instances_before_forest": 11406713,
+      "bare_rows": 483685,
+      "combined_normalized_term_instances": 8370830,
+      "events": 1206389,
+      "forest_normalized_term_instances_after_P_substitution": 9509148,
+      "rows_with_nonzero_K": 438757,
+      "rows_with_zero_K": 44928,
+      "forest_status_histogram": {
+        "EVALUATED_SIGNED_SINGLETON_FOREST_SUBTRACTION": 368802,
+        "ZERO_OUTER_SCALELESS_COGRAPH_KUV_RETAINED": 369421,
+        "ZERO_SOURCE_KUV_RESIDUE": 468166
+      },
+      "source_loop_composition_histogram": {
+        "k_1|l_0": 44928,
+        "k_1|l_1": 99156,
+        "k_1|l_2": 45582,
+        "k_2|l_0": 58086,
+        "k_2|l_1": 104592,
+        "k_2|l_2": 29201,
+        "k_3|l_0": 46216,
+        "k_3|l_1": 41528,
+        "k_4|l_0": 14396
+      },
+      "source_row_event_count_histogram": {
+        "0": 4224,
+        "1": 58394,
+        "2": 115206,
+        "3": 305861
+      },
+      "unique_source_slot_patterns": 11704,
+      "unique_overall_K_templates": 583,
+      "used_forest_templates": 320327,
+      "channel_term_instance_histogram": {
+        "epsilon_-1|L_0": 5334947,
+        "epsilon_-2|L_0": 3035883
+      }
+    },
+    "template_use_sha256": "ab1d317796e33f7b787eaaf11a61a1a8c9fcb61a0e52b835b0931fbf7fa276e9",
+    "source_stream_hashes": {
+      "bare_uncompressed_sha256": "a8908599851f88cf677fff550b9d146ec4b5092dece0ec762f6d56e5d2033a89",
+      "event_uncompressed_sha256": "26a38316e5b47184605f543f17516813b796c08d5a012c5907606bedf0cf117f"
+    }
+  },
+  "overall_K_Rprime": {
+    "status": "COMPLETE_EXACT_TWO_CHANNEL_LAURENT_MODULE",
+    "epsilon_minus_2": {
+      "term_instances_after_rowwise_collection": 3035883,
+      "selector": {
+        "epsilon_power": -2,
+        "L_12_power": 0
+      },
+      "module_sha256": "adf22a012d8055b6218f0c08b98e2f4f0811a3d2cf0bf91ef7f9f4f8bb143aab"
+    },
+    "epsilon_minus_1": {
+      "L_12": {
+        "term_instances_after_rowwise_collection": 0,
+        "selector": {
+          "epsilon_power": -1,
+          "L_12_power": 1
+        },
+        "module_sha256": "8af84edb96238c0efc72a0e85257ffcedf6cdb3e71c952515ad0615a78ed8572"
+      },
+      "constant": {
+        "term_instances_after_rowwise_collection": 5334947,
+        "selector": {
+          "epsilon_power": -1,
+          "L_12_power": 0
+        },
+        "module_sha256": "82a7040128f7a0f778230e756bfb9d30496a90342df10855a894eee9386321ae"
+      }
+    },
+    "normalization": "source_Qi*A0^2*h^3",
+    "counterterm_not_applied": "C(G)=-K R'(G) is not formed here"
+  },
+  "unresolved": {
+    "unmatched_tensor_word_count": 0,
+    "unmatched_projector_composition_count": 0,
+    "unmatched_scalar_target_count": 0,
+    "unmatched_forest_event_count": 0,
+    "unused_forest_row_count": 0,
+    "unresolved_tensor_count": 0,
+    "unresolved_integral_count": 0
+  },
+  "acceptance_boundary": {
+    "overall_K_operation_executed": true,
+    "R_operation_completed": false,
+    "parent_union_included": false,
+    "two_loop_AWI_coefficient_claimed": false,
+    "holomorphic_comparison_performed": false
+  },
+  "comparison_target_used": false,
+  "payload_sha256": "a78139f6aefc2dfd60542d19c1be9b0b39a65a0763b0021e8e6acb9f33383f44"
+}

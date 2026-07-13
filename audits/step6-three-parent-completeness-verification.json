@@ -1,0 +1,184 @@
+{
+  "K4e_background_labeled_census": {
+    "all_class_count": 6,
+    "classes": [
+      {
+        "action_vertex_count": 3,
+        "background_source_labeled_automorphism_order": 1,
+        "canonical_signature_sha256": "840422be9c146292706c676f2518351d4400655606509ec7a8cb911c0c6ced24",
+        "decorated_occurrence_orbit_weight": {
+          "denominator": 1,
+          "numerator": -1
+        },
+        "external_hosts": {
+          "p1": "A",
+          "p2": "C"
+        },
+        "literal_graphir_ids": [
+          "G6_DIRECT_K4ME_I2_S3SQ_S4"
+        ],
+        "literal_graphir_instantiated": true,
+        "raw_valence_family_id": "I2__S3^2__S4^1",
+        "record_sha256": "dc91499173b73f56d96b3630458db696fbcc1e3c3b3096302c810b8eb8fcdf9d"
+      },
+      {
+        "action_vertex_count": 3,
+        "background_source_labeled_automorphism_order": 1,
+        "canonical_signature_sha256": "3adb1b77b18b1ea4e4bfc030d1b42d6073a17ae881f021f7c460bb1030ea5971",
+        "decorated_occurrence_orbit_weight": {
+          "denominator": 1,
+          "numerator": -1
+        },
+        "external_hosts": {
+          "p1": "C",
+          "p2": "A"
+        },
+        "literal_graphir_ids": [
+          "G6_DIRECT_K4ME_I2_S3SQ_S4_P1S4_P2S3"
+        ],
+        "literal_graphir_instantiated": true,
+        "raw_valence_family_id": "I2__S3^2__S4^1",
+        "record_sha256": "90e970d0cdd448611a9c2bb955c047be5f5e541c3ab0fa92b4ab7c1066583443"
+      },
+      {
+        "action_vertex_count": 3,
+        "background_source_labeled_automorphism_order": 2,
+        "canonical_signature_sha256": "2755a156560caeb2f7696574746ae0cf8159f703f5ce499fd6b9fda7e6af2ec2",
+        "decorated_occurrence_orbit_weight": {
+          "denominator": 2,
+          "numerator": -1
+        },
+        "external_hosts": {
+          "p1": "C",
+          "p2": "C"
+        },
+        "literal_graphir_ids": [
+          "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4"
+        ],
+        "literal_graphir_instantiated": true,
+        "raw_valence_family_id": "I2__S3^2__S4^1",
+        "record_sha256": "2e31e2e30d0ac8f5291a1d2b540254ecc118fe49a1891c18d4f832df3a857e36"
+      },
+      {
+        "action_vertex_count": 3,
+        "background_source_labeled_automorphism_order": 1,
+        "canonical_signature_sha256": "f9fd400d56ced387c44abee3497786ad06a165803b0b70daec003c40826d174c",
+        "decorated_occurrence_orbit_weight": {
+          "denominator": 1,
+          "numerator": -1
+        },
+        "external_hosts": {
+          "p1": "A",
+          "p2": "B"
+        },
+        "literal_graphir_ids": [
+          "G6_DIRECT_K4ME_I3_S3CUBED"
+        ],
+        "literal_graphir_instantiated": true,
+        "raw_valence_family_id": "I3__S3^3",
+        "record_sha256": "db94f5e53895f685a5c60409a50bbd776a249e24fc482a84ee73700a54759748"
+      },
+      {
+        "action_vertex_count": 3,
+        "background_source_labeled_automorphism_order": 2,
+        "canonical_signature_sha256": "95a7dab3f211293f7a5a4752e500a1bda6248adbf46fe0db412aa6740d89d680",
+        "decorated_occurrence_orbit_weight": {
+          "denominator": 2,
+          "numerator": -1
+        },
+        "external_hosts": {
+          "p1": "A",
+          "p2": "I"
+        },
+        "literal_graphir_ids": [
+          "G6_DIRECT_K4ME_I3_S3CUBED_P1S3_P2I"
+        ],
+        "literal_graphir_instantiated": true,
+        "raw_valence_family_id": "I3__S3^3",
+        "record_sha256": "756f0ea59145fcbfaf111f1ffd74af1f92bb1bef74a0e6dce0622b0b01a73105"
+      },
+      {
+        "action_vertex_count": 3,
+        "background_source_labeled_automorphism_order": 2,
+        "canonical_signature_sha256": "9ad2d44d6b9a4ad5000d9f96a2b8bd3df3d2b45dce6e72618a8eeac338f0e38c",
+        "decorated_occurrence_orbit_weight": {
+          "denominator": 2,
+          "numerator": -1
+        },
+        "external_hosts": {
+          "p1": "I",
+          "p2": "A"
+        },
+        "literal_graphir_ids": [
+          "G6_DIRECT_K4ME_I3_S3CUBED_P1I_P2S3"
+        ],
+        "literal_graphir_instantiated": true,
+        "raw_valence_family_id": "I3__S3^3",
+        "record_sha256": "5782151dfa09ced6ed83327fec8418f119282db887e1b266937532d8b3b1f45b"
+      }
+    ],
+    "literal_GraphIR_count": 6,
+    "missing_literal_GraphIR_count": 0
+  },
+  "Q2_bb_result": null,
+  "audit_sha256": "ebe0c321d8f46638e3fd327d00aa6c0944c869f5d8ff08d1ab4556e2508ae310",
+  "authority": {
+    "current_task_id": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
+    "step6_task_authorized": false
+  },
+  "authority_role": "UNMERGED_PROPOSAL_NOT_COMPUTATIONAL_EVIDENCE",
+  "checks": {
+    "FP_fixed_gauge_completion_has_admitted_two_loop_candidates": true,
+    "N4_matter_sector_has_admitted_two_loop_candidates": true,
+    "NK_is_absent_only_in_reference_flat_scope": true,
+    "all_host_census_has_six_background_labeled_K4e_classes": true,
+    "all_six_weights_are_exact": true,
+    "complete_pure_vector_gate_is_strictly_larger_than_K4e": true,
+    "current_authority_does_not_admit_step6": true,
+    "literal_GraphIR_instantiates_all_six": true,
+    "only_two_source_valence_families_can_support_literal_K4e": true,
+    "reduced_gate_has_twelve_source_valence_families": true
+  },
+  "coefficient_claim": null,
+  "failed": 0,
+  "full_boundaries": {
+    "FP_admitted_candidate_count": 10,
+    "NK_classification": "PROVED_ABSENT_AT_THIS_ORDER",
+    "matter_admitted_candidate_count": 12,
+    "pure_vector_reduced_gate_graph_count": 273,
+    "pure_vector_self_loop_graph_count": 178
+  },
+  "implication_boundary": {
+    "hypothesis": "the common-denominator numerator of the complete six-parent K4-e raw carrier is identically zero over the exact Poly/Exterior/color ring",
+    "not_implied": {
+      "FP_fixed_gauge_completion_is_zero": true,
+      "N4_matter_completion_is_zero": true,
+      "SD_contact_counterterm_orbit_is_zero": true,
+      "complete_273_graph_pure_vector_gate_is_zero": true,
+      "covariant_X_tensor_X_amplitude_is_zero": true,
+      "renormalized_Q2_bb_is_zero": true
+    },
+    "proved_if_hypothesis_holds": {
+      "any_defined_linear_source_map_sends_that_K4e_zero_to_zero": true,
+      "complete_background_labeled_K4e_bare_rational_sum_is_zero": true,
+      "integration_needed_for_that_restricted_zero": false
+    },
+    "witnesses": {
+      "FP_candidates": 10,
+      "local_Project_SD_coefficients": null,
+      "matter_candidates": 12,
+      "missing_K4e_decorations": 0,
+      "non_K4e_or_additional_pure_vector_graph_classes": 267,
+      "tadpole_D_algebra_numerators": null
+    }
+  },
+  "schema": "step6.six_parent_k4e_completeness.audit.v2",
+  "source_valence": {
+    "K4e_capable_family_ids": [
+      "I2__S3^2__S4^1",
+      "I3__S3^3"
+    ],
+    "reduced_family_count": 12
+  },
+  "status": "PASS_EXACT_SIX_PARENT_K4E_CLOSURE_AUDIT"
+}

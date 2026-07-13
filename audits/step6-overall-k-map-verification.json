@@ -1,0 +1,51 @@
+{
+  "schema": "step6.overall_k_map.audit.v1",
+  "status": "PASS",
+  "checks": {
+    "direct_B2_raw_parent_scope_exact": true,
+    "all_483685_bispinor_vector_rows_mapped": true,
+    "rank0_through_rank8_projector_bound_through_epsilon_one": true,
+    "scalar_target_partition_594_104_92_1_exact": true,
+    "finite_J5_excluded_only_after_regular_projector_test": true,
+    "all_1206389_singleton_forest_events_joined": true,
+    "P_substitution_and_external_spectators_exact": true,
+    "every_hat_boundary_decomposed": true,
+    "epsilon_minus_2_and_minus_1_modules_exact_and_hashed": true,
+    "nonlocal_epsilon_minus_1_log_cancels_rowwise_exactly": true,
+    "row_ledger_deterministic_self_hashed_readback": true,
+    "template_ledger_deterministic_self_hashed_readback": true,
+    "unresolved_tensor_and_integral_counts_zero": true,
+    "no_AWI_holomorphic_or_parent_union_claim": true
+  },
+  "passed": 14,
+  "failed": 0,
+  "payload_sha256": "a78139f6aefc2dfd60542d19c1be9b0b39a65a0763b0021e8e6acb9f33383f44",
+  "readback": {
+    "row_ledger": {
+      "records": 483685,
+      "uncompressed_sha256": "cac1408de8f9a20b5365b7b8448b2db5ff663c565177d5d33a1c787d74304521",
+      "compressed_sha256": "9981fc7fe790ddca5f0b0c51ea44d91f6d5af75ee9e238aa6416c10564c7fd75",
+      "self_hashes_exact": true,
+      "matches_metadata": true
+    },
+    "template_ledger": {
+      "records": 583,
+      "uncompressed_sha256": "93bf0a840350e104072e7c08050f06748e53218be9fcb95b30d0681f73e44cb9",
+      "compressed_sha256": "a0a48e64a8f02778d6169a06764987d3487993dd9d7582c679a159cd4509867b",
+      "self_hashes_exact": true,
+      "matches_metadata": true
+    }
+  },
+  "counts": {
+    "source_rows": 483685,
+    "forest_events": 1206389,
+    "forest_templates": 320327,
+    "unique_overall_K_templates": 583,
+    "combined_normalized_term_instances": 8370830,
+    "unresolved_tensor_count": 0,
+    "unresolved_integral_count": 0
+  },
+  "script_sha256": "ce61994815ab70acff21969db45d0aa542fd5b5c1c7e5a5a70a6fb175d4a3acc",
+  "external_or_holomorphic_input_used": false,
+  "audit_sha256": "eba89f20308b640f5bac247b4486c73cc6fe2063ff25e531ab38e66c26087204"
+}

@@ -1,0 +1,29 @@
+{
+  "all_checks_passed": true,
+  "checks": {
+    "all_768_sign_and_coefficient_ledgers_replay": true,
+    "bare_delta_and_seed_embedding_exact": true,
+    "delta_scope_typed": true,
+    "finite_delta_two_sided_identity": true,
+    "measure_deferred_before_aggregation": true,
+    "measure_tagged_convolution_remains_open": true,
+    "no_external_result": true,
+    "payload_hash_valid": true,
+    "raw_provenance_injective": true,
+    "raw_replay_counts_exact": true,
+    "seed_type_resolved_without_closing_missing_type": true
+  },
+  "counts": {
+    "delta_entries_per_order": 256,
+    "raw_histories": 216,
+    "source_rows": 6,
+    "unaggregated_pairs": 768
+  },
+  "open_missing_type_id": "MISSING_TYPE::MeasureTaggedDeltaConvolutionBeforeContactAggregation",
+  "payload_sha256": "f10375c672a750baeeb81151ee4379a9052ff43d45bc8c9b1911e69849b65450",
+  "resolved_seed_type_id": "TYPE::PreAggregationRawReplaySeedWithBareDeltaIdentity",
+  "schema": "step6.preaggregation_raw_replay_seed.audit.v2",
+  "script_sha256": "bb5fbab7da26507954f4965e1cce6f2051cdda00b50d06075611c845c2b20f77",
+  "status": "PASS_PREAGGREGATION_REPLAY_SEED__MEASURE_TAGGED_CONVOLUTION_OPEN",
+  "test_sha256": "f441ea842f89f9a80aa6f36004acf04d977f7a6c54ec455358b33d6449ac5e79"
+}

@@ -1,0 +1,1454 @@
+{
+  "schema": "step6.three_parent_sector_sharded_evaluator.result.v1",
+  "status": "PASS_SECTOR_SHARDED_RESTRICTED_THREE_EVALUATION",
+  "label": "complete-restricted-three",
+  "scope": {
+    "evaluated_parent_class_count": 3,
+    "all_host_literal_K4_minus_e_parent_class_count": 6,
+    "strict_subset": true,
+    "can_imply_full_K4_minus_e_result": false,
+    "can_imply_Q2_bb": false
+  },
+  "blocked_certificate_hashes": {
+    "result_file_sha256": "54efd7d021d9abbca6548da2e375deead01e11d63ac564828dd1c1530b87d872",
+    "audit_file_sha256": "688bc2d4383bdfaaed64f59f5d6955fbbde5f0088f1f10565f2fa68a61cd5181"
+  },
+  "requested_sector_count": 40,
+  "complete_restricted_three_sector_count": 40,
+  "is_complete_restricted_three_run": true,
+  "shards": [
+    {
+      "ordinal": 0,
+      "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+      "sector": 0,
+      "action": "RESUMED_AFTER_FULL_EXACT_READBACK",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 0,
+        "resume_key": "ea4c8658d6b1b2cd5298000c33c007afbcad4151c3eaba2d721a7a8c51bcb96a",
+        "manifest_sha256": "1ef12d03b111acc16a9a6178c5c917204af06fd4767dccede7b44600d65aa567",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i2-s3sq-s4-s00-ea4c8658d6b1b2cd.jsonl.gz",
+          "compressed_sha256": "e10a3e7bcdb8316089fb44d57cf0e20c396497f9166810b5212abe7516b092d8",
+          "uncompressed_sha256": "284a6e9f61210110e6af7e50b10ee783a2fca91d4619f1138fd6836a470fbf0b",
+          "compressed_bytes": 8951886,
+          "uncompressed_bytes": 27960165,
+          "jsonl_record_count": 53799
+        },
+        "record_counts_before_footer": {
+          "ROW": 5136,
+          "SEMANTIC_VALUE": 1239,
+          "CIRCUIT_NODE": 47422
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 1,
+      "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+      "sector": 2,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 2,
+        "resume_key": "1cbb1a2265127b42a1d1f8fd4de993dc86f0b9bc74d539d6b86afd5a5a77de6a",
+        "manifest_sha256": "0f84af4f6c986c02b7cb0c8aa6d76818c638ec9df258ddb908752c6c12784d51",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i2-s3sq-s4-s02-1cbb1a2265127b42.jsonl.gz",
+          "compressed_sha256": "71576f118c0a5fdc773d085b2735e86c5dd0988efe4dadacb1d292249755705e",
+          "uncompressed_sha256": "766dee24e294e7cc3ba20785b34db9598c0819ff9535a1f805adfa7ca2eab93d",
+          "compressed_bytes": 10121466,
+          "uncompressed_bytes": 31629797,
+          "jsonl_record_count": 63043
+        },
+        "record_counts_before_footer": {
+          "ROW": 7685,
+          "SEMANTIC_VALUE": 1416,
+          "CIRCUIT_NODE": 53940
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 2,
+      "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+      "sector": 5,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 5,
+        "resume_key": "dda4effd3b7c96b1a90629e925b0e63cd46b42b381b355cad4e59bd18174f8cb",
+        "manifest_sha256": "b761d7529682863d1fea82e9c0dbced0988156a652956ecb4c081f834113a84a",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i2-s3sq-s4-s05-dda4effd3b7c96b1.jsonl.gz",
+          "compressed_sha256": "86275155b1c0bc7ec37dd71459350d90643b166e890f398a693a82081db9f5f3",
+          "uncompressed_sha256": "5ebee038a13abdf63e3417600b699f1e60b7923eff1b57125aebebf10c477b12",
+          "compressed_bytes": 24096046,
+          "uncompressed_bytes": 70967260,
+          "jsonl_record_count": 138212
+        },
+        "record_counts_before_footer": {
+          "ROW": 9406,
+          "SEMANTIC_VALUE": 1923,
+          "CIRCUIT_NODE": 126881
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 3,
+      "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+      "sector": 7,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 7,
+        "resume_key": "52f0fc2b091ae0d20dc8aa5e28de1f79ef547d2ef68def932a642c710ecd0bc9",
+        "manifest_sha256": "56fe8f17b926974bbbff01b43d287bdce47c5c666afc88f565c111944900396e",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i2-s3sq-s4-s07-52f0fc2b091ae0d2.jsonl.gz",
+          "compressed_sha256": "b731b1a35eae7a3647aaa8eda6784145bc7f95110320f2085a10c0f17cfcc0ed",
+          "uncompressed_sha256": "a126c5d5b00d8ab42feb88e35b7683c7cee7dcdf0e4decf47296897f6243f53f",
+          "compressed_bytes": 25167969,
+          "uncompressed_bytes": 73530508,
+          "jsonl_record_count": 139830
+        },
+        "record_counts_before_footer": {
+          "ROW": 6424,
+          "SEMANTIC_VALUE": 2294,
+          "CIRCUIT_NODE": 131110
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 4,
+      "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+      "sector": 8,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 8,
+        "resume_key": "527bb5432712fca9b254043fcb2a2b16d65e3db7751f08a528464d141f89ee28",
+        "manifest_sha256": "345ff4f70d9cb62d197848c8381b2da136673c7a1662624e81f9b3f9e7c68515",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i2-s3sq-s4-s08-527bb5432712fca9.jsonl.gz",
+          "compressed_sha256": "72df7dd944a2952f9e231f83d8b09ee2e1a085c58f255df1b9eacb8b1163c73d",
+          "uncompressed_sha256": "4fa7a4923cb2738f3aa6234ae1883c27b906ae96e5d59adfa3fa9c1282ccb55a",
+          "compressed_bytes": 18440852,
+          "uncompressed_bytes": 53876535,
+          "jsonl_record_count": 101634
+        },
+        "record_counts_before_footer": {
+          "ROW": 6234,
+          "SEMANTIC_VALUE": 1626,
+          "CIRCUIT_NODE": 93772
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 5,
+      "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+      "sector": 10,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 10,
+        "resume_key": "8f0929647c7ec76ffb2bcc96064ffe95e2ab822d749ceb3ac131a72f172e9f8d",
+        "manifest_sha256": "bacc8500c894a844c26ad2b18d49972caf908a0401c06f62406dca059fd24b56",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i2-s3sq-s4-s10-8f0929647c7ec76f.jsonl.gz",
+          "compressed_sha256": "b62415b3b135c1130df0e49040cf0c812b9650fa5aa1f8e490e01d2b3dc618c0",
+          "uncompressed_sha256": "bc2c455d0deb3020f1fdec48899af18064568e4459daf1c3e9bb1534da39f0dd",
+          "compressed_bytes": 17453150,
+          "uncompressed_bytes": 51929311,
+          "jsonl_record_count": 101884
+        },
+        "record_counts_before_footer": {
+          "ROW": 10148,
+          "SEMANTIC_VALUE": 1619,
+          "CIRCUIT_NODE": 90115
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 6,
+      "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+      "sector": 13,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 13,
+        "resume_key": "4ca8b69b76f4eb0838800ddd475e9021745d01df6fdbe011eae4bd965dbc1f94",
+        "manifest_sha256": "47ecdac3d6c7938da0f8e99a0351db57f589c4f1f085826b7844c90d6565c954",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i2-s3sq-s4-s13-4ca8b69b76f4eb08.jsonl.gz",
+          "compressed_sha256": "d2277a6aec9e98504e6b48cd999e8e03c8ed3bcf5fbf817c58ea52ea25bf42d9",
+          "uncompressed_sha256": "717d0a8a1a16100a6d9fb5d80562759f9f0d33ac530774ce598a4def04945c90",
+          "compressed_bytes": 31092109,
+          "uncompressed_bytes": 90801423,
+          "jsonl_record_count": 175926
+        },
+        "record_counts_before_footer": {
+          "ROW": 10367,
+          "SEMANTIC_VALUE": 2473,
+          "CIRCUIT_NODE": 163084
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 7,
+      "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+      "sector": 15,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 15,
+        "resume_key": "02b9531bb78db83e0f9853011f4d801079175c7fe1f70bacfa1cb36171a885fd",
+        "manifest_sha256": "be860e831736868008f8e85d38dd2bc3b7e93c91e2e61ad3878671771c17a624",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i2-s3sq-s4-s15-02b9531bb78db83e.jsonl.gz",
+          "compressed_sha256": "7867c862e17dae0f10265870e960d5c27e4fbca436a93950e9985b7729dc545e",
+          "uncompressed_sha256": "5bb67e67db48db078a71088dc41af5ad291767d5ea8501c11d103b0bf3613597",
+          "compressed_bytes": 32093317,
+          "uncompressed_bytes": 92442758,
+          "jsonl_record_count": 176530
+        },
+        "record_counts_before_footer": {
+          "ROW": 7342,
+          "SEMANTIC_VALUE": 2294,
+          "CIRCUIT_NODE": 166892
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 8,
+      "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+      "sector": 17,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 17,
+        "resume_key": "f60a7b862cd02d25536dab20551e33e1536b8b19b5676997b7f0eb2194ad3308",
+        "manifest_sha256": "d0c577c14919001d214dea2017e6f71b440e747ec20b17b6edf73707a9c7192a",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i2-s3sq-s4-s17-f60a7b862cd02d25.jsonl.gz",
+          "compressed_sha256": "0d1b3799305c459a863caa862f6dc7dc923f3242def3bb624e1c7ed16d0744ee",
+          "uncompressed_sha256": "6c652f1327c8a5c2a4f03d935ac89819ba83952e309bc51b00d3b78b57149b27",
+          "compressed_bytes": 17074536,
+          "uncompressed_bytes": 51553379,
+          "jsonl_record_count": 101043
+        },
+        "record_counts_before_footer": {
+          "ROW": 8670,
+          "SEMANTIC_VALUE": 1702,
+          "CIRCUIT_NODE": 90669
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 9,
+      "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+      "sector": 19,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 19,
+        "resume_key": "468ee6f57141e890fdf33b19ef1592f98c9bf7a09ad42eb0d70987f092d6814d",
+        "manifest_sha256": "4981ebf15efa7ee0600a9ccac2a0364dd771d96514e60c331abaab794d74849b",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i2-s3sq-s4-s19-468ee6f57141e890.jsonl.gz",
+          "compressed_sha256": "6fbb9a3b114507c1eb05eb578ddf73c67baec5b345cd6ba23df65e3640542b35",
+          "uncompressed_sha256": "ed555272815432758790a9148c150eafdd75fd0e771595d7e17583af8a89cfe9",
+          "compressed_bytes": 19075749,
+          "uncompressed_bytes": 57274720,
+          "jsonl_record_count": 107691
+        },
+        "record_counts_before_footer": {
+          "ROW": 6564,
+          "SEMANTIC_VALUE": 1892,
+          "CIRCUIT_NODE": 99233
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 10,
+      "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+      "sector": 20,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 20,
+        "resume_key": "90a1736e4bf48e55125a4b0a806235599deb2586ccdb4c63b3cec7a895fc2b0b",
+        "manifest_sha256": "a376b049bcfe3363e9b98705db398cad55f5476cb74da8bdbd5cddef1600a0bf",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i2-s3sq-s4-s20-90a1736e4bf48e55.jsonl.gz",
+          "compressed_sha256": "1d873a45322774b67ca10106d24efa5c5773a4f671dc604172e3b050e2d38958",
+          "uncompressed_sha256": "72778e19a881e5884f3a1d7af20bf4c6f7fe95ccbc3c808b5f418a63558963e0",
+          "compressed_bytes": 29379247,
+          "uncompressed_bytes": 86229834,
+          "jsonl_record_count": 158019
+        },
+        "record_counts_before_footer": {
+          "ROW": 6288,
+          "SEMANTIC_VALUE": 2553,
+          "CIRCUIT_NODE": 149176
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 11,
+      "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+      "sector": 22,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 22,
+        "resume_key": "57b46a0df40b024611b98d8cbcc0b6b0300c8dd467003a5e3bce843c4c5c8cf1",
+        "manifest_sha256": "f8e0425db4f054c322f40bcbf6b3075f0dba335636e03810c3e5c045ee9138f1",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i2-s3sq-s4-s22-57b46a0df40b0246.jsonl.gz",
+          "compressed_sha256": "6b26abe516d34aad2c845f2f05269e309d4cb03f819d2e827280dfa625bede91",
+          "uncompressed_sha256": "f11ad8524b4500fdf69e83f230835496a39f61fc840014d93b2718bc946b8a57",
+          "compressed_bytes": 25489203,
+          "uncompressed_bytes": 75450604,
+          "jsonl_record_count": 145857
+        },
+        "record_counts_before_footer": {
+          "ROW": 10744,
+          "SEMANTIC_VALUE": 2318,
+          "CIRCUIT_NODE": 132793
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 12,
+      "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+      "sector": 25,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 25,
+        "resume_key": "599fc6e20718f9cd5686429ad686dca264b4fd33e55a25ae28c5b374c8ec131e",
+        "manifest_sha256": "5231fd29d91e2bdcda5eebc8bd11051e69479f02d22a0f8b49f2bc0fb3714fe9",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i2-s3sq-s4-s25-599fc6e20718f9cd.jsonl.gz",
+          "compressed_sha256": "d12191a30d9ab1ae1240f11c5750b531a96d5bc16ae58bdb1190650fd6693e0d",
+          "uncompressed_sha256": "9be6d855c383b34eaeb920d81c3402c4496759ff012b01bc00f53779819854af",
+          "compressed_bytes": 30356820,
+          "uncompressed_bytes": 88941969,
+          "jsonl_record_count": 169637
+        },
+        "record_counts_before_footer": {
+          "ROW": 9946,
+          "SEMANTIC_VALUE": 2467,
+          "CIRCUIT_NODE": 157222
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 13,
+      "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+      "sector": 27,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 27,
+        "resume_key": "7a069bd6817ea11a0c4ee1e609b8e18aca896e40fcbf2d2a01f92c9f30b4c6cd",
+        "manifest_sha256": "9734c1912683cadea5a30af75253b9b817c7730d6f2153029e957155f680e85a",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i2-s3sq-s4-s27-7a069bd6817ea11a.jsonl.gz",
+          "compressed_sha256": "2eba1c6ed6b536ea7519269397e6ba73dd3508023685e5bc25efb01cb360c001",
+          "uncompressed_sha256": "cde5fd02183b8eaad4b5f083756d779c55feabe4f0f1707e8b496ca018e798f9",
+          "compressed_bytes": 28543878,
+          "uncompressed_bytes": 81913883,
+          "jsonl_record_count": 156670
+        },
+        "record_counts_before_footer": {
+          "ROW": 6374,
+          "SEMANTIC_VALUE": 2131,
+          "CIRCUIT_NODE": 148163
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 14,
+      "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+      "sector": 28,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 28,
+        "resume_key": "ea7cec575b0f12ca9da94881da090d4493b7fc779e06f1f4d6d2ed659143951f",
+        "manifest_sha256": "1cf085fc5bd2c2a1498599558917bc53dccf88b01e609a8e24c7f109190d5716",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i2-s3sq-s4-s28-ea7cec575b0f12ca.jsonl.gz",
+          "compressed_sha256": "9e326a2343a93d9c6dccff9d49ef2ece05b3827c76cae8c6313458f00ae31f73",
+          "uncompressed_sha256": "05c327c5f098538627846f70d4ee9ea4a8347d0d9fbb84142afb3d7cd2a939d3",
+          "compressed_bytes": 36084465,
+          "uncompressed_bytes": 104295108,
+          "jsonl_record_count": 194191
+        },
+        "record_counts_before_footer": {
+          "ROW": 7035,
+          "SEMANTIC_VALUE": 2543,
+          "CIRCUIT_NODE": 184611
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 15,
+      "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+      "sector": 30,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 30,
+        "resume_key": "b8e40945b883e98360f1d6a6248a65fd45dd375f800a941351bf48e2a30405e5",
+        "manifest_sha256": "925757aaf8aa3ba85a15adc45f707bdc949aa3766d39ba2ee9f553bfc1601a51",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i2-s3sq-s4-s30-b8e40945b883e983.jsonl.gz",
+          "compressed_sha256": "893a12faaa81d80a4deb9dad0451f8424f1a0a07cfe917588ad195645d9e7cb9",
+          "uncompressed_sha256": "fcad96b1f2917728a9d09730ed796e903238aa910fa63eddc6d5eede43a2360f",
+          "compressed_bytes": 31474713,
+          "uncompressed_bytes": 90490584,
+          "jsonl_record_count": 177379
+        },
+        "record_counts_before_footer": {
+          "ROW": 10387,
+          "SEMANTIC_VALUE": 2119,
+          "CIRCUIT_NODE": 164871
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 16,
+      "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+      "sector": 0,
+      "action": "RESUMED_AFTER_FULL_EXACT_READBACK",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+        "sector": 0,
+        "resume_key": "c4b985669781a399b6bd48e01b6687fa7345e0b7a87682cc92b2067004374f16",
+        "manifest_sha256": "86550b7e1566baf4ccc7d6c686827263df574a6d569249f16d513d36e1248420",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i2-s3sq-s4-b2-on-s4-s00-c4b985669781a399.jsonl.gz",
+          "compressed_sha256": "5198823505694b810647806536f73690e8644fa5964d2108603fc40c82397cee",
+          "uncompressed_sha256": "5fc0664210101e6c6d7ea865f7e24c2cce758b1378b0ad1f062164e07f035693",
+          "compressed_bytes": 6901996,
+          "uncompressed_bytes": 23369513,
+          "jsonl_record_count": 39483
+        },
+        "record_counts_before_footer": {
+          "ROW": 5912,
+          "SEMANTIC_VALUE": 2702,
+          "CIRCUIT_NODE": 30867
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 17,
+      "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+      "sector": 5,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+        "sector": 5,
+        "resume_key": "eeedfae22141d3f10583ef74c65b0be78bf6e99e7e3a8f359aff0f096503dc38",
+        "manifest_sha256": "cc49c9ac4b5d5db050c4dbd934af614793fe56686b732fcaaa896d35220e3226",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i2-s3sq-s4-b2-on-s4-s05-eeedfae22141d3f1.jsonl.gz",
+          "compressed_sha256": "0030d239d630e4def322818830e05245fd245db4a8c16059cc84e81cceeca8d2",
+          "uncompressed_sha256": "7941f05f57a4adcec151225cf0bda22000796f865c83721d9d369c5f32a2413b",
+          "compressed_bytes": 13340538,
+          "uncompressed_bytes": 42084262,
+          "jsonl_record_count": 80377
+        },
+        "record_counts_before_footer": {
+          "ROW": 12798,
+          "SEMANTIC_VALUE": 2902,
+          "CIRCUIT_NODE": 64675
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 18,
+      "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+      "sector": 10,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+        "sector": 10,
+        "resume_key": "c63c339c21fa67d589504ea9bd191d1dfc799bdd488d966545132fa768972f22",
+        "manifest_sha256": "3d16d1d6e45863474da8aefea8a01fc250e8e52418c92d4ac360a22282841b06",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i2-s3sq-s4-b2-on-s4-s10-c63c339c21fa67d5.jsonl.gz",
+          "compressed_sha256": "6a96403634d6cb0e3d95248f01ca7ab670163f8ff8ce975a6f09134407fb3942",
+          "uncompressed_sha256": "bc68d869d041750a85d1e78753a3644e5518028c453cd1a7dfe5716afbb86e72",
+          "compressed_bytes": 13224880,
+          "uncompressed_bytes": 41483880,
+          "jsonl_record_count": 79807
+        },
+        "record_counts_before_footer": {
+          "ROW": 12798,
+          "SEMANTIC_VALUE": 2902,
+          "CIRCUIT_NODE": 64105
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 19,
+      "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+      "sector": 15,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+        "sector": 15,
+        "resume_key": "a83471624b0c5f1b6925866236f744db271e871e54a6e000ce5ac56aa1dab584",
+        "manifest_sha256": "4018abfd33359605b0787a4e3c6c55b2ca7fe0091bd1b61cbaeed727b603149d",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i2-s3sq-s4-b2-on-s4-s15-a83471624b0c5f1b.jsonl.gz",
+          "compressed_sha256": "e5b6f221044ab1e32d6b243f0e7e0616134304ae5231e95b779876d01b750e4d",
+          "uncompressed_sha256": "502be41cf2bbd71c966e8c95534f5d7bf216136fa4b0ee65005745673395576b",
+          "compressed_bytes": 14838114,
+          "uncompressed_bytes": 46061142,
+          "jsonl_record_count": 82712
+        },
+        "record_counts_before_footer": {
+          "ROW": 8848,
+          "SEMANTIC_VALUE": 3405,
+          "CIRCUIT_NODE": 70457
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 20,
+      "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+      "sector": 19,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+        "sector": 19,
+        "resume_key": "3c45b2136d3e69421dabc0871f26c02397c2fdcf1aee66ebef33071915203eb1",
+        "manifest_sha256": "25ceca667736b7cf5bdbb80bd0b34d23f13f54eea0a11f5b284e25da7a77ce9d",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i2-s3sq-s4-b2-on-s4-s19-3c45b2136d3e6942.jsonl.gz",
+          "compressed_sha256": "2714e31ba0b6cd6d88da05c5e97195e6bebec86b85c3718c6d05235b277afb05",
+          "uncompressed_sha256": "bdd8a1f31c5184abe79b3564c36786480a9924b033a558449ce01026ece1b55f",
+          "compressed_bytes": 14904631,
+          "uncompressed_bytes": 46568804,
+          "jsonl_record_count": 88584
+        },
+        "record_counts_before_footer": {
+          "ROW": 8842,
+          "SEMANTIC_VALUE": 3665,
+          "CIRCUIT_NODE": 76075
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 21,
+      "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+      "sector": 22,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+        "sector": 22,
+        "resume_key": "d81dc1de71d41f61723d4f8e89b0cbec7eddd6feb5cd49a64920504b072168ec",
+        "manifest_sha256": "e985fdf57c380bf2d0bd250c81d49ac81ba0622cd5cdfbcc7af1c89eb14dea9d",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i2-s3sq-s4-b2-on-s4-s22-d81dc1de71d41f61.jsonl.gz",
+          "compressed_sha256": "453d1d280d361422bdb511070475b5750baabbb014194a797e0ef60b9acd6721",
+          "uncompressed_sha256": "626dbca9eb3d2464642745349d6a642fc0501cb1d8bba4dd82859248977c8030",
+          "compressed_bytes": 19159266,
+          "uncompressed_bytes": 59632761,
+          "jsonl_record_count": 112919
+        },
+        "record_counts_before_footer": {
+          "ROW": 14880,
+          "SEMANTIC_VALUE": 4085,
+          "CIRCUIT_NODE": 93952
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 22,
+      "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+      "sector": 25,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+        "sector": 25,
+        "resume_key": "34c5c5aa5a3165a9c4925a522a306b5ba0800431406b8135361539067a37d592",
+        "manifest_sha256": "49414dc6246f2cd03cb35aa21b35977bc0eef70047ad65b7211631f7d5bb926e",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i2-s3sq-s4-b2-on-s4-s25-34c5c5aa5a3165a9.jsonl.gz",
+          "compressed_sha256": "5d9cf6f8ebb44b056f5a36f4b0d0d8c9a48ec34c45f050361912f3812302606a",
+          "uncompressed_sha256": "c35bfc2b7450422d775e2cf3f04bf20a01a6a53f3aac508608748a7e943ed739",
+          "compressed_bytes": 19748751,
+          "uncompressed_bytes": 61024717,
+          "jsonl_record_count": 115225
+        },
+        "record_counts_before_footer": {
+          "ROW": 14880,
+          "SEMANTIC_VALUE": 4085,
+          "CIRCUIT_NODE": 96258
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 23,
+      "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+      "sector": 28,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+        "sector": 28,
+        "resume_key": "53018ab749bc9d7e4f3ae4d09d5f1178e22c8095ee130f42f6978edfe38aba51",
+        "manifest_sha256": "9c9efe9639a6dd2805d85b18f1a20e605901bdd4e6a4d555e2e1dbb6cc8f31f8",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i2-s3sq-s4-b2-on-s4-s28-53018ab749bc9d7e.jsonl.gz",
+          "compressed_sha256": "d481f1e4cac5ed75c427ed5aa1c79a7bbff431a70ddbfaefbdd85f80735255dd",
+          "uncompressed_sha256": "4c6c06713f14ed2f2c62fdc9e34d7ae43349adc1ed66b608cbcb61afcb94ab5d",
+          "compressed_bytes": 14467332,
+          "uncompressed_bytes": 45067592,
+          "jsonl_record_count": 80259
+        },
+        "record_counts_before_footer": {
+          "ROW": 8684,
+          "SEMANTIC_VALUE": 3451,
+          "CIRCUIT_NODE": 68122
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 24,
+      "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+      "sector": 0,
+      "action": "RESUMED_AFTER_FULL_EXACT_READBACK",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 0,
+        "resume_key": "f7cdcaa1a1e2156e7cfb3f7b02c68e83755065bdf98c990559e6ab58012a2bdb",
+        "manifest_sha256": "072220789af897eae7094cd4518dd16d303af7469a8369707429451d39d5a120",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i3-s3cubed-s00-f7cdcaa1a1e2156e.jsonl.gz",
+          "compressed_sha256": "bf9ede899bb4291cef09f5ff2c0ff7e3dded9e9037809e526f12b74874298b23",
+          "uncompressed_sha256": "10bc4cf03ec0dd0daf3388065f778ba26601ce42203789976165285202ec3d07",
+          "compressed_bytes": 39396148,
+          "uncompressed_bytes": 118392624,
+          "jsonl_record_count": 229032
+        },
+        "record_counts_before_footer": {
+          "ROW": 6051,
+          "SEMANTIC_VALUE": 1012,
+          "CIRCUIT_NODE": 221967
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 25,
+      "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+      "sector": 3,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 3,
+        "resume_key": "72ecaf6dc6be82c2d7319a83666a6d0f4b73801fde9088e1b3338955f278b87a",
+        "manifest_sha256": "f676bc7f8056313a5cdbf36f43dcedf308464ee0b41e3db927709e49859b7741",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i3-s3cubed-s03-72ecaf6dc6be82c2.jsonl.gz",
+          "compressed_sha256": "0050328b36cfd1c1b12ad986a3dd78eef21e067bbf28e80c5a3322aaf2ba58a6",
+          "uncompressed_sha256": "af83ba77d156a3facb0f0b223737d6e1cd7c852e9bc3684cd5868bf8076d96ff",
+          "compressed_bytes": 85809686,
+          "uncompressed_bytes": 247115240,
+          "jsonl_record_count": 501595
+        },
+        "record_counts_before_footer": {
+          "ROW": 8521,
+          "SEMANTIC_VALUE": 1407,
+          "CIRCUIT_NODE": 491665
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 26,
+      "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+      "sector": 4,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 4,
+        "resume_key": "c3ad7c891a27ab6dee047a25b7a230bf0321d3b7fed0da8812b3d03e4a9fc6e8",
+        "manifest_sha256": "54a99e451dbef3d4ad8d70844ab4961495efb94f1ed33d48d2325f26e7a22f66",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i3-s3cubed-s04-c3ad7c891a27ab6d.jsonl.gz",
+          "compressed_sha256": "42c720f357ba80be823cf38e3036015deb2419cd2a65463702d02f1767d3b949",
+          "uncompressed_sha256": "a312a0f3af9644bfb810be29fce8f93e8a6b535de2765ce113cf55d154ec257c",
+          "compressed_bytes": 55974864,
+          "uncompressed_bytes": 162471857,
+          "jsonl_record_count": 314729
+        },
+        "record_counts_before_footer": {
+          "ROW": 8373,
+          "SEMANTIC_VALUE": 1236,
+          "CIRCUIT_NODE": 305118
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 27,
+      "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+      "sector": 7,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 7,
+        "resume_key": "7812488a56e9243feefa86bb5708cda5613c9f1a52fb4c9e40a01e3d742efa5f",
+        "manifest_sha256": "8497e55ff166c84974ba1b94c5e949d52ee3977f0f722cb247c6d66b1588f994",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i3-s3cubed-s07-7812488a56e9243f.jsonl.gz",
+          "compressed_sha256": "458f0e2d3662edbb739c3ebd5294b1c7e1f473384a4c3195267cdf7427dee6e0",
+          "uncompressed_sha256": "9c7ab39c3d92d367b41621608851e616d679d4fe8482947e197790779efedb97",
+          "compressed_bytes": 90634020,
+          "uncompressed_bytes": 262380902,
+          "jsonl_record_count": 517883
+        },
+        "record_counts_before_footer": {
+          "ROW": 6948,
+          "SEMANTIC_VALUE": 1288,
+          "CIRCUIT_NODE": 509645
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 28,
+      "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+      "sector": 9,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 9,
+        "resume_key": "c3719c92ef624720dbfba3d56a4f5c0bcd0a9e05630acdfa2e4cdb2523945a68",
+        "manifest_sha256": "3908f6d7a28afbe99372112a0ef0a4f3b011fe88575a56cf4f58e148cc4e06e5",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i3-s3cubed-s09-c3719c92ef624720.jsonl.gz",
+          "compressed_sha256": "8c3d7517b40e8be659cad03ca1f010bf3f77ee237cb0554301bc0eee18a9237f",
+          "uncompressed_sha256": "f69888be70a707d8686fe4149029659bbc408c0b4977f6a6a02e36cb613fdf7a",
+          "compressed_bytes": 88765271,
+          "uncompressed_bytes": 256239039,
+          "jsonl_record_count": 533171
+        },
+        "record_counts_before_footer": {
+          "ROW": 8523,
+          "SEMANTIC_VALUE": 1399,
+          "CIRCUIT_NODE": 523247
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 29,
+      "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+      "sector": 10,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 10,
+        "resume_key": "d31b28c76bde6effa9f9f05060223503915b1ce3f1e4bd6b265dd6686fffb907",
+        "manifest_sha256": "b360a1196777eb4b9e49ade4739be86be94f79fa350b6443b9254b32a7f5b173",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i3-s3cubed-s10-d31b28c76bde6eff.jsonl.gz",
+          "compressed_sha256": "859845c4b81b73c90f71a02bb7666b0b6d00589c18cc3d03f225b2f09db88e9d",
+          "uncompressed_sha256": "3da7b3f227f03dbadca410706912fa94e170b15a5fe27231103d098555a83d4d",
+          "compressed_bytes": 166405290,
+          "uncompressed_bytes": 477174016,
+          "jsonl_record_count": 988772
+        },
+        "record_counts_before_footer": {
+          "ROW": 8480,
+          "SEMANTIC_VALUE": 1577,
+          "CIRCUIT_NODE": 978713
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 30,
+      "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+      "sector": 13,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 13,
+        "resume_key": "69f55aa01f01cf645a0e719247fb897494d3e46444f8883d25933ad442780224",
+        "manifest_sha256": "6d745de5d70c0b6bbcde348d55ef5d26d8e09769035fe6d05d391ac1a05651e7",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i3-s3cubed-s13-69f55aa01f01cf64.jsonl.gz",
+          "compressed_sha256": "d330a20559025bd79739628c5654ea607bc1bce27df78c07ee66761efd8735bd",
+          "uncompressed_sha256": "47f92cd3e57793e647ec9d5a0bc24e680cc1f46177c08673c78b9141ddf2c29a",
+          "compressed_bytes": 127654255,
+          "uncompressed_bytes": 365835933,
+          "jsonl_record_count": 731945
+        },
+        "record_counts_before_footer": {
+          "ROW": 8544,
+          "SEMANTIC_VALUE": 1489,
+          "CIRCUIT_NODE": 721910
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 31,
+      "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+      "sector": 14,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 14,
+        "resume_key": "8c7350241f07e4d081fe953a0654a5d8428cbc144158402162b026da70c6a6b5",
+        "manifest_sha256": "d33ec47f3572f16e67306af1b3c6660146cde14549b7334361b2ede715c6847a",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i3-s3cubed-s14-8c7350241f07e4d0.jsonl.gz",
+          "compressed_sha256": "ea95258b0ef19354ef4ff61f41ae58ad1f0e8ebba5327e6607f53974a5c5c82b",
+          "uncompressed_sha256": "1dc38303a1ba21d26e2293efaa44ea6797b605f16178f10ae1da98d14d08395a",
+          "compressed_bytes": 153449108,
+          "uncompressed_bytes": 435261631,
+          "jsonl_record_count": 908968
+        },
+        "record_counts_before_footer": {
+          "ROW": 9936,
+          "SEMANTIC_VALUE": 1615,
+          "CIRCUIT_NODE": 897415
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 32,
+      "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+      "sector": 16,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 16,
+        "resume_key": "1839c57203c89fe19f8a85fa789f9217bdea72b77bc20f33f16d46e3f2c7d453",
+        "manifest_sha256": "8ba5713c6e59df6465a18d0fdde0cfb131cb73843e3dc90a571c5ecd5e141516",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i3-s3cubed-s16-1839c57203c89fe1.jsonl.gz",
+          "compressed_sha256": "5e3d9c8cca29a10892e753ae601e0e51f065b96eeec36aa386089cc0f37835c0",
+          "uncompressed_sha256": "fc6220cc0394c99ab13971a2cb5c3b25278244abf04fbef7c81e0824f8bacf61",
+          "compressed_bytes": 56489609,
+          "uncompressed_bytes": 165787099,
+          "jsonl_record_count": 338323
+        },
+        "record_counts_before_footer": {
+          "ROW": 8387,
+          "SEMANTIC_VALUE": 1240,
+          "CIRCUIT_NODE": 328694
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 33,
+      "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+      "sector": 19,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 19,
+        "resume_key": "15ae943184a028be97bed1f4306351c70caacdf7cd4b3c14f40af20f6783b815",
+        "manifest_sha256": "27fc8931c12a14f0d0df4e392032e4976c657230d0d679a718d8394e9444970e",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i3-s3cubed-s19-15ae943184a028be.jsonl.gz",
+          "compressed_sha256": "9f5b9c42215c0f8efc4084e555bbcb8d1d880b704b7418e4b363d1e41006719f",
+          "uncompressed_sha256": "a11ef5ad3fb48028d94c6edc601e05d9deda6ca35449285b688de57eb391b4ba",
+          "compressed_bytes": 122621192,
+          "uncompressed_bytes": 353645684,
+          "jsonl_record_count": 732433
+        },
+        "record_counts_before_footer": {
+          "ROW": 8544,
+          "SEMANTIC_VALUE": 1489,
+          "CIRCUIT_NODE": 722398
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 34,
+      "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+      "sector": 20,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 20,
+        "resume_key": "f128754f6276be7a1c8d2f5bb2e3aed4eeb67774db93b2a6c268128f03e74491",
+        "manifest_sha256": "dd361298a2699d251b8842b731d0d5067bd52611f76ba6bffd5190dad6e06907",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i3-s3cubed-s20-f128754f6276be7a.jsonl.gz",
+          "compressed_sha256": "4ce7fbf4354860f08cc94710b626b65d246a720f24d697338560dc9dcc912991",
+          "uncompressed_sha256": "0d4afee474eb2bdef645cd915806cf8a672f377637ee733827f50f18ae68f565",
+          "compressed_bytes": 74417661,
+          "uncompressed_bytes": 217136792,
+          "jsonl_record_count": 423483
+        },
+        "record_counts_before_footer": {
+          "ROW": 8544,
+          "SEMANTIC_VALUE": 1276,
+          "CIRCUIT_NODE": 413661
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 35,
+      "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+      "sector": 23,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 23,
+        "resume_key": "ff5479d7b53428507a625e4d7c6abdd42a8999fef21a05598a6999608c2618fc",
+        "manifest_sha256": "1b1e8b7bb5db01519e786ec7ecc337411384d7fcd555ad783032f9cca6307ff5",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i3-s3cubed-s23-ff5479d7b5342850.jsonl.gz",
+          "compressed_sha256": "95963d574386543d02706a6f412feb8bbc405594e519ee419687840b8412b210",
+          "uncompressed_sha256": "d355724865f040d05d4aba665caf31276cb66ca3fd32eecd10c8db23b4cba7d9",
+          "compressed_bytes": 162789367,
+          "uncompressed_bytes": 460392165,
+          "jsonl_record_count": 964190
+        },
+        "record_counts_before_footer": {
+          "ROW": 9488,
+          "SEMANTIC_VALUE": 1598,
+          "CIRCUIT_NODE": 953102
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 36,
+      "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+      "sector": 25,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 25,
+        "resume_key": "5c509ed2e562feaaa0db6683d1914feaf761faca2cd9cb87785a1f45fb263f51",
+        "manifest_sha256": "1e9df82be4bacdede8eb40c5cd6c4d92942e89ab478db8190e36d2acd5e6133d",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i3-s3cubed-s25-5c509ed2e562feaa.jsonl.gz",
+          "compressed_sha256": "54857d58401e34619536d001b4d192cd8944da92c918fb29bdddc4de27d2c0b3",
+          "uncompressed_sha256": "552b7a00447703cebceb75f6e8668241582f7b46134a17fc35f1acf8c6ef5310",
+          "compressed_bytes": 93130195,
+          "uncompressed_bytes": 271251407,
+          "jsonl_record_count": 545693
+        },
+        "record_counts_before_footer": {
+          "ROW": 6948,
+          "SEMANTIC_VALUE": 1280,
+          "CIRCUIT_NODE": 537463
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 37,
+      "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+      "sector": 26,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 26,
+        "resume_key": "2ea2aadb9475386a4b53a9b4d84dda16d05858ee0d9a57935a8300134e6e0501",
+        "manifest_sha256": "f3b941556a0aebe18d513276efab3f2243479f1d7c939a20a5265515e07d720b",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i3-s3cubed-s26-2ea2aadb9475386a.jsonl.gz",
+          "compressed_sha256": "8a782d614ec8efcaa022679405b74c94ce87e28cb39d0b902198c60f3aedcdc0",
+          "uncompressed_sha256": "492b36fbd06f504c374b1faa282c93672c891e10c2b3c17153f7654fd3ab653a",
+          "compressed_bytes": 154230501,
+          "uncompressed_bytes": 438211893,
+          "jsonl_record_count": 916742
+        },
+        "record_counts_before_footer": {
+          "ROW": 9928,
+          "SEMANTIC_VALUE": 1615,
+          "CIRCUIT_NODE": 905197
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 38,
+      "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+      "sector": 29,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 29,
+        "resume_key": "7216aae784b12d61445da31825baa130c16b9beaae655a3203e89c08008c9106",
+        "manifest_sha256": "e444fa25bd6d7dff4e05d1d5407651b122456ff15360cc03fae59e1be0c0f7bd",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i3-s3cubed-s29-7216aae784b12d61.jsonl.gz",
+          "compressed_sha256": "474af5b0bb1c753c6c4ce95068415797581d5b674e1f60e3af77643802bf80b9",
+          "uncompressed_sha256": "5f7a23eaa8ccfd821476d9b9bd85f75a9976033cb3ae686944140d1fbd61f7da",
+          "compressed_bytes": 165977187,
+          "uncompressed_bytes": 468798350,
+          "jsonl_record_count": 911921
+        },
+        "record_counts_before_footer": {
+          "ROW": 9488,
+          "SEMANTIC_VALUE": 1598,
+          "CIRCUIT_NODE": 900833
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    },
+    {
+      "ordinal": 39,
+      "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+      "sector": 30,
+      "action": "BUILT_IN_ISOLATED_SUBPROCESS",
+      "validation": {
+        "status": "VALIDATED_EXACT_RESUME_SHARD",
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 30,
+        "resume_key": "246db055e9d2cc782c182acdf7d0670a98a6694d15d2105870a828832f89b990",
+        "manifest_sha256": "3246d4776f6bfc80685b2e628e6ec51b17b8fb207c92d53cd84e1cf2a0279829",
+        "artifact": {
+          "path": "generated/step6/three-parent-sector-sharded-evaluator/shards/g6-direct-k4me-i3-s3cubed-s30-246db055e9d2cc78.jsonl.gz",
+          "compressed_sha256": "f0b083df16affc46ea1b12c322c94acc383bf446d28cb2313774421d8867eca3",
+          "uncompressed_sha256": "619abb905c4a886bca75c3725f5deefe2aefb0a469e5c4c77b9dbff7b3732530",
+          "compressed_bytes": 153995517,
+          "uncompressed_bytes": 440505827,
+          "jsonl_record_count": 908030
+        },
+        "record_counts_before_footer": {
+          "ROW": 7974,
+          "SEMANTIC_VALUE": 1493,
+          "CIRCUIT_NODE": 898561
+        },
+        "full_node_and_semantic_closure_readback": true,
+        "root_payload_readback": true
+      }
+    }
+  ],
+  "action_histogram": {
+    "BUILT_IN_ISOLATED_SUBPROCESS": 37,
+    "RESUMED_AFTER_FULL_EXACT_READBACK": 3
+  },
+  "merge_manifest": {
+    "schema": "step6.three_parent_sector_sparse_merge.manifest.v1",
+    "label": "complete-restricted-three",
+    "scope": {
+      "evaluated_parent_class_count": 3,
+      "all_host_literal_K4_minus_e_parent_class_count": 6,
+      "strict_subset": true,
+      "can_imply_full_K4_minus_e_result": false,
+      "can_imply_Q2_bb": false
+    },
+    "shard_count": 40,
+    "validated_shards": [
+      {
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 0,
+        "resume_key": "ea4c8658d6b1b2cd5298000c33c007afbcad4151c3eaba2d721a7a8c51bcb96a",
+        "manifest_sha256": "1ef12d03b111acc16a9a6178c5c917204af06fd4767dccede7b44600d65aa567"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 2,
+        "resume_key": "1cbb1a2265127b42a1d1f8fd4de993dc86f0b9bc74d539d6b86afd5a5a77de6a",
+        "manifest_sha256": "0f84af4f6c986c02b7cb0c8aa6d76818c638ec9df258ddb908752c6c12784d51"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 5,
+        "resume_key": "dda4effd3b7c96b1a90629e925b0e63cd46b42b381b355cad4e59bd18174f8cb",
+        "manifest_sha256": "b761d7529682863d1fea82e9c0dbced0988156a652956ecb4c081f834113a84a"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 7,
+        "resume_key": "52f0fc2b091ae0d20dc8aa5e28de1f79ef547d2ef68def932a642c710ecd0bc9",
+        "manifest_sha256": "56fe8f17b926974bbbff01b43d287bdce47c5c666afc88f565c111944900396e"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 8,
+        "resume_key": "527bb5432712fca9b254043fcb2a2b16d65e3db7751f08a528464d141f89ee28",
+        "manifest_sha256": "345ff4f70d9cb62d197848c8381b2da136673c7a1662624e81f9b3f9e7c68515"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 10,
+        "resume_key": "8f0929647c7ec76ffb2bcc96064ffe95e2ab822d749ceb3ac131a72f172e9f8d",
+        "manifest_sha256": "bacc8500c894a844c26ad2b18d49972caf908a0401c06f62406dca059fd24b56"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 13,
+        "resume_key": "4ca8b69b76f4eb0838800ddd475e9021745d01df6fdbe011eae4bd965dbc1f94",
+        "manifest_sha256": "47ecdac3d6c7938da0f8e99a0351db57f589c4f1f085826b7844c90d6565c954"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 15,
+        "resume_key": "02b9531bb78db83e0f9853011f4d801079175c7fe1f70bacfa1cb36171a885fd",
+        "manifest_sha256": "be860e831736868008f8e85d38dd2bc3b7e93c91e2e61ad3878671771c17a624"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 17,
+        "resume_key": "f60a7b862cd02d25536dab20551e33e1536b8b19b5676997b7f0eb2194ad3308",
+        "manifest_sha256": "d0c577c14919001d214dea2017e6f71b440e747ec20b17b6edf73707a9c7192a"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 19,
+        "resume_key": "468ee6f57141e890fdf33b19ef1592f98c9bf7a09ad42eb0d70987f092d6814d",
+        "manifest_sha256": "4981ebf15efa7ee0600a9ccac2a0364dd771d96514e60c331abaab794d74849b"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 20,
+        "resume_key": "90a1736e4bf48e55125a4b0a806235599deb2586ccdb4c63b3cec7a895fc2b0b",
+        "manifest_sha256": "a376b049bcfe3363e9b98705db398cad55f5476cb74da8bdbd5cddef1600a0bf"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 22,
+        "resume_key": "57b46a0df40b024611b98d8cbcc0b6b0300c8dd467003a5e3bce843c4c5c8cf1",
+        "manifest_sha256": "f8e0425db4f054c322f40bcbf6b3075f0dba335636e03810c3e5c045ee9138f1"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 25,
+        "resume_key": "599fc6e20718f9cd5686429ad686dca264b4fd33e55a25ae28c5b374c8ec131e",
+        "manifest_sha256": "5231fd29d91e2bdcda5eebc8bd11051e69479f02d22a0f8b49f2bc0fb3714fe9"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 27,
+        "resume_key": "7a069bd6817ea11a0c4ee1e609b8e18aca896e40fcbf2d2a01f92c9f30b4c6cd",
+        "manifest_sha256": "9734c1912683cadea5a30af75253b9b817c7730d6f2153029e957155f680e85a"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 28,
+        "resume_key": "ea7cec575b0f12ca9da94881da090d4493b7fc779e06f1f4d6d2ed659143951f",
+        "manifest_sha256": "1cf085fc5bd2c2a1498599558917bc53dccf88b01e609a8e24c7f109190d5716"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "sector": 30,
+        "resume_key": "b8e40945b883e98360f1d6a6248a65fd45dd375f800a941351bf48e2a30405e5",
+        "manifest_sha256": "925757aaf8aa3ba85a15adc45f707bdc949aa3766d39ba2ee9f553bfc1601a51"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+        "sector": 0,
+        "resume_key": "c4b985669781a399b6bd48e01b6687fa7345e0b7a87682cc92b2067004374f16",
+        "manifest_sha256": "86550b7e1566baf4ccc7d6c686827263df574a6d569249f16d513d36e1248420"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+        "sector": 5,
+        "resume_key": "eeedfae22141d3f10583ef74c65b0be78bf6e99e7e3a8f359aff0f096503dc38",
+        "manifest_sha256": "cc49c9ac4b5d5db050c4dbd934af614793fe56686b732fcaaa896d35220e3226"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+        "sector": 10,
+        "resume_key": "c63c339c21fa67d589504ea9bd191d1dfc799bdd488d966545132fa768972f22",
+        "manifest_sha256": "3d16d1d6e45863474da8aefea8a01fc250e8e52418c92d4ac360a22282841b06"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+        "sector": 15,
+        "resume_key": "a83471624b0c5f1b6925866236f744db271e871e54a6e000ce5ac56aa1dab584",
+        "manifest_sha256": "4018abfd33359605b0787a4e3c6c55b2ca7fe0091bd1b61cbaeed727b603149d"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+        "sector": 19,
+        "resume_key": "3c45b2136d3e69421dabc0871f26c02397c2fdcf1aee66ebef33071915203eb1",
+        "manifest_sha256": "25ceca667736b7cf5bdbb80bd0b34d23f13f54eea0a11f5b284e25da7a77ce9d"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+        "sector": 22,
+        "resume_key": "d81dc1de71d41f61723d4f8e89b0cbec7eddd6feb5cd49a64920504b072168ec",
+        "manifest_sha256": "e985fdf57c380bf2d0bd250c81d49ac81ba0622cd5cdfbcc7af1c89eb14dea9d"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+        "sector": 25,
+        "resume_key": "34c5c5aa5a3165a9c4925a522a306b5ba0800431406b8135361539067a37d592",
+        "manifest_sha256": "49414dc6246f2cd03cb35aa21b35977bc0eef70047ad65b7211631f7d5bb926e"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+        "sector": 28,
+        "resume_key": "53018ab749bc9d7e4f3ae4d09d5f1178e22c8095ee130f42f6978edfe38aba51",
+        "manifest_sha256": "9c9efe9639a6dd2805d85b18f1a20e605901bdd4e6a4d555e2e1dbb6cc8f31f8"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 0,
+        "resume_key": "f7cdcaa1a1e2156e7cfb3f7b02c68e83755065bdf98c990559e6ab58012a2bdb",
+        "manifest_sha256": "072220789af897eae7094cd4518dd16d303af7469a8369707429451d39d5a120"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 3,
+        "resume_key": "72ecaf6dc6be82c2d7319a83666a6d0f4b73801fde9088e1b3338955f278b87a",
+        "manifest_sha256": "f676bc7f8056313a5cdbf36f43dcedf308464ee0b41e3db927709e49859b7741"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 4,
+        "resume_key": "c3ad7c891a27ab6dee047a25b7a230bf0321d3b7fed0da8812b3d03e4a9fc6e8",
+        "manifest_sha256": "54a99e451dbef3d4ad8d70844ab4961495efb94f1ed33d48d2325f26e7a22f66"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 7,
+        "resume_key": "7812488a56e9243feefa86bb5708cda5613c9f1a52fb4c9e40a01e3d742efa5f",
+        "manifest_sha256": "8497e55ff166c84974ba1b94c5e949d52ee3977f0f722cb247c6d66b1588f994"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 9,
+        "resume_key": "c3719c92ef624720dbfba3d56a4f5c0bcd0a9e05630acdfa2e4cdb2523945a68",
+        "manifest_sha256": "3908f6d7a28afbe99372112a0ef0a4f3b011fe88575a56cf4f58e148cc4e06e5"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 10,
+        "resume_key": "d31b28c76bde6effa9f9f05060223503915b1ce3f1e4bd6b265dd6686fffb907",
+        "manifest_sha256": "b360a1196777eb4b9e49ade4739be86be94f79fa350b6443b9254b32a7f5b173"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 13,
+        "resume_key": "69f55aa01f01cf645a0e719247fb897494d3e46444f8883d25933ad442780224",
+        "manifest_sha256": "6d745de5d70c0b6bbcde348d55ef5d26d8e09769035fe6d05d391ac1a05651e7"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 14,
+        "resume_key": "8c7350241f07e4d081fe953a0654a5d8428cbc144158402162b026da70c6a6b5",
+        "manifest_sha256": "d33ec47f3572f16e67306af1b3c6660146cde14549b7334361b2ede715c6847a"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 16,
+        "resume_key": "1839c57203c89fe19f8a85fa789f9217bdea72b77bc20f33f16d46e3f2c7d453",
+        "manifest_sha256": "8ba5713c6e59df6465a18d0fdde0cfb131cb73843e3dc90a571c5ecd5e141516"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 19,
+        "resume_key": "15ae943184a028be97bed1f4306351c70caacdf7cd4b3c14f40af20f6783b815",
+        "manifest_sha256": "27fc8931c12a14f0d0df4e392032e4976c657230d0d679a718d8394e9444970e"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 20,
+        "resume_key": "f128754f6276be7a1c8d2f5bb2e3aed4eeb67774db93b2a6c268128f03e74491",
+        "manifest_sha256": "dd361298a2699d251b8842b731d0d5067bd52611f76ba6bffd5190dad6e06907"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 23,
+        "resume_key": "ff5479d7b53428507a625e4d7c6abdd42a8999fef21a05598a6999608c2618fc",
+        "manifest_sha256": "1b1e8b7bb5db01519e786ec7ecc337411384d7fcd555ad783032f9cca6307ff5"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 25,
+        "resume_key": "5c509ed2e562feaaa0db6683d1914feaf761faca2cd9cb87785a1f45fb263f51",
+        "manifest_sha256": "1e9df82be4bacdede8eb40c5cd6c4d92942e89ab478db8190e36d2acd5e6133d"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 26,
+        "resume_key": "2ea2aadb9475386a4b53a9b4d84dda16d05858ee0d9a57935a8300134e6e0501",
+        "manifest_sha256": "f3b941556a0aebe18d513276efab3f2243479f1d7c939a20a5265515e07d720b"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 29,
+        "resume_key": "7216aae784b12d61445da31825baa130c16b9beaae655a3203e89c08008c9106",
+        "manifest_sha256": "e444fa25bd6d7dff4e05d1d5407651b122456ff15360cc03fae59e1be0c0f7bd"
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "sector": 30,
+        "resume_key": "246db055e9d2cc782c182acdf7d0670a98a6694d15d2105870a828832f89b990",
+        "manifest_sha256": "3246d4776f6bfc80685b2e628e6ec51b17b8fb207c92d53cd84e1cf2a0279829"
+      }
+    ],
+    "artifact": {
+      "path": "generated/step6/three-parent-sector-sharded-evaluator/results/complete-restricted-three-sparse-merge.jsonl.gz",
+      "compressed_sha256": "38eb1aa1e4034861de900a6f1ca0754323b6cf81a646da9776ff7347f1c5884b",
+      "uncompressed_sha256": "0bb512cf6dcae5fd50101d0ab961d83de58cf7873bc275dab8811fbcff1c1246",
+      "compressed_bytes": 14892735,
+      "uncompressed_bytes": 57587854,
+      "jsonl_record_count": 55520
+    },
+    "input_sparse_row_count": 351069,
+    "output_sparse_row_count": 55518,
+    "output_term_count": 350945,
+    "exact_structural_zero_key_count": 0,
+    "global_DAG_registry_constructed": false,
+    "semantic_expansion_gate": {
+      "status": "NOT_RUN_SEPARATE_GATE",
+      "Poly_Exterior_distribution_performed": false
+    },
+    "manifest_sha256": "d1565941b5f41a8e0c1e4150c46054f320be2155a3ef3cffab10e829507df07e"
+  },
+  "merge_validation": {
+    "status": "VALIDATED_DISK_STREAMED_EXACT_SPARSE_MERGE",
+    "manifest_sha256": "d1565941b5f41a8e0c1e4150c46054f320be2155a3ef3cffab10e829507df07e",
+    "artifact": {
+      "path": "generated/step6/three-parent-sector-sharded-evaluator/results/complete-restricted-three-sparse-merge.jsonl.gz",
+      "compressed_sha256": "38eb1aa1e4034861de900a6f1ca0754323b6cf81a646da9776ff7347f1c5884b",
+      "uncompressed_sha256": "0bb512cf6dcae5fd50101d0ab961d83de58cf7873bc275dab8811fbcff1c1246",
+      "compressed_bytes": 14892735,
+      "uncompressed_bytes": 57587854,
+      "jsonl_record_count": 55520
+    },
+    "output_sparse_row_count": 55518,
+    "output_term_count": 350945,
+    "global_DAG_registry_constructed": false,
+    "semantic_expansion_performed": false
+  },
+  "runtime": {
+    "wall_seconds": 6203.666097874986
+  },
+  "semantic_expansion_gate": {
+    "status": "NOT_RUN_SEPARATE_GATE",
+    "Poly_Exterior_distribution_performed": false
+  },
+  "boundary": {
+    "scope": {
+      "evaluated_parent_class_count": 3,
+      "all_host_literal_K4_minus_e_parent_class_count": 6,
+      "strict_subset": true,
+      "can_imply_full_K4_minus_e_result": false,
+      "can_imply_Q2_bb": false
+    },
+    "can_imply_full_K4_minus_e_result": false,
+    "covariant_projection_performed": false,
+    "automatic_Project_X_source_map_descent_proved": false,
+    "Q2_bb_result": null
+  },
+  "payload_sha256": "852d7b3a63b158fea79166232b017500bbbe1e271721d475cd05007db2ac73f3"
+}

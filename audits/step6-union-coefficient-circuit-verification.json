@@ -1,0 +1,4923 @@
+{
+  "checks": {
+    "materialized::I3_attempted_first": true,
+    "materialized::all_old3_parent_local_group_tensors_materialized": true,
+    "materialized::all_six_frontier_records_in_exact_order": true,
+    "materialized::all_six_two_external_S4_terms_use_certified_precompiler": true,
+    "materialized::common_denominator_and_graph_weight_are_actual_factors": true,
+    "materialized::each_unique_grammar_term_computed_once": true,
+    "materialized::every_attempt_checkpoint_hashed": true,
+    "materialized::every_resource_block_has_exact_profile": true,
+    "materialized::new3_fail_closed_before_Dalgebra_open_axis_evaluation": true,
+    "materialized::no_group_tuple_contraction_loop": true,
+    "structural::bounded_materialized_atom_executor_exact": true,
+    "structural::common_output_axes_b_p1_p2": true,
+    "structural::current_input_hashes_exact": true,
+    "structural::exact_six_direct_parent_frontier": true,
+    "structural::five_exact_edge_kernels_per_certified_old3_parent": true,
+    "structural::four_local_group_factors_per_certified_old3_parent": true,
+    "structural::graded_sign_factors_exact_and_bound_for_old3": true,
+    "structural::graph_weight_is_minus_inverse_AutB": true,
+    "structural::new3_blockers_are_family_typed": true,
+    "structural::no_physical_or_coefficient_claim": true,
+    "structural::old3_executor_separate_and_new3_fail_closed": true,
+    "structural::old3_group_and_edge_axes_eliminated_exactly_once": true,
+    "structural::old3_new3_compatibility_partition_exact": true,
+    "structural::one_joint_factor_frontier_not_16992_contractions": true,
+    "structural::one_three_factor_missing_denominator_atom_per_certified_old3": true,
+    "structural::payload_hash_exact": true,
+    "structural::union_quotient_dimension_and_color_rows_exact": true
+  },
+  "execution": {
+    "mode": "EXACT_STRUCTURAL_COMPILE_AND_MATERIALIZED_BOUNDED_EXECUTOR",
+    "platform_unit": "bytes_on_macos_kibibytes_on_linux",
+    "production_evaluation": "FAIL_CLOSED_NEW3_DALGEBRA_OPEN_AXIS_EVALUATOR_ABSENT",
+    "resource_ru_maxrss": 798638080,
+    "wall_seconds": 309.8079008330242
+  },
+  "failed": 0,
+  "generator": "scripts/step6_union_coefficient_circuit.py",
+  "materialized_execution": {
+    "execution_order": [
+      "G6_DIRECT_K4ME_I3_S3CUBED",
+      "G6_DIRECT_K4ME_I2_S3SQ_S4",
+      "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+      "G6_DIRECT_K4ME_I2_S3SQ_S4_P1S4_P2S3",
+      "G6_DIRECT_K4ME_I3_S3CUBED_P1S3_P2I",
+      "G6_DIRECT_K4ME_I3_S3CUBED_P1I_P2S3"
+    ],
+    "legacy_old3_status": "FAIL_CLOSED_AT_EXACT_INTERMEDIATE_JOIN",
+    "local_group_materialization": [
+      {
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "local_factor_count": 4,
+        "materialization": "COMPLETE_EXACT_SPARSE",
+        "records": [
+          {
+            "atom_dictionary_sha256": "eccad51cca880be3a8280e2034927dc0fa84363985c3843e40b4b3f4a60bf051",
+            "circuit_term_count": 13044,
+            "factor_content_sha256": "295e3da1713d559fb435116eb76b960e0310dce0987a90228bfaadee00609d8b",
+            "factor_id": "T::G6_DIRECT_K4ME_I3_S3CUBED::I",
+            "group_nonzero_count_histogram": {
+              "1087": 12
+            },
+            "group_radix": 12,
+            "materialization": "COMPLETE_EXACT_SPARSE",
+            "scope": [
+              "g_I",
+              "e_CI",
+              "e_AI",
+              "e_BI"
+            ],
+            "serialized_local_value_atom_count": 3835,
+            "table_row_count": 13044,
+            "vertex_id": "I"
+          },
+          {
+            "atom_dictionary_sha256": "c4c742ab1235f83ea2900a34d4806d156f0d252ea447549841e73287cf15a18e",
+            "circuit_term_count": 2928,
+            "factor_content_sha256": "1e0c6357a17393a58ff807e5d0e8c826034b053dc147f252d9edb926f2e3ffce",
+            "factor_id": "T::G6_DIRECT_K4ME_I3_S3CUBED::A",
+            "group_nonzero_count_histogram": {
+              "488": 6
+            },
+            "group_radix": 6,
+            "materialization": "COMPLETE_EXACT_SPARSE",
+            "scope": [
+              "g_A",
+              "e_CA",
+              "e_AI",
+              "p1"
+            ],
+            "serialized_local_value_atom_count": 936,
+            "table_row_count": 2928,
+            "vertex_id": "A"
+          },
+          {
+            "atom_dictionary_sha256": "35a4206abb8d0e268f03f429bac93971eab0540f9bf384bb55697aa30b76eba6",
+            "circuit_term_count": 2928,
+            "factor_content_sha256": "50eca1306879af3d8f1457f1fbffcf737032215ede73b188e3d2e3f42c561879",
+            "factor_id": "T::G6_DIRECT_K4ME_I3_S3CUBED::B",
+            "group_nonzero_count_histogram": {
+              "488": 6
+            },
+            "group_radix": 6,
+            "materialization": "COMPLETE_EXACT_SPARSE",
+            "scope": [
+              "g_B",
+              "e_CB",
+              "e_BI",
+              "p2"
+            ],
+            "serialized_local_value_atom_count": 936,
+            "table_row_count": 2928,
+            "vertex_id": "B"
+          },
+          {
+            "atom_dictionary_sha256": "ba497f4c4d93e751d739e82979bd152317c54688e5fbd0e167326eaf9f8d4714",
+            "circuit_term_count": 2928,
+            "factor_content_sha256": "0b6ba205e03a0c420e56af884d525063ee3aa4b241733e52d016b5646626bc8e",
+            "factor_id": "T::G6_DIRECT_K4ME_I3_S3CUBED::C",
+            "group_nonzero_count_histogram": {
+              "488": 6
+            },
+            "group_radix": 6,
+            "materialization": "COMPLETE_EXACT_SPARSE",
+            "scope": [
+              "g_C",
+              "e_CI",
+              "e_CA",
+              "e_CB"
+            ],
+            "serialized_local_value_atom_count": 936,
+            "table_row_count": 2928,
+            "vertex_id": "C"
+          }
+        ],
+        "serialized_local_value_atom_count_sum": 6643,
+        "sparse_table_row_count": 21828
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "local_factor_count": 4,
+        "materialization": "COMPLETE_EXACT_SPARSE",
+        "records": [
+          {
+            "atom_dictionary_sha256": "ba8ca68e0ae5395c8339e6cd5bae1fafa66cf848cd90cd690e2c560b8f953791",
+            "circuit_term_count": 172,
+            "factor_content_sha256": "fb3c6c8a12bd4ec514ec6328d60927b50ef2fc561dac5217b3ad68002ee9e477",
+            "factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4::I",
+            "group_nonzero_count_histogram": {
+              "86": 2
+            },
+            "group_radix": 2,
+            "materialization": "COMPLETE_EXACT_SPARSE",
+            "scope": [
+              "g_I",
+              "e_BI",
+              "e_IC"
+            ],
+            "serialized_local_value_atom_count": 72,
+            "table_row_count": 172,
+            "vertex_id": "I"
+          },
+          {
+            "atom_dictionary_sha256": "c4c742ab1235f83ea2900a34d4806d156f0d252ea447549841e73287cf15a18e",
+            "circuit_term_count": 2928,
+            "factor_content_sha256": "c6e981a53985cb5175340c47be12824014c1fc302104e1c7608d9d494bc04f6b",
+            "factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4::A",
+            "group_nonzero_count_histogram": {
+              "488": 6
+            },
+            "group_radix": 6,
+            "materialization": "COMPLETE_EXACT_SPARSE",
+            "scope": [
+              "g_A",
+              "e_BA",
+              "e_AC",
+              "p1"
+            ],
+            "serialized_local_value_atom_count": 936,
+            "table_row_count": 2928,
+            "vertex_id": "A"
+          },
+          {
+            "atom_dictionary_sha256": "ba497f4c4d93e751d739e82979bd152317c54688e5fbd0e167326eaf9f8d4714",
+            "circuit_term_count": 2928,
+            "factor_content_sha256": "ff2fef71c21f87424ed302767f7508d3f7a449d08141f99c9f83596f74756a07",
+            "factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4::B",
+            "group_nonzero_count_histogram": {
+              "488": 6
+            },
+            "group_radix": 6,
+            "materialization": "COMPLETE_EXACT_SPARSE",
+            "scope": [
+              "g_B",
+              "e_BI",
+              "e_BA",
+              "e_BC"
+            ],
+            "serialized_local_value_atom_count": 936,
+            "table_row_count": 2928,
+            "vertex_id": "B"
+          },
+          {
+            "atom_dictionary_sha256": "b73f03803ef06fa5c4d9f48bf570fe849aee3184855dc417d00233ba8404f3a4",
+            "circuit_term_count": 77748,
+            "factor_content_sha256": "30b33a4545a7c2106a89f2d96ecc0960b5b9e287830ef359aa9567f26caa1e79",
+            "factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4::C",
+            "group_nonzero_count_histogram": {
+              "1904": 24,
+              "2671": 12
+            },
+            "group_radix": 36,
+            "materialization": "COMPLETE_EXACT_SPARSE",
+            "scope": [
+              "g_C",
+              "e_IC",
+              "e_AC",
+              "e_BC",
+              "p2"
+            ],
+            "serialized_local_value_atom_count": 8202,
+            "table_row_count": 77748,
+            "vertex_id": "C"
+          }
+        ],
+        "serialized_local_value_atom_count_sum": 10146,
+        "sparse_table_row_count": 83776
+      },
+      {
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+        "local_factor_count": 4,
+        "materialization": "COMPLETE_EXACT_SPARSE",
+        "records": [
+          {
+            "atom_dictionary_sha256": "ba8ca68e0ae5395c8339e6cd5bae1fafa66cf848cd90cd690e2c560b8f953791",
+            "circuit_term_count": 172,
+            "factor_content_sha256": "c45f49b48fe2283b802e0d81c3f43bd76368f5a3602bc609eadb2873b58c9aee",
+            "factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4::I",
+            "group_nonzero_count_histogram": {
+              "86": 2
+            },
+            "group_radix": 2,
+            "materialization": "COMPLETE_EXACT_SPARSE",
+            "scope": [
+              "g_I",
+              "e_AI",
+              "e_IB"
+            ],
+            "serialized_local_value_atom_count": 72,
+            "table_row_count": 172,
+            "vertex_id": "I"
+          },
+          {
+            "atom_dictionary_sha256": "d0baa0e5bdf92cfa6181d0254192902f5929319b8b61d221000058550425e309",
+            "circuit_term_count": 2928,
+            "factor_content_sha256": "2852927bf364d5c337d7090c8d0691378e9a989b5ecbe96708170c9fbef86cd4",
+            "factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4::A",
+            "group_nonzero_count_histogram": {
+              "488": 6
+            },
+            "group_radix": 6,
+            "materialization": "COMPLETE_EXACT_SPARSE",
+            "scope": [
+              "g_A",
+              "e_AI",
+              "e_CA",
+              "e_BA"
+            ],
+            "serialized_local_value_atom_count": 936,
+            "table_row_count": 2928,
+            "vertex_id": "A"
+          },
+          {
+            "atom_dictionary_sha256": "0859528a0b3f9440e3f021f882041bc34697201e3b76c42222bab47d7e907556",
+            "circuit_term_count": 2928,
+            "factor_content_sha256": "1a79541d4499823dc4d681e516b04c02083cfef7fbb428dd687a3e73b6713c30",
+            "factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4::B",
+            "group_nonzero_count_histogram": {
+              "488": 6
+            },
+            "group_radix": 6,
+            "materialization": "COMPLETE_EXACT_SPARSE",
+            "scope": [
+              "g_B",
+              "e_IB",
+              "e_BC",
+              "e_BA"
+            ],
+            "serialized_local_value_atom_count": 936,
+            "table_row_count": 2928,
+            "vertex_id": "B"
+          },
+          {
+            "atom_dictionary_sha256": "3e8b07981cb527210de2f2aa762c99b655f254a145af971914bbb5a175a480b5",
+            "circuit_term_count": 121964,
+            "factor_content_sha256": "1b12e4d09d6587a6bbb3d20293ee90616ebf841588987975fc66a45c1271bf8d",
+            "factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4::C",
+            "group_nonzero_count_histogram": {
+              "1904": 36,
+              "2671": 20
+            },
+            "group_radix": 56,
+            "materialization": "COMPLETE_EXACT_SPARSE",
+            "scope": [
+              "g_C",
+              "e_CA",
+              "e_BC",
+              "p1",
+              "p2"
+            ],
+            "serialized_local_value_atom_count": 8692,
+            "table_row_count": 121964,
+            "vertex_id": "C"
+          }
+        ],
+        "serialized_local_value_atom_count_sum": 10636,
+        "sparse_table_row_count": 127992
+      }
+    ],
+    "parent_attempts": [
+      {
+        "blocked_exact_join_profile": {
+          "exact_matching_row_pairs": 135569408,
+          "exact_monomial_products_before_collection": 135569408,
+          "left_factor_id": "JOIN::0880fa53bcba177d861a",
+          "left_scope": [
+            "e_BI",
+            "e_CA",
+            "p2"
+          ],
+          "left_table_rows": 4096,
+          "output_scope": [
+            "e_BI",
+            "e_CA",
+            "p2",
+            "p1",
+            "g_A",
+            "e_AI",
+            "e_CI",
+            "g_C",
+            "e_CB"
+          ],
+          "right_factor_id": "JOIN::f0ffe35054be87c5f1b5",
+          "right_scope": [
+            "e_CA",
+            "p1",
+            "g_A",
+            "e_AI",
+            "e_CI",
+            "g_C",
+            "e_CB"
+          ],
+          "right_table_rows": 529568,
+          "shared_scope": [
+            "e_CA"
+          ]
+        },
+        "blocked_variable": "e_CA",
+        "checkpoint_sha256": "d3e15d8b7b6f0c039d395885b43c3d0d2c8ecb3500ea669c837dcc37e8b8b6de",
+        "completed_elimination_variables": [],
+        "elapsed_seconds": 9.127773915999569,
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "input": {
+          "common_denominator_atom": "DENOM::1b78d157f56eb106cad4fcac0da5751f4501ff8bd166aa0f6bbf537012f27e63",
+          "data_aware_elimination_order": [
+            "e_CA",
+            "e_CB",
+            "e_AI",
+            "e_BI",
+            "e_CI",
+            "g_I",
+            "g_A",
+            "g_B",
+            "g_C"
+          ],
+          "factor_count": 29,
+          "factor_summaries": [
+            {
+              "circuit_term_count": 13044,
+              "factor_content_sha256": "295e3da1713d559fb435116eb76b960e0310dce0987a90228bfaadee00609d8b",
+              "factor_id": "T::G6_DIRECT_K4ME_I3_S3CUBED::I",
+              "scope": [
+                "g_I",
+                "e_CI",
+                "e_AI",
+                "e_BI"
+              ],
+              "table_row_count": 13044
+            },
+            {
+              "circuit_term_count": 2928,
+              "factor_content_sha256": "1e0c6357a17393a58ff807e5d0e8c826034b053dc147f252d9edb926f2e3ffce",
+              "factor_id": "T::G6_DIRECT_K4ME_I3_S3CUBED::A",
+              "scope": [
+                "g_A",
+                "e_CA",
+                "e_AI",
+                "p1"
+              ],
+              "table_row_count": 2928
+            },
+            {
+              "circuit_term_count": 2928,
+              "factor_content_sha256": "50eca1306879af3d8f1457f1fbffcf737032215ede73b188e3d2e3f42c561879",
+              "factor_id": "T::G6_DIRECT_K4ME_I3_S3CUBED::B",
+              "scope": [
+                "g_B",
+                "e_CB",
+                "e_BI",
+                "p2"
+              ],
+              "table_row_count": 2928
+            },
+            {
+              "circuit_term_count": 2928,
+              "factor_content_sha256": "0b6ba205e03a0c420e56af884d525063ee3aa4b241733e52d016b5646626bc8e",
+              "factor_id": "T::G6_DIRECT_K4ME_I3_S3CUBED::C",
+              "scope": [
+                "g_C",
+                "e_CI",
+                "e_CA",
+                "e_CB"
+              ],
+              "table_row_count": 2928
+            },
+            {
+              "circuit_term_count": 11696,
+              "factor_content_sha256": "2b5be965afa3dcf4770627802985c8b9c5169a09cf59f516ddf1167c684d551a",
+              "factor_id": "C_UNION::G6_DIRECT_K4ME_I3_S3CUBED",
+              "scope": [
+                "g_I",
+                "g_A",
+                "g_B",
+                "g_C",
+                "b"
+              ],
+              "table_row_count": 11696
+            },
+            {
+              "circuit_term_count": 16,
+              "factor_content_sha256": "3f96c65ebc73fd9a25c619b43bdacd7ffec363ed79eb97a1e1cfe630e8f5c6fb",
+              "factor_id": "K::e_CI",
+              "scope": [
+                "e_CI"
+              ],
+              "table_row_count": 16
+            },
+            {
+              "circuit_term_count": 16,
+              "factor_content_sha256": "5e7b70d40af59460fdf3b18ca4168d2274385402817cbb216a358a818e5f2344",
+              "factor_id": "K::e_CA",
+              "scope": [
+                "e_CA"
+              ],
+              "table_row_count": 16
+            },
+            {
+              "circuit_term_count": 16,
+              "factor_content_sha256": "00b33b41e85256a6c663f04d1d22b6a5afba1938fac144af1449935f3e530ee2",
+              "factor_id": "K::e_AI",
+              "scope": [
+                "e_AI"
+              ],
+              "table_row_count": 16
+            },
+            {
+              "circuit_term_count": 16,
+              "factor_content_sha256": "74004747ac172ebcb561559b6c4bd8ba5c3249105b7e8cbd4c431a3215a0b05a",
+              "factor_id": "K::e_CB",
+              "scope": [
+                "e_CB"
+              ],
+              "table_row_count": 16
+            },
+            {
+              "circuit_term_count": 16,
+              "factor_content_sha256": "a916f52f5cdd1b9409fdc40527fa52c9820b6502b72248d20b461da5e8b22f61",
+              "factor_id": "K::e_BI",
+              "scope": [
+                "e_BI"
+              ],
+              "table_row_count": 16
+            },
+            {
+              "circuit_term_count": 16,
+              "factor_content_sha256": "0f511963419c73cae99c48fa949eb4437d48e7846c563848418473c9a0aef090",
+              "factor_id": "SIGN1::e_AI",
+              "scope": [
+                "e_AI"
+              ],
+              "table_row_count": 16
+            },
+            {
+              "circuit_term_count": 16,
+              "factor_content_sha256": "f5840ad8d8cae9e192c7dbd11bb4f0cdcbae205b566bee83c96b4ae010453f5d",
+              "factor_id": "SIGN1::e_BI",
+              "scope": [
+                "e_BI"
+              ],
+              "table_row_count": 16
+            },
+            {
+              "circuit_term_count": 16,
+              "factor_content_sha256": "2c6f1042763ba5a75eb8d078922d18661f4f895d752f67bfca96b6f59d77cb48",
+              "factor_id": "SIGN1::e_CA",
+              "scope": [
+                "e_CA"
+              ],
+              "table_row_count": 16
+            },
+            {
+              "circuit_term_count": 16,
+              "factor_content_sha256": "7f75aefe7401a35c0fe9c44d67b13017a026351c28698d97b6111b0d30579b8e",
+              "factor_id": "SIGN1::e_CB",
+              "scope": [
+                "e_CB"
+              ],
+              "table_row_count": 16
+            },
+            {
+              "circuit_term_count": 16,
+              "factor_content_sha256": "b0c811c2cfb254c1c6498c35a6ec4e21949f74b99918330935944ed10dbf981d",
+              "factor_id": "SIGN1::e_CI",
+              "scope": [
+                "e_CI"
+              ],
+              "table_row_count": 16
+            },
+            {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "762c642778329f36b8195b1df778ad5b961802c225e6a003022d17c35346c0cc",
+              "factor_id": "SIGN2::e_AI::e_BI",
+              "scope": [
+                "e_AI",
+                "e_BI"
+              ],
+              "table_row_count": 256
+            },
+            {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "09f48ad07c908372279d1836b844b8eaf20092b358c3eeb49dd977a900b16932",
+              "factor_id": "SIGN2::e_AI::e_CA",
+              "scope": [
+                "e_AI",
+                "e_CA"
+              ],
+              "table_row_count": 256
+            },
+            {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "63447d44993556e5865be2b28b3c65e473717a3d7c83d3fe923678595fc3ad7c",
+              "factor_id": "SIGN2::e_BI::e_CA",
+              "scope": [
+                "e_BI",
+                "e_CA"
+              ],
+              "table_row_count": 256
+            },
+            {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "a64a6f5c93cd73ce0df1435218b6f4f53cf0b3ec5dd35cb180729712d23ac8a6",
+              "factor_id": "SIGN2::e_BI::e_CB",
+              "scope": [
+                "e_BI",
+                "e_CB"
+              ],
+              "table_row_count": 256
+            },
+            {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "da72efacbbc42682d437588d4446945bcc020b5856afeb4e34e50e3ea52dc363",
+              "factor_id": "SIGN2::e_BI::p1",
+              "scope": [
+                "e_BI",
+                "p1"
+              ],
+              "table_row_count": 256
+            },
+            {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "3305c8096482378b1af3bedd0785842550b7f156dc25a64d71fb62d84cf20f1d",
+              "factor_id": "SIGN2::e_CA::e_CB",
+              "scope": [
+                "e_CA",
+                "e_CB"
+              ],
+              "table_row_count": 256
+            },
+            {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "f913f72c5d4540d168b093960bb0f9e7fc64b2386dd69373bacd5f8a2fa1de2d",
+              "factor_id": "SIGN2::e_CA::e_CI",
+              "scope": [
+                "e_CA",
+                "e_CI"
+              ],
+              "table_row_count": 256
+            },
+            {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "49e6115d1e6d22ea2e4de517645a6e0bbb2da4a335a2195af672b889714400e7",
+              "factor_id": "SIGN2::e_CA::p1",
+              "scope": [
+                "e_CA",
+                "p1"
+              ],
+              "table_row_count": 256
+            },
+            {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "644fa2cdc80dbaa1c34239086c6770757bba9038b1d30a8fb03ef37679f98868",
+              "factor_id": "SIGN2::e_CA::p2",
+              "scope": [
+                "e_CA",
+                "p2"
+              ],
+              "table_row_count": 256
+            },
+            {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "416397b74c12971934095e88c81614692c1928b411471b84a44986f87b2ee552",
+              "factor_id": "SIGN2::e_CB::e_CI",
+              "scope": [
+                "e_CB",
+                "e_CI"
+              ],
+              "table_row_count": 256
+            },
+            {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "e9a1835c45cbbc64c3a222af9304795815dfe15fd5559e9cb3b7fe9d98789d16",
+              "factor_id": "SIGN2::e_CB::p2",
+              "scope": [
+                "e_CB",
+                "p2"
+              ],
+              "table_row_count": 256
+            },
+            {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "1dd6c13d451d68c2063c62bcf9ad639e5397a7be3322a0af13e171ba2aff1946",
+              "factor_id": "SIGN2::e_CI::p1",
+              "scope": [
+                "e_CI",
+                "p1"
+              ],
+              "table_row_count": 256
+            },
+            {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "103c39f31f1ce2536380066e5ed38a97bf28b92143b43fd46d9b233cb6131f9f",
+              "factor_id": "SIGN2::e_CI::p2",
+              "scope": [
+                "e_CI",
+                "p2"
+              ],
+              "table_row_count": 256
+            },
+            {
+              "circuit_term_count": 1,
+              "factor_content_sha256": "a8090d815b260a3a1a7695b0654aa4de1b0245be55f0bef497dbece70a3a7fc8",
+              "factor_id": "WEIGHT_DENOM::G6_DIRECT_K4ME_I3_S3CUBED",
+              "scope": [],
+              "table_row_count": 1
+            }
+          ],
+          "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+          "graph_weight": {
+            "denominator": 1,
+            "numerator": -1
+          },
+          "local_pair_edge_cost_ledger": [
+            {
+              "edge": "e_CA",
+              "incident_factor_ids": [
+                "T::G6_DIRECT_K4ME_I3_S3CUBED::A",
+                "T::G6_DIRECT_K4ME_I3_S3CUBED::C"
+              ],
+              "local_pair_exact_matching_row_pairs": 529568,
+              "local_pair_exact_monomial_products": 529568
+            },
+            {
+              "edge": "e_CB",
+              "incident_factor_ids": [
+                "T::G6_DIRECT_K4ME_I3_S3CUBED::B",
+                "T::G6_DIRECT_K4ME_I3_S3CUBED::C"
+              ],
+              "local_pair_exact_matching_row_pairs": 529568,
+              "local_pair_exact_monomial_products": 529568
+            },
+            {
+              "edge": "e_AI",
+              "incident_factor_ids": [
+                "T::G6_DIRECT_K4ME_I3_S3CUBED::I",
+                "T::G6_DIRECT_K4ME_I3_S3CUBED::A"
+              ],
+              "local_pair_exact_matching_row_pairs": 2442048,
+              "local_pair_exact_monomial_products": 2442048
+            },
+            {
+              "edge": "e_BI",
+              "incident_factor_ids": [
+                "T::G6_DIRECT_K4ME_I3_S3CUBED::I",
+                "T::G6_DIRECT_K4ME_I3_S3CUBED::B"
+              ],
+              "local_pair_exact_matching_row_pairs": 2442048,
+              "local_pair_exact_monomial_products": 2442048
+            },
+            {
+              "edge": "e_CI",
+              "incident_factor_ids": [
+                "T::G6_DIRECT_K4ME_I3_S3CUBED::I",
+                "T::G6_DIRECT_K4ME_I3_S3CUBED::C"
+              ],
+              "local_pair_exact_matching_row_pairs": 2442048,
+              "local_pair_exact_monomial_products": 2442048
+            }
+          ],
+          "union_color_factor_content_sha256": "2b5be965afa3dcf4770627802985c8b9c5169a09cf59f516ddf1167c684d551a",
+          "weight_denominator_factor_content_sha256": "a8090d815b260a3a1a7695b0654aa4de1b0245be55f0bef497dbece70a3a7fc8"
+        },
+        "output": null,
+        "remaining_factor_summaries": [
+          {
+            "circuit_term_count": 13044,
+            "factor_content_sha256": "295e3da1713d559fb435116eb76b960e0310dce0987a90228bfaadee00609d8b",
+            "factor_id": "T::G6_DIRECT_K4ME_I3_S3CUBED::I",
+            "scope": [
+              "g_I",
+              "e_CI",
+              "e_AI",
+              "e_BI"
+            ],
+            "table_row_count": 13044
+          },
+          {
+            "circuit_term_count": 2928,
+            "factor_content_sha256": "50eca1306879af3d8f1457f1fbffcf737032215ede73b188e3d2e3f42c561879",
+            "factor_id": "T::G6_DIRECT_K4ME_I3_S3CUBED::B",
+            "scope": [
+              "g_B",
+              "e_CB",
+              "e_BI",
+              "p2"
+            ],
+            "table_row_count": 2928
+          },
+          {
+            "circuit_term_count": 11696,
+            "factor_content_sha256": "2b5be965afa3dcf4770627802985c8b9c5169a09cf59f516ddf1167c684d551a",
+            "factor_id": "C_UNION::G6_DIRECT_K4ME_I3_S3CUBED",
+            "scope": [
+              "g_I",
+              "g_A",
+              "g_B",
+              "g_C",
+              "b"
+            ],
+            "table_row_count": 11696
+          },
+          {
+            "circuit_term_count": 16,
+            "factor_content_sha256": "3f96c65ebc73fd9a25c619b43bdacd7ffec363ed79eb97a1e1cfe630e8f5c6fb",
+            "factor_id": "K::e_CI",
+            "scope": [
+              "e_CI"
+            ],
+            "table_row_count": 16
+          },
+          {
+            "circuit_term_count": 16,
+            "factor_content_sha256": "00b33b41e85256a6c663f04d1d22b6a5afba1938fac144af1449935f3e530ee2",
+            "factor_id": "K::e_AI",
+            "scope": [
+              "e_AI"
+            ],
+            "table_row_count": 16
+          },
+          {
+            "circuit_term_count": 16,
+            "factor_content_sha256": "74004747ac172ebcb561559b6c4bd8ba5c3249105b7e8cbd4c431a3215a0b05a",
+            "factor_id": "K::e_CB",
+            "scope": [
+              "e_CB"
+            ],
+            "table_row_count": 16
+          },
+          {
+            "circuit_term_count": 16,
+            "factor_content_sha256": "a916f52f5cdd1b9409fdc40527fa52c9820b6502b72248d20b461da5e8b22f61",
+            "factor_id": "K::e_BI",
+            "scope": [
+              "e_BI"
+            ],
+            "table_row_count": 16
+          },
+          {
+            "circuit_term_count": 16,
+            "factor_content_sha256": "0f511963419c73cae99c48fa949eb4437d48e7846c563848418473c9a0aef090",
+            "factor_id": "SIGN1::e_AI",
+            "scope": [
+              "e_AI"
+            ],
+            "table_row_count": 16
+          },
+          {
+            "circuit_term_count": 16,
+            "factor_content_sha256": "f5840ad8d8cae9e192c7dbd11bb4f0cdcbae205b566bee83c96b4ae010453f5d",
+            "factor_id": "SIGN1::e_BI",
+            "scope": [
+              "e_BI"
+            ],
+            "table_row_count": 16
+          },
+          {
+            "circuit_term_count": 16,
+            "factor_content_sha256": "7f75aefe7401a35c0fe9c44d67b13017a026351c28698d97b6111b0d30579b8e",
+            "factor_id": "SIGN1::e_CB",
+            "scope": [
+              "e_CB"
+            ],
+            "table_row_count": 16
+          },
+          {
+            "circuit_term_count": 16,
+            "factor_content_sha256": "b0c811c2cfb254c1c6498c35a6ec4e21949f74b99918330935944ed10dbf981d",
+            "factor_id": "SIGN1::e_CI",
+            "scope": [
+              "e_CI"
+            ],
+            "table_row_count": 16
+          },
+          {
+            "circuit_term_count": 256,
+            "factor_content_sha256": "762c642778329f36b8195b1df778ad5b961802c225e6a003022d17c35346c0cc",
+            "factor_id": "SIGN2::e_AI::e_BI",
+            "scope": [
+              "e_AI",
+              "e_BI"
+            ],
+            "table_row_count": 256
+          },
+          {
+            "circuit_term_count": 256,
+            "factor_content_sha256": "a64a6f5c93cd73ce0df1435218b6f4f53cf0b3ec5dd35cb180729712d23ac8a6",
+            "factor_id": "SIGN2::e_BI::e_CB",
+            "scope": [
+              "e_BI",
+              "e_CB"
+            ],
+            "table_row_count": 256
+          },
+          {
+            "circuit_term_count": 256,
+            "factor_content_sha256": "da72efacbbc42682d437588d4446945bcc020b5856afeb4e34e50e3ea52dc363",
+            "factor_id": "SIGN2::e_BI::p1",
+            "scope": [
+              "e_BI",
+              "p1"
+            ],
+            "table_row_count": 256
+          },
+          {
+            "circuit_term_count": 256,
+            "factor_content_sha256": "416397b74c12971934095e88c81614692c1928b411471b84a44986f87b2ee552",
+            "factor_id": "SIGN2::e_CB::e_CI",
+            "scope": [
+              "e_CB",
+              "e_CI"
+            ],
+            "table_row_count": 256
+          },
+          {
+            "circuit_term_count": 256,
+            "factor_content_sha256": "e9a1835c45cbbc64c3a222af9304795815dfe15fd5559e9cb3b7fe9d98789d16",
+            "factor_id": "SIGN2::e_CB::p2",
+            "scope": [
+              "e_CB",
+              "p2"
+            ],
+            "table_row_count": 256
+          },
+          {
+            "circuit_term_count": 256,
+            "factor_content_sha256": "1dd6c13d451d68c2063c62bcf9ad639e5397a7be3322a0af13e171ba2aff1946",
+            "factor_id": "SIGN2::e_CI::p1",
+            "scope": [
+              "e_CI",
+              "p1"
+            ],
+            "table_row_count": 256
+          },
+          {
+            "circuit_term_count": 256,
+            "factor_content_sha256": "103c39f31f1ce2536380066e5ed38a97bf28b92143b43fd46d9b233cb6131f9f",
+            "factor_id": "SIGN2::e_CI::p2",
+            "scope": [
+              "e_CI",
+              "p2"
+            ],
+            "table_row_count": 256
+          },
+          {
+            "circuit_term_count": 1,
+            "factor_content_sha256": "a8090d815b260a3a1a7695b0654aa4de1b0245be55f0bef497dbece70a3a7fc8",
+            "factor_id": "WEIGHT_DENOM::G6_DIRECT_K4ME_I3_S3CUBED",
+            "scope": [],
+            "table_row_count": 1
+          },
+          {
+            "circuit_term_count": 4096,
+            "factor_content_sha256": "e5fca0f2012b99021be1cb28e9dab9aa1475d892aaeefab80828ed71ef35fa89",
+            "factor_id": "JOIN::0880fa53bcba177d861a",
+            "scope": [
+              "e_BI",
+              "e_CA",
+              "p2"
+            ],
+            "table_row_count": 4096
+          },
+          {
+            "circuit_term_count": 529568,
+            "factor_content_sha256": "031096c3aba6a43291e3e36b2c04cf16909fabd493f7439d2d39dff04e417722",
+            "factor_id": "JOIN::f0ffe35054be87c5f1b5",
+            "scope": [
+              "e_CA",
+              "p1",
+              "g_A",
+              "e_AI",
+              "e_CI",
+              "g_C",
+              "e_CB"
+            ],
+            "table_row_count": 529568
+          }
+        ],
+        "resource_caps": {
+          "max_join_monomial_products": 600000,
+          "max_join_row_matches": 600000
+        },
+        "status": "BLOCKED_EXACT_JOIN_RESOURCE_GATE",
+        "trace": [
+          {
+            "output": {
+              "circuit_term_count": 16,
+              "factor_content_sha256": "b6e9208661233cb822185859cbc6b3de40a0ab5fd459d9f91e455de9627d6fa0",
+              "factor_id": "JOIN::eb482a84ef657e3ade4c",
+              "scope": [
+                "e_CA"
+              ],
+              "table_row_count": 16
+            },
+            "profile": {
+              "exact_matching_row_pairs": 16,
+              "exact_monomial_products_before_collection": 16,
+              "left_factor_id": "K::e_CA",
+              "left_scope": [
+                "e_CA"
+              ],
+              "left_table_rows": 16,
+              "output_scope": [
+                "e_CA"
+              ],
+              "right_factor_id": "SIGN1::e_CA",
+              "right_scope": [
+                "e_CA"
+              ],
+              "right_table_rows": 16,
+              "shared_scope": [
+                "e_CA"
+              ]
+            },
+            "stage": "JOIN",
+            "variable": "e_CA"
+          },
+          {
+            "output": {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "439971447f5477ffe6f41ec357aaaebaded77b9832e52b8145a6a4a5537db0ba",
+              "factor_id": "JOIN::f39ddfb29532366596f1",
+              "scope": [
+                "e_AI",
+                "e_CA"
+              ],
+              "table_row_count": 256
+            },
+            "profile": {
+              "exact_matching_row_pairs": 256,
+              "exact_monomial_products_before_collection": 256,
+              "left_factor_id": "SIGN2::e_AI::e_CA",
+              "left_scope": [
+                "e_AI",
+                "e_CA"
+              ],
+              "left_table_rows": 256,
+              "output_scope": [
+                "e_AI",
+                "e_CA"
+              ],
+              "right_factor_id": "JOIN::eb482a84ef657e3ade4c",
+              "right_scope": [
+                "e_CA"
+              ],
+              "right_table_rows": 16,
+              "shared_scope": [
+                "e_CA"
+              ]
+            },
+            "stage": "JOIN",
+            "variable": "e_CA"
+          },
+          {
+            "output": {
+              "circuit_term_count": 2928,
+              "factor_content_sha256": "9c5a88bafbcee3d11cb6410fbd4c36e0c919026eca5549a18245173a585bb6b4",
+              "factor_id": "JOIN::ab71aad00840aceeb0ac",
+              "scope": [
+                "g_A",
+                "e_CA",
+                "e_AI",
+                "p1"
+              ],
+              "table_row_count": 2928
+            },
+            "profile": {
+              "exact_matching_row_pairs": 2928,
+              "exact_monomial_products_before_collection": 2928,
+              "left_factor_id": "T::G6_DIRECT_K4ME_I3_S3CUBED::A",
+              "left_scope": [
+                "g_A",
+                "e_CA",
+                "e_AI",
+                "p1"
+              ],
+              "left_table_rows": 2928,
+              "output_scope": [
+                "g_A",
+                "e_CA",
+                "e_AI",
+                "p1"
+              ],
+              "right_factor_id": "JOIN::f39ddfb29532366596f1",
+              "right_scope": [
+                "e_AI",
+                "e_CA"
+              ],
+              "right_table_rows": 256,
+              "shared_scope": [
+                "e_CA",
+                "e_AI"
+              ]
+            },
+            "stage": "JOIN",
+            "variable": "e_CA"
+          },
+          {
+            "output": {
+              "circuit_term_count": 2928,
+              "factor_content_sha256": "0b9311e1fc76ff55a3353305cd210039827789348be1a5aeec9f2c9c97a87219",
+              "factor_id": "JOIN::343744b72c1bba418ee4",
+              "scope": [
+                "e_CA",
+                "p1",
+                "g_A",
+                "e_AI"
+              ],
+              "table_row_count": 2928
+            },
+            "profile": {
+              "exact_matching_row_pairs": 2928,
+              "exact_monomial_products_before_collection": 2928,
+              "left_factor_id": "SIGN2::e_CA::p1",
+              "left_scope": [
+                "e_CA",
+                "p1"
+              ],
+              "left_table_rows": 256,
+              "output_scope": [
+                "e_CA",
+                "p1",
+                "g_A",
+                "e_AI"
+              ],
+              "right_factor_id": "JOIN::ab71aad00840aceeb0ac",
+              "right_scope": [
+                "g_A",
+                "e_CA",
+                "e_AI",
+                "p1"
+              ],
+              "right_table_rows": 2928,
+              "shared_scope": [
+                "e_CA",
+                "p1"
+              ]
+            },
+            "stage": "JOIN",
+            "variable": "e_CA"
+          },
+          {
+            "output": {
+              "circuit_term_count": 2928,
+              "factor_content_sha256": "859b6a6cd302f974dd72ccc4b772e6e02f2c4b0679143980592e5c066d13fb83",
+              "factor_id": "JOIN::788d32cee4077236522a",
+              "scope": [
+                "g_C",
+                "e_CI",
+                "e_CA",
+                "e_CB"
+              ],
+              "table_row_count": 2928
+            },
+            "profile": {
+              "exact_matching_row_pairs": 2928,
+              "exact_monomial_products_before_collection": 2928,
+              "left_factor_id": "T::G6_DIRECT_K4ME_I3_S3CUBED::C",
+              "left_scope": [
+                "g_C",
+                "e_CI",
+                "e_CA",
+                "e_CB"
+              ],
+              "left_table_rows": 2928,
+              "output_scope": [
+                "g_C",
+                "e_CI",
+                "e_CA",
+                "e_CB"
+              ],
+              "right_factor_id": "SIGN2::e_CA::e_CB",
+              "right_scope": [
+                "e_CA",
+                "e_CB"
+              ],
+              "right_table_rows": 256,
+              "shared_scope": [
+                "e_CA",
+                "e_CB"
+              ]
+            },
+            "stage": "JOIN",
+            "variable": "e_CA"
+          },
+          {
+            "output": {
+              "circuit_term_count": 2928,
+              "factor_content_sha256": "bc771cc1c8e8cc61c69f71f523abfb67ec87db5d784b8c39739da7d7abad280c",
+              "factor_id": "JOIN::a34307094c10cc0e574e",
+              "scope": [
+                "e_CA",
+                "e_CI",
+                "g_C",
+                "e_CB"
+              ],
+              "table_row_count": 2928
+            },
+            "profile": {
+              "exact_matching_row_pairs": 2928,
+              "exact_monomial_products_before_collection": 2928,
+              "left_factor_id": "SIGN2::e_CA::e_CI",
+              "left_scope": [
+                "e_CA",
+                "e_CI"
+              ],
+              "left_table_rows": 256,
+              "output_scope": [
+                "e_CA",
+                "e_CI",
+                "g_C",
+                "e_CB"
+              ],
+              "right_factor_id": "JOIN::788d32cee4077236522a",
+              "right_scope": [
+                "g_C",
+                "e_CI",
+                "e_CA",
+                "e_CB"
+              ],
+              "right_table_rows": 2928,
+              "shared_scope": [
+                "e_CA",
+                "e_CI"
+              ]
+            },
+            "stage": "JOIN",
+            "variable": "e_CA"
+          },
+          {
+            "output": {
+              "circuit_term_count": 4096,
+              "factor_content_sha256": "e5fca0f2012b99021be1cb28e9dab9aa1475d892aaeefab80828ed71ef35fa89",
+              "factor_id": "JOIN::0880fa53bcba177d861a",
+              "scope": [
+                "e_BI",
+                "e_CA",
+                "p2"
+              ],
+              "table_row_count": 4096
+            },
+            "profile": {
+              "exact_matching_row_pairs": 4096,
+              "exact_monomial_products_before_collection": 4096,
+              "left_factor_id": "SIGN2::e_BI::e_CA",
+              "left_scope": [
+                "e_BI",
+                "e_CA"
+              ],
+              "left_table_rows": 256,
+              "output_scope": [
+                "e_BI",
+                "e_CA",
+                "p2"
+              ],
+              "right_factor_id": "SIGN2::e_CA::p2",
+              "right_scope": [
+                "e_CA",
+                "p2"
+              ],
+              "right_table_rows": 256,
+              "shared_scope": [
+                "e_CA"
+              ]
+            },
+            "stage": "JOIN",
+            "variable": "e_CA"
+          },
+          {
+            "output": {
+              "circuit_term_count": 529568,
+              "factor_content_sha256": "031096c3aba6a43291e3e36b2c04cf16909fabd493f7439d2d39dff04e417722",
+              "factor_id": "JOIN::f0ffe35054be87c5f1b5",
+              "scope": [
+                "e_CA",
+                "p1",
+                "g_A",
+                "e_AI",
+                "e_CI",
+                "g_C",
+                "e_CB"
+              ],
+              "table_row_count": 529568
+            },
+            "profile": {
+              "exact_matching_row_pairs": 529568,
+              "exact_monomial_products_before_collection": 529568,
+              "left_factor_id": "JOIN::343744b72c1bba418ee4",
+              "left_scope": [
+                "e_CA",
+                "p1",
+                "g_A",
+                "e_AI"
+              ],
+              "left_table_rows": 2928,
+              "output_scope": [
+                "e_CA",
+                "p1",
+                "g_A",
+                "e_AI",
+                "e_CI",
+                "g_C",
+                "e_CB"
+              ],
+              "right_factor_id": "JOIN::a34307094c10cc0e574e",
+              "right_scope": [
+                "e_CA",
+                "e_CI",
+                "g_C",
+                "e_CB"
+              ],
+              "right_table_rows": 2928,
+              "shared_scope": [
+                "e_CA"
+              ]
+            },
+            "stage": "JOIN",
+            "variable": "e_CA"
+          }
+        ]
+      },
+      {
+        "blocked_exact_join_profile": {
+          "exact_matching_row_pairs": 8663040,
+          "exact_monomial_products_before_collection": 8663040,
+          "left_factor_id": "JOIN::ee3dadaf036e2e9f50cb",
+          "left_scope": [
+            "g_B",
+            "e_BI",
+            "e_BA",
+            "e_BC"
+          ],
+          "left_table_rows": 2928,
+          "output_scope": [
+            "g_B",
+            "e_BI",
+            "e_BA",
+            "e_BC",
+            "p1",
+            "e_AC",
+            "e_IC",
+            "g_I"
+          ],
+          "right_factor_id": "JOIN::f5cc2c78805246515b6f",
+          "right_scope": [
+            "e_BI",
+            "p1",
+            "e_AC",
+            "e_IC",
+            "g_I"
+          ],
+          "right_table_rows": 44032,
+          "shared_scope": [
+            "e_BI"
+          ]
+        },
+        "blocked_variable": "e_BI",
+        "checkpoint_sha256": "b8b7d11a29e43bb2e305a905d4f50a1c3697d7a02508eecb65ce919d6ba6b921",
+        "completed_elimination_variables": [],
+        "elapsed_seconds": 2.3989048329531215,
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "input": {
+          "common_denominator_atom": "DENOM::1575876d7bd46a59a961530ed39fdf0282dc9a8016a469347f01535ae1d1911f",
+          "data_aware_elimination_order": [
+            "e_BI",
+            "e_BA",
+            "e_IC",
+            "e_AC",
+            "e_BC",
+            "g_I",
+            "g_A",
+            "g_B",
+            "g_C"
+          ],
+          "factor_count": 24,
+          "factor_summaries": [
+            {
+              "circuit_term_count": 172,
+              "factor_content_sha256": "fb3c6c8a12bd4ec514ec6328d60927b50ef2fc561dac5217b3ad68002ee9e477",
+              "factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4::I",
+              "scope": [
+                "g_I",
+                "e_BI",
+                "e_IC"
+              ],
+              "table_row_count": 172
+            },
+            {
+              "circuit_term_count": 2928,
+              "factor_content_sha256": "c6e981a53985cb5175340c47be12824014c1fc302104e1c7608d9d494bc04f6b",
+              "factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4::A",
+              "scope": [
+                "g_A",
+                "e_BA",
+                "e_AC",
+                "p1"
+              ],
+              "table_row_count": 2928
+            },
+            {
+              "circuit_term_count": 2928,
+              "factor_content_sha256": "ff2fef71c21f87424ed302767f7508d3f7a449d08141f99c9f83596f74756a07",
+              "factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4::B",
+              "scope": [
+                "g_B",
+                "e_BI",
+                "e_BA",
+                "e_BC"
+              ],
+              "table_row_count": 2928
+            },
+            {
+              "circuit_term_count": 77748,
+              "factor_content_sha256": "30b33a4545a7c2106a89f2d96ecc0960b5b9e287830ef359aa9567f26caa1e79",
+              "factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4::C",
+              "scope": [
+                "g_C",
+                "e_IC",
+                "e_AC",
+                "e_BC",
+                "p2"
+              ],
+              "table_row_count": 77748
+            },
+            {
+              "circuit_term_count": 11856,
+              "factor_content_sha256": "53a0667fe3a24fc13cf79455ab5e5ff15994da44534966b2d52c48bc54b8661d",
+              "factor_id": "C_UNION::G6_DIRECT_K4ME_I2_S3SQ_S4",
+              "scope": [
+                "g_I",
+                "g_A",
+                "g_B",
+                "g_C",
+                "b"
+              ],
+              "table_row_count": 11856
+            },
+            {
+              "circuit_term_count": 16,
+              "factor_content_sha256": "a916f52f5cdd1b9409fdc40527fa52c9820b6502b72248d20b461da5e8b22f61",
+              "factor_id": "K::e_BI",
+              "scope": [
+                "e_BI"
+              ],
+              "table_row_count": 16
+            },
+            {
+              "circuit_term_count": 16,
+              "factor_content_sha256": "1ff2d59f744c9621a8b9fdd4c83dd753f1dda43a3a7abda9712a0e1eea35f48d",
+              "factor_id": "K::e_IC",
+              "scope": [
+                "e_IC"
+              ],
+              "table_row_count": 16
+            },
+            {
+              "circuit_term_count": 16,
+              "factor_content_sha256": "2f85ff39d8fefe1054518b502ff992a9045b1f13897bc0f9166353523bf6214a",
+              "factor_id": "K::e_BA",
+              "scope": [
+                "e_BA"
+              ],
+              "table_row_count": 16
+            },
+            {
+              "circuit_term_count": 16,
+              "factor_content_sha256": "a5551a2ea04280d8c7adbbcfbe9ceccd616e5e4900e1b62052ff3e8d31821b0f",
+              "factor_id": "K::e_AC",
+              "scope": [
+                "e_AC"
+              ],
+              "table_row_count": 16
+            },
+            {
+              "circuit_term_count": 16,
+              "factor_content_sha256": "eafe4f47b952932fa8a04df72c35d5a00005da3cc6e9e6772d6e73854972a7ca",
+              "factor_id": "K::e_BC",
+              "scope": [
+                "e_BC"
+              ],
+              "table_row_count": 16
+            },
+            {
+              "circuit_term_count": 16,
+              "factor_content_sha256": "eaee465e12a3192bc663a4e54d668bcea400c3c4c7dff0b3b6c5dacd3ab88d71",
+              "factor_id": "SIGN1::e_BA",
+              "scope": [
+                "e_BA"
+              ],
+              "table_row_count": 16
+            },
+            {
+              "circuit_term_count": 16,
+              "factor_content_sha256": "f5840ad8d8cae9e192c7dbd11bb4f0cdcbae205b566bee83c96b4ae010453f5d",
+              "factor_id": "SIGN1::e_BI",
+              "scope": [
+                "e_BI"
+              ],
+              "table_row_count": 16
+            },
+            {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "8c6e7dc8fcb99ae2dd5a97a8b31dd13ceb7e6faf41c309f0804157162bfba7d7",
+              "factor_id": "SIGN2::e_AC::e_BA",
+              "scope": [
+                "e_AC",
+                "e_BA"
+              ],
+              "table_row_count": 256
+            },
+            {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "19a918f5c42fa898f40e75757bf42e075d3ee88520d7dd6b997a29dab4195a5e",
+              "factor_id": "SIGN2::e_AC::e_BC",
+              "scope": [
+                "e_AC",
+                "e_BC"
+              ],
+              "table_row_count": 256
+            },
+            {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "3744d1f918791a98fb220f0ea8175c00eddd371e73eea083b071e9c8d6de3e8c",
+              "factor_id": "SIGN2::e_AC::e_BI",
+              "scope": [
+                "e_AC",
+                "e_BI"
+              ],
+              "table_row_count": 256
+            },
+            {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "b7c8d3180d91a67db985160fa796b15412736d56b3dac3e903102504937cd964",
+              "factor_id": "SIGN2::e_AC::e_IC",
+              "scope": [
+                "e_AC",
+                "e_IC"
+              ],
+              "table_row_count": 256
+            },
+            {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "677e648193828eaa48228dc0efc955c22b46864032699327cd5b21010d83654d",
+              "factor_id": "SIGN2::e_AC::p1",
+              "scope": [
+                "e_AC",
+                "p1"
+              ],
+              "table_row_count": 256
+            },
+            {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "81fb63ffb58e3194e2460b36f7bbaa3a7cf898688e67165256a60729ce3d56c1",
+              "factor_id": "SIGN2::e_BA::e_BI",
+              "scope": [
+                "e_BA",
+                "e_BI"
+              ],
+              "table_row_count": 256
+            },
+            {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "7f166cb4b63ee7d5b8472562df2f4a6e55c9bc168f84794bde8424c8ad501a25",
+              "factor_id": "SIGN2::e_BA::p1",
+              "scope": [
+                "e_BA",
+                "p1"
+              ],
+              "table_row_count": 256
+            },
+            {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "27fea1ffe8ac74d00dff4b3db39617ed48892a2928f8fcc8387ac346d1f9e3c8",
+              "factor_id": "SIGN2::e_BC::e_IC",
+              "scope": [
+                "e_BC",
+                "e_IC"
+              ],
+              "table_row_count": 256
+            },
+            {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "e310096362e8f2e536c77a858802a8cd67f05d3f59e857dcec025ebfb556ac08",
+              "factor_id": "SIGN2::e_BI::e_IC",
+              "scope": [
+                "e_BI",
+                "e_IC"
+              ],
+              "table_row_count": 256
+            },
+            {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "da72efacbbc42682d437588d4446945bcc020b5856afeb4e34e50e3ea52dc363",
+              "factor_id": "SIGN2::e_BI::p1",
+              "scope": [
+                "e_BI",
+                "p1"
+              ],
+              "table_row_count": 256
+            },
+            {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "109669a66d5faacd88cfa53104bd9316c4f86d6d280706d327b58f503f74eebc",
+              "factor_id": "SIGN2::e_IC::p1",
+              "scope": [
+                "e_IC",
+                "p1"
+              ],
+              "table_row_count": 256
+            },
+            {
+              "circuit_term_count": 1,
+              "factor_content_sha256": "34f9b1e590d8f0f726bf0becca1f6e656b8fd93f9d86f0801782f823f9301fc2",
+              "factor_id": "WEIGHT_DENOM::G6_DIRECT_K4ME_I2_S3SQ_S4",
+              "scope": [],
+              "table_row_count": 1
+            }
+          ],
+          "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+          "graph_weight": {
+            "denominator": 1,
+            "numerator": -1
+          },
+          "local_pair_edge_cost_ledger": [
+            {
+              "edge": "e_BI",
+              "incident_factor_ids": [
+                "T::G6_DIRECT_K4ME_I2_S3SQ_S4::I",
+                "T::G6_DIRECT_K4ME_I2_S3SQ_S4::B"
+              ],
+              "local_pair_exact_matching_row_pairs": 33840,
+              "local_pair_exact_monomial_products": 33840
+            },
+            {
+              "edge": "e_BA",
+              "incident_factor_ids": [
+                "T::G6_DIRECT_K4ME_I2_S3SQ_S4::A",
+                "T::G6_DIRECT_K4ME_I2_S3SQ_S4::B"
+              ],
+              "local_pair_exact_matching_row_pairs": 529568,
+              "local_pair_exact_monomial_products": 529568
+            },
+            {
+              "edge": "e_IC",
+              "incident_factor_ids": [
+                "T::G6_DIRECT_K4ME_I2_S3SQ_S4::I",
+                "T::G6_DIRECT_K4ME_I2_S3SQ_S4::C"
+              ],
+              "local_pair_exact_matching_row_pairs": 850296,
+              "local_pair_exact_monomial_products": 850296
+            },
+            {
+              "edge": "e_AC",
+              "incident_factor_ids": [
+                "T::G6_DIRECT_K4ME_I2_S3SQ_S4::A",
+                "T::G6_DIRECT_K4ME_I2_S3SQ_S4::C"
+              ],
+              "local_pair_exact_matching_row_pairs": 12622992,
+              "local_pair_exact_monomial_products": 12622992
+            },
+            {
+              "edge": "e_BC",
+              "incident_factor_ids": [
+                "T::G6_DIRECT_K4ME_I2_S3SQ_S4::B",
+                "T::G6_DIRECT_K4ME_I2_S3SQ_S4::C"
+              ],
+              "local_pair_exact_matching_row_pairs": 12622992,
+              "local_pair_exact_monomial_products": 12622992
+            }
+          ],
+          "union_color_factor_content_sha256": "53a0667fe3a24fc13cf79455ab5e5ff15994da44534966b2d52c48bc54b8661d",
+          "weight_denominator_factor_content_sha256": "34f9b1e590d8f0f726bf0becca1f6e656b8fd93f9d86f0801782f823f9301fc2"
+        },
+        "output": null,
+        "remaining_factor_summaries": [
+          {
+            "circuit_term_count": 2928,
+            "factor_content_sha256": "c6e981a53985cb5175340c47be12824014c1fc302104e1c7608d9d494bc04f6b",
+            "factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4::A",
+            "scope": [
+              "g_A",
+              "e_BA",
+              "e_AC",
+              "p1"
+            ],
+            "table_row_count": 2928
+          },
+          {
+            "circuit_term_count": 77748,
+            "factor_content_sha256": "30b33a4545a7c2106a89f2d96ecc0960b5b9e287830ef359aa9567f26caa1e79",
+            "factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4::C",
+            "scope": [
+              "g_C",
+              "e_IC",
+              "e_AC",
+              "e_BC",
+              "p2"
+            ],
+            "table_row_count": 77748
+          },
+          {
+            "circuit_term_count": 11856,
+            "factor_content_sha256": "53a0667fe3a24fc13cf79455ab5e5ff15994da44534966b2d52c48bc54b8661d",
+            "factor_id": "C_UNION::G6_DIRECT_K4ME_I2_S3SQ_S4",
+            "scope": [
+              "g_I",
+              "g_A",
+              "g_B",
+              "g_C",
+              "b"
+            ],
+            "table_row_count": 11856
+          },
+          {
+            "circuit_term_count": 16,
+            "factor_content_sha256": "1ff2d59f744c9621a8b9fdd4c83dd753f1dda43a3a7abda9712a0e1eea35f48d",
+            "factor_id": "K::e_IC",
+            "scope": [
+              "e_IC"
+            ],
+            "table_row_count": 16
+          },
+          {
+            "circuit_term_count": 16,
+            "factor_content_sha256": "2f85ff39d8fefe1054518b502ff992a9045b1f13897bc0f9166353523bf6214a",
+            "factor_id": "K::e_BA",
+            "scope": [
+              "e_BA"
+            ],
+            "table_row_count": 16
+          },
+          {
+            "circuit_term_count": 16,
+            "factor_content_sha256": "a5551a2ea04280d8c7adbbcfbe9ceccd616e5e4900e1b62052ff3e8d31821b0f",
+            "factor_id": "K::e_AC",
+            "scope": [
+              "e_AC"
+            ],
+            "table_row_count": 16
+          },
+          {
+            "circuit_term_count": 16,
+            "factor_content_sha256": "eafe4f47b952932fa8a04df72c35d5a00005da3cc6e9e6772d6e73854972a7ca",
+            "factor_id": "K::e_BC",
+            "scope": [
+              "e_BC"
+            ],
+            "table_row_count": 16
+          },
+          {
+            "circuit_term_count": 16,
+            "factor_content_sha256": "eaee465e12a3192bc663a4e54d668bcea400c3c4c7dff0b3b6c5dacd3ab88d71",
+            "factor_id": "SIGN1::e_BA",
+            "scope": [
+              "e_BA"
+            ],
+            "table_row_count": 16
+          },
+          {
+            "circuit_term_count": 256,
+            "factor_content_sha256": "8c6e7dc8fcb99ae2dd5a97a8b31dd13ceb7e6faf41c309f0804157162bfba7d7",
+            "factor_id": "SIGN2::e_AC::e_BA",
+            "scope": [
+              "e_AC",
+              "e_BA"
+            ],
+            "table_row_count": 256
+          },
+          {
+            "circuit_term_count": 256,
+            "factor_content_sha256": "19a918f5c42fa898f40e75757bf42e075d3ee88520d7dd6b997a29dab4195a5e",
+            "factor_id": "SIGN2::e_AC::e_BC",
+            "scope": [
+              "e_AC",
+              "e_BC"
+            ],
+            "table_row_count": 256
+          },
+          {
+            "circuit_term_count": 256,
+            "factor_content_sha256": "b7c8d3180d91a67db985160fa796b15412736d56b3dac3e903102504937cd964",
+            "factor_id": "SIGN2::e_AC::e_IC",
+            "scope": [
+              "e_AC",
+              "e_IC"
+            ],
+            "table_row_count": 256
+          },
+          {
+            "circuit_term_count": 256,
+            "factor_content_sha256": "677e648193828eaa48228dc0efc955c22b46864032699327cd5b21010d83654d",
+            "factor_id": "SIGN2::e_AC::p1",
+            "scope": [
+              "e_AC",
+              "p1"
+            ],
+            "table_row_count": 256
+          },
+          {
+            "circuit_term_count": 256,
+            "factor_content_sha256": "7f166cb4b63ee7d5b8472562df2f4a6e55c9bc168f84794bde8424c8ad501a25",
+            "factor_id": "SIGN2::e_BA::p1",
+            "scope": [
+              "e_BA",
+              "p1"
+            ],
+            "table_row_count": 256
+          },
+          {
+            "circuit_term_count": 256,
+            "factor_content_sha256": "27fea1ffe8ac74d00dff4b3db39617ed48892a2928f8fcc8387ac346d1f9e3c8",
+            "factor_id": "SIGN2::e_BC::e_IC",
+            "scope": [
+              "e_BC",
+              "e_IC"
+            ],
+            "table_row_count": 256
+          },
+          {
+            "circuit_term_count": 256,
+            "factor_content_sha256": "109669a66d5faacd88cfa53104bd9316c4f86d6d280706d327b58f503f74eebc",
+            "factor_id": "SIGN2::e_IC::p1",
+            "scope": [
+              "e_IC",
+              "p1"
+            ],
+            "table_row_count": 256
+          },
+          {
+            "circuit_term_count": 1,
+            "factor_content_sha256": "34f9b1e590d8f0f726bf0becca1f6e656b8fd93f9d86f0801782f823f9301fc2",
+            "factor_id": "WEIGHT_DENOM::G6_DIRECT_K4ME_I2_S3SQ_S4",
+            "scope": [],
+            "table_row_count": 1
+          },
+          {
+            "circuit_term_count": 2928,
+            "factor_content_sha256": "e845a755e0e32ad34b9c18dcce71af722cb13f95934e305de5a5921c339cea5b",
+            "factor_id": "JOIN::ee3dadaf036e2e9f50cb",
+            "scope": [
+              "g_B",
+              "e_BI",
+              "e_BA",
+              "e_BC"
+            ],
+            "table_row_count": 2928
+          },
+          {
+            "circuit_term_count": 44032,
+            "factor_content_sha256": "3b174ab48b4fd7f932b38936ba88a196833247a0912876a8c4c36ac23bcea974",
+            "factor_id": "JOIN::f5cc2c78805246515b6f",
+            "scope": [
+              "e_BI",
+              "p1",
+              "e_AC",
+              "e_IC",
+              "g_I"
+            ],
+            "table_row_count": 44032
+          }
+        ],
+        "resource_caps": {
+          "max_join_monomial_products": 600000,
+          "max_join_row_matches": 600000
+        },
+        "status": "BLOCKED_EXACT_JOIN_RESOURCE_GATE",
+        "trace": [
+          {
+            "output": {
+              "circuit_term_count": 16,
+              "factor_content_sha256": "ffdc09b0a90042eebd05ae6c8204326256a932bc556bfd0665f9dc6374497879",
+              "factor_id": "JOIN::6515ab9f52ed0531f173",
+              "scope": [
+                "e_BI"
+              ],
+              "table_row_count": 16
+            },
+            "profile": {
+              "exact_matching_row_pairs": 16,
+              "exact_monomial_products_before_collection": 16,
+              "left_factor_id": "K::e_BI",
+              "left_scope": [
+                "e_BI"
+              ],
+              "left_table_rows": 16,
+              "output_scope": [
+                "e_BI"
+              ],
+              "right_factor_id": "SIGN1::e_BI",
+              "right_scope": [
+                "e_BI"
+              ],
+              "right_table_rows": 16,
+              "shared_scope": [
+                "e_BI"
+              ]
+            },
+            "stage": "JOIN",
+            "variable": "e_BI"
+          },
+          {
+            "output": {
+              "circuit_term_count": 172,
+              "factor_content_sha256": "62903959a44bc6747f81af679c711942593ea234b0e1f83ada2d7ed10672a25e",
+              "factor_id": "JOIN::21b0c8466ce03da00bc7",
+              "scope": [
+                "g_I",
+                "e_BI",
+                "e_IC"
+              ],
+              "table_row_count": 172
+            },
+            "profile": {
+              "exact_matching_row_pairs": 172,
+              "exact_monomial_products_before_collection": 172,
+              "left_factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4::I",
+              "left_scope": [
+                "g_I",
+                "e_BI",
+                "e_IC"
+              ],
+              "left_table_rows": 172,
+              "output_scope": [
+                "g_I",
+                "e_BI",
+                "e_IC"
+              ],
+              "right_factor_id": "JOIN::6515ab9f52ed0531f173",
+              "right_scope": [
+                "e_BI"
+              ],
+              "right_table_rows": 16,
+              "shared_scope": [
+                "e_BI"
+              ]
+            },
+            "stage": "JOIN",
+            "variable": "e_BI"
+          },
+          {
+            "output": {
+              "circuit_term_count": 172,
+              "factor_content_sha256": "b3dbd14010c476581ceb1a6b97b4a28fa13d720222eb41484482751cc14ff235",
+              "factor_id": "JOIN::7cb663510bf4d4fdaffd",
+              "scope": [
+                "e_BI",
+                "e_IC",
+                "g_I"
+              ],
+              "table_row_count": 172
+            },
+            "profile": {
+              "exact_matching_row_pairs": 172,
+              "exact_monomial_products_before_collection": 172,
+              "left_factor_id": "SIGN2::e_BI::e_IC",
+              "left_scope": [
+                "e_BI",
+                "e_IC"
+              ],
+              "left_table_rows": 256,
+              "output_scope": [
+                "e_BI",
+                "e_IC",
+                "g_I"
+              ],
+              "right_factor_id": "JOIN::21b0c8466ce03da00bc7",
+              "right_scope": [
+                "g_I",
+                "e_BI",
+                "e_IC"
+              ],
+              "right_table_rows": 172,
+              "shared_scope": [
+                "e_BI",
+                "e_IC"
+              ]
+            },
+            "stage": "JOIN",
+            "variable": "e_BI"
+          },
+          {
+            "output": {
+              "circuit_term_count": 2752,
+              "factor_content_sha256": "63f6b044fe3a19f975cac430780b054cbd3ce23a0486e07154bd434d5a68e69c",
+              "factor_id": "JOIN::6b15e265c1b663b07841",
+              "scope": [
+                "e_AC",
+                "e_BI",
+                "e_IC",
+                "g_I"
+              ],
+              "table_row_count": 2752
+            },
+            "profile": {
+              "exact_matching_row_pairs": 2752,
+              "exact_monomial_products_before_collection": 2752,
+              "left_factor_id": "SIGN2::e_AC::e_BI",
+              "left_scope": [
+                "e_AC",
+                "e_BI"
+              ],
+              "left_table_rows": 256,
+              "output_scope": [
+                "e_AC",
+                "e_BI",
+                "e_IC",
+                "g_I"
+              ],
+              "right_factor_id": "JOIN::7cb663510bf4d4fdaffd",
+              "right_scope": [
+                "e_BI",
+                "e_IC",
+                "g_I"
+              ],
+              "right_table_rows": 172,
+              "shared_scope": [
+                "e_BI"
+              ]
+            },
+            "stage": "JOIN",
+            "variable": "e_BI"
+          },
+          {
+            "output": {
+              "circuit_term_count": 2928,
+              "factor_content_sha256": "e845a755e0e32ad34b9c18dcce71af722cb13f95934e305de5a5921c339cea5b",
+              "factor_id": "JOIN::ee3dadaf036e2e9f50cb",
+              "scope": [
+                "g_B",
+                "e_BI",
+                "e_BA",
+                "e_BC"
+              ],
+              "table_row_count": 2928
+            },
+            "profile": {
+              "exact_matching_row_pairs": 2928,
+              "exact_monomial_products_before_collection": 2928,
+              "left_factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4::B",
+              "left_scope": [
+                "g_B",
+                "e_BI",
+                "e_BA",
+                "e_BC"
+              ],
+              "left_table_rows": 2928,
+              "output_scope": [
+                "g_B",
+                "e_BI",
+                "e_BA",
+                "e_BC"
+              ],
+              "right_factor_id": "SIGN2::e_BA::e_BI",
+              "right_scope": [
+                "e_BA",
+                "e_BI"
+              ],
+              "right_table_rows": 256,
+              "shared_scope": [
+                "e_BI",
+                "e_BA"
+              ]
+            },
+            "stage": "JOIN",
+            "variable": "e_BI"
+          },
+          {
+            "output": {
+              "circuit_term_count": 44032,
+              "factor_content_sha256": "3b174ab48b4fd7f932b38936ba88a196833247a0912876a8c4c36ac23bcea974",
+              "factor_id": "JOIN::f5cc2c78805246515b6f",
+              "scope": [
+                "e_BI",
+                "p1",
+                "e_AC",
+                "e_IC",
+                "g_I"
+              ],
+              "table_row_count": 44032
+            },
+            "profile": {
+              "exact_matching_row_pairs": 44032,
+              "exact_monomial_products_before_collection": 44032,
+              "left_factor_id": "SIGN2::e_BI::p1",
+              "left_scope": [
+                "e_BI",
+                "p1"
+              ],
+              "left_table_rows": 256,
+              "output_scope": [
+                "e_BI",
+                "p1",
+                "e_AC",
+                "e_IC",
+                "g_I"
+              ],
+              "right_factor_id": "JOIN::6b15e265c1b663b07841",
+              "right_scope": [
+                "e_AC",
+                "e_BI",
+                "e_IC",
+                "g_I"
+              ],
+              "right_table_rows": 2752,
+              "shared_scope": [
+                "e_BI"
+              ]
+            },
+            "stage": "JOIN",
+            "variable": "e_BI"
+          }
+        ]
+      },
+      {
+        "blocked_exact_join_profile": {
+          "exact_matching_row_pairs": 7274432,
+          "exact_monomial_products_before_collection": 165050280,
+          "left_factor_id": "SUM::e_BA::6a19d2930b0f6a934898",
+          "left_scope": [
+            "g_B",
+            "e_BC",
+            "e_CA",
+            "g_A",
+            "g_I"
+          ],
+          "left_table_rows": 12536,
+          "output_scope": [
+            "g_B",
+            "e_BC",
+            "e_CA",
+            "g_A",
+            "g_I",
+            "g_C",
+            "p1",
+            "p2"
+          ],
+          "right_factor_id": "JOIN::20b49367df7a53de6080",
+          "right_scope": [
+            "g_C",
+            "e_CA",
+            "e_BC",
+            "p1",
+            "p2"
+          ],
+          "right_table_rows": 121964,
+          "shared_scope": [
+            "e_BC",
+            "e_CA"
+          ]
+        },
+        "blocked_variable": "e_BC",
+        "checkpoint_sha256": "bc260cf3fbd4a544cc794aaea20291c3072328d04dffed675e1cd163085700b9",
+        "completed_elimination_variables": [
+          "e_AI",
+          "e_IB",
+          "e_BA"
+        ],
+        "elapsed_seconds": 18.64258941600565,
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+        "input": {
+          "common_denominator_atom": "DENOM::b161a8fb3ae1e8e14be5868dc7288376427551e7796880009436cf5f492adbaa",
+          "data_aware_elimination_order": [
+            "e_AI",
+            "e_IB",
+            "e_BA",
+            "e_BC",
+            "e_CA",
+            "g_I",
+            "g_A",
+            "g_B",
+            "g_C"
+          ],
+          "factor_count": 19,
+          "factor_summaries": [
+            {
+              "circuit_term_count": 172,
+              "factor_content_sha256": "c45f49b48fe2283b802e0d81c3f43bd76368f5a3602bc609eadb2873b58c9aee",
+              "factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4::I",
+              "scope": [
+                "g_I",
+                "e_AI",
+                "e_IB"
+              ],
+              "table_row_count": 172
+            },
+            {
+              "circuit_term_count": 2928,
+              "factor_content_sha256": "2852927bf364d5c337d7090c8d0691378e9a989b5ecbe96708170c9fbef86cd4",
+              "factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4::A",
+              "scope": [
+                "g_A",
+                "e_AI",
+                "e_CA",
+                "e_BA"
+              ],
+              "table_row_count": 2928
+            },
+            {
+              "circuit_term_count": 2928,
+              "factor_content_sha256": "1a79541d4499823dc4d681e516b04c02083cfef7fbb428dd687a3e73b6713c30",
+              "factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4::B",
+              "scope": [
+                "g_B",
+                "e_IB",
+                "e_BC",
+                "e_BA"
+              ],
+              "table_row_count": 2928
+            },
+            {
+              "circuit_term_count": 121964,
+              "factor_content_sha256": "1b12e4d09d6587a6bbb3d20293ee90616ebf841588987975fc66a45c1271bf8d",
+              "factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4::C",
+              "scope": [
+                "g_C",
+                "e_CA",
+                "e_BC",
+                "p1",
+                "p2"
+              ],
+              "table_row_count": 121964
+            },
+            {
+              "circuit_term_count": 12320,
+              "factor_content_sha256": "eb6066203f33ee361fe7a862a1797fbd0a122c28619796e60b6aad86d719bb52",
+              "factor_id": "C_UNION::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+              "scope": [
+                "g_I",
+                "g_A",
+                "g_B",
+                "g_C",
+                "b"
+              ],
+              "table_row_count": 12320
+            },
+            {
+              "circuit_term_count": 16,
+              "factor_content_sha256": "00b33b41e85256a6c663f04d1d22b6a5afba1938fac144af1449935f3e530ee2",
+              "factor_id": "K::e_AI",
+              "scope": [
+                "e_AI"
+              ],
+              "table_row_count": 16
+            },
+            {
+              "circuit_term_count": 16,
+              "factor_content_sha256": "715e745019e59f821a2124e4c2e849191c6362ff0407421bce8224037a333f0d",
+              "factor_id": "K::e_IB",
+              "scope": [
+                "e_IB"
+              ],
+              "table_row_count": 16
+            },
+            {
+              "circuit_term_count": 16,
+              "factor_content_sha256": "5e7b70d40af59460fdf3b18ca4168d2274385402817cbb216a358a818e5f2344",
+              "factor_id": "K::e_CA",
+              "scope": [
+                "e_CA"
+              ],
+              "table_row_count": 16
+            },
+            {
+              "circuit_term_count": 16,
+              "factor_content_sha256": "eafe4f47b952932fa8a04df72c35d5a00005da3cc6e9e6772d6e73854972a7ca",
+              "factor_id": "K::e_BC",
+              "scope": [
+                "e_BC"
+              ],
+              "table_row_count": 16
+            },
+            {
+              "circuit_term_count": 16,
+              "factor_content_sha256": "2f85ff39d8fefe1054518b502ff992a9045b1f13897bc0f9166353523bf6214a",
+              "factor_id": "K::e_BA",
+              "scope": [
+                "e_BA"
+              ],
+              "table_row_count": 16
+            },
+            {
+              "circuit_term_count": 16,
+              "factor_content_sha256": "0f511963419c73cae99c48fa949eb4437d48e7846c563848418473c9a0aef090",
+              "factor_id": "SIGN1::e_AI",
+              "scope": [
+                "e_AI"
+              ],
+              "table_row_count": 16
+            },
+            {
+              "circuit_term_count": 16,
+              "factor_content_sha256": "eaee465e12a3192bc663a4e54d668bcea400c3c4c7dff0b3b6c5dacd3ab88d71",
+              "factor_id": "SIGN1::e_BA",
+              "scope": [
+                "e_BA"
+              ],
+              "table_row_count": 16
+            },
+            {
+              "circuit_term_count": 16,
+              "factor_content_sha256": "2c6f1042763ba5a75eb8d078922d18661f4f895d752f67bfca96b6f59d77cb48",
+              "factor_id": "SIGN1::e_CA",
+              "scope": [
+                "e_CA"
+              ],
+              "table_row_count": 16
+            },
+            {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "ac140648a4ab7077e9c6077753a8a17cfa6e1f0ee7be842a7580171a1de8acd0",
+              "factor_id": "SIGN2::e_AI::e_IB",
+              "scope": [
+                "e_AI",
+                "e_IB"
+              ],
+              "table_row_count": 256
+            },
+            {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "167329e502cfe32434370779d8a446857ab178b9c36cf45b186b1424d8b4631b",
+              "factor_id": "SIGN2::e_BA::e_BC",
+              "scope": [
+                "e_BA",
+                "e_BC"
+              ],
+              "table_row_count": 256
+            },
+            {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "a5918cc7044c9a589bf61277c564f67ac0c28fa4b2576fd14b8b76b4552e95b2",
+              "factor_id": "SIGN2::e_BA::e_IB",
+              "scope": [
+                "e_BA",
+                "e_IB"
+              ],
+              "table_row_count": 256
+            },
+            {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "738d8c8143a3416538690b9d74b961e41fb4fd0bb16d14441a138b6c74d13174",
+              "factor_id": "SIGN2::e_BC::e_CA",
+              "scope": [
+                "e_BC",
+                "e_CA"
+              ],
+              "table_row_count": 256
+            },
+            {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "67d7c52ed06d162a0ea0ebac426ad0cbc7e3f99d4b5d8bc36bc135cd4490e2ce",
+              "factor_id": "SIGN2::e_CA::e_IB",
+              "scope": [
+                "e_CA",
+                "e_IB"
+              ],
+              "table_row_count": 256
+            },
+            {
+              "circuit_term_count": 1,
+              "factor_content_sha256": "357bebbe6414efdcb54f6f038867fba736549c1281da275311f65994d34319f1",
+              "factor_id": "WEIGHT_DENOM::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+              "scope": [],
+              "table_row_count": 1
+            }
+          ],
+          "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+          "graph_weight": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "local_pair_edge_cost_ledger": [
+            {
+              "edge": "e_AI",
+              "incident_factor_ids": [
+                "T::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4::I",
+                "T::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4::A"
+              ],
+              "local_pair_exact_matching_row_pairs": 33840,
+              "local_pair_exact_monomial_products": 33840
+            },
+            {
+              "edge": "e_IB",
+              "incident_factor_ids": [
+                "T::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4::I",
+                "T::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4::B"
+              ],
+              "local_pair_exact_matching_row_pairs": 33840,
+              "local_pair_exact_monomial_products": 33840
+            },
+            {
+              "edge": "e_BA",
+              "incident_factor_ids": [
+                "T::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4::A",
+                "T::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4::B"
+              ],
+              "local_pair_exact_matching_row_pairs": 529568,
+              "local_pair_exact_monomial_products": 529568
+            },
+            {
+              "edge": "e_BC",
+              "incident_factor_ids": [
+                "T::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4::B",
+                "T::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4::C"
+              ],
+              "local_pair_exact_matching_row_pairs": 19561328,
+              "local_pair_exact_monomial_products": 19561328
+            },
+            {
+              "edge": "e_CA",
+              "incident_factor_ids": [
+                "T::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4::A",
+                "T::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4::C"
+              ],
+              "local_pair_exact_matching_row_pairs": 19561328,
+              "local_pair_exact_monomial_products": 19561328
+            }
+          ],
+          "union_color_factor_content_sha256": "eb6066203f33ee361fe7a862a1797fbd0a122c28619796e60b6aad86d719bb52",
+          "weight_denominator_factor_content_sha256": "357bebbe6414efdcb54f6f038867fba736549c1281da275311f65994d34319f1"
+        },
+        "output": null,
+        "remaining_factor_summaries": [
+          {
+            "circuit_term_count": 12320,
+            "factor_content_sha256": "eb6066203f33ee361fe7a862a1797fbd0a122c28619796e60b6aad86d719bb52",
+            "factor_id": "C_UNION::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+            "scope": [
+              "g_I",
+              "g_A",
+              "g_B",
+              "g_C",
+              "b"
+            ],
+            "table_row_count": 12320
+          },
+          {
+            "circuit_term_count": 16,
+            "factor_content_sha256": "5e7b70d40af59460fdf3b18ca4168d2274385402817cbb216a358a818e5f2344",
+            "factor_id": "K::e_CA",
+            "scope": [
+              "e_CA"
+            ],
+            "table_row_count": 16
+          },
+          {
+            "circuit_term_count": 16,
+            "factor_content_sha256": "2c6f1042763ba5a75eb8d078922d18661f4f895d752f67bfca96b6f59d77cb48",
+            "factor_id": "SIGN1::e_CA",
+            "scope": [
+              "e_CA"
+            ],
+            "table_row_count": 16
+          },
+          {
+            "circuit_term_count": 1,
+            "factor_content_sha256": "357bebbe6414efdcb54f6f038867fba736549c1281da275311f65994d34319f1",
+            "factor_id": "WEIGHT_DENOM::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+            "scope": [],
+            "table_row_count": 1
+          },
+          {
+            "circuit_term_count": 431762,
+            "factor_content_sha256": "25c62df6165c8a3bab4d4cbe321307b6d49edb0099d9ca8164f5461f93682355",
+            "factor_id": "SUM::e_BA::6a19d2930b0f6a934898",
+            "scope": [
+              "g_B",
+              "e_BC",
+              "e_CA",
+              "g_A",
+              "g_I"
+            ],
+            "table_row_count": 12536
+          },
+          {
+            "circuit_term_count": 121964,
+            "factor_content_sha256": "1a2364e3e357d8d10e63697d28d861b8008e5af2b1321bf3f6f7d923ae3be029",
+            "factor_id": "JOIN::20b49367df7a53de6080",
+            "scope": [
+              "g_C",
+              "e_CA",
+              "e_BC",
+              "p1",
+              "p2"
+            ],
+            "table_row_count": 121964
+          }
+        ],
+        "resource_caps": {
+          "max_join_monomial_products": 600000,
+          "max_join_row_matches": 600000
+        },
+        "status": "BLOCKED_EXACT_JOIN_RESOURCE_GATE",
+        "trace": [
+          {
+            "output": {
+              "circuit_term_count": 16,
+              "factor_content_sha256": "09a64c9b9ce3f1478e5409fd588b3504ce8249004091ba1bffff46cff27c1d8d",
+              "factor_id": "JOIN::dca316fb7e93c877398f",
+              "scope": [
+                "e_AI"
+              ],
+              "table_row_count": 16
+            },
+            "profile": {
+              "exact_matching_row_pairs": 16,
+              "exact_monomial_products_before_collection": 16,
+              "left_factor_id": "K::e_AI",
+              "left_scope": [
+                "e_AI"
+              ],
+              "left_table_rows": 16,
+              "output_scope": [
+                "e_AI"
+              ],
+              "right_factor_id": "SIGN1::e_AI",
+              "right_scope": [
+                "e_AI"
+              ],
+              "right_table_rows": 16,
+              "shared_scope": [
+                "e_AI"
+              ]
+            },
+            "stage": "JOIN",
+            "variable": "e_AI"
+          },
+          {
+            "output": {
+              "circuit_term_count": 172,
+              "factor_content_sha256": "3415b8c422bae8925bec99705286b85b174a08b6aa76612f9c1b765b4ba70cf5",
+              "factor_id": "JOIN::5cae5556db942fc4d074",
+              "scope": [
+                "g_I",
+                "e_AI",
+                "e_IB"
+              ],
+              "table_row_count": 172
+            },
+            "profile": {
+              "exact_matching_row_pairs": 172,
+              "exact_monomial_products_before_collection": 172,
+              "left_factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4::I",
+              "left_scope": [
+                "g_I",
+                "e_AI",
+                "e_IB"
+              ],
+              "left_table_rows": 172,
+              "output_scope": [
+                "g_I",
+                "e_AI",
+                "e_IB"
+              ],
+              "right_factor_id": "JOIN::dca316fb7e93c877398f",
+              "right_scope": [
+                "e_AI"
+              ],
+              "right_table_rows": 16,
+              "shared_scope": [
+                "e_AI"
+              ]
+            },
+            "stage": "JOIN",
+            "variable": "e_AI"
+          },
+          {
+            "output": {
+              "circuit_term_count": 172,
+              "factor_content_sha256": "874a24507fd43e3b2d61c537374d78a8fb824f1ab086e4d60edeeb7d96819d29",
+              "factor_id": "JOIN::5aafd4a820cc4ff3f568",
+              "scope": [
+                "e_AI",
+                "e_IB",
+                "g_I"
+              ],
+              "table_row_count": 172
+            },
+            "profile": {
+              "exact_matching_row_pairs": 172,
+              "exact_monomial_products_before_collection": 172,
+              "left_factor_id": "SIGN2::e_AI::e_IB",
+              "left_scope": [
+                "e_AI",
+                "e_IB"
+              ],
+              "left_table_rows": 256,
+              "output_scope": [
+                "e_AI",
+                "e_IB",
+                "g_I"
+              ],
+              "right_factor_id": "JOIN::5cae5556db942fc4d074",
+              "right_scope": [
+                "g_I",
+                "e_AI",
+                "e_IB"
+              ],
+              "right_table_rows": 172,
+              "shared_scope": [
+                "e_AI",
+                "e_IB"
+              ]
+            },
+            "stage": "JOIN",
+            "variable": "e_AI"
+          },
+          {
+            "output": {
+              "circuit_term_count": 33840,
+              "factor_content_sha256": "eb98599f2627b9e3d3ec4f25ddf6d225b1a18217cf004f6586b24f92af8c3bb0",
+              "factor_id": "JOIN::bd9a1e412933ed7797bd",
+              "scope": [
+                "g_A",
+                "e_AI",
+                "e_CA",
+                "e_BA",
+                "e_IB",
+                "g_I"
+              ],
+              "table_row_count": 33840
+            },
+            "profile": {
+              "exact_matching_row_pairs": 33840,
+              "exact_monomial_products_before_collection": 33840,
+              "left_factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4::A",
+              "left_scope": [
+                "g_A",
+                "e_AI",
+                "e_CA",
+                "e_BA"
+              ],
+              "left_table_rows": 2928,
+              "output_scope": [
+                "g_A",
+                "e_AI",
+                "e_CA",
+                "e_BA",
+                "e_IB",
+                "g_I"
+              ],
+              "right_factor_id": "JOIN::5aafd4a820cc4ff3f568",
+              "right_scope": [
+                "e_AI",
+                "e_IB",
+                "g_I"
+              ],
+              "right_table_rows": 172,
+              "shared_scope": [
+                "e_AI"
+              ]
+            },
+            "stage": "JOIN",
+            "variable": "e_AI"
+          },
+          {
+            "input": {
+              "circuit_term_count": 33840,
+              "factor_content_sha256": "eb98599f2627b9e3d3ec4f25ddf6d225b1a18217cf004f6586b24f92af8c3bb0",
+              "factor_id": "JOIN::bd9a1e412933ed7797bd",
+              "scope": [
+                "g_A",
+                "e_AI",
+                "e_CA",
+                "e_BA",
+                "e_IB",
+                "g_I"
+              ],
+              "table_row_count": 33840
+            },
+            "output": {
+              "circuit_term_count": 33840,
+              "factor_content_sha256": "997ab6064fcfd67f13ad3673ac187a14aa76e12eebfe26812701aca1a1d54d13",
+              "factor_id": "SUM::e_AI::528f1bc1fb8a3db51e6d",
+              "scope": [
+                "g_A",
+                "e_CA",
+                "e_BA",
+                "e_IB",
+                "g_I"
+              ],
+              "table_row_count": 14792
+            },
+            "stage": "SUM_OUT",
+            "variable": "e_AI"
+          },
+          {
+            "output": {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "6ce27109efd47510ac8aa4f228b277fe3d6a13a603478b43a647ed005b3f0a99",
+              "factor_id": "JOIN::7eea8cfaf3ab34853542",
+              "scope": [
+                "e_IB",
+                "e_BA"
+              ],
+              "table_row_count": 256
+            },
+            "profile": {
+              "exact_matching_row_pairs": 256,
+              "exact_monomial_products_before_collection": 256,
+              "left_factor_id": "K::e_IB",
+              "left_scope": [
+                "e_IB"
+              ],
+              "left_table_rows": 16,
+              "output_scope": [
+                "e_IB",
+                "e_BA"
+              ],
+              "right_factor_id": "SIGN2::e_BA::e_IB",
+              "right_scope": [
+                "e_BA",
+                "e_IB"
+              ],
+              "right_table_rows": 256,
+              "shared_scope": [
+                "e_IB"
+              ]
+            },
+            "stage": "JOIN",
+            "variable": "e_IB"
+          },
+          {
+            "output": {
+              "circuit_term_count": 2928,
+              "factor_content_sha256": "b3d3835aec0b4751329cc4395e6dc7fd3f969c9fe1dc76c5ef00f771c0441c62",
+              "factor_id": "JOIN::d58649ddd2f77bb8bb31",
+              "scope": [
+                "g_B",
+                "e_IB",
+                "e_BC",
+                "e_BA"
+              ],
+              "table_row_count": 2928
+            },
+            "profile": {
+              "exact_matching_row_pairs": 2928,
+              "exact_monomial_products_before_collection": 2928,
+              "left_factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4::B",
+              "left_scope": [
+                "g_B",
+                "e_IB",
+                "e_BC",
+                "e_BA"
+              ],
+              "left_table_rows": 2928,
+              "output_scope": [
+                "g_B",
+                "e_IB",
+                "e_BC",
+                "e_BA"
+              ],
+              "right_factor_id": "JOIN::7eea8cfaf3ab34853542",
+              "right_scope": [
+                "e_IB",
+                "e_BA"
+              ],
+              "right_table_rows": 256,
+              "shared_scope": [
+                "e_IB",
+                "e_BA"
+              ]
+            },
+            "stage": "JOIN",
+            "variable": "e_IB"
+          },
+          {
+            "output": {
+              "circuit_term_count": 33840,
+              "factor_content_sha256": "a41c9c3c5dbc7fde4e0f1372cf0754438c3e5144e25b44e19ad4b652093c933f",
+              "factor_id": "JOIN::6f5af74357b58d551410",
+              "scope": [
+                "e_CA",
+                "e_IB",
+                "g_A",
+                "e_BA",
+                "g_I"
+              ],
+              "table_row_count": 14792
+            },
+            "profile": {
+              "exact_matching_row_pairs": 14792,
+              "exact_monomial_products_before_collection": 33840,
+              "left_factor_id": "SIGN2::e_CA::e_IB",
+              "left_scope": [
+                "e_CA",
+                "e_IB"
+              ],
+              "left_table_rows": 256,
+              "output_scope": [
+                "e_CA",
+                "e_IB",
+                "g_A",
+                "e_BA",
+                "g_I"
+              ],
+              "right_factor_id": "SUM::e_AI::528f1bc1fb8a3db51e6d",
+              "right_scope": [
+                "g_A",
+                "e_CA",
+                "e_BA",
+                "e_IB",
+                "g_I"
+              ],
+              "right_table_rows": 14792,
+              "shared_scope": [
+                "e_CA",
+                "e_IB"
+              ]
+            },
+            "stage": "JOIN",
+            "variable": "e_IB"
+          },
+          {
+            "output": {
+              "circuit_term_count": 433104,
+              "factor_content_sha256": "6a11acbf7811faebe9a0bf2c6cde2b4496d116e528a8e829ee3962183f5538a2",
+              "factor_id": "JOIN::e39612c402f2c098dbe6",
+              "scope": [
+                "g_B",
+                "e_IB",
+                "e_BC",
+                "e_BA",
+                "e_CA",
+                "g_A",
+                "g_I"
+              ],
+              "table_row_count": 200880
+            },
+            "profile": {
+              "exact_matching_row_pairs": 200880,
+              "exact_monomial_products_before_collection": 433104,
+              "left_factor_id": "JOIN::d58649ddd2f77bb8bb31",
+              "left_scope": [
+                "g_B",
+                "e_IB",
+                "e_BC",
+                "e_BA"
+              ],
+              "left_table_rows": 2928,
+              "output_scope": [
+                "g_B",
+                "e_IB",
+                "e_BC",
+                "e_BA",
+                "e_CA",
+                "g_A",
+                "g_I"
+              ],
+              "right_factor_id": "JOIN::6f5af74357b58d551410",
+              "right_scope": [
+                "e_CA",
+                "e_IB",
+                "g_A",
+                "e_BA",
+                "g_I"
+              ],
+              "right_table_rows": 14792,
+              "shared_scope": [
+                "e_IB",
+                "e_BA"
+              ]
+            },
+            "stage": "JOIN",
+            "variable": "e_IB"
+          },
+          {
+            "input": {
+              "circuit_term_count": 433104,
+              "factor_content_sha256": "6a11acbf7811faebe9a0bf2c6cde2b4496d116e528a8e829ee3962183f5538a2",
+              "factor_id": "JOIN::e39612c402f2c098dbe6",
+              "scope": [
+                "g_B",
+                "e_IB",
+                "e_BC",
+                "e_BA",
+                "e_CA",
+                "g_A",
+                "g_I"
+              ],
+              "table_row_count": 200880
+            },
+            "output": {
+              "circuit_term_count": 433104,
+              "factor_content_sha256": "182899ce20791a4b2b94d344b2a44c4ae9cb75829944571f645d642f06961764",
+              "factor_id": "SUM::e_IB::60c26bdcab80aaa675e7",
+              "scope": [
+                "g_B",
+                "e_BC",
+                "e_BA",
+                "e_CA",
+                "g_A",
+                "g_I"
+              ],
+              "table_row_count": 86992
+            },
+            "stage": "SUM_OUT",
+            "variable": "e_IB"
+          },
+          {
+            "output": {
+              "circuit_term_count": 16,
+              "factor_content_sha256": "930a81209a978f0e900ef916bb00b949a77da06e5663d24ff908a4a50bce8542",
+              "factor_id": "JOIN::a33fc18a8a1a703099a2",
+              "scope": [
+                "e_BA"
+              ],
+              "table_row_count": 16
+            },
+            "profile": {
+              "exact_matching_row_pairs": 16,
+              "exact_monomial_products_before_collection": 16,
+              "left_factor_id": "K::e_BA",
+              "left_scope": [
+                "e_BA"
+              ],
+              "left_table_rows": 16,
+              "output_scope": [
+                "e_BA"
+              ],
+              "right_factor_id": "SIGN1::e_BA",
+              "right_scope": [
+                "e_BA"
+              ],
+              "right_table_rows": 16,
+              "shared_scope": [
+                "e_BA"
+              ]
+            },
+            "stage": "JOIN",
+            "variable": "e_BA"
+          },
+          {
+            "output": {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "a7d8bc751df98422b3b17c05f5e3e1acdbb38375c96382590a0822223096b0c6",
+              "factor_id": "JOIN::362949fb01189fbd45da",
+              "scope": [
+                "e_BA",
+                "e_BC"
+              ],
+              "table_row_count": 256
+            },
+            "profile": {
+              "exact_matching_row_pairs": 256,
+              "exact_monomial_products_before_collection": 256,
+              "left_factor_id": "SIGN2::e_BA::e_BC",
+              "left_scope": [
+                "e_BA",
+                "e_BC"
+              ],
+              "left_table_rows": 256,
+              "output_scope": [
+                "e_BA",
+                "e_BC"
+              ],
+              "right_factor_id": "JOIN::a33fc18a8a1a703099a2",
+              "right_scope": [
+                "e_BA"
+              ],
+              "right_table_rows": 16,
+              "shared_scope": [
+                "e_BA"
+              ]
+            },
+            "stage": "JOIN",
+            "variable": "e_BA"
+          },
+          {
+            "output": {
+              "circuit_term_count": 433104,
+              "factor_content_sha256": "682a9a72f81a9c7e354b5cc47d71a637ac9050625c56e2757f6e69d7e9aa193f",
+              "factor_id": "JOIN::210031314368db84fc67",
+              "scope": [
+                "g_B",
+                "e_BC",
+                "e_BA",
+                "e_CA",
+                "g_A",
+                "g_I"
+              ],
+              "table_row_count": 86992
+            },
+            "profile": {
+              "exact_matching_row_pairs": 86992,
+              "exact_monomial_products_before_collection": 433104,
+              "left_factor_id": "SUM::e_IB::60c26bdcab80aaa675e7",
+              "left_scope": [
+                "g_B",
+                "e_BC",
+                "e_BA",
+                "e_CA",
+                "g_A",
+                "g_I"
+              ],
+              "left_table_rows": 86992,
+              "output_scope": [
+                "g_B",
+                "e_BC",
+                "e_BA",
+                "e_CA",
+                "g_A",
+                "g_I"
+              ],
+              "right_factor_id": "JOIN::362949fb01189fbd45da",
+              "right_scope": [
+                "e_BA",
+                "e_BC"
+              ],
+              "right_table_rows": 256,
+              "shared_scope": [
+                "e_BC",
+                "e_BA"
+              ]
+            },
+            "stage": "JOIN",
+            "variable": "e_BA"
+          },
+          {
+            "input": {
+              "circuit_term_count": 433104,
+              "factor_content_sha256": "682a9a72f81a9c7e354b5cc47d71a637ac9050625c56e2757f6e69d7e9aa193f",
+              "factor_id": "JOIN::210031314368db84fc67",
+              "scope": [
+                "g_B",
+                "e_BC",
+                "e_BA",
+                "e_CA",
+                "g_A",
+                "g_I"
+              ],
+              "table_row_count": 86992
+            },
+            "output": {
+              "circuit_term_count": 431762,
+              "factor_content_sha256": "25c62df6165c8a3bab4d4cbe321307b6d49edb0099d9ca8164f5461f93682355",
+              "factor_id": "SUM::e_BA::6a19d2930b0f6a934898",
+              "scope": [
+                "g_B",
+                "e_BC",
+                "e_CA",
+                "g_A",
+                "g_I"
+              ],
+              "table_row_count": 12536
+            },
+            "stage": "SUM_OUT",
+            "variable": "e_BA"
+          },
+          {
+            "output": {
+              "circuit_term_count": 256,
+              "factor_content_sha256": "2fffde915d1f6bb0215e708ae43e649f9518cd8fe616cdc9fc1c95d6275fcbef",
+              "factor_id": "JOIN::9c71500a42d89ab4fc11",
+              "scope": [
+                "e_BC",
+                "e_CA"
+              ],
+              "table_row_count": 256
+            },
+            "profile": {
+              "exact_matching_row_pairs": 256,
+              "exact_monomial_products_before_collection": 256,
+              "left_factor_id": "K::e_BC",
+              "left_scope": [
+                "e_BC"
+              ],
+              "left_table_rows": 16,
+              "output_scope": [
+                "e_BC",
+                "e_CA"
+              ],
+              "right_factor_id": "SIGN2::e_BC::e_CA",
+              "right_scope": [
+                "e_BC",
+                "e_CA"
+              ],
+              "right_table_rows": 256,
+              "shared_scope": [
+                "e_BC"
+              ]
+            },
+            "stage": "JOIN",
+            "variable": "e_BC"
+          },
+          {
+            "output": {
+              "circuit_term_count": 121964,
+              "factor_content_sha256": "1a2364e3e357d8d10e63697d28d861b8008e5af2b1321bf3f6f7d923ae3be029",
+              "factor_id": "JOIN::20b49367df7a53de6080",
+              "scope": [
+                "g_C",
+                "e_CA",
+                "e_BC",
+                "p1",
+                "p2"
+              ],
+              "table_row_count": 121964
+            },
+            "profile": {
+              "exact_matching_row_pairs": 121964,
+              "exact_monomial_products_before_collection": 121964,
+              "left_factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4::C",
+              "left_scope": [
+                "g_C",
+                "e_CA",
+                "e_BC",
+                "p1",
+                "p2"
+              ],
+              "left_table_rows": 121964,
+              "output_scope": [
+                "g_C",
+                "e_CA",
+                "e_BC",
+                "p1",
+                "p2"
+              ],
+              "right_factor_id": "JOIN::9c71500a42d89ab4fc11",
+              "right_scope": [
+                "e_BC",
+                "e_CA"
+              ],
+              "right_table_rows": 256,
+              "shared_scope": [
+                "e_CA",
+                "e_BC"
+              ]
+            },
+            "stage": "JOIN",
+            "variable": "e_BC"
+          }
+        ]
+      },
+      {
+        "blocked_exact_join_profile": null,
+        "blocked_variable": null,
+        "blockers": [
+          "MISSING_COMMON_DENOMINATOR_PARENT_EMBEDDING",
+          "MISSING_CERTIFIED_BOUNDED_OPEN_AXIS_RECORD"
+        ],
+        "checkpoint_sha256": "c0957cee0a8d165c23877b4f604c97d180712bb2979f5cf0098e2a98b5d09fd7",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_P1S4_P2S3",
+        "input": {
+          "graph_weight": {
+            "denominator": 1,
+            "numerator": -1
+          },
+          "union_color_factor_content_sha256": "c9d5a9127b52104198db373004e5064c7a04e15f619fbfb547d84f850087f1fa"
+        },
+        "status": "BLOCKED_NO_CERTIFIED_DALGEBRA_OPEN_AXIS_EVALUATOR"
+      },
+      {
+        "blocked_exact_join_profile": null,
+        "blocked_variable": null,
+        "blockers": [
+          "MISSING_COMMON_DENOMINATOR_PARENT_EMBEDDING",
+          "MISSING_CERTIFIED_BOUNDED_OPEN_AXIS_RECORD",
+          "INSERTION_BACKGROUND_PROJECT_DALGEBRA_EVALUATOR_UNCERTIFIED"
+        ],
+        "checkpoint_sha256": "85963f92774c9b2e031cac841747759d5121052a179bbaceffbe5d6d5c6f00a3",
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED_P1S3_P2I",
+        "input": {
+          "graph_weight": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "union_color_factor_content_sha256": "105b2d5017993c29e79bf72564da1daad813cbcc43701ca68caeabb994bb0c95"
+        },
+        "status": "BLOCKED_NO_CERTIFIED_DALGEBRA_OPEN_AXIS_EVALUATOR"
+      },
+      {
+        "blocked_exact_join_profile": null,
+        "blocked_variable": null,
+        "blockers": [
+          "MISSING_COMMON_DENOMINATOR_PARENT_EMBEDDING",
+          "MISSING_CERTIFIED_BOUNDED_OPEN_AXIS_RECORD",
+          "INSERTION_BACKGROUND_PROJECT_DALGEBRA_EVALUATOR_UNCERTIFIED"
+        ],
+        "checkpoint_sha256": "0a3f934362086b07cfef613c6203722ce69a6886efe1389a999145810aca8cad",
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED_P1I_P2S3",
+        "input": {
+          "graph_weight": {
+            "denominator": 2,
+            "numerator": -1
+          },
+          "union_color_factor_content_sha256": "3f44895d0c1cad54ea31578c3b73d41830459ed0fe4b9aa6b5c4381fbf429dee"
+        },
+        "status": "BLOCKED_NO_CERTIFIED_DALGEBRA_OPEN_AXIS_EVALUATOR"
+      }
+    ],
+    "platform_unit": "bytes_on_macos_kibibytes_on_linux",
+    "resource_ru_maxrss": 798638080,
+    "separate_group_tuple_contraction_count": 0,
+    "status": "FAIL_CLOSED_NEW3_DALGEBRA_OPEN_AXIS_EVALUATOR_ABSENT",
+    "unique_term_materialization": {
+      "certified_external_axis_precompiler_term_count": 6,
+      "legacy_exact_unique_term_count": 16,
+      "records": [
+        {
+          "cache_ledger_sha256": null,
+          "elapsed_seconds": 0.06853754096664488,
+          "external_ports": [],
+          "method": "UNIQUE_TERM_LEGACY_EXACT_ORACLE",
+          "nonzero_entry_count": 123,
+          "tensor_sha256": "47f4ec66c26503552bea7fb75842d0282cdb3acffe7389f12c46684acadb058b",
+          "term_id": "I2_direct_001"
+        },
+        {
+          "cache_ledger_sha256": null,
+          "elapsed_seconds": 0.05558416701387614,
+          "external_ports": [],
+          "method": "UNIQUE_TERM_LEGACY_EXACT_ORACLE",
+          "nonzero_entry_count": 123,
+          "tensor_sha256": "bb07ecad3e3927eb18c2af7194bb93e51e9f509d7b780e680d22e4c58ffa8ece",
+          "term_id": "I2_direct_002"
+        },
+        {
+          "cache_ledger_sha256": null,
+          "elapsed_seconds": 1.3388976249843836,
+          "external_ports": [],
+          "method": "UNIQUE_TERM_LEGACY_EXACT_ORACLE",
+          "nonzero_entry_count": 756,
+          "tensor_sha256": "b01a66a4f9d66ec6a81eccdbf25a6470d11e1f6630ba18ca928e3f7023b472ca",
+          "term_id": "I3_direct_001"
+        },
+        {
+          "cache_ledger_sha256": null,
+          "elapsed_seconds": 2.3259220409672707,
+          "external_ports": [],
+          "method": "UNIQUE_TERM_LEGACY_EXACT_ORACLE",
+          "nonzero_entry_count": 772,
+          "tensor_sha256": "475164a1480072b735f5a6c5cd5ccdeb27bc6d40b95ac31338add6f594973bd3",
+          "term_id": "I3_direct_002"
+        },
+        {
+          "cache_ledger_sha256": null,
+          "elapsed_seconds": 0.482999166008085,
+          "external_ports": [],
+          "method": "UNIQUE_TERM_LEGACY_EXACT_ORACLE",
+          "nonzero_entry_count": 816,
+          "tensor_sha256": "55567c6ac6e1dbb8826c0d38c21c45e61e238b5031089b42d417bfbe8951c8d4",
+          "term_id": "I3_direct_003"
+        },
+        {
+          "cache_ledger_sha256": null,
+          "elapsed_seconds": 0.3829079999704845,
+          "external_ports": [],
+          "method": "UNIQUE_TERM_LEGACY_EXACT_ORACLE",
+          "nonzero_entry_count": 963,
+          "tensor_sha256": "a54ddd49cae9fbbf4e45a73f6cc8af0be94d0f009a57662a95fd72c946423914",
+          "term_id": "I3_direct_004"
+        },
+        {
+          "cache_ledger_sha256": null,
+          "elapsed_seconds": 2.2101102499873377,
+          "external_ports": [],
+          "method": "UNIQUE_TERM_LEGACY_EXACT_ORACLE",
+          "nonzero_entry_count": 772,
+          "tensor_sha256": "eb522599575160f102f40b9357c6668055d11db3e7142e31097d90118730f079",
+          "term_id": "I3_direct_005"
+        },
+        {
+          "cache_ledger_sha256": null,
+          "elapsed_seconds": 1.1460338750039227,
+          "external_ports": [],
+          "method": "UNIQUE_TERM_LEGACY_EXACT_ORACLE",
+          "nonzero_entry_count": 756,
+          "tensor_sha256": "a483f038ac16264294d1d2f4fc8b4fe07655d7d779eb7c270382f7847ccae9fc",
+          "term_id": "I3_direct_006"
+        },
+        {
+          "cache_ledger_sha256": null,
+          "elapsed_seconds": 0.41438737499993294,
+          "external_ports": [],
+          "method": "UNIQUE_TERM_LEGACY_EXACT_ORACLE",
+          "nonzero_entry_count": 963,
+          "tensor_sha256": "97026cb8251eff5fb084bfd340d2466c3e8751e205741b87be35c625952f8c35",
+          "term_id": "I3_direct_007"
+        },
+        {
+          "cache_ledger_sha256": null,
+          "elapsed_seconds": 0.22495891602011397,
+          "external_ports": [],
+          "method": "UNIQUE_TERM_LEGACY_EXACT_ORACLE",
+          "nonzero_entry_count": 816,
+          "tensor_sha256": "c767c49f9779bcd90ec96633d9b5b388d875664708729e54a39735458dc29a19",
+          "term_id": "I3_direct_008"
+        },
+        {
+          "cache_ledger_sha256": null,
+          "elapsed_seconds": 0.1415387080051005,
+          "external_ports": [],
+          "method": "UNIQUE_TERM_LEGACY_EXACT_ORACLE",
+          "nonzero_entry_count": 658,
+          "tensor_sha256": "01e2154ea1b3e2a02fa85ff9a5a96dfee16779a972463c93dbe69fd1ad133c75",
+          "term_id": "I3_outer_connection_009"
+        },
+        {
+          "cache_ledger_sha256": null,
+          "elapsed_seconds": 0.3707079160376452,
+          "external_ports": [],
+          "method": "UNIQUE_TERM_LEGACY_EXACT_ORACLE",
+          "nonzero_entry_count": 658,
+          "tensor_sha256": "2e4908522db2b5cc85d7e44ae62b800ba218dd4ea678056baf66939012e8d59e",
+          "term_id": "I3_outer_connection_010"
+        },
+        {
+          "cache_ledger_sha256": null,
+          "elapsed_seconds": 0.614143833052367,
+          "external_ports": [],
+          "method": "UNIQUE_TERM_LEGACY_EXACT_ORACLE",
+          "nonzero_entry_count": 366,
+          "tensor_sha256": "b165b0a8cbda851effe4ea8fc75cf2c7363d787da0695865787ff78c1ddfeec4",
+          "term_id": "S3_MINUS_1_2"
+        },
+        {
+          "cache_ledger_sha256": null,
+          "elapsed_seconds": 0.5643672909936868,
+          "external_ports": [],
+          "method": "UNIQUE_TERM_LEGACY_EXACT_ORACLE",
+          "nonzero_entry_count": 366,
+          "tensor_sha256": "5d646f73952f5ceadf2bab746e308001b0af8400e1c72c70a5ba96394ccb613e",
+          "term_id": "S3_MINUS_2_1"
+        },
+        {
+          "cache_ledger_sha256": null,
+          "elapsed_seconds": 0.6132567080203444,
+          "external_ports": [],
+          "method": "UNIQUE_TERM_LEGACY_EXACT_ORACLE",
+          "nonzero_entry_count": 366,
+          "tensor_sha256": "dedf9dfdfcacda757e90d380f990357d1f067537a732dc4f07e6187832aed5fe",
+          "term_id": "S3_PLUS_1_2"
+        },
+        {
+          "cache_ledger_sha256": null,
+          "elapsed_seconds": 0.5564247089787386,
+          "external_ports": [],
+          "method": "UNIQUE_TERM_LEGACY_EXACT_ORACLE",
+          "nonzero_entry_count": 366,
+          "tensor_sha256": "1483f674f7525032595c3e64615808568e281adf6311e8fc618cd6e99f9c74e3",
+          "term_id": "S3_PLUS_2_1"
+        },
+        {
+          "cache_ledger_sha256": "f6e58caa5c2b38eaf18b84ee066f1273fb369ffdaa8a56798e00e1858abeda55",
+          "elapsed_seconds": 3.137287624995224,
+          "external_ports": [
+            "S4_MINUS.1.3.L.TildeW_1.TildeGamma_1.v1",
+            "S4_MINUS.1.3.R.TildeW_3.TildeGamma_3.v1"
+          ],
+          "method": "CERTIFIED_EXTERNAL_AXIS_PRECOMPILER",
+          "nonzero_entry_count": 1242,
+          "tensor_sha256": "442644f3e296a7dfff7501a2ba3a44948806800133b76d4e58ca1d9308601297",
+          "term_id": "S4_MINUS_1_3"
+        },
+        {
+          "cache_ledger_sha256": "f66ab933380d98d5c94705b91e8dcf3c97e33a61b37b2df4c780db1c2b83849a",
+          "elapsed_seconds": 4.341468666039873,
+          "external_ports": [
+            "S4_MINUS.2.2.L.TildeW_2.TildeGamma_2.v1",
+            "S4_MINUS.2.2.L.TildeW_2.TildeGamma_2.v2"
+          ],
+          "method": "CERTIFIED_EXTERNAL_AXIS_PRECOMPILER",
+          "nonzero_entry_count": 1753,
+          "tensor_sha256": "96d767b7b0aba8a94785d3f753fc6f559d17fb850d3577f7b319620c30667af0",
+          "term_id": "S4_MINUS_2_2"
+        },
+        {
+          "cache_ledger_sha256": "f6e58caa5c2b38eaf18b84ee066f1273fb369ffdaa8a56798e00e1858abeda55",
+          "elapsed_seconds": 3.264326832955703,
+          "external_ports": [
+            "S4_MINUS.3.1.L.TildeW_3.TildeGamma_3.v1",
+            "S4_MINUS.3.1.L.TildeW_3.TildeGamma_3.v2"
+          ],
+          "method": "CERTIFIED_EXTERNAL_AXIS_PRECOMPILER",
+          "nonzero_entry_count": 1242,
+          "tensor_sha256": "ce937705ecb547af1fff05f157b2d269583bd2711ba4904e5bdf999a3124c3b7",
+          "term_id": "S4_MINUS_3_1"
+        },
+        {
+          "cache_ledger_sha256": "f6e58caa5c2b38eaf18b84ee066f1273fb369ffdaa8a56798e00e1858abeda55",
+          "elapsed_seconds": 3.1773463339777663,
+          "external_ports": [
+            "S4_PLUS.1.3.L.W_1.Gamma_1.v1",
+            "S4_PLUS.1.3.R.W_3.Gamma_3.v1"
+          ],
+          "method": "CERTIFIED_EXTERNAL_AXIS_PRECOMPILER",
+          "nonzero_entry_count": 1242,
+          "tensor_sha256": "23494a0bf3d363041796bec0d23389ff8911754bab1ea6d9707d1dbfe596459d",
+          "term_id": "S4_PLUS_1_3"
+        },
+        {
+          "cache_ledger_sha256": "f66ab933380d98d5c94705b91e8dcf3c97e33a61b37b2df4c780db1c2b83849a",
+          "elapsed_seconds": 4.341510166996159,
+          "external_ports": [
+            "S4_PLUS.2.2.L.W_2.Gamma_2.v1",
+            "S4_PLUS.2.2.L.W_2.Gamma_2.v2"
+          ],
+          "method": "CERTIFIED_EXTERNAL_AXIS_PRECOMPILER",
+          "nonzero_entry_count": 1753,
+          "tensor_sha256": "cce2e602b746ba19df15fe5c998bd3667c44df355ad34a2bae55efa3ab6d2f9e",
+          "term_id": "S4_PLUS_2_2"
+        },
+        {
+          "cache_ledger_sha256": "f6e58caa5c2b38eaf18b84ee066f1273fb369ffdaa8a56798e00e1858abeda55",
+          "elapsed_seconds": 3.2484261249774136,
+          "external_ports": [
+            "S4_PLUS.3.1.L.W_3.Gamma_3.v1",
+            "S4_PLUS.3.1.L.W_3.Gamma_3.v2"
+          ],
+          "method": "CERTIFIED_EXTERNAL_AXIS_PRECOMPILER",
+          "nonzero_entry_count": 1242,
+          "tensor_sha256": "b0c78fd4c9659e4632da0b973cd625e37356abddeb9dbe245a6a23fd3027ae58",
+          "term_id": "S4_PLUS_3_1"
+        }
+      ],
+      "term_catalog_sha256": "9570b3eaa07eb86f546488e91d98af113c204502395b0cfcf25024a918933aba",
+      "total_nonzero_term_tensor_entries": 18114,
+      "unique_grammar_term_count": 22
+    },
+    "wall_seconds": 295.71444491599686
+  },
+  "passed": 27,
+  "payload": {
+    "authority_role": "PROPOSAL_ONLY_BLOCKED_ON_STEP5_ACCEPTANCE_AND_STEP6_TASK_ACTIVATION",
+    "boundary": {
+      "K_plus_vanishing": "NOT_CLAIMED",
+      "Q2_coefficient": "NOT_CLAIMED",
+      "R_operation": "NOT_CLAIMED",
+      "all_16992_as_independent_contractions": "FORBIDDEN_AND_NOT_RUN",
+      "evaluated_amplitude": "NOT_CLAIMED",
+      "full_local_value_atom_materialization": "DEFERRED_TO_EXACT_MATERIALIZED_EXECUTOR",
+      "full_parent_variable_elimination": "DEFERRED_TO_EXACT_MATERIALIZED_EXECUTOR",
+      "new3_D_algebra_open_axis_evaluation": "BLOCKED_NO_CERTIFIED_EVALUATOR"
+    },
+    "combined_union_output_circuit": {
+      "blocked_children": [
+        "G6_DIRECT_K4ME_I2_S3SQ_S4_P1S4_P2S3",
+        "G6_DIRECT_K4ME_I3_S3CUBED_P1S3_P2I",
+        "G6_DIRECT_K4ME_I3_S3CUBED_P1I_P2S3"
+      ],
+      "children": [
+        "b0ae5526705f251c665d73f19bcdf8b3f26f824ce3471a92bfed7e15a534d545",
+        "9069df4dd37ea82c7c7d93309a634aa95dc190c206313e5e56d44330adf71c61",
+        "51e89206ccef76ca890149f8656592f10ee06498362b364839e44cadb8f37eaa"
+      ],
+      "combined_circuit_sha256": "d4b4fd05e1b55dbead008018ff69dda6068a9360aceb6302ad051aac97bd294f",
+      "common_denominator_sha256": "fb60009eb10e45e37ac83904bfcf7629de2347aa55447e6aee79bebae3175df8",
+      "evaluation": "DEFERRED_TO_EXACT_MATERIALIZED_EXECUTOR",
+      "operation": "EXACT_PARENT_SUM_IN_COMMON_UNION_RING",
+      "quotient_basis_dimension": 385,
+      "retained_axes": [
+        "b",
+        "p1",
+        "p2"
+      ]
+    },
+    "compatibility_partition": {
+      "new3_color_factor_hashes": {
+        "G6_DIRECT_K4ME_I2_S3SQ_S4_P1S4_P2S3": "c9d5a9127b52104198db373004e5064c7a04e15f619fbfb547d84f850087f1fa",
+        "G6_DIRECT_K4ME_I3_S3CUBED_P1I_P2S3": "3f44895d0c1cad54ea31578c3b73d41830459ed0fe4b9aa6b5c4381fbf429dee",
+        "G6_DIRECT_K4ME_I3_S3CUBED_P1S3_P2I": "105b2d5017993c29e79bf72564da1daad813cbcc43701ca68caeabb994bb0c95"
+      },
+      "new3_parent_ids": [
+        "G6_DIRECT_K4ME_I2_S3SQ_S4_P1S4_P2S3",
+        "G6_DIRECT_K4ME_I3_S3CUBED_P1S3_P2I",
+        "G6_DIRECT_K4ME_I3_S3CUBED_P1I_P2S3"
+      ],
+      "new3_status": "FAIL_CLOSED_NO_CERTIFIED_DALGEBRA_OPEN_AXIS_EVALUATOR",
+      "new3_union_color_nonzero_rational_rows": 32448,
+      "old3_parent_circuit_hashes": {
+        "G6_DIRECT_K4ME_I2_S3SQ_S4": "b0ae5526705f251c665d73f19bcdf8b3f26f824ce3471a92bfed7e15a534d545",
+        "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4": "9069df4dd37ea82c7c7d93309a634aa95dc190c206313e5e56d44330adf71c61",
+        "G6_DIRECT_K4ME_I3_S3CUBED": "51e89206ccef76ca890149f8656592f10ee06498362b364839e44cadb8f37eaa"
+      },
+      "old3_parent_ids": [
+        "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+        "G6_DIRECT_K4ME_I3_S3CUBED"
+      ],
+      "old3_status": "STRUCTURALLY_COMPILED_WITH_LEGACY_CERTIFIED_OPEN_AXIS_RECORDS",
+      "old3_union_color_nonzero_rational_rows": 35872,
+      "union_color_compatibility_sha256": "7ac49c52a10e7f6d9d2b70bf5e2964262c71d63911df6dd26acfc927d272cb53"
+    },
+    "counts": {
+      "bounded_materialized_parent_tuple_count": 3,
+      "edge_kernel_factor_count": 15,
+      "fail_closed_parent_count": 3,
+      "graded_sign_factor_count": 39,
+      "group_tuple_rows_encoded_in_sparse_color_factors": 16992,
+      "local_lazy_factor_count": 12,
+      "parent_factor_graph_count": 6,
+      "production_parent_output_cell_count": 295680,
+      "separate_group_tuple_contraction_count": 0,
+      "structurally_compiled_parent_count": 3,
+      "union_color_nonzero_rational_rows": 68320
+    },
+    "inputs": {
+      "audits/step6-common-denominator-module-verification.json": "f5710bdf5796fa79bbe355eb65190c990549050a03903cb2242bc13b56dfe75a",
+      "audits/step6-exhaustive-external-axis-tuple-gate-verification.json": "7e7eb1725ca400585978c73257547381d04ce7dc9f8175f16e773d92f83b3bd6",
+      "audits/step6-union-color-jacobi-topology-verification.json": "c9ff264b086dec165db6d43542374801fa4f9233530eb884613d98442b4db802",
+      "generated/step6/common-denominator-module/common-denominator-module.json": "5bb835b8376b936e3a5824e5480ac5c250104c89eef6e84f104d4928958194de",
+      "generated/step6/union-color-jacobi-topology/union-color-jacobi-topology.json.gz": "f3de686150f6c7dfab9b6f350be6708a45fc0fea9c1ec4405f21f8f396329905",
+      "scripts/step6_all_parent_tensor_network.py": "d5e568ae1029e1f28b4d3b4d83ed9f5a4cb0b6f9015d59eef1cf7951df620e22",
+      "scripts/step6_coefficient_tensor.py": "ad8c9a1560c21d9889e233b0d0fa14e9ce9b0d0c85736866dccd1bcdcc6b437f",
+      "scripts/step6_common_denominator_module.py": "a2c3112aae65ffc9e4e3c9ecaa35d6e504a9afd1d16f77c9f30cd3d925290e4e",
+      "scripts/step6_exhaustive_external_axis_tuple_gate.py": "123d058d5893de371f4cfc708ced7a993e7229520b84dfeba2866d3a17c2792c",
+      "scripts/step6_external_axis_precomposition.py": "b90f426448b9387678bde9ef68bb13b163a88033bf1dd8e27f2858fb6f589607",
+      "scripts/step6_full_parent_census.py": "2853b6ddd8c3e144a43688c4eee56effb3614aa66b5b9600ce930927f3d92840",
+      "scripts/step6_full_supertensor.py": "8e61e05b512a8eaf3aeead4ed2c192ce8ced3a9ec70b0345a7d59afeefdc9958",
+      "scripts/step6_two_loop_amplitude_ir.py": "07edad632370f891a5fd12e016846333e033022b1faace32f81360b07bcc46fa",
+      "scripts/step6_union_color_jacobi_topology.py": "46a3f0677a5b807d50bc961e0d6f0ec3737808c2113ad36d7f5fe97b9a806766"
+    },
+    "parent_factor_graphs": [
+      {
+        "bounded_materialized_atom_gate": {
+          "circuit_term_count": 90236,
+          "exact_global_table_equality": true,
+          "external_shape": [
+            16,
+            16
+          ],
+          "factorized_circuit_sha256": "dc25a61cd9ea5a047308122f1454303e4466d9c10cdb81448132ab4387a2193a",
+          "group_tuple_indices": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "nonzero_external_cell_count": 209,
+          "serialized_local_value_atom_count": 817
+        },
+        "circuit_kind": "ONE_JOINT_SPARSE_FACTOR_GRAPH_PER_PARENT",
+        "circuit_status": "STRUCTURALLY_COMPILED_OLD3_WITH_BOUNDED_OPEN_AXIS_RECORD",
+        "exact_elimination_order": [
+          "g_I",
+          "e_BA",
+          "g_C",
+          "g_B",
+          "g_A",
+          "e_IC",
+          "e_BI",
+          "e_BC",
+          "e_AC"
+        ],
+        "factor_count": 25,
+        "graded_sign_factors": [
+          {
+            "factor_id": "SIGN1::e_BA",
+            "factor_kind": "EXACT_GRADED_LINEAR_SIGN",
+            "row_count": 16,
+            "scope": [
+              "e_BA"
+            ],
+            "table_sha256": "6a1763426d26f8f26e8838c77bc8601980095556ed568c5f096c934196b6cb8b"
+          },
+          {
+            "factor_id": "SIGN1::e_BI",
+            "factor_kind": "EXACT_GRADED_LINEAR_SIGN",
+            "row_count": 16,
+            "scope": [
+              "e_BI"
+            ],
+            "table_sha256": "6a1763426d26f8f26e8838c77bc8601980095556ed568c5f096c934196b6cb8b"
+          },
+          {
+            "factor_id": "SIGN2::e_AC::e_BA",
+            "factor_kind": "EXACT_GRADED_QUADRATIC_SIGN",
+            "row_count": 256,
+            "scope": [
+              "e_AC",
+              "e_BA"
+            ],
+            "table_sha256": "360c636a8f20a19a529772ba7001ce666b5372d84a1f507c11a4330e8d05c500"
+          },
+          {
+            "factor_id": "SIGN2::e_AC::e_BC",
+            "factor_kind": "EXACT_GRADED_QUADRATIC_SIGN",
+            "row_count": 256,
+            "scope": [
+              "e_AC",
+              "e_BC"
+            ],
+            "table_sha256": "360c636a8f20a19a529772ba7001ce666b5372d84a1f507c11a4330e8d05c500"
+          },
+          {
+            "factor_id": "SIGN2::e_AC::e_BI",
+            "factor_kind": "EXACT_GRADED_QUADRATIC_SIGN",
+            "row_count": 256,
+            "scope": [
+              "e_AC",
+              "e_BI"
+            ],
+            "table_sha256": "360c636a8f20a19a529772ba7001ce666b5372d84a1f507c11a4330e8d05c500"
+          },
+          {
+            "factor_id": "SIGN2::e_AC::e_IC",
+            "factor_kind": "EXACT_GRADED_QUADRATIC_SIGN",
+            "row_count": 256,
+            "scope": [
+              "e_AC",
+              "e_IC"
+            ],
+            "table_sha256": "360c636a8f20a19a529772ba7001ce666b5372d84a1f507c11a4330e8d05c500"
+          },
+          {
+            "factor_id": "SIGN2::e_AC::p1",
+            "factor_kind": "EXACT_GRADED_QUADRATIC_SIGN",
+            "row_count": 256,
+            "scope": [
+              "e_AC",
+              "p1"
+            ],
+            "table_sha256": "360c636a8f20a19a529772ba7001ce666b5372d84a1f507c11a4330e8d05c500"
+          },
+          {
+            "factor_id": "SIGN2::e_BA::e_BI",
+            "factor_kind": "EXACT_GRADED_QUADRATIC_SIGN",
+            "row_count": 256,
+            "scope": [
+              "e_BA",
+              "e_BI"
+            ],
+            "table_sha256": "360c636a8f20a19a529772ba7001ce666b5372d84a1f507c11a4330e8d05c500"
+          },
+          {
+            "factor_id": "SIGN2::e_BA::p1",
+            "factor_kind": "EXACT_GRADED_QUADRATIC_SIGN",
+            "row_count": 256,
+            "scope": [
+              "e_BA",
+              "p1"
+            ],
+            "table_sha256": "360c636a8f20a19a529772ba7001ce666b5372d84a1f507c11a4330e8d05c500"
+          },
+          {
+            "factor_id": "SIGN2::e_BC::e_IC",
+            "factor_kind": "EXACT_GRADED_QUADRATIC_SIGN",
+            "row_count": 256,
+            "scope": [
+              "e_BC",
+              "e_IC"
+            ],
+            "table_sha256": "360c636a8f20a19a529772ba7001ce666b5372d84a1f507c11a4330e8d05c500"
+          },
+          {
+            "factor_id": "SIGN2::e_BI::e_IC",
+            "factor_kind": "EXACT_GRADED_QUADRATIC_SIGN",
+            "row_count": 256,
+            "scope": [
+              "e_BI",
+              "e_IC"
+            ],
+            "table_sha256": "360c636a8f20a19a529772ba7001ce666b5372d84a1f507c11a4330e8d05c500"
+          },
+          {
+            "factor_id": "SIGN2::e_BI::p1",
+            "factor_kind": "EXACT_GRADED_QUADRATIC_SIGN",
+            "row_count": 256,
+            "scope": [
+              "e_BI",
+              "p1"
+            ],
+            "table_sha256": "360c636a8f20a19a529772ba7001ce666b5372d84a1f507c11a4330e8d05c500"
+          },
+          {
+            "factor_id": "SIGN2::e_IC::p1",
+            "factor_kind": "EXACT_GRADED_QUADRATIC_SIGN",
+            "row_count": 256,
+            "scope": [
+              "e_IC",
+              "p1"
+            ],
+            "table_sha256": "360c636a8f20a19a529772ba7001ce666b5372d84a1f507c11a4330e8d05c500"
+          }
+        ],
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+        "group_radices": [
+          2,
+          6,
+          6,
+          36
+        ],
+        "group_variables": [
+          "g_I",
+          "g_A",
+          "g_B",
+          "g_C"
+        ],
+        "internal_mask_variables": [
+          "e_BI",
+          "e_IC",
+          "e_BA",
+          "e_AC",
+          "e_BC"
+        ],
+        "kernel_factors": [
+          {
+            "factor_id": "K::e_BI",
+            "factor_kind": "EXACT_COEFFICIENT_METRIC_EDGE_KERNEL",
+            "nonzero_row_count": 16,
+            "scope": [
+              "e_BI"
+            ],
+            "table_sha256": "8b252e684f7bfd3d5acee7eacf77df83e274b1aae5bf0e7c33f30978d9cc5dbe"
+          },
+          {
+            "factor_id": "K::e_IC",
+            "factor_kind": "EXACT_COEFFICIENT_METRIC_EDGE_KERNEL",
+            "nonzero_row_count": 16,
+            "scope": [
+              "e_IC"
+            ],
+            "table_sha256": "8b252e684f7bfd3d5acee7eacf77df83e274b1aae5bf0e7c33f30978d9cc5dbe"
+          },
+          {
+            "factor_id": "K::e_BA",
+            "factor_kind": "EXACT_COEFFICIENT_METRIC_EDGE_KERNEL",
+            "nonzero_row_count": 16,
+            "scope": [
+              "e_BA"
+            ],
+            "table_sha256": "8b252e684f7bfd3d5acee7eacf77df83e274b1aae5bf0e7c33f30978d9cc5dbe"
+          },
+          {
+            "factor_id": "K::e_AC",
+            "factor_kind": "EXACT_COEFFICIENT_METRIC_EDGE_KERNEL",
+            "nonzero_row_count": 16,
+            "scope": [
+              "e_AC"
+            ],
+            "table_sha256": "8b252e684f7bfd3d5acee7eacf77df83e274b1aae5bf0e7c33f30978d9cc5dbe"
+          },
+          {
+            "factor_id": "K::e_BC",
+            "factor_kind": "EXACT_COEFFICIENT_METRIC_EDGE_KERNEL",
+            "nonzero_row_count": 16,
+            "scope": [
+              "e_BC"
+            ],
+            "table_sha256": "8b252e684f7bfd3d5acee7eacf77df83e274b1aae5bf0e7c33f30978d9cc5dbe"
+          }
+        ],
+        "local_dense_request_count": 2408960,
+        "local_factors": [
+          {
+            "dense_request_count": 512,
+            "factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4::I",
+            "factor_kind": "EXACT_LAZY_PROJECT_LOCAL_GROUP_TENSOR",
+            "group_catalog_sha256": "f937cf53d22c5673fca859bda12c745c361869c2bd350d6a98b79cad01c8d728",
+            "group_dense_mask_request_count_sum": 512,
+            "group_option_count_histogram": {
+              "2": 2
+            },
+            "group_option_count_sum": 4,
+            "group_radix": 2,
+            "group_record_count": 2,
+            "group_variable": "g_I",
+            "mask_domain_cardinality": 16,
+            "materialization_in_structural_compile": "DEFERRED_TO_EXACT_MATERIALIZED_EXECUTOR",
+            "scope": [
+              "g_I",
+              "e_BI",
+              "e_IC"
+            ],
+            "value_leaf_semantics": "nonzero exact value becomes LOCAL::sha256(canonical serialize_value(value)); zero emits no sparse row"
+          },
+          {
+            "dense_request_count": 24576,
+            "factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4::A",
+            "factor_kind": "EXACT_LAZY_PROJECT_LOCAL_GROUP_TENSOR",
+            "group_catalog_sha256": "b0eb7bb937c54bbb2d9f41f4884db607de119e7f0afeeade041a9c873d1003df",
+            "group_dense_mask_request_count_sum": 24576,
+            "group_option_count_histogram": {
+              "4": 6
+            },
+            "group_option_count_sum": 24,
+            "group_radix": 6,
+            "group_record_count": 6,
+            "group_variable": "g_A",
+            "mask_domain_cardinality": 16,
+            "materialization_in_structural_compile": "DEFERRED_TO_EXACT_MATERIALIZED_EXECUTOR",
+            "scope": [
+              "g_A",
+              "e_BA",
+              "e_AC",
+              "p1"
+            ],
+            "value_leaf_semantics": "nonzero exact value becomes LOCAL::sha256(canonical serialize_value(value)); zero emits no sparse row"
+          },
+          {
+            "dense_request_count": 24576,
+            "factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4::B",
+            "factor_kind": "EXACT_LAZY_PROJECT_LOCAL_GROUP_TENSOR",
+            "group_catalog_sha256": "be49a101bddc5191ee28f308a4654e4f9aaf1054360a274d9ec0f6ecc092e06e",
+            "group_dense_mask_request_count_sum": 24576,
+            "group_option_count_histogram": {
+              "4": 6
+            },
+            "group_option_count_sum": 24,
+            "group_radix": 6,
+            "group_record_count": 6,
+            "group_variable": "g_B",
+            "mask_domain_cardinality": 16,
+            "materialization_in_structural_compile": "DEFERRED_TO_EXACT_MATERIALIZED_EXECUTOR",
+            "scope": [
+              "g_B",
+              "e_BI",
+              "e_BA",
+              "e_BC"
+            ],
+            "value_leaf_semantics": "nonzero exact value becomes LOCAL::sha256(canonical serialize_value(value)); zero emits no sparse row"
+          },
+          {
+            "dense_request_count": 2359296,
+            "factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4::C",
+            "factor_kind": "EXACT_LAZY_PROJECT_LOCAL_GROUP_TENSOR",
+            "group_catalog_sha256": "9eb1240c087a2fa9815475c92b5d6d37d271162cef88120e0c9b9991134de9b9",
+            "group_dense_mask_request_count_sum": 2359296,
+            "group_option_count_histogram": {
+              "4": 36
+            },
+            "group_option_count_sum": 144,
+            "group_radix": 36,
+            "group_record_count": 36,
+            "group_variable": "g_C",
+            "mask_domain_cardinality": 16,
+            "materialization_in_structural_compile": "DEFERRED_TO_EXACT_MATERIALIZED_EXECUTOR",
+            "scope": [
+              "g_C",
+              "e_IC",
+              "e_AC",
+              "e_BC",
+              "p2"
+            ],
+            "value_leaf_semantics": "nonzero exact value becomes LOCAL::sha256(canonical serialize_value(value)); zero emits no sparse row"
+          }
+        ],
+        "orientation": "direct",
+        "parent_circuit_sha256": "b0ae5526705f251c665d73f19bcdf8b3f26f824ce3471a92bfed7e15a534d545",
+        "production_evaluation": "DEFERRED_TO_EXACT_MATERIALIZED_EXECUTOR",
+        "retained_axes": [
+          "b",
+          "p1",
+          "p2"
+        ],
+        "retained_shape": [
+          385,
+          16,
+          16
+        ],
+        "scalar_factors": [
+          {
+            "Aut_B": 1,
+            "definition": "-1/Aut_B",
+            "factor_id": "WEIGHT::G6_DIRECT_K4ME_I2_S3SQ_S4",
+            "factor_kind": "EXACT_GRAPH_WEIGHT",
+            "scope": [],
+            "value": {
+              "denominator": 1,
+              "numerator": -1
+            }
+          },
+          {
+            "atom_id": "DENOM::1575876d7bd46a59a961530ed39fdf0282dc9a8016a469347f01535ae1d1911f",
+            "factor_count": 3,
+            "factor_id": "MISSING_DENOM::G6_DIRECT_K4ME_I2_S3SQ_S4",
+            "factor_kind": "ONE_FORMAL_MISSING_DENOMINATOR_MULTIPLIER_ATOM",
+            "ordered_factor_ids": [
+              "Q::2439e635023e79d9f62e",
+              "Q::313c945e0f79194ed2fd",
+              "Q::60ac93126f6d191da637"
+            ],
+            "scope": []
+          }
+        ],
+        "union_color_factor": {
+          "coefficient_histogram": {
+            "-1/1": 3692,
+            "-1/2": 1820,
+            "-1/4": 48,
+            "-2/1": 180,
+            "-3/1": 40,
+            "-3/2": 36,
+            "-4/1": 88,
+            "-5/1": 12,
+            "-6/1": 8,
+            "-7/1": 4,
+            "1/1": 3692,
+            "1/2": 1820,
+            "1/4": 48,
+            "2/1": 180,
+            "3/1": 40,
+            "3/2": 36,
+            "4/1": 88,
+            "5/1": 12,
+            "6/1": 8,
+            "7/1": 4
+          },
+          "factor_id": "C_UNION::G6_DIRECT_K4ME_I2_S3SQ_S4",
+          "factor_kind": "EXACT_SPARSE_UNION_COLOR_JACOBI_QUOTIENT_EMBEDDING",
+          "group_tuple_count": 2592,
+          "nonzero_rational_row_count": 11856,
+          "quotient_basis_domain": 385,
+          "scope": [
+            "g_I",
+            "g_A",
+            "g_B",
+            "g_C",
+            "b"
+          ],
+          "sparse_table_sha256": "d964be03f8ca7f9d4dba1cfd933268a62dc9e508fabbe2ad0a4955cfc13dc72c",
+          "tuple_execution_semantics": "single sparse factor; group tuples are table rows, not separate contractions"
+        }
+      },
+      {
+        "bounded_materialized_atom_gate": {
+          "circuit_term_count": 45224,
+          "exact_global_table_equality": true,
+          "external_shape": [
+            16,
+            16
+          ],
+          "factorized_circuit_sha256": "e486999a675ac14d3cd2edfc47a5c637be3343bc06fcacc400a54c11be3d6f92",
+          "group_tuple_indices": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "nonzero_external_cell_count": 184,
+          "serialized_local_value_atom_count": 732
+        },
+        "circuit_kind": "ONE_JOINT_SPARSE_FACTOR_GRAPH_PER_PARENT",
+        "circuit_status": "STRUCTURALLY_COMPILED_OLD3_WITH_BOUNDED_OPEN_AXIS_RECORD",
+        "exact_elimination_order": [
+          "e_AI",
+          "e_IB",
+          "e_BA",
+          "g_I",
+          "g_B",
+          "g_A",
+          "g_C",
+          "e_CA",
+          "e_BC"
+        ],
+        "factor_count": 20,
+        "graded_sign_factors": [
+          {
+            "factor_id": "SIGN1::e_AI",
+            "factor_kind": "EXACT_GRADED_LINEAR_SIGN",
+            "row_count": 16,
+            "scope": [
+              "e_AI"
+            ],
+            "table_sha256": "6a1763426d26f8f26e8838c77bc8601980095556ed568c5f096c934196b6cb8b"
+          },
+          {
+            "factor_id": "SIGN1::e_BA",
+            "factor_kind": "EXACT_GRADED_LINEAR_SIGN",
+            "row_count": 16,
+            "scope": [
+              "e_BA"
+            ],
+            "table_sha256": "6a1763426d26f8f26e8838c77bc8601980095556ed568c5f096c934196b6cb8b"
+          },
+          {
+            "factor_id": "SIGN1::e_CA",
+            "factor_kind": "EXACT_GRADED_LINEAR_SIGN",
+            "row_count": 16,
+            "scope": [
+              "e_CA"
+            ],
+            "table_sha256": "6a1763426d26f8f26e8838c77bc8601980095556ed568c5f096c934196b6cb8b"
+          },
+          {
+            "factor_id": "SIGN2::e_AI::e_IB",
+            "factor_kind": "EXACT_GRADED_QUADRATIC_SIGN",
+            "row_count": 256,
+            "scope": [
+              "e_AI",
+              "e_IB"
+            ],
+            "table_sha256": "360c636a8f20a19a529772ba7001ce666b5372d84a1f507c11a4330e8d05c500"
+          },
+          {
+            "factor_id": "SIGN2::e_BA::e_BC",
+            "factor_kind": "EXACT_GRADED_QUADRATIC_SIGN",
+            "row_count": 256,
+            "scope": [
+              "e_BA",
+              "e_BC"
+            ],
+            "table_sha256": "360c636a8f20a19a529772ba7001ce666b5372d84a1f507c11a4330e8d05c500"
+          },
+          {
+            "factor_id": "SIGN2::e_BA::e_IB",
+            "factor_kind": "EXACT_GRADED_QUADRATIC_SIGN",
+            "row_count": 256,
+            "scope": [
+              "e_BA",
+              "e_IB"
+            ],
+            "table_sha256": "360c636a8f20a19a529772ba7001ce666b5372d84a1f507c11a4330e8d05c500"
+          },
+          {
+            "factor_id": "SIGN2::e_BC::e_CA",
+            "factor_kind": "EXACT_GRADED_QUADRATIC_SIGN",
+            "row_count": 256,
+            "scope": [
+              "e_BC",
+              "e_CA"
+            ],
+            "table_sha256": "360c636a8f20a19a529772ba7001ce666b5372d84a1f507c11a4330e8d05c500"
+          },
+          {
+            "factor_id": "SIGN2::e_CA::e_IB",
+            "factor_kind": "EXACT_GRADED_QUADRATIC_SIGN",
+            "row_count": 256,
+            "scope": [
+              "e_CA",
+              "e_IB"
+            ],
+            "table_sha256": "360c636a8f20a19a529772ba7001ce666b5372d84a1f507c11a4330e8d05c500"
+          }
+        ],
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+        "group_radices": [
+          2,
+          6,
+          6,
+          56
+        ],
+        "group_variables": [
+          "g_I",
+          "g_A",
+          "g_B",
+          "g_C"
+        ],
+        "internal_mask_variables": [
+          "e_AI",
+          "e_IB",
+          "e_CA",
+          "e_BC",
+          "e_BA"
+        ],
+        "kernel_factors": [
+          {
+            "factor_id": "K::e_AI",
+            "factor_kind": "EXACT_COEFFICIENT_METRIC_EDGE_KERNEL",
+            "nonzero_row_count": 16,
+            "scope": [
+              "e_AI"
+            ],
+            "table_sha256": "8b252e684f7bfd3d5acee7eacf77df83e274b1aae5bf0e7c33f30978d9cc5dbe"
+          },
+          {
+            "factor_id": "K::e_IB",
+            "factor_kind": "EXACT_COEFFICIENT_METRIC_EDGE_KERNEL",
+            "nonzero_row_count": 16,
+            "scope": [
+              "e_IB"
+            ],
+            "table_sha256": "8b252e684f7bfd3d5acee7eacf77df83e274b1aae5bf0e7c33f30978d9cc5dbe"
+          },
+          {
+            "factor_id": "K::e_CA",
+            "factor_kind": "EXACT_COEFFICIENT_METRIC_EDGE_KERNEL",
+            "nonzero_row_count": 16,
+            "scope": [
+              "e_CA"
+            ],
+            "table_sha256": "8b252e684f7bfd3d5acee7eacf77df83e274b1aae5bf0e7c33f30978d9cc5dbe"
+          },
+          {
+            "factor_id": "K::e_BC",
+            "factor_kind": "EXACT_COEFFICIENT_METRIC_EDGE_KERNEL",
+            "nonzero_row_count": 16,
+            "scope": [
+              "e_BC"
+            ],
+            "table_sha256": "8b252e684f7bfd3d5acee7eacf77df83e274b1aae5bf0e7c33f30978d9cc5dbe"
+          },
+          {
+            "factor_id": "K::e_BA",
+            "factor_kind": "EXACT_COEFFICIENT_METRIC_EDGE_KERNEL",
+            "nonzero_row_count": 16,
+            "scope": [
+              "e_BA"
+            ],
+            "table_sha256": "8b252e684f7bfd3d5acee7eacf77df83e274b1aae5bf0e7c33f30978d9cc5dbe"
+          }
+        ],
+        "local_dense_request_count": 3719680,
+        "local_factors": [
+          {
+            "dense_request_count": 512,
+            "factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4::I",
+            "factor_kind": "EXACT_LAZY_PROJECT_LOCAL_GROUP_TENSOR",
+            "group_catalog_sha256": "cf683c8ab89bf39d64c8c8edd86531b6194cc7c08477e2f03cc480f8f554b540",
+            "group_dense_mask_request_count_sum": 512,
+            "group_option_count_histogram": {
+              "2": 2
+            },
+            "group_option_count_sum": 4,
+            "group_radix": 2,
+            "group_record_count": 2,
+            "group_variable": "g_I",
+            "mask_domain_cardinality": 16,
+            "materialization_in_structural_compile": "DEFERRED_TO_EXACT_MATERIALIZED_EXECUTOR",
+            "scope": [
+              "g_I",
+              "e_AI",
+              "e_IB"
+            ],
+            "value_leaf_semantics": "nonzero exact value becomes LOCAL::sha256(canonical serialize_value(value)); zero emits no sparse row"
+          },
+          {
+            "dense_request_count": 24576,
+            "factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4::A",
+            "factor_kind": "EXACT_LAZY_PROJECT_LOCAL_GROUP_TENSOR",
+            "group_catalog_sha256": "6685300c6788756acbf552c446d84431213fa1d572723eb1c1e4c8be6de92d1e",
+            "group_dense_mask_request_count_sum": 24576,
+            "group_option_count_histogram": {
+              "4": 6
+            },
+            "group_option_count_sum": 24,
+            "group_radix": 6,
+            "group_record_count": 6,
+            "group_variable": "g_A",
+            "mask_domain_cardinality": 16,
+            "materialization_in_structural_compile": "DEFERRED_TO_EXACT_MATERIALIZED_EXECUTOR",
+            "scope": [
+              "g_A",
+              "e_AI",
+              "e_CA",
+              "e_BA"
+            ],
+            "value_leaf_semantics": "nonzero exact value becomes LOCAL::sha256(canonical serialize_value(value)); zero emits no sparse row"
+          },
+          {
+            "dense_request_count": 24576,
+            "factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4::B",
+            "factor_kind": "EXACT_LAZY_PROJECT_LOCAL_GROUP_TENSOR",
+            "group_catalog_sha256": "950f768369468151806ec3e5452a312845c10a687d551ddf55ba81ee4828742d",
+            "group_dense_mask_request_count_sum": 24576,
+            "group_option_count_histogram": {
+              "4": 6
+            },
+            "group_option_count_sum": 24,
+            "group_radix": 6,
+            "group_record_count": 6,
+            "group_variable": "g_B",
+            "mask_domain_cardinality": 16,
+            "materialization_in_structural_compile": "DEFERRED_TO_EXACT_MATERIALIZED_EXECUTOR",
+            "scope": [
+              "g_B",
+              "e_IB",
+              "e_BC",
+              "e_BA"
+            ],
+            "value_leaf_semantics": "nonzero exact value becomes LOCAL::sha256(canonical serialize_value(value)); zero emits no sparse row"
+          },
+          {
+            "dense_request_count": 3670016,
+            "factor_id": "T::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4::C",
+            "factor_kind": "EXACT_LAZY_PROJECT_LOCAL_GROUP_TENSOR",
+            "group_catalog_sha256": "fd90bec03bdbd7135b3b94c9d365de6d369f5e15da75a84c02a2f3b54683c959",
+            "group_dense_mask_request_count_sum": 3670016,
+            "group_option_count_histogram": {
+              "2": 40,
+              "4": 16
+            },
+            "group_option_count_sum": 144,
+            "group_radix": 56,
+            "group_record_count": 56,
+            "group_variable": "g_C",
+            "mask_domain_cardinality": 16,
+            "materialization_in_structural_compile": "DEFERRED_TO_EXACT_MATERIALIZED_EXECUTOR",
+            "scope": [
+              "g_C",
+              "e_CA",
+              "e_BC",
+              "p1",
+              "p2"
+            ],
+            "value_leaf_semantics": "nonzero exact value becomes LOCAL::sha256(canonical serialize_value(value)); zero emits no sparse row"
+          }
+        ],
+        "orientation": "direct",
+        "parent_circuit_sha256": "9069df4dd37ea82c7c7d93309a634aa95dc190c206313e5e56d44330adf71c61",
+        "production_evaluation": "DEFERRED_TO_EXACT_MATERIALIZED_EXECUTOR",
+        "retained_axes": [
+          "b",
+          "p1",
+          "p2"
+        ],
+        "retained_shape": [
+          385,
+          16,
+          16
+        ],
+        "scalar_factors": [
+          {
+            "Aut_B": 2,
+            "definition": "-1/Aut_B",
+            "factor_id": "WEIGHT::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+            "factor_kind": "EXACT_GRAPH_WEIGHT",
+            "scope": [],
+            "value": {
+              "denominator": 2,
+              "numerator": -1
+            }
+          },
+          {
+            "atom_id": "DENOM::b161a8fb3ae1e8e14be5868dc7288376427551e7796880009436cf5f492adbaa",
+            "factor_count": 3,
+            "factor_id": "MISSING_DENOM::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+            "factor_kind": "ONE_FORMAL_MISSING_DENOMINATOR_MULTIPLIER_ATOM",
+            "ordered_factor_ids": [
+              "Q::313c945e0f79194ed2fd",
+              "Q::80f1e4c1e445e897fcd0",
+              "Q::9de178283dbb6a47bdc1"
+            ],
+            "scope": []
+          }
+        ],
+        "union_color_factor": {
+          "coefficient_histogram": {
+            "-1/1": 5168,
+            "-1/2": 640,
+            "-2/1": 352,
+            "1/1": 5168,
+            "1/2": 640,
+            "2/1": 352
+          },
+          "factor_id": "C_UNION::G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+          "factor_kind": "EXACT_SPARSE_UNION_COLOR_JACOBI_QUOTIENT_EMBEDDING",
+          "group_tuple_count": 4032,
+          "nonzero_rational_row_count": 12320,
+          "quotient_basis_domain": 385,
+          "scope": [
+            "g_I",
+            "g_A",
+            "g_B",
+            "g_C",
+            "b"
+          ],
+          "sparse_table_sha256": "4be051c7902fecf498b436f2d14e8b82e6eae987e73f0e82f2959874455f7694",
+          "tuple_execution_semantics": "single sparse factor; group tuples are table rows, not separate contractions"
+        }
+      },
+      {
+        "bounded_materialized_atom_gate": {
+          "circuit_term_count": 192169,
+          "exact_global_table_equality": true,
+          "external_shape": [
+            16,
+            16
+          ],
+          "factorized_circuit_sha256": "19641f65fb144e6f8a6465c2f96eb20bda446796a50c13e830914214c507bb09",
+          "group_tuple_indices": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "nonzero_external_cell_count": 198,
+          "serialized_local_value_atom_count": 1429
+        },
+        "circuit_kind": "ONE_JOINT_SPARSE_FACTOR_GRAPH_PER_PARENT",
+        "circuit_status": "STRUCTURALLY_COMPILED_OLD3_WITH_BOUNDED_OPEN_AXIS_RECORD",
+        "exact_elimination_order": [
+          "e_AI",
+          "e_CB",
+          "g_I",
+          "g_A",
+          "g_C",
+          "g_B",
+          "e_CI",
+          "e_CA",
+          "e_BI"
+        ],
+        "factor_count": 30,
+        "graded_sign_factors": [
+          {
+            "factor_id": "SIGN1::e_AI",
+            "factor_kind": "EXACT_GRADED_LINEAR_SIGN",
+            "row_count": 16,
+            "scope": [
+              "e_AI"
+            ],
+            "table_sha256": "6a1763426d26f8f26e8838c77bc8601980095556ed568c5f096c934196b6cb8b"
+          },
+          {
+            "factor_id": "SIGN1::e_BI",
+            "factor_kind": "EXACT_GRADED_LINEAR_SIGN",
+            "row_count": 16,
+            "scope": [
+              "e_BI"
+            ],
+            "table_sha256": "6a1763426d26f8f26e8838c77bc8601980095556ed568c5f096c934196b6cb8b"
+          },
+          {
+            "factor_id": "SIGN1::e_CA",
+            "factor_kind": "EXACT_GRADED_LINEAR_SIGN",
+            "row_count": 16,
+            "scope": [
+              "e_CA"
+            ],
+            "table_sha256": "6a1763426d26f8f26e8838c77bc8601980095556ed568c5f096c934196b6cb8b"
+          },
+          {
+            "factor_id": "SIGN1::e_CB",
+            "factor_kind": "EXACT_GRADED_LINEAR_SIGN",
+            "row_count": 16,
+            "scope": [
+              "e_CB"
+            ],
+            "table_sha256": "6a1763426d26f8f26e8838c77bc8601980095556ed568c5f096c934196b6cb8b"
+          },
+          {
+            "factor_id": "SIGN1::e_CI",
+            "factor_kind": "EXACT_GRADED_LINEAR_SIGN",
+            "row_count": 16,
+            "scope": [
+              "e_CI"
+            ],
+            "table_sha256": "6a1763426d26f8f26e8838c77bc8601980095556ed568c5f096c934196b6cb8b"
+          },
+          {
+            "factor_id": "SIGN2::e_AI::e_BI",
+            "factor_kind": "EXACT_GRADED_QUADRATIC_SIGN",
+            "row_count": 256,
+            "scope": [
+              "e_AI",
+              "e_BI"
+            ],
+            "table_sha256": "360c636a8f20a19a529772ba7001ce666b5372d84a1f507c11a4330e8d05c500"
+          },
+          {
+            "factor_id": "SIGN2::e_AI::e_CA",
+            "factor_kind": "EXACT_GRADED_QUADRATIC_SIGN",
+            "row_count": 256,
+            "scope": [
+              "e_AI",
+              "e_CA"
+            ],
+            "table_sha256": "360c636a8f20a19a529772ba7001ce666b5372d84a1f507c11a4330e8d05c500"
+          },
+          {
+            "factor_id": "SIGN2::e_BI::e_CA",
+            "factor_kind": "EXACT_GRADED_QUADRATIC_SIGN",
+            "row_count": 256,
+            "scope": [
+              "e_BI",
+              "e_CA"
+            ],
+            "table_sha256": "360c636a8f20a19a529772ba7001ce666b5372d84a1f507c11a4330e8d05c500"
+          },
+          {
+            "factor_id": "SIGN2::e_BI::e_CB",
+            "factor_kind": "EXACT_GRADED_QUADRATIC_SIGN",
+            "row_count": 256,
+            "scope": [
+              "e_BI",
+              "e_CB"
+            ],
+            "table_sha256": "360c636a8f20a19a529772ba7001ce666b5372d84a1f507c11a4330e8d05c500"
+          },
+          {
+            "factor_id": "SIGN2::e_BI::p1",
+            "factor_kind": "EXACT_GRADED_QUADRATIC_SIGN",
+            "row_count": 256,
+            "scope": [
+              "e_BI",
+              "p1"
+            ],
+            "table_sha256": "360c636a8f20a19a529772ba7001ce666b5372d84a1f507c11a4330e8d05c500"
+          },
+          {
+            "factor_id": "SIGN2::e_CA::e_CB",
+            "factor_kind": "EXACT_GRADED_QUADRATIC_SIGN",
+            "row_count": 256,
+            "scope": [
+              "e_CA",
+              "e_CB"
+            ],
+            "table_sha256": "360c636a8f20a19a529772ba7001ce666b5372d84a1f507c11a4330e8d05c500"
+          },
+          {
+            "factor_id": "SIGN2::e_CA::e_CI",
+            "factor_kind": "EXACT_GRADED_QUADRATIC_SIGN",
+            "row_count": 256,
+            "scope": [
+              "e_CA",
+              "e_CI"
+            ],
+            "table_sha256": "360c636a8f20a19a529772ba7001ce666b5372d84a1f507c11a4330e8d05c500"
+          },
+          {
+            "factor_id": "SIGN2::e_CA::p1",
+            "factor_kind": "EXACT_GRADED_QUADRATIC_SIGN",
+            "row_count": 256,
+            "scope": [
+              "e_CA",
+              "p1"
+            ],
+            "table_sha256": "360c636a8f20a19a529772ba7001ce666b5372d84a1f507c11a4330e8d05c500"
+          },
+          {
+            "factor_id": "SIGN2::e_CA::p2",
+            "factor_kind": "EXACT_GRADED_QUADRATIC_SIGN",
+            "row_count": 256,
+            "scope": [
+              "e_CA",
+              "p2"
+            ],
+            "table_sha256": "360c636a8f20a19a529772ba7001ce666b5372d84a1f507c11a4330e8d05c500"
+          },
+          {
+            "factor_id": "SIGN2::e_CB::e_CI",
+            "factor_kind": "EXACT_GRADED_QUADRATIC_SIGN",
+            "row_count": 256,
+            "scope": [
+              "e_CB",
+              "e_CI"
+            ],
+            "table_sha256": "360c636a8f20a19a529772ba7001ce666b5372d84a1f507c11a4330e8d05c500"
+          },
+          {
+            "factor_id": "SIGN2::e_CB::p2",
+            "factor_kind": "EXACT_GRADED_QUADRATIC_SIGN",
+            "row_count": 256,
+            "scope": [
+              "e_CB",
+              "p2"
+            ],
+            "table_sha256": "360c636a8f20a19a529772ba7001ce666b5372d84a1f507c11a4330e8d05c500"
+          },
+          {
+            "factor_id": "SIGN2::e_CI::p1",
+            "factor_kind": "EXACT_GRADED_QUADRATIC_SIGN",
+            "row_count": 256,
+            "scope": [
+              "e_CI",
+              "p1"
+            ],
+            "table_sha256": "360c636a8f20a19a529772ba7001ce666b5372d84a1f507c11a4330e8d05c500"
+          },
+          {
+            "factor_id": "SIGN2::e_CI::p2",
+            "factor_kind": "EXACT_GRADED_QUADRATIC_SIGN",
+            "row_count": 256,
+            "scope": [
+              "e_CI",
+              "p2"
+            ],
+            "table_sha256": "360c636a8f20a19a529772ba7001ce666b5372d84a1f507c11a4330e8d05c500"
+          }
+        ],
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+        "group_radices": [
+          12,
+          6,
+          6,
+          6
+        ],
+        "group_variables": [
+          "g_I",
+          "g_A",
+          "g_B",
+          "g_C"
+        ],
+        "internal_mask_variables": [
+          "e_CI",
+          "e_CA",
+          "e_AI",
+          "e_CB",
+          "e_BI"
+        ],
+        "kernel_factors": [
+          {
+            "factor_id": "K::e_CI",
+            "factor_kind": "EXACT_COEFFICIENT_METRIC_EDGE_KERNEL",
+            "nonzero_row_count": 16,
+            "scope": [
+              "e_CI"
+            ],
+            "table_sha256": "8b252e684f7bfd3d5acee7eacf77df83e274b1aae5bf0e7c33f30978d9cc5dbe"
+          },
+          {
+            "factor_id": "K::e_CA",
+            "factor_kind": "EXACT_COEFFICIENT_METRIC_EDGE_KERNEL",
+            "nonzero_row_count": 16,
+            "scope": [
+              "e_CA"
+            ],
+            "table_sha256": "8b252e684f7bfd3d5acee7eacf77df83e274b1aae5bf0e7c33f30978d9cc5dbe"
+          },
+          {
+            "factor_id": "K::e_AI",
+            "factor_kind": "EXACT_COEFFICIENT_METRIC_EDGE_KERNEL",
+            "nonzero_row_count": 16,
+            "scope": [
+              "e_AI"
+            ],
+            "table_sha256": "8b252e684f7bfd3d5acee7eacf77df83e274b1aae5bf0e7c33f30978d9cc5dbe"
+          },
+          {
+            "factor_id": "K::e_CB",
+            "factor_kind": "EXACT_COEFFICIENT_METRIC_EDGE_KERNEL",
+            "nonzero_row_count": 16,
+            "scope": [
+              "e_CB"
+            ],
+            "table_sha256": "8b252e684f7bfd3d5acee7eacf77df83e274b1aae5bf0e7c33f30978d9cc5dbe"
+          },
+          {
+            "factor_id": "K::e_BI",
+            "factor_kind": "EXACT_COEFFICIENT_METRIC_EDGE_KERNEL",
+            "nonzero_row_count": 16,
+            "scope": [
+              "e_BI"
+            ],
+            "table_sha256": "8b252e684f7bfd3d5acee7eacf77df83e274b1aae5bf0e7c33f30978d9cc5dbe"
+          }
+        ],
+        "local_dense_request_count": 122880,
+        "local_factors": [
+          {
+            "dense_request_count": 49152,
+            "factor_id": "T::G6_DIRECT_K4ME_I3_S3CUBED::I",
+            "factor_kind": "EXACT_LAZY_PROJECT_LOCAL_GROUP_TENSOR",
+            "group_catalog_sha256": "9156dba7871504fcfc332289c3abb465b2a5b02a33a26f4b2898d24328876fa3",
+            "group_dense_mask_request_count_sum": 49152,
+            "group_option_count_histogram": {
+              "5": 12
+            },
+            "group_option_count_sum": 60,
+            "group_radix": 12,
+            "group_record_count": 12,
+            "group_variable": "g_I",
+            "mask_domain_cardinality": 16,
+            "materialization_in_structural_compile": "DEFERRED_TO_EXACT_MATERIALIZED_EXECUTOR",
+            "scope": [
+              "g_I",
+              "e_CI",
+              "e_AI",
+              "e_BI"
+            ],
+            "value_leaf_semantics": "nonzero exact value becomes LOCAL::sha256(canonical serialize_value(value)); zero emits no sparse row"
+          },
+          {
+            "dense_request_count": 24576,
+            "factor_id": "T::G6_DIRECT_K4ME_I3_S3CUBED::A",
+            "factor_kind": "EXACT_LAZY_PROJECT_LOCAL_GROUP_TENSOR",
+            "group_catalog_sha256": "c2cb95f9636483338ec7fcb66b2fca6d88abb62d9183edd640237b15c2e9b2e8",
+            "group_dense_mask_request_count_sum": 24576,
+            "group_option_count_histogram": {
+              "4": 6
+            },
+            "group_option_count_sum": 24,
+            "group_radix": 6,
+            "group_record_count": 6,
+            "group_variable": "g_A",
+            "mask_domain_cardinality": 16,
+            "materialization_in_structural_compile": "DEFERRED_TO_EXACT_MATERIALIZED_EXECUTOR",
+            "scope": [
+              "g_A",
+              "e_CA",
+              "e_AI",
+              "p1"
+            ],
+            "value_leaf_semantics": "nonzero exact value becomes LOCAL::sha256(canonical serialize_value(value)); zero emits no sparse row"
+          },
+          {
+            "dense_request_count": 24576,
+            "factor_id": "T::G6_DIRECT_K4ME_I3_S3CUBED::B",
+            "factor_kind": "EXACT_LAZY_PROJECT_LOCAL_GROUP_TENSOR",
+            "group_catalog_sha256": "af7d8cc52d64feecf36faaa5e5e016f1bebf0942924a6606c11674310be984a1",
+            "group_dense_mask_request_count_sum": 24576,
+            "group_option_count_histogram": {
+              "4": 6
+            },
+            "group_option_count_sum": 24,
+            "group_radix": 6,
+            "group_record_count": 6,
+            "group_variable": "g_B",
+            "mask_domain_cardinality": 16,
+            "materialization_in_structural_compile": "DEFERRED_TO_EXACT_MATERIALIZED_EXECUTOR",
+            "scope": [
+              "g_B",
+              "e_CB",
+              "e_BI",
+              "p2"
+            ],
+            "value_leaf_semantics": "nonzero exact value becomes LOCAL::sha256(canonical serialize_value(value)); zero emits no sparse row"
+          },
+          {
+            "dense_request_count": 24576,
+            "factor_id": "T::G6_DIRECT_K4ME_I3_S3CUBED::C",
+            "factor_kind": "EXACT_LAZY_PROJECT_LOCAL_GROUP_TENSOR",
+            "group_catalog_sha256": "d52aab871a05e09f9030f60b4a214ca7a4d5a2574163f9009e2f5b17875ff282",
+            "group_dense_mask_request_count_sum": 24576,
+            "group_option_count_histogram": {
+              "4": 6
+            },
+            "group_option_count_sum": 24,
+            "group_radix": 6,
+            "group_record_count": 6,
+            "group_variable": "g_C",
+            "mask_domain_cardinality": 16,
+            "materialization_in_structural_compile": "DEFERRED_TO_EXACT_MATERIALIZED_EXECUTOR",
+            "scope": [
+              "g_C",
+              "e_CI",
+              "e_CA",
+              "e_CB"
+            ],
+            "value_leaf_semantics": "nonzero exact value becomes LOCAL::sha256(canonical serialize_value(value)); zero emits no sparse row"
+          }
+        ],
+        "orientation": "direct",
+        "parent_circuit_sha256": "51e89206ccef76ca890149f8656592f10ee06498362b364839e44cadb8f37eaa",
+        "production_evaluation": "DEFERRED_TO_EXACT_MATERIALIZED_EXECUTOR",
+        "retained_axes": [
+          "b",
+          "p1",
+          "p2"
+        ],
+        "retained_shape": [
+          385,
+          16,
+          16
+        ],
+        "scalar_factors": [
+          {
+            "Aut_B": 1,
+            "definition": "-1/Aut_B",
+            "factor_id": "WEIGHT::G6_DIRECT_K4ME_I3_S3CUBED",
+            "factor_kind": "EXACT_GRAPH_WEIGHT",
+            "scope": [],
+            "value": {
+              "denominator": 1,
+              "numerator": -1
+            }
+          },
+          {
+            "atom_id": "DENOM::1b78d157f56eb106cad4fcac0da5751f4501ff8bd166aa0f6bbf537012f27e63",
+            "factor_count": 3,
+            "factor_id": "MISSING_DENOM::G6_DIRECT_K4ME_I3_S3CUBED",
+            "factor_kind": "ONE_FORMAL_MISSING_DENOMINATOR_MULTIPLIER_ATOM",
+            "ordered_factor_ids": [
+              "Q::123293778f5e615e8b3d",
+              "Q::2439e635023e79d9f62e",
+              "Q::60ac93126f6d191da637"
+            ],
+            "scope": []
+          }
+        ],
+        "union_color_factor": {
+          "coefficient_histogram": {
+            "-1/1": 4304,
+            "-1/2": 1496,
+            "-2/1": 8,
+            "-3/2": 40,
+            "1/1": 4304,
+            "1/2": 1496,
+            "2/1": 8,
+            "3/2": 40
+          },
+          "factor_id": "C_UNION::G6_DIRECT_K4ME_I3_S3CUBED",
+          "factor_kind": "EXACT_SPARSE_UNION_COLOR_JACOBI_QUOTIENT_EMBEDDING",
+          "group_tuple_count": 2592,
+          "nonzero_rational_row_count": 11696,
+          "quotient_basis_domain": 385,
+          "scope": [
+            "g_I",
+            "g_A",
+            "g_B",
+            "g_C",
+            "b"
+          ],
+          "sparse_table_sha256": "63d5bd72caba300f0c28da813b12f6377e1cc7b6d4e0cf591c1f7098b9665224",
+          "tuple_execution_semantics": "single sparse factor; group tuples are table rows, not separate contractions"
+        }
+      },
+      {
+        "blockers": [
+          "MISSING_COMMON_DENOMINATOR_PARENT_EMBEDDING",
+          "MISSING_CERTIFIED_BOUNDED_OPEN_AXIS_RECORD"
+        ],
+        "bounded_materialized_atom_gate": null,
+        "circuit_status": "FAIL_CLOSED_NO_CERTIFIED_DALGEBRA_OPEN_AXIS_EVALUATOR",
+        "exact_elimination_order": [],
+        "forbidden_inference": "COLOR_JACOBI_INPUT_EXISTENCE_DOES_NOT_DEFINE_A_DALGEBRA_OR_OPEN_AXIS_VALUE",
+        "graded_sign_factors": [],
+        "graph_hash": "c5eb88440ffb4d57a417fcb981d3a9b018c2df0a2b8e65ca03c8f3cbaf287ae3",
+        "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_P1S4_P2S3",
+        "group_radices": [
+          2,
+          6,
+          6,
+          36
+        ],
+        "group_variables": [
+          "g_I",
+          "g_A",
+          "g_B",
+          "g_C"
+        ],
+        "kernel_factors": [],
+        "local_factors": [],
+        "orientation": "direct",
+        "parent_circuit_sha256": null,
+        "production_evaluation": "BLOCKED_FAIL_CLOSED",
+        "reflected_orientation_hash": "c6e969a74e90af42129bfd425aa87bf0f7a303d8f7d63e9f4da17cf57f0c523c",
+        "retained_axes": [
+          "b",
+          "p1",
+          "p2"
+        ],
+        "retained_shape": [
+          385,
+          16,
+          16
+        ],
+        "scalar_factors": [
+          {
+            "Aut_B": 1,
+            "definition": "-1/Aut_B",
+            "factor_id": "WEIGHT::G6_DIRECT_K4ME_I2_S3SQ_S4_P1S4_P2S3",
+            "factor_kind": "EXACT_GRAPH_WEIGHT",
+            "scope": [],
+            "value": {
+              "denominator": 1,
+              "numerator": -1
+            }
+          }
+        ],
+        "union_color_factor": {
+          "coefficient_histogram": {
+            "-1/1": 3528,
+            "-1/2": 1556,
+            "-1/4": 32,
+            "-2/1": 180,
+            "-3/1": 40,
+            "-3/2": 8,
+            "-4/1": 88,
+            "-5/1": 12,
+            "-6/1": 8,
+            "-7/1": 4,
+            "1/1": 3528,
+            "1/2": 1556,
+            "1/4": 32,
+            "2/1": 180,
+            "3/1": 40,
+            "3/2": 8,
+            "4/1": 88,
+            "5/1": 12,
+            "6/1": 8,
+            "7/1": 4
+          },
+          "factor_id": "C_UNION::G6_DIRECT_K4ME_I2_S3SQ_S4_P1S4_P2S3",
+          "factor_kind": "EXACT_SPARSE_UNION_COLOR_JACOBI_QUOTIENT_EMBEDDING",
+          "group_tuple_count": 2592,
+          "nonzero_rational_row_count": 10912,
+          "quotient_basis_domain": 385,
+          "scope": [
+            "g_I",
+            "g_A",
+            "g_B",
+            "g_C",
+            "b"
+          ],
+          "sparse_table_sha256": "c9d5a9127b52104198db373004e5064c7a04e15f619fbfb547d84f850087f1fa",
+          "tuple_execution_semantics": "single sparse factor; group tuples are table rows, not separate contractions"
+        }
+      },
+      {
+        "blockers": [
+          "MISSING_COMMON_DENOMINATOR_PARENT_EMBEDDING",
+          "MISSING_CERTIFIED_BOUNDED_OPEN_AXIS_RECORD",
+          "INSERTION_BACKGROUND_PROJECT_DALGEBRA_EVALUATOR_UNCERTIFIED"
+        ],
+        "bounded_materialized_atom_gate": null,
+        "circuit_status": "FAIL_CLOSED_NO_CERTIFIED_DALGEBRA_OPEN_AXIS_EVALUATOR",
+        "exact_elimination_order": [],
+        "forbidden_inference": "COLOR_JACOBI_INPUT_EXISTENCE_DOES_NOT_DEFINE_A_DALGEBRA_OR_OPEN_AXIS_VALUE",
+        "graded_sign_factors": [],
+        "graph_hash": "0b07ff9757e559936478457a1bca4d29cc7ee39e5c9d35869942b3c417609535",
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED_P1S3_P2I",
+        "group_radices": [
+          12,
+          6,
+          6,
+          6
+        ],
+        "group_variables": [
+          "g_I",
+          "g_A",
+          "g_B",
+          "g_C"
+        ],
+        "kernel_factors": [],
+        "local_factors": [],
+        "orientation": "direct",
+        "parent_circuit_sha256": null,
+        "production_evaluation": "BLOCKED_FAIL_CLOSED",
+        "reflected_orientation_hash": "b2cc12b01b85012baff5b676d9eb615f844d37aed5e691a963d4919ba08ee99f",
+        "retained_axes": [
+          "b",
+          "p1",
+          "p2"
+        ],
+        "retained_shape": [
+          385,
+          16,
+          16
+        ],
+        "scalar_factors": [
+          {
+            "Aut_B": 2,
+            "definition": "-1/Aut_B",
+            "factor_id": "WEIGHT::G6_DIRECT_K4ME_I3_S3CUBED_P1S3_P2I",
+            "factor_kind": "EXACT_GRAPH_WEIGHT",
+            "scope": [],
+            "value": {
+              "denominator": 2,
+              "numerator": -1
+            }
+          }
+        ],
+        "union_color_factor": {
+          "coefficient_histogram": {
+            "-1/1": 3536,
+            "-1/2": 1488,
+            "-2/1": 304,
+            "-3/1": 64,
+            "-3/2": 80,
+            "1/1": 3536,
+            "1/2": 1488,
+            "2/1": 304,
+            "3/1": 64,
+            "3/2": 80
+          },
+          "factor_id": "C_UNION::G6_DIRECT_K4ME_I3_S3CUBED_P1S3_P2I",
+          "factor_kind": "EXACT_SPARSE_UNION_COLOR_JACOBI_QUOTIENT_EMBEDDING",
+          "group_tuple_count": 2592,
+          "nonzero_rational_row_count": 10944,
+          "quotient_basis_domain": 385,
+          "scope": [
+            "g_I",
+            "g_A",
+            "g_B",
+            "g_C",
+            "b"
+          ],
+          "sparse_table_sha256": "105b2d5017993c29e79bf72564da1daad813cbcc43701ca68caeabb994bb0c95",
+          "tuple_execution_semantics": "single sparse factor; group tuples are table rows, not separate contractions"
+        }
+      },
+      {
+        "blockers": [
+          "MISSING_COMMON_DENOMINATOR_PARENT_EMBEDDING",
+          "MISSING_CERTIFIED_BOUNDED_OPEN_AXIS_RECORD",
+          "INSERTION_BACKGROUND_PROJECT_DALGEBRA_EVALUATOR_UNCERTIFIED"
+        ],
+        "bounded_materialized_atom_gate": null,
+        "circuit_status": "FAIL_CLOSED_NO_CERTIFIED_DALGEBRA_OPEN_AXIS_EVALUATOR",
+        "exact_elimination_order": [],
+        "forbidden_inference": "COLOR_JACOBI_INPUT_EXISTENCE_DOES_NOT_DEFINE_A_DALGEBRA_OR_OPEN_AXIS_VALUE",
+        "graded_sign_factors": [],
+        "graph_hash": "eea3c50b92fd7cd1737bd40f820b04ae329a2747d0637b8da1b3eaea2b202479",
+        "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED_P1I_P2S3",
+        "group_radices": [
+          12,
+          6,
+          6,
+          6
+        ],
+        "group_variables": [
+          "g_I",
+          "g_A",
+          "g_B",
+          "g_C"
+        ],
+        "kernel_factors": [],
+        "local_factors": [],
+        "orientation": "direct",
+        "parent_circuit_sha256": null,
+        "production_evaluation": "BLOCKED_FAIL_CLOSED",
+        "reflected_orientation_hash": "45af1b4713a7eeb4cd99af09694aa83a32eb688697e9bae38e8be1e74696740f",
+        "retained_axes": [
+          "b",
+          "p1",
+          "p2"
+        ],
+        "retained_shape": [
+          385,
+          16,
+          16
+        ],
+        "scalar_factors": [
+          {
+            "Aut_B": 2,
+            "definition": "-1/Aut_B",
+            "factor_id": "WEIGHT::G6_DIRECT_K4ME_I3_S3CUBED_P1I_P2S3",
+            "factor_kind": "EXACT_GRAPH_WEIGHT",
+            "scope": [],
+            "value": {
+              "denominator": 2,
+              "numerator": -1
+            }
+          }
+        ],
+        "union_color_factor": {
+          "coefficient_histogram": {
+            "-1/1": 3664,
+            "-1/2": 1568,
+            "-2/1": 64,
+            "1/1": 3664,
+            "1/2": 1568,
+            "2/1": 64
+          },
+          "factor_id": "C_UNION::G6_DIRECT_K4ME_I3_S3CUBED_P1I_P2S3",
+          "factor_kind": "EXACT_SPARSE_UNION_COLOR_JACOBI_QUOTIENT_EMBEDDING",
+          "group_tuple_count": 2592,
+          "nonzero_rational_row_count": 10592,
+          "quotient_basis_domain": 385,
+          "scope": [
+            "g_I",
+            "g_A",
+            "g_B",
+            "g_C",
+            "b"
+          ],
+          "sparse_table_sha256": "3f44895d0c1cad54ea31578c3b73d41830459ed0fe4b9aa6b5c4381fbf429dee",
+          "tuple_execution_semantics": "single sparse factor; group tuples are table rows, not separate contractions"
+        }
+      }
+    ],
+    "payload_sha256": "0bf4c7362863dee1ba342547e81e6a2c1b60c07a70b0f5ed0b78aeb05205a48d",
+    "schema": "step6.union_coefficient_circuit.v2",
+    "semiring": {
+      "addition": "collect identical atom tuples and delete exact zeros",
+      "coefficient": "fractions.Fraction",
+      "denominator_extension": "one formal missing-multiplier atom per parent",
+      "expanded_Qi_momentum_polynomial_materialized": false,
+      "monomial": "canonically sorted tuple of serialized local-value atoms",
+      "multiplication": "multiply Fractions and sort concatenated atom tuples",
+      "scalar_field": "Q"
+    },
+    "status": "PASS_EXACT_OLD3_CIRCUITS_NEW3_FAIL_CLOSED_FRONTIER"
+  },
+  "payload_sha256": "0bf4c7362863dee1ba342547e81e6a2c1b60c07a70b0f5ed0b78aeb05205a48d",
+  "schema": "step6.union_coefficient_circuit.audit.v1",
+  "semiring_limitation": {
+    "not_proved": "cancellation between distinct LOCAL:: atoms that would require multiplication, expansion, or nontrivial equality reduction of their serialized Q(i) local polynomials",
+    "physical_coefficient_consequence": "NONE",
+    "proved": "exact collection and cancellation of monomials carrying identical sorted LOCAL:: content-hash atom tuples"
+  },
+  "status": "PASS"
+}

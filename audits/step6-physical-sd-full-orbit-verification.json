@@ -1,0 +1,153 @@
+{
+  "artifact_sha256": {
+    "scripts/step6_physical_sd_full_orbit.py": "b49b5a70abc1b84e693a497bb17e27b19b94f4bc93734e67aaf65b016ac542eb",
+    "tests/test_step6_physical_sd_full_orbit.py": "cbbf4fb5703559c5cf515267ed111868e30d7af53b800cb55ffd56cce586326e"
+  },
+  "audit_sha256": "21485a9e3a808affc0ed87bc82e55e34340cb7606d87b0dcfdcf219f33d0db39",
+  "census": {
+    "blocker_status_counts": {
+      "DESCENDANT_TOPOLOGY_ONLY_INHERITED_LOCAL_AST_ABSENT": 73,
+      "SEED_PROJECT_AXES_PRESENT_EDGE_NORMAL_FORM_BLOCKED": 22,
+      "UPSTREAM_GROUPED_EULER_CLOSED_LOCAL_EDGE_NORMAL_FORM_BLOCKED": 1
+    },
+    "column_source_provenance_size_histogram": {
+      "1": 64,
+      "2": 26,
+      "3": 6
+    },
+    "columns_by_depth": {
+      "0": 23,
+      "1": 53,
+      "2": 20
+    },
+    "columns_by_euler_family": {
+      "S3": 51,
+      "S4": 33,
+      "S5": 10,
+      "S6": 2
+    },
+    "missing_type_counts": {
+      "MISSING_TYPE::EdgeCollapsedProjectKernelNormalForm": 96,
+      "MISSING_TYPE::GroupedEVIntoI2I3OrderedPortNormalForm": 1,
+      "MISSING_TYPE::HigherValenceOrderedEulerOccurrenceNormalForm": 45,
+      "MISSING_TYPE::InheritedContactVertexAST": 73
+    },
+    "oriented_columns": 96,
+    "physical_local_coefficient_resolved_columns": 0,
+    "provenance_streams": 134,
+    "root_local_ledgers": 23,
+    "upstream_grouped_Euler_closed_columns": 1
+  },
+  "checks": {
+    "all_physical_columns_fail_closed": true,
+    "descendant_topology_not_promoted_to_AST": true,
+    "exact_22_by_134_provenance_matrix": true,
+    "exact_96_column_carrier_consumed": true,
+    "first_join_edge_normal_form_fail_closed": true,
+    "first_join_grouped_source_exact": true,
+    "formal_matrix_is_explicitly_nonphysical": true,
+    "formal_weighted_incidence_cancels": true,
+    "higher_euler_gap_count_exact": true,
+    "payload_hash_valid": true,
+    "physical_matrix_not_fabricated": true,
+    "root_23_columns_bind_real_Project_options": true,
+    "three_graph_weights_exact": true
+  },
+  "failed": 0,
+  "failures": [],
+  "first_join_boundary": {
+    "I3_EulerKappaPairing_count_histogram": {
+      "0": 10
+    },
+    "I3_candidate_count": 10,
+    "I3_opcode_profile_count": 3,
+    "closed_upstream_type_id": "TYPE::OrderedSectorEulerOccurrenceNormalForm",
+    "column_id": "CLOSE::58c131e0b287a4552c40705a",
+    "exact_AST_comparison_domain_count": 5760,
+    "first_missing_type_id": "MISSING_TYPE::GroupedEVIntoI2I3OrderedPortNormalForm",
+    "grouped_coordinate_matrix": {
+      "entries_are_all_one_quarter": true,
+      "nnz": 96,
+      "rank": 1,
+      "shape": [
+        16,
+        6
+      ]
+    },
+    "grouped_join_row_count": 16,
+    "grouped_physical_matrix": {
+      "nnz": 96,
+      "rank": 1,
+      "shape": [
+        16,
+        6
+      ]
+    },
+    "physical_coefficient_matrix": null,
+    "raw_alpha_AST_identification_is_impossible": true,
+    "raw_graft_EulerKappaPairing_count_histogram": {
+      "1": 576
+    },
+    "raw_graft_count": 576,
+    "raw_graft_opcode_profile_count": 2,
+    "raw_join_row_count": 96,
+    "reason": "Every raw graft retains EulerKappaPairing and an unresolved edge/measure transfer, while every I3 candidate has neither.  Alpha-renaming alone is therefore not the requested normal form; an edge-collapsed Project-kernel rewrite must be derived first.",
+    "required_predecessor_type_id": "MISSING_TYPE::EdgeCollapsedProjectKernelNormalForm",
+    "source_graph_key": "80655cae1d06c0f40b6c2cd1ccdf3e0ceed691e37c90d4d0b53ff49150ceb6d9",
+    "target_graph_key": "166973175c5770aa676555379bb6fda2447108beaa457a108d200b01e1265448",
+    "unresolved_endpoint_transfer_sign_count": 96
+  },
+  "formal_incidence_summary": {
+    "M_E_plus_M_C_is_zero": true,
+    "field": "Q",
+    "nnz_each": 134,
+    "rank_each": 19,
+    "shape": [
+      22,
+      134
+    ]
+  },
+  "passed": 13,
+  "payload_sha256": "edbdb9b4cd3742e1a79ffbcb8472b0ca7c362b0d23a6bcc43aa327db018d5456",
+  "physical_coefficient_matrices": {
+    "M_C_sparse_entries": null,
+    "M_E_sparse_entries": null,
+    "equality": null,
+    "field": "Q(i)[h,kappa]",
+    "rank": null,
+    "shape": [
+      22,
+      134
+    ],
+    "status": "BLOCKED_TYPED_LOCAL_AST_CLOSURE"
+  },
+  "physics_status": "BLOCKED_TYPED_LOCAL_AST_CLOSURE",
+  "schema": "step6.physical_sd_full_orbit.v1.audit",
+  "smallest_required_types_in_order": [
+    {
+      "codomain": "merged local Project AST + endpoint-transfer/Koszul sign + propagator collapse certificate",
+      "domain": "Project local AST pair + selected edge ports + H_inverse coefficient kernel + edge momentum + source measures",
+      "reason": "required before the first raw E_V-into-I2 graft can be compared",
+      "type_id": "MISSING_TYPE::EdgeCollapsedProjectKernelNormalForm"
+    },
+    {
+      "codomain": "sparse ten-term I3 Project coordinate vector",
+      "domain": "edge-collapsed grouped E_V,(2)-into-I2 operator",
+      "reason": "the current raw graft is not yet edge-collapsed",
+      "type_id": "MISSING_TYPE::GroupedEVIntoI2I3OrderedPortNormalForm"
+    },
+    {
+      "codomain": "Project E_V,(n-1) coordinates",
+      "domain": "rooted S_n action variations for n=4,5,6",
+      "reason": "45 oriented columns have Euler roots above S3",
+      "type_id": "MISSING_TYPE::HigherValenceOrderedEulerOccurrenceNormalForm"
+    },
+    {
+      "codomain": "typed descendant vertex axis with ordered surviving ports",
+      "domain": "one resolved cut stream and its merged local AST",
+      "reason": "73 descendant columns currently retain topology families only",
+      "type_id": "MISSING_TYPE::InheritedContactVertexAST"
+    }
+  ],
+  "verification_status": "PASS"
+}

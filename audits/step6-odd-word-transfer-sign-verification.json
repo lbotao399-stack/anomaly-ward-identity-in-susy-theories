@@ -1,0 +1,22 @@
+{
+  "all_checks_passed": true,
+  "checks": {
+    "all_five_event_categories_separate": true,
+    "exhaustive_case_count_exact": true,
+    "exhaustive_sign_replay_exact": true,
+    "ibp_reversal_payload_boundary_derived": true,
+    "no_external_result": true,
+    "payload_hash_valid": true,
+    "resolved_type_exact": true
+  },
+  "counts": {
+    "boundary_payload_cases": 34,
+    "exhaustive_cases": 10922,
+    "maximum_exhaustive_word_length": 6
+  },
+  "payload_sha256": "babdbab08f0aabbfe8eaf5cd743336cee967c1c2f0d647ac0e0f82af924545f4",
+  "schema": "step6.odd_word_transfer_sign.audit.v2",
+  "script_sha256": "cba78809a91428af57f21478ccaffa3ef872d73137c4688779a63679900bafa6",
+  "status": "PASS_EXACT_ARBITRARY_ODD_WORD_EVENT_LEDGER",
+  "test_sha256": "3bec06aca6a05928845bb1145ea4f7713a61829d221bb4ce0fb1cc831e578e7b"
+}

@@ -1,0 +1,26 @@
+{
+  "all_checks_passed": true,
+  "checks": {
+    "contact_catalog_exact": true,
+    "contact_catalog_is_postaggregation_shape": true,
+    "earliest_exact_seed_named": true,
+    "missing_type_remains_open": true,
+    "no_608_mapping_invented": true,
+    "no_external_result": true,
+    "payload_hash_valid": true,
+    "required_pre_distribution_provenance_absent": true
+  },
+  "counts": {
+    "contacts_with_complete_pre_distribution_provenance": 0,
+    "earliest_raw_histories": 216,
+    "earliest_unaggregated_pairs": 768,
+    "stored_contacts": 608
+  },
+  "earliest_exact_type_id": "TYPE::PreAggregationRawReplaySeedWithBareDeltaIdentity",
+  "open_missing_type_id": "MISSING_TYPE::MeasureTaggedDeltaConvolutionBeforeContactAggregation",
+  "payload_sha256": "dfdedb339649960574a238cfa3d67ead3fbee8a79e71717b0c36ea5310658f99",
+  "schema": "step6.primitive_contact_provenance_audit.audit.v1",
+  "script_sha256": "be32cbd83ec5ad0283f87bed17f8d3af870f1a1b67c18dd9b87503d6d7cf2d01",
+  "status": "FAIL_CLOSED_608_PRE_DISTRIBUTION_PROVENANCE_ABSENT",
+  "test_sha256": "f1863d193a7569b290180f70a9b907c7bc66a971fb9c0d67dd53c819968c7adf"
+}

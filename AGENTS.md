@@ -49,3 +49,7 @@ No stage may be skipped.
 - Build the payload from the committed source named in `mirror/page_map.yaml`.
 - Never fetch Notion content before or after publishing.
 - Record Git commit and source SHA-256 in the rendered mirror banner.
+- An unfinished task does not suppress every mirror.  A partial mirror may contain only
+  machine-verified `PASS` sections from a committed source and must label the branch role,
+  every open proof obligation, every uncomputed coefficient, and every non-authoritative claim.
+- A partial mirror from an unmerged branch is `UNMERGED_PROPOSAL`, never computational authority.
