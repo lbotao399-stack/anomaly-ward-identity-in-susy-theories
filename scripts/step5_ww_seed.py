@@ -596,7 +596,7 @@ def pole_ledger() -> dict[str, object]:
                 "delta4^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)"
             ),
         },
-        "contact_status": "DERIVED_FROM_EXACT_SD_CUTTING_ORBIT",
+        "contact_status": "AGGREGATE_SD_IDENTITY_NOT_BASIS_RESOLVED",
         "missing_rule_is_not_finite_BV": True,
         "bare_triangle_numerator_contains_epsilon": False,
         "metric_conventions": {
@@ -607,7 +607,8 @@ def pole_ledger() -> dict[str, object]:
             "DIRECT": "+g^2*(hat_delta-delta4)^(mu nu)/(128*pi^2*epsilon)",
             "REFLECTED": "-g^2*(hat_delta-delta4)^(mu nu)/(128*pi^2*epsilon)",
         },
-        "metric_mismatch_proved": True,
+        "metric_mismatch_proved_at_aggregate_sd_level": True,
+        "full_ordinary_triangle_bubble_cancellation_proved": False,
         "evanescent_sigma_contraction": (
             "p^rho*tilde_delta^(mu nu)*T_(mu rho nu)=-2*epsilon*p_+"
         ),
@@ -639,7 +640,7 @@ def pole_ledger() -> dict[str, object]:
         ),
         "post_D_external_operator": "X^E=nabla_+ W_+^E",
         "pre_D_action_external_field": "W_+^E",
-        "anomaly_status": "DERIVED_NOT_IMPORTED",
+        "anomaly_status": "DERIVED_AGGREGATE_SD_CANDIDATE_NOT_ACCEPTED",
     }
 
 
@@ -916,12 +917,21 @@ def build_audit(payload: dict[str, object]) -> dict[str, object]:
         for orientation in ("DIRECT", "REFLECTED")
     )
     checks["finite_remainder_coefficient"] = Fraction(2, 128) == Fraction(1, 64)
-    checks["contact_pole_derived_by_SD"] = payload["poles"]["contact_status"] == (
-        "DERIVED_FROM_EXACT_SD_CUTTING_ORBIT"
+    checks["contact_pole_is_aggregate_SD_not_basis_resolved"] = payload["poles"][
+        "contact_status"
+    ] == (
+        "AGGREGATE_SD_IDENTITY_NOT_BASIS_RESOLVED"
     )
-    checks["metric_mismatch_proved"] = bool(payload["poles"]["metric_mismatch_proved"])
-    checks["anomaly_derived_not_imported"] = payload["poles"]["anomaly_status"] == (
-        "DERIVED_NOT_IMPORTED"
+    checks["metric_mismatch_proved_at_aggregate_sd_level"] = bool(
+        payload["poles"]["metric_mismatch_proved_at_aggregate_sd_level"]
+    )
+    checks["full_ordinary_triangle_bubble_cancellation_remains_open"] = not bool(
+        payload["poles"]["full_ordinary_triangle_bubble_cancellation_proved"]
+    )
+    checks["anomaly_is_aggregate_sd_candidate_not_accepted"] = payload["poles"][
+        "anomaly_status"
+    ] == (
+        "DERIVED_AGGREGATE_SD_CANDIDATE_NOT_ACCEPTED"
     )
     checks["post_D_operator_is_X"] = payload["poles"]["post_D_external_operator"] == (
         "X^E=nabla_+ W_+^E"

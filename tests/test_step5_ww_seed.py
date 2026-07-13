@@ -106,10 +106,11 @@ class Step5WWSeedTest(unittest.TestCase):
         self.assertIn("+g^2/(128*pi^2*epsilon)", poles["contact_poles"]["REFLECTED"])
         self.assertEqual(
             poles["contact_status"],
-            "DERIVED_FROM_EXACT_SD_CUTTING_ORBIT",
+            "AGGREGATE_SD_IDENTITY_NOT_BASIS_RESOLVED",
         )
         self.assertTrue(poles["missing_rule_is_not_finite_BV"])
-        self.assertTrue(poles["metric_mismatch_proved"])
+        self.assertTrue(poles["metric_mismatch_proved_at_aggregate_sd_level"])
+        self.assertFalse(poles["full_ordinary_triangle_bubble_cancellation_proved"])
         self.assertEqual(poles["anomaly_coefficient_fixed_orientation"], "+g^2/(64*pi^2)")
         self.assertEqual(
             poles["anomaly_coefficients"],
@@ -120,7 +121,10 @@ class Step5WWSeedTest(unittest.TestCase):
             "g^2/(64*pi^2)*c_{ACD}c_{BCE}*(i*p_+^dot_alpha)*"
             "[TildeW_dot_alpha^D*X^E-X^D*TildeW_dot_alpha^E]",
         )
-        self.assertEqual(poles["anomaly_status"], "DERIVED_NOT_IMPORTED")
+        self.assertEqual(
+            poles["anomaly_status"],
+            "DERIVED_AGGREGATE_SD_CANDIDATE_NOT_ACCEPTED",
+        )
         self.assertEqual(poles["post_D_external_operator"], "X^E=nabla_+ W_+^E")
 
     def test_every_row_has_one_exact_aggregate_metric_contact_child(self) -> None:
@@ -226,10 +230,11 @@ class Step5WWSeedTest(unittest.TestCase):
         self.assertEqual(audit["status"], "PASS")
         self.assertEqual(audit["totals"]["failed"], 0)
 
-    def test_gap_audit_has_no_unresolved_seed_level_p0_or_p1(self) -> None:
+    def test_gap_audit_records_the_open_basis_resolved_contact_orbit(self) -> None:
         text = (ROOT / "audits/step5-ww-seed-gap-audit.md").read_text()
-        self.assertIn("Unresolved \\(P0/P1\\): \\(0\\)", text)
+        self.assertIn("Unresolved \\(P0/P1\\): \\(1\\)", text)
         self.assertIn("ORDERED_PORT_BASIS_TERM_NOT_GRAPH", text)
+        self.assertIn("| G4 | G-ALG |", text)
 
     def test_publication_contact_figures_bind_to_trace_families(self) -> None:
         direct = (ROOT / "generated/step5/ww-seed-contact-direct.tex").read_text()

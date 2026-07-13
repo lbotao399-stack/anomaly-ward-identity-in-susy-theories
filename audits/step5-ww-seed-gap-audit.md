@@ -10,8 +10,9 @@ Checked displayed equation groups: \(24\).
 | G1 | G-SIGN | (5.53m) | prepotential Euler transport | transpose of every \(\operatorname{ad}_{\mathcal V}\) power | \(F_n(-1)^n=1/(n+1)!\) displayed in (5.53l)--(5.53m) | P2 | RESOLVED |
 | G2 | G-SCOPE | contact basis catalogue | ordered background/quantum assignments | distinction between a port-basis term and a physical graph | every basis term is ORDERED_PORT_BASIS_TERM_NOT_GRAPH; only the \(16\) SD metric contacts and \(6\) collapsed children are GraphIR | P2 | RESOLVED |
 | G3 | G-SIGN | reflected orientation | relative minus sign | odd external permutation and derivative-transfer signs | \((\mathcal W,\widetilde{\mathcal W})\to(\widetilde{\mathcal W},\mathcal W)\) gives \(-1\); IBP and graded-prefix signs multiply to \(+1\) | P2 | RESOLVED |
+| G4 | G-ALG | (5.53w)--(5.53y) | the aggregate SD contact is the explicit physical contact family | Wick pairing, symmetry factor, edge-tagged \(D\)-algebra, and routed integrand for all legal \(I_{(3)}\widetilde S_{(3)}\), \(I_{(4)}\), and collapsed terms | generate basis-resolved physical GraphIR and prove (5.54B) | P1 | OPEN |
 
-Unresolved \(P0/P1\): \(0\).
+Unresolved \(P0/P1\): \(1\).
 
 ## Verification checks
 

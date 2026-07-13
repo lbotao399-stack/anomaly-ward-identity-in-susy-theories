@@ -19,19 +19,20 @@
     "REFLECTED_row_contact_bijection": true,
     "REFLECTED_three_collapsed_children": true,
     "REFLECTED_three_edges": true,
-    "anomaly_derived_not_imported": true,
+    "anomaly_is_aggregate_sd_candidate_not_accepted": true,
     "bare_triangle_has_no_epsilon": true,
-    "contact_pole_derived_by_SD": true,
+    "contact_pole_is_aggregate_SD_not_basis_resolved": true,
     "direct_orientation_sign": true,
     "exact_16x16_matrix_binding": true,
     "finite_remainder_coefficient": true,
-    "metric_mismatch_proved": true,
+    "full_ordinary_triangle_bubble_cancellation_remains_open": true,
+    "metric_mismatch_proved_at_aggregate_sd_level": true,
     "post_D_operator_is_X": true,
     "reflected_orientation_sign": true,
     "row_pole_sum_is_orientation_pole": true,
     "triangle_pole_is_separate": true
   },
-  "contract_sha256": "02349897ec12af5e712b40efdb05422e7369b46dc53001ec42017f3c75db9d87",
+  "contract_sha256": "92d72b88c5afd659f0c2099a0a5b661365a2b0a3d359c2a82aff5ff5c50241f6",
   "derived": {
     "D_algebra_traces": 16,
     "anomaly_coefficient_fixed_orientation": "+g^2/(64*pi^2)",
@@ -52,7 +53,7 @@
   "scope": "primitive WW w=0 triangle, exact endpoint traces, edge collapses, and SD aggregate metric-contact orbit",
   "status": "PASS",
   "totals": {
-    "checks": 30,
+    "checks": 31,
     "failed": 0
   },
   "unresolved_non_BV_rule": null

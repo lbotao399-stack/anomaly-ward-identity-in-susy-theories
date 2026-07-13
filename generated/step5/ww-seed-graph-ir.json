@@ -12071,7 +12071,7 @@
       "status": "PROVED_ABSENT_BY_INTRINSIC_EUCLIDEAN_CHIRAL_SECTOR"
     }
   },
-  "contract_sha256": "02349897ec12af5e712b40efdb05422e7369b46dc53001ec42017f3c75db9d87",
+  "contract_sha256": "92d72b88c5afd659f0c2099a0a5b661365a2b0a3d359c2a82aff5ff5c50241f6",
   "exact_matrix_binding": {
     "checks": 40,
     "engine": "exact 16x16 exterior-algebra matrices over Q(i)",
@@ -13020,24 +13020,25 @@
       "DIRECT": "+g^2/(64*pi^2)",
       "REFLECTED": "-g^2/(64*pi^2)"
     },
-    "anomaly_status": "DERIVED_NOT_IMPORTED",
+    "anomaly_status": "DERIVED_AGGREGATE_SD_CANDIDATE_NOT_ACCEPTED",
     "bare_triangle_numerator_contains_epsilon": false,
     "contact_poles": {
       "DIRECT": "-g^2/(128*pi^2*epsilon)*c_{ACD}c_{BCE}*T_(mu n nu)*delta4^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)",
       "REFLECTED": "+g^2/(128*pi^2*epsilon)*c_{BCD}c_{ACE}*T_(mu n nu)*delta4^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)"
     },
-    "contact_status": "DERIVED_FROM_EXACT_SD_CUTTING_ORBIT",
+    "contact_status": "AGGREGATE_SD_IDENTITY_NOT_BASIS_RESOLVED",
     "evanescent_sigma_contraction": "p^rho*tilde_delta^(mu nu)*T_(mu rho nu)=-2*epsilon*p_+",
     "finite_remainder_derivation": [
       "hat_delta-delta4=-tilde_delta",
       "(-tilde_delta)*T*p = -(-2*epsilon)*p_+ = +2*epsilon*p_+",
       "[g^2/(128*pi^2*epsilon)]*[2*epsilon]=g^2/(64*pi^2)"
     ],
+    "full_ordinary_triangle_bubble_cancellation_proved": false,
     "metric_conventions": {
       "mismatch": "hat_delta-delta4=-tilde_delta",
       "tilde_delta": "delta4-hat_delta"
     },
-    "metric_mismatch_proved": true,
+    "metric_mismatch_proved_at_aggregate_sd_level": true,
     "metric_mismatches": {
       "DIRECT": "+g^2*(hat_delta-delta4)^(mu nu)/(128*pi^2*epsilon)",
       "REFLECTED": "-g^2*(hat_delta-delta4)^(mu nu)/(128*pi^2*epsilon)"

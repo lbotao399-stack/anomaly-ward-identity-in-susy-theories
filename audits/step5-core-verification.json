@@ -1,12 +1,13 @@
 {
   "schema": 1,
   "task": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
-  "contract_sha256": "02349897ec12af5e712b40efdb05422e7369b46dc53001ec42017f3c75db9d87",
+  "contract_sha256": "92d72b88c5afd659f0c2099a0a5b661365a2b0a3d359c2a82aff5ff5c50241f6",
   "source_ledger_sha256": "3df707cfa375c292d18d799160aaceab814011f6d4e88754b34096e7d0b6322f",
   "status": "PASS",
-  "stage": "WARD_CLOSED",
+  "stage": "EVALUATED",
+  "stage_qualifier": "WW_UV_METRIC_MISMATCH_DERIVED_ORDINARY_ORBIT_OPEN",
   "totals": {
-    "checks": 54,
+    "checks": 55,
     "failed": 0
   },
   "failures": [],
@@ -28,6 +29,7 @@
       "step5a_reference_flat_measure": true,
       "seed_project_dalgebra_audit_present": true,
       "seed_metric_mismatch_and_coefficient_present": true,
+      "ordinary_triangle_bubble_cancellation_open": true,
       "resolved_gaussian_blocker_absent": true,
       "forbidden_approximation_tokens_absent": true
     },

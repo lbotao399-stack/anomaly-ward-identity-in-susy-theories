@@ -6,7 +6,7 @@ $$
 \boxed{
 \begin{aligned}
 5A&:\texttt{EVALUATED},\\
-5B\ (WW,\ w=0)&:\texttt{WARD\_CLOSED},\\
+5B\ (WW,\ w=0)&:\texttt{EVALUATED\_UV\_METRIC\_MISMATCH},\\
 5C&:\texttt{SPECIFIED}.
 \end{aligned}}
 \tag{5.0}
@@ -1642,10 +1642,12 @@ K^{\rm tot}_{ij}G^{jk}=\delta_i{}^k.
 \tag{5.53W}
 $$
 
-Therefore cutting one tagged parent edge gives one contact child with the same
-positive scalar pole and the opposite amplitude sign.  This fixes the
-row-by-row aggregate coefficient before any integration-by-parts redistribution
-among \(I_{(3)}\widetilde S_{(3)}\), \(I_{(4)}\), and collapsed-edge bases.
+Therefore cutting one tagged parent edge gives an aggregate contact identity
+with the same positive scalar pole and the opposite amplitude sign.  This fixes
+the row-by-row aggregate coefficient before any integration-by-parts
+redistribution among \(I_{(3)}\widetilde S_{(3)}\), \(I_{(4)}\), and
+collapsed-edge bases.  It does not determine the coefficient of each ordered
+basis term separately.
 
 Each row gives
 
@@ -1685,9 +1687,12 @@ $$
 
 The last equality is intrinsic Euclidean chirality: one chiral or antichiral
 gauge-kinetic quartic vertex cannot carry both independent external fields.
-The sole-loop \(I_{(4)}\) children are scaleless.  The legal nonlinear
-\(I_{(3)}\)--\(\widetilde S_{(3)}\) family and the collapsed-edge children sum
-row by row to the contact coefficient in (5.53w).
+The sole-loop \(I_{(4)}\) children are scaleless only after their individual
+routing checks.  The explicit Wick pairing, symmetry factor, \(D\)-algebra,
+and integrand reduction of the legal nonlinear
+\(I_{(3)}\)--\(\widetilde S_{(3)}\) family remain open.  Thus (5.53w) is an
+aggregate Schwinger--Dyson identity, not a basis-resolved sum of the
+\(30+6+180\) ordered terms in (5.53y).
 
 Finally,
 
@@ -1698,7 +1703,7 @@ p^n\widetilde\delta^{mr}
 \tag{5.53z}
 $$
 
-so the fixed-orientation local remainder is
+so the aggregate-SD candidate for the fixed-orientation local remainder is
 
 $$
 \boxed{
@@ -1727,6 +1732,20 @@ $$
 \widetilde{\mathcal W}_{\dot\alpha}^{E}
 \right].}
 \tag{5.54A}
+$$
+
+Equations (5.54)--(5.54A) are not accepted Ward-identity coefficients until
+the ordinary four-dimensional triangle terms, all physical bubble/contact
+amplitudes generated from (5.53y), and every propagator-collapsed term are
+matched explicitly:
+
+$$
+\boxed{
+\mathcal A_{\triangle}^{(4)}
++\mathcal A_{I_{(3)}\widetilde S_{(3)}}^{(4)}
++\mathcal A_{I_{(4)}}^{(4)}
++\mathcal A_{\rm collapsed}^{(4)}=0.}
+\tag{5.54B}
 $$
 
 ### 5.11e FP/NK one-loop census

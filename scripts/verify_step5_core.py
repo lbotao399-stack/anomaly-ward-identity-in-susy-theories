@@ -347,7 +347,7 @@ def contract_checks() -> dict[str, bool]:
             state in text
             for state in (
                 "\\texttt{EVALUATED}",
-                "\\texttt{WARD\\_CLOSED}",
+                "\\texttt{EVALUATED\\_UV\\_METRIC\\_MISMATCH}",
                 "\\texttt{SPECIFIED}",
             )
         ),
@@ -399,6 +399,7 @@ def contract_checks() -> dict[str, bool]:
         "seed_metric_mismatch_and_coefficient_present": all(
             tag in text for tag in ("\\tag{5.53x}", "\\tag{5.54}", "\\tag{5.54A}")
         ),
+        "ordinary_triangle_bubble_cancellation_open": "\\tag{5.54B}" in text,
         "resolved_gaussian_blocker_absent": (
             "BLOCKED\\_EUCLIDEAN\\_GAUSSIAN\\_CYCLE\\_AND\\_SOURCE\\_ORDER"
             not in text
@@ -431,7 +432,8 @@ def main() -> None:
         "contract_sha256": hashlib.sha256(CONTRACT.read_bytes()).hexdigest(),
         "source_ledger_sha256": hashlib.sha256(SOURCE_LEDGER.read_bytes()).hexdigest(),
         "status": "PASS" if not failures else "FAIL",
-        "stage": "WARD_CLOSED",
+        "stage": "EVALUATED",
+        "stage_qualifier": "WW_UV_METRIC_MISMATCH_DERIVED_ORDINARY_ORBIT_OPEN",
         "totals": {"checks": checks, "failed": len(failures)},
         "failures": failures,
         "sections": sections,
