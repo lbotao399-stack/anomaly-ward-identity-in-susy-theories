@@ -1,0 +1,375 @@
+{
+  "artifact_sha256": {
+    "generated/step6/two-loop-integrals/ibp-certificates.json": "968b8dfb31dca9d9ba379bdf5b44f1c8235293036d193ee08777b841470828be",
+    "generated/step6/two-loop-integrals/integral-families.json": "b4142bc642ef29b27cc6352a07fbedf0aca77e67b2d9209d381b7efddec00123",
+    "generated/step6/two-loop-integrals/two-loop-integrals.json": "b9575578f63eb19cddf27947a8eced9ceb1a3dc8f1dd79dbb2e59293612b3769",
+    "generated/step6/two-loop-integrals/two-loop-integrals.md": "4b3d3fb08faf47ad67149e7d2f87e0b41ce36cef693decd076fcf0ef95a03f67"
+  },
+  "checks": [
+    {
+      "evidence": {
+        "hardcoded_graph_count": false,
+        "predicate": "classification=LITERAL_K4_MINUS_EDGE_DIRECT_PARENT and topology=K4_MINUS_ONE_EDGE",
+        "source_graph_count": 3,
+        "source_graph_ids": [
+          "G6_DIRECT_K4ME_I3_S3CUBED",
+          "G6_DIRECT_K4ME_I2_S3SQ_S4",
+          "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4"
+        ]
+      },
+      "id": "DYNAMIC_LITERAL_GRAPH_SELECTION_NONEMPTY",
+      "passed": true
+    },
+    {
+      "evidence": "(k,l,P,p1,p2)->(k,l,p1-P,p2-P)",
+      "id": "P_SUBSTITUTION_REMOVES_SOURCE_MOMENTUM",
+      "passed": true
+    },
+    {
+      "evidence": [
+        "k2",
+        "l2",
+        "kl",
+        "kp1",
+        "kp2",
+        "lp1",
+        "lp2",
+        "p1sq",
+        "p2sq",
+        "p1p2"
+      ],
+      "id": "QUADRATIC_FORMS_EXACT_IN_TEN_COMPONENT_BASIS",
+      "passed": true
+    },
+    {
+      "evidence": [
+        {
+          "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+          "isp_variables": [
+            "kp1",
+            "lp2"
+          ],
+          "isps": 2,
+          "rank": 5
+        },
+        {
+          "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+          "isp_variables": [
+            "kp2",
+            "lp2"
+          ],
+          "isps": 2,
+          "rank": 5
+        },
+        {
+          "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+          "isp_variables": [
+            "kp2",
+            "lp2"
+          ],
+          "isps": 2,
+          "rank": 5
+        }
+      ],
+      "id": "RANK_AND_ISP_COUNTS_EXACT",
+      "passed": true
+    },
+    {
+      "evidence": [
+        {
+          "denominators": 5,
+          "graph_id": "G6_DIRECT_K4ME_I3_S3CUBED",
+          "sectors": 32
+        },
+        {
+          "denominators": 5,
+          "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4",
+          "sectors": 32
+        },
+        {
+          "denominators": 5,
+          "graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+          "sectors": 32
+        }
+      ],
+      "id": "SECTOR_AND_PINCH_IDS_COMPLETE_WITHOUT_CONNECTIVITY_CLAIM",
+      "passed": true
+    },
+    {
+      "evidence": "{d/dk,d/dl} dot {k,l,p1,p2}",
+      "id": "EIGHT_STANDARD_IBP_GENERATORS_PER_FAMILY",
+      "passed": true
+    },
+    {
+      "evidence": "Leibniz derivative of quadratic-form AST equals 2*r_q*(v.r)",
+      "id": "IBP_DENOMINATOR_DERIVATIVES_HAVE_TWO_EXACT_DERIVATIONS",
+      "passed": true
+    },
+    {
+      "evidence": "exact rational polynomial Leibniz AST",
+      "id": "GENERAL_INTEGER_POWERS_AND_POLYNOMIAL_AST",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "evanescent_metric": "tilde_delta=delta_(4)-hat_delta",
+        "loop_integral_metric": "hat_delta",
+        "pairwise_distinct_types": true,
+        "spin_dalgebra_metric": "delta_(4)",
+        "traces": {
+          "tr_delta_(4)": "4",
+          "tr_hat_delta": "d=4-2*epsilon",
+          "tr_tilde_delta": "2*epsilon"
+        }
+      },
+      "id": "THREE_METRIC_TYPES_DISTINCT_AND_NO_BARE_EPSILON",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "loop_order": 2,
+        "mu_power": "mu^(4*epsilon)",
+        "two_loop": "mu^(4*epsilon) d^d k/(2*pi)^d d^d l/(2*pi)^d"
+      },
+      "id": "TWO_LOOP_DRED_MEASURE_EXACT",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "all_incoming_relation": "P+p1+p2=0",
+        "definitions": {
+          "Gram_p1_p2": {
+            "coefficient_domain": "Q_NO_EPSILON",
+            "op": "polynomial",
+            "polynomial_hash": "40d65a96ac7ceaaa0a0c212c2d2eda681959f2b4fcecc2c253243c8ffac80d57",
+            "terms": [
+              {
+                "coefficient": {
+                  "denominator": 1,
+                  "numerator": 1
+                },
+                "power_vector": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  1,
+                  0
+                ],
+                "powers": {
+                  "p1sq": 1,
+                  "p2sq": 1
+                }
+              },
+              {
+                "coefficient": {
+                  "denominator": 1,
+                  "numerator": -1
+                },
+                "power_vector": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ],
+                "powers": {
+                  "p1p2": 2
+                }
+              }
+            ],
+            "variable_order": [
+              "k2",
+              "l2",
+              "kl",
+              "kp1",
+              "kp2",
+              "lp1",
+              "lp2",
+              "p1sq",
+              "p2sq",
+              "p1p2"
+            ]
+          },
+          "Psq": {
+            "coefficient_domain": "Q_NO_EPSILON",
+            "op": "polynomial",
+            "polynomial_hash": "bbd3756b2d5dfa33615c066f9848bdb3607dd80044c5c1cd9eae62703e19011e",
+            "terms": [
+              {
+                "coefficient": {
+                  "denominator": 1,
+                  "numerator": 1
+                },
+                "power_vector": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0
+                ],
+                "powers": {
+                  "p1sq": 1
+                }
+              },
+              {
+                "coefficient": {
+                  "denominator": 1,
+                  "numerator": 1
+                },
+                "power_vector": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "powers": {
+                  "p2sq": 1
+                }
+              },
+              {
+                "coefficient": {
+                  "denominator": 1,
+                  "numerator": 2
+                },
+                "power_vector": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "powers": {
+                  "p1p2": 1
+                }
+              }
+            ],
+            "variable_order": [
+              "k2",
+              "l2",
+              "kl",
+              "kp1",
+              "kp2",
+              "lp1",
+              "lp2",
+              "p1sq",
+              "p2sq",
+              "p1p2"
+            ]
+          },
+          "p1p2": "hat_delta(p1,p2)",
+          "p1sq": "hat_delta(p1,p1)",
+          "p2sq": "hat_delta(p2,p2)"
+        },
+        "domain_status": "SYMBOLIC_DOMAIN_SPECIFIED_NOT_NUMERICALLY_INSTANTIATED",
+        "forbidden_inference": "OFF_SHELL_SYMBOLS_ALONE_DO_NOT_PROVE_ABSENCE_OF_EVERY_IR_POLE",
+        "generic_off_shell_domain": [
+          "p1sq>0",
+          "p2sq>0",
+          "Psq=p1sq+p2sq+2*p1p2>0",
+          "Gram_p1_p2=p1sq*p2sq-p1p2^2>0"
+        ],
+        "invariant_basis": [
+          "p1sq",
+          "p2sq",
+          "p1p2"
+        ],
+        "ir_pole_status": "UNKNOWN_UNTIL_MASTER_INTEGRALS_AND_ALL_PINCHES_ARE_EVALUATED",
+        "signature": "EUCLIDEAN"
+      },
+      "id": "OFF_SHELL_INVARIANTS_DEFINED_WITH_IR_STATUS_UNKNOWN",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "compiled_dword_numerator": null,
+        "ibp_reduction": null,
+        "ir_poles": null,
+        "laurent_depth": null,
+        "master_integrals": null,
+        "renormalized_coefficient": null,
+        "status": "BLOCKED_COMPILED_DWORD_NUMERATOR_ABSENT",
+        "uv_poles": null
+      },
+      "id": "IBP_CERTIFICATES_REFUSE_REDUCTION_POLES_AND_COEFFICIENT",
+      "passed": true
+    },
+    {
+      "evidence": [
+        "56b2468fd3947a728ce9ae04a40919ddb6fb3e9e2fa0c32c1dd4fb85979b29ae",
+        "0584e9f914ca09bbd3882a9592c17f53ced78c0bc22f73c40b50ea731bfb1cc1",
+        "2a0c42b082dcebe082871608a08653c43401c98c1c5793c86fa9dcb2610607ca"
+      ],
+      "id": "CERTIFICATE_HASH_BINDINGS_EXACT",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "scalar": "step6.rational_scalar_polynomial.v1",
+        "tensor": "step6.rational_tensor_polynomial.v1"
+      },
+      "id": "SCALAR_AND_TENSOR_NUMERATOR_SCHEMAS_ARE_EXACT_AND_TYPED",
+      "passed": true
+    },
+    {
+      "evidence": false,
+      "id": "NO_EXTERNAL_TARGET_INPUT",
+      "passed": true
+    }
+  ],
+  "dynamic_source_graph_count": 3,
+  "failure_count": 0,
+  "rank_isp_report": [
+    {
+      "denominator_count": 5,
+      "ibp_generator_count": 8,
+      "isp_count": 2,
+      "loop_scalar_rank": 5,
+      "sector_count": 32,
+      "source_graph_id": "G6_DIRECT_K4ME_I3_S3CUBED"
+    },
+    {
+      "denominator_count": 5,
+      "ibp_generator_count": 8,
+      "isp_count": 2,
+      "loop_scalar_rank": 5,
+      "sector_count": 32,
+      "source_graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4"
+    },
+    {
+      "denominator_count": 5,
+      "ibp_generator_count": 8,
+      "isp_count": 2,
+      "loop_scalar_rank": 5,
+      "sector_count": 32,
+      "source_graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4"
+    }
+  ],
+  "schema_version": "step6.two_loop_integrals.audit.v1",
+  "status": "PASS"
+}

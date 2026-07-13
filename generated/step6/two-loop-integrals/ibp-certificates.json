@@ -1,0 +1,192 @@
+{
+  "certificates": [
+    {
+      "acceptance_rule": "NO_REDUCTION_POLE_OR_COEFFICIENT_BEFORE_COMPILED_DWORD_NUMERATOR_HASH_AND_COMPLETE_IBP_MASTER_LAURENT_CERTIFICATES",
+      "certificate_hash": "56b2468fd3947a728ce9ae04a40919ddb6fb3e9e2fa0c32c1dd4fb85979b29ae",
+      "compiled_dword_numerator": {
+        "bare_epsilon_factor": null,
+        "dword_hash": null,
+        "scalar_polynomial_ast": null,
+        "status": "BLOCKED_COMPILED_DWORD_NUMERATOR_ABSENT"
+      },
+      "gates": {
+        "compiled_dword_numerator": "BLOCKED_COMPILED_DWORD_NUMERATOR_ABSENT",
+        "denominator_family": "PASS_EXACT_ROUTING_QUADRATIC_FORMS_RANK_AND_ISP",
+        "forest_counterterms": "BLOCKED_NUMERATOR_SCALING_CERTIFICATE",
+        "laurent_depth": "BLOCKED_MASTER_UV_IR_DEPTH_AND_FOREST_COUNTERTERMS_UNEVALUATED",
+        "master_basis": "BLOCKED_NO_PHYSICAL_IBP_SYSTEM_OR_BOUNDARY_CONDITIONS",
+        "master_reduction": "BLOCKED_MASTER_BASIS_AND_COMPILED_NUMERATOR_ABSENT",
+        "numerator_to_scalar_polynomial": "BLOCKED_COMPILED_DWORD_NUMERATOR_ABSENT",
+        "r_complete_pole_cancellation": "BLOCKED_REDUCTION_AND_FOREST_INPUTS_ABSENT",
+        "sector_and_boundary_identities": "BLOCKED_PHYSICAL_NUMERATOR_SECTOR_AND_PINCH_SUPPORT_UNKNOWN"
+      },
+      "ibp_generator_hashes": [
+        "82bf983233e8c0ff197f258f76c17cc55534eabd86829ff6d28578cda8d36541",
+        "97deadfa366ff4ea62f4bd872c66ecad2ece9fe19b57fedf481febd292021ca8",
+        "8731db41c3999f1dbafcbf4ad491e1beb6764bae6928ad2b5aa026ca3ecf7205",
+        "d5e540b6ce7c7e9249c0240f66aace96f3a67861a5db0eebaf67b049c619293f",
+        "941b37460598bea869ece0e9ef1b4d109fd854526c3e59e0f9beec198885bd7b",
+        "549e42141fe5318e56b35d5bf61d9530d2c4631441657e124c16023ed956d138",
+        "9bfed7b523df829b7b1a8bc79bd4a50b9d5877e0ebdf4583001e47f5e7dbec32",
+        "4127ca92be05fd2b9cf1dda8aff7e649b18fa0507ff881c34d23f0267825604f"
+      ],
+      "integral_family_hash": "b3cf981aa45f5fca87302f918a87da333723dfff513d47732aa14a4fa65379cd",
+      "integral_family_id": "IF_G6_DIRECT_K4ME_I3_S3CUBED",
+      "master_laurent_contract": {
+        "finite_remainder": null,
+        "master_integral_ids": null,
+        "maximum_pole_order": null,
+        "reduction_coefficients": null,
+        "required_ir_laurent_depth": null,
+        "required_uv_laurent_depth": null,
+        "status": "UNCOMPUTED_FAIL_CLOSED"
+      },
+      "outputs": {
+        "ir_pole": null,
+        "master_basis": null,
+        "r_complete_integral": null,
+        "reduced_integral": null,
+        "renormalized_coefficient": null,
+        "uv_pole": null
+      },
+      "schema_version": "step6.ibp_certificate_ir.v1",
+      "source_forest_record_hash": "3b7e0f40f7b8a26c58cb2b8e2f6013a33cc048c16f627776c461ade403d63940",
+      "source_graph_hash": "5cbf5cea3c11f28278e0366aaf48206a8fbb9c57a0c3d63a357a99ff0c519fcf",
+      "source_graph_id": "G6_DIRECT_K4ME_I3_S3CUBED"
+    },
+    {
+      "acceptance_rule": "NO_REDUCTION_POLE_OR_COEFFICIENT_BEFORE_COMPILED_DWORD_NUMERATOR_HASH_AND_COMPLETE_IBP_MASTER_LAURENT_CERTIFICATES",
+      "certificate_hash": "0584e9f914ca09bbd3882a9592c17f53ced78c0bc22f73c40b50ea731bfb1cc1",
+      "compiled_dword_numerator": {
+        "bare_epsilon_factor": null,
+        "dword_hash": null,
+        "scalar_polynomial_ast": null,
+        "status": "BLOCKED_COMPILED_DWORD_NUMERATOR_ABSENT"
+      },
+      "gates": {
+        "compiled_dword_numerator": "BLOCKED_COMPILED_DWORD_NUMERATOR_ABSENT",
+        "denominator_family": "PASS_EXACT_ROUTING_QUADRATIC_FORMS_RANK_AND_ISP",
+        "forest_counterterms": "BLOCKED_NUMERATOR_SCALING_CERTIFICATE",
+        "laurent_depth": "BLOCKED_MASTER_UV_IR_DEPTH_AND_FOREST_COUNTERTERMS_UNEVALUATED",
+        "master_basis": "BLOCKED_NO_PHYSICAL_IBP_SYSTEM_OR_BOUNDARY_CONDITIONS",
+        "master_reduction": "BLOCKED_MASTER_BASIS_AND_COMPILED_NUMERATOR_ABSENT",
+        "numerator_to_scalar_polynomial": "BLOCKED_COMPILED_DWORD_NUMERATOR_ABSENT",
+        "r_complete_pole_cancellation": "BLOCKED_REDUCTION_AND_FOREST_INPUTS_ABSENT",
+        "sector_and_boundary_identities": "BLOCKED_PHYSICAL_NUMERATOR_SECTOR_AND_PINCH_SUPPORT_UNKNOWN"
+      },
+      "ibp_generator_hashes": [
+        "830f4c50d2865c12e59f382d4b1f12267b264608b6802bb0e96b7e8c3c090f1d",
+        "3ed8d1856c5ed86c48f66554a14c66f882b7394bb656aab1d05a13c38e2e0046",
+        "c187e25c2fdd80ca46b87d4f5e68e4cb1b21f06f28ad41364dd6bfda80126f8e",
+        "f3c306e16afc1b95394915640dba2d4859ed664ed305e972c6d1ea948c5808a5",
+        "417bf18e78ade809fcebb8498f6711aa04fd76585f47feeba876f13f47507a99",
+        "71d5cda469798ed32910ceb65b916a7b002c73457c38d831c2b7169319c85a31",
+        "aeca55b4970b1cb8a9a80850949b92a1694783f313abca1190ceeef976719c44",
+        "8ec506129c1497b207b8c87aa29c9c406830d171cd4df302a4299e77f10002d4"
+      ],
+      "integral_family_hash": "f7ea1370e97f6b9b32d68a78e178e91b5d16361823c6a9dbfc814cac06678b30",
+      "integral_family_id": "IF_G6_DIRECT_K4ME_I2_S3SQ_S4",
+      "master_laurent_contract": {
+        "finite_remainder": null,
+        "master_integral_ids": null,
+        "maximum_pole_order": null,
+        "reduction_coefficients": null,
+        "required_ir_laurent_depth": null,
+        "required_uv_laurent_depth": null,
+        "status": "UNCOMPUTED_FAIL_CLOSED"
+      },
+      "outputs": {
+        "ir_pole": null,
+        "master_basis": null,
+        "r_complete_integral": null,
+        "reduced_integral": null,
+        "renormalized_coefficient": null,
+        "uv_pole": null
+      },
+      "schema_version": "step6.ibp_certificate_ir.v1",
+      "source_forest_record_hash": "27160cfce8ac9e6de15410465aa15d7988adb8c5a6e15fae0718b324f701e817",
+      "source_graph_hash": "c1c75f47543ab29ebb53137f46656705f6fca9e972a0643b96c69fd295c5a78a",
+      "source_graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4"
+    },
+    {
+      "acceptance_rule": "NO_REDUCTION_POLE_OR_COEFFICIENT_BEFORE_COMPILED_DWORD_NUMERATOR_HASH_AND_COMPLETE_IBP_MASTER_LAURENT_CERTIFICATES",
+      "certificate_hash": "2a0c42b082dcebe082871608a08653c43401c98c1c5793c86fa9dcb2610607ca",
+      "compiled_dword_numerator": {
+        "bare_epsilon_factor": null,
+        "dword_hash": null,
+        "scalar_polynomial_ast": null,
+        "status": "BLOCKED_COMPILED_DWORD_NUMERATOR_ABSENT"
+      },
+      "gates": {
+        "compiled_dword_numerator": "BLOCKED_COMPILED_DWORD_NUMERATOR_ABSENT",
+        "denominator_family": "PASS_EXACT_ROUTING_QUADRATIC_FORMS_RANK_AND_ISP",
+        "forest_counterterms": "BLOCKED_NUMERATOR_SCALING_CERTIFICATE",
+        "laurent_depth": "BLOCKED_MASTER_UV_IR_DEPTH_AND_FOREST_COUNTERTERMS_UNEVALUATED",
+        "master_basis": "BLOCKED_NO_PHYSICAL_IBP_SYSTEM_OR_BOUNDARY_CONDITIONS",
+        "master_reduction": "BLOCKED_MASTER_BASIS_AND_COMPILED_NUMERATOR_ABSENT",
+        "numerator_to_scalar_polynomial": "BLOCKED_COMPILED_DWORD_NUMERATOR_ABSENT",
+        "r_complete_pole_cancellation": "BLOCKED_REDUCTION_AND_FOREST_INPUTS_ABSENT",
+        "sector_and_boundary_identities": "BLOCKED_PHYSICAL_NUMERATOR_SECTOR_AND_PINCH_SUPPORT_UNKNOWN"
+      },
+      "ibp_generator_hashes": [
+        "3e74e275dc3dab65175fd913ab8b51a4c75468c5c638b4677476723de3da0448",
+        "3b0b089474fd2ec96e4111ba51d6aca0f0ea0ef1f403851abeddd7fcfc523db5",
+        "d27d0f63f373c4ccb68bbfd208c9ff46bed8a8d2f505c281ff69b8486fdb6326",
+        "34b1bfb0174779db7446908a772a107d96ffb56ee4bc6ef527912de8c2b88e3b",
+        "2df50d33a15402d3b2b05b390ca4d0304c16a37e2a563a3b11caa6281d50a6eb",
+        "7e57b7caee9084194532b0b5bf1bacceb3dae95c46eab463667ff29e82c8a796",
+        "255b9b118be1c23e09b8f75c33fa7f01f4d3e8415745c3e22bf65d30909abd1f",
+        "e75c848d22b8de964bf91a69d5c55ae9aa38166c07c3aee747b84901689420bd"
+      ],
+      "integral_family_hash": "90237c92fdaf24b4f671b3e925df0e69cf71118f6d5f2e88358c9171fc8b18d2",
+      "integral_family_id": "IF_G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+      "master_laurent_contract": {
+        "finite_remainder": null,
+        "master_integral_ids": null,
+        "maximum_pole_order": null,
+        "reduction_coefficients": null,
+        "required_ir_laurent_depth": null,
+        "required_uv_laurent_depth": null,
+        "status": "UNCOMPUTED_FAIL_CLOSED"
+      },
+      "outputs": {
+        "ir_pole": null,
+        "master_basis": null,
+        "r_complete_integral": null,
+        "reduced_integral": null,
+        "renormalized_coefficient": null,
+        "uv_pole": null
+      },
+      "schema_version": "step6.ibp_certificate_ir.v1",
+      "source_forest_record_hash": "1c6050fc1c48c0b01a7dcbe5749e4ce38e1714aaccea72d706b78737ca63fad6",
+      "source_graph_hash": "84137962e3a5d40a2be79e124cc85f3fdd180a42cf7119c3464e7da6f620baa3",
+      "source_graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4"
+    }
+  ],
+  "schema": {
+    "current_required_fail_closed_reason": "COMPILED_DWORD_NUMERATOR_ABSENT",
+    "gate_order": [
+      "DENOMINATOR_FAMILY_CERTIFIED",
+      "COMPILED_DWORD_NUMERATOR_PRESENT",
+      "NUMERATOR_TO_SCALAR_POLYNOMIAL_CERTIFIED",
+      "SECTOR_AND_BOUNDARY_IDENTITIES_CERTIFIED",
+      "MASTER_BASIS_CERTIFIED",
+      "MASTER_REDUCTION_CERTIFIED",
+      "UV_AND_IR_LAURENT_DEPTH_CERTIFIED",
+      "R_COMPLETE_POLE_CANCELLATION_CERTIFIED"
+    ],
+    "required_fields": [
+      "source_graph_id",
+      "source_graph_hash",
+      "integral_family_id",
+      "integral_family_hash",
+      "compiled_dword_numerator",
+      "ibp_generator_hashes",
+      "gates",
+      "outputs"
+    ],
+    "schema_hash": "d3256d1bdbfed25cab462aa503bb49ed9f7c9b0b1b498c0d0194a13e67199ef7",
+    "schema_id": "step6.ibp_certificate_ir.v1"
+  },
+  "schema_version": "step6.ibp_certificate_ir.v1"
+}

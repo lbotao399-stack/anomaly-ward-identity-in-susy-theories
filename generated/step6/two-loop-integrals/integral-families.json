@@ -1,0 +1,45 @@
+{
+  "bundle_hash": "55063583f037e58e97794e288da92abdf6be40b6e2b67e9483da51f40d45e7bd",
+  "integral_family_index": [
+    {
+      "denominator_count": 5,
+      "full_record_location": "two-loop-integrals.json",
+      "ibp_generator_count": 8,
+      "integral_family_hash": "b3cf981aa45f5fca87302f918a87da333723dfff513d47732aa14a4fa65379cd",
+      "integral_family_id": "IF_G6_DIRECT_K4ME_I3_S3CUBED",
+      "isp_count": 2,
+      "loop_scalar_rank": 5,
+      "sector_count": 32,
+      "source_forest_record_hash": "3b7e0f40f7b8a26c58cb2b8e2f6013a33cc048c16f627776c461ade403d63940",
+      "source_graph_hash": "5cbf5cea3c11f28278e0366aaf48206a8fbb9c57a0c3d63a357a99ff0c519fcf",
+      "source_graph_id": "G6_DIRECT_K4ME_I3_S3CUBED"
+    },
+    {
+      "denominator_count": 5,
+      "full_record_location": "two-loop-integrals.json",
+      "ibp_generator_count": 8,
+      "integral_family_hash": "f7ea1370e97f6b9b32d68a78e178e91b5d16361823c6a9dbfc814cac06678b30",
+      "integral_family_id": "IF_G6_DIRECT_K4ME_I2_S3SQ_S4",
+      "isp_count": 2,
+      "loop_scalar_rank": 5,
+      "sector_count": 32,
+      "source_forest_record_hash": "27160cfce8ac9e6de15410465aa15d7988adb8c5a6e15fae0718b324f701e817",
+      "source_graph_hash": "c1c75f47543ab29ebb53137f46656705f6fca9e972a0643b96c69fd295c5a78a",
+      "source_graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4"
+    },
+    {
+      "denominator_count": 5,
+      "full_record_location": "two-loop-integrals.json",
+      "ibp_generator_count": 8,
+      "integral_family_hash": "90237c92fdaf24b4f671b3e925df0e69cf71118f6d5f2e88358c9171fc8b18d2",
+      "integral_family_id": "IF_G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4",
+      "isp_count": 2,
+      "loop_scalar_rank": 5,
+      "sector_count": 32,
+      "source_forest_record_hash": "1c6050fc1c48c0b01a7dcbe5749e4ce38e1714aaccea72d706b78737ca63fad6",
+      "source_graph_hash": "84137962e3a5d40a2be79e124cc85f3fdd180a42cf7119c3464e7da6f620baa3",
+      "source_graph_id": "G6_DIRECT_K4ME_I2_S3SQ_S4_B2_ON_S4"
+    }
+  ],
+  "schema_version": "step6.two_loop_integrals.v1"
+}
