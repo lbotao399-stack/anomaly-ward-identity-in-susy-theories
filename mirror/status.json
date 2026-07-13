@@ -1,12 +1,12 @@
 {
   "schema": 1,
   "state": "PUBLISHED_WRITE_RECEIPT",
-  "source": "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md",
-  "source_sha256": "109e0c531da3a1b98313e87dd692fa3d9047c8f745291f8e87021008c7acc538",
-  "git_commit": "218c043b7d0a10b54464d46a42d4732d6ab6b8ac",
-  "notion_page_id": "39aee2b7-4b3f-8126-881c-ec4d32b780de",
+  "source": "generated/step6/verified-foundations/step6-verified-foundations-partial.md",
+  "source_sha256": "0e1cf37b53a130a54a131c7a8da8eed1fac6302380c66a514fefc14e1284290c",
+  "git_commit": "2d1b8701369c8117c3497356342882ba0bf0be14",
+  "notion_page_id": "39cee2b7-4b3f-81ce-9871-d3b3bf6aeb90",
+  "authority_role": "UNMERGED_PROPOSAL",
   "verification": "WRITE_RECEIPT_ONLY_NO_NOTION_READBACK",
-  "published_at": "2026-07-11T23:01:27Z",
-  "mutation": "create_pages",
-  "async_task_id": "task_99c3a12ada2e4bf69773d68e6925cd0f"
+  "published_at": "2026-07-13T22:37:28Z",
+  "mutation": "create_pages"
 }
