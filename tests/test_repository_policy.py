@@ -467,8 +467,9 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertEqual(task["status"], "SPECIFIED")
         self.assertTrue(task["reference_admission"]["source_translation_required_before_formula_adoption"])
         self.assertEqual(len(task["acceptance"]), 16)
-        self.assertTrue(any("sixteen channel classes" in item for item in task["acceptance"]))
-        self.assertTrue(any("external leg" in item for item in task["acceptance"]))
+        self.assertTrue(any("5A PERTURBATIVE_FF_DRED_SUPERGRAPHS" in item for item in task["acceptance"]))
+        self.assertTrue(any("primitive WW" in item for item in task["acceptance"]))
+        self.assertTrue(any("external-leg" in item for item in task["acceptance"]))
         self.assertTrue(any("isolated triangle" in item for item in task["forbidden_inputs"]))
 
     def test_step_1_formula_surface(self) -> None:

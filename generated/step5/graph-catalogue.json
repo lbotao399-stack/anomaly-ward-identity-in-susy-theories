@@ -2181,23 +2181,6 @@
     "scripts/step5_graph_ir.py",
     "scripts/step5_vertex_grammar.py"
   ],
-  "blocker_contract": {
-    "candidate_pairing_is_admitted_amplitude": false,
-    "loop_blockers": [
-      "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
-      "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
-      "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
-      "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
-      "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
-      "BLOCKED_UNINSTANTIATED_E_XI_CORE",
-      "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
-      "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE"
-    ],
-    "topology_request_without_wick_pairing_is_graph": false,
-    "vertex_grammar_blockers": [
-      "BLOCKED_UNINSTANTIATED_E_XI_CORE"
-    ]
-  },
   "counts": {
     "action_monomials": 27,
     "action_vertices": 27,
@@ -2209,6 +2192,7 @@
     "valence_only_requests": 10432,
     "valence_only_templates_per_channel": 652
   },
+  "current_physical_seed": "generated/step5/ww-seed-graph-ir.json",
   "generic_blocked_graph_fixtures": [
     {
       "admitted_amplitude": false,
@@ -4853,6 +4837,24 @@
       }
     }
   ],
+  "historical_pre_split_blockers": {
+    "candidate_pairing_is_admitted_amplitude": false,
+    "current_gate": false,
+    "loop_blockers": [
+      "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
+      "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
+      "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
+      "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
+      "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
+      "BLOCKED_UNINSTANTIATED_E_XI_CORE",
+      "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
+      "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE"
+    ],
+    "topology_request_without_wick_pairing_is_graph": false,
+    "vertex_grammar_blockers": [
+      "BLOCKED_UNINSTANTIATED_E_XI_CORE"
+    ]
+  },
   "insertion_chart_monomials": [
     {
       "chart_series_status": "PROVED_5_28",
@@ -4867,7 +4869,7 @@
       "color_word": [
         "delta[B,C]"
       ],
-      "core_status": "BLOCKED_UNINSTANTIATED_E_XI_CORE",
+      "core_status": "RESOLVED_IN_GENERATED_STEP5_PROJECT_COMPOSITES_JSON",
       "derivative_scopes": [],
       "measure": "E,8;local-insertion",
       "monomial_id": "prepotential_euler_ad_0",
@@ -4904,7 +4906,7 @@
       "color_word": [
         "c[A1,B,C]"
       ],
-      "core_status": "BLOCKED_UNINSTANTIATED_E_XI_CORE",
+      "core_status": "RESOLVED_IN_GENERATED_STEP5_PROJECT_COMPOSITES_JSON",
       "derivative_scopes": [],
       "measure": "E,8;local-insertion",
       "monomial_id": "prepotential_euler_ad_1",
@@ -4952,7 +4954,7 @@
         "c[A2,B,M1]",
         "c[A1,M1,C]"
       ],
-      "core_status": "BLOCKED_UNINSTANTIATED_E_XI_CORE",
+      "core_status": "RESOLVED_IN_GENERATED_STEP5_PROJECT_COMPOSITES_JSON",
       "derivative_scopes": [],
       "measure": "E,8;local-insertion",
       "monomial_id": "prepotential_euler_ad_2",
@@ -5011,7 +5013,7 @@
         "c[A2,M1,M2]",
         "c[A1,M2,C]"
       ],
-      "core_status": "BLOCKED_UNINSTANTIATED_E_XI_CORE",
+      "core_status": "RESOLVED_IN_GENERATED_STEP5_PROJECT_COMPOSITES_JSON",
       "derivative_scopes": [],
       "measure": "E,8;local-insertion",
       "monomial_id": "prepotential_euler_ad_3",
@@ -5829,7 +5831,7 @@
     }
   ],
   "schema": 1,
-  "status": "BLOCKED_GAUGE_KERNEL_CANDIDATE_CATALOGUE",
+  "status": "LEGACY_PRE_SPLIT_VALENCE_SCAFFOLD_NOT_CURRENT_GATE",
   "task": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
   "tree_channels": [
     {
@@ -16596,7 +16598,7 @@
     }
   ],
   "valence_only_request_product": {
-    "blocker_contract_ref": "blocker_contract.loop_blockers",
+    "blocker_contract_ref": "historical_pre_split_blockers.loop_blockers",
     "classification": "VALENCE_ONLY_NOT_GRAPH",
     "enumeration_order": [
       "ordered_channel_ids",
@@ -17280,7 +17282,7 @@
     "reverse_binding_id_rule": "reverse_binding__{channel_id}",
     "reverse_channel_id_source": "tree_channels[].channel.reverse_channel_id",
     "reverse_request_id_rule": "loop__{reverse_channel_id(channel_id)}__{reflection_template_id(template_id)}",
-    "status": "BLOCKED_VALENCE_ONLY_NOT_GRAPH",
+    "status": "DEFERRED_VALENCE_ONLY_NOT_GRAPH",
     "total_count": 10432
   },
   "valence_only_templates": [

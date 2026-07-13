@@ -1,0 +1,59 @@
+{
+  "checks": {
+    "DIRECT_all_row_checks": true,
+    "DIRECT_eight_metric_contact_children": true,
+    "DIRECT_eight_rows": true,
+    "DIRECT_four_endpoints_per_placement": true,
+    "DIRECT_one_loop": true,
+    "DIRECT_routing": true,
+    "DIRECT_row_contact_bijection": true,
+    "DIRECT_three_collapsed_children": true,
+    "DIRECT_three_edges": true,
+    "D_transfer_sign_is_common_plus": true,
+    "REFLECTED_all_row_checks": true,
+    "REFLECTED_eight_metric_contact_children": true,
+    "REFLECTED_eight_rows": true,
+    "REFLECTED_four_endpoints_per_placement": true,
+    "REFLECTED_one_loop": true,
+    "REFLECTED_routing": true,
+    "REFLECTED_row_contact_bijection": true,
+    "REFLECTED_three_collapsed_children": true,
+    "REFLECTED_three_edges": true,
+    "anomaly_derived_not_imported": true,
+    "bare_triangle_has_no_epsilon": true,
+    "contact_pole_derived_by_SD": true,
+    "direct_orientation_sign": true,
+    "exact_16x16_matrix_binding": true,
+    "finite_remainder_coefficient": true,
+    "metric_mismatch_proved": true,
+    "post_D_operator_is_X": true,
+    "reflected_orientation_sign": true,
+    "row_pole_sum_is_orientation_pole": true,
+    "triangle_pole_is_separate": true
+  },
+  "contract_sha256": "02349897ec12af5e712b40efdb05422e7369b46dc53001ec42017f3c75db9d87",
+  "derived": {
+    "D_algebra_traces": 16,
+    "anomaly_coefficient_fixed_orientation": "+g^2/(64*pi^2)",
+    "collapsed_children": 6,
+    "contact_poles": {
+      "DIRECT": "-g^2/(128*pi^2*epsilon)*c_{ACD}c_{BCE}*T_(mu n nu)*delta4^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)",
+      "REFLECTED": "+g^2/(128*pi^2*epsilon)*c_{BCD}c_{ACE}*T_(mu n nu)*delta4^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)"
+    },
+    "graphs": 2,
+    "metric_contact_children": 16,
+    "triangle_poles": {
+      "DIRECT": "+g^2/(128*pi^2*epsilon)*c_{ACD}c_{BCE}*T_(mu n nu)*hat_delta^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)",
+      "REFLECTED": "-g^2/(128*pi^2*epsilon)*c_{BCD}c_{ACE}*T_(mu n nu)*hat_delta^(mu nu)*TildeW^D(q)*(i*p^n)*X^E(p)"
+    },
+    "two_orientation_single_color_tensor": "g^2/(64*pi^2)*c_{ACD}c_{BCE}*(i*p_+^dot_alpha)*[TildeW_dot_alpha^D*X^E-X^D*TildeW_dot_alpha^E]"
+  },
+  "schema": 1,
+  "scope": "primitive WW w=0 triangle, exact endpoint traces, edge collapses, and SD aggregate metric-contact orbit",
+  "status": "PASS",
+  "totals": {
+    "checks": 30,
+    "failed": 0
+  },
+  "unresolved_non_BV_rule": null
+}

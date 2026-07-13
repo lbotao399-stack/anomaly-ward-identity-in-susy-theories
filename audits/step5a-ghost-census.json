@@ -1,0 +1,931 @@
+{
+  "FP_result": "PROVED_ABSENT_AT_THIS_ORDER",
+  "I2_quantum_Wick_ports": [
+    {
+      "field": "V_q,1",
+      "parity": 0,
+      "role": "INTERNAL_WICK"
+    },
+    {
+      "field": "V_q,2",
+      "parity": 0,
+      "role": "INTERNAL_WICK"
+    }
+  ],
+  "NK_result": "PROVED_ABSENT_AT_THIS_ORDER",
+  "allowed_propagator_types": [
+    [
+      "V",
+      "V"
+    ],
+    [
+      "cprime_plus",
+      "tilde_c"
+    ],
+    [
+      "tilde_c",
+      "cprime_plus"
+    ],
+    [
+      "tilde_cprime_minus",
+      "c"
+    ],
+    [
+      "c",
+      "tilde_cprime_minus"
+    ],
+    [
+      "b_NK",
+      "tilde_b_NK"
+    ],
+    [
+      "tilde_b_NK",
+      "b_NK"
+    ]
+  ],
+  "checks": [
+    {
+      "id": "primitive_has_two_external_background_ports",
+      "passed": true
+    },
+    {
+      "id": "I2_has_two_quantum_V_Wick_ports",
+      "passed": true
+    },
+    {
+      "id": "fp_grammar_has_two_quadratic_vertices",
+      "passed": true
+    },
+    {
+      "id": "fp_grammar_has_four_cubic_vertices",
+      "passed": true
+    },
+    {
+      "id": "fp_grammar_has_four_quartic_vertices",
+      "passed": true
+    },
+    {
+      "id": "every_fp_vertex_has_two_ghost_ports",
+      "passed": true
+    },
+    {
+      "id": "no_connected_one_loop_primitive_FP_graph",
+      "passed": true
+    },
+    {
+      "id": "first_connected_FP_families_are_two_loop",
+      "passed": true
+    },
+    {
+      "id": "no_connected_primitive_NK_graph",
+      "passed": true
+    }
+  ],
+  "determinant_actions": {
+    "FP": {
+      "action": "S_FP=-<cprime,M_FP(V)c_pair>",
+      "representation": "EXPLICIT_ORDERED_PROJECT_GRAMMAR",
+      "vertices": [
+        {
+          "V_valence": 0,
+          "coefficient": "1/4*i",
+          "ghost_valence": 2,
+          "ordered_ports": [
+            "cprime_plus",
+            "tilde_c"
+          ],
+          "source_equations": [
+            "3D.84",
+            "3D.86",
+            "3D.90",
+            "3D.91"
+          ],
+          "vertex_id": "fp_plus_tilde_c_v0"
+        },
+        {
+          "V_valence": 1,
+          "coefficient": "1/8",
+          "ghost_valence": 2,
+          "ordered_ports": [
+            "cprime_plus",
+            "V",
+            "tilde_c"
+          ],
+          "source_equations": [
+            "3D.84",
+            "3D.86",
+            "3D.90",
+            "3D.91"
+          ],
+          "vertex_id": "fp_plus_tilde_c_v1"
+        },
+        {
+          "V_valence": 2,
+          "coefficient": "-1/48*i",
+          "ghost_valence": 2,
+          "ordered_ports": [
+            "cprime_plus",
+            "V",
+            "V",
+            "tilde_c"
+          ],
+          "source_equations": [
+            "3D.84",
+            "3D.86",
+            "3D.90",
+            "3D.91"
+          ],
+          "vertex_id": "fp_plus_tilde_c_v2"
+        },
+        {
+          "V_valence": 1,
+          "coefficient": "1/8",
+          "ghost_valence": 2,
+          "ordered_ports": [
+            "cprime_plus",
+            "V",
+            "c"
+          ],
+          "source_equations": [
+            "3D.84",
+            "3D.86",
+            "3D.90",
+            "3D.91"
+          ],
+          "vertex_id": "fp_plus_c_v1"
+        },
+        {
+          "V_valence": 2,
+          "coefficient": "1/48*i",
+          "ghost_valence": 2,
+          "ordered_ports": [
+            "cprime_plus",
+            "V",
+            "V",
+            "c"
+          ],
+          "source_equations": [
+            "3D.84",
+            "3D.86",
+            "3D.90",
+            "3D.91"
+          ],
+          "vertex_id": "fp_plus_c_v2"
+        },
+        {
+          "V_valence": 1,
+          "coefficient": "1/8",
+          "ghost_valence": 2,
+          "ordered_ports": [
+            "tilde_cprime_minus",
+            "V",
+            "tilde_c"
+          ],
+          "source_equations": [
+            "3D.84",
+            "3D.86",
+            "3D.90",
+            "3D.91"
+          ],
+          "vertex_id": "fp_minus_tilde_c_v1"
+        },
+        {
+          "V_valence": 2,
+          "coefficient": "-1/48*i",
+          "ghost_valence": 2,
+          "ordered_ports": [
+            "tilde_cprime_minus",
+            "V",
+            "V",
+            "tilde_c"
+          ],
+          "source_equations": [
+            "3D.84",
+            "3D.86",
+            "3D.90",
+            "3D.91"
+          ],
+          "vertex_id": "fp_minus_tilde_c_v2"
+        },
+        {
+          "V_valence": 0,
+          "coefficient": "-1/4*i",
+          "ghost_valence": 2,
+          "ordered_ports": [
+            "tilde_cprime_minus",
+            "c"
+          ],
+          "source_equations": [
+            "3D.84",
+            "3D.86",
+            "3D.90",
+            "3D.91"
+          ],
+          "vertex_id": "fp_minus_c_v0"
+        },
+        {
+          "V_valence": 1,
+          "coefficient": "1/8",
+          "ghost_valence": 2,
+          "ordered_ports": [
+            "tilde_cprime_minus",
+            "V",
+            "c"
+          ],
+          "source_equations": [
+            "3D.84",
+            "3D.86",
+            "3D.90",
+            "3D.91"
+          ],
+          "vertex_id": "fp_minus_c_v1"
+        },
+        {
+          "V_valence": 2,
+          "coefficient": "1/48*i",
+          "ghost_valence": 2,
+          "ordered_ports": [
+            "tilde_cprime_minus",
+            "V",
+            "V",
+            "c"
+          ],
+          "source_equations": [
+            "3D.84",
+            "3D.86",
+            "3D.90",
+            "3D.91"
+          ],
+          "vertex_id": "fp_minus_c_v2"
+        }
+      ]
+    },
+    "NK": {
+      "action": "S_NK,flat=-h*int_(E,8) kappa_AB tilde_b_NK^A b_NK^B",
+      "quantum_V_interaction_vertices": [],
+      "scope": "REFERENCE_FLAT_STEP5A_NORMALIZED_GAUSSIAN",
+      "statistics": "b_NK and tilde_b_NK are Grassmann-even chiral/antichiral fields"
+    }
+  },
+  "enumerated_FP_families_through_four_vertices": [
+    {
+      "FP_quantum_V_ports": 2,
+      "classification": "CONNECTED_L_2",
+      "connected": true,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": 3,
+      "loop_number_E_minus_V_plus_1": 2,
+      "m0_V^0_cprime_c": 0,
+      "m1_V^1_cprime_c": 0,
+      "m2_V^2_cprime_c": 1,
+      "oriented_ghost_edges": 1,
+      "oriented_ghost_ports": 2,
+      "total_quantum_V_ports": 4,
+      "vector_ports_saturated": true,
+      "vertices": 2
+    },
+    {
+      "FP_quantum_V_ports": 4,
+      "classification": "CONNECTED_L_3",
+      "connected": true,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": 5,
+      "loop_number_E_minus_V_plus_1": 3,
+      "m0_V^0_cprime_c": 0,
+      "m1_V^1_cprime_c": 0,
+      "m2_V^2_cprime_c": 2,
+      "oriented_ghost_edges": 2,
+      "oriented_ghost_ports": 4,
+      "total_quantum_V_ports": 6,
+      "vector_ports_saturated": true,
+      "vertices": 3
+    },
+    {
+      "FP_quantum_V_ports": 6,
+      "classification": "CONNECTED_L_4",
+      "connected": true,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": 7,
+      "loop_number_E_minus_V_plus_1": 4,
+      "m0_V^0_cprime_c": 0,
+      "m1_V^1_cprime_c": 0,
+      "m2_V^2_cprime_c": 3,
+      "oriented_ghost_edges": 3,
+      "oriented_ghost_ports": 6,
+      "total_quantum_V_ports": 8,
+      "vector_ports_saturated": true,
+      "vertices": 4
+    },
+    {
+      "FP_quantum_V_ports": 8,
+      "classification": "CONNECTED_L_5",
+      "connected": true,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": 9,
+      "loop_number_E_minus_V_plus_1": 5,
+      "m0_V^0_cprime_c": 0,
+      "m1_V^1_cprime_c": 0,
+      "m2_V^2_cprime_c": 4,
+      "oriented_ghost_edges": 4,
+      "oriented_ghost_ports": 8,
+      "total_quantum_V_ports": 10,
+      "vector_ports_saturated": true,
+      "vertices": 5
+    },
+    {
+      "FP_quantum_V_ports": 1,
+      "classification": "UNSATURATED_ODD_QUANTUM_V_PORT",
+      "connected": false,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": null,
+      "loop_number_E_minus_V_plus_1": null,
+      "m0_V^0_cprime_c": 0,
+      "m1_V^1_cprime_c": 1,
+      "m2_V^2_cprime_c": 0,
+      "oriented_ghost_edges": 1,
+      "oriented_ghost_ports": 2,
+      "total_quantum_V_ports": 3,
+      "vector_ports_saturated": false,
+      "vertices": 2
+    },
+    {
+      "FP_quantum_V_ports": 3,
+      "classification": "UNSATURATED_ODD_QUANTUM_V_PORT",
+      "connected": false,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": null,
+      "loop_number_E_minus_V_plus_1": null,
+      "m0_V^0_cprime_c": 0,
+      "m1_V^1_cprime_c": 1,
+      "m2_V^2_cprime_c": 1,
+      "oriented_ghost_edges": 2,
+      "oriented_ghost_ports": 4,
+      "total_quantum_V_ports": 5,
+      "vector_ports_saturated": false,
+      "vertices": 3
+    },
+    {
+      "FP_quantum_V_ports": 5,
+      "classification": "UNSATURATED_ODD_QUANTUM_V_PORT",
+      "connected": false,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": null,
+      "loop_number_E_minus_V_plus_1": null,
+      "m0_V^0_cprime_c": 0,
+      "m1_V^1_cprime_c": 1,
+      "m2_V^2_cprime_c": 2,
+      "oriented_ghost_edges": 3,
+      "oriented_ghost_ports": 6,
+      "total_quantum_V_ports": 7,
+      "vector_ports_saturated": false,
+      "vertices": 4
+    },
+    {
+      "FP_quantum_V_ports": 7,
+      "classification": "UNSATURATED_ODD_QUANTUM_V_PORT",
+      "connected": false,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": null,
+      "loop_number_E_minus_V_plus_1": null,
+      "m0_V^0_cprime_c": 0,
+      "m1_V^1_cprime_c": 1,
+      "m2_V^2_cprime_c": 3,
+      "oriented_ghost_edges": 4,
+      "oriented_ghost_ports": 8,
+      "total_quantum_V_ports": 9,
+      "vector_ports_saturated": false,
+      "vertices": 5
+    },
+    {
+      "FP_quantum_V_ports": 2,
+      "classification": "CONNECTED_L_2",
+      "connected": true,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": 4,
+      "loop_number_E_minus_V_plus_1": 2,
+      "m0_V^0_cprime_c": 0,
+      "m1_V^1_cprime_c": 2,
+      "m2_V^2_cprime_c": 0,
+      "oriented_ghost_edges": 2,
+      "oriented_ghost_ports": 4,
+      "total_quantum_V_ports": 4,
+      "vector_ports_saturated": true,
+      "vertices": 3
+    },
+    {
+      "FP_quantum_V_ports": 4,
+      "classification": "CONNECTED_L_3",
+      "connected": true,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": 6,
+      "loop_number_E_minus_V_plus_1": 3,
+      "m0_V^0_cprime_c": 0,
+      "m1_V^1_cprime_c": 2,
+      "m2_V^2_cprime_c": 1,
+      "oriented_ghost_edges": 3,
+      "oriented_ghost_ports": 6,
+      "total_quantum_V_ports": 6,
+      "vector_ports_saturated": true,
+      "vertices": 4
+    },
+    {
+      "FP_quantum_V_ports": 6,
+      "classification": "CONNECTED_L_4",
+      "connected": true,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": 8,
+      "loop_number_E_minus_V_plus_1": 4,
+      "m0_V^0_cprime_c": 0,
+      "m1_V^1_cprime_c": 2,
+      "m2_V^2_cprime_c": 2,
+      "oriented_ghost_edges": 4,
+      "oriented_ghost_ports": 8,
+      "total_quantum_V_ports": 8,
+      "vector_ports_saturated": true,
+      "vertices": 5
+    },
+    {
+      "FP_quantum_V_ports": 3,
+      "classification": "UNSATURATED_ODD_QUANTUM_V_PORT",
+      "connected": false,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": null,
+      "loop_number_E_minus_V_plus_1": null,
+      "m0_V^0_cprime_c": 0,
+      "m1_V^1_cprime_c": 3,
+      "m2_V^2_cprime_c": 0,
+      "oriented_ghost_edges": 3,
+      "oriented_ghost_ports": 6,
+      "total_quantum_V_ports": 5,
+      "vector_ports_saturated": false,
+      "vertices": 4
+    },
+    {
+      "FP_quantum_V_ports": 5,
+      "classification": "UNSATURATED_ODD_QUANTUM_V_PORT",
+      "connected": false,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": null,
+      "loop_number_E_minus_V_plus_1": null,
+      "m0_V^0_cprime_c": 0,
+      "m1_V^1_cprime_c": 3,
+      "m2_V^2_cprime_c": 1,
+      "oriented_ghost_edges": 4,
+      "oriented_ghost_ports": 8,
+      "total_quantum_V_ports": 7,
+      "vector_ports_saturated": false,
+      "vertices": 5
+    },
+    {
+      "FP_quantum_V_ports": 4,
+      "classification": "CONNECTED_L_3",
+      "connected": true,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": 7,
+      "loop_number_E_minus_V_plus_1": 3,
+      "m0_V^0_cprime_c": 0,
+      "m1_V^1_cprime_c": 4,
+      "m2_V^2_cprime_c": 0,
+      "oriented_ghost_edges": 4,
+      "oriented_ghost_ports": 8,
+      "total_quantum_V_ports": 6,
+      "vector_ports_saturated": true,
+      "vertices": 5
+    },
+    {
+      "FP_quantum_V_ports": 0,
+      "classification": "DISCONNECTED_GHOST_VACUUM_COMPONENT",
+      "connected": false,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": 2,
+      "loop_number_E_minus_V_plus_1": null,
+      "m0_V^0_cprime_c": 1,
+      "m1_V^1_cprime_c": 0,
+      "m2_V^2_cprime_c": 0,
+      "oriented_ghost_edges": 1,
+      "oriented_ghost_ports": 2,
+      "total_quantum_V_ports": 2,
+      "vector_ports_saturated": true,
+      "vertices": 2
+    },
+    {
+      "FP_quantum_V_ports": 2,
+      "classification": "CONNECTED_L_2",
+      "connected": true,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": 4,
+      "loop_number_E_minus_V_plus_1": 2,
+      "m0_V^0_cprime_c": 1,
+      "m1_V^1_cprime_c": 0,
+      "m2_V^2_cprime_c": 1,
+      "oriented_ghost_edges": 2,
+      "oriented_ghost_ports": 4,
+      "total_quantum_V_ports": 4,
+      "vector_ports_saturated": true,
+      "vertices": 3
+    },
+    {
+      "FP_quantum_V_ports": 4,
+      "classification": "CONNECTED_L_3",
+      "connected": true,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": 6,
+      "loop_number_E_minus_V_plus_1": 3,
+      "m0_V^0_cprime_c": 1,
+      "m1_V^1_cprime_c": 0,
+      "m2_V^2_cprime_c": 2,
+      "oriented_ghost_edges": 3,
+      "oriented_ghost_ports": 6,
+      "total_quantum_V_ports": 6,
+      "vector_ports_saturated": true,
+      "vertices": 4
+    },
+    {
+      "FP_quantum_V_ports": 6,
+      "classification": "CONNECTED_L_4",
+      "connected": true,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": 8,
+      "loop_number_E_minus_V_plus_1": 4,
+      "m0_V^0_cprime_c": 1,
+      "m1_V^1_cprime_c": 0,
+      "m2_V^2_cprime_c": 3,
+      "oriented_ghost_edges": 4,
+      "oriented_ghost_ports": 8,
+      "total_quantum_V_ports": 8,
+      "vector_ports_saturated": true,
+      "vertices": 5
+    },
+    {
+      "FP_quantum_V_ports": 1,
+      "classification": "UNSATURATED_ODD_QUANTUM_V_PORT",
+      "connected": false,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": null,
+      "loop_number_E_minus_V_plus_1": null,
+      "m0_V^0_cprime_c": 1,
+      "m1_V^1_cprime_c": 1,
+      "m2_V^2_cprime_c": 0,
+      "oriented_ghost_edges": 2,
+      "oriented_ghost_ports": 4,
+      "total_quantum_V_ports": 3,
+      "vector_ports_saturated": false,
+      "vertices": 3
+    },
+    {
+      "FP_quantum_V_ports": 3,
+      "classification": "UNSATURATED_ODD_QUANTUM_V_PORT",
+      "connected": false,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": null,
+      "loop_number_E_minus_V_plus_1": null,
+      "m0_V^0_cprime_c": 1,
+      "m1_V^1_cprime_c": 1,
+      "m2_V^2_cprime_c": 1,
+      "oriented_ghost_edges": 3,
+      "oriented_ghost_ports": 6,
+      "total_quantum_V_ports": 5,
+      "vector_ports_saturated": false,
+      "vertices": 4
+    },
+    {
+      "FP_quantum_V_ports": 5,
+      "classification": "UNSATURATED_ODD_QUANTUM_V_PORT",
+      "connected": false,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": null,
+      "loop_number_E_minus_V_plus_1": null,
+      "m0_V^0_cprime_c": 1,
+      "m1_V^1_cprime_c": 1,
+      "m2_V^2_cprime_c": 2,
+      "oriented_ghost_edges": 4,
+      "oriented_ghost_ports": 8,
+      "total_quantum_V_ports": 7,
+      "vector_ports_saturated": false,
+      "vertices": 5
+    },
+    {
+      "FP_quantum_V_ports": 2,
+      "classification": "CONNECTED_L_2",
+      "connected": true,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": 5,
+      "loop_number_E_minus_V_plus_1": 2,
+      "m0_V^0_cprime_c": 1,
+      "m1_V^1_cprime_c": 2,
+      "m2_V^2_cprime_c": 0,
+      "oriented_ghost_edges": 3,
+      "oriented_ghost_ports": 6,
+      "total_quantum_V_ports": 4,
+      "vector_ports_saturated": true,
+      "vertices": 4
+    },
+    {
+      "FP_quantum_V_ports": 4,
+      "classification": "CONNECTED_L_3",
+      "connected": true,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": 7,
+      "loop_number_E_minus_V_plus_1": 3,
+      "m0_V^0_cprime_c": 1,
+      "m1_V^1_cprime_c": 2,
+      "m2_V^2_cprime_c": 1,
+      "oriented_ghost_edges": 4,
+      "oriented_ghost_ports": 8,
+      "total_quantum_V_ports": 6,
+      "vector_ports_saturated": true,
+      "vertices": 5
+    },
+    {
+      "FP_quantum_V_ports": 3,
+      "classification": "UNSATURATED_ODD_QUANTUM_V_PORT",
+      "connected": false,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": null,
+      "loop_number_E_minus_V_plus_1": null,
+      "m0_V^0_cprime_c": 1,
+      "m1_V^1_cprime_c": 3,
+      "m2_V^2_cprime_c": 0,
+      "oriented_ghost_edges": 4,
+      "oriented_ghost_ports": 8,
+      "total_quantum_V_ports": 5,
+      "vector_ports_saturated": false,
+      "vertices": 5
+    },
+    {
+      "FP_quantum_V_ports": 0,
+      "classification": "DISCONNECTED_GHOST_VACUUM_COMPONENT",
+      "connected": false,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": 3,
+      "loop_number_E_minus_V_plus_1": null,
+      "m0_V^0_cprime_c": 2,
+      "m1_V^1_cprime_c": 0,
+      "m2_V^2_cprime_c": 0,
+      "oriented_ghost_edges": 2,
+      "oriented_ghost_ports": 4,
+      "total_quantum_V_ports": 2,
+      "vector_ports_saturated": true,
+      "vertices": 3
+    },
+    {
+      "FP_quantum_V_ports": 2,
+      "classification": "CONNECTED_L_2",
+      "connected": true,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": 5,
+      "loop_number_E_minus_V_plus_1": 2,
+      "m0_V^0_cprime_c": 2,
+      "m1_V^1_cprime_c": 0,
+      "m2_V^2_cprime_c": 1,
+      "oriented_ghost_edges": 3,
+      "oriented_ghost_ports": 6,
+      "total_quantum_V_ports": 4,
+      "vector_ports_saturated": true,
+      "vertices": 4
+    },
+    {
+      "FP_quantum_V_ports": 4,
+      "classification": "CONNECTED_L_3",
+      "connected": true,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": 7,
+      "loop_number_E_minus_V_plus_1": 3,
+      "m0_V^0_cprime_c": 2,
+      "m1_V^1_cprime_c": 0,
+      "m2_V^2_cprime_c": 2,
+      "oriented_ghost_edges": 4,
+      "oriented_ghost_ports": 8,
+      "total_quantum_V_ports": 6,
+      "vector_ports_saturated": true,
+      "vertices": 5
+    },
+    {
+      "FP_quantum_V_ports": 1,
+      "classification": "UNSATURATED_ODD_QUANTUM_V_PORT",
+      "connected": false,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": null,
+      "loop_number_E_minus_V_plus_1": null,
+      "m0_V^0_cprime_c": 2,
+      "m1_V^1_cprime_c": 1,
+      "m2_V^2_cprime_c": 0,
+      "oriented_ghost_edges": 3,
+      "oriented_ghost_ports": 6,
+      "total_quantum_V_ports": 3,
+      "vector_ports_saturated": false,
+      "vertices": 4
+    },
+    {
+      "FP_quantum_V_ports": 3,
+      "classification": "UNSATURATED_ODD_QUANTUM_V_PORT",
+      "connected": false,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": null,
+      "loop_number_E_minus_V_plus_1": null,
+      "m0_V^0_cprime_c": 2,
+      "m1_V^1_cprime_c": 1,
+      "m2_V^2_cprime_c": 1,
+      "oriented_ghost_edges": 4,
+      "oriented_ghost_ports": 8,
+      "total_quantum_V_ports": 5,
+      "vector_ports_saturated": false,
+      "vertices": 5
+    },
+    {
+      "FP_quantum_V_ports": 2,
+      "classification": "CONNECTED_L_2",
+      "connected": true,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": 6,
+      "loop_number_E_minus_V_plus_1": 2,
+      "m0_V^0_cprime_c": 2,
+      "m1_V^1_cprime_c": 2,
+      "m2_V^2_cprime_c": 0,
+      "oriented_ghost_edges": 4,
+      "oriented_ghost_ports": 8,
+      "total_quantum_V_ports": 4,
+      "vector_ports_saturated": true,
+      "vertices": 5
+    },
+    {
+      "FP_quantum_V_ports": 0,
+      "classification": "DISCONNECTED_GHOST_VACUUM_COMPONENT",
+      "connected": false,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": 4,
+      "loop_number_E_minus_V_plus_1": null,
+      "m0_V^0_cprime_c": 3,
+      "m1_V^1_cprime_c": 0,
+      "m2_V^2_cprime_c": 0,
+      "oriented_ghost_edges": 3,
+      "oriented_ghost_ports": 6,
+      "total_quantum_V_ports": 2,
+      "vector_ports_saturated": true,
+      "vertices": 4
+    },
+    {
+      "FP_quantum_V_ports": 2,
+      "classification": "CONNECTED_L_2",
+      "connected": true,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": 6,
+      "loop_number_E_minus_V_plus_1": 2,
+      "m0_V^0_cprime_c": 3,
+      "m1_V^1_cprime_c": 0,
+      "m2_V^2_cprime_c": 1,
+      "oriented_ghost_edges": 4,
+      "oriented_ghost_ports": 8,
+      "total_quantum_V_ports": 4,
+      "vector_ports_saturated": true,
+      "vertices": 5
+    },
+    {
+      "FP_quantum_V_ports": 1,
+      "classification": "UNSATURATED_ODD_QUANTUM_V_PORT",
+      "connected": false,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": null,
+      "loop_number_E_minus_V_plus_1": null,
+      "m0_V^0_cprime_c": 3,
+      "m1_V^1_cprime_c": 1,
+      "m2_V^2_cprime_c": 0,
+      "oriented_ghost_edges": 4,
+      "oriented_ghost_ports": 8,
+      "total_quantum_V_ports": 3,
+      "vector_ports_saturated": false,
+      "vertices": 5
+    },
+    {
+      "FP_quantum_V_ports": 0,
+      "classification": "DISCONNECTED_GHOST_VACUUM_COMPONENT",
+      "connected": false,
+      "ghost_number_saturated": true,
+      "insertion_quantum_V_ports": 2,
+      "internal_edges": 5,
+      "loop_number_E_minus_V_plus_1": null,
+      "m0_V^0_cprime_c": 4,
+      "m1_V^1_cprime_c": 0,
+      "m2_V^2_cprime_c": 0,
+      "oriented_ghost_edges": 4,
+      "oriented_ghost_ports": 8,
+      "total_quantum_V_ports": 2,
+      "vector_ports_saturated": true,
+      "vertices": 5
+    }
+  ],
+  "external_background_ports": [
+    {
+      "field": "X_out^A=nabla_+W_+^A",
+      "parity": 0,
+      "role": "EXTERNAL_BACKGROUND_p1"
+    },
+    {
+      "field": "X_out^B=nabla_+W_+^B",
+      "parity": 0,
+      "role": "EXTERNAL_BACKGROUND_p2"
+    }
+  ],
+  "finite_cycle_statement": "FP/NK coefficient-space cycles and finite-BV density equality are not used; they remain Step-5C obligations",
+  "graph_theoretic_proof": {
+    "V_saturation_condition": "m1 is even",
+    "connected_family_count_through_four_FP_vertices": 17,
+    "connected_one_loop_families": [],
+    "connectivity_condition": "m1+2*m2>=2; both I_(2) quantum-V ports connect outward",
+    "first_connected_two_loop_families": [
+      {
+        "FP_quantum_V_ports": 2,
+        "classification": "CONNECTED_L_2",
+        "connected": true,
+        "ghost_number_saturated": true,
+        "insertion_quantum_V_ports": 2,
+        "internal_edges": 3,
+        "loop_number_E_minus_V_plus_1": 2,
+        "m0_V^0_cprime_c": 0,
+        "m1_V^1_cprime_c": 0,
+        "m2_V^2_cprime_c": 1,
+        "oriented_ghost_edges": 1,
+        "oriented_ghost_ports": 2,
+        "total_quantum_V_ports": 4,
+        "vector_ports_saturated": true,
+        "vertices": 2
+      },
+      {
+        "FP_quantum_V_ports": 2,
+        "classification": "CONNECTED_L_2",
+        "connected": true,
+        "ghost_number_saturated": true,
+        "insertion_quantum_V_ports": 2,
+        "internal_edges": 4,
+        "loop_number_E_minus_V_plus_1": 2,
+        "m0_V^0_cprime_c": 0,
+        "m1_V^1_cprime_c": 2,
+        "m2_V^2_cprime_c": 0,
+        "oriented_ghost_edges": 2,
+        "oriented_ghost_ports": 4,
+        "total_quantum_V_ports": 4,
+        "vector_ports_saturated": true,
+        "vertices": 3
+      }
+    ],
+    "ghost_saturation_condition": "N_FP ghost and N_FP antighost ports form N_FP oriented edges",
+    "identity": "L=E-V+1=1+m1/2+m2 for a connected saturated FP family",
+    "result": "PROVED_ABSENT_AT_THIS_ORDER"
+  },
+  "minimal_connected_families": {
+    "I2_plus_one_quartic": {
+      "edges": "2 vector edges + 1 ghost self-edge = 3",
+      "loop_number": "3-2+1=2",
+      "vertex_multiset": "I_(2)+(V^2 cprime c)",
+      "vertices": "2"
+    },
+    "I2_plus_two_cubics": {
+      "edges": "2 vector edges + 2 oriented ghost edges = 4",
+      "loop_number": "4-3+1=2",
+      "vertex_multiset": "I_(2)+2*(V cprime c)",
+      "vertices": "3"
+    }
+  },
+  "port_policy": "external W/X background ports and insertion quantum-V Wick ports are distinct typed sets",
+  "schema": 1,
+  "scope": "5A.PRIMITIVE_WW_GHOST_CENSUS",
+  "seed": "nabla_-[(nabla_+W_+)^A(nabla_+W_+)^B] with primitive I_(2)",
+  "status": "PASS",
+  "totals": {
+    "checks": 9,
+    "failed": 0
+  }
+}

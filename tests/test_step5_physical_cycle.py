@@ -76,7 +76,7 @@ class Step5PhysicalCycleTest(unittest.TestCase):
         audit = self.verifier.run_verification()
         self.assertEqual(
             audit["admission_status"],
-            "REFERENCE_FLAT_CHIRAL_GAUSSIAN_VERIFIED_VECTOR_PSEUDOINVERSE_ONLY",
+            "REFERENCE_FLAT_CHIRAL_AND_STEP5A_VECTOR_GAUSSIAN_VERIFIED",
         )
         contractions = audit["reference_flat_wick_rules"]
         self.assertEqual(
@@ -93,16 +93,17 @@ class Step5PhysicalCycleTest(unittest.TestCase):
         )
         self.assertTrue(contractions["fermion_reverse_order"].startswith("<tildepsi"))
 
-    def test_vector_transverse_is_only_an_algebraic_pseudoinverse(self) -> None:
+    def test_vector_transverse_and_full_step5a_wick_rule_are_separated_from_step5c(self) -> None:
         checks = self.verifier.transverse_vector_checks()
         self.assertTrue(all(checks.values()), checks)
         audit = self.verifier.run_verification()
-        self.assertNotIn("vector_transverse", audit["reference_flat_wick_rules"])
+        self.assertIn("vector", audit["reference_flat_wick_rules"])
         pseudoinverse = audit["algebraic_pseudoinverses"]
         self.assertIn("Pi_(1/2)", pseudoinverse["vector_transverse"])
-        self.assertTrue(pseudoinverse["not_a_wick_contraction"])
+        self.assertTrue(pseudoinverse["not_a_finite_cycle_reconstruction"])
+        self.assertEqual(audit["typed_blockers"], [])
         self.assertEqual(
-            [entry["id"] for entry in audit["typed_blockers"]],
+            [entry["id"] for entry in audit["step5c_obligations"]],
             [
                 "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
                 "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",

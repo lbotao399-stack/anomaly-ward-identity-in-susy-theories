@@ -221,8 +221,15 @@
     {
       "id": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
       "state": "SPECIFIED",
-      "blocking_reason": "BLOCKED_STEP5_LOOP_INSTANTIATION: the local full vector/non-minimal kernel, gauge-fixed density vertices, vector finite Gaussian, FP/NK cycles, typed E_Xi composite insertion, and edge-tagged projector D-algebra are not yet simultaneously fixed; no one-loop channel coefficient is accepted.",
-      "task_sha256": "06f8c400c681f2fbb32aaccc7a44139c280513afaf8499829528ff2c38f419c7",
+      "blocking_reason": null,
+      "proposal_status": "STEP5A_AND_PRIMITIVE_WW_SEED_WARD_CLOSED_AWAITING_REVIEWED_ORIGIN_MAIN",
+      "step5c_obligations": [
+        "FINITE_COEFFICIENT_SPACE_DENSITY_AND_BEREZINIAN",
+        "FINITE_VECTOR_COEFFICIENT_CYCLE",
+        "FINITE_FP_AND_NK_CYCLES",
+        "GLOBAL_LOCAL_NONMINIMAL_REALIZATION"
+      ],
+      "task_sha256": "ba13b5b141c255877c23aac4a3f42f60af9bcf76cd1efeb48871955ef9aaf500",
       "task": "tasks/CURRENT.yaml"
     }
   ]

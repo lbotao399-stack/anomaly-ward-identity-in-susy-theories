@@ -365,12 +365,12 @@ def vector_checks(momentum: tuple[int, int, int, int]) -> dict[str, bool]:
     unit32 = identity(32)
     return {
         "physical_5_43": physical_from_derivatives == physical_from_projector,
-        "rejected_target_5_45": total_operator == expected_total_operator,
+        "step5a_total_5_45": total_operator == expected_total_operator,
         "h_times_g_squared_is_one": h * g_squared == 1,
         "kappa_left_inverse": multiply(kappa, kappa_inverse) == identity(2),
         "kappa_right_inverse": multiply(kappa_inverse, kappa) == identity(2),
-        "rejected_target_inverse_5_46_left": multiply(full_kernel, full_inverse) == unit32,
-        "rejected_target_inverse_5_46_right": multiply(full_inverse, full_kernel) == unit32,
+        "step5a_inverse_5_46_left": multiply(full_kernel, full_inverse) == unit32,
+        "step5a_inverse_5_46_right": multiply(full_inverse, full_kernel) == unit32,
     }
 
 
@@ -537,7 +537,7 @@ def run_verification() -> dict[str, object]:
         "arithmetic": "EXACT_Q_I_NO_FLOATING_POINT",
         "status": "PASS" if not failed else "FAIL",
         "admission_status": (
-            "PHYSICAL_HESSIANS_VERIFIED_VECTOR_GREEN_BLOCKED_REJECTED_SLICE_REGRESSION_ONLY"
+            "PHYSICAL_HESSIANS_AND_STEP5A_VECTOR_GREEN_VERIFIED"
             if not failed
             else "CONTRACT_OPERATOR_MISMATCH"
         ),
@@ -546,7 +546,7 @@ def run_verification() -> dict[str, object]:
         "checks": checks,
         "derived_rules": {
             "vector_hessian": "K_V,AB^phys=-(h/2) kappa_AB p_(4)^2 Pi_1/2",
-            "rejected_slice_regression_vector_green_kernel": "G_V,target^{AB}=-(2 g^2/p_(4)^2) kappa^{AB} 1_16",
+            "step5a_vector_green_kernel": "G_V^{AB}=-(2 g^2/p_(4)^2) kappa^{AB} 1_16",
             "chiral_hessian": "K_(tilde q q),AB=-h kappa_AB B_component(p)",
             "scalar_green_kernel": "G_(phi tildephi)^{AB}=g^2 kappa^{AB}/p_(4)^2",
             "fermion_green_kernel": "G_(psi_a tildepsi_dotb)^{AB}=-i g^2 kappa^{AB} p_(a dotb)/p_(4)^2",
@@ -555,26 +555,27 @@ def run_verification() -> dict[str, object]:
             "source_order": "int_(E,+) J_Phi Phi + int_(E,-) tildePhi tildeJ_Phi; forward derivative order is J_Phi then tildeJ_Phi",
             "reverse_fermion_order": "G_(tildepsi_dotb psi_a)(-p,p)=-G_(psi_a tildepsi_dotb)(p,-p)",
         },
-        "typed_blockers": [
+        "typed_blockers": [],
+        "step5c_obligations": [
             {
                 "id": "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
-                "scope": "vector longitudinal Hessian and vector Green kernel",
-                "reason": "The local Step-3D non-minimal class does not admit the nonlocal Y required by (5.44a)-(5.44b); (5.46) is a rejected-slice regression only.",
+                "scope": "equivalence of the admitted Step-5A vector kernel to a global local non-minimal coefficient integral",
+                "reason": "The fixed-gauge Step-5A Gaussian is admitted independently; only its global local-Y realization remains a Step-5C obligation.",
             },
             {
                 "id": "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
-                "scope": "promotion of the transverse vector pseudoinverse to a V_T Wick contraction",
-                "reason": "The chiral-matter coefficient cycle is verified separately.  The complete (A_T,lambda,tilde-lambda,d) cycle, its Berezinian, reconstruction to V_T, and ordered vector-source differentiation are not supplied.",
+                "scope": "finite coefficient-space reconstruction of the Step-5A vector Wick contraction",
+                "reason": "The complete (A_T,lambda,tilde-lambda,d) finite cycle and Berezinian remain Step 5C; they do not alter the reference-flat Step-5A inversion.",
             },
             {
                 "id": "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
-                "scope": "FP Wick propagator",
-                "reason": "Equations (3D.84)-(3D.91) fix the free FP operator, but (3D.93c) leaves the parity-reversed Euclidean ghost cycle and orientation as chosen data.",
+                "scope": "finite FP coefficient-space cycle",
+                "reason": "The primitive connected one-loop FP graph is separately proved absent; the global finite cycle remains Step 5C.",
             },
             {
                 "id": "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
-                "scope": "Nielsen-Kallosh Hessian and propagator",
-                "reason": "No 3D.95b branch, admitted 3D.96 NK auxiliary action, kernel, and cycle have been selected.",
+                "scope": "finite Nielsen-Kallosh coefficient-space cycle",
+                "reason": "The primitive connected one-loop NK graph is separately proved absent; the global finite cycle remains Step 5C.",
             },
         ],
         "source_boundary": {

@@ -324,7 +324,7 @@ def run_verification() -> dict[str, object]:
         "contract_sha256": contract_sha256,
         "status": "PASS" if not failed else "FAIL",
         "admission_status": (
-            "REFERENCE_FLAT_CHIRAL_GAUSSIAN_VERIFIED_VECTOR_PSEUDOINVERSE_ONLY"
+            "REFERENCE_FLAT_CHIRAL_AND_STEP5A_VECTOR_GAUSSIAN_VERIFIED"
             if not failed
             else "PHYSICAL_CYCLE_OR_SOURCE_ORDER_MISMATCH"
         ),
@@ -350,27 +350,29 @@ def run_verification() -> dict[str, object]:
             "fermion": "<psi_a^A(p) tildepsi_dotb^B(-p)>=-i hbar g^2 kappa^{AB} p_(a dotb)/p_(4)^2",
             "fermion_reverse_order": "<tildepsi_dotb^B(-p) psi_a^A(p)>=+i hbar g^2 kappa^{AB} p_(a dotb)/p_(4)^2",
             "auxiliary": "<F^A(p) tildeF^B(-p)>=-hbar g^2 kappa^{AB}",
+            "vector": "<V^A(p,theta) V^B(-p,theta')>=-2 hbar g^2 kappa^{AB} delta4(theta-theta')/p_(4)^2",
         },
         "algebraic_pseudoinverses": {
             "vector_transverse": "G_T^{AB}=-2 g^2 kappa^{AB} Pi_(1/2)/p_(4)^2",
             "two_sided_projected_identity": "K_T G_T=G_T K_T=Pi_(1/2)",
-            "not_a_wick_contraction": True,
+            "not_a_finite_cycle_reconstruction": True,
         },
-        "typed_blockers": [
+        "typed_blockers": [],
+        "step5c_obligations": [
             {
                 "id": "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
-                "scope": "promotion of reference-flat Gaussian rules to the full regulated measure",
+                "scope": "equality of reference-flat Step-5A Gaussian rules with the full regulated measure",
                 "reason": "The field-dependent density is isolated as S_measure=-hbar log(varpi(q)/varpi(0)); its coefficient vertices are not instantiated.",
             },
             {
                 "id": "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
-                "scope": "transverse V Wick contraction",
-                "reason": "The algebraic Pi_(1/2) pseudoinverse has not been accompanied by the complete finite Gaussian for (A_T,lambda,tildelambda,d), its ordered sources, and coefficientwise reconstruction to V_T.",
+                "scope": "finite coefficient-space reconstruction of the Step-5A vector Wick contraction",
+                "reason": "The complete finite Gaussian for (A_T,lambda,tildelambda,d), its ordered sources, and coefficientwise reconstruction to V_T remain Step 5C.",
             },
             {
                 "id": "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
-                "scope": "Pi_0 longitudinal and full unconstrained V Wick contraction",
-                "reason": "The accepted physical Hessian vanishes on Im Pi_0.  A local non-minimal multiplier kernel and its cycle are not fixed by the physical contour (3A.102)-(3A.103).",
+                "scope": "global local-nonminimal realization of the admitted Step-5A full unconstrained V Wick contraction",
+                "reason": "The fixed-gauge inverse is admitted directly; its global local multiplier realization remains Step 5C.",
             }
         ],
         "untouched_sectors": {

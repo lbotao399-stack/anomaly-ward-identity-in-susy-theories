@@ -1,0 +1,14 @@
+digraph "T-Abar_BW-w0-01" {
+  "vI" [label="vI:COMPOSITE_INSERTION_I2_WW"];
+  "vBar" [label="vBar:BACKGROUND_CUBIC_TILDE_W"];
+  "vW" [label="vW:BACKGROUND_CUBIC_W"];
+  "X_L_source" [shape=box,label="L_source:Source[nabla_-(X^A X^B)](p+q)"];
+  "X_L_source" -> "vI" [label="Abar_BW_I_source{identity}"];
+  "X_L_tildeW" [shape=box,label="L_tildeW:TildeW_dot_alpha{spinor=DOTTED:dot_alpha:UP}(q)"];
+  "X_L_tildeW" -> "vBar" [label="Abar_BW_bar_ext{identity}"];
+  "X_L_W" [shape=box,label="L_W:W_plus{spinor=UNDOTTED:+:DOWN}(p)"];
+  "X_L_W" -> "vW" [label="Abar_BW_W_ext{identity}"];
+  "vI" -> "vBar" [dir=forward,label="e0:-2*g^2*kappa^{-1}*delta4theta/r0^2(k);Abar_BW_I_A{identity};Abar_BW_bar_A{identity}"];
+  "vBar" -> "vW" [dir=forward,label="e1:-2*g^2*kappa^{-1}*delta4theta/r1^2(k+q);Abar_BW_bar_C{identity};Abar_BW_W_C{identity}"];
+  "vW" -> "vI" [dir=forward,label="e2:-2*g^2*kappa^{-1}*delta4theta/r2^2(k+p+q);Abar_BW_W_B{identity};Abar_BW_I_B{identity}"];
+}

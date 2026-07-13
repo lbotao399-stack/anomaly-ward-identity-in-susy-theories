@@ -286,16 +286,16 @@ def mixed_anticommutator_checks() -> dict[str, bool]:
     return checks
 
 
-def rejected_slice_diagnostic_checks() -> dict[str, bool]:
+def single_row_coefficient_checks() -> dict[str, bool]:
     # Strip g^2 after h^2 g^6=g^2.  Only the absolute rational budget is tested.
     propagators = Fraction(-2) ** 3
     vertex_magnitude = Fraction(1, 8) * Fraction(1, 8)
     d_chain = Fraction(-1, 2)
     coefficient = propagators * vertex_magnitude * d_chain
     return {
-        "rejected_slice_magnitude_is_one_sixteenth": abs(coefficient)
+        "single_row_magnitude_is_one_sixteenth": abs(coefficient)
         == Fraction(1, 16),
-        "rejected_slice_magnitude_is_not_one_half": abs(coefficient)
+        "single_row_magnitude_is_not_complete_chain_one_half": abs(coefficient)
         != Fraction(1, 2),
     }
 
@@ -315,7 +315,7 @@ def run_verification() -> dict[str, object]:
         "routing": routing_checks(),
         "endpoint_transfer": endpoint_transfer_checks(),
         "mixed_anticommutator": mixed_anticommutator_checks(),
-        "rejected_slice_diagnostic": rejected_slice_diagnostic_checks(),
+        "single_row_coefficient": single_row_coefficient_checks(),
     }
     checks = flatten(grouped)
     failed = [check for check in checks if not check["passed"]]
@@ -323,7 +323,7 @@ def run_verification() -> dict[str, object]:
         "schema": 1,
         "task": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
         "status": "PASS" if not failed else "FAIL",
-        "admission_status": "PROJECT_SEED_NORMALIZATION_AUDITED_NO_LOOP_AMPLITUDE_ADMITTED",
+        "admission_status": "PROJECT_SEED_ROW_NORMALIZATION_VERIFIED_AND_USED_BY_COMPLETE_WW_TRACE",
         "contract_sha256": hashlib.sha256(CONTRACT.read_bytes()).hexdigest(),
         "source_ledger_sha256": hashlib.sha256(SOURCE_LEDGER.read_bytes()).hexdigest(),
         "arithmetic": "EXACT_Q_I_NO_FLOATING_POINT",
@@ -335,18 +335,15 @@ def run_verification() -> dict[str, object]:
             "fixed_placement_D_factor": "-1/2",
             "antichiral_raw_vertex_momentum": "-(2k+q)",
             "chiral_raw_vertex_momentum": "2k+p+2q",
-            "rejected_slice_coefficient_magnitude": "g^2/16",
+            "single_row_coefficient": "+g^2/16",
         },
         "rejected_source_claims": [
             "M3_DALGEBRA_CHAIN",
             "M3 overall g^2/2 three-sigma numerator coefficient",
         ],
-        "typed_blockers": [
-            "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
-            "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
-            "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
-        ],
-        "anomaly_coefficient_computed": False,
+        "typed_blockers": [],
+        "completed_by": "generated/step5/ww-seed-graph-ir.json",
+        "anomaly_coefficient_computed_here": False,
     }
 
 

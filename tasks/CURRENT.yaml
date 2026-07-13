@@ -2,7 +2,7 @@
   "id": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
   "type": "CONTRACT_CHANGE",
   "status": "SPECIFIED",
-  "outcome": "Construct the first Euclidean N=4 SYM anomaly-Ward-identity contract in Project conventions: derive the tree Schwinger-EOM descendants and the complete regulated one-loop supergraph calculation for every ordered pair from the four letter families nabla_+ W_+, nabla_+ Phi_r, tilde Phi_r, and tilde W_dot-a; independently audit the imported chat attempts; and implement a typed draw-map plus exact superspace D-algebra integration-by-parts trace that retains derivatives routed to external legs.",
+  "outcome": "Split Step 5 into 5A fixed-gauge perturbative FF-DRED supergraphs, 5B the Schwinger-Dyson-complete graph orbit, and 5C finite-BV density/cycles; independently complete and accept the primitive w=0 ordered WW seed before any sixteen-channel valence product is promoted to physical graphs.",
   "allowed_inputs": [
     "AUTHORITY.md",
     "AGENTS.md",
@@ -32,6 +32,7 @@
     "scripts/verify_step5_reference_import.py",
     "scripts/verify_superspace_1001_supergraph_reference_import.py",
     "tasks/archive/REFERENCE-IMPORT-STEP5-CHAT-WEINBERG30-001.yaml",
+    "tasks/instructions/2026-07-12-step5abc-pr46-revision.md",
     "ledger/proof_obligations.json",
     "tests/test_repository_policy.py",
     ".github/workflows/verify.yml"
@@ -71,18 +72,18 @@
     "before any loop formula, a Step-5 notation ledger fixes the Euclidean plus/minus spin frame, epsilon components, all raised and lowered spinor slots, the complex Euclidean momentum bispinor map, Fourier phase, all-incoming momentum convention, adjoint and flavor order, Grassmann normal order, and the distinction between untilded and tilded independent Euclidean fields",
     "the DRED contract fixes d=4-2 epsilon, the d-dimensional loop subspace, the four-dimensional spinor-algebra metric, the evanescent complement, all metric traces and projectors, the loop measure with its mu power, and the sign of every momentum square; any identity involving p_(+ dot-a) p_-^(dot-a), p^2, or hat-p^2 is derived from these definitions rather than assumed",
     "a source dictionary reconstructs separately the notation and assertions of chat messages 1-7, Weinberg Chapter 30, and the admitted Superspace-1001 pages; every nontrivial source statement receives an exact Project translation plus verdict PROVED, REJECTED, CONDITIONAL, or OUT_OF_SCOPE, with the initial and later chat attempts never silently merged",
-    "the Euclidean N=4 superfield Euler operators are derived by ordered variation of the accepted action (4C.4), including gauge, three chiral, three tilded-chiral, gauge-fixing, ghost, and measure terms required by the chosen perturbative slice; the local Schwinger equation is obtained only from (3D.34)",
-    "the four typed letter families are defined in Project vector representation with all color, flavor, undotted, and dotted indices retained; their 4 by 4 ordered family product gives exactly sixteen channel classes, and the emitter expands every flavor and spinor component without identifying reversed orderings",
-    "for each ordered channel, the graded Leibniz expansion of nabla_-(L_i L_j) is shown and reduced to the complete tree Euler-operator expression before imposing any EOM; zero, Bianchi, chirality, total-derivative, gauge-BRST, and genuine EOM terms remain separately typed",
-    "the quadratic kernels and every propagator are derived by exact inversion of the locked Euclidean gauge-fixed action; every interaction and composite-insertion vertex is derived by ordered functional differentiation, with derivative placement, color word, Grassmann sign, exponential coefficient, identical-leg factor, and gauge-parameter dependence explicit",
-    "a deterministic Wick-contraction enumerator constructs the complete one-loop graph family for every channel from the action and insertion expansions; every internal edge, loop momentum, external momentum, field type, orientation, symmetry factor, fermion permutation, color contraction, and EOM-cut relation is retained in a machine-readable graph IR",
-    "the graph IR renders publication-readable ordinary graph and supergraph maps and also emits the exact amplitude before D-algebra; diagrams are generated from the same IR used for amplitudes, so a rendered edge or vertex cannot exist without a corresponding algebraic object",
-    "the D-algebra engine records every rewrite as input, rule, assumptions, Koszul sign, output, and invariant checks; superspace integration by parts is implemented as an oriented operation, and every derivative moved onto an external leg remains in the final external-leg operator rather than being discarded",
-    "for each channel, all one-loop triangle orientations are evaluated in momentum space with explicit numerator chains and unintegrated external momenta; any same-order contact, letter-expansion, Schwinger-cut, ghost, and counterterm graphs required for the regulated Ward identity are evaluated alongside the triangles, and absent topologies are proved absent from the typed vertex grammar",
-    "tensor reduction and Feynman parametrization display the complete shift, denominator polynomial, numerator expansion, physical-metric part, and evanescent-metric part; propagator-cut cancellations are checked graph by graph before any finite anomaly remainder is asserted",
+    "Step 5 is split explicitly into 5A PERTURBATIVE_FF_DRED_SUPERGRAPHS, 5B SD_COMPLETE_GRAPH_ORBIT, and 5C FINITE_BV_DENSITY_AND_CYCLES; no Step-5C obligation blocks a fixed-gauge 5A Wick contraction",
+    "the Euclidean N=4 gauge Euler core E_Xi, the V-transport sign audit, Gamma_(n), W_(n), X_(n), and I_(2), I_(3), I_(4) are generated from Project definitions with exact ordered coefficients and background/quantum typed ports",
+    "the 5A quadratic kernel K_phys+K_gf and G_V are verified as two-sided inverses in the exact 16 by 16 Grassmann representation and in the color-tensored representation; the reference-flat measure has E_measure=0 only in 5A",
+    "one physical WW parent triangle and its reflected orientation retain exact fields, colors, momenta r0=k, r1=k+q, r2=k+p+q, propagators, Wick signs, symmetry factors, and external operators in machine-readable GraphIR",
+    "the graph IR renders publication-readable supergraphs and emits the exact pre-integration amplitude; the former 10432 valence requests remain explicitly non-graphs",
+    "each orientation has exactly eight edge-tagged D-algebra traces from two D-minus placements and four cubic endpoint assignments; every endpoint-transfer sign, Koszul sign, mixed momentum, external-leg derivative token, propagator collapse, and typed classification is retained",
+    "all nonlinear-letter, quartic, scaleless, and collapsed contact children required by the primitive WW Schwinger-Dyson orbit are emitted or proved absent at this order from typed ports",
+    "the isolated-triangle and complete-contact ordinary UV poles are computed separately with no epsilon in the bare triangle numerator; the finite coefficient is accepted only from the proved metric difference hat-delta minus delta_(4)",
     "the seed ordered channel (nabla_+ W_+^A, nabla_+ W_+^B) is reproduced from the bare insertion through renormalized local result with every coefficient, color tensor, external momentum polynomial, and external superfield operator fixed; no coefficient may be inherited from either chat attempt",
-    "the remaining fifteen ordered channel classes are emitted with the same calculation trace and end in one of exactly three states: exact renormalized result, exact zero with proof, or BLOCKED_<REASON> naming the missing locked input; no channel is filled by symmetry unless the symmetry map including every sign and index permutation is proved",
-    "exact tests cover spin-frame identities, Euclidean derivative algebra, DRED projectors, quadratic-kernel inversion, ordered vertices, complete Wick census, graph-IR/render equivalence, D-algebra confluence on the admitted rule set, external-leg derivative conservation, Schwinger-cut pairing, color/Jacobi reduction, pole cancellation, and the sixteen-channel result ledger",
-    "a derivation-gap audit, notation-consistency audit, reverse-order independent graph census, and independent numerator/integral audit leave no unresolved P0 or P1 finding; contract hashes and repository policy pass, the reviewed contract reaches verified origin/main, and only then may a write-only Git-to-Notion Step-5 mirror be emitted"
+    "a typed-port FP/NK census proves either a connected primitive one-loop graph or PROVED_ABSENT_AT_THIS_ORDER; finite coefficient-space ghost cycles remain only a Step-5C obligation",
+    "Step 5C alone retains the exact finite density, Berezinian, finite vector coefficient cycle, FP/NK cycles, and global local-nonminimal realization obligations",
+    "exact tests cover spin-frame identities, DRED projectors, fixed-kernel inversion, Project composite coefficients, physical GraphIR, sixteen D-algebra traces, external-derivative conservation, Schwinger-cut pairing, pole cancellation, and the derived seed coefficient",
+    "a derivation-gap audit and independent numerator-integral audit leave no unresolved seed-level P0 or P1 finding; contract hashes and repository policy pass before the reviewed result can become authoritative on origin/main"
   ]
 }

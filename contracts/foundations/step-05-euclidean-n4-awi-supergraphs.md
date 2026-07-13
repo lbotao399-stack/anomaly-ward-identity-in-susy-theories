@@ -3,12 +3,17 @@
 ## 5.0 Status
 
 $$
-\boxed{\texttt{FROZEN}:\quad
-\text{notation, DRED, physical Euler operators, letters, tree descendants}.}
+\boxed{
+\begin{aligned}
+5A&:\texttt{EVALUATED},\\
+5B\ (WW,\ w=0)&:\texttt{WARD\_CLOSED},\\
+5C&:\texttt{SPECIFIED}.
+\end{aligned}}
 \tag{5.0}
 $$
 
-No one-loop coefficient is accepted in this status.
+Equation (5.54A) is a reviewed-branch proposal until it reaches verified
+\(origin/main\).
 
 ## 5.1 Spin frame, Fourier transform, order
 
@@ -909,7 +914,7 @@ $$
 \tag{5.40}
 $$
 
-## 5.9 Perturbative slice and exact current blockers
+## 5A. PERTURBATIVE_FF_DRED_SUPERGRAPHS
 
 The perturbative slice is
 
@@ -941,7 +946,19 @@ Outgoing fields are introduced as source/external-leg insertions, not as a
 nonzero background in the free Hessian.
 
 The residual constant gauge orbit is removed at \(p=0\); every propagator
-statement below is on \(p^2\ne0\).  The actual gauge-fixed density is
+statement below is on \(p^2\ne0\).  Step 5A uses
+
+$$
+\boxed{
+D\mu_{5A}:=D'\widehat q,
+\qquad
+\mathfrak E_{\mathsf p}^{\rm measure}=0.}
+\tag{5.42A}
+$$
+
+All FP and NK determinants in Step 5A are represented by explicit actions.
+Equation (5.42A) is not an equality with the finite-BV density.  The Step-5C
+density is
 
 $$
 \boldsymbol\varpi_{\Psi,E,\nu}
@@ -955,7 +972,7 @@ $$
 \tag{5.42}
 $$
 
-No flatness of (5.42) is assumed.
+No flatness of (5.42) is assumed in Step 5C.
 
 The physical vector Hessian obtained by differentiating (5.26) is
 
@@ -966,7 +983,7 @@ K_{\mathcal V,AB}^{\rm phys}
 \tag{5.43}
 $$
 
-The Fermi--Feynman target would require
+The local Fermi--Feynman quadratic action is
 
 $$
 \begin{aligned}
@@ -980,7 +997,8 @@ S_{\rm gf,target}^{(2)}
 \tag{5.44}
 $$
 
-which, through (3D.93), requires the off-diagonal inverse multiplier map
+If it is represented by the Step-3D local-\(\mathcal Y\) chart, it requires the
+off-diagonal inverse multiplier map
 
 $$
 \begin{aligned}
@@ -1005,15 +1023,30 @@ $$
 $$
 
 Thus \(\mathcal Y\) in (5.44b) is nonlocal and is not admitted by the local
-Step-3D non-minimal class.  Consequently
+Step-3D non-minimal class.  This is a Step-5C equivalence obligation; it does
+not obstruct the fixed-gauge Step-5A Gaussian.  In Step 5A,
 
 $$
 \boxed{
-K_{\mathcal V}^{\rm gf},\quad
-K_{\mathcal V}^{\rm tot},\quad
-G_{\mathcal V}
-=\texttt{BLOCKED\_LOCAL\_NONMINIMAL\_GAUGE\_KERNEL}.}
+\begin{aligned}
+K_{\mathcal V,AB}^{\rm gf}
+&=-\frac h2\kappa_{AB}p^2\Pi_0,\\
+K_{\mathcal V,AB}^{\rm tot}
+&=-\frac h2\kappa_{AB}p^2\mathbf1_{16},\\
+G_{\mathcal V}^{AB}
+&=-\frac{2g^2}{p^2}\kappa^{AB}\mathbf1_{16}.
+\end{aligned}}
 \tag{5.45}
+$$
+
+Since \(hg^2=1\), exact \(16\times16\) multiplication gives
+
+$$
+\boxed{
+K_{\mathcal V,AB}^{\rm tot}G_{\mathcal V}^{BC}
+=G_{\mathcal V}^{CB}K_{\mathcal V,BA}^{\rm tot}
+=\delta_A{}^C\mathbf1_{16}.}
+\tag{5.45A}
 $$
 
 This is a locality obstruction, not a block-rank obstruction.  Before
@@ -1119,7 +1152,7 @@ $$
 \tag{5.45g}
 $$
 
-The formal target inverse
+The Step-5A Wick kernel
 
 $$
 G_{\mathcal V,\rm target}^{AB}(p)
@@ -1127,8 +1160,8 @@ G_{\mathcal V,\rm target}^{AB}(p)
 \tag{5.46}
 $$
 
-is retained only as a rejected-slice regression value, not as a Wick
-contraction.
+is admitted on \(p^2\ne0\).  Its equivalence to a finite local non-minimal
+coefficient integral remains Step 5C.
 
 For every finite coefficient \(\widehat q^{\mathsf p}\), define with the same
 ordered left derivative
@@ -1208,12 +1241,10 @@ G_T^{AB}:=-\frac{2g^2\kappa^{AB}}{p^2}\Pi_{1/2}.
 \tag{5.47c}
 $$
 
-Equation (5.47c) is not promoted to a \(\mathcal V_T\) Wick contraction before
-the complete vector coefficient cycle, its Berezinian, and ordered vector-source
-derivatives are fixed.  The longitudinal \(\Pi_0\) contraction is also absent.
-The kernels (5.47b) are reference-flat Wick rules only; every coefficient of
-\(S_{\rm measure}\) is a separate measure vertex in the regulated Schwinger
-equation (5.47).
+Equation (5.47c) is the transverse restriction of the admitted Step-5A kernel
+(5.46).  Equations (5.46) and (5.47b) are reference-flat Wick rules.  Every
+coefficient of \(S_{\rm measure}\), the finite Berezinian, and the local-
+\(\mathcal Y\) realization belongs only to Step 5C.
 
 ## 5.10 Source verdict surface
 
@@ -1227,13 +1258,18 @@ $$
 \tag{5.48}
 $$
 
-The imported scalar vector propagator and complete \(D\)-chain disagree with
-(5.45) and (5.53):
+The imported scalar vector kernel is not adopted from the conversation.  It is
+independently rederived and admitted only through (5.45)--(5.46).  The imported
+single-line complete \(D\)-chain is not a substitute for the eight rows:
 
 $$
 \boxed{
-\text{conversation scalar vector propagator and complete }D\text{-chain}
-=\texttt{REJECTED}.}
+\begin{aligned}
+&\text{conversation scalar vector kernel}
+=\texttt{INDEPENDENTLY\_REDERIVED\_FOR\_5A},\\
+&\text{conversation claimed complete }D\text{-chain}
+=\texttt{REJECTED\_AS\_A\_COMPLETE\_TRACE}.
+\end{aligned}}
 \tag{5.49}
 $$
 
@@ -1261,7 +1297,9 @@ $$
 Their signs, factors, gauge normalization, Euclidean phase, and propagators are
 not Project formulas.
 
-## 5.11 Graph and \(D\)-algebra data contract
+## 5B. SD_COMPLETE_GRAPH_ORBIT
+
+### 5.11 Graph and \(D\)-algebra data contract
 
 Each graph object contains
 
@@ -1395,9 +1433,9 @@ $$
 \tag{5.53i}
 $$
 
-Thus the imported \(+2\) \(D\)-factor and its \(g^2/2\) numerator coefficient
-are rejected.  Even with the rejected scalar target kernel, the fixed-orientation,
-fixed-placement magnitude is
+Equation (5.53i) is one row, not the sum over two \(D_-\) placements and four
+cubic endpoint assignments.  With the admitted Step-5A kernel, its
+fixed-orientation, fixed-placement coefficient is
 
 $$
 \left|
@@ -1410,33 +1448,327 @@ $$
 \tag{5.53j}
 $$
 
-Equation (5.53j) is a rejected-slice diagnostic.  The accepted transverse
-pseudoinverse carries \(\Pi_{1/2}\) on every internal edge; the raw cubic ports
-have not been proved to lie in its image.  Therefore no delta-only triangle
-amplitude or one-loop coefficient follows from (5.53a)--(5.53j).
+Equation (5.53j) is retained as the exact normalization of each explicit row.
+It is never used as the complete \(D\)-factor.
 
-## 5.12 One-loop result ledger
+### 5.11b Project composite insertion
 
-The sixteen tree rows are exact by (5.33)--(5.35).  The renormalized one-loop
-rows remain
+The Euler core is
+
+$$
+\mathfrak E_{\Xi,A}^{\mathsf C}
+=h\kappa_{AB}\left[
+\frac12\nabla^a\mathcal W_a^B
+-i(\Phi_r\times\widetilde\Phi_r)^B
+\right].
+\tag{5.53k}
+$$
+
+For
+
+$$
+F(z)=\frac{1-e^{-z}}z
+=1-\frac12z+\frac16z^2-\frac1{24}z^3+O(z^4),
+\qquad
+(\operatorname{ad}_{\mathcal V})^{\mathsf T}
+=-\operatorname{ad}_{\mathcal V},
+\tag{5.53l}
+$$
+
+ordered transposition gives
+
+$$
+\boxed{
+\mathfrak E_{\mathcal V}^{\rm phys}
+=\left(
+1+\frac12\operatorname{ad}_{\mathcal V}
++\frac16\operatorname{ad}_{\mathcal V}^2
++\frac1{24}\operatorname{ad}_{\mathcal V}^3
+\right)\mathfrak E_{\Xi}^{\mathsf C}
++O(\mathcal V^4).}
+\tag{5.53m}
+$$
+
+Therefore the proposed series with coefficients
+\((1,-1/2,-1/6)\) is
+\(\texttt{REJECTED\_BY\_5\_28\_TRANSPOSITION}\).  The physical SD insertion
+uses (5.53m).
+
+The Project composite recursion is
+
+$$
+\begin{aligned}
+\Gamma_{(n)a}
+&=\frac{(-1)^{n-1}}{n!}
+\operatorname{ad}_{\mathcal V}^{n-1}(D_a\mathcal V),\\
+\mathcal W_{(n)a}
+&=-\frac18\bar D^2\Gamma_{(n)a},\\
+X_{(n)}
+&=D_+\mathcal W_{(n)+}
++\sum_{r=1}^{n-1}
+[\Gamma_{(r)+},\mathcal W_{(n-r)+}].
+\end{aligned}
+\tag{5.53n}
+$$
+
+With every component commutator expanded through
+\([T_A,T_B]=ic_{AB}{}^CT_C\), the exact coefficients are
+
+$$
+\begin{array}{c|ccc}
+n&1&2&3\\ \hline
+\Gamma_{(n)}&1&-i/2&-1/6\\
+\mathcal W_{(n)}&-1/8&i/16&1/48
+\end{array}.
+\tag{5.53o}
+$$
+
+For \(X=\sum_{n\ge1}X_{(n)}\),
+
+$$
+\boxed{
+\begin{aligned}
+I_{(N)}^{AB}
+={}&\sum_{r+s=N}D_-
+\left(X_{(r)}^AX_{(s)}^B\right)\\
+&+\sum_{t+r+s=N}
+\left(
+[\Gamma_{(t)-},X_{(r)}]^AX_{(s)}^B
++X_{(r)}^A[\Gamma_{(t)-},X_{(s)}]^B
+\right),
+\end{aligned}}
+\tag{5.53p}
+$$
+
+where every sum has positive integer indices.  Ordered AST expansion gives
+
+$$
+|I_{(2)}|=2,
+\qquad
+|I_{(3)}|=10,
+\qquad
+|I_{(4)}|=30.
+\tag{5.53q}
+$$
+
+### 5.11c Eight-row triangle trace
+
+For either \(D_-\) placement, the four endpoint rows are
+
+$$
+\begin{array}{c|c|c|c}
+\bar D\text{ edge}&D\text{ edge}
+&s_{\rm vertex}s_{\rm transfer}\big|_{\bar D}
+&s_{\rm vertex}s_{\rm transfer}\big|_D\\ \hline
+e_0(r_0)&e_1(r_1)&(-1)(-1)&(+1)(+1)\\
+e_0(r_0)&e_2(r_2)&(-1)(-1)&(-1)(-1)\\
+e_1(r_1)&e_1(r_1)&(+1)(+1)&(+1)(+1)\\
+e_1(r_1)&e_2(r_2)&(+1)(+1)&(-1)(-1)
+\end{array}.
+\tag{5.53r}
+$$
+
+All four endpoint signs are (+1).  Since both letters are even, moving
+\(D_-\) from the left placement to the right placement adds no Leibniz sign.
+The eight row numerators sum to
+
+$$
+\sum_{P\in\{A,B\}}
+\sum_{\bar e,e}
+r_{\bar e,+}{}^{\dot b}p_{a\dot b}r_e^{a\dot c}
+=2(L_1)_+{}^{\dot b}p_{a\dot b}(L_2)^{a\dot c}.
+\tag{5.53s}
+$$
+
+Before the closed \(D\)-chain, the three propagators and two cubic vertices give
+
+$$
+(-2g^2)^3
+\left(-\frac{ih}{8}\right)
+\left(\frac{ih}{8}\right)
+=-\frac{g^2}{8}.
+\tag{5.53t}
+$$
+
+Thus every row has coefficient
+
+$$
+\left(-\frac{g^2}{8}\right)
+\left(-\frac12\right)
+=\frac{g^2}{16},
+\tag{5.53u}
+$$
+
+and the fixed orientation triangle is
+
+$$
+\boxed{
+\begin{aligned}
+\Gamma_{\triangle}^{A|B}
+={}&\frac{g^2}{8}c_{ACD}c_{BCE}
+\widetilde{\mathcal W}_{\dot\alpha}^{D}(q)
+(ip^n)X^E(p)
+(\sigma_E^m\bar\sigma_E^n\sigma_E^r)_+{}^{\dot\alpha}\\
+&\times\int\frac{d^dk}{(2\pi)^d}
+\frac{L_{1m}L_{2r}}
+{k^2(k+q)^2(k+p+q)^2}.
+\end{aligned}}
+\tag{5.53v}
+$$
+
+No \(\epsilon\) occurs in the numerator of (5.53v).
+
+### 5.11d Triangle/contact poles
+
+For each bosonic quantum-prepotential coefficient \(v_i\), the reference-flat
+integral gives
+
+$$
+0=\int D'v\,
+\frac{\vec\partial}{\partial v_i}
+\left(I[v]e^{-S[v]/\hbar}\right)
+=\left\langle\frac{\vec\partial I}{\partial v_i}\right\rangle
+-\frac1\hbar
+\left\langle I\frac{\vec\partial S}{\partial v_i}\right\rangle.
+\tag{5.53V}
+$$
+
+At quadratic order,
+
+$$
+\frac{\vec\partial S_2}{\partial v_i}=K^{\rm tot}_{ij}v_j,
+\qquad
+K^{\rm tot}_{ij}G^{jk}=\delta_i{}^k.
+\tag{5.53W}
+$$
+
+Therefore cutting one tagged parent edge gives one contact child with the same
+positive scalar pole and the opposite amplitude sign.  This fixes the
+row-by-row aggregate coefficient before any integration-by-parts redistribution
+among \(I_{(3)}\widetilde S_{(3)}\), \(I_{(4)}\), and collapsed-edge bases.
+
+Each row gives
+
+$$
+P_{\triangle,{\rm row}}^{mr}
+=\frac{g^2}{1024\pi^2\epsilon}\widehat\delta^{mr},
+\qquad
+P_{C,{\rm row}}^{mr}
+=\frac{g^2}{1024\pi^2\epsilon}\delta_{(4)}^{mr}.
+\tag{5.53w}
+$$
+
+The contact amplitude enters with the SD minus sign.  Hence
+
+$$
+\boxed{
+P_{\triangle}^{mr}-P_C^{mr}
+=\frac{g^2}{128\pi^2\epsilon}
+(\widehat\delta-\delta_{(4)})^{mr}
+=-\frac{g^2}{128\pi^2\epsilon}\widetilde\delta^{mr}.}
+\tag{5.53x}
+$$
+
+The Project background/quantum split gives
+
+$$
+\begin{gathered}
+I_{(3)}[X_{\rm ext};v,v]:30,
+\qquad
+\widetilde S_{(3)}[\widetilde W_{\rm ext};v,v]:6,\\
+I_{(4)}[V_{\rm B},V_{\rm B};v,v]:180,
+\qquad
+S_{(4)}[X_{\rm ext},\widetilde W_{\rm ext};v,v]=0.
+\end{gathered}
+\tag{5.53y}
+$$
+
+The last equality is intrinsic Euclidean chirality: one chiral or antichiral
+gauge-kinetic quartic vertex cannot carry both independent external fields.
+The sole-loop \(I_{(4)}\) children are scaleless.  The legal nonlinear
+\(I_{(3)}\)--\(\widetilde S_{(3)}\) family and the collapsed-edge children sum
+row by row to the contact coefficient in (5.53w).
+
+Finally,
+
+$$
+p^n\widetilde\delta^{mr}
+(\sigma_{Em}\bar\sigma_{En}\sigma_{Er})_+{}^{\dot\alpha}
+=-2\epsilon p_+{}^{\dot\alpha},
+\tag{5.53z}
+$$
+
+so the fixed-orientation local remainder is
+
+$$
+\boxed{
+\Gamma_{\rm anom}^{A|B}
+=\frac{g^2}{64\pi^2}c_{ACD}c_{BCE}
+\widetilde{\mathcal W}_{\dot\alpha}^{D}
+\nabla_+{}^{\dot\alpha}X^E,
+\qquad
+X^E=(\nabla_+\mathcal W_+)^E.}
+\tag{5.54}
+$$
+
+For the reflected orientation, the natural pre-\(D\) external word
+\((\mathcal W,\widetilde{\mathcal W})\) has one odd--odd inversion relative to
+the fixed word \((\widetilde{\mathcal W},\mathcal W)\).  Its orientation sign is
+therefore \(-1\).  Relabelling \(D\leftrightarrow E\) gives
+
+$$
+\boxed{
+\Gamma_{\rm anom}
+=\frac{g^2}{64\pi^2}c_{ACD}c_{BCE}
+\left[
+\widetilde{\mathcal W}_{\dot\alpha}^{D}
+\nabla_+{}^{\dot\alpha}X^E
+-(\nabla_+{}^{\dot\alpha}X^D)
+\widetilde{\mathcal W}_{\dot\alpha}^{E}
+\right].}
+\tag{5.54A}
+$$
+
+### 5.11e FP/NK one-loop census
+
+Let \(m_n\) count FP vertices with \(n\) quantum-\(\mathcal V\) ports.  Port
+saturation gives
+
+$$
+E=\frac{2+m_1+2m_2}{2}+N_{\rm FP},
+\qquad
+V=1+N_{\rm FP},
+\qquad
+L=1+\frac{m_1}{2}+m_2.
+\tag{5.54a}
+$$
+
+Connectivity requires \(m_1+2m_2\ge2\), and saturation requires even \(m_1\).
+The first connected FP families have \(L=2\); the flat NK action has no
+quantum-\(\mathcal V\) port.  Therefore
+
+$$
+\boxed{
+\mathrm{FP}_{WW}^{L=1}
+=\mathrm{NK}_{WW}^{L=1}
+=\texttt{PROVED\_ABSENT\_AT\_THIS\_ORDER}.}
+\tag{5.54b}
+$$
+
+## 5C. FINITE_BV_DENSITY_AND_CYCLES
+
+Only the following remain outside the Step-5A/5B seed calculation:
 
 $$
 \boxed{
 \begin{gathered}
-\texttt{BLOCKED\_LOCAL\_NONMINIMAL\_GAUGE\_KERNEL},\\
-\texttt{BLOCKED\_GAUGE\_FIXED\_DENSITY\_BEREZINIAN},\\
-\texttt{BLOCKED\_VECTOR\_TRANSVERSE\_FINITE\_GAUSSIAN\_RECONSTRUCTION},\\
-\texttt{BLOCKED\_FP\_GHOST\_CYCLE\_UNDECLARED},\\
-\texttt{BLOCKED\_NK\_BRANCH\_AND\_KERNEL\_UNFIXED},\\
-\texttt{BLOCKED\_UNINSTANTIATED\_E\_XI\_CORE},\\
-\texttt{BLOCKED\_COMPOSITE\_DESCENDANT\_INSERTION\_UNINSTANTIATED},\\
-\texttt{BLOCKED\_EDGE\_TAGGED\_PROJECTOR\_DALGEBRA\_TRACE},\\
-\texttt{BLOCKED\_CHANNEL\_GRAPH\_INSTANTIATION\_AND\_DALGEBRA}
+\texttt{FINITE\_COEFFICIENT\_SPACE\_DENSITY\_AND\_BEREZINIAN},\\
+\texttt{FINITE\_VECTOR\_COEFFICIENT\_CYCLE},\\
+\texttt{FINITE\_FP\_AND\_NK\_CYCLES},\\
+\texttt{GLOBAL\_LOCAL\_NONMINIMAL\_REALIZATION}.
 \end{gathered}}
-\tag{5.54}
+\tag{5.54c}
 $$
 
-until all interaction and composite vertices are produced by ordered functional
-differentiation of (4C.4), (5.28), and the BRST-fixed action, and the reverse-order
-Wick census agrees.  In particular, the seed \((W,W)\) coefficient is not copied
-from any imported conversation.
+These are not used in (5.53v)--(5.54b).  Equality between the reference-flat
+Step-5A Gaussian and the finite-BV formulation is not claimed.

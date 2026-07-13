@@ -252,17 +252,6 @@ def spinor_checks() -> dict[str, bool]:
 def channel_checks() -> tuple[dict[str, bool], list[dict[str, object]]]:
     parities = {"W": 0, "Phi": 1, "TildePhi": 0, "TildeW": 1}
     nonzero = {"W": "dW", "Phi": "dPhi", "TildePhi": None, "TildeW": None}
-    blockers = [
-        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
-        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
-        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
-        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
-        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
-        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
-        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
-        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
-        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA",
-    ]
     channels: list[dict[str, object]] = []
     for left in parities:
         for right in parities:
@@ -283,7 +272,11 @@ def channel_checks() -> tuple[dict[str, bool], list[dict[str, object]]]:
                     "right": right,
                     "left_parity": parities[left],
                     "tree_terms": terms,
-                    "one_loop_blockers": blockers,
+                    "one_loop_seed_state": (
+                        "DERIVED_WW_SEED_G2_OVER_64PI2"
+                        if left == right == "W"
+                        else "DEFERRED_NOT_GENERATED_BEFORE_SEED_ACCEPTANCE"
+                    ),
                 }
             )
     identifiers = [entry["id"] for entry in channels]
@@ -297,10 +290,15 @@ def channel_checks() -> tuple[dict[str, bool], list[dict[str, object]]]:
                 for right in parities
             ),
             "four_exact_zero_tree_rows": sum(not entry["tree_terms"] for entry in channels) == 4,
-            "all_one_loop_states_honest": all(
-                entry["one_loop_blockers"] == blockers
+            "only_WW_seed_is_evaluated": sum(
+                entry["one_loop_seed_state"] == "DERIVED_WW_SEED_G2_OVER_64PI2"
                 for entry in channels
-            ),
+            ) == 1,
+            "remaining_channels_are_deferred": sum(
+                entry["one_loop_seed_state"]
+                == "DEFERRED_NOT_GENERATED_BEFORE_SEED_ACCEPTANCE"
+                for entry in channels
+            ) == 15,
         },
         channels,
     )
@@ -345,7 +343,14 @@ def source_checks() -> dict[str, bool]:
 def contract_checks() -> dict[str, bool]:
     text = CONTRACT.read_text(encoding="utf-8")
     return {
-        "status_frozen": "\\texttt{FROZEN}" in text,
+        "scope_states_present": all(
+            state in text
+            for state in (
+                "\\texttt{EVALUATED}",
+                "\\texttt{WARD\\_CLOSED}",
+                "\\texttt{SPECIFIED}",
+            )
+        ),
         "spin_frame_locked": "+\\equiv1" in text and "-\\equiv2" in text,
         "dred_split_locked": "\\widehat\\delta^{mn}+\\widetilde\\delta^{mn}" in text,
         "physical_euler_present": (
@@ -354,21 +359,15 @@ def contract_checks() -> dict[str, bool]:
         "sixteen_tree_table_present": "\\tag{5.35}" in text,
         "source_chronology_present": "\\tag{5.48}" in text,
         "source_rejected_conditional_split_present": (
-            "conversation scalar vector propagator and complete }D" in text
+            "conversation claimed complete }D" in text
             and "\\tag{5.49a}" in text
         ),
-        "one_loop_blockers_present": all(
-            blocker in text
-            for blocker in (
-                "BLOCKED\\_LOCAL\\_NONMINIMAL\\_GAUGE\\_KERNEL",
-                "BLOCKED\\_GAUGE\\_FIXED\\_DENSITY\\_BEREZINIAN",
-                "BLOCKED\\_VECTOR\\_TRANSVERSE\\_FINITE\\_GAUSSIAN\\_RECONSTRUCTION",
-                "BLOCKED\\_FP\\_GHOST\\_CYCLE\\_UNDECLARED",
-                "BLOCKED\\_NK\\_BRANCH\\_AND\\_KERNEL\\_UNFIXED",
-                "BLOCKED\\_UNINSTANTIATED\\_E\\_XI\\_CORE",
-                "BLOCKED\\_COMPOSITE\\_DESCENDANT\\_INSERTION\\_UNINSTANTIATED",
-                "BLOCKED\\_EDGE\\_TAGGED\\_PROJECTOR\\_DALGEBRA\\_TRACE",
-                "BLOCKED\\_CHANNEL\\_GRAPH\\_INSTANTIATION\\_AND\\_DALGEBRA",
+        "scope_split_present": all(
+            scope in text
+            for scope in (
+                "5A. PERTURBATIVE_FF_DRED_SUPERGRAPHS",
+                "5B. SD_COMPLETE_GRAPH_ORBIT",
+                "5C. FINITE_BV_DENSITY_AND_CYCLES",
             )
         ),
         "multiplier_block_inverse_present": all(
@@ -386,12 +385,19 @@ def contract_checks() -> dict[str, bool]:
             in text
             and "\\tag{5.47b}" in text
         ),
-        "vector_is_only_pseudoinverse": (
-            "\\tag{5.47c}" in text
-            and "not promoted to a \\(\\mathcal V_T\\) Wick contraction" in text
+        "step5a_vector_wick_kernel_admitted": (
+            "\\tag{5.45A}" in text
+            and "is admitted on \\(p^2\\ne0\\)" in text
+        ),
+        "step5a_reference_flat_measure": (
+            "\\mathfrak E_{\\mathsf p}^{\\rm measure}=0" in text
+            and "\\tag{5.42A}" in text
         ),
         "seed_project_dalgebra_audit_present": all(
             tag in text for tag in ("\\tag{5.53a}", "\\tag{5.53i}", "\\tag{5.53j}")
+        ),
+        "seed_metric_mismatch_and_coefficient_present": all(
+            tag in text for tag in ("\\tag{5.53x}", "\\tag{5.54}", "\\tag{5.54A}")
         ),
         "resolved_gaussian_blocker_absent": (
             "BLOCKED\\_EUCLIDEAN\\_GAUSSIAN\\_CYCLE\\_AND\\_SOURCE\\_ORDER"
@@ -425,7 +431,7 @@ def main() -> None:
         "contract_sha256": hashlib.sha256(CONTRACT.read_bytes()).hexdigest(),
         "source_ledger_sha256": hashlib.sha256(SOURCE_LEDGER.read_bytes()).hexdigest(),
         "status": "PASS" if not failures else "FAIL",
-        "stage": "FROZEN",
+        "stage": "WARD_CLOSED",
         "totals": {"checks": checks, "failed": len(failures)},
         "failures": failures,
         "sections": sections,

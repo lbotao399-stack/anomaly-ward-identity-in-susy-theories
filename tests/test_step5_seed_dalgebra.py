@@ -70,15 +70,16 @@ class Step5SeedDAlgebraTest(unittest.TestCase):
         self.assertEqual(len(checks), 12)
         self.assertTrue(all(checks.values()), checks)
 
-    def test_rejected_slice_diagnostic_is_not_an_admitted_amplitude(self) -> None:
-        self.assertTrue(all(self.verifier.rejected_slice_diagnostic_checks().values()))
+    def test_single_row_diagnostic_is_consumed_by_complete_trace(self) -> None:
+        self.assertTrue(all(self.verifier.single_row_coefficient_checks().values()))
         audit = self.verifier.run_verification()
         self.assertEqual(
             audit["admission_status"],
-            "PROJECT_SEED_NORMALIZATION_AUDITED_NO_LOOP_AMPLITUDE_ADMITTED",
+            "PROJECT_SEED_ROW_NORMALIZATION_VERIFIED_AND_USED_BY_COMPLETE_WW_TRACE",
         )
-        self.assertFalse(audit["anomaly_coefficient_computed"])
-        self.assertEqual(audit["derived"]["rejected_slice_coefficient_magnitude"], "g^2/16")
+        self.assertFalse(audit["anomaly_coefficient_computed_here"])
+        self.assertEqual(audit["derived"]["single_row_coefficient"], "+g^2/16")
+        self.assertEqual(audit["typed_blockers"], [])
 
 
 if __name__ == "__main__":

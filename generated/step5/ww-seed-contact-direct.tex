@@ -1,0 +1,12 @@
+\documentclass[tikz,border=6pt]{standalone}
+\usetikzlibrary{arrows.meta,shapes.geometric}
+\begin{document}
+\begin{tikzpicture}[>=Stealth]
+\node[draw,diamond,align=center] (I3) at (-2,0) {$I_{(3)}[X_{\mathrm{ext}};v,v]$};
+\node[draw,circle,align=center] (S3) at (2,0) {$\widetilde S_{(3)}[\widetilde W_{\mathrm{ext}};v,v]$};
+\draw[->,bend left=35] (I3) to node[above] {$k$} (S3);
+\draw[->,bend left=35] (S3) to node[below] {$k+q$} (I3);
+\node at (0,-2.1) {\textsf{DA-D-001--008}};
+\node at (0,-2.6) {$ -\,g^2\delta_{(4)}^{mn}/(128\pi^2\epsilon) $};
+\end{tikzpicture}
+\end{document}

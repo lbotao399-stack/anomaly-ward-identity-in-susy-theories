@@ -1,31 +1,33 @@
 {
   "schema": 1,
   "task": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
-  "contract_sha256": "7f1116253444cf09b240cfa4d6092436eb41f49146d387450d68f608e242b8f7",
+  "contract_sha256": "02349897ec12af5e712b40efdb05422e7369b46dc53001ec42017f3c75db9d87",
   "source_ledger_sha256": "3df707cfa375c292d18d799160aaceab814011f6d4e88754b34096e7d0b6322f",
   "status": "PASS",
-  "stage": "FROZEN",
+  "stage": "WARD_CLOSED",
   "totals": {
-    "checks": 51,
+    "checks": 54,
     "failed": 0
   },
   "failures": [],
   "sections": {
     "contract": {
-      "status_frozen": true,
+      "scope_states_present": true,
       "spin_frame_locked": true,
       "dred_split_locked": true,
       "physical_euler_present": true,
       "sixteen_tree_table_present": true,
       "source_chronology_present": true,
       "source_rejected_conditional_split_present": true,
-      "one_loop_blockers_present": true,
+      "scope_split_present": true,
       "multiplier_block_inverse_present": true,
       "nonlocality_obstruction_derived": true,
       "measure_vertex_split_present": true,
       "reference_flat_matter_kernels_present": true,
-      "vector_is_only_pseudoinverse": true,
+      "step5a_vector_wick_kernel_admitted": true,
+      "step5a_reference_flat_measure": true,
       "seed_project_dalgebra_audit_present": true,
+      "seed_metric_mismatch_and_coefficient_present": true,
       "resolved_gaussian_blocker_absent": true,
       "forbidden_approximation_tokens_absent": true
     },
@@ -56,7 +58,8 @@
       "sixteen_unique_ids": true,
       "reversed_orders_distinct": true,
       "four_exact_zero_tree_rows": true,
-      "all_one_loop_states_honest": true
+      "only_WW_seed_is_evaluated": true,
+      "remaining_channels_are_deferred": true
     },
     "sources": {
       "seven_visible_messages": true,
@@ -95,17 +98,7 @@
           ]
         }
       ],
-      "one_loop_blockers": [
-        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
-        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
-        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
-        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
-        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
-        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
-        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
-        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
-        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
-      ]
+      "one_loop_seed_state": "DERIVED_WW_SEED_G2_OVER_64PI2"
     },
     {
       "id": "W__Phi",
@@ -128,17 +121,7 @@
           ]
         }
       ],
-      "one_loop_blockers": [
-        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
-        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
-        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
-        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
-        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
-        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
-        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
-        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
-        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
-      ]
+      "one_loop_seed_state": "DEFERRED_NOT_GENERATED_BEFORE_SEED_ACCEPTANCE"
     },
     {
       "id": "W__TildePhi",
@@ -154,17 +137,7 @@
           ]
         }
       ],
-      "one_loop_blockers": [
-        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
-        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
-        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
-        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
-        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
-        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
-        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
-        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
-        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
-      ]
+      "one_loop_seed_state": "DEFERRED_NOT_GENERATED_BEFORE_SEED_ACCEPTANCE"
     },
     {
       "id": "W__TildeW",
@@ -180,17 +153,7 @@
           ]
         }
       ],
-      "one_loop_blockers": [
-        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
-        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
-        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
-        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
-        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
-        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
-        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
-        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
-        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
-      ]
+      "one_loop_seed_state": "DEFERRED_NOT_GENERATED_BEFORE_SEED_ACCEPTANCE"
     },
     {
       "id": "Phi__W",
@@ -213,17 +176,7 @@
           ]
         }
       ],
-      "one_loop_blockers": [
-        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
-        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
-        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
-        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
-        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
-        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
-        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
-        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
-        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
-      ]
+      "one_loop_seed_state": "DEFERRED_NOT_GENERATED_BEFORE_SEED_ACCEPTANCE"
     },
     {
       "id": "Phi__Phi",
@@ -246,17 +199,7 @@
           ]
         }
       ],
-      "one_loop_blockers": [
-        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
-        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
-        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
-        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
-        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
-        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
-        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
-        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
-        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
-      ]
+      "one_loop_seed_state": "DEFERRED_NOT_GENERATED_BEFORE_SEED_ACCEPTANCE"
     },
     {
       "id": "Phi__TildePhi",
@@ -272,17 +215,7 @@
           ]
         }
       ],
-      "one_loop_blockers": [
-        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
-        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
-        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
-        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
-        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
-        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
-        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
-        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
-        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
-      ]
+      "one_loop_seed_state": "DEFERRED_NOT_GENERATED_BEFORE_SEED_ACCEPTANCE"
     },
     {
       "id": "Phi__TildeW",
@@ -298,17 +231,7 @@
           ]
         }
       ],
-      "one_loop_blockers": [
-        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
-        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
-        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
-        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
-        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
-        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
-        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
-        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
-        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
-      ]
+      "one_loop_seed_state": "DEFERRED_NOT_GENERATED_BEFORE_SEED_ACCEPTANCE"
     },
     {
       "id": "TildePhi__W",
@@ -324,17 +247,7 @@
           ]
         }
       ],
-      "one_loop_blockers": [
-        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
-        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
-        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
-        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
-        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
-        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
-        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
-        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
-        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
-      ]
+      "one_loop_seed_state": "DEFERRED_NOT_GENERATED_BEFORE_SEED_ACCEPTANCE"
     },
     {
       "id": "TildePhi__Phi",
@@ -350,17 +263,7 @@
           ]
         }
       ],
-      "one_loop_blockers": [
-        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
-        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
-        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
-        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
-        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
-        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
-        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
-        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
-        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
-      ]
+      "one_loop_seed_state": "DEFERRED_NOT_GENERATED_BEFORE_SEED_ACCEPTANCE"
     },
     {
       "id": "TildePhi__TildePhi",
@@ -368,17 +271,7 @@
       "right": "TildePhi",
       "left_parity": 0,
       "tree_terms": [],
-      "one_loop_blockers": [
-        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
-        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
-        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
-        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
-        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
-        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
-        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
-        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
-        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
-      ]
+      "one_loop_seed_state": "DEFERRED_NOT_GENERATED_BEFORE_SEED_ACCEPTANCE"
     },
     {
       "id": "TildePhi__TildeW",
@@ -386,17 +279,7 @@
       "right": "TildeW",
       "left_parity": 0,
       "tree_terms": [],
-      "one_loop_blockers": [
-        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
-        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
-        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
-        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
-        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
-        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
-        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
-        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
-        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
-      ]
+      "one_loop_seed_state": "DEFERRED_NOT_GENERATED_BEFORE_SEED_ACCEPTANCE"
     },
     {
       "id": "TildeW__W",
@@ -412,17 +295,7 @@
           ]
         }
       ],
-      "one_loop_blockers": [
-        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
-        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
-        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
-        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
-        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
-        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
-        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
-        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
-        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
-      ]
+      "one_loop_seed_state": "DEFERRED_NOT_GENERATED_BEFORE_SEED_ACCEPTANCE"
     },
     {
       "id": "TildeW__Phi",
@@ -438,17 +311,7 @@
           ]
         }
       ],
-      "one_loop_blockers": [
-        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
-        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
-        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
-        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
-        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
-        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
-        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
-        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
-        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
-      ]
+      "one_loop_seed_state": "DEFERRED_NOT_GENERATED_BEFORE_SEED_ACCEPTANCE"
     },
     {
       "id": "TildeW__TildePhi",
@@ -456,17 +319,7 @@
       "right": "TildePhi",
       "left_parity": 1,
       "tree_terms": [],
-      "one_loop_blockers": [
-        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
-        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
-        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
-        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
-        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
-        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
-        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
-        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
-        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
-      ]
+      "one_loop_seed_state": "DEFERRED_NOT_GENERATED_BEFORE_SEED_ACCEPTANCE"
     },
     {
       "id": "TildeW__TildeW",
@@ -474,17 +327,7 @@
       "right": "TildeW",
       "left_parity": 1,
       "tree_terms": [],
-      "one_loop_blockers": [
-        "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
-        "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
-        "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
-        "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
-        "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
-        "BLOCKED_UNINSTANTIATED_E_XI_CORE",
-        "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
-        "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE",
-        "BLOCKED_CHANNEL_GRAPH_INSTANTIATION_AND_DALGEBRA"
-      ]
+      "one_loop_seed_state": "DEFERRED_NOT_GENERATED_BEFORE_SEED_ACCEPTANCE"
     }
   ]
 }

@@ -138,8 +138,11 @@ class Step5GraphCatalogueTest(unittest.TestCase):
         )
         self.assertEqual(product["reverse_binding_id_rule"], "reverse_binding__{channel_id}")
         self.assertEqual(product["classification"], "VALENCE_ONLY_NOT_GRAPH")
-        self.assertEqual(product["status"], "BLOCKED_VALENCE_ONLY_NOT_GRAPH")
-        self.assertEqual(product["blocker_contract_ref"], "blocker_contract.loop_blockers")
+        self.assertEqual(product["status"], "DEFERRED_VALENCE_ONLY_NOT_GRAPH")
+        self.assertEqual(
+            product["blocker_contract_ref"],
+            "historical_pre_split_blockers.loop_blockers",
+        )
         self.assertNotIn("valence_only_requests", catalogue)
         self.assertTrue(
             all(key not in product for key in ("graph_ir", "maps", "amplitude_skeleton"))
@@ -147,10 +150,10 @@ class Step5GraphCatalogueTest(unittest.TestCase):
         self.assertEqual(len({request["request_id"] for request in requests}), 10432)
         self.assertIn(
             "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
-            catalogue["blocker_contract"]["loop_blockers"],
+            catalogue["historical_pre_split_blockers"]["loop_blockers"],
         )
         self.assertEqual(
-            catalogue["blocker_contract"]["loop_blockers"],
+            catalogue["historical_pre_split_blockers"]["loop_blockers"],
             [
                 "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
                 "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
@@ -282,7 +285,7 @@ class Step5GraphCatalogueTest(unittest.TestCase):
             )
             self.assertEqual(insertion_vertex["momentum_injection"], "-p1-p2")
 
-    def test_fp_typed_zeros_and_euler_core_blocker_survive_catalogue(self) -> None:
+    def test_fp_typed_zeros_survive_and_euler_core_points_to_resolved_artifact(self) -> None:
         catalogue = json.loads(CATALOGUE_PATH.read_text(encoding="utf-8"))
         self.assertEqual(catalogue["counts"]["action_monomials"], 27)
         self.assertEqual(catalogue["counts"]["typed_zero_action_monomials"], 2)
@@ -292,7 +295,8 @@ class Step5GraphCatalogueTest(unittest.TestCase):
         )
         self.assertTrue(
             all(
-                item["core_status"] == "BLOCKED_UNINSTANTIATED_E_XI_CORE"
+                item["core_status"]
+                == "RESOLVED_IN_GENERATED_STEP5_PROJECT_COMPOSITES_JSON"
                 for item in catalogue["insertion_chart_monomials"]
             )
         )
@@ -300,7 +304,7 @@ class Step5GraphCatalogueTest(unittest.TestCase):
     def test_audit_and_human_map_are_exact(self) -> None:
         audit = json.loads(AUDIT_PATH.read_text(encoding="utf-8"))
         self.assertEqual(audit["status"], "PASS")
-        self.assertEqual(audit["totals"], {"checks": 22, "failed": 0})
+        self.assertEqual(audit["totals"], {"checks": 23, "failed": 0})
         self.assertEqual(
             audit["topology_distribution"],
             {"TADPOLE": 16, "BUBBLE": 432, "TRIANGLE": 9984},
@@ -308,8 +312,8 @@ class Step5GraphCatalogueTest(unittest.TestCase):
         markdown = MAPS_PATH.read_text(encoding="utf-8")
         self.assertEqual(markdown.count("## Tree "), 16)
         self.assertEqual(markdown.count("### `generic_blocked_triangle_fixture"), 8)
-        self.assertNotIn("WW seed", markdown)
-        self.assertIn("BLOCKED_GAUGE_KERNEL_CANDIDATE_CATALOGUE", markdown)
+        self.assertIn("Physical WW seed", markdown)
+        self.assertIn("LEGACY_PRE_SPLIT_VALENCE_SCAFFOLD_NOT_CURRENT_GATE", markdown)
         for relative in (
             "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md",
             "scripts/step5_graph_ir.py",

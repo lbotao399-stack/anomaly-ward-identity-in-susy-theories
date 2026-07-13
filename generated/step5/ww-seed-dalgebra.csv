@@ -1,0 +1,17 @@
+trace_id,orientation,D_minus_placement,barD_edge,D_edge,sign,numerator,classification
+DA-D-001,DIRECT,LEFT_LETTER,e0,e1,1,(r0)_+^dot_beta * (i*p)_a_dot_beta * (r1)^a_dot_alpha,ORDINARY_UV_POLE
+DA-D-002,DIRECT,LEFT_LETTER,e0,e2,1,(r0)_+^dot_beta * (i*p)_a_dot_beta * (r2)^a_dot_alpha,ORDINARY_UV_POLE
+DA-D-003,DIRECT,LEFT_LETTER,e1,e1,1,(r1)_+^dot_beta * (i*p)_a_dot_beta * (r1)^a_dot_alpha,ORDINARY_UV_POLE
+DA-D-004,DIRECT,LEFT_LETTER,e1,e2,1,(r1)_+^dot_beta * (i*p)_a_dot_beta * (r2)^a_dot_alpha,ORDINARY_UV_POLE
+DA-D-005,DIRECT,RIGHT_LETTER,e0,e1,1,(r0)_+^dot_beta * (i*p)_a_dot_beta * (r1)^a_dot_alpha,ORDINARY_UV_POLE
+DA-D-006,DIRECT,RIGHT_LETTER,e0,e2,1,(r0)_+^dot_beta * (i*p)_a_dot_beta * (r2)^a_dot_alpha,ORDINARY_UV_POLE
+DA-D-007,DIRECT,RIGHT_LETTER,e1,e1,1,(r1)_+^dot_beta * (i*p)_a_dot_beta * (r1)^a_dot_alpha,ORDINARY_UV_POLE
+DA-D-008,DIRECT,RIGHT_LETTER,e1,e2,1,(r1)_+^dot_beta * (i*p)_a_dot_beta * (r2)^a_dot_alpha,ORDINARY_UV_POLE
+DA-R-001,REFLECTED,LEFT_LETTER,e0,e1,1,(r0)_+^dot_beta * (i*p)_a_dot_beta * (r1)^a_dot_alpha,ORDINARY_UV_POLE
+DA-R-002,REFLECTED,LEFT_LETTER,e0,e2,1,(r0)_+^dot_beta * (i*p)_a_dot_beta * (r2)^a_dot_alpha,ORDINARY_UV_POLE
+DA-R-003,REFLECTED,LEFT_LETTER,e1,e1,1,(r1)_+^dot_beta * (i*p)_a_dot_beta * (r1)^a_dot_alpha,ORDINARY_UV_POLE
+DA-R-004,REFLECTED,LEFT_LETTER,e1,e2,1,(r1)_+^dot_beta * (i*p)_a_dot_beta * (r2)^a_dot_alpha,ORDINARY_UV_POLE
+DA-R-005,REFLECTED,RIGHT_LETTER,e0,e1,1,(r0)_+^dot_beta * (i*p)_a_dot_beta * (r1)^a_dot_alpha,ORDINARY_UV_POLE
+DA-R-006,REFLECTED,RIGHT_LETTER,e0,e2,1,(r0)_+^dot_beta * (i*p)_a_dot_beta * (r2)^a_dot_alpha,ORDINARY_UV_POLE
+DA-R-007,REFLECTED,RIGHT_LETTER,e1,e1,1,(r1)_+^dot_beta * (i*p)_a_dot_beta * (r1)^a_dot_alpha,ORDINARY_UV_POLE
+DA-R-008,REFLECTED,RIGHT_LETTER,e1,e2,1,(r1)_+^dot_beta * (i*p)_a_dot_beta * (r2)^a_dot_alpha,ORDINARY_UV_POLE

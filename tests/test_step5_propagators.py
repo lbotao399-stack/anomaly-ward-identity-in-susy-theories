@@ -47,13 +47,13 @@ class Step5PropagatorTest(unittest.TestCase):
             self.assertEqual(len(operators["identity"]), 16)
             self.assertEqual(len(operators["identity"][0]), 16)
 
-    def test_vector_physical_hessian_and_rejected_slice_regression(self) -> None:
+    def test_vector_physical_hessian_and_step5a_fixed_gauge_inverse(self) -> None:
         for momentum in ((0, 0, 0, 1), (1, 2, 3, 4), (2, -1, 0, 3)):
             checks = self.verifier.vector_checks(momentum)
             self.assertTrue(checks["physical_5_43"], momentum)
-            self.assertTrue(checks["rejected_target_5_45"], momentum)
-            self.assertTrue(checks["rejected_target_inverse_5_46_left"], momentum)
-            self.assertTrue(checks["rejected_target_inverse_5_46_right"], momentum)
+            self.assertTrue(checks["step5a_total_5_45"], momentum)
+            self.assertTrue(checks["step5a_inverse_5_46_left"], momentum)
+            self.assertTrue(checks["step5a_inverse_5_46_right"], momentum)
 
     def test_constrained_chiral_hessian_and_lowest_components(self) -> None:
         for momentum in ((0, 0, 0, 1), (1, 2, 3, 4), (2, -1, 0, 3)):
@@ -88,17 +88,18 @@ class Step5PropagatorTest(unittest.TestCase):
         )
         self.assertEqual(fermion_kernel, expected)
 
-    def test_source_order_and_typed_blockers_are_not_silently_dropped(self) -> None:
+    def test_source_order_and_step5c_obligations_are_scoped(self) -> None:
         audit = self.verifier.run_verification()
         self.assertEqual(
             audit["admission_status"],
-            "PHYSICAL_HESSIANS_VERIFIED_VECTOR_GREEN_BLOCKED_REJECTED_SLICE_REGRESSION_ONLY",
+            "PHYSICAL_HESSIANS_AND_STEP5A_VECTOR_GREEN_VERIFIED",
         )
         self.assertIn(
             "J_Phi then tildeJ_Phi",
             audit["derived_rules"]["source_order"],
         )
-        blocker_ids = {entry["id"] for entry in audit["typed_blockers"]}
+        self.assertEqual(audit["typed_blockers"], [])
+        blocker_ids = {entry["id"] for entry in audit["step5c_obligations"]}
         self.assertEqual(
             blocker_ids,
             {

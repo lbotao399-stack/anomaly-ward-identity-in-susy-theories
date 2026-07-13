@@ -1,7 +1,7 @@
 {
-  "admission_status": "REFERENCE_FLAT_CHIRAL_GAUSSIAN_VERIFIED_VECTOR_PSEUDOINVERSE_ONLY",
+  "admission_status": "REFERENCE_FLAT_CHIRAL_AND_STEP5A_VECTOR_GAUSSIAN_VERIFIED",
   "algebraic_pseudoinverses": {
-    "not_a_wick_contraction": true,
+    "not_a_finite_cycle_reconstruction": true,
     "two_sided_projected_identity": "K_T G_T=G_T K_T=Pi_(1/2)",
     "vector_transverse": "G_T^{AB}=-2 g^2 kappa^{AB} Pi_(1/2)/p_(4)^2"
   },
@@ -101,7 +101,7 @@
     }
   ],
   "contract": "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md",
-  "contract_sha256": "7f1116253444cf09b240cfa4d6092436eb41f49146d387450d68f608e242b8f7",
+  "contract_sha256": "02349897ec12af5e712b40efdb05422e7369b46dc53001ec42017f3c75db9d87",
   "physical_cycle": {
     "bosonic_convergence": "For h>0, positive kappa, and p_(4)^2>0, scalar, transverse-A, F-cycle, and d-cycle quadratic real parts are positive.",
     "fermion_coefficient_order": "psi_+ < psi_- < tildepsi_dot+ < tildepsi_dot- for every lexicographically ordered (p,r,A) block",
@@ -120,7 +120,8 @@
     "auxiliary": "<F^A(p) tildeF^B(-p)>=-hbar g^2 kappa^{AB}",
     "fermion": "<psi_a^A(p) tildepsi_dotb^B(-p)>=-i hbar g^2 kappa^{AB} p_(a dotb)/p_(4)^2",
     "fermion_reverse_order": "<tildepsi_dotb^B(-p) psi_a^A(p)>=+i hbar g^2 kappa^{AB} p_(a dotb)/p_(4)^2",
-    "scalar": "<phi^A(p) tildephi^B(-p)>=hbar g^2 kappa^{AB}/p_(4)^2"
+    "scalar": "<phi^A(p) tildephi^B(-p)>=hbar g^2 kappa^{AB}/p_(4)^2",
+    "vector": "<V^A(p,theta) V^B(-p,theta')>=-2 hbar g^2 kappa^{AB} delta4(theta-theta')/p_(4)^2"
   },
   "schema": 1,
   "source_boundary": {
@@ -137,28 +138,29 @@
     "reference_measure": "D' qhat with varpi(0) divided out"
   },
   "status": "PASS",
+  "step5c_obligations": [
+    {
+      "id": "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
+      "reason": "The field-dependent density is isolated as S_measure=-hbar log(varpi(q)/varpi(0)); its coefficient vertices are not instantiated.",
+      "scope": "equality of reference-flat Step-5A Gaussian rules with the full regulated measure"
+    },
+    {
+      "id": "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
+      "reason": "The complete finite Gaussian for (A_T,lambda,tildelambda,d), its ordered sources, and coefficientwise reconstruction to V_T remain Step 5C.",
+      "scope": "finite coefficient-space reconstruction of the Step-5A vector Wick contraction"
+    },
+    {
+      "id": "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
+      "reason": "The fixed-gauge inverse is admitted directly; its global local multiplier realization remains Step 5C.",
+      "scope": "global local-nonminimal realization of the admitted Step-5A full unconstrained V Wick contraction"
+    }
+  ],
   "task": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
   "totals": {
     "checks": 23,
     "failed": 0
   },
-  "typed_blockers": [
-    {
-      "id": "BLOCKED_GAUGE_FIXED_DENSITY_BEREZINIAN",
-      "reason": "The field-dependent density is isolated as S_measure=-hbar log(varpi(q)/varpi(0)); its coefficient vertices are not instantiated.",
-      "scope": "promotion of reference-flat Gaussian rules to the full regulated measure"
-    },
-    {
-      "id": "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
-      "reason": "The algebraic Pi_(1/2) pseudoinverse has not been accompanied by the complete finite Gaussian for (A_T,lambda,tildelambda,d), its ordered sources, and coefficientwise reconstruction to V_T.",
-      "scope": "transverse V Wick contraction"
-    },
-    {
-      "id": "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
-      "reason": "The accepted physical Hessian vanishes on Im Pi_0.  A local non-minimal multiplier kernel and its cycle are not fixed by the physical contour (3A.102)-(3A.103).",
-      "scope": "Pi_0 longitudinal and full unconstrained V Wick contraction"
-    }
-  ],
+  "typed_blockers": [],
   "untouched_sectors": {
     "FP_cycle": "NOT_READ_OR_MODIFIED",
     "NK_cycle": "NOT_READ_OR_MODIFIED"

@@ -8,9 +8,10 @@
     "fixture_ir_amplitude_edge_equivalence": true,
     "fixture_ir_render_id_equivalence": true,
     "fixture_momentum_routing_exact": true,
-    "four_chart_insertions_core_blocked": true,
+    "four_chart_insertions_core_resolved_elsewhere": true,
+    "generic_fixtures_do_not_impersonate_physical_ww_seed": true,
     "no_numeric_anomaly_coefficient": true,
-    "physical_ww_seed_not_claimed": true,
+    "physical_ww_seed_linked": true,
     "reverse_request_census_closed": true,
     "reverse_request_map_is_involutive": true,
     "six_contact_children": true,
@@ -37,9 +38,9 @@
   "failures": [],
   "schema": 1,
   "sha256": {
-    "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md": "7f1116253444cf09b240cfa4d6092436eb41f49146d387450d68f608e242b8f7",
-    "generated/step5/graph-catalogue.json": "e7264f950437c278e3372794c0635cb6f569fa6778c969a9c03411393395cd84",
-    "generated/step5/graph-maps.md": "f8048760f241e4d3e636db1b30d1edfd1eb5369fb17ed10c6ca0e44c21b0c46a",
+    "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md": "02349897ec12af5e712b40efdb05422e7369b46dc53001ec42017f3c75db9d87",
+    "generated/step5/graph-catalogue.json": "8a019a04b8bea4772ac568f87f72be08e13ac046c3296ed6e21a4374c3db7477",
+    "generated/step5/graph-maps.md": "fc8616b99b1fb0ef5db0ff16fda63c614d5c77d9c5e8ae5b3e6f7b84c124bf73",
     "scripts/step5_graph_ir.py": "2e5cf55ad5e486084ad4e3a0435031e29b6d22480586cbeef25e2a7b40954044",
     "scripts/step5_vertex_grammar.py": "b91f0e9633f13ebb238a18f09b0265a0c8b1bb72d964307d3fc4b1d04fd39dd8"
   },
@@ -51,7 +52,7 @@
     "TRIANGLE": 9984
   },
   "totals": {
-    "checks": 22,
+    "checks": 23,
     "failed": 0
   }
 }

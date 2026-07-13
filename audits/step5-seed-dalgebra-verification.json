@@ -1,6 +1,6 @@
 {
-  "admission_status": "PROJECT_SEED_NORMALIZATION_AUDITED_NO_LOOP_AMPLITUDE_ADMITTED",
-  "anomaly_coefficient_computed": false,
+  "admission_status": "PROJECT_SEED_ROW_NORMALIZATION_VERIFIED_AND_USED_BY_COMPLETE_WW_TRACE",
+  "anomaly_coefficient_computed_here": false,
   "arithmetic": "EXACT_Q_I_NO_FLOATING_POINT",
   "checks": [
     {
@@ -164,22 +164,23 @@
       "passed": true
     },
     {
-      "id": "rejected_slice_diagnostic.rejected_slice_magnitude_is_one_sixteenth",
+      "id": "single_row_coefficient.single_row_magnitude_is_one_sixteenth",
       "passed": true
     },
     {
-      "id": "rejected_slice_diagnostic.rejected_slice_magnitude_is_not_one_half",
+      "id": "single_row_coefficient.single_row_magnitude_is_not_complete_chain_one_half",
       "passed": true
     }
   ],
-  "contract_sha256": "7f1116253444cf09b240cfa4d6092436eb41f49146d387450d68f608e242b8f7",
+  "completed_by": "generated/step5/ww-seed-graph-ir.json",
+  "contract_sha256": "02349897ec12af5e712b40efdb05422e7369b46dc53001ec42017f3c75db9d87",
   "derived": {
     "D_minus_K_plus": "-(1/16) D^2 barD^2 D_+",
     "K_plus": "-(1/8) D_+ barD^2 D_+",
     "antichiral_raw_vertex_momentum": "-(2k+q)",
     "chiral_raw_vertex_momentum": "2k+p+2q",
     "fixed_placement_D_factor": "-1/2",
-    "rejected_slice_coefficient_magnitude": "g^2/16"
+    "single_row_coefficient": "+g^2/16"
   },
   "rejected_source_claims": [
     "M3_DALGEBRA_CHAIN",
@@ -193,9 +194,5 @@
     "checks": 42,
     "failed": 0
   },
-  "typed_blockers": [
-    "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
-    "BLOCKED_COMPOSITE_DESCENDANT_INSERTION_UNINSTANTIATED",
-    "BLOCKED_EDGE_TAGGED_PROJECTOR_DALGEBRA_TRACE"
-  ]
+  "typed_blockers": []
 }

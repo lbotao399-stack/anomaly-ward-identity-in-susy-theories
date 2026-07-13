@@ -1,0 +1,4242 @@
+{
+  "admission_status": "STEP5A_WICK_KERNEL_ADMITTED",
+  "arithmetic": "EXACT_Q_I_NO_FLOATING_POINT",
+  "checks": [
+    {
+      "id": "p_0_0_0_1.grassmann_dimension_is_16",
+      "passed": true
+    },
+    {
+      "id": "p_0_0_0_1.projector_sum_is_identity",
+      "passed": true
+    },
+    {
+      "id": "p_0_0_0_1.K_phys_equals_minus_h_over_2_p2_Pi_half",
+      "passed": true
+    },
+    {
+      "id": "p_0_0_0_1.K_gf_equals_minus_h_over_2_p2_Pi_zero",
+      "passed": true
+    },
+    {
+      "id": "p_0_0_0_1.K_tot_equals_minus_h_over_2_p2_identity",
+      "passed": true
+    },
+    {
+      "id": "p_0_0_0_1.h_equals_g_inverse_squared",
+      "passed": true
+    },
+    {
+      "id": "p_0_0_0_1.K_tot_G_left_is_identity_16",
+      "passed": true
+    },
+    {
+      "id": "p_0_0_0_1.G_K_tot_right_is_identity_16",
+      "passed": true
+    },
+    {
+      "id": "p_0_0_0_1.kappa_left_inverse",
+      "passed": true
+    },
+    {
+      "id": "p_0_0_0_1.kappa_right_inverse",
+      "passed": true
+    },
+    {
+      "id": "p_0_0_0_1.color_Grassmann_left_inverse_32",
+      "passed": true
+    },
+    {
+      "id": "p_0_0_0_1.color_Grassmann_right_inverse_32",
+      "passed": true
+    },
+    {
+      "id": "p_1_2_3_4.grassmann_dimension_is_16",
+      "passed": true
+    },
+    {
+      "id": "p_1_2_3_4.projector_sum_is_identity",
+      "passed": true
+    },
+    {
+      "id": "p_1_2_3_4.K_phys_equals_minus_h_over_2_p2_Pi_half",
+      "passed": true
+    },
+    {
+      "id": "p_1_2_3_4.K_gf_equals_minus_h_over_2_p2_Pi_zero",
+      "passed": true
+    },
+    {
+      "id": "p_1_2_3_4.K_tot_equals_minus_h_over_2_p2_identity",
+      "passed": true
+    },
+    {
+      "id": "p_1_2_3_4.h_equals_g_inverse_squared",
+      "passed": true
+    },
+    {
+      "id": "p_1_2_3_4.K_tot_G_left_is_identity_16",
+      "passed": true
+    },
+    {
+      "id": "p_1_2_3_4.G_K_tot_right_is_identity_16",
+      "passed": true
+    },
+    {
+      "id": "p_1_2_3_4.kappa_left_inverse",
+      "passed": true
+    },
+    {
+      "id": "p_1_2_3_4.kappa_right_inverse",
+      "passed": true
+    },
+    {
+      "id": "p_1_2_3_4.color_Grassmann_left_inverse_32",
+      "passed": true
+    },
+    {
+      "id": "p_1_2_3_4.color_Grassmann_right_inverse_32",
+      "passed": true
+    },
+    {
+      "id": "p_2_m1_0_3.grassmann_dimension_is_16",
+      "passed": true
+    },
+    {
+      "id": "p_2_m1_0_3.projector_sum_is_identity",
+      "passed": true
+    },
+    {
+      "id": "p_2_m1_0_3.K_phys_equals_minus_h_over_2_p2_Pi_half",
+      "passed": true
+    },
+    {
+      "id": "p_2_m1_0_3.K_gf_equals_minus_h_over_2_p2_Pi_zero",
+      "passed": true
+    },
+    {
+      "id": "p_2_m1_0_3.K_tot_equals_minus_h_over_2_p2_identity",
+      "passed": true
+    },
+    {
+      "id": "p_2_m1_0_3.h_equals_g_inverse_squared",
+      "passed": true
+    },
+    {
+      "id": "p_2_m1_0_3.K_tot_G_left_is_identity_16",
+      "passed": true
+    },
+    {
+      "id": "p_2_m1_0_3.G_K_tot_right_is_identity_16",
+      "passed": true
+    },
+    {
+      "id": "p_2_m1_0_3.kappa_left_inverse",
+      "passed": true
+    },
+    {
+      "id": "p_2_m1_0_3.kappa_right_inverse",
+      "passed": true
+    },
+    {
+      "id": "p_2_m1_0_3.color_Grassmann_left_inverse_32",
+      "passed": true
+    },
+    {
+      "id": "p_2_m1_0_3.color_Grassmann_right_inverse_32",
+      "passed": true
+    }
+  ],
+  "derived_equations": {
+    "G_V": "-2*g^2*kappa^AB*1_16/p_(4)^2",
+    "K_V^gf": "-(h/2)*kappa_AB*p_(4)^2*Pi_0",
+    "K_V^phys": "-(h/2)*kappa_AB*p_(4)^2*Pi_(1/2)",
+    "K_V^tot": "-(h/2)*kappa_AB*p_(4)^2*1_16",
+    "left_product": "K_(AB)^tot*G^(BC)=delta_A^C*1_16",
+    "right_product": "G^(AB)*K_(BC)^tot=delta^A_C*1_16"
+  },
+  "matrix_witnesses": [
+    {
+      "basis_order": "1,theta+,theta-,theta+theta-,...,theta+theta-bartheta_dot+bartheta_dot- (bit masks 0..15)",
+      "momentum": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "p_(4)^2": "1",
+      "sparse_exact_matrices": {
+        "G": [
+          {
+            "column": 0,
+            "im": "0",
+            "re": "-4/3",
+            "row": 0
+          },
+          {
+            "column": 1,
+            "im": "0",
+            "re": "-4/3",
+            "row": 1
+          },
+          {
+            "column": 2,
+            "im": "0",
+            "re": "-4/3",
+            "row": 2
+          },
+          {
+            "column": 3,
+            "im": "0",
+            "re": "-4/3",
+            "row": 3
+          },
+          {
+            "column": 4,
+            "im": "0",
+            "re": "-4/3",
+            "row": 4
+          },
+          {
+            "column": 5,
+            "im": "0",
+            "re": "-4/3",
+            "row": 5
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "-4/3",
+            "row": 6
+          },
+          {
+            "column": 7,
+            "im": "0",
+            "re": "-4/3",
+            "row": 7
+          },
+          {
+            "column": 8,
+            "im": "0",
+            "re": "-4/3",
+            "row": 8
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "-4/3",
+            "row": 9
+          },
+          {
+            "column": 10,
+            "im": "0",
+            "re": "-4/3",
+            "row": 10
+          },
+          {
+            "column": 11,
+            "im": "0",
+            "re": "-4/3",
+            "row": 11
+          },
+          {
+            "column": 12,
+            "im": "0",
+            "re": "-4/3",
+            "row": 12
+          },
+          {
+            "column": 13,
+            "im": "0",
+            "re": "-4/3",
+            "row": 13
+          },
+          {
+            "column": 14,
+            "im": "0",
+            "re": "-4/3",
+            "row": 14
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "-4/3",
+            "row": 15
+          }
+        ],
+        "G_K": [
+          {
+            "column": 0,
+            "im": "0",
+            "re": "1",
+            "row": 0
+          },
+          {
+            "column": 1,
+            "im": "0",
+            "re": "1",
+            "row": 1
+          },
+          {
+            "column": 2,
+            "im": "0",
+            "re": "1",
+            "row": 2
+          },
+          {
+            "column": 3,
+            "im": "0",
+            "re": "1",
+            "row": 3
+          },
+          {
+            "column": 4,
+            "im": "0",
+            "re": "1",
+            "row": 4
+          },
+          {
+            "column": 5,
+            "im": "0",
+            "re": "1",
+            "row": 5
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "1",
+            "row": 6
+          },
+          {
+            "column": 7,
+            "im": "0",
+            "re": "1",
+            "row": 7
+          },
+          {
+            "column": 8,
+            "im": "0",
+            "re": "1",
+            "row": 8
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "1",
+            "row": 9
+          },
+          {
+            "column": 10,
+            "im": "0",
+            "re": "1",
+            "row": 10
+          },
+          {
+            "column": 11,
+            "im": "0",
+            "re": "1",
+            "row": 11
+          },
+          {
+            "column": 12,
+            "im": "0",
+            "re": "1",
+            "row": 12
+          },
+          {
+            "column": 13,
+            "im": "0",
+            "re": "1",
+            "row": 13
+          },
+          {
+            "column": 14,
+            "im": "0",
+            "re": "1",
+            "row": 14
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "1",
+            "row": 15
+          }
+        ],
+        "K_G": [
+          {
+            "column": 0,
+            "im": "0",
+            "re": "1",
+            "row": 0
+          },
+          {
+            "column": 1,
+            "im": "0",
+            "re": "1",
+            "row": 1
+          },
+          {
+            "column": 2,
+            "im": "0",
+            "re": "1",
+            "row": 2
+          },
+          {
+            "column": 3,
+            "im": "0",
+            "re": "1",
+            "row": 3
+          },
+          {
+            "column": 4,
+            "im": "0",
+            "re": "1",
+            "row": 4
+          },
+          {
+            "column": 5,
+            "im": "0",
+            "re": "1",
+            "row": 5
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "1",
+            "row": 6
+          },
+          {
+            "column": 7,
+            "im": "0",
+            "re": "1",
+            "row": 7
+          },
+          {
+            "column": 8,
+            "im": "0",
+            "re": "1",
+            "row": 8
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "1",
+            "row": 9
+          },
+          {
+            "column": 10,
+            "im": "0",
+            "re": "1",
+            "row": 10
+          },
+          {
+            "column": 11,
+            "im": "0",
+            "re": "1",
+            "row": 11
+          },
+          {
+            "column": 12,
+            "im": "0",
+            "re": "1",
+            "row": 12
+          },
+          {
+            "column": 13,
+            "im": "0",
+            "re": "1",
+            "row": 13
+          },
+          {
+            "column": 14,
+            "im": "0",
+            "re": "1",
+            "row": 14
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "1",
+            "row": 15
+          }
+        ],
+        "K_gf": [
+          {
+            "column": 0,
+            "im": "0",
+            "re": "-3/8",
+            "row": 0
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "-3/8",
+            "row": 0
+          },
+          {
+            "column": 1,
+            "im": "0",
+            "re": "-3/8",
+            "row": 1
+          },
+          {
+            "column": 7,
+            "im": "-3/8",
+            "re": "0",
+            "row": 1
+          },
+          {
+            "column": 2,
+            "im": "0",
+            "re": "-3/8",
+            "row": 2
+          },
+          {
+            "column": 11,
+            "im": "-3/8",
+            "re": "0",
+            "row": 2
+          },
+          {
+            "column": 3,
+            "im": "0",
+            "re": "-3/4",
+            "row": 3
+          },
+          {
+            "column": 4,
+            "im": "0",
+            "re": "-3/8",
+            "row": 4
+          },
+          {
+            "column": 13,
+            "im": "3/8",
+            "re": "0",
+            "row": 4
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "-3/8",
+            "row": 6
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "3/8",
+            "row": 6
+          },
+          {
+            "column": 1,
+            "im": "3/8",
+            "re": "0",
+            "row": 7
+          },
+          {
+            "column": 7,
+            "im": "0",
+            "re": "-3/8",
+            "row": 7
+          },
+          {
+            "column": 8,
+            "im": "0",
+            "re": "-3/8",
+            "row": 8
+          },
+          {
+            "column": 14,
+            "im": "3/8",
+            "re": "0",
+            "row": 8
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "3/8",
+            "row": 9
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "-3/8",
+            "row": 9
+          },
+          {
+            "column": 2,
+            "im": "3/8",
+            "re": "0",
+            "row": 11
+          },
+          {
+            "column": 11,
+            "im": "0",
+            "re": "-3/8",
+            "row": 11
+          },
+          {
+            "column": 12,
+            "im": "0",
+            "re": "-3/4",
+            "row": 12
+          },
+          {
+            "column": 4,
+            "im": "-3/8",
+            "re": "0",
+            "row": 13
+          },
+          {
+            "column": 13,
+            "im": "0",
+            "re": "-3/8",
+            "row": 13
+          },
+          {
+            "column": 8,
+            "im": "-3/8",
+            "re": "0",
+            "row": 14
+          },
+          {
+            "column": 14,
+            "im": "0",
+            "re": "-3/8",
+            "row": 14
+          },
+          {
+            "column": 0,
+            "im": "0",
+            "re": "-3/8",
+            "row": 15
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "-3/8",
+            "row": 15
+          }
+        ],
+        "K_phys": [
+          {
+            "column": 0,
+            "im": "0",
+            "re": "-3/8",
+            "row": 0
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "3/8",
+            "row": 0
+          },
+          {
+            "column": 1,
+            "im": "0",
+            "re": "-3/8",
+            "row": 1
+          },
+          {
+            "column": 7,
+            "im": "3/8",
+            "re": "0",
+            "row": 1
+          },
+          {
+            "column": 2,
+            "im": "0",
+            "re": "-3/8",
+            "row": 2
+          },
+          {
+            "column": 11,
+            "im": "3/8",
+            "re": "0",
+            "row": 2
+          },
+          {
+            "column": 4,
+            "im": "0",
+            "re": "-3/8",
+            "row": 4
+          },
+          {
+            "column": 13,
+            "im": "-3/8",
+            "re": "0",
+            "row": 4
+          },
+          {
+            "column": 5,
+            "im": "0",
+            "re": "-3/4",
+            "row": 5
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "-3/8",
+            "row": 6
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "-3/8",
+            "row": 6
+          },
+          {
+            "column": 1,
+            "im": "-3/8",
+            "re": "0",
+            "row": 7
+          },
+          {
+            "column": 7,
+            "im": "0",
+            "re": "-3/8",
+            "row": 7
+          },
+          {
+            "column": 8,
+            "im": "0",
+            "re": "-3/8",
+            "row": 8
+          },
+          {
+            "column": 14,
+            "im": "-3/8",
+            "re": "0",
+            "row": 8
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "-3/8",
+            "row": 9
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "-3/8",
+            "row": 9
+          },
+          {
+            "column": 10,
+            "im": "0",
+            "re": "-3/4",
+            "row": 10
+          },
+          {
+            "column": 2,
+            "im": "-3/8",
+            "re": "0",
+            "row": 11
+          },
+          {
+            "column": 11,
+            "im": "0",
+            "re": "-3/8",
+            "row": 11
+          },
+          {
+            "column": 4,
+            "im": "3/8",
+            "re": "0",
+            "row": 13
+          },
+          {
+            "column": 13,
+            "im": "0",
+            "re": "-3/8",
+            "row": 13
+          },
+          {
+            "column": 8,
+            "im": "3/8",
+            "re": "0",
+            "row": 14
+          },
+          {
+            "column": 14,
+            "im": "0",
+            "re": "-3/8",
+            "row": 14
+          },
+          {
+            "column": 0,
+            "im": "0",
+            "re": "3/8",
+            "row": 15
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "-3/8",
+            "row": 15
+          }
+        ],
+        "K_tot": [
+          {
+            "column": 0,
+            "im": "0",
+            "re": "-3/4",
+            "row": 0
+          },
+          {
+            "column": 1,
+            "im": "0",
+            "re": "-3/4",
+            "row": 1
+          },
+          {
+            "column": 2,
+            "im": "0",
+            "re": "-3/4",
+            "row": 2
+          },
+          {
+            "column": 3,
+            "im": "0",
+            "re": "-3/4",
+            "row": 3
+          },
+          {
+            "column": 4,
+            "im": "0",
+            "re": "-3/4",
+            "row": 4
+          },
+          {
+            "column": 5,
+            "im": "0",
+            "re": "-3/4",
+            "row": 5
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "-3/4",
+            "row": 6
+          },
+          {
+            "column": 7,
+            "im": "0",
+            "re": "-3/4",
+            "row": 7
+          },
+          {
+            "column": 8,
+            "im": "0",
+            "re": "-3/4",
+            "row": 8
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "-3/4",
+            "row": 9
+          },
+          {
+            "column": 10,
+            "im": "0",
+            "re": "-3/4",
+            "row": 10
+          },
+          {
+            "column": 11,
+            "im": "0",
+            "re": "-3/4",
+            "row": 11
+          },
+          {
+            "column": 12,
+            "im": "0",
+            "re": "-3/4",
+            "row": 12
+          },
+          {
+            "column": 13,
+            "im": "0",
+            "re": "-3/4",
+            "row": 13
+          },
+          {
+            "column": 14,
+            "im": "0",
+            "re": "-3/4",
+            "row": 14
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "-3/4",
+            "row": 15
+          }
+        ],
+        "Pi_half": [
+          {
+            "column": 0,
+            "im": "0",
+            "re": "1/2",
+            "row": 0
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "-1/2",
+            "row": 0
+          },
+          {
+            "column": 1,
+            "im": "0",
+            "re": "1/2",
+            "row": 1
+          },
+          {
+            "column": 7,
+            "im": "-1/2",
+            "re": "0",
+            "row": 1
+          },
+          {
+            "column": 2,
+            "im": "0",
+            "re": "1/2",
+            "row": 2
+          },
+          {
+            "column": 11,
+            "im": "-1/2",
+            "re": "0",
+            "row": 2
+          },
+          {
+            "column": 4,
+            "im": "0",
+            "re": "1/2",
+            "row": 4
+          },
+          {
+            "column": 13,
+            "im": "1/2",
+            "re": "0",
+            "row": 4
+          },
+          {
+            "column": 5,
+            "im": "0",
+            "re": "1",
+            "row": 5
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "1/2",
+            "row": 6
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "1/2",
+            "row": 6
+          },
+          {
+            "column": 1,
+            "im": "1/2",
+            "re": "0",
+            "row": 7
+          },
+          {
+            "column": 7,
+            "im": "0",
+            "re": "1/2",
+            "row": 7
+          },
+          {
+            "column": 8,
+            "im": "0",
+            "re": "1/2",
+            "row": 8
+          },
+          {
+            "column": 14,
+            "im": "1/2",
+            "re": "0",
+            "row": 8
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "1/2",
+            "row": 9
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "1/2",
+            "row": 9
+          },
+          {
+            "column": 10,
+            "im": "0",
+            "re": "1",
+            "row": 10
+          },
+          {
+            "column": 2,
+            "im": "1/2",
+            "re": "0",
+            "row": 11
+          },
+          {
+            "column": 11,
+            "im": "0",
+            "re": "1/2",
+            "row": 11
+          },
+          {
+            "column": 4,
+            "im": "-1/2",
+            "re": "0",
+            "row": 13
+          },
+          {
+            "column": 13,
+            "im": "0",
+            "re": "1/2",
+            "row": 13
+          },
+          {
+            "column": 8,
+            "im": "-1/2",
+            "re": "0",
+            "row": 14
+          },
+          {
+            "column": 14,
+            "im": "0",
+            "re": "1/2",
+            "row": 14
+          },
+          {
+            "column": 0,
+            "im": "0",
+            "re": "-1/2",
+            "row": 15
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "1/2",
+            "row": 15
+          }
+        ],
+        "Pi_zero": [
+          {
+            "column": 0,
+            "im": "0",
+            "re": "1/2",
+            "row": 0
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "1/2",
+            "row": 0
+          },
+          {
+            "column": 1,
+            "im": "0",
+            "re": "1/2",
+            "row": 1
+          },
+          {
+            "column": 7,
+            "im": "1/2",
+            "re": "0",
+            "row": 1
+          },
+          {
+            "column": 2,
+            "im": "0",
+            "re": "1/2",
+            "row": 2
+          },
+          {
+            "column": 11,
+            "im": "1/2",
+            "re": "0",
+            "row": 2
+          },
+          {
+            "column": 3,
+            "im": "0",
+            "re": "1",
+            "row": 3
+          },
+          {
+            "column": 4,
+            "im": "0",
+            "re": "1/2",
+            "row": 4
+          },
+          {
+            "column": 13,
+            "im": "-1/2",
+            "re": "0",
+            "row": 4
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "1/2",
+            "row": 6
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "-1/2",
+            "row": 6
+          },
+          {
+            "column": 1,
+            "im": "-1/2",
+            "re": "0",
+            "row": 7
+          },
+          {
+            "column": 7,
+            "im": "0",
+            "re": "1/2",
+            "row": 7
+          },
+          {
+            "column": 8,
+            "im": "0",
+            "re": "1/2",
+            "row": 8
+          },
+          {
+            "column": 14,
+            "im": "-1/2",
+            "re": "0",
+            "row": 8
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "-1/2",
+            "row": 9
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "1/2",
+            "row": 9
+          },
+          {
+            "column": 2,
+            "im": "-1/2",
+            "re": "0",
+            "row": 11
+          },
+          {
+            "column": 11,
+            "im": "0",
+            "re": "1/2",
+            "row": 11
+          },
+          {
+            "column": 12,
+            "im": "0",
+            "re": "1",
+            "row": 12
+          },
+          {
+            "column": 4,
+            "im": "1/2",
+            "re": "0",
+            "row": 13
+          },
+          {
+            "column": 13,
+            "im": "0",
+            "re": "1/2",
+            "row": 13
+          },
+          {
+            "column": 8,
+            "im": "1/2",
+            "re": "0",
+            "row": 14
+          },
+          {
+            "column": 14,
+            "im": "0",
+            "re": "1/2",
+            "row": 14
+          },
+          {
+            "column": 0,
+            "im": "0",
+            "re": "1/2",
+            "row": 15
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "1/2",
+            "row": 15
+          }
+        ]
+      }
+    },
+    {
+      "basis_order": "1,theta+,theta-,theta+theta-,...,theta+theta-bartheta_dot+bartheta_dot- (bit masks 0..15)",
+      "momentum": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "p_(4)^2": "30",
+      "sparse_exact_matrices": {
+        "G": [
+          {
+            "column": 0,
+            "im": "0",
+            "re": "-2/45",
+            "row": 0
+          },
+          {
+            "column": 1,
+            "im": "0",
+            "re": "-2/45",
+            "row": 1
+          },
+          {
+            "column": 2,
+            "im": "0",
+            "re": "-2/45",
+            "row": 2
+          },
+          {
+            "column": 3,
+            "im": "0",
+            "re": "-2/45",
+            "row": 3
+          },
+          {
+            "column": 4,
+            "im": "0",
+            "re": "-2/45",
+            "row": 4
+          },
+          {
+            "column": 5,
+            "im": "0",
+            "re": "-2/45",
+            "row": 5
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "-2/45",
+            "row": 6
+          },
+          {
+            "column": 7,
+            "im": "0",
+            "re": "-2/45",
+            "row": 7
+          },
+          {
+            "column": 8,
+            "im": "0",
+            "re": "-2/45",
+            "row": 8
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "-2/45",
+            "row": 9
+          },
+          {
+            "column": 10,
+            "im": "0",
+            "re": "-2/45",
+            "row": 10
+          },
+          {
+            "column": 11,
+            "im": "0",
+            "re": "-2/45",
+            "row": 11
+          },
+          {
+            "column": 12,
+            "im": "0",
+            "re": "-2/45",
+            "row": 12
+          },
+          {
+            "column": 13,
+            "im": "0",
+            "re": "-2/45",
+            "row": 13
+          },
+          {
+            "column": 14,
+            "im": "0",
+            "re": "-2/45",
+            "row": 14
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "-2/45",
+            "row": 15
+          }
+        ],
+        "G_K": [
+          {
+            "column": 0,
+            "im": "0",
+            "re": "1",
+            "row": 0
+          },
+          {
+            "column": 1,
+            "im": "0",
+            "re": "1",
+            "row": 1
+          },
+          {
+            "column": 2,
+            "im": "0",
+            "re": "1",
+            "row": 2
+          },
+          {
+            "column": 3,
+            "im": "0",
+            "re": "1",
+            "row": 3
+          },
+          {
+            "column": 4,
+            "im": "0",
+            "re": "1",
+            "row": 4
+          },
+          {
+            "column": 5,
+            "im": "0",
+            "re": "1",
+            "row": 5
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "1",
+            "row": 6
+          },
+          {
+            "column": 7,
+            "im": "0",
+            "re": "1",
+            "row": 7
+          },
+          {
+            "column": 8,
+            "im": "0",
+            "re": "1",
+            "row": 8
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "1",
+            "row": 9
+          },
+          {
+            "column": 10,
+            "im": "0",
+            "re": "1",
+            "row": 10
+          },
+          {
+            "column": 11,
+            "im": "0",
+            "re": "1",
+            "row": 11
+          },
+          {
+            "column": 12,
+            "im": "0",
+            "re": "1",
+            "row": 12
+          },
+          {
+            "column": 13,
+            "im": "0",
+            "re": "1",
+            "row": 13
+          },
+          {
+            "column": 14,
+            "im": "0",
+            "re": "1",
+            "row": 14
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "1",
+            "row": 15
+          }
+        ],
+        "K_G": [
+          {
+            "column": 0,
+            "im": "0",
+            "re": "1",
+            "row": 0
+          },
+          {
+            "column": 1,
+            "im": "0",
+            "re": "1",
+            "row": 1
+          },
+          {
+            "column": 2,
+            "im": "0",
+            "re": "1",
+            "row": 2
+          },
+          {
+            "column": 3,
+            "im": "0",
+            "re": "1",
+            "row": 3
+          },
+          {
+            "column": 4,
+            "im": "0",
+            "re": "1",
+            "row": 4
+          },
+          {
+            "column": 5,
+            "im": "0",
+            "re": "1",
+            "row": 5
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "1",
+            "row": 6
+          },
+          {
+            "column": 7,
+            "im": "0",
+            "re": "1",
+            "row": 7
+          },
+          {
+            "column": 8,
+            "im": "0",
+            "re": "1",
+            "row": 8
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "1",
+            "row": 9
+          },
+          {
+            "column": 10,
+            "im": "0",
+            "re": "1",
+            "row": 10
+          },
+          {
+            "column": 11,
+            "im": "0",
+            "re": "1",
+            "row": 11
+          },
+          {
+            "column": 12,
+            "im": "0",
+            "re": "1",
+            "row": 12
+          },
+          {
+            "column": 13,
+            "im": "0",
+            "re": "1",
+            "row": 13
+          },
+          {
+            "column": 14,
+            "im": "0",
+            "re": "1",
+            "row": 14
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "1",
+            "row": 15
+          }
+        ],
+        "K_gf": [
+          {
+            "column": 0,
+            "im": "0",
+            "re": "-45/4",
+            "row": 0
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "-3/8",
+            "row": 0
+          },
+          {
+            "column": 1,
+            "im": "0",
+            "re": "-45/4",
+            "row": 1
+          },
+          {
+            "column": 7,
+            "im": "-3/2",
+            "re": "-9/8",
+            "row": 1
+          },
+          {
+            "column": 11,
+            "im": "3/4",
+            "re": "-3/8",
+            "row": 1
+          },
+          {
+            "column": 2,
+            "im": "0",
+            "re": "-45/4",
+            "row": 2
+          },
+          {
+            "column": 7,
+            "im": "-3/4",
+            "re": "-3/8",
+            "row": 2
+          },
+          {
+            "column": 11,
+            "im": "-3/2",
+            "re": "9/8",
+            "row": 2
+          },
+          {
+            "column": 3,
+            "im": "0",
+            "re": "-45/2",
+            "row": 3
+          },
+          {
+            "column": 4,
+            "im": "0",
+            "re": "-45/4",
+            "row": 4
+          },
+          {
+            "column": 13,
+            "im": "3/2",
+            "re": "-9/8",
+            "row": 4
+          },
+          {
+            "column": 14,
+            "im": "3/4",
+            "re": "-3/8",
+            "row": 4
+          },
+          {
+            "column": 5,
+            "im": "0",
+            "re": "-15/8",
+            "row": 5
+          },
+          {
+            "column": 6,
+            "im": "-3/4",
+            "re": "33/8",
+            "row": 5
+          },
+          {
+            "column": 9,
+            "im": "-15/4",
+            "re": "-15/8",
+            "row": 5
+          },
+          {
+            "column": 10,
+            "im": "-3/2",
+            "re": "-9/8",
+            "row": 5
+          },
+          {
+            "column": 5,
+            "im": "3/4",
+            "re": "33/8",
+            "row": 6
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "-75/8",
+            "row": 6
+          },
+          {
+            "column": 9,
+            "im": "9",
+            "re": "21/8",
+            "row": 6
+          },
+          {
+            "column": 10,
+            "im": "15/4",
+            "re": "15/8",
+            "row": 6
+          },
+          {
+            "column": 1,
+            "im": "45",
+            "re": "-135/4",
+            "row": 7
+          },
+          {
+            "column": 2,
+            "im": "45/2",
+            "re": "-45/4",
+            "row": 7
+          },
+          {
+            "column": 7,
+            "im": "0",
+            "re": "-45/4",
+            "row": 7
+          },
+          {
+            "column": 8,
+            "im": "0",
+            "re": "-45/4",
+            "row": 8
+          },
+          {
+            "column": 13,
+            "im": "-3/4",
+            "re": "-3/8",
+            "row": 8
+          },
+          {
+            "column": 14,
+            "im": "3/2",
+            "re": "9/8",
+            "row": 8
+          },
+          {
+            "column": 5,
+            "im": "15/4",
+            "re": "-15/8",
+            "row": 9
+          },
+          {
+            "column": 6,
+            "im": "-9",
+            "re": "21/8",
+            "row": 9
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "-75/8",
+            "row": 9
+          },
+          {
+            "column": 10,
+            "im": "3/4",
+            "re": "-33/8",
+            "row": 9
+          },
+          {
+            "column": 5,
+            "im": "3/2",
+            "re": "-9/8",
+            "row": 10
+          },
+          {
+            "column": 6,
+            "im": "-15/4",
+            "re": "15/8",
+            "row": 10
+          },
+          {
+            "column": 9,
+            "im": "-3/4",
+            "re": "-33/8",
+            "row": 10
+          },
+          {
+            "column": 10,
+            "im": "0",
+            "re": "-15/8",
+            "row": 10
+          },
+          {
+            "column": 1,
+            "im": "-45/2",
+            "re": "-45/4",
+            "row": 11
+          },
+          {
+            "column": 2,
+            "im": "45",
+            "re": "135/4",
+            "row": 11
+          },
+          {
+            "column": 11,
+            "im": "0",
+            "re": "-45/4",
+            "row": 11
+          },
+          {
+            "column": 12,
+            "im": "0",
+            "re": "-45/2",
+            "row": 12
+          },
+          {
+            "column": 4,
+            "im": "-45",
+            "re": "-135/4",
+            "row": 13
+          },
+          {
+            "column": 8,
+            "im": "45/2",
+            "re": "-45/4",
+            "row": 13
+          },
+          {
+            "column": 13,
+            "im": "0",
+            "re": "-45/4",
+            "row": 13
+          },
+          {
+            "column": 4,
+            "im": "-45/2",
+            "re": "-45/4",
+            "row": 14
+          },
+          {
+            "column": 8,
+            "im": "-45",
+            "re": "135/4",
+            "row": 14
+          },
+          {
+            "column": 14,
+            "im": "0",
+            "re": "-45/4",
+            "row": 14
+          },
+          {
+            "column": 0,
+            "im": "0",
+            "re": "-675/2",
+            "row": 15
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "-45/4",
+            "row": 15
+          }
+        ],
+        "K_phys": [
+          {
+            "column": 0,
+            "im": "0",
+            "re": "-45/4",
+            "row": 0
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "3/8",
+            "row": 0
+          },
+          {
+            "column": 1,
+            "im": "0",
+            "re": "-45/4",
+            "row": 1
+          },
+          {
+            "column": 7,
+            "im": "3/2",
+            "re": "9/8",
+            "row": 1
+          },
+          {
+            "column": 11,
+            "im": "-3/4",
+            "re": "3/8",
+            "row": 1
+          },
+          {
+            "column": 2,
+            "im": "0",
+            "re": "-45/4",
+            "row": 2
+          },
+          {
+            "column": 7,
+            "im": "3/4",
+            "re": "3/8",
+            "row": 2
+          },
+          {
+            "column": 11,
+            "im": "3/2",
+            "re": "-9/8",
+            "row": 2
+          },
+          {
+            "column": 4,
+            "im": "0",
+            "re": "-45/4",
+            "row": 4
+          },
+          {
+            "column": 13,
+            "im": "-3/2",
+            "re": "9/8",
+            "row": 4
+          },
+          {
+            "column": 14,
+            "im": "-3/4",
+            "re": "3/8",
+            "row": 4
+          },
+          {
+            "column": 5,
+            "im": "0",
+            "re": "-165/8",
+            "row": 5
+          },
+          {
+            "column": 6,
+            "im": "3/4",
+            "re": "-33/8",
+            "row": 5
+          },
+          {
+            "column": 9,
+            "im": "15/4",
+            "re": "15/8",
+            "row": 5
+          },
+          {
+            "column": 10,
+            "im": "3/2",
+            "re": "9/8",
+            "row": 5
+          },
+          {
+            "column": 5,
+            "im": "-3/4",
+            "re": "-33/8",
+            "row": 6
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "-105/8",
+            "row": 6
+          },
+          {
+            "column": 9,
+            "im": "-9",
+            "re": "-21/8",
+            "row": 6
+          },
+          {
+            "column": 10,
+            "im": "-15/4",
+            "re": "-15/8",
+            "row": 6
+          },
+          {
+            "column": 1,
+            "im": "-45",
+            "re": "135/4",
+            "row": 7
+          },
+          {
+            "column": 2,
+            "im": "-45/2",
+            "re": "45/4",
+            "row": 7
+          },
+          {
+            "column": 7,
+            "im": "0",
+            "re": "-45/4",
+            "row": 7
+          },
+          {
+            "column": 8,
+            "im": "0",
+            "re": "-45/4",
+            "row": 8
+          },
+          {
+            "column": 13,
+            "im": "3/4",
+            "re": "3/8",
+            "row": 8
+          },
+          {
+            "column": 14,
+            "im": "-3/2",
+            "re": "-9/8",
+            "row": 8
+          },
+          {
+            "column": 5,
+            "im": "-15/4",
+            "re": "15/8",
+            "row": 9
+          },
+          {
+            "column": 6,
+            "im": "9",
+            "re": "-21/8",
+            "row": 9
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "-105/8",
+            "row": 9
+          },
+          {
+            "column": 10,
+            "im": "-3/4",
+            "re": "33/8",
+            "row": 9
+          },
+          {
+            "column": 5,
+            "im": "-3/2",
+            "re": "9/8",
+            "row": 10
+          },
+          {
+            "column": 6,
+            "im": "15/4",
+            "re": "-15/8",
+            "row": 10
+          },
+          {
+            "column": 9,
+            "im": "3/4",
+            "re": "33/8",
+            "row": 10
+          },
+          {
+            "column": 10,
+            "im": "0",
+            "re": "-165/8",
+            "row": 10
+          },
+          {
+            "column": 1,
+            "im": "45/2",
+            "re": "45/4",
+            "row": 11
+          },
+          {
+            "column": 2,
+            "im": "-45",
+            "re": "-135/4",
+            "row": 11
+          },
+          {
+            "column": 11,
+            "im": "0",
+            "re": "-45/4",
+            "row": 11
+          },
+          {
+            "column": 4,
+            "im": "45",
+            "re": "135/4",
+            "row": 13
+          },
+          {
+            "column": 8,
+            "im": "-45/2",
+            "re": "45/4",
+            "row": 13
+          },
+          {
+            "column": 13,
+            "im": "0",
+            "re": "-45/4",
+            "row": 13
+          },
+          {
+            "column": 4,
+            "im": "45/2",
+            "re": "45/4",
+            "row": 14
+          },
+          {
+            "column": 8,
+            "im": "45",
+            "re": "-135/4",
+            "row": 14
+          },
+          {
+            "column": 14,
+            "im": "0",
+            "re": "-45/4",
+            "row": 14
+          },
+          {
+            "column": 0,
+            "im": "0",
+            "re": "675/2",
+            "row": 15
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "-45/4",
+            "row": 15
+          }
+        ],
+        "K_tot": [
+          {
+            "column": 0,
+            "im": "0",
+            "re": "-45/2",
+            "row": 0
+          },
+          {
+            "column": 1,
+            "im": "0",
+            "re": "-45/2",
+            "row": 1
+          },
+          {
+            "column": 2,
+            "im": "0",
+            "re": "-45/2",
+            "row": 2
+          },
+          {
+            "column": 3,
+            "im": "0",
+            "re": "-45/2",
+            "row": 3
+          },
+          {
+            "column": 4,
+            "im": "0",
+            "re": "-45/2",
+            "row": 4
+          },
+          {
+            "column": 5,
+            "im": "0",
+            "re": "-45/2",
+            "row": 5
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "-45/2",
+            "row": 6
+          },
+          {
+            "column": 7,
+            "im": "0",
+            "re": "-45/2",
+            "row": 7
+          },
+          {
+            "column": 8,
+            "im": "0",
+            "re": "-45/2",
+            "row": 8
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "-45/2",
+            "row": 9
+          },
+          {
+            "column": 10,
+            "im": "0",
+            "re": "-45/2",
+            "row": 10
+          },
+          {
+            "column": 11,
+            "im": "0",
+            "re": "-45/2",
+            "row": 11
+          },
+          {
+            "column": 12,
+            "im": "0",
+            "re": "-45/2",
+            "row": 12
+          },
+          {
+            "column": 13,
+            "im": "0",
+            "re": "-45/2",
+            "row": 13
+          },
+          {
+            "column": 14,
+            "im": "0",
+            "re": "-45/2",
+            "row": 14
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "-45/2",
+            "row": 15
+          }
+        ],
+        "Pi_half": [
+          {
+            "column": 0,
+            "im": "0",
+            "re": "1/2",
+            "row": 0
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "-1/60",
+            "row": 0
+          },
+          {
+            "column": 1,
+            "im": "0",
+            "re": "1/2",
+            "row": 1
+          },
+          {
+            "column": 7,
+            "im": "-1/15",
+            "re": "-1/20",
+            "row": 1
+          },
+          {
+            "column": 11,
+            "im": "1/30",
+            "re": "-1/60",
+            "row": 1
+          },
+          {
+            "column": 2,
+            "im": "0",
+            "re": "1/2",
+            "row": 2
+          },
+          {
+            "column": 7,
+            "im": "-1/30",
+            "re": "-1/60",
+            "row": 2
+          },
+          {
+            "column": 11,
+            "im": "-1/15",
+            "re": "1/20",
+            "row": 2
+          },
+          {
+            "column": 4,
+            "im": "0",
+            "re": "1/2",
+            "row": 4
+          },
+          {
+            "column": 13,
+            "im": "1/15",
+            "re": "-1/20",
+            "row": 4
+          },
+          {
+            "column": 14,
+            "im": "1/30",
+            "re": "-1/60",
+            "row": 4
+          },
+          {
+            "column": 5,
+            "im": "0",
+            "re": "11/12",
+            "row": 5
+          },
+          {
+            "column": 6,
+            "im": "-1/30",
+            "re": "11/60",
+            "row": 5
+          },
+          {
+            "column": 9,
+            "im": "-1/6",
+            "re": "-1/12",
+            "row": 5
+          },
+          {
+            "column": 10,
+            "im": "-1/15",
+            "re": "-1/20",
+            "row": 5
+          },
+          {
+            "column": 5,
+            "im": "1/30",
+            "re": "11/60",
+            "row": 6
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "7/12",
+            "row": 6
+          },
+          {
+            "column": 9,
+            "im": "2/5",
+            "re": "7/60",
+            "row": 6
+          },
+          {
+            "column": 10,
+            "im": "1/6",
+            "re": "1/12",
+            "row": 6
+          },
+          {
+            "column": 1,
+            "im": "2",
+            "re": "-3/2",
+            "row": 7
+          },
+          {
+            "column": 2,
+            "im": "1",
+            "re": "-1/2",
+            "row": 7
+          },
+          {
+            "column": 7,
+            "im": "0",
+            "re": "1/2",
+            "row": 7
+          },
+          {
+            "column": 8,
+            "im": "0",
+            "re": "1/2",
+            "row": 8
+          },
+          {
+            "column": 13,
+            "im": "-1/30",
+            "re": "-1/60",
+            "row": 8
+          },
+          {
+            "column": 14,
+            "im": "1/15",
+            "re": "1/20",
+            "row": 8
+          },
+          {
+            "column": 5,
+            "im": "1/6",
+            "re": "-1/12",
+            "row": 9
+          },
+          {
+            "column": 6,
+            "im": "-2/5",
+            "re": "7/60",
+            "row": 9
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "7/12",
+            "row": 9
+          },
+          {
+            "column": 10,
+            "im": "1/30",
+            "re": "-11/60",
+            "row": 9
+          },
+          {
+            "column": 5,
+            "im": "1/15",
+            "re": "-1/20",
+            "row": 10
+          },
+          {
+            "column": 6,
+            "im": "-1/6",
+            "re": "1/12",
+            "row": 10
+          },
+          {
+            "column": 9,
+            "im": "-1/30",
+            "re": "-11/60",
+            "row": 10
+          },
+          {
+            "column": 10,
+            "im": "0",
+            "re": "11/12",
+            "row": 10
+          },
+          {
+            "column": 1,
+            "im": "-1",
+            "re": "-1/2",
+            "row": 11
+          },
+          {
+            "column": 2,
+            "im": "2",
+            "re": "3/2",
+            "row": 11
+          },
+          {
+            "column": 11,
+            "im": "0",
+            "re": "1/2",
+            "row": 11
+          },
+          {
+            "column": 4,
+            "im": "-2",
+            "re": "-3/2",
+            "row": 13
+          },
+          {
+            "column": 8,
+            "im": "1",
+            "re": "-1/2",
+            "row": 13
+          },
+          {
+            "column": 13,
+            "im": "0",
+            "re": "1/2",
+            "row": 13
+          },
+          {
+            "column": 4,
+            "im": "-1",
+            "re": "-1/2",
+            "row": 14
+          },
+          {
+            "column": 8,
+            "im": "-2",
+            "re": "3/2",
+            "row": 14
+          },
+          {
+            "column": 14,
+            "im": "0",
+            "re": "1/2",
+            "row": 14
+          },
+          {
+            "column": 0,
+            "im": "0",
+            "re": "-15",
+            "row": 15
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "1/2",
+            "row": 15
+          }
+        ],
+        "Pi_zero": [
+          {
+            "column": 0,
+            "im": "0",
+            "re": "1/2",
+            "row": 0
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "1/60",
+            "row": 0
+          },
+          {
+            "column": 1,
+            "im": "0",
+            "re": "1/2",
+            "row": 1
+          },
+          {
+            "column": 7,
+            "im": "1/15",
+            "re": "1/20",
+            "row": 1
+          },
+          {
+            "column": 11,
+            "im": "-1/30",
+            "re": "1/60",
+            "row": 1
+          },
+          {
+            "column": 2,
+            "im": "0",
+            "re": "1/2",
+            "row": 2
+          },
+          {
+            "column": 7,
+            "im": "1/30",
+            "re": "1/60",
+            "row": 2
+          },
+          {
+            "column": 11,
+            "im": "1/15",
+            "re": "-1/20",
+            "row": 2
+          },
+          {
+            "column": 3,
+            "im": "0",
+            "re": "1",
+            "row": 3
+          },
+          {
+            "column": 4,
+            "im": "0",
+            "re": "1/2",
+            "row": 4
+          },
+          {
+            "column": 13,
+            "im": "-1/15",
+            "re": "1/20",
+            "row": 4
+          },
+          {
+            "column": 14,
+            "im": "-1/30",
+            "re": "1/60",
+            "row": 4
+          },
+          {
+            "column": 5,
+            "im": "0",
+            "re": "1/12",
+            "row": 5
+          },
+          {
+            "column": 6,
+            "im": "1/30",
+            "re": "-11/60",
+            "row": 5
+          },
+          {
+            "column": 9,
+            "im": "1/6",
+            "re": "1/12",
+            "row": 5
+          },
+          {
+            "column": 10,
+            "im": "1/15",
+            "re": "1/20",
+            "row": 5
+          },
+          {
+            "column": 5,
+            "im": "-1/30",
+            "re": "-11/60",
+            "row": 6
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "5/12",
+            "row": 6
+          },
+          {
+            "column": 9,
+            "im": "-2/5",
+            "re": "-7/60",
+            "row": 6
+          },
+          {
+            "column": 10,
+            "im": "-1/6",
+            "re": "-1/12",
+            "row": 6
+          },
+          {
+            "column": 1,
+            "im": "-2",
+            "re": "3/2",
+            "row": 7
+          },
+          {
+            "column": 2,
+            "im": "-1",
+            "re": "1/2",
+            "row": 7
+          },
+          {
+            "column": 7,
+            "im": "0",
+            "re": "1/2",
+            "row": 7
+          },
+          {
+            "column": 8,
+            "im": "0",
+            "re": "1/2",
+            "row": 8
+          },
+          {
+            "column": 13,
+            "im": "1/30",
+            "re": "1/60",
+            "row": 8
+          },
+          {
+            "column": 14,
+            "im": "-1/15",
+            "re": "-1/20",
+            "row": 8
+          },
+          {
+            "column": 5,
+            "im": "-1/6",
+            "re": "1/12",
+            "row": 9
+          },
+          {
+            "column": 6,
+            "im": "2/5",
+            "re": "-7/60",
+            "row": 9
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "5/12",
+            "row": 9
+          },
+          {
+            "column": 10,
+            "im": "-1/30",
+            "re": "11/60",
+            "row": 9
+          },
+          {
+            "column": 5,
+            "im": "-1/15",
+            "re": "1/20",
+            "row": 10
+          },
+          {
+            "column": 6,
+            "im": "1/6",
+            "re": "-1/12",
+            "row": 10
+          },
+          {
+            "column": 9,
+            "im": "1/30",
+            "re": "11/60",
+            "row": 10
+          },
+          {
+            "column": 10,
+            "im": "0",
+            "re": "1/12",
+            "row": 10
+          },
+          {
+            "column": 1,
+            "im": "1",
+            "re": "1/2",
+            "row": 11
+          },
+          {
+            "column": 2,
+            "im": "-2",
+            "re": "-3/2",
+            "row": 11
+          },
+          {
+            "column": 11,
+            "im": "0",
+            "re": "1/2",
+            "row": 11
+          },
+          {
+            "column": 12,
+            "im": "0",
+            "re": "1",
+            "row": 12
+          },
+          {
+            "column": 4,
+            "im": "2",
+            "re": "3/2",
+            "row": 13
+          },
+          {
+            "column": 8,
+            "im": "-1",
+            "re": "1/2",
+            "row": 13
+          },
+          {
+            "column": 13,
+            "im": "0",
+            "re": "1/2",
+            "row": 13
+          },
+          {
+            "column": 4,
+            "im": "1",
+            "re": "1/2",
+            "row": 14
+          },
+          {
+            "column": 8,
+            "im": "2",
+            "re": "-3/2",
+            "row": 14
+          },
+          {
+            "column": 14,
+            "im": "0",
+            "re": "1/2",
+            "row": 14
+          },
+          {
+            "column": 0,
+            "im": "0",
+            "re": "15",
+            "row": 15
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "1/2",
+            "row": 15
+          }
+        ]
+      }
+    },
+    {
+      "basis_order": "1,theta+,theta-,theta+theta-,...,theta+theta-bartheta_dot+bartheta_dot- (bit masks 0..15)",
+      "momentum": [
+        2,
+        -1,
+        0,
+        3
+      ],
+      "p_(4)^2": "14",
+      "sparse_exact_matrices": {
+        "G": [
+          {
+            "column": 0,
+            "im": "0",
+            "re": "-2/21",
+            "row": 0
+          },
+          {
+            "column": 1,
+            "im": "0",
+            "re": "-2/21",
+            "row": 1
+          },
+          {
+            "column": 2,
+            "im": "0",
+            "re": "-2/21",
+            "row": 2
+          },
+          {
+            "column": 3,
+            "im": "0",
+            "re": "-2/21",
+            "row": 3
+          },
+          {
+            "column": 4,
+            "im": "0",
+            "re": "-2/21",
+            "row": 4
+          },
+          {
+            "column": 5,
+            "im": "0",
+            "re": "-2/21",
+            "row": 5
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "-2/21",
+            "row": 6
+          },
+          {
+            "column": 7,
+            "im": "0",
+            "re": "-2/21",
+            "row": 7
+          },
+          {
+            "column": 8,
+            "im": "0",
+            "re": "-2/21",
+            "row": 8
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "-2/21",
+            "row": 9
+          },
+          {
+            "column": 10,
+            "im": "0",
+            "re": "-2/21",
+            "row": 10
+          },
+          {
+            "column": 11,
+            "im": "0",
+            "re": "-2/21",
+            "row": 11
+          },
+          {
+            "column": 12,
+            "im": "0",
+            "re": "-2/21",
+            "row": 12
+          },
+          {
+            "column": 13,
+            "im": "0",
+            "re": "-2/21",
+            "row": 13
+          },
+          {
+            "column": 14,
+            "im": "0",
+            "re": "-2/21",
+            "row": 14
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "-2/21",
+            "row": 15
+          }
+        ],
+        "G_K": [
+          {
+            "column": 0,
+            "im": "0",
+            "re": "1",
+            "row": 0
+          },
+          {
+            "column": 1,
+            "im": "0",
+            "re": "1",
+            "row": 1
+          },
+          {
+            "column": 2,
+            "im": "0",
+            "re": "1",
+            "row": 2
+          },
+          {
+            "column": 3,
+            "im": "0",
+            "re": "1",
+            "row": 3
+          },
+          {
+            "column": 4,
+            "im": "0",
+            "re": "1",
+            "row": 4
+          },
+          {
+            "column": 5,
+            "im": "0",
+            "re": "1",
+            "row": 5
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "1",
+            "row": 6
+          },
+          {
+            "column": 7,
+            "im": "0",
+            "re": "1",
+            "row": 7
+          },
+          {
+            "column": 8,
+            "im": "0",
+            "re": "1",
+            "row": 8
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "1",
+            "row": 9
+          },
+          {
+            "column": 10,
+            "im": "0",
+            "re": "1",
+            "row": 10
+          },
+          {
+            "column": 11,
+            "im": "0",
+            "re": "1",
+            "row": 11
+          },
+          {
+            "column": 12,
+            "im": "0",
+            "re": "1",
+            "row": 12
+          },
+          {
+            "column": 13,
+            "im": "0",
+            "re": "1",
+            "row": 13
+          },
+          {
+            "column": 14,
+            "im": "0",
+            "re": "1",
+            "row": 14
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "1",
+            "row": 15
+          }
+        ],
+        "K_G": [
+          {
+            "column": 0,
+            "im": "0",
+            "re": "1",
+            "row": 0
+          },
+          {
+            "column": 1,
+            "im": "0",
+            "re": "1",
+            "row": 1
+          },
+          {
+            "column": 2,
+            "im": "0",
+            "re": "1",
+            "row": 2
+          },
+          {
+            "column": 3,
+            "im": "0",
+            "re": "1",
+            "row": 3
+          },
+          {
+            "column": 4,
+            "im": "0",
+            "re": "1",
+            "row": 4
+          },
+          {
+            "column": 5,
+            "im": "0",
+            "re": "1",
+            "row": 5
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "1",
+            "row": 6
+          },
+          {
+            "column": 7,
+            "im": "0",
+            "re": "1",
+            "row": 7
+          },
+          {
+            "column": 8,
+            "im": "0",
+            "re": "1",
+            "row": 8
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "1",
+            "row": 9
+          },
+          {
+            "column": 10,
+            "im": "0",
+            "re": "1",
+            "row": 10
+          },
+          {
+            "column": 11,
+            "im": "0",
+            "re": "1",
+            "row": 11
+          },
+          {
+            "column": 12,
+            "im": "0",
+            "re": "1",
+            "row": 12
+          },
+          {
+            "column": 13,
+            "im": "0",
+            "re": "1",
+            "row": 13
+          },
+          {
+            "column": 14,
+            "im": "0",
+            "re": "1",
+            "row": 14
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "1",
+            "row": 15
+          }
+        ],
+        "K_gf": [
+          {
+            "column": 0,
+            "im": "0",
+            "re": "-21/4",
+            "row": 0
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "-3/8",
+            "row": 0
+          },
+          {
+            "column": 1,
+            "im": "0",
+            "re": "-21/4",
+            "row": 1
+          },
+          {
+            "column": 7,
+            "im": "-9/8",
+            "re": "0",
+            "row": 1
+          },
+          {
+            "column": 11,
+            "im": "-3/8",
+            "re": "-3/4",
+            "row": 1
+          },
+          {
+            "column": 2,
+            "im": "0",
+            "re": "-21/4",
+            "row": 2
+          },
+          {
+            "column": 7,
+            "im": "3/8",
+            "re": "-3/4",
+            "row": 2
+          },
+          {
+            "column": 11,
+            "im": "-9/8",
+            "re": "0",
+            "row": 2
+          },
+          {
+            "column": 3,
+            "im": "0",
+            "re": "-21/2",
+            "row": 3
+          },
+          {
+            "column": 4,
+            "im": "0",
+            "re": "-21/4",
+            "row": 4
+          },
+          {
+            "column": 13,
+            "im": "9/8",
+            "re": "0",
+            "row": 4
+          },
+          {
+            "column": 14,
+            "im": "-3/8",
+            "re": "-3/4",
+            "row": 4
+          },
+          {
+            "column": 5,
+            "im": "0",
+            "re": "-15/8",
+            "row": 5
+          },
+          {
+            "column": 6,
+            "im": "9/4",
+            "re": "-9/8",
+            "row": 5
+          },
+          {
+            "column": 9,
+            "im": "-9/4",
+            "re": "9/8",
+            "row": 5
+          },
+          {
+            "column": 10,
+            "im": "3/2",
+            "re": "9/8",
+            "row": 5
+          },
+          {
+            "column": 5,
+            "im": "-9/4",
+            "re": "-9/8",
+            "row": 6
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "-27/8",
+            "row": 6
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "27/8",
+            "row": 6
+          },
+          {
+            "column": 10,
+            "im": "9/4",
+            "re": "-9/8",
+            "row": 6
+          },
+          {
+            "column": 1,
+            "im": "63/4",
+            "re": "0",
+            "row": 7
+          },
+          {
+            "column": 2,
+            "im": "-21/4",
+            "re": "-21/2",
+            "row": 7
+          },
+          {
+            "column": 7,
+            "im": "0",
+            "re": "-21/4",
+            "row": 7
+          },
+          {
+            "column": 8,
+            "im": "0",
+            "re": "-21/4",
+            "row": 8
+          },
+          {
+            "column": 13,
+            "im": "3/8",
+            "re": "-3/4",
+            "row": 8
+          },
+          {
+            "column": 14,
+            "im": "9/8",
+            "re": "0",
+            "row": 8
+          },
+          {
+            "column": 5,
+            "im": "9/4",
+            "re": "9/8",
+            "row": 9
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "27/8",
+            "row": 9
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "-27/8",
+            "row": 9
+          },
+          {
+            "column": 10,
+            "im": "-9/4",
+            "re": "9/8",
+            "row": 9
+          },
+          {
+            "column": 5,
+            "im": "-3/2",
+            "re": "9/8",
+            "row": 10
+          },
+          {
+            "column": 6,
+            "im": "-9/4",
+            "re": "-9/8",
+            "row": 10
+          },
+          {
+            "column": 9,
+            "im": "9/4",
+            "re": "9/8",
+            "row": 10
+          },
+          {
+            "column": 10,
+            "im": "0",
+            "re": "-15/8",
+            "row": 10
+          },
+          {
+            "column": 1,
+            "im": "21/4",
+            "re": "-21/2",
+            "row": 11
+          },
+          {
+            "column": 2,
+            "im": "63/4",
+            "re": "0",
+            "row": 11
+          },
+          {
+            "column": 11,
+            "im": "0",
+            "re": "-21/4",
+            "row": 11
+          },
+          {
+            "column": 12,
+            "im": "0",
+            "re": "-21/2",
+            "row": 12
+          },
+          {
+            "column": 4,
+            "im": "-63/4",
+            "re": "0",
+            "row": 13
+          },
+          {
+            "column": 8,
+            "im": "-21/4",
+            "re": "-21/2",
+            "row": 13
+          },
+          {
+            "column": 13,
+            "im": "0",
+            "re": "-21/4",
+            "row": 13
+          },
+          {
+            "column": 4,
+            "im": "21/4",
+            "re": "-21/2",
+            "row": 14
+          },
+          {
+            "column": 8,
+            "im": "-63/4",
+            "re": "0",
+            "row": 14
+          },
+          {
+            "column": 14,
+            "im": "0",
+            "re": "-21/4",
+            "row": 14
+          },
+          {
+            "column": 0,
+            "im": "0",
+            "re": "-147/2",
+            "row": 15
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "-21/4",
+            "row": 15
+          }
+        ],
+        "K_phys": [
+          {
+            "column": 0,
+            "im": "0",
+            "re": "-21/4",
+            "row": 0
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "3/8",
+            "row": 0
+          },
+          {
+            "column": 1,
+            "im": "0",
+            "re": "-21/4",
+            "row": 1
+          },
+          {
+            "column": 7,
+            "im": "9/8",
+            "re": "0",
+            "row": 1
+          },
+          {
+            "column": 11,
+            "im": "3/8",
+            "re": "3/4",
+            "row": 1
+          },
+          {
+            "column": 2,
+            "im": "0",
+            "re": "-21/4",
+            "row": 2
+          },
+          {
+            "column": 7,
+            "im": "-3/8",
+            "re": "3/4",
+            "row": 2
+          },
+          {
+            "column": 11,
+            "im": "9/8",
+            "re": "0",
+            "row": 2
+          },
+          {
+            "column": 4,
+            "im": "0",
+            "re": "-21/4",
+            "row": 4
+          },
+          {
+            "column": 13,
+            "im": "-9/8",
+            "re": "0",
+            "row": 4
+          },
+          {
+            "column": 14,
+            "im": "3/8",
+            "re": "3/4",
+            "row": 4
+          },
+          {
+            "column": 5,
+            "im": "0",
+            "re": "-69/8",
+            "row": 5
+          },
+          {
+            "column": 6,
+            "im": "-9/4",
+            "re": "9/8",
+            "row": 5
+          },
+          {
+            "column": 9,
+            "im": "9/4",
+            "re": "-9/8",
+            "row": 5
+          },
+          {
+            "column": 10,
+            "im": "-3/2",
+            "re": "-9/8",
+            "row": 5
+          },
+          {
+            "column": 5,
+            "im": "9/4",
+            "re": "9/8",
+            "row": 6
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "-57/8",
+            "row": 6
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "-27/8",
+            "row": 6
+          },
+          {
+            "column": 10,
+            "im": "-9/4",
+            "re": "9/8",
+            "row": 6
+          },
+          {
+            "column": 1,
+            "im": "-63/4",
+            "re": "0",
+            "row": 7
+          },
+          {
+            "column": 2,
+            "im": "21/4",
+            "re": "21/2",
+            "row": 7
+          },
+          {
+            "column": 7,
+            "im": "0",
+            "re": "-21/4",
+            "row": 7
+          },
+          {
+            "column": 8,
+            "im": "0",
+            "re": "-21/4",
+            "row": 8
+          },
+          {
+            "column": 13,
+            "im": "-3/8",
+            "re": "3/4",
+            "row": 8
+          },
+          {
+            "column": 14,
+            "im": "-9/8",
+            "re": "0",
+            "row": 8
+          },
+          {
+            "column": 5,
+            "im": "-9/4",
+            "re": "-9/8",
+            "row": 9
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "-27/8",
+            "row": 9
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "-57/8",
+            "row": 9
+          },
+          {
+            "column": 10,
+            "im": "9/4",
+            "re": "-9/8",
+            "row": 9
+          },
+          {
+            "column": 5,
+            "im": "3/2",
+            "re": "-9/8",
+            "row": 10
+          },
+          {
+            "column": 6,
+            "im": "9/4",
+            "re": "9/8",
+            "row": 10
+          },
+          {
+            "column": 9,
+            "im": "-9/4",
+            "re": "-9/8",
+            "row": 10
+          },
+          {
+            "column": 10,
+            "im": "0",
+            "re": "-69/8",
+            "row": 10
+          },
+          {
+            "column": 1,
+            "im": "-21/4",
+            "re": "21/2",
+            "row": 11
+          },
+          {
+            "column": 2,
+            "im": "-63/4",
+            "re": "0",
+            "row": 11
+          },
+          {
+            "column": 11,
+            "im": "0",
+            "re": "-21/4",
+            "row": 11
+          },
+          {
+            "column": 4,
+            "im": "63/4",
+            "re": "0",
+            "row": 13
+          },
+          {
+            "column": 8,
+            "im": "21/4",
+            "re": "21/2",
+            "row": 13
+          },
+          {
+            "column": 13,
+            "im": "0",
+            "re": "-21/4",
+            "row": 13
+          },
+          {
+            "column": 4,
+            "im": "-21/4",
+            "re": "21/2",
+            "row": 14
+          },
+          {
+            "column": 8,
+            "im": "63/4",
+            "re": "0",
+            "row": 14
+          },
+          {
+            "column": 14,
+            "im": "0",
+            "re": "-21/4",
+            "row": 14
+          },
+          {
+            "column": 0,
+            "im": "0",
+            "re": "147/2",
+            "row": 15
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "-21/4",
+            "row": 15
+          }
+        ],
+        "K_tot": [
+          {
+            "column": 0,
+            "im": "0",
+            "re": "-21/2",
+            "row": 0
+          },
+          {
+            "column": 1,
+            "im": "0",
+            "re": "-21/2",
+            "row": 1
+          },
+          {
+            "column": 2,
+            "im": "0",
+            "re": "-21/2",
+            "row": 2
+          },
+          {
+            "column": 3,
+            "im": "0",
+            "re": "-21/2",
+            "row": 3
+          },
+          {
+            "column": 4,
+            "im": "0",
+            "re": "-21/2",
+            "row": 4
+          },
+          {
+            "column": 5,
+            "im": "0",
+            "re": "-21/2",
+            "row": 5
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "-21/2",
+            "row": 6
+          },
+          {
+            "column": 7,
+            "im": "0",
+            "re": "-21/2",
+            "row": 7
+          },
+          {
+            "column": 8,
+            "im": "0",
+            "re": "-21/2",
+            "row": 8
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "-21/2",
+            "row": 9
+          },
+          {
+            "column": 10,
+            "im": "0",
+            "re": "-21/2",
+            "row": 10
+          },
+          {
+            "column": 11,
+            "im": "0",
+            "re": "-21/2",
+            "row": 11
+          },
+          {
+            "column": 12,
+            "im": "0",
+            "re": "-21/2",
+            "row": 12
+          },
+          {
+            "column": 13,
+            "im": "0",
+            "re": "-21/2",
+            "row": 13
+          },
+          {
+            "column": 14,
+            "im": "0",
+            "re": "-21/2",
+            "row": 14
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "-21/2",
+            "row": 15
+          }
+        ],
+        "Pi_half": [
+          {
+            "column": 0,
+            "im": "0",
+            "re": "1/2",
+            "row": 0
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "-1/28",
+            "row": 0
+          },
+          {
+            "column": 1,
+            "im": "0",
+            "re": "1/2",
+            "row": 1
+          },
+          {
+            "column": 7,
+            "im": "-3/28",
+            "re": "0",
+            "row": 1
+          },
+          {
+            "column": 11,
+            "im": "-1/28",
+            "re": "-1/14",
+            "row": 1
+          },
+          {
+            "column": 2,
+            "im": "0",
+            "re": "1/2",
+            "row": 2
+          },
+          {
+            "column": 7,
+            "im": "1/28",
+            "re": "-1/14",
+            "row": 2
+          },
+          {
+            "column": 11,
+            "im": "-3/28",
+            "re": "0",
+            "row": 2
+          },
+          {
+            "column": 4,
+            "im": "0",
+            "re": "1/2",
+            "row": 4
+          },
+          {
+            "column": 13,
+            "im": "3/28",
+            "re": "0",
+            "row": 4
+          },
+          {
+            "column": 14,
+            "im": "-1/28",
+            "re": "-1/14",
+            "row": 4
+          },
+          {
+            "column": 5,
+            "im": "0",
+            "re": "23/28",
+            "row": 5
+          },
+          {
+            "column": 6,
+            "im": "3/14",
+            "re": "-3/28",
+            "row": 5
+          },
+          {
+            "column": 9,
+            "im": "-3/14",
+            "re": "3/28",
+            "row": 5
+          },
+          {
+            "column": 10,
+            "im": "1/7",
+            "re": "3/28",
+            "row": 5
+          },
+          {
+            "column": 5,
+            "im": "-3/14",
+            "re": "-3/28",
+            "row": 6
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "19/28",
+            "row": 6
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "9/28",
+            "row": 6
+          },
+          {
+            "column": 10,
+            "im": "3/14",
+            "re": "-3/28",
+            "row": 6
+          },
+          {
+            "column": 1,
+            "im": "3/2",
+            "re": "0",
+            "row": 7
+          },
+          {
+            "column": 2,
+            "im": "-1/2",
+            "re": "-1",
+            "row": 7
+          },
+          {
+            "column": 7,
+            "im": "0",
+            "re": "1/2",
+            "row": 7
+          },
+          {
+            "column": 8,
+            "im": "0",
+            "re": "1/2",
+            "row": 8
+          },
+          {
+            "column": 13,
+            "im": "1/28",
+            "re": "-1/14",
+            "row": 8
+          },
+          {
+            "column": 14,
+            "im": "3/28",
+            "re": "0",
+            "row": 8
+          },
+          {
+            "column": 5,
+            "im": "3/14",
+            "re": "3/28",
+            "row": 9
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "9/28",
+            "row": 9
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "19/28",
+            "row": 9
+          },
+          {
+            "column": 10,
+            "im": "-3/14",
+            "re": "3/28",
+            "row": 9
+          },
+          {
+            "column": 5,
+            "im": "-1/7",
+            "re": "3/28",
+            "row": 10
+          },
+          {
+            "column": 6,
+            "im": "-3/14",
+            "re": "-3/28",
+            "row": 10
+          },
+          {
+            "column": 9,
+            "im": "3/14",
+            "re": "3/28",
+            "row": 10
+          },
+          {
+            "column": 10,
+            "im": "0",
+            "re": "23/28",
+            "row": 10
+          },
+          {
+            "column": 1,
+            "im": "1/2",
+            "re": "-1",
+            "row": 11
+          },
+          {
+            "column": 2,
+            "im": "3/2",
+            "re": "0",
+            "row": 11
+          },
+          {
+            "column": 11,
+            "im": "0",
+            "re": "1/2",
+            "row": 11
+          },
+          {
+            "column": 4,
+            "im": "-3/2",
+            "re": "0",
+            "row": 13
+          },
+          {
+            "column": 8,
+            "im": "-1/2",
+            "re": "-1",
+            "row": 13
+          },
+          {
+            "column": 13,
+            "im": "0",
+            "re": "1/2",
+            "row": 13
+          },
+          {
+            "column": 4,
+            "im": "1/2",
+            "re": "-1",
+            "row": 14
+          },
+          {
+            "column": 8,
+            "im": "-3/2",
+            "re": "0",
+            "row": 14
+          },
+          {
+            "column": 14,
+            "im": "0",
+            "re": "1/2",
+            "row": 14
+          },
+          {
+            "column": 0,
+            "im": "0",
+            "re": "-7",
+            "row": 15
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "1/2",
+            "row": 15
+          }
+        ],
+        "Pi_zero": [
+          {
+            "column": 0,
+            "im": "0",
+            "re": "1/2",
+            "row": 0
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "1/28",
+            "row": 0
+          },
+          {
+            "column": 1,
+            "im": "0",
+            "re": "1/2",
+            "row": 1
+          },
+          {
+            "column": 7,
+            "im": "3/28",
+            "re": "0",
+            "row": 1
+          },
+          {
+            "column": 11,
+            "im": "1/28",
+            "re": "1/14",
+            "row": 1
+          },
+          {
+            "column": 2,
+            "im": "0",
+            "re": "1/2",
+            "row": 2
+          },
+          {
+            "column": 7,
+            "im": "-1/28",
+            "re": "1/14",
+            "row": 2
+          },
+          {
+            "column": 11,
+            "im": "3/28",
+            "re": "0",
+            "row": 2
+          },
+          {
+            "column": 3,
+            "im": "0",
+            "re": "1",
+            "row": 3
+          },
+          {
+            "column": 4,
+            "im": "0",
+            "re": "1/2",
+            "row": 4
+          },
+          {
+            "column": 13,
+            "im": "-3/28",
+            "re": "0",
+            "row": 4
+          },
+          {
+            "column": 14,
+            "im": "1/28",
+            "re": "1/14",
+            "row": 4
+          },
+          {
+            "column": 5,
+            "im": "0",
+            "re": "5/28",
+            "row": 5
+          },
+          {
+            "column": 6,
+            "im": "-3/14",
+            "re": "3/28",
+            "row": 5
+          },
+          {
+            "column": 9,
+            "im": "3/14",
+            "re": "-3/28",
+            "row": 5
+          },
+          {
+            "column": 10,
+            "im": "-1/7",
+            "re": "-3/28",
+            "row": 5
+          },
+          {
+            "column": 5,
+            "im": "3/14",
+            "re": "3/28",
+            "row": 6
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "9/28",
+            "row": 6
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "-9/28",
+            "row": 6
+          },
+          {
+            "column": 10,
+            "im": "-3/14",
+            "re": "3/28",
+            "row": 6
+          },
+          {
+            "column": 1,
+            "im": "-3/2",
+            "re": "0",
+            "row": 7
+          },
+          {
+            "column": 2,
+            "im": "1/2",
+            "re": "1",
+            "row": 7
+          },
+          {
+            "column": 7,
+            "im": "0",
+            "re": "1/2",
+            "row": 7
+          },
+          {
+            "column": 8,
+            "im": "0",
+            "re": "1/2",
+            "row": 8
+          },
+          {
+            "column": 13,
+            "im": "-1/28",
+            "re": "1/14",
+            "row": 8
+          },
+          {
+            "column": 14,
+            "im": "-3/28",
+            "re": "0",
+            "row": 8
+          },
+          {
+            "column": 5,
+            "im": "-3/14",
+            "re": "-3/28",
+            "row": 9
+          },
+          {
+            "column": 6,
+            "im": "0",
+            "re": "-9/28",
+            "row": 9
+          },
+          {
+            "column": 9,
+            "im": "0",
+            "re": "9/28",
+            "row": 9
+          },
+          {
+            "column": 10,
+            "im": "3/14",
+            "re": "-3/28",
+            "row": 9
+          },
+          {
+            "column": 5,
+            "im": "1/7",
+            "re": "-3/28",
+            "row": 10
+          },
+          {
+            "column": 6,
+            "im": "3/14",
+            "re": "3/28",
+            "row": 10
+          },
+          {
+            "column": 9,
+            "im": "-3/14",
+            "re": "-3/28",
+            "row": 10
+          },
+          {
+            "column": 10,
+            "im": "0",
+            "re": "5/28",
+            "row": 10
+          },
+          {
+            "column": 1,
+            "im": "-1/2",
+            "re": "1",
+            "row": 11
+          },
+          {
+            "column": 2,
+            "im": "-3/2",
+            "re": "0",
+            "row": 11
+          },
+          {
+            "column": 11,
+            "im": "0",
+            "re": "1/2",
+            "row": 11
+          },
+          {
+            "column": 12,
+            "im": "0",
+            "re": "1",
+            "row": 12
+          },
+          {
+            "column": 4,
+            "im": "3/2",
+            "re": "0",
+            "row": 13
+          },
+          {
+            "column": 8,
+            "im": "1/2",
+            "re": "1",
+            "row": 13
+          },
+          {
+            "column": 13,
+            "im": "0",
+            "re": "1/2",
+            "row": 13
+          },
+          {
+            "column": 4,
+            "im": "-1/2",
+            "re": "1",
+            "row": 14
+          },
+          {
+            "column": 8,
+            "im": "3/2",
+            "re": "0",
+            "row": 14
+          },
+          {
+            "column": 14,
+            "im": "0",
+            "re": "1/2",
+            "row": 14
+          },
+          {
+            "column": 0,
+            "im": "0",
+            "re": "7",
+            "row": 15
+          },
+          {
+            "column": 15,
+            "im": "0",
+            "re": "1/2",
+            "row": 15
+          }
+        ]
+      }
+    }
+  ],
+  "normalization": {
+    "color_metric": [
+      [
+        {
+          "im": "0",
+          "re": "2"
+        },
+        {
+          "im": "0",
+          "re": "1"
+        }
+      ],
+      [
+        {
+          "im": "0",
+          "re": "1"
+        },
+        {
+          "im": "0",
+          "re": "1"
+        }
+      ]
+    ],
+    "g^2": "2/3",
+    "h": "3/2",
+    "identity": "h*g^2=1; equivalently h=g^(-2)",
+    "inverse_color_metric": [
+      [
+        {
+          "im": "0",
+          "re": "1"
+        },
+        {
+          "im": "0",
+          "re": "-1"
+        }
+      ],
+      [
+        {
+          "im": "0",
+          "re": "-1"
+        },
+        {
+          "im": "0",
+          "re": "2"
+        }
+      ]
+    ]
+  },
+  "perturbative_measure": {
+    "density_insertion": "E_measure",
+    "finite_BV_density_equality": "NOT_CLAIMED; STEP5C_OBLIGATION",
+    "scope": "REFERENCE_FLAT_STEP5A_ONLY",
+    "value": "0"
+  },
+  "schema": 1,
+  "scope": "5A.PERTURBATIVE_FF_DRED_SUPERGRAPHS",
+  "status": "PASS",
+  "totals": {
+    "checks": 36,
+    "failed": 0
+  }
+}

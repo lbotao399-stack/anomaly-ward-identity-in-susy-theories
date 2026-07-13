@@ -1,5 +1,5 @@
 {
-  "admission_status": "PHYSICAL_HESSIANS_VERIFIED_VECTOR_GREEN_BLOCKED_REJECTED_SLICE_REGRESSION_ONLY",
+  "admission_status": "PHYSICAL_HESSIANS_AND_STEP5A_VECTOR_GREEN_VERIFIED",
   "arithmetic": "EXACT_Q_I_NO_FLOATING_POINT",
   "checks": [
     {
@@ -39,7 +39,7 @@
       "passed": true
     },
     {
-      "id": "vector.p_0_0_0_1.rejected_target_5_45",
+      "id": "vector.p_0_0_0_1.step5a_total_5_45",
       "passed": true
     },
     {
@@ -55,11 +55,11 @@
       "passed": true
     },
     {
-      "id": "vector.p_0_0_0_1.rejected_target_inverse_5_46_left",
+      "id": "vector.p_0_0_0_1.step5a_inverse_5_46_left",
       "passed": true
     },
     {
-      "id": "vector.p_0_0_0_1.rejected_target_inverse_5_46_right",
+      "id": "vector.p_0_0_0_1.step5a_inverse_5_46_right",
       "passed": true
     },
     {
@@ -155,7 +155,7 @@
       "passed": true
     },
     {
-      "id": "vector.p_1_2_3_4.rejected_target_5_45",
+      "id": "vector.p_1_2_3_4.step5a_total_5_45",
       "passed": true
     },
     {
@@ -171,11 +171,11 @@
       "passed": true
     },
     {
-      "id": "vector.p_1_2_3_4.rejected_target_inverse_5_46_left",
+      "id": "vector.p_1_2_3_4.step5a_inverse_5_46_left",
       "passed": true
     },
     {
-      "id": "vector.p_1_2_3_4.rejected_target_inverse_5_46_right",
+      "id": "vector.p_1_2_3_4.step5a_inverse_5_46_right",
       "passed": true
     },
     {
@@ -271,7 +271,7 @@
       "passed": true
     },
     {
-      "id": "vector.p_2_m1_0_3.rejected_target_5_45",
+      "id": "vector.p_2_m1_0_3.step5a_total_5_45",
       "passed": true
     },
     {
@@ -287,11 +287,11 @@
       "passed": true
     },
     {
-      "id": "vector.p_2_m1_0_3.rejected_target_inverse_5_46_left",
+      "id": "vector.p_2_m1_0_3.step5a_inverse_5_46_left",
       "passed": true
     },
     {
-      "id": "vector.p_2_m1_0_3.rejected_target_inverse_5_46_right",
+      "id": "vector.p_2_m1_0_3.step5a_inverse_5_46_right",
       "passed": true
     },
     {
@@ -352,16 +352,16 @@
     }
   ],
   "contract": "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md",
-  "contract_sha256": "7f1116253444cf09b240cfa4d6092436eb41f49146d387450d68f608e242b8f7",
+  "contract_sha256": "02349897ec12af5e712b40efdb05422e7369b46dc53001ec42017f3c75db9d87",
   "derived_rules": {
     "auxiliary_green_kernel": "G_(F tildeF)^{AB}=-g^2 kappa^{AB}",
     "chiral_hessian": "K_(tilde q q),AB=-h kappa_AB B_component(p)",
     "fermion_green_kernel": "G_(psi_a tildepsi_dotb)^{AB}=-i g^2 kappa^{AB} p_(a dotb)/p_(4)^2",
     "gaussian_wick_factor_if_admitted": "hbar times the ordered Green kernel",
-    "rejected_slice_regression_vector_green_kernel": "G_V,target^{AB}=-(2 g^2/p_(4)^2) kappa^{AB} 1_16",
     "reverse_fermion_order": "G_(tildepsi_dotb psi_a)(-p,p)=-G_(psi_a tildepsi_dotb)(p,-p)",
     "scalar_green_kernel": "G_(phi tildephi)^{AB}=g^2 kappa^{AB}/p_(4)^2",
     "source_order": "int_(E,+) J_Phi Phi + int_(E,-) tildePhi tildeJ_Phi; forward derivative order is J_Phi then tildeJ_Phi",
+    "step5a_vector_green_kernel": "G_V^{AB}=-(2 g^2/p_(4)^2) kappa^{AB} 1_16",
     "vector_hessian": "K_V,AB^phys=-(h/2) kappa_AB p_(4)^2 Pi_1/2"
   },
   "momenta": [
@@ -398,31 +398,32 @@
     "weinberg_coefficients_used": false
   },
   "status": "PASS",
+  "step5c_obligations": [
+    {
+      "id": "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
+      "reason": "The fixed-gauge Step-5A Gaussian is admitted independently; only its global local-Y realization remains a Step-5C obligation.",
+      "scope": "equivalence of the admitted Step-5A vector kernel to a global local non-minimal coefficient integral"
+    },
+    {
+      "id": "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
+      "reason": "The complete (A_T,lambda,tilde-lambda,d) finite cycle and Berezinian remain Step 5C; they do not alter the reference-flat Step-5A inversion.",
+      "scope": "finite coefficient-space reconstruction of the Step-5A vector Wick contraction"
+    },
+    {
+      "id": "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
+      "reason": "The primitive connected one-loop FP graph is separately proved absent; the global finite cycle remains Step 5C.",
+      "scope": "finite FP coefficient-space cycle"
+    },
+    {
+      "id": "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
+      "reason": "The primitive connected one-loop NK graph is separately proved absent; the global finite cycle remains Step 5C.",
+      "scope": "finite Nielsen-Kallosh coefficient-space cycle"
+    }
+  ],
   "task": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
   "totals": {
     "checks": 87,
     "failed": 0
   },
-  "typed_blockers": [
-    {
-      "id": "BLOCKED_LOCAL_NONMINIMAL_GAUGE_KERNEL",
-      "reason": "The local Step-3D non-minimal class does not admit the nonlocal Y required by (5.44a)-(5.44b); (5.46) is a rejected-slice regression only.",
-      "scope": "vector longitudinal Hessian and vector Green kernel"
-    },
-    {
-      "id": "BLOCKED_VECTOR_TRANSVERSE_FINITE_GAUSSIAN_RECONSTRUCTION",
-      "reason": "The chiral-matter coefficient cycle is verified separately.  The complete (A_T,lambda,tilde-lambda,d) cycle, its Berezinian, reconstruction to V_T, and ordered vector-source differentiation are not supplied.",
-      "scope": "promotion of the transverse vector pseudoinverse to a V_T Wick contraction"
-    },
-    {
-      "id": "BLOCKED_FP_GHOST_CYCLE_UNDECLARED",
-      "reason": "Equations (3D.84)-(3D.91) fix the free FP operator, but (3D.93c) leaves the parity-reversed Euclidean ghost cycle and orientation as chosen data.",
-      "scope": "FP Wick propagator"
-    },
-    {
-      "id": "BLOCKED_NK_BRANCH_AND_KERNEL_UNFIXED",
-      "reason": "No 3D.95b branch, admitted 3D.96 NK auxiliary action, kernel, and cycle have been selected.",
-      "scope": "Nielsen-Kallosh Hessian and propagator"
-    }
-  ]
+  "typed_blockers": []
 }

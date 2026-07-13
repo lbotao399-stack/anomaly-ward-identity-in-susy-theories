@@ -1,0 +1,217 @@
+{
+  "admission": "COMPOSITE_GRAMMAR_INSTANTIATED; LOOP_COEFFICIENT_NOT_EVALUATED_BY_THIS_MODULE",
+  "blockers": [],
+  "checks": [
+    {
+      "id": "I4_tadpoles_are_scaleless_conditionally_on_routing",
+      "passed": true
+    },
+    {
+      "id": "all_I4_terms_are_quartic_contact",
+      "passed": true
+    },
+    {
+      "id": "antichiral_s3_exact_coefficients",
+      "passed": true
+    },
+    {
+      "id": "ast_v_degree_matches_every_term",
+      "passed": true
+    },
+    {
+      "id": "ast_v_ports_are_unique_inside_every_term",
+      "passed": true
+    },
+    {
+      "id": "background_quantum_all_assignment_counts",
+      "passed": true
+    },
+    {
+      "id": "both_direct_dminus_placements_I2",
+      "passed": true
+    },
+    {
+      "id": "both_e_v_series_retained",
+      "passed": true
+    },
+    {
+      "id": "conflict_degrees_are_1_2_3",
+      "passed": true
+    },
+    {
+      "id": "e_xi_is_fully_instantiated",
+      "passed": true
+    },
+    {
+      "id": "e_xi_matter_coefficient",
+      "passed": true
+    },
+    {
+      "id": "gamma_component_coefficients",
+      "passed": true
+    },
+    {
+      "id": "gauge_s4_exact_coefficients",
+      "passed": true
+    },
+    {
+      "id": "gauge_s4_ordered_splits",
+      "passed": true
+    },
+    {
+      "id": "insertion_term_counts",
+      "passed": true
+    },
+    {
+      "id": "mixed_S4_X_TildeW_is_proved_absent",
+      "passed": true
+    },
+    {
+      "id": "no_exp_2gV_import",
+      "passed": true
+    },
+    {
+      "id": "no_external_coefficients",
+      "passed": true
+    },
+    {
+      "id": "nonlinear_letters_present_I3_I4",
+      "passed": true
+    },
+    {
+      "id": "outer_connection_present_I3_I4",
+      "passed": true
+    },
+    {
+      "id": "physical_e_v_uses_transposition_proved_series",
+      "passed": true
+    },
+    {
+      "id": "project_transposition_exact",
+      "passed": true
+    },
+    {
+      "id": "requested_transposition_conflict_explicit",
+      "passed": true
+    },
+    {
+      "id": "selected_I3_roles_are_one_background_two_quantum",
+      "passed": true
+    },
+    {
+      "id": "selected_antichiral_S3_roles_are_one_background_two_quantum",
+      "passed": true
+    },
+    {
+      "id": "tilde_gamma_component_coefficients",
+      "passed": true
+    },
+    {
+      "id": "tilde_gamma_uses_barD_not_D_core",
+      "passed": true
+    },
+    {
+      "id": "tilde_w_component_coefficients",
+      "passed": true
+    },
+    {
+      "id": "user_requested_e_v_is_rejected_not_silent",
+      "passed": true
+    },
+    {
+      "id": "w_component_coefficients",
+      "passed": true
+    },
+    {
+      "id": "x1_coefficient",
+      "passed": true
+    },
+    {
+      "id": "x2_coefficients",
+      "passed": true
+    },
+    {
+      "id": "x3_coefficients",
+      "passed": true
+    },
+    {
+      "id": "x_term_counts_by_degree",
+      "passed": true
+    }
+  ],
+  "exact_conflict": {
+    "conflict_degrees": [
+      1,
+      2,
+      3
+    ],
+    "conflict_location": "transport from Xi-variation Euler operator to V-functional Euler operator",
+    "direct_products": [
+      {
+        "F_coefficient": "1",
+        "degree": 0,
+        "product": "1",
+        "transpose_sign": "1"
+      },
+      {
+        "F_coefficient": "-1/2",
+        "degree": 1,
+        "product": "1/2",
+        "transpose_sign": "-1"
+      },
+      {
+        "F_coefficient": "1/6",
+        "degree": 2,
+        "product": "1/6",
+        "transpose_sign": "1"
+      },
+      {
+        "F_coefficient": "-1/24",
+        "degree": 3,
+        "product": "1/24",
+        "transpose_sign": "-1"
+      }
+    ],
+    "input_F_of_ad_coefficients": [
+      "1",
+      "-1/2",
+      "1/6",
+      "-1/24"
+    ],
+    "physical_instantiation_policy": "USE_PROJECT_FUNCTIONAL_EULER",
+    "primitive_I2_dependency": "NONE; I2 is built directly from X_1 X_1",
+    "project_equals_direct_transposition": true,
+    "project_functional_euler": [
+      "1",
+      "1/2",
+      "1/6",
+      "1/24"
+    ],
+    "requested_equals_direct_transposition": false,
+    "transpose_degree_signs": [
+      "1",
+      "-1",
+      "1",
+      "-1"
+    ],
+    "transpose_rule": "(ad_V)^T=-ad_V",
+    "user_requested_seed_transport": [
+      "1",
+      "-1/2",
+      "-1/6",
+      "-1/24"
+    ],
+    "user_requested_series_status": "REJECTED_BY_5_28_TRANSPOSITION"
+  },
+  "generated_sha256": "b81246ef6a6098021c52211a40e49e42f1d75759be5abf9dedfade6a18cbebd3",
+  "physical_euler_transport_series": "project_functional_euler",
+  "project_functional_euler_series_retained": true,
+  "schema": 1,
+  "scope": "STEP5A_WW_PROJECT_COMPOSITE_GRAMMAR",
+  "status": "PASS",
+  "totals": {
+    "checks": 34,
+    "failed": 0
+  },
+  "user_requested_seed_transport_status": "REJECTED_BY_5_28_TRANSPOSITION"
+}

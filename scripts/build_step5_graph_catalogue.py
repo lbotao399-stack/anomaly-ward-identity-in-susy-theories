@@ -660,22 +660,24 @@ def build_catalogue() -> dict[str, object]:
         ),
         "reverse_binding_id_rule": "reverse_binding__{channel_id}",
         "classification": "VALENCE_ONLY_NOT_GRAPH",
-        "status": "BLOCKED_VALENCE_ONLY_NOT_GRAPH",
-        "blocker_contract_ref": "blocker_contract.loop_blockers",
+        "status": "DEFERRED_VALENCE_ONLY_NOT_GRAPH",
+        "blocker_contract_ref": "historical_pre_split_blockers.loop_blockers",
         "total_count": len(channels) * len(templates),
     }
 
     return {
         "schema": 1,
         "task": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
-        "status": "BLOCKED_GAUGE_KERNEL_CANDIDATE_CATALOGUE",
+        "status": "LEGACY_PRE_SPLIT_VALENCE_SCAFFOLD_NOT_CURRENT_GATE",
+        "current_physical_seed": "generated/step5/ww-seed-graph-ir.json",
         "authority_inputs": [
             "scripts/step5_graph_ir.py",
             "scripts/step5_vertex_grammar.py",
         ],
-        "blocker_contract": {
+        "historical_pre_split_blockers": {
             "loop_blockers": list(LOOP_BLOCKERS),
             "vertex_grammar_blockers": list(bundle.blockers),
+            "current_gate": False,
             "candidate_pairing_is_admitted_amplitude": False,
             "topology_request_without_wick_pairing_is_graph": False,
         },
@@ -703,7 +705,7 @@ def build_catalogue() -> dict[str, object]:
         "insertion_chart_monomials": [
             {
                 **_monomial_manifest(item),
-                "core_status": "BLOCKED_UNINSTANTIATED_E_XI_CORE",
+                "core_status": "RESOLVED_IN_GENERATED_STEP5_PROJECT_COMPOSITES_JSON",
                 "chart_series_status": "PROVED_5_28",
             }
             for item in bundle.insertion_monomials
@@ -720,7 +722,9 @@ def render_maps_markdown(catalogue: Mapping[str, object]) -> str:
     lines = [
         "# Step 5 deterministic graph maps",
         "",
-        "Loop status: `BLOCKED_GAUGE_KERNEL_CANDIDATE_CATALOGUE`.",
+        "Status: `LEGACY_PRE_SPLIT_VALENCE_SCAFFOLD_NOT_CURRENT_GATE`.",
+        "",
+        "Physical WW seed: `generated/step5/ww-seed-graph-ir.json`.",
         "",
     ]
     for tree in catalogue["tree_channels"]:  # type: ignore[index]
@@ -870,8 +874,8 @@ def build_audit(catalogue_bytes: bytes, maps_bytes: bytes, catalogue: Mapping[st
         "sixteen_indexed_tree_maps": len(catalogue["tree_channels"]) == 16,  # type: ignore[index]
         "twenty_seven_nonzero_action_vertices": catalogue["counts"]["action_vertices"] == 27,  # type: ignore[index]
         "two_typed_zero_fp_monomials": catalogue["counts"]["typed_zero_action_monomials"] == 2,  # type: ignore[index]
-        "four_chart_insertions_core_blocked": all(
-            item["core_status"] == "BLOCKED_UNINSTANTIATED_E_XI_CORE"
+        "four_chart_insertions_core_resolved_elsewhere": all(
+            item["core_status"] == "RESOLVED_IN_GENERATED_STEP5_PROJECT_COMPOSITES_JSON"
             for item in catalogue["insertion_chart_monomials"]  # type: ignore[index]
         ),
         "six_hundred_fifty_two_valence_only_templates_per_channel": catalogue["counts"]["valence_only_templates_per_channel"] == 652,  # type: ignore[index]
@@ -882,8 +886,8 @@ def build_audit(catalogue_bytes: bytes, maps_bytes: bytes, catalogue: Mapping[st
         == {"TADPOLE": 16, "BUBBLE": 432, "TRIANGLE": 9984},
         "all_valence_only_requests_are_not_graphs": (
             product["classification"] == "VALENCE_ONLY_NOT_GRAPH"
-            and product["status"] == "BLOCKED_VALENCE_ONLY_NOT_GRAPH"
-            and product["blocker_contract_ref"] == "blocker_contract.loop_blockers"
+            and product["status"] == "DEFERRED_VALENCE_ONLY_NOT_GRAPH"
+            and product["blocker_contract_ref"] == "historical_pre_split_blockers.loop_blockers"
             and not any(
                 key in product for key in ("graph_ir", "maps", "amplitude_skeleton")
             )
@@ -918,12 +922,14 @@ def build_audit(catalogue_bytes: bytes, maps_bytes: bytes, catalogue: Mapping[st
         ),
         "fixture_ir_render_id_equivalence": fixture_render_equivalence,
         "fixture_ir_amplitude_edge_equivalence": fixture_amplitude_equivalence,
-        "physical_ww_seed_not_claimed": all(
+        "generic_fixtures_do_not_impersonate_physical_ww_seed": all(
             "WW_seed" not in item["graph_id"]
             and item["graph_ir"]["metadata"]["channel_id"]
             == "UNASSIGNED_GENERIC_FIXTURE"
             for item in fixtures
         ),
+        "physical_ww_seed_linked": catalogue["current_physical_seed"]
+        == "generated/step5/ww-seed-graph-ir.json",
         "no_numeric_anomaly_coefficient": b"anomaly_coefficient" not in catalogue_bytes.lower(),
     }
     failed = [name for name, passed in checks.items() if not passed]

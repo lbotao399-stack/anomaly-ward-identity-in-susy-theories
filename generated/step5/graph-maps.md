@@ -1,6 +1,8 @@
 # Step 5 deterministic graph maps
 
-Loop status: `BLOCKED_GAUGE_KERNEL_CANDIDATE_CATALOGUE`.
+Status: `LEGACY_PRE_SPLIT_VALENCE_SCAFFOLD_NOT_CURRENT_GATE`.
+
+Physical WW seed: `generated/step5/ww-seed-graph-ir.json`.
 
 ## Tree 1: `W__W`
 
