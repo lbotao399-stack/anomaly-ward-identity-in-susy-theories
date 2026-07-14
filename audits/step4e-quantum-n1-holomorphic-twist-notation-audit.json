@@ -1,0 +1,243 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-04E-QUANTUM-N1-HOLOMORPHIC-TWIST-001",
+  "contract": "contracts/foundations/step-04e-quantum-n1-holomorphic-twist.md",
+  "method": "lecture-notation-consistency-audit",
+  "result": "PASS",
+  "unresolved": {
+    "P0": [],
+    "P1": []
+  },
+  "symbol_ledger": [
+    {
+      "symbol": "X_nu, Y_nu",
+      "type": "regulated BV supermanifolds"
+    },
+    {
+      "symbol": "mathscr T_nu",
+      "type": "invertible odd-symplectic superdiffeomorphism Y_nu to X_nu"
+    },
+    {
+      "symbol": "mathscr T_nu,0^*, mathscr T_nu,1/2^*, mathscr T_nu,1^*",
+      "type": "typed pullbacks on functions, semidensities, and densities; unsubscripted pullback is reserved for differential forms"
+    },
+    {
+      "symbol": "bold Delta_Z,nu",
+      "type": "canonical semidensity BV operator"
+    },
+    {
+      "symbol": "Delta_Z,nu",
+      "type": "compatible-density function BV Laplacian"
+    },
+    {
+      "symbol": "mathscr O_Z,nu",
+      "type": "regulated function algebra"
+    },
+    {
+      "symbol": "mathscr S_Z,nu^WKB",
+      "type": "formal WKB semidensity space"
+    },
+    {
+      "symbol": "mathscr K_nu",
+      "type": "normalized pullback followed by raw BV fiber pushforward"
+    },
+    {
+      "symbol": "p_nu, q_nu",
+      "type": "raw fiber-integration parity and optional integer degree"
+    },
+    {
+      "symbol": "mathfrak o_n,rho, mathfrak o_Q,n,nu",
+      "type": "ordinary-QME and relative-Q-lift obstruction cocycles"
+    },
+    {
+      "symbol": "D_n,nu",
+      "type": "first even mismatch between pushforward and independent hBF quantizations"
+    },
+    {
+      "symbol": "Log_k_nu(4i)",
+      "type": "chosen logarithm branch for action extraction from the Step-4D Jacobian"
+    }
+  ],
+  "resolved_findings": [
+    {
+      "id": "NOT-01",
+      "severity": "P0",
+      "finding": "The exponential semidensity was outside the declared coefficient algebra.",
+      "repair": "Defined the formal WKB semidensity space over C((hbar^(1/2)))."
+    },
+    {
+      "id": "NOT-02",
+      "severity": "P0",
+      "finding": "The zero-flux equation was quantified for one coefficient but promoted to an operator identity.",
+      "repair": "Defined a universal Delta-stable zero-flux domain and an admissible input domain."
+    },
+    {
+      "id": "NOT-03",
+      "severity": "P0",
+      "finding": "Raw Berezin fiber integration was treated as an even chain map.",
+      "repair": "Introduced p_nu and derived the exact graded sign (-1)^p_nu."
+    },
+    {
+      "id": "NOT-04",
+      "severity": "P1",
+      "finding": "The ordinary order-n QME right-hand side was called a cohomology class without proving closedness.",
+      "repair": "Defined o_n,rho and extracted d_0 o_n,rho=0 from the Bianchi identity."
+    },
+    {
+      "id": "NOT-05",
+      "severity": "P1",
+      "finding": "Function Laplacian aliases Delta_X,nu and Delta_h,nu were undefined.",
+      "repair": "Defined both aliases from the compatible input and horizontal densities."
+    },
+    {
+      "id": "NOT-06",
+      "severity": "P1",
+      "finding": "The classical ordinary action used inconsistent regulator-zero subscripts.",
+      "repair": "Unified it as S_ord,0,nu and tied d_tw,0,nu to that symbol."
+    },
+    {
+      "id": "NOT-07",
+      "severity": "P1",
+      "finding": "The same C symbol denoted a function complex and a vertical scalar.",
+      "repair": "Renamed the function algebra mathscr O and the scalar C_ctr,nu."
+    },
+    {
+      "id": "NOT-08",
+      "severity": "P1",
+      "finding": "The change of variables was used with an inverse derivative before invertibility was declared.",
+      "repair": "Declared mathscr T_nu an invertible odd-symplectic superdiffeomorphism at first use."
+    },
+    {
+      "id": "NOT-09",
+      "severity": "P1",
+      "finding": "Canonical semidensity operators were applied directly to coefficient functions and scalars.",
+      "repair": "Introduced Darboux coefficient operators and wrote scalar-normalization commutation on semidensities."
+    },
+    {
+      "id": "NOT-10",
+      "severity": "P1",
+      "finding": "The output prefactor expansion incorrectly allowed a general one-loop action while setting its leading amplitude to one.",
+      "repair": "Kept an invertible field-dependent A_0 and derived M_1=-log A_0."
+    },
+    {
+      "id": "NOT-11",
+      "severity": "P1",
+      "finding": "Flat vertical data used a regulator-like zero subscript.",
+      "repair": "Renamed the objects rho_ctr,nu^flat and Delta_ctr,nu^flat."
+    },
+    {
+      "id": "NOT-12",
+      "severity": "P1",
+      "finding": "Classical horizontal-vertical factorization was extended to all quantum corrections.",
+      "repair": "Stated that pulled-back M_n and H_Q,n can mix sectors and removed full quantum factorization."
+    },
+    {
+      "id": "NOT-13",
+      "severity": "P1",
+      "finding": "Finite-regulator H0 and H1 were used without a preserved integer grading.",
+      "repair": "Used Hbar0 and Hbar1 by default and made H0 and H1 conditional refinements."
+    },
+    {
+      "id": "NOT-14",
+      "severity": "P1",
+      "finding": "The integer degree of raw fiber integration was omitted.",
+      "repair": "Introduced q_nu and required q_nu=0 for integer-graded action and comparison claims."
+    },
+    {
+      "id": "NOT-15",
+      "severity": "P1",
+      "finding": "The original antifield-zero vertical contour was assumed to give a nonzero normalization.",
+      "repair": "Computed S_ctr restricted to the zero section and the vanishing odd constant Berezin integral for the flat density."
+    },
+    {
+      "id": "NOT-16",
+      "severity": "P1",
+      "finding": "The density-change master equation was inferred only from nilpotence, which determines it only up to a central term.",
+      "repair": "Derived it directly from compatibility of both semidensities."
+    },
+    {
+      "id": "NOT-17",
+      "severity": "P1",
+      "finding": "The comparison subtraction did not explicitly assume both hBF actions satisfy the QME.",
+      "repair": "Added both QME hypotheses before deriving d_h D_n=0."
+    },
+    {
+      "id": "NOT-18",
+      "severity": "P1",
+      "finding": "Canonical-transformation, parameter-shift, and vacuum terms in the comparison equation lacked types.",
+      "repair": "Typed R_n, delta g_n, and zeta_n and required parameter-independent bracket data."
+    },
+    {
+      "id": "NOT-19",
+      "severity": "P1",
+      "finding": "RG maps were not declared chain maps and their parity-degree compatibility was omitted.",
+      "repair": "Typed the RG chain identities and required p_nu=0, plus q_nu=0 for the integer refinement."
+    },
+    {
+      "id": "NOT-20",
+      "severity": "P1",
+      "finding": "The continuum local cohomology used an undefined differential and untyped quotient.",
+      "repair": "Defined the bracket limit, local-density lift, continuum CME bicomplex, and relative local cohomology."
+    },
+    {
+      "id": "NOT-21",
+      "severity": "P2",
+      "finding": "K denoted both a vertical field and the composite chain map.",
+      "repair": "Renamed the chain map mathscr K_nu."
+    },
+    {
+      "id": "NOT-22",
+      "severity": "P2",
+      "finding": "The density defect reused the regulator letter nu.",
+      "repair": "Renamed it chi_rho."
+    },
+    {
+      "id": "NOT-23",
+      "severity": "P2",
+      "finding": "The Q-lift obstruction and Ward anomaly both used A_Q.",
+      "repair": "Separated mathfrak o_Q,n,nu from mathscr A_Q."
+    },
+    {
+      "id": "NOT-24",
+      "severity": "P2",
+      "finding": "The vacuum constant collided visually with the gauge ghost c.",
+      "repair": "Renamed it zeta_n,nu."
+    },
+    {
+      "id": "NOT-25",
+      "severity": "P2",
+      "finding": "The spacetime differential in relative local cohomology was undefined.",
+      "repair": "Defined d_sp on local spacetime form densities."
+    },
+    {
+      "id": "NOT-26",
+      "severity": "P1",
+      "finding": "One pullback symbol was overloaded across functions, semidensities, densities, and differential forms.",
+      "repair": "Introduced coefficient-typed pullbacks T_nu,0^*, T_nu,1/2^*, and T_nu,1^*, reserving the unsubscripted symbol for differential forms."
+    },
+    {
+      "id": "NOT-27",
+      "severity": "P1",
+      "finding": "The horizontal derivative was passed through a fiber integral without typing the base dependence of the cycle.",
+      "repair": "Declared the vertical cycle fixed over x and x^*; excluded varying cycles without a separate Gauss-Manin zero-variation-flux proof."
+    },
+    {
+      "id": "NOT-28",
+      "severity": "P1",
+      "finding": "The complex logarithm in the Jacobian action shift had no chosen branch.",
+      "repair": "Fixed Log_k_nu(4i), computed the exact branch shift, and proved the semidensity is branch-independent."
+    },
+    {
+      "id": "NOT-29",
+      "severity": "P1",
+      "finding": "The nonflat full-density ratio was not separately required to define a compatible BV density.",
+      "repair": "Expanded the half-density ratio exp(ell/2) and imposed Delta ell plus one quarter of the self bracket equal to zero."
+    },
+    {
+      "id": "NOT-30",
+      "severity": "P1",
+      "finding": "The constant comparison class was quotiented out without stating that normalization remained adjustable.",
+      "repair": "Computed the normalization shift sign explicitly and required zeta_n=0 when normalized output is frozen."
+    }
+  ]
+}

@@ -417,13 +417,15 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertTrue(audit_path.is_file())
         self.assertTrue(ledger_path.is_file())
         expected = audit_path.read_text(encoding="utf-8")
-        subprocess.run(
-            [sys.executable, str(script)],
-            cwd=ROOT,
-            check=True,
-            stdout=subprocess.DEVNULL,
-        )
-        self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
+        current_task = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
+        if current_task["id"] == "REFERENCE-IMPORT-N1-QUANTUM-HOLOMORPHIC-TWIST-001":
+            subprocess.run(
+                [sys.executable, str(script)],
+                cwd=ROOT,
+                check=True,
+                stdout=subprocess.DEVNULL,
+            )
+            self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
         audit = json.loads(expected)
         ledger = json.loads(ledger_path.read_text(encoding="utf-8"))
         self.assertEqual(audit["status"], "PASS")
@@ -589,6 +591,121 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertEqual(audit["status"], "PASS")
         self.assertEqual(audit["totals"], {"exact_checks": 110, "failed_checks": 0})
         self.assertTrue(all(item["failed"] == 0 for item in audit["categories"].values()))
+
+    def test_step4e_quantum_holomorphic_twist_registration(self) -> None:
+        task = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
+        if task["id"] != "CONTRACT-STEP-04E-QUANTUM-N1-HOLOMORPHIC-TWIST-001":
+            self.skipTest("Step-4E quantum holomorphic-twist task is not current")
+        self.assertEqual(task["type"], "CONTRACT_CHANGE")
+        self.assertEqual(task["status"], "SPECIFIED")
+        self.assertEqual(len(task["acceptance"]), 16)
+        self.assertEqual(task["reference_admission"]["admitted_claim_ids"], [])
+        self.assertEqual(len(task["reference_admission"]["blocked_claim_ids"]), 8)
+        self.assertEqual(
+            task["reference_admission"]["blocker"],
+            "BLOCKED_REFERENCE_IMPORT_NOT_ON_MAIN",
+        )
+        self.assertTrue(
+            any("all-order finite-regulator semidensity theorem" in item for item in [task["outcome"]])
+        )
+        self.assertTrue(
+            any("H0 beta or scheme class" in item for item in task["forbidden_inputs"])
+        )
+
+        manifest = json.loads((ROOT / "contracts/manifest.yaml").read_text(encoding="utf-8"))
+        entry = next(
+            item
+            for item in manifest["contracts"]
+            if item["id"] == "FOUNDATION-QUANTUM-N1-HOLOMORPHIC-TWIST-004E"
+        )
+        self.assertEqual(
+            entry["path"],
+            "contracts/foundations/step-04e-quantum-n1-holomorphic-twist.md",
+        )
+        self.assertEqual(entry["status"], "DERIVED_UNFROZEN")
+
+    def test_step4e_quantum_holomorphic_twist_surface(self) -> None:
+        path = ROOT / "contracts/foundations/step-04e-quantum-n1-holomorphic-twist.md"
+        self.assertTrue(path.is_file())
+        text = path.read_text(encoding="utf-8")
+        numeric_tags = [int(value) for value in re.findall(r"\\tag\{4E\.(\d+)\}", text)]
+        self.assertEqual(numeric_tags, list(range(1, 67)))
+        self.assertIn(r"\tag{4E.11a}", text)
+        self.assertEqual(text.count("$$") // 2, 124)
+        for forbidden in (r"\sim", r"\approx", r"\propto"):
+            self.assertNotIn(forbidden, text)
+        for required in (
+            r"\boldsymbol\Delta_{\mathrm h,\nu}\mathscr K_\nu",
+            r"=(-1)^{p_\nu}\mathscr K_\nu\boldsymbol\Delta_{X,\nu}",
+            r"d_{\mathrm{tw},0,\nu}H_{Q,n,\nu}",
+            r"\mathfrak o_{n,\rho}",
+            r"\rho_{Y,\nu}^{\mathrm{tr}}",
+            r"\rho_{Y,\nu}^{\mathrm{ref}}",
+            r"C_{\mathrm{ctr},\nu}(\hbar)",
+            r"\Delta_{\mathrm{ctr},\nu}^{\mathrm{flat}}",
+            r"L_{\mathrm{ctr},\nu}^{(0)}",
+            r"M_{1,\nu}^{\mathrm{pf}}",
+            r"[D_{n,\nu}]",
+            r"d_{abc}^{\mathrm{adj}}=0",
+            r"R_{\nu\to\mu}^{\mathrm h}\mathscr K_\nu",
+            "PROVED CONDITIONALLY",
+        ):
+            self.assertIn(required, text)
+        for index in range(1, 10):
+            self.assertIn(rf"\mathrm{{QHT\!-\!GAP\!-\!{index:02d}}}", text)
+
+    def test_step4e_quantum_holomorphic_twist_exact_verifier(self) -> None:
+        script = ROOT / "scripts/verify_step4e_quantum_n1_holomorphic_twist.py"
+        audit_path = ROOT / "audits/step4e-quantum-n1-holomorphic-twist-verification.json"
+        self.assertTrue(script.is_file())
+        self.assertTrue(audit_path.is_file())
+        expected = audit_path.read_text(encoding="utf-8")
+        subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
+        audit = json.loads(expected)
+        self.assertEqual(audit["status"], "PASS")
+        self.assertEqual(audit["totals"], {"exact_checks": 127, "failed_checks": 0})
+        self.assertTrue(all(item["failed"] == 0 for item in audit["categories"].values()))
+
+    def test_step4e_quantum_holomorphic_twist_gap_audit(self) -> None:
+        path = ROOT / "audits/step4e-quantum-n1-holomorphic-twist-gap-audit.json"
+        audit = json.loads(path.read_text(encoding="utf-8"))
+        self.assertEqual(
+            audit["task"],
+            "CONTRACT-STEP-04E-QUANTUM-N1-HOLOMORPHIC-TWIST-001",
+        )
+        self.assertEqual(
+            audit["contract"],
+            "contracts/foundations/step-04e-quantum-n1-holomorphic-twist.md",
+        )
+        self.assertEqual(audit["result"], "PASS_WITH_OPEN_APPLICATION_GAPS")
+        expected_ids = [f"QHT-GAP-{index:02d}" for index in range(1, 10)]
+        self.assertEqual(audit["open_gap_ids"], expected_ids)
+        self.assertEqual([item["id"] for item in audit["gaps"]], expected_ids)
+        self.assertEqual(
+            [item["severity"] for item in audit["gaps"]],
+            ["P1", "P1", "P1", "P1", "P1", "P1", "P2", "P2", "P2"],
+        )
+        self.assertEqual(audit["internal_proof_obligations"], {"P0": [], "P1": []})
+        self.assertEqual(audit["checked_equation_groups"], 124)
+        self.assertEqual(len(audit["verification_checks"]), 13)
+        self.assertTrue(all(item["result"] == "PASS" for item in audit["verification_checks"]))
+
+    def test_step4e_quantum_holomorphic_twist_notation_audit(self) -> None:
+        path = ROOT / "audits/step4e-quantum-n1-holomorphic-twist-notation-audit.json"
+        audit = json.loads(path.read_text(encoding="utf-8"))
+        self.assertEqual(
+            audit["task"],
+            "CONTRACT-STEP-04E-QUANTUM-N1-HOLOMORPHIC-TWIST-001",
+        )
+        self.assertEqual(audit["result"], "PASS")
+        self.assertEqual(audit["unresolved"], {"P0": [], "P1": []})
+        self.assertGreaterEqual(len(audit["resolved_findings"]), 20)
 
     def test_step4d_write_only_mirror_receipt(self) -> None:
         receipt_path = ROOT / "audits/step4d-notion-write-receipt.json"

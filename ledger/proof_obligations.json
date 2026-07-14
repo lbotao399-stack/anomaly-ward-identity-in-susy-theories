@@ -253,7 +253,14 @@
       "id": "REFERENCE-IMPORT-N1-QUANTUM-HOLOMORPHIC-TWIST-001",
       "state": "ACCEPTED",
       "blocking_reason": null,
-      "task_sha256": "4ffd3d6dd2c2770eebd04d0db4f6dd4fe1b70a4bd4b784f34571c4a3ece3cff7",
+      "task_sha256": "35922fb468804670ff197c81433b76ca9181e1aefefff4261d57fcf646275e7a",
+      "task": "tasks/archive/REFERENCE-IMPORT-N1-QUANTUM-HOLOMORPHIC-TWIST-001.yaml"
+    },
+    {
+      "id": "CONTRACT-STEP-04E-QUANTUM-N1-HOLOMORPHIC-TWIST-001",
+      "state": "SPECIFIED",
+      "blocking_reason": "BLOCKED_REFERENCE_IMPORT_NOT_ON_MAIN for every external theorem; direct finite-regulator BV identities may be derived as a stacked proposal.",
+      "task_sha256": "c46e971b2f6c39de143c581c3472f8fc2259c78899d23aff679fb1c42ad2e63c",
       "task": "tasks/CURRENT.yaml"
     }
   ]

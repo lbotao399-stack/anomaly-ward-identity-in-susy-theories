@@ -1,0 +1,1269 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-04E-QUANTUM-N1-HOLOMORPHIC-TWIST-001",
+  "contract": "contracts/foundations/step-04e-quantum-n1-holomorphic-twist.md",
+  "status": "PASS",
+  "totals": {
+    "exact_checks": 127,
+    "failed_checks": 0
+  },
+  "categories": {
+    "anomaly_channels": {
+      "checks": 5,
+      "failed": 0
+    },
+    "bv_pushforward": {
+      "checks": 11,
+      "failed": 0
+    },
+    "continuum": {
+      "checks": 4,
+      "failed": 0
+    },
+    "contract_surface": {
+      "checks": 41,
+      "failed": 0
+    },
+    "contractible_factor": {
+      "checks": 6,
+      "failed": 0
+    },
+    "density_transport": {
+      "checks": 7,
+      "failed": 0
+    },
+    "gap_audit": {
+      "checks": 16,
+      "failed": 0
+    },
+    "independent_comparison": {
+      "checks": 9,
+      "failed": 0
+    },
+    "manifest": {
+      "checks": 4,
+      "failed": 0
+    },
+    "notation_audit": {
+      "checks": 4,
+      "failed": 0
+    },
+    "quantum_q_lift": {
+      "checks": 11,
+      "failed": 0
+    },
+    "task_scope": {
+      "checks": 9,
+      "failed": 0
+    }
+  },
+  "checks": [
+    {
+      "category": "contract_surface",
+      "name": "numeric_tags_consecutive",
+      "result": "PASS",
+      "evidence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ]
+    },
+    {
+      "category": "contract_surface",
+      "name": "subtag_11a",
+      "result": "PASS",
+      "evidence": "4E.11a"
+    },
+    {
+      "category": "contract_surface",
+      "name": "display_group_count",
+      "result": "PASS",
+      "evidence": 124
+    },
+    {
+      "category": "contract_surface",
+      "name": "terminal_newline",
+      "result": "PASS",
+      "evidence": "'.66}\\n$$\\n'"
+    },
+    {
+      "category": "contract_surface",
+      "name": "forbidden_\\sim",
+      "result": "PASS",
+      "evidence": 0
+    },
+    {
+      "category": "contract_surface",
+      "name": "forbidden_\\approx",
+      "result": "PASS",
+      "evidence": 0
+    },
+    {
+      "category": "contract_surface",
+      "name": "forbidden_\\propto",
+      "result": "PASS",
+      "evidence": 0
+    },
+    {
+      "category": "contract_surface",
+      "name": "forbidden_After substitution and algebra",
+      "result": "PASS",
+      "evidence": 0
+    },
+    {
+      "category": "contract_surface",
+      "name": "forbidden_after substitution and algebra",
+      "result": "PASS",
+      "evidence": 0
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_\\boldsymbol\\Delta_{Y,\\nu}\\mathscr T_{\\nu,1/2}^*",
+      "result": "PASS",
+      "evidence": "\\boldsymbol\\Delta_{Y,\\nu}\\mathscr T_{\\nu,1/2}^*"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_\\boldsymbol\\Delta_{\\mathrm h,\\nu}\\pi_{\\nu*}^{\\mathrm{BV}}",
+      "result": "PASS",
+      "evidence": "\\boldsymbol\\Delta_{\\mathrm h,\\nu}\\pi_{\\nu*}^{\\mathrm{BV}}"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_\\boldsymbol\\Delta_{\\mathrm h,\\nu}\\mathscr K_\\nu",
+      "result": "PASS",
+      "evidence": "\\boldsymbol\\Delta_{\\mathrm h,\\nu}\\mathscr K_\\nu"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_=(-1)^{p_\\nu}\\mathscr K_\\nu\\boldsymbol\\Delta_{X,\\nu}",
+      "result": "PASS",
+      "evidence": "=(-1)^{p_\\nu}\\mathscr K_\\nu\\boldsymbol\\Delta_{X,\\nu}"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_d_{\\mathrm{tw},0,\\nu}H_{Q,n,\\nu}",
+      "result": "PASS",
+      "evidence": "d_{\\mathrm{tw},0,\\nu}H_{Q,n,\\nu}"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_\\mathfrak o_{Q,n,\\nu}",
+      "result": "PASS",
+      "evidence": "\\mathfrak o_{Q,n,\\nu}"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_\\mathfrak o_{n,\\rho}",
+      "result": "PASS",
+      "evidence": "\\mathfrak o_{n,\\rho}"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_H_{Q,0,\\nu}",
+      "result": "PASS",
+      "evidence": "H_{Q,0,\\nu}"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_S_{\\mathrm{tw},0,\\nu}-S_{\\mathrm{ord},0,\\nu}",
+      "result": "PASS",
+      "evidence": "S_{\\mathrm{tw},0,\\nu}-S_{\\mathrm{ord},0,\\nu}"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_\\rho_{Y,\\nu}^{\\mathrm{tr}}",
+      "result": "PASS",
+      "evidence": "\\rho_{Y,\\nu}^{\\mathrm{tr}}"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_\\rho_{Y,\\nu}^{\\mathrm{ref}}",
+      "result": "PASS",
+      "evidence": "\\rho_{Y,\\nu}^{\\mathrm{ref}}"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_\\ell_{\\mathscr T,\\nu}",
+      "result": "PASS",
+      "evidence": "\\ell_{\\mathscr T,\\nu}"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_\\chi_{\\rho_{Z,\\nu}}",
+      "result": "PASS",
+      "evidence": "\\chi_{\\rho_{Z,\\nu}}"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_J_{\\mathscr T,\\nu}^{1/2}=(4i)^{-N_\\nu}",
+      "result": "PASS",
+      "evidence": "J_{\\mathscr T,\\nu}^{1/2}=(4i)^{-N_\\nu}"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_\\mathbb K:=\\mathbb C((\\hbar^{1/2}))",
+      "result": "PASS",
+      "evidence": "\\mathbb K:=\\mathbb C((\\hbar^{1/2}))"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_\\mathscr S_{Z,\\nu}^{\\mathrm{WKB}}",
+      "result": "PASS",
+      "evidence": "\\mathscr S_{Z,\\nu}^{\\mathrm{WKB}}"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_\\mathscr D_{\\Gamma,\\nu}",
+      "result": "PASS",
+      "evidence": "\\mathscr D_{\\Gamma,\\nu}"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_C_{\\mathrm{ctr},\\nu}(\\hbar)",
+      "result": "PASS",
+      "evidence": "C_{\\mathrm{ctr},\\nu}(\\hbar)"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_\\Delta_{\\mathrm{ctr},\\nu}^{\\mathrm{flat}}",
+      "result": "PASS",
+      "evidence": "\\Delta_{\\mathrm{ctr},\\nu}^{\\mathrm{flat}}"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_L_{\\mathrm{ctr},\\nu}^{(0)}",
+      "result": "PASS",
+      "evidence": "L_{\\mathrm{ctr},\\nu}^{(0)}"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_\\int d\\eta_1\\,d\\eta_2\\,dw\\,1",
+      "result": "PASS",
+      "evidence": "\\int d\\eta_1\\,d\\eta_2\\,dw\\,1"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_M_{1,\\nu}^{\\mathrm{pf}}",
+      "result": "PASS",
+      "evidence": "M_{1,\\nu}^{\\mathrm{pf}}"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_=-\\log\\mathcal A_{0,\\nu}",
+      "result": "PASS",
+      "evidence": "=-\\log\\mathcal A_{0,\\nu}"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_[D_{n,\\nu}]",
+      "result": "PASS",
+      "evidence": "[D_{n,\\nu}]"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_H^{\\bar0}",
+      "result": "PASS",
+      "evidence": "H^{\\bar0}"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_H^{\\bar1}",
+      "result": "PASS",
+      "evidence": "H^{\\bar1}"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_d_{abc}^{\\mathrm{adj}}=0",
+      "result": "PASS",
+      "evidence": "d_{abc}^{\\mathrm{adj}}=0"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_\\mathcal W_Q\\mathscr A_R=0",
+      "result": "PASS",
+      "evidence": "\\mathcal W_Q\\mathscr A_R=0"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_R_{\\nu\\to\\mu}^{\\mathrm h}\\mathscr K_\\nu",
+      "result": "PASS",
+      "evidence": "R_{\\nu\\to\\mu}^{\\mathrm h}\\mathscr K_\\nu"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_\\operatorname{Flux}_{\\partial\\Gamma_{\\mathrm{ctr},\\mu}}",
+      "result": "PASS",
+      "evidence": "\\operatorname{Flux}_{\\partial\\Gamma_{\\mathrm{ctr},\\mu}}"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_H^{\\bar k}_{\\mathrm{loc}}(d_{\\mathrm h}\\mid d_{\\mathrm{sp}})",
+      "result": "PASS",
+      "evidence": "H^{\\bar k}_{\\mathrm{loc}}(d_{\\mathrm h}\\mid d_{\\mathrm{sp}})"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_PROVED CONDITIONALLY",
+      "result": "PASS",
+      "evidence": "PROVED CONDITIONALLY"
+    },
+    {
+      "category": "task_scope",
+      "name": "task_id",
+      "result": "PASS",
+      "evidence": "CONTRACT-STEP-04E-QUANTUM-N1-HOLOMORPHIC-TWIST-001"
+    },
+    {
+      "category": "task_scope",
+      "name": "task_type",
+      "result": "PASS",
+      "evidence": "CONTRACT_CHANGE"
+    },
+    {
+      "category": "task_scope",
+      "name": "task_status",
+      "result": "PASS",
+      "evidence": "SPECIFIED"
+    },
+    {
+      "category": "task_scope",
+      "name": "acceptance_count",
+      "result": "PASS",
+      "evidence": 16
+    },
+    {
+      "category": "task_scope",
+      "name": "no_admitted_reference_claims",
+      "result": "PASS",
+      "evidence": []
+    },
+    {
+      "category": "task_scope",
+      "name": "eight_blocked_reference_claims",
+      "result": "PASS",
+      "evidence": [
+        "QHT-REF-CLASSICAL-TWIST",
+        "QHT-REF-RENORMALIZED-BV-QME",
+        "QHT-REF-BV-PUSHFORWARD",
+        "QHT-REF-HOLOMORPHIC-COUNTERTERM",
+        "QHT-REF-HOLOMORPHIC-QME-ANOMALY",
+        "QHT-REF-N1-EXTENDED-ST-IDENTITY",
+        "QHT-REF-R-Q-ANOMALY-SCHEME",
+        "QHT-REF-BETA-AND-RESCALING"
+      ]
+    },
+    {
+      "category": "task_scope",
+      "name": "reference_blocker",
+      "result": "PASS",
+      "evidence": "BLOCKED_REFERENCE_IMPORT_NOT_ON_MAIN"
+    },
+    {
+      "category": "task_scope",
+      "name": "all_allowed_inputs_exist",
+      "result": "PASS",
+      "evidence": []
+    },
+    {
+      "category": "task_scope",
+      "name": "no_network_allowed_inputs",
+      "result": "PASS",
+      "evidence": [
+        "AUTHORITY.md",
+        "AGENTS.md",
+        "tasks/CURRENT.yaml",
+        "tasks/archive/CONTRACT-STEP-04D-CLASSICAL-N1-HOLOMORPHIC-TWIST-001.yaml",
+        "tasks/archive/REFERENCE-IMPORT-N1-QUANTUM-HOLOMORPHIC-TWIST-001.yaml",
+        "contracts/manifest.yaml",
+        "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md",
+        "contracts/foundations/step-04d-classical-n1-holomorphic-twist.md",
+        "contracts/foundations/step-04e-quantum-n1-holomorphic-twist.md",
+        "ledger/proof_obligations.json",
+        "references/manifest.yaml",
+        "references/claim-map.yaml",
+        "audits/step4d-classical-n1-holomorphic-twist-verification.json",
+        "audits/step4d-gap-audit.json",
+        "audits/step4d-independent-review.json",
+        "audits/step4e-quantum-n1-holomorphic-twist-verification.json",
+        "audits/step4e-quantum-n1-holomorphic-twist-gap-audit.json",
+        "audits/step4e-quantum-n1-holomorphic-twist-notation-audit.json",
+        "scripts/update_contract_hashes.py",
+        "scripts/verify_step4e_quantum_n1_holomorphic_twist.py",
+        "tests/test_repository_policy.py",
+        "mirror/README.md",
+        "mirror/page_map.yaml",
+        "scripts/build_notion_payload.py",
+        ".github/workflows/verify.yml"
+      ]
+    },
+    {
+      "category": "manifest",
+      "name": "entry_exists",
+      "result": "PASS",
+      "evidence": {
+        "id": "FOUNDATION-QUANTUM-N1-HOLOMORPHIC-TWIST-004E",
+        "path": "contracts/foundations/step-04e-quantum-n1-holomorphic-twist.md",
+        "status": "DERIVED_UNFROZEN",
+        "sha256": "5dd7a1de045e1b91e7593fd65f004b1e7f6dbea206d96c36449414eb2abfe798"
+      }
+    },
+    {
+      "category": "manifest",
+      "name": "path",
+      "result": "PASS",
+      "evidence": "contracts/foundations/step-04e-quantum-n1-holomorphic-twist.md"
+    },
+    {
+      "category": "manifest",
+      "name": "status",
+      "result": "PASS",
+      "evidence": "DERIVED_UNFROZEN"
+    },
+    {
+      "category": "manifest",
+      "name": "sha256",
+      "result": "PASS",
+      "evidence": {
+        "manifest": "5dd7a1de045e1b91e7593fd65f004b1e7f6dbea206d96c36449414eb2abfe798",
+        "actual": "5dd7a1de045e1b91e7593fd65f004b1e7f6dbea206d96c36449414eb2abfe798"
+      }
+    },
+    {
+      "category": "quantum_q_lift",
+      "name": "order_1_relative_recursion",
+      "result": "PASS",
+      "evidence": {
+        "expanded": {
+          "('H1', 'S')": "1",
+          "('H0', 'M1')": "1",
+          "('H0', 'H1')": "1"
+        },
+        "recursion": {
+          "('H1', 'S')": "1",
+          "('H0', 'H1')": "1",
+          "('H0', 'M1')": "1"
+        }
+      }
+    },
+    {
+      "category": "quantum_q_lift",
+      "name": "order_2_relative_recursion",
+      "result": "PASS",
+      "evidence": {
+        "expanded": {
+          "('H2', 'S')": "1",
+          "('H1', 'M1')": "1",
+          "('H0', 'M2')": "1",
+          "('H0', 'H2')": "1",
+          "('H1', 'H1')": "1/2"
+        },
+        "recursion": {
+          "('H2', 'S')": "1",
+          "('H0', 'H2')": "1",
+          "('H1', 'M1')": "1",
+          "('H0', 'M2')": "1",
+          "('H1', 'H1')": "1/2"
+        }
+      }
+    },
+    {
+      "category": "quantum_q_lift",
+      "name": "order_3_relative_recursion",
+      "result": "PASS",
+      "evidence": {
+        "expanded": {
+          "('H3', 'S')": "1",
+          "('H2', 'M1')": "1",
+          "('H1', 'M2')": "1",
+          "('H0', 'M3')": "1",
+          "('H0', 'H3')": "1",
+          "('H1', 'H2')": "1"
+        },
+        "recursion": {
+          "('H3', 'S')": "1",
+          "('H0', 'H3')": "1",
+          "('H2', 'M1')": "1",
+          "('H1', 'M2')": "1",
+          "('H0', 'M3')": "1",
+          "('H1', 'H2')": "1"
+        }
+      }
+    },
+    {
+      "category": "quantum_q_lift",
+      "name": "order_4_relative_recursion",
+      "result": "PASS",
+      "evidence": {
+        "expanded": {
+          "('H4', 'S')": "1",
+          "('H3', 'M1')": "1",
+          "('H2', 'M2')": "1",
+          "('H1', 'M3')": "1",
+          "('H0', 'M4')": "1",
+          "('H0', 'H4')": "1",
+          "('H1', 'H3')": "1",
+          "('H2', 'H2')": "1/2"
+        },
+        "recursion": {
+          "('H4', 'S')": "1",
+          "('H0', 'H4')": "1",
+          "('H3', 'M1')": "1",
+          "('H2', 'M2')": "1",
+          "('H1', 'M3')": "1",
+          "('H0', 'M4')": "1",
+          "('H1', 'H3')": "1",
+          "('H2', 'H2')": "1/2"
+        }
+      }
+    },
+    {
+      "category": "quantum_q_lift",
+      "name": "order_5_relative_recursion",
+      "result": "PASS",
+      "evidence": {
+        "expanded": {
+          "('H5', 'S')": "1",
+          "('H4', 'M1')": "1",
+          "('H3', 'M2')": "1",
+          "('H2', 'M3')": "1",
+          "('H1', 'M4')": "1",
+          "('H0', 'M5')": "1",
+          "('H0', 'H5')": "1",
+          "('H1', 'H4')": "1",
+          "('H2', 'H3')": "1"
+        },
+        "recursion": {
+          "('H5', 'S')": "1",
+          "('H0', 'H5')": "1",
+          "('H4', 'M1')": "1",
+          "('H3', 'M2')": "1",
+          "('H2', 'M3')": "1",
+          "('H1', 'M4')": "1",
+          "('H0', 'M5')": "1",
+          "('H1', 'H4')": "1",
+          "('H2', 'H3')": "1"
+        }
+      }
+    },
+    {
+      "category": "quantum_q_lift",
+      "name": "order_6_relative_recursion",
+      "result": "PASS",
+      "evidence": {
+        "expanded": {
+          "('H6', 'S')": "1",
+          "('H5', 'M1')": "1",
+          "('H4', 'M2')": "1",
+          "('H3', 'M3')": "1",
+          "('H2', 'M4')": "1",
+          "('H1', 'M5')": "1",
+          "('H0', 'M6')": "1",
+          "('H0', 'H6')": "1",
+          "('H1', 'H5')": "1",
+          "('H2', 'H4')": "1",
+          "('H3', 'H3')": "1/2"
+        },
+        "recursion": {
+          "('H6', 'S')": "1",
+          "('H0', 'H6')": "1",
+          "('H5', 'M1')": "1",
+          "('H4', 'M2')": "1",
+          "('H3', 'M3')": "1",
+          "('H2', 'M4')": "1",
+          "('H1', 'M5')": "1",
+          "('H0', 'M6')": "1",
+          "('H1', 'H5')": "1",
+          "('H2', 'H4')": "1",
+          "('H3', 'H3')": "1/2"
+        }
+      }
+    },
+    {
+      "category": "quantum_q_lift",
+      "name": "order_one_terms",
+      "result": "PASS",
+      "evidence": {
+        "('H1', 'S')": "1",
+        "('H0', 'H1')": "1",
+        "('H0', 'M1')": "1"
+      }
+    },
+    {
+      "category": "quantum_q_lift",
+      "name": "bianchi_coefficients",
+      "result": "PASS",
+      "evidence": [
+        "-1",
+        "+1"
+      ]
+    },
+    {
+      "category": "quantum_q_lift",
+      "name": "finite_cohomology_before_local_cohomology",
+      "result": "PASS",
+      "evidence": "finite parity cohomology before continuum relative local cohomology"
+    },
+    {
+      "category": "quantum_q_lift",
+      "name": "ordinary_obstruction_closed",
+      "result": "PASS",
+      "evidence": "Bianchi coefficient proves d0-closedness"
+    },
+    {
+      "category": "quantum_q_lift",
+      "name": "integer_grading_hypotheses",
+      "result": "PASS",
+      "evidence": "degree hypotheses"
+    },
+    {
+      "category": "density_transport",
+      "name": "compatible_density_condition",
+      "result": "PASS",
+      "evidence": "compatible density"
+    },
+    {
+      "category": "density_transport",
+      "name": "general_density_defect",
+      "result": "PASS",
+      "evidence": "general semidensity-to-function conversion"
+    },
+    {
+      "category": "density_transport",
+      "name": "transport_reference_separated",
+      "result": "PASS",
+      "evidence": "tr and ref"
+    },
+    {
+      "category": "density_transport",
+      "name": "typed_pullbacks_separated",
+      "result": "PASS",
+      "evidence": "function, semidensity, density, and differential-form pullbacks are distinct"
+    },
+    {
+      "category": "density_transport",
+      "name": "jacobian_action_sign",
+      "result": "PASS",
+      "evidence": "minus hbar log of exponent -N"
+    },
+    {
+      "category": "density_transport",
+      "name": "jacobian_log_branch",
+      "result": "PASS",
+      "evidence": "branch shift changes the action by a vacuum term and leaves the semidensity fixed"
+    },
+    {
+      "category": "density_transport",
+      "name": "constant_jacobian_has_zero_hamiltonian",
+      "result": "PASS",
+      "evidence": "flat constant ell_T separated from general reference density"
+    },
+    {
+      "category": "bv_pushforward",
+      "name": "horizontal_term",
+      "result": "PASS",
+      "evidence": "1"
+    },
+    {
+      "category": "bv_pushforward",
+      "name": "vertical_zero_flux",
+      "result": "PASS",
+      "evidence": "0"
+    },
+    {
+      "category": "bv_pushforward",
+      "name": "normalized_composite_chain_coefficient",
+      "result": "PASS",
+      "evidence": "1"
+    },
+    {
+      "category": "bv_pushforward",
+      "name": "graded_chain_sign_p0",
+      "result": "PASS",
+      "evidence": {
+        "p": 0,
+        "sign": 1
+      }
+    },
+    {
+      "category": "bv_pushforward",
+      "name": "graded_chain_sign_p1",
+      "result": "PASS",
+      "evidence": {
+        "p": 1,
+        "sign": -1
+      }
+    },
+    {
+      "category": "bv_pushforward",
+      "name": "normalization_ring",
+      "result": "PASS",
+      "evidence": "Gaussian half-powers admitted"
+    },
+    {
+      "category": "bv_pushforward",
+      "name": "output_logarithm_hypothesis",
+      "result": "PASS",
+      "evidence": "chosen field-dependent leading logarithm"
+    },
+    {
+      "category": "bv_pushforward",
+      "name": "flat_normalization_includes_jacobian",
+      "result": "PASS",
+      "evidence": "Jacobian times vertical vacuum factor"
+    },
+    {
+      "category": "bv_pushforward",
+      "name": "wkb_and_stable_zero_flux_domains",
+      "result": "PASS",
+      "evidence": "typed WKB domain and stable zero-flux subspace"
+    },
+    {
+      "category": "bv_pushforward",
+      "name": "fixed_horizontal_base_cycle",
+      "result": "PASS",
+      "evidence": "horizontal differentiation does not create a cycle-variation flux"
+    },
+    {
+      "category": "bv_pushforward",
+      "name": "raw_integer_degree_typed",
+      "result": "PASS",
+      "evidence": "raw parity and integer degree with zero-degree action condition"
+    },
+    {
+      "category": "contractible_factor",
+      "name": "monomial_1_flat_laplacian",
+      "result": "PASS",
+      "evidence": [
+        "eta1",
+        "u1*"
+      ]
+    },
+    {
+      "category": "contractible_factor",
+      "name": "monomial_2_flat_laplacian",
+      "result": "PASS",
+      "evidence": [
+        "eta2",
+        "u2*"
+      ]
+    },
+    {
+      "category": "contractible_factor",
+      "name": "monomial_3_flat_laplacian",
+      "result": "PASS",
+      "evidence": [
+        "K",
+        "w*"
+      ]
+    },
+    {
+      "category": "contractible_factor",
+      "name": "nonflat_density_condition",
+      "result": "PASS",
+      "evidence": "density Hamiltonian invariance"
+    },
+    {
+      "category": "contractible_factor",
+      "name": "nonflat_density_compatibility",
+      "result": "PASS",
+      "evidence": "full-density ratio compatibility uses the half-density exponent ell/2"
+    },
+    {
+      "category": "contractible_factor",
+      "name": "naive_zero_section_disproved",
+      "result": "PASS",
+      "evidence": "constant odd integral vanishes and even integral is undamped"
+    },
+    {
+      "category": "independent_comparison",
+      "name": "order_1_first_difference",
+      "result": "PASS",
+      "evidence": {
+        "dD1": "1"
+      }
+    },
+    {
+      "category": "independent_comparison",
+      "name": "order_2_first_difference",
+      "result": "PASS",
+      "evidence": {
+        "dD2": "1"
+      }
+    },
+    {
+      "category": "independent_comparison",
+      "name": "order_3_first_difference",
+      "result": "PASS",
+      "evidence": {
+        "dD3": "1"
+      }
+    },
+    {
+      "category": "independent_comparison",
+      "name": "order_4_first_difference",
+      "result": "PASS",
+      "evidence": {
+        "dD4": "1"
+      }
+    },
+    {
+      "category": "independent_comparison",
+      "name": "order_5_first_difference",
+      "result": "PASS",
+      "evidence": {
+        "dD5": "1"
+      }
+    },
+    {
+      "category": "independent_comparison",
+      "name": "order_6_first_difference",
+      "result": "PASS",
+      "evidence": {
+        "dD6": "1"
+      }
+    },
+    {
+      "category": "independent_comparison",
+      "name": "finite_H0_not_local_H0",
+      "result": "PASS",
+      "evidence": "regulated even cohomology separated from continuum relative local cohomology"
+    },
+    {
+      "category": "independent_comparison",
+      "name": "exact_parameter_constant_decomposition",
+      "result": "PASS",
+      "evidence": "equation 4E.52"
+    },
+    {
+      "category": "independent_comparison",
+      "name": "vacuum_normalization_sign_and_frozen_case",
+      "result": "PASS",
+      "evidence": "normalization shift removes the constant only when the normalization is adjustable"
+    },
+    {
+      "category": "anomaly_channels",
+      "name": "adjoint_tensor_sign",
+      "result": "PASS",
+      "evidence": "-1"
+    },
+    {
+      "category": "anomaly_channels",
+      "name": "adjoint_tensor_zero_over_C",
+      "result": "PASS",
+      "evidence": "d=-d and characteristic zero"
+    },
+    {
+      "category": "anomaly_channels",
+      "name": "R_Q_Wess_Zumino",
+      "result": "PASS",
+      "evidence": "equation 4E.58"
+    },
+    {
+      "category": "anomaly_channels",
+      "name": "R_anomaly_not_Q_anomaly",
+      "result": "PASS",
+      "evidence": "A_Q=0 implies only W_Q A_R=0"
+    },
+    {
+      "category": "anomaly_channels",
+      "name": "beta_degree_zero",
+      "result": "PASS",
+      "evidence": "even table entry"
+    },
+    {
+      "category": "continuum",
+      "name": "RG_homotopy_square",
+      "result": "PASS",
+      "evidence": "equation 4E.62"
+    },
+    {
+      "category": "continuum",
+      "name": "local_limit_and_flux",
+      "result": "PASS",
+      "evidence": "equation 4E.63"
+    },
+    {
+      "category": "continuum",
+      "name": "continuum_not_proved",
+      "result": "PASS",
+      "evidence": "explicit block"
+    },
+    {
+      "category": "continuum",
+      "name": "relative_local_bicomplex_typed",
+      "result": "PASS",
+      "evidence": "representative-level lift and bicomplex"
+    },
+    {
+      "category": "gap_audit",
+      "name": "contract_gap_ids",
+      "result": "PASS",
+      "evidence": [
+        "QHT-GAP-01",
+        "QHT-GAP-02",
+        "QHT-GAP-03",
+        "QHT-GAP-04",
+        "QHT-GAP-05",
+        "QHT-GAP-06",
+        "QHT-GAP-07",
+        "QHT-GAP-08",
+        "QHT-GAP-09"
+      ]
+    },
+    {
+      "category": "gap_audit",
+      "name": "audit_gap_ids",
+      "result": "PASS",
+      "evidence": [
+        "QHT-GAP-01",
+        "QHT-GAP-02",
+        "QHT-GAP-03",
+        "QHT-GAP-04",
+        "QHT-GAP-05",
+        "QHT-GAP-06",
+        "QHT-GAP-07",
+        "QHT-GAP-08",
+        "QHT-GAP-09"
+      ]
+    },
+    {
+      "category": "gap_audit",
+      "name": "declared_open_gap_ids",
+      "result": "PASS",
+      "evidence": [
+        "QHT-GAP-01",
+        "QHT-GAP-02",
+        "QHT-GAP-03",
+        "QHT-GAP-04",
+        "QHT-GAP-05",
+        "QHT-GAP-06",
+        "QHT-GAP-07",
+        "QHT-GAP-08",
+        "QHT-GAP-09"
+      ]
+    },
+    {
+      "category": "gap_audit",
+      "name": "equation_group_count_matches",
+      "result": "PASS",
+      "evidence": {
+        "audit": 124,
+        "contract": 124
+      }
+    },
+    {
+      "category": "gap_audit",
+      "name": "QHT-GAP-01_fields",
+      "result": "PASS",
+      "evidence": {
+        "id": "QHT-GAP-01",
+        "type": "G-OP",
+        "severity": "P1",
+        "location": "4E.4, 4E.64, 4E.65",
+        "claim": "A finite interacting regulator preserves the nonlinear BV theory.",
+        "what_is_missing": "No finite model is constructed that is closed under the nonlinear gauge bracket while preserving the odd symplectic form, CME, and compatible BV operator.",
+        "minimal_expansion_or_theorem_needed": "Construct the regulated field algebra and verify Jacobi, odd symplectic nondegeneracy, CME, compatible semidensity operator, and the exact Step-4D change of variables."
+      }
+    },
+    {
+      "category": "gap_audit",
+      "name": "QHT-GAP-02_fields",
+      "result": "PASS",
+      "evidence": {
+        "id": "QHT-GAP-02",
+        "type": "G-THM",
+        "severity": "P1",
+        "location": "4E.13--4E.17, 4E.65",
+        "claim": "The ordinary quantum theory admits a full quantum lift of the twisting charge Q.",
+        "what_is_missing": "The order-n cocycles o_Q,n have not been shown exact for the Project theory.",
+        "minimal_expansion_or_theorem_needed": "Solve equation 4E.15 at every order, or compute one nonzero cohomology class represented by its displayed right-hand side."
+      }
+    },
+    {
+      "category": "gap_audit",
+      "name": "QHT-GAP-03_fields",
+      "result": "PASS",
+      "evidence": {
+        "id": "QHT-GAP-03",
+        "type": "G-SCOPE",
+        "severity": "P1",
+        "location": "task reference_admission, 4E.65",
+        "claim": "The imported quantum-BV and holomorphic-renormalization claims are Project authority.",
+        "what_is_missing": "The reference import is a stacked proposal and no imported claim is admitted by the current task.",
+        "minimal_expansion_or_theorem_needed": "Merge the reference-import proposal into verified origin/main and translate each admitted claim into Project notation before formula adoption."
+      }
+    },
+    {
+      "category": "gap_audit",
+      "name": "QHT-GAP-04_fields",
+      "result": "PASS",
+      "evidence": {
+        "id": "QHT-GAP-04",
+        "type": "G-THM",
+        "severity": "P1",
+        "location": "4E.61--4E.63, 4E.65",
+        "claim": "The fixed-regulator chain maps converge to a local continuum chain map.",
+        "what_is_missing": "No even degree-zero RG maps, chain homotopy, coefficientwise local limit, bracket limit, representative-level local differential, continuum bicomplex, or limiting zero-flux estimate is constructed.",
+        "minimal_expansion_or_theorem_needed": "Construct R_X, R_h, and H_nu,mu; prove parity and degree compatibility across regulators; then prove equations 4E.62 and 4E.63 together with the bracket-limit and bicomplex identities."
+      }
+    },
+    {
+      "category": "gap_audit",
+      "name": "QHT-GAP-05_fields",
+      "result": "PASS",
+      "evidence": {
+        "id": "QHT-GAP-05",
+        "type": "G-THM",
+        "severity": "P1",
+        "location": "4E.49--4E.53, 4E.65",
+        "claim": "Pushforward-defined and independently renormalized holomorphic-BF quantizations agree.",
+        "what_is_missing": "The independent hBF odd QME obstruction is unsolved; the finite-regulator even comparison group and its continuum relative-local limit are not computed; and the parameter representatives are not proved exhaustive.",
+        "minimal_expansion_or_theorem_needed": "Solve the independent hBF Hbar1 recursion, compute regulated Hbar0, prove locality and regulator removal, compute relative local Hbar0 modulo spacetime derivatives, and show every mismatch has the exact-plus-parameter-plus-constant form 4E.52."
+      }
+    },
+    {
+      "category": "gap_audit",
+      "name": "QHT-GAP-06_fields",
+      "result": "PASS",
+      "evidence": {
+        "id": "QHT-GAP-06",
+        "type": "G-NORM",
+        "severity": "P1",
+        "location": "4E.30--4E.38, 4E.46--4E.48, 4E.65",
+        "claim": "The contractible-sector integration cycle and normalization are canonically defined.",
+        "what_is_missing": "For the original antifield-zero Lagrangian with the flat density, the restricted action vanishes, the odd constant Berezin integral is zero, and the even directions have no damping. No alternative gauge-fixed Lagrangian or compatible non-flat saturating density, parity condition, fixed horizontal-base contour, nonzero value, or zero-flux proof is supplied.",
+        "minimal_expansion_or_theorem_needed": "Prove p_nu=0 or construct a shifted target complex; construct a gauge-fixed Lagrangian with nondegenerate restricted action or a compatible non-flat density satisfying both displayed compatibility equations with Berezin saturation and even damping; then prove the fixed-base-cycle condition and equation 4E.35, evaluate nonzero C_ctr,nu, and include the Step-4D Jacobian."
+      }
+    },
+    {
+      "category": "gap_audit",
+      "name": "QHT-GAP-07_fields",
+      "result": "PASS",
+      "evidence": {
+        "id": "QHT-GAP-07",
+        "type": "G-PROJ",
+        "severity": "P2",
+        "location": "4E.10, 4E.65",
+        "claim": "Normalized correlators agree under the twist.",
+        "what_is_missing": "No source, observable, composite-operator, state, or expectation-value chain map is defined.",
+        "minimal_expansion_or_theorem_needed": "Construct these maps and prove compatibility with mathscr K_nu and with the required renormalized insertions."
+      }
+    },
+    {
+      "category": "gap_audit",
+      "name": "QHT-GAP-08_fields",
+      "result": "PASS",
+      "evidence": {
+        "id": "QHT-GAP-08",
+        "type": "G-SCOPE",
+        "severity": "P2",
+        "location": "4E.57--4E.60, 4E.65",
+        "claim": "The quantum theorem is continuously U(1)_R-equivariant and carries the R-derived integer grading.",
+        "what_is_missing": "The R-background complex and its anomalous Ward identity are not incorporated.",
+        "minimal_expansion_or_theorem_needed": "Introduce the R background ghost, compute the Ward anomaly mathscr A_R, and solve or consistently extend the equivariant Ward identity without setting mathscr A_R equal to mathscr A_Q."
+      }
+    },
+    {
+      "category": "gap_audit",
+      "name": "QHT-GAP-09_fields",
+      "result": "PASS",
+      "evidence": {
+        "id": "QHT-GAP-09",
+        "type": "G-SCOPE",
+        "severity": "P2",
+        "location": "4E.10, 4E.65",
+        "claim": "The result is an equality of actual Euclidean, global, instanton-sector, or nonperturbative path integrals.",
+        "what_is_missing": "The Euclidean reality cycle, convergence, global bundle sectors, boundary data, and possible BV-BFV completion are absent.",
+        "minimal_expansion_or_theorem_needed": "Specify all analytic and topological integration data and prove convergence and compatibility with the BV pushforward."
+      }
+    },
+    {
+      "category": "gap_audit",
+      "name": "internal_P0_empty",
+      "result": "PASS",
+      "evidence": []
+    },
+    {
+      "category": "gap_audit",
+      "name": "internal_P1_empty",
+      "result": "PASS",
+      "evidence": []
+    },
+    {
+      "category": "gap_audit",
+      "name": "all_spot_checks_pass",
+      "result": "PASS",
+      "evidence": [
+        {
+          "id": "SPOT-01",
+          "equation_group": "4E.15",
+          "check": "Expand the hbar-n coefficient of the relative QME. The terms are (S,H_n), (H_0,H_n), sum from r=1 to n of (M_r,H_n-r), one half of the internal H_r brackets, and minus Delta H_n-1.",
+          "result": "PASS"
+        },
+        {
+          "id": "SPOT-02",
+          "equation_group": "4E.27--4E.29",
+          "check": "Insert J_half=(4i)^(-N) into W_Y=T*W_X-hbar log J_half. The result is W_Y=T*W_X+hbar N log(4i).",
+          "result": "PASS"
+        },
+        {
+          "id": "SPOT-03",
+          "equation_group": "4E.32--4E.38",
+          "check": "Split the canonical BV operator into horizontal and vertical derivatives, include the raw fiber parity sign (-1)^p, integrate the vertical derivative as a total derivative, impose exactly the zero-flux equation 4E.35, and compose with odd-symplectic naturality.",
+          "result": "PASS"
+        },
+        {
+          "id": "SPOT-04",
+          "equation_group": "4E.43--4E.45",
+          "check": "Each monomial in S_ctr omits one member of every canonical base-antifield pair, so all four displayed mixed second derivatives vanish separately.",
+          "result": "PASS"
+        },
+        {
+          "id": "SPOT-05",
+          "equation_group": "4E.54--4E.56",
+          "check": "The anticommutator of two kappa-skew adjoint matrices is kappa-symmetric; transpose and cyclic trace send d_abc to minus itself, so d_abc=0 over C.",
+          "result": "PASS"
+        },
+        {
+          "id": "SPOT-06",
+          "equation_group": "4E.10",
+          "check": "For the action truncated below order n, all lower QME-defect coefficients vanish and the order-n coefficient is minus o_n. The order-n Bianchi coefficient is therefore minus d_0 o_n, proving closedness before assigning the Hbar1 class.",
+          "result": "PASS"
+        },
+        {
+          "id": "SPOT-07",
+          "equation_group": "4E.30--4E.39",
+          "check": "Raw fiber integration has parity p_nu and degree q_nu. The graded chain identity has sign (-1)^p; an ordinary even integer-graded action is extracted only when p_nu=q_nu=0.",
+          "result": "PASS"
+        },
+        {
+          "id": "SPOT-08",
+          "equation_group": "4E.42--4E.48",
+          "check": "On the original antifield-zero Lagrangian with flat density, S_ctr restricts to zero, the exponential coefficient is one, the eta_1 eta_2 w Berezin integral of one vanishes, and noncompact even directions have no damping.",
+          "result": "PASS"
+        },
+        {
+          "id": "SPOT-09",
+          "equation_group": "4E.61--4E.63",
+          "check": "The continuum comparison is typed only after even degree-zero RG maps, a representative-level local differential, bracket limit, continuum CME, and the d_h/d_sp bicomplex identities are assumed.",
+          "result": "PASS"
+        },
+        {
+          "id": "SPOT-10",
+          "equation_group": "4E.4, 4E.21--4E.29, 4E.37--4E.38",
+          "check": "Classify every pullback by coefficient type: T_nu,0^* acts on functions, T_nu,1/2^* on semidensities, T_nu,1^* on densities, and the unsubscripted geometric pullback only on differential forms.",
+          "result": "PASS"
+        },
+        {
+          "id": "SPOT-11",
+          "equation_group": "4E.31--4E.36",
+          "check": "The vertical cycle is fixed over x and x^*, so horizontal derivatives produce no moving-cycle term; BV-Stokes separately removes the vertical boundary flux on the full stable domain.",
+          "result": "PASS"
+        },
+        {
+          "id": "SPOT-12",
+          "equation_group": "4E.46--4E.47",
+          "check": "For the full-density ratio rho=exp(ell)rho_flat, expand Delta_flat exp(ell/2) exactly and obtain Delta_flat ell plus one quarter of the self bracket; this is separate from the action condition (ell,S_ctr)=0.",
+          "result": "PASS"
+        },
+        {
+          "id": "SPOT-13",
+          "equation_group": "4E.29, 4E.52--4E.53",
+          "check": "A Log(4i) branch shift changes W by 2 pi i hbar N and leaves the semidensity fixed. For a comparison vacuum term, N'=exp(-hbar^(n-1)zeta_n)N changes W by -hbar^n zeta_n; frozen normalization instead requires zeta_n=0.",
+          "result": "PASS"
+        }
+      ]
+    },
+    {
+      "category": "notation_audit",
+      "name": "audit_task",
+      "result": "PASS",
+      "evidence": "CONTRACT-STEP-04E-QUANTUM-N1-HOLOMORPHIC-TWIST-001"
+    },
+    {
+      "category": "notation_audit",
+      "name": "audit_result",
+      "result": "PASS",
+      "evidence": "PASS"
+    },
+    {
+      "category": "notation_audit",
+      "name": "no_unresolved_P0_P1",
+      "result": "PASS",
+      "evidence": {
+        "P0": [],
+        "P1": []
+      }
+    },
+    {
+      "category": "notation_audit",
+      "name": "resolved_findings_recorded",
+      "result": "PASS",
+      "evidence": 30
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-04E-QUANTUM-N1-HOLOMORPHIC-TWIST-001",
+  "contract": "contracts/foundations/step-04e-quantum-n1-holomorphic-twist.md",
+  "method": "find-gap",
+  "result": "PASS_WITH_OPEN_APPLICATION_GAPS",
+  "checked_equation_groups": 124,
+  "internal_proof_obligations": {
+    "P0": [],
+    "P1": []
+  },
+  "open_gap_ids": [
+    "QHT-GAP-01",
+    "QHT-GAP-02",
+    "QHT-GAP-03",
+    "QHT-GAP-04",
+    "QHT-GAP-05",
+    "QHT-GAP-06",
+    "QHT-GAP-07",
+    "QHT-GAP-08",
+    "QHT-GAP-09"
+  ],
+  "gaps": [
+    {
+      "id": "QHT-GAP-01",
+      "type": "G-OP",
+      "severity": "P1",
+      "location": "4E.4, 4E.64, 4E.65",
+      "claim": "A finite interacting regulator preserves the nonlinear BV theory.",
+      "what_is_missing": "No finite model is constructed that is closed under the nonlinear gauge bracket while preserving the odd symplectic form, CME, and compatible BV operator.",
+      "minimal_expansion_or_theorem_needed": "Construct the regulated field algebra and verify Jacobi, odd symplectic nondegeneracy, CME, compatible semidensity operator, and the exact Step-4D change of variables."
+    },
+    {
+      "id": "QHT-GAP-02",
+      "type": "G-THM",
+      "severity": "P1",
+      "location": "4E.13--4E.17, 4E.65",
+      "claim": "The ordinary quantum theory admits a full quantum lift of the twisting charge Q.",
+      "what_is_missing": "The order-n cocycles o_Q,n have not been shown exact for the Project theory.",
+      "minimal_expansion_or_theorem_needed": "Solve equation 4E.15 at every order, or compute one nonzero cohomology class represented by its displayed right-hand side."
+    },
+    {
+      "id": "QHT-GAP-03",
+      "type": "G-SCOPE",
+      "severity": "P1",
+      "location": "task reference_admission, 4E.65",
+      "claim": "The imported quantum-BV and holomorphic-renormalization claims are Project authority.",
+      "what_is_missing": "The reference import is a stacked proposal and no imported claim is admitted by the current task.",
+      "minimal_expansion_or_theorem_needed": "Merge the reference-import proposal into verified origin/main and translate each admitted claim into Project notation before formula adoption."
+    },
+    {
+      "id": "QHT-GAP-04",
+      "type": "G-THM",
+      "severity": "P1",
+      "location": "4E.61--4E.63, 4E.65",
+      "claim": "The fixed-regulator chain maps converge to a local continuum chain map.",
+      "what_is_missing": "No even degree-zero RG maps, chain homotopy, coefficientwise local limit, bracket limit, representative-level local differential, continuum bicomplex, or limiting zero-flux estimate is constructed.",
+      "minimal_expansion_or_theorem_needed": "Construct R_X, R_h, and H_nu,mu; prove parity and degree compatibility across regulators; then prove equations 4E.62 and 4E.63 together with the bracket-limit and bicomplex identities."
+    },
+    {
+      "id": "QHT-GAP-05",
+      "type": "G-THM",
+      "severity": "P1",
+      "location": "4E.49--4E.53, 4E.65",
+      "claim": "Pushforward-defined and independently renormalized holomorphic-BF quantizations agree.",
+      "what_is_missing": "The independent hBF odd QME obstruction is unsolved; the finite-regulator even comparison group and its continuum relative-local limit are not computed; and the parameter representatives are not proved exhaustive.",
+      "minimal_expansion_or_theorem_needed": "Solve the independent hBF Hbar1 recursion, compute regulated Hbar0, prove locality and regulator removal, compute relative local Hbar0 modulo spacetime derivatives, and show every mismatch has the exact-plus-parameter-plus-constant form 4E.52."
+    },
+    {
+      "id": "QHT-GAP-06",
+      "type": "G-NORM",
+      "severity": "P1",
+      "location": "4E.30--4E.38, 4E.46--4E.48, 4E.65",
+      "claim": "The contractible-sector integration cycle and normalization are canonically defined.",
+      "what_is_missing": "For the original antifield-zero Lagrangian with the flat density, the restricted action vanishes, the odd constant Berezin integral is zero, and the even directions have no damping. No alternative gauge-fixed Lagrangian or compatible non-flat saturating density, parity condition, fixed horizontal-base contour, nonzero value, or zero-flux proof is supplied.",
+      "minimal_expansion_or_theorem_needed": "Prove p_nu=0 or construct a shifted target complex; construct a gauge-fixed Lagrangian with nondegenerate restricted action or a compatible non-flat density satisfying both displayed compatibility equations with Berezin saturation and even damping; then prove the fixed-base-cycle condition and equation 4E.35, evaluate nonzero C_ctr,nu, and include the Step-4D Jacobian."
+    },
+    {
+      "id": "QHT-GAP-07",
+      "type": "G-PROJ",
+      "severity": "P2",
+      "location": "4E.10, 4E.65",
+      "claim": "Normalized correlators agree under the twist.",
+      "what_is_missing": "No source, observable, composite-operator, state, or expectation-value chain map is defined.",
+      "minimal_expansion_or_theorem_needed": "Construct these maps and prove compatibility with mathscr K_nu and with the required renormalized insertions."
+    },
+    {
+      "id": "QHT-GAP-08",
+      "type": "G-SCOPE",
+      "severity": "P2",
+      "location": "4E.57--4E.60, 4E.65",
+      "claim": "The quantum theorem is continuously U(1)_R-equivariant and carries the R-derived integer grading.",
+      "what_is_missing": "The R-background complex and its anomalous Ward identity are not incorporated.",
+      "minimal_expansion_or_theorem_needed": "Introduce the R background ghost, compute the Ward anomaly mathscr A_R, and solve or consistently extend the equivariant Ward identity without setting mathscr A_R equal to mathscr A_Q."
+    },
+    {
+      "id": "QHT-GAP-09",
+      "type": "G-SCOPE",
+      "severity": "P2",
+      "location": "4E.10, 4E.65",
+      "claim": "The result is an equality of actual Euclidean, global, instanton-sector, or nonperturbative path integrals.",
+      "what_is_missing": "The Euclidean reality cycle, convergence, global bundle sectors, boundary data, and possible BV-BFV completion are absent.",
+      "minimal_expansion_or_theorem_needed": "Specify all analytic and topological integration data and prove convergence and compatibility with the BV pushforward."
+    }
+  ],
+  "highest_risk_gaps": [
+    "QHT-GAP-01",
+    "QHT-GAP-02",
+    "QHT-GAP-04",
+    "QHT-GAP-05",
+    "QHT-GAP-06"
+  ],
+  "repair_order": [
+    "QHT-GAP-01",
+    "QHT-GAP-02",
+    "QHT-GAP-06",
+    "QHT-GAP-03",
+    "QHT-GAP-05",
+    "QHT-GAP-04",
+    "QHT-GAP-07",
+    "QHT-GAP-08",
+    "QHT-GAP-09"
+  ],
+  "verification_checks": [
+    {
+      "id": "SPOT-01",
+      "equation_group": "4E.15",
+      "check": "Expand the hbar-n coefficient of the relative QME. The terms are (S,H_n), (H_0,H_n), sum from r=1 to n of (M_r,H_n-r), one half of the internal H_r brackets, and minus Delta H_n-1.",
+      "result": "PASS"
+    },
+    {
+      "id": "SPOT-02",
+      "equation_group": "4E.27--4E.29",
+      "check": "Insert J_half=(4i)^(-N) into W_Y=T*W_X-hbar log J_half. The result is W_Y=T*W_X+hbar N log(4i).",
+      "result": "PASS"
+    },
+    {
+      "id": "SPOT-03",
+      "equation_group": "4E.32--4E.38",
+      "check": "Split the canonical BV operator into horizontal and vertical derivatives, include the raw fiber parity sign (-1)^p, integrate the vertical derivative as a total derivative, impose exactly the zero-flux equation 4E.35, and compose with odd-symplectic naturality.",
+      "result": "PASS"
+    },
+    {
+      "id": "SPOT-04",
+      "equation_group": "4E.43--4E.45",
+      "check": "Each monomial in S_ctr omits one member of every canonical base-antifield pair, so all four displayed mixed second derivatives vanish separately.",
+      "result": "PASS"
+    },
+    {
+      "id": "SPOT-05",
+      "equation_group": "4E.54--4E.56",
+      "check": "The anticommutator of two kappa-skew adjoint matrices is kappa-symmetric; transpose and cyclic trace send d_abc to minus itself, so d_abc=0 over C.",
+      "result": "PASS"
+    },
+    {
+      "id": "SPOT-06",
+      "equation_group": "4E.10",
+      "check": "For the action truncated below order n, all lower QME-defect coefficients vanish and the order-n coefficient is minus o_n. The order-n Bianchi coefficient is therefore minus d_0 o_n, proving closedness before assigning the Hbar1 class.",
+      "result": "PASS"
+    },
+    {
+      "id": "SPOT-07",
+      "equation_group": "4E.30--4E.39",
+      "check": "Raw fiber integration has parity p_nu and degree q_nu. The graded chain identity has sign (-1)^p; an ordinary even integer-graded action is extracted only when p_nu=q_nu=0.",
+      "result": "PASS"
+    },
+    {
+      "id": "SPOT-08",
+      "equation_group": "4E.42--4E.48",
+      "check": "On the original antifield-zero Lagrangian with flat density, S_ctr restricts to zero, the exponential coefficient is one, the eta_1 eta_2 w Berezin integral of one vanishes, and noncompact even directions have no damping.",
+      "result": "PASS"
+    },
+    {
+      "id": "SPOT-09",
+      "equation_group": "4E.61--4E.63",
+      "check": "The continuum comparison is typed only after even degree-zero RG maps, a representative-level local differential, bracket limit, continuum CME, and the d_h/d_sp bicomplex identities are assumed.",
+      "result": "PASS"
+    },
+    {
+      "id": "SPOT-10",
+      "equation_group": "4E.4, 4E.21--4E.29, 4E.37--4E.38",
+      "check": "Classify every pullback by coefficient type: T_nu,0^* acts on functions, T_nu,1/2^* on semidensities, T_nu,1^* on densities, and the unsubscripted geometric pullback only on differential forms.",
+      "result": "PASS"
+    },
+    {
+      "id": "SPOT-11",
+      "equation_group": "4E.31--4E.36",
+      "check": "The vertical cycle is fixed over x and x^*, so horizontal derivatives produce no moving-cycle term; BV-Stokes separately removes the vertical boundary flux on the full stable domain.",
+      "result": "PASS"
+    },
+    {
+      "id": "SPOT-12",
+      "equation_group": "4E.46--4E.47",
+      "check": "For the full-density ratio rho=exp(ell)rho_flat, expand Delta_flat exp(ell/2) exactly and obtain Delta_flat ell plus one quarter of the self bracket; this is separate from the action condition (ell,S_ctr)=0.",
+      "result": "PASS"
+    },
+    {
+      "id": "SPOT-13",
+      "equation_group": "4E.29, 4E.52--4E.53",
+      "check": "A Log(4i) branch shift changes W by 2 pi i hbar N and leaves the semidensity fixed. For a comparison vacuum term, N'=exp(-hbar^(n-1)zeta_n)N changes W by -hbar^n zeta_n; frozen normalization instead requires zeta_n=0.",
+      "result": "PASS"
+    }
+  ]
+}
