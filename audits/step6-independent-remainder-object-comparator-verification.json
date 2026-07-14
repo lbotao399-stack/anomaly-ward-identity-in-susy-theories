@@ -1,8 +1,9 @@
 {
   "all_checks_passed": true,
-  "artifact_sha256": "2c621238b647bc9a61c14f28f585fec28aa6f39cd124bff62ed25117a9cc4ed9",
+  "artifact_sha256": "b1cba8670b91c1561a6866d9dbc07ed38f0e257fd0c468cda097cd2960ed3fc4",
   "checks": {
     "all_exact_polynomials_equal": true,
+    "all_incidence_multiplicities_exact": true,
     "all_parent_incidence_equal": true,
     "catalogs_separate": true,
     "clean_left_import_boundary": true,
@@ -11,6 +12,9 @@
     "frozen_seed_exact": true,
     "left_executor_does_not_call_replay_or_shared_dword": true,
     "payload_hash_valid": true,
+    "replay_dependency_manifest_exact": true,
+    "replay_internal_checks_pass": true,
+    "replay_payload_exact": true,
     "replay_source_exact": true,
     "schema_status_exact": true
   },
@@ -19,9 +23,9 @@
     "objectwise_rows": 1568,
     "replay_remainder_objects": 1568
   },
-  "payload_sha256": "0f42e5e19bbf5e564fb28ea24e856147e2b0210b91ed97881e534aceaefa7551",
+  "payload_sha256": "9f7e82a04db00750a8434307fb3f893b5c04cdafb97d04a0e1499b31d000b148",
   "schema": "step6.independent_remainder_object_comparator.audit.v1",
-  "script_sha256": "bfdda1d2f60a538cd9d2a9690b07d71be36234686433efc1666179570ef8a797",
+  "script_sha256": "3f0e1c917fdc459a944dc2a2fc26daae84334b0e7de1c2e8bd4ffbd4c40df25a",
   "status": "PASS_1568_REMAINDER_OBJECTS_INDEPENDENT_LOCAL_EXTERIOR_RECONSTRUCTION",
-  "test_sha256": "1d5f13a057d160b55c879373741dd1fde792cd7e97e24283b7049daf9ec03d0c"
+  "test_sha256": "1c8f16ae292dc7f1fcdb43fc89878250ce630b270fa4712e52459fc6a3e66c2a"
 }

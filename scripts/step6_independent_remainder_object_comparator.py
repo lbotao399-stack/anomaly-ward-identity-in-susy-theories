@@ -48,6 +48,12 @@ EXPECTED_GATE_SOURCE_SHA = (
 EXPECTED_REPLAY_SOURCE_SHA = (
     "cab350456eb126fd517c4aada40a28dba2405e0aa1f4d539959517d7ee54af4d"
 )
+EXPECTED_REPLAY_PAYLOAD_SHA = (
+    "fa7118bb2f672f12e372db16e752b388eee6b24459b6326edf7f434def9e2508"
+)
+EXPECTED_REPLAY_DEPENDENCY_MANIFEST_SHA = (
+    "7ca5998d61f3693ecef7933d1e0f5febd84725af65602ec5743d8b6a04325526"
+)
 
 RANK = {
     "barD_dotplus": 0,
@@ -376,10 +382,13 @@ def local_poly_from_local_json(
     return gate.LocalPolynomial.from_terms(terms)
 
 
-def _replay_objects() -> dict[tuple[Any, ...], dict[str, Any]]:
-    rows = replay.build_payload()["measure_tagged_delta_convolution_replay"][
-        "aggregate_rows"
-    ]
+def _replay_objects(
+    replay_payload: Mapping[str, Any] | None = None,
+) -> dict[tuple[Any, ...], dict[str, Any]]:
+    replay_payload = (
+        replay.build_payload() if replay_payload is None else replay_payload
+    )
+    rows = replay_payload["measure_tagged_delta_convolution_replay"]["aggregate_rows"]
     objects = {}
     for row in rows:
         if row["classification"] != "REMAINDER":
@@ -411,18 +420,29 @@ def compare_maps(
         poly_equal = both and local_poly_from_local_json(
             left_object["exact_polynomial"]
         ) == local_poly_from_local_json(right_object["exact_polynomial"])
-        incidence_equal = both and {
+        left_incidence = [] if not both else left_object["parent_incidence"]
+        right_incidence = [] if not both else right_object["parent_incidence"]
+        left_parent_ids = [str(x["parent_pair_id"]) for x in left_incidence]
+        right_parent_ids = [str(x["parent_pair_id"]) for x in right_incidence]
+        incidence_multiplicity_exact = (
+            both
+            and len(left_parent_ids) == len(set(left_parent_ids))
+            and len(right_parent_ids) == len(set(right_parent_ids))
+            and len(left_parent_ids) == len(right_parent_ids)
+        )
+        incidence_equal = incidence_multiplicity_exact and {
             str(x["parent_pair_id"]): local_poly_from_local_json(x["exact_polynomial"])
-            for x in left_object["parent_incidence"]
+            for x in left_incidence
         } == {
             str(x["parent_pair_id"]): local_poly_from_local_json(x["exact_polynomial"])
-            for x in right_object["parent_incidence"]
+            for x in right_incidence
         }
         rows.append(
             {
                 "key_sha256": digest(_key_json(key)),
                 "present_both": both,
                 "polynomial_equal": bool(poly_equal),
+                "incidence_multiplicity_exact": bool(incidence_multiplicity_exact),
                 "incidence_equal": bool(incidence_equal),
             }
         )
@@ -431,6 +451,9 @@ def compare_maps(
         "right_count": len(right),
         "key_sets_equal": set(left) == set(right),
         "all_polynomials_equal": all(x["polynomial_equal"] for x in rows),
+        "all_incidence_multiplicities_exact": all(
+            x["incidence_multiplicity_exact"] for x in rows
+        ),
         "all_parent_incidence_equal": all(x["incidence_equal"] for x in rows),
         "rows": rows,
     }
@@ -439,8 +462,11 @@ def compare_maps(
 @lru_cache(maxsize=1)
 def build_payload() -> dict[str, Any]:
     left = _independent_objects()
-    right = _replay_objects()
+    replay_payload = replay.build_payload()
+    right = _replay_objects(replay_payload)
     comparison = compare_maps(left, right)
+    replay_dependency_manifest = replay_payload["input_provenance"]["file_sha256"]
+    replay_checks = replay.exact_checks(replay_payload)
     payload = {
         "schema": SCHEMA,
         "status": STATUS,
@@ -464,6 +490,12 @@ def build_payload() -> dict[str, Any]:
             "scripts/step6_preaggregation_measure_delta_replay.py": file_sha256(
                 ROOT / "scripts/step6_preaggregation_measure_delta_replay.py"
             ),
+        },
+        "replay_runtime_closure": {
+            "payload_sha256": replay_payload["payload_sha256"],
+            "dependency_manifest_sha256": digest(replay_dependency_manifest),
+            "dependency_paths": sorted(replay_dependency_manifest),
+            "replay_exact_checks": replay_checks,
         },
         "catalogs_separately_materialized": all(
             left[key] is not right[key] for key in set(left) & set(right)
@@ -511,10 +543,20 @@ def exact_checks(payload: Mapping[str, Any]) -> dict[str, bool]:
             "scripts/step6_preaggregation_measure_delta_replay.py"
         ]
         == EXPECTED_REPLAY_SOURCE_SHA,
+        "replay_payload_exact": payload["replay_runtime_closure"]["payload_sha256"]
+        == EXPECTED_REPLAY_PAYLOAD_SHA,
+        "replay_dependency_manifest_exact": payload["replay_runtime_closure"][
+            "dependency_manifest_sha256"
+        ]
+        == EXPECTED_REPLAY_DEPENDENCY_MANIFEST_SHA,
+        "replay_internal_checks_pass": all(
+            payload["replay_runtime_closure"]["replay_exact_checks"].values()
+        ),
         "catalogs_separate": payload["catalogs_separately_materialized"],
         "exact_1568_key_sets": c["left_count"] == c["right_count"] == 1568
         and c["key_sets_equal"],
         "all_exact_polynomials_equal": c["all_polynomials_equal"],
+        "all_incidence_multiplicities_exact": c["all_incidence_multiplicities_exact"],
         "all_parent_incidence_equal": c["all_parent_incidence_equal"],
         "payload_hash_valid": payload["payload_sha256"]
         == digest({k: v for k, v in payload.items() if k != "payload_sha256"}),
