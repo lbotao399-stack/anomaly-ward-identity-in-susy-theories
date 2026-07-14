@@ -1,0 +1,33 @@
+{
+  "id": "MIRROR-STEP-03C-DALGEBRA-NOTION-001",
+  "type": "CONTRACT_CHANGE",
+  "status": "ACCEPTED",
+  "outcome": "Publish the accepted Step-3C covariant-derivative component reconstruction from origin/main commit f340e44d233881a7133a8ca11624ac47fc6070ec to the fixed Notion child page without reading any Notion content.",
+  "allowed_inputs": [
+    "AUTHORITY.md",
+    "AGENTS.md",
+    "contracts/foundations/step-03c-gauge-vector-representation.md",
+    "contracts/manifest.yaml",
+    "mirror/page_map.yaml",
+    "mirror/README.md",
+    "scripts/build_notion_payload.py",
+    "audits/notion_write_receipt.json"
+  ],
+  "forbidden_inputs": [
+    "Notion content",
+    "Notion fetch, search, page read, block read, or content readback",
+    "legacy repositories",
+    "other local files",
+    "unmerged branches",
+    "manual mathematical edits on the Notion side"
+  ],
+  "acceptance": [
+    "the published mathematical source is exactly the Step-3C contract at origin/main commit f340e44d233881a7133a8ca11624ac47fc6070ec",
+    "the existing Notion child page is replaced only through a write operation",
+    "the payload contains the Git authority header, exact source path, commit, and SHA-256",
+    "existing child pages are preserved",
+    "mirror page map records the Notion page id, source path, source commit, and source sha256",
+    "write receipt states content_readback_performed=false",
+    "repository-policy passes after the mirror metadata update"
+  ]
+}
