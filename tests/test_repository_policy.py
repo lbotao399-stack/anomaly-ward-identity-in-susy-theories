@@ -853,6 +853,20 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertIn(r"f_{AB}(\Phi)=f_{BA}(\Phi)", text)
         self.assertIn(r"N_{\rm identities}=88", text)
         self.assertIn(r"N_{\rm component\ coefficients}=336", text)
+        d_density = text.split(
+            "### 3A.8 Canonical matter $D$-density from covariant $D$-algebra",
+            maxsplit=1,
+        )[1].split("For the superpotential", maxsplit=1)[0]
+        self.assertNotIn(r"\vartheta", d_density)
+        self.assertNotIn("direct multiplication", d_density.lower())
+        self.assertIn(r"\nabla_R^{\leftarrow2}A_R", d_density)
+        self.assertIn(r"\mathcal K_R^{\rm ord}", d_density)
+        self.assertIn(r"\partial_{RM}J_R^M", d_density)
+        self.assertIn(
+            r"\int d^4x_L\,[\bar\Phi\mathcal E_L\Phi]_D",
+            d_density,
+        )
+        self.assertNotIn("Direct Euclidean multiplication", text)
         self.assertNotIn(r"\sim", text)
         self.assertNotIn(r"\approx", text)
         self.assertNotIn(r"\propto", text)

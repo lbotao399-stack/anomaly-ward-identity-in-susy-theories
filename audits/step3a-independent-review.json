@@ -1,10 +1,11 @@
 {
   "schema": 1,
-  "task": "CONTRACT-STEP-03A-GAUGE-CHIRAL-ACTION-001",
+  "task": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
   "reviewers": [
     "lorentz_component_reverse_review_agent",
     "euclidean_wick_reverse_review_agent",
-    "gauge_bridge_and_notation_reverse_review_agent"
+    "gauge_bridge_and_notation_reverse_review_agent",
+    "covariant_d_algebra_reverse_review_agent"
   ],
   "resolved_findings": [
     {
@@ -82,6 +83,34 @@
       "equation": "3A.102",
       "issue": "the first contour equation suppressed the matter index on shifted auxiliary fields",
       "resolution": "wrote tildeG_I=-(G^I)^dagger and all contour identifications with explicit indices",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equation": "3A.74-3A.81",
+      "issue": "the former canonical matter D-density proof used explicit odd-coordinate expansion rather than the covariant D and barD algebra",
+      "resolution": "introduced the chiral-frame dual row U_R and reduced the ordered D^2 barD^2 projector by chirality, graded Leibniz rules, and the two curvature commutators in both signatures",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equation": "3A.76-3A.79",
+      "issue": "an intermediate algebraic draft suppressed the parity sign of the odd dual row and the dotted-index lowering sign in the fermion kinetic term",
+      "resolution": "expanded the right-module curvature action for odd Z, displayed 2u Z^dotb tildeW_dotb=-2u Z_dotb tildeW^dotb, and displayed the epsilon-sigma lowering identity that yields -kappa_R/2",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equation": "3A.80, 3A.94",
+      "issue": "the former presentation wrote the canonical kinetic density as a pointwise ordered-projector equality",
+      "resolution": "defined K_R^ord and K_R^can separately, displayed J_R^M and both gauge-covariant product rules, and imposed equality only after the boundary integral vanishes",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P2",
+      "equation": "3A.39-3A.42",
+      "issue": "an intermediate rewrite referred forward to the vector projectors and could appear circular",
+      "resolution": "declared the Lorentzian and Euclidean vector projectors as independent component definitions before solving c_L=-2 and c_E=-2i",
       "status": "RESOLVED"
     }
   ],
