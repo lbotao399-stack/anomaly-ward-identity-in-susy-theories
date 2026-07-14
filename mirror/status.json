@@ -1,14 +1,14 @@
 {
   "schema": 1,
   "state": "PUBLISHED_WRITE_RECEIPT",
-  "source": "contracts/foundations/step-03a-gauge-chiral-action.md",
-  "source_sha256": "48141fc931580f6b73e385b8f900b3e6df5939cdb9348042de07fd8fe9320967",
-  "git_commit": "7f21452c0d0d3080101c4be2c45e062b5679f42b",
-  "notion_page_id": "39aee2b7-4b3f-8101-bfc7-c6d5b986029d",
+  "source": "contracts/foundations/step-03c-gauge-vector-representation.md",
+  "source_sha256": "c4cc6f0504b79e02ce78030ad79b625bee6da7dff9de0f6a1ddc3b33ef2584a1",
+  "git_commit": "f340e44d233881a7133a8ca11624ac47fc6070ec",
+  "notion_page_id": "39aee2b7-4b3f-8161-b3dd-fbb0d0c97f7d",
   "verification": "WRITE_RECEIPT_ONLY_NO_NOTION_READBACK",
-  "published_at": "2026-07-14T02:45:07Z",
+  "published_at": "2026-07-14T03:58:40Z",
   "mutation": "replace_page_content",
   "preserve_child_pages": true,
-  "archived_top_level_blocks": 259,
-  "appended_blocks": 264
+  "archived_top_level_blocks": 192,
+  "appended_blocks": 235
 }
