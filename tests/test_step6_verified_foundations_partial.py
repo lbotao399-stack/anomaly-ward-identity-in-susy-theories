@@ -45,10 +45,34 @@ class Step6VerifiedFoundationsPartialTests(unittest.TestCase):
         self.assertEqual(snapshot["odd_word_sign"]["boundary_payload_cases"], 34)
         self.assertEqual(snapshot["contact_provenance"]["stored_contacts"], 608)
         self.assertEqual(
-            snapshot["contact_provenance"]["complete_pre_distribution_provenance"], 0
+            snapshot["contact_provenance"][
+                "legacy_catalog_rows_with_embedded_pre_distribution_provenance"
+            ],
+            0,
         )
         self.assertEqual(
-            snapshot["contact_provenance"]["mapping_status"], "FAIL_CLOSED"
+            snapshot["measure_delta_replay"]["resolved_type"],
+            "MeasureTaggedDeltaConvolutionReplayUnderSharedPrimitiveDAlgebraOracle",
+        )
+        self.assertEqual(
+            snapshot["measure_delta_replay"]["replay_role"],
+            "NON_INDEPENDENT_SHARED_ORACLE_RECONSTRUCTION",
+        )
+        self.assertEqual(
+            snapshot["measure_delta_replay"]["independent_remainder_object_equality"],
+            "OPEN",
+        )
+        self.assertEqual(
+            snapshot["measure_delta_replay"]["next_missing_type"],
+            "EdgeTaggedContactIBPToALocalSurvivors",
+        )
+        self.assertEqual(
+            snapshot["measure_delta_replay"]["counts"],
+            partial.EXPECTED_MEASURE_DELTA_REPLAY_COUNTS,
+        )
+        self.assertEqual(
+            snapshot["measure_delta_replay"]["hashes"],
+            partial.EXPECTED_MEASURE_DELTA_REPLAY_HASHES,
         )
         self.assertEqual(snapshot["laurent"]["AWI_coefficient"], "UNCOMPUTED")
 
@@ -72,22 +96,53 @@ class Step6VerifiedFoundationsPartialTests(unittest.TestCase):
         self.assertIn("PolyExteriorSemanticExpansion", self.markdown)
         self.assertIn("[K R'(G_{B_2})\\right]_{\\epsilon^{-1}L_P}=0", self.markdown)
         self.assertIn(
-            "MeasureTaggedDeltaConvolutionBeforeContactAggregation", self.markdown
+            "MeasureTaggedDeltaConvolutionReplayUnderSharedPrimitiveDAlgebraOracle",
+            self.markdown,
         )
         self.assertIn("PreAggregationRawReplaySeedWithBareDeltaIdentity", self.markdown)
+        self.assertIn("PASS\\_TYPED\\_REPLAY", self.markdown)
+        self.assertIn("SHARED\\_PRIMITIVE\\_D\\mbox{-}ALGEBRA\\_ORACLE", self.markdown)
+        self.assertIn("IndependentRemainderObjectEquality", self.markdown)
+        self.assertIn("PREAGGREGATION\\_MEASURE\\_DELTA\\_REPLAY\\_ONLY", self.markdown)
+        self.assertIn("StandaloneReplayCertificate", self.markdown)
+        self.assertIn(
+            "N_{\\mathrm{measure\\mbox{-}pair\\ histories}}=13\\,824", self.markdown
+        )
+        self.assertIn("N_{\\mathrm{normal\\ contributions}}=13\\,568", self.markdown)
+        self.assertIn("N_{\\mathrm{nilpotent\\ zeros}}=36\\,096", self.markdown)
+        self.assertIn(
+            "N_{\\mathrm{sparse\\ parent\\ incidence}}=6\\,080", self.markdown
+        )
+        self.assertIn("EdgeTaggedContactIBPToALocalSurvivors", self.markdown)
         self.assertIn("OPEN: MISSING\\_TYPE", self.markdown)
         self.assertNotIn(
             "DeferredMeasureDeltaDWordExecutionToALocalContact", self.markdown
         )
         self.assertIn("N_{\\mathrm{stored\\ contacts}}=608", self.markdown)
         self.assertIn(
-            "N_{\\mathrm{complete\\ pre\\mbox{-}distribution\\ provenance}}=0",
+            "N_{\\mathrm{legacy\\ catalog\\ rows\\ with\\ embedded\\ provenance}}=0",
             self.markdown,
         )
         self.assertIn(
-            "\\mathrm{ProvenanceMap}_{768\\to608}=\\texttt{FAIL\\_CLOSED}",
+            "\\mathrm{ParentIncidence}_{768\\to(608+1\\,568)}",
             self.markdown,
         )
+        self.assertIn("PASS\\_COMPUTED\\_OBJECT\\_RECONSTRUCTION", self.markdown)
+        self.assertNotIn(
+            "MeasureTaggedDeltaConvolutionBeforeContactAggregation}}\n=\\texttt{{OPEN",
+            self.markdown,
+        )
+        self.assertNotIn("PASS\\_EXACT\\_PREAGGREGATION\\_REPLAY", self.markdown)
+        self.assertNotIn("PASS\\_EXACT\\_PARENT\\_INCIDENCE", self.markdown)
+        self.assertNotIn("ProvenanceMap}_{768\\to608}", self.markdown)
+        for value in partial.EXPECTED_MEASURE_DELTA_REPLAY_HASHES.values():
+            if value in {
+                partial.EXPECTED_MEASURE_DELTA_REPLAY_HASHES["contact_catalog_sha256"],
+                partial.EXPECTED_MEASURE_DELTA_REPLAY_HASHES[
+                    "remainder_catalog_sha256"
+                ],
+            }:
+                self.assertIn(value, self.markdown)
         self.assertIn(
             "N=m+\\binom{m}{2}+m|F|+N_{\\mathrm{coeff}}+N_{\\mathrm{endpoint}}",
             self.markdown,
@@ -133,6 +188,14 @@ class Step6VerifiedFoundationsPartialTests(unittest.TestCase):
             "pure_vector_reduced_gate_graph_count"
         ] = 272
         with self.assertRaisesRegex(partial.SourceDriftError, "full gate counts"):
+            partial.validate_sources(sources)
+
+    def test_measure_replay_hash_drift_fails_closed(self) -> None:
+        sources = deepcopy(partial.load_sources())
+        sources["measure_delta_replay"]["contact_catalog_sha256"] = "0" * 64
+        with self.assertRaisesRegex(
+            partial.SourceDriftError, "measure-delta contact_catalog_sha256"
+        ):
             partial.validate_sources(sources)
 
 

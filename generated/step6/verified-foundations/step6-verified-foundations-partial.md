@@ -246,8 +246,45 @@ $$
 $$
 
 $$
-\mathrm{MeasureTaggedDeltaConvolutionBeforeContactAggregation}
+\mathrm{MeasureTaggedDeltaConvolutionReplayUnderSharedPrimitiveDAlgebraOracle}
+=\texttt{PASS\_TYPED\_REPLAY}.
+$$
+
+$$
+\mathrm{OracleRole}
+=\texttt{SHARED\_PRIMITIVE\_D\mbox{-}ALGEBRA\_ORACLE},
+\qquad
+\mathrm{IndependentRemainderObjectEquality}
 =\texttt{OPEN: MISSING\_TYPE}.
+$$
+
+$$
+\mathrm{SemanticScope}
+=\texttt{PREAGGREGATION\_MEASURE\_DELTA\_REPLAY\_ONLY},
+\qquad
+\mathrm{StandaloneReplayCertificate}=\texttt{FALSE}.
+$$
+
+$$
+N_{\mathrm{measure\ children}}=3\,456,
+\qquad
+N_{\mathrm{measure\mbox{-}pair\ histories}}=13\,824,
+\qquad
+N_{\mathrm{normal\ contributions}}=13\,568,
+\qquad
+N_{\mathrm{nilpotent\ zeros}}=36\,096.
+$$
+
+$$
+N_{\mathrm{aggregate}}=2\,176=608+1\,568,
+\qquad
+N_{\mathrm{sparse\ parent\ incidence}}=6\,080.
+$$
+
+$$
+H_{\mathrm{contact,reconstruction}}=\texttt{1918745eafd2970e942209ff312efb2bd342b745d2cf1ace3d9fe3d06fa2de0a},
+\qquad
+H_{\mathrm{remainder,reconstruction}}=\texttt{6dc51612772cdd485b0ba0b85a22fa79b4b930d37f6cfe54c821f90521579351}.
 $$
 
 ## 8. Primitive-contact provenance
@@ -255,15 +292,16 @@ $$
 $$
 N_{\mathrm{stored\ contacts}}=608,
 \qquad
-N_{\mathrm{complete\ pre\mbox{-}distribution\ provenance}}=0,
+N_{\mathrm{legacy\ catalog\ rows\ with\ embedded\ provenance}}=0,
 \qquad
 N_{\mathrm{unaggregated\ pairs}}=768.
 $$
 
 $$
-\mathrm{ProvenanceMap}_{768\to608}=\texttt{FAIL\_CLOSED},
+\mathrm{ParentIncidence}_{768\to(608+1\,568)}
+=\texttt{PASS\_COMPUTED\_OBJECT\_RECONSTRUCTION},
 \qquad
-\mathrm{MeasureTaggedDeltaConvolutionBeforeContactAggregation}
+\mathrm{EdgeTaggedContactIBPToALocalSurvivors}
 =\texttt{OPEN: MISSING\_TYPE}.
 $$
 

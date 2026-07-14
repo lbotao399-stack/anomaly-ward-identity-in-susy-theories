@@ -1,0 +1,140 @@
+{
+  "all_exact_checks_pass": true,
+  "contact_remaining_edge_token_counts": {
+    "1": 192,
+    "2": 320,
+    "3": 96
+  },
+  "counts": {
+    "contact_parent_pairs": 128,
+    "edge_square_contact_groups": 608,
+    "measure_distributed_action_histories": 3456,
+    "measure_pair_histories": 13824,
+    "nonzero_aggregate_groups": 2176,
+    "primitive_normal_contributions": 13568,
+    "primitive_zero_branches": 36096,
+    "raw_histories": 216,
+    "raw_parent_pairs": 768,
+    "remainder_groups": 1568,
+    "remainder_parent_pairs": 256,
+    "source_rows": 6,
+    "sparse_parent_incidence_entries": 6080
+  },
+  "event_counts": {
+    "measure_hit_koszul_sign": {
+      "-1": 3072,
+      "1": 3840
+    },
+    "normal_delta_and_odd_word": {
+      "ENDPOINT_TRANSFER": 67840,
+      "MIXED_ANTICOMMUTATOR": 29696,
+      "PRIMITIVE_REORDER": 37376
+    },
+    "zero_classifications": {
+      "NILPOTENT_ZERO": 36096
+    },
+    "zero_delta_and_odd_word": {
+      "ENDPOINT_TRANSFER": 180480,
+      "MIXED_ANTICOMMUTATOR": 26880,
+      "NILPOTENCE": 36096,
+      "PRIMITIVE_REORDER": 84416
+    }
+  },
+  "factorized_table_sha256": {
+    "aggregate_rows_with_parent_incidence": "6f3f81d50dae92e9b28788b299c2d7e6bdbf6b06256af3dd6805bf05d39e0f77",
+    "measure_distributed_action_histories": "7508cc2fcf2197869e766423684e536ef6ebc4a9018619eb1f8f13d362617098",
+    "parent_pair_contracts": "8301bdb71f290255b5e19f57b216b4129612ff83ed5f10fee50ca55cc5ef057c",
+    "primitive_normal_contributions": "30af4f67f3df7a1d82ad1aa6fc0d44431138c8d8c4960bed98269f201d4e2b92",
+    "primitive_zero_branches": "89dde3962d2bb0e5517577320d612bc070aedcf4c4bdc268123f66be90750072"
+  },
+  "fresh_compiler_reconstructs_full_event_payload": true,
+  "full_event_payload_materialized": false,
+  "independent_remainder_object_comparison_performed": false,
+  "input_provenance": {
+    "direct_import_paths": [
+      "scripts/step6_coefficient_tensor.py",
+      "scripts/step6_two_loop_dword.py",
+      "scripts/step6_global_dword_adapter.py"
+    ],
+    "explicitly_not_imported": {
+      "scripts/step6_full_dword_bridge.py": "REMOVED_FROM_DIRECT_DEPENDENCY",
+      "scripts/step6_grouped_e_v_i2_i3_ordered_port_normal_form.py": "REMOVED_FROM_DIRECT_DEPENDENCY",
+      "scripts/step6_measure_tagged_delta_convolution.py": "REPLACED_BY_FROZEN_HASHED_FIXTURE",
+      "scripts/step6_ordered_sector_euler_normal_form.py": "REMOVED_FROM_DIRECT_DEPENDENCY"
+    },
+    "file_sha256": {
+      "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md": "5b24afd355ef0d471e859c37a24a15632fcebdcad3aa654d30dc098647939ab5",
+      "generated/step6/measure-tagged-delta-convolution/measure-tagged-delta-convolution.json": "b5ecf1ac6a471f7a6d75158d502ec6a869fe5d0bce6599343f285b7cf404a940",
+      "scripts/step6_coefficient_tensor.py": "ad8c9a1560c21d9889e233b0d0fa14e9ce9b0d0c85736866dccd1bcdcc6b437f",
+      "scripts/step6_color_tensor.py": "55f40abe477763b2405440d475d781c24a1f423e10a06caf21437007c416ab2a",
+      "scripts/step6_external_projection.py": "e6c987472ce2fd870acaa89e51418edbb9f9c7fca65b1645437c817dc676a9e5",
+      "scripts/step6_global_dword_adapter.py": "475726251b454a25419907cbe7f5e1d5fc51143db59cd9b2b9ecc8568f3c6836",
+      "scripts/step6_global_supertensor.py": "216f0c0debb78a2855fc2c69aedabb8dbfac6a69bd0e5c227d0ae28a0e1f2200",
+      "scripts/step6_symbolic_grassmann_oracle.py": "3dade75c7ca1bdc464df66343f22068456dee5f8bde6d28ed4c7e244e5841720",
+      "scripts/step6_two_loop_amplitude_ir.py": "ef2ce40b7bb372d69aa8f4ee9ad72431f4808dfd5b2e3619662a6487ad2beb4a",
+      "scripts/step6_two_loop_dword.py": "8cd5c1969a656b16cbc8c0518ee2300fb3e34885603ed75c0c7347939b17f01e",
+      "scripts/step6_two_loop_grammar.py": "bd0905d0a29fb91e4f9bd8d2d28533b8ff0acf55d37d30f2d0e49c44e29c3b58",
+      "scripts/step6_two_loop_graphir.py": "a8d823be343a639989732812e976953bdb64b72e26f09495300a025ba6985ab3",
+      "scripts/step6_two_loop_wick.py": "32bfa0129164b40286062976df937b26a9ad3897e3b503151d20f173710093c2",
+      "scripts/verify_step5_propagators.py": "db7ffb109e6a672e9e23c724ba302a1ec7f47d194a7758d13a026329feb0c718",
+      "scripts/verify_step5a_fixed_kernel.py": "eee4eebe985f4bc0c531c6aed1fd5957336788a147b0bb0a066fe3fd6f3fb0e6"
+    },
+    "frozen_seed_role": "BOUNDED_COHERENT_INPUT_FIXTURE_NOT_AN_INDEPENDENT_ORACLE",
+    "transitive_import_paths": [
+      "scripts/step6_symbolic_grassmann_oracle.py",
+      "scripts/step6_two_loop_graphir.py",
+      "scripts/step6_global_supertensor.py",
+      "scripts/step6_two_loop_amplitude_ir.py",
+      "scripts/step6_color_tensor.py",
+      "scripts/step6_external_projection.py",
+      "scripts/step6_two_loop_grammar.py",
+      "scripts/step6_two_loop_wick.py",
+      "scripts/verify_step5a_fixed_kernel.py",
+      "scripts/verify_step5_propagators.py"
+    ]
+  },
+  "measure_children_per_raw_action_history": {
+    "18": 192
+  },
+  "open_missing_type_ids": [
+    "MISSING_TYPE::IndependentRemainderObjectComparator",
+    "MISSING_TYPE::EdgeTaggedContactIBPToALocalSurvivors"
+  ],
+  "payload_sha256": "fa7118bb2f672f12e372db16e752b388eee6b24459b6326edf7f434def9e2508",
+  "provenance_checks": {
+    "all_parent_incidence_reconstructs_aggregate": true,
+    "all_seed_parent_pairs_referenced": true,
+    "branch_record_hashes_valid": true,
+    "delta_scope_binding_exact": true,
+    "delta_scope_consumed_branchwise": true,
+    "measure_branch_record_hashes_valid": true,
+    "measure_koszul_signs_recomputed": true,
+    "measure_normalization_applied_once": true,
+    "measure_scope_map_exact": true,
+    "original_factor_order_recomputed": true,
+    "parent_pair_exact_factor_ledgers_reconstruct": true,
+    "residual_contact_IBP_explicitly_open": true,
+    "scope_execution_order_recomputed": true,
+    "seed_fixture_self_hash_valid": true
+  },
+  "reconstruction_requires_fresh_compiler": true,
+  "residual_contact_ibp_performed": false,
+  "resolved_type_id": "TYPE::MeasureTaggedDeltaConvolutionReplayUnderSharedPrimitiveDAlgebraOracle",
+  "schema": "step6.preaggregation_measure_delta_replay.summary.v2",
+  "semantic_scope": "PREAGGREGATION_MEASURE_DELTA_REPLAY_ONLY",
+  "shared_primitive_oracle_regression": {
+    "contact_catalog_sha256": "1918745eafd2970e942209ff312efb2bd342b745d2cf1ace3d9fe3d06fa2de0a",
+    "contact_hash_agrees": true,
+    "contact_object_equality": null,
+    "remainder_catalog_sha256": "6dc51612772cdd485b0ba0b85a22fa79b4b930d37f6cfe54c821f90521579351",
+    "remainder_hash_agrees": true,
+    "remainder_object_equality": null,
+    "remainder_object_equality_status": "UNPROVED_NO_OBJECT_LEVEL_COMPARATOR",
+    "role": "NON_INDEPENDENT_SHARED_ORACLE_RECONSTRUCTION",
+    "shared_oracle_contact_catalog_sha256": "1918745eafd2970e942209ff312efb2bd342b745d2cf1ace3d9fe3d06fa2de0a",
+    "shared_oracle_remainder_catalog_sha256": "6dc51612772cdd485b0ba0b85a22fa79b4b930d37f6cfe54c821f90521579351"
+  },
+  "standalone_replay_certificate": false,
+  "status": "PASS_TYPED_REPLAY_UNDER_SHARED_PRIMITIVE_DALGEBRA_ORACLE__REMAINDER_OBJECT_EQUALITY_OPEN",
+  "summary_sha256": "46dcbf6aad947195a9aa3af1eef934b587e874c719bf229b04fa994264d51529"
+}

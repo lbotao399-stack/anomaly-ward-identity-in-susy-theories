@@ -28,6 +28,9 @@ SOURCE_PATHS = {
     "overall_k": Path("generated/step6/overall-k-map/overall-k-map.json"),
     "overall_k_audit": Path("audits/step6-overall-k-map-verification.json"),
     "measure": Path("audits/step6-measure-tagged-delta-convolution-verification.json"),
+    "measure_delta_replay": Path(
+        "audits/step6-preaggregation-measure-delta-replay-verification.json"
+    ),
     "odd_word_sign": Path("audits/step6-odd-word-transfer-sign-verification.json"),
     "contact_provenance": Path(
         "audits/step6-primitive-contact-provenance-audit-verification.json"
@@ -136,6 +139,29 @@ EXPECTED_NEW3 = [
     "G6_DIRECT_K4ME_I3_S3CUBED_P1S3_P2I",
     "G6_DIRECT_K4ME_I3_S3CUBED_P1I_P2S3",
 ]
+
+EXPECTED_MEASURE_DELTA_REPLAY_COUNTS = {
+    "contact_parent_pairs": 128,
+    "edge_square_contact_groups": 608,
+    "measure_distributed_action_histories": 3_456,
+    "measure_pair_histories": 13_824,
+    "nonzero_aggregate_groups": 2_176,
+    "primitive_normal_contributions": 13_568,
+    "primitive_zero_branches": 36_096,
+    "raw_histories": 216,
+    "raw_parent_pairs": 768,
+    "remainder_groups": 1_568,
+    "remainder_parent_pairs": 256,
+    "source_rows": 6,
+    "sparse_parent_incidence_entries": 6_080,
+}
+
+EXPECTED_MEASURE_DELTA_REPLAY_HASHES = {
+    "payload_sha256": "fa7118bb2f672f12e372db16e752b388eee6b24459b6326edf7f434def9e2508",
+    "contact_catalog_sha256": "1918745eafd2970e942209ff312efb2bd342b745d2cf1ace3d9fe3d06fa2de0a",
+    "remainder_catalog_sha256": "6dc51612772cdd485b0ba0b85a22fa79b4b930d37f6cfe54c821f90521579351",
+    "aggregate_rows_with_parent_incidence_sha256": "6f3f81d50dae92e9b28788b299c2d7e6bdbf6b06256af3dd6805bf05d39e0f77",
+}
 
 
 class SourceDriftError(RuntimeError):
@@ -606,7 +632,96 @@ def _validate_measure(source: Mapping[str, Any]) -> dict[str, Any]:
     return {
         "counts": expected_counts,
         "resolved_seed": "PreAggregationRawReplaySeedWithBareDeltaIdentity",
-        "open_missing_type": "MeasureTaggedDeltaConvolutionBeforeContactAggregation",
+        "historical_open_missing_type": (
+            "MeasureTaggedDeltaConvolutionBeforeContactAggregation"
+        ),
+    }
+
+
+def _validate_measure_delta_replay(source: Mapping[str, Any]) -> dict[str, Any]:
+    expect(
+        source.get("schema") == "step6.preaggregation_measure_delta_replay.audit.v2",
+        "measure-delta replay schema",
+    )
+    expect(
+        source.get("status")
+        == (
+            "PASS_TYPED_REPLAY_UNDER_SHARED_PRIMITIVE_DALGEBRA_ORACLE__"
+            "REMAINDER_OBJECT_EQUALITY_OPEN"
+        ),
+        "measure-delta replay status",
+    )
+    expect(source.get("all_checks_passed") is True, "measure-delta all checks")
+    checks = source.get("checks", {})
+    expected_check_ids = {
+        "aggregate_cardinalities_exact",
+        "computed_branch_provenance_predicates",
+        "contact_token_counts_exact",
+        "frozen_seed_cardinalities",
+        "input_hash_closure_valid",
+        "measure_distribution_exact",
+        "no_external_result",
+        "object_level_remainder_equality_explicitly_unproved",
+        "payload_hash_valid",
+        "residual_contact_ibp_explicitly_open",
+        "schema_and_status_exact",
+        "shared_oracle_digest_regression",
+    }
+    expect(set(checks) == expected_check_ids, "measure-delta check ids")
+    expect(all(checks.values()), "measure-delta checks")
+    expect(
+        source.get("resolved_type_id")
+        == (
+            "TYPE::MeasureTaggedDeltaConvolutionReplayUnderSharedPrimitiveDAlgebraOracle"
+        ),
+        "measure-delta resolved type",
+    )
+    expect(
+        source.get("open_missing_type_ids")
+        == [
+            "MISSING_TYPE::IndependentRemainderObjectComparator",
+            "MISSING_TYPE::EdgeTaggedContactIBPToALocalSurvivors",
+        ],
+        "measure-delta open missing types",
+    )
+    expect(
+        source.get("remainder_object_equality") is None,
+        "measure-delta remainder object equality remains open",
+    )
+    expect(
+        source.get("reconstruction_requires_fresh_compiler") is True,
+        "measure-delta fresh compiler requirement",
+    )
+    expect(
+        source.get("standalone_replay_certificate") is False,
+        "measure-delta standalone boundary",
+    )
+    expect(
+        source.get("semantic_scope") == "PREAGGREGATION_MEASURE_DELTA_REPLAY_ONLY",
+        "measure-delta semantic scope",
+    )
+    expect(
+        source.get("counts") == EXPECTED_MEASURE_DELTA_REPLAY_COUNTS,
+        "measure-delta exact counts",
+    )
+    expect(
+        source.get("contact_remaining_edge_token_counts")
+        == {"1": 192, "2": 320, "3": 96},
+        "measure-delta residual-token counts",
+    )
+    for key, expected in EXPECTED_MEASURE_DELTA_REPLAY_HASHES.items():
+        expect(source.get(key) == expected, f"measure-delta {key}")
+    return {
+        "resolved_type": (
+            "MeasureTaggedDeltaConvolutionReplayUnderSharedPrimitiveDAlgebraOracle"
+        ),
+        "replay_role": "NON_INDEPENDENT_SHARED_ORACLE_RECONSTRUCTION",
+        "independent_remainder_object_equality": "OPEN",
+        "semantic_scope": "PREAGGREGATION_MEASURE_DELTA_REPLAY_ONLY",
+        "next_missing_type": "EdgeTaggedContactIBPToALocalSurvivors",
+        "counts": dict(EXPECTED_MEASURE_DELTA_REPLAY_COUNTS),
+        "hashes": dict(EXPECTED_MEASURE_DELTA_REPLAY_HASHES),
+        "contact_remaining_edge_token_counts": {"1": 192, "2": 320, "3": 96},
     }
 
 
@@ -691,9 +806,9 @@ def _validate_contact_provenance(source: Mapping[str, Any]) -> dict[str, Any]:
     )
     return {
         "stored_contacts": 608,
-        "complete_pre_distribution_provenance": 0,
+        "legacy_catalog_rows_with_embedded_pre_distribution_provenance": 0,
         "unaggregated_pairs": 768,
-        "mapping_status": "FAIL_CLOSED",
+        "historical_mapping_status": "FAIL_CLOSED_BEFORE_EXACT_REPLAY",
     }
 
 
@@ -827,6 +942,9 @@ def validate_sources(sources: Mapping[str, Any]) -> dict[str, Any]:
             sources["overall_k"], sources["overall_k_audit"]
         ),
         "measure": _validate_measure(sources["measure"]),
+        "measure_delta_replay": _validate_measure_delta_replay(
+            sources["measure_delta_replay"]
+        ),
         "odd_word_sign": _validate_odd_word_sign(sources["odd_word_sign"]),
         "contact_provenance": _validate_contact_provenance(
             sources["contact_provenance"]
@@ -868,6 +986,7 @@ def render_markdown(snapshot: Mapping[str, Any]) -> str:
             snapshot["physical_sd"]["missing_types"], start=1
         )
     )
+    replay_hashes = snapshot["measure_delta_replay"]["hashes"]
 
     return rf"""# Step 6 — verified foundations: partial mirror
 
@@ -1112,8 +1231,45 @@ $$
 $$
 
 $$
-\mathrm{{MeasureTaggedDeltaConvolutionBeforeContactAggregation}}
+\mathrm{{MeasureTaggedDeltaConvolutionReplayUnderSharedPrimitiveDAlgebraOracle}}
+=\texttt{{PASS\_TYPED\_REPLAY}}.
+$$
+
+$$
+\mathrm{{OracleRole}}
+=\texttt{{SHARED\_PRIMITIVE\_D\mbox{{-}}ALGEBRA\_ORACLE}},
+\qquad
+\mathrm{{IndependentRemainderObjectEquality}}
 =\texttt{{OPEN: MISSING\_TYPE}}.
+$$
+
+$$
+\mathrm{{SemanticScope}}
+=\texttt{{PREAGGREGATION\_MEASURE\_DELTA\_REPLAY\_ONLY}},
+\qquad
+\mathrm{{StandaloneReplayCertificate}}=\texttt{{FALSE}}.
+$$
+
+$$
+N_{{\mathrm{{measure\ children}}}}=3\,456,
+\qquad
+N_{{\mathrm{{measure\mbox{{-}}pair\ histories}}}}=13\,824,
+\qquad
+N_{{\mathrm{{normal\ contributions}}}}=13\,568,
+\qquad
+N_{{\mathrm{{nilpotent\ zeros}}}}=36\,096.
+$$
+
+$$
+N_{{\mathrm{{aggregate}}}}=2\,176=608+1\,568,
+\qquad
+N_{{\mathrm{{sparse\ parent\ incidence}}}}=6\,080.
+$$
+
+$$
+H_{{\mathrm{{contact,reconstruction}}}}=\texttt{{{replay_hashes["contact_catalog_sha256"]}}},
+\qquad
+H_{{\mathrm{{remainder,reconstruction}}}}=\texttt{{{replay_hashes["remainder_catalog_sha256"]}}}.
 $$
 
 ## 8. Primitive-contact provenance
@@ -1121,15 +1277,16 @@ $$
 $$
 N_{{\mathrm{{stored\ contacts}}}}=608,
 \qquad
-N_{{\mathrm{{complete\ pre\mbox{{-}}distribution\ provenance}}}}=0,
+N_{{\mathrm{{legacy\ catalog\ rows\ with\ embedded\ provenance}}}}=0,
 \qquad
 N_{{\mathrm{{unaggregated\ pairs}}}}=768.
 $$
 
 $$
-\mathrm{{ProvenanceMap}}_{{768\to608}}=\texttt{{FAIL\_CLOSED}},
+\mathrm{{ParentIncidence}}_{{768\to(608+1\,568)}}
+=\texttt{{PASS\_COMPUTED\_OBJECT\_RECONSTRUCTION}},
 \qquad
-\mathrm{{MeasureTaggedDeltaConvolutionBeforeContactAggregation}}
+\mathrm{{EdgeTaggedContactIBPToALocalSurvivors}}
 =\texttt{{OPEN: MISSING\_TYPE}}.
 $$
 
@@ -1239,15 +1396,38 @@ def build_audit(
         "full_gate_counts_rendered": "N_V=273" in markdown
         and "N_{\\mathrm{FP}}=10" in markdown
         and "N_{\\mathrm{matter}}=12" in markdown,
-        "preaggregation_replay_seed_resolved_convolution_open": "PreAggregationRawReplaySeedWithBareDeltaIdentity"
+        "measure_tagged_shared_oracle_replay_pass": "PreAggregationRawReplaySeedWithBareDeltaIdentity"
         in markdown
-        and "MeasureTaggedDeltaConvolutionBeforeContactAggregation" in markdown
+        and "MeasureTaggedDeltaConvolutionReplayUnderSharedPrimitiveDAlgebraOracle"
+        in markdown
+        and "PASS\\_TYPED\\_REPLAY" in markdown
+        and "SHARED\\_PRIMITIVE\\_D\\mbox{-}ALGEBRA\\_ORACLE" in markdown
+        and "N_{\\mathrm{measure\\mbox{-}pair\\ histories}}=13\\,824" in markdown
+        and "N_{\\mathrm{sparse\\ parent\\ incidence}}=6\\,080" in markdown,
+        "computed_parent_incidence_pass": "N_{\\mathrm{stored\\ contacts}}=608"
+        in markdown
+        and "N_{\\mathrm{legacy\\ catalog\\ rows\\ with\\ embedded\\ provenance}}=0"
+        in markdown
+        and "\\mathrm{ParentIncidence}_{768\\to(608+1\\,568)}" in markdown
+        and "PASS\\_COMPUTED\\_OBJECT\\_RECONSTRUCTION" in markdown,
+        "independent_remainder_object_equality_open": (
+            "IndependentRemainderObjectEquality" in markdown
+            and "OPEN: MISSING\\_TYPE" in markdown
+        ),
+        "replay_semantic_scope_bounded": (
+            "PREAGGREGATION\\_MEASURE\\_DELTA\\_REPLAY\\_ONLY" in markdown
+            and "StandaloneReplayCertificate" in markdown
+            and "\\texttt{FALSE}" in markdown
+        ),
+        "next_contact_IBP_type_open": "EdgeTaggedContactIBPToALocalSurvivors"
+        in markdown
         and "OPEN: MISSING\\_TYPE" in markdown,
-        "primitive_contact_provenance_fail_closed": "N_{\\mathrm{stored\\ contacts}}=608"
+        "measure_replay_hashes_rendered": EXPECTED_MEASURE_DELTA_REPLAY_HASHES[
+            "contact_catalog_sha256"
+        ]
         in markdown
-        and "N_{\\mathrm{complete\\ pre\\mbox{-}distribution\\ provenance}}=0"
-        in markdown
-        and "\\mathrm{ProvenanceMap}_{768\\to608}=\\texttt{FAIL\\_CLOSED}" in markdown,
+        and EXPECTED_MEASURE_DELTA_REPLAY_HASHES["remainder_catalog_sha256"]
+        in markdown,
         "odd_word_sign_formula_exact": "N=m+\\binom{m}{2}+m|F|+N_{\\mathrm{coeff}}+N_{\\mathrm{endpoint}}"
         in markdown
         and "s=(-1)^N" in markdown,
@@ -1296,7 +1476,15 @@ def build_audit(
             "odd_word_exhaustive_cases": 10_922,
             "odd_word_boundary_cases": 34,
             "stored_contacts": 608,
-            "contacts_with_complete_pre_distribution_provenance": 0,
+            "legacy_catalog_rows_with_embedded_pre_distribution_provenance": 0,
+            "measure_distributed_action_histories": 3_456,
+            "measure_pair_histories": 13_824,
+            "primitive_normal_contributions": 13_568,
+            "primitive_zero_branches": 36_096,
+            "measure_delta_aggregate_groups": 2_176,
+            "edge_square_contact_groups": 608,
+            "remainder_groups": 1_568,
+            "sparse_parent_incidence_entries": 6_080,
             "pure_vector_gate_graphs": 273,
             "FP_candidates": 10,
             "matter_candidates": 12,
