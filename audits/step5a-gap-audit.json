@@ -1,0 +1,70 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
+  "artifact": "FOUNDATION-COMPONENT-BV-BRST-PRIMITIVE-SUPERGRAPH-GRAMMAR-005A",
+  "covered_scope": [
+    {
+      "id": "COMPONENT_ACTIONS",
+      "result": "PASS",
+      "scope": "N=1, N=2, and N=4 Lorentzian and Euclidean component densities, auxiliary equations, and displayed on-shell reductions"
+    },
+    {
+      "id": "CLASSICAL_BV_BRST",
+      "result": "PASS",
+      "scope": "exact bridge, ghost, matter, prepotential, minimal BV, finite-cutoff master defect, BV Laplacian and QME recursion, non-minimal doublet, gauge-fermion, and FP maps"
+    },
+    {
+      "id": "PRIMITIVE_SUPERGRAPH_GRAMMAR",
+      "result": "PASS",
+      "scope": "all-valence coordinate-superspace gauge, matter, superpotential, and FP primitive word coefficients with ordered differentiation and Koszul signs"
+    },
+    {
+      "id": "CONDITIONAL_EUCLIDEAN_GAUSSIAN",
+      "result": "PASS_CONDITIONAL",
+      "scope": "formal projector inversion after imposing the explicitly displayed Fermi-Feynman slice"
+    }
+  ],
+  "resolved_gaps": [
+    {
+      "priority": "P0",
+      "id": "GRAPH_EDGE_PHASE",
+      "status": "RESOLVED",
+      "repair": "Replaced hbar^|E| by (-tau_R^(-1))^|E| and expanded both signature values."
+    },
+    {
+      "priority": "P0",
+      "id": "FULL_EXPONENTIAL_DERIVATIVE",
+      "status": "RESOLVED",
+      "repair": "Restricted the n-vector matter derivative to V=0, eliminating every residual higher-degree V term."
+    },
+    {
+      "priority": "P1",
+      "id": "MODULAR_DEFECT",
+      "status": "RESOLVED",
+      "repair": "Retained M_Delta[F]=Delta^2 F unless the density is separately BV-compatible."
+    }
+  ],
+  "blocking_boundaries": [
+    {
+      "id": "BLOCKED_STEP5A_UNIQUE_PROPAGATORS_PERTURBATIVE_SLICE_UNFIXED",
+      "reason": "Step 3D does not select Y, the residual-free complements, or the Euclidean multiplier and ghost cycles; its admitted Y is local while the displayed Fermi-Feynman Y contains Box_E^(-1)."
+    },
+    {
+      "id": "BLOCKED_STEP5A_NK_BRANCH_UNSELECTED",
+      "reason": "Step 3D leaves the coupled, external-measure, density-absorbed, and admitted BV-NK branches distinct."
+    },
+    {
+      "id": "BLOCKED_STEP5A_MOMENTUM_RULES_FOURIER_DRED_LEDGER_UNFIXED",
+      "reason": "The current task requires, but has not yet locked, the Fourier, all-incoming, DRED, loop-measure, and evanescent-projector ledger."
+    },
+    {
+      "id": "BLOCKED_STEP3D_LC_VECTOR_CYCLE",
+      "reason": "The archived Step-3E gate records a nonzero 2*pi*hbar*delta(p_L^2)*h_L^(-1) difference between the direct temporal line and the single-covariant Lorentzian candidate."
+    }
+  ],
+  "post_resolution": {
+    "P0": [],
+    "P1": []
+  },
+  "result": "PASS_EXACT_PARTIAL_SCOPE"
+}

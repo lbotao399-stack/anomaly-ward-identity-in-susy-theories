@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
+  "artifact": "FOUNDATION-COMPONENT-BV-BRST-PRIMITIVE-SUPERGRAPH-GRAMMAR-005A",
+  "review_results": [
+    {
+      "scope": "N=1, N=2, and N=4 component coefficient and auxiliary-elimination dictionaries",
+      "result": "PASS"
+    },
+    {
+      "scope": "full-prepotential BRST, finite-cutoff master defect, QME recursion, and minimal/non-minimal BV grammar",
+      "result": "PASS"
+    },
+    {
+      "scope": "reverse-order BCH, tilded BCH, matter color-word, superpotential, Bernoulli-BRST, and FP coefficient census",
+      "result": "PASS"
+    },
+    {
+      "scope": "labeled functional differentiation, identical-leg normalization, and Koszul permutation signs",
+      "result": "PASS"
+    },
+    {
+      "scope": "Euclidean projector inverse and locality obstruction",
+      "result": "PASS_CONDITIONAL_ONLY"
+    },
+    {
+      "scope": "unique propagators, Nielsen-Kallosh branch, momentum/DRED rules, and Lorentzian vector cycle",
+      "result": "BLOCKED_BY_EXPLICIT_CONTRACT_BOUNDARIES"
+    }
+  ],
+  "claims_not_made": [
+    "RULES_DERIVED",
+    "ALL_FEYNMAN_RULES_ACCEPTED",
+    "UNIQUE_NK_PROPAGATOR",
+    "UNIQUE_LORENTZIAN_VECTOR_PROPAGATOR",
+    "STEP5_COMPLETE"
+  ],
+  "resolved_findings": [
+    {
+      "priority": "P0",
+      "id": "LORENTZIAN_WICK_EDGE_PHASE",
+      "finding": "The first draft used hbar per edge and omitted the Lorentzian factor i.",
+      "resolution": "Equation 5A.63 now uses (-tau_R^(-1)) per edge and displays -tau_L^(-1)=i hbar and -tau_E^(-1)=hbar; the verifier checks both signatures exactly.",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P0",
+      "id": "MATTER_VERTEX_BACKGROUND_EVALUATION",
+      "finding": "The first draft differentiated the full matter exponential without displaying evaluation at V=0.",
+      "resolution": "Equation 5A.54 now includes evaluation at V=0; the verifier checks that only source degree n survives the n-fold derivative.",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "id": "BV_DENSITY_COMPATIBILITY",
+      "finding": "The first draft inferred Delta^2=0 from an even nowhere-vanishing density.",
+      "resolution": "Equation 5A.42c now retains the modular defect and makes nilpotency equivalent to the separate BV-compatible-density condition.",
+      "status": "RESOLVED"
+    }
+  ],
+  "post_resolution": {
+    "P0": [],
+    "P1": []
+  },
+  "result": "PASS_EXACT_PARTIAL_SCOPE"
+}

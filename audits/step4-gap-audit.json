@@ -112,6 +112,24 @@
   ],
   "resolved_findings": [
     {
+      "priority": "P0",
+      "issue": "Equation 4C.7 incorrectly collapsed two color-ordered gauge-Yukawa slots before contraction with c_ABC.",
+      "resolution": "Replaced 4C.7 by the full ordered B,C-color expression, moved the factor-two reduction to the explicitly c_ABC-contracted identity 4C.7a, and added exact uncontracted, premature-reduction rejection, and contracted verifier gates.",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "issue": "Equations 4B.11 and 4B.13 stated ordered free-index identities that hold only after contraction with symmetric kappa_AB; h and c_ABC were also not locally defined, and 4B.33L8 omitted the topological term of 4B.10.",
+      "resolution": "Defined h and c_ABC, displayed the exact symmetrized free-index tensors, isolated the kappa-contracted equalities, added both on-shell densities, and restored the Lorentzian topological term in 4B.33L8.",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "issue": "The N=4 auxiliary elimination and 4^4 scalar-slot reduction omitted the complete square and the finite slot census.",
+      "resolution": "Expanded both auxiliary squares, evaluated the Q_r tildeQ_r contraction, counted 256 raw slots as 112 diagonal-zero plus 144 off-diagonal slots in 36 reversal orbits, and verified the nine-entry canonical quartic dictionary.",
+      "status": "RESOLVED"
+    },
+    {
       "priority": "P1",
       "issue": "N1 initially lacked the Euclidean Euler and current-divergence surface.",
       "resolution": "Added the compact Euclidean density, Euler operators, Bianchi reduction, and both current divergences.",

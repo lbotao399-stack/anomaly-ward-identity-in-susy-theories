@@ -559,6 +559,109 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertTrue(any("external leg" in item for item in task["acceptance"]))
         self.assertTrue(any("isolated triangle" in item for item in task["forbidden_inputs"]))
 
+    def test_step5a_component_bv_brst_primitive_grammar(self) -> None:
+        relative = "contracts/foundations/step-05a-component-bv-brst-primitive-supergraph-grammar.md"
+        path = ROOT / relative
+        text = path.read_text(encoding="utf-8")
+        tags = re.findall(r"\\tag\{(5A\.[^}]+)\}", text)
+        self.assertEqual(len(tags), len(set(tags)))
+        self.assertEqual(
+            {tag for tag in tags if tag[3:].isdigit()},
+            {f"5A.{number}" for number in range(1, 82)},
+        )
+        self.assertIn("5A.53a", tags)
+        self.assertEqual(text.count("$$") % 2, 0)
+        for token in (r"\sim", r"\approx", r"\propto"):
+            self.assertNotIn(token, text)
+        for character in text:
+            self.assertFalse(ord(character) < 32 and character not in "\n\t")
+        self.assertEqual(
+            [
+                line_number
+                for line_number, line in enumerate(text.splitlines(), start=1)
+                if re.search(r"(?<!\\)qquad", line)
+            ],
+            [],
+        )
+        self.assertNotIn(r"\Delta_{R,\nu}^2=0", text)
+
+        blockers = (
+            "BLOCKED_STEP5A_UNIQUE_PROPAGATORS_PERTURBATIVE_SLICE_UNFIXED",
+            "BLOCKED_STEP5A_NK_BRANCH_UNSELECTED",
+            "BLOCKED_STEP5A_MOMENTUM_RULES_FOURIER_DRED_LEDGER_UNFIXED",
+            "BLOCKED_STEP3D_LC_VECTOR_CYCLE",
+        )
+        for blocker in blockers:
+            self.assertEqual(text.count(blocker), 1)
+        for required in (
+            r"f_{AB}=h\kappa_{AB}+i\mathfrak k_{AB}",
+            r"\mathcal V_R\ne\mathcal V_R^{\mathrm{WZ}}",
+            r"\mathfrak R_{R,\nu}^{\mathsf i}",
+            r"\mathfrak O^{\mathrm{BV}}_{E,\nu}[W]",
+            r"\mathfrak M^\Delta_{R,\nu}[F]",
+            r"&:=\Delta_{R,\nu}^2F",
+            r"\widehat{\boldsymbol\varpi}_{R,\nu}\ \text{BV-compatible}",
+            r"\mathfrak M^\Delta_{R,\nu}[F]=0\quad\text{for every }F",
+            r"a_{pq}:=\frac{(-1)^p}{p!q!(p+q+1)}",
+            r"\widetilde a_{pq}:=\frac{(-1)^{q+1}}{p!q!(p+q+1)}",
+            r"\right|_{V=0}",
+            r"(-\tau_R^{-1})^{|E(G)|}",
+            r"-\tau_L^{-1}=i\hbar",
+            r"-\tau_E^{-1}=\hbar",
+            r"\mathcal Y_{E,\mathrm{FF}}\text{ is nonlocal}",
+            "complete accepted Feynman rules are not claimed",
+        ):
+            self.assertIn(required, text)
+
+        manifest = json.loads((ROOT / "contracts/manifest.yaml").read_text(encoding="utf-8"))
+        entry = next(
+            item
+            for item in manifest["contracts"]
+            if item["id"] == "FOUNDATION-COMPONENT-BV-BRST-PRIMITIVE-SUPERGRAPH-GRAMMAR-005A"
+        )
+        self.assertEqual(entry["path"], relative)
+        self.assertEqual(entry["status"], "DERIVED_UNFROZEN")
+        self.assertEqual(entry["sha256"], hashlib.sha256(path.read_bytes()).hexdigest())
+
+        task = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
+        self.assertIn(relative, task["allowed_inputs"])
+        ledger = json.loads((ROOT / "ledger/proof_obligations.json").read_text(encoding="utf-8"))
+        obligation = next(
+            item
+            for item in ledger["proof_obligations"]
+            if item["id"] == "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001"
+        )
+        self.assertEqual(obligation["state"], "SPECIFIED")
+        checked = obligation["checked_scope"]["STEP5A_COMPONENT_BV_BRST_PRIMITIVE_GRAMMAR"]
+        self.assertEqual(checked["result"], "PASS_EXACT_PARTIAL_SCOPE")
+        self.assertEqual(checked["contract_sha256"], entry["sha256"])
+        self.assertEqual(checked["blockers"], list(blockers))
+
+    def test_step5a_exact_verifier_and_audits(self) -> None:
+        script = ROOT / "scripts/verify_step5a_component_bv_brst_grammar.py"
+        audit_path = ROOT / "audits/step5a-component-bv-brst-grammar-verification.json"
+        expected = audit_path.read_text(encoding="utf-8")
+        subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
+        audit = json.loads(expected)
+        self.assertEqual(audit["status"], "PASS_EXACT_PARTIAL_SCOPE")
+        self.assertEqual(audit["totals"]["failed_check_families"], 0)
+        self.assertGreaterEqual(audit["totals"]["exact_check_families"], 42)
+        self.assertTrue(all(item["passed"] for item in audit["checks"]))
+        for relative in (
+            "audits/step5a-notation-ledger.json",
+            "audits/step5a-gap-audit.json",
+            "audits/step5a-independent-review.json",
+        ):
+            manual = json.loads((ROOT / relative).read_text(encoding="utf-8"))
+            self.assertEqual(manual["result"], "PASS_EXACT_PARTIAL_SCOPE")
+            self.assertEqual(manual["post_resolution"], {"P0": [], "P1": []})
+
     def test_step_1_formula_surface(self) -> None:
         text = (ROOT / "contracts/foundations/step-01-supersymmetry-commutator.md").read_text(encoding="utf-8")
         tags = {int(value) for value in re.findall(r"\\tag\{1\.(\d+)\}", text)}

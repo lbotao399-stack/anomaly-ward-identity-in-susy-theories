@@ -378,29 +378,137 @@ def check_scalar_duality_and_norm():
     return norm, expected
 
 
+def canonical_spinor_bilinear(
+    first: tuple[str, str], second: tuple[str, str]
+) -> tuple[tuple[str, str], tuple[str, str]]:
+    # A contracted bilinear of two Grassmann-odd Weyl spinors is symmetric
+    # under simultaneous interchange of the two complete field slots.
+    return tuple(sorted((first, second)))
+
+
+def add_uncontracted_yukawa_term(
+    expression: dict[tuple, int],
+    coefficient: int,
+    scalar: str,
+    first_species: str,
+    first_color: str,
+    second_species: str,
+    second_color: str,
+) -> None:
+    key = (
+        scalar,
+        canonical_spinor_bilinear(
+            (first_species, first_color),
+            (second_species, second_color),
+        ),
+    )
+    add_coefficient(expression, key, coefficient)
+
+
+def add_contracted_yukawa_term(
+    expression: dict[tuple, int],
+    coefficient: int,
+    scalar: str,
+    first_species: str,
+    second_species: str,
+) -> None:
+    # c_{ABC} changes sign when the B,C fermion color slots are exchanged.
+    if first_species <= second_species:
+        sign = 1
+        pair = (first_species, second_species)
+    else:
+        sign = -1
+        pair = (second_species, first_species)
+    add_coefficient(expression, (scalar, pair), sign * coefficient)
+
+
 def check_su4_yukawa():
     _, tilde = build_su4_scalars()
-    expression: dict[tuple, int] = {}
+    fermions = ("psi0", "psi1", "psi2", "lambda")
+
+    uncontracted_actual: dict[tuple, int] = {}
     for i in range(4):
         for j in range(4):
-            if tilde[i][j] is None or i == j:
+            if tilde[i][j] is None:
                 continue
             scalar_coefficient, scalar = tilde[i][j]
-            if i < j:
-                fermion_coefficient = 1
-                pair = (i, j)
-            else:
-                fermion_coefficient = -1
-                pair = (j, i)
-            add_coefficient(expression, (scalar, pair), scalar_coefficient * fermion_coefficient)
-    expected: dict[tuple, int] = {}
+            add_uncontracted_yukawa_term(
+                uncontracted_actual,
+                scalar_coefficient,
+                scalar,
+                fermions[i],
+                "B",
+                fermions[j],
+                "C",
+            )
+
+    uncontracted_expected: dict[tuple, int] = {}
+    premature_reduction: dict[tuple, int] = {}
     for r in range(3):
-        add_coefficient(expected, (f"t{r}", (r, 3)), 2)
-    for i in range(3):
-        for j in range(i + 1, 3):
-            for k in range(3):
-                add_coefficient(expected, (f"p{k}", (i, j)), 2 * epsilon3(i, j, k))
-    return expression, expected
+        add_uncontracted_yukawa_term(
+            uncontracted_expected, 1, f"t{r}", f"psi{r}", "B", "lambda", "C"
+        )
+        add_uncontracted_yukawa_term(
+            uncontracted_expected, -1, f"t{r}", "lambda", "B", f"psi{r}", "C"
+        )
+        add_uncontracted_yukawa_term(
+            premature_reduction, 2, f"t{r}", f"psi{r}", "B", "lambda", "C"
+        )
+    for r, s, t in itertools.product(range(3), repeat=3):
+        coefficient = epsilon3(r, s, t)
+        if not coefficient:
+            continue
+        for expression in (uncontracted_expected, premature_reduction):
+            add_uncontracted_yukawa_term(
+                expression,
+                coefficient,
+                f"p{t}",
+                f"psi{r}",
+                "B",
+                f"psi{s}",
+                "C",
+            )
+
+    contracted_actual: dict[tuple, int] = {}
+    for (scalar, pair), coefficient in uncontracted_actual.items():
+        (first_species, first_color), (second_species, second_color) = pair
+        if (first_color, second_color) == ("B", "C"):
+            color_sign = 1
+        elif (first_color, second_color) == ("C", "B"):
+            color_sign = -1
+        else:
+            raise AssertionError("unexpected Yukawa color slots")
+        add_contracted_yukawa_term(
+            contracted_actual,
+            color_sign * coefficient,
+            scalar,
+            first_species,
+            second_species,
+        )
+
+    contracted_expected: dict[tuple, int] = {}
+    for r in range(3):
+        add_contracted_yukawa_term(
+            contracted_expected, 2, f"t{r}", f"psi{r}", "lambda"
+        )
+    for r, s, t in itertools.product(range(3), repeat=3):
+        coefficient = epsilon3(r, s, t)
+        if coefficient:
+            add_contracted_yukawa_term(
+                contracted_expected,
+                coefficient,
+                f"p{t}",
+                f"psi{r}",
+                f"psi{s}",
+            )
+
+    return {
+        "uncontracted_actual": uncontracted_actual,
+        "uncontracted_expected": uncontracted_expected,
+        "premature_uncontracted_reduction": premature_reduction,
+        "contracted_actual": contracted_actual,
+        "contracted_expected": contracted_expected,
+    }
 
 
 def check_su4_quartic():
@@ -455,6 +563,84 @@ def check_su4_quartic():
     return lhs, rhs
 
 
+def check_su4_quartic_census():
+    raw_slots = list(itertools.product(range(4), repeat=4))
+    diagonal_zero_slots = [
+        slot for slot in raw_slots if slot[0] == slot[1] or slot[2] == slot[3]
+    ]
+    off_diagonal_slots = [
+        slot for slot in raw_slots if slot[0] != slot[1] and slot[2] != slot[3]
+    ]
+
+    def reversal_orbit(slot):
+        i, j, k, l = slot
+        return frozenset(
+            (
+                (i, j, k, l),
+                (j, i, k, l),
+                (i, j, l, k),
+                (j, i, l, k),
+            )
+        )
+
+    reversal_orbits = {reversal_orbit(slot) for slot in off_diagonal_slots}
+    orbit_size_histogram: dict[int, int] = {}
+    for orbit in reversal_orbits:
+        orbit_size_histogram[len(orbit)] = orbit_size_histogram.get(len(orbit), 0) + 1
+
+    quartic_lhs, _ = check_su4_quartic()
+    orbit_reduction: dict[tuple, int] = {}
+    for r in range(3):
+        for s in range(3):
+            for arguments in (
+                (f"p{r}", f"p{s}", f"t{r}", f"t{s}"),
+                (f"p{r}", f"t{s}", f"t{r}", f"p{s}"),
+            ):
+                sign, key = normalize_lie_pairing(*arguments)
+                if key is not None:
+                    add_coefficient(orbit_reduction, key, 8 * sign)
+
+    canonical_actual: dict[str, int] = {}
+    for r in range(3):
+        for s in range(3):
+            if r != s:
+                label = f"A{min(r, s) + 1}{max(r, s) + 1}"
+                canonical_actual[label] = canonical_actual.get(label, 0) + 16
+            label = f"C{min(r, s) + 1}{max(r, s) + 1}"
+            canonical_actual[label] = canonical_actual.get(label, 0) - 8
+
+    canonical_expected = {
+        "A12": 32,
+        "A13": 32,
+        "A23": 32,
+        "C11": -8,
+        "C22": -8,
+        "C33": -8,
+        "C12": -16,
+        "C13": -16,
+        "C23": -16,
+    }
+    checks = {
+        "raw_slot_count": len(raw_slots) == 256,
+        "diagonal_zero_slot_count": len(diagonal_zero_slots) == 112,
+        "off_diagonal_slot_count": len(off_diagonal_slots) == 144,
+        "reversal_orbit_count": len(reversal_orbits) == 36,
+        "reversal_orbit_sizes": orbit_size_histogram == {4: 36},
+        "orbit_reduction_exact": quartic_lhs == orbit_reduction,
+        "canonical_dictionary": canonical_actual == canonical_expected,
+    }
+    return checks, {
+        "raw_slots": len(raw_slots),
+        "diagonal_zero_slots": len(diagonal_zero_slots),
+        "off_diagonal_slots": len(off_diagonal_slots),
+        "reversal_orbits": len(reversal_orbits),
+        "orbit_size_histogram": orbit_size_histogram,
+        "orbit_reduction": serialize_formal(orbit_reduction),
+        "canonical_actual": canonical_actual,
+        "canonical_expected": canonical_expected,
+    }
+
+
 def check_su2_auxiliary():
     # Formal coefficients in 1/4 Y^{ij}Y_{ij}.
     expression = {("F", "tF"): 1, ("H", "H"): Fraction(1, 2)}
@@ -462,10 +648,189 @@ def check_su2_auxiliary():
     return expression, expected
 
 
+def add_fraction(
+    expression: dict[tuple, Fraction], key: tuple, coefficient: Fraction | int
+) -> None:
+    value = Fraction(coefficient)
+    expression[key] = expression.get(key, Fraction(0)) + value
+    if expression[key] == 0:
+        del expression[key]
+
+
+def free_boson_pair(
+    first_field: str,
+    first_color: str,
+    second_field: str,
+    second_color: str,
+) -> tuple[tuple[str, str], tuple[str, str]]:
+    return tuple(sorted(((first_field, first_color), (second_field, second_color))))
+
+
+def add_free_boson_pair(
+    expression: dict[tuple, Fraction],
+    coefficient: Fraction | int,
+    first_field: str,
+    first_color: str,
+    second_field: str,
+    second_color: str,
+) -> None:
+    add_fraction(
+        expression,
+        free_boson_pair(first_field, first_color, second_field, second_color),
+        coefficient,
+    )
+
+
+def contract_symmetric_kappa(
+    expression: dict[tuple, Fraction]
+) -> dict[tuple[str, str], Fraction]:
+    contracted: dict[tuple[str, str], Fraction] = {}
+    for pair, coefficient in expression.items():
+        fields = tuple(sorted((pair[0][0], pair[1][0])))
+        add_fraction(contracted, fields, coefficient)
+    return contracted
+
+
+def check_n2_contracted_auxiliary_boundary():
+    original: dict[tuple, Fraction] = {}
+    add_free_boson_pair(original, 1, "tildeF", "A", "F", "B")
+    add_free_boson_pair(original, Fraction(1, 2), "D", "A", "D", "B")
+    add_free_boson_pair(original, 1, "D", "A", "mu", "B")
+
+    symmetrized: dict[tuple, Fraction] = {}
+    add_free_boson_pair(symmetrized, 1, "tildeF", "A", "F", "B")
+    add_free_boson_pair(symmetrized, Fraction(1, 2), "D", "A", "D", "B")
+    add_free_boson_pair(symmetrized, Fraction(1, 2), "D", "A", "mu", "B")
+    add_free_boson_pair(symmetrized, Fraction(1, 2), "mu", "A", "D", "B")
+
+    completed_square: dict[tuple, Fraction] = {}
+    add_free_boson_pair(completed_square, 1, "tildeF", "A", "F", "B")
+    add_free_boson_pair(completed_square, Fraction(1, 2), "D", "A", "D", "B")
+    add_free_boson_pair(completed_square, Fraction(1, 2), "D", "A", "mu", "B")
+    add_free_boson_pair(completed_square, Fraction(1, 2), "mu", "A", "D", "B")
+
+    y_free: dict[tuple, Fraction] = {}
+    add_free_boson_pair(y_free, Fraction(1, 2), "tildeF", "A", "F", "B")
+    add_free_boson_pair(y_free, Fraction(1, 2), "F", "A", "tildeF", "B")
+    add_free_boson_pair(y_free, Fraction(1, 2), "H", "A", "H", "B")
+
+    y_short: dict[tuple, Fraction] = {}
+    add_free_boson_pair(y_short, 1, "tildeF", "A", "F", "B")
+    add_free_boson_pair(y_short, Fraction(1, 2), "H", "A", "H", "B")
+
+    checks = {
+        "completion_symmetrized_free_index": symmetrized == completed_square,
+        "completion_not_free_index_identity": original != symmetrized,
+        "completion_kappa_contracted": (
+            contract_symmetric_kappa(original)
+            == contract_symmetric_kappa(symmetrized)
+        ),
+        "triplet_not_free_index_short_identity": y_free != y_short,
+        "triplet_kappa_contracted": (
+            contract_symmetric_kappa(y_free)
+            == contract_symmetric_kappa(y_short)
+        ),
+    }
+    return checks, {
+        "completion_original": original,
+        "completion_symmetrized": symmetrized,
+        "triplet_free_index": y_free,
+        "triplet_short_ordered": y_short,
+    }
+
+
 def add_exact(expression: dict[tuple, Exact], key: tuple, coefficient: Exact) -> None:
     expression[key] = expression.get(key, ZERO) + coefficient
     if expression[key].is_zero():
         del expression[key]
+
+
+def exact_inner_key(left: str, right: str) -> tuple[str, str]:
+    return tuple(sorted((left, right)))
+
+
+def exact_inner_linear(
+    left: dict[str, Exact], right: dict[str, Exact]
+) -> dict[tuple[str, str], Exact]:
+    expression: dict[tuple[str, str], Exact] = {}
+    for left_field, left_coefficient in left.items():
+        for right_field, right_coefficient in right.items():
+            add_exact(
+                expression,
+                exact_inner_key(left_field, right_field),
+                left_coefficient * right_coefficient,
+            )
+    return expression
+
+
+def merge_exact(
+    target: dict[tuple, Exact],
+    source: dict[tuple, Exact],
+    scale: Exact = ONE,
+) -> None:
+    for key, coefficient in source.items():
+        add_exact(target, key, scale * coefficient)
+
+
+def check_n4_auxiliary_square():
+    original: dict[tuple, Exact] = {}
+    add_exact(original, exact_inner_key("D", "D"), HALF)
+    add_exact(original, exact_inner_key("D", "C0"), I)
+    completed: dict[tuple, Exact] = {}
+    merge_exact(
+        completed,
+        exact_inner_linear({"D": ONE, "C0": I}, {"D": ONE, "C0": I}),
+        HALF,
+    )
+    add_exact(completed, exact_inner_key("C0", "C0"), HALF)
+
+    for r in range(3):
+        f = f"F{r}"
+        tf = f"tildeF{r}"
+        q = f"Q{r}"
+        tq = f"tildeQ{r}"
+        add_exact(original, exact_inner_key(tf, f), ONE)
+        add_exact(original, exact_inner_key(f, q), MINUS_ONE)
+        add_exact(original, exact_inner_key(tf, tq), MINUS_ONE)
+        merge_exact(
+            completed,
+            exact_inner_linear(
+                {tf: ONE, q: MINUS_ONE},
+                {f: ONE, tq: MINUS_ONE},
+            ),
+        )
+        add_exact(completed, exact_inner_key(q, tq), MINUS_ONE)
+
+    q_pairing_actual: dict[tuple, Fraction] = {}
+    for r, s, t, u, v in itertools.product(range(3), repeat=5):
+        left_epsilon = epsilon3(r, s, t)
+        right_epsilon = epsilon3(r, u, v)
+        if not left_epsilon or not right_epsilon:
+            continue
+        sign, key = normalize_lie_pairing(f"p{s}", f"p{t}", f"t{u}", f"t{v}")
+        if key is not None:
+            add_fraction(
+                q_pairing_actual,
+                key,
+                Fraction(left_epsilon * right_epsilon * sign, 2),
+            )
+
+    q_pairing_expected: dict[tuple, Fraction] = {}
+    for s, t in ((1, 2), (2, 0), (0, 1)):
+        sign, key = normalize_lie_pairing(f"p{s}", f"p{t}", f"t{s}", f"t{t}")
+        assert key is not None
+        add_fraction(q_pairing_expected, key, 2 * sign)
+
+    checks = {
+        "complete_square_expansion": original == completed,
+        "q_pairing_expansion": q_pairing_actual == q_pairing_expected,
+    }
+    return checks, {
+        "original": original,
+        "completed": completed,
+        "q_pairing_actual": q_pairing_actual,
+        "q_pairing_expected": q_pairing_expected,
+    }
 
 
 def check_n2_current_expansion(euclidean: bool):
@@ -821,6 +1186,13 @@ def serialize_formal(expression: dict[tuple, int | Fraction]):
     return {repr(key): str(value) for key, value in sorted(expression.items(), key=lambda item: repr(item[0]))}
 
 
+def serialize_exact_formal(expression: dict[tuple, Exact]):
+    return {
+        repr(key): exact_string(value)
+        for key, value in sorted(expression.items(), key=lambda item: repr(item[0]))
+    }
+
+
 def run_checks():
     failures: list[str] = []
     checks: dict[str, object] = {}
@@ -845,12 +1217,34 @@ def run_checks():
         "expected": serialize_formal(scalar_expected),
     }
 
-    yukawa_actual, yukawa_expected = check_su4_yukawa()
-    if yukawa_actual != yukawa_expected:
-        failures.append("su4_yukawa_packaging")
+    yukawa = check_su4_yukawa()
+    uncontracted_yukawa_ok = (
+        yukawa["uncontracted_actual"] == yukawa["uncontracted_expected"]
+    )
+    premature_reduction_rejected = (
+        yukawa["uncontracted_actual"]
+        != yukawa["premature_uncontracted_reduction"]
+    )
+    contracted_yukawa_ok = (
+        yukawa["contracted_actual"] == yukawa["contracted_expected"]
+    )
+    if not uncontracted_yukawa_ok:
+        failures.append("su4_yukawa_uncontracted_ordered")
+    if not premature_reduction_rejected:
+        failures.append("su4_yukawa_premature_reduction_not_rejected")
+    if not contracted_yukawa_ok:
+        failures.append("su4_yukawa_contracted_reduction")
     checks["su4_yukawa_packaging"] = {
-        "actual": serialize_formal(yukawa_actual),
-        "expected": serialize_formal(yukawa_expected),
+        "uncontracted_actual": serialize_formal(yukawa["uncontracted_actual"]),
+        "uncontracted_expected": serialize_formal(yukawa["uncontracted_expected"]),
+        "premature_uncontracted_reduction": serialize_formal(
+            yukawa["premature_uncontracted_reduction"]
+        ),
+        "contracted_actual": serialize_formal(yukawa["contracted_actual"]),
+        "contracted_expected": serialize_formal(yukawa["contracted_expected"]),
+        "uncontracted_ordered_passed": uncontracted_yukawa_ok,
+        "premature_uncontracted_reduction_rejected": premature_reduction_rejected,
+        "contracted_reduction_passed": contracted_yukawa_ok,
     }
 
     quartic_actual, quartic_expected = check_su4_quartic()
@@ -863,12 +1257,45 @@ def run_checks():
         "equivalent_mod_invariance_and_jacobi": quartic_equivalent,
     }
 
+    quartic_census_checks, quartic_census_data = check_su4_quartic_census()
+    for key, passed in quartic_census_checks.items():
+        if not passed:
+            failures.append(f"su4_quartic_census_{key}")
+    checks["su4_quartic_census"] = {
+        "checks": quartic_census_checks,
+        **quartic_census_data,
+    }
+
     auxiliary_actual, auxiliary_expected = check_su2_auxiliary()
     if auxiliary_actual != auxiliary_expected:
         failures.append("su2_auxiliary_triplet")
     checks["su2_auxiliary_triplet"] = {
         "actual": serialize_formal(auxiliary_actual),
         "expected": serialize_formal(auxiliary_expected),
+    }
+
+    n2_boundary_checks, n2_boundary_data = check_n2_contracted_auxiliary_boundary()
+    for key, passed in n2_boundary_checks.items():
+        if not passed:
+            failures.append(f"n2_auxiliary_boundary_{key}")
+    checks["n2_contracted_auxiliary_boundary"] = {
+        "checks": n2_boundary_checks,
+        **{
+            key: serialize_formal(value)
+            for key, value in n2_boundary_data.items()
+        },
+    }
+
+    n4_auxiliary_checks, n4_auxiliary_data = check_n4_auxiliary_square()
+    for key, passed in n4_auxiliary_checks.items():
+        if not passed:
+            failures.append(f"n4_auxiliary_{key}")
+    checks["n4_auxiliary_square"] = {
+        "checks": n4_auxiliary_checks,
+        "original": serialize_exact_formal(n4_auxiliary_data["original"]),
+        "completed": serialize_exact_formal(n4_auxiliary_data["completed"]),
+        "q_pairing_actual": serialize_formal(n4_auxiliary_data["q_pairing_actual"]),
+        "q_pairing_expected": serialize_formal(n4_auxiliary_data["q_pairing_expected"]),
     }
 
     for signature, euclidean in (("lorentz", False), ("euclidean", True)):

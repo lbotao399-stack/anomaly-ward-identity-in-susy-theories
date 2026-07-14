@@ -64,9 +64,19 @@
       "locked": "Lorentz tilded fields are daggers; Euclidean tilded fields are independent; F,tildeF,H are displayed separately"
     },
     {
+      "id": "N2_CONTRACTED_AUXILIARY_BOUNDARY",
+      "result": "PASS",
+      "locked": "4B.11 and 4B.13 retain their symmetrized A,B free-index tensors; the shorter ordered expressions are asserted only after contraction with symmetric kappa_AB"
+    },
+    {
       "id": "N4_SU4_PACKAGING",
       "result": "PASS",
-      "locked": "Lambda^4=lambda, Lambda^r=psi_r, barLambda_L and tildeLambda_E slots are explicit, and tildevarphi is the Hodge dual of varphi"
+      "locked": "Lambda^4=lambda, Lambda^r=psi_r, barLambda_L and tildeLambda_E slots are explicit, tildevarphi is the Hodge dual of varphi, and the B,C-ordered Yukawa tensor is not reduced before c_ABC contraction"
+    },
+    {
+      "id": "N4_AUXILIARY_AND_QUARTIC_CENSUS",
+      "result": "PASS",
+      "locked": "Both auxiliary squares are expanded; the scalar packaging has 256 raw slots, 112 diagonal-zero slots, 144 off-diagonal slots, 36 reversal orbits, and canonical coefficients A12=A13=A23=32, C11=C22=C33=-8, C12=C13=C23=-16"
     },
     {
       "id": "NOETHER_LABEL_TYPE",
@@ -80,6 +90,24 @@
     }
   ],
   "resolved_findings": [
+    {
+      "priority": "P0",
+      "issue": "The N=4 Yukawa package used a c_ABC-dependent reduction as an uncontracted tensor equality.",
+      "resolution": "Separated the ordered free-color identity from the c_ABC-contracted identity and checked both exact normal forms.",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "issue": "The N=2 auxiliary package did not mark the symmetric-metric contraction boundary.",
+      "resolution": "Added the full symmetrized free-index intermediates and restricted the ordered equalities to kappa contraction.",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "issue": "The N=4 quartic package omitted its exact finite-index census and canonical coefficient normal form.",
+      "resolution": "Added the complete square, 256/112/144/36 census, and nine-entry canonical dictionary with zero exact residual.",
+      "status": "RESOLVED"
+    },
     {
       "priority": "P1",
       "issue": "The first common ledger assigned an upper adjoint label to a lower-index moment-map definition.",

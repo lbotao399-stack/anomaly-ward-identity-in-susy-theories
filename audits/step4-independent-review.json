@@ -70,8 +70,32 @@
       "result": "PASS"
     }
   ],
+  "resolved_findings": [
+    {
+      "priority": "P0",
+      "issue": "The former uncontracted SU(4) Yukawa identity erased the distinction between the B,C color orderings.",
+      "resolution": "The ordered identity and its c_ABC-contracted reduction are now separate formulas and separate exact symbolic checks.",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "issue": "The N=2 auxiliary rewrite crossed a free-index versus kappa-contracted boundary, while the SU(2)_R density dropped the independent topological term.",
+      "resolution": "The free-index symmetrizations and contracted equalities are explicit, and the topological term is present in the SU(2)_R-packaged density.",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "issue": "The N=4 scalar-potential packaging had no displayed auxiliary-square expansion or 256-slot reduction ledger.",
+      "resolution": "The complete square, epsilon contraction, 112/144/36 census, Jacobi reduction, and canonical coefficient dictionary are displayed and exactly checked.",
+      "status": "RESOLVED"
+    }
+  ],
   "exact_verification": {
     "extended_sym_failure_count": 0,
+    "n2_contracted_boundary_residuals": 0,
+    "n4_ordered_yukawa_residuals": 0,
+    "n4_auxiliary_square_residuals": 0,
+    "n4_quartic_census_residuals": 0,
     "n2_closure_residuals_excluding_su2_r_gate": 0,
     "n2_su2_r_gate_residuals": 0,
     "n2_su2_r_exact_residual": "0",

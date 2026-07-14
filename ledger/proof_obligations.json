@@ -229,8 +229,29 @@
       "id": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
       "state": "SPECIFIED",
       "blocking_reason": null,
-      "task_sha256": "a5df922d6393df86af942dde3c1bd70eab5657b4b6cafe43d37332cd77aa6412",
-      "task": "tasks/CURRENT.yaml"
+      "task_sha256": "4ed8aa9957868233f4c1b7ff4a4c4ec02744c153ffd0d16e30f6e322042ba749",
+      "task": "tasks/CURRENT.yaml",
+      "checked_scope": {
+        "STEP5A_COMPONENT_BV_BRST_PRIMITIVE_GRAMMAR": {
+          "result": "PASS_EXACT_PARTIAL_SCOPE",
+          "contract": "contracts/foundations/step-05a-component-bv-brst-primitive-supergraph-grammar.md",
+          "contract_sha256": "300d55a07534a312bfad582c6702ba1991ef7e439a3b999c4c228c1329ca05bc",
+          "verifier": "scripts/verify_step5a_component_bv_brst_grammar.py",
+          "verification_audit": "audits/step5a-component-bv-brst-grammar-verification.json",
+          "covered_scope": [
+            "N=1, N=2, and N=4 Lorentzian and Euclidean component actions with auxiliary elimination",
+            "classical BRST, finite-cutoff master defect and QME recursion, and minimal/non-minimal BV grammar",
+            "all-valence coordinate-superspace gauge, matter, superpotential, and FP primitive word coefficients",
+            "conditional Euclidean Fermi-Feynman projector inversion and its exact Step-3D locality obstruction"
+          ],
+          "blockers": [
+            "BLOCKED_STEP5A_UNIQUE_PROPAGATORS_PERTURBATIVE_SLICE_UNFIXED",
+            "BLOCKED_STEP5A_NK_BRANCH_UNSELECTED",
+            "BLOCKED_STEP5A_MOMENTUM_RULES_FOURIER_DRED_LEDGER_UNFIXED",
+            "BLOCKED_STEP3D_LC_VECTOR_CYCLE"
+          ]
+        }
+      }
     },
     {
       "id": "REFERENCE-IMPORT-HT-N4-ONE-LOOP-001",
