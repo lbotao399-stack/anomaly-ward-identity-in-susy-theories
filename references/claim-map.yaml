@@ -284,6 +284,42 @@
       ],
       "allowed_use": "A later registered Step-5 contract-change task may reconstruct Weinberg Chapter 30's potential-superfield, superpropagator, supergraph, and superspace-integration-by-parts organization, then compare it with a separately derived Project-normalized construction.",
       "forbidden_use": "Importing Weinberg's chirality labels, spinor derivatives, metric, Fourier phase, measure, propagator, vertex factor, projector coefficient, integration-by-parts sign, or nonrenormalization conclusion as a Project formula."
+    },
+    {
+      "id": "HT-N4-ONE-LOOP-COMPLETE-SUPERFIELD-CANDIDATE",
+      "sources": [
+        "ARXIV-2512.07771V2-SOURCE-MAIN-TEX",
+        "HT-N4-ONE-LOOP-SOURCE-LEDGER"
+      ],
+      "classification": "EXTERNAL_TARGET_ONLY",
+      "translation_status": "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+      "comparison_status": "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+      "allowed_use": "A later registered CONTRACT_CHANGE may construct an explicit source-to-Project dictionary and independently test the source's compact N=4 one-loop superfield target, while retaining every source-internal normalization and ordering conflict.",
+      "forbidden_use": "Importing the source superfield, coefficient, color normalization, derivative convention, completeness claim, or higher-loop statement as a Project formula during this reference import."
+    },
+    {
+      "id": "HT-N4-ONE-LOOP-COMPONENT-PAIR-CANDIDATE",
+      "sources": [
+        "ARXIV-2512.07771V2-SOURCE-MAIN-TEX",
+        "HT-N4-ONE-LOOP-SOURCE-LEDGER"
+      ],
+      "classification": "EXTERNAL_TARGET_ONLY",
+      "translation_status": "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+      "comparison_status": "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+      "allowed_use": "A later registered CONTRACT_CHANGE may translate and independently rederive the source's N=4 pair formulas, zero pairs, and arbitrary-holomorphic-derivative formulas after fixing the source ordering and normalization ambiguities.",
+      "forbidden_use": "Treating any printed pair formula, zero, derivative-distribution coefficient, parity sign, or ordering as a Project result without an independent Project derivation."
+    },
+    {
+      "id": "HT-ONE-LOOP-MASTER-INTEGRAL-CANDIDATE",
+      "sources": [
+        "ARXIV-2512.07771V2-SOURCE-MAIN-TEX",
+        "HT-N4-ONE-LOOP-SOURCE-LEDGER"
+      ],
+      "classification": "EXTERNAL_TARGET_ONLY",
+      "translation_status": "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+      "comparison_status": "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+      "allowed_use": "A later registered CONTRACT_CHANGE may reconstruct the source's holomorphic-twist triangle master integral in source notation and compare it only after deriving the Project-side regulated integral independently.",
+      "forbidden_use": "Using the holomorphic-twist master integral, Laman-graph statement, zero-shift value, measure, regulator, or derivative kernel as a Project Feynman integral or graph census."
     }
   ]
 }

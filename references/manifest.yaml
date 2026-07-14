@@ -17,7 +17,7 @@
       "id": "REFERENCE-CLAIM-MAP",
       "path": "references/claim-map.yaml",
       "classification": "REFERENCE_CLAIM_BOUNDARY",
-      "sha256": "10439fbbcae893ab5f1f2ceab9e26a9c5245e28356ad0918f593b1c86d7271e2"
+      "sha256": "810637155eef0bfceb37a7a285d6d29935b28f4c0a643b143363e32f06b8c137"
     },
     {
       "id": "ARXIV-HEP-TH-0108200-V1",
@@ -366,6 +366,78 @@
       "path": "references/step5-chat-weinberg30-source-ledger.json",
       "classification": "REFERENCE_SOURCE_LEDGER",
       "sha256": "6a7d6a699f8572c976d0bf1c964fc8a85417f85ab787c60383aa6fd08d16229b"
+    },
+    {
+      "id": "ARXIV-2512.07771V2-PDF",
+      "path": "references/vendor/arxiv/2512.07771v2/2512.07771v2.pdf",
+      "classification": "PRIMARY_REFERENCE_EXTERNAL_TARGET_ONLY",
+      "sha256": "cb2a6f53c97dd0f706685fd123ef6eb6a909344b78b02769af78e90ccfcf1e35"
+    },
+    {
+      "id": "ARXIV-2512.07771V2-SOURCE-ARCHIVE",
+      "path": "references/vendor/arxiv/2512.07771v2/2512.07771v2.tar.gz",
+      "classification": "PRIMARY_REFERENCE_SOURCE_ARCHIVE_EXTERNAL_TARGET_ONLY",
+      "sha256": "27d9eefd23fef109bb65be780c72a360d0df9ba90c5db1bc07ecf0b248a63632"
+    },
+    {
+      "id": "ARXIV-2512.07771V2-SOURCE-00README-JSON",
+      "path": "references/vendor/arxiv/2512.07771v2/source/00README.json",
+      "classification": "PRIMARY_REFERENCE_EXTRACTED_SOURCE_EXTERNAL_TARGET_ONLY",
+      "sha256": "63c8b2f900ebb39ca5d0d9b295ab3668784ecaf54ffcf1edd9fe5f62d1f9429b"
+    },
+    {
+      "id": "ARXIV-2512.07771V2-SOURCE-JHEP-BST",
+      "path": "references/vendor/arxiv/2512.07771v2/source/JHEP.bst",
+      "classification": "PRIMARY_REFERENCE_EXTRACTED_SOURCE_EXTERNAL_TARGET_ONLY",
+      "sha256": "3a56889d89fdf1f402582b41ee143dfc7986c7d4270adc0e008fb21d6da3a621"
+    },
+    {
+      "id": "ARXIV-2512.07771V2-SOURCE-SEGMENT-PDF",
+      "path": "references/vendor/arxiv/2512.07771v2/source/images/segment.pdf",
+      "classification": "PRIMARY_REFERENCE_EXTRACTED_SOURCE_EXTERNAL_TARGET_ONLY",
+      "sha256": "c718bc5845a15e9860febdd7daaf39ea1a72fa1fdd65b4341d4e901b8c15b9b3"
+    },
+    {
+      "id": "ARXIV-2512.07771V2-SOURCE-TRIANGLE-PDF",
+      "path": "references/vendor/arxiv/2512.07771v2/source/images/triangle.pdf",
+      "classification": "PRIMARY_REFERENCE_EXTRACTED_SOURCE_EXTERNAL_TARGET_ONLY",
+      "sha256": "c48a34e1a7e5a79538b3f083d1f1168f5ecbfcaca00eb0855e690dd557f94143"
+    },
+    {
+      "id": "ARXIV-2512.07771V2-SOURCE-JHEPPUB-STY",
+      "path": "references/vendor/arxiv/2512.07771v2/source/jheppub.sty",
+      "classification": "PRIMARY_REFERENCE_EXTRACTED_SOURCE_EXTERNAL_TARGET_ONLY",
+      "sha256": "ed3b8049bb3042bce57ba7ccbefbb2c56159884bb467a0260f27bbb6ef61ed80"
+    },
+    {
+      "id": "ARXIV-2512.07771V2-SOURCE-MAIN-BBL",
+      "path": "references/vendor/arxiv/2512.07771v2/source/main.bbl",
+      "classification": "PRIMARY_REFERENCE_EXTRACTED_SOURCE_EXTERNAL_TARGET_ONLY",
+      "sha256": "90a84bff4a6aaf6d6f8ffd3c8dee65a351bbd5d9d566f1bd63fa7a47a2748079"
+    },
+    {
+      "id": "ARXIV-2512.07771V2-SOURCE-MAIN-TEX",
+      "path": "references/vendor/arxiv/2512.07771v2/source/main.tex",
+      "classification": "PRIMARY_REFERENCE_EXTRACTED_SOURCE_EXTERNAL_TARGET_ONLY",
+      "sha256": "90352c555f69eac3a99b9742c59e63afc785df333399a0730f8ac1ae094d9899"
+    },
+    {
+      "id": "ARXIV-2512.07771V2-SOURCE-MONO-BIB",
+      "path": "references/vendor/arxiv/2512.07771v2/source/mono.bib",
+      "classification": "PRIMARY_REFERENCE_EXTRACTED_SOURCE_EXTERNAL_TARGET_ONLY",
+      "sha256": "1500d8e2bca9246f987add2223d040b28b572167029af7bdd5054f38672d5ff9"
+    },
+    {
+      "id": "ARXIV-2512.07771V2-METADATA",
+      "path": "references/vendor/arxiv/2512.07771v2/metadata.json",
+      "classification": "REFERENCE_ACQUISITION_METADATA_EXTERNAL_TARGET_ONLY",
+      "sha256": "4e0c4ad4bc92ce680077007d99c54a95aa828e7683dc67b4f848f288698c1b5d"
+    },
+    {
+      "id": "HT-N4-ONE-LOOP-SOURCE-LEDGER",
+      "path": "references/ht-n4-one-loop-source-ledger.json",
+      "classification": "REFERENCE_SOURCE_LEDGER_EXTERNAL_TARGET_ONLY",
+      "sha256": "a8e191f8d34534ec4135b1e68e437f2553d9205f34db687f4dad1284c9a75af5"
     }
   ]
 }

@@ -1,0 +1,308 @@
+{
+  "schema": 1,
+  "task": "REFERENCE-IMPORT-HT-N4-ONE-LOOP-001",
+  "source": {
+    "versioned_id": "arXiv:2512.07771v2",
+    "title": "Loop Corrected Supercharges from Holomorphic Anomalies",
+    "authors": [
+      "Kasia Budzik",
+      "Justin Kulp"
+    ],
+    "primary_tex_path": "references/vendor/arxiv/2512.07771v2/source/main.tex",
+    "primary_tex_sha256": "90352c555f69eac3a99b9742c59e63afc785df333399a0730f8ac1ae094d9899"
+  },
+  "admissibility": {
+    "role": "EXTERNAL_TARGET_ONLY",
+    "translation_status": "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+    "comparison_status": "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+    "project_formula_adoption": false,
+    "project_notation_used": false,
+    "project_contract_modified": false,
+    "normalization_conflicts_resolved": false
+  },
+  "anchors": [
+    {
+      "id": "HT-TITLE-ABSTRACT",
+      "path": "references/vendor/arxiv/2512.07771v2/source/main.tex",
+      "start_line": 111,
+      "end_line": 126,
+      "byte_size": 1235,
+      "sha256": "a5416babfe591e14658adaf5144a9b35344142ad7198adc0b2e65c6b14c3abcd",
+      "role": "SOURCE_IDENTITY_AND_COMPLETE_ONE_LOOP_SCOPE"
+    },
+    {
+      "id": "HT-INTRO-N4-COMPACT-Q1",
+      "path": "references/vendor/arxiv/2512.07771v2/source/main.tex",
+      "start_line": 198,
+      "end_line": 206,
+      "byte_size": 1356,
+      "sha256": "6548bf5c794c3f38e47b0ea462444531e9ff9d89c3dd0a57bec867713825a900",
+      "equation_labels": [
+        "eq:Q0C",
+        "eq:Q1C"
+      ],
+      "role": "INTRODUCTORY_N4_SUPERFIELD_RESULT"
+    },
+    {
+      "id": "HT-HIGHER-LOOP-BOUNDARY",
+      "path": "references/vendor/arxiv/2512.07771v2/source/main.tex",
+      "start_line": 218,
+      "end_line": 222,
+      "byte_size": 926,
+      "sha256": "e2a209f3c5797836ed7f674eeeaa997dfc1b150fe23c7cc336adabfb6684b849",
+      "role": "SOURCE_SCOPE_NOT_ONE_LOOP_EXACT"
+    },
+    {
+      "id": "HT-Q1-BRACKET-DEFINITION",
+      "path": "references/vendor/arxiv/2512.07771v2/source/main.tex",
+      "start_line": 386,
+      "end_line": 400,
+      "byte_size": 2200,
+      "sha256": "261f51ca39ae337fae29ca78a190d1740c7537a37eeaa047e70aa5d53f579c9c",
+      "role": "LOOP_ORDER_AND_CONSISTENCY_DEFINITION"
+    },
+    {
+      "id": "HT-NORMAL-ORDERING-PARITY",
+      "path": "references/vendor/arxiv/2512.07771v2/source/main.tex",
+      "start_line": 438,
+      "end_line": 451,
+      "byte_size": 2283,
+      "sha256": "5940ab15d2473a3ded0f381508923ed898accb48b44073ca0793ff41e703d0de",
+      "equation_labels": [
+        "eq:generalWord",
+        "eq:gen"
+      ],
+      "role": "SOURCE_NORMAL_ORDERING_AND_SUPERCOMMUTATIVITY"
+    },
+    {
+      "id": "HT-MASTER-INTEGRAL-DEFINITION-LAMAN",
+      "path": "references/vendor/arxiv/2512.07771v2/source/main.tex",
+      "start_line": 485,
+      "end_line": 499,
+      "byte_size": 2485,
+      "sha256": "081dba027a9296dc4c51a82064eddcc8d8225e5d5c937eb8bf6be1b3009b951d",
+      "equation_labels": [
+        "eq:MasterIntegral"
+      ],
+      "role": "MASTER_INTEGRAL_AND_ONE_LOOP_TRIANGLE_SCOPE"
+    },
+    {
+      "id": "HT-MASTER-INTEGRAL-CLOSED-FORM",
+      "path": "references/vendor/arxiv/2512.07771v2/source/main.tex",
+      "start_line": 652,
+      "end_line": 668,
+      "byte_size": 1537,
+      "sha256": "8e23f1907a2ae6d5205905f2975d0651b6dd33a05f84d9f157fd6bd641d80189",
+      "equation_labels": [
+        "eq:I"
+      ],
+      "role": "ONE_LOOP_MASTER_INTEGRAL_CLOSED_FORM_AND_ZERO_SHIFT"
+    },
+    {
+      "id": "HT-TWISTED-ACTION-FIELDS",
+      "path": "references/vendor/arxiv/2512.07771v2/source/main.tex",
+      "start_line": 675,
+      "end_line": 705,
+      "byte_size": 2181,
+      "sha256": "2277b8d7ed32708a54b9339a159ba69f4cece8ce81e7e0ff3f3ab5360b376e01",
+      "equation_labels": [
+        "eq:L"
+      ],
+      "role": "SOURCE_ACTION_FIELD_CONTENT_AND_SOURCE_DICTIONARY"
+    },
+    {
+      "id": "HT-PAIR-RULE-AND-DTRI-KERNEL",
+      "path": "references/vendor/arxiv/2512.07771v2/source/main.tex",
+      "start_line": 709,
+      "end_line": 732,
+      "byte_size": 2510,
+      "sha256": "0c20b367363886ef1220ba26067f85f7defc86305ed9fe07d287e55988bfee49",
+      "role": "PAIR_ACTION_DERIVATIVE_KERNEL_ZERO_PAIRS"
+    },
+    {
+      "id": "HT-LIE-NORMALIZATION",
+      "path": "references/vendor/arxiv/2512.07771v2/source/main.tex",
+      "start_line": 736,
+      "end_line": 744,
+      "byte_size": 682,
+      "sha256": "8213f1680ed884d3c0d9e570cf8b7ddcb03f63899c461bb9713ec5f3ba4ebd16",
+      "role": "SOURCE_LIE_ALGEBRA_AND_KAPPA_NORMALIZATION"
+    },
+    {
+      "id": "HT-GENERIC-ADJOINT-SHIFTED-PAIRS",
+      "path": "references/vendor/arxiv/2512.07771v2/source/main.tex",
+      "start_line": 1038,
+      "end_line": 1073,
+      "byte_size": 2618,
+      "sha256": "8d8664edc81e68044492f9a3d90f7f08008b2c642c0a243cae17be4028bcf7d5",
+      "equation_labels": [
+        "eq:oneW",
+        "eq:twoW",
+        "eq:threeW"
+      ],
+      "role": "ADJOINT_AND_N4_SHIFTED_COMPONENT_RESULTS"
+    },
+    {
+      "id": "HT-N4-SETUP-SUPERFIELD",
+      "path": "references/vendor/arxiv/2512.07771v2/source/main.tex",
+      "start_line": 1149,
+      "end_line": 1184,
+      "byte_size": 1992,
+      "sha256": "a16da6c67d43fdfa90a0f50334936f5cb378a512d72e8996a99322c5d579b0c8",
+      "equation_labels": [
+        "eq:C"
+      ],
+      "role": "N4_SUPERPOTENTIAL_TREE_DIFFERENTIAL_AND_SUPERFIELD"
+    },
+    {
+      "id": "HT-N4-COMPONENT-PAIR-RESULTS",
+      "path": "references/vendor/arxiv/2512.07771v2/source/main.tex",
+      "start_line": 1212,
+      "end_line": 1246,
+      "byte_size": 2258,
+      "sha256": "c6ac381fac5f1566b9290b64850381027000d03166374e3b73df0b51956a6ae7",
+      "equation_labels": [
+        "eq:oneterm"
+      ],
+      "role": "N4_ZERO_DERIVATIVE_COMPONENT_PAIR_RESULTS"
+    },
+    {
+      "id": "HT-N4-COMPACT-SUPERFIELD-RESULT",
+      "path": "references/vendor/arxiv/2512.07771v2/source/main.tex",
+      "start_line": 1248,
+      "end_line": 1252,
+      "byte_size": 405,
+      "sha256": "6e82c7f07ce4c72fab77f4c104465e9c27d3d4f470338810582f2ab50d393b8f",
+      "equation_labels": [
+        "eq:Q1N4"
+      ],
+      "role": "N4_COMPACT_ONE_LOOP_SUPERFIELD_RESULT"
+    },
+    {
+      "id": "HT-MASTER-INTEGRAL-DERIVATION",
+      "path": "references/vendor/arxiv/2512.07771v2/source/main.tex",
+      "start_line": 1272,
+      "end_line": 1334,
+      "byte_size": 4522,
+      "sha256": "1ecf734ea4d421c18b4c705815eaa7a3ce29ac621ed41be85584999f4687667e",
+      "equation_labels": [
+        "eq:triangle"
+      ],
+      "role": "ONE_LOOP_MASTER_INTEGRAL_DERIVATION"
+    },
+    {
+      "id": "HT-N4-DERIVATIVE-COMPONENT-PAIR-RESULTS",
+      "path": "references/vendor/arxiv/2512.07771v2/source/main.tex",
+      "start_line": 1339,
+      "end_line": 1395,
+      "byte_size": 5171,
+      "sha256": "9e008678d0073e6a3d8d2899d262d5773e4ff7c7d156a2701691384d03bad832",
+      "equation_labels": [
+        "eq:rec",
+        "eq:Cmn"
+      ],
+      "role": "N4_COMPONENT_RESULTS_WITH_ARBITRARY_HOLOMORPHIC_DERIVATIVES"
+    }
+  ],
+  "source_internal_normalization_conflicts": [
+    {
+      "id": "HT-NORM-CONFLICT-COMPACT-Q1-COEFFICIENT",
+      "status": "UNRESOLVED_IN_SOURCE",
+      "anchors": [
+        "HT-INTRO-N4-COMPACT-Q1",
+        "HT-LIE-NORMALIZATION",
+        "HT-N4-COMPACT-SUPERFIELD-RESULT"
+      ],
+      "printed_statements": [
+        "Equation (1.10), label eq:Q1C, prints the compact coefficient -1/4.",
+        "Equation (3.69), label eq:Q1N4, prints the compact coefficient -kappa^2.",
+        "Equation (3.11) prints Tr(t_A t_B)=kappa delta_AB and the following sentence calls kappa the dual Coxeter number."
+      ],
+      "algebraic_compatibility_condition_in_source_symbols": "kappa^2=1/4",
+      "resolution": "NO_RESOLUTION_OR_PROJECT_TRANSLATION_PERFORMED_IN_REFERENCE_IMPORT"
+    },
+    {
+      "id": "HT-NORM-CONFLICT-ZERO-SHIFT-FACTOR-TWO",
+      "status": "UNRESOLVED_IN_SOURCE",
+      "anchors": [
+        "HT-PAIR-RULE-AND-DTRI-KERNEL",
+        "HT-GENERIC-ADJOINT-SHIFTED-PAIRS",
+        "HT-N4-COMPONENT-PAIR-RESULTS",
+        "HT-N4-DERIVATIVE-COMPONENT-PAIR-RESULTS"
+      ],
+      "printed_statements": [
+        "Equation (3.9) prints D_tri_(0,0)(f,g)=1/2 partial_(dot alpha)f partial^(dot alpha)g.",
+        "The shifted pair formulas multiply D_tri by kappa^2, so direct z=w=0 substitution prints kappa^2/2 times the derivative bilinear.",
+        "Equations (3.63)-(3.68) print kappa^2 times the corresponding zero-shift derivative bilinears.",
+        "Appendix B formulas at m=n=0 print kappa^2/(m+n+2)=kappa^2/2 times the corresponding derivative bilinears."
+      ],
+      "algebraic_discrepancy_in_source_symbols": "(kappa^2)-(kappa^2/2)=kappa^2/2",
+      "resolution": "NO_RESOLUTION_OR PROJECT_TRANSLATION_PERFORMED_IN_REFERENCE_IMPORT"
+    }
+  ],
+  "source_internal_ordering_audits": [
+    {
+      "id": "HT-ORDERING-AUDIT-BB-VECTOR-TERM-SYMMETRY",
+      "status": "PASS",
+      "anchors": [
+        "HT-NORMAL-ORDERING-PARITY",
+        "HT-TWISTED-ACTION-FIELDS",
+        "HT-LIE-NORMALIZATION",
+        "HT-N4-COMPONENT-PAIR-RESULTS",
+        "HT-MASTER-INTEGRAL-DERIVATION"
+      ],
+      "source_parity_data": "For zero-form letters, the displayed shifts give |b|=0, |c|=1, |beta|=1, |gamma|=0 modulo 2; line 446 states that normal ordering is supercommutative on letters.",
+      "source_symbol_definitions": [
+        "F_ABDE:=f_ACD f_BCE",
+        "Lambda^D_(dot alpha):=partial_(dot alpha)c^D",
+        "P^E_(dot alpha):=partial_(dot alpha)b^E",
+        "S_DE:=Lambda^D_(dot alpha) P^(E dot alpha)=epsilon^(dot alpha dot beta)Lambda^D_(dot alpha)P^E_(dot beta)"
+      ],
+      "source_internal_calculation": [
+        "P^D_(dot alpha)Lambda^(E dot alpha)=epsilon^(dot alpha dot beta)P^D_(dot alpha)Lambda^E_(dot beta).",
+        "Because P is even, this equals epsilon^(dot alpha dot beta)Lambda^E_(dot beta)P^D_(dot alpha).",
+        "Exchanging the dummy dotted indices gives epsilon^(dot beta dot alpha)Lambda^E_(dot alpha)P^D_(dot beta)=-S_ED.",
+        "The vector term printed in equation (3.64) is therefore R_AB=kappa^2 F_ABDE(S_DE+S_ED).",
+        "F_BADE=f_BCD f_ACE=f_ACE f_BCD=F_ABED.",
+        "R_BA=kappa^2 F_ABED(S_DE+S_ED)=kappa^2 F_ABDE(S_ED+S_DE)=R_AB after D<->E relabelling.",
+        "Thus the displayed vector output is symmetric under A<->B, consistent with b^A b^B=b^B b^A."
+      ],
+      "result": "SOURCE_INTERNAL_GRADED_SYMMETRY_VERIFIED",
+      "project_translation_status": "NOT_PERFORMED_IN_REFERENCE_IMPORT"
+    }
+  ],
+  "candidate_claims": [
+    {
+      "id": "HT-N4-ONE-LOOP-COMPLETE-SUPERFIELD-CANDIDATE",
+      "classification": "EXTERNAL_TARGET_ONLY",
+      "anchors": [
+        "HT-INTRO-N4-COMPACT-Q1",
+        "HT-N4-SETUP-SUPERFIELD",
+        "HT-N4-COMPACT-SUPERFIELD-RESULT",
+        "HT-HIGHER-LOOP-BOUNDARY"
+      ],
+      "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+    },
+    {
+      "id": "HT-N4-ONE-LOOP-COMPONENT-PAIR-CANDIDATE",
+      "classification": "EXTERNAL_TARGET_ONLY",
+      "anchors": [
+        "HT-PAIR-RULE-AND-DTRI-KERNEL",
+        "HT-GENERIC-ADJOINT-SHIFTED-PAIRS",
+        "HT-N4-COMPONENT-PAIR-RESULTS",
+        "HT-N4-DERIVATIVE-COMPONENT-PAIR-RESULTS"
+      ],
+      "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+    },
+    {
+      "id": "HT-ONE-LOOP-MASTER-INTEGRAL-CANDIDATE",
+      "classification": "EXTERNAL_TARGET_ONLY",
+      "anchors": [
+        "HT-MASTER-INTEGRAL-DEFINITION-LAMAN",
+        "HT-MASTER-INTEGRAL-CLOSED-FORM",
+        "HT-MASTER-INTEGRAL-DERIVATION"
+      ],
+      "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+    }
+  ]
+}
