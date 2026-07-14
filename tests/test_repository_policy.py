@@ -340,6 +340,114 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertIn("GRAPH_CENSUS", final_text)
         self.assertIn("FULL_AA_MATCH", final_text)
 
+    def test_step5_ab1_standard_feynman_strictification(self) -> None:
+        script = ROOT / "scripts/step5_ab1_standard_feynman_strict_audit.py"
+        audit = ROOT / "audits/step5-ab1-standard-feynman-strictification.md"
+        pro_initial = ROOT / "proposals/gpt-pro-ab1-standard-feynman-2026-07-14.md"
+        pro_derivation = ROOT / "proposals/gpt-pro-ab1-derivation-correction-2026-07-14.md"
+        pro_final = ROOT / "proposals/gpt-pro-ab1-final-settlement-2026-07-14.md"
+        for path in (script, audit, pro_initial, pro_derivation, pro_final):
+            self.assertTrue(path.is_file())
+        completed = subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        result = json.loads(completed.stdout)
+        self.assertEqual(result["summary"]["status"], "PASS")
+        self.assertEqual(result["summary"]["failed"], 0)
+        self.assertGreater(result["summary"]["passed"], 80)
+        self.assertEqual(result["scope"], "CONDITIONAL_FF_Q4S_AB1_ARITHMETIC_ONLY")
+        self.assertEqual(
+            result["claim_boundary"],
+            "PASS_DOES_NOT_CERTIFY_AB1_OCCURRENCE_CENSUS_DWORD_CUT_COMPLETION_OR_RENORMALIZED_MATCH",
+        )
+        self.assertFalse(result["certifies_full_diagram_derivation"])
+        self.assertEqual(
+            result["authority"],
+            {
+                "commit": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+                "origin_main_at_check": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+                "verify_run": 29306335742,
+                "verify_run_receipt_kind": "RECORDED_METADATA_NOT_LIVE_GITHUB_QUERY",
+                "foundation_reads": "PINNED_GIT_OBJECTS_ONLY",
+            },
+        )
+        self.assertEqual(
+            result["full_diagram_derivation"]["status"],
+            "BLOCKED_NO_ADMITTED_AB1_TREE_GRAPH_DRED_RESULT",
+        )
+        self.assertFalse(result["full_diagram_derivation"]["pass_from_this_script_implies_completion"])
+        self.assertNotIn("source_hessian_census", result)
+        self.assertEqual(
+            result["coarse_port_pair_count"],
+            {
+                "status": "COARSE_ORDERED_PORT_PAIR_COUNT_ONLY__NOT_SOURCE_HESSIAN_CENSUS",
+                "count_kind": "ORDERED_DISTINCT_COARSE_PORT_PAIRS",
+                "certifies_source_hessian_census": False,
+                "I0": 2,
+                "I1": 18,
+                "I2": 72,
+                "total": 92,
+                "nonlink": 50,
+                "link_dependent": 42,
+            },
+        )
+        checks = {row["id"]: row for row in result["checks"]}
+        self.assertEqual(checks["rescaled_vector_propagator_sign"]["actual"], "-1")
+        self.assertEqual(checks["rescaled_matter_propagator_sign"]["actual"], "1/16")
+        self.assertEqual(checks["authority_exact_vector_momentum_rule"]["status"], "PASS")
+        self.assertEqual(checks["authority_exact_matter_momentum_rule"]["status"], "PASS")
+        self.assertEqual(checks["authority_origin_main_pin"]["status"], "PASS")
+        self.assertEqual(checks["authority_step5a_receipt_status"]["status"], "PASS")
+        self.assertEqual(checks["audit_authority_workflow_receipt_metadata"]["status"], "PASS")
+        self.assertEqual(checks["audit_exact_rescaled_vector_rule"]["status"], "PASS")
+        self.assertEqual(checks["audit_exact_rescaled_matter_rule"]["status"], "PASS")
+        self.assertEqual(checks["degree_two_resolvent_neumann_words"]["status"], "PASS")
+        self.assertEqual(checks["conditional_Q4S_trace_unit"]["actual"], "1/32")
+        self.assertEqual(checks["coarse_ordered_port_pair_total"]["actual"], "92")
+        self.assertTrue(
+            all(
+                row["scope"] == "CONDITIONAL_FF_Q4S_AB1_ARITHMETIC_ONLY"
+                and not row["certifies_full_diagram_derivation"]
+                for row in result["checks"]
+            )
+        )
+        audit_text = audit.read_text(encoding="utf-8")
+        independently_required_blockers = {
+            "BLOCKED_AB1_SOURCE_OVERALL_G_NORMALIZATION",
+            "BLOCKED_CHIRAL_TO_VECTOR_FRAME_SOURCE_BRIDGE",
+            "BLOCKED_SOURCE_COUPLING_INSERTION_SIGN",
+            "BLOCKED_TYPED_ORIENTED_EDGE_KERNEL_ASSIGNMENT",
+            "BLOCKED_DESCENDANT_CONTACT_HESSIANS_UNSPECIFIED",
+        }
+        self.assertTrue(independently_required_blockers.issubset(set(result["blockers"])))
+        for blocker in independently_required_blockers:
+            self.assertIn(blocker, audit_text)
+        for blocker in result["blockers"]:
+            self.assertIn(blocker, audit_text)
+        for label in ("initial_pro", "derivation_pro", "final_pro"):
+            self.assertEqual(checks[f"{label}_archive_exists"]["status"], "PASS")
+            self.assertEqual(checks[f"{label}_archive_non_authority_status"]["status"], "PASS")
+            self.assertEqual(checks[f"{label}_archive_prompt_hash_declared"]["status"], "PASS")
+            body_hash_id = f"{label}_archive_body_hash"
+            if body_hash_id in checks:
+                self.assertEqual(checks[body_hash_id]["status"], "PASS")
+        self.assertEqual(
+            checks["initial_pro_archive_prompt_hash"]["actual"],
+            "2f8307295b028b317ca07ae29696eca93a8c3850f0c4fe3005584439add1b658",
+        )
+        self.assertEqual(
+            checks["derivation_pro_archive_prompt_hash"]["actual"],
+            "059d7aa7bef7ac723ec8969ef1af172a983c2073233fe75dab32c198be45b3fd",
+        )
+        self.assertEqual(
+            checks["final_pro_archive_prompt_hash"]["actual"],
+            "d179b8b7b80d902b7789cab3d7cfed13a6e96ef2ee152c82028883e57c88853c",
+        )
+
     def test_reference_import_has_narrow_acquisition_scope(self) -> None:
         task = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
         if task["type"] != "REFERENCE_IMPORT":
