@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
+  "artifact": "FOUNDATION-COMPONENT-BV-BRST-PRIMITIVE-SUPERGRAPH-GRAMMAR-005A",
+  "checks": [
+    {
+      "id": "SIGNATURE_AND_WEIGHT",
+      "result": "PASS",
+      "locked": "R=L,E; eta_L=+1; eta_E=-1; tau_L=i/hbar; tau_E=-1/hbar; each Wick edge is -tau_R^(-1), hence i hbar in L and hbar in E"
+    },
+    {
+      "id": "GAUGE_AND_COLOR",
+      "result": "PASS",
+      "locked": "h=g^(-2); c_ABC=kappa_CD c_AB^D=c_[ABC]; all adjoint contractions and ordered color words are explicit"
+    },
+    {
+      "id": "EUCLIDEAN_INDEPENDENCE",
+      "result": "PASS",
+      "locked": "Euclidean tilded and untilded chiral, fermion, ghost, antighost, and multiplier fields are independent before a cycle is selected"
+    },
+    {
+      "id": "WZ_VERSUS_BV_FIELD_SPACE",
+      "result": "PASS",
+      "locked": "component actions use the Wess-Zumino representative; BV-BRST and primitive supergraph words use the full exponential prepotential chart"
+    },
+    {
+      "id": "ORDERED_WORDS",
+      "result": "PASS",
+      "locked": "matrix order, derivative slot, chirality, flavor, adjoint label, Grassmann parity, and labeled external-leg order are retained"
+    },
+    {
+      "id": "BERNOULLI_CONVENTION",
+      "result": "PASS",
+      "locked": "z/(exp(z)-1)=sum_n B_n z^n/n! with B_0=1, B_1=-1/2, B_2=1/6"
+    },
+    {
+      "id": "CONDITIONAL_KERNEL_LABEL",
+      "result": "PASS",
+      "locked": "the Euclidean Fermi-Feynman inverse is a conditional algebraic inverse, not a Project-accepted propagator"
+    },
+    {
+      "id": "STRICT_EQUALITY_AND_RENDERING",
+      "result": "PASS",
+      "locked": "equation tags are unique; display delimiters are balanced; sim, approx, propto, control characters, and naked qquad tokens are absent"
+    }
+  ],
+  "resolved_findings": [
+    {
+      "priority": "P1",
+      "id": "NAKED_QQUAD",
+      "status": "RESOLVED",
+      "resolution": "Nine renderer-hostile naked qquad literals were replaced by the LaTeX command backslash-qquad and registered in the exact surface checker."
+    }
+  ],
+  "post_resolution": {
+    "P0": [],
+    "P1": []
+  },
+  "result": "PASS_EXACT_PARTIAL_SCOPE"
+}

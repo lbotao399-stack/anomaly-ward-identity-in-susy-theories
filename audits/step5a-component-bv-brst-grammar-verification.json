@@ -1,0 +1,1313 @@
+{
+  "schema": 1,
+  "section": "STEP-05A",
+  "contract_path": "contracts/foundations/step-05a-component-bv-brst-primitive-supergraph-grammar.md",
+  "scope_id": "STEP5A_COMPONENT_BV_BRST_GRAMMAR_EXACT_PARTIAL_SCOPE",
+  "status": "PASS_EXACT_PARTIAL_SCOPE",
+  "scope": {
+    "claim": "exact partial component/BV-BRST/vertex grammar only",
+    "forbidden_inputs_used": [],
+    "forbidden_inputs": [
+      "network",
+      "Notion",
+      "Step-3E branch"
+    ],
+    "blockers": [
+      "BLOCKED_STEP5A_UNIQUE_PROPAGATORS_PERTURBATIVE_SLICE_UNFIXED",
+      "BLOCKED_STEP5A_NK_BRANCH_UNSELECTED",
+      "BLOCKED_STEP5A_MOMENTUM_RULES_FOURIER_DRED_LEDGER_UNFIXED",
+      "BLOCKED_STEP3D_LC_VECTOR_CYCLE"
+    ]
+  },
+  "sources": [
+    {
+      "path": "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md",
+      "sha256": "109e0c531da3a1b98313e87dd692fa3d9047c8f745291f8e87021008c7acc538"
+    },
+    {
+      "path": "contracts/foundations/step-04a-n1-super-yang-mills.md",
+      "sha256": "b2495f6a98c8cffe21ab2583b1955c81f5bb06af9b0edfb677fc0a3a3ee1fbc1"
+    },
+    {
+      "path": "contracts/foundations/step-04b-n2-super-yang-mills.md",
+      "sha256": "590bff04a31f2790ec97226570df189647f822b69c53ee9b141f5c1a0c98c860"
+    },
+    {
+      "path": "contracts/foundations/step-04c-n4-super-yang-mills.md",
+      "sha256": "fafc3bc2227b60ca699b3f953b632db82dafe093b221baa74736cc5fb838928f"
+    }
+  ],
+  "arithmetic": {
+    "coefficient_field": "Q(i,sqrt(2))",
+    "floating_point": false,
+    "external_cas": false,
+    "random_sampling": false
+  },
+  "categories": {
+    "surface": {
+      "checks": 9,
+      "failed": 0
+    },
+    "source_lock": {
+      "checks": 4,
+      "failed": 0
+    },
+    "components": {
+      "checks": 6,
+      "failed": 0
+    },
+    "auxiliary": {
+      "checks": 5,
+      "failed": 0
+    },
+    "contraction": {
+      "checks": 3,
+      "failed": 0
+    },
+    "bch": {
+      "checks": 1,
+      "failed": 0
+    },
+    "gauge_vertices": {
+      "checks": 1,
+      "failed": 0
+    },
+    "matter_vertices": {
+      "checks": 2,
+      "failed": 0
+    },
+    "brst": {
+      "checks": 2,
+      "failed": 0
+    },
+    "fp_vertices": {
+      "checks": 1,
+      "failed": 0
+    },
+    "koszul": {
+      "checks": 2,
+      "failed": 0
+    },
+    "graph_weights": {
+      "checks": 2,
+      "failed": 0
+    },
+    "projector": {
+      "checks": 3,
+      "failed": 0
+    },
+    "scope": {
+      "checks": 1,
+      "failed": 0
+    }
+  },
+  "totals": {
+    "exact_check_families": 42,
+    "failed_check_families": 0
+  },
+  "witnesses": {
+    "component_coefficients": {
+      "N1_L": {
+        "aux:D2": {
+          "1": "1/2",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "fermion:tilde_lambda_D_lambda": {
+          "1": "0",
+          "sqrt2": "0",
+          "i": "1",
+          "i_sqrt2": "0"
+        },
+        "gauge:F2": {
+          "1": "-1/4",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "topological:k_F_dual_F": {
+          "1": "-1/8",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        }
+      },
+      "N1_E": {
+        "aux:D2": {
+          "1": "-1/2",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "fermion:tilde_lambda_D_lambda": {
+          "1": "1",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "gauge:F2": {
+          "1": "1/4",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "topological:k_F_dual_F": {
+          "1": "0",
+          "sqrt2": "0",
+          "i": "-1/8",
+          "i_sqrt2": "0"
+        }
+      },
+      "N2_L": {
+        "aux:D2": {
+          "1": "1/2",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "aux:D_mu": {
+          "1": "1",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "aux:tilde_F_F": {
+          "1": "1",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "fermion:tilde_lambda_D_lambda": {
+          "1": "0",
+          "sqrt2": "0",
+          "i": "1",
+          "i_sqrt2": "0"
+        },
+        "fermion:tilde_psi_D_psi": {
+          "1": "0",
+          "sqrt2": "0",
+          "i": "1",
+          "i_sqrt2": "0"
+        },
+        "gauge:F2": {
+          "1": "-1/4",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "scalar:D_tilde_phi_D_phi": {
+          "1": "-1",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "topological:k_F_dual_F": {
+          "1": "-1/8",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "yukawa:tilde_phi_lambda_psi": {
+          "1": "0",
+          "sqrt2": "-1",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "yukawa:tilde_psi_tilde_lambda_phi": {
+          "1": "0",
+          "sqrt2": "1",
+          "i": "0",
+          "i_sqrt2": "0"
+        }
+      },
+      "N2_E": {
+        "aux:D2": {
+          "1": "-1/2",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "aux:D_mu": {
+          "1": "-1",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "aux:tilde_F_F": {
+          "1": "-1",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "fermion:tilde_lambda_D_lambda": {
+          "1": "1",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "fermion:tilde_psi_D_psi": {
+          "1": "1",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "gauge:F2": {
+          "1": "1/4",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "scalar:D_tilde_phi_D_phi": {
+          "1": "1",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "topological:k_F_dual_F": {
+          "1": "0",
+          "sqrt2": "0",
+          "i": "-1/8",
+          "i_sqrt2": "0"
+        },
+        "yukawa:tilde_phi_lambda_psi": {
+          "1": "0",
+          "sqrt2": "1",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "yukawa:tilde_psi_tilde_lambda_phi": {
+          "1": "0",
+          "sqrt2": "-1",
+          "i": "0",
+          "i_sqrt2": "0"
+        }
+      },
+      "N4_L": {
+        "aux:D2": {
+          "1": "1/2",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "aux:i_D_C0": {
+          "1": "0",
+          "sqrt2": "0",
+          "i": "1",
+          "i_sqrt2": "0"
+        },
+        "aux:sum_r_tilde_F_r_F_r": {
+          "1": "1",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "fermion:sum_r_tilde_psi_r_D_psi_r": {
+          "1": "0",
+          "sqrt2": "0",
+          "i": "1",
+          "i_sqrt2": "0"
+        },
+        "fermion:tilde_lambda_D_lambda": {
+          "1": "0",
+          "sqrt2": "0",
+          "i": "1",
+          "i_sqrt2": "0"
+        },
+        "gauge:F2": {
+          "1": "-1/4",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "scalar:sum_r_D_tilde_phi_r_D_phi_r": {
+          "1": "-1",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "superpotential:epsilon_F_phi_phi": {
+          "1": "0",
+          "sqrt2": "-1/2",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "superpotential:epsilon_phi_psi_psi": {
+          "1": "0",
+          "sqrt2": "1/2",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "superpotential:epsilon_tilde_F_tilde_phi_tilde_phi": {
+          "1": "0",
+          "sqrt2": "-1/2",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "superpotential:epsilon_tilde_phi_tilde_psi_tilde_psi": {
+          "1": "0",
+          "sqrt2": "1/2",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "topological:k_F_dual_F": {
+          "1": "-1/8",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "yukawa:sum_r_phi_r_tilde_psi_r_tilde_lambda": {
+          "1": "0",
+          "sqrt2": "1",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "yukawa:sum_r_tilde_phi_r_psi_r_lambda": {
+          "1": "0",
+          "sqrt2": "1",
+          "i": "0",
+          "i_sqrt2": "0"
+        }
+      },
+      "N4_E": {
+        "aux:D2": {
+          "1": "-1/2",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "aux:i_D_C0": {
+          "1": "0",
+          "sqrt2": "0",
+          "i": "-1",
+          "i_sqrt2": "0"
+        },
+        "aux:sum_r_tilde_F_r_F_r": {
+          "1": "-1",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "fermion:sum_r_tilde_psi_r_D_psi_r": {
+          "1": "1",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "fermion:tilde_lambda_D_lambda": {
+          "1": "1",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "gauge:F2": {
+          "1": "1/4",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "scalar:sum_r_D_tilde_phi_r_D_phi_r": {
+          "1": "1",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "superpotential:epsilon_F_phi_phi": {
+          "1": "0",
+          "sqrt2": "1/2",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "superpotential:epsilon_phi_psi_psi": {
+          "1": "0",
+          "sqrt2": "-1/2",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "superpotential:epsilon_tilde_F_tilde_phi_tilde_phi": {
+          "1": "0",
+          "sqrt2": "1/2",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "superpotential:epsilon_tilde_phi_tilde_psi_tilde_psi": {
+          "1": "0",
+          "sqrt2": "-1/2",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "topological:k_F_dual_F": {
+          "1": "0",
+          "sqrt2": "0",
+          "i": "-1/8",
+          "i_sqrt2": "0"
+        },
+        "yukawa:sum_r_phi_r_tilde_psi_r_tilde_lambda": {
+          "1": "0",
+          "sqrt2": "-1",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "yukawa:sum_r_tilde_phi_r_psi_r_lambda": {
+          "1": "0",
+          "sqrt2": "-1",
+          "i": "0",
+          "i_sqrt2": "0"
+        }
+      }
+    },
+    "auxiliary_and_contraction": {
+      "n2_square": {
+        "('D', 'D')": {
+          "1": "1/2",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "('D', 'mu')": {
+          "1": "1",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "('F', 'tilde_F')": {
+          "1": "1",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        }
+      },
+      "n4_D_elimination_L": {
+        "1": "1/2",
+        "sqrt2": "0",
+        "i": "0",
+        "i_sqrt2": "0"
+      },
+      "n4_D_elimination_E": {
+        "1": "-1/2",
+        "sqrt2": "0",
+        "i": "0",
+        "i_sqrt2": "0"
+      },
+      "n4_F_pair_elimination_L": {
+        "1": "-1/2",
+        "sqrt2": "0",
+        "i": "0",
+        "i_sqrt2": "0"
+      },
+      "n4_F_pair_elimination_E": {
+        "1": "1/2",
+        "sqrt2": "0",
+        "i": "0",
+        "i_sqrt2": "0"
+      },
+      "su4_slot_census": {
+        "raw": 256,
+        "diagonal_zero": 112,
+        "off_diagonal": 144,
+        "reversal_orbits": 36
+      },
+      "su4_reduced_coefficients": {
+        "C11": -8,
+        "A12": 32,
+        "C12": -16,
+        "A13": 32,
+        "C13": -16,
+        "C22": -8,
+        "A23": 32,
+        "C23": -16,
+        "C33": -8
+      }
+    },
+    "bch_and_gauge": {
+      "bch_checked_square": [
+        9,
+        9
+      ],
+      "gauge_convolution_signatures": [
+        "Lorentzian eta=+1",
+        "Euclidean eta=-1"
+      ],
+      "gauge_convolution_range": [
+        0,
+        4
+      ]
+    },
+    "matter_symmetrization": {
+      "0": {
+        "ordered_words": 1,
+        "coefficient_per_word": "1",
+        "total": "1",
+        "source_orders_surviving_V_equals_zero": [
+          0
+        ]
+      },
+      "1": {
+        "ordered_words": 1,
+        "coefficient_per_word": "1",
+        "total": "1",
+        "source_orders_surviving_V_equals_zero": [
+          1
+        ]
+      },
+      "2": {
+        "ordered_words": 2,
+        "coefficient_per_word": "1/2",
+        "total": "1",
+        "source_orders_surviving_V_equals_zero": [
+          2
+        ]
+      },
+      "3": {
+        "ordered_words": 6,
+        "coefficient_per_word": "1/6",
+        "total": "1",
+        "source_orders_surviving_V_equals_zero": [
+          3
+        ]
+      },
+      "4": {
+        "ordered_words": 24,
+        "coefficient_per_word": "1/24",
+        "total": "1",
+        "source_orders_surviving_V_equals_zero": [
+          4
+        ]
+      },
+      "5": {
+        "ordered_words": 120,
+        "coefficient_per_word": "1/120",
+        "total": "1",
+        "source_orders_surviving_V_equals_zero": [
+          5
+        ]
+      },
+      "6": {
+        "ordered_words": 720,
+        "coefficient_per_word": "1/720",
+        "total": "1",
+        "source_orders_surviving_V_equals_zero": [
+          6
+        ]
+      },
+      "7": {
+        "ordered_words": 5040,
+        "coefficient_per_word": "1/5040",
+        "total": "1",
+        "source_orders_surviving_V_equals_zero": [
+          7
+        ]
+      }
+    },
+    "brst_and_fp": {
+      "bernoulli": [
+        "1",
+        "-1/2",
+        "1/6",
+        "0",
+        "-1/30",
+        "0",
+        "1/42",
+        "0",
+        "-1/30",
+        "0",
+        "5/66"
+      ],
+      "low_order_coefficients": {
+        "p=0,q=0": {
+          "sV_tilde_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "1",
+            "i_sqrt2": "0"
+          },
+          "sV_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "-1",
+            "i_sqrt2": "0"
+          },
+          "FP_tilde_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "1/4",
+            "i_sqrt2": "0"
+          },
+          "FP_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "-1/4",
+            "i_sqrt2": "0"
+          }
+        },
+        "p=0,q=1": {
+          "sV_tilde_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "1/2",
+            "i_sqrt2": "0"
+          },
+          "sV_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "1/2",
+            "i_sqrt2": "0"
+          },
+          "FP_tilde_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "1/8",
+            "i_sqrt2": "0"
+          },
+          "FP_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "1/8",
+            "i_sqrt2": "0"
+          }
+        },
+        "p=0,q=2": {
+          "sV_tilde_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "1/12",
+            "i_sqrt2": "0"
+          },
+          "sV_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "-1/12",
+            "i_sqrt2": "0"
+          },
+          "FP_tilde_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "1/48",
+            "i_sqrt2": "0"
+          },
+          "FP_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "-1/48",
+            "i_sqrt2": "0"
+          }
+        },
+        "p=0,q=3": {
+          "sV_tilde_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "0",
+            "i_sqrt2": "0"
+          },
+          "sV_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "0",
+            "i_sqrt2": "0"
+          },
+          "FP_tilde_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "0",
+            "i_sqrt2": "0"
+          },
+          "FP_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "0",
+            "i_sqrt2": "0"
+          }
+        },
+        "p=1,q=0": {
+          "sV_tilde_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "-1/2",
+            "i_sqrt2": "0"
+          },
+          "sV_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "-1/2",
+            "i_sqrt2": "0"
+          },
+          "FP_tilde_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "-1/8",
+            "i_sqrt2": "0"
+          },
+          "FP_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "-1/8",
+            "i_sqrt2": "0"
+          }
+        },
+        "p=1,q=1": {
+          "sV_tilde_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "-1/6",
+            "i_sqrt2": "0"
+          },
+          "sV_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "1/6",
+            "i_sqrt2": "0"
+          },
+          "FP_tilde_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "-1/24",
+            "i_sqrt2": "0"
+          },
+          "FP_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "1/24",
+            "i_sqrt2": "0"
+          }
+        },
+        "p=1,q=2": {
+          "sV_tilde_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "0",
+            "i_sqrt2": "0"
+          },
+          "sV_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "0",
+            "i_sqrt2": "0"
+          },
+          "FP_tilde_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "0",
+            "i_sqrt2": "0"
+          },
+          "FP_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "0",
+            "i_sqrt2": "0"
+          }
+        },
+        "p=2,q=0": {
+          "sV_tilde_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "1/12",
+            "i_sqrt2": "0"
+          },
+          "sV_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "-1/12",
+            "i_sqrt2": "0"
+          },
+          "FP_tilde_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "1/48",
+            "i_sqrt2": "0"
+          },
+          "FP_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "-1/48",
+            "i_sqrt2": "0"
+          }
+        },
+        "p=2,q=1": {
+          "sV_tilde_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "0",
+            "i_sqrt2": "0"
+          },
+          "sV_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "0",
+            "i_sqrt2": "0"
+          },
+          "FP_tilde_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "0",
+            "i_sqrt2": "0"
+          },
+          "FP_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "0",
+            "i_sqrt2": "0"
+          }
+        },
+        "p=3,q=0": {
+          "sV_tilde_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "0",
+            "i_sqrt2": "0"
+          },
+          "sV_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "0",
+            "i_sqrt2": "0"
+          },
+          "FP_tilde_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "0",
+            "i_sqrt2": "0"
+          },
+          "FP_c": {
+            "1": "0",
+            "sqrt2": "0",
+            "i": "0",
+            "i_sqrt2": "0"
+          }
+        }
+      }
+    },
+    "koszul": {
+      "ordered_derivative_cases": 3076,
+      "permutation_cases": 4283
+    },
+    "graph_wick_phases": {
+      "tau_phase": {
+        "E": {
+          "1": "-1",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "L": {
+          "1": "0",
+          "sqrt2": "0",
+          "i": "1",
+          "i_sqrt2": "0"
+        }
+      },
+      "edge_phase_minus_tau_inverse": {
+        "E": {
+          "1": "1",
+          "sqrt2": "0",
+          "i": "0",
+          "i_sqrt2": "0"
+        },
+        "L": {
+          "1": "0",
+          "sqrt2": "0",
+          "i": "1",
+          "i_sqrt2": "0"
+        }
+      },
+      "checked_vertex_edge_square": [
+        7,
+        7
+      ]
+    },
+    "euclidean_projector": {
+      "kernel": {
+        "P_T": {
+          "coefficient": "1/2",
+          "powers": {
+            "Box_E": 1,
+            "h": 1
+          }
+        },
+        "P_0": {
+          "coefficient": "1/2",
+          "powers": {
+            "Box_E": 1,
+            "h": 1,
+            "xi": -1
+          }
+        }
+      },
+      "inverse": {
+        "P_T": {
+          "coefficient": "2",
+          "powers": {
+            "Box_E": -1,
+            "h": -1
+          }
+        },
+        "P_0": {
+          "coefficient": "2",
+          "powers": {
+            "Box_E": -1,
+            "h": -1,
+            "xi": 1
+          }
+        }
+      },
+      "covariance": {
+        "P_T": {
+          "coefficient": "2",
+          "powers": {
+            "Box_E": -1,
+            "h": -1,
+            "hbar": 1
+          }
+        },
+        "P_0": {
+          "coefficient": "2",
+          "powers": {
+            "Box_E": -1,
+            "h": -1,
+            "hbar": 1,
+            "xi": 1
+          }
+        }
+      },
+      "xi_equals_one_covariance": {
+        "P_T": {
+          "coefficient": "2",
+          "powers": {
+            "Box_E": -1,
+            "h": -1,
+            "hbar": 1
+          }
+        },
+        "P_0": {
+          "coefficient": "2",
+          "powers": {
+            "Box_E": -1,
+            "h": -1,
+            "hbar": 1
+          }
+        }
+      }
+    },
+    "contract_surface": {
+      "tag_count": 88,
+      "numeric_tag_count": 81,
+      "blocker_counts": {
+        "BLOCKED_STEP5A_UNIQUE_PROPAGATORS_PERTURBATIVE_SLICE_UNFIXED": 1,
+        "BLOCKED_STEP5A_NK_BRANCH_UNSELECTED": 1,
+        "BLOCKED_STEP5A_MOMENTUM_RULES_FOURIER_DRED_LEDGER_UNFIXED": 1,
+        "BLOCKED_STEP3D_LC_VECTOR_CYCLE": 1
+      },
+      "naked_qquads": []
+    }
+  },
+  "checks": [
+    {
+      "name": "Step-5A unique equation tags",
+      "category": "surface",
+      "passed": true,
+      "actual_sha256": "8b940be7fb78aaa6b6567dd7a3987996947460df1c668e698eb92ca77e425349",
+      "expected_sha256": "8b940be7fb78aaa6b6567dd7a3987996947460df1c668e698eb92ca77e425349",
+      "actual": 88,
+      "expected": 88
+    },
+    {
+      "name": "Step-5A numeric equation surface",
+      "category": "surface",
+      "passed": true,
+      "actual_sha256": "7dc8429e12ba7ce0c689e88cfbf82b8bccb37e93101e7228f033456369524840",
+      "expected_sha256": "7dc8429e12ba7ce0c689e88cfbf82b8bccb37e93101e7228f033456369524840"
+    },
+    {
+      "name": "Step-5A display delimiter parity",
+      "category": "surface",
+      "passed": true,
+      "actual_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "expected_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Step-5A strict-equality tokens",
+      "category": "surface",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "Step-5A control characters",
+      "category": "surface",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "Step-5A no malformed naked qquad",
+      "category": "surface",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "Step-5A does not infer BV compatibility from nonvanishing density",
+      "category": "surface",
+      "passed": true,
+      "actual_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "expected_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Step-5A blocker tokens occur exactly once",
+      "category": "surface",
+      "passed": true,
+      "actual_sha256": "a75582283bf26a2c5b17c19afa43664c13af27d57724746f0f7dcbe6661c70db",
+      "expected_sha256": "a75582283bf26a2c5b17c19afa43664c13af27d57724746f0f7dcbe6661c70db"
+    },
+    {
+      "name": "Step-5A required formula surface",
+      "category": "surface",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "source SHA-256 lock: contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md",
+      "category": "source_lock",
+      "passed": true,
+      "actual_sha256": "e0ba71f7a034c184bd8cdf822f9e460e9fcca2318adab69d33b584ab9b880914",
+      "expected_sha256": "e0ba71f7a034c184bd8cdf822f9e460e9fcca2318adab69d33b584ab9b880914",
+      "actual": "109e0c531da3a1b98313e87dd692fa3d9047c8f745291f8e87021008c7acc538",
+      "expected": "109e0c531da3a1b98313e87dd692fa3d9047c8f745291f8e87021008c7acc538"
+    },
+    {
+      "name": "source SHA-256 lock: contracts/foundations/step-04a-n1-super-yang-mills.md",
+      "category": "source_lock",
+      "passed": true,
+      "actual_sha256": "a2073beac8e432763f498aeac35694c7e814188ad26ee6717941263f09cdbd32",
+      "expected_sha256": "a2073beac8e432763f498aeac35694c7e814188ad26ee6717941263f09cdbd32",
+      "actual": "b2495f6a98c8cffe21ab2583b1955c81f5bb06af9b0edfb677fc0a3a3ee1fbc1",
+      "expected": "b2495f6a98c8cffe21ab2583b1955c81f5bb06af9b0edfb677fc0a3a3ee1fbc1"
+    },
+    {
+      "name": "source SHA-256 lock: contracts/foundations/step-04b-n2-super-yang-mills.md",
+      "category": "source_lock",
+      "passed": true,
+      "actual_sha256": "126fc0cd29c39c3f0cf6680670ef71a534846e7af739c772acc87c687416328d",
+      "expected_sha256": "126fc0cd29c39c3f0cf6680670ef71a534846e7af739c772acc87c687416328d",
+      "actual": "590bff04a31f2790ec97226570df189647f822b69c53ee9b141f5c1a0c98c860",
+      "expected": "590bff04a31f2790ec97226570df189647f822b69c53ee9b141f5c1a0c98c860"
+    },
+    {
+      "name": "source SHA-256 lock: contracts/foundations/step-04c-n4-super-yang-mills.md",
+      "category": "source_lock",
+      "passed": true,
+      "actual_sha256": "a354a6f8361d81b241042719310b5c5f99988ef212c69cc0299ef7ac02d90c1b",
+      "expected_sha256": "a354a6f8361d81b241042719310b5c5f99988ef212c69cc0299ef7ac02d90c1b",
+      "actual": "fafc3bc2227b60ca699b3f953b632db82dafe093b221baa74736cc5fb838928f",
+      "expected": "fafc3bc2227b60ca699b3f953b632db82dafe093b221baa74736cc5fb838928f"
+    },
+    {
+      "name": "N=1 Lorentzian component coefficient dictionary",
+      "category": "components",
+      "passed": true,
+      "actual_sha256": "fb1617c1bb00e362a2bafd817485dbe1f483703bd315caad0cb2bf86a53aaeaa",
+      "expected_sha256": "fb1617c1bb00e362a2bafd817485dbe1f483703bd315caad0cb2bf86a53aaeaa"
+    },
+    {
+      "name": "N=1 Euclidean component coefficient dictionary",
+      "category": "components",
+      "passed": true,
+      "actual_sha256": "2ca6d66bdbb8230b653d95adfcb6d58a0dc423e9ee0ab19be7a201298d566758",
+      "expected_sha256": "2ca6d66bdbb8230b653d95adfcb6d58a0dc423e9ee0ab19be7a201298d566758"
+    },
+    {
+      "name": "N=2 Lorentzian component coefficient dictionary",
+      "category": "components",
+      "passed": true,
+      "actual_sha256": "3ba9229d55fff8aeb028e077aa4b07b38e46de0b2d2fb3177296dad9894261dd",
+      "expected_sha256": "3ba9229d55fff8aeb028e077aa4b07b38e46de0b2d2fb3177296dad9894261dd"
+    },
+    {
+      "name": "N=2 Euclidean component coefficient dictionary",
+      "category": "components",
+      "passed": true,
+      "actual_sha256": "5111aee4bfe8552c7c09090a21123ffce5ace415b86c321f64cf09bde8e63075",
+      "expected_sha256": "5111aee4bfe8552c7c09090a21123ffce5ace415b86c321f64cf09bde8e63075"
+    },
+    {
+      "name": "N=4 Lorentzian component coefficient dictionary",
+      "category": "components",
+      "passed": true,
+      "actual_sha256": "5ffd6c767d4f3e0f1c1f972b183a504128dc6c14a7466f5792e626d3160b237e",
+      "expected_sha256": "5ffd6c767d4f3e0f1c1f972b183a504128dc6c14a7466f5792e626d3160b237e"
+    },
+    {
+      "name": "N=4 Euclidean component coefficient dictionary",
+      "category": "components",
+      "passed": true,
+      "actual_sha256": "6434cde04f80a429472c47e0ca30c0b7a6bbbffcb3457480fe25551ca6ac0604",
+      "expected_sha256": "6434cde04f80a429472c47e0ca30c0b7a6bbbffcb3457480fe25551ca6ac0604"
+    },
+    {
+      "name": "N=2 contracted auxiliary square",
+      "category": "auxiliary",
+      "passed": true,
+      "actual_sha256": "f9188907a98e896b3f014f6b6b3edf6c09f299f652f6fdcbb41de913b9b18d8e",
+      "expected_sha256": "f9188907a98e896b3f014f6b6b3edf6c09f299f652f6fdcbb41de913b9b18d8e"
+    },
+    {
+      "name": "N=4 Lorentzian D elimination coefficient",
+      "category": "auxiliary",
+      "passed": true,
+      "actual_sha256": "3f0df5f0f457b27523b2192b5acb523f48d67d3a5f8840bbb76abba6cefeae33",
+      "expected_sha256": "3f0df5f0f457b27523b2192b5acb523f48d67d3a5f8840bbb76abba6cefeae33"
+    },
+    {
+      "name": "N=4 Euclidean D elimination coefficient",
+      "category": "auxiliary",
+      "passed": true,
+      "actual_sha256": "388e0d4c68baff841585884fc02bd46bea014f3875e6d0ae036070f05d9261a1",
+      "expected_sha256": "388e0d4c68baff841585884fc02bd46bea014f3875e6d0ae036070f05d9261a1"
+    },
+    {
+      "name": "N=4 Lorentzian F-pair elimination coefficient",
+      "category": "auxiliary",
+      "passed": true,
+      "actual_sha256": "388e0d4c68baff841585884fc02bd46bea014f3875e6d0ae036070f05d9261a1",
+      "expected_sha256": "388e0d4c68baff841585884fc02bd46bea014f3875e6d0ae036070f05d9261a1"
+    },
+    {
+      "name": "N=4 Euclidean F-pair elimination coefficient",
+      "category": "auxiliary",
+      "passed": true,
+      "actual_sha256": "3f0df5f0f457b27523b2192b5acb523f48d67d3a5f8840bbb76abba6cefeae33",
+      "expected_sha256": "3f0df5f0f457b27523b2192b5acb523f48d67d3a5f8840bbb76abba6cefeae33"
+    },
+    {
+      "name": "contracted SU(4) Yukawa expansion",
+      "category": "contraction",
+      "passed": true,
+      "actual_sha256": "1527dac3653cb77bada70c7e4628bf02e3fd6ab731fe539df1c772b02ae5191e",
+      "expected_sha256": "1527dac3653cb77bada70c7e4628bf02e3fd6ab731fe539df1c772b02ae5191e"
+    },
+    {
+      "name": "SU(4) 256-slot contraction census",
+      "category": "contraction",
+      "passed": true,
+      "actual_sha256": "ff223034bb85b24565f26cf76e298c5216a293e016833a9e6b7a65c171199684",
+      "expected_sha256": "ff223034bb85b24565f26cf76e298c5216a293e016833a9e6b7a65c171199684"
+    },
+    {
+      "name": "SU(4) Jacobi-reduced coefficient dictionary",
+      "category": "contraction",
+      "passed": true,
+      "actual_sha256": "9f0498c542983bf9638452b89c3b29ec2be99b806f49ff498ec9384a6e253a36",
+      "expected_sha256": "9f0498c542983bf9638452b89c3b29ec2be99b806f49ff498ec9384a6e253a36"
+    },
+    {
+      "name": "BCH and tilded-BCH word coefficients",
+      "category": "bch",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "gauge-action BCH convolution",
+      "category": "gauge_vertices",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "matter exponential labelled symmetrization",
+      "category": "matter_vertices",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "matter derivative evaluated at V=0 isolates degree n",
+      "category": "matter_vertices",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "Bernoulli sequence B_0 through B_10",
+      "category": "brst",
+      "passed": true,
+      "actual_sha256": "fa4fa704393db503c6934a31751cddcf7ac8c336f2f61c0ce1a1beef09b57c57",
+      "expected_sha256": "fa4fa704393db503c6934a31751cddcf7ac8c336f2f61c0ce1a1beef09b57c57"
+    },
+    {
+      "name": "Bernoulli generating-function inverse",
+      "category": "brst",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "Bernoulli sV and FP word coefficients",
+      "category": "fp_vertices",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "ordered functional-derivative Koszul signs",
+      "category": "koszul",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "permutation Koszul signs",
+      "category": "koszul",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "universal Wick edge phase satisfies tau_R times edge_R equals -1",
+      "category": "graph_weights",
+      "passed": true,
+      "actual_sha256": "b2da975dafb322b4ab223eb5b9fb34cc78fea85faf82dcf0cf7d5ae37d174171",
+      "expected_sha256": "b2da975dafb322b4ab223eb5b9fb34cc78fea85faf82dcf0cf7d5ae37d174171"
+    },
+    {
+      "name": "signature-dependent labeled graph phases",
+      "category": "graph_weights",
+      "passed": true,
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "Euclidean projector kernel inverse",
+      "category": "projector",
+      "passed": true,
+      "actual_sha256": "aa9835e7528b253a138f0ba5df66d0e9efb429a61558023d075e17112e8efb0d",
+      "expected_sha256": "aa9835e7528b253a138f0ba5df66d0e9efb429a61558023d075e17112e8efb0d"
+    },
+    {
+      "name": "Euclidean projector covariance",
+      "category": "projector",
+      "passed": true,
+      "actual_sha256": "65cd8b94a3d3fe4aaa81a365b19cf466246fe0f1e5cb59451db3d041f6c18ea1",
+      "expected_sha256": "65cd8b94a3d3fe4aaa81a365b19cf466246fe0f1e5cb59451db3d041f6c18ea1"
+    },
+    {
+      "name": "Euclidean xi=1 Fermi covariance",
+      "category": "projector",
+      "passed": true,
+      "actual_sha256": "cea3a92e9ba2421c0a0f7821b99a16b5f83a3808c11edce018f5e7902714b23e",
+      "expected_sha256": "cea3a92e9ba2421c0a0f7821b99a16b5f83a3808c11edce018f5e7902714b23e"
+    },
+    {
+      "name": "exact partial-scope blocker labels",
+      "category": "scope",
+      "passed": true,
+      "actual_sha256": "cfdf383b65f29d979aa6d4e5929f6903498b780562edd85cd1c8771779ac0568",
+      "expected_sha256": "cfdf383b65f29d979aa6d4e5929f6903498b780562edd85cd1c8771779ac0568"
+    }
+  ],
+  "failures": []
+}

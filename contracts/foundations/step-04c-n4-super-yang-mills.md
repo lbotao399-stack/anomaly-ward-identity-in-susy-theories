@@ -97,9 +97,24 @@ $$
 \boxed{
 \widetilde\varphi_{\mathcal I\mathcal J}^A
 \Lambda^{\mathcal I B}\Lambda^{\mathcal J C}
-=2\widetilde\phi_r^A\psi_r^B\lambda^C
+=\sum_{r=1}^3\widetilde\phi_r^A
+\left(\psi_r^B\lambda^C-\lambda^B\psi_r^C\right)
 +\varepsilon_{rst}\phi_t^A\psi_r^B\psi_s^C.}
 \tag{4C.7}
+$$
+
+The two ordered gauge-Yukawa slots combine only after contraction with
+the antisymmetric invariant tensor:
+
+$$
+\boxed{
+\begin{aligned}
+c_{ABC}\widetilde\varphi_{\mathcal I\mathcal J}^A
+\Lambda^{\mathcal I B}\Lambda^{\mathcal J C}
+=c_{ABC}\Big(&2\widetilde\phi_r^A\psi_r^B\lambda^C\\
+&+\varepsilon_{rst}\phi_t^A\psi_r^B\psi_s^C\Big).
+\end{aligned}}
+\tag{4C.7a}
 $$
 
 The Step-3B gauge Yukawa is
@@ -115,7 +130,7 @@ i\sqrt2h\widetilde\phi_B(T_A^{\rm ad})^B{}_C
 \tag{4C.8}
 $$
 
-Comparison of (4C.7) and (4C.8) gives
+Comparison of the contracted identity (4C.7a) and (4C.8) gives
 
 $$
 2C=\sqrt2,
@@ -141,7 +156,7 @@ $$
 \tag{4C.11}
 $$
 
-Comparison with (4C.7) gives
+Comparison with the contracted identity (4C.7a) gives
 
 $$
 -\frac u2=C=\frac1{\sqrt2},
@@ -260,7 +275,70 @@ C_0:=\phi_r\times\widetilde\phi_r.
 \tag{4C.19}
 $$
 
-Substitution of (4C.18) into (4C.14) gives
+Also define
+
+$$
+Q_r:=\frac1{\sqrt2}\varepsilon_{rst}
+(\phi_s\times\phi_t),
+\qquad
+\widetilde Q_r:=\frac1{\sqrt2}\varepsilon_{rst}
+(\widetilde\phi_s\times\widetilde\phi_t).
+\tag{4C.19a}
+$$
+
+The complete auxiliary square is
+
+$$
+\begin{aligned}
+\frac1h\mathcal L_{L,\mathrm{aux}}^{(4)}
+={}&\frac12\operatorname{tr}_\kappa(\mathscr D\mathscr D)
++i\operatorname{tr}_\kappa(\mathscr DC_0)\\
+&+\sum_{r=1}^3\operatorname{tr}_\kappa\left(
+\widetilde F_rF_r-F_rQ_r-\widetilde F_r\widetilde Q_r\right)\\
+={}&\frac12\operatorname{tr}_\kappa
+\left[(\mathscr D+iC_0)(\mathscr D+iC_0)\right]
++\frac12\operatorname{tr}_\kappa(C_0C_0)\\
+&+\sum_{r=1}^3\left\{
+\operatorname{tr}_\kappa\left[
+(\widetilde F_r-Q_r)(F_r-\widetilde Q_r)\right]
+-\operatorname{tr}_\kappa(Q_r\widetilde Q_r)\right\}.
+\end{aligned}
+\tag{4C.19b}
+$$
+
+No term is suppressed in the last equality: its two squares expand as
+
+$$
+\begin{aligned}
+\frac12\operatorname{tr}_\kappa[(\mathscr D+iC_0)(\mathscr D+iC_0)]
++\frac12\operatorname{tr}_\kappa(C_0C_0)
+&=\frac12\operatorname{tr}_\kappa(\mathscr D\mathscr D)
++i\operatorname{tr}_\kappa(\mathscr DC_0),\\
+\operatorname{tr}_\kappa[(\widetilde F_r-Q_r)(F_r-\widetilde Q_r)]
+-\operatorname{tr}_\kappa(Q_r\widetilde Q_r)
+&=\operatorname{tr}_\kappa(\widetilde F_rF_r)
+-\operatorname{tr}_\kappa(\widetilde F_r\widetilde Q_r)
+-\operatorname{tr}_\kappa(F_rQ_r).
+\end{aligned}
+\tag{4C.19c}
+$$
+
+Using
+
+$$
+\begin{aligned}
+\sum_{r=1}^3\operatorname{tr}_\kappa(Q_r\widetilde Q_r)
+&=\frac12\varepsilon_{rst}\varepsilon_{ruv}
+\operatorname{tr}_\kappa\left[
+(\phi_s\times\phi_t)(\widetilde\phi_u\times\widetilde\phi_v)\right]\\
+&=2\sum_{(st)=(23),(31),(12)}
+\operatorname{tr}_\kappa\left[
+(\phi_s\times\phi_t)(\widetilde\phi_s\times\widetilde\phi_t)\right],
+\end{aligned}
+\tag{4C.19d}
+$$
+
+restriction of (4C.19b) to (4C.18) gives
 
 $$
 \begin{aligned}
@@ -290,8 +368,63 @@ $$
 \tag{4C.20b}
 $$
 
-Expansion of the \(4^4\) internal-index slots followed only by
-(4C.20b) gives
+Let the left side of (4C.21) be \(\mathcal S_4\).  Its raw ordered
+slot census is
+
+$$
+4^4=256,
+\qquad
+4\cdot4^2+4\cdot4^2-4^2=112,
+\qquad
+(4^2-4)^2=144=36\cdot4.
+\tag{4C.20c}
+$$
+
+The middle number counts the slots with
+\(\mathcal I=\mathcal J\) or
+\(\mathcal K=\mathcal L\), hence zero by antisymmetry.  The remaining
+144 slots form 36 four-element orbits under the two independent pair
+reversals.  Define
+
+$$
+\begin{aligned}
+A_{rs}&:=\mathsf B(\phi_r,\phi_s;
+\widetilde\phi_r,\widetilde\phi_s),\\
+U_{rs}&:=\mathsf B(\phi_r,\widetilde\phi_s;
+\widetilde\phi_r,\phi_s),\\
+C_{rs}&:=\mathsf B(\phi_r,\widetilde\phi_r;
+\phi_s,\widetilde\phi_s).
+\end{aligned}
+\tag{4C.20d}
+$$
+
+Explicit summation of the 36 orbit representatives and one use of
+(4C.20b) give
+
+$$
+\begin{aligned}
+\mathcal S_4
+&=8\sum_{r,s=1}^3(A_{rs}+U_{rs}),
+&U_{rs}&=A_{rs}-C_{rs},\\
+\mathcal S_4
+&=16\sum_{r,s=1}^3A_{rs}-8\sum_{r,s=1}^3C_{rs}\\
+&=32(A_{12}+A_{13}+A_{23})
+-8(C_{11}+C_{22}+C_{33})
+-16(C_{12}+C_{13}+C_{23}).
+\end{aligned}
+\tag{4C.20e}
+$$
+
+Thus the canonical coefficient dictionary is
+
+$$
+\boxed{
+(A_{12},A_{13},A_{23};C_{11},C_{22},C_{33};C_{12},C_{13},C_{23})
+=(32,32,32;-8,-8,-8;-16,-16,-16).}
+\tag{4C.20f}
+$$
+
+Equations (4C.20b)--(4C.20f) give
 
 $$
 \boxed{
@@ -309,7 +442,7 @@ $$
 \tag{4C.21}
 $$
 
-Equations (4C.7), its barred counterpart, and (4C.21) give the
+Equations (4C.7a), its barred counterpart, and (4C.21) give the
 Lorentzian on-shell action
 
 $$

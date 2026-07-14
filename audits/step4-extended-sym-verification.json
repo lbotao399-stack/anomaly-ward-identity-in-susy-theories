@@ -7,6 +7,35 @@
     "lorentz_clifford": {
       "failures": []
     },
+    "n2_contracted_auxiliary_boundary": {
+      "checks": {
+        "completion_kappa_contracted": true,
+        "completion_not_free_index_identity": true,
+        "completion_symmetrized_free_index": true,
+        "triplet_kappa_contracted": true,
+        "triplet_not_free_index_short_identity": true
+      },
+      "completion_original": {
+        "(('D', 'A'), ('D', 'B'))": "1/2",
+        "(('D', 'A'), ('mu', 'B'))": "1",
+        "(('F', 'B'), ('tildeF', 'A'))": "1"
+      },
+      "completion_symmetrized": {
+        "(('D', 'A'), ('D', 'B'))": "1/2",
+        "(('D', 'A'), ('mu', 'B'))": "1/2",
+        "(('D', 'B'), ('mu', 'A'))": "1/2",
+        "(('F', 'B'), ('tildeF', 'A'))": "1"
+      },
+      "triplet_free_index": {
+        "(('F', 'A'), ('tildeF', 'B'))": "1/2",
+        "(('F', 'B'), ('tildeF', 'A'))": "1/2",
+        "(('H', 'A'), ('H', 'B'))": "1/2"
+      },
+      "triplet_short_ordered": {
+        "(('F', 'B'), ('tildeF', 'A'))": "1",
+        "(('H', 'A'), ('H', 'B'))": "1/2"
+      }
+    },
     "n2_euclidean_current_expansion": {
       "actual": {
         "('hidden', 'Dtildephi', 'lambda')": "-sqrt(2)",
@@ -59,6 +88,48 @@
         "('manifest', 'mu', 'tildelambda')": "-1"
       }
     },
+    "n4_auxiliary_square": {
+      "checks": {
+        "complete_square_expansion": true,
+        "q_pairing_expansion": true
+      },
+      "completed": {
+        "('C0', 'D')": "i",
+        "('D', 'D')": "1/2",
+        "('F0', 'Q0')": "-1",
+        "('F0', 'tildeF0')": "1",
+        "('F1', 'Q1')": "-1",
+        "('F1', 'tildeF1')": "1",
+        "('F2', 'Q2')": "-1",
+        "('F2', 'tildeF2')": "1",
+        "('tildeF0', 'tildeQ0')": "-1",
+        "('tildeF1', 'tildeQ1')": "-1",
+        "('tildeF2', 'tildeQ2')": "-1"
+      },
+      "original": {
+        "('C0', 'D')": "i",
+        "('D', 'D')": "1/2",
+        "('F0', 'Q0')": "-1",
+        "('F0', 'tildeF0')": "1",
+        "('F1', 'Q1')": "-1",
+        "('F1', 'tildeF1')": "1",
+        "('F2', 'Q2')": "-1",
+        "('F2', 'tildeF2')": "1",
+        "('tildeF0', 'tildeQ0')": "-1",
+        "('tildeF1', 'tildeQ1')": "-1",
+        "('tildeF2', 'tildeQ2')": "-1"
+      },
+      "q_pairing_actual": {
+        "(('p0', 'p1'), ('t0', 't1'))": "2",
+        "(('p0', 'p2'), ('t0', 't2'))": "2",
+        "(('p1', 'p2'), ('t1', 't2'))": "2"
+      },
+      "q_pairing_expected": {
+        "(('p0', 'p1'), ('t0', 't1'))": "2",
+        "(('p0', 'p2'), ('t0', 't2'))": "2",
+        "(('p1', 'p2'), ('t1', 't2'))": "2"
+      }
+    },
     "n4_cubic_coefficient": {
       "C": "1/2sqrt(2)",
       "passed": true,
@@ -109,6 +180,57 @@
         "('F', 'tF')": "1",
         "('H', 'H')": "1/2"
       }
+    },
+    "su4_quartic_census": {
+      "canonical_actual": {
+        "A12": 32,
+        "A13": 32,
+        "A23": 32,
+        "C11": -8,
+        "C12": -16,
+        "C13": -16,
+        "C22": -8,
+        "C23": -16,
+        "C33": -8
+      },
+      "canonical_expected": {
+        "A12": 32,
+        "A13": 32,
+        "A23": 32,
+        "C11": -8,
+        "C12": -16,
+        "C13": -16,
+        "C22": -8,
+        "C23": -16,
+        "C33": -8
+      },
+      "checks": {
+        "canonical_dictionary": true,
+        "diagonal_zero_slot_count": true,
+        "off_diagonal_slot_count": true,
+        "orbit_reduction_exact": true,
+        "raw_slot_count": true,
+        "reversal_orbit_count": true,
+        "reversal_orbit_sizes": true
+      },
+      "diagonal_zero_slots": 112,
+      "off_diagonal_slots": 144,
+      "orbit_reduction": {
+        "(('p0', 'p1'), ('t0', 't1'))": "16",
+        "(('p0', 'p2'), ('t0', 't2'))": "16",
+        "(('p0', 't0'), ('p0', 't0'))": "-8",
+        "(('p0', 't1'), ('p1', 't0'))": "-16",
+        "(('p0', 't2'), ('p2', 't0'))": "-16",
+        "(('p1', 'p2'), ('t1', 't2'))": "16",
+        "(('p1', 't1'), ('p1', 't1'))": "-8",
+        "(('p1', 't2'), ('p2', 't1'))": "-16",
+        "(('p2', 't2'), ('p2', 't2'))": "-8"
+      },
+      "orbit_size_histogram": {
+        "4": 36
+      },
+      "raw_slots": 256,
+      "reversal_orbits": 36
     },
     "su4_quartic_packaging": {
       "actual": {
@@ -227,22 +349,64 @@
       }
     },
     "su4_yukawa_packaging": {
-      "actual": {
-        "('p0', (1, 2))": "2",
-        "('p1', (0, 2))": "-2",
-        "('p2', (0, 1))": "2",
-        "('t0', (0, 3))": "2",
-        "('t1', (1, 3))": "2",
-        "('t2', (2, 3))": "2"
+      "contracted_actual": {
+        "('p0', ('psi1', 'psi2'))": "2",
+        "('p1', ('psi0', 'psi2'))": "-2",
+        "('p2', ('psi0', 'psi1'))": "2",
+        "('t0', ('lambda', 'psi0'))": "-2",
+        "('t1', ('lambda', 'psi1'))": "-2",
+        "('t2', ('lambda', 'psi2'))": "-2"
       },
-      "expected": {
-        "('p0', (1, 2))": "2",
-        "('p1', (0, 2))": "-2",
-        "('p2', (0, 1))": "2",
-        "('t0', (0, 3))": "2",
-        "('t1', (1, 3))": "2",
-        "('t2', (2, 3))": "2"
-      }
+      "contracted_expected": {
+        "('p0', ('psi1', 'psi2'))": "2",
+        "('p1', ('psi0', 'psi2'))": "-2",
+        "('p2', ('psi0', 'psi1'))": "2",
+        "('t0', ('lambda', 'psi0'))": "-2",
+        "('t1', ('lambda', 'psi1'))": "-2",
+        "('t2', ('lambda', 'psi2'))": "-2"
+      },
+      "contracted_reduction_passed": true,
+      "premature_uncontracted_reduction": {
+        "('p0', (('psi1', 'B'), ('psi2', 'C')))": "1",
+        "('p0', (('psi1', 'C'), ('psi2', 'B')))": "-1",
+        "('p1', (('psi0', 'B'), ('psi2', 'C')))": "-1",
+        "('p1', (('psi0', 'C'), ('psi2', 'B')))": "1",
+        "('p2', (('psi0', 'B'), ('psi1', 'C')))": "1",
+        "('p2', (('psi0', 'C'), ('psi1', 'B')))": "-1",
+        "('t0', (('lambda', 'C'), ('psi0', 'B')))": "2",
+        "('t1', (('lambda', 'C'), ('psi1', 'B')))": "2",
+        "('t2', (('lambda', 'C'), ('psi2', 'B')))": "2"
+      },
+      "premature_uncontracted_reduction_rejected": true,
+      "uncontracted_actual": {
+        "('p0', (('psi1', 'B'), ('psi2', 'C')))": "1",
+        "('p0', (('psi1', 'C'), ('psi2', 'B')))": "-1",
+        "('p1', (('psi0', 'B'), ('psi2', 'C')))": "-1",
+        "('p1', (('psi0', 'C'), ('psi2', 'B')))": "1",
+        "('p2', (('psi0', 'B'), ('psi1', 'C')))": "1",
+        "('p2', (('psi0', 'C'), ('psi1', 'B')))": "-1",
+        "('t0', (('lambda', 'B'), ('psi0', 'C')))": "-1",
+        "('t0', (('lambda', 'C'), ('psi0', 'B')))": "1",
+        "('t1', (('lambda', 'B'), ('psi1', 'C')))": "-1",
+        "('t1', (('lambda', 'C'), ('psi1', 'B')))": "1",
+        "('t2', (('lambda', 'B'), ('psi2', 'C')))": "-1",
+        "('t2', (('lambda', 'C'), ('psi2', 'B')))": "1"
+      },
+      "uncontracted_expected": {
+        "('p0', (('psi1', 'B'), ('psi2', 'C')))": "1",
+        "('p0', (('psi1', 'C'), ('psi2', 'B')))": "-1",
+        "('p1', (('psi0', 'B'), ('psi2', 'C')))": "-1",
+        "('p1', (('psi0', 'C'), ('psi2', 'B')))": "1",
+        "('p2', (('psi0', 'B'), ('psi1', 'C')))": "1",
+        "('p2', (('psi0', 'C'), ('psi1', 'B')))": "-1",
+        "('t0', (('lambda', 'B'), ('psi0', 'C')))": "-1",
+        "('t0', (('lambda', 'C'), ('psi0', 'B')))": "1",
+        "('t1', (('lambda', 'B'), ('psi1', 'C')))": "-1",
+        "('t1', (('lambda', 'C'), ('psi1', 'B')))": "1",
+        "('t2', (('lambda', 'B'), ('psi2', 'C')))": "-1",
+        "('t2', (('lambda', 'C'), ('psi2', 'B')))": "1"
+      },
+      "uncontracted_ordered_passed": true
     },
     "two_spinor_schouten": {
       "failure_count": 0,

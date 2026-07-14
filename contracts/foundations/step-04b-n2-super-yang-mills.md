@@ -13,6 +13,17 @@ $$
 
 All tilded Euclidean fields remain independent.
 
+Throughout this contract,
+
+$$
+h:=g^{-2},
+\qquad
+c_{ABC}:=\kappa_{CD}c_{AB}{}^D=c_{[ABC]},
+\qquad
+\kappa_{AB}=\kappa_{BA}.
+\tag{4B.0a}
+$$
+
 ### 4B.1 \(\mathcal N=1\) superspace action and relative metric
 
 Let \(q_{AB}=q_{BA}\) be the undetermined adjoint-chiral metric:
@@ -258,18 +269,32 @@ F_{\mu\nu}^AF_{\rho\sigma}^B.
 \tag{4B.10}
 $$
 
-The auxiliary terms obey
+The free-index completion is the symmetrized tensor identity
 
 $$
 \begin{aligned}
-\widetilde F^AF^B
+\mathcal Q_{L,\mathrm{sym}}^{AB}
+:={}&\widetilde F^AF^B
 +\frac12\mathscr D^A\mathscr D^B
-+\mathscr D^A\mu^B
++\frac12\left(\mathscr D^A\mu^B+\mu^A\mathscr D^B\right)\\
 ={}&\widetilde F^AF^B
 +\frac12H^AH^B
 -\frac12\mu^A\mu^B.
 \end{aligned}
 \tag{4B.11}
+$$
+
+The unsymmetrized term in (4B.10) equals (4B.11) only after the
+symmetric invariant metric is contracted:
+
+$$
+\boxed{
+\kappa_{AB}\left(
+\widetilde F^AF^B
++\frac12\mathscr D^A\mathscr D^B
++\mathscr D^A\mu^B\right)
+=\kappa_{AB}\mathcal Q_{L,\mathrm{sym}}^{AB}.}
+\tag{4B.11a}
 $$
 
 With the three Step-4 auxiliary slots,
@@ -283,7 +308,7 @@ Y_{12}=Y_{21}=iH,
 \tag{4B.12}
 $$
 
-one has, by explicit index raising,
+one has, by explicit index raising, the free-index identity
 
 $$
 \begin{aligned}
@@ -291,9 +316,22 @@ $$
 &=\frac14\left(
 Y_{22}^AY_{11}^B+Y_{11}^AY_{22}^B
 -2Y_{12}^AY_{12}^B\right)\\
-&=\widetilde F^AF^B+\frac12H^AH^B.
+&=\frac12\left(
+\widetilde F^AF^B+F^A\widetilde F^B\right)
++\frac12H^AH^B.
 \end{aligned}
 \tag{4B.13}
+$$
+
+Therefore the shorter ordered form is valid precisely on the
+\(\kappa\)-contracted boundary:
+
+$$
+\boxed{
+\frac14\kappa_{AB}Y^{Aij}Y_{ij}^B
+=\kappa_{AB}\left(
+\widetilde F^AF^B+\frac12H^AH^B\right).}
+\tag{4B.13a}
 $$
 
 Hence
@@ -315,6 +353,26 @@ H=0,
 \qquad
 \mathscr D=-\mu.
 \tag{4B.15}
+$$
+
+Hence the Lorentzian on-shell density is
+
+$$
+\boxed{
+\begin{aligned}
+\mathcal L_{L,\mathrm{on}}^{(2)}={}&
+h\kappa_{AB}\Big[
+-\frac14F_{\mu\nu}^AF^{B\mu\nu}
+-(\mathcal D_\mu\widetilde\phi^A)(\mathcal D^\mu\phi^B)
++i\bar\lambda^A\bar\sigma_L^\mu\mathcal D_\mu\lambda^B
++i\widetilde\psi^A\bar\sigma_L^\mu\mathcal D_\mu\psi^B
+-\frac12\mu^A\mu^B\Big]\\
+&-\sqrt2h c_{ACD}\widetilde\phi^D\lambda^A\psi^C
++\sqrt2h c_{ACD}\widetilde\psi^D\bar\lambda^A\phi^C
+-\frac18\mathfrak k_{AB}\epsilon_L^{\mu\nu\rho\sigma}
+F_{\mu\nu}^AF_{\rho\sigma}^B.
+\end{aligned}}
+\tag{4B.15a}
 $$
 
 ### 4B.3 Direct Euclidean component projection
@@ -360,6 +418,34 @@ $$
 =-\frac h4\kappa_{AB}Y_E^{Aij}Y_{E,ij}^B
 +\frac h2\kappa_{AB}\mu_E^A\mu_E^B.}
 \tag{4B.18}
+$$
+
+The Euclidean auxiliary equations are
+
+$$
+F=\widetilde F=0,
+\qquad
+\mathscr D=-\mu_E,
+\tag{4B.18a}
+$$
+
+and the Euclidean on-shell density is
+
+$$
+\boxed{
+\begin{aligned}
+\mathcal L_{E,\mathrm{on}}^{(2)}={}&
+h\kappa_{AB}\Big[
++\frac14F_{mn}^AF_{mn}^B
++(\mathcal D_m\widetilde\phi^A)(\mathcal D_m\phi^B)
++\widetilde\lambda^A\bar\sigma_E^m\mathcal D_m\lambda^B
++\widetilde\psi^A\bar\sigma_E^m\mathcal D_m\psi^B
++\frac12\mu_E^A\mu_E^B\Big]\\
+&+\sqrt2h c_{ACD}\widetilde\phi^D\lambda^A\psi^C
+-\sqrt2h c_{ACD}\widetilde\psi^D\widetilde\lambda^A\phi^C
+-\frac i8\mathfrak k_{AB}\epsilon_E^{mnrs}F_{mn}^AF_{rs}^B.
+\end{aligned}}
+\tag{4B.18b}
 $$
 
 Equations (4B.17)--(4B.18) agree termwise with
@@ -863,7 +949,9 @@ $$
 \varepsilon^{ij}(\chi_i\times\chi_j)
 +\frac1{\sqrt2}\phi\,
 \varepsilon_{ij}(\bar\chi^i\times\bar\chi^j)
-\Big],
+\Big]
+-\frac18\mathfrak k_{AB}\epsilon_L^{\mu\nu\rho\sigma}
+F_{\mu\nu}^AF_{\rho\sigma}^B,
 \end{aligned}}
 \tag{4B.33L8}
 $$
