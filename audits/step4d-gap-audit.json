@@ -1,0 +1,252 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-04D-CLASSICAL-N1-HOLOMORPHIC-TWIST-001",
+  "contract": "contracts/foundations/step-04d-classical-n1-holomorphic-twist.md",
+  "result": "PASS_WITH_EXPLICIT_P2_SCOPE_BOUNDARIES",
+  "taxonomy": [
+    "G-DEF",
+    "G-IDX",
+    "G-SIGN",
+    "G-ALG",
+    "G-OP",
+    "G-THM",
+    "G-PROJ",
+    "G-NORM",
+    "G-SCOPE"
+  ],
+  "resolved_findings": [
+    {
+      "id": "HT-RESOLVED-01",
+      "type": "G-DEF",
+      "location": "4D.24-4D.31",
+      "claim": "The residual component gauge theory has a complete minimal BV cotangent theory.",
+      "missing_step_before_repair": "No component ghost-antifield ledger or component master action had been defined.",
+      "minimal_repair": "Define every component field, antifield, ghost number, parity, odd pairing, BRST rule, and direct CME calculation.",
+      "severity": "P0",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "HT-RESOLVED-02",
+      "type": "G-DEF",
+      "location": "4D.32-4D.36",
+      "claim": "Q is a degree-one differential after the holomorphic twist.",
+      "missing_step_before_repair": "The U(1)_R charges and antifield regrading were absent.",
+      "minimal_repair": "Derive the pure-action R symmetry, derive r(Q) from the component rules, and define deg_HT=gh_BV-r.",
+      "severity": "P0",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "HT-RESOLVED-03",
+      "type": "G-THM",
+      "location": "4D.1, 4D.74-4D.98",
+      "claim": "The full twisted BV space is directly symplectomorphic to holomorphic BF.",
+      "missing_step_before_repair": "The claimed spaces have different dimensions.",
+      "minimal_repair": "Replace the false statement by an exact canonical product with T*[-1]V_ctr, then display a cyclic strong deformation retract.",
+      "severity": "P0",
+      "status": "RESOLVED_BY_CORRECTED_THEOREM"
+    },
+    {
+      "id": "HT-RESOLVED-04",
+      "type": "G-OP",
+      "location": "4D.37-4D.43",
+      "claim": "delta=s+Q is square-zero on the complete field algebra.",
+      "missing_step_before_repair": "Qc and the anticommutator sQ+Qs had not been fixed.",
+      "minimal_repair": "Set Qc=0 and expand the covariant-field and connection anticommutators separately.",
+      "severity": "P1",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "HT-RESOLVED-05",
+      "type": "G-ALG",
+      "location": "4D.44-4D.57",
+      "claim": "The Euclidean action can be removed by a BV canonical transform.",
+      "missing_step_before_repair": "No exact Q-primitive with all bosonic, fermionic, and topological terms had been shown.",
+      "minimal_repair": "Expand QPsi_0, prove the six-curvature polynomial identity, expand the fermion kinetic term, and eliminate integral P only under the declared compact-support scope.",
+      "severity": "P1",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "HT-RESOLVED-06",
+      "type": "G-SIGN",
+      "location": "4D.58-4D.73",
+      "claim": "Deleting Q-doublets preserves the BV odd symplectic structure.",
+      "missing_step_before_repair": "A field-only deletion is not canonical and raw antifields cannot be reused after a derivative-dependent field map.",
+      "minimal_repair": "Use an exact cotangent shift, an unweighted super-Darboux potential, and the complete derivative-dependent cotangent lift with every Frechet-transpose antifield row displayed.",
+      "severity": "P1",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "HT-RESOLVED-07",
+      "type": "G-NORM",
+      "location": "4D.78-4D.87",
+      "claim": "The horizontal master action equals standard holomorphic BF with fixed normalization.",
+      "missing_step_before_repair": "The volume factor, one-quarter antifield coefficients, and transformed origin of B were absent.",
+      "minimal_repair": "Use Omega wedge barOmega=-4d4x and expand all three antiholomorphic-degree products.",
+      "severity": "P1",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "HT-RESOLVED-08",
+      "type": "G-THM",
+      "location": "4D.88-4D.91",
+      "claim": "The reduced action satisfies the classical master equation.",
+      "missing_step_before_repair": "The base-field squares, antifield Hamiltonian vector field, and antifield squares had not all been expanded.",
+      "minimal_repair": "Differentiate the horizontal action with respect to all eight coordinates and expand every field and antifield square through covariant-derivative and graded-Jacobi cancellation.",
+      "severity": "P1",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "HT-RESOLVED-09",
+      "type": "G-PROJ",
+      "location": "4D.92-4D.98",
+      "claim": "The vertical cotangent factor can be projected out as an acyclic sector.",
+      "missing_step_before_repair": "No homotopy or cotangent-dual cyclicity check was supplied.",
+      "minimal_repair": "Give h eta_i=u_i and hK=w, display the six dual differential and homotopy entries with signs, and verify delta h+h delta=1-ip and cyclicity on all twelve coordinates.",
+      "severity": "P1",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "HT-RESOLVED-10",
+      "type": "G-NORM",
+      "location": "4D.7c and 4D.16-4D.18",
+      "claim": "The self-contained parent supersymmetry rule and the six-pair component calculation have the same normalization.",
+      "missing_step_before_repair": "An extra factor two was initially placed in front of a full antisymmetric Einstein sum.",
+      "minimal_repair": "Use one full mn sum with coefficient minus one, equivalently six independent m<n terms with coefficient minus two, and verify both constructions agree.",
+      "severity": "P0",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "HT-RESOLVED-11",
+      "type": "G-IDX",
+      "location": "4D.7a, 4D.24, 4D.30, 4D.72-4D.73",
+      "claim": "The dotted gaugino and its antifield are dual coordinates in the displayed cotangent map.",
+      "missing_step_before_repair": "Upper dotted components were used in the Q-rules while lower dotted components were listed as BV coordinates.",
+      "minimal_repair": "Choose tilde-lambda upper-dot-a as the independent coordinate, choose the lower-dotted antifield as its dual, and recompute both eta transpose entries.",
+      "severity": "P1",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "HT-RESOLVED-12",
+      "type": "G-PROJ",
+      "location": "4D.70-4D.74",
+      "claim": "The nonlinear field map is lifted to the complete BV cotangent complex.",
+      "missing_step_before_repair": "The c-star, A-bar-star, u-star, and w-star rows and their integration-by-parts signs were not displayed.",
+      "minimal_repair": "Expand d eta, dZ, and dK, show the compact-support and invariant-pairing transposes, list every nontrivial antifield row, and contract the one-form equality with delta coefficient by coefficient.",
+      "severity": "P1",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "HT-RESOLVED-13",
+      "type": "G-ALG",
+      "location": "4D.55",
+      "claim": "The Chern-Weil identity is proved using only the defined invariant bilinear pairing.",
+      "missing_step_before_repair": "An ill-typed fourfold trace expression was used for the quartic term.",
+      "minimal_repair": "Use graded Jacobi to prove A times (A times A)=0 and invariant pairing to obtain pairing(A times A,A times A)=0.",
+      "severity": "P1",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "HT-RESOLVED-14",
+      "type": "G-OP",
+      "location": "4D.90a-4D.91",
+      "claim": "The full hBF Hamiltonian vector field is square-zero.",
+      "missing_step_before_repair": "Only the four base-field squares were displayed.",
+      "minimal_repair": "Display delta B, delta A-bar-star, and delta c-star, then expand all four antifield squares including the curvature commutator and mixed Jacobi identity.",
+      "severity": "P1",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "HT-RESOLVED-15",
+      "type": "G-SIGN",
+      "location": "4D.12a",
+      "claim": "The gauge-covariant closure vector agrees with the displayed commutator order.",
+      "missing_step_before_repair": "The sign of v for [delta-epsilon,delta-bar-epsilon] was reversed.",
+      "minimal_repair": "Set v=-2 epsilon sigma_E bar-epsilon for the fixed order.",
+      "severity": "P1",
+      "status": "RESOLVED"
+    }
+  ],
+  "open_findings": [
+    {
+      "id": "HT-GAP-01",
+      "type": "G-SCOPE",
+      "location": "4D.30 and 4D.100",
+      "claim_not_made": "The unconstrained Step-3D superfield BV theory canonically reduces to the residual component BV theory used here.",
+      "missing_step": "The supergauge Wess-Zumino reduction, superghost doublets, and their cotangent lift are not constructed.",
+      "minimal_repair": "Add a separate contract deriving the residual component BV complex from the Step-3D superfield BV complex.",
+      "severity": "P2",
+      "status": "OPEN_SCOPE_EXTENSION"
+    },
+    {
+      "id": "HT-GAP-02",
+      "type": "G-SCOPE",
+      "location": "4D.55-4D.57 and 4D.100",
+      "claim_not_made": "The topological functional vanishes on nontrivial bundles, instanton sectors, manifolds with boundary, or non-compact-support fields.",
+      "missing_step": "Global bundle and boundary data are outside the declared ordinary-space sector.",
+      "minimal_repair": "Retain (g^-2-ik) integral P and specify the global integration sector and boundary action.",
+      "severity": "P2",
+      "status": "OPEN_SCOPE_EXTENSION"
+    },
+    {
+      "id": "HT-GAP-03",
+      "type": "G-SCOPE",
+      "location": "4D.100",
+      "claim_not_made": "Holomorphic twist commutes with quantum BV quantization.",
+      "missing_step": "No regulator, BV density, quantum master action, or anomaly obstruction has been selected.",
+      "minimal_repair": "Construct the regulated QME and calculate the obstruction to the canonical reduction.",
+      "severity": "P2",
+      "status": "OPEN_SCOPE_EXTENSION"
+    }
+  ],
+  "dependency_graph": [
+    "component BV definition -> R regrading -> delta=s+Q",
+    "delta=s+Q -> exact Q primitive -> canonical cotangent shift",
+    "canonical cotangent shift -> triangular field map -> cotangent lift",
+    "cotangent lift -> hBF packaging plus acyclic factor -> cyclic SDR",
+    "HT-GAP-01 -> optional superfield-level classical extension",
+    "HT-GAP-02 -> optional global classical extension",
+    "HT-GAP-03 -> separate quantum-legality project"
+  ],
+  "repair_queue": [],
+  "spot_checks": [
+    {
+      "id": "SPOT-01",
+      "target": "Q lambda_1",
+      "calculation": "All six independent F_mn coefficients were multiplied through sigma_E^{mn}; the residual against 4F_bar1bar2 is zero.",
+      "result": "PASS"
+    },
+    {
+      "id": "SPOT-02",
+      "target": "Q Psi_0",
+      "calculation": "The curvature polynomial, auxiliary square, fermion derivative decomposition, and topological density were independently expanded; every residual coefficient is zero.",
+      "result": "PASS"
+    },
+    {
+      "id": "SPOT-03",
+      "target": "hBF odd pairing and action",
+      "calculation": "Omega wedge barOmega=-4d4x and every one-quarter coefficient in B were multiplied explicitly; the four odd-pairing coefficients and five action coefficients match the component BV Hamiltonian.",
+      "result": "PASS"
+    },
+    {
+      "id": "SPOT-04",
+      "target": "complete cotangent lift",
+      "calculation": "All eleven independent scalar, derivative-transpose, and Lie-transpose coefficients were checked against the explicit old-to-final antifield rows.",
+      "result": "PASS"
+    },
+    {
+      "id": "SPOT-05",
+      "target": "full horizontal CME",
+      "calculation": "The base and antifield squares were independently expanded; connection-antifield derivative terms, the curvature commutator, and the mixed c-alpha-B Jacobi coefficients all vanish exactly.",
+      "result": "PASS"
+    }
+  ],
+  "post_resolution": {
+    "P0": [],
+    "P1": [],
+    "P2": [
+      "HT-GAP-01",
+      "HT-GAP-02",
+      "HT-GAP-03"
+    ]
+  }
+}

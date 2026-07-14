@@ -471,6 +471,67 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertTrue(any("external leg" in item for item in task["acceptance"]))
         self.assertTrue(any("isolated triangle" in item for item in task["forbidden_inputs"]))
 
+    def test_step4d_classical_holomorphic_twist_registration(self) -> None:
+        task = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
+        if task["id"] != "CONTRACT-STEP-04D-CLASSICAL-N1-HOLOMORPHIC-TWIST-001":
+            self.skipTest("Step-4D classical holomorphic-twist task is not current")
+        self.assertEqual(task["type"], "CONTRACT_CHANGE")
+        self.assertEqual(task["status"], "SPECIFIED")
+        self.assertTrue(any("odd-symplectic reduction" in item for item in task["outcome"].split(";")))
+        self.assertTrue(any("contracting homotopy" in item for item in task["forbidden_inputs"]))
+        self.assertEqual(len(task["acceptance"]), 13)
+
+        manifest = json.loads((ROOT / "contracts/manifest.yaml").read_text(encoding="utf-8"))
+        entry = next(
+            item
+            for item in manifest["contracts"]
+            if item["id"] == "FOUNDATION-CLASSICAL-N1-HOLOMORPHIC-TWIST-004D"
+        )
+        self.assertEqual(
+            entry["path"],
+            "contracts/foundations/step-04d-classical-n1-holomorphic-twist.md",
+        )
+        self.assertEqual(entry["status"], "DERIVED_UNFROZEN")
+
+    def test_step4d_classical_holomorphic_twist_surface(self) -> None:
+        path = ROOT / "contracts/foundations/step-04d-classical-n1-holomorphic-twist.md"
+        if not path.exists():
+            self.skipTest("Step-4D classical holomorphic-twist contract is not registered")
+        text = path.read_text(encoding="utf-8")
+        numeric_tags = [int(value) for value in re.findall(r"\\tag\{4D\.(\d+)\}", text)]
+        self.assertEqual(numeric_tags, list(range(1, 102)))
+        for subtag in ("3a", "7a", "7b", "7c", "7d", "12a", "29a"):
+            self.assertIn(rf"\tag{{4D.{subtag}}}", text)
+        self.assertNotIn(r"\sim", text)
+        self.assertNotIn(r"\approx", text)
+        for required in (
+            r"Q^2=0",
+            r"S_{\mathrm{hBF}}",
+            r"\Omega\wedge\bar\Omega",
+            r"\delta h+h\delta",
+            r"\mathrm{P0}=\varnothing",
+            r"\mathrm{P1}=\varnothing",
+        ):
+            self.assertIn(required, text)
+
+    def test_step4d_classical_holomorphic_twist_exact_verifier(self) -> None:
+        script = ROOT / "scripts/verify_step4d_classical_n1_holomorphic_twist.py"
+        audit_path = ROOT / "audits/step4d-classical-n1-holomorphic-twist-verification.json"
+        self.assertTrue(script.is_file())
+        self.assertTrue(audit_path.is_file())
+        expected = audit_path.read_text(encoding="utf-8")
+        subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
+        audit = json.loads(expected)
+        self.assertEqual(audit["status"], "PASS")
+        self.assertEqual(audit["totals"], {"exact_checks": 95, "failed_checks": 0})
+        self.assertTrue(all(item["failed"] == 0 for item in audit["categories"].values()))
+
     def test_step_1_formula_surface(self) -> None:
         text = (ROOT / "contracts/foundations/step-01-supersymmetry-commutator.md").read_text(encoding="utf-8")
         tags = {int(value) for value in re.findall(r"\\tag\{1\.(\d+)\}", text)}

@@ -1,0 +1,1486 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-04D-CLASSICAL-N1-HOLOMORPHIC-TWIST-001",
+  "contract": "contracts/foundations/step-04d-classical-n1-holomorphic-twist.md",
+  "status": "PASS",
+  "totals": {
+    "exact_checks": 95,
+    "failed_checks": 0
+  },
+  "categories": {
+    "CME": {
+      "checks": 11,
+      "failed": 0
+    },
+    "Q_primitive": {
+      "checks": 2,
+      "failed": 0
+    },
+    "component_Q": {
+      "checks": 8,
+      "failed": 0
+    },
+    "contract_surface": {
+      "checks": 9,
+      "failed": 0
+    },
+    "contraction": {
+      "checks": 7,
+      "failed": 0
+    },
+    "coordinates": {
+      "checks": 7,
+      "failed": 0
+    },
+    "cotangent_lift": {
+      "checks": 11,
+      "failed": 0
+    },
+    "forms": {
+      "checks": 2,
+      "failed": 0
+    },
+    "hBF_packaging": {
+      "checks": 5,
+      "failed": 0
+    },
+    "nilpotence": {
+      "checks": 3,
+      "failed": 0
+    },
+    "odd_symplectic": {
+      "checks": 4,
+      "failed": 0
+    },
+    "sigma_clifford": {
+      "checks": 16,
+      "failed": 0
+    },
+    "sigma_mn": {
+      "checks": 6,
+      "failed": 0
+    },
+    "translation": {
+      "checks": 4,
+      "failed": 0
+    }
+  },
+  "checks": [
+    {
+      "category": "sigma_clifford",
+      "name": "sigma_bar_sigma_1_1",
+      "result": "PASS",
+      "evidence": [
+        [
+          "(2,0)",
+          "(0,0)"
+        ],
+        [
+          "(0,0)",
+          "(2,0)"
+        ]
+      ]
+    },
+    {
+      "category": "sigma_clifford",
+      "name": "sigma_bar_sigma_1_2",
+      "result": "PASS",
+      "evidence": [
+        [
+          "(0,0)",
+          "(0,0)"
+        ],
+        [
+          "(0,0)",
+          "(0,0)"
+        ]
+      ]
+    },
+    {
+      "category": "sigma_clifford",
+      "name": "sigma_bar_sigma_1_3",
+      "result": "PASS",
+      "evidence": [
+        [
+          "(0,0)",
+          "(0,0)"
+        ],
+        [
+          "(0,0)",
+          "(0,0)"
+        ]
+      ]
+    },
+    {
+      "category": "sigma_clifford",
+      "name": "sigma_bar_sigma_1_4",
+      "result": "PASS",
+      "evidence": [
+        [
+          "(0,0)",
+          "(0,0)"
+        ],
+        [
+          "(0,0)",
+          "(0,0)"
+        ]
+      ]
+    },
+    {
+      "category": "sigma_clifford",
+      "name": "sigma_bar_sigma_2_1",
+      "result": "PASS",
+      "evidence": [
+        [
+          "(0,0)",
+          "(0,0)"
+        ],
+        [
+          "(0,0)",
+          "(0,0)"
+        ]
+      ]
+    },
+    {
+      "category": "sigma_clifford",
+      "name": "sigma_bar_sigma_2_2",
+      "result": "PASS",
+      "evidence": [
+        [
+          "(2,0)",
+          "(0,0)"
+        ],
+        [
+          "(0,0)",
+          "(2,0)"
+        ]
+      ]
+    },
+    {
+      "category": "sigma_clifford",
+      "name": "sigma_bar_sigma_2_3",
+      "result": "PASS",
+      "evidence": [
+        [
+          "(0,0)",
+          "(0,0)"
+        ],
+        [
+          "(0,0)",
+          "(0,0)"
+        ]
+      ]
+    },
+    {
+      "category": "sigma_clifford",
+      "name": "sigma_bar_sigma_2_4",
+      "result": "PASS",
+      "evidence": [
+        [
+          "(0,0)",
+          "(0,0)"
+        ],
+        [
+          "(0,0)",
+          "(0,0)"
+        ]
+      ]
+    },
+    {
+      "category": "sigma_clifford",
+      "name": "sigma_bar_sigma_3_1",
+      "result": "PASS",
+      "evidence": [
+        [
+          "(0,0)",
+          "(0,0)"
+        ],
+        [
+          "(0,0)",
+          "(0,0)"
+        ]
+      ]
+    },
+    {
+      "category": "sigma_clifford",
+      "name": "sigma_bar_sigma_3_2",
+      "result": "PASS",
+      "evidence": [
+        [
+          "(0,0)",
+          "(0,0)"
+        ],
+        [
+          "(0,0)",
+          "(0,0)"
+        ]
+      ]
+    },
+    {
+      "category": "sigma_clifford",
+      "name": "sigma_bar_sigma_3_3",
+      "result": "PASS",
+      "evidence": [
+        [
+          "(2,0)",
+          "(0,0)"
+        ],
+        [
+          "(0,0)",
+          "(2,0)"
+        ]
+      ]
+    },
+    {
+      "category": "sigma_clifford",
+      "name": "sigma_bar_sigma_3_4",
+      "result": "PASS",
+      "evidence": [
+        [
+          "(0,0)",
+          "(0,0)"
+        ],
+        [
+          "(0,0)",
+          "(0,0)"
+        ]
+      ]
+    },
+    {
+      "category": "sigma_clifford",
+      "name": "sigma_bar_sigma_4_1",
+      "result": "PASS",
+      "evidence": [
+        [
+          "(0,0)",
+          "(0,0)"
+        ],
+        [
+          "(0,0)",
+          "(0,0)"
+        ]
+      ]
+    },
+    {
+      "category": "sigma_clifford",
+      "name": "sigma_bar_sigma_4_2",
+      "result": "PASS",
+      "evidence": [
+        [
+          "(0,0)",
+          "(0,0)"
+        ],
+        [
+          "(0,0)",
+          "(0,0)"
+        ]
+      ]
+    },
+    {
+      "category": "sigma_clifford",
+      "name": "sigma_bar_sigma_4_3",
+      "result": "PASS",
+      "evidence": [
+        [
+          "(0,0)",
+          "(0,0)"
+        ],
+        [
+          "(0,0)",
+          "(0,0)"
+        ]
+      ]
+    },
+    {
+      "category": "sigma_clifford",
+      "name": "sigma_bar_sigma_4_4",
+      "result": "PASS",
+      "evidence": [
+        [
+          "(2,0)",
+          "(0,0)"
+        ],
+        [
+          "(0,0)",
+          "(2,0)"
+        ]
+      ]
+    },
+    {
+      "category": "sigma_mn",
+      "name": "sigma_1_2",
+      "result": "PASS",
+      "evidence": [
+        [
+          "(0,1/2)",
+          "(0,0)"
+        ],
+        [
+          "(0,0)",
+          "(0,-1/2)"
+        ]
+      ]
+    },
+    {
+      "category": "sigma_mn",
+      "name": "sigma_1_3",
+      "result": "PASS",
+      "evidence": [
+        [
+          "(0,0)",
+          "(-1/2,0)"
+        ],
+        [
+          "(1/2,0)",
+          "(0,0)"
+        ]
+      ]
+    },
+    {
+      "category": "sigma_mn",
+      "name": "sigma_2_3",
+      "result": "PASS",
+      "evidence": [
+        [
+          "(0,0)",
+          "(0,1/2)"
+        ],
+        [
+          "(0,1/2)",
+          "(0,0)"
+        ]
+      ]
+    },
+    {
+      "category": "sigma_mn",
+      "name": "sigma_1_4",
+      "result": "PASS",
+      "evidence": [
+        [
+          "(0,0)",
+          "(0,-1/2)"
+        ],
+        [
+          "(0,-1/2)",
+          "(0,0)"
+        ]
+      ]
+    },
+    {
+      "category": "sigma_mn",
+      "name": "sigma_2_4",
+      "result": "PASS",
+      "evidence": [
+        [
+          "(0,0)",
+          "(-1/2,0)"
+        ],
+        [
+          "(1/2,0)",
+          "(0,0)"
+        ]
+      ]
+    },
+    {
+      "category": "sigma_mn",
+      "name": "sigma_3_4",
+      "result": "PASS",
+      "evidence": [
+        [
+          "(0,-1/2)",
+          "(0,0)"
+        ],
+        [
+          "(0,0)",
+          "(0,1/2)"
+        ]
+      ]
+    },
+    {
+      "category": "coordinates",
+      "name": "complex_map_times_inverse",
+      "result": "PASS",
+      "evidence": [
+        [
+          "(1,0)",
+          "(0,0)",
+          "(0,0)",
+          "(0,0)"
+        ],
+        [
+          "(0,0)",
+          "(1,0)",
+          "(0,0)",
+          "(0,0)"
+        ],
+        [
+          "(0,0)",
+          "(0,0)",
+          "(1,0)",
+          "(0,0)"
+        ],
+        [
+          "(0,0)",
+          "(0,0)",
+          "(0,0)",
+          "(1,0)"
+        ]
+      ]
+    },
+    {
+      "category": "coordinates",
+      "name": "complex_inverse_times_map",
+      "result": "PASS",
+      "evidence": [
+        [
+          "(1,0)",
+          "(0,0)",
+          "(0,0)",
+          "(0,0)"
+        ],
+        [
+          "(0,0)",
+          "(1,0)",
+          "(0,0)",
+          "(0,0)"
+        ],
+        [
+          "(0,0)",
+          "(0,0)",
+          "(1,0)",
+          "(0,0)"
+        ],
+        [
+          "(0,0)",
+          "(0,0)",
+          "(0,0)",
+          "(1,0)"
+        ]
+      ]
+    },
+    {
+      "category": "translation",
+      "name": "sigma_first_row_dot1",
+      "result": "PASS",
+      "evidence": [
+        "(0,0)",
+        "(0,0)",
+        "(0,-1)",
+        "(1,0)"
+      ]
+    },
+    {
+      "category": "translation",
+      "name": "sigma_first_row_dot2",
+      "result": "PASS",
+      "evidence": [
+        "(0,-1)",
+        "(-1,0)",
+        "(0,0)",
+        "(0,0)"
+      ]
+    },
+    {
+      "category": "translation",
+      "name": "Q_barQ_dot1_coefficients",
+      "result": "PASS",
+      "evidence": [
+        "(0,0)",
+        "(0,0)",
+        "(0,2)",
+        "(-2,0)"
+      ]
+    },
+    {
+      "category": "translation",
+      "name": "Q_barQ_dot2_coefficients",
+      "result": "PASS",
+      "evidence": [
+        "(0,2)",
+        "(2,0)",
+        "(0,0)",
+        "(0,0)"
+      ]
+    },
+    {
+      "category": "coordinates",
+      "name": "F_bar1_bar2",
+      "result": "PASS",
+      "evidence": {
+        "F13": "(1/4,0)",
+        "F14": "(0,1/4)",
+        "F23": "(0,-1/4)",
+        "F24": "(1/4,0)"
+      }
+    },
+    {
+      "category": "coordinates",
+      "name": "F_z1_z2",
+      "result": "PASS",
+      "evidence": {
+        "F13": "(1/4,0)",
+        "F14": "(0,-1/4)",
+        "F23": "(0,1/4)",
+        "F24": "(1/4,0)"
+      }
+    },
+    {
+      "category": "coordinates",
+      "name": "F_z1_bar1",
+      "result": "PASS",
+      "evidence": {
+        "F12": "(0,-1/2)"
+      }
+    },
+    {
+      "category": "coordinates",
+      "name": "F_z2_bar2",
+      "result": "PASS",
+      "evidence": {
+        "F34": "(0,1/2)"
+      }
+    },
+    {
+      "category": "coordinates",
+      "name": "Z_from_complex_curvature",
+      "result": "PASS",
+      "evidence": {
+        "F12": "(1,0)",
+        "F34": "(-1,0)"
+      }
+    },
+    {
+      "category": "component_Q",
+      "name": "Q_lambda_1",
+      "result": "PASS",
+      "evidence": {
+        "F13": "(1,0)",
+        "F14": "(0,1)",
+        "F23": "(0,-1)",
+        "F24": "(1,0)"
+      }
+    },
+    {
+      "category": "component_Q",
+      "name": "Q_lambda_2",
+      "result": "PASS",
+      "evidence": {
+        "D": "(0,-1)",
+        "F12": "(0,1)",
+        "F34": "(0,-1)"
+      }
+    },
+    {
+      "category": "component_Q",
+      "name": "full_Einstein_sum_matches_six_pairs_lambda1",
+      "result": "PASS",
+      "evidence": {
+        "F13": "(1,0)",
+        "F14": "(0,1)",
+        "F23": "(0,-1)",
+        "F24": "(1,0)"
+      }
+    },
+    {
+      "category": "component_Q",
+      "name": "full_Einstein_sum_matches_six_pairs_lambda2",
+      "result": "PASS",
+      "evidence": {
+        "D": "(0,-1)",
+        "F12": "(0,1)",
+        "F34": "(0,-1)"
+      }
+    },
+    {
+      "category": "component_Q",
+      "name": "Q_A_z1",
+      "result": "PASS",
+      "evidence": {
+        "t2": "(0,-1)"
+      }
+    },
+    {
+      "category": "component_Q",
+      "name": "Q_A_bar1",
+      "result": "PASS",
+      "evidence": {}
+    },
+    {
+      "category": "component_Q",
+      "name": "Q_A_z2",
+      "result": "PASS",
+      "evidence": {
+        "t1": "(0,-1)"
+      }
+    },
+    {
+      "category": "component_Q",
+      "name": "Q_A_bar2",
+      "result": "PASS",
+      "evidence": {}
+    },
+    {
+      "category": "Q_primitive",
+      "name": "bosonic_QPsi_identity",
+      "result": "PASS",
+      "evidence": {}
+    },
+    {
+      "category": "Q_primitive",
+      "name": "fermionic_QPsi_identity",
+      "result": "PASS",
+      "evidence": {
+        "('l2', 'b1', 't2')": "(0,-2)",
+        "('l2', 'b2', 't1')": "(0,-2)",
+        "('l1', 'z1', 't1')": "(0,2)",
+        "('l1', 'z2', 't2')": "(0,-2)"
+      }
+    },
+    {
+      "category": "nilpotence",
+      "name": "QD_derived_from_sigma",
+      "result": "PASS",
+      "evidence": {
+        "('b1', 't2')": "(-2,0)",
+        "('b2', 't1')": "(-2,0)"
+      }
+    },
+    {
+      "category": "nilpotence",
+      "name": "QZ_derived_from_QA",
+      "result": "PASS",
+      "evidence": {
+        "('b1', 't2')": "(-2,0)",
+        "('b2', 't1')": "(-2,0)"
+      }
+    },
+    {
+      "category": "nilpotence",
+      "name": "QH_equals_zero",
+      "result": "PASS",
+      "evidence": {}
+    },
+    {
+      "category": "forms",
+      "name": "Omega_barOmega_volume_by_wedge",
+      "result": "PASS",
+      "evidence": {
+        "(0, 1, 2, 3)": "(-4,0)"
+      }
+    },
+    {
+      "category": "forms",
+      "name": "F_wedge_F_equals_2P_volume",
+      "result": "PASS",
+      "evidence": {
+        "F12*F34": "(2,0)",
+        "F13*F24": "(-2,0)",
+        "F14*F23": "(2,0)"
+      }
+    },
+    {
+      "category": "odd_symplectic",
+      "name": "B_alpha",
+      "result": "PASS",
+      "evidence": "(-4,0)"
+    },
+    {
+      "category": "odd_symplectic",
+      "name": "Abar1star_Abar1",
+      "result": "PASS",
+      "evidence": "(1,0)"
+    },
+    {
+      "category": "odd_symplectic",
+      "name": "Abar2star_Abar2",
+      "result": "PASS",
+      "evidence": "(1,0)"
+    },
+    {
+      "category": "odd_symplectic",
+      "name": "cstar_c",
+      "result": "PASS",
+      "evidence": "(1,0)"
+    },
+    {
+      "category": "hBF_packaging",
+      "name": "B_F",
+      "result": "PASS",
+      "evidence": "(-4,0)"
+    },
+    {
+      "category": "hBF_packaging",
+      "name": "B_c_alpha",
+      "result": "PASS",
+      "evidence": "(-4,0)"
+    },
+    {
+      "category": "hBF_packaging",
+      "name": "Abar1star_Dbar1c",
+      "result": "PASS",
+      "evidence": "(1,0)"
+    },
+    {
+      "category": "hBF_packaging",
+      "name": "Abar2star_Dbar2c",
+      "result": "PASS",
+      "evidence": "(1,0)"
+    },
+    {
+      "category": "hBF_packaging",
+      "name": "cstar_cxc",
+      "result": "PASS",
+      "evidence": "(1/2,0)"
+    },
+    {
+      "category": "cotangent_lift",
+      "name": "lambda1_to_alpha_star",
+      "result": "PASS",
+      "evidence": "(-1/4,0)"
+    },
+    {
+      "category": "cotangent_lift",
+      "name": "tilde2_to_eta1_star",
+      "result": "PASS",
+      "evidence": "(0,-1)"
+    },
+    {
+      "category": "cotangent_lift",
+      "name": "tilde1_to_eta2_star",
+      "result": "PASS",
+      "evidence": "(0,-1)"
+    },
+    {
+      "category": "cotangent_lift",
+      "name": "D_to_K_star",
+      "result": "PASS",
+      "evidence": "(0,-1)"
+    },
+    {
+      "category": "cotangent_lift",
+      "name": "Abar_to_K_before_transpose",
+      "result": "PASS",
+      "evidence": "(-2,0)"
+    },
+    {
+      "category": "cotangent_lift",
+      "name": "Abar_to_K_after_transpose",
+      "result": "PASS",
+      "evidence": "(2,0)"
+    },
+    {
+      "category": "cotangent_lift",
+      "name": "u_to_K_before_transpose",
+      "result": "PASS",
+      "evidence": "(2,0)"
+    },
+    {
+      "category": "cotangent_lift",
+      "name": "u_to_K_after_transpose",
+      "result": "PASS",
+      "evidence": "(-2,0)"
+    },
+    {
+      "category": "cotangent_lift",
+      "name": "u_eta_Lie_transpose",
+      "result": "PASS",
+      "evidence": "(1,0)"
+    },
+    {
+      "category": "cotangent_lift",
+      "name": "c_K_Lie_transpose",
+      "result": "PASS",
+      "evidence": "(-1,0)"
+    },
+    {
+      "category": "cotangent_lift",
+      "name": "w_K_Lie_transpose",
+      "result": "PASS",
+      "evidence": "(-1,0)"
+    },
+    {
+      "category": "CME",
+      "name": "connection_square_after_graded_symmetry",
+      "result": "PASS",
+      "evidence": "0"
+    },
+    {
+      "category": "CME",
+      "name": "alpha_square_after_Jacobi",
+      "result": "PASS",
+      "evidence": "0"
+    },
+    {
+      "category": "CME",
+      "name": "alpha_curvature_cancellation",
+      "result": "PASS",
+      "evidence": "0"
+    },
+    {
+      "category": "CME",
+      "name": "B_antifield_square_Jacobi",
+      "result": "PASS",
+      "evidence": "0"
+    },
+    {
+      "category": "CME",
+      "name": "Abar1star_c_DB_cancellation",
+      "result": "PASS",
+      "evidence": "0"
+    },
+    {
+      "category": "CME",
+      "name": "Abar1star_Dc_B_cancellation",
+      "result": "PASS",
+      "evidence": "0"
+    },
+    {
+      "category": "CME",
+      "name": "Abar2star_c_DB_cancellation",
+      "result": "PASS",
+      "evidence": "0"
+    },
+    {
+      "category": "CME",
+      "name": "Abar2star_Dc_B_cancellation",
+      "result": "PASS",
+      "evidence": "0"
+    },
+    {
+      "category": "CME",
+      "name": "cstar_curvature_commutator_cancellation",
+      "result": "PASS",
+      "evidence": "0"
+    },
+    {
+      "category": "CME",
+      "name": "cstar_mixed_Jacobi_calpha_B",
+      "result": "PASS",
+      "evidence": "0"
+    },
+    {
+      "category": "CME",
+      "name": "cstar_mixed_Jacobi_alpha_cB",
+      "result": "PASS",
+      "evidence": "0"
+    },
+    {
+      "category": "contraction",
+      "name": "cotangent_d_squared",
+      "result": "PASS",
+      "evidence": [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ]
+    },
+    {
+      "category": "contraction",
+      "name": "cotangent_h_squared",
+      "result": "PASS",
+      "evidence": [
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1",
+          "0",
+          "0",
+          "0"
+        ]
+      ]
+    },
+    {
+      "category": "contraction",
+      "name": "cotangent_dh_plus_hd",
+      "result": "PASS",
+      "evidence": [
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "contraction",
+      "name": "dual_differential_signs",
+      "result": "PASS",
+      "evidence": {
+        "d_eta1star": "1",
+        "d_eta2star": "1",
+        "d_Kstar": "-1"
+      }
+    },
+    {
+      "category": "contraction",
+      "name": "dual_homotopy_signs",
+      "result": "PASS",
+      "evidence": {
+        "h_u1star": "1",
+        "h_u2star": "1",
+        "h_wstar": "-1"
+      }
+    },
+    {
+      "category": "contraction",
+      "name": "cyclic_pair_eta_u_star",
+      "result": "PASS",
+      "evidence": "0"
+    },
+    {
+      "category": "contraction",
+      "name": "cyclic_pair_K_w_star",
+      "result": "PASS",
+      "evidence": "0"
+    },
+    {
+      "category": "contract_surface",
+      "name": "numeric_tags_complete",
+      "result": "PASS",
+      "evidence": {
+        "count": 101,
+        "first": 1,
+        "last": 101
+      }
+    },
+    {
+      "category": "contract_surface",
+      "name": "subtag_12a",
+      "result": "PASS",
+      "evidence": "4D.12a"
+    },
+    {
+      "category": "contract_surface",
+      "name": "no_asymptotic_symbols",
+      "result": "PASS",
+      "evidence": {
+        "sim": 0,
+        "approx": 0
+      }
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_Q^2=0",
+      "result": "PASS",
+      "evidence": "Q^2=0"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_\\Omega\\wedge\\bar\\Omega",
+      "result": "PASS",
+      "evidence": "\\Omega\\wedge\\bar\\Omega"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_S_{\\mathrm{hBF}}",
+      "result": "PASS",
+      "evidence": "S_{\\mathrm{hBF}}"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_\\delta h+h\\delta",
+      "result": "PASS",
+      "evidence": "\\delta h+h\\delta"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_\\mathrm{P0}=\\varnothing",
+      "result": "PASS",
+      "evidence": "\\mathrm{P0}=\\varnothing"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_\\mathrm{P1}=\\varnothing",
+      "result": "PASS",
+      "evidence": "\\mathrm{P1}=\\varnothing"
+    }
+  ]
+}

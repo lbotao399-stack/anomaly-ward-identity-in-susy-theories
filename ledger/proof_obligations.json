@@ -223,7 +223,27 @@
       "state": "SPECIFIED",
       "blocking_reason": null,
       "task_sha256": "06f8c400c681f2fbb32aaccc7a44139c280513afaf8499829528ff2c38f419c7",
-      "task": "tasks/CURRENT.yaml"
+      "task": "tasks/archive/CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001.yaml"
+    },
+    {
+      "id": "CONTRACT-STEP-04D-CLASSICAL-N1-HOLOMORPHIC-TWIST-001",
+      "state": "SPECIFIED",
+      "blocking_reason": null,
+      "task_sha256": "d795e1df3b05ffd6d6ded3fe1b8e87875a6e987043641768a6187e194c2882a8",
+      "task": "tasks/CURRENT.yaml",
+      "checked_scope": {
+        "theorem": "complexified compact-support component BV theory on the trivial bundle over R4=C2",
+        "canonical_result": "holomorphic BF times an acyclic shifted-cotangent factor",
+        "unresolved": {
+          "P0": [],
+          "P1": []
+        },
+        "scope_extensions": [
+          "HT-GAP-01 superfield-to-component Wess-Zumino BV reduction",
+          "HT-GAP-02 nontrivial bundles, instanton sectors, and boundaries",
+          "HT-GAP-03 quantum twist-quantization commutation"
+        ]
+      }
     }
   ]
 }
