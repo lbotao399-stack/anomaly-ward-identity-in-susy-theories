@@ -1,0 +1,35 @@
+{
+  "id": "MIRROR-STEP-05A-NOTION-001",
+  "type": "CONTRACT_CHANGE",
+  "status": "ACCEPTED",
+  "outcome": "Publish the verified Step-4B/4C repairs and the Step-5A exact partial-scope component/BV-BRST/primitive-supergraph grammar from origin/main commit ee5cf4ef77757c2ab44cfe4a95528b88b12bc1cd to Notion without reading any Notion content.",
+  "allowed_inputs": [
+    "AUTHORITY.md",
+    "AGENTS.md",
+    "contracts/foundations/step-04b-n2-super-yang-mills.md",
+    "contracts/foundations/step-04c-n4-super-yang-mills.md",
+    "contracts/foundations/step-05a-component-bv-brst-primitive-supergraph-grammar.md",
+    "contracts/manifest.yaml",
+    "mirror/page_map.yaml",
+    "mirror/README.md",
+    "scripts/build_notion_payload.py",
+    "audits/notion_write_receipt.json"
+  ],
+  "forbidden_inputs": [
+    "Notion content",
+    "Notion fetch, search, page read, block read, or content readback",
+    "legacy repositories",
+    "other local files",
+    "unmerged branches",
+    "manual mathematical edits on the Notion side"
+  ],
+  "acceptance": [
+    "the published mathematical sources are exactly Step 4B, Step 4C, and Step 5A at verified origin/main commit ee5cf4ef77757c2ab44cfe4a95528b88b12bc1cd",
+    "the existing Step-4B and Step-4C child pages are replaced while preserving child pages, and the Step-5A child page is created only through write operations under root page 39e80ed3e5844b17b3ccf2579e2a64ca",
+    "each payload contains the Git authority header, exact source path, commit, and SHA-256",
+    "mirror page map records each Notion page id, source path, source commit, and source sha256",
+    "write receipt records the exact mutation responses and states content_readback_performed=false",
+    "the central parallel log receives the unresolved blockers first and records content_readback_performed=false",
+    "repository-policy passes after the mirror metadata update"
+  ]
+}
