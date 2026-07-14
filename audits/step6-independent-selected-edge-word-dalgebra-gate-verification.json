@@ -1,0 +1,40 @@
+{
+  "all_checks_passed": true,
+  "checks": {
+    "all_basis_outputs_equal": true,
+    "all_operator_matrices_equal": true,
+    "basis_case_count_exact": true,
+    "frozen_seed_hashes_exact": true,
+    "independent_side_has_no_shared_primitive_engine": true,
+    "local_mixed_algebra_exact": true,
+    "local_same_chirality_algebra_exact": true,
+    "no_basis_mismatch": true,
+    "no_external_result": true,
+    "open_boundaries_explicit": true,
+    "payload_hash_valid": true,
+    "schema_and_status_exact": true,
+    "selected_pair_count_exact": true
+  },
+  "counts": {
+    "basis_mismatches": 0,
+    "coefficient_basis_dimension": 16,
+    "dwordnf_normal_terms": 140,
+    "dwordnf_zero_pairs": 92,
+    "exact_basis_cases": 2272,
+    "selected_word_pairs": 142
+  },
+  "open_missing_type_ids": [
+    "MISSING_TYPE::IndependentRemainderObjectComparator",
+    "MISSING_TYPE::EdgeTaggedContactIBPToALocalSurvivors"
+  ],
+  "pair_rows_sha256": "1a071a308cde13dfcdcbefcf292a234fdcc79671d1535288a963097348e82fa5",
+  "payload_sha256": "fdd8231944415dd82b9db183085ed7f913af213eb720be270960258d40747a52",
+  "resolved_type_id": "TYPE::IndependentLocalExteriorMatrixGateForSelectedEdgeWordPairs",
+  "schema": "step6.independent_selected_edge_word_dalgebra_gate.audit.v1",
+  "script_sha256": "b8abf68e203cde926972e7871856f3fbd95a80ea7b78553615b48cd1c342b6a6",
+  "selected_word_pairs_sha256": "68fb00bee6917d76dabe58a5eafed6afb16ed061c86b52d8871d9949d4c468a5",
+  "semantic_scope": "SELECTED_EDGE_WORD_PRIMITIVE_DALGEBRA_ONLY",
+  "status": "PASS_EXACT_142_EDGE_WORD_PAIRS_X_16_INDEPENDENT_LOCAL_EXTERIOR_GATE",
+  "test_sha256": "3ef1b85a2ee90978ad5112c7e791b786ffdbc6db1d0555385c6ad7a2dc68ba8d",
+  "two_loop_AWI_coefficient_status": "UNCOMPUTED"
+}
