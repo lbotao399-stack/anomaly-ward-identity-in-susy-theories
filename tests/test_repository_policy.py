@@ -1013,6 +1013,8 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertEqual(tags, set(range(1, 82)))
         self.assertIn(r"\tag{3C.39a}", text)
         self.assertIn(r"\tag{3C.60a}", text)
+        for letter in "abcdefghijklmnop":
+            self.assertIn(rf"\tag{{3C.72{letter}}}", text)
         self.assertIn(r"\mathsf V:=\text{gauge-vector frame}", text)
         self.assertIn(r"\mathsf C:=\text{gauge-chiral frame}", text)
         self.assertIn(r"\mathsf A:=\text{gauge-antichiral frame}", text)
@@ -1020,6 +1022,18 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertIn(r"\xi_Ac_{BC}{}^A=0", text)
         self.assertIn(r"\widetilde{\mathcal B}_R\mathcal B_R", text)
         self.assertIn(r"\boldsymbol\nabla_R^{\mathsf V a}", text)
+        self.assertIn("#### 3C.6.1 Canonical matter density", text)
+        self.assertIn("#### 3C.6.2 Chiral and gauge densities", text)
+        self.assertIn(r"\partial_{RM}J_R^M", text)
+        self.assertIn(r"\mathfrak C_R^{AB}", text)
+        self.assertIn(r"\mathcal L_{L,\mathrm{can}}", text)
+        self.assertIn(r"\mathcal L_{E,\mathrm{can}}", text)
+        density_segment = text[
+            text.index("#### 3C.6.1 Canonical matter density") : text.index(
+                "### 3C.7 Wick transport"
+            )
+        ]
+        self.assertNotIn(r"\vartheta", density_segment)
         self.assertNotRegex(text, r"\^\{V(?:A|B|a|\\dot)")
         self.assertNotIn(r"\sim", text)
         self.assertNotIn(r"\approx", text)
@@ -1042,9 +1056,11 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
         audit = json.loads(expected)
         self.assertEqual(audit["status"], "PASS")
-        self.assertEqual(audit["totals"]["exact_checks"], 106)
+        self.assertEqual(audit["totals"]["exact_checks"], 206)
         self.assertEqual(audit["totals"]["failed_checks"], 0)
         self.assertTrue(all(item["failed"] == 0 for item in audit["categories"].values()))
+        self.assertEqual(audit["categories"]["component_density_binding"]["failed"], 0)
+        self.assertEqual(audit["categories"]["mutation"]["failed"], 0)
 
     def test_step_3c_audits(self) -> None:
         for relative in (

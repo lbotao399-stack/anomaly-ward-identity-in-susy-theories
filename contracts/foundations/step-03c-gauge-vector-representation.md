@@ -553,7 +553,7 @@ one obtains
 
 $$
 \begin{aligned}
-[\bar\nabla^{\mathsf C}_{R\dot a},
+{}[\bar\nabla^{\mathsf C}_{R\dot a},
 \mathcal D^{\mathsf C}_{Rb\dot b}]
 &=-\frac1{2\kappa_R}\epsilon_{\dot a\dot b}
 \bar D_R^2\Gamma^{\mathsf C}_{Rb}\\
@@ -585,7 +585,7 @@ $$
 $$
 \boxed{
 \begin{aligned}
-[\bar{\boldsymbol\nabla}^{\mathsf V}_{R\dot a},
+{}[\bar{\boldsymbol\nabla}^{\mathsf V}_{R\dot a},
 \boldsymbol{\mathcal D}^{\mathsf V}_{Rb\dot b}]
 &=u_R\epsilon_{\dot a\dot b}
 \boldsymbol{\mathcal W}^{\mathsf V}_{Rb},\\
@@ -1279,7 +1279,537 @@ $$
 \tag{3C.72}
 $$
 
-Thus the Step-3B component action is unchanged off shell.
+The equality can be checked directly as follows.
+
+#### 3C.6.1 Canonical matter density from vector-frame derivative algebra
+
+For the canonical slice of (3C.63), set
+
+$$
+\begin{gathered}
+\mathscr K_{0,R}^{\mathsf V}
+:=\widetilde{\boldsymbol\Phi}_R^{\mathsf V}
+\boldsymbol\Phi_R^{\mathsf V},
+\qquad
+\boldsymbol A_R^{\mathsf V}
+:=\bigl((\bar{\boldsymbol\nabla}_R^{\mathsf V})^{\rm row}\bigr)^2
+\widetilde{\boldsymbol\Phi}_R^{\mathsf V},\\
+\boldsymbol Z_R^{\mathsf V\dot b}
+:=(\bar{\boldsymbol\nabla}_R^{\mathsf V\dot b})^{\rm row}
+\widetilde{\boldsymbol\Phi}_R^{\mathsf V},
+\qquad
+\mathscr K_R^{\mathsf V}=\mathscr K_{0,R}^{\mathsf V},
+\qquad
+f_{R,AB},\widetilde f_{R,AB}=\text{constant}.
+\end{gathered}
+\tag{3C.72a}
+$$
+
+Because $\mathscr K_{0,R}^{\mathsf V}$ is a gauge scalar, its flat
+projector equals its vector-frame covariant projector.  Covariant chirality
+and the graded row--column Leibniz rule give
+
+$$
+\begin{aligned}
+D_{R\mathfrak A}(X_IY^I)
+&=\bigl((\boldsymbol\nabla_{R\mathfrak A}^{\mathsf V})^{\rm row}
+X\bigr)_IY^I
++(-1)^{|\mathfrak A||X|}X_I
+\boldsymbol\nabla_{R\mathfrak A}^{\mathsf V}Y^I,\\
+{}[\mathscr K_{0,R}^{\mathsf V}]_D
+&=\frac1{16}D_R^2\bar D_R^2
+(\widetilde{\boldsymbol\Phi}_R^{\mathsf V}
+\boldsymbol\Phi_R^{\mathsf V})\Big|\\
+&=\frac1{16}(\boldsymbol\nabla_R^{\mathsf V})^2
+(\bar{\boldsymbol\nabla}_R^{\mathsf V})^2
+(\widetilde{\boldsymbol\Phi}_R^{\mathsf V}
+\boldsymbol\Phi_R^{\mathsf V})\Big|,\\
+(\bar{\boldsymbol\nabla}_R^{\mathsf V})^2
+(\widetilde{\boldsymbol\Phi}_R^{\mathsf V}
+\boldsymbol\Phi_R^{\mathsf V})
+&=\boldsymbol A_R^{\mathsf V}\boldsymbol\Phi_R^{\mathsf V},\\
+(\boldsymbol\nabla_R^{\mathsf V})^2
+(\boldsymbol A_R^{\mathsf V}\boldsymbol\Phi_R^{\mathsf V})
+&=\bigl((\boldsymbol\nabla_R^{\mathsf V})^{\rm row}\bigr)^2
+\boldsymbol A_R^{\mathsf V}\,\boldsymbol\Phi_R^{\mathsf V}
++2(\boldsymbol\nabla_R^{\mathsf V a})^{\rm row}
+\boldsymbol A_R^{\mathsf V}\,
+\boldsymbol\nabla_{Ra}^{\mathsf V}\boldsymbol\Phi_R^{\mathsf V}
++\boldsymbol A_R^{\mathsf V}
+(\boldsymbol\nabla_R^{\mathsf V})^2\boldsymbol\Phi_R^{\mathsf V}.
+\end{aligned}
+\tag{3C.72b}
+$$
+
+The row-module form of (3C.16) and (3C.40) is
+
+$$
+\begin{aligned}
+{}[\boldsymbol\nabla_{R\mathfrak A}^{\mathsf V},
+\boldsymbol\nabla_{R\mathfrak B}^{\mathsf V}\}
+&=T^R_{\mathfrak A\mathfrak B}{}^{\mathfrak C}
+\boldsymbol\nabla_{R\mathfrak C}^{\mathsf V}
+-i\boldsymbol{\mathcal F}_{R\mathfrak A\mathfrak B}^{\mathsf V},\\
+{}[(\boldsymbol\nabla_{R\mathfrak A}^{\mathsf V})^{\rm row},
+(\boldsymbol\nabla_{R\mathfrak B}^{\mathsf V})^{\rm row}\}X
+&=T^R_{\mathfrak A\mathfrak B}{}^{\mathfrak C}
+(\boldsymbol\nabla_{R\mathfrak C}^{\mathsf V})^{\rm row}X\\
+&\quad+i(-1)^{(|\mathfrak A|+|\mathfrak B|)|X|}
+X\boldsymbol{\mathcal F}_{R\mathfrak A\mathfrak B}^{\mathsf V},\\
+{}[(\bar{\boldsymbol\nabla}_{R\dot c}^{\mathsf V})^{\rm row},
+\kappa_R(\boldsymbol{\mathcal D}_{Ra\dot b}^{\mathsf V})^{\rm row}]
+\widetilde{\boldsymbol\Phi}_R^{\mathsf V}
+&=-4\epsilon_{\dot c\dot b}
+\widetilde{\boldsymbol\Phi}_R^{\mathsf V}
+\boldsymbol{\mathcal W}_{Ra}^{\mathsf V},\\
+(\boldsymbol\nabla_{Ra}^{\mathsf V})^{\rm row}
+\boldsymbol A_R^{\mathsf V}
+&=2\kappa_R
+(\boldsymbol{\mathcal D}_{Ra\dot b}^{\mathsf V})^{\rm row}
+\boldsymbol Z_R^{\mathsf V\dot b}
+-8\widetilde{\boldsymbol\Phi}_R^{\mathsf V}
+\boldsymbol{\mathcal W}_{Ra}^{\mathsf V}.
+\end{aligned}
+\tag{3C.72c}
+$$
+
+Here $|\boldsymbol Z_R^{\mathsf V}|=1$.  Its parity changes the dual-row
+curvature sign.  With $\kappa_Ru_R=4$ and
+$\kappa_R^2\rho_R=4$,
+
+$$
+\begin{aligned}
+{}[(\boldsymbol\nabla_R^{\mathsf V a})^{\rm row},
+(\boldsymbol{\mathcal D}_{Ra\dot b}^{\mathsf V})^{\rm row}]
+\boldsymbol Z_R^{\mathsf V\dot b}
+&=+2u_R\boldsymbol Z_R^{\mathsf V\dot b}
+\widetilde{\boldsymbol{\mathcal W}}_{R\dot b}^{\mathsf V}
+=-2u_R\boldsymbol Z_{R\dot b}^{\mathsf V}
+\widetilde{\boldsymbol{\mathcal W}}_R^{\mathsf V\dot b},\\
+(\boldsymbol\nabla_R^{\mathsf V a})^{\rm row}
+\boldsymbol Z_R^{\mathsf V\dot b}
+&=\kappa_R(\boldsymbol{\mathcal D}_R^{\mathsf V a\dot b})^{\rm row}
+\widetilde{\boldsymbol\Phi}_R^{\mathsf V},\\
+(\boldsymbol{\mathcal D}_{Ra\dot b}^{\mathsf V})^{\rm row}
+(\boldsymbol{\mathcal D}_R^{\mathsf V a\dot b})^{\rm row}
+&=2\rho_R(\boldsymbol{\mathcal D}_{RM}^{\mathsf V})^{\rm row}
+(\boldsymbol{\mathcal D}_R^{\mathsf V M})^{\rm row},\\
+((\boldsymbol\nabla_R^{\mathsf V})^{\rm row})^2
+\boldsymbol A_R^{\mathsf V}
+&=2\kappa_R(\boldsymbol\nabla_R^{\mathsf V a})^{\rm row}
+\left[
+(\boldsymbol{\mathcal D}_{Ra\dot b}^{\mathsf V})^{\rm row}
+\boldsymbol Z_R^{\mathsf V\dot b}
+\right]
+-8(\boldsymbol\nabla_R^{\mathsf V a})^{\rm row}
+(\widetilde{\boldsymbol\Phi}_R^{\mathsf V}
+\boldsymbol{\mathcal W}_{Ra}^{\mathsf V})\\
+&=2\kappa_R^2
+(\boldsymbol{\mathcal D}_{Ra\dot b}^{\mathsf V})^{\rm row}
+(\boldsymbol{\mathcal D}_R^{\mathsf V a\dot b})^{\rm row}
+\widetilde{\boldsymbol\Phi}_R^{\mathsf V}
+-4\kappa_Ru_R\boldsymbol Z_{R\dot b}^{\mathsf V}
+\widetilde{\boldsymbol{\mathcal W}}_R^{\mathsf V\dot b}
+-8\widetilde{\boldsymbol\Phi}_R^{\mathsf V}
+\boldsymbol\nabla_R^{\mathsf V a}
+\boldsymbol{\mathcal W}_{Ra}^{\mathsf V},\\
+\bigl((\boldsymbol\nabla_R^{\mathsf V})^{\rm row}\bigr)^2
+\boldsymbol A_R^{\mathsf V}
+&=16(\boldsymbol{\mathcal D}_{RM}^{\mathsf V})^{\rm row}
+(\boldsymbol{\mathcal D}_R^{\mathsf V M})^{\rm row}
+\widetilde{\boldsymbol\Phi}_R^{\mathsf V}\\
+&\quad-16\boldsymbol Z_{R\dot b}^{\mathsf V}
+\widetilde{\boldsymbol{\mathcal W}}_R^{\mathsf V\dot b}
+-8\widetilde{\boldsymbol\Phi}_R^{\mathsf V}
+\boldsymbol\nabla_R^{\mathsf V a}
+\boldsymbol{\mathcal W}_{Ra}^{\mathsf V}.
+\end{aligned}
+\tag{3C.72d}
+$$
+
+Using the projections (3C.65)--(3C.72), the three terms of (3C.72b)
+become
+
+$$
+\begin{aligned}
+\frac1{16}
+\bigl((\boldsymbol\nabla_R^{\mathsf V})^{\rm row}\bigr)^2
+\boldsymbol A_{R,I}^{\mathsf V}\Big|\,\phi_R^I
+={}&(\mathcal D_{RM}\mathcal D_R^M\widetilde\phi_R)_I\phi_R^I
+-i\sqrt2\widetilde\psi_{R\dot a,I}(T_A)^I{}_J
+\widetilde\lambda_R^{A\dot a}\phi_R^J
++\widetilde\phi_{R,I}\mathscr D_R^A(T_A)^I{}_J\phi_R^J,\\
+\frac18(\boldsymbol\nabla_R^{\mathsf V a})^{\rm row}
+\boldsymbol A_{R,I}^{\mathsf V}\Big|\,
+\boldsymbol\nabla_{Ra}^{\mathsf V}
+\boldsymbol\Phi_R^{\mathsf V I}\Big|
+={}&-\frac{\kappa_R}{2}
+(\mathcal D_{RM}\widetilde\psi_{R\dot a})_I
+(\bar\sigma_R^M)^{\dot aa}\psi_{Ra}^I
++i\sqrt2\widetilde\phi_{R,I}(T_A)^I{}_J
+\lambda_R^{Aa}\psi_{Ra}^J,\\
+\frac1{16}\boldsymbol A_{R,I}^{\mathsf V}\Big|\,
+(\boldsymbol\nabla_R^{\mathsf V})^2
+\boldsymbol\Phi_R^{\mathsf V I}\Big|
+={}&\widetilde F_{R,I}F_R^I.
+\end{aligned}
+\tag{3C.72e}
+$$
+
+Therefore
+
+$$
+\begin{aligned}
+{}[\mathscr K_{0,R}^{\mathsf V}]_D
+={}&(\mathcal D_{RM}\mathcal D_R^M\widetilde\phi_R)_I\phi_R^I
+-\frac{\kappa_R}{2}
+(\mathcal D_{RM}\widetilde\psi_{R\dot a})_I
+(\bar\sigma_R^M)^{\dot aa}\psi_{Ra}^I
++\widetilde F_{R,I}F_R^I\\
+&+\widetilde\phi_{R,I}\mathscr D_R^A(T_A)^I{}_J\phi_R^J
++i\sqrt2\left[
+\widetilde\phi_{R,I}(T_A)^I{}_J\lambda_R^{Aa}\psi_{Ra}^J
+-\widetilde\psi_{R\dot a,I}(T_A)^I{}_J
+\widetilde\lambda_R^{A\dot a}\phi_R^J\right],\\
+J_R^M
+:={}&(\mathcal D_R^M\widetilde\phi_R)_I\phi_R^I
+-\frac{\kappa_R}{2}\widetilde\psi_{R\dot a,I}
+(\bar\sigma_R^M)^{\dot aa}\psi_{Ra}^I,\\
+\partial_{RM}J_R^M
+={}&(\mathcal D_{RM}\mathcal D_R^M\widetilde\phi_R)_I\phi_R^I
++(\mathcal D_R^M\widetilde\phi_R)_I
+(\mathcal D_{RM}\phi_R)^I\\
+&-\frac{\kappa_R}{2}
+(\mathcal D_{RM}\widetilde\psi_{R\dot a})_I
+(\bar\sigma_R^M)^{\dot aa}\psi_{Ra}^I
+-\frac{\kappa_R}{2}\widetilde\psi_{R\dot a,I}
+(\bar\sigma_R^M)^{\dot aa}(\mathcal D_{RM}\psi_{Ra})^I,\\
+\mathcal K_{0,R}^{\rm can}
+:={}&-(\mathcal D_{RM}\widetilde\phi_R)_I
+(\mathcal D_R^M\phi_R)^I
++\frac{\kappa_R}{2}\widetilde\psi_{R\dot a,I}
+(\bar\sigma_R^M)^{\dot aa}(\mathcal D_{RM}\psi_{Ra})^I
++\widetilde F_{R,I}F_R^I\\
+&+\widetilde\phi_{R,I}\mathscr D_R^A(T_A)^I{}_J\phi_R^J
++i\sqrt2\left[
+\widetilde\phi_{R,I}(T_A)^I{}_J\lambda_R^{Aa}\psi_{Ra}^J
+-\widetilde\psi_{R\dot a,I}(T_A)^I{}_J
+\widetilde\lambda_R^{A\dot a}\phi_R^J\right],\\
+{}[\mathscr K_{0,R}^{\mathsf V}]_D
+={}&\mathcal K_{0,R}^{\rm can}+\partial_{RM}J_R^M.
+\end{aligned}
+\tag{3C.72f}
+$$
+
+#### 3C.6.2 Chiral and gauge densities from vector-frame algebra
+
+Gauge invariance makes each $F$-density integrand a scalar.  Hence
+
+$$
+\begin{aligned}
+{}[\mathscr U_R^{\mathsf V}(\boldsymbol\Phi_R^{\mathsf V})]_F
+&=-\frac14(\boldsymbol\nabla_R^{\mathsf V})^2
+\mathscr U_R^{\mathsf V}(\boldsymbol\Phi_R^{\mathsf V})\Big|,\\
+(\boldsymbol\nabla_R^{\mathsf V})^2\mathscr U_R^{\mathsf V}
+&=\mathscr U_{R,I}
+(\boldsymbol\nabla_R^{\mathsf V})^2
+\boldsymbol\Phi_R^{\mathsf V I}
++\mathscr U_{R,IJ}
+\boldsymbol\nabla_R^{\mathsf V a}\boldsymbol\Phi_R^{\mathsf V I}
+\boldsymbol\nabla_{Ra}^{\mathsf V}\boldsymbol\Phi_R^{\mathsf V J},\\
+{}[\mathscr U_R^{\mathsf V}]_F
+&=\mathscr U_{R,I}F_R^I
+-\frac12\mathscr U_{R,IJ}\psi_R^{Ia}\psi_{Ra}^J,\\
+{}[\widetilde{\mathscr U}_R^{\mathsf V}]_{\widetilde F}
+&=\widetilde{\mathscr U}_R^{,I}\widetilde F_{R,I}
+-\frac12\widetilde{\mathscr U}_R^{,IJ}
+\widetilde\psi_{R\dot a,I}\widetilde\psi_{R,J}^{\dot a}.
+\end{aligned}
+\tag{3C.72g}
+$$
+
+Define
+
+$$
+\tau_L:=i,
+\qquad
+\tau_E:=-i.
+\tag{3C.72h}
+$$
+
+The decomposition (3C.44), the auxiliary projection (3C.70), and the
+curvature projection give
+
+$$
+\boxed{
+\begin{aligned}
+\boldsymbol\nabla_{Ra}^{\mathsf V}
+\boldsymbol{\mathcal W}_{Rb}^{\mathsf V}\Big|
+&=-\epsilon_{ab}\mathscr D_R
++\tau_R(\sigma_R^{MN})_{ab}F_{RMN},\\
+\bar{\boldsymbol\nabla}_{R\dot a}^{\mathsf V}
+\widetilde{\boldsymbol{\mathcal W}}_{R\dot b}^{\mathsf V}\Big|
+&=+\epsilon_{\dot a\dot b}\mathscr D_R
++\tau_R(\bar\sigma_R^{MN})_{\dot a\dot b}F_{RMN},\\
+-\frac{i}{\rho_R}&=\tau_R.
+\end{aligned}}
+\tag{3C.72i}
+$$
+
+The second spinor derivative follows from chirality and the Bianchi identity,
+without a superfield expansion:
+
+$$
+\begin{aligned}
+(\boldsymbol\nabla_R^{\mathsf V})^2
+\boldsymbol{\mathcal W}_{Ra}^{\mathsf V}
+&=-2\boldsymbol\nabla_{Ra}^{\mathsf V}
+(\boldsymbol\nabla_R^{\mathsf V b}
+\boldsymbol{\mathcal W}_{Rb}^{\mathsf V})\\
+&=+2\boldsymbol\nabla_{Ra}^{\mathsf V}
+(\bar{\boldsymbol\nabla}_R^{\mathsf V\dot b}
+\widetilde{\boldsymbol{\mathcal W}}_{R\dot b}^{\mathsf V})\\
+&=+2\kappa_R\boldsymbol{\mathcal D}^{\mathsf V}_{Ra}{}^{\dot b}
+\widetilde{\boldsymbol{\mathcal W}}_{R\dot b}^{\mathsf V}
+=-2\kappa_R\boldsymbol{\mathcal D}_{Ra\dot b}^{\mathsf V}
+\widetilde{\boldsymbol{\mathcal W}}_R^{\mathsf V\dot b},\\
+(\boldsymbol\nabla_R^{\mathsf V})^2
+\boldsymbol{\mathcal W}_{Ra}^{\mathsf V}\Big|
+&=-2i\kappa_R(\sigma_R^M)_{a\dot b}
+(\mathcal D_{RM}\widetilde\lambda_R^{\dot b})\\
+&=\begin{cases}
+4(\sigma_L^\mu)_{a\dot b}\mathcal D_\mu\bar\lambda^{\dot b},&R=L,\\
+4i(\sigma_E^m)_{a\dot b}\mathcal D_m\widetilde\lambda^{\dot b},&R=E.
+\end{cases}
+\\
+(\bar{\boldsymbol\nabla}_R^{\mathsf V})^2
+&:=\bar{\boldsymbol\nabla}_{R\dot a}^{\mathsf V}
+\bar{\boldsymbol\nabla}_R^{\mathsf V\dot a},\\
+(\bar{\boldsymbol\nabla}_R^{\mathsf V})^2
+\widetilde{\boldsymbol{\mathcal W}}_{R\dot a}^{\mathsf V}\Big|
+&=-2i\kappa_R(\sigma_R^M)_{b\dot a}
+(\mathcal D_{RM}\lambda_R^b).
+\end{aligned}
+\tag{3C.72j}
+$$
+
+For the odd strengths, the twice-graded Leibniz rule is
+
+$$
+\begin{aligned}
+(\boldsymbol\nabla_R^{\mathsf V})^2(XY)
+={}&((\boldsymbol\nabla_R^{\mathsf V})^2X)Y
++X(\boldsymbol\nabla_R^{\mathsf V})^2Y\\
+&+2(-1)^{|X|}
+(\boldsymbol\nabla_R^{\mathsf V b}X)
+(\boldsymbol\nabla_{Rb}^{\mathsf V}Y),\\
+{}[\boldsymbol{\mathcal W}_R^{\mathsf V Aa}
+\boldsymbol{\mathcal W}_{Ra}^{\mathsf V B}]_F
+=-\frac14\Big[&
+(\boldsymbol\nabla_R^{\mathsf V})^2
+\boldsymbol{\mathcal W}_R^{\mathsf V Aa}
+\boldsymbol{\mathcal W}_{Ra}^{\mathsf V B}
++\boldsymbol{\mathcal W}_R^{\mathsf V Aa}
+(\boldsymbol\nabla_R^{\mathsf V})^2
+\boldsymbol{\mathcal W}_{Ra}^{\mathsf V B}\\
+&-2(\boldsymbol\nabla_R^{\mathsf V b}
+\boldsymbol{\mathcal W}_R^{\mathsf V Aa})
+(\boldsymbol\nabla_{Rb}^{\mathsf V}
+\boldsymbol{\mathcal W}_{Ra}^{\mathsf V B})
+\Big]\Big|,\\
+M_{R,ba}^A
+&:=\boldsymbol\nabla_{Rb}^{\mathsf V}
+\boldsymbol{\mathcal W}_{Ra}^{\mathsf V A}\Big|,\\
+\mathfrak C_R^{AB}
+&:=\epsilon^{bc}\epsilon^{ad}M_{R,cd}^AM_{R,ba}^B,\\
+M_{R,ba}^A
+&=-\epsilon_{ba}\mathscr D^A
++\tau_R(\sigma_R^{MN})_{ba}F_{RMN}^A,\\
+\epsilon^{bc}\epsilon^{ad}\epsilon_{cd}\epsilon_{ba}
+&=2,\\
+\epsilon^{bc}\epsilon^{ad}\epsilon_{cd}(\sigma_R^{MN})_{ba}
+&=\epsilon^{bc}\epsilon^{ad}(\sigma_R^{MN})_{cd}\epsilon_{ba}=0,\\
+\epsilon^{bc}\epsilon^{ad}(\sigma_R^{MN})_{cd}
+(\sigma_R^{PQ})_{ba}
+&=-\operatorname{tr}_2(\sigma_R^{MN}\sigma_R^{PQ}),\\
+\tau_R^2&=-1,\\
+\mathfrak C_R^{AB}
+&=2\mathscr D^A\mathscr D^B
++\operatorname{tr}_2(\sigma_R^{MN}\sigma_R^{PQ})
+F_{RMN}^AF_{RPQ}^B,\\
+{}[\boldsymbol{\mathcal W}_R^{\mathsf V Aa}
+\boldsymbol{\mathcal W}_{Ra}^{\mathsf V B}]_F
+&=\frac12\mathfrak C_R^{AB}
++\frac{\kappa_R}{2}\left[
+\lambda_R^{Aa}(\sigma_R^M)_{a\dot b}
+\mathcal D_{RM}\widetilde\lambda_R^{B\dot b}
++(A\leftrightarrow B)\right],\\
+(\bar{\boldsymbol\nabla}_R^{\mathsf V})^2(XY)
+={}&((\bar{\boldsymbol\nabla}_R^{\mathsf V})^2X)Y
++X(\bar{\boldsymbol\nabla}_R^{\mathsf V})^2Y\\
+&+2(-1)^{|X|}
+(\bar{\boldsymbol\nabla}_{R\dot b}^{\mathsf V}X)
+(\bar{\boldsymbol\nabla}_R^{\mathsf V\dot b}Y),\\
+(\bar\sigma_R^{MN})_{\dot b\dot a}
+&:=\epsilon_{\dot b\dot c}
+(\bar\sigma_R^{MN})^{\dot c}{}_{\dot a},\\
+\widetilde M_{R,\dot b\dot a}^A
+&:=\bar{\boldsymbol\nabla}_{R\dot b}^{\mathsf V}
+\widetilde{\boldsymbol{\mathcal W}}_{R\dot a}^{\mathsf V A}\Big|\\
+&=+\epsilon_{\dot b\dot a}\mathscr D^A
++\tau_R(\bar\sigma_R^{MN})_{\dot b\dot a}F_{RMN}^A,\\
+\widetilde{\mathfrak C}_R^{AB}
+&:=\epsilon^{\dot b\dot c}\epsilon^{\dot a\dot d}
+\widetilde M_{R,\dot c\dot d}^A
+\widetilde M_{R,\dot b\dot a}^B\\
+&=2\mathscr D^A\mathscr D^B
++\operatorname{tr}_2(\bar\sigma_R^{MN}\bar\sigma_R^{PQ})
+F_{RMN}^AF_{RPQ}^B,\\
+{}[\widetilde{\boldsymbol{\mathcal W}}_{R\dot a}^{\mathsf V A}
+\widetilde{\boldsymbol{\mathcal W}}_R^{\mathsf V B\dot a}]_{\widetilde F}
+&=\frac12\widetilde{\mathfrak C}_R^{AB}
++\frac{\kappa_R}{2}\left[
+\widetilde\lambda_{R\dot a}^A(\bar\sigma_R^M)^{\dot aa}
+\mathcal D_{RM}\lambda_{Ra}^B
++(A\leftrightarrow B)\right].
+\end{aligned}
+\tag{3C.72k}
+$$
+
+The required spinor traces are
+
+$$
+\begin{aligned}
+\operatorname{tr}_2(\sigma_L^{\mu\nu}\sigma_L^{\rho\sigma})
+&=-\frac12(\eta^{\mu\rho}\eta^{\nu\sigma}
+-\eta^{\mu\sigma}\eta^{\nu\rho})
++\frac i2\epsilon_L^{\mu\nu\rho\sigma},\\
+\operatorname{tr}_2(\sigma_E^{mn}\sigma_E^{rs})
+&=-\frac12(\delta^{mr}\delta^{ns}-\delta^{ms}\delta^{nr})
++\frac12\epsilon_E^{mnrs},\\
+\operatorname{tr}_2(\bar\sigma_L^{\mu\nu}\bar\sigma_L^{\rho\sigma})
+&=-\frac12(\eta^{\mu\rho}\eta^{\nu\sigma}
+-\eta^{\mu\sigma}\eta^{\nu\rho})
+-\frac i2\epsilon_L^{\mu\nu\rho\sigma},\\
+\operatorname{tr}_2(\bar\sigma_E^{mn}\bar\sigma_E^{rs})
+&=-\frac12(\delta^{mr}\delta^{ns}-\delta^{ms}\delta^{nr})
+-\frac12\epsilon_E^{mnrs}.
+\end{aligned}
+\tag{3C.72l}
+$$
+
+Substitution into (3C.72k) gives
+
+$$
+\boxed{
+\begin{aligned}
+{}[\boldsymbol{\mathcal W}_L^{\mathsf V Aa}
+\boldsymbol{\mathcal W}_{La}^{\mathsf V B}]_F
+={}&\mathscr D^A\mathscr D^B
+-\frac12F^A_{\mu\nu}F^{B\mu\nu}
++\frac i4\epsilon_L^{\mu\nu\rho\sigma}
+F^A_{\mu\nu}F^B_{\rho\sigma}\\
+&+i\lambda^A\sigma_L^\mu\mathcal D_\mu\bar\lambda^B
++i\lambda^B\sigma_L^\mu\mathcal D_\mu\bar\lambda^A,\\
+{}[\boldsymbol{\mathcal W}_E^{\mathsf V Aa}
+\boldsymbol{\mathcal W}_{Ea}^{\mathsf V B}]_F
+={}&\mathscr D^A\mathscr D^B
+-\frac12F^A_{mn}F^B_{mn}
++\frac14\epsilon_E^{mnrs}F^A_{mn}F^B_{rs}\\
+&-\lambda^A\sigma_E^m\mathcal D_m\widetilde\lambda^B
+-\lambda^B\sigma_E^m\mathcal D_m\widetilde\lambda^A,\\
+{}[\widetilde{\boldsymbol{\mathcal W}}_{L\dot a}^{\mathsf V A}
+\widetilde{\boldsymbol{\mathcal W}}_L^{\mathsf V B\dot a}]_{\widetilde F}
+={}&\mathscr D^A\mathscr D^B
+-\frac12F^A_{\mu\nu}F^{B\mu\nu}
+-\frac i4\epsilon_L^{\mu\nu\rho\sigma}
+F^A_{\mu\nu}F^B_{\rho\sigma}\\
+&+i\widetilde\lambda^A\bar\sigma_L^\mu\mathcal D_\mu\lambda^B
++i\widetilde\lambda^B\bar\sigma_L^\mu\mathcal D_\mu\lambda^A,\\
+{}[\widetilde{\boldsymbol{\mathcal W}}_{E\dot a}^{\mathsf V A}
+\widetilde{\boldsymbol{\mathcal W}}_E^{\mathsf V B\dot a}]_{\widetilde F}
+={}&\mathscr D^A\mathscr D^B
+-\frac12F^A_{mn}F^B_{mn}
+-\frac14\epsilon_E^{mnrs}F^A_{mn}F^B_{rs}\\
+&-\widetilde\lambda^A\bar\sigma_E^m\mathcal D_m\lambda^B
+-\widetilde\lambda^B\bar\sigma_E^m\mathcal D_m\lambda^A.
+\end{aligned}}
+\tag{3C.72m}
+$$
+
+#### 3C.6.3 Canonical component actions
+
+The Abelian-quotient condition (3C.62) fixes the FI projection.  Let
+
+$$
+\begin{gathered}
+\mathfrak h_{AB}:=\operatorname{Re}f_{AB},
+\qquad
+\mathfrak k_{AB}:=\operatorname{Im}f_{AB},
+\qquad
+\mu_A^{(0)}:=\widetilde\phi_IT_A{}^I{}_J\phi^J+\xi_A,\\
+\int d^4x_R\,\xi_A
+[(\log(\widetilde{\mathcal B}_R\mathcal B_R))^A]_D
+=\int d^4x_R\,\xi_A\mathscr D_R^A.
+\end{gathered}
+\tag{3C.72n}
+$$
+
+Equations (3C.72f), (3C.72g), (3C.72m), and (3C.72n), inserted
+into (3C.63), give on the Lorentzian reality contour
+
+$$
+\boxed{
+\begin{aligned}
+\mathcal L_{L,\mathrm{can}}={}&
+-(\mathcal D_\mu\bar\phi)_I(\mathcal D^\mu\phi)^I
++i\bar\psi_{\dot a,I}(\bar\sigma_L^\mu)^{\dot aa}
+(\mathcal D_\mu\psi_a)^I
++\bar F_IF^I+\mu_A^{(0)}\mathscr D^A\\
+&+i\sqrt2\left[
+\bar\phi_IT_A{}^I{}_J\lambda^{Aa}\psi_a^J
+-\bar\psi_{\dot a,I}T_A{}^I{}_J
+\bar\lambda^{A\dot a}\phi^J\right]\\
+&+\mathscr U_IF^I-\frac12\mathscr U_{IJ}\psi^I\psi^J
++\bar{\mathscr U}^{,I}\bar F_I
+-\frac12\bar{\mathscr U}^{,IJ}
+\bar\psi_{\dot a,I}\bar\psi_J^{\dot a}\\
+&-\frac14\mathfrak h_{AB}F^A_{\mu\nu}F^{B\mu\nu}
++i\mathfrak h_{AB}\bar\lambda^A\bar\sigma_L^\mu
+\mathcal D_\mu\lambda^B
++\frac12\mathfrak h_{AB}\mathscr D^A\mathscr D^B\\
+&-\frac18\mathfrak k_{AB}\epsilon_L^{\mu\nu\rho\sigma}
+F^A_{\mu\nu}F^B_{\rho\sigma}.
+\end{aligned}}
+\tag{3C.72o}
+$$
+
+On the Euclidean Wick contour,
+
+$$
+\boxed{
+\begin{aligned}
+\mathcal L_{E,\mathrm{can}}={}&
++(\mathcal D_m\widetilde\phi)_I(\mathcal D_m\phi)^I
++\widetilde\psi_{\dot a,I}(\bar\sigma_E^m)^{\dot aa}
+(\mathcal D_m\psi_a)^I
+-\widetilde F_IF^I-\mu_A^{(0)}\mathscr D^A\\
+&-i\sqrt2\left[
+\widetilde\phi_IT_A{}^I{}_J\lambda^{Aa}\psi_a^J
+-\widetilde\psi_{\dot a,I}T_A{}^I{}_J
+\widetilde\lambda^{A\dot a}\phi^J\right]\\
+&-\mathscr U_IF^I+\frac12\mathscr U_{IJ}\psi^I\psi^J
+-\widetilde{\mathscr U}^{,I}\widetilde F_I
++\frac12\widetilde{\mathscr U}^{,IJ}
+\widetilde\psi_{\dot a,I}\widetilde\psi_J^{\dot a}\\
+&+\frac14\mathfrak h_{AB}F^A_{mn}F^B_{mn}
++\mathfrak h_{AB}\widetilde\lambda^A\bar\sigma_E^m
+\mathcal D_m\lambda^B
+-\frac12\mathfrak h_{AB}\mathscr D^A\mathscr D^B\\
+&-\frac i8\mathfrak k_{AB}\epsilon_E^{mnrs}F^A_{mn}F^B_{rs}.
+\end{aligned}}
+\tag{3C.72p}
+$$
 
 ### 3C.7 Wick transport
 
