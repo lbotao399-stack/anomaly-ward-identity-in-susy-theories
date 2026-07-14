@@ -2,7 +2,7 @@
   "schema": 1,
   "task": "CONTRACT-STEP-03C-GAUGE-VECTOR-REPRESENTATION-001",
   "contract": "contracts/foundations/step-03c-gauge-vector-representation.md",
-  "contract_sha256": "90e5211557e0a12e444ee91a174beaf7ddea9039e6f9b987eb0861f0a9ef2461",
+  "contract_sha256": "c4cc6f0504b79e02ce78030ad79b625bee6da7dff9de0f6a1ddc3b33ef2584a1",
   "checks": [
     {
       "id": "SIGNATURE_AND_INDEX_DOMAINS",
@@ -60,6 +60,16 @@
       "locked": "mathscr K superscript mathsf V is the full-superspace density; mathscr U and f are holomorphic data; mathcal I and widetilde mathcal I are the gauge-scalar kinetic integrands; varsigma_L=+1 and varsigma_E=-1 are the action signs"
     },
     {
+      "id": "VECTOR_FRAME_COMPONENT_DENSITIES",
+      "result": "PASS",
+      "locked": "A_R is the squared dotted row derivative of tilded Phi; Z_R is its first dotted row derivative; tau_L=i and tau_E=-i fix both curvature projections; mathfrak C_R and widetilde mathfrak C_R are the fully contracted undotted and dotted strength bilinears; every projector acts on a complete gauge scalar"
+    },
+    {
+      "id": "COMPONENT_DENSITY_EXACT_BINDING",
+      "result": "PASS",
+      "locked": "206 exact checks include row-D-algebra coefficient propagation, all four sigma-bivector trace tensors, equation-level coefficient/order bindings, and three explicit sign-mutation rejection probes"
+    },
+    {
       "id": "FI_LOCAL_CHART",
       "result": "PASS",
       "locked": "mathcal V_R=log(widetilde mathcal B_R mathcal B_R) only in the chosen local chart and xi_A c_BC^A=0 restricts xi to the Abelian quotient"
@@ -77,7 +87,7 @@
     {
       "id": "EQUATION_AND_LATEX_SURFACE",
       "result": "PASS",
-      "locked": "83 display blocks and 83 unique tags compile; all local references resolve; no unsafe row break followed by a bare left bracket remains"
+      "locked": "99 display blocks and 99 unique tags compile; all local references resolve; no unsafe formula or row start with a bare left bracket remains"
     },
     {
       "id": "STRICT_EQUALITY_NOTATION",

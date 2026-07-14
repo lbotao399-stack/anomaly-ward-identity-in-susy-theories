@@ -2,9 +2,9 @@
   "schema": 1,
   "task": "CONTRACT-STEP-03C-GAUGE-VECTOR-REPRESENTATION-001",
   "contract": "contracts/foundations/step-03c-gauge-vector-representation.md",
-  "contract_sha256": "90e5211557e0a12e444ee91a174beaf7ddea9039e6f9b987eb0861f0a9ef2461",
-  "scope": "All 83 tagged equation groups in Step 3C, checked in reverse order against only the accepted Project contracts and approved source subset",
-  "checked_equation_groups": 83,
+  "contract_sha256": "c4cc6f0504b79e02ce78030ad79b625bee6da7dff9de0f6a1ddc3b33ef2584a1",
+  "scope": "All 99 tagged equation groups in Step 3C, checked against the accepted Project contracts; the approved source subset is confined to the pre-existing structural dictionary",
+  "checked_equation_groups": 99,
   "proof_obligations": [
     {
       "id": "FRAME_AND_BRIDGE_ORDER",
@@ -37,6 +37,11 @@
       "result": "PASS"
     },
     {
+      "id": "VECTOR_FRAME_D_AND_F_DENSITY_RECONSTRUCTION",
+      "equations": "3C.72a-3C.72p",
+      "result": "PASS"
+    },
+    {
       "id": "WICK_TRANSPORT_WITHOUT_EUCLIDEAN_DAGGER",
       "equations": "3C.73-3C.76",
       "result": "PASS"
@@ -64,8 +69,8 @@
       "result": "PASS"
     },
     {
-      "equations": "3C.65-3C.76",
-      "check": "checked rightmost-first row derivatives, second projections, Wess-Zumino bridge jets, and the Lorentz-to-Euclidean coefficient map",
+      "equations": "3C.65-3C.72p",
+      "check": "checked rightmost-first row derivatives, the D-density master identity, boundary-current reduction, both gauge F-densities, all sigma traces, and the Lorentz and Euclidean component actions",
       "result": "PASS"
     }
   ],
@@ -101,12 +106,33 @@
       "location": "3C.62-3C.63 and 3C.77-3C.80",
       "resolution": "separated the Project FI derivation and Project field-strength normalization from excluded source formulas",
       "status": "RESOLVED"
+    },
+    {
+      "id": "G4[G-ALG]",
+      "priority": "P1",
+      "location": "3C.72a-3C.72p",
+      "resolution": "replaced the formal component-equivalence statement by explicit vector-frame covariant-projector algebra, dual-row signs, boundary reduction, sigma traces, and both signature component actions",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "G5[G-SIGN]",
+      "priority": "P1",
+      "location": "3C.72i and 3C.72k",
+      "resolution": "fixed the dotted curvature slot to +tau_R by the exact identity -i/rho_R=tau_R and independently rederived the dotted strength-squared density",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "G6[G-PROJ]",
+      "priority": "P1",
+      "location": "Step-3C exact verifier",
+      "resolution": "added equation-level coefficient and ordering bindings, explicit row-D-algebra coefficient propagation, and sign-mutation rejection for the master curvature term, dotted curvature phase, and Lorentz gaugino kinetic term",
+      "status": "RESOLVED"
     }
   ],
   "verification": {
-    "exact_checks": 106,
+    "exact_checks": 206,
     "exact_failures": 0,
-    "lualatex_display_blocks": 83,
+    "lualatex_display_blocks": 99,
     "lualatex_failures": 0,
     "post_resolution_P0": [],
     "post_resolution_P1": []

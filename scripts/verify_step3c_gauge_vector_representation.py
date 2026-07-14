@@ -188,6 +188,38 @@ def mat_trace(value: Matrix) -> Gaussian:
     return sum((value[index][index] for index in range(len(value))), ZERO)
 
 
+def sigma_bivectors(
+    sigma: tuple[Matrix, Matrix, Matrix, Matrix],
+    bar_sigma: tuple[Matrix, Matrix, Matrix, Matrix],
+) -> tuple[tuple[Matrix, ...], ...]:
+    quarter = q(Fraction(1, 4))
+    return tuple(
+        tuple(
+            mat_scale(
+                quarter,
+                mat_sub(
+                    mat_mul(sigma[left], bar_sigma[right]),
+                    mat_mul(sigma[right], bar_sigma[left]),
+                ),
+            )
+            for right in range(4)
+        )
+        for left in range(4)
+    )
+
+
+def epsilon_four(indices: tuple[int, int, int, int]) -> Gaussian:
+    if len(set(indices)) != 4:
+        return ZERO
+    inversions = sum(
+        1
+        for left in range(4)
+        for right in range(left + 1, 4)
+        if indices[left] > indices[right]
+    )
+    return ONE if inversions % 2 == 0 else MINUS_ONE
+
+
 def mat_transpose(value: Matrix) -> Matrix:
     return tuple(
         tuple(value[row][column] for row in range(len(value)))
@@ -725,6 +757,212 @@ def coefficient_witnesses(recorder: Recorder) -> None:
     recorder.check("Wick mixed algebra kappa_L i=kappa_E", kappa_l * I, kappa_e, "wick")
     recorder.check("Wick spinor-vector coefficient u_L/i=u_E", u_l / I, u_e, "wick")
     recorder.check("Wick vector commutator flips rho", -rho_l, rho_e, "wick")
+    tau_l = I
+    tau_e = -I
+    recorder.check(
+        "Lorentz dotted curvature phase from vector curvature",
+        (-I) / rho_l,
+        tau_l,
+        "component_density",
+    )
+    recorder.check(
+        "Euclidean dotted curvature phase from vector curvature",
+        (-I) / rho_e,
+        tau_e,
+        "component_density",
+    )
+    recorder.check("Lorentz curvature phase square", tau_l * tau_l, MINUS_ONE, "component_density")
+    recorder.check("Euclidean curvature phase square", tau_e * tau_e, MINUS_ONE, "component_density")
+    recorder.check("Lorentz kappa times u", kappa_l * u_l, FOUR, "component_density")
+    recorder.check("Euclidean kappa times u", kappa_e * u_e, FOUR, "component_density")
+    recorder.check(
+        "Lorentz kappa squared times rho",
+        kappa_l * kappa_l * rho_l,
+        FOUR,
+        "component_density",
+    )
+    recorder.check(
+        "Euclidean kappa squared times rho",
+        kappa_e * kappa_e * rho_e,
+        FOUR,
+        "component_density",
+    )
+    recorder.check(
+        "Lorentz W second-derivative coefficient",
+        q(-2) * I * kappa_l,
+        FOUR,
+        "component_density",
+    )
+    recorder.check(
+        "Euclidean W second-derivative coefficient",
+        q(-2) * I * kappa_e,
+        FOUR * I,
+        "component_density",
+    )
+    recorder.check(
+        "Lorentz ordered matter-fermion coefficient",
+        q(Fraction(-1, 2)) * kappa_l,
+        -I,
+        "component_density",
+    )
+    recorder.check(
+        "Euclidean ordered matter-fermion coefficient",
+        q(Fraction(-1, 2)) * kappa_e,
+        ONE,
+        "component_density",
+    )
+    recorder.check(
+        "Lorentz canonical matter-fermion coefficient",
+        q(Fraction(1, 2)) * kappa_l,
+        I,
+        "component_density",
+    )
+    recorder.check(
+        "Euclidean action matter-fermion coefficient",
+        MINUS_ONE * q(Fraction(1, 2)) * kappa_e,
+        ONE,
+        "component_density",
+    )
+
+
+def component_density_witnesses(recorder: Recorder) -> None:
+    first_vector = TWO
+    first_strength = q(-8)
+    z_vector = ONE
+    z_curvature = q(-2)
+    spinor_vector_contraction = TWO
+    kappa_u = FOUR
+    kappa_squared_rho = FOUR
+
+    master_spinor_vector = first_vector * z_vector
+    master_curvature = first_vector * z_curvature
+    master_auxiliary = first_strength
+    final_vector = master_spinor_vector * spinor_vector_contraction * kappa_squared_rho
+    final_curvature = master_curvature * kappa_u
+
+    recorder.check(
+        "row D-algebra intermediate kappa-squared coefficient",
+        master_spinor_vector,
+        TWO,
+        "component_density",
+    )
+    recorder.check(
+        "row D-algebra intermediate kappa-u coefficient",
+        master_curvature,
+        q(-4),
+        "component_density",
+    )
+    recorder.check(
+        "row D-algebra intermediate auxiliary coefficient",
+        master_auxiliary,
+        q(-8),
+        "component_density",
+    )
+    recorder.check(
+        "row D-algebra final vector coefficient",
+        final_vector,
+        q(16),
+        "component_density",
+    )
+    recorder.check(
+        "row D-algebra final curvature coefficient",
+        final_curvature,
+        q(-16),
+        "component_density",
+    )
+    recorder.check(
+        "twice-graded Leibniz coefficient for odd strength",
+        TWO * MINUS_ONE,
+        q(-2),
+        "component_density",
+    )
+
+    sigma_0 = identity(2)
+    sigma_1 = matrix(((0, 1), (1, 0)))
+    sigma_2 = matrix(((0, -I), (I, 0)))
+    sigma_3 = matrix(((1, 0), (0, -1)))
+
+    sigma_l = (sigma_0, sigma_1, sigma_2, sigma_3)
+    bar_sigma_l = (
+        sigma_0,
+        mat_scale(MINUS_ONE, sigma_1),
+        mat_scale(MINUS_ONE, sigma_2),
+        mat_scale(MINUS_ONE, sigma_3),
+    )
+    sigma_e = (
+        mat_scale(-I, sigma_1),
+        mat_scale(-I, sigma_2),
+        mat_scale(-I, sigma_3),
+        sigma_0,
+    )
+    bar_sigma_e = (
+        mat_scale(I, sigma_1),
+        mat_scale(I, sigma_2),
+        mat_scale(I, sigma_3),
+        sigma_0,
+    )
+
+    sigma_mn_l = sigma_bivectors(sigma_l, bar_sigma_l)
+    bar_sigma_mn_l = sigma_bivectors(bar_sigma_l, sigma_l)
+    sigma_mn_e = sigma_bivectors(sigma_e, bar_sigma_e)
+    bar_sigma_mn_e = sigma_bivectors(bar_sigma_e, sigma_e)
+    eta = (q(-1), ONE, ONE, ONE)
+
+    actual_l: dict[str, Gaussian] = {}
+    expected_l: dict[str, Gaussian] = {}
+    actual_bar_l: dict[str, Gaussian] = {}
+    expected_bar_l: dict[str, Gaussian] = {}
+    actual_e: dict[str, Gaussian] = {}
+    expected_e: dict[str, Gaussian] = {}
+    actual_bar_e: dict[str, Gaussian] = {}
+    expected_bar_e: dict[str, Gaussian] = {}
+    half = q(Fraction(1, 2))
+    minus_half = q(Fraction(-1, 2))
+
+    for m in range(4):
+        for n in range(4):
+            for r in range(4):
+                for s in range(4):
+                    key = f"{m}{n}{r}{s}"
+                    metric_l = (
+                        eta[m] * eta[n]
+                        if m == r and n == s
+                        else ZERO
+                    ) - (
+                        eta[m] * eta[n]
+                        if m == s and n == r
+                        else ZERO
+                    )
+                    metric_e = q(int(m == r and n == s) - int(m == s and n == r))
+                    epsilon = epsilon_four((m, n, r, s))
+
+                    actual_l[key] = mat_trace(mat_mul(sigma_mn_l[m][n], sigma_mn_l[r][s]))
+                    expected_l[key] = minus_half * metric_l + half * I * epsilon
+                    actual_bar_l[key] = mat_trace(
+                        mat_mul(bar_sigma_mn_l[m][n], bar_sigma_mn_l[r][s])
+                    )
+                    expected_bar_l[key] = minus_half * metric_l - half * I * epsilon
+                    actual_e[key] = mat_trace(mat_mul(sigma_mn_e[m][n], sigma_mn_e[r][s]))
+                    expected_e[key] = minus_half * metric_e + half * epsilon
+                    actual_bar_e[key] = mat_trace(
+                        mat_mul(bar_sigma_mn_e[m][n], bar_sigma_mn_e[r][s])
+                    )
+                    expected_bar_e[key] = minus_half * metric_e - half * epsilon
+
+    recorder.check("Lorentz undotted sigma-bivector trace", actual_l, expected_l, "component_density")
+    recorder.check(
+        "Lorentz dotted sigma-bivector trace",
+        actual_bar_l,
+        expected_bar_l,
+        "component_density",
+    )
+    recorder.check("Euclidean undotted sigma-bivector trace", actual_e, expected_e, "component_density")
+    recorder.check(
+        "Euclidean dotted sigma-bivector trace",
+        actual_bar_e,
+        expected_bar_e,
+        "component_density",
+    )
 
 
 def bianchi_witnesses(recorder: Recorder) -> None:
@@ -795,11 +1033,171 @@ def document_and_provenance_checks(recorder: Recorder) -> None:
     tags = re.findall(r"\\tag\{3C\.([^}]+)\}", contract)
     expected_tags = [str(value) for value in range(1, 40)] + ["39a"] + [
         str(value) for value in range(40, 61)
-    ] + ["60a"] + [
-        str(value) for value in range(61, 82)
-    ]
+    ] + ["60a"] + [str(value) for value in range(61, 73)] + [
+        f"72{letter}" for letter in "abcdefghijklmnop"
+    ] + [str(value) for value in range(73, 82)]
     recorder.check("equation tags exact ordered surface", tags, expected_tags, "document")
     recorder.check("equation tags unique", len(tags), len(set(tags)), "document")
+    equation_bodies: dict[str, str] = {}
+    for display in re.findall(r"\$\$(.*?)\$\$", contract, flags=re.DOTALL):
+        display_tags = re.findall(r"\\tag\{3C\.([^}]+)\}", display)
+        for tag in display_tags:
+            equation_bodies[tag] = re.sub(r"\s+", "", display)
+
+    equation_bindings: dict[str, tuple[tuple[str, int], ...]] = {
+        "72d": (
+            (r"=2\kappa_R^2", 1),
+            (r"-4\kappa_Ru_R\boldsymbol Z_{R\dot b}^{\mathsf V}", 1),
+            (r"=16(\boldsymbol{\mathcal D}_{RM}^{\mathsf V})^{\rm row}", 1),
+            (r"-16\boldsymbol Z_{R\dot b}^{\mathsf V}", 1),
+            (r"-8\widetilde{\boldsymbol\Phi}_R^{\mathsf V}", 2),
+        ),
+        "72e": (
+            (r"={}&-\frac{\kappa_R}{2}", 1),
+            (r"+i\sqrt2\widetilde\phi_{R,I}(T_A)^I{}_J", 1),
+            (r"={}&\widetilde F_{R,I}F_R^I", 1),
+        ),
+        "72f": (
+            (r":={}&-(\mathcal D_{RM}\widetilde\phi_R)_I", 1),
+            (r"+\frac{\kappa_R}{2}\widetilde\psi_{R\dot a,I}", 1),
+            (r"={}&\mathcal K_{0,R}^{\rm can}+\partial_{RM}J_R^M", 1),
+        ),
+        "72g": (
+            (r"&=\mathscr U_{R,I}F_R^I-\frac12\mathscr U_{R,IJ}", 1),
+            (r"&=\widetilde{\mathscr U}_R^{,I}\widetilde F_{R,I}-\frac12", 1),
+        ),
+        "72i": (
+            (r"&=-\epsilon_{ab}\mathscr D_R+\tau_R(\sigma_R^{MN})_{ab}", 1),
+            (r"&=+\epsilon_{\dot a\dot b}\mathscr D_R+\tau_R(\bar\sigma_R^{MN})", 1),
+            (r"-\frac{i}{\rho_R}&=\tau_R", 1),
+        ),
+        "72j": (
+            (r"&=-2i\kappa_R(\sigma_R^M)_{a\dot b}", 1),
+            (r"&=-2i\kappa_R(\sigma_R^M)_{b\dot a}", 1),
+        ),
+        "72k": (
+            (r"+2(-1)^{|X|}", 2),
+            (r"&=+\epsilon_{\dot b\dot a}\mathscr D^A+\tau_R(\bar\sigma_R^{MN})", 1),
+            (r"&=2\mathscr D^A\mathscr D^B+\operatorname{tr}_2(\sigma_R", 1),
+            (r"&=2\mathscr D^A\mathscr D^B+\operatorname{tr}_2(\bar\sigma_R", 1),
+            (r"+\frac{\kappa_R}{2}\left[", 2),
+        ),
+        "72l": (
+            (r"+\frac i2\epsilon_L^{\mu\nu\rho\sigma}", 1),
+            (r"+\frac12\epsilon_E^{mnrs}", 1),
+            (r"-\frac i2\epsilon_L^{\mu\nu\rho\sigma}", 1),
+            (r"-\frac12\epsilon_E^{mnrs}", 1),
+        ),
+        "72m": (
+            (r"+\frac i4\epsilon_L^{\mu\nu\rho\sigma}", 1),
+            (r"+\frac14\epsilon_E^{mnrs}F^A_{mn}F^B_{rs}", 1),
+            (r"-\frac i4\epsilon_L^{\mu\nu\rho\sigma}", 1),
+            (r"-\frac14\epsilon_E^{mnrs}F^A_{mn}F^B_{rs}", 1),
+            (r"+i\lambda^A\sigma_L^\mu\mathcal D_\mu\bar\lambda^B", 1),
+            (r"-\lambda^A\sigma_E^m\mathcal D_m\widetilde\lambda^B", 1),
+            (r"+i\widetilde\lambda^A\bar\sigma_L^\mu\mathcal D_\mu\lambda^B", 1),
+            (r"-\widetilde\lambda^A\bar\sigma_E^m\mathcal D_m\lambda^B", 1),
+        ),
+        "72n": (
+            (r"\mu_A^{(0)}:=\widetilde\phi_IT_A{}^I{}_J\phi^J+\xi_A", 1),
+            (r"=\int d^4x_R\,\xi_A\mathscr D_R^A", 1),
+        ),
+        "72o": (
+            (r"-(\mathcal D_\mu\bar\phi)_I(\mathcal D^\mu\phi)^I", 1),
+            (r"+i\bar\psi_{\dot a,I}(\bar\sigma_L^\mu)^{\dot aa}", 1),
+            (r"+\bar F_IF^I+\mu_A^{(0)}\mathscr D^A", 1),
+            (r"+i\sqrt2\left[", 1),
+            (r"+\mathscr U_IF^I-\frac12\mathscr U_{IJ}\psi^I\psi^J", 1),
+            (r"-\frac14\mathfrak h_{AB}F^A_{\mu\nu}F^{B\mu\nu}", 1),
+            (r"+i\mathfrak h_{AB}\bar\lambda^A\bar\sigma_L^\mu", 1),
+            (r"+\frac12\mathfrak h_{AB}\mathscr D^A\mathscr D^B", 1),
+            (r"-\frac18\mathfrak k_{AB}\epsilon_L^{\mu\nu\rho\sigma}", 1),
+        ),
+        "72p": (
+            (r"+(\mathcal D_m\widetilde\phi)_I(\mathcal D_m\phi)^I", 1),
+            (r"+\widetilde\psi_{\dot a,I}(\bar\sigma_E^m)^{\dot aa}", 1),
+            (r"-\widetilde F_IF^I-\mu_A^{(0)}\mathscr D^A", 1),
+            (r"-i\sqrt2\left[", 1),
+            (r"-\mathscr U_IF^I+\frac12\mathscr U_{IJ}\psi^I\psi^J", 1),
+            (r"+\frac14\mathfrak h_{AB}F^A_{mn}F^B_{mn}", 1),
+            (r"+\mathfrak h_{AB}\widetilde\lambda^A\bar\sigma_E^m", 1),
+            (r"-\frac12\mathfrak h_{AB}\mathscr D^A\mathscr D^B", 1),
+            (r"-\frac i8\mathfrak k_{AB}\epsilon_E^{mnrs}", 1),
+        ),
+    }
+    for tag, bindings in equation_bindings.items():
+        body = equation_bodies[tag]
+        for binding, expected_count in bindings:
+            compact_binding = re.sub(r"\s+", "", binding)
+            recorder.check(
+                f"equation 3C.{tag} exact binding: {binding}",
+                body.count(compact_binding),
+                expected_count,
+                "component_density_binding",
+            )
+    master_expected = re.sub(
+        r"\s+",
+        "",
+        r"-4\kappa_Ru_R\boldsymbol Z_{R\dot b}^{\mathsf V}",
+    )
+    master_mutated = equation_bodies["72d"].replace(
+        master_expected,
+        master_expected.replace("-4", "+4", 1),
+    )
+    recorder.check(
+        "mutation probe changes the row-curvature sign",
+        master_mutated == equation_bodies["72d"],
+        False,
+        "mutation",
+    )
+    recorder.check(
+        "row-curvature sign mutation violates exact binding",
+        master_mutated.count(master_expected),
+        0,
+        "mutation",
+    )
+    gaugino_expected = re.sub(
+        r"\s+",
+        "",
+        r"+i\mathfrak h_{AB}\bar\lambda^A\bar\sigma_L^\mu",
+    )
+    gaugino_mutated = equation_bodies["72o"].replace(
+        gaugino_expected,
+        gaugino_expected.replace("+i", "-i", 1),
+    )
+    recorder.check(
+        "mutation probe changes the Lorentz gaugino sign",
+        gaugino_mutated == equation_bodies["72o"],
+        False,
+        "mutation",
+    )
+    recorder.check(
+        "Lorentz gaugino sign mutation violates exact binding",
+        gaugino_mutated.count(gaugino_expected),
+        0,
+        "mutation",
+    )
+    dotted_expected = re.sub(
+        r"\s+",
+        "",
+        r"&=+\epsilon_{\dot b\dot a}\mathscr D^A+\tau_R(\bar\sigma_R^{MN})",
+    )
+    dotted_mutated = equation_bodies["72k"].replace(
+        dotted_expected,
+        dotted_expected.replace("+\\tau_R", "-\\tau_R", 1),
+    )
+    recorder.check(
+        "mutation probe changes the dotted curvature phase",
+        dotted_mutated == equation_bodies["72k"],
+        False,
+        "mutation",
+    )
+    recorder.check(
+        "dotted curvature phase mutation violates exact binding",
+        dotted_mutated.count(dotted_expected),
+        0,
+        "mutation",
+    )
     contract_bindings = {
         "relative bridge multiplication order": (
             r"\mathcalE_R:=\widetilde{\mathcalB}_R\mathcalB_R=e^{\mathcalV_R}"
@@ -895,6 +1293,58 @@ def document_and_provenance_checks(recorder: Recorder) -> None:
     recorder.check("Project Wtilde coefficient +1/8", r"+\frac18D_R^2" in contract, True, "document")
     recorder.check("component fermion coefficient", r"\frac1{\sqrt2}" in contract, True, "document")
     recorder.check("component auxiliary coefficient", r"-\frac14" in contract, True, "document")
+    density_segment = contract[
+        contract.index("#### 3C.6.1 Canonical matter density") : contract.index("### 3C.7 Wick transport")
+    ]
+    density_bindings = {
+        "flat D-density projector": r"\frac1{16}D_R^2\bar D_R^2",
+        "graded row-column product rule": r"(-1)^{|\mathfrak A||X|}",
+        "dual-row curvature sign": (
+            r"=-2u_R\boldsymbol Z_{R\dot b}^{\mathsf V}"
+            r"\widetilde{\boldsymbol{\mathcal W}}_R^{\mathsf V\dot b}"
+        ),
+        "matter master vector-derivative coefficient": (
+            r"=16(\boldsymbol{\mathcal D}_{RM}^{\mathsf V})^{\rm row}"
+        ),
+        "matter master gaugino coefficient": (
+            r"-16\boldsymbol Z_{R\dot b}^{\mathsf V}"
+        ),
+        "matter master auxiliary coefficient": (
+            r"-8\widetilde{\boldsymbol\Phi}_R^{\mathsf V}"
+            r"\boldsymbol\nabla_R^{\mathsf V a}"
+        ),
+        "boundary current expanded": r"\partial_{RM}J_R^M",
+        "superpotential covariant chain rule": (
+            r"\mathscr U_{R,IJ}"
+            r"\boldsymbol\nabla_R^{\mathsf V a}\boldsymbol\Phi_R^{\mathsf V I}"
+        ),
+        "W second-spinor derivative": (
+            r"=-2i\kappa_R(\sigma_R^M)_{a\dot b}"
+        ),
+        "twice-graded odd product": r"+2(-1)^{|X|}",
+        "Lorentz undotted topological density": (
+            r"+\frac i4\epsilon_L^{\mu\nu\rho\sigma}"
+        ),
+        "Euclidean dotted topological density": (
+            r"-\frac14\epsilon_E^{mnrs}F^A_{mn}F^B_{rs}"
+        ),
+        "Lorentz canonical component action": r"\mathcal L_{L,\mathrm{can}}",
+        "Euclidean canonical component action": r"\mathcal L_{E,\mathrm{can}}",
+    }
+    density_compact = re.sub(r"\s+", "", density_segment)
+    for name, binding in density_bindings.items():
+        recorder.check(
+            f"component-density binding: {name}",
+            re.sub(r"\s+", "", binding) in density_compact,
+            True,
+            "document",
+        )
+    recorder.check(
+        "component-density derivation has no coordinate expansion",
+        r"\vartheta" in density_segment,
+        False,
+        "document",
+    )
     recorder.check(
         "general component transport defines C-frame projections",
         r"\psi_{Ra}^{\mathsf C}" in contract and r"F_R^{\mathsf C}" in contract,
@@ -944,6 +1394,7 @@ def build_audit() -> dict[str, Any]:
     chirality_and_action_witnesses(recorder, data)
     component_projection_witnesses(recorder)
     coefficient_witnesses(recorder)
+    component_density_witnesses(recorder)
     bianchi_witnesses(recorder)
 
     categories: dict[str, dict[str, int]] = {}

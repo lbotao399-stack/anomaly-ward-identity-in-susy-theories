@@ -2,8 +2,8 @@
   "schema": 1,
   "task": "CONTRACT-STEP-03C-GAUGE-VECTOR-REPRESENTATION-001",
   "contract": "contracts/foundations/step-03c-gauge-vector-representation.md",
-  "contract_sha256": "90e5211557e0a12e444ee91a174beaf7ddea9039e6f9b987eb0861f0a9ef2461",
-  "reviewer": "final_step3c_reverse_order_audit_agent",
+  "contract_sha256": "c4cc6f0504b79e02ce78030ad79b625bee6da7dff9de0f6a1ddc3b33ef2584a1",
+  "reviewer": "independent matter-D-algebra and gauge-F-algebra agents plus final reverse-order audit",
   "review_order": "3C.81 backward through 3C.1",
   "allowed_evidence": [
     "accepted Step-1, Step-2A, Step-3A, and Step-3B contracts",
@@ -14,6 +14,10 @@
   "review_results": [
     {
       "scope": "3C.81-3C.73: verification surface, source boundary, Wick transport, and intrinsic Euclidean independence",
+      "result": "PASS"
+    },
+    {
+      "scope": "3C.72p-3C.72a: canonical D-density, dual-row curvature, superpotential projectors, both strength-squared densities, sigma traces, and Lorentz-Euclidean component actions",
       "result": "PASS"
     },
     {
@@ -31,15 +35,15 @@
   ],
   "exact_verification": {
     "verifier": "scripts/verify_step3c_gauge_vector_representation.py",
-    "verifier_sha256": "f3121e3baa64f61251c197c77dedb571f7e45f459c8a3fee34c0c662074336af",
-    "exact_checks": 106,
+    "verifier_sha256": "d63817cd0c86ae97376fd7c4e78ba1531b15834615f59ff3cc3f6017bb7a7928",
+    "exact_checks": 206,
     "failed_checks": 0,
     "status": "PASS"
   },
   "latex_verification": {
-    "display_blocks": 83,
-    "equation_tags": 83,
-    "unique_equation_tags": 83,
+    "display_blocks": 99,
+    "equation_tags": 99,
+    "unique_equation_tags": 99,
     "unresolved_internal_references": 0,
     "unsafe_row_starts": 0,
     "lualatex_return_code": 0,
@@ -72,6 +76,27 @@
       "equations": "3C.71-3C.72",
       "issue": "component equality required pure first and second bridge jets to vanish in symmetric Wess-Zumino gauge",
       "resolution": "declared all required D, bar-D, D-squared, and bar-D-squared bridge projections before identifying components",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equations": "3C.72a-3C.72p",
+      "issue": "the component equivalence was stated without a vector-frame covariant-derivative reconstruction",
+      "resolution": "derived the canonical matter D-density, boundary current, superpotential densities, undotted and dotted gauge densities, and both signature component actions from the locked covariant algebra",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equations": "3C.72i and 3C.72k",
+      "issue": "the first dotted curvature draft used -tau_R although the locked lowering and -i/rho_R=tau_R require +tau_R",
+      "resolution": "corrected the dotted curvature slot to +tau_R and independently rederived the graded product, contracted bilinear, gaugino coefficient, and both tilded densities",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equations": "3C.72d, 3C.72k, 3C.72o, and exact verifier",
+      "issue": "the initial verifier did not reject mutations of the intermediate row-curvature coefficient or the final Lorentz gaugino sign",
+      "resolution": "bound every new equation-level coefficient and ordering, implemented exact coefficient propagation, and proved that all three targeted sign mutations change PASS to FAIL",
       "status": "RESOLVED"
     }
   ],
