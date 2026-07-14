@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "task": "CONTRACT-STEP-03A-GAUGE-CHIRAL-ACTION-001",
+  "task": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
   "contract": "contracts/foundations/step-03a-gauge-chiral-action.md",
-  "scope": "Lorentzian and Euclidean gauge-chiral superspace action, Wess-Zumino projections, component reductions, Wick continuation, and Euclidean contour",
+  "scope": "Lorentzian and Euclidean gauge-chiral superspace action, covariant D-algebra matter-density reduction, Wess-Zumino projections, component reductions, Wick continuation, and Euclidean contour",
   "checks": [
     {
       "id": "SIGNATURE_AND_INDEX_DOMAINS",
@@ -22,7 +22,7 @@
     {
       "id": "FLAT_VERSUS_GAUGE_COVARIANT_SPINOR_DERIVATIVE",
       "result": "PASS",
-      "locked": "D and barD are Step-2A flat derivatives; nabla is the chiral-frame covariant derivative; the dual row uses the separately defined antichiral-frame row derivative"
+      "locked": "D and barD are Step-2A flat derivatives; nabla is the chiral-frame column derivative; the antichiral-frame row derivative and the chiral-frame right-module derivative nabla-left-arrow are separately defined and never conflated"
     },
     {
       "id": "WZ_COMPONENT_PROJECTION_SCOPE",
@@ -68,6 +68,26 @@
       "id": "CANONICAL_GAUGE_FORM",
       "result": "PASS",
       "locked": "constant f_AB is symmetric and invariant; Re f is positive; the absorbed-coupling connection is exactly partial_M-i A_M"
+    },
+    {
+      "id": "D_ALGEBRA_SIGNATURE_PARAMETERS",
+      "result": "PASS",
+      "locked": "kappa_L=2i and kappa_E=-2; u_R=4/kappa_R and rho_R=4/kappa_R^2; kappa_R u_R=4 and kappa_R^2 rho_R=4"
+    },
+    {
+      "id": "CHIRAL_FRAME_DUAL_ROW",
+      "result": "PASS",
+      "locked": "U_R=tildePhi_R E_R is a chiral-frame dual row; hat-tilde-W=E_R^(-1) tildeW E_R is the corresponding transported antichiral field strength; the bottom row connection is partial_M X+i X A_M"
+    },
+    {
+      "id": "ORDERED_PROJECTOR_VERSUS_CANONICAL_DENSITY",
+      "result": "PASS",
+      "locked": "K_R^ord is the pointwise D_R^2 barD_R^2 representative; K_R^can differs by the explicit divergence partial_M J_R^M and is equal only after the stated boundary integral vanishes"
+    },
+    {
+      "id": "D_DENSITY_WITHOUT_ODD_COORDINATE_EXPANSION",
+      "result": "PASS",
+      "locked": "equations 3A.74 through 3A.81 use only covariant derivative algebra, chirality, curvature commutators, graded Leibniz rules, component projections, and gauge-covariant integration by parts"
     },
     {
       "id": "STRICT_EQUALITY_NOTATION",

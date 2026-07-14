@@ -438,98 +438,101 @@ $$
 \tag{3A.38}
 $$
 
-### 3A.5 Bridge normalization from the scalar kinetic term
+### 3A.5 Bridge normalization from derivative projections
 
-Set the Lorentzian vector slot temporarily to
+Set
 
 $$
-\mathcal V_{L,A}=c_LB_L^\mu A_\mu.
+\mathcal V_{L,A}=c_LB_L^\mu A_\mu,
+\qquad
+\mathcal V_{E,A}=c_EB_E^mA_m.
 \tag{3A.39}
 $$
 
-Using (3A.26)--(3A.28) and
-$e^{\mathcal V}=1+\mathcal V+\frac12\mathcal V^2$ at the required order,
+The ordered derivative algebra gives
 
 $$
-\begin{aligned}
-[\bar\Phi e^{\mathcal V}\Phi]_D\Big|_{\phi,A}
-={}&-\partial_\mu\bar\phi\,\partial^\mu\phi
--\frac{ic_L}{2}(\partial_\mu\bar\phi)A^\mu\phi\\
-&+\frac{ic_L}{2}\bar\phi A^\mu\partial_\mu\phi
--\frac{c_L^2}{4}\bar\phi A_\mu A^\mu\phi.
-\end{aligned}
+\begin{gathered}
+[D_{Ra},\bar D_{R\dot b}]_{\rm ord}B_R^M\Big|
+=2(\sigma_R^M)_{a\dot b},\\
+(\bar\sigma_{L,\mu})^{\dot ba}
+(\sigma_L^\nu)_{a\dot b}=-2\delta_\mu{}^\nu,
+\qquad
+(\bar\sigma_{E,m})^{\dot ba}
+(\sigma_E^n)_{a\dot b}=+2\delta_m{}^n.
+\end{gathered}
 \tag{3A.40}
 $$
 
-On the other hand,
+Define the vector components by
 
 $$
 \begin{aligned}
--(\mathcal D_\mu\bar\phi)(\mathcal D^\mu\phi)
-={}&-\partial_\mu\bar\phi\,\partial^\mu\phi
-+i(\partial_\mu\bar\phi)A^\mu\phi\\
-&-i\bar\phi A^\mu\partial_\mu\phi
--\bar\phi A_\mu A^\mu\phi.
+A_\mu^L
+&:=\frac18(\bar\sigma_{L,\mu})^{\dot ba}
+[D_{La},\bar D_{L\dot b}]_{\rm ord}\mathcal V_L\Big|
+&=-\frac{c_L}{2}A_\mu,\\
+A_m^E
+&:=\frac{i}{8}(\bar\sigma_{E,m})^{\dot ba}
+[D_{Ea},\bar D_{E\dot b}]_{\rm ord}\mathcal V_E\Big|
+&=+\frac{ic_E}{2}A_m.
 \end{aligned}
 \tag{3A.41}
 $$
 
-Coefficient equality gives
+Thus
 
 $$
--\frac{ic_L}{2}=i,
+-\frac{c_L}{2}=1,
 \qquad
-\frac{ic_L}{2}=-i,
+\frac{ic_E}{2}=1,
 \qquad
--\frac{c_L^2}{4}=-1,
-\qquad
-\boxed{c_L=-2.}
+\boxed{c_L=-2,\qquad c_E=-2i.}
 \tag{3A.42}
 $$
 
-For Euclidean signature, set
+Since
+$\mathcal V_R|=D_{Ra}\mathcal V_R|=
+\bar D_{R\dot a}\mathcal V_R|=0$,
 
 $$
-\mathcal V_{E,A}=c_EB_E^mA_m.
+\Gamma_{Ra}|=0,
+\qquad
+\bar D_{R\dot b}\Gamma_{Ra}\Big|
+=-c_R(\sigma_R^M)_{a\dot b}A_M.
 \tag{3A.43}
 $$
 
-Equations (3A.26), (3A.29), and (3A.30) give
+Hence
 
 $$
 \begin{aligned}
-[\widetilde\Phi e^{\mathcal V_E}\Phi]_D\Big|_{\phi,A}
-={}&-\partial_m\widetilde\phi\,\partial_m\phi
--\frac{c_E}{2}(\partial_m\widetilde\phi)A_m\phi\\
-&+\frac{c_E}{2}\widetilde\phi A_m\partial_m\phi
-+\frac{c_E^2}{4}\widetilde\phi A_mA_m\phi.
+\{\nabla_{La},\bar D_{L\dot b}\}\Big|
+&=2i(\sigma_L^\mu)_{a\dot b}\partial_\mu
++2(\sigma_L^\mu)_{a\dot b}A_\mu,\\
+\{\nabla_{Ea},\bar D_{E\dot b}\}\Big|
+&=-2(\sigma_E^m)_{a\dot b}\partial_m
++2i(\sigma_E^m)_{a\dot b}A_m.
 \end{aligned}
 \tag{3A.44}
 $$
 
-Matching
+Factoring the right-hand sides gives
 
 $$
 \begin{aligned}
--(\mathcal D_m\widetilde\phi)(\mathcal D_m\phi)
-={}&-\partial_m\widetilde\phi\,\partial_m\phi
-+i(\partial_m\widetilde\phi)A_m\phi\\
-&-i\widetilde\phi A_m\partial_m\phi
--\widetilde\phi A_mA_m\phi
+\{\nabla_{La},\bar D_{L\dot b}\}\Big|
+&=2i(\sigma_L^\mu)_{a\dot b}(\partial_\mu-iA_\mu),\\
+\{\nabla_{Ea},\bar D_{E\dot b}\}\Big|
+&=-2(\sigma_E^m)_{a\dot b}(\partial_m-iA_m).
 \end{aligned}
 \tag{3A.45}
 $$
 
-gives
+Therefore both signatures give
 
 $$
--\frac{c_E}{2}=i,
-\qquad
-\frac{c_E}{2}=-i,
-\qquad
-\frac{c_E^2}{4}=-1,
-\qquad
-\boxed{c_E=-2i.}
+\boxed{\mathcal D_M=\partial_M-iA_M.}
 \tag{3A.46}
 $$
 
@@ -1016,12 +1019,15 @@ $$
 \tag{3A.72}
 $$
 
-### 3A.8 Canonical Lorentzian component check
+### 3A.8 Canonical matter $D$-density from covariant $D$-algebra
 
 Take
 
 $$
-\mathscr K_g=\bar\Phi_I(\mathcal E)^I{}_J\Phi^J,
+\mathscr K_{g,R}
+=\widetilde\Phi_{R,I}(\mathcal E_R)^I{}_J\Phi_R^J,
+\qquad
+\widetilde\Phi_L=\bar\Phi_L,
 \qquad
 f_{AB}=f_{BA}=\text{constant},
 \qquad
@@ -1031,109 +1037,233 @@ c_{CA}{}^Df_{DB}+c_{CB}{}^Df_{AD}=0,
 \tag{3A.73}
 $$
 
-Before integration by parts, direct multiplication of (3A.27) and
-(3A.28) gives
+Introduce
 
 $$
-\begin{aligned}
-[\bar\Phi_I\Phi^I]_D={}&
-\frac14\bar\phi_I\Box_L\phi^I
-+\frac14(\Box_L\bar\phi_I)\phi^I
--\frac12(\partial_\mu\bar\phi_I)(\partial^\mu\phi^I)
-+\bar F_IF^I\\
-&+\frac i2\bar\psi_{\dot a,I}
-(\bar\sigma_L^\mu)^{\dot ab}\partial_\mu\psi_b^I
--\frac i2(\partial_\mu\bar\psi_{\dot a,I})
-(\bar\sigma_L^\mu)^{\dot ab}\psi_b^I.
-\end{aligned}
+\begin{gathered}
+\kappa_L:=2i,
+\qquad
+\kappa_E:=-2,
+\qquad
+u_R:=\frac4{\kappa_R},
+\qquad
+\rho_R:=\frac4{\kappa_R^2},\\
+U_{R,I}:=\widetilde\Phi_{R,J}(\mathcal E_R)^J{}_I,
+\qquad
+\widehat{\widetilde{\mathcal W}}_{R\dot a}
+:=\mathcal E_R^{-1}\widetilde{\mathcal W}_{R\dot a}\mathcal E_R,\\
+(\nabla_{Ra}^{\leftarrow}X)_I
+:=D_{Ra}X_I-(-1)^{|X|}X_J(\Gamma_{Ra})^J{}_I,
+\qquad
+\bar\nabla_{R\dot a}^{\leftarrow}X:=\bar D_{R\dot a}X.
+\end{gathered}
 \tag{3A.74}
 $$
 
-The two scalar second-derivative terms and the second fermion term obey
+The chiral-frame constraints and Wess--Zumino projections are
 
 $$
-\begin{aligned}
-\int d^4x_L\,\frac14\bar\phi\Box_L\phi
-&=-\int d^4x_L\,\frac14
-\partial_\mu\bar\phi\,\partial^\mu\phi,\\
-\int d^4x_L\,\frac14(\Box_L\bar\phi)\phi
-&=-\int d^4x_L\,\frac14
-\partial_\mu\bar\phi\,\partial^\mu\phi,\\
-\int d^4x_L\left[-\frac i2
-(\partial_\mu\bar\psi)\bar\sigma_L^\mu\psi\right]
-&=\int d^4x_L\left[+\frac i2
-\bar\psi\bar\sigma_L^\mu\partial_\mu\psi\right].
-\end{aligned}
+\begin{gathered}
+\nabla_{Ra}^{\leftarrow}U_R
+=D_{Ra}(\widetilde\Phi_R\mathcal E_R)
+-U_R\Gamma_{Ra}
+=\widetilde\Phi_RD_{Ra}\mathcal E_R-U_R\Gamma_{Ra}=0,
+\qquad
+\bar D_{R\dot a}\Phi_R=0,
+\qquad
+\{\nabla_{Ra}^{\leftarrow},\bar D_{R\dot b}\}X
+=\kappa_R(\sigma_R^M)_{a\dot b}\mathcal D_{RM}^{\leftarrow}X,\\
+\kappa_R(\sigma_R^M)_{a\dot b}
+\mathcal D_{RM}^{\leftarrow}X\Big|
+=\kappa_R(\sigma_R^M)_{a\dot b}\partial_{RM}X\Big|
+-X|\,\bar D_{R\dot b}\Gamma_{Ra}\Big|,\\
+\mathcal D_{RM}^{\leftarrow}X\Big|
+=\partial_{RM}X\Big|+iX|A_M,\\
+U_R|=\widetilde\phi_R,
+\quad
+\bar D_{R\dot a}U_R|=\sqrt2\widetilde\psi_{R\dot a},
+\quad
+-\frac14\bar D_R^2U_R|=\widetilde F_R,\\
+\nabla_{Ra}\Phi_R|=\sqrt2\psi_{Ra},
+\quad
+-\frac14\nabla_R^2\Phi_R|=F_R,
+\quad
+\mathcal W_{Ra}|=-i\lambda_{Ra},
+\quad
+\widehat{\widetilde{\mathcal W}}_{R\dot a}|=i\widetilde\lambda_{R\dot a},
+\quad
+-\frac12\nabla_R^a\mathcal W_{Ra}|=\mathscr D_R.
+\end{gathered}
 \tag{3A.75}
 $$
 
-Therefore
+Set $A_R:=\bar D_R^2U_R$.  The first derivative is obtained only by
+commuting $\nabla_R^{\leftarrow}$ through the two $\bar D_R$'s:
 
 $$
-\boxed{
-\int d^4\vartheta\,\bar\Phi_I\Phi^I
-=-\partial_\mu\bar\phi_I\partial^\mu\phi^I
-+i\bar\psi_I\bar\sigma_L^\mu\partial_\mu\psi^I
-+\bar F_IF^I.}
+\begin{aligned}
+[\bar D_{R\dot c},
+\kappa_R\mathcal D_{Ra\dot b}^{\leftarrow}]U_R
+&=-U_R\bar D_{R\dot c}\bar D_{R\dot b}\Gamma_{Ra}\\
+&=+\frac12\epsilon_{\dot c\dot b}
+U_R\bar D_R^2\Gamma_{Ra}
+=-4\epsilon_{\dot c\dot b}U_R\mathcal W_{Ra},\\
+[\bar D_{R\dot b},
+\kappa_R\mathcal D_{Ra}{}^{\dot b\,\leftarrow}]U_R
+&=+8U_R\mathcal W_{Ra},\\
+\nabla_{Ra}^{\leftarrow}A_R
+&=2\kappa_R\mathcal D_{Ra\dot b}^{\leftarrow}
+\bar D_R^{\dot b}U_R
+-[\bar D_{R\dot b},
+\kappa_R\mathcal D_{Ra}{}^{\dot b\,\leftarrow}]U_R\\
+&=2\kappa_R\mathcal D_{Ra\dot b}^{\leftarrow}
+\bar D_R^{\dot b}U_R-8U_R\mathcal W_{Ra}.
+\end{aligned}
 \tag{3A.76}
 $$
 
-At degree four in the odd coordinates,
+Chirality and the graded Leibniz rule give the complete ordered
+projector:
 
 $$
-e^{\mathcal V_L}=1+\mathcal V_L+\frac12\mathcal V_L^2,
-\qquad
-\mathcal V_L^3=0.
+\begin{aligned}
+ D_{Ra}(X_IY^I)
+&=(\nabla_{Ra}^{\leftarrow}X)_IY^I
++(-1)^{|X|}X_I\nabla_{Ra}Y^I,\\
+\bar D_{R\dot a}(X_IY^I)
+&=(\bar D_{R\dot a}X)_IY^I
++(-1)^{|X|}X_I\bar D_{R\dot a}Y^I,\\
+\bar D_R^2(U_{R,I}\Phi_R^I)&=A_{R,I}\Phi_R^I,\\
+D_R^2(A_{R,I}\Phi_R^I)
+&=(\nabla_R^{\leftarrow2}A_R)_I\Phi_R^I
++2(\nabla_R^{\leftarrow a}A_R)_I\nabla_{Ra}\Phi_R^I
++A_{R,I}\nabla_R^2\Phi_R^I.
+\end{aligned}
 \tag{3A.77}
 $$
 
-The four scalar--connection coefficients are
+For the odd row
+$Z_R^{\dot b}:=\bar D_R^{\dot b}U_R$, the curvature and sigma
+contractions are
 
 $$
+\begin{gathered}
+[\nabla_{Rc},\mathcal D_{Ra\dot b}]_{\rm col}
+=u_R\epsilon_{ca}
+\widehat{\widetilde{\mathcal W}}_{R\dot b},\\
+[\nabla_{Rc}^{\leftarrow},
+\mathcal D_{Ra\dot b}^{\leftarrow}]Z_R^{\dot b}
+=+u_R\epsilon_{ca}Z_R^{\dot b}
+\widehat{\widetilde{\mathcal W}}_{R\dot b}
+\qquad(|Z_R|=1),\\
+[\nabla_R^{\leftarrow a},
+\mathcal D_{Ra\dot b}^{\leftarrow}]Z_R^{\dot b}
+=+2u_RZ_R^{\dot b}
+\widehat{\widetilde{\mathcal W}}_{R\dot b}
+=-2u_RZ_{R\dot b}
+\widehat{\widetilde{\mathcal W}}_R^{\dot b},
+\qquad
+\nabla_R^{\leftarrow a}\bar D_R^{\dot b}U_R
+=\kappa_R\mathcal D_R^{a\dot b\,\leftarrow}U_R,\\
+\mathcal D_{Ra\dot b}^{\leftarrow}
+\mathcal D_R^{a\dot b\,\leftarrow}
+=2\rho_R\mathcal D_{RM}^{\leftarrow}
+\mathcal D_R^{M\,\leftarrow},
+\qquad
+\kappa_Ru_R=4,
+\qquad
+\kappa_R^2\rho_R=4,\\[1mm]
 \begin{aligned}
-&-\partial_\mu\bar\phi\,\partial^\mu\phi
-+i(\partial_\mu\bar\phi)A^\mu\phi
--i\bar\phi A^\mu\partial_\mu\phi
--\bar\phi A_\mu A^\mu\phi\\
-&\qquad
-=-(\mathcal D_\mu\bar\phi)(\mathcal D^\mu\phi).
+\nabla_R^{\leftarrow2}A_R
+={}&2\kappa_R\nabla_R^{\leftarrow a}
+(\mathcal D_{Ra\dot b}^{\leftarrow}Z_R^{\dot b})
+-8\nabla_R^{\leftarrow a}(U_R\mathcal W_{Ra})\\
+={}&2\kappa_R^2
+\mathcal D_{Ra\dot b}^{\leftarrow}
+\mathcal D_R^{a\dot b\,\leftarrow}U_R
+-4\kappa_Ru_R
+(\bar D_{R\dot b}U_R)
+\widehat{\widetilde{\mathcal W}}_R^{\dot b}
+-8U_R\nabla_R^a\mathcal W_{Ra}\\
+={}&16\mathcal D_{RM}^{\leftarrow}
+\mathcal D_R^{M\,\leftarrow}U_R
+-16(\bar D_{R\dot b}U_R)
+\widehat{\widetilde{\mathcal W}}_R^{\dot b}
+-8U_R\nabla_R^a\mathcal W_{Ra}.
 \end{aligned}
+\end{gathered}
 \tag{3A.78}
 $$
 
-The fermion--connection multiplication is
-
-$$
--4(\bar\vartheta\bar\psi)
-(\vartheta\sigma_L^\mu\bar\vartheta)A_\mu
-(\vartheta\psi)
-=\vartheta^2\bar\vartheta^2
-\bar\psi\bar\sigma_L^\mu A_\mu\psi.
-\tag{3A.79}
-$$
-
-The two gaugino multiplications are
+The three terms in (3A.77) therefore project to
 
 $$
 \begin{aligned}
-\bar\phi(-2i\bar\vartheta^2\vartheta\lambda)
-(\sqrt2\vartheta\psi)
-&=+i\sqrt2\vartheta^2\bar\vartheta^2
-\bar\phi\lambda\psi,\\
-(\sqrt2\bar\vartheta\bar\psi)
-(2i\vartheta^2\bar\vartheta\bar\lambda)\phi
-&=-i\sqrt2\vartheta^2\bar\vartheta^2
-\bar\psi\bar\lambda\phi.
+\frac{\kappa_R}{2}
+(\mathcal D_{RM}\widetilde\psi_R^{\dot b})_I
+\epsilon^{ac}(\sigma_R^M)_{c\dot b}\psi_{Ra}^I
+&=-\frac{\kappa_R}{2}
+(\mathcal D_{RM}\widetilde\psi_{R\dot a})_I
+(\bar\sigma_R^M)^{\dot aa}\psi_{Ra}^I,\\
+\frac1{16}(\nabla_R^{\leftarrow2}A_R)_I|\,\phi_R^I
+={}&(\mathcal D_{RM}\mathcal D_R^M\widetilde\phi_R)_I\phi_R^I
+-i\sqrt2\widetilde\psi_{R\dot a,I}(T_A)^I{}_J
+\widetilde\lambda_R^{A\dot a}\phi_R^J
++\widetilde\phi_{R,I}\mathscr D_R^A(T_A)^I{}_J\phi_R^J,\\
+\frac18(\nabla_R^{\leftarrow a}A_R)_I|
+\,\nabla_{Ra}\Phi_R^I|
+={}&-\frac{\kappa_R}{2}
+(\mathcal D_{RM}\widetilde\psi_{R\dot a})_I
+(\bar\sigma_R^M)^{\dot aa}\psi_{Ra}^I
++i\sqrt2\widetilde\phi_{R,I}(T_A)^I{}_J
+\lambda_R^{Aa}\psi_{Ra}^J,\\
+\frac1{16}A_{R,I}|\,\nabla_R^2\Phi_R^I|
+={}&\widetilde F_{R,I}F_R^I.
+\end{aligned}
+\tag{3A.79}
+$$
+
+Define the ordered representative and its current by
+
+$$
+\begin{aligned}
+\mathcal K_R^{\rm ord}:={}&
+[\widetilde\Phi_R\mathcal E_R\Phi_R]_D\\
+={}&(\mathcal D_{RM}\mathcal D_R^M\widetilde\phi_R)_I\phi_R^I
+-\frac{\kappa_R}{2}
+(\mathcal D_{RM}\widetilde\psi_{R\dot a})_I
+(\bar\sigma_R^M)^{\dot aa}\psi_{Ra}^I
++\widetilde F_{R,I}F_R^I\\
+&+\widetilde\phi_{R,I}\mathscr D_R^A(T_A)^I{}_J\phi_R^J\\
+&+i\sqrt2\left[
+\widetilde\phi_{R,I}(T_A)^I{}_J\lambda_R^{Aa}\psi_{Ra}^J
+-\widetilde\psi_{R\dot a,I}(T_A)^I{}_J
+\widetilde\lambda_R^{A\dot a}\phi_R^J\right],\\
+J_R^M:={}&
+(\mathcal D_R^M\widetilde\phi_R)_I\phi_R^I
+-\frac{\kappa_R}{2}\widetilde\psi_{R\dot a,I}
+(\bar\sigma_R^M)^{\dot aa}\psi_{Ra}^I,\\
+\partial_{RM}J_R^M={}&
+(\mathcal D_{RM}\mathcal D_R^M\widetilde\phi_R)_I\phi_R^I
++(\mathcal D_R^M\widetilde\phi_R)_I
+(\mathcal D_{RM}\phi_R)^I\\
+&-\frac{\kappa_R}{2}
+(\mathcal D_{RM}\widetilde\psi_{R\dot a})_I
+(\bar\sigma_R^M)^{\dot aa}\psi_{Ra}^I
+-\frac{\kappa_R}{2}\widetilde\psi_{R\dot a,I}
+(\bar\sigma_R^M)^{\dot aa}(\mathcal D_{RM}\psi_{Ra})^I,\\
+\mathcal K_R^{\rm ord}
+={}&\mathcal K_R^{\rm can}+\partial_{RM}J_R^M.
 \end{aligned}
 \tag{3A.80}
 $$
 
-Equations (3A.76)--(3A.80) give
+For $R=L$, $\kappa_L/2=i$ and the boundary integral vanishes, so
 
 $$
 \boxed{
 \begin{aligned}
-[\bar\Phi e^{\mathcal V_L}\Phi]_D={}&
+\mathcal K_L^{\rm can}={}&
 -(\mathcal D_\mu\bar\phi)_I(\mathcal D^\mu\phi)^I
 +i\bar\psi_{\dot a,I}(\bar\sigma_L^\mu)^{\dot aa}
 (\mathcal D_\mu\psi_a)^I
@@ -1142,7 +1272,9 @@ $$
 &+i\sqrt2\left[
 \bar\phi_I(T_A)^I{}_J\lambda^{Aa}\psi_a^J
 -\bar\psi_{\dot a,I}(T_A)^I{}_J
-\bar\lambda^{A\dot a}\phi^J\right].
+\bar\lambda^{A\dot a}\phi^J\right],\\
+\int d^4x_L\,[\bar\Phi\mathcal E_L\Phi]_D
+={}&\int d^4x_L\,\mathcal K_L^{\rm can}.
 \end{aligned}}
 \tag{3A.81}
 $$
@@ -1319,26 +1451,30 @@ S_E=-\int d^4x_E\Big\{&
 \tag{3A.93}
 $$
 
-Direct Euclidean multiplication of (3A.29), (3A.30), and (3A.48),
-before the minus sign in (3A.93), gives
+Equation (3A.80) with $\kappa_E=-2$, before the minus sign in
+(3A.93), gives the pointwise ordered representative
 
 $$
 \begin{aligned}
-[\widetilde\Phi e^{\mathcal V_E}\Phi]_D={}&
--(\mathcal D_m\widetilde\phi)_I(\mathcal D_m\phi)^I
--\widetilde\psi_{\dot a,I}(\bar\sigma_E^m)^{\dot aa}
-(\mathcal D_m\psi_a)^I
+[\widetilde\Phi\mathcal E_E\Phi]_D={}&
+(\mathcal D_m\mathcal D_m\widetilde\phi)_I\phi^I
++(\mathcal D_m\widetilde\psi_{\dot a})_I
+(\bar\sigma_E^m)^{\dot aa}\psi_a^I
 +\widetilde F_IF^I\\
 &+\widetilde\phi_I\mathscr D^A(T_A)^I{}_J\phi^J\\
 &+i\sqrt2\left[
 \widetilde\phi_I(T_A)^I{}_J\lambda^{Aa}\psi_a^J
 -\widetilde\psi_{\dot a,I}(T_A)^I{}_J
-\widetilde\lambda^{A\dot a}\phi^J\right].
+\widetilde\lambda^{A\dot a}\phi^J\right],\\
+J_E^m={}&(\mathcal D_m\widetilde\phi)_I\phi^I
++\widetilde\psi_{\dot a,I}(\bar\sigma_E^m)^{\dot aa}\psi_a^I,\\
+[\widetilde\Phi\mathcal E_E\Phi]_D
+={}&\mathcal K_E^{\rm can}+\partial_mJ_E^m.
 \end{aligned}
 \tag{3A.94}
 $$
 
-Consequently
+Consequently, for $\int d^4x_E\,\partial_mJ_E^m=0$,
 
 $$
 \boxed{
@@ -1463,6 +1599,9 @@ $$
 $$
 
 ### 3A.10 Exact component verification
+
+The matter $D$-density is derived by (3A.74)--(3A.80).  The
+exterior-algebra implementation below is an independent coefficient check.
 
 The exact verifier computes
 
