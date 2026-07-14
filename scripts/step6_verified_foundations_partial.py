@@ -31,6 +31,15 @@ SOURCE_PATHS = {
     "measure_delta_replay": Path(
         "audits/step6-preaggregation-measure-delta-replay-verification.json"
     ),
+    "independent_primitive_gate": Path(
+        "audits/step6-independent-selected-edge-word-dalgebra-gate-verification.json"
+    ),
+    "independent_remainder_comparator": Path(
+        "audits/step6-independent-remainder-object-comparator-verification.json"
+    ),
+    "contact_ibp_carrier": Path(
+        "audits/step6-contact-ibp-survivor-carrier-verification.json"
+    ),
     "odd_word_sign": Path("audits/step6-odd-word-transfer-sign-verification.json"),
     "contact_provenance": Path(
         "audits/step6-primitive-contact-provenance-audit-verification.json"
@@ -162,6 +171,69 @@ EXPECTED_MEASURE_DELTA_REPLAY_HASHES = {
     "remainder_catalog_sha256": "6dc51612772cdd485b0ba0b85a22fa79b4b930d37f6cfe54c821f90521579351",
     "aggregate_rows_with_parent_incidence_sha256": "6f3f81d50dae92e9b28788b299c2d7e6bdbf6b06256af3dd6805bf05d39e0f77",
 }
+
+EXPECTED_INDEPENDENT_PRIMITIVE_GATE_COUNTS = {
+    "basis_mismatches": 0,
+    "coefficient_basis_dimension": 16,
+    "dwordnf_normal_terms": 140,
+    "dwordnf_zero_pairs": 92,
+    "exact_basis_cases": 2_272,
+    "selected_word_pairs": 142,
+}
+
+EXPECTED_INDEPENDENT_PRIMITIVE_GATE_HASHES = {
+    "audit_file_sha256": "7052d54813ef6dfecc66af60da44450270e76ce3ee41142d0246e827071ae998",
+    "selected_word_pairs_sha256": "68fb00bee6917d76dabe58a5eafed6afb16ed061c86b52d8871d9949d4c468a5",
+    "pair_rows_sha256": "1a071a308cde13dfcdcbefcf292a234fdcc79671d1535288a963097348e82fa5",
+    "payload_sha256": "fdd8231944415dd82b9db183085ed7f913af213eb720be270960258d40747a52",
+}
+
+EXPECTED_INDEPENDENT_REMAINDER_COMPARATOR_COMMIT = "9bdeeff"
+
+EXPECTED_INDEPENDENT_REMAINDER_COMPARATOR_COUNTS = {
+    "independent_remainder_objects": 1_568,
+    "objectwise_rows": 1_568,
+    "replay_remainder_objects": 1_568,
+}
+
+EXPECTED_INDEPENDENT_REMAINDER_COMPARATOR_HASHES = {
+    "audit_file_sha256": "32515bf7ecae1fa2082dc5bc2bab268958aed27f293bd043eb1e164abf864b3f",
+    "artifact_sha256": "b1cba8670b91c1561a6866d9dbc07ed38f0e257fd0c468cda097cd2960ed3fc4",
+    "payload_sha256": "9f7e82a04db00750a8434307fb3f893b5c04cdafb97d04a0e1499b31d000b148",
+    "script_sha256": "3f0e1c917fdc459a944dc2a2fc26daae84334b0e7de1c2e8bd4ffbd4c40df25a",
+    "test_sha256": "1c8f16ae292dc7f1fcdb43fc89878250ce630b270fa4712e52459fc6a3e66c2a",
+}
+
+EXPECTED_CONTACT_IBP_CARRIER_COUNTS = {
+    "A_local_slots": 1_216,
+    "I3_comparison_interface_rows": 2_432,
+    "I3_target_terms": 10,
+    "coproduct_branches": 2_432,
+    "ibp_events": 5_248,
+    "one_token_contacts": 192,
+    "protected_I_local_slots": 608,
+    "raw_ordered_I3_word_matches": 0,
+    "raw_permutation_I3_word_matches": 0,
+    "raw_port_degree_no_candidate_rows": 832,
+    "raw_port_degree_prefilter_rows": 1_600,
+    "retained_edge_tagged_boundary_tokens": 5_248,
+    "source_contact_aggregates": 608,
+    "three_token_contacts": 96,
+    "two_token_contacts": 320,
+}
+
+EXPECTED_CONTACT_IBP_CARRIER_HASHES = {
+    "audit_file_sha256": "6163d71bc519bb0ca9b4a0812716bb3600d1f1d35e0e348f5df3aab20441728e",
+    "payload_sha256": "133ab0512bf6f2274cd50569a2cc842ebefdb86f2baf9e2730a47e1f8b1d4dcc",
+    "carrier_rows_sha256": "ed14cbeb1d27ba8ae4aa6a79d1487772ae57244b7bb584c1a6c8215af02b2500",
+    "I3_target_basis_sha256": "5d656ddf3b4e27abbfe359eac4b59651b3c19707399ea24b004d5217458907c9",
+}
+
+EXPECTED_CONTACT_IBP_OPEN_TYPES = [
+    "MISSING_TYPE::CollapsedContactEndpointColorAndI3PortBinding",
+    "MISSING_TYPE::PostIBPPrimitiveNormalForm",
+    "MISSING_TYPE::I3LocalSurvivorComparisonMatrix",
+]
 
 
 class SourceDriftError(RuntimeError):
@@ -716,12 +788,222 @@ def _validate_measure_delta_replay(source: Mapping[str, Any]) -> dict[str, Any]:
             "MeasureTaggedDeltaConvolutionReplayUnderSharedPrimitiveDAlgebraOracle"
         ),
         "replay_role": "NON_INDEPENDENT_SHARED_ORACLE_RECONSTRUCTION",
-        "independent_remainder_object_equality": "OPEN",
         "semantic_scope": "PREAGGREGATION_MEASURE_DELTA_REPLAY_ONLY",
-        "next_missing_type": "EdgeTaggedContactIBPToALocalSurvivors",
         "counts": dict(EXPECTED_MEASURE_DELTA_REPLAY_COUNTS),
         "hashes": dict(EXPECTED_MEASURE_DELTA_REPLAY_HASHES),
         "contact_remaining_edge_token_counts": {"1": 192, "2": 320, "3": 96},
+    }
+
+
+def _validate_independent_primitive_gate(source: Mapping[str, Any]) -> dict[str, Any]:
+    expect(
+        source.get("schema")
+        == "step6.independent_selected_edge_word_dalgebra_gate.audit.v1",
+        "independent primitive gate schema",
+    )
+    expect(
+        source.get("status")
+        == "PASS_EXACT_142_EDGE_WORD_PAIRS_X_16_INDEPENDENT_LOCAL_EXTERIOR_GATE",
+        "independent primitive gate status",
+    )
+    expect(
+        source.get("resolved_type_id")
+        == "TYPE::IndependentLocalExteriorMatrixGateForSelectedEdgeWordPairs",
+        "independent primitive gate resolved type",
+    )
+    expect(
+        source.get("semantic_scope") == "SELECTED_EDGE_WORD_PRIMITIVE_DALGEBRA_ONLY",
+        "independent primitive gate semantic scope",
+    )
+    expected_checks = {
+        "all_basis_outputs_equal",
+        "all_operator_matrices_equal",
+        "basis_case_count_exact",
+        "frozen_seed_hashes_exact",
+        "independent_side_has_no_shared_primitive_engine",
+        "local_mixed_algebra_exact",
+        "local_same_chirality_algebra_exact",
+        "no_basis_mismatch",
+        "no_external_result",
+        "open_boundaries_explicit",
+        "payload_hash_valid",
+        "schema_and_status_exact",
+        "selected_pair_count_exact",
+    }
+    checks = source.get("checks", {})
+    expect(set(checks) == expected_checks, "independent primitive gate check ids")
+    expect(source.get("all_checks_passed") is True, "independent gate all checks")
+    expect(all(checks.values()), "independent primitive gate checks")
+    expect(
+        source.get("counts") == EXPECTED_INDEPENDENT_PRIMITIVE_GATE_COUNTS,
+        "independent primitive gate counts",
+    )
+    for key in ("selected_word_pairs_sha256", "pair_rows_sha256", "payload_sha256"):
+        expect(
+            source.get(key) == EXPECTED_INDEPENDENT_PRIMITIVE_GATE_HASHES[key],
+            f"independent primitive gate {key}",
+        )
+    expect(
+        source.get("open_missing_type_ids")
+        == [
+            "MISSING_TYPE::IndependentRemainderObjectComparator",
+            "MISSING_TYPE::EdgeTaggedContactIBPToALocalSurvivors",
+        ],
+        "independent primitive gate open types",
+    )
+    expect(
+        source.get("two_loop_AWI_coefficient_status") == "UNCOMPUTED",
+        "independent primitive gate AWI boundary",
+    )
+    return {
+        "ring": "Q(i)[k_(+,dot+),k_(+,dot-),k_(-,dot+),k_(-,dot-)]",
+        "counts": dict(EXPECTED_INDEPENDENT_PRIMITIVE_GATE_COUNTS),
+        "hashes": dict(EXPECTED_INDEPENDENT_PRIMITIVE_GATE_HASHES),
+        "semantic_scope": "SELECTED_EDGE_WORD_PRIMITIVE_DALGEBRA_ONLY",
+        "AWI_coefficient": "UNCOMPUTED",
+    }
+
+
+def _validate_independent_remainder_comparator(
+    source: Mapping[str, Any],
+) -> dict[str, Any]:
+    expect(
+        source.get("schema")
+        == "step6.independent_remainder_object_comparator.audit.v1",
+        "independent remainder comparator schema",
+    )
+    expect(
+        source.get("status")
+        == "PASS_1568_REMAINDER_OBJECTS_INDEPENDENT_LOCAL_EXTERIOR_RECONSTRUCTION",
+        "independent remainder comparator status",
+    )
+    expected_checks = {
+        "all_exact_polynomials_equal",
+        "all_incidence_multiplicities_exact",
+        "all_parent_incidence_equal",
+        "catalogs_separate",
+        "clean_left_import_boundary",
+        "committed_gate_source_exact",
+        "exact_1568_key_sets",
+        "frozen_seed_exact",
+        "left_executor_does_not_call_replay_or_shared_dword",
+        "payload_hash_valid",
+        "replay_dependency_manifest_exact",
+        "replay_internal_checks_pass",
+        "replay_payload_exact",
+        "replay_source_exact",
+        "schema_status_exact",
+    }
+    checks = source.get("checks", {})
+    expect(set(checks) == expected_checks, "independent remainder comparator check ids")
+    expect(
+        source.get("all_checks_passed") is True,
+        "independent remainder comparator all checks",
+    )
+    expect(all(checks.values()), "independent remainder comparator checks")
+    expect(
+        source.get("counts") == EXPECTED_INDEPENDENT_REMAINDER_COMPARATOR_COUNTS,
+        "independent remainder comparator counts",
+    )
+    for key in ("artifact_sha256", "payload_sha256", "script_sha256", "test_sha256"):
+        expect(
+            source.get(key) == EXPECTED_INDEPENDENT_REMAINDER_COMPARATOR_HASHES[key],
+            f"independent remainder comparator {key}",
+        )
+    return {
+        "commit": EXPECTED_INDEPENDENT_REMAINDER_COMPARATOR_COMMIT,
+        "counts": dict(EXPECTED_INDEPENDENT_REMAINDER_COMPARATOR_COUNTS),
+        "hashes": dict(EXPECTED_INDEPENDENT_REMAINDER_COMPARATOR_HASHES),
+        "status": "PASS",
+        "key_mismatches": 0,
+        "polynomial_mismatches": 0,
+        "parent_incidence_mismatches": 0,
+        "parent_incidence_multiplicity_mismatches": 0,
+        "AWI_coefficient": "UNCOMPUTED",
+    }
+
+
+def _validate_contact_ibp_carrier(source: Mapping[str, Any]) -> dict[str, Any]:
+    expect(
+        source.get("schema") == "step6.contact_ibp_survivor_carrier.audit.v1",
+        "contact IBP carrier schema",
+    )
+    expect(
+        source.get("status")
+        == "PASS_TYPED_IBP_EVENT_CARRIER__I3_LOCAL_SURVIVOR_COMPARISON_OPEN",
+        "contact IBP carrier status",
+    )
+    expect(
+        source.get("resolved_type_id") == "TYPE::EdgeTaggedContactIBPEventCarrier",
+        "contact IBP resolved type",
+    )
+    expect(
+        source.get("original_missing_type_status")
+        == "PARTIALLY_RESOLVED_EVENT_CARRIER_ONLY",
+        "contact IBP original type boundary",
+    )
+    expected_checks = {
+        "I3_target_interface_exact",
+        "all_event_and_branch_hashes_valid",
+        "branch_signs_and_token_conservation_exact",
+        "comparison_fail_closed",
+        "contact_and_token_census_exact",
+        "graded_coproduct_cardinality_exact",
+        "input_hash_closure_exact",
+        "local_partition_exact",
+        "no_coefficient_claim",
+        "no_external_result",
+        "payload_hash_valid",
+        "raw_word_match_is_honestly_nonaccepting",
+        "source_replay_payload_exact",
+        "theta_I_barrier_and_boundary_retention_exact",
+        "token_word_census_exact",
+    }
+    checks = source.get("checks", {})
+    expect(set(checks) == expected_checks, "contact IBP carrier check ids")
+    expect(source.get("all_checks_passed") is True, "contact IBP carrier all checks")
+    expect(all(checks.values()), "contact IBP carrier checks")
+    expect(
+        source.get("counts") == EXPECTED_CONTACT_IBP_CARRIER_COUNTS,
+        "contact IBP carrier counts",
+    )
+    expect(
+        source.get("A_local_edge_order_census") == {"e_BA|e_CA": 304, "e_CA|e_BA": 304},
+        "contact IBP A-local edge order census",
+    )
+    expect(
+        source.get("open_missing_type_ids") == EXPECTED_CONTACT_IBP_OPEN_TYPES,
+        "contact IBP open types",
+    )
+    for key in ("payload_sha256", "carrier_rows_sha256", "I3_target_basis_sha256"):
+        expect(
+            source.get(key) == EXPECTED_CONTACT_IBP_CARRIER_HASHES[key],
+            f"contact IBP carrier {key}",
+        )
+    comparison = source.get("comparison_frontier", {})
+    expect(comparison.get("status") == "OPEN_FAIL_CLOSED", "contact IBP comparison")
+    expect(comparison.get("comparison_matrix") is None, "contact IBP matrix open")
+    expect(
+        comparison.get("object_level_I3_equality") is None,
+        "contact IBP object equality open",
+    )
+    expect(
+        [row.get("missing_type_id") for row in comparison.get("missing_rule_data", [])]
+        == EXPECTED_CONTACT_IBP_OPEN_TYPES,
+        "contact IBP missing rule data",
+    )
+    expect(source.get("anomaly_coefficient") is None, "contact IBP AWI coefficient")
+    return {
+        "counts": dict(EXPECTED_CONTACT_IBP_CARRIER_COUNTS),
+        "hashes": dict(EXPECTED_CONTACT_IBP_CARRIER_HASHES),
+        "A_local_edge_orders": {"e_BA|e_CA": 304, "e_CA|e_BA": 304},
+        "resolved_type": "EdgeTaggedContactIBPEventCarrier",
+        "resolved_status": "PASS",
+        "original_type_status": "PARTIALLY_RESOLVED_EVENT_CARRIER_ONLY",
+        "boundary_tokens_retained": True,
+        "theta_I_barrier": "EXACT",
+        "open_types": list(EXPECTED_CONTACT_IBP_OPEN_TYPES),
+        "AWI_coefficient": "UNCOMPUTED",
     }
 
 
@@ -945,6 +1227,17 @@ def validate_sources(sources: Mapping[str, Any]) -> dict[str, Any]:
         "measure_delta_replay": _validate_measure_delta_replay(
             sources["measure_delta_replay"]
         ),
+        "independent_primitive_gate": _validate_independent_primitive_gate(
+            sources["independent_primitive_gate"]
+        ),
+        "independent_remainder_comparator": (
+            _validate_independent_remainder_comparator(
+                sources["independent_remainder_comparator"]
+            )
+        ),
+        "contact_ibp_carrier": _validate_contact_ibp_carrier(
+            sources["contact_ibp_carrier"]
+        ),
         "odd_word_sign": _validate_odd_word_sign(sources["odd_word_sign"]),
         "contact_provenance": _validate_contact_provenance(
             sources["contact_provenance"]
@@ -987,6 +1280,8 @@ def render_markdown(snapshot: Mapping[str, Any]) -> str:
         )
     )
     replay_hashes = snapshot["measure_delta_replay"]["hashes"]
+    comparator = snapshot["independent_remainder_comparator"]
+    comparator_hashes = comparator["hashes"]
 
     return rf"""# Step 6 — verified foundations: partial mirror
 
@@ -1239,8 +1534,7 @@ $$
 \mathrm{{OracleRole}}
 =\texttt{{SHARED\_PRIMITIVE\_D\mbox{{-}}ALGEBRA\_ORACLE}},
 \qquad
-\mathrm{{IndependentRemainderObjectEquality}}
-=\texttt{{OPEN: MISSING\_TYPE}}.
+\mathrm{{ReplayRemainderEqualityClaim}}=\texttt{{NOT\_STANDALONE}}.
 $$
 
 $$
@@ -1272,7 +1566,113 @@ H_{{\mathrm{{contact,reconstruction}}}}=\texttt{{{replay_hashes["contact_catalog
 H_{{\mathrm{{remainder,reconstruction}}}}=\texttt{{{replay_hashes["remainder_catalog_sha256"]}}}.
 $$
 
-## 8. Primitive-contact provenance
+## 8. Independent selected primitive D-algebra gate
+
+$$
+k:=\left(k_{{+\dot +}},k_{{+\dot -}},k_{{-\dot +}},k_{{-\dot -}}\right),
+\qquad
+R:=\mathbb Q(i)[k].
+$$
+
+$$
+A=(P_1^A,\ldots,P_{{|A|}}^A),
+\qquad
+I=(P_1^I,\ldots,P_{{|I|}}^I),
+\qquad
+M(A):=\prod_{{a=1}}^{{|A|}}M(P_a^A),
+\qquad
+M(I):=\prod_{{b=1}}^{{|I|}}M(P_b^I).
+$$
+
+$$
+M_{{\mathrm{{raw}}}}(A,I):=(-1)^{{|I|}}M(A)M(I),
+\qquad
+|I|=5,
+\qquad
+M_{{\mathrm{{raw}}}}(A,I)=-M(A)M(I).
+$$
+
+$$
+768\longrightarrow13\,824\longrightarrow142,
+\qquad
+142\times16=2\,272,
+\qquad
+N_{{\mathrm{{mismatch}}}}=0.
+$$
+
+$$
+N_{{\mathrm{{DWordNF\ normal\ terms}}}}=140,
+\qquad
+N_{{\mathrm{{DWordNF\ zero\ pairs}}}}=92.
+$$
+
+$$
+\mathrm{{SelectedPrimitiveDAlgebra}}
+=\texttt{{PASS\_EXACT\_142\_EDGE\_WORD\_PAIRS\_X\_16}},
+\qquad
+\mathrm{{SemanticScope}}
+=\texttt{{SELECTED\_EDGE\_WORD\_PRIMITIVE\_DALGEBRA\_ONLY}}.
+$$
+
+$$
+\mathcal K_R:=\text{{remainder-object key set}},
+\qquad
+p:=\text{{parent-pair id}}.
+$$
+
+$$
+P_{{\mathrm{{ind}}}}(K),P_{{\mathrm{{rep}}}}(K)\in R,
+\qquad
+\mathcal I_{{\mathrm{{ind}}}}(K,p),\mathcal I_{{\mathrm{{rep}}}}(K,p)\in R,
+\qquad
+m_{{\mathrm{{ind}}}}(K,p),m_{{\mathrm{{rep}}}}(K,p)\in\mathbb Z_{{\geq0}}.
+$$
+
+$$
+N_R^{{\mathrm{{ind}}}}=N_R^{{\mathrm{{rep}}}}=|\mathcal K_R|=1\,568.
+$$
+
+$$
+\forall K\in\mathcal K_R:\qquad
+P_{{\mathrm{{ind}}}}(K)=P_{{\mathrm{{rep}}}}(K).
+$$
+
+$$
+\forall(K,p):\qquad
+\mathcal I_{{\mathrm{{ind}}}}(K,p)=\mathcal I_{{\mathrm{{rep}}}}(K,p),
+\qquad
+m_{{\mathrm{{ind}}}}(K,p)=m_{{\mathrm{{rep}}}}(K,p).
+$$
+
+$$
+N_{{\mathrm{{key\ mismatch}}}}
+=N_{{\mathrm{{polynomial\ mismatch}}}}
+=N_{{\mathrm{{incidence\ mismatch}}}}
+=N_{{\mathrm{{incidence\ multiplicity\ mismatch}}}}=0.
+$$
+
+$$
+\mathrm{{IndependentRemainderObjectComparator}}
+=\texttt{{PASS\_1568\_EXACT\_OBJECTS}},
+\qquad
+\mathrm{{ComparatorCommit}}=\texttt{{{comparator["commit"]}}}.
+$$
+
+$$
+\begin{{aligned}}
+H_{{\mathrm{{comparator,audit}}}}&=\texttt{{{comparator_hashes["audit_file_sha256"]}}},\\
+H_{{\mathrm{{comparator,artifact}}}}&=\texttt{{{comparator_hashes["artifact_sha256"]}}},\\
+H_{{\mathrm{{comparator,payload}}}}&=\texttt{{{comparator_hashes["payload_sha256"]}}},\\
+H_{{\mathrm{{comparator,source}}}}&=\texttt{{{comparator_hashes["script_sha256"]}}},\\
+H_{{\mathrm{{comparator,test}}}}&=\texttt{{{comparator_hashes["test_sha256"]}}}.
+\end{{aligned}}
+$$
+
+$$
+C_{{\mathrm{{AWI}}}}^{{(2)}}=\texttt{{UNCOMPUTED}}.
+$$
+
+## 9. Primitive-contact provenance
 
 $$
 N_{{\mathrm{{stored\ contacts}}}}=608,
@@ -1284,13 +1684,56 @@ $$
 
 $$
 \mathrm{{ParentIncidence}}_{{768\to(608+1\,568)}}
-=\texttt{{PASS\_COMPUTED\_OBJECT\_RECONSTRUCTION}},
-\qquad
-\mathrm{{EdgeTaggedContactIBPToALocalSurvivors}}
-=\texttt{{OPEN: MISSING\_TYPE}}.
+=\texttt{{PASS\_COMPUTED\_OBJECT\_RECONSTRUCTION}}.
 $$
 
-## 9. Odd-word transfer sign
+## 10. Contact-IBP event carrier
+
+$$
+N_c:=N_{{\mathrm{{contact}}}}=608.
+$$
+
+$$
+N_b:=192(2)+320(4)+96(8)=384+1\,280+768=2\,432.
+$$
+
+$$
+N_e:=192(2)+320(8)+96(24)=384+2\,560+2\,304=5\,248.
+$$
+
+$$
+N_{{e_{{BA}}|e_{{CA}}}}=304,
+\qquad
+N_{{e_{{CA}}|e_{{BA}}}}=304,
+\qquad
+N_{{e_{{BA}}|e_{{CA}}}}+N_{{e_{{CA}}|e_{{BA}}}}=608.
+$$
+
+$$
+N_{{\mathrm{{retained\ boundary\ tokens}}}}=N_e=5\,248,
+\qquad
+\mathrm{{AllBoundaryTokensRetained}}=\texttt{{TRUE}},
+\qquad
+\mathrm{{Barrier}}(\theta_I)=\texttt{{EXACT}}.
+$$
+
+$$
+\mathrm{{EdgeTaggedContactIBPEventCarrier}}=\texttt{{PASS}},
+\qquad
+\mathrm{{EdgeTaggedContactIBPToALocalSurvivors}}
+=\texttt{{PARTIALLY\_RESOLVED\_EVENT\_CARRIER\_ONLY}}.
+$$
+
+$$
+\begin{{aligned}}
+\mathrm{{CollapsedContactEndpointColorAndI3PortBinding}}&=\texttt{{OPEN}},\\
+\mathrm{{PostIBPPrimitiveNormalForm}}&=\texttt{{OPEN}},\\
+\mathrm{{I3LocalSurvivorComparisonMatrix}}&=\texttt{{OPEN}},\\
+C_{{\mathrm{{AWI}}}}^{{(2)}}&=\texttt{{UNCOMPUTED}}.
+\end{{aligned}}
+$$
+
+## 11. Odd-word transfer sign
 
 $$
 N=m+\binom{{m}}{{2}}+m|F|+N_{{\mathrm{{coeff}}}}+N_{{\mathrm{{endpoint}}}},
@@ -1316,7 +1759,7 @@ $$
 N_{{\mathrm{{boundary}}}}=2(17)=34.
 $$
 
-## 10. Frozen full-orbit Schwinger–Dyson snapshot
+## 12. Frozen full-orbit Schwinger–Dyson snapshot
 
 $$
 \mathrm{{Snapshot}}=\texttt{{FROZEN\_FULL\_ORBIT\_AUDIT}},
@@ -1342,7 +1785,7 @@ $$
 \end{{aligned}}
 $$
 
-## 11. Covariant descent and coefficient boundary
+## 13. Covariant descent and coefficient boundary
 
 $$
 \mathrm{{AutomaticSourceMapDescent}}=\texttt{{OPEN}},
@@ -1410,24 +1853,100 @@ def build_audit(
         in markdown
         and "\\mathrm{ParentIncidence}_{768\\to(608+1\\,568)}" in markdown
         and "PASS\\_COMPUTED\\_OBJECT\\_RECONSTRUCTION" in markdown,
-        "independent_remainder_object_equality_open": (
-            "IndependentRemainderObjectEquality" in markdown
-            and "OPEN: MISSING\\_TYPE" in markdown
+        "independent_remainder_comparator_audit_hash_bound": hashes[
+            str(SOURCE_PATHS["independent_remainder_comparator"])
+        ]
+        == EXPECTED_INDEPENDENT_REMAINDER_COMPARATOR_HASHES["audit_file_sha256"],
+        "independent_remainder_object_equality_exact": (
+            "N_R^{\\mathrm{ind}}=N_R^{\\mathrm{rep}}=|\\mathcal K_R|=1\\,568"
+            in markdown
+            and "P_{\\mathrm{ind}}(K)=P_{\\mathrm{rep}}(K)" in markdown
+            and "\\mathcal I_{\\mathrm{ind}}(K,p)=\\mathcal I_{\\mathrm{rep}}(K,p)"
+            in markdown
+            and "m_{\\mathrm{ind}}(K,p)=m_{\\mathrm{rep}}(K,p)" in markdown
+            and "N_{\\mathrm{incidence\\ multiplicity\\ mismatch}}=0" in markdown
+            and "PASS\\_1568\\_EXACT\\_OBJECTS" in markdown
+            and "IndependentRemainderObjectComparator}=\\texttt{OPEN}"
+            not in "".join(markdown.split())
         ),
+        "independent_remainder_comparator_hashes_rendered": all(
+            value in markdown
+            for value in EXPECTED_INDEPENDENT_REMAINDER_COMPARATOR_HASHES.values()
+        )
+        and EXPECTED_INDEPENDENT_REMAINDER_COMPARATOR_COMMIT in markdown,
         "replay_semantic_scope_bounded": (
             "PREAGGREGATION\\_MEASURE\\_DELTA\\_REPLAY\\_ONLY" in markdown
             and "StandaloneReplayCertificate" in markdown
             and "\\texttt{FALSE}" in markdown
         ),
-        "next_contact_IBP_type_open": "EdgeTaggedContactIBPToALocalSurvivors"
-        in markdown
-        and "OPEN: MISSING\\_TYPE" in markdown,
+        "contact_IBP_original_type_partially_resolved": (
+            "EdgeTaggedContactIBPToALocalSurvivors" in markdown
+            and "PARTIALLY\\_RESOLVED\\_EVENT\\_CARRIER\\_ONLY" in markdown
+            and (
+                "EdgeTaggedContactIBPToALocalSurvivors}=\\texttt{OPEN}"
+                not in "".join(markdown.split())
+            )
+        ),
         "measure_replay_hashes_rendered": EXPECTED_MEASURE_DELTA_REPLAY_HASHES[
             "contact_catalog_sha256"
         ]
         in markdown
         and EXPECTED_MEASURE_DELTA_REPLAY_HASHES["remainder_catalog_sha256"]
         in markdown,
+        "independent_primitive_gate_audit_hash_bound": hashes[
+            str(SOURCE_PATHS["independent_primitive_gate"])
+        ]
+        == EXPECTED_INDEPENDENT_PRIMITIVE_GATE_HASHES["audit_file_sha256"],
+        "independent_primitive_gate_formula_exact": (
+            "R:=\\mathbb Q(i)[k]" in markdown
+            and "M_{\\mathrm{raw}}(A,I):=(-1)^{|I|}M(A)M(I)" in markdown
+            and "768\\longrightarrow13\\,824\\longrightarrow142" in markdown
+            and "142\\times16=2\\,272" in markdown
+            and "N_{\\mathrm{mismatch}}=0" in markdown
+            and "N_{\\mathrm{DWordNF\\ normal\\ terms}}=140" in markdown
+            and "N_{\\mathrm{DWordNF\\ zero\\ pairs}}=92" in markdown
+        ),
+        "independent_primitive_gate_scope_bounded": (
+            "SELECTED\\_EDGE\\_WORD\\_PRIMITIVE\\_DALGEBRA\\_ONLY" in markdown
+            and "IndependentRemainderObjectComparator" in markdown
+            and "EdgeTaggedContactIBPToALocalSurvivors" in markdown
+            and snapshot["independent_remainder_comparator"]["status"] == "PASS"
+            and snapshot["contact_ibp_carrier"]["original_type_status"]
+            == "PARTIALLY_RESOLVED_EVENT_CARRIER_ONLY"
+            and snapshot["independent_primitive_gate"]["AWI_coefficient"]
+            == "UNCOMPUTED"
+        ),
+        "contact_IBP_carrier_audit_hash_bound": hashes[
+            str(SOURCE_PATHS["contact_ibp_carrier"])
+        ]
+        == EXPECTED_CONTACT_IBP_CARRIER_HASHES["audit_file_sha256"],
+        "contact_IBP_carrier_counts_exact": (
+            "N_c:=N_{\\mathrm{contact}}=608" in markdown
+            and "N_b:=192(2)+320(4)+96(8)=384+1\\,280+768=2\\,432" in markdown
+            and "N_e:=192(2)+320(8)+96(24)=384+2\\,560+2\\,304=5\\,248" in markdown
+            and "N_{e_{BA}|e_{CA}}=304" in markdown
+            and "N_{e_{CA}|e_{BA}}=304" in markdown
+            and "N_{\\mathrm{retained\\ boundary\\ tokens}}=N_e=5\\,248" in markdown
+        ),
+        "contact_IBP_carrier_status_exact": (
+            "EdgeTaggedContactIBPEventCarrier" in markdown
+            and "PARTIALLY\\_RESOLVED\\_EVENT\\_CARRIER\\_ONLY" in markdown
+            and "AllBoundaryTokensRetained" in markdown
+            and "\\mathrm{Barrier}(\\theta_I)=\\texttt{EXACT}" in markdown
+            and (
+                "EdgeTaggedContactIBPToALocalSurvivors}=\\texttt{OPEN}"
+                not in "".join(markdown.split())
+            )
+        ),
+        "contact_IBP_three_open_types_exact": (
+            all(
+                type_id.removeprefix("MISSING_TYPE::") in markdown
+                for type_id in EXPECTED_CONTACT_IBP_OPEN_TYPES
+            )
+            and snapshot["contact_ibp_carrier"]["open_types"]
+            == EXPECTED_CONTACT_IBP_OPEN_TYPES
+            and snapshot["contact_ibp_carrier"]["AWI_coefficient"] == "UNCOMPUTED"
+        ),
         "odd_word_sign_formula_exact": "N=m+\\binom{m}{2}+m|F|+N_{\\mathrm{coeff}}+N_{\\mathrm{endpoint}}"
         in markdown
         and "s=(-1)^N" in markdown,
@@ -1485,6 +2004,24 @@ def build_audit(
             "edge_square_contact_groups": 608,
             "remainder_groups": 1_568,
             "sparse_parent_incidence_entries": 6_080,
+            "independent_selected_word_pairs": 142,
+            "independent_coefficient_basis_dimension": 16,
+            "independent_exact_basis_cases": 2_272,
+            "independent_basis_mismatches": 0,
+            "independent_dwordnf_normal_terms": 140,
+            "independent_dwordnf_zero_pairs": 92,
+            "independent_remainder_objects": 1_568,
+            "replay_remainder_objects": 1_568,
+            "independent_remainder_key_mismatches": 0,
+            "independent_remainder_polynomial_mismatches": 0,
+            "independent_remainder_parent_incidence_mismatches": 0,
+            "independent_remainder_parent_incidence_multiplicity_mismatches": 0,
+            "contact_IBP_source_contacts": 608,
+            "contact_IBP_coproduct_branches": 2_432,
+            "contact_IBP_events": 5_248,
+            "contact_IBP_retained_boundary_tokens": 5_248,
+            "contact_IBP_A_local_edge_order_e_BA_e_CA": 304,
+            "contact_IBP_A_local_edge_order_e_CA_e_BA": 304,
             "pure_vector_gate_graphs": 273,
             "FP_candidates": 10,
             "matter_candidates": 12,

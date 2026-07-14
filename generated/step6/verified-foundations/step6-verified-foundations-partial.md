@@ -254,8 +254,7 @@ $$
 \mathrm{OracleRole}
 =\texttt{SHARED\_PRIMITIVE\_D\mbox{-}ALGEBRA\_ORACLE},
 \qquad
-\mathrm{IndependentRemainderObjectEquality}
-=\texttt{OPEN: MISSING\_TYPE}.
+\mathrm{ReplayRemainderEqualityClaim}=\texttt{NOT\_STANDALONE}.
 $$
 
 $$
@@ -287,7 +286,113 @@ H_{\mathrm{contact,reconstruction}}=\texttt{1918745eafd2970e942209ff312efb2bd342
 H_{\mathrm{remainder,reconstruction}}=\texttt{6dc51612772cdd485b0ba0b85a22fa79b4b930d37f6cfe54c821f90521579351}.
 $$
 
-## 8. Primitive-contact provenance
+## 8. Independent selected primitive D-algebra gate
+
+$$
+k:=\left(k_{+\dot +},k_{+\dot -},k_{-\dot +},k_{-\dot -}\right),
+\qquad
+R:=\mathbb Q(i)[k].
+$$
+
+$$
+A=(P_1^A,\ldots,P_{|A|}^A),
+\qquad
+I=(P_1^I,\ldots,P_{|I|}^I),
+\qquad
+M(A):=\prod_{a=1}^{|A|}M(P_a^A),
+\qquad
+M(I):=\prod_{b=1}^{|I|}M(P_b^I).
+$$
+
+$$
+M_{\mathrm{raw}}(A,I):=(-1)^{|I|}M(A)M(I),
+\qquad
+|I|=5,
+\qquad
+M_{\mathrm{raw}}(A,I)=-M(A)M(I).
+$$
+
+$$
+768\longrightarrow13\,824\longrightarrow142,
+\qquad
+142\times16=2\,272,
+\qquad
+N_{\mathrm{mismatch}}=0.
+$$
+
+$$
+N_{\mathrm{DWordNF\ normal\ terms}}=140,
+\qquad
+N_{\mathrm{DWordNF\ zero\ pairs}}=92.
+$$
+
+$$
+\mathrm{SelectedPrimitiveDAlgebra}
+=\texttt{PASS\_EXACT\_142\_EDGE\_WORD\_PAIRS\_X\_16},
+\qquad
+\mathrm{SemanticScope}
+=\texttt{SELECTED\_EDGE\_WORD\_PRIMITIVE\_DALGEBRA\_ONLY}.
+$$
+
+$$
+\mathcal K_R:=\text{remainder-object key set},
+\qquad
+p:=\text{parent-pair id}.
+$$
+
+$$
+P_{\mathrm{ind}}(K),P_{\mathrm{rep}}(K)\in R,
+\qquad
+\mathcal I_{\mathrm{ind}}(K,p),\mathcal I_{\mathrm{rep}}(K,p)\in R,
+\qquad
+m_{\mathrm{ind}}(K,p),m_{\mathrm{rep}}(K,p)\in\mathbb Z_{\geq0}.
+$$
+
+$$
+N_R^{\mathrm{ind}}=N_R^{\mathrm{rep}}=|\mathcal K_R|=1\,568.
+$$
+
+$$
+\forall K\in\mathcal K_R:\qquad
+P_{\mathrm{ind}}(K)=P_{\mathrm{rep}}(K).
+$$
+
+$$
+\forall(K,p):\qquad
+\mathcal I_{\mathrm{ind}}(K,p)=\mathcal I_{\mathrm{rep}}(K,p),
+\qquad
+m_{\mathrm{ind}}(K,p)=m_{\mathrm{rep}}(K,p).
+$$
+
+$$
+N_{\mathrm{key\ mismatch}}
+=N_{\mathrm{polynomial\ mismatch}}
+=N_{\mathrm{incidence\ mismatch}}
+=N_{\mathrm{incidence\ multiplicity\ mismatch}}=0.
+$$
+
+$$
+\mathrm{IndependentRemainderObjectComparator}
+=\texttt{PASS\_1568\_EXACT\_OBJECTS},
+\qquad
+\mathrm{ComparatorCommit}=\texttt{9bdeeff}.
+$$
+
+$$
+\begin{aligned}
+H_{\mathrm{comparator,audit}}&=\texttt{32515bf7ecae1fa2082dc5bc2bab268958aed27f293bd043eb1e164abf864b3f},\\
+H_{\mathrm{comparator,artifact}}&=\texttt{b1cba8670b91c1561a6866d9dbc07ed38f0e257fd0c468cda097cd2960ed3fc4},\\
+H_{\mathrm{comparator,payload}}&=\texttt{9f7e82a04db00750a8434307fb3f893b5c04cdafb97d04a0e1499b31d000b148},\\
+H_{\mathrm{comparator,source}}&=\texttt{3f0e1c917fdc459a944dc2a2fc26daae84334b0e7de1c2e8bd4ffbd4c40df25a},\\
+H_{\mathrm{comparator,test}}&=\texttt{1c8f16ae292dc7f1fcdb43fc89878250ce630b270fa4712e52459fc6a3e66c2a}.
+\end{aligned}
+$$
+
+$$
+C_{\mathrm{AWI}}^{(2)}=\texttt{UNCOMPUTED}.
+$$
+
+## 9. Primitive-contact provenance
 
 $$
 N_{\mathrm{stored\ contacts}}=608,
@@ -299,13 +404,56 @@ $$
 
 $$
 \mathrm{ParentIncidence}_{768\to(608+1\,568)}
-=\texttt{PASS\_COMPUTED\_OBJECT\_RECONSTRUCTION},
-\qquad
-\mathrm{EdgeTaggedContactIBPToALocalSurvivors}
-=\texttt{OPEN: MISSING\_TYPE}.
+=\texttt{PASS\_COMPUTED\_OBJECT\_RECONSTRUCTION}.
 $$
 
-## 9. Odd-word transfer sign
+## 10. Contact-IBP event carrier
+
+$$
+N_c:=N_{\mathrm{contact}}=608.
+$$
+
+$$
+N_b:=192(2)+320(4)+96(8)=384+1\,280+768=2\,432.
+$$
+
+$$
+N_e:=192(2)+320(8)+96(24)=384+2\,560+2\,304=5\,248.
+$$
+
+$$
+N_{e_{BA}|e_{CA}}=304,
+\qquad
+N_{e_{CA}|e_{BA}}=304,
+\qquad
+N_{e_{BA}|e_{CA}}+N_{e_{CA}|e_{BA}}=608.
+$$
+
+$$
+N_{\mathrm{retained\ boundary\ tokens}}=N_e=5\,248,
+\qquad
+\mathrm{AllBoundaryTokensRetained}=\texttt{TRUE},
+\qquad
+\mathrm{Barrier}(\theta_I)=\texttt{EXACT}.
+$$
+
+$$
+\mathrm{EdgeTaggedContactIBPEventCarrier}=\texttt{PASS},
+\qquad
+\mathrm{EdgeTaggedContactIBPToALocalSurvivors}
+=\texttt{PARTIALLY\_RESOLVED\_EVENT\_CARRIER\_ONLY}.
+$$
+
+$$
+\begin{aligned}
+\mathrm{CollapsedContactEndpointColorAndI3PortBinding}&=\texttt{OPEN},\\
+\mathrm{PostIBPPrimitiveNormalForm}&=\texttt{OPEN},\\
+\mathrm{I3LocalSurvivorComparisonMatrix}&=\texttt{OPEN},\\
+C_{\mathrm{AWI}}^{(2)}&=\texttt{UNCOMPUTED}.
+\end{aligned}
+$$
+
+## 11. Odd-word transfer sign
 
 $$
 N=m+\binom{m}{2}+m|F|+N_{\mathrm{coeff}}+N_{\mathrm{endpoint}},
@@ -331,7 +479,7 @@ $$
 N_{\mathrm{boundary}}=2(17)=34.
 $$
 
-## 10. Frozen full-orbit Schwinger–Dyson snapshot
+## 12. Frozen full-orbit Schwinger–Dyson snapshot
 
 $$
 \mathrm{Snapshot}=\texttt{FROZEN\_FULL\_ORBIT\_AUDIT},
@@ -360,7 +508,7 @@ $$
 \end{aligned}
 $$
 
-## 11. Covariant descent and coefficient boundary
+## 13. Covariant descent and coefficient boundary
 
 $$
 \mathrm{AutomaticSourceMapDescent}=\texttt{OPEN},

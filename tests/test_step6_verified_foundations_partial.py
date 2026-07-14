@@ -59,20 +59,82 @@ class Step6VerifiedFoundationsPartialTests(unittest.TestCase):
             "NON_INDEPENDENT_SHARED_ORACLE_RECONSTRUCTION",
         )
         self.assertEqual(
-            snapshot["measure_delta_replay"]["independent_remainder_object_equality"],
-            "OPEN",
-        )
-        self.assertEqual(
-            snapshot["measure_delta_replay"]["next_missing_type"],
-            "EdgeTaggedContactIBPToALocalSurvivors",
-        )
-        self.assertEqual(
             snapshot["measure_delta_replay"]["counts"],
             partial.EXPECTED_MEASURE_DELTA_REPLAY_COUNTS,
         )
         self.assertEqual(
             snapshot["measure_delta_replay"]["hashes"],
             partial.EXPECTED_MEASURE_DELTA_REPLAY_HASHES,
+        )
+        self.assertEqual(
+            snapshot["independent_primitive_gate"]["counts"],
+            partial.EXPECTED_INDEPENDENT_PRIMITIVE_GATE_COUNTS,
+        )
+        self.assertEqual(
+            snapshot["independent_primitive_gate"]["hashes"],
+            partial.EXPECTED_INDEPENDENT_PRIMITIVE_GATE_HASHES,
+        )
+        self.assertEqual(
+            snapshot["independent_primitive_gate"]["semantic_scope"],
+            "SELECTED_EDGE_WORD_PRIMITIVE_DALGEBRA_ONLY",
+        )
+        self.assertEqual(
+            snapshot["independent_primitive_gate"]["AWI_coefficient"], "UNCOMPUTED"
+        )
+        self.assertEqual(
+            snapshot["independent_remainder_comparator"]["counts"],
+            partial.EXPECTED_INDEPENDENT_REMAINDER_COMPARATOR_COUNTS,
+        )
+        self.assertEqual(
+            snapshot["independent_remainder_comparator"]["hashes"],
+            partial.EXPECTED_INDEPENDENT_REMAINDER_COMPARATOR_HASHES,
+        )
+        self.assertEqual(
+            snapshot["independent_remainder_comparator"]["commit"], "9bdeeff"
+        )
+        self.assertEqual(snapshot["independent_remainder_comparator"]["status"], "PASS")
+        self.assertEqual(
+            snapshot["independent_remainder_comparator"]["key_mismatches"], 0
+        )
+        self.assertEqual(
+            snapshot["independent_remainder_comparator"]["polynomial_mismatches"], 0
+        )
+        self.assertEqual(
+            snapshot["independent_remainder_comparator"]["parent_incidence_mismatches"],
+            0,
+        )
+        self.assertEqual(
+            snapshot["independent_remainder_comparator"][
+                "parent_incidence_multiplicity_mismatches"
+            ],
+            0,
+        )
+        self.assertEqual(
+            snapshot["contact_ibp_carrier"]["counts"],
+            partial.EXPECTED_CONTACT_IBP_CARRIER_COUNTS,
+        )
+        self.assertEqual(
+            snapshot["contact_ibp_carrier"]["hashes"],
+            partial.EXPECTED_CONTACT_IBP_CARRIER_HASHES,
+        )
+        self.assertEqual(
+            snapshot["contact_ibp_carrier"]["A_local_edge_orders"],
+            {"e_BA|e_CA": 304, "e_CA|e_BA": 304},
+        )
+        self.assertEqual(
+            snapshot["contact_ibp_carrier"]["resolved_type"],
+            "EdgeTaggedContactIBPEventCarrier",
+        )
+        self.assertEqual(snapshot["contact_ibp_carrier"]["resolved_status"], "PASS")
+        self.assertEqual(
+            snapshot["contact_ibp_carrier"]["original_type_status"],
+            "PARTIALLY_RESOLVED_EVENT_CARRIER_ONLY",
+        )
+        self.assertTrue(snapshot["contact_ibp_carrier"]["boundary_tokens_retained"])
+        self.assertEqual(snapshot["contact_ibp_carrier"]["theta_I_barrier"], "EXACT")
+        self.assertEqual(
+            snapshot["contact_ibp_carrier"]["open_types"],
+            partial.EXPECTED_CONTACT_IBP_OPEN_TYPES,
         )
         self.assertEqual(snapshot["laurent"]["AWI_coefficient"], "UNCOMPUTED")
 
@@ -102,7 +164,7 @@ class Step6VerifiedFoundationsPartialTests(unittest.TestCase):
         self.assertIn("PreAggregationRawReplaySeedWithBareDeltaIdentity", self.markdown)
         self.assertIn("PASS\\_TYPED\\_REPLAY", self.markdown)
         self.assertIn("SHARED\\_PRIMITIVE\\_D\\mbox{-}ALGEBRA\\_ORACLE", self.markdown)
-        self.assertIn("IndependentRemainderObjectEquality", self.markdown)
+        self.assertIn("ReplayRemainderEqualityClaim", self.markdown)
         self.assertIn("PREAGGREGATION\\_MEASURE\\_DELTA\\_REPLAY\\_ONLY", self.markdown)
         self.assertIn("StandaloneReplayCertificate", self.markdown)
         self.assertIn(
@@ -113,8 +175,67 @@ class Step6VerifiedFoundationsPartialTests(unittest.TestCase):
         self.assertIn(
             "N_{\\mathrm{sparse\\ parent\\ incidence}}=6\\,080", self.markdown
         )
+        self.assertIn("R:=\\mathbb Q(i)[k]", self.markdown)
+        self.assertIn("M_{\\mathrm{raw}}(A,I):=(-1)^{|I|}M(A)M(I)", self.markdown)
+        self.assertIn("768\\longrightarrow13\\,824\\longrightarrow142", self.markdown)
+        self.assertIn("142\\times16=2\\,272", self.markdown)
+        self.assertIn("N_{\\mathrm{mismatch}}=0", self.markdown)
+        self.assertIn("N_{\\mathrm{DWordNF\\ normal\\ terms}}=140", self.markdown)
+        self.assertIn("N_{\\mathrm{DWordNF\\ zero\\ pairs}}=92", self.markdown)
+        self.assertIn(
+            "SELECTED\\_EDGE\\_WORD\\_PRIMITIVE\\_DALGEBRA\\_ONLY",
+            self.markdown,
+        )
+        self.assertIn("IndependentRemainderObjectComparator", self.markdown)
+        self.assertIn(
+            "N_R^{\\mathrm{ind}}=N_R^{\\mathrm{rep}}=|\\mathcal K_R|=1\\,568",
+            self.markdown,
+        )
+        self.assertIn("P_{\\mathrm{ind}}(K)=P_{\\mathrm{rep}}(K)", self.markdown)
+        self.assertIn(
+            "\\mathcal I_{\\mathrm{ind}}(K,p)=\\mathcal I_{\\mathrm{rep}}(K,p)",
+            self.markdown,
+        )
+        self.assertIn("m_{\\mathrm{ind}}(K,p)=m_{\\mathrm{rep}}(K,p)", self.markdown)
+        self.assertIn(
+            "N_{\\mathrm{incidence\\ multiplicity\\ mismatch}}=0", self.markdown
+        )
+        self.assertIn("PASS\\_1568\\_EXACT\\_OBJECTS", self.markdown)
+        self.assertIn("ComparatorCommit", self.markdown)
+        self.assertIn("9bdeeff", self.markdown)
+        for value in partial.EXPECTED_INDEPENDENT_REMAINDER_COMPARATOR_HASHES.values():
+            self.assertIn(value, self.markdown)
+        self.assertNotRegex(
+            self.markdown,
+            r"IndependentRemainderObjectComparator\}\s*=\s*\\texttt\{OPEN\}",
+        )
         self.assertIn("EdgeTaggedContactIBPToALocalSurvivors", self.markdown)
-        self.assertIn("OPEN: MISSING\\_TYPE", self.markdown)
+        self.assertIn("N_c:=N_{\\mathrm{contact}}=608", self.markdown)
+        self.assertIn(
+            "N_b:=192(2)+320(4)+96(8)=384+1\\,280+768=2\\,432",
+            self.markdown,
+        )
+        self.assertIn(
+            "N_e:=192(2)+320(8)+96(24)=384+2\\,560+2\\,304=5\\,248",
+            self.markdown,
+        )
+        self.assertIn("N_{e_{BA}|e_{CA}}=304", self.markdown)
+        self.assertIn("N_{e_{CA}|e_{BA}}=304", self.markdown)
+        self.assertIn(
+            "N_{\\mathrm{retained\\ boundary\\ tokens}}=N_e=5\\,248",
+            self.markdown,
+        )
+        self.assertIn("AllBoundaryTokensRetained", self.markdown)
+        self.assertIn("\\mathrm{Barrier}(\\theta_I)=\\texttt{EXACT}", self.markdown)
+        self.assertIn("EdgeTaggedContactIBPEventCarrier", self.markdown)
+        self.assertIn("PARTIALLY\\_RESOLVED\\_EVENT\\_CARRIER\\_ONLY", self.markdown)
+        self.assertNotRegex(
+            self.markdown,
+            r"EdgeTaggedContactIBPToALocalSurvivors\}\s*=\s*\\texttt\{OPEN\}",
+        )
+        for type_id in partial.EXPECTED_CONTACT_IBP_OPEN_TYPES:
+            self.assertIn(type_id.removeprefix("MISSING_TYPE::"), self.markdown)
+        self.assertNotIn("IndependentRemainderObjectEquality", self.markdown)
         self.assertNotIn(
             "DeferredMeasureDeltaDWordExecutionToALocalContact", self.markdown
         )
@@ -172,6 +293,40 @@ class Step6VerifiedFoundationsPartialTests(unittest.TestCase):
         self.assertEqual(readback["status"], "PASS")
         self.assertEqual(readback["failed"], 0)
         self.assertTrue(all(readback["checks"].values()))
+        self.assertTrue(
+            readback["checks"]["independent_primitive_gate_audit_hash_bound"]
+        )
+        self.assertTrue(
+            readback["checks"]["independent_remainder_comparator_audit_hash_bound"]
+        )
+        self.assertTrue(
+            readback["checks"]["independent_remainder_object_equality_exact"]
+        )
+        self.assertEqual(readback["counts"]["independent_selected_word_pairs"], 142)
+        self.assertEqual(readback["counts"]["independent_exact_basis_cases"], 2_272)
+        self.assertEqual(readback["counts"]["independent_basis_mismatches"], 0)
+        self.assertEqual(readback["counts"]["independent_remainder_objects"], 1_568)
+        self.assertEqual(readback["counts"]["replay_remainder_objects"], 1_568)
+        self.assertEqual(
+            readback["counts"]["independent_remainder_polynomial_mismatches"], 0
+        )
+        self.assertEqual(
+            readback["counts"]["independent_remainder_parent_incidence_mismatches"],
+            0,
+        )
+        self.assertEqual(
+            readback["counts"][
+                "independent_remainder_parent_incidence_multiplicity_mismatches"
+            ],
+            0,
+        )
+        self.assertTrue(readback["checks"]["contact_IBP_carrier_audit_hash_bound"])
+        self.assertEqual(readback["counts"]["contact_IBP_source_contacts"], 608)
+        self.assertEqual(readback["counts"]["contact_IBP_coproduct_branches"], 2_432)
+        self.assertEqual(readback["counts"]["contact_IBP_events"], 5_248)
+        self.assertEqual(
+            readback["counts"]["contact_IBP_retained_boundary_tokens"], 5_248
+        )
         unhashed = dict(readback)
         audit_hash = unhashed.pop("audit_sha256")
         self.assertEqual(audit_hash, partial.payload_sha256(unhashed))
@@ -195,6 +350,27 @@ class Step6VerifiedFoundationsPartialTests(unittest.TestCase):
         sources["measure_delta_replay"]["contact_catalog_sha256"] = "0" * 64
         with self.assertRaisesRegex(
             partial.SourceDriftError, "measure-delta contact_catalog_sha256"
+        ):
+            partial.validate_sources(sources)
+
+    def test_independent_primitive_gate_drift_fails_closed(self) -> None:
+        sources = deepcopy(partial.load_sources())
+        sources["independent_primitive_gate"]["counts"]["basis_mismatches"] = 1
+        with self.assertRaisesRegex(
+            partial.SourceDriftError, "independent primitive gate counts"
+        ):
+            partial.validate_sources(sources)
+        sources = deepcopy(partial.load_sources())
+        sources["contact_ibp_carrier"]["counts"]["ibp_events"] = 5_247
+        with self.assertRaisesRegex(
+            partial.SourceDriftError, "contact IBP carrier counts"
+        ):
+            partial.validate_sources(sources)
+        sources = deepcopy(partial.load_sources())
+        sources["independent_remainder_comparator"]["artifact_sha256"] = "0" * 64
+        with self.assertRaisesRegex(
+            partial.SourceDriftError,
+            "independent remainder comparator artifact_sha256",
         ):
             partial.validate_sources(sources)
 
