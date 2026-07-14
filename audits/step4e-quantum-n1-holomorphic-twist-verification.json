@@ -451,6 +451,7 @@
         "audits/step4e-quantum-n1-holomorphic-twist-verification.json",
         "audits/step4e-quantum-n1-holomorphic-twist-gap-audit.json",
         "audits/step4e-quantum-n1-holomorphic-twist-notation-audit.json",
+        "audits/step4e-notion-write-receipt.json",
         "scripts/update_contract_hashes.py",
         "scripts/verify_step4e_quantum_n1_holomorphic_twist.py",
         "tests/test_repository_policy.py",
