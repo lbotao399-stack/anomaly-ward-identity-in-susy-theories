@@ -230,7 +230,7 @@
       "state": "SPECIFIED",
       "blocking_reason": null,
       "task_sha256": "18e73570e99f2e900af472d71fd396f21c25f042d3a2163fe43e29fd43977038",
-      "task": "tasks/CURRENT.yaml",
+      "task": "tasks/archive/CONTRACT-STEP-04D-CLASSICAL-N1-HOLOMORPHIC-TWIST-001.yaml",
       "checked_scope": {
         "theorem": "complexified compact-support component BV theory on the trivial bundle over R4=C2",
         "canonical_result": "holomorphic BF times an acyclic shifted-cotangent factor",
@@ -248,6 +248,13 @@
           "HT-GAP-07 symmetry-preserving interacting BV regulator"
         ]
       }
+    },
+    {
+      "id": "REFERENCE-IMPORT-N1-QUANTUM-HOLOMORPHIC-TWIST-001",
+      "state": "ACCEPTED",
+      "blocking_reason": null,
+      "task_sha256": "4ffd3d6dd2c2770eebd04d0db4f6dd4fe1b70a4bd4b784f34571c4a3ece3cff7",
+      "task": "tasks/CURRENT.yaml"
     }
   ]
 }

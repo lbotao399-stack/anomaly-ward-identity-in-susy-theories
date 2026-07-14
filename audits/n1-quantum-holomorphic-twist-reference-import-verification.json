@@ -1,0 +1,1358 @@
+{
+  "schema": 1,
+  "task": "REFERENCE-IMPORT-N1-QUANTUM-HOLOMORPHIC-TWIST-001",
+  "status": "PASS",
+  "totals": {
+    "checks": 269,
+    "failed": 0,
+    "sources": 8,
+    "claims": 8
+  },
+  "checks": [
+    {
+      "name": "task-id",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "task-type",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "task-status",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "task-eight-claims",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "task-no-contract-input",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "task-external-count",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "task-ledger-id",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "task-current-obligation",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "task-current-obligation-id",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "task-current-hash",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ledger-source-count",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ledger-core-count",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ledger-diagnostic-count",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ledger-no-source-execution",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ledger-no-translation",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ledger-no-adoption",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-0706-1533-V3-version",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-0706-1533-V3-title",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-0706-1533-V3-authors",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-0706-1533-V3-SOURCE-exists",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-0706-1533-V3-SOURCE-bytes",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-0706-1533-V3-SOURCE-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-0706-1533-V3-SOURCE-manifest",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-0706-1533-V3-SOURCE-manifest-path",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-0706-1533-V3-SOURCE-manifest-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-0706-1533-V3-PDF-exists",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-0706-1533-V3-PDF-bytes",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-0706-1533-V3-PDF-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-0706-1533-V3-PDF-manifest",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-0706-1533-V3-PDF-manifest-path",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-0706-1533-V3-PDF-manifest-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-0706-1533-V3-pdf-pages",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-0706-1533-V3-gzip-name",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-0706-1533-V3-gzip-bytes",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1507-01221-V2-version",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1507-01221-V2-title",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1507-01221-V2-authors",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1507-01221-V2-SOURCE-exists",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1507-01221-V2-SOURCE-bytes",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1507-01221-V2-SOURCE-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1507-01221-V2-SOURCE-manifest",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1507-01221-V2-SOURCE-manifest-path",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1507-01221-V2-SOURCE-manifest-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1507-01221-V2-PDF-exists",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1507-01221-V2-PDF-bytes",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1507-01221-V2-PDF-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1507-01221-V2-PDF-manifest",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1507-01221-V2-PDF-manifest-path",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1507-01221-V2-PDF-manifest-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1507-01221-V2-pdf-pages",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1507-01221-V2-archive-members",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1809-02661-V2-version",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1809-02661-V2-title",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1809-02661-V2-authors",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1809-02661-V2-SOURCE-exists",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1809-02661-V2-SOURCE-bytes",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1809-02661-V2-SOURCE-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1809-02661-V2-SOURCE-manifest",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1809-02661-V2-SOURCE-manifest-path",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1809-02661-V2-SOURCE-manifest-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1809-02661-V2-PDF-exists",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1809-02661-V2-PDF-bytes",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1809-02661-V2-PDF-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1809-02661-V2-PDF-manifest",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1809-02661-V2-PDF-manifest-path",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1809-02661-V2-PDF-manifest-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1809-02661-V2-pdf-pages",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1809-02661-V2-archive-members",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2002-10517-V1-version",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2002-10517-V1-title",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2002-10517-V1-authors",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2002-10517-V1-SOURCE-exists",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2002-10517-V1-SOURCE-bytes",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2002-10517-V1-SOURCE-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2002-10517-V1-SOURCE-manifest",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2002-10517-V1-SOURCE-manifest-path",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2002-10517-V1-SOURCE-manifest-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2002-10517-V1-PDF-exists",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2002-10517-V1-PDF-bytes",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2002-10517-V1-PDF-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2002-10517-V1-PDF-manifest",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2002-10517-V1-PDF-manifest-path",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2002-10517-V1-PDF-manifest-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2002-10517-V1-pdf-pages",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2002-10517-V1-archive-members",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9507045-V2-version",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9507045-V2-title",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9507045-V2-authors",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9507045-V2-SOURCE-exists",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9507045-V2-SOURCE-bytes",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9507045-V2-SOURCE-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9507045-V2-SOURCE-manifest",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9507045-V2-SOURCE-manifest-path",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9507045-V2-SOURCE-manifest-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9507045-V2-PDF-exists",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9507045-V2-PDF-bytes",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9507045-V2-PDF-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9507045-V2-PDF-manifest",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9507045-V2-PDF-manifest-path",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9507045-V2-PDF-manifest-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9507045-V2-pdf-pages",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9507045-V2-gzip-name",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9507045-V2-gzip-bytes",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9707133-V1-version",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9707133-V1-title",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9707133-V1-authors",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9707133-V1-SOURCE-exists",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9707133-V1-SOURCE-bytes",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9707133-V1-SOURCE-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9707133-V1-SOURCE-manifest",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9707133-V1-SOURCE-manifest-path",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9707133-V1-SOURCE-manifest-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9707133-V1-PDF-exists",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9707133-V1-PDF-bytes",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9707133-V1-PDF-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9707133-V1-PDF-manifest",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9707133-V1-PDF-manifest-path",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9707133-V1-PDF-manifest-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9707133-V1-pdf-pages",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9707133-V1-gzip-name",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9707133-V1-gzip-bytes",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1902-06715-V3-version",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1902-06715-V3-title",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1902-06715-V3-authors",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1902-06715-V3-SOURCE-exists",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1902-06715-V3-SOURCE-bytes",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1902-06715-V3-SOURCE-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1902-06715-V3-SOURCE-manifest",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1902-06715-V3-SOURCE-manifest-path",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1902-06715-V3-SOURCE-manifest-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1902-06715-V3-PDF-exists",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1902-06715-V3-PDF-bytes",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1902-06715-V3-PDF-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1902-06715-V3-PDF-manifest",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1902-06715-V3-PDF-manifest-path",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1902-06715-V3-PDF-manifest-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1902-06715-V3-pdf-pages",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1902-06715-V3-archive-members",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2011-09978-V2-version",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2011-09978-V2-title",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2011-09978-V2-authors",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2011-09978-V2-SOURCE-exists",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2011-09978-V2-SOURCE-bytes",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2011-09978-V2-SOURCE-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2011-09978-V2-SOURCE-manifest",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2011-09978-V2-SOURCE-manifest-path",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2011-09978-V2-SOURCE-manifest-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2011-09978-V2-PDF-exists",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2011-09978-V2-PDF-bytes",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2011-09978-V2-PDF-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2011-09978-V2-PDF-manifest",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2011-09978-V2-PDF-manifest-path",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2011-09978-V2-PDF-manifest-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2011-09978-V2-pdf-pages",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2011-09978-V2-gzip-name",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2011-09978-V2-gzip-bytes",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "claim-task-ledger-id-set",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "claim-distinct-counterterm",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "claim-distinct-qme",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-CLASSICAL-TWIST-claim-map",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-CLASSICAL-TWIST-locator",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-CLASSICAL-TWIST-scope",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-CLASSICAL-TWIST-not-adopted",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-CLASSICAL-TWIST-sources",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-CLASSICAL-TWIST-allowed-use",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-CLASSICAL-TWIST-forbidden-use",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-CLASSICAL-TWIST-ARXIV-2002-10517-V1-SOURCE-hashed",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-CLASSICAL-TWIST-ARXIV-2002-10517-V1-PDF-hashed",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-RENORMALIZED-BV-QME-claim-map",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-RENORMALIZED-BV-QME-locator",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-RENORMALIZED-BV-QME-scope",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-RENORMALIZED-BV-QME-not-adopted",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-RENORMALIZED-BV-QME-sources",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-RENORMALIZED-BV-QME-allowed-use",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-RENORMALIZED-BV-QME-forbidden-use",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-RENORMALIZED-BV-QME-ARXIV-0706-1533-V3-SOURCE-hashed",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-RENORMALIZED-BV-QME-ARXIV-0706-1533-V3-PDF-hashed",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-BV-PUSHFORWARD-claim-map",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-BV-PUSHFORWARD-locator",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-BV-PUSHFORWARD-scope",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-BV-PUSHFORWARD-not-adopted",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-BV-PUSHFORWARD-sources",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-BV-PUSHFORWARD-allowed-use",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-BV-PUSHFORWARD-forbidden-use",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-BV-PUSHFORWARD-ARXIV-1507-01221-V2-SOURCE-hashed",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-BV-PUSHFORWARD-ARXIV-1507-01221-V2-PDF-hashed",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-HOLOMORPHIC-COUNTERTERM-claim-map",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-HOLOMORPHIC-COUNTERTERM-locator",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-HOLOMORPHIC-COUNTERTERM-scope",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-HOLOMORPHIC-COUNTERTERM-not-adopted",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-HOLOMORPHIC-COUNTERTERM-sources",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-HOLOMORPHIC-COUNTERTERM-allowed-use",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-HOLOMORPHIC-COUNTERTERM-forbidden-use",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-HOLOMORPHIC-COUNTERTERM-ARXIV-1809-02661-V2-SOURCE-hashed",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-HOLOMORPHIC-COUNTERTERM-ARXIV-1809-02661-V2-PDF-hashed",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-HOLOMORPHIC-QME-ANOMALY-claim-map",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-HOLOMORPHIC-QME-ANOMALY-locator",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-HOLOMORPHIC-QME-ANOMALY-scope",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-HOLOMORPHIC-QME-ANOMALY-not-adopted",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-HOLOMORPHIC-QME-ANOMALY-sources",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-HOLOMORPHIC-QME-ANOMALY-allowed-use",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-HOLOMORPHIC-QME-ANOMALY-forbidden-use",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-HOLOMORPHIC-QME-ANOMALY-ARXIV-1809-02661-V2-SOURCE-hashed",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-HOLOMORPHIC-QME-ANOMALY-ARXIV-1809-02661-V2-PDF-hashed",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-N1-EXTENDED-ST-IDENTITY-claim-map",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-N1-EXTENDED-ST-IDENTITY-locator",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-N1-EXTENDED-ST-IDENTITY-scope",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-N1-EXTENDED-ST-IDENTITY-not-adopted",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-N1-EXTENDED-ST-IDENTITY-sources",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-N1-EXTENDED-ST-IDENTITY-allowed-use",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-N1-EXTENDED-ST-IDENTITY-forbidden-use",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-N1-EXTENDED-ST-IDENTITY-ARXIV-HEP-TH-9507045-V2-SOURCE-hashed",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-N1-EXTENDED-ST-IDENTITY-ARXIV-HEP-TH-9507045-V2-PDF-hashed",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-R-Q-ANOMALY-SCHEME-claim-map",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-R-Q-ANOMALY-SCHEME-locator",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-R-Q-ANOMALY-SCHEME-scope",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-R-Q-ANOMALY-SCHEME-not-adopted",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-R-Q-ANOMALY-SCHEME-sources",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-R-Q-ANOMALY-SCHEME-allowed-use",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-R-Q-ANOMALY-SCHEME-forbidden-use",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-R-Q-ANOMALY-SCHEME-ARXIV-1902-06715-V3-SOURCE-hashed",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-R-Q-ANOMALY-SCHEME-ARXIV-1902-06715-V3-PDF-hashed",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-R-Q-ANOMALY-SCHEME-ARXIV-2011-09978-V2-SOURCE-hashed",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-R-Q-ANOMALY-SCHEME-ARXIV-2011-09978-V2-PDF-hashed",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-BETA-AND-RESCALING-claim-map",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-BETA-AND-RESCALING-locator",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-BETA-AND-RESCALING-scope",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-BETA-AND-RESCALING-not-adopted",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-BETA-AND-RESCALING-sources",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-BETA-AND-RESCALING-allowed-use",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-BETA-AND-RESCALING-forbidden-use",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-BETA-AND-RESCALING-ARXIV-HEP-TH-9707133-V1-SOURCE-hashed",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "QHT-REF-BETA-AND-RESCALING-ARXIV-HEP-TH-9707133-V1-PDF-hashed",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "claim-map-manifest-path",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "claim-map-manifest-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ledger-manifest-path",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ledger-manifest-sha",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "visual-source-count",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "visual-result",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-0706-1533-V3-visual-source",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-0706-1533-V3-visual-pass",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-0706-1533-V3-visual-pages",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1507-01221-V2-visual-source",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1507-01221-V2-visual-pass",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1507-01221-V2-visual-pages",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1809-02661-V2-visual-source",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1809-02661-V2-visual-pass",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1809-02661-V2-visual-pages",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2002-10517-V1-visual-source",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2002-10517-V1-visual-pass",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2002-10517-V1-visual-pages",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9507045-V2-visual-source",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9507045-V2-visual-pass",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9507045-V2-visual-pages",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9707133-V1-visual-source",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9707133-V1-visual-pass",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-HEP-TH-9707133-V1-visual-pages",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1902-06715-V3-visual-source",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1902-06715-V3-visual-pass",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-1902-06715-V3-visual-pages",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2011-09978-V2-visual-source",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2011-09978-V2-visual-pass",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ARXIV-2011-09978-V2-visual-pages",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "admissibility-reference-only",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "admissibility-no-translation",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "admissibility-no-adoption",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "admissibility-no-contract-change",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "admissibility-no-notion-read",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "admissibility-no-chat",
+      "result": "PASS",
+      "detail": ""
+    }
+  ]
+}

@@ -383,7 +383,60 @@ class RepositoryPolicyTest(unittest.TestCase):
             )
             self.assertEqual(len(task["candidate_claim_ids"]), 3)
             return
+        if task["id"] == "REFERENCE-IMPORT-N1-QUANTUM-HOLOMORPHIC-TWIST-001":
+            external = [item for item in task["allowed_inputs"] if item.startswith("https://")]
+            arxiv_ids = (
+                "0706.1533",
+                "1507.01221",
+                "1809.02661",
+                "2002.10517",
+                "hep-th/9507045",
+                "hep-th/9707133",
+                "1902.06715",
+                "2011.09978",
+            )
+            expected = []
+            for arxiv_id in arxiv_ids:
+                expected.extend(
+                    [
+                        f"https://export.arxiv.org/e-print/{arxiv_id}",
+                        f"https://arxiv.org/pdf/{arxiv_id}",
+                    ]
+                )
+            self.assertEqual(external, expected)
+            self.assertEqual(len(task["candidate_claim_ids"]), 8)
+            self.assertTrue(all("NOTION" not in item.upper() for item in external))
+            return
         self.fail(f"unreviewed reference-import task: {task['id']}")
+
+    def test_n1_quantum_holomorphic_twist_reference_import(self) -> None:
+        script = ROOT / "scripts/verify_n1_quantum_holomorphic_twist_reference_import.py"
+        audit_path = ROOT / "audits/n1-quantum-holomorphic-twist-reference-import-verification.json"
+        ledger_path = ROOT / "references/n1-quantum-holomorphic-twist-source-ledger.json"
+        self.assertTrue(script.is_file())
+        self.assertTrue(audit_path.is_file())
+        self.assertTrue(ledger_path.is_file())
+        expected = audit_path.read_text(encoding="utf-8")
+        subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
+        audit = json.loads(expected)
+        ledger = json.loads(ledger_path.read_text(encoding="utf-8"))
+        self.assertEqual(audit["status"], "PASS")
+        self.assertEqual(audit["totals"], {"checks": 269, "failed": 0, "sources": 8, "claims": 8})
+        self.assertEqual(ledger["admissibility"]["translation_status"], "NOT_PERFORMED_IN_REFERENCE_IMPORT")
+        self.assertFalse(ledger["admissibility"]["project_formula_adoption"])
+        self.assertFalse(ledger["admissibility"]["project_contract_modified"])
+        self.assertTrue(
+            all(
+                claim["adoption_status"] == "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+                for claim in ledger["candidate_claims"]
+            )
+        )
 
     def test_superspace_1001_supergraph_reference_import(self) -> None:
         audit_path = ROOT / "audits/superspace-1001-supergraph-reference-import-verification.json"

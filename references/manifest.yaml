@@ -17,7 +17,7 @@
       "id": "REFERENCE-CLAIM-MAP",
       "path": "references/claim-map.yaml",
       "classification": "REFERENCE_CLAIM_BOUNDARY",
-      "sha256": "10439fbbcae893ab5f1f2ceab9e26a9c5245e28356ad0918f593b1c86d7271e2"
+      "sha256": "93ba4d5d868451496304a3f82729672aa871437f6b655517c9d11bba175e2601"
     },
     {
       "id": "ARXIV-HEP-TH-0108200-V1",
@@ -366,6 +366,108 @@
       "path": "references/step5-chat-weinberg30-source-ledger.json",
       "classification": "REFERENCE_SOURCE_LEDGER",
       "sha256": "6a7d6a699f8572c976d0bf1c964fc8a85417f85ab787c60383aa6fd08d16229b"
+    },
+    {
+      "id": "ARXIV-0706-1533-V3-SOURCE",
+      "path": "references/vendor/arxiv/0706.1533-source.tar",
+      "classification": "PRIMARY_REFERENCE_SOURCE_EVIDENCE_ONLY",
+      "sha256": "5f566f7d2103a692a202dece2f4e32793a806d72f0a0137949dd56f78bf5cc83"
+    },
+    {
+      "id": "ARXIV-0706-1533-V3-PDF",
+      "path": "references/vendor/arxiv/0706.1533.pdf",
+      "classification": "PRIMARY_REFERENCE_RENDERED_EVIDENCE_ONLY",
+      "sha256": "03fc69467694162e7da40a7cf6df445cdbdb4ecd165e67158fb0dbc283e13cd1"
+    },
+    {
+      "id": "ARXIV-1507-01221-V2-SOURCE",
+      "path": "references/vendor/arxiv/1507.01221-source.tar",
+      "classification": "PRIMARY_REFERENCE_SOURCE_EVIDENCE_ONLY",
+      "sha256": "2b6ef92ba8d8540b290da66310b78080db2dba27b9a0c9b76bca91c7d6df9778"
+    },
+    {
+      "id": "ARXIV-1507-01221-V2-PDF",
+      "path": "references/vendor/arxiv/1507.01221.pdf",
+      "classification": "PRIMARY_REFERENCE_RENDERED_EVIDENCE_ONLY",
+      "sha256": "5755695bf54e27db8848c773ee8b001c38fe705fcbd4b9537b72ce555f0928c2"
+    },
+    {
+      "id": "ARXIV-1809-02661-V2-SOURCE",
+      "path": "references/vendor/arxiv/1809.02661-source.tar",
+      "classification": "PRIMARY_REFERENCE_SOURCE_EVIDENCE_ONLY",
+      "sha256": "e0f94ecbe724d243e339a34f41d5903f23bdcc78f2b81a91fb1c7840dd7c197d"
+    },
+    {
+      "id": "ARXIV-1809-02661-V2-PDF",
+      "path": "references/vendor/arxiv/1809.02661.pdf",
+      "classification": "PRIMARY_REFERENCE_RENDERED_EVIDENCE_ONLY",
+      "sha256": "cb493b1e7ef34b69cf7ffe333bdc12f88680d1e97d9981f57600e56f79a2bffc"
+    },
+    {
+      "id": "ARXIV-2002-10517-V1-SOURCE",
+      "path": "references/vendor/arxiv/2002.10517-source.tar",
+      "classification": "PRIMARY_REFERENCE_SOURCE_EVIDENCE_ONLY",
+      "sha256": "c89655e92338ea6a22ecd56737516db6906706a6bd73549a8d9829b84678bb85"
+    },
+    {
+      "id": "ARXIV-2002-10517-V1-PDF",
+      "path": "references/vendor/arxiv/2002.10517.pdf",
+      "classification": "PRIMARY_REFERENCE_RENDERED_EVIDENCE_ONLY",
+      "sha256": "07629209035914eab7155dd031499801a43d64e685c27fd487c299b785ea8420"
+    },
+    {
+      "id": "ARXIV-HEP-TH-9507045-V2-SOURCE",
+      "path": "references/vendor/arxiv/hep-th-9507045-source.tar",
+      "classification": "PRIMARY_REFERENCE_SOURCE_EVIDENCE_ONLY",
+      "sha256": "2cc98d71222b869b687d6a81c8bd18c92b02b885fda587fda5cc6ae7c568824c"
+    },
+    {
+      "id": "ARXIV-HEP-TH-9507045-V2-PDF",
+      "path": "references/vendor/arxiv/hep-th-9507045.pdf",
+      "classification": "PRIMARY_REFERENCE_RENDERED_EVIDENCE_ONLY",
+      "sha256": "eb87a761ecab88e9a33e770f440cf6de93653be4125b44dab86d344d4ee0c5a0"
+    },
+    {
+      "id": "ARXIV-HEP-TH-9707133-V1-SOURCE",
+      "path": "references/vendor/arxiv/hep-th-9707133-source.tar",
+      "classification": "PRIMARY_REFERENCE_SOURCE_EVIDENCE_ONLY",
+      "sha256": "cf1a639a108420e3534ee290c31902634530a5da5f75c85374229a92ec40e9d5"
+    },
+    {
+      "id": "ARXIV-HEP-TH-9707133-V1-PDF",
+      "path": "references/vendor/arxiv/hep-th-9707133.pdf",
+      "classification": "PRIMARY_REFERENCE_RENDERED_EVIDENCE_ONLY",
+      "sha256": "4869e47927ce0d63641a9263648c1d4bb0104e9751503767215100ffcd26f1f4"
+    },
+    {
+      "id": "ARXIV-1902-06715-V3-SOURCE",
+      "path": "references/vendor/arxiv/1902.06715-source.tar",
+      "classification": "PRIMARY_REFERENCE_SOURCE_EVIDENCE_ONLY",
+      "sha256": "ea55375461f4b6e1222a8181b6b1021c4a31b6b6b6a4b86449a635437dead728"
+    },
+    {
+      "id": "ARXIV-1902-06715-V3-PDF",
+      "path": "references/vendor/arxiv/1902.06715.pdf",
+      "classification": "PRIMARY_REFERENCE_RENDERED_EVIDENCE_ONLY",
+      "sha256": "e665cb0a73a210a1ff860ae5d22bab978945a3ee7fd29a747d8817682087e8e2"
+    },
+    {
+      "id": "ARXIV-2011-09978-V2-SOURCE",
+      "path": "references/vendor/arxiv/2011.09978-source.tar",
+      "classification": "PRIMARY_REFERENCE_SOURCE_EVIDENCE_ONLY",
+      "sha256": "7079b3f14c1d12fd1f50eff7cfda7d9e910db3e46ca109d395083a3471010cab"
+    },
+    {
+      "id": "ARXIV-2011-09978-V2-PDF",
+      "path": "references/vendor/arxiv/2011.09978.pdf",
+      "classification": "PRIMARY_REFERENCE_RENDERED_EVIDENCE_ONLY",
+      "sha256": "38cc6b5ccdb84a7544d854142faa33079be176384b74af8a11fa886d42314c78"
+    },
+    {
+      "id": "N1-QUANTUM-HOLOMORPHIC-TWIST-SOURCE-LEDGER",
+      "path": "references/n1-quantum-holomorphic-twist-source-ledger.json",
+      "classification": "REFERENCE_SOURCE_LEDGER",
+      "sha256": "db9775d7cd3375fe1988327e95d78899154228e89f8e6279733abd961b0b91a0"
     }
   ]
 }

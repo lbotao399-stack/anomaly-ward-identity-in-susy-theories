@@ -1,0 +1,291 @@
+{
+  "schema": 1,
+  "task": "REFERENCE-IMPORT-N1-QUANTUM-HOLOMORPHIC-TWIST-001",
+  "recorded_at_utc": "2026-07-14T02:41:08Z",
+  "acquisition": {
+    "method": "byte-for-byte HTTPS download from the exact task locators",
+    "source_execution_performed": false,
+    "translation_status": "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+    "project_formula_adoption": false
+  },
+  "source_tiers": {
+    "core_bv_holomorphic": [
+      "ARXIV-0706-1533-V3",
+      "ARXIV-1507-01221-V2",
+      "ARXIV-1809-02661-V2",
+      "ARXIV-2002-10517-V1"
+    ],
+    "anomaly_and_renormalization_diagnostics": [
+      "ARXIV-HEP-TH-9507045-V2",
+      "ARXIV-HEP-TH-9707133-V1",
+      "ARXIV-1902-06715-V3",
+      "ARXIV-2011-09978-V2"
+    ]
+  },
+  "sources": [
+    {
+      "id": "ARXIV-0706-1533-V3",
+      "arxiv_id": "0706.1533",
+      "version": "v3",
+      "title": "Renormalisation and the Batalin-Vilkovisky Formalism",
+      "authors": ["Kevin Costello"],
+      "source": {
+        "url": "https://export.arxiv.org/e-print/0706.1533",
+        "path": "references/vendor/arxiv/0706.1533-source.tar",
+        "bytes": 67051,
+        "sha256": "5f566f7d2103a692a202dece2f4e32793a806d72f0a0137949dd56f78bf5cc83",
+        "archive_format": "gzip_single_file",
+        "members": [{"name": "renormalisation4.tex", "bytes": 247407}]
+      },
+      "pdf": {
+        "url": "https://arxiv.org/pdf/0706.1533",
+        "path": "references/vendor/arxiv/0706.1533.pdf",
+        "bytes": 582136,
+        "pages": 88,
+        "sha256": "03fc69467694162e7da40a7cf6df445cdbdb4ecd165e67158fb0dbc283e13cd1"
+      }
+    },
+    {
+      "id": "ARXIV-1507-01221-V2",
+      "arxiv_id": "1507.01221",
+      "version": "v2",
+      "title": "Perturbative Quantum Gauge Theories on Manifolds with Boundary",
+      "authors": ["Alberto S. Cattaneo", "Pavel Mnev", "Nicolai Reshetikhin"],
+      "source": {
+        "url": "https://export.arxiv.org/e-print/1507.01221",
+        "path": "references/vendor/arxiv/1507.01221-source.tar",
+        "bytes": 141166,
+        "sha256": "2b6ef92ba8d8540b290da66310b78080db2dba27b9a0c9b76bca91c7d6df9778",
+        "archive_format": "gzip_tar",
+        "members": ["BF-dearv2-final.tex", "gluing1.pdf", "gluing2.pdf", "gluing3.pdf", "gluing4.pdf", "wheelloop.pdf"]
+      },
+      "pdf": {
+        "url": "https://arxiv.org/pdf/1507.01221",
+        "path": "references/vendor/arxiv/1507.01221.pdf",
+        "bytes": 1536474,
+        "pages": 93,
+        "sha256": "5755695bf54e27db8848c773ee8b001c38fe705fcbd4b9537b72ce555f0928c2"
+      }
+    },
+    {
+      "id": "ARXIV-1809-02661-V2",
+      "arxiv_id": "1809.02661",
+      "version": "v2",
+      "title": "Renormalization for Holomorphic Field Theories",
+      "authors": ["Brian R. Williams"],
+      "source": {
+        "url": "https://export.arxiv.org/e-print/1809.02661",
+        "path": "references/vendor/arxiv/1809.02661-source.tar",
+        "bytes": 55049,
+        "sha256": "e0f94ecbe724d243e339a34f41d5903f23bdcc78f2b81a91fb1c7840dd7c197d",
+        "archive_format": "gzip_tar",
+        "members": ["holrenorm_cmp.bbl", "holrenorm_cmp.tex", "macros.sty"]
+      },
+      "pdf": {
+        "url": "https://arxiv.org/pdf/1809.02661",
+        "path": "references/vendor/arxiv/1809.02661.pdf",
+        "bytes": 533345,
+        "pages": 48,
+        "sha256": "cb493b1e7ef34b69cf7ffe333bdc12f88680d1e97d9981f57600e56f79a2bffc"
+      }
+    },
+    {
+      "id": "ARXIV-2002-10517-V1",
+      "arxiv_id": "2002.10517",
+      "version": "v1",
+      "title": "A Taxonomy of Twists of Supersymmetric Yang-Mills Theory",
+      "authors": ["Chris Elliott", "Pavel Safronov", "Brian R. Williams"],
+      "source": {
+        "url": "https://export.arxiv.org/e-print/2002.10517",
+        "path": "references/vendor/arxiv/2002.10517-source.tar",
+        "bytes": 91569,
+        "sha256": "c89655e92338ea6a22ecd56737516db6906706a6bd73549a8d9829b84678bb85",
+        "archive_format": "gzip_tar",
+        "members": ["combined_macros.sty", "main.bbl", "main.tex"]
+      },
+      "pdf": {
+        "url": "https://arxiv.org/pdf/2002.10517",
+        "path": "references/vendor/arxiv/2002.10517.pdf",
+        "bytes": 1188661,
+        "pages": 98,
+        "sha256": "07629209035914eab7155dd031499801a43d64e685c27fd487c299b785ea8420"
+      }
+    },
+    {
+      "id": "ARXIV-HEP-TH-9507045-V2",
+      "arxiv_id": "hep-th/9507045",
+      "version": "v2",
+      "title": "Algebraic Renormalization of N = 1 Supersymmetric Gauge Theories",
+      "authors": ["Nicola Maggiore", "Olivier Piguet", "Sylvain Wolf"],
+      "source": {
+        "url": "https://export.arxiv.org/e-print/hep-th/9507045",
+        "path": "references/vendor/arxiv/hep-th-9507045-source.tar",
+        "bytes": 28717,
+        "sha256": "2cc98d71222b869b687d6a81c8bd18c92b02b885fda587fda5cc6ae7c568824c",
+        "archive_format": "gzip_single_file",
+        "members": [{"name": "9507045.tex", "bytes": 89286}]
+      },
+      "pdf": {
+        "url": "https://arxiv.org/pdf/hep-th/9507045",
+        "path": "references/vendor/arxiv/hep-th-9507045.pdf",
+        "bytes": 295089,
+        "pages": 31,
+        "sha256": "eb87a761ecab88e9a33e770f440cf6de93653be4125b44dab86d344d4ee0c5a0"
+      }
+    },
+    {
+      "id": "ARXIV-HEP-TH-9707133-V1",
+      "arxiv_id": "hep-th/9707133",
+      "version": "v1",
+      "title": "Holomorphy, Rescaling Anomalies and Exact Beta Functions in Supersymmetric Gauge Theories",
+      "authors": ["Nima Arkani-Hamed", "Hitoshi Murayama"],
+      "source": {
+        "url": "https://export.arxiv.org/e-print/hep-th/9707133",
+        "path": "references/vendor/arxiv/hep-th-9707133-source.tar",
+        "bytes": 38043,
+        "sha256": "cf1a639a108420e3534ee290c31902634530a5da5f75c85374229a92ec40e9d5",
+        "archive_format": "gzip_single_file",
+        "members": [{"name": "hitoshi.tex", "bytes": 128767}]
+      },
+      "pdf": {
+        "url": "https://arxiv.org/pdf/hep-th/9707133",
+        "path": "references/vendor/arxiv/hep-th-9707133.pdf",
+        "bytes": 381027,
+        "pages": 36,
+        "sha256": "4869e47927ce0d63641a9263648c1d4bb0104e9751503767215100ffcd26f1f4"
+      }
+    },
+    {
+      "id": "ARXIV-1902-06715-V3",
+      "arxiv_id": "1902.06715",
+      "version": "v3",
+      "title": "Anomalous supersymmetry",
+      "authors": ["Georgios Katsianis", "Ioannis Papadimitriou", "Kostas Skenderis", "Marika Taylor"],
+      "source": {
+        "url": "https://export.arxiv.org/e-print/1902.06715",
+        "path": "references/vendor/arxiv/1902.06715-source.tar",
+        "bytes": 23982,
+        "sha256": "ea55375461f4b6e1222a8181b6b1021c4a31b6b6b6a4b86449a635437dead728",
+        "archive_format": "gzip_tar",
+        "members": ["3diagramsnew.pdf", "macros.tex", "SA_PRL-v2-KS.bbl", "SA_PRL-v2-KS.tex"]
+      },
+      "pdf": {
+        "url": "https://arxiv.org/pdf/1902.06715",
+        "path": "references/vendor/arxiv/1902.06715.pdf",
+        "bytes": 342848,
+        "pages": 6,
+        "sha256": "e665cb0a73a210a1ff860ae5d22bab978945a3ee7fd29a747d8817682087e8e2"
+      }
+    },
+    {
+      "id": "ARXIV-2011-09978-V2",
+      "arxiv_id": "2011.09978",
+      "version": "v2",
+      "title": "Consistency of supersymmetric 't Hooft anomalies",
+      "authors": ["Adam Bzowski", "Guido Festuccia", "Vladimir Prochazka"],
+      "source": {
+        "url": "https://export.arxiv.org/e-print/2011.09978",
+        "path": "references/vendor/arxiv/2011.09978-source.tar",
+        "bytes": 53025,
+        "sha256": "7079b3f14c1d12fd1f50eff7cfda7d9e910db3e46ca109d395083a3471010cab",
+        "archive_format": "gzip_single_file",
+        "members": [{"name": "final3.tex", "bytes": 207514}]
+      },
+      "pdf": {
+        "url": "https://arxiv.org/pdf/2011.09978",
+        "path": "references/vendor/arxiv/2011.09978.pdf",
+        "bytes": 830183,
+        "pages": 59,
+        "sha256": "38cc6b5ccdb84a7544d854142faa33079be176384b74af8a11fa886d42314c78"
+      }
+    }
+  ],
+  "candidate_claims": [
+    {
+      "id": "QHT-REF-CLASSICAL-TWIST",
+      "sources": ["ARXIV-2002-10517-V1-SOURCE", "ARXIV-2002-10517-V1-PDF"],
+      "locator": "Section 10.1.1, Theorem 10.1, PDF page 70",
+      "candidate_claim": "The classical holomorphic twist of 4d N=1 super Yang-Mills with matter is perturbatively equivalent to holomorphic BF with a beta-gamma matter sector; pure gauge is the zero-matter specialization.",
+      "scope_limitation": "Classical perturbative BV equivalence only; no QME, counterterm, regulator, or path-integral theorem.",
+      "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+    },
+    {
+      "id": "QHT-REF-RENORMALIZED-BV-QME",
+      "sources": ["ARXIV-0706-1533-V3-SOURCE", "ARXIV-0706-1533-V3-PDF"],
+      "locator": "Sections 1.5-1.8; Theorem B on PDF page 5; Theorem C and renormalized-QME definition on PDF pages 7-10",
+      "candidate_claim": "A fixed renormalization scheme produces local counterterms and compatible effective actions; satisfying the renormalized QME is an additional condition on the effective family.",
+      "scope_limitation": "Abstract elliptic BV framework; does not quantize this N=1 theory or prove twist compatibility.",
+      "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+    },
+    {
+      "id": "QHT-REF-BV-PUSHFORWARD",
+      "sources": ["ARXIV-1507-01221-V2-SOURCE", "ARXIV-1507-01221-V2-PDF"],
+      "locator": "Section 2.2.2, Theorem 2.9 and equations (2.3)-(2.5), PDF page 12; Definition 2.11, Corollary 2.12, Theorem 2.15, PDF pages 13-15",
+      "candidate_claim": "Finite-dimensional BV integration of half-densities along a Lagrangian fiber intertwines BV Laplacians; a Lagrangian homotopy changes the result by a BV-exact term.",
+      "scope_limitation": "Finite-dimensional statement; infinite-dimensional use is perturbative/diagrammatic and requires separate renormalization.",
+      "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+    },
+    {
+      "id": "QHT-REF-HOLOMORPHIC-COUNTERTERM",
+      "sources": ["ARXIV-1809-02661-V2-SOURCE", "ARXIV-1809-02661-V2-PDF"],
+      "locator": "Section 3, Theorem 3.4, PDF page 27",
+      "candidate_claim": "A holomorphic theory on complex affine space admits a one-loop prequantization with no counterterms under the paper's hypotheses.",
+      "scope_limitation": "Prequantization and counterterm finiteness do not imply the QME or anomaly cancellation.",
+      "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+    },
+    {
+      "id": "QHT-REF-HOLOMORPHIC-QME-ANOMALY",
+      "sources": ["ARXIV-1809-02661-V2-SOURCE", "ARXIV-1809-02661-V2-PDF"],
+      "locator": "Definition 4.2 and Lemma 4.3 on PDF page 38; Proposition 4.4 and equation (24) on PDF page 39",
+      "candidate_claim": "The one-loop QME obstruction is a local cohomology class and, for holomorphic theories on C^d, is represented by wheels with d+1 vertices.",
+      "scope_limitation": "The relevant hBF wheel and color factor are not evaluated by the general theorem.",
+      "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+    },
+    {
+      "id": "QHT-REF-N1-EXTENDED-ST-IDENTITY",
+      "sources": ["ARXIV-HEP-TH-9507045-V2-SOURCE", "ARXIV-HEP-TH-9507045-V2-PDF"],
+      "locator": "Section 3.2, equations (3.36)-(3.44), PDF pages 11-12; Section 5, PDF pages 14-15",
+      "candidate_claim": "The local breaking of the generalized gauge-plus-supersymmetry Slavnov identity is a linearized-Slavnov coboundary plus the supersymmetric Adler-Bardeen cocycle.",
+      "scope_limitation": "Minkowski Wess-Zumino-gauge 1PI algebraic renormalization; Euclidean BV/QME translation and the pure-adjoint cocycle calculation remain Project-side obligations.",
+      "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+    },
+    {
+      "id": "QHT-REF-R-Q-ANOMALY-SCHEME",
+      "sources": ["ARXIV-1902-06715-V3-SOURCE", "ARXIV-1902-06715-V3-PDF", "ARXIV-2011-09978-V2-SOURCE", "ARXIV-2011-09978-V2-PDF"],
+      "locator": "1902.06715 equations (4)-(6) and Tables I-II on PDF pages 3-4; 2011.09978 Sections 2.2-2.3 equations (2.24)-(2.29) on PDF pages 9-12 and Section 5.6 on PDF page 45",
+      "candidate_claim": "The assignment of an R-current anomaly to a supersymmetry Ward identity depends on background-source content, current multiplet, compensators, and finite-counterterm scheme.",
+      "scope_limitation": "Background-current Ward identities do not by themselves establish or obstruct the flat-space gauge-plus-Q BV master equation.",
+      "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+    },
+    {
+      "id": "QHT-REF-BETA-AND-RESCALING",
+      "sources": ["ARXIV-HEP-TH-9707133-V1-SOURCE", "ARXIV-HEP-TH-9707133-V1-PDF"],
+      "locator": "Section 2 equations (2.5)-(2.12), PDF pages 4-6; Section 6 equation (6.6), PDF page 14; Appendix B equation (B.14), PDF page 33",
+      "candidate_claim": "Holomorphic and canonically normalized gauge couplings have different running because the field rescaling has an anomalous Jacobian.",
+      "scope_limitation": "Wilsonian/canonical-coupling renormalization is not the holomorphic-twist beta functional and is not a ghost-number-one QME obstruction.",
+      "adoption_status": "NOT_ADOPTED_IN_REFERENCE_IMPORT"
+    }
+  ],
+  "visual_verification": {
+    "method": "Poppler PNG render plus direct visual inspection",
+    "checks": [
+      {"source": "ARXIV-0706-1533-V3", "pdf_pages": [1, 5], "result": "PASS"},
+      {"source": "ARXIV-1507-01221-V2", "pdf_pages": [1, 12], "result": "PASS"},
+      {"source": "ARXIV-1809-02661-V2", "pdf_pages": [1, 27], "result": "PASS"},
+      {"source": "ARXIV-2002-10517-V1", "pdf_pages": [1, 70], "result": "PASS"},
+      {"source": "ARXIV-HEP-TH-9507045-V2", "pdf_pages": [1, 12], "result": "PASS"},
+      {"source": "ARXIV-HEP-TH-9707133-V1", "pdf_pages": [1, 14], "result": "PASS"},
+      {"source": "ARXIV-1902-06715-V3", "pdf_pages": [1, 4], "result": "PASS"},
+      {"source": "ARXIV-2011-09978-V2", "pdf_pages": [1, 45], "result": "PASS"}
+    ],
+    "result": "PASS"
+  },
+  "admissibility": {
+    "classification": "REFERENCE_EVIDENCE_ONLY",
+    "translation_status": "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+    "project_formula_adoption": false,
+    "project_contract_modified": false,
+    "notion_read_performed": false,
+    "chat_or_pro_output_used": false
+  }
+}

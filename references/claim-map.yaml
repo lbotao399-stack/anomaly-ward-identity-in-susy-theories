@@ -284,6 +284,80 @@
       ],
       "allowed_use": "A later registered Step-5 contract-change task may reconstruct Weinberg Chapter 30's potential-superfield, superpropagator, supergraph, and superspace-integration-by-parts organization, then compare it with a separately derived Project-normalized construction.",
       "forbidden_use": "Importing Weinberg's chirality labels, spinor derivatives, metric, Fourier phase, measure, propagator, vertex factor, projector coefficient, integration-by-parts sign, or nonrenormalization conclusion as a Project formula."
+    },
+    {
+      "id": "QHT-REF-CLASSICAL-TWIST",
+      "sources": [
+        "ARXIV-2002-10517-V1-SOURCE",
+        "ARXIV-2002-10517-V1-PDF"
+      ],
+      "allowed_use": "A later registered quantum-holomorphic-twist contract may compare the Project Step-4D classical map with Section 10.1.1, Theorem 10.1, after deriving a complete convention translation.",
+      "forbidden_use": "Inferring quantum equivalence, QME compatibility, regulator preservation, counterterm matching, or Euclidean path-integral equality from the classical perturbative theorem."
+    },
+    {
+      "id": "QHT-REF-RENORMALIZED-BV-QME",
+      "sources": [
+        "ARXIV-0706-1533-V3-SOURCE",
+        "ARXIV-0706-1533-V3-PDF"
+      ],
+      "allowed_use": "A later registered contract may translate Theorems B-C and the renormalized-QME definition into explicit proof obligations for the Project elliptic BV data and effective-action family.",
+      "forbidden_use": "Claiming that the abstract counterterm construction quantizes pure N=1 SYM, constructs the quantum Q-lift, or proves twist-quantization commutation."
+    },
+    {
+      "id": "QHT-REF-BV-PUSHFORWARD",
+      "sources": [
+        "ARXIV-1507-01221-V2-SOURCE",
+        "ARXIV-1507-01221-V2-PDF"
+      ],
+      "allowed_use": "A later registered contract may translate Section 2.2.2, Theorem 2.9 and its Lagrangian-homotopy consequences to the Project finite-regulator semidensity pushforward.",
+      "forbidden_use": "Applying a finite-dimensional BV pushforward identity directly to the unregulated infinite-dimensional theory or omitting BV-Stokes, density, cycle, and renormalization hypotheses."
+    },
+    {
+      "id": "QHT-REF-HOLOMORPHIC-COUNTERTERM",
+      "sources": [
+        "ARXIV-1809-02661-V2-SOURCE",
+        "ARXIV-1809-02661-V2-PDF"
+      ],
+      "allowed_use": "A later registered contract may translate Theorem 3.4 to a one-loop prequantization and counterterm-finiteness check for the exact Project holomorphic theory.",
+      "forbidden_use": "Equating no one-loop counterterms with vanishing QME anomaly, all-order quantization, or equality with untwisted renormalization."
+    },
+    {
+      "id": "QHT-REF-HOLOMORPHIC-QME-ANOMALY",
+      "sources": [
+        "ARXIV-1809-02661-V2-SOURCE",
+        "ARXIV-1809-02661-V2-PDF"
+      ],
+      "allowed_use": "A later registered contract may translate Definition 4.2, Lemma 4.3, and Proposition 4.4 equation (24) into an explicit three-vertex-wheel calculation on C2.",
+      "forbidden_use": "Declaring the hBF obstruction zero without evaluating every surviving wheel, color factor, local class, and convention map."
+    },
+    {
+      "id": "QHT-REF-N1-EXTENDED-ST-IDENTITY",
+      "sources": [
+        "ARXIV-HEP-TH-9507045-V2-SOURCE",
+        "ARXIV-HEP-TH-9507045-V2-PDF"
+      ],
+      "allowed_use": "A later registered contract may translate Section 3.2 equations (3.36)-(3.44) and independently test the pure-adjoint specialization of the generalized gauge-plus-supersymmetry Slavnov cohomology.",
+      "forbidden_use": "Identifying the Minkowski Wess-Zumino-gauge 1PI Slavnov identity with the Project Euclidean finite-regulator BV QME without an explicit field, ghost, antifield, signature, and scheme translation."
+    },
+    {
+      "id": "QHT-REF-R-Q-ANOMALY-SCHEME",
+      "sources": [
+        "ARXIV-1902-06715-V3-SOURCE",
+        "ARXIV-1902-06715-V3-PDF",
+        "ARXIV-2011-09978-V2-SOURCE",
+        "ARXIV-2011-09978-V2-PDF"
+      ],
+      "allowed_use": "A later registered contract may compare the two background-source and finite-counterterm schemes to decide exactly which R-equivariant or current-multiplet statement is obstructed.",
+      "forbidden_use": "Inferring a flat-space gauge-plus-Q BV anomaly solely from an anomalous continuous U(1)_R current or from one fixed background-current scheme."
+    },
+    {
+      "id": "QHT-REF-BETA-AND-RESCALING",
+      "sources": [
+        "ARXIV-HEP-TH-9707133-V1-SOURCE",
+        "ARXIV-HEP-TH-9707133-V1-PDF"
+      ],
+      "allowed_use": "A later registered contract may derive the precise Project relation among holomorphic, Wilsonian, and canonically normalized couplings and classify the resulting RG compatibility condition.",
+      "forbidden_use": "Treating the untwisted canonical beta function or an R-rescaling Jacobian as a ghost-number-one QME obstruction or as the holomorphic-twist beta functional."
     }
   ]
 }
