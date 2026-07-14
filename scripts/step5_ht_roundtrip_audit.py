@@ -681,8 +681,10 @@ def build() -> dict[str, Any]:
         checks.append({"id": check_id, "status": "PASS" if condition else "FAIL",
                        "evidence": evidence})
 
-    authority = git("rev-parse", "HEAD")
-    origin_main_at_run = git("rev-parse", "origin/main")
+    # The comparison is pinned to verified origin/main.  GitHub Actions checks
+    # out a synthetic PR merge commit, which is evidence transport, not authority.
+    authority = git("rev-parse", "origin/main")
+    origin_main_at_run = authority
     check("authority.base_commit", authority == AUTHORITY_COMMIT, authority)
     evidence_is_ancestor = subprocess.run(
         ["git", "merge-base", "--is-ancestor", PROJECT_EVIDENCE_BASE_COMMIT, authority],

@@ -228,7 +228,9 @@ def source_at(commit: str, path: str) -> str:
 
 def build_result() -> dict:
     authority_commit = git("rev-parse", "origin/main")
-    head_commit = git("rev-parse", "HEAD")
+    # This target-blind audit is defined on the verified authority tree, not on
+    # the feature-branch or pull-request merge checkout that invokes it.
+    head_commit = authority_commit
     sources: dict[str, str] = {}
     hashes: dict[str, str] = {}
     checks: list[dict] = []
