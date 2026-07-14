@@ -1,13 +1,13 @@
 {
   "schema": 1,
   "task": "CONTRACT-STEP-04D-CLASSICAL-N1-HOLOMORPHIC-TWIST-001",
-  "timestamp_utc": "2026-07-14T00:40:04Z",
+  "timestamp_utc": "2026-07-14T01:27:14Z",
   "direction": "GIT_TO_NOTION_ONLY",
   "source": "contracts/foundations/step-04d-classical-n1-holomorphic-twist.md",
-  "source_commit": "e087927c6dd1e6eba69fb155d2e83e3b07055dbc",
-  "source_sha256": "4ce9863d5778dc4d260a2b5d96cd4fba1b804d7e391266e2b8afcfc331bc5232",
+  "source_commit": "053a382f718bc339d60397b02398f99f6e3f419f",
+  "source_sha256": "64973883d8d4585f43aeb9b055f4e72fae3d28ada47338e63ae3ae722cbabd69",
   "mirror_write": {
-    "operation": "CREATE_PAGE",
+    "operation": "REPLACE_PAGE_CONTENT",
     "parent_page_id": "39e80ed3-e584-4b17-b3cc-f2579e2a64ca",
     "notion_page_id": "39dee2b7-4b3f-81f8-9f80-f08906b4a1e8",
     "url": "https://www.notion.so/39dee2b74b3f81f89f80f08906b4a1e8",
