@@ -219,6 +219,13 @@
       "task": "tasks/archive/REFERENCE-IMPORT-STEP5-CHAT-WEINBERG30-001.yaml"
     },
     {
+      "id": "MIRROR-STEP-03A-DALGEBRA-NOTION-001",
+      "state": "ACCEPTED",
+      "blocking_reason": null,
+      "task_sha256": "342c64b5b55086cf3526bdb3f84df7d7a01f08960a17cf0b1f758a8d8316b6a1",
+      "task": "tasks/archive/MIRROR-STEP-03A-DALGEBRA-NOTION-001.yaml"
+    },
+    {
       "id": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
       "state": "SPECIFIED",
       "blocking_reason": null,
