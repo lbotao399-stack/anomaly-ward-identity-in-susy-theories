@@ -1,0 +1,111 @@
+{
+  "A_local_edge_order_census": {
+    "e_BA|e_CA": 304,
+    "e_CA|e_BA": 304
+  },
+  "I3_target_basis_sha256": "5d656ddf3b4e27abbfe359eac4b59651b3c19707399ea24b004d5217458907c9",
+  "all_checks_passed": true,
+  "anomaly_coefficient": null,
+  "artifact_storage": {
+    "compressed_file_sha256": "fa2f25b4585648e46f0ccc85477640e504f64e9bce26b499852dc372d361d32e",
+    "compressed_size_bytes": 871151,
+    "compression_level": 9,
+    "encoding": "JSON_UTF8_GZIP",
+    "gzip_mtime": 0,
+    "round_trip_payload_hash_valid": true,
+    "round_trip_payload_sha256": "133ab0512bf6f2274cd50569a2cc842ebefdb86f2baf9e2730a47e1f8b1d4dcc",
+    "uncompressed_file_sha256": "2ff41f058f9f36fe0919c8ee15b5e4ac2215a192ac69800d9a3ca91e8bb38deb",
+    "uncompressed_size_bytes": 21942066
+  },
+  "carrier_rows_sha256": "ed14cbeb1d27ba8ae4aa6a79d1487772ae57244b7bb584c1a6c8215af02b2500",
+  "checks": {
+    "I3_target_interface_exact": true,
+    "all_event_and_branch_hashes_valid": true,
+    "branch_signs_and_token_conservation_exact": true,
+    "comparison_fail_closed": true,
+    "contact_and_token_census_exact": true,
+    "graded_coproduct_cardinality_exact": true,
+    "input_hash_closure_exact": true,
+    "local_partition_exact": true,
+    "no_coefficient_claim": true,
+    "no_external_result": true,
+    "payload_hash_valid": true,
+    "raw_word_match_is_honestly_nonaccepting": true,
+    "source_replay_payload_exact": true,
+    "theta_I_barrier_and_boundary_retention_exact": true,
+    "token_word_census_exact": true
+  },
+  "comparison_frontier": {
+    "comparison_matrix": null,
+    "missing_rule_data": [
+      {
+        "missing_type_id": "MISSING_TYPE::CollapsedContactEndpointColorAndI3PortBinding",
+        "required_record": "for each collapsed contact: edge -> endpoint class, momentum, color slot, and ordered I3 grammar-port bijection"
+      },
+      {
+        "missing_type_id": "MISSING_TYPE::PostIBPPrimitiveNormalForm",
+        "required_record": "edge-tagged primitive normal ordering, mixed anticommutator, chirality, and nilpotence ledger after the IBP carrier"
+      },
+      {
+        "missing_type_id": "MISSING_TYPE::I3LocalSurvivorComparisonMatrix",
+        "required_record": "object-level exact Q(i) matrix from normalized local branches to the ten I3 target terms, including color and port order"
+      }
+    ],
+    "object_level_I3_equality": null,
+    "raw_ordered_word_match_count": 0,
+    "raw_permutation_word_match_count": 0,
+    "raw_word_equality_is_not_a_post_IBP_normal_form_proof": true,
+    "status": "OPEN_FAIL_CLOSED"
+  },
+  "counts": {
+    "A_local_slots": 1216,
+    "I3_comparison_interface_rows": 2432,
+    "I3_target_terms": 10,
+    "coproduct_branches": 2432,
+    "ibp_events": 5248,
+    "one_token_contacts": 192,
+    "protected_I_local_slots": 608,
+    "raw_ordered_I3_word_matches": 0,
+    "raw_permutation_I3_word_matches": 0,
+    "raw_port_degree_no_candidate_rows": 832,
+    "raw_port_degree_prefilter_rows": 1600,
+    "retained_edge_tagged_boundary_tokens": 5248,
+    "source_contact_aggregates": 608,
+    "three_token_contacts": 96,
+    "two_token_contacts": 320
+  },
+  "input_provenance": {
+    "external_result_used_as_input": false,
+    "file_sha256": {
+      "audits/step6-preaggregation-measure-delta-replay-verification.json": "616fe3e5ece0a9baa5886cdf472880dcf6d49cb6c14af3da3db9219c39ae9bc2",
+      "contracts/foundations/step-05-euclidean-n4-awi-supergraphs.md": "5b24afd355ef0d471e859c37a24a15632fcebdcad3aa654d30dc098647939ab5",
+      "generated/step6/coefficient-tensor/coefficient-tensor-programs.json": "1d5fd2c13e30f0dc315d819d2c3c8f4213d832e386c72aee32be77843548f126",
+      "generated/step6/measure-tagged-delta-convolution/measure-tagged-delta-convolution.json": "b5ecf1ac6a471f7a6d75158d502ec6a869fe5d0bce6599343f285b7cf404a940",
+      "generated/step6/preaggregation-measure-delta-replay/preaggregation-measure-delta-replay-summary.json": "5e6e345c76619952e1c6efebba04c2892bb3ae55c378f61bd418a7ce8377f442",
+      "scripts/step6_preaggregation_measure_delta_replay.py": "cab350456eb126fd517c4aada40a28dba2405e0aa1f4d539959517d7ee54af4d"
+    },
+    "runtime_reconstruction_object_hash_matches_bcdfe0c": true,
+    "runtime_reconstruction_role": "MECHANISM_ONLY_EXACT_OBJECT_HASH_GATED_NOT_SEPARATE_AUTHORITY",
+    "source_aggregate_rows_sha256": "6f3f81d50dae92e9b28788b299c2d7e6bdbf6b06256af3dd6805bf05d39e0f77",
+    "source_contact_catalog_sha256": "1918745eafd2970e942209ff312efb2bd342b745d2cf1ace3d9fe3d06fa2de0a",
+    "source_replay_payload_sha256": "fa7118bb2f672f12e372db16e752b388eee6b24459b6326edf7f434def9e2508"
+  },
+  "open_missing_type_ids": [
+    "MISSING_TYPE::CollapsedContactEndpointColorAndI3PortBinding",
+    "MISSING_TYPE::PostIBPPrimitiveNormalForm",
+    "MISSING_TYPE::I3LocalSurvivorComparisonMatrix"
+  ],
+  "original_missing_type_status": "PARTIALLY_RESOLVED_EVENT_CARRIER_ONLY",
+  "payload_sha256": "133ab0512bf6f2274cd50569a2cc842ebefdb86f2baf9e2730a47e1f8b1d4dcc",
+  "resolved_type_id": "TYPE::EdgeTaggedContactIBPEventCarrier",
+  "schema": "step6.contact_ibp_survivor_carrier.audit.v1",
+  "script_sha256": "cccc45e6f03258cf6bc7560153221f8207af51ae72b75c7718c9bef46e9a6d1b",
+  "status": "PASS_TYPED_IBP_EVENT_CARRIER__I3_LOCAL_SURVIVOR_COMPARISON_OPEN",
+  "test_sha256": "d4991c96bfb08f2c532a843176e0296d12673672d8badf5df291216aae40c69f",
+  "token_word_census": {
+    "D_plus": 192,
+    "barD_dotminus|D_plus": 160,
+    "barD_dotplus|D_plus": 160,
+    "barD_dotplus|barD_dotminus|D_plus": 96
+  }
+}
