@@ -1187,7 +1187,7 @@ class RepositoryPolicyTest(unittest.TestCase):
         page_map = json.loads((ROOT / "mirror/page_map.yaml").read_text(encoding="utf-8"))
         receipt = json.loads((ROOT / "audits/notion_write_receipt.json").read_text(encoding="utf-8"))
         mirror_task = json.loads(
-            (ROOT / "tasks/archive/MIRROR-STEP-03C-NOTION-001.yaml").read_text(encoding="utf-8")
+            (ROOT / "tasks/archive/MIRROR-STEP-03C-DALGEBRA-NOTION-001.yaml").read_text(encoding="utf-8")
         )
         page = next(
             item
@@ -1199,12 +1199,18 @@ class RepositoryPolicyTest(unittest.TestCase):
             for item in receipt["pages"]
             if item["id"] == "FOUNDATION-GAUGE-VECTOR-REPRESENTATION-003C"
         )
-        self.assertEqual(page["source_commit"], "fe4b80a9478a4ad0bdd63c614c0d1a1f4b1cd5f0")
-        self.assertEqual(page["source_sha256"], "90e5211557e0a12e444ee91a174beaf7ddea9039e6f9b987eb0861f0a9ef2461")
+        self.assertEqual(page["source_commit"], "f340e44d233881a7133a8ca11624ac47fc6070ec")
+        self.assertEqual(page["source_sha256"], "c4cc6f0504b79e02ce78030ad79b625bee6da7dff9de0f6a1ddc3b33ef2584a1")
         self.assertEqual(page["notion_page_id"], "39aee2b7-4b3f-8161-b3dd-fbb0d0c97f7d")
+        self.assertEqual(write["source_commit"], "f340e44d233881a7133a8ca11624ac47fc6070ec")
+        self.assertEqual(write["source_sha256"], "c4cc6f0504b79e02ce78030ad79b625bee6da7dff9de0f6a1ddc3b33ef2584a1")
+        self.assertEqual(write["mutation"], "replace_page_content")
+        self.assertTrue(write["preserve_child_pages"])
+        self.assertEqual(write["archived_top_level_blocks"], 192)
+        self.assertEqual(write["appended_blocks"], 235)
         self.assertEqual(write["write_response"], "succeeded")
         self.assertFalse(receipt["content_readback_performed"])
-        self.assertEqual(mirror_task["id"], "MIRROR-STEP-03C-NOTION-001")
+        self.assertEqual(mirror_task["id"], "MIRROR-STEP-03C-DALGEBRA-NOTION-001")
         self.assertEqual(mirror_task["status"], "ACCEPTED")
 
     def test_step_3d_write_only_mirror_receipt(self) -> None:

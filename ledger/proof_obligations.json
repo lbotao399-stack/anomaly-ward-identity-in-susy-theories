@@ -226,6 +226,13 @@
       "task": "tasks/archive/MIRROR-STEP-03A-DALGEBRA-NOTION-001.yaml"
     },
     {
+      "id": "MIRROR-STEP-03C-DALGEBRA-NOTION-001",
+      "state": "ACCEPTED",
+      "blocking_reason": null,
+      "task_sha256": "613535c8f90ffa29f6a7c3e210133bc8f943458c5a4e00515f22ac65a4103616",
+      "task": "tasks/archive/MIRROR-STEP-03C-DALGEBRA-NOTION-001.yaml"
+    },
+    {
       "id": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
       "state": "SPECIFIED",
       "blocking_reason": null,
