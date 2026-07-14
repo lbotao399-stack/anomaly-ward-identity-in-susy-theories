@@ -1,0 +1,1689 @@
+{
+  "audit_sections": {
+    "authority.": {
+      "blocked": 0,
+      "checks": 1,
+      "failed": 0,
+      "passed": 1
+    },
+    "brst.": {
+      "blocked": 1,
+      "checks": 2,
+      "failed": 0,
+      "passed": 1
+    },
+    "contract.": {
+      "blocked": 0,
+      "checks": 5,
+      "failed": 0,
+      "passed": 5
+    },
+    "determinism.": {
+      "blocked": 0,
+      "checks": 12,
+      "failed": 0,
+      "passed": 12
+    },
+    "dred.": {
+      "blocked": 2,
+      "checks": 9,
+      "failed": 0,
+      "passed": 7
+    },
+    "graph.": {
+      "blocked": 2,
+      "checks": 11,
+      "failed": 0,
+      "passed": 9
+    },
+    "ht.": {
+      "blocked": 1,
+      "checks": 9,
+      "failed": 0,
+      "passed": 8
+    },
+    "jet.": {
+      "blocked": 0,
+      "checks": 6,
+      "failed": 0,
+      "passed": 6
+    },
+    "mixing.": {
+      "blocked": 4,
+      "checks": 13,
+      "failed": 0,
+      "passed": 9
+    },
+    "project.": {
+      "blocked": 0,
+      "checks": 7,
+      "failed": 0,
+      "passed": 7
+    },
+    "q.": {
+      "blocked": 0,
+      "checks": 4,
+      "failed": 0,
+      "passed": 4
+    }
+  },
+  "authority_base_commit": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+  "blocking_gates": [
+    {
+      "detail": {
+        "completion_sectors": {
+          "BRST_OPEN_COLOR_SOURCE": "PENDING_CLEAN_AUDIT",
+          "COUNTERTERM_MIXING": "BLOCKED_ONE_LOOP_COMPOSITE_Z_MATRIX",
+          "CUT_CONTACT_LINK_POLE": "CONDITIONAL_FF_AGGREGATE_BARE_POLE",
+          "GAUGE_FIXING_FP_NK_MEASURE": "PENDING_CLEAN_AUDIT",
+          "SOURCE_AND_LINK_OPERATOR": "PROVED_OPERATOR_LEVEL",
+          "TRIANGLE_WW_PARENT": "PROVED_POLE"
+        },
+        "status": "CONDITIONAL_FF_BARE_CUT_CHECKED__RENORMALIZED_MIXING_PENDING"
+      },
+      "id": "graph.renormalized_completion",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": {
+        "blocker": {
+          "equation": "H=(h/2)A_E; H^{-1}=2*g^2*A_E/Box_E=Y_E,FF",
+          "id": "BLOCKED_STEP5A_LOCAL_FERMI_FEYNMAN_PROPER_SLICE",
+          "reason": "Every completion in the audited normal-form class gives H_eff=Y_00^{-1}. H_eff=H forces Y_00=H^{-1}, exactly the nonlocal Step-5A.79 kernel."
+        },
+        "result": "NO_GO_WITHIN_FINITE_LOCAL_TRIVIAL_PAIR_NORMAL_FORM__DRED_LEDGER_LOCKABLE_SEPARATELY"
+      },
+      "id": "slice.admissible_fermi_feynman_proper_completion",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": {
+        "blockers": [
+          {
+            "id": "BLOCKED_STEP5A_WZ_BV_REDUCTION_UNDEFINED",
+            "missing": [
+              "WZ-preserving constraints on every chiral and antichiral ghost component",
+              "induced residual component BRST differential and minimal BV action",
+              "canonical BV pushforward or reduction from the unrestricted prepotential",
+              "algebraic WZ-gauge FP determinant and its density carrier",
+              "Euclidean component integration cycle and Berezinian"
+            ]
+          },
+          {
+            "id": "BLOCKED_STEP5A_COMPONENT_TO_SUPERFIELD_WW_EQUIVALENCE_UNPROVED",
+            "missing": [
+              "a regulator-compatible BV chain map for the WW composite insertion",
+              "equality of component and full-superfield contact/cutting descendants",
+              "equality of DRED evanescent operator mixing and counterterms"
+            ]
+          }
+        ],
+        "result": "BLOCKED_CURRENT_AUTHORITY"
+      },
+      "id": "slice.wz_component_bv_reduction",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": {
+        "missing_raw_graph_words": [
+          {
+            "id": "RAW-Q-PARENT-UU",
+            "reason": "forward q paths start at U; the locked Project fields and the WW seed define no U field, source, propagator, or vertex",
+            "required_word": "the ordered bare U>U insertion and all of its quantum-port functional derivatives",
+            "state": "BLOCKED_U_SOURCE_VERTEX_UNDEFINED"
+          },
+          {
+            "id": "RAW-Q-INVERSE-DESCENT",
+            "reason": "q_r A=0, so forward q cannot leave the WW A>A seed",
+            "required_word": "an explicit h_r on raw graph words with q_r h_r+h_r q_r equal to the required lower-letter projector",
+            "state": "BLOCKED_INVERSE_Q_DESCENT_UNDEFINED"
+          },
+          {
+            "id": "RAW-Q-QUANTUM-PORTS",
+            "reason": "the bottom-letter q action does not define a derivation on the gauge-fixed quantum graph algebra",
+            "required_word": "q_r on every background-split quantum port v, Phi_s, tildePhi_s, c, tilde-c, antighost, multiplier, and NK field",
+            "state": "BLOCKED_QUANTUM_Q_ACTION_UNDEFINED"
+          },
+          {
+            "id": "RAW-Q-WW-VERTICES",
+            "reason": "the candidate graph rows copy the two WW action vertices unchanged into every component pair",
+            "required_word": "q_r[+(i*g/2)c_UCD tildeW^D_dotgamma(barD_C^dotgamma-barD_U^dotgamma)] and q_r[-(i*g/2)c_VC'E W^{E gamma}(D_C',gamma-D_V,gamma)] resolved into the ordered gauge, tildePhi*V^n*Phi, Phi^3, and tildePhi^3 word basis",
+            "state": "BLOCKED_VERTEX_Q_IMAGES_UNDEFINED"
+          },
+          {
+            "id": "RAW-Q-EDGES",
+            "reason": "the WW seed contains only three v-v edges; no transformed field type, numerator, arrow, or edge Koszul sign is emitted",
+            "required_word": "the endpoint identity q_r^(1)G+(-1)^epsilon G q_r^(2) for vector, chiral, antichiral, fermion, ghost, and mixed edges",
+            "state": "BLOCKED_EDGE_Q_INTERTWINER_UNDEFINED"
+          },
+          {
+            "id": "RAW-Q-SOURCE",
+            "reason": "pair labels on ORDERED_BILOCAL_COMPONENT_PROJECTOR are not ordered functional derivatives of the source",
+            "required_word": "q_r[(D_-K_+v^A)(K_+v^B)+(K_+v^A)(D_-K_+v^B)] together with nonlinear-letter, one-link, two-link, and endpoint source vertices",
+            "state": "BLOCKED_SOURCE_Q_IMAGES_UNDEFINED"
+          },
+          {
+            "id": "RAW-Q-CUT",
+            "reason": "a metric replacement hat_delta->delta_4 does not prove q-equivariance of the raw Schwinger cut",
+            "required_word": "q_r on each of the eight WW endpoint D-words and on every contact/link completion row, with [q_r,C_cut] evaluated",
+            "state": "BLOCKED_CUT_Q_INTERTWINER_UNDEFINED"
+          },
+          {
+            "id": "RAW-Q-GAUGE-COMPLETION",
+            "reason": "supersymmetry of the invariant action alone does not prove equivariance of the selected gauge-fixed graph complex",
+            "required_word": "the compensating BRST word, if nonzero, in q_r(S_gf+S_FP+S_NK+measure)",
+            "state": "BLOCKED_GAUGE_FIXING_COMPENSATOR_UNDEFINED"
+          }
+        ],
+        "status": "BLOCKED_RAW_GRAPH_Q_EQUIVARIANT_LIFT",
+        "verdict": {
+          "compact_covariant_component_ledger": "PROVED_CONDITIONAL_ON_U_COMPLETION",
+          "exact_reason": "q_r A=0 makes the forward q-orbit of the raw A>A WW seed one-dimensional; the candidate 132 objects contain compact kernel labels but no q-transformed raw vertices, edges, source D-words, or cut intertwiners",
+          "physical_graph_census": "BLOCKED_RAW_GRAPH_Q_DATA_MISSING",
+          "ww_to_all_component_graph_lift": "REJECTED_AS_CURRENT_CLAIM"
+        }
+      },
+      "id": "graph.raw_q_equivariant_lift",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": [
+        {
+          "effect": "The endpoint transfer signs and the two mixed-anticommutator factors are recorded primitives. A full representative superspace D-word, four endpoint integration-by-parts chains, and the exchange map for the second marked placement have not been generated from a noncommutative rewrite trace.",
+          "id": "BLOCKED_EXPLICIT_WW_D_ALGEBRA_WORD_DERIVATION"
+        }
+      ],
+      "id": "dred.explicit_ww_d_algebra_word_derivation",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": {
+        "blocker": {
+          "effect": "A numerical table assigning fractions of C_C to each named sector cannot be emitted. Only allocation invariance inside the conditional FF arithmetic ledger is checked.",
+          "id": "BLOCKED_COMPLETE_RAW_PORT_WORDS_FOR_NAMED_SECTOR_TABLE",
+          "missing": "The full raw port-preserving D words for every nonlinear-letter, quartic, and collapsed descendant before endpoint transfer."
+        },
+        "status": "CONDITIONAL_FF_ALLOCATION_EXACTNESS_AND_AGGREGATE_INVARIANCE_CHECKED__BLOCKED_COMPLETE_RAW_PORT_WORDS_FOR_NAMED_SECTOR_TABLE"
+      },
+      "id": "dred.named_topology_numerical_table",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": {
+        "blockers": [
+          {
+            "effect": "The 64 compact rows, 81 physical rows, and derivative rule are checked against a pinned manual transcription. They do not yet carry equation/line provenance for every row, and no source-coefficient mutation is parsed through to the target comparison.",
+            "id": "BLOCKED_HT_ROW_LEVEL_SOURCE_EXTRACTION_PROVENANCE"
+          },
+          {
+            "effect": "The printed HT source assigns unequal coefficients to identically typed zero-shift and compact statements. Project can classify both branches but cannot turn the inconsistent source into one equality target.",
+            "id": "BLOCKED_REFERENCE_INTERNAL_NORMALIZATION"
+          },
+          {
+            "effect": "The c/U slot and total Q0 round trip remain conditional; all physical A,B,C,D rows are unaffected.",
+            "id": "BLOCKED_U_NOT_DEFINED_BY_LOCKED_PROJECT_INPUTS"
+          },
+          {
+            "effect": "s_0=-1/2 and hence s_1=s_0 are a typed conditional dictionary, not a locked Project theorem.",
+            "id": "BLOCKED_TREE_INTERTWINER_REQUIRES_FORMAL_U_AND_FULL_TREE_EOM_MAP"
+          },
+          {
+            "effect": "The displayed color/trace map is total factorwise for simple factors; CURRENT does not restrict the Project gauge algebra to one simple factor.",
+            "id": "BLOCKED_SINGLE_KAPPA_H_FOR_GENERAL_REDUCTIVE_GAUGE_ALGEBRA"
+          }
+        ],
+        "status": "PASS_WITH_EXPLICIT_BLOCKERS"
+      },
+      "id": "ht.total_typed_roundtrip",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": {
+        "closure_status": "BLOCKED_COMPLETE_BV_DRED_BASIS_DRED_EPSILON_SPLIT_FINITE_RESIDUES",
+        "closure_verdict": {
+          "bare_WW": "CLOSED_TO_TRIVIAL_EPSILON_Z",
+          "finite_mixed_term": "BLOCKED_FINITE_MIXED_PRIMITIVE_RESIDUES",
+          "reason": "The closed breve polynomials remove the 1/epsilon pole but retain the graph- and tensor-dependent finite 2*sum_alpha P'_(u,alpha)(0)r_(u,alpha,-1); Step 5A does not lock the complete BV/DRED basis, epsilon-tensor split, or numerical primitive rules.",
+          "renormalized_all_channel": "BLOCKED_COMPLETE_BV_DRED_BASIS_DRED_EPSILON_SPLIT_FINITE_RESIDUES",
+          "z_EO": "BLOCKED_COMPLETE_BV_DRED_EVANESCENT_BASIS",
+          "z_EO_MS_complete_BV_basis": "BLOCKED_COMPLETE_BV_DRED_EVANESCENT_BASIS",
+          "z_EuO_MS_eight_projector_rows": "CONDITIONAL_ZERO_UNDER_UV_IR_SEPARATION_SIMPLE_POLE_AND_NO_INVERSE_N_EPSILON"
+        },
+        "computed_verdict": "FINITE_EVANESCENT_TO_PHYSICAL_MIXING_CANNOT_BE_EXCLUDED",
+        "mixing_status": "BLOCKED",
+        "numerical_status": "BLOCKED_ONE_LOOP_COMPOSITE_Z_MATRIX",
+        "unexcluded_operator": "D_dot a^D*(P_h^dot a A_hb)^E-(P_h,dot a A_hb)^D*D^(E,dot a)"
+      },
+      "id": "mixing.renormalized_evanescent_closure",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": {
+        "local_evanescent_kernel": "BLOCKED_COMPLETE_BV_DRED_EVANESCENT_BASIS",
+        "status": "BLOCKED_MIXED_PROJECTOR_CENSUS",
+        "witness": {
+          "compatibility_note": "Legacy verifier witness key; this row belongs to the minimal projector split and is not asserted to span the complete BV/DRED kernel.",
+          "id": "E_DA_h_hb",
+          "operator": "D_dot a^D*(P_h^dot a A_hb)^E-(P_h,dot a A_hb)^D*D^(E,dot a)"
+        }
+      },
+      "id": "mixing.mixed_projector_census",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": {
+        "id": "BLOCKED_OPEN_COLOR_SOURCE_BV_EXTENSION",
+        "minimal_missing_input": "A locked contragredient source J_DE, its antifield/source slots, and its subtraction conditions.",
+        "severity": "P0",
+        "why": "The ordered tensor O^(DE) is gauge-BRST covariant in Adj tensor Adj and is not BRST closed before source completion or invariant color contraction."
+      },
+      "id": "brst.open_color_source_bv_completion",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": [
+        {
+          "id": "BLOCKED_COMPLETE_BV_DRED_EVANESCENT_BASIS",
+          "why": "The eight rows are only the complete minimal projector split of Z; ghost, NK, measure, EOM, BRST-exact, total-derivative, and general source rows remain unenumerated."
+        },
+        {
+          "id": "BLOCKED_DRED_EPSILON_TENSOR_SPLIT",
+          "why": "The unsplit Chern-Weil bulk variation vanishes, but Step 5A does not lock a separate hat/breve continuation of epsilon_E^mnrs."
+        },
+        {
+          "id": "BLOCKED_STEP5A_MOMENTUM_RULES_FOURIER_DRED_LEDGER_UNFIXED",
+          "why": "Step 5A explicitly does not assert a unique propagator set or numerical momentum-space rules."
+        },
+        {
+          "id": "BLOCKED_FINITE_MIXED_PRIMITIVE_RESIDUES",
+          "why": "Each one-index mixed I_[0] tensor structure requires 2*r_(u,alpha,-1); the remaining G1-G3 contacts/bubbles require 2*sum_alpha P'_(u,alpha)(0)*r_(u,alpha,-1). Locked propagators, integration cycle, DRED sigma ledger, symmetry factors, and UV/IR separation are absent."
+        }
+      ],
+      "id": "mixing.complete_bv_dred_evanescent_basis",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": {
+        "blockers": [
+          {
+            "id": "BLOCKED_COMPLETE_BV_DRED_EVANESCENT_BASIS",
+            "why": "The eight rows are only the complete minimal projector split of Z; ghost, NK, measure, EOM, BRST-exact, total-derivative, and general source rows remain unenumerated."
+          },
+          {
+            "id": "BLOCKED_DRED_EPSILON_TENSOR_SPLIT",
+            "why": "The unsplit Chern-Weil bulk variation vanishes, but Step 5A does not lock a separate hat/breve continuation of epsilon_E^mnrs."
+          },
+          {
+            "id": "BLOCKED_STEP5A_MOMENTUM_RULES_FOURIER_DRED_LEDGER_UNFIXED",
+            "why": "Step 5A explicitly does not assert a unique propagator set or numerical momentum-space rules."
+          },
+          {
+            "id": "BLOCKED_FINITE_MIXED_PRIMITIVE_RESIDUES",
+            "why": "Each one-index mixed I_[0] tensor structure requires 2*r_(u,alpha,-1); the remaining G1-G3 contacts/bubbles require 2*sum_alpha P'_(u,alpha)(0)*r_(u,alpha,-1). Locked propagators, integration cycle, DRED sigma ledger, symmetry factors, and UV/IR separation are absent."
+          }
+        ],
+        "conditional_pole_statement": {
+          "A_bb_boundary": "The three enumerated delta_ij contraction classes vanish. The complete r_(h,bb),-1 remains blocked until all compatible action/BV/source vertices are exhausted.",
+          "MS_mixing": "z_(E_u O)=-Res_[1/epsilon]Gamma_(E_u to O)=0 for u in the eight-row component projector split",
+          "MS_pole_residue": "Res_[1/epsilon] sum_alpha P_(u,alpha)(N_epsilon)I_(u,alpha)^(1)=0",
+          "closed_breve_lemma": "A physical projection has no external breve index. In the displayed O(N_epsilon)-covariant component projector sector, each row decomposes into a finite sum sum_alpha P_(u,alpha)(N_epsilon) I_(u,alpha), with P_(u,alpha)(0)=0 for every independent tensor/integral structure alpha.",
+          "double_pole_boundary": "Without UV/IR separation, an IR 1/epsilon^2 term would give 2/epsilon after multiplication by N_epsilon and cannot be used as a composite UV mixing residue.",
+          "finite_anomaly": "Fin_[epsilon^0] sum_alpha P_(u,alpha)(N_epsilon)I_(u,alpha)^(1)=2*sum_alpha P'_(u,alpha)(0)*r_(u,alpha,-1); P=N gives 2r, P=N^2 gives 0, and P=N(N-1) gives -2r",
+          "general_polynomial_expansion": "For every alpha, P_(u,alpha)(0)=0 implies Fin[P_(u,alpha)(2epsilon) I_(u,alpha)^(1)]=2*P'_(u,alpha)(0)*r_(u,alpha,-1).",
+          "graphwise_requirement": "Every P_(u,alpha) must be recorded graph and tensor structure by graph and tensor structure; the three one-index mixed I_[0] cycles have P_(u,alpha)=N_epsilon before further Clifford reduction, while multi-breve rows cannot be assigned the coefficient 2 without their contraction polynomials.",
+          "no_inverse_trace": "The zero-background epsilon-scalar kernel is K_(chi_i^A chi_j^B)=h*kappa_AB*hat_p^2*delta_ij. Its inverse species tensor is delta^ij, not delta^ij/N_epsilon. Vertices are polynomial in delta_ij, Gamma_i, and Sigma_ij. Therefore primitive contractions contain no inverse power of N_epsilon.",
+          "one_trace_expansion": "N_epsilon I_u^(1)=2*r_u,-1+2*epsilon*r_u,0+2*epsilon^2*r_u,1",
+          "primitive_integral": "I_(r,s)(Delta)=mu^(2epsilon)/(4pi)^(2-epsilon)*Gamma(r+2-epsilon)*Gamma(s-r-2+epsilon)/[Gamma(2-epsilon)Gamma(s)]*Delta^(r+2-s-epsilon)",
+          "scope": "The zero is a pole-mixing result for the eight component projector rows, not a claim about an unenumerated complete BV/source basis and not a claim that every finite epsilon-scalar anomaly coefficient is zero.",
+          "simple_pole_input": "I_(u,alpha)^(1)=r_(u,alpha,-1)/epsilon+r_(u,alpha,0)+epsilon*r_(u,alpha,1); this must be the UV Laurent series after IR separation for every independent structure alpha",
+          "simple_pole_proof": "For nonnegative integer r,s and nonexceptional Euclidean Delta, Gamma(r+2-epsilon) is finite and Gamma(s-r-2+epsilon) has either no pole or one simple pole. A one-loop primitive has no UV subdivergence. Tensor numerators reduce to a finite sum of these integrals."
+        },
+        "no_double_count_boundary": {
+          "boundary": "Equality of a particular mixed-source finite trace with a WW origin_id still requires the missing graph-IR/source provenance and numerical primitive trace.",
+          "correct_projector_multiplicity": {
+            "breve": 1,
+            "hat": 1
+          },
+          "cut_remainder": "r*hat_delta^mn*T_mn-r*delta_4^mn*T_mn=-r*breve_delta^mn*T_mn",
+          "double_count_mutation": {
+            "breve": 2,
+            "hat": 1
+          },
+          "identity": "delta_4=hat_delta+breve_delta",
+          "rule": "If and only if an explicit epsilon-scalar realization and the full-superspace seed have the same graph/source origin_id, the realization is the breve complement in this identity rather than an additional graph contribution."
+        }
+      },
+      "id": "mixing.finite_mixed_primitive_residues",
+      "status": "BLOCKED"
+    }
+  ],
+  "checks": [
+    {
+      "detail": {
+        "origin_main": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+        "recorded_base": "00000f748fe4bdd1b5d122663cc1fb814faace66"
+      },
+      "id": "authority.origin_main_matches_recorded_base",
+      "status": "PASS"
+    },
+    {
+      "detail": [],
+      "id": "contract.no_control_characters",
+      "status": "PASS"
+    },
+    {
+      "detail": [
+        "\\sim",
+        "\\approx",
+        "After substitution",
+        "after substitution"
+      ],
+      "id": "contract.no_forbidden_shortcuts",
+      "status": "PASS"
+    },
+    {
+      "detail": [
+        "Status: `CONDITIONAL_WW_ARITHMETIC_CHECKED__EXPLICIT_D_WORD_RAW_ALL_CHANNEL_AND_RENORMALIZATION_BLOCKED`",
+        "## 1. Notation and DRED",
+        "## 4. Canonical WW seed",
+        "## 7. Ordered component ledger",
+        "## 9. Renormalization obstruction",
+        "BLOCKED\\_STEP5A\\_LOCAL\\_FERMI\\_FEYNMAN\\_PROPER\\_SLICE",
+        "BLOCKED\\_STEP5A\\_WZ\\_BV\\_REDUCTION\\_UNDEFINED",
+        "BLOCKED\\_RAW\\_GRAPH\\_Q\\_EQUIVARIANT\\_LIFT",
+        "BLOCKED\\_FINITE\\_MIXED\\_PRIMITIVE\\_RESIDUES",
+        "BLOCKED\\_REFERENCE\\_INTERNAL\\_NORMALIZATION",
+        "HT-NORM-CONFLICT-COMPACT-Q1-COEFFICIENT",
+        "HT-NORM-CONFLICT-ZERO-SHIFT-FACTOR-TWO"
+      ],
+      "id": "contract.required_fail_closed_anchors",
+      "status": "PASS"
+    },
+    {
+      "detail": [
+        "Status: `ACCEPTED`",
+        "Status: `RENORMALIZED`",
+        "Status: `WARD_CLOSED`",
+        "the complete one-loop answer is",
+        "every printed zero-derivative component formula map exactly",
+        "\\mathcal A_{ij}^{(1),\\rm noncut}=0"
+      ],
+      "id": "contract.no_renormalized_overclaim",
+      "status": "PASS"
+    },
+    {
+      "detail": [
+        "\\mathcal K^P_{1,0}\n=\\frac13\\langle P_1f,g\\rangle",
+        "\\mathcal K^P_{2,0}\n=\\frac16\\langle P_1^2f,g\\rangle",
+        "\\mathcal K^P_{1,1}={}&\n\\frac16\\langle P_1P_2f,g\\rangle",
+        "\\mathfrak p_{\\dot\\alpha}X"
+      ],
+      "id": "contract.exact_typed_endpoint_weights",
+      "status": "PASS"
+    },
+    {
+      "detail": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+      "id": "project.authority_base",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "checks": 13,
+        "failed": 0,
+        "passed": 13
+      },
+      "id": "project.engine_status",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "project-compact-actions.json": null,
+        "project-dred-seed.json": false,
+        "project-result-ledger.json": false,
+        "project-tree-dictionary.json": null,
+        "project-verification.json": null
+      },
+      "id": "project.target_blind",
+      "status": "PASS"
+    },
+    {
+      "detail": [
+        81,
+        29,
+        52
+      ],
+      "id": "project.ordered_pair_counts",
+      "status": "PASS"
+    },
+    {
+      "detail": 81,
+      "id": "project.pair_ids_unique",
+      "status": "PASS"
+    },
+    {
+      "detail": 29,
+      "id": "project.every_nonzero_has_physical_output",
+      "status": "PASS"
+    },
+    {
+      "detail": 52,
+      "id": "project.every_zero_has_certificate",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "failed": 0,
+        "passed": 22,
+        "verdict": "PROVED_BOTTOM_PROJECTION_WITH_CONDITIONAL_COMPACT_COMPLETION"
+      },
+      "id": "q.residual_projection_checks",
+      "status": "PASS"
+    },
+    {
+      "detail": "audits/step5-residual-q-projection.json",
+      "id": "q.residual_projection_determinism",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "passed": 12,
+        "total": 12
+      },
+      "id": "q.covariance_kernel_checks",
+      "status": "PASS"
+    },
+    {
+      "detail": "audits/step5-project-covariance-kernel.json",
+      "id": "q.covariance_kernel_determinism",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "adjoint_symmetric_trace": true,
+        "dual_source_nilpotent": true,
+        "evanescent_finite_part": true,
+        "first_jet_pairing": true,
+        "input_hashes": true,
+        "link_endpoint_nilpotent": true,
+        "path_derivative_symmetry": true,
+        "second_jet_pairing": true
+      },
+      "id": "brst.clean_algebra",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "cut_orbits": 66,
+        "graphs": 132,
+        "kernels": 66,
+        "nonzero_pairs": 29,
+        "pairs": 81,
+        "zero_pairs": 52
+      },
+      "id": "graph.structural_status",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "counts": {
+          "cut_orbits": 66,
+          "graphs": 132,
+          "kernels": 66,
+          "nonzero_pairs": 29,
+          "pairs": 81,
+          "zero_pairs": 52
+        },
+        "ordered_family_channels": 16
+      },
+      "id": "graph.structural_counts",
+      "status": "PASS"
+    },
+    {
+      "detail": [
+        {
+          "id": "DROP_FIRST_KERNEL",
+          "status": "PASS"
+        },
+        {
+          "id": "DUPLICATE_FIRST_KERNEL",
+          "status": "PASS"
+        },
+        {
+          "id": "REVERSE_ONE_OUTPUT_WORD",
+          "status": "PASS"
+        },
+        {
+          "id": "ADD_ORIENTATION_COPY",
+          "status": "PASS"
+        }
+      ],
+      "id": "graph.structural_mutations",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "checks": 11,
+        "failed": 0,
+        "passed": 11
+      },
+      "id": "graph.physical_structural_status",
+      "status": "PASS"
+    },
+    {
+      "detail": [
+        81,
+        29,
+        52,
+        66,
+        66,
+        132,
+        1
+      ],
+      "id": "graph.physical_counts_no_orientation_double",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "physical": 66,
+        "structural": 66
+      },
+      "id": "graph.independent_census_equal",
+      "status": "PASS"
+    },
+    {
+      "detail": "C_cut^2=1 on all 132 graph objects",
+      "id": "graph.cut_involution",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "completion_sectors": {
+          "BRST_OPEN_COLOR_SOURCE": "PENDING_CLEAN_AUDIT",
+          "COUNTERTERM_MIXING": "BLOCKED_ONE_LOOP_COMPOSITE_Z_MATRIX",
+          "CUT_CONTACT_LINK_POLE": "CONDITIONAL_FF_AGGREGATE_BARE_POLE",
+          "GAUGE_FIXING_FP_NK_MEASURE": "PENDING_CLEAN_AUDIT",
+          "SOURCE_AND_LINK_OPERATOR": "PROVED_OPERATOR_LEVEL",
+          "TRIANGLE_WW_PARENT": "PROVED_POLE"
+        },
+        "status": "CONDITIONAL_FF_BARE_CUT_CHECKED__RENORMALIZED_MIXING_PENDING"
+      },
+      "id": "graph.renormalized_completion",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": {
+        "dred_trace_split": true,
+        "naive_block_identity": true,
+        "proper_completion_schur_identity": true,
+        "step3d_locality": true,
+        "step3d_nk_branch": true,
+        "step3d_proper_hessian": true,
+        "step5a_A_square": true,
+        "step5a_nonlocality": true
+      },
+      "id": "slice.local_completion_no_go_algebra",
+      "status": "PASS"
+    },
+    {
+      "detail": "audits/step5a-local-slice-dred-no-go.json",
+      "id": "slice.local_completion_no_go_determinism",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "blocker": {
+          "equation": "H=(h/2)A_E; H^{-1}=2*g^2*A_E/Box_E=Y_E,FF",
+          "id": "BLOCKED_STEP5A_LOCAL_FERMI_FEYNMAN_PROPER_SLICE",
+          "reason": "Every completion in the audited normal-form class gives H_eff=Y_00^{-1}. H_eff=H forces Y_00=H^{-1}, exactly the nonlocal Step-5A.79 kernel."
+        },
+        "result": "NO_GO_WITHIN_FINITE_LOCAL_TRIVIAL_PAIR_NORMAL_FORM__DRED_LEDGER_LOCKABLE_SEPARATELY"
+      },
+      "id": "slice.admissible_fermi_feynman_proper_completion",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": {
+        "euclidean_ghosts_are_independent": true,
+        "full_prepotential_brst_rule_exists": true,
+        "step3d_forbids_implicit_wz_restriction": true,
+        "step5a_forbids_component_propagator_inference": true,
+        "step5a_uses_unrestricted_prepotential": true,
+        "wz_lowest_component_is_zero": true
+      },
+      "id": "slice.wz_bv_gate_algebra",
+      "status": "PASS"
+    },
+    {
+      "detail": "audits/step5a-wz-component-bv-gate.json",
+      "id": "slice.wz_bv_gate_determinism",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "blockers": [
+          {
+            "id": "BLOCKED_STEP5A_WZ_BV_REDUCTION_UNDEFINED",
+            "missing": [
+              "WZ-preserving constraints on every chiral and antichiral ghost component",
+              "induced residual component BRST differential and minimal BV action",
+              "canonical BV pushforward or reduction from the unrestricted prepotential",
+              "algebraic WZ-gauge FP determinant and its density carrier",
+              "Euclidean component integration cycle and Berezinian"
+            ]
+          },
+          {
+            "id": "BLOCKED_STEP5A_COMPONENT_TO_SUPERFIELD_WW_EQUIVALENCE_UNPROVED",
+            "missing": [
+              "a regulator-compatible BV chain map for the WW composite insertion",
+              "equality of component and full-superfield contact/cutting descendants",
+              "equality of DRED evanescent operator mixing and counterterms"
+            ]
+          }
+        ],
+        "result": "BLOCKED_CURRENT_AUTHORITY"
+      },
+      "id": "slice.wz_component_bv_reduction",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": {
+        "baseline_failures": [],
+        "mutations": [
+          {
+            "expected_failure": "Q_PATH::B2",
+            "id": "FLIP_B2_EPSILON_SIGN",
+            "observed_failures": [
+              "Q_PATH::B2"
+            ],
+            "status": "PASS"
+          },
+          {
+            "expected_failure": "LETTER_LIFT_COVERAGE",
+            "id": "DROP_DDOT2_LIFT",
+            "observed_failures": [
+              "LETTER_LIFT_COVERAGE"
+            ],
+            "status": "PASS"
+          },
+          {
+            "expected_failure": "PAIR_KOSZUL::B1__C1",
+            "id": "FLIP_B1_C1_KOSZUL",
+            "observed_failures": [
+              "PAIR_KOSZUL::B1__C1"
+            ],
+            "status": "PASS"
+          },
+          {
+            "expected_failure": "WW_SEED_Q_CLOSED",
+            "id": "MAKE_qA_NONZERO",
+            "observed_failures": [
+              "WW_SEED_Q_CLOSED"
+            ],
+            "status": "PASS"
+          },
+          {
+            "expected_failure": "WW_ENDPOINT_WORD_COUNT",
+            "id": "DELETE_WW_ENDPOINT_WORD",
+            "observed_failures": [
+              "WW_ENDPOINT_WORD_COUNT"
+            ],
+            "status": "PASS"
+          },
+          {
+            "expected_failure": "UNSUPPORTED_GRAPH_TRANSFORM",
+            "id": "INVENT_VERTEX_TRANSFORM_WITHOUT_QUANTUM_q",
+            "observed_failures": [
+              "UNSUPPORTED_GRAPH_TRANSFORM"
+            ],
+            "status": "PASS"
+          }
+        ],
+        "structural_status": "PASS"
+      },
+      "id": "graph.q_equivariant_lift_structural_audit",
+      "status": "PASS"
+    },
+    {
+      "detail": "audits/step5-q-equivariant-graph-lift.json",
+      "id": "graph.q_equivariant_lift_determinism",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "missing_raw_graph_words": [
+          {
+            "id": "RAW-Q-PARENT-UU",
+            "reason": "forward q paths start at U; the locked Project fields and the WW seed define no U field, source, propagator, or vertex",
+            "required_word": "the ordered bare U>U insertion and all of its quantum-port functional derivatives",
+            "state": "BLOCKED_U_SOURCE_VERTEX_UNDEFINED"
+          },
+          {
+            "id": "RAW-Q-INVERSE-DESCENT",
+            "reason": "q_r A=0, so forward q cannot leave the WW A>A seed",
+            "required_word": "an explicit h_r on raw graph words with q_r h_r+h_r q_r equal to the required lower-letter projector",
+            "state": "BLOCKED_INVERSE_Q_DESCENT_UNDEFINED"
+          },
+          {
+            "id": "RAW-Q-QUANTUM-PORTS",
+            "reason": "the bottom-letter q action does not define a derivation on the gauge-fixed quantum graph algebra",
+            "required_word": "q_r on every background-split quantum port v, Phi_s, tildePhi_s, c, tilde-c, antighost, multiplier, and NK field",
+            "state": "BLOCKED_QUANTUM_Q_ACTION_UNDEFINED"
+          },
+          {
+            "id": "RAW-Q-WW-VERTICES",
+            "reason": "the candidate graph rows copy the two WW action vertices unchanged into every component pair",
+            "required_word": "q_r[+(i*g/2)c_UCD tildeW^D_dotgamma(barD_C^dotgamma-barD_U^dotgamma)] and q_r[-(i*g/2)c_VC'E W^{E gamma}(D_C',gamma-D_V,gamma)] resolved into the ordered gauge, tildePhi*V^n*Phi, Phi^3, and tildePhi^3 word basis",
+            "state": "BLOCKED_VERTEX_Q_IMAGES_UNDEFINED"
+          },
+          {
+            "id": "RAW-Q-EDGES",
+            "reason": "the WW seed contains only three v-v edges; no transformed field type, numerator, arrow, or edge Koszul sign is emitted",
+            "required_word": "the endpoint identity q_r^(1)G+(-1)^epsilon G q_r^(2) for vector, chiral, antichiral, fermion, ghost, and mixed edges",
+            "state": "BLOCKED_EDGE_Q_INTERTWINER_UNDEFINED"
+          },
+          {
+            "id": "RAW-Q-SOURCE",
+            "reason": "pair labels on ORDERED_BILOCAL_COMPONENT_PROJECTOR are not ordered functional derivatives of the source",
+            "required_word": "q_r[(D_-K_+v^A)(K_+v^B)+(K_+v^A)(D_-K_+v^B)] together with nonlinear-letter, one-link, two-link, and endpoint source vertices",
+            "state": "BLOCKED_SOURCE_Q_IMAGES_UNDEFINED"
+          },
+          {
+            "id": "RAW-Q-CUT",
+            "reason": "a metric replacement hat_delta->delta_4 does not prove q-equivariance of the raw Schwinger cut",
+            "required_word": "q_r on each of the eight WW endpoint D-words and on every contact/link completion row, with [q_r,C_cut] evaluated",
+            "state": "BLOCKED_CUT_Q_INTERTWINER_UNDEFINED"
+          },
+          {
+            "id": "RAW-Q-GAUGE-COMPLETION",
+            "reason": "supersymmetry of the invariant action alone does not prove equivariance of the selected gauge-fixed graph complex",
+            "required_word": "the compensating BRST word, if nonzero, in q_r(S_gf+S_FP+S_NK+measure)",
+            "state": "BLOCKED_GAUGE_FIXING_COMPENSATOR_UNDEFINED"
+          }
+        ],
+        "status": "BLOCKED_RAW_GRAPH_Q_EQUIVARIANT_LIFT",
+        "verdict": {
+          "compact_covariant_component_ledger": "PROVED_CONDITIONAL_ON_U_COMPLETION",
+          "exact_reason": "q_r A=0 makes the forward q-orbit of the raw A>A WW seed one-dimensional; the candidate 132 objects contain compact kernel labels but no q-transformed raw vertices, edges, source D-words, or cut intertwiners",
+          "physical_graph_census": "BLOCKED_RAW_GRAPH_Q_DATA_MISSING",
+          "ww_to_all_component_graph_lift": "REJECTED_AS_CURRENT_CLAIM"
+        }
+      },
+      "id": "graph.raw_q_equivariant_lift",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": {
+        "checks": [
+          {
+            "actual": {
+              "denominator": 4,
+              "numerator": -1
+            },
+            "expected": {
+              "denominator": 4,
+              "numerator": -1
+            },
+            "id": "dictionary_W_linear",
+            "status": "PASS"
+          },
+          {
+            "actual": {
+              "denominator": 1,
+              "numerator": 1
+            },
+            "expected": {
+              "denominator": 1,
+              "numerator": 1
+            },
+            "id": "propagator_inverse",
+            "status": "PASS"
+          },
+          {
+            "actual": {
+              "denominator": 4,
+              "numerator": 1
+            },
+            "expected": {
+              "denominator": 4,
+              "numerator": 1
+            },
+            "id": "vertex_product",
+            "status": "PASS"
+          },
+          {
+            "actual": {
+              "denominator": 1,
+              "numerator": 1
+            },
+            "expected": {
+              "denominator": 1,
+              "numerator": 1
+            },
+            "id": "wick_weight",
+            "status": "PASS"
+          },
+          {
+            "actual": 8,
+            "expected": 8,
+            "id": "row_count",
+            "status": "PASS"
+          },
+          {
+            "actual": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "expected": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "id": "all_row_signs",
+            "status": "PASS"
+          },
+          {
+            "actual": {
+              "denominator": 1,
+              "numerator": 2
+            },
+            "expected": {
+              "denominator": 1,
+              "numerator": 2
+            },
+            "id": "D_weight",
+            "status": "PASS"
+          },
+          {
+            "actual": {
+              "denominator": 1,
+              "numerator": 1
+            },
+            "expected": {
+              "denominator": 1,
+              "numerator": 1
+            },
+            "id": "tensor_multiplier",
+            "status": "PASS"
+          },
+          {
+            "actual": {
+              "denominator": 2,
+              "numerator": 1
+            },
+            "expected": {
+              "denominator": 2,
+              "numerator": 1
+            },
+            "id": "preintegral",
+            "status": "PASS"
+          },
+          {
+            "actual": {
+              "denominator": 32,
+              "numerator": 1
+            },
+            "expected": {
+              "denominator": 32,
+              "numerator": 1
+            },
+            "id": "pole",
+            "status": "PASS"
+          },
+          {
+            "actual": [
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS"
+            ],
+            "expected": [
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS"
+            ],
+            "id": "all_mutations_detected",
+            "status": "PASS"
+          }
+        ],
+        "status": "PASS_ARITHMETIC_WITH_EXPLICIT_D_WORD_BLOCKER"
+      },
+      "id": "dred.canonical_seed_arithmetic",
+      "status": "PASS"
+    },
+    {
+      "detail": [
+        {
+          "effect": "The endpoint transfer signs and the two mixed-anticommutator factors are recorded primitives. A full representative superspace D-word, four endpoint integration-by-parts chains, and the exchange map for the second marked placement have not been generated from a noncommutative rewrite trace.",
+          "id": "BLOCKED_EXPLICIT_WW_D_ALGEBRA_WORD_DERIVATION"
+        }
+      ],
+      "id": "dred.explicit_ww_d_algebra_word_derivation",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": "audits/step5-canonical-superfield-ww-seed.json",
+      "id": "dred.canonical_seed_determinism",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "checks": 17,
+        "status": "CONDITIONAL_FF_AGGREGATE_BARE_POLE_ARITHMETIC_CHECKED__BLOCKED_D_WORD_TOPOLOGY_ALLOCATION_AND_RENORMALIZED_MIXING"
+      },
+      "id": "dred.ww_pole_checks",
+      "status": "PASS"
+    },
+    {
+      "detail": "audits/step5-ww-physical-cut-pole.json",
+      "id": "dred.ww_pole_determinism",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "C_C": "hbar*g^2/(32*pi^2) times the same fixed color/external/ordered kernel",
+        "C_T": "hbar*g^2/(32*pi^2) times the fixed color/external/ordered kernel",
+        "breve_contraction": "brevedelta^mu nu*T_mu rho nu*p^rho=-2*epsilon*sigma_rho*p^rho",
+        "definition_of_C_T_and_C_C": "Gamma_T=(C_T/epsilon)*hatdelta; Gamma_C=-(C_C/epsilon)*delta4",
+        "derivation_not_definition": true,
+        "finite_defect": "+hbar*g^2/(16*pi^2)*color*ordered_kernel*barW_dot-alpha*p_+^dot-alpha*X",
+        "longitudinal_pole_after_link_completion": "0",
+        "magnitude_equality": "C_C=C_T",
+        "metric_sum": "-hbar*g^2/(32*pi^2*epsilon)*color*ordered_kernel*T_mu rho nu*brevedelta^mu nu"
+      },
+      "id": "dred.metric_defect",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "checks": 9,
+        "status": "CONDITIONAL_FF_ALLOCATION_EXACTNESS_AND_AGGREGATE_INVARIANCE_CHECKED__BLOCKED_COMPLETE_RAW_PORT_WORDS_FOR_NAMED_SECTOR_TABLE"
+      },
+      "id": "dred.topology_allocation_checks",
+      "status": "PASS"
+    },
+    {
+      "detail": "audits/step5-ww-topology-allocation-invariance.json",
+      "id": "dred.topology_allocation_determinism",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "blocker": {
+          "effect": "A numerical table assigning fractions of C_C to each named sector cannot be emitted. Only allocation invariance inside the conditional FF arithmetic ledger is checked.",
+          "id": "BLOCKED_COMPLETE_RAW_PORT_WORDS_FOR_NAMED_SECTOR_TABLE",
+          "missing": "The full raw port-preserving D words for every nonlinear-letter, quartic, and collapsed descendant before endpoint transfer."
+        },
+        "status": "CONDITIONAL_FF_ALLOCATION_EXACTNESS_AND_AGGREGATE_INVARIANCE_CHECKED__BLOCKED_COMPLETE_RAW_PORT_WORDS_FOR_NAMED_SECTOR_TABLE"
+      },
+      "id": "dred.named_topology_numerical_table",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": {
+        "checks": 807,
+        "failed": 0,
+        "passed": 807
+      },
+      "id": "jet.shift_kernel_status",
+      "status": "PASS"
+    },
+    {
+      "detail": "audits/step5-project-shift-kernel.json",
+      "id": "jet.shift_kernel_determinism",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "checks": 47,
+        "failed": 0,
+        "passed": 47
+      },
+      "id": "jet.link_pbw_status",
+      "status": "PASS"
+    },
+    {
+      "detail": "audits/step5-link-pbw-intertwiner.json",
+      "id": "jet.link_pbw_determinism",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "0": {
+          "forward_inverse": "PASS",
+          "inverse_forward": "PASS",
+          "symmetric_dimension": 1,
+          "word_dimension": 1
+        },
+        "1": {
+          "forward_inverse": "PASS",
+          "inverse_forward": "PASS",
+          "symmetric_dimension": 2,
+          "word_dimension": 2
+        },
+        "2": {
+          "forward_inverse": "PASS",
+          "inverse_forward": "PASS",
+          "symmetric_dimension": 4,
+          "word_dimension": 4
+        },
+        "3": {
+          "forward_inverse": "PASS",
+          "inverse_forward": "PASS",
+          "symmetric_dimension": 8,
+          "word_dimension": 8
+        },
+        "4": {
+          "forward_inverse": "PASS",
+          "inverse_forward": "PASS",
+          "symmetric_dimension": 16,
+          "word_dimension": 16
+        }
+      },
+      "id": "jet.pbw_linear_isomorphism_degree_0_4",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "associativity": {
+          "exact_rational": true,
+          "maximum_total_degree": 4,
+          "status": "PASS",
+          "triples_checked": 351
+        },
+        "intertwining": {
+          "exact_rational": true,
+          "maximum_total_degree": 4,
+          "pairs_checked": 129,
+          "status": "PASS"
+        }
+      },
+      "id": "jet.pbw_star_checks",
+      "status": "PASS"
+    },
+    {
+      "detail": [
+        "ht_compact_grassmann_audit.json",
+        "ht_derivative_kernel.json",
+        "ht_generation_summary.json",
+        "ht_ordered_pair_targets.json",
+        "ht_source_conflicts.json",
+        "ht_typed_alphabet.json",
+        "ht_typed_dictionary.json"
+      ],
+      "id": "ht.external_target_engine_deterministic",
+      "status": "PASS"
+    },
+    {
+      "detail": [
+        "ht_compact_grassmann_audit.json",
+        "ht_derivative_kernel.json",
+        "ht_generation_summary.json",
+        "ht_ordered_pair_targets.json",
+        "ht_source_conflicts.json",
+        "ht_typed_alphabet.json",
+        "ht_typed_dictionary.json"
+      ],
+      "id": "ht.generated_target_artifacts_current",
+      "status": "PASS"
+    },
+    {
+      "detail": "EXTERNAL_TARGET_ONLY",
+      "id": "ht.external_target_role",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "mismatches": [],
+        "pairs": 64
+      },
+      "id": "ht.compact_roundtrip_64",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "mismatches": [],
+        "pairs": 81
+      },
+      "id": "ht.ordered_pair_classification_81",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "identity": "K_Project=2*T_HT_printed",
+        "mismatches": [],
+        "rectangle": [
+          0,
+          12,
+          0,
+          12
+        ],
+        "terms": 8281
+      },
+      "id": "ht.derivative_kernel_project_equals_two_printed_target",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "checks": 47,
+        "checks_failed": 0,
+        "checks_passed": 47
+      },
+      "id": "ht.roundtrip_audit_algebra",
+      "status": "PASS"
+    },
+    {
+      "detail": "audits/step5-ht-roundtrip-audit.json",
+      "id": "ht.roundtrip_audit_determinism",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "blockers": [
+          {
+            "effect": "The 64 compact rows, 81 physical rows, and derivative rule are checked against a pinned manual transcription. They do not yet carry equation/line provenance for every row, and no source-coefficient mutation is parsed through to the target comparison.",
+            "id": "BLOCKED_HT_ROW_LEVEL_SOURCE_EXTRACTION_PROVENANCE"
+          },
+          {
+            "effect": "The printed HT source assigns unequal coefficients to identically typed zero-shift and compact statements. Project can classify both branches but cannot turn the inconsistent source into one equality target.",
+            "id": "BLOCKED_REFERENCE_INTERNAL_NORMALIZATION"
+          },
+          {
+            "effect": "The c/U slot and total Q0 round trip remain conditional; all physical A,B,C,D rows are unaffected.",
+            "id": "BLOCKED_U_NOT_DEFINED_BY_LOCKED_PROJECT_INPUTS"
+          },
+          {
+            "effect": "s_0=-1/2 and hence s_1=s_0 are a typed conditional dictionary, not a locked Project theorem.",
+            "id": "BLOCKED_TREE_INTERTWINER_REQUIRES_FORMAL_U_AND_FULL_TREE_EOM_MAP"
+          },
+          {
+            "effect": "The displayed color/trace map is total factorwise for simple factors; CURRENT does not restrict the Project gauge algebra to one simple factor.",
+            "id": "BLOCKED_SINGLE_KAPPA_H_FOR_GENERAL_REDUCTIVE_GAUGE_ALGEBRA"
+          }
+        ],
+        "status": "PASS_WITH_EXPLICIT_BLOCKERS"
+      },
+      "id": "ht.total_typed_roundtrip",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": {
+        "status": "BLOCKED",
+        "tests": 11
+      },
+      "id": "mixing.algebra_tests",
+      "status": "PASS"
+    },
+    {
+      "detail": "audits/step5-local-operator-mixing.json",
+      "id": "mixing.audit_determinism",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "kernel_dimension": 1,
+        "primitive": "q_s Y_r=i delta_sr Z"
+      },
+      "id": "mixing.unique_physical_q_cocycle",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "checks": 12,
+        "status": "BLOCKED_COMPLETE_BV_DRED_BASIS_DRED_EPSILON_SPLIT_FINITE_RESIDUES"
+      },
+      "id": "mixing.evanescent_cross_review_tests",
+      "status": "PASS"
+    },
+    {
+      "detail": "audits/step5-evanescent-closure-review.json",
+      "id": "mixing.evanescent_cross_review_determinism",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "closure_status": "BLOCKED_COMPLETE_BV_DRED_BASIS_DRED_EPSILON_SPLIT_FINITE_RESIDUES",
+        "closure_verdict": {
+          "bare_WW": "CLOSED_TO_TRIVIAL_EPSILON_Z",
+          "finite_mixed_term": "BLOCKED_FINITE_MIXED_PRIMITIVE_RESIDUES",
+          "reason": "The closed breve polynomials remove the 1/epsilon pole but retain the graph- and tensor-dependent finite 2*sum_alpha P'_(u,alpha)(0)r_(u,alpha,-1); Step 5A does not lock the complete BV/DRED basis, epsilon-tensor split, or numerical primitive rules.",
+          "renormalized_all_channel": "BLOCKED_COMPLETE_BV_DRED_BASIS_DRED_EPSILON_SPLIT_FINITE_RESIDUES",
+          "z_EO": "BLOCKED_COMPLETE_BV_DRED_EVANESCENT_BASIS",
+          "z_EO_MS_complete_BV_basis": "BLOCKED_COMPLETE_BV_DRED_EVANESCENT_BASIS",
+          "z_EuO_MS_eight_projector_rows": "CONDITIONAL_ZERO_UNDER_UV_IR_SEPARATION_SIMPLE_POLE_AND_NO_INVERSE_N_EPSILON"
+        },
+        "computed_verdict": "FINITE_EVANESCENT_TO_PHYSICAL_MIXING_CANNOT_BE_EXCLUDED",
+        "mixing_status": "BLOCKED",
+        "numerical_status": "BLOCKED_ONE_LOOP_COMPOSITE_Z_MATRIX",
+        "unexcluded_operator": "D_dot a^D*(P_h^dot a A_hb)^E-(P_h,dot a A_hb)^D*D^(E,dot a)"
+      },
+      "id": "mixing.renormalized_evanescent_closure",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": {
+        "local_evanescent_kernel": "BLOCKED_COMPLETE_BV_DRED_EVANESCENT_BASIS",
+        "status": "BLOCKED_MIXED_PROJECTOR_CENSUS",
+        "witness": {
+          "compatibility_note": "Legacy verifier witness key; this row belongs to the minimal projector split and is not asserted to span the complete BV/DRED kernel.",
+          "id": "E_DA_h_hb",
+          "operator": "D_dot a^D*(P_h^dot a A_hb)^E-(P_h,dot a A_hb)^D*D^(E,dot a)"
+        }
+      },
+      "id": "mixing.mixed_projector_census",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": {
+        "id": "BLOCKED_OPEN_COLOR_SOURCE_BV_EXTENSION",
+        "minimal_missing_input": "A locked contragredient source J_DE, its antifield/source slots, and its subtraction conditions.",
+        "severity": "P0",
+        "why": "The ordered tensor O^(DE) is gauge-BRST covariant in Adj tensor Adj and is not BRST closed before source completion or invariant color contraction."
+      },
+      "id": "brst.open_color_source_bv_completion",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": {
+        "status": "BLOCKED_COMPLETE_BV_DRED_BASIS_DRED_EPSILON_SPLIT_FINITE_RESIDUES",
+        "tests": 15
+      },
+      "id": "mixing.epsilon_scalar_projector_tests",
+      "status": "PASS"
+    },
+    {
+      "detail": "audits/step5-dred-epsilon-scalar-mixing.json",
+      "id": "mixing.epsilon_scalar_projector_determinism",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "exact_decomposition": "Z_full=Z_DA(h,hh)+Z_BC(h,h)+sum_(eight projector-evanescent rows)E_u",
+        "physical_piece_count": 2,
+        "projector_evanescent_piece_count": 8,
+        "rows": [
+          {
+            "P_sector": "h",
+            "allowed_resolvent_classes": [
+              "G1",
+              "G2",
+              "G3",
+              "G4"
+            ],
+            "family": "DA",
+            "finite_rule": "For the graphwise tensor decomposition sum_alpha P_(u,alpha)(N_epsilon) I_(u,alpha), F_uO=2*sum_alpha P'_(u,alpha)(0) r_(u,alpha,-1). P=N gives 2r, P=N^2 gives 0, and P=N(N-1) gives -2r.",
+            "finite_status": "BLOCKED_NUMERICAL_PRIMITIVE_TRACE",
+            "four_dimensional_projection": "0",
+            "id": "E_DA_h_hb",
+            "letter_sector": "hb",
+            "minimal_breve_degree": 1,
+            "minimal_field_degree": 2,
+            "minimal_insertion_hessian": "I_[0] contains the ordered D-chi Hessian",
+            "one_loop_MS_pole_residue_to_physical": "0 after UV/IR separation and the simple-pole condition",
+            "operator": "D_dot a^D*(P_h^dot a A_hb)^E-(P_h,dot a A_hb)^D*D^(E,dot a)",
+            "z_EO_MS": "0 under the same condition"
+          },
+          {
+            "P_sector": "h",
+            "allowed_resolvent_classes": [
+              "G1",
+              "G2"
+            ],
+            "family": "DA",
+            "finite_rule": "For the graphwise tensor decomposition sum_alpha P_(u,alpha)(N_epsilon) I_(u,alpha), F_uO=2*sum_alpha P'_(u,alpha)(0) r_(u,alpha,-1). P=N gives 2r, P=N^2 gives 0, and P=N(N-1) gives -2r.",
+            "finite_status": "ENUMERATED_DELTA_IJ_CLASSES_ZERO__FULL_ROW_BLOCKED",
+            "four_dimensional_projection": "0",
+            "id": "E_DA_h_bb",
+            "letter_sector": "bb",
+            "minimal_breve_degree": 2,
+            "minimal_field_degree": 3,
+            "minimal_insertion_hessian": "I_[1] starts with the chi-chi Hessian and one D background",
+            "one_loop_MS_pole_residue_to_physical": "0 after UV/IR separation and the simple-pole condition",
+            "operator": "D_dot a^D*(P_h^dot a A_bb)^E-(P_h,dot a A_bb)^D*D^(E,dot a)",
+            "z_EO_MS": "0 under the same condition"
+          },
+          {
+            "P_sector": "b",
+            "allowed_resolvent_classes": [
+              "G1",
+              "G2"
+            ],
+            "family": "DA",
+            "finite_rule": "For the graphwise tensor decomposition sum_alpha P_(u,alpha)(N_epsilon) I_(u,alpha), F_uO=2*sum_alpha P'_(u,alpha)(0) r_(u,alpha,-1). P=N gives 2r, P=N^2 gives 0, and P=N(N-1) gives -2r.",
+            "finite_status": "BLOCKED_NUMERICAL_PRIMITIVE_TRACE",
+            "four_dimensional_projection": "0",
+            "id": "E_DA_b_hh",
+            "letter_sector": "hh",
+            "minimal_breve_degree": 1,
+            "minimal_field_degree": 3,
+            "minimal_insertion_hessian": "I_[1] starts with D-chi and one A_hh background",
+            "one_loop_MS_pole_residue_to_physical": "0 after UV/IR separation and the simple-pole condition",
+            "operator": "D_dot a^D*(P_b^dot a A_hh)^E-(P_b,dot a A_hh)^D*D^(E,dot a)",
+            "z_EO_MS": "0 under the same condition"
+          },
+          {
+            "P_sector": "b",
+            "allowed_resolvent_classes": [
+              "G1",
+              "G2"
+            ],
+            "family": "DA",
+            "finite_rule": "For the graphwise tensor decomposition sum_alpha P_(u,alpha)(N_epsilon) I_(u,alpha), F_uO=2*sum_alpha P'_(u,alpha)(0) r_(u,alpha,-1). P=N gives 2r, P=N^2 gives 0, and P=N(N-1) gives -2r.",
+            "finite_status": "BLOCKED_NUMERICAL_PRIMITIVE_TRACE",
+            "four_dimensional_projection": "0",
+            "id": "E_DA_b_hb",
+            "letter_sector": "hb",
+            "minimal_breve_degree": 2,
+            "minimal_field_degree": 3,
+            "minimal_insertion_hessian": "I_[1] starts with two epsilon-scalar quantum legs and one D background",
+            "one_loop_MS_pole_residue_to_physical": "0 after UV/IR separation and the simple-pole condition",
+            "operator": "D_dot a^D*(P_b^dot a A_hb)^E-(P_b,dot a A_hb)^D*D^(E,dot a)",
+            "z_EO_MS": "0 under the same condition"
+          },
+          {
+            "P_sector": "b",
+            "allowed_resolvent_classes": [
+              "G1"
+            ],
+            "family": "DA",
+            "finite_rule": "For the graphwise tensor decomposition sum_alpha P_(u,alpha)(N_epsilon) I_(u,alpha), F_uO=2*sum_alpha P'_(u,alpha)(0) r_(u,alpha,-1). P=N gives 2r, P=N^2 gives 0, and P=N(N-1) gives -2r.",
+            "finite_status": "EXACT_ZERO_AFTER_PI4_BY_EXTERNAL_CHI_COUNT",
+            "four_dimensional_projection": "0",
+            "id": "E_DA_b_bb",
+            "letter_sector": "bb",
+            "minimal_breve_degree": 3,
+            "minimal_field_degree": 4,
+            "minimal_insertion_hessian": "I_[2] retains at least one external epsilon scalar",
+            "one_loop_MS_pole_residue_to_physical": "0 after UV/IR separation and the simple-pole condition",
+            "operator": "D_dot a^D*(P_b^dot a A_bb)^E-(P_b,dot a A_bb)^D*D^(E,dot a)",
+            "z_EO_MS": "0 under the same condition"
+          },
+          {
+            "P_sector": "b,h",
+            "allowed_resolvent_classes": [
+              "G1",
+              "G2"
+            ],
+            "family": "BC",
+            "finite_rule": "For the graphwise tensor decomposition sum_alpha P_(u,alpha)(N_epsilon) I_(u,alpha), F_uO=2*sum_alpha P'_(u,alpha)(0) r_(u,alpha,-1). P=N gives 2r, P=N^2 gives 0, and P=N(N-1) gives -2r.",
+            "finite_status": "BLOCKED_NUMERICAL_PRIMITIVE_TRACE",
+            "four_dimensional_projection": "0",
+            "id": "E_BC_b_h",
+            "letter_sector": "BC",
+            "minimal_breve_degree": 1,
+            "minimal_field_degree": 3,
+            "minimal_insertion_hessian": "I_[1]",
+            "one_loop_MS_pole_residue_to_physical": "0 after UV/IR separation and the simple-pole condition",
+            "operator": "sum_r[(P_b,dot a B_r^D)(P_h^dot a C_r^E)-(P_h,dot a C_r^D)(P_b^dot a B_r^E)]",
+            "z_EO_MS": "0 under the same condition"
+          },
+          {
+            "P_sector": "h,b",
+            "allowed_resolvent_classes": [
+              "G1",
+              "G2"
+            ],
+            "family": "BC",
+            "finite_rule": "For the graphwise tensor decomposition sum_alpha P_(u,alpha)(N_epsilon) I_(u,alpha), F_uO=2*sum_alpha P'_(u,alpha)(0) r_(u,alpha,-1). P=N gives 2r, P=N^2 gives 0, and P=N(N-1) gives -2r.",
+            "finite_status": "BLOCKED_NUMERICAL_PRIMITIVE_TRACE",
+            "four_dimensional_projection": "0",
+            "id": "E_BC_h_b",
+            "letter_sector": "BC",
+            "minimal_breve_degree": 1,
+            "minimal_field_degree": 3,
+            "minimal_insertion_hessian": "I_[1]",
+            "one_loop_MS_pole_residue_to_physical": "0 after UV/IR separation and the simple-pole condition",
+            "operator": "sum_r[(P_h,dot a B_r^D)(P_b^dot a C_r^E)-(P_b,dot a C_r^D)(P_h^dot a B_r^E)]",
+            "z_EO_MS": "0 under the same condition"
+          },
+          {
+            "P_sector": "b,b",
+            "allowed_resolvent_classes": [
+              "G1"
+            ],
+            "family": "BC",
+            "finite_rule": "For the graphwise tensor decomposition sum_alpha P_(u,alpha)(N_epsilon) I_(u,alpha), F_uO=2*sum_alpha P'_(u,alpha)(0) r_(u,alpha,-1). P=N gives 2r, P=N^2 gives 0, and P=N(N-1) gives -2r.",
+            "finite_status": "ZERO_FOR_MASSLESS_SCALARLESS_CONTACT_OTHERWISE_N_EPSILON_FINITE",
+            "four_dimensional_projection": "0",
+            "id": "E_BC_b_b",
+            "letter_sector": "BC",
+            "minimal_breve_degree": 2,
+            "minimal_field_degree": 4,
+            "minimal_insertion_hessian": "I_[2] has a chi-chi contact; every other Hessian leaves external chi",
+            "one_loop_MS_pole_residue_to_physical": "0 after UV/IR separation and the simple-pole condition",
+            "operator": "sum_r[(P_b,dot a B_r^D)(P_b^dot a C_r^E)-(P_b,dot a C_r^D)(P_b^dot a B_r^E)]",
+            "z_EO_MS": "0 under the same condition"
+          }
+        ],
+        "scope": "Complete only inside the P_(h/b), A_(hh/hb/bb) split of the derivative-slot cocycle Z; not a complete BV/source/EOM/ghost/measure evanescent basis."
+      },
+      "id": "mixing.minimal_projector_split_5_plus_3",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "action_vertex_species": "V_(A_hat chi_k chi_l) carries delta_kl",
+        "boundary": "No full-row zero follows until every source Hessian and every compatible G1-G4 vertex/edge word is exhaustively enumerated.",
+        "contact_tadpole": "Sigma^ij delta_ij=0",
+        "direct": "Sigma^ij delta_ik delta_jl delta_kl=Sigma^ij delta_ij=0",
+        "exchange": "Sigma^ij delta_il delta_jk delta_kl=Sigma^ij delta_ij=0",
+        "full_row_conclusion": "NOT_PROVED",
+        "full_row_status": "BLOCKED_FINITE_MIXED_PRIMITIVE_RESIDUES",
+        "restricted_conclusion": "(Pi_phys Gamma^(1)[E_DA_h_bb])|_(enumerated delta_ij classes)=0",
+        "scope": [
+          "CHI_TADPOLE",
+          "A_HAT_CHICHI_DIRECT",
+          "A_HAT_CHICHI_EXCHANGE"
+        ],
+        "source_hessian": "delta^2 A_bb^E/(delta chi_i^M delta chi_j^N)=-2i Sigma^ij c_MN^E",
+        "whole_leg_symmetry": "Sigma^ji c_NM^E=Sigma^ij c_MN^E"
+      },
+      "id": "mixing.double_breve_enumerated_delta_classes_zero",
+      "status": "PASS"
+    },
+    {
+      "detail": [
+        {
+          "id": "BLOCKED_COMPLETE_BV_DRED_EVANESCENT_BASIS",
+          "why": "The eight rows are only the complete minimal projector split of Z; ghost, NK, measure, EOM, BRST-exact, total-derivative, and general source rows remain unenumerated."
+        },
+        {
+          "id": "BLOCKED_DRED_EPSILON_TENSOR_SPLIT",
+          "why": "The unsplit Chern-Weil bulk variation vanishes, but Step 5A does not lock a separate hat/breve continuation of epsilon_E^mnrs."
+        },
+        {
+          "id": "BLOCKED_STEP5A_MOMENTUM_RULES_FOURIER_DRED_LEDGER_UNFIXED",
+          "why": "Step 5A explicitly does not assert a unique propagator set or numerical momentum-space rules."
+        },
+        {
+          "id": "BLOCKED_FINITE_MIXED_PRIMITIVE_RESIDUES",
+          "why": "Each one-index mixed I_[0] tensor structure requires 2*r_(u,alpha,-1); the remaining G1-G3 contacts/bubbles require 2*sum_alpha P'_(u,alpha)(0)*r_(u,alpha,-1). Locked propagators, integration cycle, DRED sigma ledger, symmetry factors, and UV/IR separation are absent."
+        }
+      ],
+      "id": "mixing.complete_bv_dred_evanescent_basis",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": {
+        "blockers": [
+          {
+            "id": "BLOCKED_COMPLETE_BV_DRED_EVANESCENT_BASIS",
+            "why": "The eight rows are only the complete minimal projector split of Z; ghost, NK, measure, EOM, BRST-exact, total-derivative, and general source rows remain unenumerated."
+          },
+          {
+            "id": "BLOCKED_DRED_EPSILON_TENSOR_SPLIT",
+            "why": "The unsplit Chern-Weil bulk variation vanishes, but Step 5A does not lock a separate hat/breve continuation of epsilon_E^mnrs."
+          },
+          {
+            "id": "BLOCKED_STEP5A_MOMENTUM_RULES_FOURIER_DRED_LEDGER_UNFIXED",
+            "why": "Step 5A explicitly does not assert a unique propagator set or numerical momentum-space rules."
+          },
+          {
+            "id": "BLOCKED_FINITE_MIXED_PRIMITIVE_RESIDUES",
+            "why": "Each one-index mixed I_[0] tensor structure requires 2*r_(u,alpha,-1); the remaining G1-G3 contacts/bubbles require 2*sum_alpha P'_(u,alpha)(0)*r_(u,alpha,-1). Locked propagators, integration cycle, DRED sigma ledger, symmetry factors, and UV/IR separation are absent."
+          }
+        ],
+        "conditional_pole_statement": {
+          "A_bb_boundary": "The three enumerated delta_ij contraction classes vanish. The complete r_(h,bb),-1 remains blocked until all compatible action/BV/source vertices are exhausted.",
+          "MS_mixing": "z_(E_u O)=-Res_[1/epsilon]Gamma_(E_u to O)=0 for u in the eight-row component projector split",
+          "MS_pole_residue": "Res_[1/epsilon] sum_alpha P_(u,alpha)(N_epsilon)I_(u,alpha)^(1)=0",
+          "closed_breve_lemma": "A physical projection has no external breve index. In the displayed O(N_epsilon)-covariant component projector sector, each row decomposes into a finite sum sum_alpha P_(u,alpha)(N_epsilon) I_(u,alpha), with P_(u,alpha)(0)=0 for every independent tensor/integral structure alpha.",
+          "double_pole_boundary": "Without UV/IR separation, an IR 1/epsilon^2 term would give 2/epsilon after multiplication by N_epsilon and cannot be used as a composite UV mixing residue.",
+          "finite_anomaly": "Fin_[epsilon^0] sum_alpha P_(u,alpha)(N_epsilon)I_(u,alpha)^(1)=2*sum_alpha P'_(u,alpha)(0)*r_(u,alpha,-1); P=N gives 2r, P=N^2 gives 0, and P=N(N-1) gives -2r",
+          "general_polynomial_expansion": "For every alpha, P_(u,alpha)(0)=0 implies Fin[P_(u,alpha)(2epsilon) I_(u,alpha)^(1)]=2*P'_(u,alpha)(0)*r_(u,alpha,-1).",
+          "graphwise_requirement": "Every P_(u,alpha) must be recorded graph and tensor structure by graph and tensor structure; the three one-index mixed I_[0] cycles have P_(u,alpha)=N_epsilon before further Clifford reduction, while multi-breve rows cannot be assigned the coefficient 2 without their contraction polynomials.",
+          "no_inverse_trace": "The zero-background epsilon-scalar kernel is K_(chi_i^A chi_j^B)=h*kappa_AB*hat_p^2*delta_ij. Its inverse species tensor is delta^ij, not delta^ij/N_epsilon. Vertices are polynomial in delta_ij, Gamma_i, and Sigma_ij. Therefore primitive contractions contain no inverse power of N_epsilon.",
+          "one_trace_expansion": "N_epsilon I_u^(1)=2*r_u,-1+2*epsilon*r_u,0+2*epsilon^2*r_u,1",
+          "primitive_integral": "I_(r,s)(Delta)=mu^(2epsilon)/(4pi)^(2-epsilon)*Gamma(r+2-epsilon)*Gamma(s-r-2+epsilon)/[Gamma(2-epsilon)Gamma(s)]*Delta^(r+2-s-epsilon)",
+          "scope": "The zero is a pole-mixing result for the eight component projector rows, not a claim about an unenumerated complete BV/source basis and not a claim that every finite epsilon-scalar anomaly coefficient is zero.",
+          "simple_pole_input": "I_(u,alpha)^(1)=r_(u,alpha,-1)/epsilon+r_(u,alpha,0)+epsilon*r_(u,alpha,1); this must be the UV Laurent series after IR separation for every independent structure alpha",
+          "simple_pole_proof": "For nonnegative integer r,s and nonexceptional Euclidean Delta, Gamma(r+2-epsilon) is finite and Gamma(s-r-2+epsilon) has either no pole or one simple pole. A one-loop primitive has no UV subdivergence. Tensor numerators reduce to a finite sum of these integrals."
+        },
+        "no_double_count_boundary": {
+          "boundary": "Equality of a particular mixed-source finite trace with a WW origin_id still requires the missing graph-IR/source provenance and numerical primitive trace.",
+          "correct_projector_multiplicity": {
+            "breve": 1,
+            "hat": 1
+          },
+          "cut_remainder": "r*hat_delta^mn*T_mn-r*delta_4^mn*T_mn=-r*breve_delta^mn*T_mn",
+          "double_count_mutation": {
+            "breve": 2,
+            "hat": 1
+          },
+          "identity": "delta_4=hat_delta+breve_delta",
+          "rule": "If and only if an explicit epsilon-scalar realization and the full-superspace seed have the same graph/source origin_id, the realization is the breve complement in this identity rather than an additional graph contribution."
+        }
+      },
+      "id": "mixing.finite_mixed_primitive_residues",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": "generated/step5/project-tree-dictionary.json",
+      "id": "determinism.project.project-tree-dictionary.json",
+      "status": "PASS"
+    },
+    {
+      "detail": "generated/step5/project-compact-actions.json",
+      "id": "determinism.project.project-compact-actions.json",
+      "status": "PASS"
+    },
+    {
+      "detail": "generated/step5/project-result-ledger.json",
+      "id": "determinism.project.project-result-ledger.json",
+      "status": "PASS"
+    },
+    {
+      "detail": "generated/step5/project-dred-seed.json",
+      "id": "determinism.project.project-dred-seed.json",
+      "status": "PASS"
+    },
+    {
+      "detail": "generated/step5/project-verification.json",
+      "id": "determinism.project.project-verification.json",
+      "status": "PASS"
+    },
+    {
+      "detail": "generated/step5/graph-census.json",
+      "id": "determinism.structural.graph-census.json",
+      "status": "PASS"
+    },
+    {
+      "detail": "generated/step5/cut-orbits.json",
+      "id": "determinism.structural.cut-orbits.json",
+      "status": "PASS"
+    },
+    {
+      "detail": "generated/step5/dred-masters.json",
+      "id": "determinism.structural.dred-masters.json",
+      "status": "PASS"
+    },
+    {
+      "detail": "generated/step5/structural-graph-verification.json",
+      "id": "determinism.structural.structural-graph-verification.json",
+      "status": "PASS"
+    },
+    {
+      "detail": "generated/step5/physical-graph-ir.json",
+      "id": "determinism.physical.physical-graph-ir.json",
+      "status": "PASS"
+    },
+    {
+      "detail": "generated/step5/physical-graph-verification.json",
+      "id": "determinism.physical.physical-graph-verification.json",
+      "status": "PASS"
+    },
+    {
+      "detail": "generated/step5/physical-graph-atlas.md",
+      "id": "determinism.physical.physical-graph-atlas.md",
+      "status": "PASS"
+    }
+  ],
+  "contract": {
+    "path": "contracts/foundations/step-05-euclidean-n4-awi-one-loop.md",
+    "sha256": "3bdc39287e58aa65a32afe6a8d01f883d11f91d7c24076fa65ac748e70fb2114"
+  },
+  "engines": {
+    "step5_brst_clean_review.py": "be31989e87b86f359d6c15feef89708820d843f4a34c0cbc4ed716cca9682282",
+    "step5_canonical_superfield_ww_seed.py": "cdd835c1d9ed5770067bf3aca9508c625fc4711df792a7e0d28ccce7d1f2cd38",
+    "step5_dred_epsilon_scalar_mixing_audit.py": "804dff2d72bda5fd0a8ac8bf629c822d5571ec79270902275502ec02f53f1b66",
+    "step5_evanescent_closure_review.py": "2d60ee39aadeee4bb30d924c7a42afc01f3457032b13f8073edc29208b890c37",
+    "step5_graph_cut_engine.py": "df7cdc468cd1ee41439e11880e62e5e33c9889960fc46f9b3461c3b6fb0c5f77",
+    "step5_ht_roundtrip_audit.py": "a7ee11b3a60c20450a53f4b47d50060ded39d8e45e45cf6681cd561aca880821",
+    "step5_ht_target_engine.py": "de00c47ce746a2845f0e01c3cc1151c8f05d43e9851ccfe4ba902885969dbfaa",
+    "step5_link_pbw_intertwiner_audit.py": "8b50553da50af40ad5f7ade3611a49ebdc207dce7bd833d0e914fe12e214f969",
+    "step5_local_operator_mixing_audit.py": "21d6669ac6e56438d6c243628d1cb1eed10eda3b20f89aaee75f96e5b42ee800",
+    "step5_pbw_jet_audit.py": "36276af77306a388631e02ceb7c4f74f2affd752c06b05166f3f1638abe5ac38",
+    "step5_physical_graph_engine.py": "b5922e32b0e9af7143c951a716776f1a4934897ff10fc7b7af837b240291a13d",
+    "step5_project_anomaly_engine.py": "52788907ea7a29d25bb0c65435e025bf5000cd1666d6a6fd633dd8bae95f69d4",
+    "step5_project_covariance_audit.py": "3588d6789fd1e3c45c94e18aeceefaf0161b66062e0b9b3703be26f4d998ce2e",
+    "step5_project_shift_kernel_audit.py": "b394de8642f3ed877e3cde9d211827ce171ecfc60c170a284ff122c89f87141c",
+    "step5_q_equivariant_graph_lift_audit.py": "c8b5c0ce694cc5c596b4b9d06fbaecdd54e7698fc342b5f8f4e605b896038ddc",
+    "step5_residual_q_projection_audit.py": "ebf009eab2d23b58c689031b70991c158a64071c332fb6d1d5f98e4f56a005cb",
+    "step5_ww_contact_link_completion_audit.py": "40392e48b0381c3de6b6b51f8e60ed6651b525f631e50468660a95aa177c015c",
+    "step5_ww_physical_cut_pole_audit.py": "baa6e6311f1d24e063a3a497bb55de3b32129ff35cc52885c7ec7f96f68f6844",
+    "step5_ww_topology_allocation_invariance_audit.py": "7d31241909ee3584ff92873764dfd067e7e9d655c81c6892d10133c284574fc0"
+  },
+  "excluded_obsolete_or_contaminated_engines": [
+    "scripts/step5_brst_counterterm_closure_audit.py",
+    "scripts/step5_cut_exhaustion_audit.py",
+    "scripts/step5_ww_seed_engine.py"
+  ],
+  "failed_checks": [],
+  "schema": 2,
+  "status": "BLOCKED",
+  "task": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
+  "totals": {
+    "blocked": 12,
+    "checks": 85,
+    "compact_cut_representatives": 66,
+    "compact_ordered_kernels": 66,
+    "compact_representative_graph_objects": 132,
+    "failed": 0,
+    "nonzero_pairs": 29,
+    "ordered_family_channels": 16,
+    "ordered_pairs": 81,
+    "passed": 73,
+    "zero_pairs": 52
+  }
+}

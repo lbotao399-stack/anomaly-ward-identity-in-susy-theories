@@ -1,0 +1,392 @@
+{
+  "authority_commit": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+  "canonical_representative_policy": {
+    "current_raw_graph_IR_available": false,
+    "rule": "Use NF-WW-CUT-01. A produced Box(r_i) always wins the label COLLAPSED_Ri; otherwise retain the source/action/link origin.",
+    "unique_for_any_complete_raw_graph_IR": true
+  },
+  "checks": [
+    {
+      "id": "input_hash::audits/step5-ww-contact-link-completion.json",
+      "status": "PASS"
+    },
+    {
+      "id": "input_hash::audits/step5-ww-physical-cut-pole.json",
+      "status": "PASS"
+    },
+    {
+      "id": "normal_form_stage_order",
+      "status": "PASS"
+    },
+    {
+      "id": "local_image_boundary_equals_kernel_sum",
+      "status": "PASS"
+    },
+    {
+      "id": "local_anomaly_annihilates_allocation_boundaries",
+      "status": "PASS"
+    },
+    {
+      "id": "global_16_occurrence_quotient_dimension",
+      "status": "PASS"
+    },
+    {
+      "id": "global_exactness_blockwise",
+      "status": "PASS"
+    },
+    {
+      "id": "global_anomaly_invariance_blockwise",
+      "status": "PASS"
+    },
+    {
+      "id": "all_mutations_detected",
+      "status": "PASS"
+    }
+  ],
+  "exact_blocker": {
+    "effect": "A numerical table assigning fractions of C_C to each named sector cannot be emitted. Only allocation invariance inside the conditional FF arithmetic ledger is checked.",
+    "id": "BLOCKED_COMPLETE_RAW_PORT_WORDS_FOR_NAMED_SECTOR_TABLE",
+    "missing": "The full raw port-preserving D words for every nonlinear-letter, quartic, and collapsed descendant before endpoint transfer."
+  },
+  "global_allocation_complex": {
+    "anomaly_invariant_blockwise": true,
+    "boundary_generator_count": 128,
+    "boundary_rank": 128,
+    "exactness_blockwise": true,
+    "expected_quotient_basis": "one aggregate contact class for every already-oriented occurrence",
+    "kernel_sum_dimension": 128,
+    "occurrence_count": 16,
+    "occurrences": [
+      "A_to_Wtilde__B_to_W::Dminus_left::r0|r1",
+      "A_to_Wtilde__B_to_W::Dminus_left::r0|r2",
+      "A_to_Wtilde__B_to_W::Dminus_left::r1|r1",
+      "A_to_Wtilde__B_to_W::Dminus_left::r1|r2",
+      "A_to_Wtilde__B_to_W::Dminus_right::r0|r1",
+      "A_to_Wtilde__B_to_W::Dminus_right::r0|r2",
+      "A_to_Wtilde__B_to_W::Dminus_right::r1|r1",
+      "A_to_Wtilde__B_to_W::Dminus_right::r1|r2",
+      "B_to_Wtilde__A_to_W::Dminus_left::r0|r1",
+      "B_to_Wtilde__A_to_W::Dminus_left::r0|r2",
+      "B_to_Wtilde__A_to_W::Dminus_left::r1|r1",
+      "B_to_Wtilde__A_to_W::Dminus_left::r1|r2",
+      "B_to_Wtilde__A_to_W::Dminus_right::r0|r1",
+      "B_to_Wtilde__A_to_W::Dminus_right::r0|r2",
+      "B_to_Wtilde__A_to_W::Dminus_right::r1|r1",
+      "B_to_Wtilde__A_to_W::Dminus_right::r1|r2"
+    ],
+    "quotient_dimension": 16,
+    "sector_coordinate_count": 144
+  },
+  "inputs": [
+    {
+      "expected_sha256": "322a92140e557fee666df4bfb652dfb6472aa07a915fa1ea8a8501e5d18635cd",
+      "path": "audits/step5-ww-contact-link-completion.json",
+      "sha256": "322a92140e557fee666df4bfb652dfb6472aa07a915fa1ea8a8501e5d18635cd",
+      "status": "PASS"
+    },
+    {
+      "expected_sha256": "92d1d87f6d667ff6e60016eead238bd68d3caf6ef4194d2e69795564e91d18c4",
+      "path": "audits/step5-ww-physical-cut-pole.json",
+      "sha256": "92d1d87f6d667ff6e60016eead238bd68d3caf6ef4194d2e69795564e91d18c4",
+      "status": "PASS"
+    }
+  ],
+  "local_allocation_complex": {
+    "anomaly_after_boundary": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "anomaly_factors_through_sum": true,
+    "boundary_generators": [
+      {
+        "boundary": "NONLINEAR_LETTER-COLLAPSED_R1",
+        "id": "H::NONLINEAR_LETTER->COLLAPSED_R1",
+        "interpretation": "same normalized occurrence word with a different auxiliary origin/collapse/link label"
+      },
+      {
+        "boundary": "QUARTIC_ACTION-COLLAPSED_R1",
+        "id": "H::QUARTIC_ACTION->COLLAPSED_R1",
+        "interpretation": "same normalized occurrence word with a different auxiliary origin/collapse/link label"
+      },
+      {
+        "boundary": "COLLAPSED_R0-COLLAPSED_R1",
+        "id": "H::COLLAPSED_R0->COLLAPSED_R1",
+        "interpretation": "same normalized occurrence word with a different auxiliary origin/collapse/link label"
+      },
+      {
+        "boundary": "COLLAPSED_R2-COLLAPSED_R1",
+        "id": "H::COLLAPSED_R2->COLLAPSED_R1",
+        "interpretation": "same normalized occurrence word with a different auxiliary origin/collapse/link label"
+      },
+      {
+        "boundary": "ONE_LINK-COLLAPSED_R1",
+        "id": "H::ONE_LINK->COLLAPSED_R1",
+        "interpretation": "same normalized occurrence word with a different auxiliary origin/collapse/link label"
+      },
+      {
+        "boundary": "TWO_LINK-COLLAPSED_R1",
+        "id": "H::TWO_LINK->COLLAPSED_R1",
+        "interpretation": "same normalized occurrence word with a different auxiliary origin/collapse/link label"
+      },
+      {
+        "boundary": "ENDPOINT_LEFT-COLLAPSED_R1",
+        "id": "H::ENDPOINT_LEFT->COLLAPSED_R1",
+        "interpretation": "same normalized occurrence word with a different auxiliary origin/collapse/link label"
+      },
+      {
+        "boundary": "ENDPOINT_RIGHT-COLLAPSED_R1",
+        "id": "H::ENDPOINT_RIGHT->COLLAPSED_R1",
+        "interpretation": "same normalized occurrence word with a different auxiliary origin/collapse/link label"
+      }
+    ],
+    "boundary_matrix": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "boundary_rank": 8,
+    "canonical_label": "COLLAPSED_R1",
+    "image_boundary_equals_kernel_sum": true,
+    "kernel_sum_dimension": 8,
+    "sector_basis": [
+      "NONLINEAR_LETTER",
+      "QUARTIC_ACTION",
+      "COLLAPSED_R0",
+      "COLLAPSED_R1",
+      "COLLAPSED_R2",
+      "ONE_LINK",
+      "TWO_LINK",
+      "ENDPOINT_LEFT",
+      "ENDPOINT_RIGHT"
+    ],
+    "sum_after_boundary": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "summation_matrix": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ]
+  },
+  "mutation_tests": [
+    {
+      "detected_by": "Sigma boundary !=0",
+      "id": "MUTATE_BOUNDARY_MINUS_TO_PLUS",
+      "status": "PASS"
+    },
+    {
+      "detected_by": "A boundary !=0",
+      "id": "MUTATE_SECTOR_DEPENDENT_ANOMALY_WEIGHT",
+      "status": "PASS"
+    },
+    {
+      "detected_by": "normal-form stage trace",
+      "id": "MUTATE_LOOP_SHIFT_BEFORE_CLOSURE",
+      "status": "PASS"
+    },
+    {
+      "detected_by": "product-rule sector coverage",
+      "id": "MUTATE_DROP_TWO_LINK_SECTOR",
+      "status": "PASS"
+    }
+  ],
+  "normal_form": {
+    "determinism": [
+      "Stage order is total, so closure cannot race endpoint transfer.",
+      "Each Box retains one edge tag, so collapse classification is unique.",
+      "Loop shift is terminal and cannot alter a port or collapse tag.",
+      "Disjoint endpoint transfers commute; transfers on one delta have one declared root."
+    ],
+    "id": "NF-WW-CUT-01",
+    "ordered_ports": "Ports, reflected orientations, and marked Dminus placements are never merged.",
+    "ordered_stages": [
+      {
+        "invariant": "edge tag, port order, color word, marked Dminus placement",
+        "name": "ENDPOINT_TRANSFER",
+        "rule": "D_i delta_ij -> -D_j delta_ij and barD_i delta_ij -> -barD_j delta_ij, following the oriented edge toward its declared root.",
+        "stage": 1
+      },
+      {
+        "invariant": "ordered external derivative word",
+        "name": "D_LOOP_CLOSURE",
+        "rule": "Apply D^2 barD^2 D^2=16 Box D^2 only after all endpoint transfers; emit Box(r_i) without cancelling it.",
+        "stage": 2
+      },
+      {
+        "invariant": "normalized occurrence word and total coefficient",
+        "name": "EDGE_COLLAPSE_AND_CLASSIFY",
+        "rule": "Box(r_i)/r_i^2 -> delta_edge(r_i); classify the result as COLLAPSED_Ri. If no Box tag exists, retain its origin label NONLINEAR_LETTER, QUARTIC_ACTION, ONE_LINK, TWO_LINK, ENDPOINT_LEFT, or ENDPOINT_RIGHT.",
+        "stage": 3
+      },
+      {
+        "invariant": "Laurent residue and ordered external phase",
+        "name": "LOOP_MOMENTUM_SHIFT",
+        "rule": "Only now perform k -> ell-y*q-z*P in the DRED integral; do not use a shift to choose a collapse edge.",
+        "stage": 4
+      }
+    ]
+  },
+  "overall_status": "CONDITIONAL_FF_ALLOCATION_EXACTNESS_AND_AGGREGATE_INVARIANCE_CHECKED__BLOCKED_COMPLETE_RAW_PORT_WORDS_FOR_NAMED_SECTOR_TABLE",
+  "relation_generators": [
+    {
+      "allocation_effect": "moves a term between origin-labelled and collapsed-labelled rows",
+      "equation": "D_i delta_ij + D_j delta_ij=0; same for barD",
+      "id": "REL-ENDPOINT"
+    },
+    {
+      "allocation_effect": "moves a closed D word into an edge-tagged Box representative",
+      "equation": "D^2 barD^2 D^2-16 Box D^2=0",
+      "id": "REL-CLOSURE"
+    },
+    {
+      "allocation_effect": "moves a quartic/nonlinear representative into COLLAPSED_Ri",
+      "equation": "Box(r_i) G(r_i)-delta_edge(r_i)=0",
+      "id": "REL-CUT"
+    },
+    {
+      "allocation_effect": "moves ONE_LINK bulk into endpoint representatives",
+      "equation": "i w.(r-r') int_0^1 ds E(s)-E(r)+E(r')=0",
+      "id": "REL-DUHAMEL-1"
+    },
+    {
+      "allocation_effect": "moves TWO_LINK bulk into ONE_LINK representatives",
+      "equation": "i w.(r0-r1) int_{a<=b}E012-int db(E02-E12)=0",
+      "id": "REL-DUHAMEL-2A"
+    },
+    {
+      "allocation_effect": "moves TWO_LINK bulk into ONE_LINK representatives",
+      "equation": "i w.(r1-r2) int_{a<=b}E012-int da(E01-E02)=0",
+      "id": "REL-DUHAMEL-2B"
+    },
+    {
+      "allocation_effect": "changes routing notation after all edge labels are fixed",
+      "equation": "int d^d k [F(k+a)-F(k)]=0 in the declared translational DRED measure",
+      "id": "REL-SHIFT"
+    }
+  ],
+  "schema": "awi.step5.ww-topology-allocation-invariance.v1",
+  "theorem": {
+    "consequence": "Nonlinear/quartic/collapsed/link/endpoint reallocation cannot change C_C=C_T or the evanescent anomaly. It changes only the representative used to display the contact completion.",
+    "exact_sequence": "0 -> H_alloc -> S_sectors -> N_aggregate -> 0",
+    "proof": [
+      "Sigma*boundary=0, hence image(boundary) is contained in kernel(Sigma).",
+      "rank(boundary)=8=dim kernel(Sigma) for the nine sector labels, hence image(boundary)=kernel(Sigma).",
+      "The anomaly row is constant on sector labels, so A=abar*Sigma and A*boundary=0.",
+      "The sixteen ordered occurrences form a block direct sum; the quotient has dimension sixteen, not one."
+    ],
+    "statement": "For each already-oriented occurrence, any two sector allocations with the same normalized aggregate differ by an allocation boundary."
+  },
+  "verify_run": "29306335742"
+}

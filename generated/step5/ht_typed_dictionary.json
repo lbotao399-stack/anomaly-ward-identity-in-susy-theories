@@ -1,0 +1,107 @@
+{
+  "color_basis_contract": {
+    "forbidden_shortcut": "f_ABC=c_ABC",
+    "formula": "f_AB^C R_C^R=i R_A^P R_B^Q c_PQ^R",
+    "nonzero_symbols": [
+      "tau"
+    ],
+    "trace_formula": "kappa_H delta_AB=tau R_A^P R_B^Q kappa_Project_PQ"
+  },
+  "invertibility_assumptions": [
+    "s_b!=0",
+    "s_beta!=0",
+    "s_gamma!=0",
+    "s_c!=0",
+    "s_Q!=0",
+    "tau!=0",
+    "R in GL(dim(g))",
+    "U in GL(3)",
+    "S in GL(2)"
+  ],
+  "maps": [
+    {
+      "forward": "iota(b^A)=s_b R_A^P B^P",
+      "inverse": "iota^-1(B^P)=s_b^-1 (R^-1)_P^A b^A",
+      "project": "B^P=(nabla_+ W_+)^P",
+      "scale_constraint": "s_b!=0",
+      "scale_symbol": "s_b",
+      "source": "b^A"
+    },
+    {
+      "forward": "iota(beta_I^A)=s_beta R_A^P U_I^r P_r^P",
+      "inverse": "iota^-1(P_r^P)=s_beta^-1 (R^-1)_P^A (U^-1)_r^I beta_I^A",
+      "project": "P_r^P=(nabla_+ Phi_r)^P",
+      "scale_constraint": "s_beta!=0",
+      "scale_symbol": "s_beta",
+      "source": "beta_I^A"
+    },
+    {
+      "forward": "iota(gamma^{I A})=s_gamma R_A^P (U^-1)_r^I G_r^P",
+      "inverse": "iota^-1(G_r^P)=s_gamma^-1 (R^-1)_P^A U_I^r gamma^{I A}",
+      "project": "G_r^P=tilde_Phi_r^P",
+      "scale_constraint": "s_gamma!=0",
+      "scale_symbol": "s_gamma",
+      "source": "gamma^{I A}"
+    },
+    {
+      "forward": "iota(partial_dot_a c^A)=s_c R_A^P S_dot_a^dot_b H_dot_b^P",
+      "inverse": "iota^-1(H_dot_b^P)=s_c^-1 (R^-1)_P^A (S^-1)_dot_b^dot_a partial_dot_a c^A",
+      "project": "H_dot_b^P=tilde_W_dot_b^P",
+      "scale_constraint": "s_c!=0",
+      "scale_symbol": "s_c",
+      "source": "partial_dot_a c^A"
+    }
+  ],
+  "operator_normalization": {
+    "formula": "iota o Q1_HT o iota^-1=s_Q Q1_Project",
+    "scale_constraint": "s_Q!=0",
+    "scale_symbol": "s_Q",
+    "status": "UNRESOLVED_PROJECT_DERIVATION_REQUIRED"
+  },
+  "round_trip_audits": [
+    {
+      "forward_then_inverse": "IDENTITY_UNDER_DECLARED_INVERTIBILITY_ASSUMPTIONS",
+      "inverse_then_forward": "IDENTITY_UNDER_DECLARED_INVERTIBILITY_ASSUMPTIONS",
+      "project": "B^P=(nabla_+ W_+)^P",
+      "source": "b^A"
+    },
+    {
+      "forward_then_inverse": "IDENTITY_UNDER_DECLARED_INVERTIBILITY_ASSUMPTIONS",
+      "inverse_then_forward": "IDENTITY_UNDER_DECLARED_INVERTIBILITY_ASSUMPTIONS",
+      "project": "P_r^P=(nabla_+ Phi_r)^P",
+      "source": "beta_I^A"
+    },
+    {
+      "forward_then_inverse": "IDENTITY_UNDER_DECLARED_INVERTIBILITY_ASSUMPTIONS",
+      "inverse_then_forward": "IDENTITY_UNDER_DECLARED_INVERTIBILITY_ASSUMPTIONS",
+      "project": "G_r^P=tilde_Phi_r^P",
+      "source": "gamma^{I A}"
+    },
+    {
+      "forward_then_inverse": "IDENTITY_UNDER_DECLARED_INVERTIBILITY_ASSUMPTIONS",
+      "inverse_then_forward": "IDENTITY_UNDER_DECLARED_INVERTIBILITY_ASSUMPTIONS",
+      "project": "H_dot_b^P=tilde_W_dot_b^P",
+      "source": "partial_dot_a c^A"
+    }
+  ],
+  "schema": 1,
+  "status": "CONDITIONAL_PLACEHOLDER_NOT_A_PROJECT_FORMULA",
+  "unresolved_typed_gates": [
+    {
+      "detail": "The source gamma-to-Phi^{4r} convention must be translated to the Project tilde_Phi_r convention by an explicit Hodge/index map.",
+      "id": "CONDITIONAL_SU4_HODGE_MAP"
+    },
+    {
+      "detail": "The exact coefficient between b and nabla_+ W_+ is not fixed before the Step-5 plus/minus spin-frame ledger.",
+      "id": "CONDITIONAL_PLUS_MINUS_SPIN_FRAME"
+    },
+    {
+      "detail": "The commuting source partial_1,partial_2 tower is not identified with ordered Project gauge-covariant derivatives before a Project derivation.",
+      "id": "CONDITIONAL_HOLOMORPHIC_DERIVATIVE_MAP"
+    },
+    {
+      "detail": "The admitted source anchors contain no explicit g_YM normalization to identify with the Project absorbed-coupling convention.",
+      "id": "CONDITIONAL_LOOP_NORMALIZATION"
+    }
+  ]
+}

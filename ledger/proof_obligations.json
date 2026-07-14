@@ -235,7 +235,7 @@
     {
       "id": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
       "state": "SPECIFIED",
-      "blocking_reason": null,
+      "blocking_reason": "BLOCKED_STEP5_PARTIAL_FAIL_CLOSED_CHECKPOINT: conditional WW coefficient arithmetic is checked, but the explicit D-word derivation, admissible perturbative slice, raw all-channel graph census, complete BV/DRED evanescent basis, finite mixed residues, and total holomorphic-twist round trip remain unresolved; Step-5 acceptance is not claimed.",
       "task_sha256": "4ed8aa9957868233f4c1b7ff4a4c4ec02744c153ffd0d16e30f6e322042ba749",
       "task": "tasks/CURRENT.yaml",
       "checked_scope": {
@@ -256,6 +256,36 @@
             "BLOCKED_STEP5A_NK_BRANCH_UNSELECTED",
             "BLOCKED_STEP5A_MOMENTUM_RULES_FOURIER_DRED_LEDGER_UNFIXED",
             "BLOCKED_STEP3D_LC_VECTOR_CYCLE"
+          ]
+        },
+        "STEP5_ONE_LOOP_FAIL_CLOSED_CHECKPOINT": {
+          "result": "CONDITIONAL_WW_ARITHMETIC_CHECKED__EXPLICIT_D_WORD_RAW_ALL_CHANNEL_AND_RENORMALIZATION_BLOCKED",
+          "verification_status": "BLOCKED",
+          "contract": "contracts/foundations/step-05-euclidean-n4-awi-one-loop.md",
+          "contract_sha256": "3bdc39287e58aa65a32afe6a8d01f883d11f91d7c24076fa65ac748e70fb2114",
+          "verifier": "scripts/verify_step5_euclidean_n4_awi.py",
+          "verification_audit": "audits/step5-euclidean-n4-awi-verification.json",
+          "atomic_blockers": [
+            "BLOCKED_EXPLICIT_WW_D_ALGEBRA_WORD_DERIVATION",
+            "BLOCKED_STEP5A_LOCAL_FERMI_FEYNMAN_PROPER_SLICE",
+            "BLOCKED_STEP5A_WZ_BV_REDUCTION_UNDEFINED",
+            "BLOCKED_STEP5A_COMPONENT_TO_SUPERFIELD_WW_EQUIVALENCE_UNPROVED",
+            "BLOCKED_RAW_GRAPH_Q_EQUIVARIANT_LIFT",
+            "BLOCKED_COMPLETE_RAW_PORT_WORDS_FOR_NAMED_SECTOR_TABLE",
+            "BLOCKED_OPEN_COLOR_SOURCE_BV_EXTENSION",
+            "BLOCKED_COMPLETE_BV_DRED_EVANESCENT_BASIS",
+            "BLOCKED_DRED_EPSILON_TENSOR_SPLIT",
+            "BLOCKED_STEP5A_MOMENTUM_RULES_FOURIER_DRED_LEDGER_UNFIXED",
+            "BLOCKED_FINITE_MIXED_PRIMITIVE_RESIDUES",
+            "BLOCKED_HT_ROW_LEVEL_SOURCE_EXTRACTION_PROVENANCE",
+            "BLOCKED_REFERENCE_INTERNAL_NORMALIZATION",
+            "BLOCKED_U_NOT_DEFINED_BY_LOCKED_PROJECT_INPUTS",
+            "BLOCKED_TREE_INTERTWINER_REQUIRES_FORMAL_U_AND_FULL_TREE_EOM_MAP",
+            "BLOCKED_SINGLE_KAPPA_H_FOR_GENERAL_REDUCTIVE_GAUGE_ALGEBRA"
+          ],
+          "aggregate_gates": [
+            "BLOCKED_COMPLETE_BV_DRED_BASIS_DRED_EPSILON_SPLIT_FINITE_RESIDUES",
+            "BLOCKED_TOTAL_TYPED_HT_ROUNDTRIP"
           ]
         }
       }

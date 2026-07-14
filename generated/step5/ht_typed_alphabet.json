@@ -1,0 +1,155 @@
+{
+  "authority_role": "EXTERNAL_TARGET_ONLY",
+  "family_sizes": {
+    "B": 1,
+    "G": 3,
+    "H": 2,
+    "P": 3
+  },
+  "letter_count": 9,
+  "letters": [
+    {
+      "component": null,
+      "dictionary_scale_symbol": "s_b",
+      "family": "B",
+      "id": "B",
+      "inherent_source_derivative": [
+        0,
+        0
+      ],
+      "ordinal": 0,
+      "parity": 0,
+      "project_expression": "nabla_+ W_+",
+      "source_field": "b"
+    },
+    {
+      "component": 1,
+      "dictionary_scale_symbol": "s_beta",
+      "family": "P",
+      "id": "P1",
+      "inherent_source_derivative": [
+        0,
+        0
+      ],
+      "ordinal": 1,
+      "parity": 1,
+      "project_expression": "nabla_+ Phi_1",
+      "source_field": "beta"
+    },
+    {
+      "component": 2,
+      "dictionary_scale_symbol": "s_beta",
+      "family": "P",
+      "id": "P2",
+      "inherent_source_derivative": [
+        0,
+        0
+      ],
+      "ordinal": 2,
+      "parity": 1,
+      "project_expression": "nabla_+ Phi_2",
+      "source_field": "beta"
+    },
+    {
+      "component": 3,
+      "dictionary_scale_symbol": "s_beta",
+      "family": "P",
+      "id": "P3",
+      "inherent_source_derivative": [
+        0,
+        0
+      ],
+      "ordinal": 3,
+      "parity": 1,
+      "project_expression": "nabla_+ Phi_3",
+      "source_field": "beta"
+    },
+    {
+      "component": 1,
+      "dictionary_scale_symbol": "s_gamma",
+      "family": "G",
+      "id": "G1",
+      "inherent_source_derivative": [
+        0,
+        0
+      ],
+      "ordinal": 4,
+      "parity": 0,
+      "project_expression": "tilde_Phi_1",
+      "source_field": "gamma"
+    },
+    {
+      "component": 2,
+      "dictionary_scale_symbol": "s_gamma",
+      "family": "G",
+      "id": "G2",
+      "inherent_source_derivative": [
+        0,
+        0
+      ],
+      "ordinal": 5,
+      "parity": 0,
+      "project_expression": "tilde_Phi_2",
+      "source_field": "gamma"
+    },
+    {
+      "component": 3,
+      "dictionary_scale_symbol": "s_gamma",
+      "family": "G",
+      "id": "G3",
+      "inherent_source_derivative": [
+        0,
+        0
+      ],
+      "ordinal": 6,
+      "parity": 0,
+      "project_expression": "tilde_Phi_3",
+      "source_field": "gamma"
+    },
+    {
+      "component": "dot1",
+      "dictionary_scale_symbol": "s_c",
+      "family": "H",
+      "id": "Hdot1",
+      "inherent_source_derivative": [
+        1,
+        0
+      ],
+      "ordinal": 7,
+      "parity": 1,
+      "project_expression": "tilde_W_dot1",
+      "source_field": "c"
+    },
+    {
+      "component": "dot2",
+      "dictionary_scale_symbol": "s_c",
+      "family": "H",
+      "id": "Hdot2",
+      "inherent_source_derivative": [
+        0,
+        1
+      ],
+      "ordinal": 8,
+      "parity": 1,
+      "project_expression": "tilde_W_dot2",
+      "source_field": "c"
+    }
+  ],
+  "ordered_pair_count": 81,
+  "parity_identity": {
+    "B": "|nabla_+|+|W_+|=1+1=0 mod 2",
+    "G": "|tilde_Phi_r|=0",
+    "H": "|tilde_W_dot_a|=1",
+    "P": "|nabla_+|+|Phi_r|=1+0=1 mod 2"
+  },
+  "schema": 1,
+  "source": {
+    "anchors": [
+      "HT-TWISTED-ACTION-FIELDS",
+      "HT-N4-SETUP-SUPERFIELD",
+      "HT-N4-DERIVATIVE-COMPONENT-PAIR-RESULTS"
+    ],
+    "path": "references/vendor/arxiv/2512.07771v2/source/main.tex",
+    "sha256": "90352c555f69eac3a99b9742c59e63afc785df333399a0730f8ac1ae094d9899"
+  }
+}

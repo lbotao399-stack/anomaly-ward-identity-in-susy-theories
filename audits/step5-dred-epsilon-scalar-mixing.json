@@ -1,0 +1,525 @@
+{
+  "A_bb_enumerated_delta_zero": {
+    "action_vertex_species": "V_(A_hat chi_k chi_l) carries delta_kl",
+    "boundary": "No full-row zero follows until every source Hessian and every compatible G1-G4 vertex/edge word is exhaustively enumerated.",
+    "contact_tadpole": "Sigma^ij delta_ij=0",
+    "direct": "Sigma^ij delta_ik delta_jl delta_kl=Sigma^ij delta_ij=0",
+    "exchange": "Sigma^ij delta_il delta_jk delta_kl=Sigma^ij delta_ij=0",
+    "full_row_conclusion": "NOT_PROVED",
+    "full_row_status": "BLOCKED_FINITE_MIXED_PRIMITIVE_RESIDUES",
+    "restricted_conclusion": "(Pi_phys Gamma^(1)[E_DA_h_bb])|_(enumerated delta_ij classes)=0",
+    "scope": [
+      "CHI_TADPOLE",
+      "A_HAT_CHICHI_DIRECT",
+      "A_HAT_CHICHI_EXCHANGE"
+    ],
+    "source_hessian": "delta^2 A_bb^E/(delta chi_i^M delta chi_j^N)=-2i Sigma^ij c_MN^E",
+    "whole_leg_symmetry": "Sigma^ji c_NM^E=Sigma^ij c_MN^E"
+  },
+  "authority": {
+    "external_target_used": false,
+    "inputs": [
+      {
+        "git_object_commit": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+        "path": "contracts/foundations/step-05a-component-bv-brst-primitive-supergraph-grammar.md",
+        "sha256": "300d55a07534a312bfad582c6702ba1991ef7e439a3b999c4c228c1329ca05bc"
+      },
+      {
+        "git_object_commit": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+        "path": "contracts/foundations/step-04c-n4-super-yang-mills.md",
+        "sha256": "fafc3bc2227b60ca699b3f953b632db82dafe093b221baa74736cc5fb838928f"
+      }
+    ],
+    "origin_main_commit": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+    "verify_run": 29306335742,
+    "verify_status_at_generation": "SUCCESS"
+  },
+  "authority_role": "LOCAL_PROPOSAL_USING_VERIFIED_FOUNDATION_BUT_PENDING_DRED_RULE_LOCK",
+  "blockers": [
+    {
+      "id": "BLOCKED_COMPLETE_BV_DRED_EVANESCENT_BASIS",
+      "why": "The eight rows are only the complete minimal projector split of Z; ghost, NK, measure, EOM, BRST-exact, total-derivative, and general source rows remain unenumerated."
+    },
+    {
+      "id": "BLOCKED_DRED_EPSILON_TENSOR_SPLIT",
+      "why": "The unsplit Chern-Weil bulk variation vanishes, but Step 5A does not lock a separate hat/breve continuation of epsilon_E^mnrs."
+    },
+    {
+      "id": "BLOCKED_STEP5A_MOMENTUM_RULES_FOURIER_DRED_LEDGER_UNFIXED",
+      "why": "Step 5A explicitly does not assert a unique propagator set or numerical momentum-space rules."
+    },
+    {
+      "id": "BLOCKED_FINITE_MIXED_PRIMITIVE_RESIDUES",
+      "why": "Each one-index mixed I_[0] tensor structure requires 2*r_(u,alpha,-1); the remaining G1-G3 contacts/bubbles require 2*sum_alpha P'_(u,alpha)(0)*r_(u,alpha,-1). Locked propagators, integration cycle, DRED sigma ledger, symmetry factors, and UV/IR separation are absent."
+    }
+  ],
+  "dred_split": {
+    "action_split": [
+      "L_gauge=h[1/4 F_hatmu,hatnu^2+1/2(D_hatmu chi_i)^2+1/4(chi_i cross chi_j)^2]",
+      "L_chi-fermion=h*kappa_AB tildeLambda_(dot a I)^A bar_sigma^(i,dot a a)(chi_i cross Lambda_a^I)^B",
+      "L_chi-scalar=h/4*kappa_AB[(chi_i cross varphi^IJ)^A(chi_i cross tildevarphi_IJ)^B]"
+    ],
+    "dimension": "d=4-2*epsilon",
+    "fields": [
+      "chi_i:=A_breve_i",
+      "partial_i X=0",
+      "D_i X=chi_i cross X",
+      "F_hatmu,i=D_hatmu chi_i",
+      "F_ij=chi_i cross chi_j"
+    ],
+    "metric": "delta_4=hat_delta+breve_delta",
+    "projector_algebra": [
+      "hat_delta^2=hat_delta",
+      "breve_delta^2=breve_delta",
+      "hat_delta*breve_delta=0",
+      "tr(hat_delta)=d",
+      "tr(breve_delta)=N_epsilon=2*epsilon"
+    ]
+  },
+  "minimal_projector_split": {
+    "exact_decomposition": "Z_full=Z_DA(h,hh)+Z_BC(h,h)+sum_(eight projector-evanescent rows)E_u",
+    "physical_piece_count": 2,
+    "projector_evanescent_piece_count": 8,
+    "rows": [
+      {
+        "P_sector": "h",
+        "allowed_resolvent_classes": [
+          "G1",
+          "G2",
+          "G3",
+          "G4"
+        ],
+        "family": "DA",
+        "finite_rule": "For the graphwise tensor decomposition sum_alpha P_(u,alpha)(N_epsilon) I_(u,alpha), F_uO=2*sum_alpha P'_(u,alpha)(0) r_(u,alpha,-1). P=N gives 2r, P=N^2 gives 0, and P=N(N-1) gives -2r.",
+        "finite_status": "BLOCKED_NUMERICAL_PRIMITIVE_TRACE",
+        "four_dimensional_projection": "0",
+        "id": "E_DA_h_hb",
+        "letter_sector": "hb",
+        "minimal_breve_degree": 1,
+        "minimal_field_degree": 2,
+        "minimal_insertion_hessian": "I_[0] contains the ordered D-chi Hessian",
+        "one_loop_MS_pole_residue_to_physical": "0 after UV/IR separation and the simple-pole condition",
+        "operator": "D_dot a^D*(P_h^dot a A_hb)^E-(P_h,dot a A_hb)^D*D^(E,dot a)",
+        "z_EO_MS": "0 under the same condition"
+      },
+      {
+        "P_sector": "h",
+        "allowed_resolvent_classes": [
+          "G1",
+          "G2"
+        ],
+        "family": "DA",
+        "finite_rule": "For the graphwise tensor decomposition sum_alpha P_(u,alpha)(N_epsilon) I_(u,alpha), F_uO=2*sum_alpha P'_(u,alpha)(0) r_(u,alpha,-1). P=N gives 2r, P=N^2 gives 0, and P=N(N-1) gives -2r.",
+        "finite_status": "ENUMERATED_DELTA_IJ_CLASSES_ZERO__FULL_ROW_BLOCKED",
+        "four_dimensional_projection": "0",
+        "id": "E_DA_h_bb",
+        "letter_sector": "bb",
+        "minimal_breve_degree": 2,
+        "minimal_field_degree": 3,
+        "minimal_insertion_hessian": "I_[1] starts with the chi-chi Hessian and one D background",
+        "one_loop_MS_pole_residue_to_physical": "0 after UV/IR separation and the simple-pole condition",
+        "operator": "D_dot a^D*(P_h^dot a A_bb)^E-(P_h,dot a A_bb)^D*D^(E,dot a)",
+        "z_EO_MS": "0 under the same condition"
+      },
+      {
+        "P_sector": "b",
+        "allowed_resolvent_classes": [
+          "G1",
+          "G2"
+        ],
+        "family": "DA",
+        "finite_rule": "For the graphwise tensor decomposition sum_alpha P_(u,alpha)(N_epsilon) I_(u,alpha), F_uO=2*sum_alpha P'_(u,alpha)(0) r_(u,alpha,-1). P=N gives 2r, P=N^2 gives 0, and P=N(N-1) gives -2r.",
+        "finite_status": "BLOCKED_NUMERICAL_PRIMITIVE_TRACE",
+        "four_dimensional_projection": "0",
+        "id": "E_DA_b_hh",
+        "letter_sector": "hh",
+        "minimal_breve_degree": 1,
+        "minimal_field_degree": 3,
+        "minimal_insertion_hessian": "I_[1] starts with D-chi and one A_hh background",
+        "one_loop_MS_pole_residue_to_physical": "0 after UV/IR separation and the simple-pole condition",
+        "operator": "D_dot a^D*(P_b^dot a A_hh)^E-(P_b,dot a A_hh)^D*D^(E,dot a)",
+        "z_EO_MS": "0 under the same condition"
+      },
+      {
+        "P_sector": "b",
+        "allowed_resolvent_classes": [
+          "G1",
+          "G2"
+        ],
+        "family": "DA",
+        "finite_rule": "For the graphwise tensor decomposition sum_alpha P_(u,alpha)(N_epsilon) I_(u,alpha), F_uO=2*sum_alpha P'_(u,alpha)(0) r_(u,alpha,-1). P=N gives 2r, P=N^2 gives 0, and P=N(N-1) gives -2r.",
+        "finite_status": "BLOCKED_NUMERICAL_PRIMITIVE_TRACE",
+        "four_dimensional_projection": "0",
+        "id": "E_DA_b_hb",
+        "letter_sector": "hb",
+        "minimal_breve_degree": 2,
+        "minimal_field_degree": 3,
+        "minimal_insertion_hessian": "I_[1] starts with two epsilon-scalar quantum legs and one D background",
+        "one_loop_MS_pole_residue_to_physical": "0 after UV/IR separation and the simple-pole condition",
+        "operator": "D_dot a^D*(P_b^dot a A_hb)^E-(P_b,dot a A_hb)^D*D^(E,dot a)",
+        "z_EO_MS": "0 under the same condition"
+      },
+      {
+        "P_sector": "b",
+        "allowed_resolvent_classes": [
+          "G1"
+        ],
+        "family": "DA",
+        "finite_rule": "For the graphwise tensor decomposition sum_alpha P_(u,alpha)(N_epsilon) I_(u,alpha), F_uO=2*sum_alpha P'_(u,alpha)(0) r_(u,alpha,-1). P=N gives 2r, P=N^2 gives 0, and P=N(N-1) gives -2r.",
+        "finite_status": "EXACT_ZERO_AFTER_PI4_BY_EXTERNAL_CHI_COUNT",
+        "four_dimensional_projection": "0",
+        "id": "E_DA_b_bb",
+        "letter_sector": "bb",
+        "minimal_breve_degree": 3,
+        "minimal_field_degree": 4,
+        "minimal_insertion_hessian": "I_[2] retains at least one external epsilon scalar",
+        "one_loop_MS_pole_residue_to_physical": "0 after UV/IR separation and the simple-pole condition",
+        "operator": "D_dot a^D*(P_b^dot a A_bb)^E-(P_b,dot a A_bb)^D*D^(E,dot a)",
+        "z_EO_MS": "0 under the same condition"
+      },
+      {
+        "P_sector": "b,h",
+        "allowed_resolvent_classes": [
+          "G1",
+          "G2"
+        ],
+        "family": "BC",
+        "finite_rule": "For the graphwise tensor decomposition sum_alpha P_(u,alpha)(N_epsilon) I_(u,alpha), F_uO=2*sum_alpha P'_(u,alpha)(0) r_(u,alpha,-1). P=N gives 2r, P=N^2 gives 0, and P=N(N-1) gives -2r.",
+        "finite_status": "BLOCKED_NUMERICAL_PRIMITIVE_TRACE",
+        "four_dimensional_projection": "0",
+        "id": "E_BC_b_h",
+        "letter_sector": "BC",
+        "minimal_breve_degree": 1,
+        "minimal_field_degree": 3,
+        "minimal_insertion_hessian": "I_[1]",
+        "one_loop_MS_pole_residue_to_physical": "0 after UV/IR separation and the simple-pole condition",
+        "operator": "sum_r[(P_b,dot a B_r^D)(P_h^dot a C_r^E)-(P_h,dot a C_r^D)(P_b^dot a B_r^E)]",
+        "z_EO_MS": "0 under the same condition"
+      },
+      {
+        "P_sector": "h,b",
+        "allowed_resolvent_classes": [
+          "G1",
+          "G2"
+        ],
+        "family": "BC",
+        "finite_rule": "For the graphwise tensor decomposition sum_alpha P_(u,alpha)(N_epsilon) I_(u,alpha), F_uO=2*sum_alpha P'_(u,alpha)(0) r_(u,alpha,-1). P=N gives 2r, P=N^2 gives 0, and P=N(N-1) gives -2r.",
+        "finite_status": "BLOCKED_NUMERICAL_PRIMITIVE_TRACE",
+        "four_dimensional_projection": "0",
+        "id": "E_BC_h_b",
+        "letter_sector": "BC",
+        "minimal_breve_degree": 1,
+        "minimal_field_degree": 3,
+        "minimal_insertion_hessian": "I_[1]",
+        "one_loop_MS_pole_residue_to_physical": "0 after UV/IR separation and the simple-pole condition",
+        "operator": "sum_r[(P_h,dot a B_r^D)(P_b^dot a C_r^E)-(P_b,dot a C_r^D)(P_h^dot a B_r^E)]",
+        "z_EO_MS": "0 under the same condition"
+      },
+      {
+        "P_sector": "b,b",
+        "allowed_resolvent_classes": [
+          "G1"
+        ],
+        "family": "BC",
+        "finite_rule": "For the graphwise tensor decomposition sum_alpha P_(u,alpha)(N_epsilon) I_(u,alpha), F_uO=2*sum_alpha P'_(u,alpha)(0) r_(u,alpha,-1). P=N gives 2r, P=N^2 gives 0, and P=N(N-1) gives -2r.",
+        "finite_status": "ZERO_FOR_MASSLESS_SCALARLESS_CONTACT_OTHERWISE_N_EPSILON_FINITE",
+        "four_dimensional_projection": "0",
+        "id": "E_BC_b_b",
+        "letter_sector": "BC",
+        "minimal_breve_degree": 2,
+        "minimal_field_degree": 4,
+        "minimal_insertion_hessian": "I_[2] has a chi-chi contact; every other Hessian leaves external chi",
+        "one_loop_MS_pole_residue_to_physical": "0 after UV/IR separation and the simple-pole condition",
+        "operator": "sum_r[(P_b,dot a B_r^D)(P_b^dot a C_r^E)-(P_b,dot a C_r^D)(P_b^dot a B_r^E)]",
+        "z_EO_MS": "0 under the same condition"
+      }
+    ],
+    "scope": "Complete only inside the P_(h/b), A_(hh/hb/bb) split of the derivative-slot cocycle Z; not a complete BV/source/EOM/ghost/measure evanescent basis."
+  },
+  "mixed_A_hb_source": {
+    "graph_classes": [
+      {
+        "id": "G1",
+        "sign": 1,
+        "term": "+STr[G I_[2]]"
+      },
+      {
+        "id": "G2",
+        "sign": -1,
+        "term": "-STr[G V_[1] G I_[1]]"
+      },
+      {
+        "id": "G3",
+        "sign": -1,
+        "term": "-STr[G V_[2] G I_[0]]"
+      },
+      {
+        "id": "G4",
+        "sign": 1,
+        "term": "+STr[G V_[1] G V_[1] G I_[0]]"
+      }
+    ],
+    "linear_letter": "A_hb,(1)^E(p)=+2*sigma^(hatmu i)_(++) p_hatmu chi_i^E(p) before the outer P_h; with the -i convention retained, P_h A_hb,(1)=2i sigma_h^nu_(+dot a)sigma^(hatmu i)_(++)p_nu p_mu chi_i",
+    "nonzero": true,
+    "ordered_hessian": "I_(D^M_dot a,chi_i^N)=2i[J_MN-J_NM]sigma_h^nu_(+dot a)sigma^(hatmu i)_(++)p_nu p_mu",
+    "physical_triangle_cycles": [
+      {
+        "id": "T_DA_CHI_GAUGE",
+        "internal_edges": [
+          "D_source--Lambda^4_at_V_chi_tildeLambda_Lambda",
+          "chi_source--chi_at_V_A_chi_chi",
+          "chi_at_V_chi_tildeLambda_Lambda--chi_at_V_A_chi_chi"
+        ],
+        "physical_backgrounds": [
+          "D=tildeLambda_4",
+          "A_hat"
+        ],
+        "projector_factor": "N_epsilon=breve_delta^i_i=2*epsilon",
+        "source_quantum_legs": [
+          "D=tildeLambda_4",
+          "chi_i"
+        ],
+        "vertices": [
+          "V_chi_tildeLambda_Lambda",
+          "V_A_chi_chi"
+        ]
+      },
+      {
+        "id": "T_DA_FERMION_GAUGE",
+        "internal_edges": [
+          "D_source--Lambda^4_at_V_A_tildeLambda_Lambda",
+          "tildeLambda_4_at_V_A_tildeLambda_Lambda--Lambda^4_at_V_chi_tildeLambda_Lambda",
+          "chi_at_V_chi_tildeLambda_Lambda--chi_source"
+        ],
+        "physical_backgrounds": [
+          "A_hat",
+          "D=tildeLambda_4"
+        ],
+        "projector_factor": "N_epsilon",
+        "source_quantum_legs": [
+          "D=tildeLambda_4",
+          "chi_i"
+        ],
+        "vertices": [
+          "V_A_tildeLambda_Lambda",
+          "V_chi_tildeLambda_Lambda"
+        ]
+      },
+      {
+        "id": "T_BC_YUKAWA",
+        "internal_edges": [
+          "D_source--Lambda^4_at_V_tildevarphi_Lambda_Lambda",
+          "Lambda^r_at_V_tildevarphi_Lambda_Lambda--tildeLambda_r_at_V_chi_tildeLambda_Lambda",
+          "chi_at_V_chi_tildeLambda_Lambda--chi_source"
+        ],
+        "physical_backgrounds": [
+          "C_r=tildevarphi_(4r)",
+          "B_r=Lambda^r"
+        ],
+        "projector_factor": "N_epsilon",
+        "source_quantum_legs": [
+          "D=tildeLambda_4",
+          "chi_i"
+        ],
+        "vertices": [
+          "V_tildevarphi_Lambda_Lambda",
+          "V_chi_tildeLambda_Lambda"
+        ]
+      }
+    ],
+    "vertices_from_step5a_component_action": {
+      "V_A_chi_chi": "h*kappa_AB (partial_hatmu chi_i)^A(A_hatmu cross chi_i)^B; labeled momentum vertex is i*h*c_MNP*(p-r)_hatmu*delta_ij under e^(ipx)",
+      "V_A_tildeLambda_Lambda": "h*kappa_AB tildeLambda_I^A bar_sigma^hatmu(A_hatmu cross Lambda^I)^B",
+      "V_chi_tildeLambda_Lambda": "h*kappa_AB tildeLambda_(dot a I)^A bar_sigma^(i,dot a a)c_CD^B chi_i^C Lambda_a^(I D)",
+      "V_tildevarphi_Lambda_Lambda": "-(h/sqrt(2))*c_ABC tildevarphi_IJ^A Lambda^(I B)Lambda^(J C)"
+    }
+  },
+  "no_double_count": {
+    "boundary": "Equality of a particular mixed-source finite trace with a WW origin_id still requires the missing graph-IR/source provenance and numerical primitive trace.",
+    "correct_projector_multiplicity": {
+      "breve": 1,
+      "hat": 1
+    },
+    "cut_remainder": "r*hat_delta^mn*T_mn-r*delta_4^mn*T_mn=-r*breve_delta^mn*T_mn",
+    "double_count_mutation": {
+      "breve": 2,
+      "hat": 1
+    },
+    "identity": "delta_4=hat_delta+breve_delta",
+    "rule": "If and only if an explicit epsilon-scalar realization and the full-superspace seed have the same graph/source origin_id, the realization is the breve complement in this identity rather than an additional graph contribution."
+  },
+  "one_loop_pole_vs_finite": {
+    "A_bb_boundary": "The three enumerated delta_ij contraction classes vanish. The complete r_(h,bb),-1 remains blocked until all compatible action/BV/source vertices are exhausted.",
+    "MS_mixing": "z_(E_u O)=-Res_[1/epsilon]Gamma_(E_u to O)=0 for u in the eight-row component projector split",
+    "MS_pole_residue": "Res_[1/epsilon] sum_alpha P_(u,alpha)(N_epsilon)I_(u,alpha)^(1)=0",
+    "closed_breve_lemma": "A physical projection has no external breve index. In the displayed O(N_epsilon)-covariant component projector sector, each row decomposes into a finite sum sum_alpha P_(u,alpha)(N_epsilon) I_(u,alpha), with P_(u,alpha)(0)=0 for every independent tensor/integral structure alpha.",
+    "double_pole_boundary": "Without UV/IR separation, an IR 1/epsilon^2 term would give 2/epsilon after multiplication by N_epsilon and cannot be used as a composite UV mixing residue.",
+    "finite_anomaly": "Fin_[epsilon^0] sum_alpha P_(u,alpha)(N_epsilon)I_(u,alpha)^(1)=2*sum_alpha P'_(u,alpha)(0)*r_(u,alpha,-1); P=N gives 2r, P=N^2 gives 0, and P=N(N-1) gives -2r",
+    "general_polynomial_expansion": "For every alpha, P_(u,alpha)(0)=0 implies Fin[P_(u,alpha)(2epsilon) I_(u,alpha)^(1)]=2*P'_(u,alpha)(0)*r_(u,alpha,-1).",
+    "graphwise_requirement": "Every P_(u,alpha) must be recorded graph and tensor structure by graph and tensor structure; the three one-index mixed I_[0] cycles have P_(u,alpha)=N_epsilon before further Clifford reduction, while multi-breve rows cannot be assigned the coefficient 2 without their contraction polynomials.",
+    "no_inverse_trace": "The zero-background epsilon-scalar kernel is K_(chi_i^A chi_j^B)=h*kappa_AB*hat_p^2*delta_ij. Its inverse species tensor is delta^ij, not delta^ij/N_epsilon. Vertices are polynomial in delta_ij, Gamma_i, and Sigma_ij. Therefore primitive contractions contain no inverse power of N_epsilon.",
+    "one_trace_expansion": "N_epsilon I_u^(1)=2*r_u,-1+2*epsilon*r_u,0+2*epsilon^2*r_u,1",
+    "primitive_integral": "I_(r,s)(Delta)=mu^(2epsilon)/(4pi)^(2-epsilon)*Gamma(r+2-epsilon)*Gamma(s-r-2+epsilon)/[Gamma(2-epsilon)Gamma(s)]*Delta^(r+2-s-epsilon)",
+    "scope": "The zero is a pole-mixing result for the eight component projector rows, not a claim about an unenumerated complete BV/source basis and not a claim that every finite epsilon-scalar anomaly coefficient is zero.",
+    "simple_pole_input": "I_(u,alpha)^(1)=r_(u,alpha,-1)/epsilon+r_(u,alpha,0)+epsilon*r_(u,alpha,1); this must be the UV Laurent series after IR separation for every independent structure alpha",
+    "simple_pole_proof": "For nonnegative integer r,s and nonexceptional Euclidean Delta, Gamma(r+2-epsilon) is finite and Gamma(s-r-2+epsilon) has either no pole or one simple pole. A one-loop primitive has no UV subdivergence. Tensor numerators reduce to a finite sum of these integrals."
+  },
+  "projected_letters": {
+    "A_bb": "-i(sigma_E^mn)_(++)breve_delta_m^i breve_delta_n^j F_ij=-i Sigma^ij(chi_i cross chi_j)",
+    "A_hb": "-i(sigma_E^mn)_(++)(hat_delta_m^p breve_delta_n^q+breve_delta_m^p hat_delta_n^q)F_pq=-2i(sigma_E^(hatmu i))_(++)D_hatmu chi_i",
+    "A_hh": "-i(sigma_E^mn)_(++)hat_delta_m^p hat_delta_n^q F_pq",
+    "A_sum": "A=A_hh+A_hb+A_bb",
+    "P_b": "(sigma_E^m)_(+dot a) breve_delta_m^n D_n=Gamma_i,(+dot a)(chi_i cross .)",
+    "P_h": "(sigma_E^m)_(+dot a) hat_delta_m^n D_n",
+    "P_sum": "P=P_h+P_b"
+  },
+  "residual_q_orbit": {
+    "A_bb_first": "q_r A_bb=-i*sqrt(2)*Sigma^ij[(Gamma_i tildepsi_r) cross chi_j]",
+    "A_bb_second": "q_s Upsilon_r=Sigma^ij[(Gamma_i epsilon_rst sigma^m_+ D_m phi_t) cross chi_j-(1/sqrt(2))(Gamma_i tildepsi_r cross Gamma_j tildepsi_s)]",
+    "connection_sum": "K_h,r+K_b,r=0",
+    "curvature_rule": "q_r A_xy=-(i/sqrt(2))*sigma^mn_(++)Pi_xy,mn^pq[D_p(sigma_q,+dot a tildepsi_r^dot a)-D_q(sigma_p,+dot a tildepsi_r^dot a)]",
+    "epsilon_scalar_rule": "q_r chi_i=(1/sqrt(2))*Gamma_i,dot a*tildepsi_r^dot a",
+    "gamma": "Gamma_i,dot a=(sigma_E^m)_(+dot a)breve_delta_mi",
+    "pre_relation_generator_bound": 64,
+    "projection_intertwiner": "Within this component projector module, pi_4 q_r=q_r pi_4, hence every displayed descendant remains in ker(pi_4)",
+    "projector_orbit": "K_ev,proj=Span{q_R E_u: u=1..8, R subset {1,2,3}}; q_R is ordered increasingly and repeated q vanishes",
+    "row_rule_BC": "q_s(<b,c>-<c,b>)=<q_sb,c>-<b,q_sc>-<q_sc,b>-<c,q_sb>",
+    "row_rule_DA": "q_s(<D,a>-<a,D>)=<q_sD,a>-<D,q_sa>-<q_sa,D>-<a,q_sD>",
+    "scope_blocker": "No completeness claim is made for BV-source, ghost, NK, measure, EOM, or total-derivative descendants.",
+    "split_derivative_rule": "q_r(P_x X)=P_x(q_r X)+K_x,r(X), K_x,r=(1/sqrt(2))*sigma^m_(+dot a)x_delta_m^n sigma_n,(+dot b)(tildepsi_r^dot b cross X)"
+  },
+  "schema": "awi.step5.dred-epsilon-scalar-mixing.v1",
+  "status": "BLOCKED_COMPLETE_BV_DRED_BASIS_DRED_EPSILON_SPLIT_FINITE_RESIDUES",
+  "tests": [
+    {
+      "id": "T01_CARTESIAN_PROJECTOR_SPLIT",
+      "observed": [
+        "E_BC_b_b",
+        "E_BC_b_h",
+        "E_BC_h_b",
+        "E_DA_b_bb",
+        "E_DA_b_hb",
+        "E_DA_b_hh",
+        "E_DA_h_bb",
+        "E_DA_h_hb"
+      ],
+      "pass": true
+    },
+    {
+      "id": "T02_EVERY_PROJECTOR_PIECE_VANISHES_UNDER_PI4",
+      "pass": true
+    },
+    {
+      "id": "T03_A_BB_SOURCE_HESSIAN_SYMMETRY",
+      "observed": "Sigma^(ji)c_(NM)^E=(-Sigma^(ij))(-c_(MN)^E)=Sigma^(ij)c_(MN)^E",
+      "pass": true
+    },
+    {
+      "id": "T04_A_BB_DIRECT_WICK_ZERO",
+      "pass": true
+    },
+    {
+      "id": "T05_A_BB_EXCHANGE_WICK_ZERO",
+      "pass": true
+    },
+    {
+      "id": "T06_A_BB_TADPOLE_ZERO",
+      "pass": true
+    },
+    {
+      "id": "T07_MIXED_SOURCE_HESSIAN_NONZERO",
+      "observed": "for the independent source assignment J_12=1,J_21=0, the ordered coefficient J_12-J_21=1",
+      "pass": true
+    },
+    {
+      "id": "T09_N_EPSILON_TIMES_SIMPLE_POLE_HAS_NO_POLE",
+      "observed": "2*epsilon*(7/(3epsilon)-5/2+11epsilon/7)=14/3-5epsilon+22epsilon^2/7",
+      "pass": true
+    },
+    {
+      "id": "T10_N_EPSILON_MUTATION_DETECTED",
+      "observed": "omitting the closed breve trace leaves 7/(3epsilon)",
+      "pass": true
+    },
+    {
+      "id": "T11_RESOLVENT_SIGNS",
+      "pass": true
+    },
+    {
+      "id": "T12_TYPED_LEG_MATCHING_TRIANGLE_CENSUS",
+      "observed": [
+        [
+          "V_A_ff",
+          "V_chi_ff_ext_D",
+          "A",
+          "D"
+        ],
+        [
+          "V_C_LL",
+          "V_B_chi",
+          "C",
+          "B"
+        ],
+        [
+          "V_chi_ff_ext_D",
+          "V_A_chichi",
+          "D",
+          "A"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "id": "T13_NO_DOUBLE_COUNT_PROJECTOR_IDENTITY",
+      "observed": "delta_4=hat_delta+breve_delta; one complement gives (hat,breve)=(1,1), adding it twice gives (1,2)",
+      "pass": true
+    },
+    {
+      "id": "T15_STEP5A_NUMERICAL_RULE_BLOCKER_RETAINED",
+      "pass": true
+    },
+    {
+      "id": "T16_CHERN_WEIL_VARIATION_USES_BIANCHI",
+      "observed": "delta int k F wedge F=4 int boundary(k deltaA wedge F)-4 int k deltaA wedge D F; D F=0",
+      "pass": true
+    },
+    {
+      "id": "T17_DOUBLE_POLE_MUTATION_DETECTED",
+      "observed": "2*epsilon*(1/epsilon^2)=2/epsilon, so UV/IR separation and primitive one-loop simple-pole status are necessary",
+      "pass": true
+    }
+  ],
+  "topological_sector": {
+    "action": "S_top=-(i/8)k_AB int epsilon_E^mnrs F_mn^A F_rs^B",
+    "bianchi": "epsilon_E^mnrs D_m F_rs=0",
+    "component_vertex_conclusion": "For compactly supported variations or a boundaryless manifold, every bulk functional derivative of the unsplit four-dimensional Chern-Weil term vanishes; it adds no component primitive vertex to the A_bb census.",
+    "dred_boundary": "A separate hat/breve continuation of epsilon_E^mnrs is not locked by Step 5A. If the regulator splits the topological density before using the Chern-Weil identity, the mixed cancellation is BLOCKED_DRED_EPSILON_TENSOR_SPLIT.",
+    "variation": "delta S_top=-(i/2) int partial_m[k_AB epsilon_E^mnrs delta A_n^A F_rs^B]+(i/2) int k_AB epsilon_E^mnrs delta A_n^A(D_m F_rs)^B"
+  },
+  "unfixed_bv_source_rows": [
+    {
+      "dependent_blockers": [
+        "BLOCKED_STEP5A_LOCAL_FERMI_FEYNMAN_PROPER_SLICE",
+        "BLOCKED_STEP5A_MOMENTUM_RULES_FOURIER_DRED_LEDGER_UNFIXED"
+      ],
+      "reason": "The selected local gauge fermion and its component DRED reduction are not fixed.",
+      "sector": "ghost and gauge-fixing",
+      "status": "BLOCKED_STEP5A_LOCAL_FERMI_FEYNMAN_PROPER_SLICE"
+    },
+    {
+      "reason": "No NK branch is selected, so no absorber/no-absorber theorem is asserted.",
+      "sector": "Nielsen-Kallosh",
+      "status": "BLOCKED_STEP5A_NK_BRANCH_UNSELECTED"
+    },
+    {
+      "reason": "Step 5A leaves the finite-cutoff BV density conditional; inverse N_epsilon factors or modular rows have not been excluded.",
+      "sector": "BV density and measure",
+      "status": "BLOCKED_BV_DENSITY_DRED_CONTINUATION"
+    },
+    {
+      "reason": "The required source multipliers and quotient grammar have not been enumerated.",
+      "sector": "EOM, BRST-exact, total derivative, and counterterm completion",
+      "status": "BLOCKED_COMPLETE_BV_DRED_EVANESCENT_BASIS"
+    }
+  ]
+}

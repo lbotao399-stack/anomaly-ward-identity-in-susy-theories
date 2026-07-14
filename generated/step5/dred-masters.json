@@ -1,0 +1,17 @@
+{
+  "J2": "mu^(2epsilon)/(4pi)^(2-epsilon)*Gamma(epsilon)*Delta^(-epsilon)",
+  "J3": "mu^(2epsilon)/(2*(4pi)^(2-epsilon))*Gamma(1+epsilon)*Delta^(-1-epsilon)",
+  "d": "4-2*epsilon",
+  "delta_4": "hat_delta+breve_delta",
+  "identities": [
+    "Delta*J3=(epsilon/2)*J2",
+    "Res(J2)=1/(16*pi^2)",
+    "p^rho*breve_delta^mn*sigma_m*bar_sigma_rho*sigma_n=-2*epsilon*p^rho*sigma_rho"
+  ],
+  "measure": "mu^(2*epsilon)*d^d ell/(2*pi)^d",
+  "schema": 2,
+  "traces": {
+    "breve_delta": "2*epsilon",
+    "hat_delta": "4-2*epsilon"
+  }
+}

@@ -1,0 +1,746 @@
+{
+  "authority_base_commit": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+  "channel_kernel_counts": {
+    "A__A": 8,
+    "A__B": 12,
+    "A__C": 6,
+    "A__D": 2,
+    "B__A": 12,
+    "B__B": 12,
+    "B__C": 3,
+    "C__A": 6,
+    "C__B": 3,
+    "D__A": 2
+  },
+  "external_target_used": false,
+  "families": {
+    "A": 1,
+    "B": 3,
+    "C": 3,
+    "D": 2
+  },
+  "nonzero_pairs": 29,
+  "operator_first": [
+    {
+      "channel": "A__A",
+      "compact_output": "A>U",
+      "pair_id": "A__A"
+    },
+    {
+      "channel": "A__A",
+      "compact_output": "B1>C1",
+      "pair_id": "A__A"
+    },
+    {
+      "channel": "A__A",
+      "compact_output": "B2>C2",
+      "pair_id": "A__A"
+    },
+    {
+      "channel": "A__A",
+      "compact_output": "B3>C3",
+      "pair_id": "A__A"
+    },
+    {
+      "channel": "A__A",
+      "compact_output": "C1>B1",
+      "pair_id": "A__A"
+    },
+    {
+      "channel": "A__A",
+      "compact_output": "C2>B2",
+      "pair_id": "A__A"
+    },
+    {
+      "channel": "A__A",
+      "compact_output": "C3>B3",
+      "pair_id": "A__A"
+    },
+    {
+      "channel": "A__A",
+      "compact_output": "U>A",
+      "pair_id": "A__A"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "B1>U",
+      "pair_id": "A__B1"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "C2>C3",
+      "pair_id": "A__B1"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "C3>C2",
+      "pair_id": "A__B1"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "U>B1",
+      "pair_id": "A__B1"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "B2>U",
+      "pair_id": "A__B2"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "C1>C3",
+      "pair_id": "A__B2"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "C3>C1",
+      "pair_id": "A__B2"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "U>B2",
+      "pair_id": "A__B2"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "B3>U",
+      "pair_id": "A__B3"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "C1>C2",
+      "pair_id": "A__B3"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "C2>C1",
+      "pair_id": "A__B3"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "U>B3",
+      "pair_id": "A__B3"
+    },
+    {
+      "channel": "A__C",
+      "compact_output": "C1>U",
+      "pair_id": "A__C1"
+    },
+    {
+      "channel": "A__C",
+      "compact_output": "U>C1",
+      "pair_id": "A__C1"
+    },
+    {
+      "channel": "A__C",
+      "compact_output": "C2>U",
+      "pair_id": "A__C2"
+    },
+    {
+      "channel": "A__C",
+      "compact_output": "U>C2",
+      "pair_id": "A__C2"
+    },
+    {
+      "channel": "A__C",
+      "compact_output": "C3>U",
+      "pair_id": "A__C3"
+    },
+    {
+      "channel": "A__C",
+      "compact_output": "U>C3",
+      "pair_id": "A__C3"
+    },
+    {
+      "channel": "A__D",
+      "compact_output": "U>U",
+      "pair_id": "A__Ddot1"
+    },
+    {
+      "channel": "A__D",
+      "compact_output": "U>U",
+      "pair_id": "A__Ddot2"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "B1>U",
+      "pair_id": "B1__A"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "C2>C3",
+      "pair_id": "B1__A"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "C3>C2",
+      "pair_id": "B1__A"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "U>B1",
+      "pair_id": "B1__A"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "C3>U",
+      "pair_id": "B1__B2"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "U>C3",
+      "pair_id": "B1__B2"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "C2>U",
+      "pair_id": "B1__B3"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "U>C2",
+      "pair_id": "B1__B3"
+    },
+    {
+      "channel": "B__C",
+      "compact_output": "U>U",
+      "pair_id": "B1__C1"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "B2>U",
+      "pair_id": "B2__A"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "C1>C3",
+      "pair_id": "B2__A"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "C3>C1",
+      "pair_id": "B2__A"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "U>B2",
+      "pair_id": "B2__A"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "C3>U",
+      "pair_id": "B2__B1"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "U>C3",
+      "pair_id": "B2__B1"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "C1>U",
+      "pair_id": "B2__B3"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "U>C1",
+      "pair_id": "B2__B3"
+    },
+    {
+      "channel": "B__C",
+      "compact_output": "U>U",
+      "pair_id": "B2__C2"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "B3>U",
+      "pair_id": "B3__A"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "C1>C2",
+      "pair_id": "B3__A"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "C2>C1",
+      "pair_id": "B3__A"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "U>B3",
+      "pair_id": "B3__A"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "C2>U",
+      "pair_id": "B3__B1"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "U>C2",
+      "pair_id": "B3__B1"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "C1>U",
+      "pair_id": "B3__B2"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "U>C1",
+      "pair_id": "B3__B2"
+    },
+    {
+      "channel": "B__C",
+      "compact_output": "U>U",
+      "pair_id": "B3__C3"
+    },
+    {
+      "channel": "C__A",
+      "compact_output": "C1>U",
+      "pair_id": "C1__A"
+    },
+    {
+      "channel": "C__A",
+      "compact_output": "U>C1",
+      "pair_id": "C1__A"
+    },
+    {
+      "channel": "C__B",
+      "compact_output": "U>U",
+      "pair_id": "C1__B1"
+    },
+    {
+      "channel": "C__A",
+      "compact_output": "C2>U",
+      "pair_id": "C2__A"
+    },
+    {
+      "channel": "C__A",
+      "compact_output": "U>C2",
+      "pair_id": "C2__A"
+    },
+    {
+      "channel": "C__B",
+      "compact_output": "U>U",
+      "pair_id": "C2__B2"
+    },
+    {
+      "channel": "C__A",
+      "compact_output": "C3>U",
+      "pair_id": "C3__A"
+    },
+    {
+      "channel": "C__A",
+      "compact_output": "U>C3",
+      "pair_id": "C3__A"
+    },
+    {
+      "channel": "C__B",
+      "compact_output": "U>U",
+      "pair_id": "C3__B3"
+    },
+    {
+      "channel": "D__A",
+      "compact_output": "U>U",
+      "pair_id": "Ddot1__A"
+    },
+    {
+      "channel": "D__A",
+      "compact_output": "U>U",
+      "pair_id": "Ddot2__A"
+    }
+  ],
+  "ordered_component_pairs": 81,
+  "ordered_family_channels": 16,
+  "ordered_kernels": 66,
+  "output_first": [
+    {
+      "channel": "A__A",
+      "compact_output": "A>U",
+      "pair_id": "A__A"
+    },
+    {
+      "channel": "A__A",
+      "compact_output": "B3>C3",
+      "pair_id": "A__A"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "B3>U",
+      "pair_id": "A__B3"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "B3>U",
+      "pair_id": "B3__A"
+    },
+    {
+      "channel": "A__A",
+      "compact_output": "B2>C2",
+      "pair_id": "A__A"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "B2>U",
+      "pair_id": "A__B2"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "B2>U",
+      "pair_id": "B2__A"
+    },
+    {
+      "channel": "A__A",
+      "compact_output": "B1>C1",
+      "pair_id": "A__A"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "B1>U",
+      "pair_id": "A__B1"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "B1>U",
+      "pair_id": "B1__A"
+    },
+    {
+      "channel": "A__A",
+      "compact_output": "C3>B3",
+      "pair_id": "A__A"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "C3>C2",
+      "pair_id": "A__B1"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "C3>C2",
+      "pair_id": "B1__A"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "C3>C1",
+      "pair_id": "A__B2"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "C3>C1",
+      "pair_id": "B2__A"
+    },
+    {
+      "channel": "A__C",
+      "compact_output": "C3>U",
+      "pair_id": "A__C3"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "C3>U",
+      "pair_id": "B1__B2"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "C3>U",
+      "pair_id": "B2__B1"
+    },
+    {
+      "channel": "C__A",
+      "compact_output": "C3>U",
+      "pair_id": "C3__A"
+    },
+    {
+      "channel": "A__A",
+      "compact_output": "C2>B2",
+      "pair_id": "A__A"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "C2>C3",
+      "pair_id": "A__B1"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "C2>C3",
+      "pair_id": "B1__A"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "C2>C1",
+      "pair_id": "A__B3"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "C2>C1",
+      "pair_id": "B3__A"
+    },
+    {
+      "channel": "A__C",
+      "compact_output": "C2>U",
+      "pair_id": "A__C2"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "C2>U",
+      "pair_id": "B1__B3"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "C2>U",
+      "pair_id": "B3__B1"
+    },
+    {
+      "channel": "C__A",
+      "compact_output": "C2>U",
+      "pair_id": "C2__A"
+    },
+    {
+      "channel": "A__A",
+      "compact_output": "C1>B1",
+      "pair_id": "A__A"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "C1>C3",
+      "pair_id": "A__B2"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "C1>C3",
+      "pair_id": "B2__A"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "C1>C2",
+      "pair_id": "A__B3"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "C1>C2",
+      "pair_id": "B3__A"
+    },
+    {
+      "channel": "A__C",
+      "compact_output": "C1>U",
+      "pair_id": "A__C1"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "C1>U",
+      "pair_id": "B2__B3"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "C1>U",
+      "pair_id": "B3__B2"
+    },
+    {
+      "channel": "C__A",
+      "compact_output": "C1>U",
+      "pair_id": "C1__A"
+    },
+    {
+      "channel": "A__A",
+      "compact_output": "U>A",
+      "pair_id": "A__A"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "U>B3",
+      "pair_id": "A__B3"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "U>B3",
+      "pair_id": "B3__A"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "U>B2",
+      "pair_id": "A__B2"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "U>B2",
+      "pair_id": "B2__A"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "U>B1",
+      "pair_id": "A__B1"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "U>B1",
+      "pair_id": "B1__A"
+    },
+    {
+      "channel": "A__C",
+      "compact_output": "U>C3",
+      "pair_id": "A__C3"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "U>C3",
+      "pair_id": "B1__B2"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "U>C3",
+      "pair_id": "B2__B1"
+    },
+    {
+      "channel": "C__A",
+      "compact_output": "U>C3",
+      "pair_id": "C3__A"
+    },
+    {
+      "channel": "A__C",
+      "compact_output": "U>C2",
+      "pair_id": "A__C2"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "U>C2",
+      "pair_id": "B1__B3"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "U>C2",
+      "pair_id": "B3__B1"
+    },
+    {
+      "channel": "C__A",
+      "compact_output": "U>C2",
+      "pair_id": "C2__A"
+    },
+    {
+      "channel": "A__C",
+      "compact_output": "U>C1",
+      "pair_id": "A__C1"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "U>C1",
+      "pair_id": "B2__B3"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "U>C1",
+      "pair_id": "B3__B2"
+    },
+    {
+      "channel": "C__A",
+      "compact_output": "U>C1",
+      "pair_id": "C1__A"
+    },
+    {
+      "channel": "A__D",
+      "compact_output": "U>U",
+      "pair_id": "A__Ddot2"
+    },
+    {
+      "channel": "A__D",
+      "compact_output": "U>U",
+      "pair_id": "A__Ddot1"
+    },
+    {
+      "channel": "B__C",
+      "compact_output": "U>U",
+      "pair_id": "B3__C3"
+    },
+    {
+      "channel": "B__C",
+      "compact_output": "U>U",
+      "pair_id": "B2__C2"
+    },
+    {
+      "channel": "B__C",
+      "compact_output": "U>U",
+      "pair_id": "B1__C1"
+    },
+    {
+      "channel": "C__B",
+      "compact_output": "U>U",
+      "pair_id": "C3__B3"
+    },
+    {
+      "channel": "C__B",
+      "compact_output": "U>U",
+      "pair_id": "C2__B2"
+    },
+    {
+      "channel": "C__B",
+      "compact_output": "U>U",
+      "pair_id": "C1__B1"
+    },
+    {
+      "channel": "D__A",
+      "compact_output": "U>U",
+      "pair_id": "Ddot2__A"
+    },
+    {
+      "channel": "D__A",
+      "compact_output": "U>U",
+      "pair_id": "Ddot1__A"
+    }
+  ],
+  "schema": 2,
+  "zero_pair_ids": [
+    "B1__B1",
+    "B1__C2",
+    "B1__C3",
+    "B1__Ddot1",
+    "B1__Ddot2",
+    "B2__B2",
+    "B2__C1",
+    "B2__C3",
+    "B2__Ddot1",
+    "B2__Ddot2",
+    "B3__B3",
+    "B3__C1",
+    "B3__C2",
+    "B3__Ddot1",
+    "B3__Ddot2",
+    "C1__B2",
+    "C1__B3",
+    "C1__C1",
+    "C1__C2",
+    "C1__C3",
+    "C1__Ddot1",
+    "C1__Ddot2",
+    "C2__B1",
+    "C2__B3",
+    "C2__C1",
+    "C2__C2",
+    "C2__C3",
+    "C2__Ddot1",
+    "C2__Ddot2",
+    "C3__B1",
+    "C3__B2",
+    "C3__C1",
+    "C3__C2",
+    "C3__C3",
+    "C3__Ddot1",
+    "C3__Ddot2",
+    "Ddot1__B1",
+    "Ddot1__B2",
+    "Ddot1__B3",
+    "Ddot1__C1",
+    "Ddot1__C2",
+    "Ddot1__C3",
+    "Ddot1__Ddot1",
+    "Ddot1__Ddot2",
+    "Ddot2__B1",
+    "Ddot2__B2",
+    "Ddot2__B3",
+    "Ddot2__C1",
+    "Ddot2__C2",
+    "Ddot2__C3",
+    "Ddot2__Ddot1",
+    "Ddot2__Ddot2"
+  ],
+  "zero_pairs": 52
+}

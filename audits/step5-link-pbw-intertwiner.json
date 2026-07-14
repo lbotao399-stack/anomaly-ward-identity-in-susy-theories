@@ -1,0 +1,1213 @@
+{
+  "checks": [
+    {
+      "id": "degree::0::0:0",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::1::0:1",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::1::1:0",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::2::0:2",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::2::1:1",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::2::2:0",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::3::0:3",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::3::1:2",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::3::2:1",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::3::3:0",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::4::0:4",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::4::1:3",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::4::2:2",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::4::3:1",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::4::4:0",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::5::0:5",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::5::1:4",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::5::2:3",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::5::3:2",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::5::4:1",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::5::5:0",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::6::0:6",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::6::1:5",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::6::2:4",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::6::3:3",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::6::4:2",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::6::5:1",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::6::6:0",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::7::0:7",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::7::1:6",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::7::2:5",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::7::3:4",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::7::4:3",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::7::5:2",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::7::6:1",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::7::7:0",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::8::0:8",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::8::1:7",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::8::2:6",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::8::3:5",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::8::4:4",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::8::5:3",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::8::6:2",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::8::7:1",
+      "status": "PASS"
+    },
+    {
+      "id": "degree::8::8:0",
+      "status": "PASS"
+    }
+  ],
+  "curvature_statement": "the sum is the PBW-symmetrized lift; individual ordered words differ by [P1,P2]=-ad_A and higher Lyndon curvature jets",
+  "external_target_used": false,
+  "mutations": [
+    {
+      "id": "USE_FACTORIAL_DENOMINATOR_AFTER_DERIVATION",
+      "status": "PASS"
+    },
+    {
+      "id": "KEEP_ONE_ORDERED_WORD_ONLY",
+      "status": "PASS"
+    }
+  ],
+  "ordered_translation": "tau_w=exp(w1*P1+w2*P2)",
+  "samples": [
+    {
+      "coefficient_after_w_derivatives": "1",
+      "multiindex": [
+        0,
+        0
+      ],
+      "normalized_pbw_shuffle_coefficient": "1",
+      "word_count": 1,
+      "words": [
+        ""
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1",
+      "multiindex": [
+        0,
+        1
+      ],
+      "normalized_pbw_shuffle_coefficient": "1",
+      "word_count": 1,
+      "words": [
+        "2"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1",
+      "multiindex": [
+        1,
+        0
+      ],
+      "normalized_pbw_shuffle_coefficient": "1",
+      "word_count": 1,
+      "words": [
+        "1"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1",
+      "multiindex": [
+        0,
+        2
+      ],
+      "normalized_pbw_shuffle_coefficient": "1",
+      "word_count": 1,
+      "words": [
+        "22"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1/2",
+      "multiindex": [
+        1,
+        1
+      ],
+      "normalized_pbw_shuffle_coefficient": "1/2",
+      "word_count": 2,
+      "words": [
+        "12",
+        "21"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1",
+      "multiindex": [
+        2,
+        0
+      ],
+      "normalized_pbw_shuffle_coefficient": "1",
+      "word_count": 1,
+      "words": [
+        "11"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1",
+      "multiindex": [
+        0,
+        3
+      ],
+      "normalized_pbw_shuffle_coefficient": "1",
+      "word_count": 1,
+      "words": [
+        "222"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1/3",
+      "multiindex": [
+        1,
+        2
+      ],
+      "normalized_pbw_shuffle_coefficient": "1/3",
+      "word_count": 3,
+      "words": [
+        "122",
+        "212",
+        "221"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1/3",
+      "multiindex": [
+        2,
+        1
+      ],
+      "normalized_pbw_shuffle_coefficient": "1/3",
+      "word_count": 3,
+      "words": [
+        "112",
+        "121",
+        "211"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1",
+      "multiindex": [
+        3,
+        0
+      ],
+      "normalized_pbw_shuffle_coefficient": "1",
+      "word_count": 1,
+      "words": [
+        "111"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1",
+      "multiindex": [
+        0,
+        4
+      ],
+      "normalized_pbw_shuffle_coefficient": "1",
+      "word_count": 1,
+      "words": [
+        "2222"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1/4",
+      "multiindex": [
+        1,
+        3
+      ],
+      "normalized_pbw_shuffle_coefficient": "1/4",
+      "word_count": 4,
+      "words": [
+        "1222",
+        "2122",
+        "2212",
+        "2221"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1/6",
+      "multiindex": [
+        2,
+        2
+      ],
+      "normalized_pbw_shuffle_coefficient": "1/6",
+      "word_count": 6,
+      "words": [
+        "1122",
+        "1212",
+        "1221",
+        "2112",
+        "2121",
+        "2211"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1/4",
+      "multiindex": [
+        3,
+        1
+      ],
+      "normalized_pbw_shuffle_coefficient": "1/4",
+      "word_count": 4,
+      "words": [
+        "1112",
+        "1121",
+        "1211",
+        "2111"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1",
+      "multiindex": [
+        4,
+        0
+      ],
+      "normalized_pbw_shuffle_coefficient": "1",
+      "word_count": 1,
+      "words": [
+        "1111"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1",
+      "multiindex": [
+        0,
+        5
+      ],
+      "normalized_pbw_shuffle_coefficient": "1",
+      "word_count": 1,
+      "words": [
+        "22222"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1/5",
+      "multiindex": [
+        1,
+        4
+      ],
+      "normalized_pbw_shuffle_coefficient": "1/5",
+      "word_count": 5,
+      "words": [
+        "12222",
+        "21222",
+        "22122",
+        "22212",
+        "22221"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1/10",
+      "multiindex": [
+        2,
+        3
+      ],
+      "normalized_pbw_shuffle_coefficient": "1/10",
+      "word_count": 10,
+      "words": [
+        "11222",
+        "12122",
+        "12212",
+        "12221",
+        "21122",
+        "21212",
+        "21221",
+        "22112",
+        "22121",
+        "22211"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1/10",
+      "multiindex": [
+        3,
+        2
+      ],
+      "normalized_pbw_shuffle_coefficient": "1/10",
+      "word_count": 10,
+      "words": [
+        "11122",
+        "11212",
+        "11221",
+        "12112",
+        "12121",
+        "12211",
+        "21112",
+        "21121",
+        "21211",
+        "22111"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1/5",
+      "multiindex": [
+        4,
+        1
+      ],
+      "normalized_pbw_shuffle_coefficient": "1/5",
+      "word_count": 5,
+      "words": [
+        "11112",
+        "11121",
+        "11211",
+        "12111",
+        "21111"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1",
+      "multiindex": [
+        5,
+        0
+      ],
+      "normalized_pbw_shuffle_coefficient": "1",
+      "word_count": 1,
+      "words": [
+        "11111"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1",
+      "multiindex": [
+        0,
+        6
+      ],
+      "normalized_pbw_shuffle_coefficient": "1",
+      "word_count": 1,
+      "words": [
+        "222222"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1/6",
+      "multiindex": [
+        1,
+        5
+      ],
+      "normalized_pbw_shuffle_coefficient": "1/6",
+      "word_count": 6,
+      "words": [
+        "122222",
+        "212222",
+        "221222",
+        "222122",
+        "222212",
+        "222221"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1/15",
+      "multiindex": [
+        2,
+        4
+      ],
+      "normalized_pbw_shuffle_coefficient": "1/15",
+      "word_count": 15,
+      "words": [
+        "112222",
+        "121222",
+        "122122",
+        "122212",
+        "122221",
+        "211222",
+        "212122",
+        "212212",
+        "212221",
+        "221122",
+        "221212",
+        "221221",
+        "222112",
+        "222121",
+        "222211"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1/20",
+      "multiindex": [
+        3,
+        3
+      ],
+      "normalized_pbw_shuffle_coefficient": "1/20",
+      "word_count": 20,
+      "words": [
+        "111222",
+        "112122",
+        "112212",
+        "112221",
+        "121122",
+        "121212",
+        "121221",
+        "122112",
+        "122121",
+        "122211",
+        "211122",
+        "211212",
+        "211221",
+        "212112",
+        "212121",
+        "212211",
+        "221112",
+        "221121",
+        "221211",
+        "222111"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1/15",
+      "multiindex": [
+        4,
+        2
+      ],
+      "normalized_pbw_shuffle_coefficient": "1/15",
+      "word_count": 15,
+      "words": [
+        "111122",
+        "111212",
+        "111221",
+        "112112",
+        "112121",
+        "112211",
+        "121112",
+        "121121",
+        "121211",
+        "122111",
+        "211112",
+        "211121",
+        "211211",
+        "212111",
+        "221111"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1/6",
+      "multiindex": [
+        5,
+        1
+      ],
+      "normalized_pbw_shuffle_coefficient": "1/6",
+      "word_count": 6,
+      "words": [
+        "111112",
+        "111121",
+        "111211",
+        "112111",
+        "121111",
+        "211111"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1",
+      "multiindex": [
+        6,
+        0
+      ],
+      "normalized_pbw_shuffle_coefficient": "1",
+      "word_count": 1,
+      "words": [
+        "111111"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1",
+      "multiindex": [
+        0,
+        7
+      ],
+      "normalized_pbw_shuffle_coefficient": "1",
+      "word_count": 1,
+      "words": [
+        "2222222"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1/7",
+      "multiindex": [
+        1,
+        6
+      ],
+      "normalized_pbw_shuffle_coefficient": "1/7",
+      "word_count": 7,
+      "words": [
+        "1222222",
+        "2122222",
+        "2212222",
+        "2221222",
+        "2222122",
+        "2222212",
+        "2222221"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1/21",
+      "multiindex": [
+        2,
+        5
+      ],
+      "normalized_pbw_shuffle_coefficient": "1/21",
+      "word_count": 21,
+      "words": [
+        "1122222",
+        "1212222",
+        "1221222",
+        "1222122",
+        "1222212",
+        "1222221",
+        "2112222",
+        "2121222",
+        "2122122",
+        "2122212",
+        "2122221",
+        "2211222",
+        "2212122",
+        "2212212",
+        "2212221",
+        "2221122",
+        "2221212",
+        "2221221",
+        "2222112",
+        "2222121",
+        "2222211"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1/35",
+      "multiindex": [
+        3,
+        4
+      ],
+      "normalized_pbw_shuffle_coefficient": "1/35",
+      "word_count": 35,
+      "words": [
+        "1112222",
+        "1121222",
+        "1122122",
+        "1122212",
+        "1122221",
+        "1211222",
+        "1212122",
+        "1212212",
+        "1212221",
+        "1221122",
+        "1221212",
+        "1221221",
+        "1222112",
+        "1222121",
+        "1222211",
+        "2111222",
+        "2112122",
+        "2112212",
+        "2112221",
+        "2121122",
+        "2121212",
+        "2121221",
+        "2122112",
+        "2122121",
+        "2122211",
+        "2211122",
+        "2211212",
+        "2211221",
+        "2212112",
+        "2212121",
+        "2212211",
+        "2221112",
+        "2221121",
+        "2221211",
+        "2222111"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1/35",
+      "multiindex": [
+        4,
+        3
+      ],
+      "normalized_pbw_shuffle_coefficient": "1/35",
+      "word_count": 35,
+      "words": [
+        "1111222",
+        "1112122",
+        "1112212",
+        "1112221",
+        "1121122",
+        "1121212",
+        "1121221",
+        "1122112",
+        "1122121",
+        "1122211",
+        "1211122",
+        "1211212",
+        "1211221",
+        "1212112",
+        "1212121",
+        "1212211",
+        "1221112",
+        "1221121",
+        "1221211",
+        "1222111",
+        "2111122",
+        "2111212",
+        "2111221",
+        "2112112",
+        "2112121",
+        "2112211",
+        "2121112",
+        "2121121",
+        "2121211",
+        "2122111",
+        "2211112",
+        "2211121",
+        "2211211",
+        "2212111",
+        "2221111"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1/21",
+      "multiindex": [
+        5,
+        2
+      ],
+      "normalized_pbw_shuffle_coefficient": "1/21",
+      "word_count": 21,
+      "words": [
+        "1111122",
+        "1111212",
+        "1111221",
+        "1112112",
+        "1112121",
+        "1112211",
+        "1121112",
+        "1121121",
+        "1121211",
+        "1122111",
+        "1211112",
+        "1211121",
+        "1211211",
+        "1212111",
+        "1221111",
+        "2111112",
+        "2111121",
+        "2111211",
+        "2112111",
+        "2121111",
+        "2211111"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1/7",
+      "multiindex": [
+        6,
+        1
+      ],
+      "normalized_pbw_shuffle_coefficient": "1/7",
+      "word_count": 7,
+      "words": [
+        "1111112",
+        "1111121",
+        "1111211",
+        "1112111",
+        "1121111",
+        "1211111",
+        "2111111"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1",
+      "multiindex": [
+        7,
+        0
+      ],
+      "normalized_pbw_shuffle_coefficient": "1",
+      "word_count": 1,
+      "words": [
+        "1111111"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1",
+      "multiindex": [
+        0,
+        8
+      ],
+      "normalized_pbw_shuffle_coefficient": "1",
+      "word_count": 1,
+      "words": [
+        "22222222"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1/8",
+      "multiindex": [
+        1,
+        7
+      ],
+      "normalized_pbw_shuffle_coefficient": "1/8",
+      "word_count": 8,
+      "words": [
+        "12222222",
+        "21222222",
+        "22122222",
+        "22212222",
+        "22221222",
+        "22222122",
+        "22222212",
+        "22222221"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1/28",
+      "multiindex": [
+        2,
+        6
+      ],
+      "normalized_pbw_shuffle_coefficient": "1/28",
+      "word_count": 28,
+      "words": [
+        "11222222",
+        "12122222",
+        "12212222",
+        "12221222",
+        "12222122",
+        "12222212",
+        "12222221",
+        "21122222",
+        "21212222",
+        "21221222",
+        "21222122",
+        "21222212",
+        "21222221",
+        "22112222",
+        "22121222",
+        "22122122",
+        "22122212",
+        "22122221",
+        "22211222",
+        "22212122",
+        "22212212",
+        "22212221",
+        "22221122",
+        "22221212",
+        "22221221",
+        "22222112",
+        "22222121",
+        "22222211"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1/56",
+      "multiindex": [
+        3,
+        5
+      ],
+      "normalized_pbw_shuffle_coefficient": "1/56",
+      "word_count": 56,
+      "words": [
+        "11122222",
+        "11212222",
+        "11221222",
+        "11222122",
+        "11222212",
+        "11222221",
+        "12112222",
+        "12121222",
+        "12122122",
+        "12122212",
+        "12122221",
+        "12211222",
+        "12212122",
+        "12212212",
+        "12212221",
+        "12221122",
+        "12221212",
+        "12221221",
+        "12222112",
+        "12222121",
+        "12222211",
+        "21112222",
+        "21121222",
+        "21122122",
+        "21122212",
+        "21122221",
+        "21211222",
+        "21212122",
+        "21212212",
+        "21212221",
+        "21221122",
+        "21221212",
+        "21221221",
+        "21222112",
+        "21222121",
+        "21222211",
+        "22111222",
+        "22112122",
+        "22112212",
+        "22112221",
+        "22121122",
+        "22121212",
+        "22121221",
+        "22122112",
+        "22122121",
+        "22122211",
+        "22211122",
+        "22211212",
+        "22211221",
+        "22212112",
+        "22212121",
+        "22212211",
+        "22221112",
+        "22221121",
+        "22221211",
+        "22222111"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1/70",
+      "multiindex": [
+        4,
+        4
+      ],
+      "normalized_pbw_shuffle_coefficient": "1/70",
+      "word_count": 70,
+      "words": [
+        "11112222",
+        "11121222",
+        "11122122",
+        "11122212",
+        "11122221",
+        "11211222",
+        "11212122",
+        "11212212",
+        "11212221",
+        "11221122",
+        "11221212",
+        "11221221",
+        "11222112",
+        "11222121",
+        "11222211",
+        "12111222",
+        "12112122",
+        "12112212",
+        "12112221",
+        "12121122",
+        "12121212",
+        "12121221",
+        "12122112",
+        "12122121",
+        "12122211",
+        "12211122",
+        "12211212",
+        "12211221",
+        "12212112",
+        "12212121",
+        "12212211",
+        "12221112",
+        "12221121",
+        "12221211",
+        "12222111",
+        "21111222",
+        "21112122",
+        "21112212",
+        "21112221",
+        "21121122",
+        "21121212",
+        "21121221",
+        "21122112",
+        "21122121",
+        "21122211",
+        "21211122",
+        "21211212",
+        "21211221",
+        "21212112",
+        "21212121",
+        "21212211",
+        "21221112",
+        "21221121",
+        "21221211",
+        "21222111",
+        "22111122",
+        "22111212",
+        "22111221",
+        "22112112",
+        "22112121",
+        "22112211",
+        "22121112",
+        "22121121",
+        "22121211",
+        "22122111",
+        "22211112",
+        "22211121",
+        "22211211",
+        "22212111",
+        "22221111"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1/56",
+      "multiindex": [
+        5,
+        3
+      ],
+      "normalized_pbw_shuffle_coefficient": "1/56",
+      "word_count": 56,
+      "words": [
+        "11111222",
+        "11112122",
+        "11112212",
+        "11112221",
+        "11121122",
+        "11121212",
+        "11121221",
+        "11122112",
+        "11122121",
+        "11122211",
+        "11211122",
+        "11211212",
+        "11211221",
+        "11212112",
+        "11212121",
+        "11212211",
+        "11221112",
+        "11221121",
+        "11221211",
+        "11222111",
+        "12111122",
+        "12111212",
+        "12111221",
+        "12112112",
+        "12112121",
+        "12112211",
+        "12121112",
+        "12121121",
+        "12121211",
+        "12122111",
+        "12211112",
+        "12211121",
+        "12211211",
+        "12212111",
+        "12221111",
+        "21111122",
+        "21111212",
+        "21111221",
+        "21112112",
+        "21112121",
+        "21112211",
+        "21121112",
+        "21121121",
+        "21121211",
+        "21122111",
+        "21211112",
+        "21211121",
+        "21211211",
+        "21212111",
+        "21221111",
+        "22111112",
+        "22111121",
+        "22111211",
+        "22112111",
+        "22121111",
+        "22211111"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1/28",
+      "multiindex": [
+        6,
+        2
+      ],
+      "normalized_pbw_shuffle_coefficient": "1/28",
+      "word_count": 28,
+      "words": [
+        "11111122",
+        "11111212",
+        "11111221",
+        "11112112",
+        "11112121",
+        "11112211",
+        "11121112",
+        "11121121",
+        "11121211",
+        "11122111",
+        "11211112",
+        "11211121",
+        "11211211",
+        "11212111",
+        "11221111",
+        "12111112",
+        "12111121",
+        "12111211",
+        "12112111",
+        "12121111",
+        "12211111",
+        "21111112",
+        "21111121",
+        "21111211",
+        "21112111",
+        "21121111",
+        "21211111",
+        "22111111"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1/8",
+      "multiindex": [
+        7,
+        1
+      ],
+      "normalized_pbw_shuffle_coefficient": "1/8",
+      "word_count": 8,
+      "words": [
+        "11111112",
+        "11111121",
+        "11111211",
+        "11112111",
+        "11121111",
+        "11211111",
+        "12111111",
+        "21111111"
+      ]
+    },
+    {
+      "coefficient_after_w_derivatives": "1",
+      "multiindex": [
+        8,
+        0
+      ],
+      "normalized_pbw_shuffle_coefficient": "1",
+      "word_count": 1,
+      "words": [
+        "11111111"
+      ]
+    }
+  ],
+  "schema": 1,
+  "status": "PASS",
+  "taylor_identity": "partial_w1^m partial_w2^n tau_w|_0=binom(m+n,m)^(-1) sum_Sh(1^m,2^n) P_word",
+  "totals": {
+    "checks": 47,
+    "failed": 0,
+    "passed": 47
+  }
+}

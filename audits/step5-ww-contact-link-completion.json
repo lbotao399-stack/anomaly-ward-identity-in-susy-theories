@@ -1,0 +1,1251 @@
+{
+  "authority_commit": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+  "blocked_claims": {
+    "contact_equals_minus_delta4_with_same_C_T": "BLOCKED_EQUAL_CONTACT_AND_LONGITUDINAL_RESIDUES",
+    "graphwise_w_longitudinal_UV_cancellation": "BLOCKED_EQUAL_CONTACT_AND_LONGITUDINAL_RESIDUES",
+    "numerical_cut_contact_UV_pole": "BLOCKED_LOCKED_GAUGE_KERNEL_AND_PROPAGATORS",
+    "renormalized_completion": "BLOCKED_RENORMALIZED_COMPOSITE_MIXING"
+  },
+  "blockers": [
+    {
+      "id": "BLOCKED_EXPLICIT_WW_D_ALGEBRA_WORD_DERIVATION",
+      "missing": "One complete superspace D-word, the four endpoint integration-by-parts chains, and the declared exchange map for the second marked placement.",
+      "why": "The current endpoint signs and mixed anticommutator factors are recorded arithmetic primitives rather than rewrite-engine outputs."
+    },
+    {
+      "id": "BLOCKED_LOCKED_ORDERED_BILOCAL_SOURCE",
+      "missing": "Contract admission of S_J, its superspace/source measure, Fourier phase, dual Adj tensor Adj source law, and reversed-order rule.",
+      "why": "Step 3D permits general sources but does not select this Step-5 operator."
+    },
+    {
+      "id": "BLOCKED_LOCKED_STEP5_DRED_CONTRACT",
+      "missing": "Verified d=4-2 epsilon, loop measure, delta_4=hat_delta+breve_delta, and regulator action on all blocks.",
+      "why": "Steps 3A/3C/3D/4C contain no dimensional-reduction metric split."
+    },
+    {
+      "id": "BLOCKED_LOCKED_GAUGE_KERNEL_AND_PROPAGATORS",
+      "missing": "A chosen Y_E in (3D.88a)--(3D.93), residual-free Hessian, and exact vector/chiral/FP/NK/multiplier inverses.",
+      "why": "The Schwinger cut K*G=delta cannot be evaluated while the gauge-fixing map and density are arbitrary."
+    },
+    {
+      "id": "BLOCKED_LOCKED_BACKGROUND_QUANTUM_PORT_GRAMMAR",
+      "missing": "Ordered derivatives of this bilocal source and the full background-split N=4 action through g^2, including ghost and measure ports.",
+      "why": "BCH fixes operator words, but not background/quantum/external port type, identical-leg factors, or contraction signs."
+    },
+    {
+      "id": "BLOCKED_EQUAL_CONTACT_AND_LONGITUDINAL_RESIDUES",
+      "missing": "Edge-tagged D-algebra and loop reduction of every nonlinear, quartic, collapsed, one-link, two-link, and endpoint graph.",
+      "why": "Phase telescoping proves cancellation only after the graph residues are independently equal."
+    },
+    {
+      "id": "BLOCKED_RENORMALIZED_COMPOSITE_MIXING",
+      "missing": "Local composite/counterterm basis and evanescent-to-physical one-loop mixing matrix.",
+      "why": "An O(epsilon) operator can multiply a 1/epsilon pole."
+    }
+  ],
+  "canonical_connection_and_letter": {
+    "canonicalization": [
+      "A_Project=g*a from h=g^(-2) and canonical quadratic normalization",
+      "V_Project=2*g*v from the WZ vector coefficient (3A.48)",
+      "W_Project=g*W_can from (3A.51)"
+    ],
+    "connection_coefficients": {
+      "Gamma1": {
+        "denominator": 1,
+        "numerator": 2
+      },
+      "Gamma2": {
+        "denominator": 1,
+        "numerator": 2
+      },
+      "Gamma3": {
+        "denominator": 3,
+        "numerator": 4
+      }
+    },
+    "connection_derivation": [
+      "X=2*g*v",
+      "exp(-X)D_a exp(X)=D_a X+(1/2)[[D_a X,X]]+(1/6)[[[[D_a X,X]],X]]+O(g^4)",
+      "Gamma_a=2*g*D_a v+2*g^2*[[D_a v,v]]+(4/3)*g^3*[[[[D_a v,v]],v]]+O(g^4)"
+    ],
+    "field_strength": [
+      "W1_a=-(1/4)*barD^2 D_a v",
+      "W2_a=-(1/4)*barD^2 [[D_a v,v]]",
+      "W3_a=-(1/6)*barD^2 [[[[D_a v,v]],v]]"
+    ],
+    "field_strength_coefficients": {
+      "W1": {
+        "denominator": 4,
+        "numerator": -1
+      },
+      "W2": {
+        "denominator": 4,
+        "numerator": -1
+      },
+      "W3": {
+        "denominator": 6,
+        "numerator": -1
+      }
+    },
+    "letter": {
+      "L1": "D_+ W1_+",
+      "L2": "D_+ W2_+ + 2*[[D_+ v,W1_+]]",
+      "L3": "D_+ W3_+ + 2*[[D_+ v,W2_+]] + 2*[[[[D_+ v,v]],W1_+]]",
+      "definition": "L=g^(-1)*(nabla_+ W_Project,+)=L1+g*L2+g^2*L3+O(g^3)",
+      "parity": "even"
+    }
+  },
+  "checks": [
+    {
+      "actual": "48141fc931580f6b73e385b8f900b3e6df5939cdb9348042de07fd8fe9320967",
+      "expected": "48141fc931580f6b73e385b8f900b3e6df5939cdb9348042de07fd8fe9320967",
+      "id": "foundation_hash::contracts/foundations/step-03a-gauge-chiral-action.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "c4cc6f0504b79e02ce78030ad79b625bee6da7dff9de0f6a1ddc3b33ef2584a1",
+      "expected": "c4cc6f0504b79e02ce78030ad79b625bee6da7dff9de0f6a1ddc3b33ef2584a1",
+      "id": "foundation_hash::contracts/foundations/step-03c-gauge-vector-representation.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "109e0c531da3a1b98313e87dd692fa3d9047c8f745291f8e87021008c7acc538",
+      "expected": "109e0c531da3a1b98313e87dd692fa3d9047c8f745291f8e87021008c7acc538",
+      "id": "foundation_hash::contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md",
+      "status": "PASS"
+    },
+    {
+      "actual": "fafc3bc2227b60ca699b3f953b632db82dafe093b221baa74736cc5fb838928f",
+      "expected": "fafc3bc2227b60ca699b3f953b632db82dafe093b221baa74736cc5fb838928f",
+      "id": "foundation_hash::contracts/foundations/step-04c-n4-super-yang-mills.md",
+      "status": "PASS"
+    },
+    {
+      "id": "two_link_boundary::a=b",
+      "status": "PASS"
+    },
+    {
+      "id": "two_link_boundary::a=0",
+      "status": "PASS"
+    },
+    {
+      "id": "two_link_boundary::b=1",
+      "status": "PASS"
+    },
+    {
+      "id": "two_link_boundary::b=a",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "omega_x": 1,
+        "omega_y": 0
+      },
+      "expected": {
+        "omega_x": 1,
+        "omega_y": 0
+      },
+      "id": "external_endpoint_covariance",
+      "status": "PASS"
+    },
+    {
+      "id": "cut_involution_C_squared",
+      "status": "PASS"
+    },
+    {
+      "id": "sixteen_occurrence_decorated_roots",
+      "status": "PASS"
+    },
+    {
+      "id": "fixed_orientation_wick_weight",
+      "status": "PASS"
+    },
+    {
+      "id": "no_orientation_or_Dminus_double_count",
+      "status": "PASS"
+    },
+    {
+      "id": "conditional_metric_basis_algebra",
+      "status": "PASS"
+    }
+  ],
+  "completion_obligation_slots": [
+    {
+      "marked_Dminus_placement": "Dminus_left",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "NONLINEAR_LETTER_LEFT",
+      "source_word": "L2_A T0 L1_B",
+      "state": "OPERATOR_WORD_DERIVED",
+      "word_root": "A_to_Wtilde__B_to_W::Dminus_left"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_left",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "NONLINEAR_LETTER_RIGHT",
+      "source_word": "L1_A T0 L2_B",
+      "state": "OPERATOR_WORD_DERIVED",
+      "word_root": "A_to_Wtilde__B_to_W::Dminus_left"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_left",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "QUARTIC_ACTION_CONTACT",
+      "source_word": "W1 W3; W2 W2; W3 W1",
+      "state": "DENSITY_WORD_DERIVED",
+      "word_root": "A_to_Wtilde__B_to_W::Dminus_left"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_left",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "COLLAPSED_DALGEBRA_R0",
+      "source_word": "cut r0",
+      "state": "BLOCKED_AMPLITUDE_KERNEL",
+      "word_root": "A_to_Wtilde__B_to_W::Dminus_left"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_left",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "COLLAPSED_DALGEBRA_R1",
+      "source_word": "cut r1",
+      "state": "BLOCKED_AMPLITUDE_KERNEL",
+      "word_root": "A_to_Wtilde__B_to_W::Dminus_left"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_left",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "COLLAPSED_DALGEBRA_R2",
+      "source_word": "cut r2",
+      "state": "BLOCKED_AMPLITUDE_KERNEL",
+      "word_root": "A_to_Wtilde__B_to_W::Dminus_left"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_left",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "SCHWINGER_CUT_CONTACT",
+      "source_word": "occurrence-decorated C_SD",
+      "state": "BLOCKED_AMPLITUDE_KERNEL",
+      "word_root": "A_to_Wtilde__B_to_W::Dminus_left"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_left",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "ONE_LINK_BULK",
+      "source_word": "L1_A T1 L1_B",
+      "state": "OPERATOR_WORD_DERIVED",
+      "word_root": "A_to_Wtilde__B_to_W::Dminus_left"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_left",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "TWO_LINK_ORDERED",
+      "source_word": "L1_A T2 L1_B",
+      "state": "OPERATOR_WORD_DERIVED",
+      "word_root": "A_to_Wtilde__B_to_W::Dminus_left"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_left",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "EXTERNAL_ENDPOINT_LEFT",
+      "source_word": "+omega(x)U",
+      "state": "ENDPOINT_LAW_DERIVED",
+      "word_root": "A_to_Wtilde__B_to_W::Dminus_left"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_left",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "EXTERNAL_ENDPOINT_RIGHT",
+      "source_word": "-U omega(y)+U delta Y(y)",
+      "state": "ENDPOINT_LAW_DERIVED",
+      "word_root": "A_to_Wtilde__B_to_W::Dminus_left"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_right",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "NONLINEAR_LETTER_LEFT",
+      "source_word": "L2_A T0 L1_B",
+      "state": "OPERATOR_WORD_DERIVED",
+      "word_root": "A_to_Wtilde__B_to_W::Dminus_right"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_right",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "NONLINEAR_LETTER_RIGHT",
+      "source_word": "L1_A T0 L2_B",
+      "state": "OPERATOR_WORD_DERIVED",
+      "word_root": "A_to_Wtilde__B_to_W::Dminus_right"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_right",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "QUARTIC_ACTION_CONTACT",
+      "source_word": "W1 W3; W2 W2; W3 W1",
+      "state": "DENSITY_WORD_DERIVED",
+      "word_root": "A_to_Wtilde__B_to_W::Dminus_right"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_right",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "COLLAPSED_DALGEBRA_R0",
+      "source_word": "cut r0",
+      "state": "BLOCKED_AMPLITUDE_KERNEL",
+      "word_root": "A_to_Wtilde__B_to_W::Dminus_right"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_right",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "COLLAPSED_DALGEBRA_R1",
+      "source_word": "cut r1",
+      "state": "BLOCKED_AMPLITUDE_KERNEL",
+      "word_root": "A_to_Wtilde__B_to_W::Dminus_right"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_right",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "COLLAPSED_DALGEBRA_R2",
+      "source_word": "cut r2",
+      "state": "BLOCKED_AMPLITUDE_KERNEL",
+      "word_root": "A_to_Wtilde__B_to_W::Dminus_right"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_right",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "SCHWINGER_CUT_CONTACT",
+      "source_word": "occurrence-decorated C_SD",
+      "state": "BLOCKED_AMPLITUDE_KERNEL",
+      "word_root": "A_to_Wtilde__B_to_W::Dminus_right"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_right",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "ONE_LINK_BULK",
+      "source_word": "L1_A T1 L1_B",
+      "state": "OPERATOR_WORD_DERIVED",
+      "word_root": "A_to_Wtilde__B_to_W::Dminus_right"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_right",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "TWO_LINK_ORDERED",
+      "source_word": "L1_A T2 L1_B",
+      "state": "OPERATOR_WORD_DERIVED",
+      "word_root": "A_to_Wtilde__B_to_W::Dminus_right"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_right",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "EXTERNAL_ENDPOINT_LEFT",
+      "source_word": "+omega(x)U",
+      "state": "ENDPOINT_LAW_DERIVED",
+      "word_root": "A_to_Wtilde__B_to_W::Dminus_right"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_right",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "EXTERNAL_ENDPOINT_RIGHT",
+      "source_word": "-U omega(y)+U delta Y(y)",
+      "state": "ENDPOINT_LAW_DERIVED",
+      "word_root": "A_to_Wtilde__B_to_W::Dminus_right"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_left",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "NONLINEAR_LETTER_LEFT",
+      "source_word": "L2_A T0 L1_B",
+      "state": "OPERATOR_WORD_DERIVED",
+      "word_root": "B_to_Wtilde__A_to_W::Dminus_left"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_left",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "NONLINEAR_LETTER_RIGHT",
+      "source_word": "L1_A T0 L2_B",
+      "state": "OPERATOR_WORD_DERIVED",
+      "word_root": "B_to_Wtilde__A_to_W::Dminus_left"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_left",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "QUARTIC_ACTION_CONTACT",
+      "source_word": "W1 W3; W2 W2; W3 W1",
+      "state": "DENSITY_WORD_DERIVED",
+      "word_root": "B_to_Wtilde__A_to_W::Dminus_left"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_left",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "COLLAPSED_DALGEBRA_R0",
+      "source_word": "cut r0",
+      "state": "BLOCKED_AMPLITUDE_KERNEL",
+      "word_root": "B_to_Wtilde__A_to_W::Dminus_left"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_left",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "COLLAPSED_DALGEBRA_R1",
+      "source_word": "cut r1",
+      "state": "BLOCKED_AMPLITUDE_KERNEL",
+      "word_root": "B_to_Wtilde__A_to_W::Dminus_left"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_left",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "COLLAPSED_DALGEBRA_R2",
+      "source_word": "cut r2",
+      "state": "BLOCKED_AMPLITUDE_KERNEL",
+      "word_root": "B_to_Wtilde__A_to_W::Dminus_left"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_left",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "SCHWINGER_CUT_CONTACT",
+      "source_word": "occurrence-decorated C_SD",
+      "state": "BLOCKED_AMPLITUDE_KERNEL",
+      "word_root": "B_to_Wtilde__A_to_W::Dminus_left"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_left",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "ONE_LINK_BULK",
+      "source_word": "L1_A T1 L1_B",
+      "state": "OPERATOR_WORD_DERIVED",
+      "word_root": "B_to_Wtilde__A_to_W::Dminus_left"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_left",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "TWO_LINK_ORDERED",
+      "source_word": "L1_A T2 L1_B",
+      "state": "OPERATOR_WORD_DERIVED",
+      "word_root": "B_to_Wtilde__A_to_W::Dminus_left"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_left",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "EXTERNAL_ENDPOINT_LEFT",
+      "source_word": "+omega(x)U",
+      "state": "ENDPOINT_LAW_DERIVED",
+      "word_root": "B_to_Wtilde__A_to_W::Dminus_left"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_left",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "EXTERNAL_ENDPOINT_RIGHT",
+      "source_word": "-U omega(y)+U delta Y(y)",
+      "state": "ENDPOINT_LAW_DERIVED",
+      "word_root": "B_to_Wtilde__A_to_W::Dminus_left"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_right",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "NONLINEAR_LETTER_LEFT",
+      "source_word": "L2_A T0 L1_B",
+      "state": "OPERATOR_WORD_DERIVED",
+      "word_root": "B_to_Wtilde__A_to_W::Dminus_right"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_right",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "NONLINEAR_LETTER_RIGHT",
+      "source_word": "L1_A T0 L2_B",
+      "state": "OPERATOR_WORD_DERIVED",
+      "word_root": "B_to_Wtilde__A_to_W::Dminus_right"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_right",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "QUARTIC_ACTION_CONTACT",
+      "source_word": "W1 W3; W2 W2; W3 W1",
+      "state": "DENSITY_WORD_DERIVED",
+      "word_root": "B_to_Wtilde__A_to_W::Dminus_right"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_right",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "COLLAPSED_DALGEBRA_R0",
+      "source_word": "cut r0",
+      "state": "BLOCKED_AMPLITUDE_KERNEL",
+      "word_root": "B_to_Wtilde__A_to_W::Dminus_right"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_right",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "COLLAPSED_DALGEBRA_R1",
+      "source_word": "cut r1",
+      "state": "BLOCKED_AMPLITUDE_KERNEL",
+      "word_root": "B_to_Wtilde__A_to_W::Dminus_right"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_right",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "COLLAPSED_DALGEBRA_R2",
+      "source_word": "cut r2",
+      "state": "BLOCKED_AMPLITUDE_KERNEL",
+      "word_root": "B_to_Wtilde__A_to_W::Dminus_right"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_right",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "SCHWINGER_CUT_CONTACT",
+      "source_word": "occurrence-decorated C_SD",
+      "state": "BLOCKED_AMPLITUDE_KERNEL",
+      "word_root": "B_to_Wtilde__A_to_W::Dminus_right"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_right",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "ONE_LINK_BULK",
+      "source_word": "L1_A T1 L1_B",
+      "state": "OPERATOR_WORD_DERIVED",
+      "word_root": "B_to_Wtilde__A_to_W::Dminus_right"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_right",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "TWO_LINK_ORDERED",
+      "source_word": "L1_A T2 L1_B",
+      "state": "OPERATOR_WORD_DERIVED",
+      "word_root": "B_to_Wtilde__A_to_W::Dminus_right"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_right",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "EXTERNAL_ENDPOINT_LEFT",
+      "source_word": "+omega(x)U",
+      "state": "ENDPOINT_LAW_DERIVED",
+      "word_root": "B_to_Wtilde__A_to_W::Dminus_right"
+    },
+    {
+      "marked_Dminus_placement": "Dminus_right",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "physical_graph_count_claimed": false,
+      "sector": "EXTERNAL_ENDPOINT_RIGHT",
+      "source_word": "-U omega(y)+U delta Y(y)",
+      "state": "ENDPOINT_LAW_DERIVED",
+      "word_root": "B_to_Wtilde__A_to_W::Dminus_right"
+    }
+  ],
+  "cut_orbits": {
+    "contact_count": 16,
+    "definition": "C_SD preserves orientation, marked Dminus placement, derivative endpoints, color word, and link word.",
+    "fixed_orientation_wick_weight": {
+      "calculation": "(1/2!)*(1+1)=1",
+      "value": {
+        "denominator": 1,
+        "numerator": 1
+      }
+    },
+    "mapping": {
+      "C_SD::A_to_Wtilde__B_to_W::Dminus_left::r0|r1": "T::A_to_Wtilde__B_to_W::Dminus_left::r0|r1",
+      "C_SD::A_to_Wtilde__B_to_W::Dminus_left::r0|r2": "T::A_to_Wtilde__B_to_W::Dminus_left::r0|r2",
+      "C_SD::A_to_Wtilde__B_to_W::Dminus_left::r1|r1": "T::A_to_Wtilde__B_to_W::Dminus_left::r1|r1",
+      "C_SD::A_to_Wtilde__B_to_W::Dminus_left::r1|r2": "T::A_to_Wtilde__B_to_W::Dminus_left::r1|r2",
+      "C_SD::A_to_Wtilde__B_to_W::Dminus_right::r0|r1": "T::A_to_Wtilde__B_to_W::Dminus_right::r0|r1",
+      "C_SD::A_to_Wtilde__B_to_W::Dminus_right::r0|r2": "T::A_to_Wtilde__B_to_W::Dminus_right::r0|r2",
+      "C_SD::A_to_Wtilde__B_to_W::Dminus_right::r1|r1": "T::A_to_Wtilde__B_to_W::Dminus_right::r1|r1",
+      "C_SD::A_to_Wtilde__B_to_W::Dminus_right::r1|r2": "T::A_to_Wtilde__B_to_W::Dminus_right::r1|r2",
+      "C_SD::B_to_Wtilde__A_to_W::Dminus_left::r0|r1": "T::B_to_Wtilde__A_to_W::Dminus_left::r0|r1",
+      "C_SD::B_to_Wtilde__A_to_W::Dminus_left::r0|r2": "T::B_to_Wtilde__A_to_W::Dminus_left::r0|r2",
+      "C_SD::B_to_Wtilde__A_to_W::Dminus_left::r1|r1": "T::B_to_Wtilde__A_to_W::Dminus_left::r1|r1",
+      "C_SD::B_to_Wtilde__A_to_W::Dminus_left::r1|r2": "T::B_to_Wtilde__A_to_W::Dminus_left::r1|r2",
+      "C_SD::B_to_Wtilde__A_to_W::Dminus_right::r0|r1": "T::B_to_Wtilde__A_to_W::Dminus_right::r0|r1",
+      "C_SD::B_to_Wtilde__A_to_W::Dminus_right::r0|r2": "T::B_to_Wtilde__A_to_W::Dminus_right::r0|r2",
+      "C_SD::B_to_Wtilde__A_to_W::Dminus_right::r1|r1": "T::B_to_Wtilde__A_to_W::Dminus_right::r1|r1",
+      "C_SD::B_to_Wtilde__A_to_W::Dminus_right::r1|r2": "T::B_to_Wtilde__A_to_W::Dminus_right::r1|r2",
+      "T::A_to_Wtilde__B_to_W::Dminus_left::r0|r1": "C_SD::A_to_Wtilde__B_to_W::Dminus_left::r0|r1",
+      "T::A_to_Wtilde__B_to_W::Dminus_left::r0|r2": "C_SD::A_to_Wtilde__B_to_W::Dminus_left::r0|r2",
+      "T::A_to_Wtilde__B_to_W::Dminus_left::r1|r1": "C_SD::A_to_Wtilde__B_to_W::Dminus_left::r1|r1",
+      "T::A_to_Wtilde__B_to_W::Dminus_left::r1|r2": "C_SD::A_to_Wtilde__B_to_W::Dminus_left::r1|r2",
+      "T::A_to_Wtilde__B_to_W::Dminus_right::r0|r1": "C_SD::A_to_Wtilde__B_to_W::Dminus_right::r0|r1",
+      "T::A_to_Wtilde__B_to_W::Dminus_right::r0|r2": "C_SD::A_to_Wtilde__B_to_W::Dminus_right::r0|r2",
+      "T::A_to_Wtilde__B_to_W::Dminus_right::r1|r1": "C_SD::A_to_Wtilde__B_to_W::Dminus_right::r1|r1",
+      "T::A_to_Wtilde__B_to_W::Dminus_right::r1|r2": "C_SD::A_to_Wtilde__B_to_W::Dminus_right::r1|r2",
+      "T::B_to_Wtilde__A_to_W::Dminus_left::r0|r1": "C_SD::B_to_Wtilde__A_to_W::Dminus_left::r0|r1",
+      "T::B_to_Wtilde__A_to_W::Dminus_left::r0|r2": "C_SD::B_to_Wtilde__A_to_W::Dminus_left::r0|r2",
+      "T::B_to_Wtilde__A_to_W::Dminus_left::r1|r1": "C_SD::B_to_Wtilde__A_to_W::Dminus_left::r1|r1",
+      "T::B_to_Wtilde__A_to_W::Dminus_left::r1|r2": "C_SD::B_to_Wtilde__A_to_W::Dminus_left::r1|r2",
+      "T::B_to_Wtilde__A_to_W::Dminus_right::r0|r1": "C_SD::B_to_Wtilde__A_to_W::Dminus_right::r0|r1",
+      "T::B_to_Wtilde__A_to_W::Dminus_right::r0|r2": "C_SD::B_to_Wtilde__A_to_W::Dminus_right::r0|r2",
+      "T::B_to_Wtilde__A_to_W::Dminus_right::r1|r1": "C_SD::B_to_Wtilde__A_to_W::Dminus_right::r1|r1",
+      "T::B_to_Wtilde__A_to_W::Dminus_right::r1|r2": "C_SD::B_to_Wtilde__A_to_W::Dminus_right::r1|r2"
+    },
+    "multiplicity_rule": "Reflected orientation and the other Dminus placement are distinct output words, never factors multiplying one word.",
+    "orbits": [
+      {
+        "already_oriented_output_word": true,
+        "derivative_endpoints": "r0|r1",
+        "marked_Dminus_placement": "Dminus_left",
+        "members": [
+          "T::A_to_Wtilde__B_to_W::Dminus_left::r0|r1",
+          "C_SD::A_to_Wtilde__B_to_W::Dminus_left::r0|r1"
+        ],
+        "orientation": "A_to_Wtilde__B_to_W",
+        "root": "A_to_Wtilde__B_to_W::Dminus_left::r0|r1"
+      },
+      {
+        "already_oriented_output_word": true,
+        "derivative_endpoints": "r0|r2",
+        "marked_Dminus_placement": "Dminus_left",
+        "members": [
+          "T::A_to_Wtilde__B_to_W::Dminus_left::r0|r2",
+          "C_SD::A_to_Wtilde__B_to_W::Dminus_left::r0|r2"
+        ],
+        "orientation": "A_to_Wtilde__B_to_W",
+        "root": "A_to_Wtilde__B_to_W::Dminus_left::r0|r2"
+      },
+      {
+        "already_oriented_output_word": true,
+        "derivative_endpoints": "r1|r1",
+        "marked_Dminus_placement": "Dminus_left",
+        "members": [
+          "T::A_to_Wtilde__B_to_W::Dminus_left::r1|r1",
+          "C_SD::A_to_Wtilde__B_to_W::Dminus_left::r1|r1"
+        ],
+        "orientation": "A_to_Wtilde__B_to_W",
+        "root": "A_to_Wtilde__B_to_W::Dminus_left::r1|r1"
+      },
+      {
+        "already_oriented_output_word": true,
+        "derivative_endpoints": "r1|r2",
+        "marked_Dminus_placement": "Dminus_left",
+        "members": [
+          "T::A_to_Wtilde__B_to_W::Dminus_left::r1|r2",
+          "C_SD::A_to_Wtilde__B_to_W::Dminus_left::r1|r2"
+        ],
+        "orientation": "A_to_Wtilde__B_to_W",
+        "root": "A_to_Wtilde__B_to_W::Dminus_left::r1|r2"
+      },
+      {
+        "already_oriented_output_word": true,
+        "derivative_endpoints": "r0|r1",
+        "marked_Dminus_placement": "Dminus_right",
+        "members": [
+          "T::A_to_Wtilde__B_to_W::Dminus_right::r0|r1",
+          "C_SD::A_to_Wtilde__B_to_W::Dminus_right::r0|r1"
+        ],
+        "orientation": "A_to_Wtilde__B_to_W",
+        "root": "A_to_Wtilde__B_to_W::Dminus_right::r0|r1"
+      },
+      {
+        "already_oriented_output_word": true,
+        "derivative_endpoints": "r0|r2",
+        "marked_Dminus_placement": "Dminus_right",
+        "members": [
+          "T::A_to_Wtilde__B_to_W::Dminus_right::r0|r2",
+          "C_SD::A_to_Wtilde__B_to_W::Dminus_right::r0|r2"
+        ],
+        "orientation": "A_to_Wtilde__B_to_W",
+        "root": "A_to_Wtilde__B_to_W::Dminus_right::r0|r2"
+      },
+      {
+        "already_oriented_output_word": true,
+        "derivative_endpoints": "r1|r1",
+        "marked_Dminus_placement": "Dminus_right",
+        "members": [
+          "T::A_to_Wtilde__B_to_W::Dminus_right::r1|r1",
+          "C_SD::A_to_Wtilde__B_to_W::Dminus_right::r1|r1"
+        ],
+        "orientation": "A_to_Wtilde__B_to_W",
+        "root": "A_to_Wtilde__B_to_W::Dminus_right::r1|r1"
+      },
+      {
+        "already_oriented_output_word": true,
+        "derivative_endpoints": "r1|r2",
+        "marked_Dminus_placement": "Dminus_right",
+        "members": [
+          "T::A_to_Wtilde__B_to_W::Dminus_right::r1|r2",
+          "C_SD::A_to_Wtilde__B_to_W::Dminus_right::r1|r2"
+        ],
+        "orientation": "A_to_Wtilde__B_to_W",
+        "root": "A_to_Wtilde__B_to_W::Dminus_right::r1|r2"
+      },
+      {
+        "already_oriented_output_word": true,
+        "derivative_endpoints": "r0|r1",
+        "marked_Dminus_placement": "Dminus_left",
+        "members": [
+          "T::B_to_Wtilde__A_to_W::Dminus_left::r0|r1",
+          "C_SD::B_to_Wtilde__A_to_W::Dminus_left::r0|r1"
+        ],
+        "orientation": "B_to_Wtilde__A_to_W",
+        "root": "B_to_Wtilde__A_to_W::Dminus_left::r0|r1"
+      },
+      {
+        "already_oriented_output_word": true,
+        "derivative_endpoints": "r0|r2",
+        "marked_Dminus_placement": "Dminus_left",
+        "members": [
+          "T::B_to_Wtilde__A_to_W::Dminus_left::r0|r2",
+          "C_SD::B_to_Wtilde__A_to_W::Dminus_left::r0|r2"
+        ],
+        "orientation": "B_to_Wtilde__A_to_W",
+        "root": "B_to_Wtilde__A_to_W::Dminus_left::r0|r2"
+      },
+      {
+        "already_oriented_output_word": true,
+        "derivative_endpoints": "r1|r1",
+        "marked_Dminus_placement": "Dminus_left",
+        "members": [
+          "T::B_to_Wtilde__A_to_W::Dminus_left::r1|r1",
+          "C_SD::B_to_Wtilde__A_to_W::Dminus_left::r1|r1"
+        ],
+        "orientation": "B_to_Wtilde__A_to_W",
+        "root": "B_to_Wtilde__A_to_W::Dminus_left::r1|r1"
+      },
+      {
+        "already_oriented_output_word": true,
+        "derivative_endpoints": "r1|r2",
+        "marked_Dminus_placement": "Dminus_left",
+        "members": [
+          "T::B_to_Wtilde__A_to_W::Dminus_left::r1|r2",
+          "C_SD::B_to_Wtilde__A_to_W::Dminus_left::r1|r2"
+        ],
+        "orientation": "B_to_Wtilde__A_to_W",
+        "root": "B_to_Wtilde__A_to_W::Dminus_left::r1|r2"
+      },
+      {
+        "already_oriented_output_word": true,
+        "derivative_endpoints": "r0|r1",
+        "marked_Dminus_placement": "Dminus_right",
+        "members": [
+          "T::B_to_Wtilde__A_to_W::Dminus_right::r0|r1",
+          "C_SD::B_to_Wtilde__A_to_W::Dminus_right::r0|r1"
+        ],
+        "orientation": "B_to_Wtilde__A_to_W",
+        "root": "B_to_Wtilde__A_to_W::Dminus_right::r0|r1"
+      },
+      {
+        "already_oriented_output_word": true,
+        "derivative_endpoints": "r0|r2",
+        "marked_Dminus_placement": "Dminus_right",
+        "members": [
+          "T::B_to_Wtilde__A_to_W::Dminus_right::r0|r2",
+          "C_SD::B_to_Wtilde__A_to_W::Dminus_right::r0|r2"
+        ],
+        "orientation": "B_to_Wtilde__A_to_W",
+        "root": "B_to_Wtilde__A_to_W::Dminus_right::r0|r2"
+      },
+      {
+        "already_oriented_output_word": true,
+        "derivative_endpoints": "r1|r1",
+        "marked_Dminus_placement": "Dminus_right",
+        "members": [
+          "T::B_to_Wtilde__A_to_W::Dminus_right::r1|r1",
+          "C_SD::B_to_Wtilde__A_to_W::Dminus_right::r1|r1"
+        ],
+        "orientation": "B_to_Wtilde__A_to_W",
+        "root": "B_to_Wtilde__A_to_W::Dminus_right::r1|r1"
+      },
+      {
+        "already_oriented_output_word": true,
+        "derivative_endpoints": "r1|r2",
+        "marked_Dminus_placement": "Dminus_right",
+        "members": [
+          "T::B_to_Wtilde__A_to_W::Dminus_right::r1|r2",
+          "C_SD::B_to_Wtilde__A_to_W::Dminus_right::r1|r2"
+        ],
+        "orientation": "B_to_Wtilde__A_to_W",
+        "root": "B_to_Wtilde__A_to_W::Dminus_right::r1|r2"
+      }
+    ],
+    "parent_count": 16
+  },
+  "duhamel_translation": {
+    "covariance": [
+      "D'_m=R(k)D_m R(k)^(-1) from (3C.18)",
+      "tau'_w=R(k)tau_w R(k)^(-1)",
+      "(tau_w Y)'(x)=R(k(x))(tau_w Y)(x)"
+    ],
+    "definitions": {
+      "M": "M^A_C(x)=w^m c_{BC}^A a_m^B(x)",
+      "P": "w^m partial_m",
+      "fourier_declaration": "exp(+i p.x)",
+      "tau": "tau_w=exp(P+g*M)=exp(w^m D_m^adj)"
+    },
+    "no_extra_factorial": true,
+    "ordered_volumes": {
+      "T0": {
+        "denominator": 1,
+        "numerator": 1
+      },
+      "T1": {
+        "denominator": 1,
+        "numerator": 1
+      },
+      "T2": {
+        "denominator": 2,
+        "numerator": 1
+      }
+    },
+    "orders": [
+      {
+        "coefficient": {
+          "denominator": 1,
+          "numerator": 1
+        },
+        "order": 0,
+        "word": "T0=exp(P)"
+      },
+      {
+        "coefficient": {
+          "denominator": 1,
+          "numerator": 1
+        },
+        "order": 1,
+        "word": "T1=int_0^1 ds exp((1-s)P) M exp(sP)"
+      },
+      {
+        "coefficient": {
+          "denominator": 1,
+          "numerator": 1
+        },
+        "order": 2,
+        "word": "T2=int_{0<=a<=b<=1} da db exp((1-b)P) M exp((b-a)P) M exp(aP)"
+      }
+    ],
+    "position_space": [
+      "(T0 Y)^A(x)=Y^A(x+w)",
+      "(T1 Y)^A(x)=int_0^1 dt M^A_B(x+t*w)Y^B(x+w)",
+      "(T2 Y)^A(x)=int_{0<=t1<=t2<=1}dt1dt2 M^A_B(x+t1*w)M^B_C(x+t2*w)Y^C(x+w)"
+    ]
+  },
+  "endpoint_covariance": {
+    "coefficient_sum": {
+      "omega_x": 1,
+      "omega_y": 0
+    },
+    "field_law": "delta Y(y)=omega_adj(y)Y(y)",
+    "link_law": "delta U_adj(x,y)=omega_adj(x)U_adj(x,y)-U_adj(x,y)omega_adj(y)",
+    "result": "delta[U_adj(x,y)Y(y)]=omega_adj(x)U_adj(x,y)Y(y)"
+  },
+  "foundations": [
+    {
+      "actual_sha256": "48141fc931580f6b73e385b8f900b3e6df5939cdb9348042de07fd8fe9320967",
+      "equations_used": "(3A.3)--(3A.8), (3A.34), (3A.48), (3A.51)",
+      "expected_sha256": "48141fc931580f6b73e385b8f900b3e6df5939cdb9348042de07fd8fe9320967",
+      "path": "contracts/foundations/step-03a-gauge-chiral-action.md",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "c4cc6f0504b79e02ce78030ad79b625bee6da7dff9de0f6a1ddc3b33ef2584a1",
+      "equations_used": "(3C.15)--(3C.24), (3C.33)--(3C.45)",
+      "expected_sha256": "c4cc6f0504b79e02ce78030ad79b625bee6da7dff9de0f6a1ddc3b33ef2584a1",
+      "path": "contracts/foundations/step-03c-gauge-vector-representation.md",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "109e0c531da3a1b98313e87dd692fa3d9047c8f745291f8e87021008c7acc538",
+      "equations_used": "(3D.34), (3D.80)--(3D.93)",
+      "expected_sha256": "109e0c531da3a1b98313e87dd692fa3d9047c8f745291f8e87021008c7acc538",
+      "path": "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "fafc3bc2227b60ca699b3f953b632db82dafe093b221baa74736cc5fb838928f",
+      "equations_used": "(4C.1), (4C.4), (4C.34)--(4C.35d)",
+      "expected_sha256": "fafc3bc2227b60ca699b3f953b632db82dafe093b221baa74736cc5fb838928f",
+      "path": "contracts/foundations/step-04c-n4-super-yang-mills.md",
+      "status": "PASS"
+    }
+  ],
+  "input_boundary": {
+    "not_read": [
+      "untracked Step-5 contract",
+      "untracked Step-5 seed/cut audits as evidence",
+      "holomorphic-twist target",
+      "live chats",
+      "Notion"
+    ],
+    "read": [
+      "contracts/foundations/step-03a-gauge-chiral-action.md",
+      "contracts/foundations/step-03c-gauge-vector-representation.md",
+      "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md",
+      "contracts/foundations/step-04c-n4-super-yang-mills.md"
+    ]
+  },
+  "metric_mismatch": {
+    "basis": [
+      "hat_delta^{mn}",
+      "breve_delta^{mn}"
+    ],
+    "common_symbolic_residue": "C_T/epsilon",
+    "definition": "delta_4^{mn}=hat_delta^{mn}+breve_delta^{mn}",
+    "proof_state": "CONDITIONAL_ON_PROJECT_DERIVATION_OF_EQUAL_RESIDUE_C_T",
+    "required_contact": "-(C_T/epsilon)*delta_4^{mn}",
+    "sum": "-(C_T/epsilon)*breve_delta^{mn}",
+    "triangle": "+(C_T/epsilon)*hat_delta^{mn}",
+    "vectors": {
+      "contact": [
+        {
+          "denominator": 1,
+          "numerator": -1
+        },
+        {
+          "denominator": 1,
+          "numerator": -1
+        }
+      ],
+      "sum": [
+        {
+          "denominator": 1,
+          "numerator": 0
+        },
+        {
+          "denominator": 1,
+          "numerator": -1
+        }
+      ],
+      "triangle": [
+        {
+          "denominator": 1,
+          "numerator": 1
+        },
+        {
+          "denominator": 1,
+          "numerator": 0
+        }
+      ]
+    }
+  },
+  "minimal_new_step5_definitions": [
+    "Admit the ordered source S_J and its contragredient J_AB law exactly as displayed.",
+    "Lock exp(+i p.x), P=w.partial, and tau_w=exp(w.D_adj).",
+    "Lock d=4-2 epsilon, the loop measure, and delta_4=hat_delta+breve_delta on every field and ghost block.",
+    "Choose Y_E and publish every residual-free quadratic inverse.",
+    "Publish the ordered background/quantum port grammar through g^2 before graph enumeration.",
+    "Publish the composite counterterm basis before a renormalized closure claim."
+  ],
+  "ordered_bilocal_source": {
+    "each_product_coefficient": {
+      "denominator": 1,
+      "numerator": 1
+    },
+    "functional": "S_J=int d^4x d^4theta dw J_AB(x,w)L^A(x)(tau_w L)^B(x)",
+    "marked_placements": [
+      {
+        "id": "Dminus_left",
+        "leibniz_sign": 1,
+        "word": "J_AB (nabla_- L)^A (tau_w L)^B"
+      },
+      {
+        "id": "Dminus_right",
+        "leibniz_sign": 1,
+        "word": "J_AB L^A nabla_-[(tau_w L)^B]"
+      }
+    ],
+    "ordered": true,
+    "product_expansion": {
+      "g0": [
+        "L1_A T0 L1_B"
+      ],
+      "g1": [
+        "L2_A T0 L1_B",
+        "L1_A T0 L2_B",
+        "L1_A T1 L1_B"
+      ],
+      "g2": [
+        "L3_A T0 L1_B",
+        "L1_A T0 L3_B",
+        "L2_A T0 L2_B",
+        "L2_A T1 L1_B",
+        "L1_A T1 L2_B",
+        "L1_A T2 L1_B"
+      ]
+    },
+    "reverse_order_is_distinct": true,
+    "right_placement_completion": [
+      "nabla_-(tau_w L)=tau_w(nabla_- L)+[nabla_-,tau_w]L",
+      "[nabla_-,tau_w]=int_0^1 ds exp((1-s)w.D)[nabla_-,w.D]exp(s*w.D)"
+    ],
+    "source_type": "J belongs to dual(Adj_x tensor Adj_x)",
+    "term_count": {
+      "g0": 1,
+      "g1": 3,
+      "g2": 6
+    }
+  },
+  "overall_status": "CONDITIONAL_FF_ARITHMETIC__BLOCKED_EXPLICIT_D_WORD_AND_STEP5_COMPLETION_KERNELS",
+  "phase_chain": {
+    "boundaries": {
+      "a=0": [
+        [
+          {
+            "denominator": 1,
+            "numerator": 0
+          },
+          {
+            "denominator": 1,
+            "numerator": 0
+          },
+          {
+            "denominator": 1,
+            "numerator": 0
+          }
+        ],
+        [
+          {
+            "denominator": 1,
+            "numerator": 0
+          },
+          {
+            "denominator": 1,
+            "numerator": 0
+          },
+          {
+            "denominator": 1,
+            "numerator": 1
+          }
+        ],
+        [
+          {
+            "denominator": 1,
+            "numerator": 1
+          },
+          {
+            "denominator": 1,
+            "numerator": 0
+          },
+          {
+            "denominator": 1,
+            "numerator": -1
+          }
+        ]
+      ],
+      "a=b": [
+        [
+          {
+            "denominator": 1,
+            "numerator": 0
+          },
+          {
+            "denominator": 1,
+            "numerator": 0
+          },
+          {
+            "denominator": 1,
+            "numerator": 1
+          }
+        ],
+        [
+          {
+            "denominator": 1,
+            "numerator": 0
+          },
+          {
+            "denominator": 1,
+            "numerator": 0
+          },
+          {
+            "denominator": 1,
+            "numerator": 0
+          }
+        ],
+        [
+          {
+            "denominator": 1,
+            "numerator": 1
+          },
+          {
+            "denominator": 1,
+            "numerator": 0
+          },
+          {
+            "denominator": 1,
+            "numerator": -1
+          }
+        ]
+      ],
+      "b=1": [
+        [
+          {
+            "denominator": 1,
+            "numerator": 0
+          },
+          {
+            "denominator": 1,
+            "numerator": 1
+          },
+          {
+            "denominator": 1,
+            "numerator": 0
+          }
+        ],
+        [
+          {
+            "denominator": 1,
+            "numerator": 1
+          },
+          {
+            "denominator": 1,
+            "numerator": -1
+          },
+          {
+            "denominator": 1,
+            "numerator": 0
+          }
+        ],
+        [
+          {
+            "denominator": 1,
+            "numerator": 0
+          },
+          {
+            "denominator": 1,
+            "numerator": 0
+          },
+          {
+            "denominator": 1,
+            "numerator": 0
+          }
+        ]
+      ],
+      "b=a": [
+        [
+          {
+            "denominator": 1,
+            "numerator": 0
+          },
+          {
+            "denominator": 1,
+            "numerator": 1
+          },
+          {
+            "denominator": 1,
+            "numerator": 0
+          }
+        ],
+        [
+          {
+            "denominator": 1,
+            "numerator": 0
+          },
+          {
+            "denominator": 1,
+            "numerator": 0
+          },
+          {
+            "denominator": 1,
+            "numerator": 0
+          }
+        ],
+        [
+          {
+            "denominator": 1,
+            "numerator": 1
+          },
+          {
+            "denominator": 1,
+            "numerator": -1
+          },
+          {
+            "denominator": 1,
+            "numerator": 0
+          }
+        ]
+      ]
+    },
+    "one_link_cancellation_rows": [
+      [
+        "+C_parallel*exp(i*w.r0)",
+        "-C_parallel*exp(i*w.r0)",
+        "0"
+      ],
+      [
+        "-C_parallel*exp(i*w.r1)",
+        "+C_parallel*exp(i*w.r1)",
+        "0"
+      ]
+    ],
+    "one_link_identity": "i*w.(r0-r1)*int_0^1 ds exp(i*w.[s*r0+(1-s)*r1])=exp(i*w.r0)-exp(i*w.r1)",
+    "scope": "Exact phase telescoping; equality of the loop residue C_parallel is a separate amplitude obligation.",
+    "two_link_a_identity": "i*w.(r0-r1)*int db int_0^b da E012=int db[E02(b)-E12(b)]",
+    "two_link_b_identity": "i*w.(r1-r2)*int da int_a^1 db E012=int da[E01(a)-E02(a)]",
+    "two_link_phase": "E012=exp(i*w.[a*r0+(b-a)*r1+(1-b)*r2]),0<=a<=b<=1"
+  },
+  "proved": {
+    "conditional_metric_algebra": "PASS",
+    "connection_and_WW_letter_through_g2": "PASS",
+    "cut_involution": "PASS",
+    "endpoint_covariance": "PASS",
+    "no_double_count": "PASS",
+    "one_and_two_link_phase_telescoping": "PASS",
+    "ordered_Duhamel_through_g2": "PASS",
+    "ordered_bilocal_product_through_g2": "PASS"
+  },
+  "quartic_action": {
+    "boundary": "The density words are exact; their background/quantum port derivatives require a locked Step-5 perturbative slice.",
+    "derivation": [
+      "S_E,+=-(1/4)*int[W_can^a W_can,a]_F",
+      "W_can=W1+g*W2+g^2*W3+O(g^3)"
+    ],
+    "do_not_merge_before_ordered_port_differentiation": true,
+    "g2_ordered_density": [
+      {
+        "coefficient": {
+          "denominator": 4,
+          "numerator": -1
+        },
+        "word": "W1^a W3_a"
+      },
+      {
+        "coefficient": {
+          "denominator": 4,
+          "numerator": -1
+        },
+        "word": "W2^a W2_a"
+      },
+      {
+        "coefficient": {
+          "denominator": 4,
+          "numerator": -1
+        },
+        "word": "W3^a W1_a"
+      }
+    ]
+  },
+  "schema": "awi.step5.ww-contact-link-completion-audit.v1",
+  "task_id": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
+  "verify_run": "29306335742"
+}

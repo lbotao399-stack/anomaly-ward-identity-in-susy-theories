@@ -559,6 +559,132 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertTrue(any("external leg" in item for item in task["acceptance"]))
         self.assertTrue(any("isolated triangle" in item for item in task["forbidden_inputs"]))
 
+    def test_step5_fail_closed_checkpoint_contract(self) -> None:
+        task = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
+        if task["id"] != "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001":
+            self.skipTest("Step-5 Euclidean N=4 AWI task is not current")
+
+        relative = "contracts/foundations/step-05-euclidean-n4-awi-one-loop.md"
+        path = ROOT / relative
+        text = path.read_text(encoding="utf-8")
+        digest = hashlib.sha256(path.read_bytes()).hexdigest()
+        manifest = json.loads((ROOT / "contracts/manifest.yaml").read_text(encoding="utf-8"))
+        entries = [
+            entry
+            for entry in manifest["contracts"]
+            if entry["id"] == "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001"
+        ]
+        self.assertEqual(len(entries), 1)
+        self.assertEqual(entries[0]["path"], relative)
+        self.assertEqual(entries[0]["status"], "DERIVED_UNFROZEN")
+        self.assertEqual(entries[0]["sha256"], digest)
+        self.assertIn(
+            "Status: `CONDITIONAL_WW_ARITHMETIC_CHECKED__EXPLICIT_D_WORD_RAW_ALL_CHANNEL_AND_RENORMALIZATION_BLOCKED`",
+            text,
+        )
+        self.assertEqual(text.count("$$") % 2, 0)
+        for token in (r"\sim", r"\approx", r"\propto"):
+            self.assertNotIn(token, text)
+        for character in text:
+            self.assertFalse(ord(character) < 32 and character not in "\n\t")
+
+        self.assertEqual(task["status"], "SPECIFIED")
+        self.assertNotIn(relative, task["allowed_inputs"])
+        proof_ledger = json.loads(
+            (ROOT / "ledger/proof_obligations.json").read_text(encoding="utf-8")
+        )
+        obligation = next(
+            row
+            for row in proof_ledger["proof_obligations"]
+            if row["id"] == task["id"]
+        )
+        self.assertEqual(obligation["state"], "SPECIFIED")
+        checkpoint = obligation["checked_scope"]["STEP5_ONE_LOOP_FAIL_CLOSED_CHECKPOINT"]
+        self.assertEqual(checkpoint["verification_status"], "BLOCKED")
+        self.assertEqual(checkpoint["contract_sha256"], digest)
+        atomic_blockers = {
+            "BLOCKED_EXPLICIT_WW_D_ALGEBRA_WORD_DERIVATION",
+            "BLOCKED_STEP5A_LOCAL_FERMI_FEYNMAN_PROPER_SLICE",
+            "BLOCKED_STEP5A_WZ_BV_REDUCTION_UNDEFINED",
+            "BLOCKED_STEP5A_COMPONENT_TO_SUPERFIELD_WW_EQUIVALENCE_UNPROVED",
+            "BLOCKED_RAW_GRAPH_Q_EQUIVARIANT_LIFT",
+            "BLOCKED_COMPLETE_RAW_PORT_WORDS_FOR_NAMED_SECTOR_TABLE",
+            "BLOCKED_OPEN_COLOR_SOURCE_BV_EXTENSION",
+            "BLOCKED_COMPLETE_BV_DRED_EVANESCENT_BASIS",
+            "BLOCKED_DRED_EPSILON_TENSOR_SPLIT",
+            "BLOCKED_STEP5A_MOMENTUM_RULES_FOURIER_DRED_LEDGER_UNFIXED",
+            "BLOCKED_FINITE_MIXED_PRIMITIVE_RESIDUES",
+            "BLOCKED_HT_ROW_LEVEL_SOURCE_EXTRACTION_PROVENANCE",
+            "BLOCKED_REFERENCE_INTERNAL_NORMALIZATION",
+            "BLOCKED_U_NOT_DEFINED_BY_LOCKED_PROJECT_INPUTS",
+            "BLOCKED_TREE_INTERTWINER_REQUIRES_FORMAL_U_AND_FULL_TREE_EOM_MAP",
+            "BLOCKED_SINGLE_KAPPA_H_FOR_GENERAL_REDUCTIVE_GAUGE_ALGEBRA",
+        }
+        self.assertEqual(set(checkpoint["atomic_blockers"]), atomic_blockers)
+        unescaped_text = text.replace(r"\_", "_")
+        for blocker in atomic_blockers:
+            self.assertIn(blocker, unescaped_text)
+        self.assertEqual(
+            set(checkpoint["aggregate_gates"]),
+            {
+                "BLOCKED_COMPLETE_BV_DRED_BASIS_DRED_EPSILON_SPLIT_FINITE_RESIDUES",
+                "BLOCKED_TOTAL_TYPED_HT_ROUNDTRIP",
+            },
+        )
+
+    def test_step5_fail_closed_verifier(self) -> None:
+        task = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
+        if task["id"] != "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001":
+            self.skipTest("Step-5 Euclidean N=4 AWI task is not current")
+        script = ROOT / "scripts/verify_step5_euclidean_n4_awi.py"
+        audit_path = ROOT / "audits/step5-euclidean-n4-awi-verification.json"
+        expected = audit_path.read_bytes()
+        completed = subprocess.run(
+            [sys.executable, str(script), "--check"],
+            cwd=ROOT,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 2, completed.stdout + completed.stderr)
+        self.assertEqual(audit_path.read_bytes(), expected)
+        audit = json.loads(expected)
+        self.assertEqual(audit["status"], "BLOCKED")
+        self.assertEqual(audit["totals"]["failed"], 0)
+        self.assertEqual(audit["failed_checks"], [])
+        self.assertEqual(audit["totals"]["checks"], 85)
+        self.assertEqual(audit["totals"]["passed"], 73)
+        self.assertEqual(audit["totals"]["blocked"], 12)
+        self.assertEqual(audit["totals"]["ordered_family_channels"], 16)
+        self.assertEqual(audit["totals"]["ordered_pairs"], 81)
+        self.assertEqual(audit["totals"]["nonzero_pairs"], 29)
+        self.assertEqual(audit["totals"]["zero_pairs"], 52)
+        self.assertEqual(audit["totals"]["compact_ordered_kernels"], 66)
+        self.assertEqual(audit["totals"]["compact_cut_representatives"], 66)
+        self.assertEqual(audit["totals"]["compact_representative_graph_objects"], 132)
+        self.assertEqual(
+            {row["id"] for row in audit["blocking_gates"]},
+            {
+                "graph.renormalized_completion",
+                "slice.admissible_fermi_feynman_proper_completion",
+                "slice.wz_component_bv_reduction",
+                "graph.raw_q_equivariant_lift",
+                "dred.explicit_ww_d_algebra_word_derivation",
+                "dred.named_topology_numerical_table",
+                "ht.total_typed_roundtrip",
+                "mixing.renormalized_evanescent_closure",
+                "mixing.mixed_projector_census",
+                "brst.open_color_source_bv_completion",
+                "mixing.complete_bv_dred_evanescent_basis",
+                "mixing.finite_mixed_primitive_residues",
+            },
+        )
+        authority_gate = next(
+            row
+            for row in audit["checks"]
+            if row["id"] == "authority.origin_main_matches_recorded_base"
+        )
+        self.assertEqual(authority_gate["status"], "PASS")
+
     def test_step5a_component_bv_brst_primitive_grammar(self) -> None:
         relative = "contracts/foundations/step-05a-component-bv-brst-primitive-supergraph-grammar.md"
         path = ROOT / relative

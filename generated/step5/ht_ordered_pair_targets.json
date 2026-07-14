@@ -1,0 +1,5489 @@
+{
+  "authority_role": "EXTERNAL_TARGET_ONLY",
+  "direct_canonical_count": 52,
+  "exact_nonzero_count": 29,
+  "exact_zero_count": 52,
+  "family_order": [
+    "B",
+    "P",
+    "G",
+    "H"
+  ],
+  "ordered_family_component_counts": [
+    [
+      1,
+      3,
+      3,
+      2
+    ],
+    [
+      3,
+      9,
+      9,
+      6
+    ],
+    [
+      3,
+      9,
+      9,
+      6
+    ],
+    [
+      2,
+      6,
+      6,
+      4
+    ]
+  ],
+  "pair_count": 81,
+  "pairs": [
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        null,
+        null
+      ],
+      "canonical_source_fields": [
+        "b",
+        "b"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": false,
+      "id": "B__B",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        0
+      ],
+      "input_source_components": [
+        null,
+        null
+      ],
+      "input_source_fields": [
+        "b",
+        "b"
+      ],
+      "koszul_sign": 1,
+      "left": "B",
+      "ordinal": 0,
+      "output_terms": [
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "c",
+          "right_output": "b"
+        },
+        {
+          "coefficient": -1,
+          "kernel": "T_mn",
+          "left_output": "b",
+          "right_output": "c"
+        },
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "beta_1",
+          "right_output": "gamma_1"
+        },
+        {
+          "coefficient": -1,
+          "kernel": "T_mn",
+          "left_output": "gamma_1",
+          "right_output": "beta_1"
+        },
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "beta_2",
+          "right_output": "gamma_2"
+        },
+        {
+          "coefficient": -1,
+          "kernel": "T_mn",
+          "left_output": "gamma_2",
+          "right_output": "beta_2"
+        },
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "beta_3",
+          "right_output": "gamma_3"
+        },
+        {
+          "coefficient": -1,
+          "kernel": "T_mn",
+          "left_output": "gamma_3",
+          "right_output": "beta_3"
+        }
+      ],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "B",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BB",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": null
+    },
+    {
+      "canonical_color_order": [
+        "B",
+        "A"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        1,
+        null
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "b"
+      ],
+      "color_tensor": "f_{B C D} f_{A C E}",
+      "exact_zero": false,
+      "id": "B__P1",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        1
+      ],
+      "input_source_components": [
+        null,
+        1
+      ],
+      "input_source_fields": [
+        "b",
+        "beta"
+      ],
+      "koszul_sign": 1,
+      "left": "B",
+      "ordinal": 1,
+      "output_terms": [
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "beta_1",
+          "right_output": "c"
+        },
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "c",
+          "right_output": "beta_1"
+        },
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "gamma_2",
+          "right_output": "gamma_3"
+        },
+        {
+          "coefficient": -1,
+          "kernel": "T_mn",
+          "left_output": "gamma_3",
+          "right_output": "gamma_2"
+        }
+      ],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": true,
+      "right": "P1",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-B",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": null
+    },
+    {
+      "canonical_color_order": [
+        "B",
+        "A"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        2,
+        null
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "b"
+      ],
+      "color_tensor": "f_{B C D} f_{A C E}",
+      "exact_zero": false,
+      "id": "B__P2",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        1
+      ],
+      "input_source_components": [
+        null,
+        2
+      ],
+      "input_source_fields": [
+        "b",
+        "beta"
+      ],
+      "koszul_sign": 1,
+      "left": "B",
+      "ordinal": 2,
+      "output_terms": [
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "beta_2",
+          "right_output": "c"
+        },
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "c",
+          "right_output": "beta_2"
+        },
+        {
+          "coefficient": -1,
+          "kernel": "T_mn",
+          "left_output": "gamma_1",
+          "right_output": "gamma_3"
+        },
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "gamma_3",
+          "right_output": "gamma_1"
+        }
+      ],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": true,
+      "right": "P2",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-B",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": null
+    },
+    {
+      "canonical_color_order": [
+        "B",
+        "A"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        3,
+        null
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "b"
+      ],
+      "color_tensor": "f_{B C D} f_{A C E}",
+      "exact_zero": false,
+      "id": "B__P3",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        1
+      ],
+      "input_source_components": [
+        null,
+        3
+      ],
+      "input_source_fields": [
+        "b",
+        "beta"
+      ],
+      "koszul_sign": 1,
+      "left": "B",
+      "ordinal": 3,
+      "output_terms": [
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "beta_3",
+          "right_output": "c"
+        },
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "c",
+          "right_output": "beta_3"
+        },
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "gamma_1",
+          "right_output": "gamma_2"
+        },
+        {
+          "coefficient": -1,
+          "kernel": "T_mn",
+          "left_output": "gamma_2",
+          "right_output": "gamma_1"
+        }
+      ],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": true,
+      "right": "P3",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-B",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": null
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        null,
+        1
+      ],
+      "canonical_source_fields": [
+        "b",
+        "gamma"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": false,
+      "id": "B__G1",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        0
+      ],
+      "input_source_components": [
+        null,
+        1
+      ],
+      "input_source_fields": [
+        "b",
+        "gamma"
+      ],
+      "koszul_sign": 1,
+      "left": "B",
+      "ordinal": 4,
+      "output_terms": [
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "c",
+          "right_output": "gamma_1"
+        },
+        {
+          "coefficient": -1,
+          "kernel": "T_mn",
+          "left_output": "gamma_1",
+          "right_output": "c"
+        }
+      ],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "G1",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-B-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": null
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        null,
+        2
+      ],
+      "canonical_source_fields": [
+        "b",
+        "gamma"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": false,
+      "id": "B__G2",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        0
+      ],
+      "input_source_components": [
+        null,
+        2
+      ],
+      "input_source_fields": [
+        "b",
+        "gamma"
+      ],
+      "koszul_sign": 1,
+      "left": "B",
+      "ordinal": 5,
+      "output_terms": [
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "c",
+          "right_output": "gamma_2"
+        },
+        {
+          "coefficient": -1,
+          "kernel": "T_mn",
+          "left_output": "gamma_2",
+          "right_output": "c"
+        }
+      ],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "G2",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-B-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": null
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        null,
+        3
+      ],
+      "canonical_source_fields": [
+        "b",
+        "gamma"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": false,
+      "id": "B__G3",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        0
+      ],
+      "input_source_components": [
+        null,
+        3
+      ],
+      "input_source_fields": [
+        "b",
+        "gamma"
+      ],
+      "koszul_sign": 1,
+      "left": "B",
+      "ordinal": 6,
+      "output_terms": [
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "c",
+          "right_output": "gamma_3"
+        },
+        {
+          "coefficient": -1,
+          "kernel": "T_mn",
+          "left_output": "gamma_3",
+          "right_output": "c"
+        }
+      ],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "G3",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-B-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": null
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        null,
+        "dot1"
+      ],
+      "canonical_source_fields": [
+        "b",
+        "c"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": false,
+      "id": "B__Hdot1",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        1
+      ],
+      "input_source_components": [
+        null,
+        "dot1"
+      ],
+      "input_source_fields": [
+        "b",
+        "c"
+      ],
+      "koszul_sign": 1,
+      "left": "B",
+      "ordinal": 7,
+      "output_terms": [
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "c",
+          "right_output": "c"
+        }
+      ],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "Hdot1",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BC",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": null
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "canonical_source_components": [
+        null,
+        "dot2"
+      ],
+      "canonical_source_fields": [
+        "b",
+        "c"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": false,
+      "id": "B__Hdot2",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "input_parities": [
+        0,
+        1
+      ],
+      "input_source_components": [
+        null,
+        "dot2"
+      ],
+      "input_source_fields": [
+        "b",
+        "c"
+      ],
+      "koszul_sign": 1,
+      "left": "B",
+      "ordinal": 8,
+      "output_terms": [
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "c",
+          "right_output": "c"
+        }
+      ],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "Hdot2",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BC",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": null
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        1,
+        null
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "b"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": false,
+      "id": "P1__B",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        0
+      ],
+      "input_source_components": [
+        1,
+        null
+      ],
+      "input_source_fields": [
+        "beta",
+        "b"
+      ],
+      "koszul_sign": 1,
+      "left": "P1",
+      "ordinal": 9,
+      "output_terms": [
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "beta_1",
+          "right_output": "c"
+        },
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "c",
+          "right_output": "beta_1"
+        },
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "gamma_2",
+          "right_output": "gamma_3"
+        },
+        {
+          "coefficient": -1,
+          "kernel": "T_mn",
+          "left_output": "gamma_3",
+          "right_output": "gamma_2"
+        }
+      ],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "B",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-B",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": null
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        1,
+        1
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "beta"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "P1__P1",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        1
+      ],
+      "input_source_components": [
+        1,
+        1
+      ],
+      "input_source_fields": [
+        "beta",
+        "beta"
+      ],
+      "koszul_sign": 1,
+      "left": "P1",
+      "ordinal": 10,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "P1",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-BETA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "FLAVOR_TENSOR_ZERO"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        1,
+        2
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "beta"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": false,
+      "id": "P1__P2",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        1
+      ],
+      "input_source_components": [
+        1,
+        2
+      ],
+      "input_source_fields": [
+        "beta",
+        "beta"
+      ],
+      "koszul_sign": 1,
+      "left": "P1",
+      "ordinal": 11,
+      "output_terms": [
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "c",
+          "right_output": "gamma_3"
+        },
+        {
+          "coefficient": -1,
+          "kernel": "T_mn",
+          "left_output": "gamma_3",
+          "right_output": "c"
+        }
+      ],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "P2",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-BETA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": null
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        1,
+        3
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "beta"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": false,
+      "id": "P1__P3",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        1
+      ],
+      "input_source_components": [
+        1,
+        3
+      ],
+      "input_source_fields": [
+        "beta",
+        "beta"
+      ],
+      "koszul_sign": 1,
+      "left": "P1",
+      "ordinal": 12,
+      "output_terms": [
+        {
+          "coefficient": -1,
+          "kernel": "T_mn",
+          "left_output": "c",
+          "right_output": "gamma_2"
+        },
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "gamma_2",
+          "right_output": "c"
+        }
+      ],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "P3",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-BETA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": null
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        1,
+        1
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "gamma"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": false,
+      "id": "P1__G1",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        0
+      ],
+      "input_source_components": [
+        1,
+        1
+      ],
+      "input_source_fields": [
+        "beta",
+        "gamma"
+      ],
+      "koszul_sign": 1,
+      "left": "P1",
+      "ordinal": 13,
+      "output_terms": [
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "c",
+          "right_output": "c"
+        }
+      ],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "G1",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": null
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        1,
+        2
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "gamma"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "P1__G2",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        0
+      ],
+      "input_source_components": [
+        1,
+        2
+      ],
+      "input_source_fields": [
+        "beta",
+        "gamma"
+      ],
+      "koszul_sign": 1,
+      "left": "P1",
+      "ordinal": 14,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "G2",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "FLAVOR_TENSOR_ZERO"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        1,
+        3
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "gamma"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "P1__G3",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        0
+      ],
+      "input_source_components": [
+        1,
+        3
+      ],
+      "input_source_fields": [
+        "beta",
+        "gamma"
+      ],
+      "koszul_sign": 1,
+      "left": "P1",
+      "ordinal": 15,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "G3",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "FLAVOR_TENSOR_ZERO"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        1,
+        "dot1"
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "c"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "P1__Hdot1",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        1
+      ],
+      "input_source_components": [
+        1,
+        "dot1"
+      ],
+      "input_source_fields": [
+        "beta",
+        "c"
+      ],
+      "koszul_sign": 1,
+      "left": "P1",
+      "ordinal": 16,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "Hdot1",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-BETA-C",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "canonical_source_components": [
+        1,
+        "dot2"
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "c"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "P1__Hdot2",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "input_parities": [
+        1,
+        1
+      ],
+      "input_source_components": [
+        1,
+        "dot2"
+      ],
+      "input_source_fields": [
+        "beta",
+        "c"
+      ],
+      "koszul_sign": 1,
+      "left": "P1",
+      "ordinal": 17,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "Hdot2",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-BETA-C",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        2,
+        null
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "b"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": false,
+      "id": "P2__B",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        0
+      ],
+      "input_source_components": [
+        2,
+        null
+      ],
+      "input_source_fields": [
+        "beta",
+        "b"
+      ],
+      "koszul_sign": 1,
+      "left": "P2",
+      "ordinal": 18,
+      "output_terms": [
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "beta_2",
+          "right_output": "c"
+        },
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "c",
+          "right_output": "beta_2"
+        },
+        {
+          "coefficient": -1,
+          "kernel": "T_mn",
+          "left_output": "gamma_1",
+          "right_output": "gamma_3"
+        },
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "gamma_3",
+          "right_output": "gamma_1"
+        }
+      ],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "B",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-B",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": null
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        2,
+        1
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "beta"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": false,
+      "id": "P2__P1",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        1
+      ],
+      "input_source_components": [
+        2,
+        1
+      ],
+      "input_source_fields": [
+        "beta",
+        "beta"
+      ],
+      "koszul_sign": 1,
+      "left": "P2",
+      "ordinal": 19,
+      "output_terms": [
+        {
+          "coefficient": -1,
+          "kernel": "T_mn",
+          "left_output": "c",
+          "right_output": "gamma_3"
+        },
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "gamma_3",
+          "right_output": "c"
+        }
+      ],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "P1",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-BETA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": null
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        2,
+        2
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "beta"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "P2__P2",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        1
+      ],
+      "input_source_components": [
+        2,
+        2
+      ],
+      "input_source_fields": [
+        "beta",
+        "beta"
+      ],
+      "koszul_sign": 1,
+      "left": "P2",
+      "ordinal": 20,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "P2",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-BETA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "FLAVOR_TENSOR_ZERO"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        2,
+        3
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "beta"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": false,
+      "id": "P2__P3",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        1
+      ],
+      "input_source_components": [
+        2,
+        3
+      ],
+      "input_source_fields": [
+        "beta",
+        "beta"
+      ],
+      "koszul_sign": 1,
+      "left": "P2",
+      "ordinal": 21,
+      "output_terms": [
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "c",
+          "right_output": "gamma_1"
+        },
+        {
+          "coefficient": -1,
+          "kernel": "T_mn",
+          "left_output": "gamma_1",
+          "right_output": "c"
+        }
+      ],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "P3",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-BETA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": null
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        2,
+        1
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "gamma"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "P2__G1",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        0
+      ],
+      "input_source_components": [
+        2,
+        1
+      ],
+      "input_source_fields": [
+        "beta",
+        "gamma"
+      ],
+      "koszul_sign": 1,
+      "left": "P2",
+      "ordinal": 22,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "G1",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "FLAVOR_TENSOR_ZERO"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        2,
+        2
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "gamma"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": false,
+      "id": "P2__G2",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        0
+      ],
+      "input_source_components": [
+        2,
+        2
+      ],
+      "input_source_fields": [
+        "beta",
+        "gamma"
+      ],
+      "koszul_sign": 1,
+      "left": "P2",
+      "ordinal": 23,
+      "output_terms": [
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "c",
+          "right_output": "c"
+        }
+      ],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "G2",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": null
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        2,
+        3
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "gamma"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "P2__G3",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        0
+      ],
+      "input_source_components": [
+        2,
+        3
+      ],
+      "input_source_fields": [
+        "beta",
+        "gamma"
+      ],
+      "koszul_sign": 1,
+      "left": "P2",
+      "ordinal": 24,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "G3",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "FLAVOR_TENSOR_ZERO"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        2,
+        "dot1"
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "c"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "P2__Hdot1",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        1
+      ],
+      "input_source_components": [
+        2,
+        "dot1"
+      ],
+      "input_source_fields": [
+        "beta",
+        "c"
+      ],
+      "koszul_sign": 1,
+      "left": "P2",
+      "ordinal": 25,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "Hdot1",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-BETA-C",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "canonical_source_components": [
+        2,
+        "dot2"
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "c"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "P2__Hdot2",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "input_parities": [
+        1,
+        1
+      ],
+      "input_source_components": [
+        2,
+        "dot2"
+      ],
+      "input_source_fields": [
+        "beta",
+        "c"
+      ],
+      "koszul_sign": 1,
+      "left": "P2",
+      "ordinal": 26,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "Hdot2",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-BETA-C",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        3,
+        null
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "b"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": false,
+      "id": "P3__B",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        0
+      ],
+      "input_source_components": [
+        3,
+        null
+      ],
+      "input_source_fields": [
+        "beta",
+        "b"
+      ],
+      "koszul_sign": 1,
+      "left": "P3",
+      "ordinal": 27,
+      "output_terms": [
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "beta_3",
+          "right_output": "c"
+        },
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "c",
+          "right_output": "beta_3"
+        },
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "gamma_1",
+          "right_output": "gamma_2"
+        },
+        {
+          "coefficient": -1,
+          "kernel": "T_mn",
+          "left_output": "gamma_2",
+          "right_output": "gamma_1"
+        }
+      ],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "B",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-B",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": null
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        3,
+        1
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "beta"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": false,
+      "id": "P3__P1",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        1
+      ],
+      "input_source_components": [
+        3,
+        1
+      ],
+      "input_source_fields": [
+        "beta",
+        "beta"
+      ],
+      "koszul_sign": 1,
+      "left": "P3",
+      "ordinal": 28,
+      "output_terms": [
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "c",
+          "right_output": "gamma_2"
+        },
+        {
+          "coefficient": -1,
+          "kernel": "T_mn",
+          "left_output": "gamma_2",
+          "right_output": "c"
+        }
+      ],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "P1",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-BETA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": null
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        3,
+        2
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "beta"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": false,
+      "id": "P3__P2",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        1
+      ],
+      "input_source_components": [
+        3,
+        2
+      ],
+      "input_source_fields": [
+        "beta",
+        "beta"
+      ],
+      "koszul_sign": 1,
+      "left": "P3",
+      "ordinal": 29,
+      "output_terms": [
+        {
+          "coefficient": -1,
+          "kernel": "T_mn",
+          "left_output": "c",
+          "right_output": "gamma_1"
+        },
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "gamma_1",
+          "right_output": "c"
+        }
+      ],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "P2",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-BETA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": null
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        3,
+        3
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "beta"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "P3__P3",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        1
+      ],
+      "input_source_components": [
+        3,
+        3
+      ],
+      "input_source_fields": [
+        "beta",
+        "beta"
+      ],
+      "koszul_sign": 1,
+      "left": "P3",
+      "ordinal": 30,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "P3",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-BETA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "FLAVOR_TENSOR_ZERO"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        3,
+        1
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "gamma"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "P3__G1",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        0
+      ],
+      "input_source_components": [
+        3,
+        1
+      ],
+      "input_source_fields": [
+        "beta",
+        "gamma"
+      ],
+      "koszul_sign": 1,
+      "left": "P3",
+      "ordinal": 31,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "G1",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "FLAVOR_TENSOR_ZERO"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        3,
+        2
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "gamma"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "P3__G2",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        0
+      ],
+      "input_source_components": [
+        3,
+        2
+      ],
+      "input_source_fields": [
+        "beta",
+        "gamma"
+      ],
+      "koszul_sign": 1,
+      "left": "P3",
+      "ordinal": 32,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "G2",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "FLAVOR_TENSOR_ZERO"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        3,
+        3
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "gamma"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": false,
+      "id": "P3__G3",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        0
+      ],
+      "input_source_components": [
+        3,
+        3
+      ],
+      "input_source_fields": [
+        "beta",
+        "gamma"
+      ],
+      "koszul_sign": 1,
+      "left": "P3",
+      "ordinal": 33,
+      "output_terms": [
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "c",
+          "right_output": "c"
+        }
+      ],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "G3",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": null
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        3,
+        "dot1"
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "c"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "P3__Hdot1",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        1
+      ],
+      "input_source_components": [
+        3,
+        "dot1"
+      ],
+      "input_source_fields": [
+        "beta",
+        "c"
+      ],
+      "koszul_sign": 1,
+      "left": "P3",
+      "ordinal": 34,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "Hdot1",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-BETA-C",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "canonical_source_components": [
+        3,
+        "dot2"
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "c"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "P3__Hdot2",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "input_parities": [
+        1,
+        1
+      ],
+      "input_source_components": [
+        3,
+        "dot2"
+      ],
+      "input_source_fields": [
+        "beta",
+        "c"
+      ],
+      "koszul_sign": 1,
+      "left": "P3",
+      "ordinal": 35,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "Hdot2",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-BETA-C",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "B",
+        "A"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        null,
+        1
+      ],
+      "canonical_source_fields": [
+        "b",
+        "gamma"
+      ],
+      "color_tensor": "f_{B C D} f_{A C E}",
+      "exact_zero": false,
+      "id": "G1__B",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        0
+      ],
+      "input_source_components": [
+        1,
+        null
+      ],
+      "input_source_fields": [
+        "gamma",
+        "b"
+      ],
+      "koszul_sign": 1,
+      "left": "G1",
+      "ordinal": 36,
+      "output_terms": [
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "c",
+          "right_output": "gamma_1"
+        },
+        {
+          "coefficient": -1,
+          "kernel": "T_mn",
+          "left_output": "gamma_1",
+          "right_output": "c"
+        }
+      ],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": true,
+      "right": "B",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-B-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": null
+    },
+    {
+      "canonical_color_order": [
+        "B",
+        "A"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        1,
+        1
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "gamma"
+      ],
+      "color_tensor": "f_{B C D} f_{A C E}",
+      "exact_zero": false,
+      "id": "G1__P1",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        1
+      ],
+      "input_source_components": [
+        1,
+        1
+      ],
+      "input_source_fields": [
+        "gamma",
+        "beta"
+      ],
+      "koszul_sign": 1,
+      "left": "G1",
+      "ordinal": 37,
+      "output_terms": [
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "c",
+          "right_output": "c"
+        }
+      ],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": true,
+      "right": "P1",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": null
+    },
+    {
+      "canonical_color_order": [
+        "B",
+        "A"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        2,
+        1
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "gamma"
+      ],
+      "color_tensor": "f_{B C D} f_{A C E}",
+      "exact_zero": true,
+      "id": "G1__P2",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        1
+      ],
+      "input_source_components": [
+        1,
+        2
+      ],
+      "input_source_fields": [
+        "gamma",
+        "beta"
+      ],
+      "koszul_sign": 1,
+      "left": "G1",
+      "ordinal": 38,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": true,
+      "right": "P2",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "FLAVOR_TENSOR_ZERO"
+    },
+    {
+      "canonical_color_order": [
+        "B",
+        "A"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        3,
+        1
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "gamma"
+      ],
+      "color_tensor": "f_{B C D} f_{A C E}",
+      "exact_zero": true,
+      "id": "G1__P3",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        1
+      ],
+      "input_source_components": [
+        1,
+        3
+      ],
+      "input_source_fields": [
+        "gamma",
+        "beta"
+      ],
+      "koszul_sign": 1,
+      "left": "G1",
+      "ordinal": 39,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": true,
+      "right": "P3",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "FLAVOR_TENSOR_ZERO"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        1,
+        1
+      ],
+      "canonical_source_fields": [
+        "gamma",
+        "gamma"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "G1__G1",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        0
+      ],
+      "input_source_components": [
+        1,
+        1
+      ],
+      "input_source_fields": [
+        "gamma",
+        "gamma"
+      ],
+      "koszul_sign": 1,
+      "left": "G1",
+      "ordinal": 40,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "G1",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-GAMMA-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        1,
+        2
+      ],
+      "canonical_source_fields": [
+        "gamma",
+        "gamma"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "G1__G2",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        0
+      ],
+      "input_source_components": [
+        1,
+        2
+      ],
+      "input_source_fields": [
+        "gamma",
+        "gamma"
+      ],
+      "koszul_sign": 1,
+      "left": "G1",
+      "ordinal": 41,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "G2",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-GAMMA-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        1,
+        3
+      ],
+      "canonical_source_fields": [
+        "gamma",
+        "gamma"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "G1__G3",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        0
+      ],
+      "input_source_components": [
+        1,
+        3
+      ],
+      "input_source_fields": [
+        "gamma",
+        "gamma"
+      ],
+      "koszul_sign": 1,
+      "left": "G1",
+      "ordinal": 42,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "G3",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-GAMMA-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        1,
+        "dot1"
+      ],
+      "canonical_source_fields": [
+        "gamma",
+        "c"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "G1__Hdot1",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        1
+      ],
+      "input_source_components": [
+        1,
+        "dot1"
+      ],
+      "input_source_fields": [
+        "gamma",
+        "c"
+      ],
+      "koszul_sign": 1,
+      "left": "G1",
+      "ordinal": 43,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "Hdot1",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-GAMMA-C",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "canonical_source_components": [
+        1,
+        "dot2"
+      ],
+      "canonical_source_fields": [
+        "gamma",
+        "c"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "G1__Hdot2",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "input_parities": [
+        0,
+        1
+      ],
+      "input_source_components": [
+        1,
+        "dot2"
+      ],
+      "input_source_fields": [
+        "gamma",
+        "c"
+      ],
+      "koszul_sign": 1,
+      "left": "G1",
+      "ordinal": 44,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "Hdot2",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-GAMMA-C",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "B",
+        "A"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        null,
+        2
+      ],
+      "canonical_source_fields": [
+        "b",
+        "gamma"
+      ],
+      "color_tensor": "f_{B C D} f_{A C E}",
+      "exact_zero": false,
+      "id": "G2__B",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        0
+      ],
+      "input_source_components": [
+        2,
+        null
+      ],
+      "input_source_fields": [
+        "gamma",
+        "b"
+      ],
+      "koszul_sign": 1,
+      "left": "G2",
+      "ordinal": 45,
+      "output_terms": [
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "c",
+          "right_output": "gamma_2"
+        },
+        {
+          "coefficient": -1,
+          "kernel": "T_mn",
+          "left_output": "gamma_2",
+          "right_output": "c"
+        }
+      ],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": true,
+      "right": "B",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-B-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": null
+    },
+    {
+      "canonical_color_order": [
+        "B",
+        "A"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        1,
+        2
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "gamma"
+      ],
+      "color_tensor": "f_{B C D} f_{A C E}",
+      "exact_zero": true,
+      "id": "G2__P1",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        1
+      ],
+      "input_source_components": [
+        2,
+        1
+      ],
+      "input_source_fields": [
+        "gamma",
+        "beta"
+      ],
+      "koszul_sign": 1,
+      "left": "G2",
+      "ordinal": 46,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": true,
+      "right": "P1",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "FLAVOR_TENSOR_ZERO"
+    },
+    {
+      "canonical_color_order": [
+        "B",
+        "A"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        2,
+        2
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "gamma"
+      ],
+      "color_tensor": "f_{B C D} f_{A C E}",
+      "exact_zero": false,
+      "id": "G2__P2",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        1
+      ],
+      "input_source_components": [
+        2,
+        2
+      ],
+      "input_source_fields": [
+        "gamma",
+        "beta"
+      ],
+      "koszul_sign": 1,
+      "left": "G2",
+      "ordinal": 47,
+      "output_terms": [
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "c",
+          "right_output": "c"
+        }
+      ],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": true,
+      "right": "P2",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": null
+    },
+    {
+      "canonical_color_order": [
+        "B",
+        "A"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        3,
+        2
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "gamma"
+      ],
+      "color_tensor": "f_{B C D} f_{A C E}",
+      "exact_zero": true,
+      "id": "G2__P3",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        1
+      ],
+      "input_source_components": [
+        2,
+        3
+      ],
+      "input_source_fields": [
+        "gamma",
+        "beta"
+      ],
+      "koszul_sign": 1,
+      "left": "G2",
+      "ordinal": 48,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": true,
+      "right": "P3",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "FLAVOR_TENSOR_ZERO"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        2,
+        1
+      ],
+      "canonical_source_fields": [
+        "gamma",
+        "gamma"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "G2__G1",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        0
+      ],
+      "input_source_components": [
+        2,
+        1
+      ],
+      "input_source_fields": [
+        "gamma",
+        "gamma"
+      ],
+      "koszul_sign": 1,
+      "left": "G2",
+      "ordinal": 49,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "G1",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-GAMMA-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        2,
+        2
+      ],
+      "canonical_source_fields": [
+        "gamma",
+        "gamma"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "G2__G2",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        0
+      ],
+      "input_source_components": [
+        2,
+        2
+      ],
+      "input_source_fields": [
+        "gamma",
+        "gamma"
+      ],
+      "koszul_sign": 1,
+      "left": "G2",
+      "ordinal": 50,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "G2",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-GAMMA-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        2,
+        3
+      ],
+      "canonical_source_fields": [
+        "gamma",
+        "gamma"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "G2__G3",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        0
+      ],
+      "input_source_components": [
+        2,
+        3
+      ],
+      "input_source_fields": [
+        "gamma",
+        "gamma"
+      ],
+      "koszul_sign": 1,
+      "left": "G2",
+      "ordinal": 51,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "G3",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-GAMMA-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        2,
+        "dot1"
+      ],
+      "canonical_source_fields": [
+        "gamma",
+        "c"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "G2__Hdot1",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        1
+      ],
+      "input_source_components": [
+        2,
+        "dot1"
+      ],
+      "input_source_fields": [
+        "gamma",
+        "c"
+      ],
+      "koszul_sign": 1,
+      "left": "G2",
+      "ordinal": 52,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "Hdot1",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-GAMMA-C",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "canonical_source_components": [
+        2,
+        "dot2"
+      ],
+      "canonical_source_fields": [
+        "gamma",
+        "c"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "G2__Hdot2",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "input_parities": [
+        0,
+        1
+      ],
+      "input_source_components": [
+        2,
+        "dot2"
+      ],
+      "input_source_fields": [
+        "gamma",
+        "c"
+      ],
+      "koszul_sign": 1,
+      "left": "G2",
+      "ordinal": 53,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "Hdot2",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-GAMMA-C",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "B",
+        "A"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        null,
+        3
+      ],
+      "canonical_source_fields": [
+        "b",
+        "gamma"
+      ],
+      "color_tensor": "f_{B C D} f_{A C E}",
+      "exact_zero": false,
+      "id": "G3__B",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        0
+      ],
+      "input_source_components": [
+        3,
+        null
+      ],
+      "input_source_fields": [
+        "gamma",
+        "b"
+      ],
+      "koszul_sign": 1,
+      "left": "G3",
+      "ordinal": 54,
+      "output_terms": [
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "c",
+          "right_output": "gamma_3"
+        },
+        {
+          "coefficient": -1,
+          "kernel": "T_mn",
+          "left_output": "gamma_3",
+          "right_output": "c"
+        }
+      ],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": true,
+      "right": "B",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-B-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": null
+    },
+    {
+      "canonical_color_order": [
+        "B",
+        "A"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        1,
+        3
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "gamma"
+      ],
+      "color_tensor": "f_{B C D} f_{A C E}",
+      "exact_zero": true,
+      "id": "G3__P1",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        1
+      ],
+      "input_source_components": [
+        3,
+        1
+      ],
+      "input_source_fields": [
+        "gamma",
+        "beta"
+      ],
+      "koszul_sign": 1,
+      "left": "G3",
+      "ordinal": 55,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": true,
+      "right": "P1",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "FLAVOR_TENSOR_ZERO"
+    },
+    {
+      "canonical_color_order": [
+        "B",
+        "A"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        2,
+        3
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "gamma"
+      ],
+      "color_tensor": "f_{B C D} f_{A C E}",
+      "exact_zero": true,
+      "id": "G3__P2",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        1
+      ],
+      "input_source_components": [
+        3,
+        2
+      ],
+      "input_source_fields": [
+        "gamma",
+        "beta"
+      ],
+      "koszul_sign": 1,
+      "left": "G3",
+      "ordinal": 56,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": true,
+      "right": "P2",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "FLAVOR_TENSOR_ZERO"
+    },
+    {
+      "canonical_color_order": [
+        "B",
+        "A"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        3,
+        3
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "gamma"
+      ],
+      "color_tensor": "f_{B C D} f_{A C E}",
+      "exact_zero": false,
+      "id": "G3__P3",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        1
+      ],
+      "input_source_components": [
+        3,
+        3
+      ],
+      "input_source_fields": [
+        "gamma",
+        "beta"
+      ],
+      "koszul_sign": 1,
+      "left": "G3",
+      "ordinal": 57,
+      "output_terms": [
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "c",
+          "right_output": "c"
+        }
+      ],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": true,
+      "right": "P3",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BETA-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": null
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        3,
+        1
+      ],
+      "canonical_source_fields": [
+        "gamma",
+        "gamma"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "G3__G1",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        0
+      ],
+      "input_source_components": [
+        3,
+        1
+      ],
+      "input_source_fields": [
+        "gamma",
+        "gamma"
+      ],
+      "koszul_sign": 1,
+      "left": "G3",
+      "ordinal": 58,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "G1",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-GAMMA-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        3,
+        2
+      ],
+      "canonical_source_fields": [
+        "gamma",
+        "gamma"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "G3__G2",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        0
+      ],
+      "input_source_components": [
+        3,
+        2
+      ],
+      "input_source_fields": [
+        "gamma",
+        "gamma"
+      ],
+      "koszul_sign": 1,
+      "left": "G3",
+      "ordinal": 59,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "G2",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-GAMMA-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        3,
+        3
+      ],
+      "canonical_source_fields": [
+        "gamma",
+        "gamma"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "G3__G3",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        0
+      ],
+      "input_source_components": [
+        3,
+        3
+      ],
+      "input_source_fields": [
+        "gamma",
+        "gamma"
+      ],
+      "koszul_sign": 1,
+      "left": "G3",
+      "ordinal": 60,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "G3",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-GAMMA-GAMMA",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        3,
+        "dot1"
+      ],
+      "canonical_source_fields": [
+        "gamma",
+        "c"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "G3__Hdot1",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "input_parities": [
+        0,
+        1
+      ],
+      "input_source_components": [
+        3,
+        "dot1"
+      ],
+      "input_source_fields": [
+        "gamma",
+        "c"
+      ],
+      "koszul_sign": 1,
+      "left": "G3",
+      "ordinal": 61,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "Hdot1",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-GAMMA-C",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "canonical_source_components": [
+        3,
+        "dot2"
+      ],
+      "canonical_source_fields": [
+        "gamma",
+        "c"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "G3__Hdot2",
+      "input_inherent_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "input_parities": [
+        0,
+        1
+      ],
+      "input_source_components": [
+        3,
+        "dot2"
+      ],
+      "input_source_fields": [
+        "gamma",
+        "c"
+      ],
+      "koszul_sign": 1,
+      "left": "G3",
+      "ordinal": 62,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "Hdot2",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-GAMMA-C",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "B",
+        "A"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        null,
+        "dot1"
+      ],
+      "canonical_source_fields": [
+        "b",
+        "c"
+      ],
+      "color_tensor": "f_{B C D} f_{A C E}",
+      "exact_zero": false,
+      "id": "Hdot1__B",
+      "input_inherent_derivatives": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        0
+      ],
+      "input_source_components": [
+        "dot1",
+        null
+      ],
+      "input_source_fields": [
+        "c",
+        "b"
+      ],
+      "koszul_sign": 1,
+      "left": "Hdot1",
+      "ordinal": 63,
+      "output_terms": [
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "c",
+          "right_output": "c"
+        }
+      ],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": true,
+      "right": "B",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BC",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": null
+    },
+    {
+      "canonical_color_order": [
+        "B",
+        "A"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        1,
+        "dot1"
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "c"
+      ],
+      "color_tensor": "f_{B C D} f_{A C E}",
+      "exact_zero": true,
+      "id": "Hdot1__P1",
+      "input_inherent_derivatives": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        1
+      ],
+      "input_source_components": [
+        "dot1",
+        1
+      ],
+      "input_source_fields": [
+        "c",
+        "beta"
+      ],
+      "koszul_sign": -1,
+      "left": "Hdot1",
+      "ordinal": 64,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": true,
+      "right": "P1",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-BETA-C",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "B",
+        "A"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        2,
+        "dot1"
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "c"
+      ],
+      "color_tensor": "f_{B C D} f_{A C E}",
+      "exact_zero": true,
+      "id": "Hdot1__P2",
+      "input_inherent_derivatives": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        1
+      ],
+      "input_source_components": [
+        "dot1",
+        2
+      ],
+      "input_source_fields": [
+        "c",
+        "beta"
+      ],
+      "koszul_sign": -1,
+      "left": "Hdot1",
+      "ordinal": 65,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": true,
+      "right": "P2",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-BETA-C",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "B",
+        "A"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        3,
+        "dot1"
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "c"
+      ],
+      "color_tensor": "f_{B C D} f_{A C E}",
+      "exact_zero": true,
+      "id": "Hdot1__P3",
+      "input_inherent_derivatives": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        1
+      ],
+      "input_source_components": [
+        "dot1",
+        3
+      ],
+      "input_source_fields": [
+        "c",
+        "beta"
+      ],
+      "koszul_sign": -1,
+      "left": "Hdot1",
+      "ordinal": 66,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": true,
+      "right": "P3",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-BETA-C",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "B",
+        "A"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        1,
+        "dot1"
+      ],
+      "canonical_source_fields": [
+        "gamma",
+        "c"
+      ],
+      "color_tensor": "f_{B C D} f_{A C E}",
+      "exact_zero": true,
+      "id": "Hdot1__G1",
+      "input_inherent_derivatives": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        0
+      ],
+      "input_source_components": [
+        "dot1",
+        1
+      ],
+      "input_source_fields": [
+        "c",
+        "gamma"
+      ],
+      "koszul_sign": 1,
+      "left": "Hdot1",
+      "ordinal": 67,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": true,
+      "right": "G1",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-GAMMA-C",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "B",
+        "A"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        2,
+        "dot1"
+      ],
+      "canonical_source_fields": [
+        "gamma",
+        "c"
+      ],
+      "color_tensor": "f_{B C D} f_{A C E}",
+      "exact_zero": true,
+      "id": "Hdot1__G2",
+      "input_inherent_derivatives": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        0
+      ],
+      "input_source_components": [
+        "dot1",
+        2
+      ],
+      "input_source_fields": [
+        "c",
+        "gamma"
+      ],
+      "koszul_sign": 1,
+      "left": "Hdot1",
+      "ordinal": 68,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": true,
+      "right": "G2",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-GAMMA-C",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "B",
+        "A"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        3,
+        "dot1"
+      ],
+      "canonical_source_fields": [
+        "gamma",
+        "c"
+      ],
+      "color_tensor": "f_{B C D} f_{A C E}",
+      "exact_zero": true,
+      "id": "Hdot1__G3",
+      "input_inherent_derivatives": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        0
+      ],
+      "input_source_components": [
+        "dot1",
+        3
+      ],
+      "input_source_fields": [
+        "c",
+        "gamma"
+      ],
+      "koszul_sign": 1,
+      "left": "Hdot1",
+      "ordinal": 69,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": true,
+      "right": "G3",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-GAMMA-C",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        "dot1",
+        "dot1"
+      ],
+      "canonical_source_fields": [
+        "c",
+        "c"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "Hdot1__Hdot1",
+      "input_inherent_derivatives": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        1
+      ],
+      "input_source_components": [
+        "dot1",
+        "dot1"
+      ],
+      "input_source_fields": [
+        "c",
+        "c"
+      ],
+      "koszul_sign": 1,
+      "left": "Hdot1",
+      "ordinal": 70,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "Hdot1",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-CC",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "canonical_source_components": [
+        "dot1",
+        "dot2"
+      ],
+      "canonical_source_fields": [
+        "c",
+        "c"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "Hdot1__Hdot2",
+      "input_inherent_derivatives": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "input_parities": [
+        1,
+        1
+      ],
+      "input_source_components": [
+        "dot1",
+        "dot2"
+      ],
+      "input_source_fields": [
+        "c",
+        "c"
+      ],
+      "koszul_sign": 1,
+      "left": "Hdot1",
+      "ordinal": 71,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "Hdot2",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-CC",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "B",
+        "A"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "canonical_source_components": [
+        null,
+        "dot2"
+      ],
+      "canonical_source_fields": [
+        "b",
+        "c"
+      ],
+      "color_tensor": "f_{B C D} f_{A C E}",
+      "exact_zero": false,
+      "id": "Hdot2__B",
+      "input_inherent_derivatives": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        0
+      ],
+      "input_source_components": [
+        "dot2",
+        null
+      ],
+      "input_source_fields": [
+        "c",
+        "b"
+      ],
+      "koszul_sign": 1,
+      "left": "Hdot2",
+      "ordinal": 72,
+      "output_terms": [
+        {
+          "coefficient": 1,
+          "kernel": "T_mn",
+          "left_output": "c",
+          "right_output": "c"
+        }
+      ],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": true,
+      "right": "B",
+      "rule_classification": "NONZERO",
+      "rule_id": "HT-RULE-BC",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": null
+    },
+    {
+      "canonical_color_order": [
+        "B",
+        "A"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "canonical_source_components": [
+        1,
+        "dot2"
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "c"
+      ],
+      "color_tensor": "f_{B C D} f_{A C E}",
+      "exact_zero": true,
+      "id": "Hdot2__P1",
+      "input_inherent_derivatives": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        1
+      ],
+      "input_source_components": [
+        "dot2",
+        1
+      ],
+      "input_source_fields": [
+        "c",
+        "beta"
+      ],
+      "koszul_sign": -1,
+      "left": "Hdot2",
+      "ordinal": 73,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": true,
+      "right": "P1",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-BETA-C",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "B",
+        "A"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "canonical_source_components": [
+        2,
+        "dot2"
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "c"
+      ],
+      "color_tensor": "f_{B C D} f_{A C E}",
+      "exact_zero": true,
+      "id": "Hdot2__P2",
+      "input_inherent_derivatives": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        1
+      ],
+      "input_source_components": [
+        "dot2",
+        2
+      ],
+      "input_source_fields": [
+        "c",
+        "beta"
+      ],
+      "koszul_sign": -1,
+      "left": "Hdot2",
+      "ordinal": 74,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": true,
+      "right": "P2",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-BETA-C",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "B",
+        "A"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "canonical_source_components": [
+        3,
+        "dot2"
+      ],
+      "canonical_source_fields": [
+        "beta",
+        "c"
+      ],
+      "color_tensor": "f_{B C D} f_{A C E}",
+      "exact_zero": true,
+      "id": "Hdot2__P3",
+      "input_inherent_derivatives": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        1
+      ],
+      "input_source_components": [
+        "dot2",
+        3
+      ],
+      "input_source_fields": [
+        "c",
+        "beta"
+      ],
+      "koszul_sign": -1,
+      "left": "Hdot2",
+      "ordinal": 75,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": true,
+      "right": "P3",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-BETA-C",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "B",
+        "A"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "canonical_source_components": [
+        1,
+        "dot2"
+      ],
+      "canonical_source_fields": [
+        "gamma",
+        "c"
+      ],
+      "color_tensor": "f_{B C D} f_{A C E}",
+      "exact_zero": true,
+      "id": "Hdot2__G1",
+      "input_inherent_derivatives": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        0
+      ],
+      "input_source_components": [
+        "dot2",
+        1
+      ],
+      "input_source_fields": [
+        "c",
+        "gamma"
+      ],
+      "koszul_sign": 1,
+      "left": "Hdot2",
+      "ordinal": 76,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": true,
+      "right": "G1",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-GAMMA-C",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "B",
+        "A"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "canonical_source_components": [
+        2,
+        "dot2"
+      ],
+      "canonical_source_fields": [
+        "gamma",
+        "c"
+      ],
+      "color_tensor": "f_{B C D} f_{A C E}",
+      "exact_zero": true,
+      "id": "Hdot2__G2",
+      "input_inherent_derivatives": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        0
+      ],
+      "input_source_components": [
+        "dot2",
+        2
+      ],
+      "input_source_fields": [
+        "c",
+        "gamma"
+      ],
+      "koszul_sign": 1,
+      "left": "Hdot2",
+      "ordinal": 77,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": true,
+      "right": "G2",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-GAMMA-C",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "B",
+        "A"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "canonical_source_components": [
+        3,
+        "dot2"
+      ],
+      "canonical_source_fields": [
+        "gamma",
+        "c"
+      ],
+      "color_tensor": "f_{B C D} f_{A C E}",
+      "exact_zero": true,
+      "id": "Hdot2__G3",
+      "input_inherent_derivatives": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        0
+      ],
+      "input_source_components": [
+        "dot2",
+        3
+      ],
+      "input_source_fields": [
+        "c",
+        "gamma"
+      ],
+      "koszul_sign": 1,
+      "left": "Hdot2",
+      "ordinal": 78,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": true,
+      "right": "G3",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-GAMMA-C",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "canonical_source_components": [
+        "dot2",
+        "dot1"
+      ],
+      "canonical_source_fields": [
+        "c",
+        "c"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "Hdot2__Hdot1",
+      "input_inherent_derivatives": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "input_parities": [
+        1,
+        1
+      ],
+      "input_source_components": [
+        "dot2",
+        "dot1"
+      ],
+      "input_source_fields": [
+        "c",
+        "c"
+      ],
+      "koszul_sign": 1,
+      "left": "Hdot2",
+      "ordinal": 79,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "Hdot1",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-CC",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    },
+    {
+      "canonical_color_order": [
+        "A",
+        "B"
+      ],
+      "canonical_input_derivatives": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "canonical_source_components": [
+        "dot2",
+        "dot2"
+      ],
+      "canonical_source_fields": [
+        "c",
+        "c"
+      ],
+      "color_tensor": "f_{A C D} f_{B C E}",
+      "exact_zero": true,
+      "id": "Hdot2__Hdot2",
+      "input_inherent_derivatives": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "input_parities": [
+        1,
+        1
+      ],
+      "input_source_components": [
+        "dot2",
+        "dot2"
+      ],
+      "input_source_fields": [
+        "c",
+        "c"
+      ],
+      "koszul_sign": 1,
+      "left": "Hdot2",
+      "ordinal": 80,
+      "output_terms": [],
+      "overall_source_coefficient": "kappa_H^2",
+      "reversed_to_canonical": false,
+      "right": "Hdot2",
+      "rule_classification": "ZERO",
+      "rule_id": "HT-ZERO-CC",
+      "source_branch": "DERIVATIVE_TOWER_BRANCH",
+      "zero_reason": "SOURCE_ZERO_RULE"
+    }
+  ],
+  "reversal_contract": {
+    "color_rule": "A,B are swapped before the canonical source rule is instantiated",
+    "forbidden_reduction": "f_{B C D} f_{A C E} must not be replaced by f_{A C D} f_{B C E} without a separate proof",
+    "formula": "Q1(X^A Y^B)=(-1)^(|X||Y|) Q1(Y^B X^A)"
+  },
+  "reversed_canonical_count": 29,
+  "rule_catalog": [
+    {
+      "canonical_source_fields": [
+        "b",
+        "c"
+      ],
+      "classification": "NONZERO",
+      "id": "HT-RULE-BC",
+      "source_line_span_union": [
+        1041,
+        1042,
+        1227,
+        1228,
+        1367,
+        1369
+      ],
+      "source_path": "references/vendor/arxiv/2512.07771v2/source/main.tex"
+    },
+    {
+      "canonical_source_fields": [
+        "b",
+        "b"
+      ],
+      "classification": "NONZERO",
+      "id": "HT-RULE-BB",
+      "source_line_span_union": [
+        1044,
+        1046,
+        1230,
+        1232,
+        1371,
+        1374
+      ],
+      "source_path": "references/vendor/arxiv/2512.07771v2/source/main.tex"
+    },
+    {
+      "canonical_source_fields": [
+        "beta",
+        "gamma"
+      ],
+      "classification": "NONZERO",
+      "id": "HT-RULE-BETA-GAMMA",
+      "source_line_span_union": [
+        1048,
+        1049,
+        1234,
+        1235,
+        1377,
+        1379
+      ],
+      "source_path": "references/vendor/arxiv/2512.07771v2/source/main.tex"
+    },
+    {
+      "canonical_source_fields": [
+        "beta",
+        "beta"
+      ],
+      "classification": "NONZERO",
+      "id": "HT-RULE-BETA-BETA",
+      "source_line_span_union": [
+        1068,
+        1069,
+        1236,
+        1237,
+        1382,
+        1384
+      ],
+      "source_path": "references/vendor/arxiv/2512.07771v2/source/main.tex"
+    },
+    {
+      "canonical_source_fields": [
+        "b",
+        "gamma"
+      ],
+      "classification": "NONZERO",
+      "id": "HT-RULE-B-GAMMA",
+      "source_line_span_union": [
+        1055,
+        1056,
+        1238,
+        1239,
+        1387,
+        1388
+      ],
+      "source_path": "references/vendor/arxiv/2512.07771v2/source/main.tex"
+    },
+    {
+      "canonical_source_fields": [
+        "beta",
+        "b"
+      ],
+      "classification": "NONZERO",
+      "id": "HT-RULE-BETA-B",
+      "source_line_span_union": [
+        1070,
+        1072,
+        1241,
+        1243,
+        1390,
+        1393
+      ],
+      "source_path": "references/vendor/arxiv/2512.07771v2/source/main.tex"
+    },
+    {
+      "canonical_source_fields": [
+        "c",
+        "c"
+      ],
+      "classification": "ZERO",
+      "id": "HT-ZERO-CC",
+      "source_line_span_union": [
+        729,
+        731
+      ],
+      "source_path": "references/vendor/arxiv/2512.07771v2/source/main.tex"
+    },
+    {
+      "canonical_source_fields": [
+        "gamma",
+        "gamma"
+      ],
+      "classification": "ZERO",
+      "id": "HT-ZERO-GAMMA-GAMMA",
+      "source_line_span_union": [
+        729,
+        731
+      ],
+      "source_path": "references/vendor/arxiv/2512.07771v2/source/main.tex"
+    },
+    {
+      "canonical_source_fields": [
+        "gamma",
+        "c"
+      ],
+      "classification": "ZERO",
+      "id": "HT-ZERO-GAMMA-C",
+      "source_line_span_union": [
+        729,
+        731
+      ],
+      "source_path": "references/vendor/arxiv/2512.07771v2/source/main.tex"
+    },
+    {
+      "canonical_source_fields": [
+        "beta",
+        "c"
+      ],
+      "classification": "ZERO",
+      "id": "HT-ZERO-BETA-C",
+      "source_line_span_union": [
+        729,
+        731
+      ],
+      "source_path": "references/vendor/arxiv/2512.07771v2/source/main.tex"
+    }
+  ],
+  "schema": 1
+}
