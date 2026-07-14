@@ -259,6 +259,13 @@
       "blocking_reason": null,
       "task_sha256": "2fb04b2772dde80fb2faa45652ce1c6b03a15df6d9c3430d16dbb13dabc34afc",
       "task": "tasks/archive/REFERENCE-IMPORT-HT-N4-ONE-LOOP-001.yaml"
+    },
+    {
+      "id": "MIRROR-STEP-05A-NOTION-001",
+      "state": "ACCEPTED",
+      "blocking_reason": null,
+      "task_sha256": "23714346018bba14aad3156cadbf1ac168205893263a94f68f88e8d4e108798e",
+      "task": "tasks/archive/MIRROR-STEP-05A-NOTION-001.yaml"
     }
   ]
 }

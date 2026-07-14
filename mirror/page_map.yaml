@@ -93,16 +93,16 @@
     {
       "id": "FOUNDATION-N2-SUPER-YANG-MILLS-004B",
       "source": "contracts/foundations/step-04b-n2-super-yang-mills.md",
-      "source_commit": "a3d7791c0469051f21471f5f5c40c97f6aef1cff",
-      "source_sha256": "c8c46744d2c41880bf145d8d6c90af25555276650cc036ded8ddbda9071870d3",
+      "source_commit": "ee5cf4ef77757c2ab44cfe4a95528b88b12bc1cd",
+      "source_sha256": "590bff04a31f2790ec97226570df189647f822b69c53ee9b141f5c1a0c98c860",
       "notion_page_id": "39bee2b7-4b3f-8188-bfb0-f7bb9f1d6d0f",
       "title": "Step 4B — N=2 Super Yang–Mills"
     },
     {
       "id": "FOUNDATION-N4-SUPER-YANG-MILLS-004C",
       "source": "contracts/foundations/step-04c-n4-super-yang-mills.md",
-      "source_commit": "a3d7791c0469051f21471f5f5c40c97f6aef1cff",
-      "source_sha256": "9fb057d14ee438b31d3f38836e8ca848dfee74b1ea363716222264c96405e5db",
+      "source_commit": "ee5cf4ef77757c2ab44cfe4a95528b88b12bc1cd",
+      "source_sha256": "fafc3bc2227b60ca699b3f953b632db82dafe093b221baa74736cc5fb838928f",
       "notion_page_id": "39bee2b7-4b3f-81ee-ad8d-ec5b838fa90d",
       "title": "Step 4C — N=4 Super Yang–Mills"
     },
@@ -113,6 +113,14 @@
       "source_sha256": "0909093c4afa22d5d8ae9c540880a524e57353c573795bf1937de1cfdcdd0a7b",
       "notion_page_id": "39bee2b7-4b3f-8150-a227-dd76caa48008",
       "title": "Step 4 — Project–Srednicki–Weinberg extended-SYM dictionary"
+    },
+    {
+      "id": "FOUNDATION-COMPONENT-BV-BRST-PRIMITIVE-SUPERGRAPH-GRAMMAR-005A",
+      "source": "contracts/foundations/step-05a-component-bv-brst-primitive-supergraph-grammar.md",
+      "source_commit": "ee5cf4ef77757c2ab44cfe4a95528b88b12bc1cd",
+      "source_sha256": "300d55a07534a312bfad582c6702ba1991ef7e439a3b999c4c228c1329ca05bc",
+      "notion_page_id": "39dee2b7-4b3f-8113-8e71-ee71eeeef23b",
+      "title": "Step 5A — Component actions, BV–BRST quantization, and primitive supergraph grammar"
     }
   ]
 }
