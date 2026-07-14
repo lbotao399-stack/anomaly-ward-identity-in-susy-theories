@@ -2,11 +2,11 @@
   "schema": 1,
   "state": "PUBLISHED_WRITE_RECEIPT",
   "source": "generated/step6/verified-foundations/step6-verified-foundations-partial.md",
-  "source_sha256": "0e1cf37b53a130a54a131c7a8da8eed1fac6302380c66a514fefc14e1284290c",
-  "git_commit": "2d1b8701369c8117c3497356342882ba0bf0be14",
+  "source_sha256": "6e876e690c6305bb7294ebb0ff7ed8952fbdf26b4ddd55b729e8317adadf8781",
+  "git_commit": "bcdfe0c8e507f19bc0a51dcd59fea1ae07832a4a",
   "notion_page_id": "39cee2b7-4b3f-81ce-9871-d3b3bf6aeb90",
   "authority_role": "UNMERGED_PROPOSAL",
   "verification": "WRITE_RECEIPT_ONLY_NO_NOTION_READBACK",
-  "published_at": "2026-07-13T22:37:28Z",
-  "mutation": "create_pages"
+  "published_at": "2026-07-14T00:07:58Z",
+  "mutation": "replace_content"
 }
