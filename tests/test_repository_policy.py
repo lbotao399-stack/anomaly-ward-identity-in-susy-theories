@@ -534,8 +534,28 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertEqual(task["type"], "CONTRACT_CHANGE")
         self.assertEqual(task["status"], "SPECIFIED")
         self.assertTrue(task["reference_admission"]["source_translation_required_before_formula_adoption"])
+        self.assertTrue(task["reference_admission"]["independent_project_derivation_required_before_target_comparison"])
         self.assertEqual(len(task["acceptance"]), 16)
+        external_target_ids = task["reference_admission"]["external_target_only_claim_ids"]
+        self.assertEqual(
+            external_target_ids,
+            [
+                "HT-N4-ONE-LOOP-COMPLETE-SUPERFIELD-CANDIDATE",
+                "HT-N4-ONE-LOOP-COMPONENT-PAIR-CANDIDATE",
+                "HT-ONE-LOOP-MASTER-INTEGRAL-CANDIDATE",
+            ],
+        )
+        self.assertTrue(set(external_target_ids) <= set(task["reference_admission"]["admitted_claim_ids"]))
+        claim_map = json.loads((ROOT / "references/claim-map.yaml").read_text(encoding="utf-8"))
+        classifications = {item["id"]: item.get("classification") for item in claim_map["claims"]}
+        self.assertTrue(all(classifications[claim_id] == "EXTERNAL_TARGET_ONLY" for claim_id in external_target_ids))
         self.assertTrue(any("sixteen channel classes" in item for item in task["acceptance"]))
+        self.assertTrue(any("exactly eighty-one ordered component pairs" in item for item in task["acceptance"]))
+        self.assertTrue(any("arbitrary holomorphic-derivative tower" in item for item in task["acceptance"]))
+        self.assertTrue(any("HT-NORM-CONFLICT-COMPACT-Q1-COEFFICIENT" in item for item in task["acceptance"]))
+        self.assertTrue(any("HT-NORM-CONFLICT-ZERO-SHIFT-FACTOR-TWO" in item for item in task["acceptance"]))
+        self.assertTrue(any("forward and inverse maps compose to the identity" in item for item in task["acceptance"]))
+        self.assertTrue(any("holomorphic-twist round-trip audit" in item for item in task["acceptance"]))
         self.assertTrue(any("external leg" in item for item in task["acceptance"]))
         self.assertTrue(any("isolated triangle" in item for item in task["forbidden_inputs"]))
 

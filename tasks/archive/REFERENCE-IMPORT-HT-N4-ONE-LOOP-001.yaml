@@ -1,0 +1,68 @@
+{
+  "id": "REFERENCE-IMPORT-HT-N4-ONE-LOOP-001",
+  "type": "REFERENCE_IMPORT",
+  "status": "ACCEPTED",
+  "outcome": "Vendor the exact arXiv v2 primary source for the holomorphic-twist complete one-loop supercharge in four-dimensional N=4 SYM as an external target only; preserve source notation and equations without translating them into Project notation, comparing coefficients, or modifying any Step-5 calculation.",
+  "allowed_inputs": [
+    "AUTHORITY.md",
+    "AGENTS.md",
+    "references/manifest.yaml",
+    "references/claim-map.yaml",
+    "ledger/proof_obligations.json",
+    "tasks/archive/CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001.yaml",
+    "tasks/instructions/2026-07-13-reference-import-ht-one-loop-n4.md",
+    "tests/test_repository_policy.py",
+    ".github/workflows/verify.yml",
+    "https://arxiv.org/abs/2512.07771v2",
+    "https://arxiv.org/html/2512.07771v2",
+    "https://arxiv.org/pdf/2512.07771v2",
+    "https://export.arxiv.org/e-print/2512.07771v2",
+    "references/vendor/arxiv/2512.07771v2/2512.07771v2.pdf",
+    "references/vendor/arxiv/2512.07771v2/2512.07771v2.tar.gz",
+    "references/vendor/arxiv/2512.07771v2/source/",
+    "references/vendor/arxiv/2512.07771v2/metadata.json",
+    "references/ht-n4-one-loop-source-ledger.json",
+    "scripts/verify_ht_n4_one_loop_reference_import.py",
+    "audits/ht-n4-one-loop-reference-import-verification.json",
+    "audits/n2-su2r-obstruction-reference-import-verification.json",
+    "audits/n2-general-lie-closure-instructor-import-verification.json"
+  ],
+  "reference_exception": {
+    "user_authorized": true,
+    "source": "arXiv:2512.07771v2",
+    "title": "Loop Corrected Supercharges from Holomorphic Anomalies",
+    "authors": ["Kasia Budzik", "Justin Kulp"],
+    "fetch_scope": "The exact v2 abstract metadata, PDF, TeX source archive, and every file contained in that source archive; no secondary summary is admitted.",
+    "role": "EXTERNAL_TARGET_ONLY",
+    "translation_status": "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+    "comparison_status": "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+    "default_boundary_after_task": "GIT_TO_NOTION_ONLY"
+  },
+  "forbidden_inputs": [
+    "Notion content, search, fetch, export, or readback",
+    "ChatGPT or GPT-Pro output as mathematical evidence",
+    "secondary summaries, reviews, blogs, or search-result snippets",
+    "local files outside this repository",
+    "legacy repositories or archived holomorphic-theory notes",
+    "unmerged branches as mathematical evidence",
+    "Step-5 calculation contracts, scripts, generated amplitudes, or coefficients during this reference-import task",
+    "translation into Project notation during this reference-import task",
+    "comparison with a Project coefficient during this reference-import task",
+    "modification of a Project mathematical contract during this reference-import task"
+  ],
+  "candidate_claim_ids": [
+    "HT-N4-ONE-LOOP-COMPLETE-SUPERFIELD-CANDIDATE",
+    "HT-N4-ONE-LOOP-COMPONENT-PAIR-CANDIDATE",
+    "HT-ONE-LOOP-MASTER-INTEGRAL-CANDIDATE"
+  ],
+  "acceptance": [
+    "the exact arXiv version is fixed as 2512.07771v2 and acquisition metadata records title, authors, submission revision timestamp, URLs, byte sizes, and SHA-256 values",
+    "the PDF and TeX source archive are stored byte-for-byte and the full source archive is extracted without omission under one versioned vendor root",
+    "every extracted source file is listed in deterministic path order with byte size and SHA-256",
+    "the source ledger identifies the exact TeX files and source line spans containing the N=4 one-loop superfield result, its component formulas, normalization conventions, and master integral without translating or adjudicating them",
+    "references/manifest.yaml and references/claim-map.yaml register exactly the three candidate claim families as EXTERNAL_TARGET_ONLY",
+    "translation_status and comparison_status remain NOT_PERFORMED_IN_REFERENCE_IMPORT",
+    "an exact verifier reproduces all file hashes, source-file order, source anchors, and claim registrations with zero failures",
+    "repository-policy passes before the imported source may be read by a later CONTRACT_CHANGE dictionary task"
+  ]
+}

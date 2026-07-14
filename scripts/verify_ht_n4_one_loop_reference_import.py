@@ -14,7 +14,7 @@ METADATA_PATH = ROOT / "references/vendor/arxiv/2512.07771v2/metadata.json"
 LEDGER_PATH = ROOT / "references/ht-n4-one-loop-source-ledger.json"
 MANIFEST_PATH = ROOT / "references/manifest.yaml"
 CLAIM_MAP_PATH = ROOT / "references/claim-map.yaml"
-TASK_PATH = ROOT / "tasks/CURRENT.yaml"
+TASK_PATH = ROOT / "tasks/archive/REFERENCE-IMPORT-HT-N4-ONE-LOOP-001.yaml"
 AUDIT_PATH = ROOT / "audits/ht-n4-one-loop-reference-import-verification.json"
 
 TASK_ID = "REFERENCE-IMPORT-HT-N4-ONE-LOOP-001"
