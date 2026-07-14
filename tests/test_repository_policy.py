@@ -532,6 +532,26 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertEqual(audit["totals"], {"exact_checks": 95, "failed_checks": 0})
         self.assertTrue(all(item["failed"] == 0 for item in audit["categories"].values()))
 
+    def test_step4d_write_only_mirror_receipt(self) -> None:
+        receipt_path = ROOT / "audits/step4d-notion-write-receipt.json"
+        if not receipt_path.exists():
+            self.skipTest("Step-4D Notion mirror has not been emitted")
+        receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
+        page_map = json.loads((ROOT / "mirror/page_map.yaml").read_text(encoding="utf-8"))
+        entry = next(
+            item
+            for item in page_map["pages"]
+            if item["id"] == "FOUNDATION-CLASSICAL-N1-HOLOMORPHIC-TWIST-004D"
+        )
+        self.assertEqual(receipt["direction"], "GIT_TO_NOTION_ONLY")
+        self.assertFalse(receipt["content_readback_performed"])
+        self.assertEqual(receipt["verification_mode"], "WRITE_RECEIPT_ONLY_NO_NOTION_READBACK")
+        self.assertEqual(receipt["mirror_write"]["result"], "SUCCESS")
+        self.assertEqual(receipt["central_log_write"]["result"], "SUCCESS")
+        self.assertEqual(entry["notion_page_id"], receipt["mirror_write"]["notion_page_id"])
+        self.assertEqual(entry["source_commit"], receipt["source_commit"])
+        self.assertEqual(entry["source_sha256"], receipt["source_sha256"])
+
     def test_step_1_formula_surface(self) -> None:
         text = (ROOT / "contracts/foundations/step-01-supersymmetry-commutator.md").read_text(encoding="utf-8")
         tags = {int(value) for value in re.findall(r"\\tag\{1\.(\d+)\}", text)}
