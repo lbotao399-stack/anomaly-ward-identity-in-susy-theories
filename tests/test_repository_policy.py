@@ -239,6 +239,107 @@ class RepositoryPolicyTest(unittest.TestCase):
                 digest = hashlib.sha256((ROOT / obligation["task"]).read_bytes()).hexdigest()
                 self.assertEqual(digest, obligation["task_sha256"])
 
+    def test_step5_aa_standard_feynman_strictification(self) -> None:
+        script = ROOT / "scripts/step5_aa_standard_feynman_strict_audit.py"
+        audit = ROOT / "audits/step5-aa-standard-feynman-strictification.md"
+        pro_review = ROOT / "proposals/gpt-pro-aa-standard-feynman-2026-07-14.md"
+        pro_correction = ROOT / "proposals/gpt-pro-aa-derivation-correction-2026-07-14.md"
+        pro_final = ROOT / "proposals/gpt-pro-aa-final-settlement-2026-07-14.md"
+        self.assertTrue(script.is_file())
+        self.assertTrue(audit.is_file())
+        self.assertTrue(pro_review.is_file())
+        self.assertTrue(pro_correction.is_file())
+        self.assertTrue(pro_final.is_file())
+        completed = subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        result = json.loads(completed.stdout)
+        self.assertEqual(result["summary"]["status"], "PASS")
+        self.assertEqual(result["summary"]["failed"], 0)
+        self.assertGreater(result["summary"]["passed"], 200)
+        self.assertEqual(result["scope"], "CONDITIONAL_DOWNSTREAM_ARITHMETIC_ONLY")
+        self.assertEqual(result["summary"]["scope"], "CONDITIONAL_DOWNSTREAM_ARITHMETIC_ONLY")
+        self.assertEqual(result["claim_boundary"], "PASS_DOES_NOT_CERTIFY_FULL_DIAGRAM_DERIVATION")
+        self.assertFalse(result["certifies_full_diagram_derivation"])
+        self.assertEqual(
+            result["full_diagram_derivation"]["status"],
+            "BLOCKED_MISSING_OCCURRENCE_RESOLVED_D_WORD_TRACES",
+        )
+        self.assertFalse(result["full_diagram_derivation"]["pass_from_this_script_implies_completion"])
+        checks = {row["id"]: row for row in result["checks"]}
+        self.assertEqual(checks["gauge_signed_hessian_propagator_weight"]["status"], "PASS")
+        self.assertEqual(checks["gauge_signed_hessian_propagator_weight"]["actual"], "-1/16")
+        self.assertTrue(
+            all(
+                row["scope"] == "CONDITIONAL_DOWNSTREAM_ARITHMETIC_ONLY"
+                and not row["certifies_full_diagram_derivation"]
+                for row in result["checks"]
+            )
+        )
+        conditional_matter_arithmetic_checks = {
+            "matter_naive_2x2_bispinor_matrix",
+            "matter_naive_2x2_bispinor_determinant",
+            "matter_cut_e0_vector_bubble_zero",
+            "matter_cut_e1_vector_bubble_zero",
+            "matter_cut_seagull_vector_bubble_zero",
+            "matter_cut_J_C_vector_bubble_zero",
+            "matter_cut_J_B_vector_bubble_zero",
+            "matter_rank_two_parent_ell_1_squared_coefficient",
+            "matter_rank_two_parent_ell_2_squared_coefficient",
+            "matter_rank_two_parent_ell_3_squared_coefficient",
+            "matter_rank_two_parent_ell_4_squared_coefficient",
+            "matter_rank_two_simplex_projection_factor",
+            "matter_rank_two_forward_simplex_ratios",
+            "matter_rank_two_reflected_simplex_ratios",
+            "matter_rank_two_derived_symmetric_diagonal_weights",
+            "matter_rank_two_H_displayed_ratio",
+            "matter_rank_two_H_delta4_zero",
+            "matter_rank_two_H_locked_trace_constraint",
+            "matter_rank_two_H_epsilon_ratio",
+        }
+        self.assertTrue(conditional_matter_arithmetic_checks.issubset(checks))
+        self.assertTrue(
+            all(checks[check_id]["status"] == "PASS" for check_id in conditional_matter_arithmetic_checks)
+        )
+        text = audit.read_text(encoding="utf-8")
+        missing_derivation_blockers = {
+            "BLOCKED_EXPLICIT_WW_D_ALGEBRA_WORD_DERIVATION",
+            "BLOCKED_STEP5A_LOCAL_FERMI_FEYNMAN_PROPER_SLICE",
+            "BLOCKED_LOCKED_ORDERED_BILOCAL_SOURCE",
+            "BLOCKED_LOCKED_STEP5_DRED_CONTRACT",
+            "BLOCKED_LOCKED_BACKGROUND_QUANTUM_PORT_GRAMMAR",
+            "BLOCKED_EQUAL_CONTACT_AND_LONGITUDINAL_RESIDUES",
+            "BLOCKED_LOCKED_Q4S_SPINOR_REALIZATION",
+            "BLOCKED_AA_MATTER_DWORD_SIGN_NORMALIZATION",
+            "BLOCKED_TOTAL_PROJECT_HT_COMPONENT_INTERTWINER",
+        }
+        self.assertEqual(
+            set(result["full_diagram_derivation"]["required_blockers"]),
+            missing_derivation_blockers,
+        )
+        for blocker in missing_derivation_blockers:
+            self.assertIn(blocker, text)
+        self.assertIn("CONDITIONAL_DOWNSTREAM_ARITHMETIC_ONLY", text)
+        self.assertIn("UNVERIFIED_DWORD_ANSATZ", text)
+        self.assertIn("CONDITIONAL_PARENT_DEFINITION", text)
+        self.assertIn("REJECTED_PROPAGATOR_NORMALIZATION", text)
+        self.assertIn("REJECTED_BY_EVIDENCE__EXACT_FACTOR_8", text)
+        self.assertIn("NON_AUTHORITY_PRO_REVIEW", pro_review.read_text(encoding="utf-8"))
+        correction_text = pro_correction.read_text(encoding="utf-8")
+        self.assertIn("NON_AUTHORITY_PRO_REVIEW", correction_text)
+        self.assertIn("# CORRECTED_G_RESULT", correction_text)
+        final_text = pro_final.read_text(encoding="utf-8")
+        self.assertIn("NON_AUTHORITY_PRO_REVIEW", final_text)
+        self.assertIn("1efd04011130a3f64f4e57e42bc58fc1d0aa576af8bc8e7eb68b7f0eaab1f90b", final_text)
+        self.assertIn("BLOCKED_UNREDUCED_Q4S_MATTER_WORD", final_text)
+        self.assertIn("BLOCKED_PROJECT_HT_COMPONENT_INTERTWINER", final_text)
+        self.assertIn("GRAPH_CENSUS", final_text)
+        self.assertIn("FULL_AA_MATCH", final_text)
+
     def test_reference_import_has_narrow_acquisition_scope(self) -> None:
         task = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
         if task["type"] != "REFERENCE_IMPORT":
