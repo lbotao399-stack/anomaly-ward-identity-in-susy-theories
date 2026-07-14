@@ -229,7 +229,7 @@
       "id": "CONTRACT-STEP-04D-CLASSICAL-N1-HOLOMORPHIC-TWIST-001",
       "state": "SPECIFIED",
       "blocking_reason": null,
-      "task_sha256": "5168e7cdb39698a29ec5896672cbeca9ec94c06986fe6fdfb1aa2719a2f13776",
+      "task_sha256": "18e73570e99f2e900af472d71fd396f21c25f042d3a2163fe43e29fd43977038",
       "task": "tasks/CURRENT.yaml",
       "checked_scope": {
         "theorem": "complexified compact-support component BV theory on the trivial bundle over R4=C2",
@@ -241,7 +241,11 @@
         "scope_extensions": [
           "HT-GAP-01 superfield-to-component Wess-Zumino BV reduction",
           "HT-GAP-02 nontrivial bundles, instanton sectors, and boundaries",
-          "HT-GAP-03 quantum twist-quantization commutation"
+          "HT-GAP-03 quantum twist-quantization commutation",
+          "HT-GAP-04 ordinary Euclidean non-minimal BV path-integral data",
+          "HT-GAP-05 transformed-cycle and semidensity factorization",
+          "HT-GAP-06 regulated vertical-integral normalization",
+          "HT-GAP-07 symmetry-preserving interacting BV regulator"
         ]
       }
     }

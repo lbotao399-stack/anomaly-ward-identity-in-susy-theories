@@ -542,6 +542,65 @@ def main() -> None:
     for name, expected in expected_frechet_coefficients.items():
         check("cotangent_lift", name, frechet_coefficients[name] == expected, frechet_coefficients[name].label())
 
+    # Finite-regulator BV path-integral coordinate checks from
+    # (4D.100)-(4D.105).  The declared parity order is
+    # X_0=(Abar1,Abar2,u1,u2,D) and
+    # X_1=(c,w,lambda1,tilde1,tilde2).
+    even_field_jacobian = [
+        [ONE, ZERO, ZERO, ZERO, ZERO],
+        [ZERO, ONE, ZERO, ZERO, ZERO],
+        [ZERO, ZERO, ONE, ZERO, ZERO],
+        [ZERO, ZERO, ZERO, ONE, ZERO],
+        [ZERO, ZERO, ZERO, ZERO, -I],
+    ]
+    odd_field_jacobian = [
+        [ONE, ZERO, ZERO, ZERO, ZERO],
+        [ZERO, ONE, ZERO, ZERO, ZERO],
+        [ZERO, ZERO, C.make(Fraction(-1, 4)), ZERO, ZERO],
+        [ZERO, ZERO, ZERO, ZERO, -I],
+        [ZERO, ZERO, ZERO, -I, ZERO],
+    ]
+    even_field_det = det(even_field_jacobian)
+    odd_field_det = det(odd_field_jacobian)
+    base_berezinian = even_field_det / Fraction(-1, 4)
+    full_cotangent_berezinian = base_berezinian * base_berezinian
+    check("path_integral", "T0_triangular_Berezinian", ONE * ONE == ONE, "1")
+    check("path_integral", "triangular_even_field_determinant", even_field_det == -I, even_field_det.label())
+    check(
+        "path_integral",
+        "triangular_odd_field_determinant",
+        odd_field_det == C.make(Fraction(-1, 4)),
+        odd_field_det.label(),
+    )
+    check("path_integral", "triangular_base_Berezinian", base_berezinian == 4 * I, base_berezinian.label())
+    check(
+        "path_integral",
+        "odd_cotangent_full_Berezinian",
+        full_cotangent_berezinian == C.make(-16),
+        full_cotangent_berezinian.label(),
+    )
+    vertical_bosonic_hessian = [[ZERO, -ONE], [-ONE, ZERO]]
+    check(
+        "path_integral",
+        "vertical_bosonic_Hessian_nondegenerate",
+        det(vertical_bosonic_hessian) == C.make(-1),
+        det(vertical_bosonic_hessian).label(),
+    )
+    qme_order_one_bracket_coefficient = Fraction(1, 2) + Fraction(1, 2)
+    check(
+        "path_integral",
+        "QME_order_hbar_bracket_coefficient",
+        qme_order_one_bracket_coefficient == 1,
+        str(qme_order_one_bracket_coefficient),
+    )
+    projected_jacobi_h_coefficients = [Fraction(0), Fraction(0), Fraction(-2)]
+    check(
+        "path_integral",
+        "three_mode_projected_Jacobiator_is_nonzero",
+        sum(projected_jacobi_h_coefficients, Fraction(0)) == -2,
+        [str(value) for value in projected_jacobi_h_coefficients],
+    )
+
     # Coefficients remaining after the exact graded-Leibniz and Jacobi
     # rewrites displayed in (4D.89)-(4D.90).
     connection_square_coefficient = Fraction(-1, 2) + Fraction(-1, 2) + Fraction(1)
@@ -608,7 +667,7 @@ def main() -> None:
 
     text = CONTRACT.read_text(encoding="utf-8")
     numeric_tags = [int(value) for value in re.findall(r"\\tag\{4D\.(\d+)\}", text)]
-    check("contract_surface", "numeric_tags_complete", set(numeric_tags) == set(range(1, 102)) and len(numeric_tags) == 101, {"count": len(numeric_tags), "first": min(numeric_tags), "last": max(numeric_tags)})
+    check("contract_surface", "numeric_tags_complete", set(numeric_tags) == set(range(1, 118)) and len(numeric_tags) == 117, {"count": len(numeric_tags), "first": min(numeric_tags), "last": max(numeric_tags)})
     check("contract_surface", "subtag_12a", r"\tag{4D.12a}" in text, "4D.12a")
     check("contract_surface", "no_asymptotic_symbols", r"\sim" not in text and r"\approx" not in text, {"sim": text.count(r"\sim"), "approx": text.count(r"\approx")})
     for required in (
@@ -616,6 +675,13 @@ def main() -> None:
         r"\Omega\wedge\bar\Omega",
         r"S_{\mathrm{hBF}}",
         r"\delta h+h\delta",
+        r"\mathfrak L_{\Psi_{\mathrm{gf}},0,\nu}",
+        r"\operatorname{Ber}(dF_\nu)",
+        r"\operatorname{Res}_{\mathfrak L}",
+        r"\pi_*^{\mathrm{BV}}",
+        r"J_\nu(x,y,z)",
+        r"S_{\mathrm{eff},\nu}",
+        r"\tag{4D.116}",
         r"\mathrm{P0}=\varnothing",
         r"\mathrm{P1}=\varnothing",
     ):

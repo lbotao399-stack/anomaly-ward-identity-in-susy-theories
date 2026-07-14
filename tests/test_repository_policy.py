@@ -479,7 +479,8 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertEqual(task["status"], "SPECIFIED")
         self.assertTrue(any("odd-symplectic reduction" in item for item in task["outcome"].split(";")))
         self.assertTrue(any("contracting homotopy" in item for item in task["forbidden_inputs"]))
-        self.assertEqual(len(task["acceptance"]), 13)
+        self.assertEqual(len(task["acceptance"]), 14)
+        self.assertTrue(any("conditionally admissible finite BV regulator" in item for item in task["acceptance"]))
 
         manifest = json.loads((ROOT / "contracts/manifest.yaml").read_text(encoding="utf-8"))
         entry = next(
@@ -499,7 +500,7 @@ class RepositoryPolicyTest(unittest.TestCase):
             self.skipTest("Step-4D classical holomorphic-twist contract is not registered")
         text = path.read_text(encoding="utf-8")
         numeric_tags = [int(value) for value in re.findall(r"\\tag\{4D\.(\d+)\}", text)]
-        self.assertEqual(numeric_tags, list(range(1, 102)))
+        self.assertEqual(numeric_tags, list(range(1, 118)))
         for subtag in ("3a", "7a", "7b", "7c", "7d", "12a", "29a"):
             self.assertIn(rf"\tag{{4D.{subtag}}}", text)
         self.assertNotIn(r"\sim", text)
@@ -509,6 +510,10 @@ class RepositoryPolicyTest(unittest.TestCase):
             r"S_{\mathrm{hBF}}",
             r"\Omega\wedge\bar\Omega",
             r"\delta h+h\delta",
+            r"\operatorname{Res}_{\mathfrak L}",
+            r"\operatorname{Ber}(dF_\nu)",
+            r"\pi_*^{\mathrm{BV}}",
+            r"J_\nu(x,y,z)",
             r"\mathrm{P0}=\varnothing",
             r"\mathrm{P1}=\varnothing",
         ):
@@ -529,7 +534,7 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
         audit = json.loads(expected)
         self.assertEqual(audit["status"], "PASS")
-        self.assertEqual(audit["totals"], {"exact_checks": 95, "failed_checks": 0})
+        self.assertEqual(audit["totals"], {"exact_checks": 110, "failed_checks": 0})
         self.assertTrue(all(item["failed"] == 0 for item in audit["categories"].values()))
 
     def test_step4d_write_only_mirror_receipt(self) -> None:

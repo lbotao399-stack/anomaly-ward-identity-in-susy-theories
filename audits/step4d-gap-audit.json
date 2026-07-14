@@ -164,13 +164,43 @@
       "minimal_repair": "Set v=-2 epsilon sigma_E bar-epsilon for the fixed order.",
       "severity": "P1",
       "status": "RESOLVED"
+    },
+    {
+      "id": "HT-RESOLVED-16",
+      "type": "G-SCOPE",
+      "location": "4D.99-4D.101",
+      "claim": "The Q-exact classical action disappears from a fixed Euclidean BV integration cycle.",
+      "missing_step_before_repair": "The first cotangent shift had been applied to the master function without displaying the induced map of the gauge-fixing graph.",
+      "minimal_repair": "Use the Project minus-graph convention, pull the graph back through T_0, and verify on the pulled-back zero section that the transformed cotangent Hamiltonian restricts to g^-2 Q Psi_0=S_E^(1).",
+      "severity": "P1",
+      "status": "RESOLVED_BY_CORRECTED_THEOREM"
+    },
+    {
+      "id": "HT-RESOLVED-17",
+      "type": "G-NORM",
+      "location": "4D.102-4D.105",
+      "claim": "The odd-symplectic triangular cotangent lift preserves a chosen flat semidensity.",
+      "missing_step_before_repair": "No finite-regulator Berezinian had been computed.",
+      "minimal_repair": "Compute det(dF)_even=-i, det(dF)_odd=-1/4, Ber(dF)=4i, Ber(dT_1)=-16 per regulated adjoint coefficient, and retain the resulting field-independent hbar-order vacuum term.",
+      "severity": "P1",
+      "status": "RESOLVED_FOR_THE_DECLARED_FLAT_FINITE_REGULATOR"
+    },
+    {
+      "id": "HT-RESOLVED-18",
+      "type": "G-PROJ",
+      "location": "4D.107-4D.110",
+      "claim": "The cyclic contraction by itself evaluates the vertical BV integral as one.",
+      "missing_step_before_repair": "No vertical Lagrangian, contour, semidensity, or normalization constant had been displayed.",
+      "minimal_repair": "Give an explicit vertical Lagrangian, define C_ctr,nu(hbar), and state only the conditional normalized pushforward S_eff,nu=S_hBF while retaining the unnormalized constant.",
+      "severity": "P1",
+      "status": "RESOLVED_BY_CONDITIONAL_NORMALIZED_STATEMENT"
     }
   ],
   "open_findings": [
     {
       "id": "HT-GAP-01",
       "type": "G-SCOPE",
-      "location": "4D.30 and 4D.100",
+      "location": "4D.30 and 4D.116",
       "claim_not_made": "The unconstrained Step-3D superfield BV theory canonically reduces to the residual component BV theory used here.",
       "missing_step": "The supergauge Wess-Zumino reduction, superghost doublets, and their cotangent lift are not constructed.",
       "minimal_repair": "Add a separate contract deriving the residual component BV complex from the Step-3D superfield BV complex.",
@@ -180,20 +210,60 @@
     {
       "id": "HT-GAP-02",
       "type": "G-SCOPE",
-      "location": "4D.55-4D.57 and 4D.100",
+      "location": "4D.55-4D.57, 4D.113, and 4D.116",
       "claim_not_made": "The topological functional vanishes on nontrivial bundles, instanton sectors, manifolds with boundary, or non-compact-support fields.",
-      "missing_step": "Global bundle and boundary data are outside the declared ordinary-space sector.",
-      "minimal_repair": "Retain (g^-2-ik) integral P and specify the global integration sector and boundary action.",
+      "missing_step": "Global bundle patching and boundary data are outside the declared ordinary-space sector; on a closed fixed sector I_P is a constant weight, while on a boundary or asymptotic sector its field-space variation need not vanish.",
+      "minimal_repair": "Retain (g^-2-ik) I_P, specify the global sector weights, and supply boundary conditions or a BV-BFV completion when d_fld I_P is nonzero.",
       "severity": "P2",
       "status": "OPEN_SCOPE_EXTENSION"
     },
     {
       "id": "HT-GAP-03",
       "type": "G-SCOPE",
-      "location": "4D.100",
+      "location": "4D.111-4D.112 and 4D.116",
       "claim_not_made": "Holomorphic twist commutes with quantum BV quantization.",
-      "missing_step": "No regulator, BV density, quantum master action, or anomaly obstruction has been selected.",
-      "minimal_repair": "Construct the regulated QME and calculate the obstruction to the canonical reduction.",
+      "missing_step": "No regulator-compatible BV density, quantum master action, anomaly counterterm, or continuum Berezinian has been selected.",
+      "minimal_repair": "Construct the regulated QME, calculate the obstruction to the canonical reduction, and prove regulator removal.",
+      "severity": "P2",
+      "status": "OPEN_SCOPE_EXTENSION"
+    },
+    {
+      "id": "HT-GAP-04",
+      "type": "G-DEF",
+      "location": "4D.99 and 4D.116",
+      "claim_not_made": "The minimal complexified component master action defines the ordinary Euclidean N=1 BV path integral.",
+      "missing_step": "The non-minimal antighost and multiplier pairs, elliptic gauge-fixing fermion, Euclidean reality cycle, convergence conditions, and regulated semidensity have not been chosen.",
+      "minimal_repair": "Adjoin the non-minimal BV sector and define every datum in 4D.99 for a Q-compatible Euclidean cycle.",
+      "severity": "P2",
+      "status": "OPEN_SCOPE_EXTENSION"
+    },
+    {
+      "id": "HT-GAP-05",
+      "type": "G-PROJ",
+      "location": "4D.106-4D.107 and 4D.116",
+      "claim_not_made": "The transformed Euclidean gauge-fixing cycle and semidensity factor as a standard hBF cycle times a vertical cycle.",
+      "missing_step": "Action splitting does not imply either cycle or semidensity splitting, and no admissible Lagrangian homotopy has been constructed.",
+      "minimal_repair": "Prove both equalities in 4D.107, or construct a Lagrangian homotopy and prove the regulated QME, BV-Stokes identity, and zero field-space boundary flux.",
+      "severity": "P2",
+      "status": "OPEN_SCOPE_EXTENSION"
+    },
+    {
+      "id": "HT-GAP-06",
+      "type": "G-NORM",
+      "location": "4D.108-4D.110 and 4D.116",
+      "claim_not_made": "The unnormalized vertical BV integral is canonically one and has a regulator-independent continuum value.",
+      "missing_step": "The bosonic contour, fermionic orientation, value of C_ctr,nu(hbar), and regulator-removal normalization have not been fixed.",
+      "minimal_repair": "Evaluate the regulated vertical integral on a declared convergent contour and specify the normalization before removing the regulator.",
+      "severity": "P2",
+      "status": "OPEN_SCOPE_EXTENSION"
+    },
+    {
+      "id": "HT-GAP-07",
+      "type": "G-OP",
+      "location": "The regulator conditions preceding 4D.99 and 4D.116",
+      "claim_not_made": "A finite interacting BV regulator preserves delta^2=0, the CME, the exact hBF-plus-contractible split, and the cyclic contraction.",
+      "missing_step": "A naive cylindrical projection does not preserve the pointwise product and has a nonzero projected Jacobiator in general.",
+      "minimal_repair": "Construct a regulator satisfying all four displayed compatibility identities; do not infer them from a mode projection.",
       "severity": "P2",
       "status": "OPEN_SCOPE_EXTENSION"
     }
@@ -203,9 +273,13 @@
     "delta=s+Q -> exact Q primitive -> canonical cotangent shift",
     "canonical cotangent shift -> triangular field map -> cotangent lift",
     "cotangent lift -> hBF packaging plus acyclic factor -> cyclic SDR",
+    "finite-regulator path-integral data -> transformed cycle and pushed semidensity",
+    "transformed cycle plus exact action split -> conditional normalized vertical pushforward",
     "HT-GAP-01 -> optional superfield-level classical extension",
     "HT-GAP-02 -> optional global classical extension",
-    "HT-GAP-03 -> separate quantum-legality project"
+    "HT-GAP-03 -> separate quantum-legality project",
+    "HT-GAP-04 -> HT-GAP-05 -> HT-GAP-06 -> Euclidean partition-function comparison",
+    "HT-GAP-07 -> regulated path-integral and quantum comparisons"
   ],
   "repair_queue": [],
   "spot_checks": [
@@ -238,6 +312,24 @@
       "target": "full horizontal CME",
       "calculation": "The base and antifield squares were independently expanded; connection-antifield derivative terms, the curvature commutator, and the mixed c-alpha-B Jacobi coefficients all vanish exactly.",
       "result": "PASS"
+    },
+    {
+      "id": "SPOT-06",
+      "target": "first cotangent shift on the integration cycle",
+      "calculation": "The old zero section pulls back to Xhat*=g^-2 Psi_0,X; restricting the transformed cotangent Hamiltonian gives g^-2 delta Psi_0=g^-2 Q Psi_0=S_E^(1), not zero.",
+      "result": "PASS"
+    },
+    {
+      "id": "SPOT-07",
+      "target": "finite-regulator Berezinian",
+      "calculation": "The declared even and odd determinants are -i and -1/4, so Ber(dF)=4i and the full odd-cotangent Berezinian is (4i)^2=-16 per regulated adjoint coefficient.",
+      "result": "PASS"
+    },
+    {
+      "id": "SPOT-08",
+      "target": "vertical normalized pushforward",
+      "calculation": "Because S_ctr has no horizontal variable, the product-cycle fiber integral is e^(-S_hBF/hbar) C_ctr,nu(hbar), hence normalized S_eff,nu=S_hBF exactly.",
+      "result": "PASS"
     }
   ],
   "post_resolution": {
@@ -246,7 +338,11 @@
     "P2": [
       "HT-GAP-01",
       "HT-GAP-02",
-      "HT-GAP-03"
+      "HT-GAP-03",
+      "HT-GAP-04",
+      "HT-GAP-05",
+      "HT-GAP-06",
+      "HT-GAP-07"
     ]
   }
 }

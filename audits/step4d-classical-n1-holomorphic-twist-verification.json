@@ -4,7 +4,7 @@
   "contract": "contracts/foundations/step-04d-classical-n1-holomorphic-twist.md",
   "status": "PASS",
   "totals": {
-    "exact_checks": 95,
+    "exact_checks": 110,
     "failed_checks": 0
   },
   "categories": {
@@ -21,7 +21,7 @@
       "failed": 0
     },
     "contract_surface": {
-      "checks": 9,
+      "checks": 16,
       "failed": 0
     },
     "contraction": {
@@ -50,6 +50,10 @@
     },
     "odd_symplectic": {
       "checks": 4,
+      "failed": 0
+    },
+    "path_integral": {
+      "checks": 8,
       "failed": 0
     },
     "sigma_clifford": {
@@ -799,6 +803,58 @@
       "evidence": "(-1,0)"
     },
     {
+      "category": "path_integral",
+      "name": "T0_triangular_Berezinian",
+      "result": "PASS",
+      "evidence": "1"
+    },
+    {
+      "category": "path_integral",
+      "name": "triangular_even_field_determinant",
+      "result": "PASS",
+      "evidence": "(0,-1)"
+    },
+    {
+      "category": "path_integral",
+      "name": "triangular_odd_field_determinant",
+      "result": "PASS",
+      "evidence": "(-1/4,0)"
+    },
+    {
+      "category": "path_integral",
+      "name": "triangular_base_Berezinian",
+      "result": "PASS",
+      "evidence": "(0,4)"
+    },
+    {
+      "category": "path_integral",
+      "name": "odd_cotangent_full_Berezinian",
+      "result": "PASS",
+      "evidence": "(-16,0)"
+    },
+    {
+      "category": "path_integral",
+      "name": "vertical_bosonic_Hessian_nondegenerate",
+      "result": "PASS",
+      "evidence": "(-1,0)"
+    },
+    {
+      "category": "path_integral",
+      "name": "QME_order_hbar_bracket_coefficient",
+      "result": "PASS",
+      "evidence": "1"
+    },
+    {
+      "category": "path_integral",
+      "name": "three_mode_projected_Jacobiator_is_nonzero",
+      "result": "PASS",
+      "evidence": [
+        "0",
+        "0",
+        "-2"
+      ]
+    },
+    {
       "category": "CME",
       "name": "connection_square_after_graded_symmetry",
       "result": "PASS",
@@ -1426,9 +1482,9 @@
       "name": "numeric_tags_complete",
       "result": "PASS",
       "evidence": {
-        "count": 101,
+        "count": 117,
         "first": 1,
-        "last": 101
+        "last": 117
       }
     },
     {
@@ -1469,6 +1525,48 @@
       "name": "contains_\\delta h+h\\delta",
       "result": "PASS",
       "evidence": "\\delta h+h\\delta"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_\\mathfrak L_{\\Psi_{\\mathrm{gf}},0,\\nu}",
+      "result": "PASS",
+      "evidence": "\\mathfrak L_{\\Psi_{\\mathrm{gf}},0,\\nu}"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_\\operatorname{Ber}(dF_\\nu)",
+      "result": "PASS",
+      "evidence": "\\operatorname{Ber}(dF_\\nu)"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_\\operatorname{Res}_{\\mathfrak L}",
+      "result": "PASS",
+      "evidence": "\\operatorname{Res}_{\\mathfrak L}"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_\\pi_*^{\\mathrm{BV}}",
+      "result": "PASS",
+      "evidence": "\\pi_*^{\\mathrm{BV}}"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_J_\\nu(x,y,z)",
+      "result": "PASS",
+      "evidence": "J_\\nu(x,y,z)"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_S_{\\mathrm{eff},\\nu}",
+      "result": "PASS",
+      "evidence": "S_{\\mathrm{eff},\\nu}"
+    },
+    {
+      "category": "contract_surface",
+      "name": "contains_\\tag{4D.116}",
+      "result": "PASS",
+      "evidence": "\\tag{4D.116}"
     },
     {
       "category": "contract_surface",

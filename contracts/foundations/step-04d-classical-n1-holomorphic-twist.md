@@ -24,7 +24,12 @@ $$
 
 The second factor has an explicit cyclic contraction.  Projection along this
 factor is therefore a classical BV quasi-isomorphism to holomorphic BF
-theory.  No equation of motion is used in the construction.
+theory.  For any finite regulator satisfying the compatibility conditions in
+4D.13, the corresponding BV change of variables must also move the
+gauge-fixing cycle and semidensity.  On a normalized product cycle its
+field-dependent tree-level effective action is exactly
+\(S_{\mathrm{hBF}}\); equality with an ordinary Euclidean partition function
+is not asserted.  No equation of motion is used in the construction.
 
 ### Final Result List
 
@@ -45,6 +50,18 @@ S_{\mathrm{hBF}}
 \frac12(S_{\mathrm{hBF}},S_{\mathrm{hBF}})=0.
 \end{gathered}}
 \tag{4D.2}
+$$
+
+The path-integral corollary and its sharp boundary are
+
+$$
+\boxed{
+S_{\mathrm{eff},\nu}^{(0),\mathrm{field\ dependent}}
+=S_{\mathrm{hBF}},
+\qquad
+\Gamma_{Y,\nu}
+=\Gamma_{\mathrm{hBF},\nu}\times\Gamma_{\mathrm{ctr},\nu}
+\ \text{is not proved}.}
 $$
 
 ### 4D.1 Symbols, degrees, and scope
@@ -1782,7 +1799,612 @@ $$
 Equations (4D.58), (4D.70), (4D.74), and (4D.98) prove the result
 (4D.1).
 
-### 4D.13 Derivation-gap audit
+### 4D.13 Regulated BV path-integral substitution and its obstruction
+
+A path integral requires data that are not contained in the classical triple
+\((\mathcal F,\omega,S_0)\).  To separate the classical statement from these
+additional data, conditionally fix a finite-dimensional BV regulator \(\nu\).
+Write \(\mathscr T_\nu\) for the regulated restriction of the combined
+new-to-old map \(T_0\circ T_1^{-1}\).  The regulator is admissible here only
+if it preserves the identities already proved:
+
+$$
+\delta_\nu^2=0,
+\qquad
+\frac12(S_{0,\nu},S_{0,\nu})_\nu=0,
+\qquad
+\mathscr T_\nu^*S_{0,X,\nu}
+=S_{\mathrm{hBF},\nu}+S_{\mathrm{ctr},\nu},
+\qquad
+\delta_\nu h_\nu+h_\nu\delta_\nu
+=\operatorname{id}-i_\nu p_\nu.
+$$
+
+Here \(i_\nu,p_\nu,h_\nu\) are the regulated inclusion, projection, and
+cyclic homotopy corresponding to (4D.98).  A naive mode projection is not
+admissible.  Indeed, for even gauge-algebra-valued coefficients \(x,y,z\),
+if \(P_\nu^2=P_\nu\) and
+\([x,y]_\nu:=P_\nu[P_\nu x,P_\nu y]\), then its Jacobiator is
+
+$$
+\begin{aligned}
+J_\nu(x,y,z)
+&:=P_\nu\Big(
+[P_\nu[P_\nu x,P_\nu y],P_\nu z]
++[P_\nu[P_\nu y,P_\nu z],P_\nu x]\\
+&\hspace{3.2cm}
++[P_\nu[P_\nu z,P_\nu x],P_\nu y]\Big)\\
+&=P_\nu\Big(
+[(P_\nu-\operatorname{id})[P_\nu x,P_\nu y],P_\nu z]
++[(P_\nu-\operatorname{id})[P_\nu y,P_\nu z],P_\nu x]\\
+&\hspace{3.2cm}
++[(P_\nu-\operatorname{id})[P_\nu z,P_\nu x],P_\nu y]\Big),
+\end{aligned}
+$$
+
+This defect is nonzero already for a three-mode cutoff.  Let
+\(e_n(t):=e^{int}\), retain \(n\in\{-1,0,1\}\), and set
+\(P_\nu e_n=e_n\) for retained \(n\) and \(P_\nu e_n=0\) otherwise.
+For
+
+$$
+[H,E]=2E,
+\qquad
+[E,F]=H,
+\qquad
+[F,H]=2F,
+$$
+
+choose \(x=He_1\), \(y=Ee_1\), and \(z=Fe_{-1}\).  Then
+
+$$
+\begin{aligned}
+[[x,y]_\nu,z]_\nu&=[0,Fe_{-1}]_\nu=0,\\
+[[y,z]_\nu,x]_\nu&=[He_0,He_1]_\nu=0,\\
+[[z,x]_\nu,y]_\nu&=[2Fe_0,Ee_1]_\nu=-2He_1,\\
+J_\nu(x,y,z)&=-2He_1\neq0.
+\end{aligned}
+$$
+
+Thus the Jacobiator is not identically zero for a general \(P_\nu\).
+Existence of an
+admissible interacting regulator is not proved below.  Subject to this
+condition, let
+\(\widehat{\boldsymbol\varpi}_{X,\nu}\) be an even nowhere-vanishing BV
+density in the regulated \(X\)-Darboux chart, let \(\Psi_{\mathrm{gf}}\) be an
+odd gauge-fixing fermion, and let \(\Gamma_{X,\nu}\) be a convergent real
+integration cycle inside the complex gauge-fixing Lagrangian.  No
+regulator-removal statement is made.  The Project minus-graph convention is
+
+$$
+\boxed{
+\begin{aligned}
+\mathfrak L_{\Psi_{\mathrm{gf}},0,\nu}
+&:=\left\{
+X^*=-\frac{\overrightarrow\partial\Psi_{\mathrm{gf}}}
+{\partial X}
+\ \text{for every regulated coordinate }X
+\right\},\\
+\mathcal Z_{X,\nu}[\Psi_{\mathrm{gf}},\Gamma_X]
+&:=\int_{\Gamma_{X,\nu}\subset
+\mathfrak L_{\Psi_{\mathrm{gf}},0,\nu}}
+\ell_X^*\left[
+\widehat{\boldsymbol\varpi}_{X,\nu}^{1/2}
+\exp\left(-\frac{S_{0,X}}{\hbar}\right)
+\right].
+\end{aligned}}
+\tag{4D.99}
+$$
+
+In (4D.99)--(4D.101), the symbols
+\(X,\delta,\Psi_0,S_E^{(1)}\) denote their regulated counterparts
+\(X_\nu,\delta_\nu,\Psi_{0,\nu},S_{E,\nu}^{(1)}\); the subscript is
+suppressed only to keep the earlier coordinate formulas unchanged.
+
+Here \(\operatorname{Dens}^{1/2}(\mathcal F_{\mathrm{BV}})\) denotes the
+half-density line on the regulated BV space and
+\(\operatorname{Dens}(\mathfrak L)\) the density line on a Lagrangian.  The
+odd symplectic structure defines the canonical BV restriction
+
+$$
+\operatorname{Res}_{\mathfrak L}:
+\operatorname{Dens}^{1/2}(\mathcal F_{\mathrm{BV}})
+\longrightarrow
+\operatorname{Dens}(\mathfrak L).
+$$
+
+The notation \(\ell_X^*\) in (4D.99), and every \(\ell^*\) below, means this
+BV restriction; it is not the ordinary tensor pullback of a half-density.
+The phrase
+``classical path-integral statement'' below means the field-dependent
+coefficient of \(\hbar^0\) in the effective master action; the integral in
+(4D.99) itself is quantum data.
+
+Let \(T_0\) denote the first coordinate substitution from hatted to old
+coordinates,
+
+$$
+T_0:\quad
+(X,\widehat X^*)\longmapsto
+\left(
+X,
+X^*=\widehat X^*-g^{-2}
+\frac{\overrightarrow\partial\Psi_0}{\partial X}
+\right).
+$$
+
+Its regulated Jacobian and its pullback of the old gauge-fixing graph are
+
+$$
+\boxed{
+\begin{aligned}
+\frac{\overrightarrow\partial(X,X^*)}
+{\partial(X,\widehat X^*)}
+&=
+\begin{pmatrix}
+\mathbf1&0\\
+-g^{-2}\Psi_0''&\mathbf1
+\end{pmatrix},
+&\operatorname{Ber}(dT_0)&=1,\\
+T_0^{-1}\mathfrak L_{\Psi_{\mathrm{gf}},0,\nu}
+&=\left\{
+\widehat X^*
+=-\frac{\overrightarrow\partial}{\partial X}
+\left(\Psi_{\mathrm{gf}}-g^{-2}\Psi_0\right)
+\right\}
+=\mathfrak L_{\Psi_{\mathrm{gf}}-g^{-2}\Psi_0,0,\nu}.
+\end{aligned}}
+\tag{4D.100}
+$$
+
+Thus the old zero section does not become the hatted zero section.  For
+\(\Psi_{\mathrm{gf}}=0\), its pullback is
+
+$$
+\widehat X^*=g^{-2}
+\frac{\overrightarrow\partial\Psi_0}{\partial X}.
+$$
+
+Restricting the transformed action (4D.62) to this correct graph gives every
+term explicitly:
+
+$$
+\boxed{
+\begin{aligned}
+\left.T_0^*S_{0,X}\right|_{T_0^{-1}\mathfrak L_{0,0,\nu}}
+&=g^{-2}\sum_X\int(-1)^{\epsilon_X}
+\operatorname{tr}_\kappa\left(
+\frac{\overrightarrow\partial\Psi_0}{\partial X}
+\delta X\right)\\
+&=g^{-2}\iota_\delta d_{\mathrm{fld}}\Psi_0
+=g^{-2}\delta\Psi_0
+=g^{-2}Q\Psi_0
+=S_E^{(1)}.
+\end{aligned}}
+\tag{4D.101}
+$$
+
+The \(Q\)-exact action has therefore moved from the master function to the
+integration cycle; it has not vanished from the integral.  Replacing the
+last graph in (4D.100) by \(\widehat X^*=0\) changes the integral.
+
+Now let \(T_1\) be the old-to-new cotangent lift (4D.71).  Work in the
+intermediate complex component chart already fixed by (4D.4), and order one
+regulated adjoint coefficient by parity as
+
+$$
+\begin{aligned}
+X_{\bar0}&=(A_{\bar1},A_{\bar2},u_1,u_2,\mathscr D),
+&Y_{\bar0}&=(A_{\bar1},A_{\bar2},u_1,u_2,K),\\
+X_{\bar1}&=(c,w,\lambda_1,
+\widetilde\lambda^{\dot1},\widetilde\lambda^{\dot2}),
+&Y_{\bar1}&=(c,w,\alpha,\eta_1,\eta_2).
+\end{aligned}
+$$
+
+Equations (4D.63)--(4D.66) give triangular Fr\'echet matrices.  Their
+full parity-block matrix has the form
+\(dF_\nu=\left(\begin{smallmatrix}A_{\bar0\bar0}&B\\
+C&D_{\bar1\bar1}\end{smallmatrix}\right)\).
+The only nonzero entries of \(B\) have output \(K\) and inputs \(c,w\);
+the only nonzero entries of \(C\) have outputs \(\eta_i\) and inputs \(u_i\);
+and
+
+$$
+(D_{\bar1\bar1}^{-1})_{\beta\gamma}=0
+\quad
+\text{for }
+\beta\in\{c,w\},
+\quad
+\gamma\in\{\eta_1,\eta_2\}.
+$$
+
+Hence \(BD_{\bar1\bar1}^{-1}C=0\) exactly and
+\(\operatorname{Ber}(dF_\nu)
+=\det(A_{\bar0\bar0}-BD_{\bar1\bar1}^{-1}C)/
+\det D_{\bar1\bar1}
+=\det A_{\bar0\bar0}/\det D_{\bar1\bar1}\).
+The two diagonal determinants are
+
+$$
+\boxed{
+\begin{aligned}
+\det(dF_\nu)_{\bar0}
+&=1\cdot1\cdot1\cdot1\cdot(-i)=-i,\\
+\det(dF_\nu)_{\bar1}
+&=1\cdot1\cdot
+\det\begin{pmatrix}
+-\frac14&0&0\\
+0&0&-i\\
+0&-i&0
+\end{pmatrix}\\
+&=-\frac14\left[0-(-i)(-i)\right]
+=-\frac14,\\
+\operatorname{Ber}(dF_\nu)
+&=\frac{\det(dF_\nu)_{\bar0}}
+{\det(dF_\nu)_{\bar1}}
+=\frac{-i}{-1/4}=4i.
+\end{aligned}}
+\tag{4D.102}
+$$
+
+The entries containing \(\mathcal D_zc\), \(u_i\times c\),
+\(Z(A_{\bar i},u_i)\), and \(\llbracket c,w\rrbracket\) are strictly
+off-diagonal in this order and do not enter either determinant.  If
+\(N_\nu\) is the number of regulated spacetime coefficients times
+\(\dim\mathfrak g_{\mathbb C}\), then
+
+$$
+\operatorname{Ber}(dF_\nu)=(4i)^{N_\nu}.
+$$
+
+For completeness, let \(V_\nu\) be the regulated field superspace and write
+\(J=dF_\nu\in\operatorname{GL}(V_\nu)\).  The field map is \(dY=J\,dX\),
+whereas the cotangent map following from
+\(\widehat X^*dX=Y^*dY\) is
+\(Y^*=(J^\vee)^{-1}\widehat X^*\).  On the parity-reversed cotangent
+fiber,
+
+$$
+\begin{aligned}
+\operatorname{Ber}_{\Pi V_\nu^*}
+\left((J^\vee)^{-1}\right)
+&=\left[
+\operatorname{Ber}_{V_\nu^*}
+\left((J^\vee)^{-1}\right)
+\right]^{-1}\\
+&=\left[\operatorname{Ber}_{V_\nu}(J)^{-1}\right]^{-1}
+=\operatorname{Ber}(J),\\
+\boxed{\operatorname{Ber}(dT_1)}
+&=\operatorname{Ber}(J)\,
+\operatorname{Ber}_{\Pi V_\nu^*}
+\left((J^\vee)^{-1}\right)
+=\operatorname{Ber}(J)^2
+=(-16)^{N_\nu}.
+\end{aligned}
+\tag{4D.103}
+$$
+
+Consequently an odd-symplectic coordinate change need not preserve a chosen
+flat density.  With the declared forward Jacobian and flat coordinate
+semidensities,
+
+$$
+\boxed{
+|D\Phi_X|^{1/2}
+=\operatorname{Ber}(dT_1)^{-1/2}|D\Phi_Y|^{1/2}
+=(4i)^{-N_\nu}|D\Phi_Y|^{1/2},}
+\tag{4D.104}
+$$
+
+where the square root is fixed by the ordered base Berezinian in (4D.102).
+The same factor may be placed in the exponent as
+
+$$
+(4i)^{-N_\nu}
+e^{-(S_{\mathrm{hBF}}+S_{\mathrm{ctr}})/\hbar}
+=\exp\left[-\frac{
+S_{\mathrm{hBF}}+S_{\mathrm{ctr}}
++\hbar N_\nu\log(4i)}{\hbar}\right].
+\tag{4D.105}
+$$
+
+This is a field-independent regulated vacuum normalization.  For a general
+Project density, the exact rule is instead to pull the old semidensity back
+along the new-to-old substitution.  Define
+
+$$
+\mathscr T_\nu
+:=T_{0,\nu}\circ T_{1,\nu}^{-1}:
+\mathcal F_{Y,\nu}\longrightarrow\mathcal F_{X,\nu}.
+$$
+
+Its defining action identity is
+
+$$
+\mathscr T_\nu^*S_{0,X,\nu}
+=S_{\mathrm{hBF},\nu}+S_{\mathrm{ctr},\nu}.
+$$
+
+For the flat semidensity,
+\(\operatorname{Ber}(d\mathscr T_\nu)
+=\operatorname{Ber}(dT_1)^{-1}\) and its multiplier is
+\((4i)^{-N_\nu}\), in agreement with (4D.104).  For a general density,
+define the pulled-back cycle and the density ratio by
+
+$$
+\boxed{
+\begin{aligned}
+\Gamma_{Y,\nu}&:=\mathscr T_\nu^{-1}(\Gamma_{X,\nu}),\\
+\mathscr T_\nu^*\widehat{\boldsymbol\varpi}_{X,\nu}^{1/2}
+&=:\mathcal J_{\mathscr T,\nu}^{1/2}
+\widehat{\boldsymbol\varpi}_{Y,\nu}^{1/2},\\
+\mathcal Z_{X,\nu}
+&=\int_{\Gamma_{Y,\nu}}
+\ell_Y^*\left[
+\mathcal J_{\mathscr T,\nu}^{1/2}
+\widehat{\boldsymbol\varpi}_{Y,\nu}^{1/2}
+\exp\left(-\frac{S_{\mathrm{hBF}}+S_{\mathrm{ctr}}}{\hbar}\right)
+\right].
+\end{aligned}}
+\tag{4D.106}
+$$
+
+Equation (4D.106) is only a change of variables and requires no QME.  It also
+shows the first path-integral obstruction: (4D.74) splits the action, but it
+does not prove either of the two independent factorization conditions
+
+$$
+\boxed{
+\begin{aligned}
+\Gamma_{Y,\nu}
+&=\Gamma_{\mathrm{hBF},\nu}
+\times\Gamma_{\mathrm{ctr},\nu},\\
+\ell_Y^*\left(
+\mathcal J_{\mathscr T,\nu}^{1/2}
+\widehat{\boldsymbol\varpi}_{Y,\nu}^{1/2}
+\right)
+&=\ell_{\mathrm h}^*
+\widehat{\boldsymbol\varpi}_{\mathrm{hBF},\nu}^{1/2}
+\boxtimes
+\ell_{\mathrm{ctr}}^*
+\widehat{\boldsymbol\varpi}_{\mathrm{ctr},\nu}^{1/2}.
+\end{aligned}}
+\tag{4D.107}
+$$
+
+If (4D.107) is supplied, an explicit vertical Lagrangian is
+
+$$
+\mathfrak L_{\mathrm{ctr},\nu}
+:=\{u_i=\eta_i^*=w=K^*=0\}.
+$$
+
+Its free coordinates are
+\((u_1^*,u_2^*,\eta_1,\eta_2,w^*,K)\).  Pullback of every term in
+\(\omega_{\mathrm{ctr}}\) vanishes, its dimension is one half of the
+vertical BV dimension, and
+
+$$
+\left.S_{\mathrm{ctr}}\right|_{\mathfrak L_{\mathrm{ctr},\nu}}
+=\int d^4x_E\,\operatorname{tr}_\kappa
+\left(u_1^*\eta_1+u_2^*\eta_2-w^*K\right).
+$$
+
+After choosing a convergent real contour inside this complex Lagrangian and
+a Berezin orientation, define
+
+$$
+\boxed{
+C_{\mathrm{ctr},\nu}(\hbar)
+:=\int_{\Gamma_{\mathrm{ctr},\nu}}
+\ell_{\mathrm{ctr}}^*\left[
+\widehat{\boldsymbol\varpi}_{\mathrm{ctr},\nu}^{1/2}
+\exp\left(-\frac{S_{\mathrm{ctr}}}{\hbar}\right)
+\right].}
+\tag{4D.108}
+$$
+
+The bosonic Hessian of \(-w^*K\) in the ordered coordinates
+\((w^*,K)\) is
+
+$$
+-\begin{pmatrix}0&1\\1&0\end{pmatrix},
+\qquad
+\det\left[-\begin{pmatrix}0&1\\1&0\end{pmatrix}\right]=-1.
+$$
+
+It is nondegenerate but has one positive and one negative eigenvalue, so the
+contract does not supply a canonical convergent real contour.  Acyclicity
+alone does not assign a value to (4D.108).  Let
+\(\pi_*^{\mathrm{BV}}\) denote integration of the BV-restricted product
+semidensity along \(\Gamma_{\mathrm{ctr},\nu}\), leaving a horizontal
+semidensity.
+
+When (4D.107)--(4D.108) hold, BV fiber integration is exact:
+
+$$
+\boxed{
+\begin{aligned}
+\pi_*^{\mathrm{BV}}\!\left[
+\left(
+\widehat{\boldsymbol\varpi}_{\mathrm{hBF},\nu}^{1/2}
+\boxtimes
+\widehat{\boldsymbol\varpi}_{\mathrm{ctr},\nu}^{1/2}
+\right)
+e^{-(S_{\mathrm{hBF}}+S_{\mathrm{ctr}})/\hbar}
+\right]
+&=\widehat{\boldsymbol\varpi}_{\mathrm{hBF},\nu}^{1/2}
+e^{-S_{\mathrm{eff},\nu}/\hbar}\\
+&=\widehat{\boldsymbol\varpi}_{\mathrm{hBF},\nu}^{1/2}
+e^{-S_{\mathrm{hBF}}/\hbar}
+C_{\mathrm{ctr},\nu}(\hbar),\\
+S_{\mathrm{eff},\nu}
+&=S_{\mathrm{hBF}}
+-\hbar\log C_{\mathrm{ctr},\nu}(\hbar).
+\end{aligned}}
+\tag{4D.109}
+$$
+
+The normalized pushforward divides the first line of (4D.109) by
+\(C_{\mathrm{ctr},\nu}(\hbar)\).  It gives
+
+$$
+\boxed{
+S_{\mathrm{eff},\nu}^{\mathrm{normalized}}
+=S_{\mathrm{hBF}},
+\qquad
+S_{\mathrm{eff},\nu}^{(0),\mathrm{field\ dependent}}
+=S_{\mathrm{hBF}}.}
+\tag{4D.110}
+$$
+
+No vertical interaction contains a horizontal variable by (4D.74)--(4D.76),
+so no connected tree with a horizontal external leg can contain a vertical
+internal edge.  This is the precise path-integral form of the classical
+cyclic contraction.
+
+Changing \(\Gamma_{Y,\nu}\) to a preferred product cycle is not a mere
+coordinate substitution.  For a BV-compatible chosen density with
+\(\Delta_\nu^2=0\), use the Step-3D convention
+
+$$
+\Delta_\nu(FG)
+=(\Delta_\nu F)G
++(-1)^{\epsilon_F}F\Delta_\nu G
++(-1)^{\epsilon_F}(F,G),
+$$
+
+direct differentiation gives
+
+$$
+\boxed{
+\Delta_\nu e^{-W_\nu/\hbar}
+=\left[
+-\frac1\hbar\Delta_\nu W_\nu
++\frac1{2\hbar^2}(W_\nu,W_\nu)
+\right]e^{-W_\nu/\hbar},
+\qquad
+\frac12(W_\nu,W_\nu)-\hbar\Delta_\nu W_\nu=0.}
+\tag{4D.111}
+$$
+
+Write the quantum master action without omitted orders as
+\(W_\nu=\sum_{n\geq0}\hbar^nS_{n,\nu}\).  Equality of every coefficient in
+(4D.111) requires
+
+$$
+\boxed{
+\begin{aligned}
+\frac12(S_{0,\nu},S_{0,\nu})&=0,\\
+(S_{0,\nu},S_{1,\nu})-\Delta_\nu S_{0,\nu}&=0,\\
+\frac12\sum_{r+s=n}(S_{r,\nu},S_{s,\nu})
+-\Delta_\nu S_{n-1,\nu}&=0,
+\qquad n\geq2.
+\end{aligned}}
+\tag{4D.112}
+$$
+
+The first line is the CME already proved.  The second line has a solution
+only if \(\Delta_\nu S_{0,\nu}\) lies in the image of
+\((S_{0,\nu},\cdot)\).  This is the first quantum obstruction.  A deformation
+of cycles additionally needs the BV--Stokes identity and zero flux at
+field-space infinity; compact support in spacetime does not imply either
+condition.
+
+Finally, before the compact-support step (4D.57), set
+
+$$
+I_P[A]:=\int_M d^4x_E\,\operatorname{tr}_\kappa P
+=\frac12\int_M\operatorname{tr}_\kappa(F\wedge F),
+\qquad
+\tau:=g^{-2}-ik.
+$$
+
+The first shift then gives, without discarding a term,
+
+$$
+\boxed{
+T_0^*S_{0,X}^{\mathrm{global}}
+=\tau I_P[A]
++\sum_X\int(-1)^{\epsilon_X}
+\operatorname{tr}_\kappa(\widehat X^*\delta X).}
+\tag{4D.113}
+$$
+
+On a trivialized bundle over a manifold with boundary, (4D.55) gives
+
+$$
+\begin{aligned}
+I_P[A]
+&=\frac12\int_{\partial M}
+\operatorname{tr}_\kappa\left[
+A\wedge dA+\frac13A\wedge(A\times A)\right],\\
+d_{\mathrm{fld}}I_P[A]
+&=\int_{\partial M}
+\operatorname{tr}_\kappa(d_{\mathrm{fld}}A\wedge F).
+\end{aligned}
+$$
+
+In this contract the connection \(A\), not only its variation, has compact
+support.  Therefore
+
+$$
+I_P[A]
+=\frac12\lim_{R\to\infty}\int_{S_R^3}
+\operatorname{tr}_\kappa\left[
+A\wedge dA+\frac13A\wedge(A\times A)\right]
+=0.
+$$
+
+On a closed manifold and within a fixed bundle sector \(\mathfrak p\),
+\(d_{\mathrm{fld}}I_P=0\).  The value \(I_P(\mathfrak p)\) is then a
+sector-dependent constant: it does not change the local classical BV vector
+field, but it prevents strict equality of master functions and contributes
+the exact path-integral weight
+
+$$
+\exp\left[-\frac{\tau I_P(\mathfrak p)}{\hbar}\right].
+$$
+
+On a boundary or asymptotic sector,
+\(d_{\mathrm{fld}}I_P\) is the second line above and need not vanish; boundary
+conditions or a BV--BFV completion are then required.  Since
+\(\mathbb R^4\) is contractible, a smooth principal bundle on it is trivial.
+A nonzero instanton number on \(\mathbb R^4\) is encoded by the transition
+map at \(S_\infty^3\), equivalently by extension to a nontrivial bundle on
+\(S^4\); such a connection violates the compact-support condition.  The
+symbol \(\tau_E\) below denotes an antilinear Euclidean reality involution,
+and \(S_{\mathrm{nonmin}}\) denotes the master action of the antighost and
+Nakanishi--Lautrup contractible pairs.  The complete obstruction hierarchy is
+
+$$
+\boxed{
+\begin{array}{c|l}
+\text{statement}&\text{obstruction}\\ \hline
+\text{local complexified classical BV theorem in the stated scope}
+&\varnothing\\
+\text{strict global master-function equality}
+&\tau I_P(\mathfrak p)\ \text{and global bundle patching}\\
+\text{boundary or asymptotic classical BV theory}
+&d_{\mathrm{fld}}I_P,\ \text{boundary conditions, and BV--BFV data}\\
+\text{actual Euclidean BV integral before loop expansion}
+&\tau_E,\ S_{\mathrm{nonmin}},\ \Psi_{\mathrm{gf}},\
+\Gamma^E_{X,\nu},\ \text{then the two factorizations (4D.107)}\\
+\text{quantum comparison}
+&\text{admissible regulator},\
+\widehat{\boldsymbol\varpi}_{\nu},\ \Delta_\nu,\
+\text{QME, and vertical normalization}
+\end{array}}
+\tag{4D.114}
+$$
+
+Thus (4D.1) proves a classical BV quasi-isomorphism and the normalized
+tree-level pushforward (4D.110).  It does not prove equality between the
+ordinary Euclidean \(\mathcal N=1\) partition function and a standard
+holomorphic-BF partition function.
+
+### 4D.14 Derivation-gap audit
 
 All obligations inside the stated component, complexified,
 compact-support, trivial-bundle scope are closed:
@@ -1792,7 +2414,7 @@ $$
 \mathrm{P0}=\varnothing,
 \qquad
 \mathrm{P1}=\varnothing.}
-\tag{4D.99}
+\tag{4D.115}
 $$
 
 The unproved extensions are
@@ -1823,9 +2445,42 @@ GAP\!-
 SCOPE}&\mathrm{P2}
 &Quantum commutation of twist and BV quantization.
 &Choose a regulator and BV density, prove the QME, and calculate the
-obstruction class to the canonical reduction.\\
+obstruction class and regulated Berezinian of the canonical reduction.\\
+\mathrm{HT\!-
+GAP\!-
+04}&\mathrm{G\!-
+DEF}&\mathrm{P2}
+&Equality with an ordinary Euclidean component BV path integral.
+&Adjoin a non-minimal gauge-fixing sector, choose
+\(\Psi_{\mathrm{gf}}\), the Euclidean reality cycle, its convergence
+conditions, and the regulated semidensity in (4D.99).\\
+\mathrm{HT\!-
+GAP\!-
+05}&\mathrm{G\!-
+PROJ}&\mathrm{P2}
+&Factorization of the transformed Euclidean cycle into horizontal and
+vertical cycles.
+&Prove both equalities in (4D.107), or construct a Lagrangian homotopy and
+prove the regulated QME, BV--Stokes identity, and zero field-space boundary
+flux.\\
+\mathrm{HT\!-
+GAP\!-
+06}&\mathrm{G\!-
+NORM}&\mathrm{P2}
+&The unnormalized vertical BV integral is canonically equal to one.
+&Choose the bosonic contour and fermionic orientation in (4D.108), evaluate
+\(C_{\mathrm{ctr},\nu}(\hbar)\), and state the regulator-removal
+normalization.\\
+\mathrm{HT\!-
+GAP\!-
+07}&\mathrm{G\!-
+OP}&\mathrm{P2}
+&Existence of a finite interacting BV regulator preserving the classical
+master equation, exact split, and cyclic contraction.
+&Construct a regulator satisfying the four identities preceding (4D.99);
+a naive cylindrical projection is excluded by its displayed Jacobiator.\\
 \end{array}
-\tag{4D.100}
+\tag{4D.116}
 $$
 
 Their dependency graph is
@@ -1847,11 +2502,31 @@ GAP\!-
 GAP\!-
 03}
 \longrightarrow
-\text{quantum extension}.
-\tag{4D.101}
+\text{quantum extension},
+\qquad
+\mathrm{HT\!-
+GAP\!-
+04}
+\longrightarrow
+\mathrm{HT\!-
+GAP\!-
+05}
+\longrightarrow
+\mathrm{HT\!-
+GAP\!-
+06}
+\longrightarrow
+\text{Euclidean partition-function comparison},
+\qquad
+\mathrm{HT\!-
+GAP\!-
+07}
+\longrightarrow
+\text{regulated path-integral and quantum comparisons}.
+\tag{4D.117}
 $$
 
-### 4D.14 Repository provenance surface
+### 4D.15 Repository provenance surface
 
 The repository convention provenance is restricted to:
 
@@ -1863,5 +2538,5 @@ The repository convention provenance is restricted to:
    (4A.56a)--(4A.57).
 
 Every formula needed to check the proof has been restated and derived in
-(4D.3)--(4D.101); the list above is not a logical prerequisite.  No external
+(4D.3)--(4D.117); the list above is not a logical prerequisite.  No external
 holomorphic-twist or holomorphic-BF formula is used as an input.

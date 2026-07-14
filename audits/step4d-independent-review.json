@@ -12,7 +12,12 @@
     "complete derivative-dependent cotangent lift including every antifield row",
     "holomorphic-BF component packaging and normalization",
     "all eight horizontal Hamiltonian-vector-field components and their squares",
-    "all twelve vertical cotangent differential and homotopy entries and cyclicity"
+    "all twelve vertical cotangent differential and homotopy entries and cyclicity",
+    "first cotangent shift on the Project minus-graph gauge-fixing cycle",
+    "finite-regulator field and odd-cotangent Berezinians",
+    "conditional normalized vertical BV pushforward and its cycle-factorization boundary",
+    "Euclidean QME coefficient equations and global topological obstruction",
+    "projected-bracket Jacobiator and conditional symmetry-preserving regulator boundary"
   ],
   "resolved_during_review": [
     "removed the extra factor two from the full antisymmetric Einstein sum in 4D.7c",
@@ -21,7 +26,10 @@
     "replaced the ill-typed fourfold trace by invariant-pairing and graded-Jacobi identities",
     "expanded the complete Frechet-transpose antifield map",
     "expanded B, A-bar-star, and c-star differentials and squares",
-    "removed the stray multiplicative comma from the odd symplectic form"
+    "removed the stray multiplicative comma from the odd symplectic form",
+    "corrected the fixed-cycle path-integral reading by pulling the gauge-fixing graph through the first cotangent shift",
+    "computed Ber(dF)=4i and Ber(dT_1)=-16 per regulated adjoint coefficient",
+    "separated normalized tree-level BV pushforward from genuine Euclidean partition-function equality"
   ],
   "post_review": {
     "P0": [],
@@ -29,14 +37,18 @@
     "P2": [
       "HT-GAP-01",
       "HT-GAP-02",
-      "HT-GAP-03"
+      "HT-GAP-03",
+      "HT-GAP-04",
+      "HT-GAP-05",
+      "HT-GAP-06",
+      "HT-GAP-07"
     ]
   },
   "exact_verifier": {
     "path": "scripts/verify_step4d_classical_n1_holomorphic_twist.py",
     "audit": "audits/step4d-classical-n1-holomorphic-twist-verification.json",
     "status": "PASS",
-    "exact_checks": 95,
+    "exact_checks": 110,
     "failed_checks": 0
   }
 }
