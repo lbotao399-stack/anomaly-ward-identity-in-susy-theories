@@ -1,0 +1,479 @@
+{
+  "after_check_only": {
+    "HT_vector": [
+      "1",
+      "1",
+      "-sqrt(2)*i",
+      "sqrt(2)*i"
+    ],
+    "basis": [
+      "D>B1",
+      "B1>D",
+      "C2>C3",
+      "C3>C2"
+    ],
+    "mismatches": [],
+    "read_after_project_seal": "bdeffbb34da6a8191df264769d48a50e725dfad11b97fad0f4c8cd0b15ae8547",
+    "source": "audits/step5-ht-roundtrip-audit.json",
+    "status": "EXACT_MATCH"
+  },
+  "checks": {
+    "count": 31,
+    "failed": 0,
+    "passed": 31,
+    "rows": [
+      {
+        "actual": false,
+        "expected": false,
+        "id": "G1_TARGET_BLIND",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "id": "VECTOR_TARGET_BLIND",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "id": "G3_MEASURE_TARGET_BLIND",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "id": "G3_TYPED_TARGET_BLIND",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "id": "AA_TARGET_BLIND",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "0",
+          "0"
+        ],
+        "expected": [
+          "0",
+          "0"
+        ],
+        "id": "G1_LOWER_RESOLVENT_ANOMALY_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "4096",
+        "expected": "4096",
+        "id": "G3_MEASURE_COEFFICIENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "Q_ACTION_A",
+        "status": "PASS"
+      },
+      {
+        "actual": "-i delta_rs A",
+        "expected": "-i delta_rs A",
+        "id": "Q_ACTION_B",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "2",
+          "2"
+        ],
+        "expected": [
+          "2",
+          "2"
+        ],
+        "id": "G1_PAIR_EOM",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "0",
+          "2"
+        ],
+        "expected": [
+          "0",
+          "2"
+        ],
+        "id": "G1_PAIR_TD",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "-1/3",
+          "4/3"
+        ],
+        "expected": [
+          "-1/3",
+          "4/3"
+        ],
+        "id": "G2_PAIR_EOM",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1",
+          "4/3"
+        ],
+        "expected": [
+          "1",
+          "4/3"
+        ],
+        "id": "G2_PAIR_TD",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "0",
+          "1",
+          "-2*sqrt(2)*i",
+          "2*sqrt(2)*i"
+        ],
+        "expected": [
+          "0",
+          "1",
+          "-2*sqrt(2)*i",
+          "2*sqrt(2)*i"
+        ],
+        "id": "COMMON_COMPACT_TD_VECTOR",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "2",
+          "1",
+          "-2*sqrt(2)*i",
+          "2*sqrt(2)*i"
+        ],
+        "expected": [
+          "2",
+          "1",
+          "-2*sqrt(2)*i",
+          "2*sqrt(2)*i"
+        ],
+        "id": "HYBRID_VECTOR_RECORDED",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "id": "HYBRID_IS_NOT_COMMON_QUOTIENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "pi_G1_EOM(2,2)=2 was identified with pi_G1_TD(2,2)=0",
+        "expected": "pi_G1_EOM(2,2)=2 was identified with pi_G1_TD(2,2)=0",
+        "id": "HYBRID_FIRST_FALSE_EQUALITY",
+        "status": "PASS"
+      },
+      {
+        "actual": 3,
+        "expected": 3,
+        "id": "Q_MATRIX_RANK",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "0",
+          "0",
+          "0"
+        ],
+        "expected": [
+          "0",
+          "0",
+          "0"
+        ],
+        "id": "Q_KERNEL",
+        "status": "PASS"
+      },
+      {
+        "actual": 1,
+        "expected": 1,
+        "id": "Q_KERNEL_NULLITY",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "-1",
+          "-2*sqrt(2)*i",
+          "2*sqrt(2)*i"
+        ],
+        "expected": [
+          "-1",
+          "-2*sqrt(2)*i",
+          "2*sqrt(2)*i"
+        ],
+        "id": "COMPACT_TD_Q_RESIDUAL",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          {
+            "d_BD": "1",
+            "d_DB": "2"
+          }
+        ],
+        "expected": [
+          {
+            "d_BD": 1,
+            "d_DB": 2
+          }
+        ],
+        "id": "TOPOLOGY_SUPPORT_Q_SOLUTION",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "2",
+          "2",
+          "-2*sqrt(2)*i",
+          "2*sqrt(2)*i"
+        ],
+        "expected": [
+          "2",
+          "2",
+          "-2*sqrt(2)*i",
+          "2*sqrt(2)*i"
+        ],
+        "id": "TOPOLOGY_SUPPORT_COMPLETES_TO_SCALE_TWO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": 1,
+        "id": "AA_TARGET_BLIND_SCALE",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "id": "TOPOLOGY_SUPPORT_SCALE_TWO_REJECTED_BY_AA",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          {
+            "d0": "1",
+            "d1": "0",
+            "d2": "sqrt(2)*i",
+            "d3": "-sqrt(2)*i"
+          }
+        ],
+        "expected": [
+          {
+            "d0": 1,
+            "d1": 0,
+            "d2": "sqrt(2)*i",
+            "d3": "-sqrt(2)*i"
+          }
+        ],
+        "id": "FINITE_PROJECT_WARD_UNIQUE_SOLUTION",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1",
+          "0",
+          "sqrt(2)*i",
+          "-sqrt(2)*i"
+        ],
+        "expected": [
+          "1",
+          "0",
+          "sqrt(2)*i",
+          "-sqrt(2)*i"
+        ],
+        "id": "FINITE_COUNTERTERM_VECTOR",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1",
+          "1",
+          "-sqrt(2)*i",
+          "sqrt(2)*i"
+        ],
+        "expected": [
+          "1",
+          "1",
+          "-sqrt(2)*i",
+          "sqrt(2)*i"
+        ],
+        "id": "RENORMALIZED_PROJECT_VECTOR",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "0",
+          "0",
+          "0"
+        ],
+        "expected": [
+          "0",
+          "0",
+          "0"
+        ],
+        "id": "RENORMALIZED_Q_WARD",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          {
+            "t": "1"
+          }
+        ],
+        "expected": [
+          {
+            "t": 1
+          }
+        ],
+        "id": "PROJECT_WARD_RAY_SCALE",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1",
+          "1",
+          "-sqrt(2)*i",
+          "sqrt(2)*i"
+        ],
+        "expected": [
+          "1",
+          "1",
+          "-sqrt(2)*i",
+          "sqrt(2)*i"
+        ],
+        "id": "HT_CHECK_ONLY_EXACT_VECTOR",
+        "status": "PASS"
+      }
+    ]
+  },
+  "external_target_used_in_derivation": false,
+  "finite_normal_product": {
+    "independent_anomaly_graph": false,
+    "operator": "lambda1*F^{AB}_{DE}*(<D^D,B1^E>+i*sqrt(2)<C2^D,C3^E>-i*sqrt(2)<C3^D,C2^E>)",
+    "origin": "unique local composite-source scheme change from Project q Ward plus target-blind AA scale one",
+    "vector": [
+      "1",
+      "0",
+      "sqrt(2)*i",
+      "-sqrt(2)*i"
+    ]
+  },
+  "project_derivation": {
+    "AA_scale": "1",
+    "basis": [
+      "D>B1",
+      "B1>D",
+      "C2>C3",
+      "C3>C2"
+    ],
+    "common_compact_TD_vector": [
+      "0",
+      "1",
+      "-2*sqrt(2)*i",
+      "2*sqrt(2)*i"
+    ],
+    "finite_counterterm": [
+      "1",
+      "0",
+      "sqrt(2)*i",
+      "-sqrt(2)*i"
+    ],
+    "hybrid_vector_rejected": [
+      "2",
+      "1",
+      "-2*sqrt(2)*i",
+      "2*sqrt(2)*i"
+    ],
+    "q_matrix": [
+      [
+        "1",
+        "-1",
+        "0",
+        "0"
+      ],
+      [
+        "sqrt(2)*i",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "-sqrt(2)*i",
+        "0",
+        "0",
+        "1"
+      ]
+    ],
+    "raw_carrier_layers": {
+      "G1_pair_EOM": [
+        "2",
+        "2"
+      ],
+      "G1_pair_TD": [
+        "0",
+        "2"
+      ],
+      "G2_pair_EOM": [
+        "-1/3",
+        "4/3"
+      ],
+      "G2_pair_TD": [
+        "1",
+        "4/3"
+      ]
+    },
+    "renormalized_vector": [
+      "1",
+      "1",
+      "-sqrt(2)*i",
+      "sqrt(2)*i"
+    ]
+  },
+  "project_seal_sha256": "bdeffbb34da6a8191df264769d48a50e725dfad11b97fad0f4c8cd0b15ae8547",
+  "renormalized_result": {
+    "AB": [
+      "1",
+      "1",
+      "-sqrt(2)*i",
+      "sqrt(2)*i"
+    ],
+    "BA": [
+      "1",
+      "1",
+      "-sqrt(2)*i",
+      "sqrt(2)*i"
+    ],
+    "formula": "lambda1*F^{AB}_{DE}*(<D^D,B1^E>+<B1^D,D^E>-i*sqrt(2)<C2^D,C3^E>+i*sqrt(2)<C3^D,C2^E>)"
+  },
+  "schema": "step5-ab-ba-project-ward-finite-renormalization-exact-v1",
+  "status": "PASS_TARGET_BLIND_FINITE_PROJECT_WARD_RENORMALIZATION__AB_BA_HT_CHECK_ONLY_EXACT_MATCH",
+  "topology_limited_candidate": {
+    "completed_vector": [
+      "2",
+      "2",
+      "-2*sqrt(2)*i",
+      "2*sqrt(2)*i"
+    ],
+    "correction": [
+      "2",
+      "1",
+      "0",
+      "0"
+    ],
+    "missing_graph_CC_support": [
+      "0",
+      "0"
+    ],
+    "verdict": "REJECTED_SCALE_TWO_CONFLICTS_WITH_TARGET_BLIND_AA_WARD_NORMALIZATION"
+  }
+}

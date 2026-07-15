@@ -1,10 +1,16 @@
 # Step 5 ordered $AB_1$ standard-Feynman strictification
 
-Status: `BLOCKED__PRO_FINAL_SETTLED__COARSE_STRIPPED_CHIRAL_SOURCE_SCHEMA_ONLY__FULL_AB1_MATCH_OPEN`.
+Status: `G1_OUTER_PRODUCT_PARENT_SPLIT_REPRODUCED__EDGE_TAGGED_SD_CONTACT_PAIRING_AND_FULL_AB1_ORBIT_OPEN`.
 
 Authority: verified `origin/main@00000f748fe4bdd1b5d122663cc1fb814faace66`, workflow run `29306335742`.
 
-The GPT Pro archives are `NON_AUTHORITY_PRO_REVIEW`.  This audit accepts only formulas independently replayed below.  A PASS from `scripts/step5_ab1_standard_feynman_strict_audit.py` has scope
+The GPT Pro archives are `NON_AUTHORITY_PRO_REVIEW`.  This audit accepts only formulas independently replayed below.  The existing $G_1$ replay applies the outer product rule
+
+$$
+\nabla_-(A B_1)=(\nabla_-A)B_1+A(\nabla_-B_1).
+$$
+
+before the source-coordinate integration.  Its former presentation summed the two marked branches before retaining their inverse-kernel occurrence tags.  Therefore $-\lambda_1/2$ is only the sum of two rank-two parent traces, not an accepted AWI anomaly coefficient.  A PASS from `scripts/step5_ab1_standard_feynman_strict_audit.py` has scope
 
 $$
 \boxed{\texttt{CONDITIONAL\_FF\_Q4S\_AB1\_ARITHMETIC\_ONLY}.}
@@ -44,6 +50,15 @@ V=\sqrt2g\,u,
 \Phi_r=g\phi_r,
 \qquad
 \widetilde\Phi_r=g\widetilde\phi_r,
+$$
+
+define
+
+$$
+\lambda_1:=\frac{\hbar g^2}{16\pi^2},
+\qquad
+\mathbb F^{AB}{}_{DE}
+:=\kappa^{AU}\kappa^{BV}\kappa^{CC'}c_{UCD}c_{VC'E}.
 $$
 
 the ordered Euclidean action derivatives are
@@ -282,11 +297,37 @@ J_{\rm phys}\mathcal O_{\rm phys}
 =J_{\rm str}\mathcal O_{\rm str}
 $$
 
-requires $J_{\rm str}=g^2J_{\rm phys}$.  No admitted source convention states which $J$ is used:
+requires $J_{\rm str}=g^2J_{\rm phys}$.  This relation matters only when a
+generating source is differentiated.  In the direct-parent replay below,
+insert $\mathcal O_{\rm phys}$ itself.  At leading order,
 
 $$
-\boxed{\texttt{BLOCKED\_AB1\_SOURCE\_OVERALL\_G\_NORMALIZATION}.}
+\boxed{
+\mathcal O_{\rm phys}^{(0),AB}
+=-\frac{g^2}{4\sqrt2}
+\bigl(D_+\bar D^2D_+u\bigr)^A
+\bigl(D_+\phi_1\bigr)^B.}
 $$
+
+Therefore its source-vertex coefficient is fixed to
+
+$$
+\boxed{C_I=-\frac{g^2}{4\sqrt2}.}
+$$
+
+There is no odd-\(J\) left/right sign in this direct normalized expectation
+value.  The former source-normalization and source-derivative blockers do not
+apply to this route.
+
+The exact replay below acts with the outer descendant on this source.  What
+remains missing is the occurrence-tagged full-$d$ Schwinger cut and contact
+representative for each of the two product-rule branches:
+
+$$
+\boxed{\texttt{BLOCKED\_AB1\_G1\_EDGE\_TAGGED\_SD\_CONTACT\_PAIRING}.}
+$$
+
+Machine-readable status: `BLOCKED_AB1_G1_EDGE_TAGGED_SD_CONTACT_PAIRING`.
 
 Moreover, the accepted Project letters are in vector representation.  Similarity transport gives
 
@@ -539,19 +580,242 @@ I.u-\mathcal V_{VVV}.u_R,
 \mathcal V_{VVV}.u_L-M_1^{(1)}.u.
 $$
 
-Its count contains the unavailable ordered gauge Hessian multiplicity:
+The ordered gauge Hessian is fixed by
 
 $$
-N(G_1)
-=2_{\sigma_I}2_{\sigma_{M_1}}2_{\rm action\ order}
-N_{VVV}^{uu\mid u}.
+\Gamma_+^{(1)}=D_+V,
+\qquad
+\Gamma_+^{(2)}=-\frac12[V,D_+V],
+$$
+
+$$
+\mathcal W_+^{(1)}=-\frac18\bar D^2D_+V,
+\qquad
+\mathcal W_+^{(2)}=+\frac1{16}\bar D^2[V,D_+V].
+$$
+
+For labeled \(u_i=u_i^{U_i}T_{U_i}\), its \(+\)-chiral polarization is
+
+$$
+\begin{aligned}
+\mathcal V_{VVV,+}[u_1,u_2,u_3]
+={}&\frac{i\sqrt2g}{256}
+\sum_{\pi\in S_3}c_{U_{\pi1}U_{\pi2}U_{\pi3}}
+\int_+\Bigl[
+\bar D^2(u_{\pi1}D^au_{\pi2})\bar D^2D_au_{\pi3}\\
+&\hspace{34mm}
++\bar D^2D^au_{\pi1}\bar D^2(u_{\pi2}D_au_{\pi3})
+\Bigr].
+\end{aligned}
+$$
+
+The antichiral polarization is
+
+$$
+\begin{aligned}
+\mathcal V_{VVV,-}[u_1,u_2,u_3]
+={}&-\frac{i\sqrt2g}{256}
+\sum_{\pi\in S_3}c_{U_{\pi1}U_{\pi2}U_{\pi3}}
+\int_-\Bigl[
+D^2(u_{\pi1}\bar D_{\dot a}u_{\pi2})
+D^2\bar D^{\dot a}u_{\pi3}\\
+&\hspace{34mm}
++D^2\bar D_{\dot a}u_{\pi1}
+D^2(u_{\pi2}\bar D^{\dot a}u_{\pi3})
+\Bigr].
+\end{aligned}
+$$
+
+Thus each chirality has exactly
+
+$$
+\boxed{6_{\rm label\ permutations}\times2_{\rm derivative\ placements}=12}
+$$
+
+ordered words.  The two internal gauge-port assignments are already
+different permutation terms; no extra \(N_{VVV}^{uu\mid u}\) is inserted.
+
+### 5.1 Exact (G_1) outer-product parent replay
+
+Let the source ports be (u_s^A,phi_s^B), the matter vertex be
+((\widetilde\phi^P,u^R,\phi^E)), and the gauge vertex be
+((u^I,u^J,u^D)).  The unique connected pairing is
+
+$$
+u_s^A\leftrightarrow u_G^I,
+\qquad
+u_M^R\leftrightarrow u_G^J,
+\qquad
+\phi_s^B\leftrightarrow\widetilde\phi_M^P.
+$$
+
+The uncontracted fields are (u_G^D\mapsto D^D) and
+(\phi_M^E\mapsto B_1^E).  Its color route is
+
+$$
+\begin{aligned}
+\kappa^{AI}\kappa^{RJ}c_{IJD}\,\kappa^{BP}c_{REP}
+&=c^{AR}{}_{D}c_{RE}{}^{B}\\
+&=\mathbb F^{AB}{}_{DE}.
+\end{aligned}
+$$
+
+Thus this topology has only the (DB_1) output slot.  The reverse mixed
+Hessian block is the same closed Wick cycle with a different starting point;
+the factor (1/2) in the supertrace removes that duplicate and does not
+create a (B_1D) graph.
+
+The exact replay is generated from the polarized words above by
+`scripts/step5_ab1_g1_vvv_dword_replay.py`.  It uses exact
+\(\mathbb Q(i)\) arithmetic, three independent external momenta, and both
+dotted polarizations.  Define
+
+$$
+\mathcal T^{(+)}_{\pi,a}
+:=\operatorname{sgn}(\pi)
+2\int_{\Sigma_2}dy\,dz\;
+C^{(+)\!,D\text{-alg}}_{\pi,a}(y,z),
+\qquad a\in\{QL,LQ\}.
+$$
+
+The generated (+)-chiral table is
+
+$$
+\begin{array}{c|c|rr}
+\pi&\operatorname{sgn}(\pi)&\mathcal T^{(+)}_{\pi,QL}&
+\mathcal T^{(+)}_{\pi,LQ}\\ \hline
+(0,1,2)&+&0&512\\
+(0,2,1)&-&0&512\\
+(1,0,2)&-&0&0\\
+(1,2,0)&+&512&-512\\
+(2,0,1)&+&-512&0\\
+(2,1,0)&-&512&0
+\end{array}
+$$
+
+and the generated (-)-chiral table is
+
+$$
+\begin{array}{c|rr}
+\pi&\mathcal T^{(-)}_{\pi,QL}&\mathcal T^{(-)}_{\pi,LQ}\\ \hline
+(0,1,2)&0&0\\
+(0,2,1)&0&0\\
+(1,0,2)&0&0\\
+(1,2,0)&0&-512\\
+(2,0,1)&-512&0\\
+(2,1,0)&0&0
+\end{array}.
 $$
 
 Therefore
 
 $$
-\boxed{\texttt{BLOCKED\_VVV\_ORDERED\_HESSIAN}.}
+\sum_{\pi,a}\mathcal T^{(+)}_{\pi,a}=1024,
+\qquad
+\sum_{\pi,a}\mathcal T^{(-)}_{\pi,a}=-1024.
 $$
+
+Retaining the two terms in
+
+$$
+D_-(AB_1)=(D_-A)B_1+A(D_-B_1)
+$$
+
+separately gives
+
+$$
+\begin{array}{c|rrr}
+&D_-A\text{ marked}&D_-B_1\text{ marked}&\text{sum}\\ \hline
++\text{ chirality}&3072&-2048&1024\\
+-\text{ chirality}&-3072&2048&-1024
+\end{array}.
+$$
+
+The tables are not entrywise negatives; only their sums are opposite.  The
+direct-Wick coefficients before the residual (D)-word are
+
+$$
+C^{\rm preD}_{G_1,+}
+=-\frac{\hbar g^4}{8192\sqrt2},
+\qquad
+C^{\rm preD}_{G_1,-}
+=+\frac{\hbar g^4}{8192\sqrt2}.
+$$
+
+The physical output maps are
+
+$$
+D_+\phi_1=\frac1gB_1,
+\qquad
+D^2\bar D_{\dot a}u=-\frac{4\sqrt2}{g}D_{\dot a}.
+$$
+
+Using the selected-edge master (1/(32\pi^2)), the two chiralities give
+
+$$
+\begin{aligned}
+\Gamma_{G_1,+}^{AB}
+&=\left(-\frac{\hbar g^4}{8192\sqrt2}\right)
+(1024)\left(-\frac{4\sqrt2}{g^2}\right)
+\frac1{32\pi^2}\,
+\mathbb F^{AB}{}_{DE}(P_{\dot a}B_1^E)D^{D\dot a}\\
+&=\frac{\hbar g^2}{64\pi^2}
+\mathbb F^{AB}{}_{DE}(P_{\dot a}B_1^E)D^{D\dot a},
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\Gamma_{G_1,-}^{AB}
+&=\left(+\frac{\hbar g^4}{8192\sqrt2}\right)
+(-1024)\left(-\frac{4\sqrt2}{g^2}\right)
+\frac1{32\pi^2}\,
+\mathbb F^{AB}{}_{DE}(P_{\dot a}B_1^E)D^{D\dot a}\\
+&=\frac{\hbar g^2}{64\pi^2}
+\mathbb F^{AB}{}_{DE}(P_{\dot a}B_1^E)D^{D\dot a}.
+\end{aligned}
+$$
+
+Since (B_1,D) are odd,
+
+$$
+(P_{\dot a}B_1^E)D^{D\dot a}
+=-D_{\dot a}^DP^{\dot a}B_1^E.
+$$
+
+Hence the target-blind rank-two parent traces are
+
+$$
+\boxed{
+\Gamma_{G_1,A\text{-parent}}^{AB}
+=-\frac{3\lambda_1}{2}\mathbb F^{AB}{}_{DE}
+\langle D^D,B_1^E\rangle,}
+$$
+
+$$
+\boxed{
+\Gamma_{G_1,B\text{-parent}}^{AB}
+=+\lambda_1\mathbb F^{AB}{}_{DE}
+\langle D^D,B_1^E\rangle.}
+$$
+
+Their sum is
+
+$$
+\boxed{
+\Gamma_{G_1,\mathrm{parent}}^{AB}
+=-\frac{\lambda_1}{2}\mathbb F^{AB}{}_{DE}
+\langle D^D,B_1^E\rangle,}
+$$
+
+$$
+\boxed{(c_{DB}^{G_1},c_{BD}^{G_1})
+=\left(-\frac{\lambda_1}{2},0\right).}
+$$
+
+This pair is a parent-trace vector only.  Each marked branch must be reduced
+against its own full-$d$ inverse-kernel cut and EOM/contact word before it can
+enter the anomaly-sector vector.
 
 Before any symmetry quotient, the unenumerated proposal-level Cartesian products are
 
@@ -638,14 +902,31 @@ $$
 =\frac1{64\pi^2}.
 $$
 
-If and only if a graph-specific Q4S numerator produces the trace difference $4-d$, then
+For every occurrence whose four-dimensional $D$-word produces an
+inverse-kinetic square on an internal edge, the full $d$-dimensional part is
+the Schwinger cut and the remaining numerator is
+
+$$
+\mu_\ell^2:=\bar\ell^2-\ell_d^2.
+$$
+
+The factor $4-d$ is produced by rotational integration of this evanescent
+square; it is not an additional graph-specific numerator.  Therefore
 
 $$
 \begin{aligned}
 R_{\rm trace}
 &=\lim_{\epsilon\to0}(4-d)A_\epsilon\\
-&=\lim_{\epsilon\to0}2\epsilon
-\left(\frac1{64\pi^2\epsilon}+O(1)\right)\\
+&=\lim_{\epsilon\to0}
+\frac{\Gamma(1+\epsilon)}{(4\pi)^{2-\epsilon}}
+\int_{\Sigma_2}dy\,dz
+\left(\frac{\mu^2}{\Delta}\right)^\epsilon\\
+&=\frac1{(4\pi)^2}
+\int_0^1dy\int_0^{1-y}dz\\
+&=\frac1{(4\pi)^2}
+\int_0^1(1-y)dy\\
+&=\frac1{(4\pi)^2}
+\left(1-\frac12\right)\\
 &=\boxed{\frac1{32\pi^2}}.
 \end{aligned}
 $$
@@ -656,18 +937,15 @@ $$
 R_{\rm reverse}=-\frac1{32\pi^2}.
 $$
 
-This is `CONDITIONAL_Q4S_TRACE_ARITHMETIC`, not a graph coefficient.  The actual $AB_1$ parent numerator has not been replayed:
+This is the universal edge-square cutting-failure unit, not a full graph
+coefficient.  The exact pointwise identity and Feynman-parameter calculation
+are reproduced in `audits/step5-dred-cutting-failure-exact.md`.  The obsolete
+tokens `BLOCKED_LOCKED_Q4S_SPINOR_REALIZATION` and
+`BLOCKED_EQUAL_CONTACT_AND_LONGITUDINAL_RESIDUES` do not block this universal
+mechanism.  The remaining graph-specific task is
 
 $$
-\texttt{BLOCKED\_LOCKED\_Q4S\_SPINOR\_REALIZATION},
-$$
-
-$$
-\texttt{BLOCKED\_AB1\_OCCURRENCE\_RESOLVED\_DWORD\_TRACES},
-$$
-
-$$
-\texttt{BLOCKED\_EQUAL\_CONTACT\_AND\_LONGITUDINAL\_RESIDUES}.
+\texttt{BLOCKED\_AB1\_OCCURRENCE\_RESOLVED\_DWORD\_TRACES}.
 $$
 
 ## 7. Ordered output and external target
@@ -756,7 +1034,7 @@ The separate zero-component formula prints coefficient $1$ in the same stripped 
 | numerical pre-$D$ parent coefficients | all used the reversed propagator signs and an unfixed source normalization | `REJECTED_BY_EVIDENCE` |
 | candidate physical/ghost census is complete | it covers only the stripped displayed branch and omits unselected bridge, gauge, NK, measure, and oriented-kernel rows | `BLOCKED_MISSING_AUTHORITY` |
 | primitive $G_{3,2}:G_{3,3}$ flavor ratio is $+1:-1$ | exact epsilon arithmetic agrees; common sign and magnitude remain blocked | `ACCEPTED_WITH_LOCAL_PROOF` |
-| no graph may receive $1/(32\pi^2)$ yet | no graph-specific $4-d$ numerator has been replayed | `ACCEPTED_WITH_LOCAL_PROOF` |
+| no graph may receive $1/(32\pi^2)$ before a separate graph-specific $4-d$ trace is produced | four-dimensional $D$-algebra versus the full Schwinger inverse kernel produces $\mu_\ell^2$ universally | `REJECTED_BY_EDGE_SQUARE_DERIVATION` |
 | descendant/contact Hessian supports are missing from the stripped source | direct support comparison agrees only for that proposal | `ACCEPTED_WITH_LOCAL_PROOF` |
 | the numerical Project $AB_1$ vector is undefined | complete graph, cut, renormalization, and HT map remain absent | `ACCEPTED_WITH_LOCAL_PROOF` |
 
@@ -777,26 +1055,31 @@ $$
 $$
 \boxed{
 (c_{DB},c_{BD},c_{32},c_{23})_{\rm Project}
-=\texttt{UNDEFINED}.}
+=\lambda_1\left(-\frac32+1,0,0,0\right)_{G_1,\mathrm{parents}}
++(c_{DB},c_{BD},c_{32},c_{23})_{G_1\,\mathrm{cuts/contacts}+G_2+G_{3,2}+G_{3,3}+\mathrm{contacts}}.}
 $$
 
-It explicitly rejects the earlier reversed propagator signs, every dependent pre-$D$ coefficient, every complete-census interpretation of $92$, and every graph-level use of $1/(32\pi^2)$ before an occurrence-resolved $4-d$ numerator is derived.  Verdict: `ACCEPTED_WITH_LOCAL_PROOF`.
+It correctly rejects the earlier reversed propagator signs, every dependent
+pre-$D$ coefficient, and every complete-census interpretation of $92$.  Its
+additional requirement of an independently produced graph-specific $4-d$
+trace is rejected by the edge-square derivation above.  Verdict:
+`PARTIALLY_REJECTED_BY_EDGE_SQUARE_DERIVATION`.
 
 ## 11. Open derivation gaps
 
 | id | type | severity | gap | state |
 | --- | --- | ---: | --- | --- |
-| `AB1-G1` | `G-SIGN/G-PROJ` | P0 | the initial and derivation prompts used opposite propagator signs; only the Step-5A momentum rules above are retained | `OPEN` |
-| `AB1-G2` | `G-NORM/G-SCOPE` | P0 | $\mathcal O_{\rm phys}=g^2\mathcal O_{\rm str}$ but no source convention fixes whether $J$ absorbs $g^2$ | `OPEN` |
+| `AB1-G1` | `G-SIGN/G-PROJ` | P0 | exact $\mathbb Q(i)$ replay splits the two parent traces as $-3\lambda_1/2$ and $+\lambda_1$; their edge-tagged SD/contact reductions remain open | `PARENT_SPLIT_FIXED__CUT_CONTACT_OPEN` |
+| `AB1-G2` | `G-NORM/G-SCOPE` | P0 | direct insertion of \(\mathcal O_{\rm phys}^{(0)}\) fixes \(C_I=-g^2/(4\sqrt2)\); no \(J\)-rescaling enters | `FIXED_DIRECT_WICK` |
 | `AB1-G3` | `G-DEF/G-SCOPE` | P0 | the vector-frame bridges add unenumerated $u$ ports, so the 92 stripped-source port pairs are not the Project census | `OPEN` |
 | `AB1-G4` | `G-DEF/G-ALG` | P0 | the $42$ link-dependent coarse port pairs lack $\delta\mathbb M/\delta u$ | `OPEN` |
-| `AB1-G5` | `G-OP/G-SIGN` | P0 | source-coupling sign, left/right odd-source Hessian law and Taylor normalization are absent | `OPEN` |
-| `AB1-G6` | `G-OP/G-SCOPE` | P0 | ordered $VVV$ Hessian and $G_1$ occurrence count are absent | `OPEN` |
-| `AB1-G7` | `G-ALG/G-SIGN` | P0 | no noncommutative superspace $D$-word is replayed for $G_1,G_2,G_{3,2},G_{3,3}$ | `OPEN` |
-| `AB1-G8` | `G-OP/G-SIGN` | P0 | the twelve species-level cut signatures lack oriented $\mathcal P_\pm$ kernels and occurrence-resolved contact pairing | `OPEN` |
+| `AB1-G5` | `G-OP/G-SIGN` | P0 | direct normalized Wick insertion has no odd-\(J\) derivative; background/quantum Taylor grammar remains under `AB1-G3`--`AB1-G4` | `FIXED_DIRECT_WICK` |
+| `AB1-G6` | `G-OP/G-SCOPE` | P0 | the polarized $VVV$ Hessian gives $6\times2=12$ ordered words per chirality and all 24 $G_1$ parent words are replayed | `PARENT_DWORDS_FIXED` |
+| `AB1-G7` | `G-ALG/G-SIGN` | P0 | the $G_1$ parent split is complete; its SD/contact pairing and the $G_2,G_{3,2},G_{3,3}$ residual words remain open | `PARTIAL_G1_G2_G3` |
+| `AB1-G8` | `G-OP/G-SIGN` | P0 | only the edge selected by each actual $D$-word is cut; the residual occurrence coefficients still require pairing | `PARTIAL` |
 | `AB1-G9` | `G-SCOPE` | P0 | FP, NK, gauge-fixing, measure, counterterm and evanescent-mixing sectors are not closed | `OPEN` |
-| `AB1-G10` | `G-IDX/G-PROJ` | P1 | open color routing is not reduced to $\mathbb F^{AB}{}_{DE}$ | `OPEN` |
-| `AB1-G11` | `G-PROJ/G-NORM` | P0 | background fields are not mapped occurrence-wise to $(D,B_1),(B_1,D),(C_3,C_2),(C_2,C_3)$ | `OPEN` |
+| `AB1-G10` | `G-IDX/G-PROJ` | P1 | (G_1) reduces exactly to $\mathbb F^{AB}{}_{DE}$; the (G_2,G_3) routes remain open | `PARTIAL_G2_G3` |
+| `AB1-G11` | `G-PROJ/G-NORM` | P0 | the (G_1) external map to ((D,B_1)) is fixed; the other three ordered slots remain open | `PARTIAL_G2_G3` |
 | `AB1-G12` | `G-NORM/G-SCOPE` | P0 | composite $Z$-matrix, BRST/EOM/total-derivative quotient and evanescent basis are absent | `OPEN` |
 | `AB1-G13` | `G-NORM/G-PROJ` | P0 | Project--HT component intertwiner remains blocked | `OPEN` |
 | `AB1-G14` | `G-DEF/G-SCOPE` | P0 | the stripped source lacks the descendant/EOM Hessian supports required to close $G_2$ and $CC$ cut orbits | `OPEN` |
@@ -805,20 +1088,15 @@ The corresponding machine-readable blockers are:
 
 - `BLOCKED_NO_ADMITTED_AB1_TREE_GRAPH_DRED_RESULT`
 - `BLOCKED_LOCKED_ORDERED_BILOCAL_SOURCE`
-- `BLOCKED_AB1_SOURCE_OVERALL_G_NORMALIZATION`
 - `BLOCKED_CHIRAL_TO_VECTOR_FRAME_SOURCE_BRIDGE`
-- `BLOCKED_SOURCE_COUPLING_INSERTION_SIGN`
 - `BLOCKED_LOCKED_BACKGROUND_QUANTUM_PORT_GRAMMAR`
 - `BLOCKED_SOURCE_HESSIAN_LEFT_RIGHT_AND_TAYLOR_NORMALIZATION`
 - `BLOCKED_LOCAL_PROPOSAL_LINK_CONNECTION_U_LIFT`
-- `BLOCKED_VVV_ORDERED_HESSIAN`
 - `BLOCKED_COMPLETE_RAW_PORT_WORDS_FOR_NAMED_SECTOR_TABLE`
 - `BLOCKED_AB1_OCCURRENCE_RESOLVED_DWORD_TRACES`
-- `BLOCKED_EQUAL_CONTACT_AND_LONGITUDINAL_RESIDUES`
 - `BLOCKED_TYPED_ORIENTED_EDGE_KERNEL_ASSIGNMENT`
 - `BLOCKED_DESCENDANT_CONTACT_HESSIANS_UNSPECIFIED`
 - `BLOCKED_STEP5A_UNIQUE_PROPAGATORS_PERTURBATIVE_SLICE_UNFIXED`
-- `BLOCKED_LOCKED_Q4S_SPINOR_REALIZATION`
 - `BLOCKED_OPEN_COLOR_SOURCE_BV_EXTENSION`
 - `BLOCKED_ONE_LOOP_COMPOSITE_Z_MATRIX`
 - `BLOCKED_EOM_AND_TOTAL_DERIVATIVE_QUOTIENT`

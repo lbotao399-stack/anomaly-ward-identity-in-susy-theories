@@ -1,0 +1,550 @@
+{
+  "R1": {
+    "DRED_anomaly_sector": "0",
+    "all_I2_species": "u,u,u,phi1",
+    "external_ports": "D=u and B1=phi1",
+    "loop_integrals": "integral d^d ell (mu_ell^2)^r (ell^2)^s/(ell^2)^n = 0 for every integer r,s,n by massless scaleless DR continuation",
+    "quantum_ports": "u,u"
+  },
+  "R2_R3_symbolic_zero_bubbles": {
+    "R2_M": {
+      "0": {
+        "AB": {},
+        "BA": "exact graded/color mirror of AB",
+        "DRED_anomaly_sector": "0"
+      },
+      "1": {
+        "AB": {},
+        "BA": "exact graded/color mirror of AB",
+        "DRED_anomaly_sector": "0"
+      }
+    },
+    "R3_M4": {
+      "0": {
+        "AB": {},
+        "BA": "exact graded/color mirror of AB",
+        "DRED_anomaly_sector": "0"
+      },
+      "1": {
+        "AB": {},
+        "BA": "exact graded/color mirror of AB",
+        "DRED_anomaly_sector": "0"
+      }
+    }
+  },
+  "R2_gauge_bubble": {
+    "AB": {
+      "0": {
+        "DRED_anomaly_sector": "0",
+        "complete_sum": "-sqrt(2)*(q0 - i*q1)/4",
+        "denominator": "two-propagator bubble",
+        "four_dimensional_inverse_square": false,
+        "nonbridge_gamma_sum": "-sqrt(2)*(q0 - i*q1)/2",
+        "tagged_raw_numerators": {
+          "A1*NB1_gamma:Sg3+": "-sqrt(2)*(q0 - i*q1)/4",
+          "A1*NB1_gamma:Sg3-": "-sqrt(2)*(q0 - i*q1)/4",
+          "NA0*B12_bridge:Sg3+": "sqrt(2)*(q0 - i*q1)/8",
+          "NA0*B12_bridge:Sg3-": "sqrt(2)*(q0 - i*q1)/8"
+        },
+        "vector_bridge_sum": "sqrt(2)*(q0 - i*q1)/4"
+      },
+      "1": {
+        "DRED_anomaly_sector": "0",
+        "complete_sum": "sqrt(2)*(q2 + i*q3)/4",
+        "denominator": "two-propagator bubble",
+        "four_dimensional_inverse_square": false,
+        "nonbridge_gamma_sum": "sqrt(2)*(q2 + i*q3)/2",
+        "tagged_raw_numerators": {
+          "A1*NB1_gamma:Sg3+": "sqrt(2)*(q2 + i*q3)/4",
+          "A1*NB1_gamma:Sg3-": "sqrt(2)*(q2 + i*q3)/4",
+          "NA0*B12_bridge:Sg3+": "-sqrt(2)*(q2 + i*q3)/8",
+          "NA0*B12_bridge:Sg3-": "-sqrt(2)*(q2 + i*q3)/8"
+        },
+        "vector_bridge_sum": "-sqrt(2)*(q2 + i*q3)/4"
+      }
+    },
+    "BA": {
+      "0": {
+        "DRED_anomaly_sector": "0",
+        "complete_sum": "-sqrt(2)*(q0 - i*q1)/4",
+        "denominator": "two-propagator bubble",
+        "four_dimensional_inverse_square": false,
+        "nonbridge_gamma_sum": "-sqrt(2)*(q0 - i*q1)/2",
+        "tagged_raw_numerators": {
+          "-B12_bridge*NA0:Sg3+": "sqrt(2)*(q0 - i*q1)/8",
+          "-B12_bridge*NA0:Sg3-": "sqrt(2)*(q0 - i*q1)/8",
+          "NB1_gamma*A1:Sg3+": "-sqrt(2)*(q0 - i*q1)/4",
+          "NB1_gamma*A1:Sg3-": "-sqrt(2)*(q0 - i*q1)/4"
+        },
+        "vector_bridge_sum": "sqrt(2)*(q0 - i*q1)/4"
+      },
+      "1": {
+        "DRED_anomaly_sector": "0",
+        "complete_sum": "sqrt(2)*(q2 + i*q3)/4",
+        "denominator": "two-propagator bubble",
+        "four_dimensional_inverse_square": false,
+        "nonbridge_gamma_sum": "sqrt(2)*(q2 + i*q3)/2",
+        "tagged_raw_numerators": {
+          "-B12_bridge*NA0:Sg3+": "-sqrt(2)*(q2 + i*q3)/8",
+          "-B12_bridge*NA0:Sg3-": "-sqrt(2)*(q2 + i*q3)/8",
+          "NB1_gamma*A1:Sg3+": "sqrt(2)*(q2 + i*q3)/4",
+          "NB1_gamma*A1:Sg3-": "sqrt(2)*(q2 + i*q3)/4"
+        },
+        "vector_bridge_sum": "-sqrt(2)*(q2 + i*q3)/4"
+      }
+    }
+  },
+  "R4_selected_edge_anomaly": {
+    "A_mark": [
+      "4/3",
+      "2/3"
+    ],
+    "B_mark": [
+      "2/3",
+      "4/3"
+    ],
+    "sum_raw_p_q": [
+      "2",
+      "2"
+    ]
+  },
+  "checks": {
+    "count": 44,
+    "failed": 0,
+    "passed": 44,
+    "rows": [
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "I0_sector_count",
+        "status": "PASS"
+      },
+      {
+        "actual": "4",
+        "expected": "4",
+        "id": "I1_vector_frame_sector_count",
+        "status": "PASS"
+      },
+      {
+        "actual": "10",
+        "expected": "10",
+        "id": "I1_descendant_word_count",
+        "status": "PASS"
+      },
+      {
+        "actual": "10",
+        "expected": "10",
+        "id": "I2_vector_frame_sector_count",
+        "status": "PASS"
+      },
+      {
+        "actual": "4",
+        "expected": "4",
+        "id": "resolvent_surviving_species_classes",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "R1_loop_count",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "id": "R2G_edge_count",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "id": "R2M_edge_count",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "id": "R3_edge_count",
+        "status": "PASS"
+      },
+      {
+        "actual": "(QI(re=Fraction(4, 3), im=Fraction(0, 1)), QI(re=Fraction(2, 3), im=Fraction(0, 1)))",
+        "expected": "(QI(re=Fraction(4, 3), im=Fraction(0, 1)), QI(re=Fraction(2, 3), im=Fraction(0, 1)))",
+        "id": "R4_A_selected",
+        "status": "PASS"
+      },
+      {
+        "actual": "(QI(re=Fraction(2, 3), im=Fraction(0, 1)), QI(re=Fraction(4, 3), im=Fraction(0, 1)))",
+        "expected": "(QI(re=Fraction(2, 3), im=Fraction(0, 1)), QI(re=Fraction(4, 3), im=Fraction(0, 1)))",
+        "id": "R4_B_selected",
+        "status": "PASS"
+      },
+      {
+        "actual": "(QI(re=Fraction(2, 1), im=Fraction(0, 1)), QI(re=Fraction(2, 1), im=Fraction(0, 1)))",
+        "expected": "(QI(re=Fraction(2, 1), im=Fraction(0, 1)), QI(re=Fraction(2, 1), im=Fraction(0, 1)))",
+        "id": "R4_selected_total",
+        "status": "PASS"
+      },
+      {
+        "actual": "-sqrt(2)*(q0 - i*q1)/4",
+        "expected": "-sqrt(2)*(q0 - i*q1)/4",
+        "id": "R2G:AB:dot0:total",
+        "status": "PASS"
+      },
+      {
+        "actual": "-sqrt(2)*(q0 - i*q1)/2",
+        "expected": "-sqrt(2)*(q0 - i*q1)/2",
+        "id": "R2G:AB:dot0:gamma",
+        "status": "PASS"
+      },
+      {
+        "actual": "sqrt(2)*(q0 - i*q1)/4",
+        "expected": "sqrt(2)*(q0 - i*q1)/4",
+        "id": "R2G:AB:dot0:bridge",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "R2G:AB:dot0:no_loop_momentum",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "R2G:AB:dot0:no_B_momentum",
+        "status": "PASS"
+      },
+      {
+        "actual": "sqrt(2)*(q2 + i*q3)/4",
+        "expected": "sqrt(2)*(q2 + i*q3)/4",
+        "id": "R2G:AB:dot1:total",
+        "status": "PASS"
+      },
+      {
+        "actual": "sqrt(2)*(q2 + i*q3)/2",
+        "expected": "sqrt(2)*(q2 + i*q3)/2",
+        "id": "R2G:AB:dot1:gamma",
+        "status": "PASS"
+      },
+      {
+        "actual": "-sqrt(2)*(q2 + i*q3)/4",
+        "expected": "-sqrt(2)*(q2 + i*q3)/4",
+        "id": "R2G:AB:dot1:bridge",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "R2G:AB:dot1:no_loop_momentum",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "R2G:AB:dot1:no_B_momentum",
+        "status": "PASS"
+      },
+      {
+        "actual": "-sqrt(2)*(q0 - i*q1)/4",
+        "expected": "-sqrt(2)*(q0 - i*q1)/4",
+        "id": "R2G:BA:dot0:total",
+        "status": "PASS"
+      },
+      {
+        "actual": "-sqrt(2)*(q0 - i*q1)/2",
+        "expected": "-sqrt(2)*(q0 - i*q1)/2",
+        "id": "R2G:BA:dot0:gamma",
+        "status": "PASS"
+      },
+      {
+        "actual": "sqrt(2)*(q0 - i*q1)/4",
+        "expected": "sqrt(2)*(q0 - i*q1)/4",
+        "id": "R2G:BA:dot0:bridge",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "R2G:BA:dot0:no_loop_momentum",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "R2G:BA:dot0:no_B_momentum",
+        "status": "PASS"
+      },
+      {
+        "actual": "sqrt(2)*(q2 + i*q3)/4",
+        "expected": "sqrt(2)*(q2 + i*q3)/4",
+        "id": "R2G:BA:dot1:total",
+        "status": "PASS"
+      },
+      {
+        "actual": "sqrt(2)*(q2 + i*q3)/2",
+        "expected": "sqrt(2)*(q2 + i*q3)/2",
+        "id": "R2G:BA:dot1:gamma",
+        "status": "PASS"
+      },
+      {
+        "actual": "-sqrt(2)*(q2 + i*q3)/4",
+        "expected": "-sqrt(2)*(q2 + i*q3)/4",
+        "id": "R2G:BA:dot1:bridge",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "R2G:BA:dot1:no_loop_momentum",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "R2G:BA:dot1:no_B_momentum",
+        "status": "PASS"
+      },
+      {
+        "actual": "-sqrt(2)*(q0 - i*q1)/4",
+        "expected": "-sqrt(2)*(q0 - i*q1)/4",
+        "id": "R2G_AB_BA_dot0_equal",
+        "status": "PASS"
+      },
+      {
+        "actual": "sqrt(2)*(q2 + i*q3)/4",
+        "expected": "sqrt(2)*(q2 + i*q3)/4",
+        "id": "R2G_AB_BA_dot1_equal",
+        "status": "PASS"
+      },
+      {
+        "actual": "{}",
+        "expected": "{}",
+        "id": "R2M_AB_dot0_symbolic_zero",
+        "status": "PASS"
+      },
+      {
+        "actual": "{}",
+        "expected": "{}",
+        "id": "R3M4_AB_dot0_symbolic_zero",
+        "status": "PASS"
+      },
+      {
+        "actual": "{}",
+        "expected": "{}",
+        "id": "R2M_AB_dot1_symbolic_zero",
+        "status": "PASS"
+      },
+      {
+        "actual": "{}",
+        "expected": "{}",
+        "id": "R3M4_AB_dot1_symbolic_zero",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "R1_DRED_anomaly",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[0], [0]])",
+        "expected": "Matrix([[0], [0]])",
+        "id": "R1_R2_R3_new_anomaly_vector",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[2], [2]])",
+        "expected": "Matrix([[2], [2]])",
+        "id": "G1_common_layer_raw_p_q",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[0], [2]])",
+        "expected": "Matrix([[0], [2]])",
+        "id": "G1_pair_total_derivative_basis",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "G1_mod_total_derivative",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[0], [0]])",
+        "expected": "Matrix([[0], [0]])",
+        "id": "missing_exact_minus_one",
+        "status": "PASS"
+      }
+    ]
+  },
+  "common_layer": {
+    "G1_after_total_derivative_quotient": "0",
+    "G1_pair_total_derivative": [
+      "0",
+      "2"
+    ],
+    "G1_raw_p_q": [
+      "2",
+      "2"
+    ],
+    "basis_identity": "a*X+b*Y=(a-b)*X+b*T_DB with T_DB=X+Y",
+    "common_layer_closure_verdict": "NO_COMMON_LAYER_CLOSURE",
+    "missing_terms_supply_minus_one_D_gt_B1": false,
+    "new_R1_R2_R3_anomaly_raw_p_q": [
+      "0",
+      "0"
+    ]
+  },
+  "external_target_used": false,
+  "longitudinal_boundary": {
+    "Gate10_minus_p_plus_q": "REJECTED",
+    "exact_result": "L_A is already in the 24 R4 words; no nonzero R2/R3 Hessian equals -L_A and no row has an exact bar(r1)^2 divisor",
+    "forbidden_projection": "a global centered metric trace is not an occurrence-tagged inverse-kernel cut",
+    "ordinary_no_inverse_square_term": {
+      "anomaly_sector": false,
+      "raw_Ward_contact_completion": "SEPARATE_IDENTITY_NOT_CLAIMED_COMPLETE",
+      "reason": "it has no occurrence-tagged four-dimensional inverse square, hence no full-square minus four-dimensional-square defect"
+    }
+  },
+  "port_census": {
+    "excluded_by_ports": {
+      "R2_other_matter_flavors": "source phi1 has no matching tilde2/tilde3",
+      "R2_superpotential": "source u ports have no propagating partner",
+      "R3_pure_gauge_gauge_fixing_FP_NK_measure": "source phi1 has no tilde1 partner",
+      "R3_superpotential": "source u has no u partner"
+    },
+    "survivors": [
+      {
+        "class": "R1",
+        "external_assignment": "I2:(D,B1)",
+        "internal_edges": [
+          "u--u same-source tadpole"
+        ],
+        "loops": 1,
+        "quantum_ports": [
+          "u",
+          "u"
+        ],
+        "source": "I2(u,u,u,phi1)",
+        "status": "SCALELESS_TADPOLE",
+        "term": "+G0*I2"
+      },
+      {
+        "action": "Sg3(u,u,u)",
+        "class": "R2_G",
+        "external_assignment": "I1:B1; Sg3:D",
+        "internal_edges": [
+          "u--u",
+          "u--u"
+        ],
+        "loops": 1,
+        "quantum_ports": [
+          "I1:u,u",
+          "Sg3:u,u"
+        ],
+        "source": "I1(u,u,phi1)",
+        "status": "UNIQUE_NONZERO_ORDINARY_BUBBLE",
+        "term": "-G0*Sg3*G0*I1"
+      },
+      {
+        "action": "Sm3(tilde1,u,phi1)",
+        "class": "R2_M",
+        "external_assignment": "I1:D; Sm3:B1",
+        "internal_edges": [
+          "u--u",
+          "phi1--tilde1"
+        ],
+        "loops": 1,
+        "quantum_ports": [
+          "I1:u,phi1",
+          "Sm3:u,tilde1"
+        ],
+        "source": "I1(u,u,phi1)",
+        "status": "D_ALGEBRA_ZERO",
+        "term": "-G0*Sm3*G0*I1"
+      },
+      {
+        "action": "Sm4(tilde1,u,u,phi1)",
+        "class": "R3_M4",
+        "external_assignment": "Sm4:(D,B1)",
+        "internal_edges": [
+          "u--u",
+          "phi1--tilde1"
+        ],
+        "loops": 1,
+        "quantum_ports": [
+          "I0:u,phi1",
+          "Sm4:u,tilde1"
+        ],
+        "source": "I0(u,phi1)",
+        "status": "D_ALGEBRA_ZERO",
+        "term": "-G0*Sm4*G0*I0"
+      }
+    ]
+  },
+  "schema": "step5-ab-ba-g1-actual-resolvent-contact-orbit-exact-v1",
+  "status": "G1_VECTOR_FRAME_R1_R2_R3_ANOMALY_ZERO__NO_MISSING_MINUS_ONE__COMMON_LAYER_RAW_TWO_TWO__MOD_TOTAL_DERIVATIVE_ZERO",
+  "vector_frame_source": {
+    "I0_order_two": [
+      "A1*B11"
+    ],
+    "I1_descendant_occurrence_tags_AB": [
+      "Complete order-g descendant source, with all occurrence tags."
+    ],
+    "I1_exact_ten_descendant_words_AB": [
+      "NA1_A2*B11",
+      "NA1_gamma*B11",
+      "NA0*B12",
+      "A2*NB0",
+      "A1*NB1_B12",
+      "A1*NB1_gamma",
+      "NA1_bridge*B11",
+      "NA0*B12_bridge",
+      "A2_bridge*NB0",
+      "A1*NB1_bridge"
+    ],
+    "I1_order_three": [
+      "A2*B11",
+      "A1*B12",
+      "b1(A1)*B11",
+      "A1*b1(B11)"
+    ],
+    "I2_order_four": [
+      "A3*B11",
+      "b1(A2)*B11",
+      "b2(A1)*B11",
+      "A2*B12",
+      "A2*b1(B11)",
+      "b1(A1)*B12",
+      "b1(A1)*b1(B11)",
+      "A1*B13",
+      "A1*b1(B12)",
+      "A1*b2(B11)"
+    ],
+    "bridge": {
+      "B_ad": "exp(ad_V/2)",
+      "V": "sqrt(2)*g*U",
+      "b1(L)": "(1/sqrt(2))*[U,L]",
+      "b2(L)": "(1/4)*[U,[U,L]]"
+    },
+    "species_support": {
+      "I0": [
+        "u",
+        "phi1"
+      ],
+      "I1_each_word": [
+        "u",
+        "u",
+        "phi1"
+      ],
+      "I2_each_word": [
+        "u",
+        "u",
+        "u",
+        "phi1"
+      ]
+    }
+  }
+}

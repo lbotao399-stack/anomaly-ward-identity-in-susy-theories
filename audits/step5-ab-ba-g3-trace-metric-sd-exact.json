@@ -1,0 +1,270 @@
+{
+  "checks": {
+    "count": 32,
+    "failed": 0,
+    "passed": 32,
+    "rows": [
+      {
+        "actual": "p00*r01 - p01*r00",
+        "expected": "p00*r01 - p01*r00",
+        "id": "RAW_W2_EQUALS_W01",
+        "status": "PASS"
+      },
+      {
+        "actual": "1024*(p00**2*p11*r01 - p00**2*r01*r11 - p00*p01*p10*r01 - p00*p01*p11*r00 + p00*p01*r00*r11 + p00*p01*r01*r10 + p00*p10*r01**2 + p00*p11*q00*r01 - p00*p11*q01*r00 - p00*p11*r00*r01 - p00*q00*r01*r11 + p00*q01*r01*r10 + p00*r00*r01*r11 - p00*r01**2*r10 + p01**2*p10*r00 - p01**2*r00*r10 - p01*p10*q00*r01 + p01*p10*q01*r00 - p01*p10*r00*r01 + p01*p11*r00**2 + p01*q00*r00*r11 - p01*q01*r00*r10 - p01*r00**2*r11 + p01*r00*r01*r10 + p10*q00*r01**2 - p10*q01*r00*r01 - p11*q00*r00*r01 + p11*q01*r00**2)",
+        "expected": "1024*(p00**2*p11*r01 - p00**2*r01*r11 - p00*p01*p10*r01 - p00*p01*p11*r00 + p00*p01*r00*r11 + p00*p01*r01*r10 + p00*p10*r01**2 + p00*p11*q00*r01 - p00*p11*q01*r00 - p00*p11*r00*r01 - p00*q00*r01*r11 + p00*q01*r01*r10 + p00*r00*r01*r11 - p00*r01**2*r10 + p01**2*p10*r00 - p01**2*r00*r10 - p01*p10*q00*r01 + p01*p10*q01*r00 - p01*p10*r00*r01 + p01*p11*r00**2 + p01*q00*r00*r11 - p01*q01*r00*r10 - p01*r00**2*r11 + p01*r00*r01*r10 + p10*q00*r01**2 - p10*q01*r00*r01 - p11*q00*r00*r01 + p11*q01*r00**2)",
+        "id": "RAW_A_PARENT_REPLAY",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1024*(p00*r01 - p01*r00)*(p00*p11 + p00*q11 - p00*r11 - p01*p10 - p01*q10 + p01*r10 - p10*q01 + p10*r01 + p11*q00 - p11*r00 + q00*q11 - q00*r11 - q01*q10 + q01*r10 + q10*r01 - q11*r00 + r00*r11 - r01*r10)",
+        "expected": "-1024*(p00*r01 - p01*r00)*(p00*p11 + p00*q11 - p00*r11 - p01*p10 - p01*q10 + p01*r10 - p10*q01 + p10*r01 + p11*q00 - p11*r00 + q00*q11 - q00*r11 - q01*q10 + q01*r10 + q10*r01 - q11*r00 + r00*r11 - r01*r10)",
+        "id": "RAW_B_PARENT_REPLAY",
+        "status": "PASS"
+      },
+      {
+        "actual": "512*(p00*q01 - p01*q00 + q00*r01 - q01*r00)",
+        "expected": "512*(p00*q01 - p01*q00 + q00*r01 - q01*r00)",
+        "id": "RAW_K0_CORE",
+        "status": "PASS"
+      },
+      {
+        "actual": "-128*(p00*r01 - p01*r00 + q00*r01 - q01*r00)",
+        "expected": "-128*(p00*r01 - p01*r00 + q00*r01 - q01*r00)",
+        "id": "RAW_K1_CORE",
+        "status": "PASS"
+      },
+      {
+        "actual": "-128*(p00*r01 - p01*r00)",
+        "expected": "-128*(p00*r01 - p01*r00)",
+        "id": "RAW_K2_CORE",
+        "status": "PASS"
+      },
+      {
+        "actual": "-4",
+        "expected": "-4",
+        "id": "LOCKED_D2_THETA2_SATURATION",
+        "status": "PASS"
+      },
+      {
+        "actual": "4",
+        "expected": "4",
+        "id": "LOCKED_MINUS_BARD2_BARTHETA2_SATURATION",
+        "status": "PASS"
+      },
+      {
+        "actual": "512*(p00*q01 - p01*q00 + q00*r01 - q01*r00)",
+        "expected": "512*(p00*q01 - p01*q00 + q00*r01 - q01*r00)",
+        "id": "KINETIC_K0_CORE",
+        "status": "PASS"
+      },
+      {
+        "actual": "-512*(p00*r01 - p01*r00 + q00*r01 - q01*r00)",
+        "expected": "-512*(p00*r01 - p01*r00 + q00*r01 - q01*r00)",
+        "id": "KINETIC_K1_CORE",
+        "status": "PASS"
+      },
+      {
+        "actual": "512*(p00*r01 - p01*r00)",
+        "expected": "512*(p00*r01 - p01*r00)",
+        "id": "KINETIC_K2_CORE",
+        "status": "PASS"
+      },
+      {
+        "actual": "-512*(D0*RW0*chi - D0*RW0 - D1*RW1*chi + D1*RW1 + RW0*chi*mu2 - RW1*chi*mu2)/(D0*D1*D2)",
+        "expected": "-512*(D0*RW0*chi - D0*RW0 - D1*RW1*chi + D1*RW1 + RW0*chi*mu2 - RW1*chi*mu2)/(D0*D1*D2)",
+        "id": "A_ORBIT_COMMON_DENOMINATOR",
+        "status": "PASS"
+      },
+      {
+        "actual": "[{chi: 1}]",
+        "expected": "[{chi: 1}]",
+        "id": "FULL_D_SD_UNIQUE_CHI",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "A_FULL_D_ZERO_AT_CHI1",
+        "status": "PASS"
+      },
+      {
+        "actual": "-512*(D0*RW0 - D1*RW1)/(D0*D1*D2)",
+        "expected": "-512*(D0*RW0 - D1*RW1)/(D0*D1*D2)",
+        "id": "A_OLD_CHI2_NONZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-512*mu2*(RW0 - RW1)/(D0*D1*D2)",
+        "expected": "-512*mu2*(RW0 - RW1)/(D0*D1*D2)",
+        "id": "A_DRED_REMAINDER_CHI1",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "B_FULL_D_ZERO_AT_CHI1",
+        "status": "PASS"
+      },
+      {
+        "actual": "-512*RW2*mu2/(D0*D1*D2)",
+        "expected": "-512*RW2*mu2/(D0*D1*D2)",
+        "id": "B_DRED_REMAINDER_CHI1",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "ZERO_SQUARE_JE_JX_LOCAL_WORD",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "ZERO_SQUARE_PE_PX_LOCAL_WORD",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "ZERO_SQUARE_JE_JX_MU2_DEFECT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "ZERO_SQUARE_PE_PX_MU2_DEFECT",
+        "status": "PASS"
+      },
+      {
+        "actual": "x1*y2 - x2*y1",
+        "expected": "x1*y2 - x2*y1",
+        "id": "TYPED_PAIRING_EQUALS_RAW_WEDGE",
+        "status": "PASS"
+      },
+      {
+        "actual": "-x1*y2 + x2*y1",
+        "expected": "-x1*y2 + x2*y1",
+        "id": "FOURIER_TYPED_PAIRING_EQUALS_MINUS_RAW_WEDGE",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2048",
+        "expected": "-2048",
+        "id": "CORRECTED_DWORD_CHI1",
+        "status": "PASS"
+      },
+      {
+        "actual": "-4096",
+        "expected": "-4096",
+        "id": "OLD_DWORD_CHI2",
+        "status": "PASS"
+      },
+      {
+        "actual": "sqrt(2)*i/3",
+        "expected": "sqrt(2)*i/3",
+        "id": "G32_SINGLE_BRANCH_LAMBDA1",
+        "status": "PASS"
+      },
+      {
+        "actual": "-sqrt(2)*i/3",
+        "expected": "-sqrt(2)*i/3",
+        "id": "G33_SINGLE_BRANCH_LAMBDA1",
+        "status": "PASS"
+      },
+      {
+        "actual": "sqrt(2)*i",
+        "expected": "sqrt(2)*i",
+        "id": "G32_THREE_BRANCHES_LAMBDA1",
+        "status": "PASS"
+      },
+      {
+        "actual": "-sqrt(2)*i",
+        "expected": "-sqrt(2)*i",
+        "id": "G33_THREE_BRANCHES_LAMBDA1",
+        "status": "PASS"
+      },
+      {
+        "actual": "-sqrt(2)*i",
+        "expected": "-sqrt(2)*i",
+        "id": "G32_TYPED_AFTER_FOURIER",
+        "status": "PASS"
+      },
+      {
+        "actual": "sqrt(2)*i",
+        "expected": "sqrt(2)*i",
+        "id": "G33_TYPED_AFTER_FOURIER",
+        "status": "PASS"
+      }
+    ]
+  },
+  "chi_equation": {
+    "A_full_d_coefficients": [
+      "1-chi",
+      "chi-1"
+    ],
+    "old_chi2_residual": "512*(-D0*RW0+D1*RW1)/(D0*D1*D2)",
+    "unique_solution": "chi=1"
+  },
+  "dred_remainders_common_units": {
+    "A": "+512*mu2*(-RW0+RW1)/(D0*D1*D2)",
+    "B": "-512*mu2*RW2/(D0*D1*D2)",
+    "sum": "+512*mu2*(-RW0+RW1-RW2)/(D0*D1*D2)"
+  },
+  "external_target_used": false,
+  "normalization": {
+    "Dword": "32768*(1/4)*(1/2)*(-1/2)=-2048",
+    "conditional_chi1_raw_wedge": {
+      "G32": "+i*sqrt(2)",
+      "G33": "-i*sqrt(2)"
+    },
+    "conditional_chi1_typed": {
+      "G32_C2_gt_C3": "-i*sqrt(2)",
+      "G33_C3_gt_C2": "+i*sqrt(2)"
+    },
+    "epsilon_contraction_factor": "1",
+    "fourier_raw_wedge_to_typed_pairing": "-1"
+  },
+  "occurrence_denominators": {
+    "JE_JX": {
+      "collapsed_edge": "e0",
+      "sum": "0"
+    },
+    "K0": [
+      "D1",
+      "D2"
+    ],
+    "K1": [
+      "D0",
+      "D2"
+    ],
+    "K2": [
+      "D0",
+      "D1"
+    ],
+    "PE_PX": {
+      "collapsed_edge": "e2",
+      "sum": "0"
+    }
+  },
+  "pro_adjudication": {
+    "conditional_only": "if K0,K1,K2 have common-unit coefficients +512,-512,+512, then the full-d equations fix chi=1",
+    "corrected_naming": "K0,K1,K2 are kinetic derivative-of-action cuts; JE/JX/PE/PX are separate zero-square nonlinear rows",
+    "delta_B": "NOT_CLOSED_UNTIL_RAW_K_MULTIPLICITY_REPLAY",
+    "rejected": "the absolute K Hessian/Taylor/Wick multiplicities were not derived in the same units as the two-axis parent trace"
+  },
+  "raw_replay": {
+    "A_parent_chi2": "-1024*det4(r0)*W0+1024*det4(r1)*W1",
+    "B_parent_chi2": "-1024*det4(r2)*W2",
+    "K_cores": {
+      "K0": "+512*W0",
+      "K1": "-512*W1",
+      "K2": "+512*W2"
+    },
+    "W0": "W12",
+    "W1": "W(P0)",
+    "W2": "W(p0)=W01"
+  },
+  "schema": "step5-ab-ba-g3-trace-metric-sd-exact-v1",
+  "status": "REJECTED_CONDITIONAL_CONTACT_NORMALIZATION__CHI_ONE_NOT_DERIVED"
+}

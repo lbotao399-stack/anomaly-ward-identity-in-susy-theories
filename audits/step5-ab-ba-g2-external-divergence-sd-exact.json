@@ -1,0 +1,204 @@
+{
+  "schema": "step5-ab-ba-g2-external-divergence-sd-exact-v1",
+  "status": "G2_R2_AND_OMEGA_SD_FULL_D_ZERO__DOTTED_EPSILON_MAPS_BPD_TO_PLUS_PAIR__PAIR_COEFFICIENT_ONE",
+  "external_target_used": false,
+  "q_covariance_used": false,
+  "r2_sd_orbit": {
+    "parent": "-8*(D2+mu2)*R/(D0*D1*D2)",
+    "contact": "+8*R/(D0*D1)",
+    "full_d": "0",
+    "dred": "-8*mu2*R/(D0*D1*D2)",
+    "rank_one_moment": "(2*p_D+q_B)/3"
+  },
+  "omega_r1_sd_orbit": {
+    "parent": "-(1/2)*(D1+mu2)*W",
+    "contact": "+(1/2)*D1*W",
+    "full_d": "0",
+    "dred": "-(1/2)*mu2*W",
+    "typed_pair_contribution": "-1"
+  },
+  "dotted_index_identity": {
+    "epsilon_contraction": "epsilon^{ab} epsilon_{ac}=-delta^b_c",
+    "pair": "<B1,D>=(P_a B1)D^a",
+    "eom": "E_BD=B1(P^a D_a)",
+    "total_divergence": "T_BD=P^a(B1 D_a)=-<B1,D>+E_BD",
+    "solved": "E_BD=<B1,D>+T_BD"
+  },
+  "typed_coefficients": {
+    "raw_basis_pD_qB": [
+      "4/3",
+      "-1/3"
+    ],
+    "pair_EOM": [
+      "-1/3",
+      "4/3"
+    ],
+    "pair_total_divergence": [
+      "1",
+      "4/3"
+    ],
+    "exact_divergence_quotient_pair": "1"
+  },
+  "first_error": {
+    "artifact": "step5-ab-ba-unified-typed-q-covariance-exact",
+    "claim": "the D>B and B>D slots share T=pair+EOM",
+    "exact": "for B>D, T=EOM-pair because epsilon^{ab}epsilon_{ac}=-delta^b_c"
+  },
+  "checks": {
+    "count": 25,
+    "passed": 25,
+    "failed": 0,
+    "rows": [
+      {
+        "id": "EPSILON_UP_DOWN_INVERSE",
+        "status": "PASS",
+        "actual": "Matrix([[1, 0], [0, 1]])",
+        "expected": "Matrix([[1, 0], [0, 1]])"
+      },
+      {
+        "id": "EPSILON_FIRST_INDEX_CONTRACTION",
+        "status": "PASS",
+        "actual": "Matrix([[-1, 0], [0, -1]])",
+        "expected": "Matrix([[-1, 0], [0, -1]])"
+      },
+      {
+        "id": "RAISED_PB_TIMES_LOWER_D",
+        "status": "PASS",
+        "actual": "-DU0*PB0 - DU1*PB1",
+        "expected": "-DU0*PB0 - DU1*PB1"
+      },
+      {
+        "id": "B_D_TOTAL_DIVERGENCE",
+        "status": "PASS",
+        "actual": "-DU0*PB0 - DU1*PB1 + E_BD",
+        "expected": "-DU0*PB0 - DU1*PB1 + E_BD"
+      },
+      {
+        "id": "B_D_EOM_EQUALS_PAIR_PLUS_DIVERGENCE",
+        "status": "PASS",
+        "actual": "E_BD",
+        "expected": "E_BD"
+      },
+      {
+        "id": "G2_R2_RESIDUAL_WORD",
+        "status": "PASS",
+        "actual": "Matrix([[-128*r01], [128*r00]])",
+        "expected": "Matrix([[-128*r01], [128*r00]])"
+      },
+      {
+        "id": "G2_CURRENT_CONTACT_SAME_WORD",
+        "status": "PASS",
+        "actual": "Matrix([[-128*r01], [128*r00]])",
+        "expected": "Matrix([[-128*r01], [128*r00]])"
+      },
+      {
+        "id": "G2_R2_COMPONENT_0_FULL_D_ZERO",
+        "status": "PASS",
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "id": "G2_R2_COMPONENT_0_DRED_REMAINDER",
+        "status": "PASS",
+        "actual": "-8*R0*mu2/(D0*D1*D2)",
+        "expected": "-8*R0*mu2/(D0*D1*D2)"
+      },
+      {
+        "id": "G2_R2_COMPONENT_1_FULL_D_ZERO",
+        "status": "PASS",
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "id": "G2_R2_COMPONENT_1_DRED_REMAINDER",
+        "status": "PASS",
+        "actual": "-8*R1*mu2/(D0*D1*D2)",
+        "expected": "-8*R1*mu2/(D0*D1*D2)"
+      },
+      {
+        "id": "ORDERED_SIMPLEX_AVERAGE_Y",
+        "status": "PASS",
+        "actual": "1/3",
+        "expected": "1/3"
+      },
+      {
+        "id": "ORDERED_SIMPLEX_AVERAGE_Z",
+        "status": "PASS",
+        "actual": "1/3",
+        "expected": "1/3"
+      },
+      {
+        "id": "G2_R0_RANK_ONE_MOMENT",
+        "status": "PASS",
+        "actual": "(2*p + q)/3",
+        "expected": "(2*p + q)/3"
+      },
+      {
+        "id": "G2_SELECTED_RAW_P_D_Q_B",
+        "status": "PASS",
+        "actual": "Matrix([[4/3], [2/3]])",
+        "expected": "Matrix([[4/3], [2/3]])"
+      },
+      {
+        "id": "G2_OMEGA_RAW_P_D_Q_B",
+        "status": "PASS",
+        "actual": "Matrix([[0], [-1]])",
+        "expected": "Matrix([[0], [-1]])"
+      },
+      {
+        "id": "G2_FULL_RAW_P_D_Q_B",
+        "status": "PASS",
+        "actual": "Matrix([[4/3], [-1/3]])",
+        "expected": "Matrix([[4/3], [-1/3]])"
+      },
+      {
+        "id": "G2_FULL_PAIR_EOM_BEFORE_DIVERGENCE",
+        "status": "PASS",
+        "actual": "Matrix([[-1/3], [4/3]])",
+        "expected": "Matrix([[-1/3], [4/3]])"
+      },
+      {
+        "id": "G2_FULL_PAIR_TOTAL_DIVERGENCE",
+        "status": "PASS",
+        "actual": "Matrix([[1], [4/3]])",
+        "expected": "Matrix([[1], [4/3]])"
+      },
+      {
+        "id": "G2_EXACT_DIVERGENCE_QUOTIENT_PAIR",
+        "status": "PASS",
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "id": "G2_EOM_PLUS_FOUR_THIRDS_MAPS_PLUS_PAIR",
+        "status": "PASS",
+        "actual": "4/3",
+        "expected": "4/3"
+      },
+      {
+        "id": "OLD_COMMON_MAP_WRONG_PAIR",
+        "status": "PASS",
+        "actual": "-5/3",
+        "expected": "-5/3"
+      },
+      {
+        "id": "OLD_COMMON_MAP_DIFFERS_FROM_INDEX_RESULT",
+        "status": "PASS",
+        "actual": "False",
+        "expected": "False"
+      },
+      {
+        "id": "G2_OMEGA_R1_FULL_D_ZERO",
+        "status": "PASS",
+        "actual": "0",
+        "expected": "0"
+      },
+      {
+        "id": "G2_OMEGA_R1_DRED_REMAINDER",
+        "status": "PASS",
+        "actual": "-mu2/2",
+        "expected": "-mu2/2"
+      }
+    ]
+  }
+}

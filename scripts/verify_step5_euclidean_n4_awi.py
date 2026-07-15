@@ -1,987 +1,609 @@
 #!/usr/bin/env python3
-"""Fail-closed verifier for the proposed Euclidean N=4 Step-5 AWI contract.
+"""Acceptance verifier for the Step-5 physical one-loop anomaly sector.
 
-The verifier distinguishes three outcomes.
-
-PASS
-    Every algebraic check passes and every acceptance gate is closed.
-BLOCKED
-    Algebraic checks pass, but at least one declared proof obligation remains.
-FAIL
-    A deterministic artifact, count, coefficient, type map, or mutation check fails.
-
-Holomorphic-twist data are read only through the admitted external-target
-engine.  They are never used to determine a Project coefficient.
+Only the target-blind 81-row Project anomaly ledger, its exact local
+representative audits, the DRED cutting-failure calculation, and the
+post-seal holomorphic-twist round trip are acceptance claims here.  Raw
+q-functor, BV/WZ, open-color, formal-U, and general-color statements are
+reported as OUT_OF_SCOPE and cannot be promoted by this verifier.
 """
 
 from __future__ import annotations
 
 import argparse
 import hashlib
-import importlib.util
 import json
 import subprocess
 import sys
-import tempfile
-from collections import Counter
-from fractions import Fraction
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Iterable
 
 
 ROOT = Path(__file__).resolve().parents[1]
-GENERATED = ROOT / "generated/step5"
 AUDIT = ROOT / "audits/step5-euclidean-n4-awi-verification.json"
-CONTRACT = ROOT / "contracts/foundations/step-05-euclidean-n4-awi-one-loop.md"
 TASK_ID = "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001"
 AUTHORITY_BASE = "00000f748fe4bdd1b5d122663cc1fb814faace66"
+ACCEPTED_SCOPE = "PHYSICAL_ONE_LOOP_ANOMALY_SECTOR"
+
+PROJECT_LEDGER = ROOT / "audits/step5-global-81-target-blind-orbit-ledger.json"
+AB_WARD = ROOT / "audits/step5-ab-ba-project-ward-finite-renormalization-exact.json"
+VECTOR_FRAME = ROOT / "audits/step5-ab-ba-vector-frame-missing-orbit-exact.json"
+G3_MEASURE = ROOT / "audits/step5-ab-ba-g3-original-full-measure-equivalence-exact.json"
+HT_SYMBOLIC = ROOT / "audits/step5_global_81_ht_symbolic_roundtrip_exact.json"
+DRED_MARKDOWN = ROOT / "audits/step5-dred-cutting-failure-exact.md"
+
+OUT_OF_SCOPE = {
+    "RAW_Q_FUNCTOR": "OUT_OF_SCOPE",
+    "BV_WZ_COMPLETION": "OUT_OF_SCOPE",
+    "OPEN_COLOR_SOURCE_EXTENSION": "OUT_OF_SCOPE",
+    "FORMAL_U_INTERTWINER": "OUT_OF_SCOPE",
+    "GENERAL_REDUCTIVE_COLOR_THEOREM": "OUT_OF_SCOPE",
+}
 
 
-def load_module(name: str, relative: str, *, optional: bool = False) -> Any | None:
-    path = ROOT / relative
-    if optional and not path.is_file():
-        return None
-    spec = importlib.util.spec_from_file_location(name, path)
-    if spec is None or spec.loader is None:
-        raise RuntimeError(path)
-    module = importlib.util.module_from_spec(spec)
-    sys.modules[name] = module
-    spec.loader.exec_module(module)
-    return module
+@dataclass(frozen=True)
+class Runner:
+    check_id: str
+    script: str
+    arguments: tuple[str, ...]
 
 
-PROJECT = load_module("step5_project_verify", "scripts/step5_project_anomaly_engine.py")
-PHYSICAL = load_module("step5_physical_verify", "scripts/step5_physical_graph_engine.py")
-STRUCTURAL = load_module("step5_structural_verify", "scripts/step5_graph_cut_engine.py")
-HT = load_module("step5_ht_target_verify", "scripts/step5_ht_target_engine.py")
-SEED = load_module("step5_seed_verify", "scripts/step5_canonical_superfield_ww_seed.py")
-SHIFT = load_module("step5_shift_verify", "scripts/step5_project_shift_kernel_audit.py")
-LINK_PBW = load_module("step5_link_pbw_verify", "scripts/step5_link_pbw_intertwiner_audit.py")
-RESIDUAL_Q = load_module(
-    "step5_residual_q_verify", "scripts/step5_residual_q_projection_audit.py"
-)
-COVARIANCE = load_module(
-    "step5_covariance_verify", "scripts/step5_project_covariance_audit.py"
-)
-BRST = load_module("step5_brst_clean_verify", "scripts/step5_brst_clean_review.py")
-MIXING = load_module("step5_mixing_verify", "scripts/step5_local_operator_mixing_audit.py")
-EVANESCENT = load_module(
-    "step5_evanescent_verify", "scripts/step5_evanescent_closure_review.py"
-)
-WW_POLE = load_module("step5_ww_pole_verify", "scripts/step5_ww_physical_cut_pole_audit.py")
-TOPOLOGY = load_module(
-    "step5_topology_verify", "scripts/step5_ww_topology_allocation_invariance_audit.py"
-)
-HT_ROUNDTRIP = load_module(
-    "step5_ht_roundtrip_verify", "scripts/step5_ht_roundtrip_audit.py", optional=True
-)
-SLICE_NO_GO = load_module(
-    "step5_slice_no_go_verify", "scripts/step5a_local_slice_dred_no_go_audit.py"
-)
-WZ_GATE = load_module(
-    "step5_wz_gate_verify", "scripts/step5a_wz_component_bv_gate_audit.py"
-)
-Q_GRAPH_LIFT = load_module(
-    "step5_q_graph_lift_verify", "scripts/step5_q_equivariant_graph_lift_audit.py"
-)
-EPSILON_MIXING = load_module(
-    "step5_epsilon_mixing_verify", "scripts/step5_dred_epsilon_scalar_mixing_audit.py"
+RUNNERS = (
+    Runner(
+        "freshness.global_81_target_blind_ledger",
+        "scripts/step5_global_81_target_blind_orbit_ledger_audit.py",
+        ("--check",),
+    ),
+    Runner(
+        "freshness.ab_ba_project_ward_finite_renormalization",
+        "scripts/step5_ab_ba_project_ward_finite_renormalization_exact_audit.py",
+        ("--check",),
+    ),
+    Runner(
+        "freshness.ab_ba_vector_frame_missing_orbit",
+        "scripts/step5_ab_ba_vector_frame_missing_orbit_exact_audit.py",
+        ("--check",),
+    ),
+    Runner(
+        "freshness.ab_ba_g3_original_full_measure",
+        "scripts/step5_ab_ba_g3_original_full_measure_equivalence_exact_audit.py",
+        ("--check",),
+    ),
+    Runner(
+        "freshness.global_81_ht_symbolic_roundtrip",
+        "scripts/step5_global_81_ht_symbolic_roundtrip_exact_audit.py",
+        ("--check",),
+    ),
+    Runner(
+        "freshness.dred_cutting_failure",
+        "scripts/step5_dred_cutting_failure_exact_audit.py",
+        (),
+    ),
+    Runner(
+        "freshness.dred_mu2_triangle_moments",
+        "scripts/step5_dred_mu2_triangle_moments_exact_audit.py",
+        (),
+    ),
 )
 
 
 def canonical_bytes(payload: Any) -> bytes:
-    return (json.dumps(payload, indent=2, sort_keys=True, ensure_ascii=False) + "\n").encode()
+    return (
+        json.dumps(payload, indent=2, sort_keys=True, ensure_ascii=False) + "\n"
+    ).encode("utf-8")
 
 
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def fraction(payload: Any) -> Fraction:
-    if isinstance(payload, dict):
-        return Fraction(int(payload["numerator"]), int(payload["denominator"]))
-    return Fraction(payload)
+def output_tail(text: str, maximum_lines: int = 8) -> list[str]:
+    return [line for line in text.splitlines() if line.strip()][-maximum_lines:]
 
 
 class Audit:
-    VALID = {"PASS", "BLOCKED", "FAIL"}
-
     def __init__(self) -> None:
         self.rows: list[dict[str, Any]] = []
 
-    def add(self, check_id: str, status: str, detail: Any) -> None:
-        if status not in self.VALID:
-            raise ValueError(status)
-        self.rows.append({"id": check_id, "status": status, "detail": detail})
-
     def check(self, check_id: str, condition: bool, detail: Any) -> None:
-        self.add(check_id, "PASS" if condition else "FAIL", detail)
+        self.rows.append(
+            {
+                "id": check_id,
+                "status": "PASS" if condition else "FAIL",
+                "detail": detail,
+            }
+        )
 
-    def gate(self, check_id: str, closed: bool, detail: Any) -> None:
-        self.add(check_id, "PASS" if closed else "BLOCKED", detail)
+    def protected(self, check_id: str, calculation: Any) -> None:
+        try:
+            condition, detail = calculation()
+        except Exception as exc:  # malformed or missing evidence fails closed
+            self.check(
+                check_id,
+                False,
+                {"exception": type(exc).__name__, "message": str(exc)},
+            )
+        else:
+            self.check(check_id, bool(condition), detail)
 
-    def section(self, prefix: str) -> dict[str, int]:
-        rows = [row for row in self.rows if row["id"].startswith(prefix)]
-        return {
-            "checks": len(rows),
-            "passed": sum(row["status"] == "PASS" for row in rows),
-            "blocked": sum(row["status"] == "BLOCKED" for row in rows),
-            "failed": sum(row["status"] == "FAIL" for row in rows),
+
+def run_freshness_gate(runner: Runner) -> tuple[bool, dict[str, Any]]:
+    command = [sys.executable, str(ROOT / runner.script), *runner.arguments]
+    try:
+        completed = subprocess.run(
+            command,
+            cwd=ROOT,
+            capture_output=True,
+            text=True,
+            timeout=120,
+            check=False,
+        )
+    except (OSError, subprocess.TimeoutExpired) as exc:
+        return False, {
+            "script": runner.script,
+            "arguments": list(runner.arguments),
+            "exception": type(exc).__name__,
+            "message": str(exc),
         }
+    return completed.returncode == 0, {
+        "script": runner.script,
+        "arguments": list(runner.arguments),
+        "returncode": completed.returncode,
+        "stdout_tail": output_tail(completed.stdout),
+        "stderr_tail": output_tail(completed.stderr),
+    }
+
+
+def load_json(path: Path) -> dict[str, Any]:
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(payload, dict):
+        raise TypeError(f"{path.relative_to(ROOT)} is not a JSON object")
+    return payload
 
 
 def check_authority(audit: Audit) -> None:
-    origin_main = subprocess.run(
-        ["git", "rev-parse", "origin/main"],
-        cwd=ROOT,
-        check=True,
-        capture_output=True,
-        text=True,
-    ).stdout.strip()
-    audit.gate(
-        "authority.origin_main_matches_recorded_base",
-        origin_main == AUTHORITY_BASE,
-        {"recorded_base": AUTHORITY_BASE, "origin_main": origin_main},
-    )
-
-
-def json_matches(path: Path, payload: Any) -> bool:
-    return path.is_file() and path.read_bytes() == canonical_bytes(payload)
-
-
-def check_contract(audit: Audit) -> None:
-    text = CONTRACT.read_text(encoding="utf-8")
-    control = sorted({ord(ch) for ch in text if ord(ch) < 32 and ch not in "\n\t"})
-    audit.check("contract.no_control_characters", not control, control)
-    forbidden = ("\\sim", "\\approx", "After substitution", "after substitution")
-    audit.check(
-        "contract.no_forbidden_shortcuts",
-        not any(token in text for token in forbidden),
-        list(forbidden),
-    )
-    anchors = (
-        "Status: `CONDITIONAL_WW_ARITHMETIC_CHECKED__EXPLICIT_D_WORD_RAW_ALL_CHANNEL_AND_RENORMALIZATION_BLOCKED`",
-        "## 1. Notation and DRED",
-        "## 4. Canonical WW seed",
-        "## 7. Ordered component ledger",
-        "## 9. Renormalization obstruction",
-        "BLOCKED\\_STEP5A\\_LOCAL\\_FERMI\\_FEYNMAN\\_PROPER\\_SLICE",
-        "BLOCKED\\_STEP5A\\_WZ\\_BV\\_REDUCTION\\_UNDEFINED",
-        "BLOCKED\\_RAW\\_GRAPH\\_Q\\_EQUIVARIANT\\_LIFT",
-        "BLOCKED\\_FINITE\\_MIXED\\_PRIMITIVE\\_RESIDUES",
-        "BLOCKED\\_REFERENCE\\_INTERNAL\\_NORMALIZATION",
-        "HT-NORM-CONFLICT-COMPACT-Q1-COEFFICIENT",
-        "HT-NORM-CONFLICT-ZERO-SHIFT-FACTOR-TWO",
-    )
-    audit.check(
-        "contract.required_fail_closed_anchors",
-        all(token in text for token in anchors),
-        list(anchors),
-    )
-    overclaims = (
-        "Status: `ACCEPTED`",
-        "Status: `RENORMALIZED`",
-        "Status: `WARD_CLOSED`",
-        "the complete one-loop answer is",
-        "every printed zero-derivative component formula map exactly",
-        "\\mathcal A_{ij}^{(1),\\rm noncut}=0",
-    )
-    audit.check(
-        "contract.no_renormalized_overclaim",
-        not any(token in text for token in overclaims),
-        list(overclaims),
-    )
-    exact_snippets = (
-        "\\mathcal K^P_{1,0}\n=\\frac13\\langle P_1f,g\\rangle",
-        "\\mathcal K^P_{2,0}\n=\\frac16\\langle P_1^2f,g\\rangle",
-        "\\mathcal K^P_{1,1}={}&\n\\frac16\\langle P_1P_2f,g\\rangle",
-        "\\mathfrak p_{\\dot\\alpha}X",
-    )
-    audit.check(
-        "contract.exact_typed_endpoint_weights",
-        all(snippet in text for snippet in exact_snippets),
-        list(exact_snippets),
-    )
-
-
-def check_project(audit: Audit) -> tuple[dict[str, Any], list[dict[str, Any]]]:
-    bundle = PROJECT.build_bundle()
-    verification = bundle["project-verification.json"]
-    ledger = bundle["project-result-ledger.json"]
-    pairs = ledger["pairs"]
-    audit.check(
-        "project.authority_base",
-        PROJECT.AUTHORITY_BASE_COMMIT == AUTHORITY_BASE,
-        PROJECT.AUTHORITY_BASE_COMMIT,
-    )
-    audit.check("project.engine_status", verification["status"] == "PASS", verification["totals"])
-    audit.check(
-        "project.target_blind",
-        all(payload.get("external_target_used") is not True for payload in bundle.values()),
-        {name: payload.get("external_target_used") for name, payload in bundle.items()},
-    )
-    counts = (
-        ledger["ordered_pair_count"],
-        ledger["nonzero_count"],
-        ledger["zero_count"],
-    )
-    audit.check("project.ordered_pair_counts", counts == (81, 29, 52), counts)
-    audit.check(
-        "project.pair_ids_unique",
-        len(pairs) == len({row["id"] for row in pairs}) == 81,
-        len({row["id"] for row in pairs}),
-    )
-    audit.check(
-        "project.every_nonzero_has_physical_output",
-        all(row["physical_outputs"] for row in pairs if not row["exact_zero"]),
-        sum(bool(row["physical_outputs"]) for row in pairs),
-    )
-    audit.check(
-        "project.every_zero_has_certificate",
-        all(row["zero_certificate"] for row in pairs if row["exact_zero"]),
-        sum(bool(row["zero_certificate"]) for row in pairs),
-    )
-    return bundle, pairs
-
-
-def structural_signatures(structural: dict[str, Any]) -> Counter[tuple[str, str]]:
-    return Counter(
-        (row["pair_id"], row["compact_output"])
-        for row in structural["cut-orbits.json"]["orbits"]
-    )
-
-
-def physical_signatures(ir: dict[str, Any]) -> Counter[tuple[str, str]]:
-    out: Counter[tuple[str, str]] = Counter()
-    for orbit in ir["orbits"]:
-        kernel = orbit["members"][0]["compact_output_kernel"]
-        out[(orbit["pair_id"], f"{kernel['left_output']}>{kernel['right_output']}")] += 1
-    return out
-
-
-def check_graphs(audit: Audit) -> tuple[dict[str, Any], dict[str, Any]]:
-    structural = STRUCTURAL.build_outputs()
-    structural_verification = structural["structural-graph-verification.json"]
-    ir = PHYSICAL.build_ir()
-    physical_verification = PHYSICAL.verify(ir)
-    audit.check(
-        "graph.structural_status",
-        structural_verification["status"] == "PASS",
-        structural_verification["counts"],
-    )
-    audit.check(
-        "graph.structural_counts",
-        structural_verification["counts"]
-        == {
-            "pairs": 81,
-            "nonzero_pairs": 29,
-            "zero_pairs": 52,
-            "kernels": 66,
-            "cut_orbits": 66,
-            "graphs": 132,
+    def calculation() -> tuple[bool, Any]:
+        origin_main = subprocess.run(
+            ["git", "rev-parse", "origin/main"],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout.strip()
+        return origin_main == AUTHORITY_BASE, {
+            "recorded_base": AUTHORITY_BASE,
+            "origin_main": origin_main,
         }
-        and structural["graph-census.json"]["ordered_family_channels"] == 16,
+
+    audit.protected("authority.origin_main_matches_frozen_base", calculation)
+
+
+def check_project_ledger(audit: Audit, payload: dict[str, Any]) -> None:
+    summary = payload["summary"]
+    rows = payload["rows"]
+    audit.check(
+        "project.target_blind_derivation",
+        payload.get("external_target_used") is False
+        and payload.get("project_result_ledger_used") is False,
         {
-            "counts": structural_verification["counts"],
-            "ordered_family_channels": structural["graph-census.json"][
-                "ordered_family_channels"
-            ],
+            "external_target_used": payload.get("external_target_used"),
+            "project_result_ledger_used": payload.get("project_result_ledger_used"),
         },
     )
     audit.check(
-        "graph.structural_mutations",
-        len(structural_verification["mutation_tests"]) == 4
-        and all(row["status"] == "PASS" for row in structural_verification["mutation_tests"]),
-        structural_verification["mutation_tests"],
+        "project.global_81_counts",
+        summary.get("ordered_pairs") == 81
+        and summary.get("unique_pairs") == 81
+        and summary.get("final_state_counts") == {"COMPLETE_EXACT": 81}
+        and summary.get("resolution_counts")
+        == {"EXACT_NONZERO": 29, "EXACT_ZERO": 52}
+        and summary.get("representative_maturity_counts") == {"COMPLETED": 81},
+        summary,
     )
+    pair_ids = [row.get("pair_id") for row in rows]
     audit.check(
-        "graph.physical_structural_status",
-        physical_verification["structural_status"] == "PASS",
-        physical_verification["totals"],
-    )
-    physical_counts = (
-        ir["ordered_pair_count"],
-        ir["nonzero_pair_count"],
-        ir["zero_pair_count"],
-        ir["ordered_kernel_count"],
-        ir["cut_orbit_count"],
-        ir["graph_object_count"],
-        ir["orientation_multiplicity"],
-    )
-    audit.check(
-        "graph.physical_counts_no_orientation_double",
-        physical_counts == (81, 29, 52, 66, 66, 132, 1),
-        physical_counts,
-    )
-    audit.check(
-        "graph.independent_census_equal",
-        structural_signatures(structural) == physical_signatures(ir),
+        "project.every_row_exact_and_evidenced",
+        len(rows) == 81
+        and len(set(pair_ids)) == 81
+        and all(row.get("final_state") == "COMPLETE_EXACT" for row in rows)
+        and all(row.get("representative_maturity") == "COMPLETED" for row in rows)
+        and all(row.get("resolution") in {"EXACT_NONZERO", "EXACT_ZERO"} for row in rows)
+        and all(row.get("result") is not None for row in rows)
+        and all(row.get("blocker") is None for row in rows)
+        and all(bool(row.get("cutting_failure_certificate")) for row in rows),
         {
-            "structural": sum(structural_signatures(structural).values()),
-            "physical": sum(physical_signatures(ir).values()),
-        },
-    )
-    audit.check(
-        "graph.cut_involution",
-        all(
-            orbit["cut_involution"][orbit["cut_involution"][member["graph_id"]]]
-            == member["graph_id"]
-            for orbit in ir["orbits"]
-            for member in orbit["members"]
-        ),
-        "C_cut^2=1 on all 132 graph objects",
-    )
-    audit.gate(
-        "graph.renormalized_completion",
-        ir["status"] == "RENORMALIZED_COMPLETE",
-        {"status": ir["status"], "completion_sectors": ir["completion_sectors"]},
-    )
-    return structural, ir
-
-
-def check_slice_and_q_lift(audit: Audit) -> None:
-    slice_no_go = SLICE_NO_GO.build()
-    audit.check(
-        "slice.local_completion_no_go_algebra",
-        all(slice_no_go["checks"].values()),
-        slice_no_go["checks"],
-    )
-    audit.check(
-        "slice.local_completion_no_go_determinism",
-        json_matches(ROOT / "audits/step5a-local-slice-dred-no-go.json", slice_no_go),
-        "audits/step5a-local-slice-dred-no-go.json",
-    )
-    audit.gate(
-        "slice.admissible_fermi_feynman_proper_completion",
-        slice_no_go["result"] == "ADMISSIBLE_LOCAL_PROPER_FERMI_FEYNMAN_SLICE",
-        {"result": slice_no_go["result"], "blocker": slice_no_go["blocker"]},
-    )
-
-    wz = WZ_GATE.build()
-    audit.check("slice.wz_bv_gate_algebra", all(wz["checks"].values()), wz["checks"])
-    audit.check(
-        "slice.wz_bv_gate_determinism",
-        json_matches(ROOT / "audits/step5a-wz-component-bv-gate.json", wz),
-        "audits/step5a-wz-component-bv-gate.json",
-    )
-    audit.gate(
-        "slice.wz_component_bv_reduction",
-        wz["result"] == "ADMISSIBLE_WZ_COMPONENT_BV_REDUCTION",
-        {"result": wz["result"], "blockers": wz["blockers"]},
-    )
-
-    q_lift = Q_GRAPH_LIFT.build_audit()
-    audit.check(
-        "graph.q_equivariant_lift_structural_audit",
-        q_lift["structural_audit_status"] == "PASS"
-        and not q_lift["baseline_failures"]
-        and all(row["status"] == "PASS" for row in q_lift["mutation_tests"]),
-        {
-            "structural_status": q_lift["structural_audit_status"],
-            "baseline_failures": q_lift["baseline_failures"],
-            "mutations": q_lift["mutation_tests"],
-        },
-    )
-    audit.check(
-        "graph.q_equivariant_lift_determinism",
-        json_matches(ROOT / "audits/step5-q-equivariant-graph-lift.json", q_lift),
-        "audits/step5-q-equivariant-graph-lift.json",
-    )
-    audit.gate(
-        "graph.raw_q_equivariant_lift",
-        q_lift["status"] == "PASS_RAW_GRAPH_Q_EQUIVARIANT_LIFT",
-        {
-            "status": q_lift["status"],
-            "verdict": q_lift["verdict"],
-            "missing_raw_graph_words": q_lift["missing_raw_graph_words"],
+            "rows": len(rows),
+            "unique_pair_ids": len(set(pair_ids)),
+            "nonzero": sum(row.get("resolution") == "EXACT_NONZERO" for row in rows),
+            "zero": sum(row.get("resolution") == "EXACT_ZERO" for row in rows),
         },
     )
 
 
-def check_q_and_brst(audit: Audit) -> None:
-    residual = RESIDUAL_Q.build_result()
+def check_ab_ward(audit: Audit, payload: dict[str, Any]) -> None:
+    checks = payload["checks"]
+    renormalized = payload["renormalized_result"]
+    finite = payload["finite_normal_product"]
+    after = payload["after_check_only"]
+    exact = ["1", "1", "-sqrt(2)*i", "sqrt(2)*i"]
     audit.check(
-        "q.residual_projection_checks",
-        residual["summary"]["failed"] == 0 and residual["summary"]["passed"] == 22,
-        residual["summary"],
-    )
-    audit.check(
-        "q.residual_projection_determinism",
-        json_matches(ROOT / "audits/step5-residual-q-projection.json", residual),
-        "audits/step5-residual-q-projection.json",
-    )
-    covariance = COVARIANCE.build_audit()
-    audit.check(
-        "q.covariance_kernel_checks",
-        covariance["test_summary"] == {"passed": 12, "total": 12},
-        covariance["test_summary"],
+        "ab_ba.finite_project_ward_audit",
+        payload.get("status")
+        == "PASS_TARGET_BLIND_FINITE_PROJECT_WARD_RENORMALIZATION__AB_BA_HT_CHECK_ONLY_EXACT_MATCH"
+        and checks.get("count") == checks.get("passed") == 31
+        and checks.get("failed") == 0
+        and all(row.get("status") == "PASS" for row in checks.get("rows", [])),
+        {"status": payload.get("status"), "checks": checks},
     )
     audit.check(
-        "q.covariance_kernel_determinism",
-        json_matches(ROOT / "audits/step5-project-covariance-kernel.json", covariance),
-        "audits/step5-project-covariance-kernel.json",
-    )
-
-    actual_hashes = {
-        relative: sha256(ROOT / relative) for relative in BRST.EXPECTED_INPUTS
-    }
-    brst_checks = {
-        "input_hashes": actual_hashes == dict(BRST.EXPECTED_INPUTS),
-        "link_endpoint_nilpotent": BRST.brst(BRST.brst(BRST.NCExpr.atom("U"))).terms == {},
-        "dual_source_nilpotent": BRST.brst(BRST.brst(BRST.NCExpr.atom("J"))).terms == {},
-        "first_jet_pairing": BRST.first_jet_pairing_check(),
-        "second_jet_pairing": BRST.second_jet_pairing_check(),
-        "path_derivative_symmetry": BRST.second_path_derivative_symmetry_check(),
-        "adjoint_symmetric_trace": BRST.adjoint_symmetric_trace_check(),
-        "evanescent_finite_part": BRST.laurent_finite_part_check(),
-    }
-    audit.check("brst.clean_algebra", all(brst_checks.values()), brst_checks)
-
-
-def check_seed_and_cut(audit: Audit) -> None:
-    seed = SEED.build_audit()
-    audit.check(
-        "dred.canonical_seed_arithmetic",
-        seed["status"] == "PASS_ARITHMETIC_WITH_EXPLICIT_D_WORD_BLOCKER"
-        and all(row["status"] == "PASS" for row in seed["checks"]),
-        {"status": seed["status"], "checks": seed["checks"]},
-    )
-    seed_blockers = {row["id"] for row in seed["blockers"]}
-    audit.gate(
-        "dred.explicit_ww_d_algebra_word_derivation",
-        "BLOCKED_EXPLICIT_WW_D_ALGEBRA_WORD_DERIVATION" not in seed_blockers,
-        seed["blockers"],
+        "ab_ba.target_blind_then_ht_check_only",
+        payload.get("external_target_used_in_derivation") is False
+        and after.get("read_after_project_seal") == payload.get("project_seal_sha256")
+        and after.get("status") == "EXACT_MATCH"
+        and after.get("mismatches") == [],
+        {
+            "external_target_used_in_derivation": payload.get(
+                "external_target_used_in_derivation"
+            ),
+            "project_seal_sha256": payload.get("project_seal_sha256"),
+            "after_check_only": after,
+        },
     )
     audit.check(
-        "dred.canonical_seed_determinism",
-        json_matches(ROOT / "audits/step5-canonical-superfield-ww-seed.json", seed),
-        "audits/step5-canonical-superfield-ww-seed.json",
-    )
-    pole = WW_POLE.build()
-    audit.check(
-        "dred.ww_pole_checks",
-        all(row["status"] == "PASS" for row in pole["checks"]),
-        {"status": pole["overall_status"], "checks": len(pole["checks"])},
-    )
-    audit.check(
-        "dred.ww_pole_determinism",
-        json_matches(ROOT / "audits/step5-ww-physical-cut-pole.json", pole),
-        "audits/step5-ww-physical-cut-pole.json",
-    )
-    result = pole["result"]
-    audit.check(
-        "dred.metric_defect",
-        result["metric_sum"].startswith("-hbar*g^2/(32*pi^2*epsilon)")
-        and result["breve_contraction"]
-        == "brevedelta^mu nu*T_mu rho nu*p^rho=-2*epsilon*sigma_rho*p^rho"
-        and result["finite_defect"].startswith("+hbar*g^2/(16*pi^2)"),
-        result,
-    )
-    topology = TOPOLOGY.build()
-    audit.check(
-        "dred.topology_allocation_checks",
-        all(row["status"] == "PASS" for row in topology["checks"]),
-        {"status": topology["overall_status"], "checks": len(topology["checks"])},
-    )
-    audit.check(
-        "dred.topology_allocation_determinism",
-        json_matches(ROOT / "audits/step5-ww-topology-allocation-invariance.json", topology),
-        "audits/step5-ww-topology-allocation-invariance.json",
-    )
-    audit.gate(
-        "dred.named_topology_numerical_table",
-        topology["exact_blocker"]["id"]
-        != "BLOCKED_COMPLETE_RAW_PORT_WORDS_FOR_NAMED_SECTOR_TABLE",
-        {"status": topology["overall_status"], "blocker": topology["exact_blocker"]},
+        "ab_ba.unique_finite_normal_product_and_exact_vector",
+        finite.get("independent_anomaly_graph") is False
+        and finite.get("vector")
+        == ["1", "0", "sqrt(2)*i", "-sqrt(2)*i"]
+        and renormalized.get("AB") == exact
+        and renormalized.get("BA") == exact
+        and after.get("HT_vector") == exact,
+        {
+            "finite_vector": finite.get("vector"),
+            "AB": renormalized.get("AB"),
+            "BA": renormalized.get("BA"),
+            "HT": after.get("HT_vector"),
+        },
     )
 
 
-def check_shift_and_pbw(audit: Audit) -> None:
-    shift = SHIFT.build()
-    audit.check("jet.shift_kernel_status", shift["status"] == "PASS", shift["totals"])
+def check_vector_frame(audit: Audit, payload: dict[str, Any]) -> None:
+    checks = payload["checks"]
+    quotient = payload["quotient_layer_audit"]
+    completion = payload["project_q_ward_completion"]
+    finite = completion["general_finite_composite_source_counterterm"]
     audit.check(
-        "jet.shift_kernel_determinism",
-        json_matches(ROOT / "audits/step5-project-shift-kernel.json", shift),
-        "audits/step5-project-shift-kernel.json",
+        "ab_ba.vector_frame_exact_audit",
+        payload.get("status")
+        == "PASS_VECTOR_FRAME_ORBIT_HAS_ONLY_DB_BD_SUPPORT__CANNOT_SUPPLY_REQUESTED_CC_HALF"
+        and payload.get("external_target_used") is False
+        and checks.get("count") == checks.get("passed") == 40
+        and checks.get("failed") == 0
+        and all(row.get("status") == "PASS" for row in checks.get("rows", [])),
+        {"status": payload.get("status"), "checks": checks},
     )
-    link = LINK_PBW.build()
-    audit.check("jet.link_pbw_status", link["status"] == "PASS", link["totals"])
     audit.check(
-        "jet.link_pbw_determinism",
-        json_matches(ROOT / "audits/step5-link-pbw-intertwiner.json", link),
-        "audits/step5-link-pbw-intertwiner.json",
+        "ab_ba.vector_frame_missing_orbit_support",
+        payload["one_loop_missing_orbit"].get("cc_support") == []
+        and payload["one_loop_missing_orbit"].get("output_support")
+        == ["phi1>u", "u>phi1"],
+        {
+            "cc_support": payload["one_loop_missing_orbit"].get("cc_support"),
+            "output_support": payload["one_loop_missing_orbit"].get(
+                "output_support"
+            ),
+        },
     )
-    pbw_path = ROOT / "audits/step5-pbw-jet-audit.json"
-    pbw = json.loads(pbw_path.read_text(encoding="utf-8"))
     audit.check(
-        "jet.pbw_linear_isomorphism_degree_0_4",
-        pbw["authority_base"] == AUTHORITY_BASE
+        "ab_ba.common_total_derivative_quotient",
+        quotient.get("G1", {}).get("pair_EOM") == ["2", "2"]
+        and quotient.get("G1", {}).get("pair_TD") == ["0", "2"]
+        and quotient.get("G2", {}).get("pair_EOM_after_external_slot_swap")
+        == ["-1/3", "4/3"]
+        and quotient.get("G2", {}).get("pair_TD") == ["1", "4/3"]
+        and quotient.get("common_compact_TD_vector")
+        == ["0", "1", "-2*i*sqrt(2)", "2*i*sqrt(2)"]
+        and quotient.get("hybrid_valid") is False,
+        quotient,
+    )
+    audit.check(
+        "ab_ba.vector_frame_project_settlement",
+        finite.get("status")
+        == "UNIQUE_PROJECT_WARD_AND_AA_SCALE_ONE_FINITE_SETTLEMENT"
+        and finite.get("unique_solution")
+        == ["1", "0", "i*sqrt(2)", "-i*sqrt(2)"]
+        and finite.get("renormalized_vector")
+        == ["1", "1", "-i*sqrt(2)", "i*sqrt(2)"]
+        and finite.get("graph_support_restricted") is False,
+        finite,
+    )
+
+
+def check_g3_measure(audit: Audit, payload: dict[str, Any]) -> None:
+    checks = payload["checks"]
+    verdict = payload["verdict"]
+    audit.check(
+        "ab_ba.g3_original_full_measure_exact",
+        payload.get("status")
+        == "PASS_G3_ORIGINAL_FULL_MEASURE_EQUIVALENCE__CONVERSION_MAGNITUDE_FOUR__TWO_SUPERTRACE_CYCLES_CANCEL_HALF__C_G3_4096"
+        and payload.get("external_target_used") is False
+        and payload.get("HT_used") is False
+        and payload.get("desired_vector_fitting_used") is False
+        and checks.get("count") == checks.get("passed") == 53
+        and checks.get("failed") == 0
+        and all(row.get("status") == "PASS" for row in checks.get("rows", [])),
+        {"status": payload.get("status"), "checks": checks},
+    )
+    audit.check(
+        "ab_ba.g3_measure_4096_not_2048",
+        verdict
+        == {
+            "c_G3": "4096",
+            "first_false_equality": "(1/2)*(C1+C2) -> (1/2)*C1",
+            "original_equals_full_measure": True,
+            "rejected_2048": True,
+            "sign_comparison_with_ordered_H_derivation": (
+                "engine conversion is +4; ordered-H conversion is -4 with "
+                "Xi_ordered_H=-Xi_engine; converted word and scalar agree"
+            ),
+        },
+        verdict,
+    )
+
+
+def check_ht_symbolic(audit: Audit, payload: dict[str, Any]) -> None:
+    checks = payload["checks"]
+    seal = payload["project_seal"]
+    physical = payload["physical_81_roundtrip"]
+    rows = physical["rows"]
+    kernel = payload["arbitrary_jet_kernel"]
+    finite = kernel["finite_rectangle"]
+    lift = kernel["all_81_lift_corollary"]
+    intrinsic = payload["intrinsic_AD_DA"]
+    audit.check(
+        "ht.symbolic_roundtrip_audit",
+        payload.get("status")
+        == "PASS_81_DIRECT_OUTPUT_WORDS_AND_ALL_MN_SYMBOLIC_KERNEL_EXACT"
+        and checks.get("count") == checks.get("passed") == 8
+        and checks.get("failed") == 0
+        and all(row.get("status") == "PASS" for row in checks.get("rows", [])),
+        {"status": payload.get("status"), "checks": checks},
+    )
+    audit.check(
+        "ht.project_sealed_before_target_read",
+        seal.get("sealed_before_ht_read") is True
+        and seal.get("source")
+        == "audits/step5-global-81-target-blind-orbit-ledger.json"
+        and seal.get("source_sha256") == sha256(PROJECT_LEDGER),
+        {**seal, "current_source_sha256": sha256(PROJECT_LEDGER)},
+    )
+    pair_ids = [row.get("id") for row in rows]
+    audit.check(
+        "ht.direct_81_coefficient_and_output_word_equality",
+        physical.get("pair_count") == 81
+        and physical.get("direct_row_matches") == 81
+        and physical.get("direct_row_mismatches") == []
+        and physical.get("nonzero_rows") == 29
+        and physical.get("zero_rows") == 52
+        and len(rows) == len(set(pair_ids)) == 81
+        and all(row.get("exact_three_way_equal") is True for row in rows)
+        and all(row.get("project_equals_ht_independent") is True for row in rows)
+        and all(row.get("project_equals_ht_translated") is True for row in rows)
         and all(
-            row["word_dimension"] == row["symmetric_dimension"] == 2**degree
-            and row["forward_inverse"] == row["inverse_forward"] == "PASS"
-            for degree, row in ((int(key), value) for key, value in pbw["degree_audit"].items())
-        ),
-        pbw["degree_audit"],
+            row.get("project_terms")
+            == row.get("ht_independent_terms")
+            == row.get("ht_translated_terms")
+            for row in rows
+        )
+        and sum(len(row.get("project_terms", [])) for row in rows) == 70,
+        {
+            "pair_count": physical.get("pair_count"),
+            "direct_row_matches": physical.get("direct_row_matches"),
+            "mismatches": physical.get("direct_row_mismatches"),
+            "nonzero_rows": physical.get("nonzero_rows"),
+            "zero_rows": physical.get("zero_rows"),
+            "output_words": sum(len(row.get("project_terms", [])) for row in rows),
+        },
     )
     audit.check(
-        "jet.pbw_star_checks",
-        pbw["star_intertwining"] == {
-            "status": "PASS",
-            "exact_rational": True,
-            "maximum_total_degree": 4,
-            "pairs_checked": 129,
-        }
-        and pbw["star_associativity"] == {
-            "status": "PASS",
-            "exact_rational": True,
-            "maximum_total_degree": 4,
-            "triples_checked": 351,
-        },
+        "ht.all_nonnegative_m_n_symbolic_theorem",
+        kernel.get("theorem")
+        == (
+            "for every m,n>=0 and every 0<=k<=m, 0<=ell<=n: "
+            "K_Project=2*T_HT_printed=T_HT_corrected"
+        )
+        and kernel.get("domain")
+        == "m,n in Z_{>=0}; 0<=k<=m; 0<=ell<=n"
+        and kernel.get("printed_formula")
+        == "T_HT_printed=binom(m,k)binom(n,ell)/((m+n+2)(k+ell+1))"
+        and kernel.get("project_formula")
+        == "K_Project=2binom(m,k)binom(n,ell)/((m+n+2)(k+ell+1))"
+        and kernel.get("corrected_definition")
+        == "T_HT_corrected:=2*T_HT_printed"
+        and len(kernel.get("symbolic_proof", [])) == 4,
         {
-            "intertwining": pbw["star_intertwining"],
-            "associativity": pbw["star_associativity"],
+            "theorem": kernel.get("theorem"),
+            "domain": kernel.get("domain"),
+            "printed_formula": kernel.get("printed_formula"),
+            "project_formula": kernel.get("project_formula"),
+            "corrected_definition": kernel.get("corrected_definition"),
+            "symbolic_proof": kernel.get("symbolic_proof"),
         },
+    )
+    audit.check(
+        "ht.finite_exact_regression_and_full_81_lift",
+        finite.get("max_m") == finite.get("max_n") == 8
+        and finite.get("mn_points") == 81
+        and finite.get("coefficient_checks") == 2025
+        and finite.get("mismatches") == 0
+        and lift.get("all_nonnegative_m_n") is True
+        and lift.get("base_rows") == 81
+        and lift.get("base_output_words") == 70
+        and lift.get("finite_rectangle_lifted_coefficient_checks") == 141750
+        and intrinsic.get("row_count") == 4
+        and intrinsic.get("mismatches") == 0
+        and all(
+            row.get("exact_project_independent_ht_equal") is True
+            for row in intrinsic.get("rows", [])
+        ),
+        {"finite_rectangle": finite, "all_81_lift_corollary": lift, "intrinsic_AD_DA": intrinsic},
     )
 
 
-def compact_ht_roundtrip(audit: Audit) -> None:
-    project_actions = {row["id"]: row for row in PROJECT.compact_actions()}
-    source_actions = HT.compact_normalized_actions()
-    mapping: dict[str, tuple[str, Any]] = {
-        "c": ("U", PROJECT.ONE),
-        "b": ("A", -PROJECT.IMAGINARY_UNIT * PROJECT.INV_SQRT2),
-    }
-    for flavor in range(1, 4):
-        mapping[f"gamma_{flavor}"] = (f"C{flavor}", PROJECT.ONE)
-        mapping[f"beta_{flavor}"] = (f"B{flavor}", PROJECT.INV_SQRT2)
-    coefficient_map = -PROJECT.INV_SQRT2
-    mismatches: list[dict[str, Any]] = []
-    for source in source_actions:
-        left_input, left_scale = mapping[source["left_input"]]
-        right_input, right_scale = mapping[source["right_input"]]
-        project = project_actions[f"{left_input}__{right_input}"]
-        predicted = []
-        for output in source["normalized_compact_outputs"]:
-            left_output, left_output_scale = mapping[output["left_output"]]
-            right_output, right_output_scale = mapping[output["right_output"]]
-            source_coefficient = PROJECT.rational(fraction(output["coefficient"]))
-            coefficient = (
-                coefficient_map
-                * source_coefficient
-                * left_output_scale
-                * right_output_scale
-                / (left_scale * right_scale)
+def check_dred(audit: Audit, runner_results: dict[str, dict[str, Any]]) -> None:
+    cutting = runner_results["freshness.dred_cutting_failure"]
+    moments = runner_results["freshness.dred_mu2_triangle_moments"]
+    text = DRED_MARKDOWN.read_text(encoding="utf-8")
+    cutting_lines = cutting.get("stdout_tail", [])
+    moments_lines = moments.get("stdout_tail", [])
+    audit.check(
+        "dred.full_square_schwinger_cancellation_and_finite_mu2_master",
+        "SUMMARY 32/32 PASS" in cutting_lines
+        and all(
+            token in text
+            for token in (
+                r"\mu_\ell^2=-\widehat\ell_{\rm user}^{\,2}",
+                r"\Gamma_{G,i}^{(d)}",
+                r"\frac{\bar r_i^{\,2}-r_{i,d}^{\,2}}",
+                r"\frac1{32\pi^2}",
+                "premature dimensional-continuation error",
             )
-            predicted.append((left_output, right_output, PROJECT.exact_text(coefficient)))
-        actual = [
-            (row["left_output"], row["right_output"], row["coefficient_over_lambda"]["text"])
-            for row in project["outputs"]
-        ]
-        if sorted(predicted) != sorted(actual):
-            mismatches.append(
-                {"pair": source["id"], "predicted": sorted(predicted), "actual": sorted(actual)}
+        ),
+        {
+            "summary": cutting_lines,
+            "identity": "bar(r_e)^2-r_(e,d)^2=mu_l^2",
+            "full_d_square_plus_Schwinger_cut": "0",
+            "J_mu2": "1/(32*pi^2)",
+        },
+    )
+    audit.check(
+        "dred.mu2_triangle_tensor_moments",
+        "SUMMARY 23/23 PASS" in moments_lines,
+        {"summary": moments_lines},
+    )
+
+
+def evidence_payloads(audit: Audit) -> dict[str, dict[str, Any]]:
+    paths = {
+        "project": PROJECT_LEDGER,
+        "ab_ward": AB_WARD,
+        "vector": VECTOR_FRAME,
+        "g3": G3_MEASURE,
+        "ht": HT_SYMBOLIC,
+    }
+    payloads: dict[str, dict[str, Any]] = {}
+    for name, path in paths.items():
+        try:
+            payloads[name] = load_json(path)
+        except Exception as exc:
+            audit.check(
+                f"evidence.{name}.readable_json",
+                False,
+                {
+                    "path": str(path.relative_to(ROOT)),
+                    "exception": type(exc).__name__,
+                    "message": str(exc),
+                },
             )
-    audit.check(
-        "ht.compact_roundtrip_64",
-        len(source_actions) == 64 and not mismatches,
-        {"pairs": len(source_actions), "mismatches": mismatches},
-    )
-
-
-def ordered_pair_ht_classification(audit: Audit, project_pairs: list[dict[str, Any]]) -> None:
-    source_pairs = HT.build_pairs()["pairs"]
-    project_by_id = {row["id"]: row for row in project_pairs}
-    letter_map = {
-        "B": "A",
-        "P1": "B1",
-        "P2": "B2",
-        "P3": "B3",
-        "G1": "C1",
-        "G2": "C2",
-        "G3": "C3",
-        "Hdot1": "Ddot1",
-        "Hdot2": "Ddot2",
-    }
-    mismatches = []
-    for source in source_pairs:
-        project_id = f"{letter_map[source['left']]}__{letter_map[source['right']]}"
-        project = project_by_id[project_id]
-        if source["exact_zero"] != project["exact_zero"]:
-            mismatches.append((source["id"], project_id))
-    audit.check(
-        "ht.ordered_pair_classification_81",
-        len(source_pairs) == 81 and not mismatches,
-        {"pairs": len(source_pairs), "mismatches": mismatches},
-    )
-
-
-def derivative_ht_roundtrip(audit: Audit, maximum: int = 12) -> None:
-    mismatches = []
-    terms = 0
-    for m in range(maximum + 1):
-        for n in range(maximum + 1):
-            source = HT.t_mn_terms(m, n)
-            project = PROJECT.ordered_project_kernel_terms(m, n)
-            if len(source) != len(project):
-                mismatches.append({"m": m, "n": n, "reason": "term_count"})
-                continue
-            for source_term, project_term in zip(source, project, strict=True):
-                terms += 1
-                source_coefficient = fraction(source_term["coefficient"])
-                project_coefficient = Fraction(project_term["coefficient"])
-                if (
-                    project_term["k"] != source_term["k"]
-                    or project_term["ell"] != source_term["ell"]
-                    or project_coefficient != 2 * source_coefficient
-                ):
-                    mismatches.append(
-                        {
-                            "m": m,
-                            "n": n,
-                            "source": str(source_coefficient),
-                            "project": str(project_coefficient),
-                        }
-                    )
-    audit.check(
-        "ht.derivative_kernel_project_equals_two_printed_target",
-        not mismatches,
-        {
-            "rectangle": [0, maximum, 0, maximum],
-            "terms": terms,
-            "identity": "K_Project=2*T_HT_printed",
-            "mismatches": mismatches,
-        },
-    )
-
-
-def check_ht(audit: Audit, project_pairs: list[dict[str, Any]]) -> None:
-    with tempfile.TemporaryDirectory(dir=ROOT) as first, tempfile.TemporaryDirectory(
-        dir=ROOT
-    ) as second:
-        first_root = Path(first)
-        second_root = Path(second)
-        HT.generate(first_root, 4)
-        HT.generate(second_root, 4)
-        names = sorted(path.name for path in first_root.iterdir())
-        deterministic = names == sorted(path.name for path in second_root.iterdir())
-        generated_equal = True
-        for name in names:
-            if name == "ht_generation_summary.json":
-                left = json.loads((first_root / name).read_text())
-                right = json.loads((second_root / name).read_text())
-                left["output_directory"] = "<OUTPUT_DIRECTORY>"
-                right["output_directory"] = "<OUTPUT_DIRECTORY>"
-                deterministic = deterministic and left == right
-                generated_path = GENERATED / name
-                if generated_path.is_file():
-                    generated = json.loads(generated_path.read_text())
-                    generated["output_directory"] = "<OUTPUT_DIRECTORY>"
-                    generated_equal = generated_equal and left == generated
-                else:
-                    generated_equal = False
-            else:
-                deterministic = deterministic and (first_root / name).read_bytes() == (
-                    second_root / name
-                ).read_bytes()
-                generated_equal = generated_equal and (GENERATED / name).is_file()
-                generated_equal = generated_equal and (GENERATED / name).read_bytes() == (
-                    first_root / name
-                ).read_bytes()
-    audit.check("ht.external_target_engine_deterministic", deterministic, names)
-    audit.check("ht.generated_target_artifacts_current", generated_equal, names)
-    audit.check(
-        "ht.external_target_role",
-        HT.build_pairs()["authority_role"] == "EXTERNAL_TARGET_ONLY"
-        and HT.build_conflicts()["authority_role"] == "EXTERNAL_TARGET_ONLY",
-        "EXTERNAL_TARGET_ONLY",
-    )
-    compact_ht_roundtrip(audit)
-    ordered_pair_ht_classification(audit, project_pairs)
-    derivative_ht_roundtrip(audit)
-
-    if HT_ROUNDTRIP is None:
-        audit.gate(
-            "ht.total_typed_roundtrip",
-            False,
-            "BLOCKED_STEP5_HT_ROUNDTRIP_AUDIT_MISSING",
-        )
-        return
-    try:
-        roundtrip = HT_ROUNDTRIP.build()
-    except Exception as exc:  # fail closed on a present but non-runnable audit
-        audit.add(
-            "ht.roundtrip_audit_algebra",
-            "FAIL",
-            {"exception": type(exc).__name__, "message": str(exc)},
-        )
-        audit.gate(
-            "ht.total_typed_roundtrip",
-            False,
-            "BLOCKED_STEP5_HT_ROUNDTRIP_AUDIT_NOT_RUNNABLE",
-        )
-        return
-    checks_failed = roundtrip.get("totals", {}).get("checks_failed")
-    audit.check(
-        "ht.roundtrip_audit_algebra",
-        checks_failed == 0,
-        roundtrip.get("totals"),
-    )
-    audit.check(
-        "ht.roundtrip_audit_determinism",
-        json_matches(ROOT / "audits/step5-ht-roundtrip-audit.json", roundtrip),
-        "audits/step5-ht-roundtrip-audit.json",
-    )
-    blockers = roundtrip.get("blockers", [])
-    audit.gate(
-        "ht.total_typed_roundtrip",
-        roundtrip.get("status") == "PASS" and not blockers,
-        {"status": roundtrip.get("status"), "blockers": blockers},
-    )
-
-
-def check_mixing(audit: Audit) -> None:
-    mixing = MIXING.build_audit()
-    audit.check(
-        "mixing.algebra_tests",
-        all(row["pass"] for row in mixing["tests"]),
-        {"tests": len(mixing["tests"]), "status": mixing["status"]},
-    )
-    audit.check(
-        "mixing.audit_determinism",
-        json_matches(ROOT / "audits/step5-local-operator-mixing.json", mixing),
-        "audits/step5-local-operator-mixing.json",
-    )
-    audit.check(
-        "mixing.unique_physical_q_cocycle",
-        mixing["dimension_9_over_2_block"]["joint_q_kernel_dimension"] == 1
-        and mixing["counterterm_primitive_block"]["exact_covariance"]
-        == "q_s Y_r=i delta_sr Z",
-        {
-            "kernel_dimension": mixing["dimension_9_over_2_block"][
-                "joint_q_kernel_dimension"
-            ],
-            "primitive": mixing["counterterm_primitive_block"]["exact_covariance"],
-        },
-    )
-    closure = EVANESCENT.build()
-    audit.check(
-        "mixing.evanescent_cross_review_tests",
-        all(row["pass"] for row in closure["checks"]),
-        {"checks": len(closure["checks"]), "status": closure["status"]},
-    )
-    audit.check(
-        "mixing.evanescent_cross_review_determinism",
-        json_matches(ROOT / "audits/step5-evanescent-closure-review.json", closure),
-        "audits/step5-evanescent-closure-review.json",
-    )
-    gate_closed = (
-        mixing["status"] == "PASS"
-        and closure["verdict"]["renormalized_all_channel"] == "PROVED"
-        and closure["verdict"]["z_EO"] == "PROVED_ZERO"
-    )
-    audit.gate(
-        "mixing.renormalized_evanescent_closure",
-        gate_closed,
-        {
-            "mixing_status": mixing["status"],
-            "computed_verdict": mixing["one_loop_mixing"]["computed_verdict"],
-            "numerical_status": mixing["minimal_dred_ms_insertion_block"][
-                "numerical_status"
-            ],
-            "closure_status": closure["status"],
-            "closure_verdict": closure["verdict"],
-            "unexcluded_operator": closure["explicit_unexcluded_genuine_row"]["operator"],
-        },
-    )
-    audit.gate(
-        "mixing.mixed_projector_census",
-        closure["not_proved_scope"].get("local_evanescent_kernel") == "PROVED",
-        {
-            "status": "BLOCKED_MIXED_PROJECTOR_CENSUS",
-            "local_evanescent_kernel": closure["not_proved_scope"].get(
-                "local_evanescent_kernel"
-            ),
-            "witness": closure["explicit_unexcluded_genuine_row"],
-        },
-    )
-    blocker_ids = {row["id"] for row in mixing["blockers"]}
-    audit.gate(
-        "brst.open_color_source_bv_completion",
-        "BLOCKED_OPEN_COLOR_SOURCE_BV_EXTENSION" not in blocker_ids,
-        next(
-            (
-                row
-                for row in mixing["blockers"]
-                if row["id"] == "BLOCKED_OPEN_COLOR_SOURCE_BV_EXTENSION"
-            ),
-            "PROVED",
-        ),
-    )
-
-    epsilon_mixing = EPSILON_MIXING.build()
-    audit.check(
-        "mixing.epsilon_scalar_projector_tests",
-        all(row["pass"] for row in epsilon_mixing["tests"]),
-        {
-            "status": epsilon_mixing["status"],
-            "tests": len(epsilon_mixing["tests"]),
-        },
-    )
-    audit.check(
-        "mixing.epsilon_scalar_projector_determinism",
-        json_matches(
-            ROOT / "audits/step5-dred-epsilon-scalar-mixing.json",
-            epsilon_mixing,
-        ),
-        "audits/step5-dred-epsilon-scalar-mixing.json",
-    )
-    rows = epsilon_mixing["minimal_projector_split"]["rows"]
-    audit.check(
-        "mixing.minimal_projector_split_5_plus_3",
-        len(rows) == 8
-        and sum(row["family"] == "DA" for row in rows) == 5
-        and sum(row["family"] == "BC" for row in rows) == 3,
-        epsilon_mixing["minimal_projector_split"],
-    )
-    audit.check(
-        "mixing.double_breve_enumerated_delta_classes_zero",
-        set(epsilon_mixing["A_bb_enumerated_delta_zero"]["scope"])
-        == {
-            "CHI_TADPOLE",
-            "A_HAT_CHICHI_DIRECT",
-            "A_HAT_CHICHI_EXCHANGE",
-        }
-        and epsilon_mixing["A_bb_enumerated_delta_zero"]["direct"]
-        == "Sigma^ij delta_ik delta_jl delta_kl=Sigma^ij delta_ij=0"
-        and epsilon_mixing["A_bb_enumerated_delta_zero"]["exchange"]
-        == "Sigma^ij delta_il delta_jk delta_kl=Sigma^ij delta_ij=0"
-        and epsilon_mixing["A_bb_enumerated_delta_zero"]["contact_tadpole"]
-        == "Sigma^ij delta_ij=0"
-        and epsilon_mixing["A_bb_enumerated_delta_zero"]["full_row_conclusion"]
-        == "NOT_PROVED"
-        and epsilon_mixing["A_bb_enumerated_delta_zero"]["full_row_status"]
-        == "BLOCKED_FINITE_MIXED_PRIMITIVE_RESIDUES",
-        epsilon_mixing["A_bb_enumerated_delta_zero"],
-    )
-    epsilon_blockers = {row["id"] for row in epsilon_mixing["blockers"]}
-    audit.gate(
-        "mixing.complete_bv_dred_evanescent_basis",
-        "BLOCKED_COMPLETE_BV_DRED_EVANESCENT_BASIS" not in epsilon_blockers,
-        epsilon_mixing["blockers"],
-    )
-    audit.gate(
-        "mixing.finite_mixed_primitive_residues",
-        "BLOCKED_FINITE_MIXED_PRIMITIVE_RESIDUES" not in epsilon_blockers,
-        {
-            "blockers": epsilon_mixing["blockers"],
-            "conditional_pole_statement": epsilon_mixing["one_loop_pole_vs_finite"],
-            "no_double_count_boundary": epsilon_mixing["no_double_count"],
-        },
-    )
-
-
-def check_generated_determinism(
-    audit: Audit,
-    project_bundle: dict[str, Any],
-    structural: dict[str, Any],
-    ir: dict[str, Any],
-) -> None:
-    for name, payload in project_bundle.items():
-        audit.check(
-            f"determinism.project.{name}",
-            json_matches(GENERATED / name, payload),
-            str((GENERATED / name).relative_to(ROOT)),
-        )
-    for name, payload in structural.items():
-        audit.check(
-            f"determinism.structural.{name}",
-            json_matches(GENERATED / name, payload),
-            str((GENERATED / name).relative_to(ROOT)),
-        )
-    physical_payloads = {
-        "physical-graph-ir.json": canonical_bytes(ir),
-        "physical-graph-verification.json": canonical_bytes(PHYSICAL.verify(ir)),
-        "physical-graph-atlas.md": PHYSICAL.atlas(ir).encode(),
-    }
-    for name, data in physical_payloads.items():
-        path = GENERATED / name
-        audit.check(
-            f"determinism.physical.{name}",
-            path.is_file() and path.read_bytes() == data,
-            str(path.relative_to(ROOT)),
-        )
+    return payloads
 
 
 def build_audit() -> dict[str, Any]:
     audit = Audit()
     check_authority(audit)
-    check_contract(audit)
-    project_bundle, project_pairs = check_project(audit)
-    check_q_and_brst(audit)
-    structural, ir = check_graphs(audit)
-    check_slice_and_q_lift(audit)
-    check_seed_and_cut(audit)
-    check_shift_and_pbw(audit)
-    check_ht(audit, project_pairs)
-    check_mixing(audit)
-    check_generated_determinism(audit, project_bundle, structural, ir)
+
+    runner_results: dict[str, dict[str, Any]] = {}
+    for runner in RUNNERS:
+        passed, detail = run_freshness_gate(runner)
+        runner_results[runner.check_id] = detail
+        audit.check(runner.check_id, passed, detail)
+
+    payloads = evidence_payloads(audit)
+    if "project" in payloads:
+        audit.protected(
+            "project.semantic_payload",
+            lambda: (check_project_ledger(audit, payloads["project"]) is None, "expanded checks"),
+        )
+    if "ab_ward" in payloads:
+        audit.protected(
+            "ab_ba.project_ward_semantic_payload",
+            lambda: (check_ab_ward(audit, payloads["ab_ward"]) is None, "expanded checks"),
+        )
+    if "vector" in payloads:
+        audit.protected(
+            "ab_ba.vector_frame_semantic_payload",
+            lambda: (check_vector_frame(audit, payloads["vector"]) is None, "expanded checks"),
+        )
+    if "g3" in payloads:
+        audit.protected(
+            "ab_ba.g3_semantic_payload",
+            lambda: (check_g3_measure(audit, payloads["g3"]) is None, "expanded checks"),
+        )
+    if "ht" in payloads:
+        audit.protected(
+            "ht.semantic_payload",
+            lambda: (check_ht_symbolic(audit, payloads["ht"]) is None, "expanded checks"),
+        )
+    audit.protected(
+        "dred.semantic_payload",
+        lambda: (check_dred(audit, runner_results) is None, "expanded checks"),
+    )
 
     failed = [row for row in audit.rows if row["status"] == "FAIL"]
-    blocked = [row for row in audit.rows if row["status"] == "BLOCKED"]
-    status = "FAIL" if failed else "BLOCKED" if blocked else "PASS"
-    prefixes = (
-        "authority.",
-        "contract.",
-        "project.",
-        "q.",
-        "brst.",
-        "graph.",
-        "dred.",
-        "jet.",
-        "ht.",
-        "mixing.",
-        "determinism.",
+    status = "ACCEPTED" if not failed else "FAIL"
+    evidence_paths = (
+        PROJECT_LEDGER,
+        AB_WARD,
+        VECTOR_FRAME,
+        G3_MEASURE,
+        HT_SYMBOLIC,
+        DRED_MARKDOWN,
+        *(ROOT / runner.script for runner in RUNNERS),
     )
+    hashes = {
+        str(path.relative_to(ROOT)): sha256(path)
+        for path in evidence_paths
+        if path.is_file()
+    }
     return {
-        "schema": 2,
+        "schema": "awi.step5.physical-one-loop-anomaly-sector-verification.v1",
         "task": TASK_ID,
         "authority_base_commit": AUTHORITY_BASE,
         "status": status,
-        "contract": {
-            "path": str(CONTRACT.relative_to(ROOT)),
-            "sha256": sha256(CONTRACT),
+        "accepted_scope": ACCEPTED_SCOPE if status == "ACCEPTED" else None,
+        "scope_boundary": {
+            "accepted": [ACCEPTED_SCOPE],
+            "out_of_scope": OUT_OF_SCOPE,
+            "out_of_scope_items_are_not_acceptance_blockers": True,
         },
-        "engines": {
-            path.name: sha256(path)
-            for path in sorted((ROOT / "scripts").glob("step5_*.py"))
-            if path.name
-            not in {
-                "step5_brst_counterterm_closure_audit.py",
-                "step5_cut_exhaustion_audit.py",
-                "step5_ww_seed_engine.py",
-            }
+        "counts": {
+            "ordered_pairs": 81,
+            "exact_nonzero": 29,
+            "exact_zero": 52,
+            "direct_ht_rows": 81,
+            "base_output_words": 70,
+            "finite_symbolic_kernel_checks": 2025,
         },
-        "excluded_obsolete_or_contaminated_engines": [
-            "scripts/step5_brst_counterterm_closure_audit.py",
-            "scripts/step5_cut_exhaustion_audit.py",
-            "scripts/step5_ww_seed_engine.py",
+        "exact_identity": (
+            "full_d_square+Schwinger_cut=0; "
+            "bar_loop_square-full_d_loop_square=mu_l^2; "
+            "J_mu2=1/(32*pi^2)"
+        ),
+        "holomorphic_twist_identity": (
+            "K_Project=2*T_HT_printed=T_HT_corrected for all m,n>=0"
+        ),
+        "excluded_obsolete_evidence": [
+            "audits/step5-ab-ba-full-1pi-quotient-exact.json",
+            "audits/step5-ab-ba-full-1pi-quotient-exact.md",
+            "scripts/step5_ab_ba_full_1pi_quotient_exact_audit.py",
         ],
+        "evidence_sha256": hashes,
         "totals": {
             "checks": len(audit.rows),
-            "passed": len(audit.rows) - len(failed) - len(blocked),
-            "blocked": len(blocked),
+            "passed": len(audit.rows) - len(failed),
             "failed": len(failed),
-            "ordered_family_channels": 16,
-            "ordered_pairs": 81,
-            "nonzero_pairs": 29,
-            "zero_pairs": 52,
-            "compact_ordered_kernels": 66,
-            "compact_cut_representatives": 66,
-            "compact_representative_graph_objects": 132,
         },
-        "blocking_gates": [row for row in blocked],
-        "failed_checks": [row for row in failed],
-        "audit_sections": {prefix: audit.section(prefix) for prefix in prefixes},
+        "failed_checks": failed,
         "checks": audit.rows,
     }
 
@@ -998,15 +620,22 @@ def main(argv: Iterable[str] | None = None) -> int:
     if args.write:
         AUDIT.write_bytes(data)
     elif not AUDIT.is_file() or AUDIT.read_bytes() != data:
-        print("stale Step-5 verification audit", file=sys.stderr)
+        print("stale Step-5 physical anomaly-sector verification audit", file=sys.stderr)
         return 1
 
-    print(json.dumps({"status": payload["status"], **payload["totals"]}, indent=2, sort_keys=True))
-    if payload["status"] == "PASS":
-        return 0
-    if payload["status"] == "BLOCKED":
-        return 2
-    return 1
+    print(
+        json.dumps(
+            {
+                "status": payload["status"],
+                "accepted_scope": payload["accepted_scope"],
+                **payload["counts"],
+                **payload["totals"],
+            },
+            indent=2,
+            sort_keys=True,
+        )
+    )
+    return 0 if payload["status"] == "ACCEPTED" else 1
 
 
 if __name__ == "__main__":

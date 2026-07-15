@@ -1,0 +1,422 @@
+{
+  "canonical_single_monomial_bases": {
+    "F_normalized": "(F^{AB}+F^{BA})/2",
+    "F_plus": "F^{AB}+F^{BA}",
+    "HT_F_normalized_coefficient": "-2*sqrt(2)*i",
+    "HT_F_plus_coefficient": "-sqrt(2)*i",
+    "cross_basis_trap": "raw ordered -2*i*sqrt(2) equals HT normalized-symmetric -2*i*sqrt(2) only as numbers, not as tensor coordinates",
+    "ratio_in_either_basis": "2",
+    "raw_F_normalized_coefficient": "-4*sqrt(2)*i",
+    "raw_F_plus_coefficient": "-2*sqrt(2)*i"
+  },
+  "canonical_two_tensor_basis": {
+    "HT": [
+      "-sqrt(2)*i",
+      "-sqrt(2)*i"
+    ],
+    "basis": [
+      "F^{AB}X_23",
+      "F^{BA}X_23"
+    ],
+    "color": "F^{AB}_{ED}=F^{BA}_{DE}",
+    "exchange": "X_32^{DE}=-X_23^{ED}",
+    "raw": [
+      "-2*sqrt(2)*i",
+      "-2*sqrt(2)*i"
+    ],
+    "raw_over_HT": [
+      "2",
+      "2"
+    ]
+  },
+  "checks": {
+    "count": 42,
+    "failed": 0,
+    "passed": 42,
+    "rows": [
+      {
+        "actual": "SCALE_ONE",
+        "expected": "SCALE_ONE",
+        "id": "NORMALIZATION_SCALE",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "id": "RAW_G3_TARGET_NOT_USED",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "id": "RAW_MULTIPLICITY_TARGET_NOT_USED",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            2,
+            3,
+            1
+          ],
+          [
+            3,
+            2,
+            -1
+          ]
+        ],
+        "expected": [
+          [
+            2,
+            3,
+            1
+          ],
+          [
+            3,
+            2,
+            -1
+          ]
+        ],
+        "id": "EPSILON_1JK_EXPANSION",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "C2>C3",
+          "C3>C2"
+        ],
+        "expected": [
+          "C2>C3",
+          "C3>C2"
+        ],
+        "id": "ORDERED_BASIS",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "-sqrt(2)*i",
+          "sqrt(2)*i"
+        ],
+        "expected": [
+          "-sqrt(2)*i",
+          "sqrt(2)*i"
+        ],
+        "id": "HT_ORDERED",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "-2*sqrt(2)*i",
+          "2*sqrt(2)*i"
+        ],
+        "expected": [
+          "-2*sqrt(2)*i",
+          "2*sqrt(2)*i"
+        ],
+        "id": "RAW_ORDERED",
+        "status": "PASS"
+      },
+      {
+        "actual": 0,
+        "expected": 0,
+        "id": "C_PARITY",
+        "status": "PASS"
+      },
+      {
+        "actual": 1,
+        "expected": 1,
+        "id": "GRADED_FIELD_EXCHANGE",
+        "status": "PASS"
+      },
+      {
+        "actual": -1,
+        "expected": -1,
+        "id": "DOTTED_EXCHANGE",
+        "status": "PASS"
+      },
+      {
+        "actual": -1,
+        "expected": -1,
+        "id": "TOTAL_OUTPUT_EXCHANGE",
+        "status": "PASS"
+      },
+      {
+        "actual": "-x1*y2 + x2*y1",
+        "expected": "-x1*y2 + x2*y1",
+        "id": "DOTTED_POLYNOMIAL",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "id": "COLOR_SIMULTANEOUS_EXCHANGE",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "id": "COLOR_FIXED_AB_OUTPUT_SYMMETRY",
+        "status": "PASS"
+      },
+      {
+        "actual": "C_Project^{BA}{}_{DE}=C_Project^{AB}{}_{ED}",
+        "expected": "C_Project^{BA}{}_{DE}=C_Project^{AB}{}_{ED}",
+        "id": "LOCKED_COLOR_IDENTITY",
+        "status": "PASS"
+      },
+      {
+        "actual": -2,
+        "expected": -2,
+        "id": "COUNTEREXAMPLE_F01_10",
+        "status": "PASS"
+      },
+      {
+        "actual": 0,
+        "expected": 0,
+        "id": "COUNTEREXAMPLE_F01_01",
+        "status": "PASS"
+      },
+      {
+        "actual": 0,
+        "expected": 0,
+        "id": "COUNTEREXAMPLE_F10_10",
+        "status": "PASS"
+      },
+      {
+        "actual": -2,
+        "expected": -2,
+        "id": "COUNTEREXAMPLE_F10_01",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "-sqrt(2)*i",
+          "-sqrt(2)*i"
+        ],
+        "expected": [
+          "-sqrt(2)*i",
+          "-sqrt(2)*i"
+        ],
+        "id": "HT_CANONICAL_TWO_TENSOR",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "-2*sqrt(2)*i",
+          "-2*sqrt(2)*i"
+        ],
+        "expected": [
+          "-2*sqrt(2)*i",
+          "-2*sqrt(2)*i"
+        ],
+        "id": "RAW_CANONICAL_TWO_TENSOR",
+        "status": "PASS"
+      },
+      {
+        "actual": "-sqrt(2)*i",
+        "expected": "-sqrt(2)*i",
+        "id": "HT_FPLUS_COEFFICIENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2*sqrt(2)*i",
+        "expected": "-2*sqrt(2)*i",
+        "id": "RAW_FPLUS_COEFFICIENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2*sqrt(2)*i",
+        "expected": "-2*sqrt(2)*i",
+        "id": "HT_FNORMALIZED_COEFFICIENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-4*sqrt(2)*i",
+        "expected": "-4*sqrt(2)*i",
+        "id": "RAW_FNORMALIZED_COEFFICIENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": 2,
+        "id": "ORDERED_RATIO",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": 2,
+        "id": "CANONICAL_TWO_TENSOR_RATIO",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": 2,
+        "id": "FPLUS_RATIO",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": 2,
+        "id": "FNORMALIZED_RATIO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2*sqrt(2)*i",
+        "expected": "-2*sqrt(2)*i",
+        "id": "CROSS_BASIS_NUMERICAL_COINCIDENCE",
+        "status": "PASS"
+      },
+      {
+        "actual": "4*sqrt(2)*i",
+        "expected": "4*sqrt(2)*i",
+        "id": "RAW_FRAME_VALUE",
+        "status": "PASS"
+      },
+      {
+        "actual": "2*sqrt(2)*i",
+        "expected": "2*sqrt(2)*i",
+        "id": "HT_FULL_FRAME_VALUE",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "id": "RAW_FRAME_NOT_HT_FRAME",
+        "status": "PASS"
+      },
+      {
+        "actual": 1,
+        "expected": 1,
+        "id": "AB_INPUT_EXCHANGE_SIGN",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1",
+          "1"
+        ],
+        "expected": [
+          "1",
+          "1"
+        ],
+        "id": "SOURCE_HESSIAN_BLOCKS",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": 1,
+        "id": "SOURCE_HESSIAN_HALF_TIMES_TWO",
+        "status": "PASS"
+      },
+      {
+        "actual": "(1/2)*(1+1)=1",
+        "expected": "(1/2)*(1+1)=1",
+        "id": "SOURCE_HESSIAN_STORED",
+        "status": "PASS"
+      },
+      {
+        "actual": "(1/2)*2=1",
+        "expected": "(1/2)*2=1",
+        "id": "RAW_SOURCE_CYCLE_STORED",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/2",
+        "expected": "1/2",
+        "id": "FORBIDDEN_SECOND_HESSIAN_HALF",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "tildephi2",
+          "tildephi3"
+        ],
+        "expected": [
+          "tildephi2",
+          "tildephi3"
+        ],
+        "id": "G32_EXTERNAL_ORDER",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "tildephi3",
+          "tildephi2"
+        ],
+        "expected": [
+          "tildephi3",
+          "tildephi2"
+        ],
+        "id": "G33_EXTERNAL_ORDER",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "id": "G32_G33_DISTINCT_ROUTES",
+        "status": "PASS"
+      }
+    ]
+  },
+  "color_counterexample": {
+    "F01_01": 0,
+    "F01_10": -2,
+    "F10_01": -2,
+    "F10_10": 0
+  },
+  "epsilon_expansion": {
+    "formula": "epsilon_1JK X_JK=X_23-X_32",
+    "ordered_terms": [
+      [
+        2,
+        3,
+        1
+      ],
+      [
+        3,
+        2,
+        -1
+      ]
+    ]
+  },
+  "first_false_equality": {
+    "SU2_counterexample": "F^{01}_{10}=-2 while F^{10}_{10}=0",
+    "canonicalization": "F^{AB}_{ED}=F^{AB}_{DE}",
+    "correct": "F^{AB}_{ED}=F^{BA}_{DE}",
+    "equivalent_cross_basis_error": "F^{AB}=F_(AB)",
+    "hessian": "(1/2!)*(T_(u,phi)+T_(phi,u))=T, not T/2"
+  },
+  "hessian_factor": {
+    "block_traces": [
+      "1",
+      "1"
+    ],
+    "exact_result": "(1/2!)*(1+1)=1",
+    "forbidden_second_half": "1/2",
+    "ordered_blocks": [
+      "H_(u,phi1)",
+      "H_(phi1,u)"
+    ]
+  },
+  "ordered_basis": {
+    "HT": [
+      "-sqrt(2)*i",
+      "sqrt(2)*i"
+    ],
+    "basis": [
+      "F^{AB}X_23",
+      "F^{AB}X_32"
+    ],
+    "raw": [
+      "-2*sqrt(2)*i",
+      "2*sqrt(2)*i"
+    ],
+    "raw_over_HT": [
+      "2",
+      "2"
+    ]
+  },
+  "schema": "step5-ht-ab-epsilon-canonicalization-exact-v1",
+  "status": "PASS_HT_EPSILON_ORDERED_AND_CANONICAL_BASES_EXACT__RAW_G32_G33_REMAIN_FACTOR_TWO__NO_HESSIAN_RESCALING",
+  "verdict": "RAW_G32_G33_ARE_STILL_TWICE_HT_IN_EVERY_COMMON_BASIS; CANONICALIZATION_AND_THE_EXTERNAL_HESSIAN_2_FACTOR_DO_NOT_REMOVE_THE_MISMATCH"
+}

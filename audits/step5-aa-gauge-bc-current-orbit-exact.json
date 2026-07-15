@@ -1,0 +1,60 @@
+{
+  "anomaly_coefficient_in_lambda1_units": "0",
+  "checks": {
+    "contract_outer_A_identity": true,
+    "free_chirality": true,
+    "gauge_fixing_has_no_BC_ports": true,
+    "independent_p_q_pointwise_cancellation": true,
+    "matter_current_definition": true,
+    "not_minus_one_third": true,
+    "pointwise_current_cancellation": true,
+    "same_ordered_color_word": true
+  },
+  "color_word": "c_DE^A B_s^D(p) C_s^E(q)",
+  "evanescent_square": "absent",
+  "external_momenta": {
+    "B_s": "p",
+    "C_s": "q",
+    "restriction": "none; p and q independent"
+  },
+  "loop_denominator": "none; cancellation precedes Wick contraction",
+  "omega21_boundary": {
+    "included_here": false,
+    "reason": "Omega21 is a residual of the AA matter second-mark D-word, not a BC functional derivative of the pure-vector gauge-fixing/E_V source port."
+  },
+  "ordered_output": "(B_s^D(p), C_s^E(q))",
+  "pointwise_sum": "0",
+  "schema": "step5-aa-gauge-bc-current-orbit-v1",
+  "source_port_rows": [
+    {
+      "coefficient": "2*i",
+      "id": "EV_CURRENT_DPLUS_PHI",
+      "operation": "-D_+[-2i(Phi_s x C_s)] with D_+Phi_s=B_s and D_+C_s=0",
+      "outer_source": "A",
+      "ports": [
+        "Phi_s",
+        "C_s"
+      ]
+    },
+    {
+      "coefficient": "-2*i",
+      "id": "EXPLICIT_OUTER_A_CURRENT",
+      "operation": "explicit -2i(B_s x C_s)",
+      "outer_source": "A",
+      "ports": [
+        "B_s",
+        "C_s"
+      ]
+    },
+    {
+      "BC_functional_hessian": 0,
+      "coefficient": "0",
+      "id": "GAUGE_FIXING_LONGITUDINAL",
+      "outer_source": "A",
+      "ports": [
+        "u"
+      ]
+    }
+  ],
+  "target_blind": true
+}

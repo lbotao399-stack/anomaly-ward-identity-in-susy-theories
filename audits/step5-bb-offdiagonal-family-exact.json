@@ -1,0 +1,543 @@
+{
+  "authority_base_commit": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+  "checks": [
+    "B1_B2_spectator_local_upstream_count",
+    "B1_B2_directed_parent_count",
+    "B2_B1_directed_parent_count",
+    "B1_B2_topologies",
+    "B1_B2_output_ports",
+    "B2_B1_output_ports",
+    "B1_B2_spectator_parent_count",
+    "B1_B2_spectator_typed_vertex_pairs",
+    "B1_B2_spectator_external_ports",
+    "B1_B2_spectator_001_DC3_port_projector",
+    "B1_B2_spectator_001_loop_number",
+    "B1_B2_spectator_001_source_edge_is_articulation",
+    "B1_B2_spectator_001_one_particle_irreducible",
+    "B1_B2_spectator_002_DC3_port_projector",
+    "B1_B2_spectator_002_loop_number",
+    "B1_B2_spectator_002_source_edge_is_articulation",
+    "B1_B2_spectator_002_one_particle_irreducible",
+    "B1_B2_spectator_003_DC3_port_projector",
+    "B1_B2_spectator_003_loop_number",
+    "B1_B2_spectator_003_source_edge_is_articulation",
+    "B1_B2_spectator_003_one_particle_irreducible",
+    "B1_B2_spectator_004_DC3_port_projector",
+    "B1_B2_spectator_004_loop_number",
+    "B1_B2_spectator_004_source_edge_is_articulation",
+    "B1_B2_spectator_004_one_particle_irreducible",
+    "TMH_M_source_mark_residual_dot1",
+    "TMH_M_source_mark_residual_dot2",
+    "TMH_H_source_mark_residual_dot1",
+    "TMH_H_source_mark_residual_dot2",
+    "TMH_H_source_full_parent_dot1",
+    "TMH_H_source_full_parent_dot2",
+    "TMH_endpoint_representation_dot1",
+    "TMH_direct_full_word_dot1",
+    "TMH_endpoint_representation_dot2",
+    "TMH_direct_full_word_dot2",
+    "DH2_projector_product_full_Leibniz_rule",
+    "TMH_H_endpoint_direct_core_dot1",
+    "TMH_H_endpoint_transported_core_dot1",
+    "TMH_H_endpoint_direct_core_dot2",
+    "TMH_H_endpoint_transported_core_dot2",
+    "TMH_route003_independent_direct_core_dot1",
+    "TMH_route003_independent_transported_core_dot1",
+    "TMH_route003_independent_direct_core_dot2",
+    "TMH_route003_independent_transported_core_dot2",
+    "TMH_route003_rebase_k1_equals_k0_minus_p",
+    "TMH_route003_rebase_k2_equals_k1_minus_q",
+    "D2_barD2_D2_projector_identity",
+    "Dplus_barD2_D2_neighboring_projector_identity",
+    "TMM_route001_left_mark",
+    "TMM_route001_right_mark",
+    "pure_antichiral_endpoint_D2_theta2",
+    "TMH_endpoint_parent_dot1",
+    "TMH_endpoint_parent_dot2",
+    "TMH_direct_mu2_word_dot1",
+    "TMH_direct_mu2_word_dot2",
+    "TMH_transported_parent_dot1",
+    "TMH_transported_parent_dot2",
+    "TMH_transported_mu2_word_dot1",
+    "TMH_transported_mu2_word_dot2",
+    "TMH_transported_to_direct_ratio_dot1",
+    "TMH_transported_to_direct_ratio_dot2",
+    "BB_I1_T2_contact_dot1",
+    "BB_I1_T2_contact_dot2",
+    "BB_I1_T4_contact_dot1",
+    "BB_I1_T4_contact_dot2",
+    "BB_I1_T2_T4_uncolored_word_dot1",
+    "BB_I1_T2_T4_uncolored_word_dot2",
+    "BB_I1_T1_Dplus_nilpotence",
+    "BB_I1_T3_Dplus_nilpotence",
+    "BB_I1_E1_four_dimensional_external_square",
+    "BB_I1_E2_four_dimensional_external_square",
+    "BB_I1_explicit_row_count",
+    "full_d_SD_parent_plus_cut_pointwise_zero",
+    "DRED_parent_minus_cut_is_mu2",
+    "DRED_mu2_triangle_master",
+    "simplex_area",
+    "simplex_2int_y",
+    "simplex_2int_z",
+    "rank_one_r0_p_weight",
+    "rank_one_r0_q_weight",
+    "BB_linear_source_coefficient",
+    "BB_M_action_exponent",
+    "BB_Hminus_action_exponent",
+    "BB_three_chiral_propagators",
+    "BB_action_Taylor_orderings",
+    "BB_primitive_preD",
+    "BB_I1_source_B1_commutator_coefficient",
+    "BB_I1_two_chiral_propagators",
+    "BB_I1_Hminus_contact_preD",
+    "BB_transported_parent_contact_normalization",
+    "BB_transported_full_d_SD_orbit_pointwise_zero",
+    "BB_transported_DRED_SD_orbit_mu2_remainder",
+    "BB_external_D_probe_map",
+    "BB_external_C_map",
+    "BB_external_DC_map",
+    "BB_direct_unsigned_route_unit",
+    "BB_transported_unsigned_route_unit",
+    "BB_unsigned_route_q_coefficient",
+    "BB_transported_to_direct_normalized_ratio",
+    "route002_SU2_color_contraction_is_F",
+    "route003_SU2_color_contraction_is_minus_F",
+    "route002_effective_color_Koszul",
+    "route003_effective_color_Koszul",
+    "BB_route002_direct_DC",
+    "BB_route002_direct_CD",
+    "BB_route003_direct_DC",
+    "BB_route003_direct_CD",
+    "B1_B2_direct_subtotal_DC",
+    "B1_B2_direct_subtotal_CD",
+    "B1_B2_transported_subtotal_DC",
+    "B1_B2_transported_subtotal_CD",
+    "B1_B2_triangle_DC",
+    "B1_B2_triangle_CD",
+    "BB_O0_word_count",
+    "BB_O1_word_count",
+    "BB_O2_word_count",
+    "BB_I0_occurrence_count",
+    "BB_I1_expanded_occurrence_count",
+    "BB_I2_expanded_occurrence_count",
+    "BB_I1_T2_contact_matches_route002_transported_dot1",
+    "BB_I1_T4_contact_matches_route003_transported_dot2",
+    "Euler_potential_plus_explicit_contact_identical_regulator",
+    "offdiagonal_coincident_EOM_Jacobian_delta12",
+    "B13_free_tadpole_has_C3_port",
+    "B13_scaleless_tadpole",
+    "M4_seagull_absorbs_phi1_and_phi2",
+    "Hminus_quartic_vertex_count",
+    "gauge_fixing_BB_flavor_port_count",
+    "ghost_BB_flavor_port_count",
+    "auxiliary_is_already_superfield_encoded",
+    "BB_offdiagonal_SU3_ordered_count",
+    "BB_target_minus_triangle_DC",
+    "BB_target_minus_triangle_CD",
+    "Pro_BB12_minus_two_thirds_plus_one_third",
+    "Pro_BB12_Hminus_fixed_port_Wick",
+    "Pro_BB12_reject_extra_Hminus_factor_two",
+    "Pro_BB12_nonlinear_orbit_is_one_loop",
+    "Pro_BB12_claimed_match_follows_from_arithmetic",
+    "Pro_Gate2_transported_ratio_matches_local",
+    "Pro_Gate2_final_vector_matches_local",
+    "audit_anchor_route001",
+    "audit_anchor_route002",
+    "audit_anchor_route003",
+    "audit_anchor_endpoint",
+    "audit_anchor_transported",
+    "audit_anchor_source_orbit",
+    "audit_anchor_spectator",
+    "audit_anchor_potential",
+    "audit_anchor_result"
+  ],
+  "conditional_HT_comparison_only_after_calculation": {
+    "target_B1__B2_over_lambda1": [
+      "-sqrt(2)*I",
+      "sqrt(2)*I"
+    ],
+    "target_minus_calculation": [
+      "0",
+      "0"
+    ],
+    "verdict": "EXACT_MATCH"
+  },
+  "dred": {
+    "full_d_zero": "r_(e,d)^2/(D0*D1*D2)-1/(product_(j!=e) Dj)=0",
+    "remainder": "mu_l^2/(D0*D1*D2)",
+    "triangle_master": "1/(32*pi^2)"
+  },
+  "external_target_used_as_input": false,
+  "gpt_pro_adjudication": {
+    "authority": "NON_AUTHORITY_PRO_REVIEW",
+    "gate1": {
+      "errors": [
+        "-sqrt(2)*(2/3)+sqrt(2)*(1/3)=-sqrt(2) is false",
+        "extra fixed-port Hminus Wick factor two is false",
+        "exclusion of I1*S_Hminus one-loop contacts is false"
+      ],
+      "sha256": "a00e3a660e109ab5cc26e992f237f49874ef64fc6fa84f942a197ca12530e6b3",
+      "source": "proposals/gpt-pro-bb12-evanescent-cut-gate1-response-2026-07-14.md",
+      "verdict": "REJECTED"
+    },
+    "gate2": {
+      "sha256": "31f8906d79cd5f824191eb9d09c7733f4723a2916e45e5bac3c2f826f2e7d2e0",
+      "source": "proposals/gpt-pro-bb12-evanescent-cut-gate2-response-2026-07-14.md",
+      "verdict": "ACCEPTED_AFTER_INDEPENDENT_LOCAL_SPARSE_GRASSMANN_AND_NORMALIZATION_CHECK"
+    }
+  },
+  "nonzero_occurrences": [
+    {
+      "endpoint_complete_D_word": "4096*v(r0)*bar(r2)^2",
+      "full_d_contact": "-4096*v(r0)/(D0*D1)",
+      "id": "002-R-dir",
+      "moment_DC_CD": [
+        "2/3",
+        "1/3"
+      ],
+      "mu2_remainder": "4096*mu_l^2*v(r0)/(D0*D1*D2)",
+      "normalized_vector_over_lambda1": [
+        "-4*sqrt(2)*I/3",
+        "-2*sqrt(2)*I/3"
+      ],
+      "selected_edge": "r2"
+    },
+    {
+      "endpoint_complete_D_word": "2048*v(r0)*bar(r1)^2",
+      "full_d_contact": "I1*S_Hminus:T2=-128*v(r0)/(D0*D2)",
+      "id": "002-R-tr",
+      "moment_DC_CD": [
+        "2/3",
+        "1/3"
+      ],
+      "mu2_remainder": "2048*mu_l^2*v(r0)/(D0*D1*D2)",
+      "normalized_vector_over_lambda1": [
+        "-2*sqrt(2)*I/3",
+        "-sqrt(2)*I/3"
+      ],
+      "selected_edge": "r1"
+    },
+    {
+      "canonical_rebase": "k0=-rho2; k1=-rho1; k2=-rho0",
+      "endpoint_complete_D_word": "4096*v(k0)*bar(k2)^2",
+      "full_d_contact": "-4096*v(k0)/(K0*K1)",
+      "id": "003-L-dir",
+      "moment_DC_CD": [
+        "1/3",
+        "2/3"
+      ],
+      "mu2_remainder": "4096*mu_l^2*v(k0)/(K0*K1*K2)",
+      "normalized_vector_over_lambda1": [
+        "2*sqrt(2)*I/3",
+        "4*sqrt(2)*I/3"
+      ],
+      "oriented_routing": "rho1=ell-q; rho2=ell-p-q",
+      "selected_edge": "k2"
+    },
+    {
+      "canonical_rebase": "k0=-rho2; k1=-rho1; k2=-rho0",
+      "endpoint_complete_D_word": "2048*v(k0)*bar(k1)^2",
+      "full_d_contact": "I1*S_Hminus:T4=-128*v(k0)/(K0*K2)",
+      "id": "003-L-tr",
+      "moment_DC_CD": [
+        "1/3",
+        "2/3"
+      ],
+      "mu2_remainder": "2048*mu_l^2*v(k0)/(K0*K1*K2)",
+      "normalized_vector_over_lambda1": [
+        "sqrt(2)*I/3",
+        "2*sqrt(2)*I/3"
+      ],
+      "oriented_routing": "rho1=ell-q; rho2=ell-p-q",
+      "selected_edge": "k1"
+    }
+  ],
+  "occurrence_orbit": [
+    {
+      "id": "BB-I1-HMINUS-CONTACTS",
+      "noncancellation": "T2 and T4 have opposite ordered color words and different external port order",
+      "rows": [
+        "T1=0",
+        "E1=0 external q square",
+        "T2=-128*v(r0)/(D0*D2), route002 bridge tag",
+        "T4=-128*v(r0)/(D0*D2), route003 bridge tag",
+        "T3=0",
+        "E2=0 external p square"
+      ]
+    },
+    {
+      "id": "BB-E-POT",
+      "kernel": "+sqrt(2)*K_potential",
+      "word": "+sqrt(2)*epsilon*(C cross C) inside -2 E_tilde"
+    },
+    {
+      "id": "BB-X-POT",
+      "kernel": "-sqrt(2)*K_potential",
+      "word": "-sqrt(2)*epsilon*(C cross C) explicit"
+    },
+    {
+      "direct_to_transported_ratio": "(-2)/(-4)=1/2",
+      "id": "BB-TRANSPORTED-EDGE",
+      "identity": "D2(Pib*Pis)=(D2Pib)Pis+Pib(D2Pis)+2(D-Pib)(D+Pis)-2(D+Pib)(D-Pis)",
+      "result": "SECOND_NEIGHBORING_EDGE_OCCURRENCE",
+      "survivors": [
+        "Pib(D2Pis)",
+        "-2(D+Pib)(D-Pis)"
+      ]
+    },
+    {
+      "id": "BB-I2-B13",
+      "result": "EXACT_ZERO_NO_C3_PORT_AND_SCALELESS_TADPOLE"
+    },
+    {
+      "id": "BB-I0-S4",
+      "result": "EXACT_ZERO_FLAVOR_PORT; Hminus has no quartic"
+    },
+    {
+      "id": "BB-GF-GHOST-AUX",
+      "result": "EXACT_ABSENT_BY_MATTER_FLAVOR_PORT_GRAMMAR"
+    },
+    {
+      "id": "BB-COINCIDENT-JACOBIAN",
+      "result": "EXACT_ZERO_DELTA_R_S_FOR_R_NOT_EQUAL_S; first superpotential Hessian is the counted TMH parent"
+    }
+  ],
+  "parents": [
+    {
+      "id": "BB-TMM-001",
+      "marks": {
+        "left": "0",
+        "right": "0"
+      },
+      "result": "EXACT_ZERO_DWORD"
+    },
+    {
+      "id": "BB-TMH-002-L",
+      "raw_residual": [
+        "0",
+        "0"
+      ],
+      "result": "EXACT_ZERO_DWORD",
+      "selected_edge": "source B1 to M1"
+    },
+    {
+      "id": "BB-TMH-002-R",
+      "occurrences": [
+        "002-R-dir",
+        "002-R-tr"
+      ],
+      "raw_residual": [
+        "-128*r0_(+dot2)",
+        "+128*r0_(+dot1)"
+      ],
+      "selected_edge": "source B2 to Hminus"
+    },
+    {
+      "canonical_residual": [
+        "-128*k0_(+dot2)",
+        "+128*k0_(+dot1)"
+      ],
+      "id": "BB-TMH-003-L",
+      "occurrences": [
+        "003-L-dir",
+        "003-L-tr"
+      ],
+      "raw_residual_oriented": [
+        "+128*rho2_(+dot2)",
+        "-128*rho2_(+dot1)"
+      ],
+      "selected_edge": "source B1 to Hminus; independently rerouted",
+      "source_attachment_koszul": "-1"
+    },
+    {
+      "id": "BB-TMH-003-R",
+      "raw_residual": [
+        "0",
+        "0"
+      ],
+      "result": "EXACT_ZERO_DWORD",
+      "selected_edge": "source B2 to M2"
+    }
+  ],
+  "routing": {
+    "p": "external D momentum at the matter vertex",
+    "q": "external C_t momentum at Hminus",
+    "rank_one_route002": "2*int_Sigma r0=(2*p+q)/3",
+    "rank_one_route003": "2*int_Sigma k0=(2*p+q)/3; reversed ports map to (DC,CD)=(1/3,2/3)",
+    "route002": {
+      "r0": "ell",
+      "r1": "ell-p",
+      "r2": "ell-p-q"
+    },
+    "route003_canonical_rebase": {
+      "k0": "-rho2",
+      "k1": "-rho1=k0-p",
+      "k2": "-rho0=k0-p-q"
+    },
+    "route003_oriented": {
+      "rho0": "ell",
+      "rho1": "ell-q",
+      "rho2": "ell-p-q"
+    }
+  },
+  "schema": "awi.step5.bb-offdiagonal-family-exact.v2",
+  "source_expansion": {
+    "B0": "D_+ phi_r",
+    "B1": "sqrt(2)*[D_+u,phi_r]",
+    "B2": "[(D_+u)u-u(D_+u),phi_r]",
+    "I_occurrence_counts": [
+      2,
+      6,
+      12
+    ],
+    "O_word_counts": [
+      1,
+      2,
+      3
+    ],
+    "order_g2_resolvent": [
+      "<I2>",
+      "-<I1*S3>/hbar",
+      "-<I0*S4>/hbar",
+      "+<I0*S3*S3>/(2*hbar^2)"
+    ]
+  },
+  "spectator_source_double_bridge": [
+    {
+      "DC3_projection": "EXACT_ZERO_EXTERNAL_PORT_ORTHOGONALITY",
+      "amputated_BB_coefficient": "EXCLUDED_EXTERNAL_SELF_ENERGY_1PR",
+      "external_ports": [
+        "phi1",
+        "phi2"
+      ],
+      "id": "BB-SPEC-001",
+      "loop_count": 1,
+      "one_particle_irreducible": false,
+      "source_edge_articulation": true,
+      "spectator_side": "L",
+      "typed_vertices": [
+        "Hminus",
+        "Hplus"
+      ]
+    },
+    {
+      "DC3_projection": "EXACT_ZERO_EXTERNAL_PORT_ORTHOGONALITY",
+      "amputated_BB_coefficient": "EXCLUDED_EXTERNAL_SELF_ENERGY_1PR",
+      "external_ports": [
+        "phi1",
+        "phi2"
+      ],
+      "id": "BB-SPEC-002",
+      "loop_count": 1,
+      "one_particle_irreducible": false,
+      "source_edge_articulation": true,
+      "spectator_side": "L",
+      "typed_vertices": [
+        "M2",
+        "M2"
+      ]
+    },
+    {
+      "DC3_projection": "EXACT_ZERO_EXTERNAL_PORT_ORTHOGONALITY",
+      "amputated_BB_coefficient": "EXCLUDED_EXTERNAL_SELF_ENERGY_1PR",
+      "external_ports": [
+        "phi2",
+        "phi1"
+      ],
+      "id": "BB-SPEC-003",
+      "loop_count": 1,
+      "one_particle_irreducible": false,
+      "source_edge_articulation": true,
+      "spectator_side": "R",
+      "typed_vertices": [
+        "Hminus",
+        "Hplus"
+      ]
+    },
+    {
+      "DC3_projection": "EXACT_ZERO_EXTERNAL_PORT_ORTHOGONALITY",
+      "amputated_BB_coefficient": "EXCLUDED_EXTERNAL_SELF_ENERGY_1PR",
+      "external_ports": [
+        "phi2",
+        "phi1"
+      ],
+      "id": "BB-SPEC-004",
+      "loop_count": 1,
+      "one_particle_irreducible": false,
+      "source_edge_articulation": true,
+      "spectator_side": "R",
+      "typed_vertices": [
+        "M1",
+        "M1"
+      ]
+    }
+  ],
+  "status": "PASS_BB_OFFDIAGONAL_DRED_SD_ORBIT_EXACT_HT_MATCH",
+  "summary": {
+    "checks": 149,
+    "failed": 0,
+    "passed": 149
+  },
+  "triangle_result": {
+    "B1__B2_basis": [
+      "<D^D,C3^E>",
+      "<C3^D,D^E>"
+    ],
+    "SU3_lift": [
+      {
+        "epsilon": 1,
+        "pair": "B1__B2",
+        "third_flavor": 3,
+        "triangle_CD_over_lambda1": "sqrt(2)*I",
+        "triangle_DC_over_lambda1": "-sqrt(2)*I"
+      },
+      {
+        "epsilon": 1,
+        "pair": "B2__B3",
+        "third_flavor": 1,
+        "triangle_CD_over_lambda1": "sqrt(2)*I",
+        "triangle_DC_over_lambda1": "-sqrt(2)*I"
+      },
+      {
+        "epsilon": 1,
+        "pair": "B3__B1",
+        "third_flavor": 2,
+        "triangle_CD_over_lambda1": "sqrt(2)*I",
+        "triangle_DC_over_lambda1": "-sqrt(2)*I"
+      },
+      {
+        "epsilon": -1,
+        "pair": "B2__B1",
+        "third_flavor": 3,
+        "triangle_CD_over_lambda1": "-sqrt(2)*I",
+        "triangle_DC_over_lambda1": "sqrt(2)*I"
+      },
+      {
+        "epsilon": -1,
+        "pair": "B3__B2",
+        "third_flavor": 1,
+        "triangle_CD_over_lambda1": "-sqrt(2)*I",
+        "triangle_DC_over_lambda1": "sqrt(2)*I"
+      },
+      {
+        "epsilon": -1,
+        "pair": "B1__B3",
+        "third_flavor": 2,
+        "triangle_CD_over_lambda1": "-sqrt(2)*I",
+        "triangle_DC_over_lambda1": "sqrt(2)*I"
+      }
+    ],
+    "coefficient_over_lambda1": [
+      "-sqrt(2)*I",
+      "sqrt(2)*I"
+    ],
+    "direct_subtotal_over_lambda1": [
+      "-2*sqrt(2)*I/3",
+      "2*sqrt(2)*I/3"
+    ],
+    "transported_subtotal_over_lambda1": [
+      "-sqrt(2)*I/3",
+      "sqrt(2)*I/3"
+    ]
+  }
+}

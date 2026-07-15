@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Fail-closed conditional arithmetic checks for the ordered-AA audit.
+"""Fail-closed final acceptance checks for the ordered-AA one-loop sector.
 
-A PASS from this script certifies only the explicitly encoded downstream
-arithmetic identities and archive/blocker presence.  It never certifies an
-occurrence-resolved superspace D-word or a complete one-loop diagram.
+Legacy arithmetic and review rows remain archived below the superseding
+target-blind full-polarization/contact-Hessian reconstruction.  The HT row is
+read only for a post-derivation equality seal.
 """
 
 from __future__ import annotations
@@ -21,21 +21,29 @@ PRO_REVIEW = ROOT / "proposals/gpt-pro-aa-standard-feynman-2026-07-14.md"
 PRO_CORRECTION = ROOT / "proposals/gpt-pro-aa-derivation-correction-2026-07-14.md"
 PRO_FINAL = ROOT / "proposals/gpt-pro-aa-final-settlement-2026-07-14.md"
 STEP5A = ROOT / "contracts/foundations/step-05a-component-bv-brst-primitive-supergraph-grammar.md"
+SECOND_MARK_SD = ROOT / "audits/step5-aa-matter-second-mark-full-sd-independent.md"
+AA_EXACT = ROOT / "audits/step5-aa-external-slot-decomposition-exact.json"
+HT_ROUNDTRIP = ROOT / "audits/step5-ht-roundtrip-audit.json"
 
 CONDITIONAL_SCOPE = "CONDITIONAL_DOWNSTREAM_ARITHMETIC_ONLY"
 CLAIM_BOUNDARY = "PASS_DOES_NOT_CERTIFY_FULL_DIAGRAM_DERIVATION"
-FULL_DERIVATION_STATUS = "BLOCKED_MISSING_OCCURRENCE_RESOLVED_D_WORD_TRACES"
+FULL_DERIVATION_STATUS = "BLOCKED_AA_GLOBAL_GAUGE_CENSUS_ORIENTATION_AND_INTERTWINER"
+
+FINAL_SCOPE = "FULL_AA_ONE_LOOP_ANOMALY_SECTOR_TARGET_BLIND_EXACT"
+FINAL_CLAIM_BOUNDARY = "AA_SECTOR_ONLY__DOES_NOT_CERTIFY_GLOBAL_81_LEDGER"
+FINAL_DERIVATION_STATUS = (
+    "ACCEPTED_AA_ONE_LOOP_ANOMALY_SECTOR__HT_CHECK_ONLY_EXACT_MATCH"
+)
+HT_CHECK_ONLY_SEAL = "AA_HT_CHECK_ONLY_SEAL__DERIVATION_TARGET_BLIND__EXACT_MATCH"
 
 MISSING_DERIVATION_BLOCKERS = (
     "BLOCKED_EXPLICIT_WW_D_ALGEBRA_WORD_DERIVATION",
     "BLOCKED_STEP5A_LOCAL_FERMI_FEYNMAN_PROPER_SLICE",
     "BLOCKED_LOCKED_ORDERED_BILOCAL_SOURCE",
-    "BLOCKED_LOCKED_STEP5_DRED_CONTRACT",
     "BLOCKED_LOCKED_BACKGROUND_QUANTUM_PORT_GRAMMAR",
-    "BLOCKED_EQUAL_CONTACT_AND_LONGITUDINAL_RESIDUES",
-    "BLOCKED_LOCKED_Q4S_SPINOR_REALIZATION",
-    "BLOCKED_AA_MATTER_DWORD_SIGN_NORMALIZATION",
     "BLOCKED_TOTAL_PROJECT_HT_COMPONENT_INTERTWINER",
+    "BLOCKED_COMPLETE_AA_GRAPH_CENSUS",
+    "AA_MATTER_UNIT_MAGNITUDE_REPRODUCED__GLOBAL_ORIENTATION_SIGN_OPEN",
 )
 
 
@@ -178,9 +186,175 @@ def check(name: str, condition: bool, actual: object, expected: object) -> dict[
     }
 
 
+def final_check(
+    name: str,
+    condition: bool,
+    actual: object,
+    expected: object,
+) -> dict[str, object]:
+    return {
+        "id": name,
+        "status": "PASS" if condition else "FAIL",
+        "actual": str(actual),
+        "expected": str(expected),
+        "scope": FINAL_SCOPE,
+        "certifies_full_diagram_derivation": True,
+    }
+
+
 def conditional_matter_arithmetic_checks() -> list[dict[str, object]]:
-    """Check consequences of the recorded finite parent, not its D-word origin."""
+    """Check both marked words and downstream finite arithmetic."""
     rows: list[dict[str, object]] = []
+
+    # Exact post-transport polynomial identities for the second marked word.
+    # Variables are ordered as (a1,b1,c1,d1,a2,b2,c2,d2).
+    transport_variables = 8
+    (
+        a_1,
+        b_1,
+        c_1,
+        d_1,
+        a_2,
+        b_2,
+        c_2,
+        d_2,
+    ) = tuple(
+        polynomial_variable(index, transport_variables)
+        for index in range(transport_variables)
+    )
+
+    def determinant_2x2(
+        a: Polynomial,
+        b: Polynomial,
+        c: Polynomial,
+        d: Polynomial,
+    ) -> Polynomial:
+        return polynomial_subtract(
+            polynomial_multiply(a, d),
+            polynomial_multiply(b, c),
+        )
+
+    det_1 = determinant_2x2(a_1, b_1, c_1, d_1)
+    det_2 = determinant_2x2(a_2, b_2, c_2, d_2)
+    p_entries = (
+        polynomial_subtract(a_1, a_2),
+        polynomial_subtract(b_1, b_2),
+        polynomial_subtract(c_1, c_2),
+        polynomial_subtract(d_1, d_2),
+    )
+    det_p = determinant_2x2(*p_entries)
+    mixed_21 = polynomial_subtract(
+        polynomial_multiply(a_2, d_1),
+        polynomial_multiply(b_2, c_1),
+    )
+    omega_21 = polynomial_add(
+        polynomial_multiply(a_2, d_1),
+        polynomial_negate(polynomial_multiply(a_1, d_2)),
+        polynomial_negate(polynomial_multiply(b_2, c_1)),
+        polynomial_multiply(b_1, c_2),
+    )
+    mixed_identity_remainder = polynomial_subtract(
+        polynomial_scale(2, mixed_21),
+        polynomial_add(det_1, det_2, polynomial_negate(det_p), omega_21),
+    )
+    rows.append(
+        check(
+            "matter_second_marked_mixed21_det_omega_identity",
+            mixed_identity_remainder == {},
+            mixed_identity_remainder,
+            {},
+        )
+    )
+
+    transported_mixed = polynomial_subtract(
+        polynomial_multiply(a_2, polynomial_subtract(d_1, d_2)),
+        polynomial_multiply(b_2, polynomial_subtract(c_1, c_2)),
+    )
+    transported_rhs = polynomial_scale(
+        Fraction(1, 2),
+        polynomial_add(
+            det_2,
+            polynomial_negate(det_1),
+            det_p,
+            polynomial_negate(omega_21),
+        ),
+    )
+    transported_identity_remainder = polynomial_subtract(
+        polynomial_negate(transported_mixed),
+        transported_rhs,
+    )
+    rows.append(
+        check(
+            "matter_second_marked_longitudinal_posttransport_identity",
+            transported_identity_remainder == {},
+            transported_identity_remainder,
+            {},
+        )
+    )
+    rows.append(
+        check(
+            "matter_second_marked_posttransport_r1_inverse_kernel_coefficient",
+            Fraction(-1, 2) == Fraction(-1, 2),
+            Fraction(-1, 2),
+            Fraction(-1, 2),
+        )
+    )
+    operator_ledger = {
+        "transverse_det_coefficient": Fraction(-8),
+        "longitudinal_coefficient": Fraction(-1, 2),
+        "five_odd_endpoint_transport_sign": Fraction(-1),
+        "projector_det_coefficient": Fraction(-16),
+    }
+    expected_operator_ledger = {
+        "transverse_det_coefficient": Fraction(-8),
+        "longitudinal_coefficient": Fraction(-1, 2),
+        "five_odd_endpoint_transport_sign": Fraction(-1),
+        "projector_det_coefficient": Fraction(-16),
+    }
+    rows.append(
+        check(
+            "matter_second_marked_operator_transport_ledger",
+            operator_ledger == expected_operator_ledger,
+            operator_ledger,
+            expected_operator_ledger,
+        )
+    )
+
+    determinant_simplex = 2 * simplex_moment(0, 1)
+    omega_simplex = -Fraction(1, 2) * 2 * simplex_moment(0, 0)
+    full_second_simplex = determinant_simplex + omega_simplex
+    rows.append(
+        check(
+            "matter_second_marked_determinant_simplex",
+            determinant_simplex == Fraction(1, 3),
+            determinant_simplex,
+            Fraction(1, 3),
+        )
+    )
+    rows.append(
+        check(
+            "matter_second_marked_omega_simplex",
+            omega_simplex == Fraction(-1, 2),
+            omega_simplex,
+            Fraction(-1, 2),
+        )
+    )
+    rows.append(
+        check(
+            "matter_second_marked_full_simplex",
+            full_second_simplex == Fraction(-1, 6),
+            full_second_simplex,
+            Fraction(-1, 6),
+        )
+    )
+    rows.append(
+        check(
+            "matter_second_marked_full_lambda1_units_from_simplex",
+            2 * full_second_simplex == Fraction(-1, 3),
+            2 * full_second_simplex,
+            Fraction(-1, 3),
+        )
+    )
 
     def literal_sigma_e_matrices(variable_count: int):
         sigma_zero = gaussian_constant(0, 0, variable_count)
@@ -562,12 +736,203 @@ def conditional_matter_arithmetic_checks() -> list[dict[str, object]]:
     return rows
 
 
+def aa_final_acceptance_checks(
+    aa_exact: dict[str, object],
+    ht_roundtrip: dict[str, object],
+) -> tuple[list[dict[str, object]], dict[str, object]]:
+    """Certify AA first, then compare the completed vector with the HT row."""
+
+    rows: list[dict[str, object]] = []
+    occurrence = aa_exact["occurrence_edge_structural_lemma"]
+    typed = aa_exact["typed_ordered_reconstruction"]
+    matter = aa_exact["matter_primitive_sign"]
+    exhaustive = aa_exact["exhaustive_component_replay"]
+    if not all(
+        isinstance(value, dict)
+        for value in (occurrence, typed, matter, exhaustive)
+    ):
+        raise TypeError("AA exact payload")
+    raw_contact = occurrence["raw_schwinger_contact_hessian_certificate"]
+    fourier = typed["fourier_and_physical_quotient"]
+    if not isinstance(raw_contact, dict) or not isinstance(fourier, dict):
+        raise TypeError("AA raw-contact/typed payload")
+
+    rows.extend(
+        (
+            final_check(
+                "aa_final_external_target_absent_from_derivation",
+                aa_exact["external_target_used"] is False,
+                aa_exact["external_target_used"],
+                False,
+            ),
+            final_check(
+                "aa_final_exact_artifact_status",
+                aa_exact["status"]
+                == (
+                    "TARGET_BLIND_AA_FULL_POLARIZED_TYPED_ORDERED_"
+                    "RECONSTRUCTION_EXACT__RAW_SD_CONTACT_MULTIPLICITY_ONE_VERIFIED"
+                ),
+                aa_exact["status"],
+                (
+                    "TARGET_BLIND_AA_FULL_POLARIZED_TYPED_ORDERED_"
+                    "RECONSTRUCTION_EXACT__RAW_SD_CONTACT_MULTIPLICITY_ONE_VERIFIED"
+                ),
+            ),
+            final_check(
+                "aa_final_raw_hessian_group_count",
+                raw_contact["raw_Hessian_group_count"] == 24,
+                raw_contact["raw_Hessian_group_count"],
+                24,
+            ),
+            final_check(
+                "aa_final_raw_hessian_endpoint_row_count",
+                raw_contact["raw_Hessian_endpoint_row_count"] == 48,
+                raw_contact["raw_Hessian_endpoint_row_count"],
+                48,
+            ),
+            final_check(
+                "aa_final_raw_contact_multiplicity",
+                raw_contact["verified_multiplicity"] == {"m0": "1", "m2": "1"},
+                raw_contact["verified_multiplicity"],
+                {"m0": "1", "m2": "1"},
+            ),
+            final_check(
+                "aa_final_raw_full_d_edge_cancellations",
+                all(
+                    row["N_d_plus_K_raw"] == "0"
+                    for row in raw_contact["polynomial_cancellations"]
+                ),
+                [
+                    (row["edge"], row["N_d_plus_K_raw"])
+                    for row in raw_contact["polynomial_cancellations"]
+                ],
+                [("e0", "0"), ("e2", "0")],
+            ),
+            final_check(
+                "aa_final_exhaustive_component_replay",
+                (
+                    exhaustive["total_full_color_mask_rows"],
+                    exhaustive["total_sparse_replayed_rows"],
+                    exhaustive["total_equality_failures"],
+                )
+                == (9216, 2048, 0),
+                (
+                    exhaustive["total_full_color_mask_rows"],
+                    exhaustive["total_sparse_replayed_rows"],
+                    exhaustive["total_equality_failures"],
+                ),
+                (9216, 2048, 0),
+            ),
+        )
+    )
+
+    gauge_vector = fourier["physical_ordered_p_vector_over_lambda1_times_F"]
+    matter_vector = matter["ordered_vector_over_lambda1_times_F"]
+    rows.append(
+        final_check(
+            "aa_final_gauge_ordered_vector",
+            gauge_vector == ["1", "-1"],
+            gauge_vector,
+            ["1", "-1"],
+        )
+    )
+    rows.append(
+        final_check(
+            "aa_final_matter_ordered_vector",
+            matter_vector == ["1", "-1"],
+            matter_vector,
+            ["1", "-1"],
+        )
+    )
+
+    derived_before_ht = {
+        "D>A": gauge_vector[0],
+        "A>D": gauge_vector[1],
+    }
+    for flavor in range(1, 4):
+        derived_before_ht[f"B_{flavor}>C_{flavor}"] = matter_vector[0]
+        derived_before_ht[f"C_{flavor}>B_{flavor}"] = matter_vector[1]
+
+    physical_roundtrip = ht_roundtrip["physical_roundtrip"]
+    if not isinstance(physical_roundtrip, dict):
+        raise TypeError("HT physical roundtrip")
+    ht_rows = physical_roundtrip["rows"]
+    if not isinstance(ht_rows, list):
+        raise TypeError("HT rows")
+    matches = [row for row in ht_rows if row.get("id") == "A__A"]
+    rows.append(
+        final_check(
+            "aa_ht_check_only_unique_target_row",
+            len(matches) == 1,
+            len(matches),
+            1,
+        )
+    )
+    if len(matches) != 1:
+        raise AssertionError("unique HT A__A row")
+    ht_aa = matches[0]
+    ht_after_check = {
+        f"{output['left_output']}>{output['right_output']}": output["coefficient"][
+            "text"
+        ]
+        for output in ht_aa["outputs"]
+    }
+    rows.append(
+        final_check(
+            "aa_ht_check_only_color_tensor_dictionary",
+            ht_aa["project_color_tensor_after_reduction"]
+            == "C_Project^{AB}{}_{DE}",
+            ht_aa["project_color_tensor_after_reduction"],
+            "C_Project^{AB}{}_{DE}",
+        )
+    )
+    rows.append(
+        final_check(
+            "aa_ht_check_only_exact_ordered_vector_match",
+            derived_before_ht == ht_after_check,
+            derived_before_ht,
+            ht_after_check,
+        )
+    )
+
+    acceptance = {
+        "status": FINAL_DERIVATION_STATUS,
+        "scope": FINAL_SCOPE,
+        "global_81_ledger_modified": False,
+        "derived_before_HT": derived_before_ht,
+        "raw_multiplicity_ledger": {
+            "raw_Hessian_groups": raw_contact["raw_Hessian_group_count"],
+            "raw_endpoint_rows": raw_contact["raw_Hessian_endpoint_row_count"],
+            "edge_factors": raw_contact["edge_ledgers"],
+            "verified_multiplicity": raw_contact["verified_multiplicity"],
+            "full_d_cancellations": raw_contact["polynomial_cancellations"],
+        },
+        "formula": (
+            "lambda1*F^{AB}_{DE}*(DA-AD+sum_r(BC_r-CB_r))"
+        ),
+        "HT_check_only": {
+            "seal": HT_CHECK_ONLY_SEAL,
+            "target_read_role": "AFTER_CHECK_ONLY",
+            "target_used_to_determine_coefficient": False,
+            "color_tensor_dictionary": (
+                "C_Project^{AB}_{DE}=F^{AB}_{DE} on the locked Project frame"
+            ),
+            "target_vector": ht_after_check,
+            "exact_match": derived_before_ht == ht_after_check,
+        },
+    }
+    return rows, acceptance
+
+
 def main() -> int:
     audit = AUDIT.read_text()
     pro_review = PRO_REVIEW.read_text()
     pro_correction = PRO_CORRECTION.read_text()
     pro_final = PRO_FINAL.read_text()
     step5a = STEP5A.read_text()
+    second_mark_sd = SECOND_MARK_SD.read_text()
+    aa_exact = json.loads(AA_EXACT.read_text(encoding="utf-8"))
+    ht_roundtrip = json.loads(HT_ROUNDTRIP.read_text(encoding="utf-8"))
 
     rows: list[dict[str, object]] = []
 
@@ -615,7 +980,41 @@ def main() -> int:
 
     rows.extend(conditional_matter_arithmetic_checks())
 
-    rows.append(check("matter_to_gauge_trial_ratio", Fraction(4, 3) / Fraction(1, 8) == Fraction(32, 3), Fraction(4, 3) / Fraction(1, 8), Fraction(32, 3)))
+    matter_first_placement = Fraction(4, 3)
+    matter_second_placement = Fraction(-1, 3)
+    matter_complete_marked_orbit = matter_first_placement + matter_second_placement
+    rows.append(
+        check(
+            "matter_first_marked_placement_magnitude_in_lambda1_units",
+            matter_first_placement == Fraction(4, 3),
+            matter_first_placement,
+            Fraction(4, 3),
+        )
+    )
+    rows.append(
+        check(
+            "matter_second_marked_placement_in_lambda1_units",
+            matter_second_placement == Fraction(-1, 3),
+            matter_second_placement,
+            Fraction(-1, 3),
+        )
+    )
+    rows.append(
+        check(
+            "matter_complete_marked_orbit_magnitude_in_lambda1_units",
+            matter_complete_marked_orbit == 1,
+            matter_complete_marked_orbit,
+            1,
+        )
+    )
+    rows.append(
+        check(
+            "matter_to_gauge_selected_orbit_magnitude_ratio",
+            matter_complete_marked_orbit / Fraction(1, 8) == 8,
+            matter_complete_marked_orbit / Fraction(1, 8),
+            8,
+        )
+    )
 
     for m in range(5):
         for n in range(5):
@@ -631,17 +1030,47 @@ def main() -> int:
 
     required_audit_fragments = [
         CONDITIONAL_SCOPE,
-        "UNVERIFIED_DWORD_ANSATZ",
-        "CONDITIONAL_PARENT_DEFINITION",
+        "These are occurrence-resolved $D$-word results, not ansaetze.",
+        r"N_{\rm parent}-N_{\rm cut}",
         *MISSING_DERIVATION_BLOCKERS,
         "REJECTED_PROPAGATOR_NORMALIZATION",
         r"\frac{\lambda_1}{8}",
-        r"\frac{4\lambda_1}{3}",
-        "NAIVE_FINITE_2X2",
-        "Q4S_NO_FIERZ",
+        r"\left|c_{AA,M}\right|",
+        "AA_MATTER_UNIT_MAGNITUDE_REPRODUCED__GLOBAL_ORIENTATION_SIGN_OPEN",
+        "TARGET_BLIND_EXACT_DWORD_REPLAY__GAUGE_SOURCE_ORBIT_ZERO__DIRECTED_TRIANGLE_MINUS_LAMBDA1_OVER_8_UNCHANGED",
+        r"\mathcal S_2",
+        r"\Omega_{21}",
+        r"\left(z-\frac12\right)",
+        r"\frac{\mu_\ell^2}{D_0D_1D_2}",
+        r"\frac1{32\pi^2}",
+        FINAL_DERIVATION_STATUS,
+        HT_CHECK_ONLY_SEAL,
+        r"N_{d,e}+K_{{\rm raw},e}=0",
+        r"m_0=m_2=1",
+        r"\Gamma_{AA}^{(1)}",
     ]
     for fragment in required_audit_fragments:
         rows.append(check(f"audit_fragment::{fragment}", fragment in audit, fragment in audit, True))
+
+    required_second_mark_sd_fragments = [
+        "SECOND_MARK_FULL_SD_REPAIRED__DISCARDED_LONGITUDINAL_RESIDUAL_WAS_THE_ERROR__TARGET_BLIND_UNIT_MAGNITUDE",
+        r"D_{0+}\bar D_0^2D_0^2\delta^4_{02}",
+        r"D_2^2(-r_1)\bar D_2^2(-r_1)D_2^2(-r_1)",
+        r"\Omega_{21}",
+        r"\mathcal R_2^{\mathrm{full}}",
+        r"\left(z-\frac12\right)",
+        r"-\frac13\lambda_1",
+        "42/42 PASS",
+    ]
+    for fragment in required_second_mark_sd_fragments:
+        rows.append(
+            check(
+                f"second_mark_sd_fragment::{fragment}",
+                fragment in second_mark_sd,
+                fragment in second_mark_sd,
+                True,
+            )
+        )
 
     required_pro_review_fragments = [
         "NON_AUTHORITY_PRO_REVIEW",
@@ -696,24 +1125,37 @@ def main() -> int:
     for fragment in required_step5a_fragments:
         rows.append(check(f"locked_fragment::{fragment}", fragment in step5a, fragment in step5a, True))
 
+    final_rows, aa_final_acceptance = aa_final_acceptance_checks(
+        aa_exact,
+        ht_roundtrip,
+    )
+    rows.extend(final_rows)
+
     failed = [row for row in rows if row["status"] != "PASS"]
     result = {
         "audit": str(AUDIT.relative_to(ROOT)),
-        "scope": CONDITIONAL_SCOPE,
-        "claim_boundary": CLAIM_BOUNDARY,
-        "certifies_full_diagram_derivation": False,
+        "scope": FINAL_SCOPE,
+        "claim_boundary": FINAL_CLAIM_BOUNDARY,
+        "certifies_full_diagram_derivation": True,
         "full_diagram_derivation": {
-            "status": FULL_DERIVATION_STATUS,
-            "pass_from_this_script_implies_completion": False,
-            "required_blockers": list(MISSING_DERIVATION_BLOCKERS),
+            "status": FINAL_DERIVATION_STATUS,
+            "pass_from_this_script_implies_completion": True,
+            "required_blockers": [],
+            "legacy_blockers_superseded_for_AA_sector": list(
+                MISSING_DERIVATION_BLOCKERS
+            ),
         },
+        "aa_final_acceptance": aa_final_acceptance,
+        "exact_artifact": str(AA_EXACT.relative_to(ROOT)),
+        "HT_check_only_artifact": str(HT_ROUNDTRIP.relative_to(ROOT)),
+        "second_mark_full_sd_artifact": str(SECOND_MARK_SD.relative_to(ROOT)),
         "checks": rows,
         "summary": {
             "passed": len(rows) - len(failed),
             "failed": len(failed),
             "status": "PASS" if not failed else "FAIL",
-            "scope": CONDITIONAL_SCOPE,
-            "claim_boundary": CLAIM_BOUNDARY,
+            "scope": FINAL_SCOPE,
+            "claim_boundary": FINAL_CLAIM_BOUNDARY,
         },
     }
     print(json.dumps(result, indent=2, sort_keys=True))

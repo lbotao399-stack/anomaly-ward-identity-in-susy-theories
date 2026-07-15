@@ -1,0 +1,451 @@
+{
+  "Hessian_blocks": {
+    "Hminus": [
+      "H_1s",
+      "H_s1"
+    ],
+    "I0": [
+      "I_u1",
+      "I_1u"
+    ],
+    "M_s": [
+      "M_us",
+      "M_su"
+    ]
+  },
+  "authority_role": "LOCAL_PROPOSAL_TARGET_BLIND",
+  "basis": [
+    "u",
+    "phi1",
+    "tildephi1",
+    "phi_s",
+    "tildephi_s"
+  ],
+  "checks": {
+    "count": 30,
+    "failed": 0,
+    "passed": 30,
+    "rows": [
+      {
+        "actual": "(0, 0, 0, 0, 0)",
+        "expected": "(0, 0, 0, 0, 0)",
+        "id": "G3_TMH_FIELD_PARITIES",
+        "status": "PASS"
+      },
+      {
+        "actual": "C_AB",
+        "expected": "C_AB",
+        "id": "AB_REVERSE_HESSIAN_BLOCK_RETAINS_AB",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "AB_REVERSE_HESSIAN_BLOCK_IS_BA_SOURCE",
+        "status": "PASS"
+      },
+      {
+        "actual": "16",
+        "expected": "16",
+        "id": "ORIENTED_BLOCK_CANDIDATE_COUNT",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "id": "NONZERO_BLOCK_CYCLE_COUNT",
+        "status": "PASS"
+      },
+      {
+        "actual": "(MH::I_1u::M_us::H_s1, HM::I_u1::M_su::H_1s)",
+        "expected": "(MH::I_1u::M_us::H_s1, HM::I_u1::M_su::H_1s)",
+        "id": "NONZERO_BLOCK_CYCLE_IDS",
+        "status": "PASS"
+      },
+      {
+        "actual": "((u), (phi1))",
+        "expected": "((u), (phi1))",
+        "id": "NONZERO_CYCLE_STARTING_BLOCKS",
+        "status": "PASS"
+      },
+      {
+        "actual": "G_1*G_s*G_u*H_s1*i_1u*M_us",
+        "expected": "G_1*G_s*G_u*H_s1*i_1u*M_us",
+        "id": "MH_I1U_WEIGHT",
+        "status": "PASS"
+      },
+      {
+        "actual": "G_1*G_s*G_u*H_1s*i_u1*M_su",
+        "expected": "G_1*G_s*G_u*H_1s*i_u1*M_su",
+        "id": "HM_IU1_WEIGHT",
+        "status": "PASS"
+      },
+      {
+        "actual": "G_1*G_s*G_u*i0*VH*VM",
+        "expected": "G_1*G_s*G_u*i0*VH*VM",
+        "id": "TWO_CYCLES_EQUAL_MH",
+        "status": "PASS"
+      },
+      {
+        "actual": "G_1*G_s*G_u*i0*VH*VM",
+        "expected": "G_1*G_s*G_u*i0*VH*VM",
+        "id": "TWO_CYCLES_EQUAL_HM",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "RESOLVENT_MM_WORD_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "G_1*G_s*G_u*i0*VH*VM",
+        "expected": "G_1*G_s*G_u*i0*VH*VM",
+        "id": "RESOLVENT_MH_WORD",
+        "status": "PASS"
+      },
+      {
+        "actual": "G_1*G_s*G_u*i0*VH*VM",
+        "expected": "G_1*G_s*G_u*i0*VH*VM",
+        "id": "RESOLVENT_HM_WORD",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "RESOLVENT_HH_WORD_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "2*G_1*G_s*G_u*i0*VH*VM",
+        "expected": "2*G_1*G_s*G_u*i0*VH*VM",
+        "id": "RESOLVENT_CROSS_SUM",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RESOLVENT_HALF_TIMES_CORRELATED_TWO_CYCLES",
+        "status": "PASS"
+      },
+      {
+        "actual": "{'I_1u': 'MH', 'I_u1': 'HM'}",
+        "expected": "{'I_1u': 'MH', 'I_u1': 'HM'}",
+        "id": "SOURCE_BLOCK_TO_ACTION_ORDER_BIJECTION",
+        "status": "PASS"
+      },
+      {
+        "actual": "{'MH': 'I_1u', 'HM': 'I_u1'}",
+        "expected": "{'MH': 'I_1u', 'HM': 'I_u1'}",
+        "id": "ACTION_ORDER_TO_SOURCE_BLOCK_BIJECTION",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "id": "INDEPENDENT_TWO_BY_TWO_MULTIPLICITY",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "FOUR_NONZERO_CARTESIAN_ROWS_EXIST",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "DIRECT_ACTION_TAYLOR_WEIGHT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RESOLVENT_AND_DIRECT_WICK_WEIGHTS_EQUAL",
+        "status": "PASS"
+      },
+      {
+        "actual": "-sqrt(2)*g**4*hbar/1024",
+        "expected": "-sqrt(2)*g**4*hbar/1024",
+        "id": "CURRENT_G32_PRED",
+        "status": "PASS"
+      },
+      {
+        "actual": "sqrt(2)*g**4*hbar/1024",
+        "expected": "sqrt(2)*g**4*hbar/1024",
+        "id": "CURRENT_G33_PRED",
+        "status": "PASS"
+      },
+      {
+        "actual": "-sqrt(2)*g**4*hbar/1024",
+        "expected": "-sqrt(2)*g**4*hbar/1024",
+        "id": "RESOLVENT_EQUALS_CURRENT_G32_PRED",
+        "status": "PASS"
+      },
+      {
+        "actual": "sqrt(2)*g**4*hbar/1024",
+        "expected": "sqrt(2)*g**4*hbar/1024",
+        "id": "RESOLVENT_EQUALS_CURRENT_G33_PRED",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "CURRENT_PRED_RAW_SOURCE_FACTOR_TWO",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "CURRENT_PRED_DOUBLE_COUNTS_TWO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-sqrt(2)*g**4*hbar/512",
+        "expected": "-sqrt(2)*g**4*hbar/512",
+        "id": "HYPOTHETICAL_EXTRA_TWO_G32",
+        "status": "PASS"
+      }
+    ]
+  },
+  "correlation": {
+    "BA_has_same_two-cycle_sparsity_with_C_AB_replaced_by_C_BA": true,
+    "action_to_source": {
+      "HM": "I_u1",
+      "MH": "I_1u"
+    },
+    "independent_2x2": false,
+    "reverse_AB_Hessian_block_becomes_BA_source": false,
+    "source_reverse_and_action_swap_are_same_two_rows": true,
+    "source_to_action": {
+      "I_1u": "MH",
+      "I_u1": "HM"
+    }
+  },
+  "decision": {
+    "current_preD_retained": true,
+    "documentation_rule": "Use either resolvent (1/2)*2 or direct Wick (1/2!)*2; do not form an independent 2_source*2_action census.",
+    "overall_resolvent_half_cancelled_by": "one correlated pair of nonzero closed block cycles",
+    "source_reverse_block_two_is_independent_of_action_order_two": false
+  },
+  "direct_Wick_representation": {
+    "alternative_to_resolvent_count_not_independent_multiplier": true,
+    "formula": "(1/2!)_action*(2)_even_action_sequences*(1)_unique_species_Wick=1",
+    "weight": "1"
+  },
+  "external_target_used": false,
+  "nonzero_cycles": [
+    {
+      "id": "MH::I_1u::M_us::H_s1",
+      "path": "u-G_u-u-M-phi_s-G_s-tildephi_s-H-tildephi1-G_1-phi1-I0-u",
+      "start": "u",
+      "weight": "G_1*G_s*G_u*H_s1*i_1u*M_us"
+    },
+    {
+      "id": "HM::I_u1::M_su::H_1s",
+      "path": "phi1-G_1-tildephi1-H-tildephi_s-G_s-phi_s-M-u-G_u-u-I0-phi1",
+      "start": "phi1",
+      "weight": "G_1*G_s*G_u*H_1s*i_u1*M_su"
+    }
+  ],
+  "oriented_cycle_census": {
+    "candidate_count": 16,
+    "nonzero_count": 2,
+    "rows": [
+      {
+        "Hminus_block": "H_1s",
+        "action_order": "MH",
+        "diagonal_support": [],
+        "id": "MH::I_u1::M_us::H_1s",
+        "matter_block": "M_us",
+        "nonzero": false,
+        "source_block": "I_u1",
+        "supertrace": "0"
+      },
+      {
+        "Hminus_block": "H_s1",
+        "action_order": "MH",
+        "diagonal_support": [],
+        "id": "MH::I_u1::M_us::H_s1",
+        "matter_block": "M_us",
+        "nonzero": false,
+        "source_block": "I_u1",
+        "supertrace": "0"
+      },
+      {
+        "Hminus_block": "H_1s",
+        "action_order": "MH",
+        "diagonal_support": [],
+        "id": "MH::I_u1::M_su::H_1s",
+        "matter_block": "M_su",
+        "nonzero": false,
+        "source_block": "I_u1",
+        "supertrace": "0"
+      },
+      {
+        "Hminus_block": "H_s1",
+        "action_order": "MH",
+        "diagonal_support": [],
+        "id": "MH::I_u1::M_su::H_s1",
+        "matter_block": "M_su",
+        "nonzero": false,
+        "source_block": "I_u1",
+        "supertrace": "0"
+      },
+      {
+        "Hminus_block": "H_1s",
+        "action_order": "MH",
+        "diagonal_support": [],
+        "id": "MH::I_1u::M_us::H_1s",
+        "matter_block": "M_us",
+        "nonzero": false,
+        "source_block": "I_1u",
+        "supertrace": "0"
+      },
+      {
+        "Hminus_block": "H_s1",
+        "action_order": "MH",
+        "diagonal_support": [
+          "u"
+        ],
+        "id": "MH::I_1u::M_us::H_s1",
+        "matter_block": "M_us",
+        "nonzero": true,
+        "source_block": "I_1u",
+        "supertrace": "G_1*G_s*G_u*H_s1*i_1u*M_us"
+      },
+      {
+        "Hminus_block": "H_1s",
+        "action_order": "MH",
+        "diagonal_support": [],
+        "id": "MH::I_1u::M_su::H_1s",
+        "matter_block": "M_su",
+        "nonzero": false,
+        "source_block": "I_1u",
+        "supertrace": "0"
+      },
+      {
+        "Hminus_block": "H_s1",
+        "action_order": "MH",
+        "diagonal_support": [],
+        "id": "MH::I_1u::M_su::H_s1",
+        "matter_block": "M_su",
+        "nonzero": false,
+        "source_block": "I_1u",
+        "supertrace": "0"
+      },
+      {
+        "Hminus_block": "H_1s",
+        "action_order": "HM",
+        "diagonal_support": [],
+        "id": "HM::I_u1::M_us::H_1s",
+        "matter_block": "M_us",
+        "nonzero": false,
+        "source_block": "I_u1",
+        "supertrace": "0"
+      },
+      {
+        "Hminus_block": "H_s1",
+        "action_order": "HM",
+        "diagonal_support": [],
+        "id": "HM::I_u1::M_us::H_s1",
+        "matter_block": "M_us",
+        "nonzero": false,
+        "source_block": "I_u1",
+        "supertrace": "0"
+      },
+      {
+        "Hminus_block": "H_1s",
+        "action_order": "HM",
+        "diagonal_support": [
+          "phi1"
+        ],
+        "id": "HM::I_u1::M_su::H_1s",
+        "matter_block": "M_su",
+        "nonzero": true,
+        "source_block": "I_u1",
+        "supertrace": "G_1*G_s*G_u*H_1s*i_u1*M_su"
+      },
+      {
+        "Hminus_block": "H_s1",
+        "action_order": "HM",
+        "diagonal_support": [],
+        "id": "HM::I_u1::M_su::H_s1",
+        "matter_block": "M_su",
+        "nonzero": false,
+        "source_block": "I_u1",
+        "supertrace": "0"
+      },
+      {
+        "Hminus_block": "H_1s",
+        "action_order": "HM",
+        "diagonal_support": [],
+        "id": "HM::I_1u::M_us::H_1s",
+        "matter_block": "M_us",
+        "nonzero": false,
+        "source_block": "I_1u",
+        "supertrace": "0"
+      },
+      {
+        "Hminus_block": "H_s1",
+        "action_order": "HM",
+        "diagonal_support": [],
+        "id": "HM::I_1u::M_us::H_s1",
+        "matter_block": "M_us",
+        "nonzero": false,
+        "source_block": "I_1u",
+        "supertrace": "0"
+      },
+      {
+        "Hminus_block": "H_1s",
+        "action_order": "HM",
+        "diagonal_support": [],
+        "id": "HM::I_1u::M_su::H_1s",
+        "matter_block": "M_su",
+        "nonzero": false,
+        "source_block": "I_1u",
+        "supertrace": "0"
+      },
+      {
+        "Hminus_block": "H_s1",
+        "action_order": "HM",
+        "diagonal_support": [],
+        "id": "HM::I_1u::M_su::H_s1",
+        "matter_block": "M_su",
+        "nonzero": false,
+        "source_block": "I_1u",
+        "supertrace": "0"
+      }
+    ]
+  },
+  "preD": {
+    "G32_current": "-sqrt(2)*g**4*hbar/1024",
+    "G32_resolvent": "-sqrt(2)*g**4*hbar/1024",
+    "G33_current": "sqrt(2)*g**4*hbar/1024",
+    "G33_resolvent": "sqrt(2)*g**4*hbar/1024",
+    "current_double_counts_two": false,
+    "current_formula": "source*M*Hminus*three_propagators*action_cross_weight",
+    "hypothetical_extra_two_G32": "-sqrt(2)*g**4*hbar/512",
+    "raw_source_Hessian_factor_two_applied": false
+  },
+  "propagator_blocks": {
+    "phi1-tildephi1": "G_1",
+    "phi_s-tildephi_s": "G_s",
+    "tildephi1-phi1": "G_1",
+    "tildephi_s-phi_s": "G_s",
+    "u-u": "G_u"
+  },
+  "residual_q_used": false,
+  "resolvent_expansion": {
+    "HH": "0",
+    "HM": "G_1*G_s*G_u*i0*VH*VM",
+    "MH": "G_1*G_s*G_u*i0*VH*VM",
+    "MM": "0",
+    "cross_sum": "2*G_1*G_s*G_u*i0*VH*VM",
+    "cycle_weight": "1",
+    "formula": "(1/2)_resolvent*(2)_correlated_closed_cycles=1",
+    "overall_half": "1/2"
+  },
+  "schema": "step5-ab-ba-g3-resolvent-cycle-census-exact-v1",
+  "status": "PASS_G3_RESOLVENT_TWO_NONZERO_CYCLES_CORRELATED__OUTER_HALF_CANCELLED_ONCE__CURRENT_PRED_NO_DOUBLE_COUNT"
+}

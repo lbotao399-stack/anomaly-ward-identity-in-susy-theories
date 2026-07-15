@@ -1,0 +1,462 @@
+{
+  "DRED_cutting_failure": {
+    "D_e": "r_{e,d}^2",
+    "bar_r_e_squared": "D_e+mu_l^2",
+    "four_d_square_plus_cut": "(D_e+mu_l^2)/(D0*D1*D2)-1/prod_{j!=e}(D_j)=mu_l^2/(D0*D1*D2)",
+    "full_d_square_plus_cut": "D_e/(D0*D1*D2)-1/prod_{j!=e}(D_j)=0"
+  },
+  "accepted_as_positive_derivation": false,
+  "artifact_role": "HISTORICAL_RETRACTION_REGRESSION",
+  "carrier_rebasing_and_finite_settlement": {
+    "common_TD_vector": [
+      "0",
+      "1",
+      "-2*sqrt(2)*i",
+      "2*sqrt(2)*i"
+    ],
+    "compact_basis": [
+      "D>B1",
+      "B1>D",
+      "C2>C3",
+      "C3>C2"
+    ],
+    "finite_normal_product_vector": [
+      "1",
+      "0",
+      "sqrt(2)*i",
+      "-sqrt(2)*i"
+    ],
+    "raw_basis": [
+      "X_DB",
+      "E_DB",
+      "X_BD",
+      "E_BD",
+      "C23",
+      "C32"
+    ],
+    "raw_vector": [
+      "2",
+      "2",
+      "-1/3",
+      "4/3",
+      "-2*sqrt(2)*i",
+      "2*sqrt(2)*i"
+    ],
+    "rebased_basis": [
+      "X_DB",
+      "T_DB",
+      "X_BD",
+      "T_BD",
+      "C23",
+      "C32"
+    ],
+    "rebased_vector": [
+      "0",
+      "2",
+      "1",
+      "4/3",
+      "-2*sqrt(2)*i",
+      "2*sqrt(2)*i"
+    ],
+    "rejected_hybrid_vector": [
+      "2",
+      "1",
+      "-2*sqrt(2)*i",
+      "2*sqrt(2)*i"
+    ],
+    "relations": [
+      "T_DB=X_DB+E_DB",
+      "T_BD=-X_BD+E_BD"
+    ],
+    "renormalized_q_Ward": [
+      "0",
+      "0",
+      "0"
+    ],
+    "renormalized_vector": [
+      "1",
+      "1",
+      "-sqrt(2)*i",
+      "sqrt(2)*i"
+    ]
+  },
+  "checks": {
+    "count": 55,
+    "failed": 0,
+    "passed": 55,
+    "rows": [
+      {
+        "actual": "step5-ab-ba-g3-original-full-measure-equivalence-exact-v1",
+        "expected": "step5-ab-ba-g3-original-full-measure-equivalence-exact-v1",
+        "id": "G3_SOURCE_SCHEMA",
+        "status": "PASS"
+      },
+      {
+        "actual": "PASS_G3_ORIGINAL_FULL_MEASURE_EQUIVALENCE__CONVERSION_MAGNITUDE_FOUR__TWO_SUPERTRACE_CYCLES_CANCEL_HALF__C_G3_4096",
+        "expected": "PASS_G3_ORIGINAL_FULL_MEASURE_EQUIVALENCE__CONVERSION_MAGNITUDE_FOUR__TWO_SUPERTRACE_CYCLES_CANCEL_HALF__C_G3_4096",
+        "id": "G3_SOURCE_STATUS",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "G3_SOURCE_EXTERNAL_TARGET_UNUSED",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "G3_SOURCE_HT_UNUSED",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "G3_SOURCE_DESIRED_VECTOR_FITTING_UNUSED",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "G3_SOURCE_CHECKS_FAILED",
+        "status": "PASS"
+      },
+      {
+        "actual": "53",
+        "expected": "53",
+        "id": "G3_SOURCE_CHECKS_COMPLETE",
+        "status": "PASS"
+      },
+      {
+        "actual": "4096",
+        "expected": "4096",
+        "id": "G3_ABSOLUTE_COEFFICIENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "32768*(1/4)_M*(1/2)_barH=4096",
+        "expected": "32768*(1/4)_M*(1/2)_barH=4096",
+        "id": "G3_ORIGINAL_MEASURE_CHAIN",
+        "status": "PASS"
+      },
+      {
+        "actual": "65536*(1/4)_M*(1/4)_H=4096",
+        "expected": "65536*(1/4)_M*(1/4)_H=4096",
+        "id": "G3_FULL_MEASURE_CHAIN",
+        "status": "PASS"
+      },
+      {
+        "actual": "32768*(1/4)_M*(1/4)_H=2048",
+        "expected": "32768*(1/4)_M*(1/4)_H=2048",
+        "id": "G3_REJECTED_HALF_CHAIN",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "id": "G3_NONZERO_SUPERTRACE_CYCLES",
+        "status": "PASS"
+      },
+      {
+        "actual": "(1/2)*(C1+C2)=C1",
+        "expected": "(1/2)*(C1+C2)=C1",
+        "id": "G3_CORRELATED_CYCLE_SUM",
+        "status": "PASS"
+      },
+      {
+        "actual": "(1/2)*(C1+C2) -> (1/2)*C1",
+        "expected": "(1/2)*(C1+C2) -> (1/2)*C1",
+        "id": "G3_FIRST_FALSE_EQUALITY",
+        "status": "PASS"
+      },
+      {
+        "actual": "(1/2)*(C1+C2) -> (1/2)*C1",
+        "expected": "(1/2)*(C1+C2) -> (1/2)*C1",
+        "id": "G3_VERDICT_FIRST_FALSE_EQUALITY",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "G3_VERDICT_REJECTS_2048",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "G3_TWO_CYCLES_CANCEL_OUTER_HALF",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/2",
+        "expected": "1/2",
+        "id": "G3_FALSE_SINGLE_CYCLE_FACTOR",
+        "status": "PASS"
+      },
+      {
+        "actual": "2048",
+        "expected": "2048",
+        "id": "G3_FALSE_NORMALIZATION_IS_2048",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "id": "G3_CORRECT_TO_REJECTED_RATIO",
+        "status": "PASS"
+      },
+      {
+        "actual": "2/3",
+        "expected": "2/3",
+        "id": "G3_SIMPLEX_A_SHAPE",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/3",
+        "expected": "1/3",
+        "id": "G3_SIMPLEX_B_SHAPE",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "G3_SIMPLEX_SHAPE_SUM",
+        "status": "PASS"
+      },
+      {
+        "actual": "step5-ab-ba-project-ward-finite-renormalization-exact-v1",
+        "expected": "step5-ab-ba-project-ward-finite-renormalization-exact-v1",
+        "id": "FINITE_SOURCE_SCHEMA",
+        "status": "PASS"
+      },
+      {
+        "actual": "PASS_TARGET_BLIND_FINITE_PROJECT_WARD_RENORMALIZATION__AB_BA_HT_CHECK_ONLY_EXACT_MATCH",
+        "expected": "PASS_TARGET_BLIND_FINITE_PROJECT_WARD_RENORMALIZATION__AB_BA_HT_CHECK_ONLY_EXACT_MATCH",
+        "id": "FINITE_SOURCE_STATUS",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "FINITE_SOURCE_EXTERNAL_TARGET_UNUSED_IN_DERIVATION",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FINITE_SOURCE_CHECKS_FAILED",
+        "status": "PASS"
+      },
+      {
+        "actual": "31",
+        "expected": "31",
+        "id": "FINITE_SOURCE_CHECKS_COMPLETE",
+        "status": "PASS"
+      },
+      {
+        "actual": "bdeffbb34da6a8191df264769d48a50e725dfad11b97fad0f4c8cd0b15ae8547",
+        "expected": "bdeffbb34da6a8191df264769d48a50e725dfad11b97fad0f4c8cd0b15ae8547",
+        "id": "FINITE_SOURCE_PROJECT_SEAL",
+        "status": "PASS"
+      },
+      {
+        "actual": "['D>B1', 'B1>D', 'C2>C3', 'C3>C2']",
+        "expected": "['D>B1', 'B1>D', 'C2>C3', 'C3>C2']",
+        "id": "FINITE_SOURCE_BASIS",
+        "status": "PASS"
+      },
+      {
+        "actual": "[2, 2]",
+        "expected": "[2, 2]",
+        "id": "FINITE_SOURCE_G1_EOM",
+        "status": "PASS"
+      },
+      {
+        "actual": "[0, 2]",
+        "expected": "[0, 2]",
+        "id": "FINITE_SOURCE_G1_TD",
+        "status": "PASS"
+      },
+      {
+        "actual": "[-1/3, 4/3]",
+        "expected": "[-1/3, 4/3]",
+        "id": "FINITE_SOURCE_G2_EOM",
+        "status": "PASS"
+      },
+      {
+        "actual": "[1, 4/3]",
+        "expected": "[1, 4/3]",
+        "id": "FINITE_SOURCE_G2_TD",
+        "status": "PASS"
+      },
+      {
+        "actual": "[0, 1, -2*sqrt(2)*i, 2*sqrt(2)*i]",
+        "expected": "[0, 1, -2*sqrt(2)*i, 2*sqrt(2)*i]",
+        "id": "FINITE_SOURCE_COMMON_TD",
+        "status": "PASS"
+      },
+      {
+        "actual": "[1, 0, sqrt(2)*i, -sqrt(2)*i]",
+        "expected": "[1, 0, sqrt(2)*i, -sqrt(2)*i]",
+        "id": "FINITE_SOURCE_DELTA",
+        "status": "PASS"
+      },
+      {
+        "actual": "[1, 1, -sqrt(2)*i, sqrt(2)*i]",
+        "expected": "[1, 1, -sqrt(2)*i, sqrt(2)*i]",
+        "id": "FINITE_SOURCE_RENORMALIZED",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "FINITE_SOURCE_DELTA_NOT_GRAPH",
+        "status": "PASS"
+      },
+      {
+        "actual": "[1, 0, sqrt(2)*i, -sqrt(2)*i]",
+        "expected": "[1, 0, sqrt(2)*i, -sqrt(2)*i]",
+        "id": "FINITE_SOURCE_DELTA_VECTOR_MATCH",
+        "status": "PASS"
+      },
+      {
+        "actual": "[1, 1, -sqrt(2)*i, sqrt(2)*i]",
+        "expected": "[1, 1, -sqrt(2)*i, sqrt(2)*i]",
+        "id": "FINITE_SOURCE_RESULT_AB",
+        "status": "PASS"
+      },
+      {
+        "actual": "[1, 1, -sqrt(2)*i, sqrt(2)*i]",
+        "expected": "[1, 1, -sqrt(2)*i, sqrt(2)*i]",
+        "id": "FINITE_SOURCE_RESULT_BA",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FULL_D_SQUARE_PLUS_SCHWINGER_CUT_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "mu_l2/(D0*D1*D2)",
+        "expected": "mu_l2/(D0*D1*D2)",
+        "id": "FOUR_D_SQUARE_PLUS_SCHWINGER_CUT_IS_MU2",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/(32*pi**2)",
+        "expected": "1/(32*pi**2)",
+        "id": "DRED_FINITE_MASTER",
+        "status": "PASS"
+      },
+      {
+        "actual": "[2, 2, -1/3, 4/3, -2*sqrt(2)*i, 2*sqrt(2)*i]",
+        "expected": "[2, 2, -1/3, 4/3, -2*sqrt(2)*i, 2*sqrt(2)*i]",
+        "id": "RAW_SIX_CARRIER_VECTOR",
+        "status": "PASS"
+      },
+      {
+        "actual": "[0, 2, 1, 4/3, -2*sqrt(2)*i, 2*sqrt(2)*i]",
+        "expected": "[0, 2, 1, 4/3, -2*sqrt(2)*i, 2*sqrt(2)*i]",
+        "id": "RAW_TO_X_T_REBASING",
+        "status": "PASS"
+      },
+      {
+        "actual": "[0, 2]",
+        "expected": "[0, 2]",
+        "id": "G1_X_E_TO_X_T",
+        "status": "PASS"
+      },
+      {
+        "actual": "[1, 4/3]",
+        "expected": "[1, 4/3]",
+        "id": "G2_X_E_TO_X_T",
+        "status": "PASS"
+      },
+      {
+        "actual": "[0, 1, -2*sqrt(2)*i, 2*sqrt(2)*i]",
+        "expected": "[0, 1, -2*sqrt(2)*i, 2*sqrt(2)*i]",
+        "id": "COMMON_TD_FROM_RAW_REBASING",
+        "status": "PASS"
+      },
+      {
+        "actual": "[0, 1, -2*sqrt(2)*i, 2*sqrt(2)*i]",
+        "expected": "[0, 1, -2*sqrt(2)*i, 2*sqrt(2)*i]",
+        "id": "COMMON_TD_MATCHES_ACCEPTED_SOURCE",
+        "status": "PASS"
+      },
+      {
+        "actual": "[2, 1, -2*sqrt(2)*i, 2*sqrt(2)*i]",
+        "expected": "[2, 1, -2*sqrt(2)*i, 2*sqrt(2)*i]",
+        "id": "OBSOLETE_HYBRID_REJECTED",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "OBSOLETE_HYBRID_DIFFERS_FROM_COMMON_TD",
+        "status": "PASS"
+      },
+      {
+        "actual": "[1, 1, -sqrt(2)*i, sqrt(2)*i]",
+        "expected": "[1, 1, -sqrt(2)*i, sqrt(2)*i]",
+        "id": "FINITE_NORMAL_PRODUCT_SETTLEMENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "[0, 0, 0]",
+        "expected": "[0, 0, 0]",
+        "id": "RENORMALIZED_PROJECT_WARD",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "PROJECT_WARD_KERNEL_NULLITY",
+        "status": "PASS"
+      }
+    ]
+  },
+  "definitions": {
+    "d": "4-2*epsilon",
+    "finite_master": "1/(32*pi**2)",
+    "lambda1": "hbar*g^2/(16*pi^2)",
+    "mu_l_squared": "bar(l)^2-l_d^2=-hat(l)_user^2"
+  },
+  "derivation_sources": [
+    {
+      "path": "audits/step5-ab-ba-g3-original-full-measure-equivalence-exact.json",
+      "semantic_gate": "exact original/full measure and two-cycle census",
+      "sha256": "d8c7763353f79593ec5411d734e309edcce337592d6c0e8829d9a2709d99a17f"
+    },
+    {
+      "path": "audits/step5-ab-ba-project-ward-finite-renormalization-exact.json",
+      "project_seal_sha256": "bdeffbb34da6a8191df264769d48a50e725dfad11b97fad0f4c8cd0b15ae8547",
+      "semantic_gate": "sealed common-TD and finite normal-product settlement",
+      "sha256": "ce8f2e2daf7dfe8571030ee3f3d207e68f7ade5f485cca51abe55989793cc8a1"
+    }
+  ],
+  "external_target_used_in_derivation": false,
+  "historical_retraction": {
+    "correct_cycle_factor": "(1/2)*(C1+C2)=1 for C1=C2=1",
+    "first_false_equality": "(1/2)*(C1+C2) -> (1/2)*C1",
+    "first_false_numeric_equality": "4096 -> 2048",
+    "nonzero_supertrace_cycles": 2,
+    "original_full_measure_coefficient": "4096",
+    "outer_supertrace_factor": "1/2",
+    "raw_multiplicity_scale": "2",
+    "rejected_single_cycle_coefficient": "2048",
+    "retracted_claim": "simplex 2/3+1/3=1 fixes the absolute G3 graph scale",
+    "simplex_shape_sum": "1",
+    "verdict": "RETRACTED_FALSE_SCALE_ONE_NORMALIZATION"
+  },
+  "holomorphic_twist_read": false,
+  "project_result_engine_read": false,
+  "raw_G1_boundary": {
+    "generic_pq_occurrence_result_is_not_used": true,
+    "reason": "the rejected generic-p,q occurrence lift is not restored by this historical retraction",
+    "status": "BLOCKED_RAW_GRAPH_Q_DATA_MISSING"
+  },
+  "schema": "step5-ab-ba-full-1pi-quotient-historical-retraction-exact-v2",
+  "status": "HISTORICAL_RETRACTION__FALSE_G3_SCALE_ONE__CORRECT_RAW_TO_COMMON_TD__FINITE_NORMAL_PRODUCT_ACCEPTED"
+}

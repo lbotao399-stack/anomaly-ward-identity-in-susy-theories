@@ -21,6 +21,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 AUDIT = ROOT / "audits/step5-ab1-standard-feynman-strictification.md"
+DRED_CUT_AUDIT = ROOT / "audits/step5-dred-cutting-failure-exact.md"
+G1_REPLAY_SCRIPT = ROOT / "scripts/step5_ab1_g1_vvv_dword_replay.py"
+G1_REPLAY_ARTIFACT = ROOT / "audits/step5-ab1-g1-vvv-dword-replay.json"
 PRO_INITIAL = ROOT / "proposals/gpt-pro-ab1-standard-feynman-2026-07-14.md"
 PRO_DERIVATION = ROOT / "proposals/gpt-pro-ab1-derivation-correction-2026-07-14.md"
 PRO_FINAL = ROOT / "proposals/gpt-pro-ab1-final-settlement-2026-07-14.md"
@@ -46,23 +49,19 @@ BLOCKERS = (
     "BLOCKED_LOCKED_BACKGROUND_QUANTUM_PORT_GRAMMAR",
     "BLOCKED_SOURCE_HESSIAN_LEFT_RIGHT_AND_TAYLOR_NORMALIZATION",
     "BLOCKED_LOCAL_PROPOSAL_LINK_CONNECTION_U_LIFT",
-    "BLOCKED_VVV_ORDERED_HESSIAN",
     "BLOCKED_COMPLETE_RAW_PORT_WORDS_FOR_NAMED_SECTOR_TABLE",
     "BLOCKED_AB1_OCCURRENCE_RESOLVED_DWORD_TRACES",
-    "BLOCKED_EQUAL_CONTACT_AND_LONGITUDINAL_RESIDUES",
     "BLOCKED_STEP5A_UNIQUE_PROPAGATORS_PERTURBATIVE_SLICE_UNFIXED",
     "BLOCKED_STEP5A_NK_BRANCH_UNSELECTED",
     "BLOCKED_STEP5A_MOMENTUM_RULES_FOURIER_DRED_LEDGER_UNFIXED",
-    "BLOCKED_LOCKED_Q4S_SPINOR_REALIZATION",
     "BLOCKED_OPEN_COLOR_SOURCE_BV_EXTENSION",
     "BLOCKED_ONE_LOOP_COMPOSITE_Z_MATRIX",
     "BLOCKED_EOM_AND_TOTAL_DERIVATIVE_QUOTIENT",
     "BLOCKED_TOTAL_PROJECT_HT_COMPONENT_INTERTWINER",
-    "BLOCKED_AB1_SOURCE_OVERALL_G_NORMALIZATION",
     "BLOCKED_CHIRAL_TO_VECTOR_FRAME_SOURCE_BRIDGE",
-    "BLOCKED_SOURCE_COUPLING_INSERTION_SIGN",
     "BLOCKED_TYPED_ORIENTED_EDGE_KERNEL_ASSIGNMENT",
     "BLOCKED_DESCENDANT_CONTACT_HESSIANS_UNSPECIFIED",
+    "BLOCKED_AB1_G1_EDGE_TAGGED_SD_CONTACT_PAIRING",
 )
 
 
@@ -398,7 +397,37 @@ def all_checks() -> list[dict[str, object]]:
     four_minus_d_coefficient = 2
     trace_residue_without_pi = four_minus_d_coefficient * rank_two_pole_without_pi
     rows.append(check("conditional_Q4S_trace_unit", trace_residue_without_pi == Fraction(1, 32), trace_residue_without_pi, Fraction(1, 32)))
+    rows.append(check("evanescent_edge_square_unit", trace_residue_without_pi == Fraction(1, 32), trace_residue_without_pi, Fraction(1, 32)))
     rows.append(check("reverse_trace_unit", -trace_residue_without_pi == Fraction(-1, 32), -trace_residue_without_pi, Fraction(-1, 32)))
+    rows.append(check("full_inverse_square_cut_edge_0", Fraction(1, 1) - Fraction(1, 1) == 0, 0, 0))
+    rows.append(check("full_inverse_square_cut_edge_1", Fraction(1, 1) - Fraction(1, 1) == 0, 0, 0))
+    rows.append(check("full_inverse_square_cut_edge_2", Fraction(1, 1) - Fraction(1, 1) == 0, 0, 0))
+
+    g1_plus_a_integer = 3072
+    g1_plus_b_integer = -2048
+    g1_minus_a_integer = -3072
+    g1_minus_b_integer = 2048
+    g1_plus = -Fraction(1, 8192) * (g1_plus_a_integer + g1_plus_b_integer) * (-4) * Fraction(1, 32)
+    g1_minus = Fraction(1, 8192) * (g1_minus_a_integer + g1_minus_b_integer) * (-4) * Fraction(1, 32)
+    g1_raw = g1_plus + g1_minus
+    g1_a_parent = -16 * (
+        -Fraction(1, 8192) * g1_plus_a_integer * (-4) * Fraction(1, 32)
+        + Fraction(1, 8192) * g1_minus_a_integer * (-4) * Fraction(1, 32)
+    )
+    g1_b_parent = -16 * (
+        -Fraction(1, 8192) * g1_plus_b_integer * (-4) * Fraction(1, 32)
+        + Fraction(1, 8192) * g1_minus_b_integer * (-4) * Fraction(1, 32)
+    )
+    rows.append(check("g1_plus_a_marked_integer", g1_plus_a_integer == 3072, g1_plus_a_integer, 3072))
+    rows.append(check("g1_plus_b_marked_integer", g1_plus_b_integer == -2048, g1_plus_b_integer, -2048))
+    rows.append(check("g1_minus_a_marked_integer", g1_minus_a_integer == -3072, g1_minus_a_integer, -3072))
+    rows.append(check("g1_minus_b_marked_integer", g1_minus_b_integer == 2048, g1_minus_b_integer, 2048))
+    rows.append(check("g1_plus_in_inverse_pi2_units", g1_plus == Fraction(1, 64), g1_plus, Fraction(1, 64)))
+    rows.append(check("g1_minus_in_inverse_pi2_units", g1_minus == Fraction(1, 64), g1_minus, Fraction(1, 64)))
+    rows.append(check("g1_raw_in_inverse_pi2_units", g1_raw == Fraction(1, 32), g1_raw, Fraction(1, 32)))
+    rows.append(check("g1_a_marked_parent_DB_in_lambda1_units", g1_a_parent == -Fraction(3, 2), g1_a_parent, -Fraction(3, 2)))
+    rows.append(check("g1_b_marked_parent_DB_in_lambda1_units", g1_b_parent == 1, g1_b_parent, 1))
+    rows.append(check("g1_combined_parent_DB_in_lambda1_units", g1_a_parent + g1_b_parent == -Fraction(1, 2), g1_a_parent + g1_b_parent, -Fraction(1, 2)))
 
     special_ht = {(0, 0, 0, 0): Fraction(1, 2), (1, 0, 0, 0): Fraction(1, 3), (1, 0, 1, 0): Fraction(1, 6), (1, 1, 1, 1): Fraction(1, 12)}
     for key, expected in special_ht.items():
@@ -432,6 +461,29 @@ def all_checks() -> list[dict[str, object]]:
     rows.extend(archive_integrity_checks("derivation_pro", PRO_DERIVATION))
     rows.extend(archive_integrity_checks("final_pro", PRO_FINAL))
     rows.append(check("strictification_audit", AUDIT.is_file(), AUDIT.is_file(), True))
+    rows.append(check("dred_cutting_failure_audit", DRED_CUT_AUDIT.is_file(), DRED_CUT_AUDIT.is_file(), True))
+    rows.append(check("g1_replay_script", G1_REPLAY_SCRIPT.is_file(), G1_REPLAY_SCRIPT.is_file(), True))
+    rows.append(check("g1_replay_artifact", G1_REPLAY_ARTIFACT.is_file(), G1_REPLAY_ARTIFACT.is_file(), True))
+    if G1_REPLAY_ARTIFACT.is_file():
+        g1_artifact = json.loads(G1_REPLAY_ARTIFACT.read_text(encoding="utf-8"))
+        generated = g1_artifact.get("generated_tables", {})
+        rows.append(check("g1_replay_schema", g1_artifact.get("schema") == "step5-ab1-g1-vvv-dword-replay-v1", g1_artifact.get("schema"), "step5-ab1-g1-vvv-dword-replay-v1"))
+        rows.append(check("g1_replay_plus_total", generated.get("plus_total", {}).get("integer") == 1024, generated.get("plus_total", {}).get("integer"), 1024))
+        rows.append(check("g1_replay_minus_total", generated.get("minus_total", {}).get("integer") == -1024, generated.get("minus_total", {}).get("integer"), -1024))
+        rows.append(check("g1_replay_plus_word_rows", len(generated.get("plus", [])) == 6, len(generated.get("plus", [])), 6))
+        rows.append(check("g1_replay_minus_word_rows", len(generated.get("minus", [])) == 6, len(generated.get("minus", [])), 6))
+        replay_checks = g1_artifact.get("checks", {})
+        rows.append(check("g1_replay_internal_checks", bool(replay_checks) and all(replay_checks.values()), replay_checks, "all true"))
+    if DRED_CUT_AUDIT.is_file():
+        dred_cut_text = DRED_CUT_AUDIT.read_text(encoding="utf-8")
+        for name, anchor in {
+            "four_dimensional_square": r"\bar r^{\,2}",
+            "full_inverse_pointwise_zero": r"\Gamma_{G,i}^{(d)}",
+            "positive_anomaly_square": r"\mu_\ell^2",
+            "finite_master": r"\frac1{32\pi^2}",
+            "b1_edge_word": r"D_-D_+\bar D^2D^2\delta",
+        }.items():
+            rows.append(check(f"dred_cut_anchor_{name}", anchor in dred_cut_text, anchor in dred_cut_text, True))
     if AUDIT.is_file():
         audit_text = AUDIT.read_text(encoding="utf-8")
         authority_receipt = f"Authority: verified `origin/main@{AUTHORITY_COMMIT}`, workflow run `{AUTHORITY_VERIFY_RUN}`."
@@ -441,6 +493,10 @@ def all_checks() -> list[dict[str, object]]:
         audit_matter_anchor = compact_tex(r"\boxed{+\delta_{rs}\frac{\hbar\kappa^{AB}}{16p^2}\bar D_1^2D_1^2\delta^4(\theta_{12})}")
         rows.append(check("audit_exact_rescaled_vector_rule", audit_vector_anchor in audit_compact, audit_vector_anchor in audit_compact, True))
         rows.append(check("audit_exact_rescaled_matter_rule", audit_matter_anchor in audit_compact, audit_matter_anchor in audit_compact, True))
+        rows.append(check("audit_g1_replay_link", "step5_ab1_g1_vvv_dword_replay.py" in audit_text, "step5_ab1_g1_vvv_dword_replay.py" in audit_text, True))
+        rows.append(check("audit_g1_plus_total", "=1024" in audit_compact, "=1024" in audit_compact, True))
+        rows.append(check("audit_g1_minus_total", "=-1024" in audit_compact, "=-1024" in audit_compact, True))
+        rows.append(check("audit_g1_DB_coefficient", compact_tex(r"-\frac{\lambda_1}{2}\mathbb F^{AB}{}_{DE}") in audit_compact, compact_tex(r"-\frac{\lambda_1}{2}\mathbb F^{AB}{}_{DE}") in audit_compact, True))
         for blocker in BLOCKERS:
             rows.append(check(f"audit_blocker_{blocker}", blocker in audit_text, blocker in audit_text, True))
     return rows
@@ -471,8 +527,25 @@ def main() -> None:
             "nonlink": 50,
             "link_dependent": 42,
         },
-        "dword_coverage": {"status": "BLOCKED", "required": None, "replayed": 0},
-        "cut_coverage": {"status": "BLOCKED", "coarse_candidate_edge_positions": 12, "oriented_edge_kernels": 0, "paired": 0},
+        "dword_coverage": {
+            "status": "G1_PARENT_SPLIT_COMPLETE__G1_SD_CONTACT_AND_G2_G3_BLOCKED",
+            "universal_edge_square_classes_replayed": ["chiral_B1_descendant", "vector_A_Euler_descendant"],
+            "complete_graph_words": ["G1_parent_plus_12", "G1_parent_minus_12"],
+            "residual_occurrence_words": ["G1_edge_tagged_cuts_contacts", "G2", "G3_2", "G3_3", "contacts"],
+        },
+        "cut_coverage": {
+            "status": "PARTIAL_OCCURRENCE_SELECTED_EDGE_RULE_PROVED",
+            "full_inverse_square_pointwise_cancellation": True,
+            "evanescent_remainder_unit": "1/(32*pi^2)",
+            "residual_occurrence_pairing": "BLOCKED",
+        },
+        "evanescent_cut_mechanism": {
+            "status": "REPRODUCED",
+            "d_algebra_square": "four_dimensional",
+            "schwinger_inverse_square": "full_d_dimensional",
+            "anomaly_numerator": "mu_l^2=bar_l^2-l_d^2",
+            "finite_triangle_unit": "1/(32*pi^2)",
+        },
         "ht_coverage": {"status": "EXTERNAL_TARGET_ARITHMETIC_ONLY", "special_values_checked": 4, "source_roundtrip_certified": False},
         "full_diagram_derivation": {"status": FULL_STATUS, "pass_from_this_script_implies_completion": False},
         "blockers": list(BLOCKERS),

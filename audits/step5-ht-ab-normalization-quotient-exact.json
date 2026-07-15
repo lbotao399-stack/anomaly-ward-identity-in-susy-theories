@@ -1,0 +1,531 @@
+{
+  "aa_normalization": {
+    "BC_output_scale": "sqrt(2)/2",
+    "DA_output_scale": "sqrt(2)/2",
+    "input_scale": "-1/2",
+    "loop_marker_general": "hbar_H*kappa_H^2=-s_1*lambda_1/sqrt(2)",
+    "loop_marker_if_s1_equals_s0_equals_minus_half": "lambda_1/(2*sqrt(2))",
+    "normalized_loop_ratio": "hbar_H*kappa_H^2/s_1=-lambda_1/sqrt(2)",
+    "output_over_input": "-sqrt(2)",
+    "target_blind_raw_checks": {
+      "Schwinger_contact_multiplicity": "1",
+      "external_target_used": false,
+      "gauge_vector": [
+        "1",
+        "-1"
+      ],
+      "matter_vector": [
+        "1",
+        "-1"
+      ],
+      "raw_endpoint_rows": 48
+    }
+  },
+  "aa_q_covariance": {
+    "equation": "i*t*Z-i*Z=0",
+    "relations": [
+      "q_1 Y_1=i Z",
+      "q_1(A B_1)=-i A A",
+      "Delta(AA)=Z"
+    ],
+    "scale_two_residual": "i*Z",
+    "unique_scale": "t=1"
+  },
+  "ab_translation": {
+    "CC_output_over_input": "2*i",
+    "DB_output_over_input": "-sqrt(2)",
+    "HT_zero_component_main_compact_vector": [
+      "1",
+      "1",
+      "-sqrt(2)*i",
+      "sqrt(2)*i"
+    ],
+    "basis": [
+      "D>B1",
+      "B1>D",
+      "C2>C3",
+      "C3>C2"
+    ],
+    "epsilon_1JK_ordered_terms": [
+      [
+        2,
+        3,
+        1
+      ],
+      [
+        3,
+        2,
+        -1
+      ]
+    ],
+    "input_scale": "-i/2",
+    "verdict": "SCALE_ONE"
+  },
+  "blocker": "RAW_G3_SCALE_TWO_REQUIRES_AN_EXPLICIT_EOM_BRST_TD_OR_COUNTERTERM_QUOTIENT_MAP; HT_NORMALIZATION_SUPPLIES_NO_HALF",
+  "checks": {
+    "count": 48,
+    "failed": 0,
+    "passed": 48,
+    "rows": [
+      {
+        "actual": 726,
+        "expected": 726,
+        "id": "SOURCE_DTRI_ZERO_LINE",
+        "status": "PASS"
+      },
+      {
+        "actual": 1070,
+        "expected": 1070,
+        "id": "SOURCE_SHIFTED_BETA_B_LINE",
+        "status": "PASS"
+      },
+      {
+        "actual": 1241,
+        "expected": 1241,
+        "id": "SOURCE_ZERO_COMPONENT_BETA_B_LINE",
+        "status": "PASS"
+      },
+      {
+        "actual": 1251,
+        "expected": 1251,
+        "id": "SOURCE_COMPACT_MAIN_LINE",
+        "status": "PASS"
+      },
+      {
+        "actual": 1390,
+        "expected": 1390,
+        "id": "SOURCE_APPENDIX_BETA_B_LINE",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/2",
+        "expected": "-1/2",
+        "id": "AA_INPUT_SCALE",
+        "status": "PASS"
+      },
+      {
+        "actual": "sqrt(2)/2",
+        "expected": "sqrt(2)/2",
+        "id": "AA_DA_OUTPUT_SCALE",
+        "status": "PASS"
+      },
+      {
+        "actual": "sqrt(2)/2",
+        "expected": "sqrt(2)/2",
+        "id": "AA_BC_OUTPUT_SCALE",
+        "status": "PASS"
+      },
+      {
+        "actual": "-sqrt(2)",
+        "expected": "-sqrt(2)",
+        "id": "AA_DA_RATIO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-sqrt(2)",
+        "expected": "-sqrt(2)",
+        "id": "AA_BC_RATIO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-i/2",
+        "expected": "-i/2",
+        "id": "AB_INPUT_SCALE",
+        "status": "PASS"
+      },
+      {
+        "actual": "sqrt(2)*i/2",
+        "expected": "sqrt(2)*i/2",
+        "id": "AB_DB_OUTPUT_SCALE",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": 1,
+        "id": "AB_CC_OUTPUT_SCALE",
+        "status": "PASS"
+      },
+      {
+        "actual": "-sqrt(2)",
+        "expected": "-sqrt(2)",
+        "id": "AB_DB_RATIO",
+        "status": "PASS"
+      },
+      {
+        "actual": "2*i",
+        "expected": "2*i",
+        "id": "AB_CC_RATIO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-sqrt(2)*lambda_1*s_1/2",
+        "expected": "-sqrt(2)*lambda_1*s_1/2",
+        "id": "AA_FIXES_LOOP_MARKER",
+        "status": "PASS"
+      },
+      {
+        "actual": "-sqrt(2)*lambda_1/2",
+        "expected": "-sqrt(2)*lambda_1/2",
+        "id": "S1_CANCELS_FROM_ALL_COMPONENT_RATIOS",
+        "status": "PASS"
+      },
+      {
+        "actual": "sqrt(2)*lambda_1/4",
+        "expected": "sqrt(2)*lambda_1/4",
+        "id": "CONDITIONAL_S1_MINUS_HALF_MARKER",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": 1,
+        "id": "HT_PROJECT_DB_COEFFICIENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-sqrt(2)*i",
+        "expected": "-sqrt(2)*i",
+        "id": "HT_PROJECT_CC23_COEFFICIENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "sqrt(2)*i",
+        "expected": "sqrt(2)*i",
+        "id": "HT_PROJECT_CC32_COEFFICIENT",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          [
+            2,
+            3,
+            1
+          ],
+          [
+            3,
+            2,
+            -1
+          ]
+        ],
+        "expected": [
+          [
+            2,
+            3,
+            1
+          ],
+          [
+            3,
+            2,
+            -1
+          ]
+        ],
+        "id": "EPSILON_1JK_ORDERED_TERMS",
+        "status": "PASS"
+      },
+      {
+        "actual": 2,
+        "expected": 2,
+        "id": "EPSILON_1JK_TERM_COUNT",
+        "status": "PASS"
+      },
+      {
+        "actual": "R_A^P R_B^Q f_ACD f_BCE (R^-1)_R^D (R^-1)_S^E=C_Project^{PQ}{}_{RS}",
+        "expected": "R_A^P R_B^Q f_ACD f_BCE (R^-1)_R^D (R^-1)_S^E=C_Project^{PQ}{}_{RS}",
+        "id": "COLOR_TENSOR_ROUNDTRIP_NO_HALF",
+        "status": "PASS"
+      },
+      {
+        "actual": "C_Project^{BA}{}_{DE}=C_Project^{AB}{}_{ED}",
+        "expected": "C_Project^{BA}{}_{DE}=C_Project^{AB}{}_{ED}",
+        "id": "COLOR_REVERSE_IDENTITY",
+        "status": "PASS"
+      },
+      {
+        "actual": true,
+        "expected": true,
+        "id": "AA_TARGET_BLIND_SCALE_ONE_ACCEPTED",
+        "status": "PASS"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "id": "AA_EXTERNAL_TARGET_NOT_USED",
+        "status": "PASS"
+      },
+      {
+        "actual": "CLOSED_RAW_SCHWINGER_CONTACT_HESSIAN_MULTIPLICITY_ONE",
+        "expected": "CLOSED_RAW_SCHWINGER_CONTACT_HESSIAN_MULTIPLICITY_ONE",
+        "id": "AA_RAW_CONTACT_MULTIPLICITY_STATUS",
+        "status": "PASS"
+      },
+      {
+        "actual": 48,
+        "expected": 48,
+        "id": "AA_RAW_ENDPOINT_ROW_COUNT",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1",
+          "-1"
+        ],
+        "expected": [
+          "1",
+          "-1"
+        ],
+        "id": "AA_GAUGE_SCALE_ONE_VECTOR",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1",
+          "-1"
+        ],
+        "expected": [
+          "1",
+          "-1"
+        ],
+        "id": "AA_MATTER_SCALE_ONE_VECTOR",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1",
+          "1",
+          "-sqrt(2)*i",
+          "sqrt(2)*i"
+        ],
+        "expected": [
+          "1",
+          "1",
+          "-sqrt(2)*i",
+          "sqrt(2)*i"
+        ],
+        "id": "HT_ZERO_COMPONENT_MAIN_COMPACT_VECTOR",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/2",
+        "expected": "1/2",
+        "id": "HT_PRINTED_DTRI_T00",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": 1,
+        "id": "PROJECT_KERNEL_K00",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": 1,
+        "id": "HT_ZERO_COMPONENT_BRANCH_T00",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": 2,
+        "id": "HT_INTERNAL_ZERO_SHIFT_RATIO",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": 2,
+        "id": "RAW_G3_OVER_PROJECT_K00",
+        "status": "PASS"
+      },
+      {
+        "actual": "4",
+        "expected": 4,
+        "id": "RAW_G3_OVER_PRINTED_HT_T00",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "2",
+          "1",
+          "-2*sqrt(2)*i",
+          "2*sqrt(2)*i"
+        ],
+        "expected": [
+          "2",
+          "1",
+          "-2*sqrt(2)*i",
+          "2*sqrt(2)*i"
+        ],
+        "id": "LOCKED_HYBRID_DIRECT_VECTOR",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "2",
+          "1",
+          "2",
+          "2"
+        ],
+        "expected": [
+          "2",
+          "1",
+          "2",
+          "2"
+        ],
+        "id": "RAW_OVER_HT_SCALE_CANDIDATES",
+        "status": "PASS"
+      },
+      {
+        "actual": [],
+        "expected": [],
+        "id": "NO_GLOBAL_NORMALIZATION_FIX",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "2",
+          "2"
+        ],
+        "expected": [
+          "2",
+          "2"
+        ],
+        "id": "G1_RAW_PAIR_EOM",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "-1/3",
+          "4/3"
+        ],
+        "expected": [
+          "-1/3",
+          "4/3"
+        ],
+        "id": "G2_RAW_PAIR_EOM",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "0",
+          "2"
+        ],
+        "expected": [
+          "0",
+          "2"
+        ],
+        "id": "G1_PAIR_TD_DECOMPOSITION",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1",
+          "4/3"
+        ],
+        "expected": [
+          "1",
+          "4/3"
+        ],
+        "id": "G2_PAIR_TD_DECOMPOSITION",
+        "status": "PASS"
+      },
+      {
+        "actual": "i*(t - 1)",
+        "expected": "i*(t - 1)",
+        "id": "AA_AB_Q_COVARIANCE_RESIDUAL",
+        "status": "PASS"
+      },
+      {
+        "actual": [
+          "1"
+        ],
+        "expected": [
+          1
+        ],
+        "id": "AA_AB_Q_COVARIANCE_UNIQUE_SCALE",
+        "status": "PASS"
+      },
+      {
+        "actual": "i",
+        "expected": "i",
+        "id": "SCALE_TWO_Q_COVARIANCE_FAILURE",
+        "status": "PASS"
+      }
+    ]
+  },
+  "external_target_role": "HT_SOURCE_READ_ONLY_NORMALIZATION_AUDIT",
+  "field_scales": {
+    "A": "-i/sqrt(2)",
+    "B_r": "1/sqrt(2)",
+    "C_r": "1",
+    "D_dot": "i",
+    "common_rho": "cancels as rho^2/rho^2"
+  },
+  "first_error_equality": {
+    "comparison_error": "the vector (2,1,-2*i*sqrt(2),2*i*sqrt(2)) combines raw G1/G3 with total-derivative-quotiented G2 and is not an element of one common layer",
+    "concrete_chain": "-pair/3+4*EOM/3=pair+4*T_BD/3; only [T_BD]=0 gives [pair]",
+    "raw_local_invalid_step": "T_BD=0",
+    "valid_only_after": "projection to the total-derivative quotient"
+  },
+  "raw_and_quotient_layers": {
+    "global_normalization_solution": [],
+    "hybrid_direct_basis": [
+      "D>B1",
+      "B1>D",
+      "C2>C3",
+      "C3>C2"
+    ],
+    "hybrid_direct_vector": [
+      "2",
+      "1",
+      "-2*sqrt(2)*i",
+      "2*sqrt(2)*i"
+    ],
+    "hybrid_over_HT_scale_candidates": [
+      "2",
+      "1",
+      "2",
+      "2"
+    ],
+    "raw_local": {
+      "G1_pair_EOM": [
+        "2",
+        "2"
+      ],
+      "G2_pair_EOM": [
+        "-1/3",
+        "4/3"
+      ],
+      "G3_C2C3_C3C2": [
+        "-2*i*sqrt(2)",
+        "2*i*sqrt(2)"
+      ]
+    },
+    "total_derivative_decomposition": {
+      "G1": "2*pair+2*EOM=2*T_DB; T_DB=pair+EOM",
+      "G2": "-pair/3+4*EOM/3=pair+4*T_BD/3; T_BD=-pair+EOM"
+    }
+  },
+  "schema": "step5-ht-ab-normalization-quotient-exact-v1",
+  "source_internal_conflict": {
+    "Dtri_zero_and_Appendix_B_m0n0": "scale 1/2",
+    "effect": "the source conflict offers scale 1 or scale 1/2, never scale 2",
+    "exact_ratio": "2",
+    "kernel_comparison": {
+      "K_Project_00_equals_2T_HT_00": "1",
+      "T_HT_00": "1/2",
+      "raw_G3_over_K_Project_00": "2",
+      "raw_G3_over_T_HT_00": "4",
+      "raw_G3_scale": "2"
+    },
+    "zero_component_and_main_compact": "scale 1"
+  },
+  "source_provenance_lines": {
+    "Dtri_definition": 722,
+    "Dtri_zero": 726,
+    "N4_Q0": 1183,
+    "N4_field_map": 1168,
+    "N4_superfield": 1174,
+    "appendix_beta_b": 1390,
+    "compact_main": 1251,
+    "shifted_beta_b": 1070,
+    "zero_component_beta_b": 1241
+  },
+  "status": "PASS_HT_AB_SCALE_ONE__S1_CANCELS__RAW_G3_SCALE_TWO_IS_NOT_A_NORMALIZATION_EFFECT__FIRST_ERROR_IS_MIXED_QUOTIENT_LAYER"
+}

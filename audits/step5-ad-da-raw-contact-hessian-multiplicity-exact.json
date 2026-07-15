@@ -1,0 +1,2722 @@
+{
+  "checks": {
+    "count": 255,
+    "failed": 0,
+    "passed": 255,
+    "rows": [
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "ACTION_ORDER_HALF_TIMES_TWO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "CUT_ENDPOINT_HALF_TIMES_TWO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "REMAINING_WICK_HALF_TIMES_TWO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_CONTACT_MULTIPLICITY",
+        "status": "PASS"
+      },
+      {
+        "actual": "8",
+        "expected": "8",
+        "id": "AD_DIRECT_E0_EIGHT_ROWS",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "AD_DIRECT_E0_ROW_WEIGHT_SUM",
+        "status": "PASS"
+      },
+      {
+        "actual": "8",
+        "expected": "8",
+        "id": "AD_CROSSED_E2_EIGHT_ROWS",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "AD_CROSSED_E2_ROW_WEIGHT_SUM",
+        "status": "PASS"
+      },
+      {
+        "actual": "8",
+        "expected": "8",
+        "id": "DA_DIRECT_E2_EIGHT_ROWS",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "DA_DIRECT_E2_ROW_WEIGHT_SUM",
+        "status": "PASS"
+      },
+      {
+        "actual": "8",
+        "expected": "8",
+        "id": "DA_CROSSED_E0_EIGHT_ROWS",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "DA_CROSSED_E0_ROW_WEIGHT_SUM",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/4 + 5/16*i",
+        "expected": "1/4 + 5/16*i",
+        "id": "FRAME0_AD_DIRECT_E0_++_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/4 - 5/16*i",
+        "expected": "-1/4 - 5/16*i",
+        "id": "FRAME0_AD_DIRECT_E0_++_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME0_AD_DIRECT_E0_++_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/4 + 5/16*i",
+        "expected": "1/4 + 5/16*i",
+        "id": "FRAME0_AD_DIRECT_E0_+-_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/4 - 5/16*i",
+        "expected": "-1/4 - 5/16*i",
+        "id": "FRAME0_AD_DIRECT_E0_+-_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME0_AD_DIRECT_E0_+-_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/4 + 5/16*i",
+        "expected": "1/4 + 5/16*i",
+        "id": "FRAME0_AD_DIRECT_E0_-+_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/4 - 5/16*i",
+        "expected": "-1/4 - 5/16*i",
+        "id": "FRAME0_AD_DIRECT_E0_-+_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME0_AD_DIRECT_E0_-+_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/4 + 5/16*i",
+        "expected": "1/4 + 5/16*i",
+        "id": "FRAME0_AD_DIRECT_E0_--_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/4 - 5/16*i",
+        "expected": "-1/4 - 5/16*i",
+        "id": "FRAME0_AD_DIRECT_E0_--_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME0_AD_DIRECT_E0_--_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1 + 5/4*i",
+        "expected": "1 + 5/4*i",
+        "id": "FRAME0_AD_DIRECT_E0_TOTAL_PARENT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1 - 5/4*i",
+        "expected": "-1 - 5/4*i",
+        "id": "FRAME0_AD_DIRECT_E0_TOTAL_CONTACT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME0_AD_DIRECT_E0_TOTAL_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-3/16 - 1/4*i",
+        "expected": "-3/16 - 1/4*i",
+        "id": "FRAME0_AD_CROSSED_E2_++_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/16 + 1/4*i",
+        "expected": "3/16 + 1/4*i",
+        "id": "FRAME0_AD_CROSSED_E2_++_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME0_AD_CROSSED_E2_++_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-3/16 - 1/4*i",
+        "expected": "-3/16 - 1/4*i",
+        "id": "FRAME0_AD_CROSSED_E2_+-_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/16 + 1/4*i",
+        "expected": "3/16 + 1/4*i",
+        "id": "FRAME0_AD_CROSSED_E2_+-_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME0_AD_CROSSED_E2_+-_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-3/16 - 1/4*i",
+        "expected": "-3/16 - 1/4*i",
+        "id": "FRAME0_AD_CROSSED_E2_-+_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/16 + 1/4*i",
+        "expected": "3/16 + 1/4*i",
+        "id": "FRAME0_AD_CROSSED_E2_-+_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME0_AD_CROSSED_E2_-+_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-3/16 - 1/4*i",
+        "expected": "-3/16 - 1/4*i",
+        "id": "FRAME0_AD_CROSSED_E2_--_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/16 + 1/4*i",
+        "expected": "3/16 + 1/4*i",
+        "id": "FRAME0_AD_CROSSED_E2_--_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME0_AD_CROSSED_E2_--_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-3/4 - i",
+        "expected": "-3/4 - i",
+        "id": "FRAME0_AD_CROSSED_E2_TOTAL_PARENT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/4 + i",
+        "expected": "3/4 + i",
+        "id": "FRAME0_AD_CROSSED_E2_TOTAL_CONTACT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME0_AD_CROSSED_E2_TOTAL_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-3/16 - 1/4*i",
+        "expected": "-3/16 - 1/4*i",
+        "id": "FRAME0_DA_DIRECT_E2_++_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/16 + 1/4*i",
+        "expected": "3/16 + 1/4*i",
+        "id": "FRAME0_DA_DIRECT_E2_++_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME0_DA_DIRECT_E2_++_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-3/16 - 1/4*i",
+        "expected": "-3/16 - 1/4*i",
+        "id": "FRAME0_DA_DIRECT_E2_+-_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/16 + 1/4*i",
+        "expected": "3/16 + 1/4*i",
+        "id": "FRAME0_DA_DIRECT_E2_+-_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME0_DA_DIRECT_E2_+-_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-3/16 - 1/4*i",
+        "expected": "-3/16 - 1/4*i",
+        "id": "FRAME0_DA_DIRECT_E2_-+_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/16 + 1/4*i",
+        "expected": "3/16 + 1/4*i",
+        "id": "FRAME0_DA_DIRECT_E2_-+_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME0_DA_DIRECT_E2_-+_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-3/16 - 1/4*i",
+        "expected": "-3/16 - 1/4*i",
+        "id": "FRAME0_DA_DIRECT_E2_--_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/16 + 1/4*i",
+        "expected": "3/16 + 1/4*i",
+        "id": "FRAME0_DA_DIRECT_E2_--_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME0_DA_DIRECT_E2_--_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-3/4 - i",
+        "expected": "-3/4 - i",
+        "id": "FRAME0_DA_DIRECT_E2_TOTAL_PARENT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/4 + i",
+        "expected": "3/4 + i",
+        "id": "FRAME0_DA_DIRECT_E2_TOTAL_CONTACT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME0_DA_DIRECT_E2_TOTAL_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/4 + 5/16*i",
+        "expected": "1/4 + 5/16*i",
+        "id": "FRAME0_DA_CROSSED_E0_++_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/4 - 5/16*i",
+        "expected": "-1/4 - 5/16*i",
+        "id": "FRAME0_DA_CROSSED_E0_++_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME0_DA_CROSSED_E0_++_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/4 + 5/16*i",
+        "expected": "1/4 + 5/16*i",
+        "id": "FRAME0_DA_CROSSED_E0_+-_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/4 - 5/16*i",
+        "expected": "-1/4 - 5/16*i",
+        "id": "FRAME0_DA_CROSSED_E0_+-_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME0_DA_CROSSED_E0_+-_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/4 + 5/16*i",
+        "expected": "1/4 + 5/16*i",
+        "id": "FRAME0_DA_CROSSED_E0_-+_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/4 - 5/16*i",
+        "expected": "-1/4 - 5/16*i",
+        "id": "FRAME0_DA_CROSSED_E0_-+_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME0_DA_CROSSED_E0_-+_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/4 + 5/16*i",
+        "expected": "1/4 + 5/16*i",
+        "id": "FRAME0_DA_CROSSED_E0_--_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/4 - 5/16*i",
+        "expected": "-1/4 - 5/16*i",
+        "id": "FRAME0_DA_CROSSED_E0_--_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME0_DA_CROSSED_E0_--_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1 + 5/4*i",
+        "expected": "1 + 5/4*i",
+        "id": "FRAME0_DA_CROSSED_E0_TOTAL_PARENT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1 - 5/4*i",
+        "expected": "-1 - 5/4*i",
+        "id": "FRAME0_DA_CROSSED_E0_TOTAL_CONTACT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME0_DA_CROSSED_E0_TOTAL_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/16 + 1/8*i",
+        "expected": "1/16 + 1/8*i",
+        "id": "FRAME1_AD_DIRECT_E0_++_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/16 - 1/8*i",
+        "expected": "-1/16 - 1/8*i",
+        "id": "FRAME1_AD_DIRECT_E0_++_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME1_AD_DIRECT_E0_++_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/16 + 1/8*i",
+        "expected": "1/16 + 1/8*i",
+        "id": "FRAME1_AD_DIRECT_E0_+-_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/16 - 1/8*i",
+        "expected": "-1/16 - 1/8*i",
+        "id": "FRAME1_AD_DIRECT_E0_+-_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME1_AD_DIRECT_E0_+-_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/16 + 1/8*i",
+        "expected": "1/16 + 1/8*i",
+        "id": "FRAME1_AD_DIRECT_E0_-+_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/16 - 1/8*i",
+        "expected": "-1/16 - 1/8*i",
+        "id": "FRAME1_AD_DIRECT_E0_-+_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME1_AD_DIRECT_E0_-+_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/16 + 1/8*i",
+        "expected": "1/16 + 1/8*i",
+        "id": "FRAME1_AD_DIRECT_E0_--_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/16 - 1/8*i",
+        "expected": "-1/16 - 1/8*i",
+        "id": "FRAME1_AD_DIRECT_E0_--_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME1_AD_DIRECT_E0_--_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/4 + 1/2*i",
+        "expected": "1/4 + 1/2*i",
+        "id": "FRAME1_AD_DIRECT_E0_TOTAL_PARENT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/4 - 1/2*i",
+        "expected": "-1/4 - 1/2*i",
+        "id": "FRAME1_AD_DIRECT_E0_TOTAL_CONTACT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME1_AD_DIRECT_E0_TOTAL_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/16*i",
+        "expected": "-1/16*i",
+        "id": "FRAME1_AD_CROSSED_E2_++_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/16*i",
+        "expected": "1/16*i",
+        "id": "FRAME1_AD_CROSSED_E2_++_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME1_AD_CROSSED_E2_++_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/16*i",
+        "expected": "-1/16*i",
+        "id": "FRAME1_AD_CROSSED_E2_+-_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/16*i",
+        "expected": "1/16*i",
+        "id": "FRAME1_AD_CROSSED_E2_+-_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME1_AD_CROSSED_E2_+-_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/16*i",
+        "expected": "-1/16*i",
+        "id": "FRAME1_AD_CROSSED_E2_-+_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/16*i",
+        "expected": "1/16*i",
+        "id": "FRAME1_AD_CROSSED_E2_-+_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME1_AD_CROSSED_E2_-+_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/16*i",
+        "expected": "-1/16*i",
+        "id": "FRAME1_AD_CROSSED_E2_--_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/16*i",
+        "expected": "1/16*i",
+        "id": "FRAME1_AD_CROSSED_E2_--_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME1_AD_CROSSED_E2_--_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/4*i",
+        "expected": "-1/4*i",
+        "id": "FRAME1_AD_CROSSED_E2_TOTAL_PARENT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/4*i",
+        "expected": "1/4*i",
+        "id": "FRAME1_AD_CROSSED_E2_TOTAL_CONTACT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME1_AD_CROSSED_E2_TOTAL_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/16*i",
+        "expected": "-1/16*i",
+        "id": "FRAME1_DA_DIRECT_E2_++_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/16*i",
+        "expected": "1/16*i",
+        "id": "FRAME1_DA_DIRECT_E2_++_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME1_DA_DIRECT_E2_++_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/16*i",
+        "expected": "-1/16*i",
+        "id": "FRAME1_DA_DIRECT_E2_+-_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/16*i",
+        "expected": "1/16*i",
+        "id": "FRAME1_DA_DIRECT_E2_+-_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME1_DA_DIRECT_E2_+-_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/16*i",
+        "expected": "-1/16*i",
+        "id": "FRAME1_DA_DIRECT_E2_-+_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/16*i",
+        "expected": "1/16*i",
+        "id": "FRAME1_DA_DIRECT_E2_-+_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME1_DA_DIRECT_E2_-+_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/16*i",
+        "expected": "-1/16*i",
+        "id": "FRAME1_DA_DIRECT_E2_--_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/16*i",
+        "expected": "1/16*i",
+        "id": "FRAME1_DA_DIRECT_E2_--_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME1_DA_DIRECT_E2_--_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/4*i",
+        "expected": "-1/4*i",
+        "id": "FRAME1_DA_DIRECT_E2_TOTAL_PARENT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/4*i",
+        "expected": "1/4*i",
+        "id": "FRAME1_DA_DIRECT_E2_TOTAL_CONTACT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME1_DA_DIRECT_E2_TOTAL_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/16 + 1/8*i",
+        "expected": "1/16 + 1/8*i",
+        "id": "FRAME1_DA_CROSSED_E0_++_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/16 - 1/8*i",
+        "expected": "-1/16 - 1/8*i",
+        "id": "FRAME1_DA_CROSSED_E0_++_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME1_DA_CROSSED_E0_++_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/16 + 1/8*i",
+        "expected": "1/16 + 1/8*i",
+        "id": "FRAME1_DA_CROSSED_E0_+-_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/16 - 1/8*i",
+        "expected": "-1/16 - 1/8*i",
+        "id": "FRAME1_DA_CROSSED_E0_+-_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME1_DA_CROSSED_E0_+-_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/16 + 1/8*i",
+        "expected": "1/16 + 1/8*i",
+        "id": "FRAME1_DA_CROSSED_E0_-+_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/16 - 1/8*i",
+        "expected": "-1/16 - 1/8*i",
+        "id": "FRAME1_DA_CROSSED_E0_-+_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME1_DA_CROSSED_E0_-+_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/16 + 1/8*i",
+        "expected": "1/16 + 1/8*i",
+        "id": "FRAME1_DA_CROSSED_E0_--_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/16 - 1/8*i",
+        "expected": "-1/16 - 1/8*i",
+        "id": "FRAME1_DA_CROSSED_E0_--_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME1_DA_CROSSED_E0_--_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/4 + 1/2*i",
+        "expected": "1/4 + 1/2*i",
+        "id": "FRAME1_DA_CROSSED_E0_TOTAL_PARENT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/4 - 1/2*i",
+        "expected": "-1/4 - 1/2*i",
+        "id": "FRAME1_DA_CROSSED_E0_TOTAL_CONTACT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME1_DA_CROSSED_E0_TOTAL_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/32 + 3/16*i",
+        "expected": "1/32 + 3/16*i",
+        "id": "FRAME2_AD_DIRECT_E0_++_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/32 - 3/16*i",
+        "expected": "-1/32 - 3/16*i",
+        "id": "FRAME2_AD_DIRECT_E0_++_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME2_AD_DIRECT_E0_++_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/32 + 3/16*i",
+        "expected": "1/32 + 3/16*i",
+        "id": "FRAME2_AD_DIRECT_E0_+-_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/32 - 3/16*i",
+        "expected": "-1/32 - 3/16*i",
+        "id": "FRAME2_AD_DIRECT_E0_+-_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME2_AD_DIRECT_E0_+-_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/32 + 3/16*i",
+        "expected": "1/32 + 3/16*i",
+        "id": "FRAME2_AD_DIRECT_E0_-+_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/32 - 3/16*i",
+        "expected": "-1/32 - 3/16*i",
+        "id": "FRAME2_AD_DIRECT_E0_-+_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME2_AD_DIRECT_E0_-+_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/32 + 3/16*i",
+        "expected": "1/32 + 3/16*i",
+        "id": "FRAME2_AD_DIRECT_E0_--_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/32 - 3/16*i",
+        "expected": "-1/32 - 3/16*i",
+        "id": "FRAME2_AD_DIRECT_E0_--_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME2_AD_DIRECT_E0_--_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/8 + 3/4*i",
+        "expected": "1/8 + 3/4*i",
+        "id": "FRAME2_AD_DIRECT_E0_TOTAL_PARENT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/8 - 3/4*i",
+        "expected": "-1/8 - 3/4*i",
+        "id": "FRAME2_AD_DIRECT_E0_TOTAL_CONTACT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME2_AD_DIRECT_E0_TOTAL_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/8 - 3/16*i",
+        "expected": "1/8 - 3/16*i",
+        "id": "FRAME2_AD_CROSSED_E2_++_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/8 + 3/16*i",
+        "expected": "-1/8 + 3/16*i",
+        "id": "FRAME2_AD_CROSSED_E2_++_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME2_AD_CROSSED_E2_++_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/8 - 3/16*i",
+        "expected": "1/8 - 3/16*i",
+        "id": "FRAME2_AD_CROSSED_E2_+-_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/8 + 3/16*i",
+        "expected": "-1/8 + 3/16*i",
+        "id": "FRAME2_AD_CROSSED_E2_+-_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME2_AD_CROSSED_E2_+-_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/8 - 3/16*i",
+        "expected": "1/8 - 3/16*i",
+        "id": "FRAME2_AD_CROSSED_E2_-+_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/8 + 3/16*i",
+        "expected": "-1/8 + 3/16*i",
+        "id": "FRAME2_AD_CROSSED_E2_-+_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME2_AD_CROSSED_E2_-+_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/8 - 3/16*i",
+        "expected": "1/8 - 3/16*i",
+        "id": "FRAME2_AD_CROSSED_E2_--_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/8 + 3/16*i",
+        "expected": "-1/8 + 3/16*i",
+        "id": "FRAME2_AD_CROSSED_E2_--_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME2_AD_CROSSED_E2_--_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/2 - 3/4*i",
+        "expected": "1/2 - 3/4*i",
+        "id": "FRAME2_AD_CROSSED_E2_TOTAL_PARENT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/2 + 3/4*i",
+        "expected": "-1/2 + 3/4*i",
+        "id": "FRAME2_AD_CROSSED_E2_TOTAL_CONTACT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME2_AD_CROSSED_E2_TOTAL_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/8 - 3/16*i",
+        "expected": "1/8 - 3/16*i",
+        "id": "FRAME2_DA_DIRECT_E2_++_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/8 + 3/16*i",
+        "expected": "-1/8 + 3/16*i",
+        "id": "FRAME2_DA_DIRECT_E2_++_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME2_DA_DIRECT_E2_++_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/8 - 3/16*i",
+        "expected": "1/8 - 3/16*i",
+        "id": "FRAME2_DA_DIRECT_E2_+-_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/8 + 3/16*i",
+        "expected": "-1/8 + 3/16*i",
+        "id": "FRAME2_DA_DIRECT_E2_+-_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME2_DA_DIRECT_E2_+-_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/8 - 3/16*i",
+        "expected": "1/8 - 3/16*i",
+        "id": "FRAME2_DA_DIRECT_E2_-+_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/8 + 3/16*i",
+        "expected": "-1/8 + 3/16*i",
+        "id": "FRAME2_DA_DIRECT_E2_-+_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME2_DA_DIRECT_E2_-+_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/8 - 3/16*i",
+        "expected": "1/8 - 3/16*i",
+        "id": "FRAME2_DA_DIRECT_E2_--_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/8 + 3/16*i",
+        "expected": "-1/8 + 3/16*i",
+        "id": "FRAME2_DA_DIRECT_E2_--_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME2_DA_DIRECT_E2_--_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/2 - 3/4*i",
+        "expected": "1/2 - 3/4*i",
+        "id": "FRAME2_DA_DIRECT_E2_TOTAL_PARENT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/2 + 3/4*i",
+        "expected": "-1/2 + 3/4*i",
+        "id": "FRAME2_DA_DIRECT_E2_TOTAL_CONTACT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME2_DA_DIRECT_E2_TOTAL_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/32 + 3/16*i",
+        "expected": "1/32 + 3/16*i",
+        "id": "FRAME2_DA_CROSSED_E0_++_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/32 - 3/16*i",
+        "expected": "-1/32 - 3/16*i",
+        "id": "FRAME2_DA_CROSSED_E0_++_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME2_DA_CROSSED_E0_++_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/32 + 3/16*i",
+        "expected": "1/32 + 3/16*i",
+        "id": "FRAME2_DA_CROSSED_E0_+-_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/32 - 3/16*i",
+        "expected": "-1/32 - 3/16*i",
+        "id": "FRAME2_DA_CROSSED_E0_+-_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME2_DA_CROSSED_E0_+-_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/32 + 3/16*i",
+        "expected": "1/32 + 3/16*i",
+        "id": "FRAME2_DA_CROSSED_E0_-+_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/32 - 3/16*i",
+        "expected": "-1/32 - 3/16*i",
+        "id": "FRAME2_DA_CROSSED_E0_-+_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME2_DA_CROSSED_E0_-+_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/32 + 3/16*i",
+        "expected": "1/32 + 3/16*i",
+        "id": "FRAME2_DA_CROSSED_E0_--_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/32 - 3/16*i",
+        "expected": "-1/32 - 3/16*i",
+        "id": "FRAME2_DA_CROSSED_E0_--_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME2_DA_CROSSED_E0_--_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/8 + 3/4*i",
+        "expected": "1/8 + 3/4*i",
+        "id": "FRAME2_DA_CROSSED_E0_TOTAL_PARENT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/8 - 3/4*i",
+        "expected": "-1/8 - 3/4*i",
+        "id": "FRAME2_DA_CROSSED_E0_TOTAL_CONTACT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME2_DA_CROSSED_E0_TOTAL_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/32 - 1/16*i",
+        "expected": "1/32 - 1/16*i",
+        "id": "FRAME3_AD_DIRECT_E0_++_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/32 + 1/16*i",
+        "expected": "-1/32 + 1/16*i",
+        "id": "FRAME3_AD_DIRECT_E0_++_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME3_AD_DIRECT_E0_++_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/32 - 1/16*i",
+        "expected": "1/32 - 1/16*i",
+        "id": "FRAME3_AD_DIRECT_E0_+-_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/32 + 1/16*i",
+        "expected": "-1/32 + 1/16*i",
+        "id": "FRAME3_AD_DIRECT_E0_+-_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME3_AD_DIRECT_E0_+-_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/32 - 1/16*i",
+        "expected": "1/32 - 1/16*i",
+        "id": "FRAME3_AD_DIRECT_E0_-+_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/32 + 1/16*i",
+        "expected": "-1/32 + 1/16*i",
+        "id": "FRAME3_AD_DIRECT_E0_-+_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME3_AD_DIRECT_E0_-+_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/32 - 1/16*i",
+        "expected": "1/32 - 1/16*i",
+        "id": "FRAME3_AD_DIRECT_E0_--_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/32 + 1/16*i",
+        "expected": "-1/32 + 1/16*i",
+        "id": "FRAME3_AD_DIRECT_E0_--_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME3_AD_DIRECT_E0_--_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/8 - 1/4*i",
+        "expected": "1/8 - 1/4*i",
+        "id": "FRAME3_AD_DIRECT_E0_TOTAL_PARENT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/8 + 1/4*i",
+        "expected": "-1/8 + 1/4*i",
+        "id": "FRAME3_AD_DIRECT_E0_TOTAL_CONTACT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME3_AD_DIRECT_E0_TOTAL_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/16 + 1/8*i",
+        "expected": "-1/16 + 1/8*i",
+        "id": "FRAME3_AD_CROSSED_E2_++_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/16 - 1/8*i",
+        "expected": "1/16 - 1/8*i",
+        "id": "FRAME3_AD_CROSSED_E2_++_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME3_AD_CROSSED_E2_++_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/16 + 1/8*i",
+        "expected": "-1/16 + 1/8*i",
+        "id": "FRAME3_AD_CROSSED_E2_+-_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/16 - 1/8*i",
+        "expected": "1/16 - 1/8*i",
+        "id": "FRAME3_AD_CROSSED_E2_+-_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME3_AD_CROSSED_E2_+-_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/16 + 1/8*i",
+        "expected": "-1/16 + 1/8*i",
+        "id": "FRAME3_AD_CROSSED_E2_-+_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/16 - 1/8*i",
+        "expected": "1/16 - 1/8*i",
+        "id": "FRAME3_AD_CROSSED_E2_-+_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME3_AD_CROSSED_E2_-+_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/16 + 1/8*i",
+        "expected": "-1/16 + 1/8*i",
+        "id": "FRAME3_AD_CROSSED_E2_--_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/16 - 1/8*i",
+        "expected": "1/16 - 1/8*i",
+        "id": "FRAME3_AD_CROSSED_E2_--_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME3_AD_CROSSED_E2_--_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/4 + 1/2*i",
+        "expected": "-1/4 + 1/2*i",
+        "id": "FRAME3_AD_CROSSED_E2_TOTAL_PARENT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/4 - 1/2*i",
+        "expected": "1/4 - 1/2*i",
+        "id": "FRAME3_AD_CROSSED_E2_TOTAL_CONTACT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME3_AD_CROSSED_E2_TOTAL_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/16 + 1/8*i",
+        "expected": "-1/16 + 1/8*i",
+        "id": "FRAME3_DA_DIRECT_E2_++_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/16 - 1/8*i",
+        "expected": "1/16 - 1/8*i",
+        "id": "FRAME3_DA_DIRECT_E2_++_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME3_DA_DIRECT_E2_++_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/16 + 1/8*i",
+        "expected": "-1/16 + 1/8*i",
+        "id": "FRAME3_DA_DIRECT_E2_+-_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/16 - 1/8*i",
+        "expected": "1/16 - 1/8*i",
+        "id": "FRAME3_DA_DIRECT_E2_+-_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME3_DA_DIRECT_E2_+-_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/16 + 1/8*i",
+        "expected": "-1/16 + 1/8*i",
+        "id": "FRAME3_DA_DIRECT_E2_-+_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/16 - 1/8*i",
+        "expected": "1/16 - 1/8*i",
+        "id": "FRAME3_DA_DIRECT_E2_-+_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME3_DA_DIRECT_E2_-+_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/16 + 1/8*i",
+        "expected": "-1/16 + 1/8*i",
+        "id": "FRAME3_DA_DIRECT_E2_--_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/16 - 1/8*i",
+        "expected": "1/16 - 1/8*i",
+        "id": "FRAME3_DA_DIRECT_E2_--_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME3_DA_DIRECT_E2_--_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/4 + 1/2*i",
+        "expected": "-1/4 + 1/2*i",
+        "id": "FRAME3_DA_DIRECT_E2_TOTAL_PARENT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/4 - 1/2*i",
+        "expected": "1/4 - 1/2*i",
+        "id": "FRAME3_DA_DIRECT_E2_TOTAL_CONTACT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME3_DA_DIRECT_E2_TOTAL_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/32 - 1/16*i",
+        "expected": "1/32 - 1/16*i",
+        "id": "FRAME3_DA_CROSSED_E0_++_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/32 + 1/16*i",
+        "expected": "-1/32 + 1/16*i",
+        "id": "FRAME3_DA_CROSSED_E0_++_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME3_DA_CROSSED_E0_++_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/32 - 1/16*i",
+        "expected": "1/32 - 1/16*i",
+        "id": "FRAME3_DA_CROSSED_E0_+-_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/32 + 1/16*i",
+        "expected": "-1/32 + 1/16*i",
+        "id": "FRAME3_DA_CROSSED_E0_+-_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME3_DA_CROSSED_E0_+-_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/32 - 1/16*i",
+        "expected": "1/32 - 1/16*i",
+        "id": "FRAME3_DA_CROSSED_E0_-+_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/32 + 1/16*i",
+        "expected": "-1/32 + 1/16*i",
+        "id": "FRAME3_DA_CROSSED_E0_-+_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME3_DA_CROSSED_E0_-+_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/32 - 1/16*i",
+        "expected": "1/32 - 1/16*i",
+        "id": "FRAME3_DA_CROSSED_E0_--_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/32 + 1/16*i",
+        "expected": "-1/32 + 1/16*i",
+        "id": "FRAME3_DA_CROSSED_E0_--_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME3_DA_CROSSED_E0_--_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/8 - 1/4*i",
+        "expected": "1/8 - 1/4*i",
+        "id": "FRAME3_DA_CROSSED_E0_TOTAL_PARENT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/8 + 1/4*i",
+        "expected": "-1/8 + 1/4*i",
+        "id": "FRAME3_DA_CROSSED_E0_TOTAL_CONTACT_FOUR",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME3_DA_CROSSED_E0_TOTAL_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "T1_DUHAMEL_DIFFERENTIAL",
+        "status": "PASS"
+      },
+      {
+        "actual": "exp(x) - exp(y)",
+        "expected": "exp(x) - exp(y)",
+        "id": "T1_DUHAMEL_BOUNDARY",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "T1_ENDPOINT_CANCELLATION",
+        "status": "PASS"
+      }
+    ]
+  },
+  "external_target_used": false,
+  "finite_w_one_link": {
+    "T1_derivative": "delta(T1 Y)^B/delta a_n^J=w^n*c_{JC}{}^B*int_0^1 ds exp(i*w.[s*r+(1-s)*r_prime])*Y^C",
+    "anomaly_reason": "The phase-weighted link and endpoint rows cancel before loop integration in arbitrary d; they contain no det_4-det_d remainder.",
+    "canonical_linear_connection": "a_m^{L,(1)}[u]=(i*sqrt(2)/8)*bar_sigma_m^{dot b a}*[D_a,barD_dot b]_ord*u^L|",
+    "functional_derivatives": {
+      "with_respect_to_a": "delta(M_1)^B_C/delta a_n^J=w^n*c_{JC}{}^B",
+      "with_respect_to_u": "delta(M_1)^B_C/delta u^J=(i*sqrt(2)/8)*w^m*c_{JC}{}^B*bar_sigma_m^{dot b a}[D_a,barD_dot b]_ord"
+    },
+    "identity": "(x-y)*int_0^1 ds exp(s*x+(1-s)*y)=exp(x)-exp(y); x=i*w.r, y=i*w.r_prime",
+    "link_generator": "(M_1[u])^B_C=w^m*c_{LC}{}^B*a_m^{L,(1)}[u]",
+    "longitudinal_contraction": "i*(r-r_prime)_n*delta(T1 Y)/delta a_n=c*(exp(i*w.r)-exp(i*w.r_prime))*Y",
+    "occurrence_rows": [
+      {
+        "classification": "LINK_WARD_CANCELLATION",
+        "endpoint_row": "+C_omega_e*(exp(x)-exp(y))",
+        "link_color_order": "(M_1)^B_C=c_{LC}{}^B*w^m*a_m^L",
+        "local_occurrence": "AD_DIRECT_E0",
+        "local_residue": "R1",
+        "mu2_anomaly": "0",
+        "one_link_row": "-C_omega_e*(x-y)*int_0^1 ds exp(s*x+(1-s)*y)",
+        "phase_endpoints": [
+          "x=i*w.r",
+          "y=i*w.r_prime"
+        ],
+        "sum": "0"
+      },
+      {
+        "classification": "LINK_WARD_CANCELLATION",
+        "endpoint_row": "+C_omega_e*(exp(x)-exp(y))",
+        "link_color_order": "(M_1)^B_C=c_{LC}{}^B*w^m*a_m^L",
+        "local_occurrence": "AD_CROSSED_E2",
+        "local_residue": "R2",
+        "mu2_anomaly": "0",
+        "one_link_row": "-C_omega_e*(x-y)*int_0^1 ds exp(s*x+(1-s)*y)",
+        "phase_endpoints": [
+          "x=i*w.r",
+          "y=i*w.r_prime"
+        ],
+        "sum": "0"
+      },
+      {
+        "classification": "LINK_WARD_CANCELLATION",
+        "endpoint_row": "+C_omega_e*(exp(x)-exp(y))",
+        "link_color_order": "(M_1)^B_C=c_{LC}{}^B*w^m*a_m^L",
+        "local_occurrence": "DA_DIRECT_E2",
+        "local_residue": "R2",
+        "mu2_anomaly": "0",
+        "one_link_row": "-C_omega_e*(x-y)*int_0^1 ds exp(s*x+(1-s)*y)",
+        "phase_endpoints": [
+          "x=i*w.r",
+          "y=i*w.r_prime"
+        ],
+        "sum": "0"
+      },
+      {
+        "classification": "LINK_WARD_CANCELLATION",
+        "endpoint_row": "+C_omega_e*(exp(x)-exp(y))",
+        "link_color_order": "(M_1)^B_C=c_{LC}{}^B*w^m*a_m^L",
+        "local_occurrence": "DA_CROSSED_E0",
+        "local_residue": "R1",
+        "mu2_anomaly": "0",
+        "one_link_row": "-C_omega_e*(x-y)*int_0^1 ds exp(s*x+(1-s)*y)",
+        "phase_endpoints": [
+          "x=i*w.r",
+          "y=i*w.r_prime"
+        ],
+        "sum": "0"
+      }
+    ],
+    "origin": "A_P,m=(i/8)*bar_sigma_m[D,barD]_ord*V_P|; V_P=sqrt(2)*g*u; A_P,m=g*a_m",
+    "w_zero": "T1=0 because M_1 contains one explicit w"
+  },
+  "local_w0": {
+    "combinatorics": {
+      "cut_action_background_linear_vertex": {
+        "functional_derivative_endpoint_placements": 2,
+        "product": "1",
+        "quantum_Taylor_factor": "1/2!"
+      },
+      "interaction_expansion": {
+        "action_orders": 2,
+        "factorial": "1/2!",
+        "product": "1"
+      },
+      "labeled_rows": {
+        "AD_CROSSED_E2": [
+          {
+            "action_order": "CUT_THEN_UNCUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "right",
+            "cut_endpoint": "QUANTUM_PORT_1",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "AD_CROSSED_E2::CUT_THEN_UNCUT::QUANTUM_PORT_1::SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "remaining_pairing": "SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "row_weight": "1/8",
+            "uncut_action": "left",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          },
+          {
+            "action_order": "CUT_THEN_UNCUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "right",
+            "cut_endpoint": "QUANTUM_PORT_1",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "AD_CROSSED_E2::CUT_THEN_UNCUT::QUANTUM_PORT_1::SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "remaining_pairing": "SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "row_weight": "1/8",
+            "uncut_action": "left",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          },
+          {
+            "action_order": "CUT_THEN_UNCUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "right",
+            "cut_endpoint": "QUANTUM_PORT_2",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "AD_CROSSED_E2::CUT_THEN_UNCUT::QUANTUM_PORT_2::SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "remaining_pairing": "SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "row_weight": "1/8",
+            "uncut_action": "left",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          },
+          {
+            "action_order": "CUT_THEN_UNCUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "right",
+            "cut_endpoint": "QUANTUM_PORT_2",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "AD_CROSSED_E2::CUT_THEN_UNCUT::QUANTUM_PORT_2::SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "remaining_pairing": "SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "row_weight": "1/8",
+            "uncut_action": "left",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          },
+          {
+            "action_order": "UNCUT_THEN_CUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "right",
+            "cut_endpoint": "QUANTUM_PORT_1",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "AD_CROSSED_E2::UNCUT_THEN_CUT::QUANTUM_PORT_1::SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "remaining_pairing": "SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "row_weight": "1/8",
+            "uncut_action": "left",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          },
+          {
+            "action_order": "UNCUT_THEN_CUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "right",
+            "cut_endpoint": "QUANTUM_PORT_1",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "AD_CROSSED_E2::UNCUT_THEN_CUT::QUANTUM_PORT_1::SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "remaining_pairing": "SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "row_weight": "1/8",
+            "uncut_action": "left",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          },
+          {
+            "action_order": "UNCUT_THEN_CUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "right",
+            "cut_endpoint": "QUANTUM_PORT_2",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "AD_CROSSED_E2::UNCUT_THEN_CUT::QUANTUM_PORT_2::SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "remaining_pairing": "SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "row_weight": "1/8",
+            "uncut_action": "left",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          },
+          {
+            "action_order": "UNCUT_THEN_CUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "right",
+            "cut_endpoint": "QUANTUM_PORT_2",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "AD_CROSSED_E2::UNCUT_THEN_CUT::QUANTUM_PORT_2::SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "remaining_pairing": "SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "row_weight": "1/8",
+            "uncut_action": "left",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          }
+        ],
+        "AD_DIRECT_E0": [
+          {
+            "action_order": "CUT_THEN_UNCUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "left",
+            "cut_endpoint": "QUANTUM_PORT_1",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "AD_DIRECT_E0::CUT_THEN_UNCUT::QUANTUM_PORT_1::SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "remaining_pairing": "SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "row_weight": "1/8",
+            "uncut_action": "right",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          },
+          {
+            "action_order": "CUT_THEN_UNCUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "left",
+            "cut_endpoint": "QUANTUM_PORT_1",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "AD_DIRECT_E0::CUT_THEN_UNCUT::QUANTUM_PORT_1::SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "remaining_pairing": "SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "row_weight": "1/8",
+            "uncut_action": "right",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          },
+          {
+            "action_order": "CUT_THEN_UNCUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "left",
+            "cut_endpoint": "QUANTUM_PORT_2",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "AD_DIRECT_E0::CUT_THEN_UNCUT::QUANTUM_PORT_2::SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "remaining_pairing": "SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "row_weight": "1/8",
+            "uncut_action": "right",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          },
+          {
+            "action_order": "CUT_THEN_UNCUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "left",
+            "cut_endpoint": "QUANTUM_PORT_2",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "AD_DIRECT_E0::CUT_THEN_UNCUT::QUANTUM_PORT_2::SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "remaining_pairing": "SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "row_weight": "1/8",
+            "uncut_action": "right",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          },
+          {
+            "action_order": "UNCUT_THEN_CUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "left",
+            "cut_endpoint": "QUANTUM_PORT_1",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "AD_DIRECT_E0::UNCUT_THEN_CUT::QUANTUM_PORT_1::SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "remaining_pairing": "SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "row_weight": "1/8",
+            "uncut_action": "right",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          },
+          {
+            "action_order": "UNCUT_THEN_CUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "left",
+            "cut_endpoint": "QUANTUM_PORT_1",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "AD_DIRECT_E0::UNCUT_THEN_CUT::QUANTUM_PORT_1::SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "remaining_pairing": "SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "row_weight": "1/8",
+            "uncut_action": "right",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          },
+          {
+            "action_order": "UNCUT_THEN_CUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "left",
+            "cut_endpoint": "QUANTUM_PORT_2",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "AD_DIRECT_E0::UNCUT_THEN_CUT::QUANTUM_PORT_2::SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "remaining_pairing": "SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "row_weight": "1/8",
+            "uncut_action": "right",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          },
+          {
+            "action_order": "UNCUT_THEN_CUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "left",
+            "cut_endpoint": "QUANTUM_PORT_2",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "AD_DIRECT_E0::UNCUT_THEN_CUT::QUANTUM_PORT_2::SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "remaining_pairing": "SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "row_weight": "1/8",
+            "uncut_action": "right",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          }
+        ],
+        "DA_CROSSED_E0": [
+          {
+            "action_order": "CUT_THEN_UNCUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "left",
+            "cut_endpoint": "QUANTUM_PORT_1",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "DA_CROSSED_E0::CUT_THEN_UNCUT::QUANTUM_PORT_1::SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "remaining_pairing": "SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "row_weight": "1/8",
+            "uncut_action": "right",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          },
+          {
+            "action_order": "CUT_THEN_UNCUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "left",
+            "cut_endpoint": "QUANTUM_PORT_1",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "DA_CROSSED_E0::CUT_THEN_UNCUT::QUANTUM_PORT_1::SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "remaining_pairing": "SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "row_weight": "1/8",
+            "uncut_action": "right",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          },
+          {
+            "action_order": "CUT_THEN_UNCUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "left",
+            "cut_endpoint": "QUANTUM_PORT_2",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "DA_CROSSED_E0::CUT_THEN_UNCUT::QUANTUM_PORT_2::SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "remaining_pairing": "SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "row_weight": "1/8",
+            "uncut_action": "right",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          },
+          {
+            "action_order": "CUT_THEN_UNCUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "left",
+            "cut_endpoint": "QUANTUM_PORT_2",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "DA_CROSSED_E0::CUT_THEN_UNCUT::QUANTUM_PORT_2::SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "remaining_pairing": "SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "row_weight": "1/8",
+            "uncut_action": "right",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          },
+          {
+            "action_order": "UNCUT_THEN_CUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "left",
+            "cut_endpoint": "QUANTUM_PORT_1",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "DA_CROSSED_E0::UNCUT_THEN_CUT::QUANTUM_PORT_1::SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "remaining_pairing": "SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "row_weight": "1/8",
+            "uncut_action": "right",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          },
+          {
+            "action_order": "UNCUT_THEN_CUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "left",
+            "cut_endpoint": "QUANTUM_PORT_1",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "DA_CROSSED_E0::UNCUT_THEN_CUT::QUANTUM_PORT_1::SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "remaining_pairing": "SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "row_weight": "1/8",
+            "uncut_action": "right",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          },
+          {
+            "action_order": "UNCUT_THEN_CUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "left",
+            "cut_endpoint": "QUANTUM_PORT_2",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "DA_CROSSED_E0::UNCUT_THEN_CUT::QUANTUM_PORT_2::SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "remaining_pairing": "SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "row_weight": "1/8",
+            "uncut_action": "right",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          },
+          {
+            "action_order": "UNCUT_THEN_CUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "left",
+            "cut_endpoint": "QUANTUM_PORT_2",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "DA_CROSSED_E0::UNCUT_THEN_CUT::QUANTUM_PORT_2::SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "remaining_pairing": "SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "row_weight": "1/8",
+            "uncut_action": "right",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          }
+        ],
+        "DA_DIRECT_E2": [
+          {
+            "action_order": "CUT_THEN_UNCUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "right",
+            "cut_endpoint": "QUANTUM_PORT_1",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "DA_DIRECT_E2::CUT_THEN_UNCUT::QUANTUM_PORT_1::SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "remaining_pairing": "SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "row_weight": "1/8",
+            "uncut_action": "left",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          },
+          {
+            "action_order": "CUT_THEN_UNCUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "right",
+            "cut_endpoint": "QUANTUM_PORT_1",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "DA_DIRECT_E2::CUT_THEN_UNCUT::QUANTUM_PORT_1::SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "remaining_pairing": "SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "row_weight": "1/8",
+            "uncut_action": "left",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          },
+          {
+            "action_order": "CUT_THEN_UNCUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "right",
+            "cut_endpoint": "QUANTUM_PORT_2",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "DA_DIRECT_E2::CUT_THEN_UNCUT::QUANTUM_PORT_2::SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "remaining_pairing": "SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "row_weight": "1/8",
+            "uncut_action": "left",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          },
+          {
+            "action_order": "CUT_THEN_UNCUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "right",
+            "cut_endpoint": "QUANTUM_PORT_2",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "DA_DIRECT_E2::CUT_THEN_UNCUT::QUANTUM_PORT_2::SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "remaining_pairing": "SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "row_weight": "1/8",
+            "uncut_action": "left",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          },
+          {
+            "action_order": "UNCUT_THEN_CUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "right",
+            "cut_endpoint": "QUANTUM_PORT_1",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "DA_DIRECT_E2::UNCUT_THEN_CUT::QUANTUM_PORT_1::SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "remaining_pairing": "SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "row_weight": "1/8",
+            "uncut_action": "left",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          },
+          {
+            "action_order": "UNCUT_THEN_CUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "right",
+            "cut_endpoint": "QUANTUM_PORT_1",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "DA_DIRECT_E2::UNCUT_THEN_CUT::QUANTUM_PORT_1::SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "remaining_pairing": "SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "row_weight": "1/8",
+            "uncut_action": "left",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          },
+          {
+            "action_order": "UNCUT_THEN_CUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "right",
+            "cut_endpoint": "QUANTUM_PORT_2",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "DA_DIRECT_E2::UNCUT_THEN_CUT::QUANTUM_PORT_2::SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "remaining_pairing": "SPECTATOR_TO_PORT1__BRIDGE_TO_PORT2",
+            "row_weight": "1/8",
+            "uncut_action": "left",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          },
+          {
+            "action_order": "UNCUT_THEN_CUT",
+            "action_order_weight": "1/2",
+            "canonicalized_relative_Hessian_word": "+1",
+            "cut_action": "right",
+            "cut_endpoint": "QUANTUM_PORT_2",
+            "cut_vertex_quantum_Taylor_weight": "1/2",
+            "id": "DA_DIRECT_E2::UNCUT_THEN_CUT::QUANTUM_PORT_2::SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "remaining_pairing": "SPECTATOR_TO_PORT2__BRIDGE_TO_PORT1",
+            "row_weight": "1/8",
+            "uncut_action": "left",
+            "uncut_vertex_quantum_Taylor_weight": "1/2"
+          }
+        ]
+      },
+      "m_contact": "1",
+      "uncut_action_background_linear_vertex": {
+        "ordered_two_line_Wick_pairings": 2,
+        "product": "1",
+        "quantum_Taylor_factor": "1/2!"
+      }
+    },
+    "contact_edge_factor": "(-1)_SD*(-2)_source_to_Euler*(-2)^2_uncut=+8",
+    "full_d_identity": "N_d+K_raw=0 occurrencewise and chirality-sectorwise",
+    "kinetic_metric": "K_AB=-kappa_AB*r_e^2; kappa_AB=delta_AB/2",
+    "m_contact": "1",
+    "parent_edge_factor": "(-2)^3=-8",
+    "replay_frames": {
+      "frame_0": {
+        "action_table_sizes": {
+          "left": 104,
+          "right": 104
+        },
+        "loop": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "occurrences": {
+          "AD_CROSSED_E2": {
+            "allocation": "crossed",
+            "basis": "R2",
+            "chirality_sectors": {
+              "++": {
+                "K_raw_contact": "3/16 + 1/4*i",
+                "N_d_parent_quotient": "-3/16 - 1/4*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "+-": {
+                "K_raw_contact": "3/16 + 1/4*i",
+                "N_d_parent_quotient": "-3/16 - 1/4*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "-+": {
+                "K_raw_contact": "3/16 + 1/4*i",
+                "N_d_parent_quotient": "-3/16 - 1/4*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "--": {
+                "K_raw_contact": "3/16 + 1/4*i",
+                "N_d_parent_quotient": "-3/16 - 1/4*i",
+                "N_d_plus_K_raw": "0"
+              }
+            },
+            "color": "F^{BA}_{DE}",
+            "four_sector_sum": {
+              "K_raw_contact": "3/4 + i",
+              "N_d_parent_quotient": "-3/4 - i",
+              "N_d_plus_K_raw": "0"
+            },
+            "marked_edge": "e2",
+            "pair": "AD"
+          },
+          "AD_DIRECT_E0": {
+            "allocation": "direct",
+            "basis": "R1",
+            "chirality_sectors": {
+              "++": {
+                "K_raw_contact": "-1/4 - 5/16*i",
+                "N_d_parent_quotient": "1/4 + 5/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "+-": {
+                "K_raw_contact": "-1/4 - 5/16*i",
+                "N_d_parent_quotient": "1/4 + 5/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "-+": {
+                "K_raw_contact": "-1/4 - 5/16*i",
+                "N_d_parent_quotient": "1/4 + 5/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "--": {
+                "K_raw_contact": "-1/4 - 5/16*i",
+                "N_d_parent_quotient": "1/4 + 5/16*i",
+                "N_d_plus_K_raw": "0"
+              }
+            },
+            "color": "F^{AB}_{DE}",
+            "four_sector_sum": {
+              "K_raw_contact": "-1 - 5/4*i",
+              "N_d_parent_quotient": "1 + 5/4*i",
+              "N_d_plus_K_raw": "0"
+            },
+            "marked_edge": "e0",
+            "pair": "AD"
+          },
+          "DA_CROSSED_E0": {
+            "allocation": "crossed",
+            "basis": "R1",
+            "chirality_sectors": {
+              "++": {
+                "K_raw_contact": "-1/4 - 5/16*i",
+                "N_d_parent_quotient": "1/4 + 5/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "+-": {
+                "K_raw_contact": "-1/4 - 5/16*i",
+                "N_d_parent_quotient": "1/4 + 5/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "-+": {
+                "K_raw_contact": "-1/4 - 5/16*i",
+                "N_d_parent_quotient": "1/4 + 5/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "--": {
+                "K_raw_contact": "-1/4 - 5/16*i",
+                "N_d_parent_quotient": "1/4 + 5/16*i",
+                "N_d_plus_K_raw": "0"
+              }
+            },
+            "color": "F^{BA}_{DE}",
+            "four_sector_sum": {
+              "K_raw_contact": "-1 - 5/4*i",
+              "N_d_parent_quotient": "1 + 5/4*i",
+              "N_d_plus_K_raw": "0"
+            },
+            "marked_edge": "e0",
+            "pair": "DA"
+          },
+          "DA_DIRECT_E2": {
+            "allocation": "direct",
+            "basis": "R2",
+            "chirality_sectors": {
+              "++": {
+                "K_raw_contact": "3/16 + 1/4*i",
+                "N_d_parent_quotient": "-3/16 - 1/4*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "+-": {
+                "K_raw_contact": "3/16 + 1/4*i",
+                "N_d_parent_quotient": "-3/16 - 1/4*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "-+": {
+                "K_raw_contact": "3/16 + 1/4*i",
+                "N_d_parent_quotient": "-3/16 - 1/4*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "--": {
+                "K_raw_contact": "3/16 + 1/4*i",
+                "N_d_parent_quotient": "-3/16 - 1/4*i",
+                "N_d_plus_K_raw": "0"
+              }
+            },
+            "color": "F^{AB}_{DE}",
+            "four_sector_sum": {
+              "K_raw_contact": "3/4 + i",
+              "N_d_parent_quotient": "-3/4 - i",
+              "N_d_plus_K_raw": "0"
+            },
+            "marked_edge": "e2",
+            "pair": "DA"
+          }
+        },
+        "p_raw": [
+          "2",
+          "-1",
+          "1",
+          "0"
+        ],
+        "q_raw": [
+          "-1",
+          "3",
+          "0",
+          "2"
+        ]
+      },
+      "frame_1": {
+        "action_table_sizes": {
+          "left": 104,
+          "right": 104
+        },
+        "loop": [
+          "2",
+          "-1",
+          "0",
+          "1"
+        ],
+        "occurrences": {
+          "AD_CROSSED_E2": {
+            "allocation": "crossed",
+            "basis": "R2",
+            "chirality_sectors": {
+              "++": {
+                "K_raw_contact": "1/16*i",
+                "N_d_parent_quotient": "-1/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "+-": {
+                "K_raw_contact": "1/16*i",
+                "N_d_parent_quotient": "-1/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "-+": {
+                "K_raw_contact": "1/16*i",
+                "N_d_parent_quotient": "-1/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "--": {
+                "K_raw_contact": "1/16*i",
+                "N_d_parent_quotient": "-1/16*i",
+                "N_d_plus_K_raw": "0"
+              }
+            },
+            "color": "F^{BA}_{DE}",
+            "four_sector_sum": {
+              "K_raw_contact": "1/4*i",
+              "N_d_parent_quotient": "-1/4*i",
+              "N_d_plus_K_raw": "0"
+            },
+            "marked_edge": "e2",
+            "pair": "AD"
+          },
+          "AD_DIRECT_E0": {
+            "allocation": "direct",
+            "basis": "R1",
+            "chirality_sectors": {
+              "++": {
+                "K_raw_contact": "-1/16 - 1/8*i",
+                "N_d_parent_quotient": "1/16 + 1/8*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "+-": {
+                "K_raw_contact": "-1/16 - 1/8*i",
+                "N_d_parent_quotient": "1/16 + 1/8*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "-+": {
+                "K_raw_contact": "-1/16 - 1/8*i",
+                "N_d_parent_quotient": "1/16 + 1/8*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "--": {
+                "K_raw_contact": "-1/16 - 1/8*i",
+                "N_d_parent_quotient": "1/16 + 1/8*i",
+                "N_d_plus_K_raw": "0"
+              }
+            },
+            "color": "F^{AB}_{DE}",
+            "four_sector_sum": {
+              "K_raw_contact": "-1/4 - 1/2*i",
+              "N_d_parent_quotient": "1/4 + 1/2*i",
+              "N_d_plus_K_raw": "0"
+            },
+            "marked_edge": "e0",
+            "pair": "AD"
+          },
+          "DA_CROSSED_E0": {
+            "allocation": "crossed",
+            "basis": "R1",
+            "chirality_sectors": {
+              "++": {
+                "K_raw_contact": "-1/16 - 1/8*i",
+                "N_d_parent_quotient": "1/16 + 1/8*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "+-": {
+                "K_raw_contact": "-1/16 - 1/8*i",
+                "N_d_parent_quotient": "1/16 + 1/8*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "-+": {
+                "K_raw_contact": "-1/16 - 1/8*i",
+                "N_d_parent_quotient": "1/16 + 1/8*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "--": {
+                "K_raw_contact": "-1/16 - 1/8*i",
+                "N_d_parent_quotient": "1/16 + 1/8*i",
+                "N_d_plus_K_raw": "0"
+              }
+            },
+            "color": "F^{BA}_{DE}",
+            "four_sector_sum": {
+              "K_raw_contact": "-1/4 - 1/2*i",
+              "N_d_parent_quotient": "1/4 + 1/2*i",
+              "N_d_plus_K_raw": "0"
+            },
+            "marked_edge": "e0",
+            "pair": "DA"
+          },
+          "DA_DIRECT_E2": {
+            "allocation": "direct",
+            "basis": "R2",
+            "chirality_sectors": {
+              "++": {
+                "K_raw_contact": "1/16*i",
+                "N_d_parent_quotient": "-1/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "+-": {
+                "K_raw_contact": "1/16*i",
+                "N_d_parent_quotient": "-1/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "-+": {
+                "K_raw_contact": "1/16*i",
+                "N_d_parent_quotient": "-1/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "--": {
+                "K_raw_contact": "1/16*i",
+                "N_d_parent_quotient": "-1/16*i",
+                "N_d_plus_K_raw": "0"
+              }
+            },
+            "color": "F^{AB}_{DE}",
+            "four_sector_sum": {
+              "K_raw_contact": "1/4*i",
+              "N_d_parent_quotient": "-1/4*i",
+              "N_d_plus_K_raw": "0"
+            },
+            "marked_edge": "e2",
+            "pair": "DA"
+          }
+        },
+        "p_raw": [
+          "2",
+          "-1",
+          "1",
+          "0"
+        ],
+        "q_raw": [
+          "-1",
+          "3",
+          "0",
+          "2"
+        ]
+      },
+      "frame_2": {
+        "action_table_sizes": {
+          "left": 104,
+          "right": 104
+        },
+        "loop": [
+          "0",
+          "1",
+          "-2",
+          "3"
+        ],
+        "occurrences": {
+          "AD_CROSSED_E2": {
+            "allocation": "crossed",
+            "basis": "R2",
+            "chirality_sectors": {
+              "++": {
+                "K_raw_contact": "-1/8 + 3/16*i",
+                "N_d_parent_quotient": "1/8 - 3/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "+-": {
+                "K_raw_contact": "-1/8 + 3/16*i",
+                "N_d_parent_quotient": "1/8 - 3/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "-+": {
+                "K_raw_contact": "-1/8 + 3/16*i",
+                "N_d_parent_quotient": "1/8 - 3/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "--": {
+                "K_raw_contact": "-1/8 + 3/16*i",
+                "N_d_parent_quotient": "1/8 - 3/16*i",
+                "N_d_plus_K_raw": "0"
+              }
+            },
+            "color": "F^{BA}_{DE}",
+            "four_sector_sum": {
+              "K_raw_contact": "-1/2 + 3/4*i",
+              "N_d_parent_quotient": "1/2 - 3/4*i",
+              "N_d_plus_K_raw": "0"
+            },
+            "marked_edge": "e2",
+            "pair": "AD"
+          },
+          "AD_DIRECT_E0": {
+            "allocation": "direct",
+            "basis": "R1",
+            "chirality_sectors": {
+              "++": {
+                "K_raw_contact": "-1/32 - 3/16*i",
+                "N_d_parent_quotient": "1/32 + 3/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "+-": {
+                "K_raw_contact": "-1/32 - 3/16*i",
+                "N_d_parent_quotient": "1/32 + 3/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "-+": {
+                "K_raw_contact": "-1/32 - 3/16*i",
+                "N_d_parent_quotient": "1/32 + 3/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "--": {
+                "K_raw_contact": "-1/32 - 3/16*i",
+                "N_d_parent_quotient": "1/32 + 3/16*i",
+                "N_d_plus_K_raw": "0"
+              }
+            },
+            "color": "F^{AB}_{DE}",
+            "four_sector_sum": {
+              "K_raw_contact": "-1/8 - 3/4*i",
+              "N_d_parent_quotient": "1/8 + 3/4*i",
+              "N_d_plus_K_raw": "0"
+            },
+            "marked_edge": "e0",
+            "pair": "AD"
+          },
+          "DA_CROSSED_E0": {
+            "allocation": "crossed",
+            "basis": "R1",
+            "chirality_sectors": {
+              "++": {
+                "K_raw_contact": "-1/32 - 3/16*i",
+                "N_d_parent_quotient": "1/32 + 3/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "+-": {
+                "K_raw_contact": "-1/32 - 3/16*i",
+                "N_d_parent_quotient": "1/32 + 3/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "-+": {
+                "K_raw_contact": "-1/32 - 3/16*i",
+                "N_d_parent_quotient": "1/32 + 3/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "--": {
+                "K_raw_contact": "-1/32 - 3/16*i",
+                "N_d_parent_quotient": "1/32 + 3/16*i",
+                "N_d_plus_K_raw": "0"
+              }
+            },
+            "color": "F^{BA}_{DE}",
+            "four_sector_sum": {
+              "K_raw_contact": "-1/8 - 3/4*i",
+              "N_d_parent_quotient": "1/8 + 3/4*i",
+              "N_d_plus_K_raw": "0"
+            },
+            "marked_edge": "e0",
+            "pair": "DA"
+          },
+          "DA_DIRECT_E2": {
+            "allocation": "direct",
+            "basis": "R2",
+            "chirality_sectors": {
+              "++": {
+                "K_raw_contact": "-1/8 + 3/16*i",
+                "N_d_parent_quotient": "1/8 - 3/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "+-": {
+                "K_raw_contact": "-1/8 + 3/16*i",
+                "N_d_parent_quotient": "1/8 - 3/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "-+": {
+                "K_raw_contact": "-1/8 + 3/16*i",
+                "N_d_parent_quotient": "1/8 - 3/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "--": {
+                "K_raw_contact": "-1/8 + 3/16*i",
+                "N_d_parent_quotient": "1/8 - 3/16*i",
+                "N_d_plus_K_raw": "0"
+              }
+            },
+            "color": "F^{AB}_{DE}",
+            "four_sector_sum": {
+              "K_raw_contact": "-1/2 + 3/4*i",
+              "N_d_parent_quotient": "1/2 - 3/4*i",
+              "N_d_plus_K_raw": "0"
+            },
+            "marked_edge": "e2",
+            "pair": "DA"
+          }
+        },
+        "p_raw": [
+          "1",
+          "0",
+          "2",
+          "-1"
+        ],
+        "q_raw": [
+          "0",
+          "-2",
+          "1",
+          "2"
+        ]
+      },
+      "frame_3": {
+        "action_table_sizes": {
+          "left": 104,
+          "right": 104
+        },
+        "loop": [
+          "3",
+          "0",
+          "1",
+          "-2"
+        ],
+        "occurrences": {
+          "AD_CROSSED_E2": {
+            "allocation": "crossed",
+            "basis": "R2",
+            "chirality_sectors": {
+              "++": {
+                "K_raw_contact": "1/16 - 1/8*i",
+                "N_d_parent_quotient": "-1/16 + 1/8*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "+-": {
+                "K_raw_contact": "1/16 - 1/8*i",
+                "N_d_parent_quotient": "-1/16 + 1/8*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "-+": {
+                "K_raw_contact": "1/16 - 1/8*i",
+                "N_d_parent_quotient": "-1/16 + 1/8*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "--": {
+                "K_raw_contact": "1/16 - 1/8*i",
+                "N_d_parent_quotient": "-1/16 + 1/8*i",
+                "N_d_plus_K_raw": "0"
+              }
+            },
+            "color": "F^{BA}_{DE}",
+            "four_sector_sum": {
+              "K_raw_contact": "1/4 - 1/2*i",
+              "N_d_parent_quotient": "-1/4 + 1/2*i",
+              "N_d_plus_K_raw": "0"
+            },
+            "marked_edge": "e2",
+            "pair": "AD"
+          },
+          "AD_DIRECT_E0": {
+            "allocation": "direct",
+            "basis": "R1",
+            "chirality_sectors": {
+              "++": {
+                "K_raw_contact": "-1/32 + 1/16*i",
+                "N_d_parent_quotient": "1/32 - 1/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "+-": {
+                "K_raw_contact": "-1/32 + 1/16*i",
+                "N_d_parent_quotient": "1/32 - 1/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "-+": {
+                "K_raw_contact": "-1/32 + 1/16*i",
+                "N_d_parent_quotient": "1/32 - 1/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "--": {
+                "K_raw_contact": "-1/32 + 1/16*i",
+                "N_d_parent_quotient": "1/32 - 1/16*i",
+                "N_d_plus_K_raw": "0"
+              }
+            },
+            "color": "F^{AB}_{DE}",
+            "four_sector_sum": {
+              "K_raw_contact": "-1/8 + 1/4*i",
+              "N_d_parent_quotient": "1/8 - 1/4*i",
+              "N_d_plus_K_raw": "0"
+            },
+            "marked_edge": "e0",
+            "pair": "AD"
+          },
+          "DA_CROSSED_E0": {
+            "allocation": "crossed",
+            "basis": "R1",
+            "chirality_sectors": {
+              "++": {
+                "K_raw_contact": "-1/32 + 1/16*i",
+                "N_d_parent_quotient": "1/32 - 1/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "+-": {
+                "K_raw_contact": "-1/32 + 1/16*i",
+                "N_d_parent_quotient": "1/32 - 1/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "-+": {
+                "K_raw_contact": "-1/32 + 1/16*i",
+                "N_d_parent_quotient": "1/32 - 1/16*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "--": {
+                "K_raw_contact": "-1/32 + 1/16*i",
+                "N_d_parent_quotient": "1/32 - 1/16*i",
+                "N_d_plus_K_raw": "0"
+              }
+            },
+            "color": "F^{BA}_{DE}",
+            "four_sector_sum": {
+              "K_raw_contact": "-1/8 + 1/4*i",
+              "N_d_parent_quotient": "1/8 - 1/4*i",
+              "N_d_plus_K_raw": "0"
+            },
+            "marked_edge": "e0",
+            "pair": "DA"
+          },
+          "DA_DIRECT_E2": {
+            "allocation": "direct",
+            "basis": "R2",
+            "chirality_sectors": {
+              "++": {
+                "K_raw_contact": "1/16 - 1/8*i",
+                "N_d_parent_quotient": "-1/16 + 1/8*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "+-": {
+                "K_raw_contact": "1/16 - 1/8*i",
+                "N_d_parent_quotient": "-1/16 + 1/8*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "-+": {
+                "K_raw_contact": "1/16 - 1/8*i",
+                "N_d_parent_quotient": "-1/16 + 1/8*i",
+                "N_d_plus_K_raw": "0"
+              },
+              "--": {
+                "K_raw_contact": "1/16 - 1/8*i",
+                "N_d_parent_quotient": "-1/16 + 1/8*i",
+                "N_d_plus_K_raw": "0"
+              }
+            },
+            "color": "F^{AB}_{DE}",
+            "four_sector_sum": {
+              "K_raw_contact": "1/4 - 1/2*i",
+              "N_d_parent_quotient": "-1/4 + 1/2*i",
+              "N_d_plus_K_raw": "0"
+            },
+            "marked_edge": "e2",
+            "pair": "DA"
+          }
+        },
+        "p_raw": [
+          "-1",
+          "2",
+          "0",
+          "1"
+        ],
+        "q_raw": [
+          "2",
+          "1",
+          "-1",
+          "0"
+        ]
+      }
+    },
+    "source_to_euler": "r_e^2*P^A=-2*P^A*K_A"
+  },
+  "normalization_consequence": {
+    "extra_chi_factor": "1",
+    "m_contact": "1",
+    "m_parent": "1",
+    "raw_contact_half": "REJECTED"
+  },
+  "schema": "step5-ad-da-raw-contact-hessian-multiplicity-exact-v1",
+  "status": "PASS_RAW_LOCAL_CONTACT_MULTIPLICITY_ONE__FINITE_W_LINK_LONGITUDINAL_ZERO"
+}

@@ -1,0 +1,441 @@
+{
+  "G1": {
+    "correct_EOM_quotient_only": "2",
+    "old_q_equals_minus_p_result": "0",
+    "pair_EOM": [
+      "2",
+      "2"
+    ],
+    "pair_TD": [
+      "0",
+      "2"
+    ],
+    "raw_p_q": [
+      "2",
+      "2"
+    ]
+  },
+  "G2": {
+    "EOM_quotient_only": "-1/3",
+    "Omega": "retained transported r1 cut; pair contribution -1",
+    "exact_divergence_quotient_pair": "1",
+    "external_slots": [
+      "D(p)",
+      "B1(q)"
+    ],
+    "mark_sum_not_typed_pair": "4/3+2/3-1=1",
+    "pair_EOM": [
+      "-1/3",
+      "4/3"
+    ],
+    "pair_TD": [
+      "1",
+      "4/3"
+    ],
+    "raw_p_q": [
+      "4/3",
+      "-1/3"
+    ]
+  },
+  "checks": {
+    "count": 47,
+    "failed": 0,
+    "passed": 47,
+    "rows": [
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "G1_TARGET_NOT_USED",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "G3_TARGET_NOT_USED",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "G3_GATE7_TARGET_NOT_USED",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "G2_TYPED_TARGET_NOT_USED",
+        "status": "PASS"
+      },
+      {
+        "actual": "REJECTED_CONDITIONAL_CONTACT_NORMALIZATION__CHI_ONE_NOT_DERIVED",
+        "expected": "REJECTED_CONDITIONAL_CONTACT_NORMALIZATION__CHI_ONE_NOT_DERIVED",
+        "id": "G3_CONDITIONAL_CHI1_ARTIFACT_REJECTED",
+        "status": "PASS"
+      },
+      {
+        "actual": "-14336 + 7168*i",
+        "expected": "-14336 + 7168*i",
+        "id": "G1_A_STORED_PARENT_IDENTITY",
+        "status": "PASS"
+      },
+      {
+        "actual": "[{chi: 1}]",
+        "expected": "[{chi: 1}]",
+        "id": "G1_A_FULL_D_UNIQUE_CHI",
+        "status": "PASS"
+      },
+      {
+        "actual": "mu2*(-2048 + 1024*i)",
+        "expected": "mu2*(-2048 + 1024*i)",
+        "id": "G1_A_DRED_REMAINDER_CHI1",
+        "status": "PASS"
+      },
+      {
+        "actual": "15360 - 15360*i",
+        "expected": "15360 - 15360*i",
+        "id": "G1_B_STORED_PARENT_IDENTITY",
+        "status": "PASS"
+      },
+      {
+        "actual": "[{chi: 1}]",
+        "expected": "[{chi: 1}]",
+        "id": "G1_B_FULL_D_UNIQUE_CHI",
+        "status": "PASS"
+      },
+      {
+        "actual": "mu2*(1024 - 1024*i)",
+        "expected": "mu2*(1024 - 1024*i)",
+        "id": "G1_B_DRED_REMAINDER_CHI1",
+        "status": "PASS"
+      },
+      {
+        "actual": "21",
+        "expected": "21",
+        "id": "G2_REPLAY_INTERNAL_CHECKS",
+        "status": "PASS"
+      },
+      {
+        "actual": "[{chi: 1}]",
+        "expected": "[{chi: 1}]",
+        "id": "G2_first_FULL_D_UNIQUE_CHI",
+        "status": "PASS"
+      },
+      {
+        "actual": "-mu2*(z - 1)",
+        "expected": "-mu2*(z - 1)",
+        "id": "G2_first_DRED_REMAINDER_CHI1",
+        "status": "PASS"
+      },
+      {
+        "actual": "[{chi: 1}]",
+        "expected": "[{chi: 1}]",
+        "id": "G2_second_det_FULL_D_UNIQUE_CHI",
+        "status": "PASS"
+      },
+      {
+        "actual": "mu2*z",
+        "expected": "mu2*z",
+        "id": "G2_second_det_DRED_REMAINDER_CHI1",
+        "status": "PASS"
+      },
+      {
+        "actual": "[{chi: 1}]",
+        "expected": "[{chi: 1}]",
+        "id": "G2_second_omega_FULL_D_UNIQUE_CHI",
+        "status": "PASS"
+      },
+      {
+        "actual": "-mu2/2",
+        "expected": "-mu2/2",
+        "id": "G2_second_omega_DRED_REMAINDER_CHI1",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[-1, 0], [0, -1]])",
+        "expected": "Matrix([[-1, 0], [0, -1]])",
+        "id": "DOTTED_EPSILON_FIRST_INDEX_CONTRACTION",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[2], [2]])",
+        "expected": "Matrix([[2], [2]])",
+        "id": "G1_RAW_P_Q_FROM_REPLAY",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[2], [2]])",
+        "expected": "Matrix([[2], [2]])",
+        "id": "G1_TYPED_PAIR_EOM",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[0], [2]])",
+        "expected": "Matrix([[0], [2]])",
+        "id": "G1_TYPED_PAIR_TOTAL_DERIVATIVE",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "id": "G1_EOM_QUOTIENT_ONLY",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "G1_TOTAL_DERIVATIVE_QUOTIENT_ONLY",
+        "status": "PASS"
+      },
+      {
+        "actual": "4/3",
+        "expected": "4/3",
+        "id": "G2_REPLAY_FIRST_MARK",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/3",
+        "expected": "-1/3",
+        "id": "G2_REPLAY_SECOND_MARK_COMPLETE",
+        "status": "PASS"
+      },
+      {
+        "actual": "D(p)",
+        "expected": "D(p)",
+        "id": "G2_ROUTED_M_EXTERNAL",
+        "status": "PASS"
+      },
+      {
+        "actual": "B1(q)",
+        "expected": "B1(q)",
+        "id": "G2_ROUTED_H_EXTERNAL",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[-1/3], [4/3]])",
+        "expected": "Matrix([[-1/3], [4/3]])",
+        "id": "G2_TYPED_PAIR_EOM",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[1], [4/3]])",
+        "expected": "Matrix([[1], [4/3]])",
+        "id": "G2_TYPED_PAIR_TOTAL_DERIVATIVE",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/3",
+        "expected": "-1/3",
+        "id": "G2_EOM_QUOTIENT_ONLY",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "G2_TOTAL_DERIVATIVE_QUOTIENT_ONLY",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "G2_OMEGA_RETAINED",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "G2_OLD_IDENTITY_TYPED_MAP_REJECTED",
+        "status": "PASS"
+      },
+      {
+        "actual": "('tildephi2', 'tildephi3')",
+        "expected": "('tildephi2', 'tildephi3')",
+        "id": "G32_ORDERED_EXTERNAL_FIELDS",
+        "status": "PASS"
+      },
+      {
+        "actual": "('tildephi3', 'tildephi2')",
+        "expected": "('tildephi3', 'tildephi2')",
+        "id": "G33_ORDERED_EXTERNAL_FIELDS",
+        "status": "PASS"
+      },
+      {
+        "actual": "-i delta_rs A",
+        "expected": "-i delta_rs A",
+        "id": "LOCKED_q_B",
+        "status": "PASS"
+      },
+      {
+        "actual": "-(1/sqrt(2)) epsilon_rst B_t",
+        "expected": "-(1/sqrt(2)) epsilon_rst B_t",
+        "id": "LOCKED_q_C",
+        "status": "PASS"
+      },
+      {
+        "actual": "-i P_dot C_r",
+        "expected": "-i P_dot C_r",
+        "id": "LOCKED_q_D",
+        "status": "PASS"
+      },
+      {
+        "actual": "3",
+        "expected": "3",
+        "id": "Q_COVARIANCE_RANK",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "Q_COVARIANCE_NULLITY",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[0], [0], [0]])",
+        "expected": "Matrix([[0], [0], [0]])",
+        "id": "Q_COVARIANCE_CANONICAL_KERNEL",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2*sqrt(2)*i",
+        "expected": "-2*sqrt(2)*i",
+        "id": "G32_FOURIER_TYPED",
+        "status": "PASS"
+      },
+      {
+        "actual": "2*sqrt(2)*i",
+        "expected": "2*sqrt(2)*i",
+        "id": "G33_FOURIER_TYPED",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([\n[1],\n[0],\n[0]])",
+        "expected": "Matrix([[1], [0], [0]])",
+        "id": "DIRECT_Q_COVARIANCE_RESIDUAL",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[2], [1], [2], [2]])",
+        "expected": "Matrix([[2], [1], [2], [2]])",
+        "id": "DIRECT_KERNEL_SCALE_CANDIDATES",
+        "status": "PASS"
+      },
+      {
+        "actual": "[]",
+        "expected": "[]",
+        "id": "NO_COMMON_Q_COVARIANT_SCALE",
+        "status": "PASS"
+      }
+    ]
+  },
+  "current_unique_blocker": "G2_IS_EXACTLY_ONE_AFTER_DOTTED_DIVERGENCE; G1_AND_G3_REMAIN_ON_COMMON_SCALE_TWO",
+  "external_target_used": false,
+  "first_typed_errors": [
+    "the marked/unified G2 comment assigned p to B1 and q to D; the raw graph has D(p) at M and B1(q) at H",
+    "the old unified map reused T=pair+EOM for B1>D; exact dotted raising gives T=-pair+EOM"
+  ],
+  "q_covariance": {
+    "basis": [
+      "D>B1",
+      "B1>D",
+      "C2>C3",
+      "C3>C2"
+    ],
+    "constraint_rref": [
+      [
+        "1",
+        "0",
+        "0",
+        "sqrt(2)*i/2"
+      ],
+      [
+        "0",
+        "1",
+        "0",
+        "sqrt(2)*i/2"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "1"
+      ]
+    ],
+    "direct_residual": [
+      "1",
+      "0",
+      "0"
+    ],
+    "direct_vector": [
+      "2",
+      "1",
+      "-2*sqrt(2)*i",
+      "2*sqrt(2)*i"
+    ],
+    "pivots": [
+      0,
+      1,
+      2
+    ],
+    "scale_candidates": [
+      "2",
+      "1",
+      "2",
+      "2"
+    ],
+    "unique_kernel_ray": [
+      "1",
+      "1",
+      "-sqrt(2)*i",
+      "sqrt(2)*i"
+    ]
+  },
+  "schema": "step5-ab-ba-unified-typed-q-covariance-exact-v1",
+  "status": "PASS_G2_DOTTED_DIVERGENCE_PAIR_ONE__G1_G3_COMMON_FACTOR_TWO_REMAINS",
+  "trace_metric_occurrence_check": {
+    "G1_A": "chi=1",
+    "G1_B": "chi=1",
+    "G2_first": "chi=1",
+    "G2_second_det": "chi=1",
+    "G2_second_omega": "chi=1"
+  },
+  "typed_map": {
+    "G1_matrix": [
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ],
+    "G1_raw_basis": [
+      "p_on_B1",
+      "q_on_D"
+    ],
+    "G1_total_derivative_definition": "T_DB=pair+EOM",
+    "G2_epsilon_reason": "epsilon^{ab}epsilon_{ac}=-delta^b_c",
+    "G2_matrix": [
+      [
+        "0",
+        "1"
+      ],
+      [
+        "1",
+        "0"
+      ]
+    ],
+    "G2_raw_basis": [
+      "p_on_D",
+      "q_on_B1"
+    ],
+    "G2_total_derivative_definition": "T_BD=-pair+EOM",
+    "pair_EOM_basis": [
+      "ordered_pair",
+      "divergence_EOM"
+    ],
+    "pair_total_derivative_basis": [
+      "ordered_pair",
+      "total_derivative"
+    ]
+  }
+}

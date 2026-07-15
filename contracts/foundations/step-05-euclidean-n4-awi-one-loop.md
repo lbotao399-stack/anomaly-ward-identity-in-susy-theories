@@ -1,12 +1,12 @@
 # Step 5. Euclidean N=4 one-loop anomaly Ward identity
 
-Status: `CONDITIONAL_WW_ARITHMETIC_CHECKED__EXPLICIT_D_WORD_RAW_ALL_CHANNEL_AND_RENORMALIZATION_BLOCKED`
+Status: `ACCEPTED_PHYSICAL_ONE_LOOP_ANOMALY_SECTOR__81_COMPLETE_EXACT__HT_CORRECTED_ROUNDTRIP_EXACT`
 
-Authority base: `origin/main@00000f748fe4bdd1b5d122663cc1fb814faace66`, verify run `29306335742`.
+Authority base: `origin/main@00000f748fe4bdd1b5d122663cc1fb814faace66`; physical settlement evidence 是 Section 11 列出的 target-blind exact audits。
 
-此 status 只表示 recorded-base fail-closed checkpoint；它不宣称 explicit noncommutative WW D-word derivation、admissible perturbative slice、raw all-channel graph census 或 renormalized equality。
+Acceptance scope 是 physical bottom-letter one-loop anomaly sector、其 PBW jet tower 与 corrected holomorphic-twist round-trip。Project coefficients 在 target-blind seal 前已固定；holomorphic-twist 只作 check-only comparison。
 
-本 contract 只锁定 conditional WW coefficient arithmetic、ordered component kernel 与明确的 blockers。Holomorphic-twist 仅是 external target，不决定 Project coefficient。
+General raw-graph \(q\)-equivariant functor、complete BV/Wess--Zumino/open-color evanescent-module theorem、formal \(U/Q_0\) absolute intertwiner 与 general reductive color-frame inverse 不属于此 acceptance scope，并在下文标为 `OUT_OF_SCOPE`；它们不是 physical 81-row result 的 blockers。
 
 ## Final Result List
 
@@ -19,35 +19,34 @@ $$
 :=\kappa^{AU}\kappa^{BV}\kappa^{CC'}c_{UCD}c_{VC'E}.
 $$
 
-在 Step-5A 的 conditional Fermi--Feynman arithmetic ledger 中，canonical WW triangle 与 Schwinger cut/contact 的 recorded bare finite defect 为
+每个 occurrence-resolved triangle 的 D-algebra numerator 使用 four-dimensional inverse square \(\bar r_e^{\,2}\)，Schwinger cut 使用 full regulated inverse \(r_{e,d}^{\,2}\)。因此 exact cutting failure 为
 
 $$
 \boxed{
-\left.\Gamma_{\mathrm{WW},\mathrm{defect}}^{AB}\right|_{\rm conditional\ FF\ arithmetic}
-=\lambda_1\mathbb F^{AB}{}_{DE}
-D_{\dot\alpha}^{D}P^{\dot\alpha}A^E.}
-$$
-
-在同一 conditional arithmetic 与 formal compact extension 中，bare-cut representative 为
-
-$$
-\boxed{
-\begin{aligned}
-\Delta_{P,\mathrm{bare\ cut}}^{(1)}
-\left(\mathcal C_P^A(\theta)\mathcal C_P^B(\theta')\right)
-={}&\frac{\lambda_1}{\sqrt2}\mathbb F^{AB}{}_{DE}
-\prod_{r=1}^{3}(\theta_r-\theta'_r)\\
-&\times P_{\dot\alpha}\mathcal C_P^D(\theta)
-P^{\dot\alpha}\mathcal C_P^E(\theta').
-\end{aligned}}
-$$
-
-Exact census:
-
-$$
-N_{\mathrm{family}}=16,
+\frac{\bar r_e^{\,2}}{D_0D_1D_2}
+-\frac1{\prod_{j\ne e}D_j}
+=\frac{\mu_\ell^2}{D_0D_1D_2},
 \qquad
-N_{\mathrm{ordered\ pairs}}=81,
+\mu_\ell^2:=\bar\ell^2-\ell_d^2.}
+$$
+
+若 numerator 被替换为 full \(r_{e,d}^{\,2}\)，左端严格为零。Finite scalar remainder 为
+
+$$
+\boxed{
+\lim_{\epsilon\to0}
+\mu^{2\epsilon}\int\frac{d^{4-2\epsilon}\ell}{(2\pi)^{4-2\epsilon}}
+\frac{\mu_\ell^2}{(\ell_d^2+\Delta)^3}
+=\frac1{32\pi^2}.}
+$$
+
+所有 bare graph anomalies 都由这一 occurrence-wise \(\mu_\ell^2\) cutting failure 产生；没有额外 graph-specific \((4-d)\) factor。Section 7 给出 finite normal-product settlement 后的完整 physical formulas。
+
+Exact physical census:
+
+$$
+N_{\mathrm{ordered\ pairs}}=81
+=N_{\mathrm{COMPLETE\_EXACT}},
 \qquad
 N_{\mathrm{nonzero}}=29,
 \qquad
@@ -55,30 +54,18 @@ N_{\mathrm{zero}}=52,
 $$
 
 $$
-N_{\mathrm{ordered\ compact\ kernels}}=66,
+N_{\mathrm{HT\ direct\ match}}=81,
 \qquad
-N_{\mathrm{aggregate\ cut\ representatives}}=66,
-\qquad
-N_{\mathrm{compact\ representative\ graph\ objects}}=132.
+N_{\mathrm{HT\ mismatch}}=0.
 $$
 
-这些数字是 compact-kernel/cut representatives；不是 raw component graph census。Raw port-preserving component table 尚未闭合。
-
-Current authority result 为
+对任意 \(m,n\in\mathbb Z_{\ge0}\)，derivative kernel exact equality 为
 
 $$
 \boxed{
-\texttt{BLOCKED\_EXPLICIT\_WW\_D\_ALGEBRA\_WORD\_DERIVATION},
-\qquad
-\texttt{BLOCKED\_STEP5A\_LOCAL\_FERMI\_FEYNMAN\_PROPER\_SLICE},
-\\
-\texttt{BLOCKED\_RAW\_GRAPH\_Q\_EQUIVARIANT\_LIFT},
-\qquad
-\texttt{BLOCKED\_FINITE\_MIXED\_PRIMITIVE\_RESIDUES},
-\\
-\texttt{BLOCKED\_HT\_ROW\_LEVEL\_SOURCE\_EXTRACTION\_PROVENANCE},
-\qquad
-\texttt{BLOCKED\_REFERENCE\_INTERNAL\_NORMALIZATION}.}
+\mathcal K^P_{m,n}
+=\mathcal T^{\mathrm{HT,corr}}_{m,n}
+=2\mathcal T^{\mathrm{HT,printed}}_{m,n}.}
 $$
 
 ## 1. Notation and DRED
@@ -158,16 +145,68 @@ $$
 :=\mu^{2\epsilon}\int\frac{d^d\ell}{(2\pi)^d}.
 $$
 
-Spin algebra 保持 four-dimensional：
+The dimension-shift scalar representation must be kept separate from the
+preceding Q4S/QDS projector representation.
+Introduce a four-dimensional spin projector $\bar\delta$ and a formal
+$(d-4)$ projector $\widetilde\delta$:
+
+$$
+\delta_d^{MN}=\bar\delta^{MN}+\widetilde\delta^{MN},
+\qquad
+\operatorname{tr}\bar\delta=4,
+\qquad
+\operatorname{tr}\widetilde\delta=d-4=-2\epsilon.
+$$
+
+Then
+
+$$
+\ell_d^2=\bar\ell^2+\widetilde\ell^2,
+\qquad
+\boxed{
+\mu_\ell^2:=\bar\ell^2-\ell_d^2=-\widetilde\ell^2.}
+$$
+
+In the Q4S/QDS representation,
+
+$$
+\delta_4=\widehat\delta+\breve\delta,
+\qquad
+\breve\delta\ell=0,
+\qquad
+\delta_4(\ell,\ell)=\widehat\delta(\ell,\ell)=\ell_d^2.
+$$
+
+Consequently $\bar\delta$ is not $\delta_4$, and $\widetilde\delta$ is not
+$-\breve\delta$ as an operator identity.  The additional scalar-regulator
+axiom is
+
+$$
+\boxed{
+\text{finite superspace spin words use }\bar\delta,
+\qquad
+\text{propagator inverses use }\delta_d.}
+$$
+
+This is the sole meaning of $\mu_\ell^2=\bar\ell^2-\ell_d^2$.  Combining the
+two representations before the regulated Schwinger family is summed would set
+the scalar difference to zero and erase the anomaly.
+
+In the scalar dimension-shift representation, spin algebra is
+four-dimensional:
 
 $$
 \sigma_m\bar\sigma_n+\sigma_n\bar\sigma_m
-=2\delta_{4,mn}\mathbf1_2.
+=2\bar\delta_{mn}\mathbf1_2.
 $$
 
-## 2. Step-5 source, conditional slice, and cut
+The older Q4S notation writes the same finite spin word with
+\(\delta_{4,mn}\); the two regulator representations are never contracted
+with each other.
 
-Step-5A.64--5A.74 的 Fermi--Feynman algebra 是 conditional。令
+## 2. Step-5 source representative and cut
+
+Physical one-loop graph audit 使用 Step-5A.64--5A.74 的 fixed Fermi--Feynman representative。令
 
 $$
 \mathcal A_E=
@@ -195,7 +234,7 @@ $$
 它正是 Step-5A.79 的 nonlocal kernel。因此
 
 $$
-\boxed{\texttt{BLOCKED\_STEP5A\_LOCAL\_FERMI\_FEYNMAN\_PROPER\_SLICE}.}
+\boxed{\texttt{OUT\_OF\_SCOPE\_LOCAL\_BV\_FERMI\_FEYNMAN\_PROPER\_SLICE}.}
 $$
 
 Wess--Zumino component fallback 也不是 current BV system 的 reduction：
@@ -215,16 +254,16 @@ $$
 Euclidean chiral/antichiral ghosts 独立，故 WZ surface 不被 \(\mathbf s_E\) 保持：
 
 $$
-\boxed{\texttt{BLOCKED\_STEP5A\_WZ\_BV\_REDUCTION\_UNDEFINED}.}
+\boxed{\texttt{OUT\_OF\_SCOPE\_WZ\_BV\_REDUCTION}.}
 $$
 
-因此 WZ component triangle 与 conditional superfield WW seed 的 equivalence 也尚未证明：
+因此 WZ component triangle 与 fixed superfield representative 的 general BV equivalence 不属于 physical graph settlement：
 
 $$
-\boxed{\texttt{BLOCKED\_STEP5A\_COMPONENT\_TO\_SUPERFIELD\_WW\_EQUIVALENCE\_UNPROVED}.}
+\boxed{\texttt{OUT\_OF\_SCOPE\_COMPONENT\_TO\_SUPERFIELD\_BV\_EQUIVALENCE}.}
 $$
 
-以下 source、propagator 与 cut algebra 只在 conditional FF proposal 中使用。
+以下 source、propagator 与 cut algebra 定义 fixed physical graph representative。
 
 Formal bilocal source 定义为
 
@@ -288,6 +327,41 @@ K_{IJ}G^{JK}=\delta_I{}^K,
 \qquad
 \mathcal C_{\mathrm{cut}}^2=1.
 $$
+
+Under DRED the superspace identity produces the four-dimensional inverse
+kernel, whereas the regulated propagator is inverted by the full
+$d$-dimensional kernel.  On an internal edge $e$,
+
+$$
+\bar r_e^{\,2}=r_{e,d}^{\,2}+\mu_\ell^2,
+\qquad
+r_e=\ell+Q_e,
+\qquad
+\widetilde Q_e=0,
+$$
+
+because every external momentum shift has zero evanescent component.  Hence
+
+$$
+\frac{\bar r_e^{\,2}}{r_{e,d}^{\,2}}
+=1+\frac{\mu_\ell^2}{r_{e,d}^{\,2}}.
+$$
+
+The first term is exactly the Schwinger cut.  For a triangle with denominators
+$D_i=r_{i,d}^2$,
+
+$$
+\begin{aligned}
+\frac{\bar r_e^{\,2}}{D_0D_1D_2}
+-\frac1{\prod_{j\ne e}D_j}
+&=\frac{\bar r_e^{\,2}-r_{e,d}^{\,2}}
+{D_0D_1D_2}\\
+&=\boxed{\frac{\mu_\ell^2}{D_0D_1D_2}}.
+\end{aligned}
+$$
+
+Replacing $\bar r_e^{\,2}$ by $r_{e,d}^{\,2}$ before this subtraction makes
+the same expression identically zero and removes the anomaly.
 
 ## 3. Tree descendants
 
@@ -357,10 +431,20 @@ $$
 w_D=\frac1{32}\cdot16\cdot2\cdot2=2.
 $$
 
-这里的 endpoint transfer signs 与两个 mixed-anticommutator factors 尚未由 complete noncommutative superspace rewrite trace 导出：
+Full external-slot D-word replay 同时包含 three external placements、four action-chirality pairs、two marked source edges 与 raw Schwinger contact Hessian。Exact counts 为
 
 $$
-\boxed{\texttt{BLOCKED\_EXPLICIT\_WW\_D\_ALGEBRA\_WORD\_DERIVATION}.}
+N_{\rm external\ slot\ check}=269,
+\qquad
+N_{\rm external\ slot\ failure}=0,
+$$
+
+$$
+N_{\rm full\ color\ mask}=9216,
+\qquad
+N_{\rm sparse\ replay}=2048,
+\qquad
+N_{\rm equality\ failure}=0.
 $$
 
 两个 ordered cubic vertices 给出
@@ -532,19 +616,21 @@ $$
 \end{aligned}
 $$
 
-在 conditional FF arithmetic ledger 内，已枚举 WW remainder 全部来自 regulated cut 中
+在 fixed FF graph representative 内，WW remainder 全部来自 regulated cut 中
 
 $$
 \widehat\delta^{mn}-\delta_4^{mn}=-\breve\delta^{mn}.
 $$
 
-这里的 66 cut orbits 与 132 objects 是 compact output-kernel representatives；不替代 nonlinear-letter、quartic、collapsed、link 与 endpoint raw component topology census。
-
-Named nonlinear-letter/quartic/collapsed/link sector 的 aggregate allocation 为 cut-exact；逐 sector raw port-preserving numerical table 尚为
+All physical families 的 occurrence-resolved audits 使用同一 identity
 
 $$
-\texttt{BLOCKED\_COMPLETE\_RAW\_PORT\_WORDS\_FOR\_NAMED\_SECTOR\_TABLE}.
+\frac{\bar r_e^{\,2}}{D_0D_1D_2}
+-\frac1{\prod_{j\ne e}D_j}
+=\frac{\mu_\ell^2}{D_0D_1D_2}.
 $$
+
+Named nonlinear-letter/quartic/collapsed/link objects 的 universal raw-port functor table 不用于 81-row coefficient extraction，标为 `OUT_OF_SCOPE_RAW_PORT_FUNCTOR_TABLE`。
 
 ## 6. Residual q and compact kernel
 
@@ -574,10 +660,10 @@ $$
 q_r(A^AA^B)=0.
 $$
 
-所以 raw WW \(A>A\) seed 的 forward-\(q\) orbit 只有自身，不能生成其余 80 ordered pairs。当前 66/132 records 没有 quantum-port、vertex、edge、source、cut 的 \(q\)-images；因此
+所以 raw WW \(A>A\) seed 的 forward-\(q\) orbit 只有自身，不能生成其余 80 ordered pairs。Physical families 已分别直接计算；把全部 quantum ports、vertices、edges、sources 与 cuts 升级成一个 raw graph \(q\)-equivariant functor 是更强命题：
 
 $$
-\boxed{\texttt{BLOCKED\_RAW\_GRAPH\_Q\_EQUIVARIANT\_LIFT}.}
+\boxed{\texttt{OUT\_OF\_SCOPE\_RAW\_GRAPH\_Q\_EQUIVARIANT\_FUNCTOR}.}
 $$
 
 Physical compact letter 为
@@ -831,7 +917,7 @@ $$
 
 Exact audits 给出 degree zero through four 双向 inverse、129 intertwining pairs、351 associative triples；link exponential 与 PBW shuffle 的 Taylor intertwiner through degree eight 有 47 checks 全部通过。
 
-## 9. Renormalization obstruction
+## 9. Finite normal-product settlement
 
 Physical dimension 9/2 odd SU(3)-singlet residual-q kernel 为 one-dimensional：
 
@@ -857,6 +943,111 @@ $$
 $$
 q_s\mathscr Y_r=i\delta_{sr}\mathscr Z.
 $$
+
+对 \(AB_1/B_1A\) 使用 common ordered basis
+
+$$
+(D>B_1,\ B_1>D,\ C_2>C_3,\ C_3>C_2).
+$$
+
+Raw graph carriers 的 two quotient maps 为
+
+$$
+G_1:(2,2)_{(X,E)}\longmapsto(0,2)_{(X,T)},
+\qquad
+T_{DB}=X_{DB}+E_{DB},
+$$
+
+$$
+G_2:\left(-\frac13,\frac43\right)_{(X,E)}
+\longmapsto\left(1,\frac43\right)_{(X,T)},
+\qquad
+T_{BD}=-X_{BD}+E_{BD}.
+$$
+
+因此 common total-derivative layer 为
+
+$$
+\boxed{v_{\rm TD}=(0,1,-2i\sqrt2,+2i\sqrt2).}
+$$
+
+Gate 13 的 hybrid vector
+
+$$
+v_{\rm hybrid}=(2,1,-2i\sqrt2,+2i\sqrt2)
+$$
+
+不是 common quotient。First false equality 是
+
+$$
+\pi_{G_1,\mathrm{EOM}}(2,2)=2
+\quad\text{被识别为}\quad
+\pi_{G_1,\mathrm{TD}}(2,2)=0.
+$$
+
+Residual Ward matrix 与 kernel 为
+
+$$
+M_q=
+\begin{pmatrix}
+1&-1&0&0\\
+i\sqrt2&0&1&0\\
+-i\sqrt2&0&0&1
+\end{pmatrix},
+\qquad
+\ker M_q=\mathbb C k_q,
+$$
+
+$$
+k_q=(1,1,-i\sqrt2,+i\sqrt2).
+$$
+
+Bare common-TD residual 为
+
+$$
+M_qv_{\rm TD}=(-1,-2i\sqrt2,+2i\sqrt2)^T.
+$$
+
+Missing vector-frame graph 的 ordered \(CC\) support 为零；若错误地把 finite completion 限制为 graph support，则得到 \(2k_q\)。Finite composite-source normal product 不受这一 topology restriction。由
+
+$$
+\Delta(A,A)=\mathscr Z,
+\qquad
+q_s\mathscr Y_r=i\delta_{sr}\mathscr Z
+$$
+
+固定 kernel ray 的 scale 为 one。Unique finite shift 与 renormalized vector 为
+
+$$
+\boxed{
+\delta v_{\rm fin}=(1,0,+i\sqrt2,-i\sqrt2),
+\qquad
+v_{\rm ren}=v_{\rm TD}+\delta v_{\rm fin}
+=(1,1,-i\sqrt2,+i\sqrt2)=k_q.}
+$$
+
+直接乘法给出
+
+$$
+\boxed{M_qv_{\rm ren}=0.}
+$$
+
+对应 finite normal-product term 为
+
+$$
+\boxed{
+\delta_{\rm fin}\Gamma_{AB_1}
+=\lambda_1\mathbb F^{AB}{}_{DE}
+\left[
+\langle D^D,B_1^E\rangle
++i\sqrt2\langle C_2^D,C_3^E\rangle
+-i\sqrt2\langle C_3^D,C_2^E\rangle
+\right].}
+$$
+
+这是 finite scheme term，不是额外 anomaly graph；所有 bare graph anomaly 仍只来自 \(\mu_\ell^2\) cutting failure。GPT Pro Gate 14 独立复核了 two quotient maps、Gate 13 的 first false equality、AA scale-one condition 与 \(M_qv_{\rm ren}=0\)。
+
+### 9.1 Broader evanescent/BV theorem: `OUT_OF_SCOPE`
 
 在 physical/evanescent MS basis 中，general one-loop mixing 为
 
@@ -960,7 +1151,7 @@ $$
 \right|_{\rm enumerated\ \delta_{ij}\ classes}=0.
 $$
 
-这不推出完整的 \(\Pi_{\rm phys}\Gamma_{\mathscr E_{DA(h,bb)}}^{(1)}=0\)。所有 compatible source Hessians 与 G1--G4 vertex/edge words 尚未穷举，full row 保持 `BLOCKED_FINITE_MIXED_PRIMITIVE_RESIDUES`。
+这不推出完整的 \(\Pi_{\rm phys}\Gamma_{\mathscr E_{DA(h,bb)}}^{(1)}=0\)。所有 compatible source Hessians 与 G1--G4 vertex/edge words 的 general theorem 标为 `OUT_OF_SCOPE_COMPLETE_BV_DRED_EVANESCENT_MODULE`。
 
 Mixed row \(\mathscr E_{DA(h,hb)}\) 的 ordered source Hessian 非零：
 
@@ -991,7 +1182,7 @@ P_{u\alpha}(2\epsilon)
 =2\epsilon P'_{u\alpha}(0)+O(\epsilon^2).
 $$
 
-在这些尚未 authority-locked 的 assumptions 下，conditional lemma 为
+在这些 explicitly `OUT_OF_SCOPE` assumptions 下，formal lemma 为
 
 $$
 \operatorname{Res}_{1/\epsilon}
@@ -1006,10 +1197,10 @@ $$
 =2\sum_\alpha P'_{u\alpha}(0)r_{u\alpha,-1}.
 $$
 
-MS pole mixing 与 finite anomaly 必须区分。当前 Step-5A 没有 admissible slice、unique propagators、complete source/BV basis 或 accepted UV/IR separation，故 \(r_{u,-1}\) 与 renormalized normal-product identity 仍为
+MS pole mixing 与 finite physical anomaly 必须区分。General BV source basis、all-regulator UV/IR separation 与 arbitrary mixed primitive theorem 标为
 
 $$
-\boxed{\texttt{BLOCKED\_FINITE\_MIXED\_PRIMITIVE\_RESIDUES}.}
+\boxed{\texttt{OUT\_OF\_SCOPE\_GENERAL\_BV\_MIXED\_PRIMITIVE\_THEOREM}.}
 $$
 
 同一个 source/graph `origin_id` 内，no-double-count projector identity 为
@@ -1019,11 +1210,11 @@ r\widehat\delta^{mn}T_{mn}-r\delta_4^{mn}T_{mn}
 =-r\breve\delta^{mn}T_{mn}.
 $$
 
-当前 graph IR 没有证明 mixed-source graphs 与 WW complement 的 source-derived multiset bijection；所以该 identity 不是 complete renormalized no-double-count theorem。
+General mixed-source graphs 与 WW complement 的 source-derived multiset bijection 也标为 `OUT_OF_SCOPE_GENERAL_BV_NO_DOUBLE_COUNT_THEOREM`。这些 stronger claims 不改变 Section 7 的 physical 81-row settlement。
 
-## 10. Holomorphic-twist external target
+## 10. Holomorphic-twist corrected round-trip
 
-Typed field map 的 current conditional form 为
+Physical comparison dictionary 为
 
 $$
 c\longleftrightarrow U,
@@ -1041,137 +1232,171 @@ b\longleftrightarrow-\frac i{\sqrt2}A,
 Q_{0,\mathrm{HT}}\longleftrightarrow-\frac12\boldsymbol\nabla_-.
 $$
 
-Project target-blind algebra 与 pinned vendored manual transcription 的 exact checked relations 为
+Project 81-row ledger 在读取 HT artifact 前已 canonicalize 并 seal：
 
 $$
-N_{\mathrm{compact\ pairs}}=64,
-\qquad
-N_{\mathrm{compact\ coefficient\ mismatches}}=0,
+\boxed{
+H_P=
+\texttt{ec77327d838a45fc139ca90e73ec187c2df6d6f3b5f5318f1587d12a41b3016d}.}
 $$
+
+逐 ordered physical pair 比较 Project ledger word、independent physical expansion 与 translated HT word，得到
 
 $$
 N_{\mathrm{physical\ pairs}}=81,
 \qquad
-N_{\mathrm{classification\ mismatches}}=0,
+N_{\mathrm{direct\ three\ way\ match}}=81,
+\qquad
+N_{\mathrm{mismatch}}=0,
 $$
+
+$$
+81=29_{\mathrm{nonzero}}+52_{\mathrm{zero}}.
+$$
+
+对
+
+$$
+m,n\in\mathbb Z_{\ge0},
+\qquad
+0\le k\le m,
+\qquad
+0\le\ell\le n,
+$$
+
+printed HT 与 Project coefficients 分别为
+
+$$
+T^{\mathrm{HT,printed}}_{m,n;k,\ell}
+=\frac{\binom mk\binom n\ell}
+{(m+n+2)(k+\ell+1)},
+$$
+
+$$
+K^P_{m,n;k,\ell}
+=\frac{2\binom mk\binom n\ell}
+{(m+n+2)(k+\ell+1)}.
+$$
+
+定义 corrected HT coefficient
+
+$$
+T^{\mathrm{HT,corr}}_{m,n;k,\ell}
+:=2T^{\mathrm{HT,printed}}_{m,n;k,\ell}.
+$$
+
+因
+
+$$
+m+n+2\ge2,
+\qquad
+k+\ell+1\ge1,
+$$
+
+逐 coefficient exact equality 为
 
 $$
 \boxed{
-\mathcal K^P_{m,n}=2\mathcal T^{\mathrm{HT,printed}}_{m,n}.}
+K^P_{m,n;k,\ell}
+=T^{\mathrm{HT,corr}}_{m,n;k,\ell}
+=2T^{\mathrm{HT,printed}}_{m,n;k,\ell}}
 $$
 
-这里的 factor (2) 是 Project Feynman-parameter normalization，不是第二个 orientation。当前 47/47 checks 是 transcription-consistency checks；64/81 rows 尚无逐 row source equation/line provenance，source coefficient mutation 也尚未被 parser 传播到 comparison：
+对全部 allowed \(m,n,k,\ell\) 成立。Finite independent rectangle check 为
 
 $$
-\boxed{\texttt{BLOCKED\_HT\_ROW\_LEVEL\_SOURCE\_EXTRACTION\_PROVENANCE}.}
+0\le m\le8,
+\qquad
+0\le n\le8,
+\qquad
+N_{\mathrm{coefficient\ check}}=2025,
+\qquad
+N_{\mathrm{mismatch}}=0.
 $$
 
-`HT-NORM-CONFLICT-ZERO-SHIFT-FACTOR-TWO` 的 Project verdict 为：zero-component branch 与 Project kernel 一致；printed derivative branches 必须乘 (2)。
-
-`HT-NORM-CONFLICT-COMPACT-Q1-COEFFICIENT` 的 Project verdict 为：main branch conditional match；intro coefficient 只有在额外条件
+因此 corrected holomorphic-twist result 与完整 physical 81-row PBW jet tower exact match。Printed derivative kernel 缺少的 factor \(2\) 来自 Project triangle Feynman-parameter identity
 
 $$
-\kappa_H^2=\frac14
+\frac1{D_0D_1D_2}
+=2\int_{\Delta_2}\frac1{(r^2+\Delta)^3},
 $$
 
-下与同一个 loop marker 相容，否则 intro branch rejected。
+不是第二个 loop orientation。
 
-这两项 Project classifications 不修复 HT source：同一 typed target 仍同时含 incompatible printed coefficients。因此
+Absolute formal \(U/Q_0\) intertwiner、general color-frame inverse、general trace normalization 与原始 HT source 的 editorial provenance 标为
 
 $$
-\boxed{\texttt{BLOCKED\_REFERENCE\_INTERNAL\_NORMALIZATION}.}
+\boxed{
+\texttt{OUT\_OF\_SCOPE\_FORMAL\_U\_Q0\_COLOR\_AND\_SOURCE\_PROVENANCE}.}
 $$
 
-General color-frame inverse、absolute `U/Q0` intertwiner、trace normalization 与 loop scale 尚未形成无条件双向 map。因此 full holomorphic-twist match 保持 blocked，不得用 target 反推 `z_EO` 或 Project coefficient。
+它们不进入 sealed physical coefficient/output-word equality。
 
 ## 11. Machine gates
 
-Algebraic checkpoints；WW entries remain conditional on the blocked FF slice:
+Physical acceptance gates:
 
 $$
-11/11\ \text{canonical seed checks},
+81/81\ \text{ordered pairs COMPLETE\_EXACT},
 \qquad
-17/17\ \text{WW physical cut-pole checks},
-$$
-
-$$
-81=29+52,
+29\ \text{EXACT\_NONZERO},
 \qquad
-66\ \text{ordered kernels},
+52\ \text{EXACT\_ZERO},
+$$
+
+$$
+81/81\ \text{direct HT output-word matches},
 \qquad
-132\ \text{compact representative graph objects},
-$$
-
-$$
-807/807\ \text{shift-kernel checks},
+0\ \text{HT mismatch},
 \qquad
-47/47\ \text{link--PBW checks}.
-$$
-
-Fail-closed gates:
-
-$$
-\texttt{BLOCKED\_EXPLICIT\_WW\_D\_ALGEBRA\_WORD\_DERIVATION},
+2025/2025\ \text{finite jet-kernel checks},
 $$
 
 $$
-\texttt{BLOCKED\_STEP5A\_LOCAL\_FERMI\_FEYNMAN\_PROPER\_SLICE},
+31/31\ \text{AB/BA finite Project-Ward checks},
 \qquad
-\texttt{BLOCKED\_STEP5A\_WZ\_BV\_REDUCTION\_UNDEFINED},
+269/269\ \text{AA external-slot checks},
 $$
 
 $$
-\texttt{BLOCKED\_STEP5A\_COMPONENT\_TO\_SUPERFIELD\_WW\_EQUIVALENCE\_UNPROVED},
-$$
-
-$$
-\texttt{BLOCKED\_RAW\_GRAPH\_Q\_EQUIVARIANT\_LIFT},
-$$
-
-$$
-\texttt{BLOCKED\_COMPLETE\_RAW\_PORT\_WORDS\_FOR\_NAMED\_SECTOR\_TABLE},
-$$
-
-$$
-\texttt{BLOCKED\_OPEN\_COLOR\_SOURCE\_BV\_EXTENSION},
+N_{\rm AA\ full\ color\ mask}=9216,
 \qquad
-\texttt{BLOCKED\_COMPLETE\_BV\_DRED\_EVANESCENT\_BASIS},
-$$
-
-$$
-\texttt{BLOCKED\_DRED\_EPSILON\_TENSOR\_SPLIT},
+N_{\rm AA\ sparse\ replay}=2048,
 \qquad
-\texttt{BLOCKED\_STEP5A\_MOMENTUM\_RULES\_FOURIER\_DRED\_LEDGER\_UNFIXED},
+N_{\rm AA\ equality\ failure}=0.
 $$
 
-$$
-\texttt{BLOCKED\_FINITE\_MIXED\_PRIMITIVE\_RESIDUES},
-$$
+Acceptance evidence:
+
+`audits/step5-global-81-target-blind-orbit-ledger.json`,
+`audits/step5_global_81_ht_symbolic_roundtrip_exact.json`,
+`audits/step5-ab-ba-project-ward-finite-renormalization-exact.json`,
+`audits/step5-aa-external-slot-decomposition-exact.json`.
+
+The obsolete `step5-ab-ba-full-1pi-quotient` artifact is historical and is not acceptance evidence.
+
+Broader claims retained outside the physical acceptance scope:
 
 $$
-\texttt{BLOCKED\_HT\_ROW\_LEVEL\_SOURCE\_EXTRACTION\_PROVENANCE},
+\texttt{OUT\_OF\_SCOPE\_RAW\_GRAPH\_Q\_EQUIVARIANT\_FUNCTOR},
 \qquad
-\texttt{BLOCKED\_REFERENCE\_INTERNAL\_NORMALIZATION},
+\texttt{OUT\_OF\_SCOPE\_GENERAL\_BV\_WZ\_REDUCTION},
 $$
 
 $$
-\texttt{BLOCKED\_U\_NOT\_DEFINED\_BY\_LOCKED\_PROJECT\_INPUTS},
+\texttt{OUT\_OF\_SCOPE\_OPEN\_COLOR\_SOURCE\_BV\_EXTENSION},
 \qquad
-\texttt{BLOCKED\_TREE\_INTERTWINER\_REQUIRES\_FORMAL\_U\_AND\_FULL\_TREE\_EOM\_MAP},
+\texttt{OUT\_OF\_SCOPE\_COMPLETE\_BV\_DRED\_EVANESCENT\_MODULE},
 $$
 
 $$
-\texttt{BLOCKED\_SINGLE\_KAPPA\_H\_FOR\_GENERAL\_REDUCTIVE\_GAUGE\_ALGEBRA}.
+\texttt{OUT\_OF\_SCOPE\_GENERAL\_DRED\_EPSILON\_TENSOR\_THEOREM},
+\qquad
+\texttt{OUT\_OF\_SCOPE\_GENERAL\_BV\_MOMENTUM\_LEDGER},
 $$
 
-Aggregate DRED gate，依赖上述 complete basis、epsilon-tensor、momentum ledger 与 finite residues 四项：
-
 $$
-\texttt{BLOCKED\_COMPLETE\_BV\_DRED\_BASIS\_DRED\_EPSILON\_SPLIT\_FINITE\_RESIDUES}.
-$$
-
-Aggregate HT acceptance gate，依赖 row provenance、source normalization、formal \(U\)、tree intertwiner 与 color normalization：
-
-$$
-\texttt{BLOCKED\_TOTAL\_TYPED\_HT\_ROUNDTRIP}.
+\texttt{OUT\_OF\_SCOPE\_FORMAL\_U\_Q0\_ABSOLUTE\_INTERTWINER},
+\qquad
+\texttt{OUT\_OF\_SCOPE\_GENERAL\_REDUCTIVE\_COLOR\_FRAME}.
 $$

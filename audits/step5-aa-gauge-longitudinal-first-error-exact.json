@@ -1,0 +1,83 @@
+{
+  "schema": "awi.step5.aa-gauge-longitudinal-first-error-exact.v2",
+  "status": "AA_GAUGE_WRONG_CHIRAL_INDEX_PROVED__FULL_EDGE_ORBIT_PENDING",
+  "external_target_used": false,
+  "index_correction": "W^gamma D_gamma with external W_plus selects W^minus=-W_plus and therefore -D_minus; the old D_plus endpoint is rejected",
+  "marked_identity": "Dminus*A1=selected+longitudinal; selected=sqrt(2)*bar(r_e)^2*Dplus*u; longitudinal=sqrt(2)/16*Dplus*barD2*D2*u",
+  "rows": {
+    "mark01_full": [
+      "-a0*b2*d0 + a0*b2*d1 - a2*b0*d2 + b0*b2*c0 - b0*b2*c1 + b0*b2*c2",
+      "a0*b2*d0 - a0*b2*d1 + a2*b0*d1 - b0*b2*c0",
+      "b0*(a2*d0 - a2*d1 + a2*d2 - b2*c0 + b2*c1 - b2*c2)",
+      "b0*(a2*d0 - b2*c0)"
+    ],
+    "mark01_selected": [
+      "-b2*(a0*d0 - b0*c0)",
+      "b2*(a0*d0 - b0*c0)",
+      "b2*(a0*d0 - b0*c0)",
+      "b2*(a0*d0 - b0*c0)"
+    ],
+    "mark01_longitudinal": [
+      "a0*b2*d1 - a2*b0*d2 - b0*b2*c1 + b0*b2*c2",
+      "-d1*(a0*b2 - a2*b0)",
+      "-a0*b2*d0 + a2*b0*d0 - a2*b0*d1 + a2*b0*d2 + b0*b2*c1 - b0*b2*c2",
+      "-d0*(a0*b2 - a2*b0)"
+    ],
+    "mark02_full": [
+      "b0*(a2*d2 - b2*c2)",
+      "-b0*(a2*d1 - b2*c1)",
+      "b0*(a2*d2 - b2*c2)",
+      "b0*(a2*d1 - b2*c1)"
+    ],
+    "mark02_selected": [
+      "b0*(a2*d2 - b2*c2)",
+      "-b0*(a2*d2 - b2*c2)",
+      "b0*(a2*d2 - b2*c2)",
+      "b0*(a2*d2 - b2*c2)"
+    ],
+    "mark02_longitudinal": [
+      "0",
+      "-b0*(a2*d1 - a2*d2 - b2*c1 + b2*c2)",
+      "0",
+      "b0*(a2*d1 - a2*d2 - b2*c1 + b2*c2)"
+    ]
+  },
+  "row_sums": {
+    "mark01_full": "2*b0*(a2*d0 - b2*c0)",
+    "mark01_selected": "2*b2*(a0*d0 - b0*c0)",
+    "mark01_longitudinal": "-2*d0*(a0*b2 - a2*b0)",
+    "mark02_full": "2*b0*(a2*d2 - b2*c2)",
+    "mark02_selected": "2*b0*(a2*d2 - b2*c2)",
+    "mark02_longitudinal": "0"
+  },
+  "wrong_Dplus_control": {
+    "mark01_selected": [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "mark02_selected": [
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  },
+  "conclusion": {
+    "old_same_undotted_row_projection": "zero selected square row by row",
+    "correct_selected_mark01": "2*b2*det(r0)=-2*b2*bar(r0)^2",
+    "correct_selected_mark02": "2*b0*det(r2)=-2*b0*bar(r2)^2",
+    "rejected_inference": "the former traceless rank-two conclusion came from contracting lower W_plus with D_plus instead of -D_minus",
+    "required_completion": "pair det(r0) and det(r2) with their own full-d Schwinger contacts, then complete the transported longitudinal and link orbit"
+  },
+  "checks": [
+    "old_Dplus_mark01_selected_zero_4_of_4",
+    "old_Dplus_mark02_selected_zero_4_of_4",
+    "correct_full_equals_selected_plus_longitudinal_8_of_8",
+    "correct_mark01_selected_rows_exact",
+    "correct_mark02_selected_rows_exact",
+    "correct_selected_sums_are_r0_and_r2_determinants",
+    "correct_longitudinal_sums_exact"
+  ]
+}

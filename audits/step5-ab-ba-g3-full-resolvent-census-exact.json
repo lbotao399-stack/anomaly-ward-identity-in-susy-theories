@@ -1,0 +1,404 @@
+{
+  "census": {
+    "I0S3S3": {
+      "all_one_loop_rows": [
+        {
+          "action_vertices": [
+            "M1",
+            "Hminus"
+          ],
+          "connected": true,
+          "edges": [
+            "I0:u--L_M1:u",
+            "I0:phi1--L_M1:tilde1",
+            "L_M1:phi1--R_Hminus:tilde1"
+          ],
+          "external_C2_vertex": "R_Hminus",
+          "external_C3_vertex": "R_Hminus",
+          "loop_count": 1,
+          "one_particle_irreducible": false
+        },
+        {
+          "action_vertices": [
+            "M2",
+            "Hminus"
+          ],
+          "connected": true,
+          "edges": [
+            "I0:u--L_M2:u",
+            "I0:phi1--R_Hminus:tilde1",
+            "L_M2:phi2--R_Hminus:tilde2"
+          ],
+          "external_C2_vertex": "L_M2",
+          "external_C3_vertex": "R_Hminus",
+          "loop_count": 1,
+          "one_particle_irreducible": true
+        },
+        {
+          "action_vertices": [
+            "M3",
+            "Hminus"
+          ],
+          "connected": true,
+          "edges": [
+            "I0:u--L_M3:u",
+            "I0:phi1--R_Hminus:tilde1",
+            "L_M3:phi3--R_Hminus:tilde3"
+          ],
+          "external_C2_vertex": "R_Hminus",
+          "external_C3_vertex": "L_M3",
+          "loop_count": 1,
+          "one_particle_irreducible": true
+        }
+      ],
+      "one_loop_1PI": [
+        {
+          "action_vertices": [
+            "M2",
+            "Hminus"
+          ],
+          "connected": true,
+          "edges": [
+            "I0:u--L_M2:u",
+            "I0:phi1--R_Hminus:tilde1",
+            "L_M2:phi2--R_Hminus:tilde2"
+          ],
+          "external_C2_vertex": "L_M2",
+          "external_C3_vertex": "R_Hminus",
+          "loop_count": 1,
+          "one_particle_irreducible": true
+        },
+        {
+          "action_vertices": [
+            "M3",
+            "Hminus"
+          ],
+          "connected": true,
+          "edges": [
+            "I0:u--L_M3:u",
+            "I0:phi1--R_Hminus:tilde1",
+            "L_M3:phi3--R_Hminus:tilde3"
+          ],
+          "external_C2_vertex": "R_Hminus",
+          "external_C3_vertex": "L_M3",
+          "loop_count": 1,
+          "one_particle_irreducible": true
+        }
+      ],
+      "one_loop_1PR": [
+        {
+          "action_vertices": [
+            "M1",
+            "Hminus"
+          ],
+          "connected": true,
+          "edges": [
+            "I0:u--L_M1:u",
+            "I0:phi1--L_M1:tilde1",
+            "L_M1:phi1--R_Hminus:tilde1"
+          ],
+          "external_C2_vertex": "R_Hminus",
+          "external_C3_vertex": "R_Hminus",
+          "loop_count": 1,
+          "one_particle_irreducible": false
+        }
+      ]
+    },
+    "I0S4": {
+      "one_loop_1PI": [],
+      "rows": []
+    },
+    "I1S3": {
+      "one_loop_1PI": [],
+      "rows": []
+    },
+    "I2": {
+      "one_loop_1PI": 0,
+      "rows": []
+    }
+  },
+  "checks": {
+    "count": 24,
+    "failed": 0,
+    "passed": 24,
+    "rows": [
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "I2_C2C3_EXTERNAL_SUPPORT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "I1S3_C2C3_ONE_LOOP_1PI_COUNT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "I0S4_C2C3_ONE_LOOP_1PI_COUNT",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "id": "I0S3S3_C2C3_ONE_LOOP_1PI_COUNT",
+        "status": "PASS"
+      },
+      {
+        "actual": "Counter({('M2', 'Hminus'): 1, ('M3', 'Hminus'): 1})",
+        "expected": "Counter({('M2', 'Hminus'): 1, ('M3', 'Hminus'): 1})",
+        "id": "I0S3S3_ONLY_M2_HMINUS_AND_M3_HMINUS",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "M1_HMINUS_C2C3_ROWS_ARE_NOT_1PI",
+        "status": "PASS"
+      },
+      {
+        "actual": "4096*(p00**2*p11*r01 - p00**2*r01*r11 - p00*p01*p10*r01 - p00*p01*p11*r00 + p00*p01*r00*r11 + p00*p01*r01*r10 + p00*p10*r01**2 + p00*p11*q00*r01 - p00*p11*q01*r00 - p00*p11*r00*r01 - p00*q00*r01*r11 + p00*q01*r01*r10 + p00*r00*r01*r11 - p00*r01**2*r10 + p01**2*p10*r00 - p01**2*r00*r10 - p01*p10*q00*r01 + p01*p10*q01*r00 - p01*p10*r00*r01 + p01*p11*r00**2 + p01*q00*r00*r11 - p01*q01*r00*r10 - p01*r00**2*r11 + p01*r00*r01*r10 + p10*q00*r01**2 - p10*q01*r00*r01 - p11*q00*r00*r01 + p11*q01*r00**2)",
+        "expected": "4096*(p00**2*p11*r01 - p00**2*r01*r11 - p00*p01*p10*r01 - p00*p01*p11*r00 + p00*p01*r00*r11 + p00*p01*r01*r10 + p00*p10*r01**2 + p00*p11*q00*r01 - p00*p11*q01*r00 - p00*p11*r00*r01 - p00*q00*r01*r11 + p00*q01*r01*r10 + p00*r00*r01*r11 - p00*r01**2*r10 + p01**2*p10*r00 - p01**2*r00*r10 - p01*p10*q00*r01 + p01*p10*q01*r00 - p01*p10*r00*r01 + p01*p11*r00**2 + p01*q00*r00*r11 - p01*q01*r00*r10 - p01*r00**2*r11 + p01*r00*r01*r10 + p10*q00*r01**2 - p10*q01*r00*r01 - p11*q00*r00*r01 + p11*q01*r00**2)",
+        "id": "ORIGINAL_MEASURE_A_OVER_FULL_FULL_RAW",
+        "status": "PASS"
+      },
+      {
+        "actual": "-4096*(p00*r01 - p01*r00)*(p00*p11 + p00*q11 - p00*r11 - p01*p10 - p01*q10 + p01*r10 - p10*q01 + p10*r01 + p11*q00 - p11*r00 + q00*q11 - q00*r11 - q01*q10 + q01*r10 + q10*r01 - q11*r00 + r00*r11 - r01*r10)",
+        "expected": "-4096*(p00*r01 - p01*r00)*(p00*p11 + p00*q11 - p00*r11 - p01*p10 - p01*q10 + p01*r10 - p10*q01 + p10*r01 + p11*q00 - p11*r00 + q00*q11 - q00*r11 - q01*q10 + q01*r10 + q10*r01 - q11*r00 + r00*r11 - r01*r10)",
+        "id": "ORIGINAL_MEASURE_B_OVER_FULL_FULL_RAW",
+        "status": "PASS"
+      },
+      {
+        "actual": "4",
+        "expected": "4",
+        "id": "ORIGINAL_MEASURE_A_MAGNITUDE_EQUALS_ENDPOINT_MINUS4",
+        "status": "PASS"
+      },
+      {
+        "actual": "4",
+        "expected": "4",
+        "id": "ORIGINAL_MEASURE_B_MAGNITUDE_EQUALS_ENDPOINT_MINUS4",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SD_EDGE_0_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-4096*W0*mu2/(D0*D1*D2)",
+        "expected": "-4096*W0*mu2/(D0*D1*D2)",
+        "id": "SD_EDGE_0_DRED_REMAINDER",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SD_EDGE_1_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "4096*W1*mu2/(D0*D1*D2)",
+        "expected": "4096*W1*mu2/(D0*D1*D2)",
+        "id": "SD_EDGE_1_DRED_REMAINDER",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SD_EDGE_2_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-4096*W2*mu2/(D0*D1*D2)",
+        "expected": "-4096*W2*mu2/(D0*D1*D2)",
+        "id": "SD_EDGE_2_DRED_REMAINDER",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "A_NONLINEAR_JE_PLUS_JX",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "B_NONLINEAR_PE_PLUS_PX",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[1/3], [1/3], [1/3]])",
+        "expected": "Matrix([[1/3], [1/3], [1/3]])",
+        "id": "THREE_SIMPLEX_WEIGHTS",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "THREE_SIMPLEX_WEIGHTS_SUM",
+        "status": "PASS"
+      },
+      {
+        "actual": "-sqrt(2)*g**4*hbar/1024",
+        "expected": "-sqrt(2)*g**4*hbar/1024",
+        "id": "G32_PRED",
+        "status": "PASS"
+      },
+      {
+        "actual": "2*sqrt(2)*i/3",
+        "expected": "2*sqrt(2)*i/3",
+        "id": "G32_EACH_SD_EDGE_RAW_WEDGE",
+        "status": "PASS"
+      },
+      {
+        "actual": "2*sqrt(2)*i",
+        "expected": "2*sqrt(2)*i",
+        "id": "G32_THREE_EDGE_RAW_WEDGE",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2*sqrt(2)*i",
+        "expected": "-2*sqrt(2)*i",
+        "id": "G32_THREE_EDGE_TYPED",
+        "status": "PASS"
+      }
+    ]
+  },
+  "conclusion": {
+    "missing_net_correction": "0",
+    "raw_result": [
+      "G32=-2*i*sqrt(2)",
+      "G33=+2*i*sqrt(2)"
+    ],
+    "remaining_boundary": "The full bare-source 1PI resolvent and original-measure conversion contain no -i*sqrt(2) family.  A match cannot be obtained by adding I2, I1S3, or I0S4 in this external port sector."
+  },
+  "external_target_used": false,
+  "original_measure": {
+    "A_full_full_raw": "1024*(p00**2*p11*r01 - p00**2*r01*r11 - p00*p01*p10*r01 - p00*p01*p11*r00 + p00*p01*r00*r11 + p00*p01*r01*r10 + p00*p10*r01**2 + p00*p11*q00*r01 - p00*p11*q01*r00 - p00*p11*r00*r01 - p00*q00*r01*r11 + p00*q01*r01*r10 + p00*r00*r01*r11 - p00*r01**2*r10 + p01**2*p10*r00 - p01**2*r00*r10 - p01*p10*q00*r01 + p01*p10*q01*r00 - p01*p10*r00*r01 + p01*p11*r00**2 + p01*q00*r00*r11 - p01*q01*r00*r10 - p01*r00**2*r11 + p01*r00*r01*r10 + p10*q00*r01**2 - p10*q01*r00*r01 - p11*q00*r00*r01 + p11*q01*r00**2)",
+    "A_original": "4096*(p00**2*p11*r01 - p00**2*r01*r11 - p00*p01*p10*r01 - p00*p01*p11*r00 + p00*p01*r00*r11 + p00*p01*r01*r10 + p00*p10*r01**2 + p00*p11*q00*r01 - p00*p11*q01*r00 - p00*p11*r00*r01 - p00*q00*r01*r11 + p00*q01*r01*r10 + p00*r00*r01*r11 - p00*r01**2*r10 + p01**2*p10*r00 - p01**2*r00*r10 - p01*p10*q00*r01 + p01*p10*q01*r00 - p01*p10*r00*r01 + p01*p11*r00**2 + p01*q00*r00*r11 - p01*q01*r00*r10 - p01*r00**2*r11 + p01*r00*r01*r10 + p10*q00*r01**2 - p10*q01*r00*r01 - p11*q00*r00*r01 + p11*q01*r00**2)",
+    "B_full_full_raw": "-1024*(p00*r01 - p01*r00)*(p00*p11 + p00*q11 - p00*r11 - p01*p10 - p01*q10 + p01*r10 - p10*q01 + p10*r01 + p11*q00 - p11*r00 + q00*q11 - q00*r11 - q01*q10 + q01*r10 + q10*r01 - q11*r00 + r00*r11 - r01*r10)",
+    "B_original": "-4096*(p00*r01 - p01*r00)*(p00*p11 + p00*q11 - p00*r11 - p01*p10 - p01*q10 + p01*r10 - p10*q01 + p10*r01 + p11*q00 - p11*r00 + q00*q11 - q00*r11 - q01*q10 + q01*r10 + q10*r01 - q11*r00 + r00*r11 - r01*r10)",
+    "factor_two_found": "NO",
+    "magnitude_ratio_to_full_full_raw": "4",
+    "measure_factor": "(1/4)*(1/2)=1/8"
+  },
+  "port_conventions": {
+    "I0": [
+      "u",
+      "phi1"
+    ],
+    "I1": [
+      "u",
+      "u",
+      "phi1"
+    ],
+    "I2": [
+      "u",
+      "u",
+      "u",
+      "phi1"
+    ],
+    "S3": {
+      "G": [
+        "u",
+        "u",
+        "u"
+      ],
+      "Hminus": [
+        "tilde1",
+        "tilde2",
+        "tilde3"
+      ],
+      "Hplus": [
+        "phi1",
+        "phi2",
+        "phi3"
+      ],
+      "M1": [
+        "tilde1",
+        "u",
+        "phi1"
+      ],
+      "M2": [
+        "tilde2",
+        "u",
+        "phi2"
+      ],
+      "M3": [
+        "tilde3",
+        "u",
+        "phi3"
+      ]
+    },
+    "S4": {
+      "G4": [
+        "u",
+        "u",
+        "u",
+        "u"
+      ],
+      "M1_2": [
+        "tilde1",
+        "u",
+        "u",
+        "phi1"
+      ],
+      "M2_2": [
+        "tilde2",
+        "u",
+        "u",
+        "phi2"
+      ],
+      "M3_2": [
+        "tilde3",
+        "u",
+        "u",
+        "phi3"
+      ]
+    },
+    "external_sector": [
+      "tilde2=C2",
+      "tilde3=C3"
+    ],
+    "propagators": [
+      "u--u",
+      "phi_r--tilde_r"
+    ]
+  },
+  "resolvent": "I2-I1*S3-I0*S4+(1/2)*I0*S3*S3",
+  "schema": "step5-ab-ba-g3-full-resolvent-census-exact-v1",
+  "sd_and_normalization": {
+    "G32_raw_wedge": "2*sqrt(2)*i",
+    "G32_typed": "-2*sqrt(2)*i",
+    "G33_typed": "2*sqrt(2)*i",
+    "cuts": [
+      "4096*W0/(D1*D2)",
+      "-4096*W1/(D0*D2)",
+      "4096*W2/(D0*D1)"
+    ],
+    "nonlinear_zero_square": {
+      "A": "JE+JX=512*W0-512*W0=0",
+      "B": "PE+PX=-128*W2+128*W2=0"
+    },
+    "parents": [
+      "-4096*W0*(D0 + mu2)/(D0*D1*D2)",
+      "4096*W1*(D1 + mu2)/(D0*D1*D2)",
+      "-4096*W2*(D2 + mu2)/(D0*D1*D2)"
+    ],
+    "remainders": [
+      "-4096*W0*mu2/(D0*D1*D2)",
+      "4096*W1*mu2/(D0*D1*D2)",
+      "-4096*W2*mu2/(D0*D1*D2)"
+    ],
+    "simplex_weights": [
+      "1/3",
+      "1/3",
+      "1/3"
+    ]
+  },
+  "status": "PASS_FULL_RESOLVENT_CENSUS__NO_MISSING_1PI_C2C3_FAMILY__G3_SCALE_TWO_REMAINS"
+}

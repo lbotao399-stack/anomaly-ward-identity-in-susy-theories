@@ -1,0 +1,1443 @@
+{
+  "authority_equation": "Step 5A (5A.52)",
+  "canonical_reduction": {
+    "V": "sqrt(2)*g*u",
+    "action_hessians": {
+      "minus": "-I*g/4*c_UCD*Wtilde_c^D*(barD_C-barD_U)",
+      "plus": "I*g/4*c_UCE*W_c^E*(D_C-D_U)"
+    },
+    "canonical_actions": {
+      "minus": "+(g/4) int Wtilde_c_dot_a [barD^dot_a u,u]",
+      "plus": "-(g/4) int W_c^a [D_a u,u]"
+    },
+    "chiral_measure_and_odd_order": "-4",
+    "exponent_hessians": {
+      "minus": "I*g/(4*hbar)",
+      "plus": "-I*g/(4*hbar)"
+    },
+    "h": "g^(-2)",
+    "linear_field_strength_conversion": "-4*sqrt(2)",
+    "minus_two_cross_term_groups": [
+      "g/8",
+      "g/8"
+    ],
+    "one_raw_word_canonical_u_magnitude": "sqrt(2)*g/256",
+    "one_raw_word_original_V_magnitude": "1/(512*g**2)",
+    "one_reduced_word_magnitude": "g/8",
+    "plus_two_cross_term_groups": [
+      "-g/8",
+      "-g/8"
+    ]
+  },
+  "checks": [
+    "four_raw_words_per_chirality",
+    "5A52_sign_and_denominator_recomputed_8_of_8",
+    "six_labeled_slot_assignments_per_raw_word",
+    "canonical_raw_coefficient_sqrt2_g_over_256",
+    "compact_hessians_from_two_cross_term_groups",
+    "36_structural_routes_and_72_marked_occurrences_not_multipliers",
+    "corrected_Dminus_direct_rows_exact",
+    "wrong_Dplus_reflected_rows_zero_8_of_8",
+    "independent_reflected_AD_rows_exact",
+    "full_equals_selected_plus_longitudinal_16_of_16",
+    "occurrence_and_edge_preserving_SD_contacts_16_of_16",
+    "rank_one_simplex_moments_exact",
+    "extended_ordered_vector_target_blind",
+    "fixed_slot_scope_rejected_as_full_polarization"
+  ],
+  "d_algebra": {
+    "bar_coefficient_sums": {
+      "AD": {
+        "mark01": "2*b2",
+        "mark02": "2*b0"
+      },
+      "DA": {
+        "mark01": "-2*b2",
+        "mark02": "-2*b0"
+      }
+    },
+    "contact_rows": [
+      {
+        "full_d_contact": "-a0*b2*d1 + a2*b0*d2 + b0*b2*c1 - b0*b2*c2 - b2*r0_d_sq",
+        "id": "DA:01.1",
+        "longitudinal_parent": "a0*b2*d1 - a2*b0*d2 - b0*b2*c1 + b0*b2*c2",
+        "mark": "01",
+        "orientation": "DA",
+        "row": 1,
+        "same_edge": true,
+        "same_occurrence": true,
+        "selected_bar_square_coefficient": "b2",
+        "selected_edge": "e0",
+        "sole_dred_remainder": "b2*mu_sq"
+      },
+      {
+        "full_d_contact": "a0*b2*d1 - a2*b0*d1 + b2*r0_d_sq",
+        "id": "DA:01.2",
+        "longitudinal_parent": "-d1*(a0*b2 - a2*b0)",
+        "mark": "01",
+        "orientation": "DA",
+        "row": 2,
+        "same_edge": true,
+        "same_occurrence": true,
+        "selected_bar_square_coefficient": "-b2",
+        "selected_edge": "e0",
+        "sole_dred_remainder": "-b2*mu_sq"
+      },
+      {
+        "full_d_contact": "a0*b2*d0 - a2*b0*d0 + a2*b0*d1 - a2*b0*d2 - b0*b2*c1 + b0*b2*c2 + b2*r0_d_sq",
+        "id": "DA:01.3",
+        "longitudinal_parent": "-a0*b2*d0 + a2*b0*d0 - a2*b0*d1 + a2*b0*d2 + b0*b2*c1 - b0*b2*c2",
+        "mark": "01",
+        "orientation": "DA",
+        "row": 3,
+        "same_edge": true,
+        "same_occurrence": true,
+        "selected_bar_square_coefficient": "-b2",
+        "selected_edge": "e0",
+        "sole_dred_remainder": "-b2*mu_sq"
+      },
+      {
+        "full_d_contact": "a0*b2*d0 - a2*b0*d0 + b2*r0_d_sq",
+        "id": "DA:01.4",
+        "longitudinal_parent": "-d0*(a0*b2 - a2*b0)",
+        "mark": "01",
+        "orientation": "DA",
+        "row": 4,
+        "same_edge": true,
+        "same_occurrence": true,
+        "selected_bar_square_coefficient": "-b2",
+        "selected_edge": "e0",
+        "sole_dred_remainder": "-b2*mu_sq"
+      },
+      {
+        "full_d_contact": "b0*r2_d_sq",
+        "id": "DA:02.1",
+        "longitudinal_parent": "0",
+        "mark": "02",
+        "orientation": "DA",
+        "row": 1,
+        "same_edge": true,
+        "same_occurrence": true,
+        "selected_bar_square_coefficient": "-b0",
+        "selected_edge": "e2",
+        "sole_dred_remainder": "-b0*mu_sq"
+      },
+      {
+        "full_d_contact": "b0*(a2*d1 - a2*d2 - b2*c1 + b2*c2 - r2_d_sq)",
+        "id": "DA:02.2",
+        "longitudinal_parent": "-b0*(a2*d1 - a2*d2 - b2*c1 + b2*c2)",
+        "mark": "02",
+        "orientation": "DA",
+        "row": 2,
+        "same_edge": true,
+        "same_occurrence": true,
+        "selected_bar_square_coefficient": "b0",
+        "selected_edge": "e2",
+        "sole_dred_remainder": "b0*mu_sq"
+      },
+      {
+        "full_d_contact": "b0*r2_d_sq",
+        "id": "DA:02.3",
+        "longitudinal_parent": "0",
+        "mark": "02",
+        "orientation": "DA",
+        "row": 3,
+        "same_edge": true,
+        "same_occurrence": true,
+        "selected_bar_square_coefficient": "-b0",
+        "selected_edge": "e2",
+        "sole_dred_remainder": "-b0*mu_sq"
+      },
+      {
+        "full_d_contact": "-b0*(a2*d1 - a2*d2 - b2*c1 + b2*c2 - r2_d_sq)",
+        "id": "DA:02.4",
+        "longitudinal_parent": "b0*(a2*d1 - a2*d2 - b2*c1 + b2*c2)",
+        "mark": "02",
+        "orientation": "DA",
+        "row": 4,
+        "same_edge": true,
+        "same_occurrence": true,
+        "selected_bar_square_coefficient": "-b0",
+        "selected_edge": "e2",
+        "sole_dred_remainder": "-b0*mu_sq"
+      },
+      {
+        "full_d_contact": "-b2*r0_d_sq",
+        "id": "AD:01.1",
+        "longitudinal_parent": "0",
+        "mark": "01",
+        "orientation": "AD",
+        "row": 1,
+        "same_edge": true,
+        "same_occurrence": true,
+        "selected_bar_square_coefficient": "b2",
+        "selected_edge": "e0",
+        "sole_dred_remainder": "b2*mu_sq"
+      },
+      {
+        "full_d_contact": "-b2*r0_d_sq",
+        "id": "AD:01.2",
+        "longitudinal_parent": "0",
+        "mark": "01",
+        "orientation": "AD",
+        "row": 2,
+        "same_edge": true,
+        "same_occurrence": true,
+        "selected_bar_square_coefficient": "b2",
+        "selected_edge": "e0",
+        "sole_dred_remainder": "b2*mu_sq"
+      },
+      {
+        "full_d_contact": "-b2*r0_d_sq",
+        "id": "AD:01.3",
+        "longitudinal_parent": "0",
+        "mark": "01",
+        "orientation": "AD",
+        "row": 3,
+        "same_edge": true,
+        "same_occurrence": true,
+        "selected_bar_square_coefficient": "b2",
+        "selected_edge": "e0",
+        "sole_dred_remainder": "b2*mu_sq"
+      },
+      {
+        "full_d_contact": "b2*r0_d_sq",
+        "id": "AD:01.4",
+        "longitudinal_parent": "0",
+        "mark": "01",
+        "orientation": "AD",
+        "row": 4,
+        "same_edge": true,
+        "same_occurrence": true,
+        "selected_bar_square_coefficient": "-b2",
+        "selected_edge": "e0",
+        "sole_dred_remainder": "-b2*mu_sq"
+      },
+      {
+        "full_d_contact": "a0*b2*d1 - a2*b0*d2 - b0*b2*c1 + b0*b2*c2 - b0*r2_d_sq",
+        "id": "AD:02.1",
+        "longitudinal_parent": "-a0*b2*d1 + a2*b0*d2 + b0*b2*c1 - b0*b2*c2",
+        "mark": "02",
+        "orientation": "AD",
+        "row": 1,
+        "same_edge": true,
+        "same_occurrence": true,
+        "selected_bar_square_coefficient": "b0",
+        "selected_edge": "e2",
+        "sole_dred_remainder": "b0*mu_sq"
+      },
+      {
+        "full_d_contact": "a0*b2*d1 - a2*b0*d2 - b0*b2*c1 + b0*b2*c2 - b0*r2_d_sq",
+        "id": "AD:02.2",
+        "longitudinal_parent": "-a0*b2*d1 + a2*b0*d2 + b0*b2*c1 - b0*b2*c2",
+        "mark": "02",
+        "orientation": "AD",
+        "row": 2,
+        "same_edge": true,
+        "same_occurrence": true,
+        "selected_bar_square_coefficient": "b0",
+        "selected_edge": "e2",
+        "sole_dred_remainder": "b0*mu_sq"
+      },
+      {
+        "full_d_contact": "-a0*b2*d1 + a2*b0*d2 + b0*b2*c1 - b0*b2*c2 + b0*r2_d_sq",
+        "id": "AD:02.3",
+        "longitudinal_parent": "a0*b2*d1 - a2*b0*d2 - b0*b2*c1 + b0*b2*c2",
+        "mark": "02",
+        "orientation": "AD",
+        "row": 3,
+        "same_edge": true,
+        "same_occurrence": true,
+        "selected_bar_square_coefficient": "-b0",
+        "selected_edge": "e2",
+        "sole_dred_remainder": "-b0*mu_sq"
+      },
+      {
+        "full_d_contact": "a0*b2*d1 - a2*b0*d2 - b0*b2*c1 + b0*b2*c2 - b0*r2_d_sq",
+        "id": "AD:02.4",
+        "longitudinal_parent": "-a0*b2*d1 + a2*b0*d2 + b0*b2*c1 - b0*b2*c2",
+        "mark": "02",
+        "orientation": "AD",
+        "row": 4,
+        "same_edge": true,
+        "same_occurrence": true,
+        "selected_bar_square_coefficient": "b0",
+        "selected_edge": "e2",
+        "sole_dred_remainder": "b0*mu_sq"
+      }
+    ],
+    "direct": {
+      "mark01_full": [
+        "-a0*b2*d0 + a0*b2*d1 - a2*b0*d2 + b0*b2*c0 - b0*b2*c1 + b0*b2*c2",
+        "a0*b2*d0 - a0*b2*d1 + a2*b0*d1 - b0*b2*c0",
+        "b0*(a2*d0 - a2*d1 + a2*d2 - b2*c0 + b2*c1 - b2*c2)",
+        "b0*(a2*d0 - b2*c0)"
+      ],
+      "mark01_longitudinal": [
+        "a0*b2*d1 - a2*b0*d2 - b0*b2*c1 + b0*b2*c2",
+        "-d1*(a0*b2 - a2*b0)",
+        "-a0*b2*d0 + a2*b0*d0 - a2*b0*d1 + a2*b0*d2 + b0*b2*c1 - b0*b2*c2",
+        "-d0*(a0*b2 - a2*b0)"
+      ],
+      "mark01_selected": [
+        "-b2*(a0*d0 - b0*c0)",
+        "b2*(a0*d0 - b0*c0)",
+        "b2*(a0*d0 - b0*c0)",
+        "b2*(a0*d0 - b0*c0)"
+      ],
+      "mark02_full": [
+        "b0*(a2*d2 - b2*c2)",
+        "-b0*(a2*d1 - b2*c1)",
+        "b0*(a2*d2 - b2*c2)",
+        "b0*(a2*d1 - b2*c1)"
+      ],
+      "mark02_longitudinal": [
+        "0",
+        "-b0*(a2*d1 - a2*d2 - b2*c1 + b2*c2)",
+        "0",
+        "b0*(a2*d1 - a2*d2 - b2*c1 + b2*c2)"
+      ],
+      "mark02_selected": [
+        "b0*(a2*d2 - b2*c2)",
+        "-b0*(a2*d2 - b2*c2)",
+        "b0*(a2*d2 - b2*c2)",
+        "b0*(a2*d2 - b2*c2)"
+      ]
+    },
+    "reflected": {
+      "mark01_full": [
+        "-b2*(a0*d0 - b0*c0)",
+        "-b2*(a0*d0 - b0*c0)",
+        "-b2*(a0*d0 - b0*c0)",
+        "b2*(a0*d0 - b0*c0)"
+      ],
+      "mark01_longitudinal": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "mark01_selected": [
+        "-b2*(a0*d0 - b0*c0)",
+        "-b2*(a0*d0 - b0*c0)",
+        "-b2*(a0*d0 - b0*c0)",
+        "b2*(a0*d0 - b0*c0)"
+      ],
+      "mark02_full": [
+        "-b2*(a0*d1 - b0*c1)",
+        "-b2*(a0*d1 - b0*c1)",
+        "b2*(a0*d1 - b0*c1)",
+        "-b2*(a0*d1 - b0*c1)"
+      ],
+      "mark02_longitudinal": [
+        "-a0*b2*d1 + a2*b0*d2 + b0*b2*c1 - b0*b2*c2",
+        "-a0*b2*d1 + a2*b0*d2 + b0*b2*c1 - b0*b2*c2",
+        "a0*b2*d1 - a2*b0*d2 - b0*b2*c1 + b0*b2*c2",
+        "-a0*b2*d1 + a2*b0*d2 + b0*b2*c1 - b0*b2*c2"
+      ],
+      "mark02_selected": [
+        "-b0*(a2*d2 - b2*c2)",
+        "-b0*(a2*d2 - b2*c2)",
+        "b0*(a2*d2 - b2*c2)",
+        "-b0*(a2*d2 - b2*c2)"
+      ]
+    },
+    "wrong_reflected_Dplus": {
+      "mark01": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "mark02": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    }
+  },
+  "external_target_used": false,
+  "normalization": {
+    "common_vertex_propagator_prefactor": "-g**2*hbar/16",
+    "lambda1": "g**2*hbar/(16*pi**2)",
+    "mu2_triangle_master": "1/(32*pi**2)",
+    "raw_component_coefficient_over_lambda1": "1/48"
+  },
+  "raw_cubic_words": {
+    "all_rows": 48,
+    "minus_signs": [
+      -1,
+      1,
+      -1,
+      1
+    ],
+    "plus_signs": [
+      1,
+      -1,
+      1,
+      -1
+    ],
+    "rows": [
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "B",
+          "Z": "E"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "coefficient_original_V": "+1*h/512",
+        "external_is_linear_field_strength_slot": true,
+        "id": "+:1000:SBE",
+        "left_word": "barD2(V_S D^a V_B)",
+        "ordered_color_word": "K(S,B;E)",
+        "pqrs": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "right_word": "barD2(D_a V_E)"
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "E",
+          "Z": "B"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "coefficient_original_V": "+1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "+:1000:SEB",
+        "left_word": "barD2(V_S D^a V_E)",
+        "ordered_color_word": "K(S,E;B)",
+        "pqrs": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "right_word": "barD2(D_a V_B)"
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "S",
+          "Z": "E"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "coefficient_original_V": "+1*h/512",
+        "external_is_linear_field_strength_slot": true,
+        "id": "+:1000:BSE",
+        "left_word": "barD2(V_B D^a V_S)",
+        "ordered_color_word": "K(B,S;E)",
+        "pqrs": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "right_word": "barD2(D_a V_E)"
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "E",
+          "Z": "S"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "coefficient_original_V": "+1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "+:1000:BES",
+        "left_word": "barD2(V_B D^a V_E)",
+        "ordered_color_word": "K(B,E;S)",
+        "pqrs": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "right_word": "barD2(D_a V_S)"
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "S",
+          "Z": "B"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "coefficient_original_V": "+1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "+:1000:ESB",
+        "left_word": "barD2(V_E D^a V_S)",
+        "ordered_color_word": "K(E,S;B)",
+        "pqrs": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "right_word": "barD2(D_a V_B)"
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "B",
+          "Z": "S"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "coefficient_original_V": "+1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "+:1000:EBS",
+        "left_word": "barD2(V_E D^a V_B)",
+        "ordered_color_word": "K(E,B;S)",
+        "pqrs": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "right_word": "barD2(D_a V_S)"
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "B",
+          "Z": "E"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "coefficient_original_V": "-1*h/512",
+        "external_is_linear_field_strength_slot": true,
+        "id": "+:0100:SBE",
+        "left_word": "barD2(D^a V_S V_B)",
+        "ordered_color_word": "K(S,B;E)",
+        "pqrs": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "right_word": "barD2(D_a V_E)"
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "E",
+          "Z": "B"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "coefficient_original_V": "-1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "+:0100:SEB",
+        "left_word": "barD2(D^a V_S V_E)",
+        "ordered_color_word": "K(S,E;B)",
+        "pqrs": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "right_word": "barD2(D_a V_B)"
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "S",
+          "Z": "E"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "coefficient_original_V": "-1*h/512",
+        "external_is_linear_field_strength_slot": true,
+        "id": "+:0100:BSE",
+        "left_word": "barD2(D^a V_B V_S)",
+        "ordered_color_word": "K(B,S;E)",
+        "pqrs": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "right_word": "barD2(D_a V_E)"
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "E",
+          "Z": "S"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "coefficient_original_V": "-1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "+:0100:BES",
+        "left_word": "barD2(D^a V_B V_E)",
+        "ordered_color_word": "K(B,E;S)",
+        "pqrs": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "right_word": "barD2(D_a V_S)"
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "S",
+          "Z": "B"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "coefficient_original_V": "-1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "+:0100:ESB",
+        "left_word": "barD2(D^a V_E V_S)",
+        "ordered_color_word": "K(E,S;B)",
+        "pqrs": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "right_word": "barD2(D_a V_B)"
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "B",
+          "Z": "S"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "coefficient_original_V": "-1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "+:0100:EBS",
+        "left_word": "barD2(D^a V_E V_B)",
+        "ordered_color_word": "K(E,B;S)",
+        "pqrs": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "right_word": "barD2(D_a V_S)"
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "B",
+          "Z": "E"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "coefficient_original_V": "+1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "+:0010:SBE",
+        "left_word": "barD2(D^a V_S)",
+        "ordered_color_word": "K(B,E;S)",
+        "pqrs": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "right_word": "barD2(V_B D_a V_E)"
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "E",
+          "Z": "B"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "coefficient_original_V": "+1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "+:0010:SEB",
+        "left_word": "barD2(D^a V_S)",
+        "ordered_color_word": "K(E,B;S)",
+        "pqrs": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "right_word": "barD2(V_E D_a V_B)"
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "S",
+          "Z": "E"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "coefficient_original_V": "+1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "+:0010:BSE",
+        "left_word": "barD2(D^a V_B)",
+        "ordered_color_word": "K(S,E;B)",
+        "pqrs": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "right_word": "barD2(V_S D_a V_E)"
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "E",
+          "Z": "S"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "coefficient_original_V": "+1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "+:0010:BES",
+        "left_word": "barD2(D^a V_B)",
+        "ordered_color_word": "K(E,S;B)",
+        "pqrs": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "right_word": "barD2(V_E D_a V_S)"
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "S",
+          "Z": "B"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "coefficient_original_V": "+1*h/512",
+        "external_is_linear_field_strength_slot": true,
+        "id": "+:0010:ESB",
+        "left_word": "barD2(D^a V_E)",
+        "ordered_color_word": "K(S,B;E)",
+        "pqrs": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "right_word": "barD2(V_S D_a V_B)"
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "B",
+          "Z": "S"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "coefficient_original_V": "+1*h/512",
+        "external_is_linear_field_strength_slot": true,
+        "id": "+:0010:EBS",
+        "left_word": "barD2(D^a V_E)",
+        "ordered_color_word": "K(B,S;E)",
+        "pqrs": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "right_word": "barD2(V_B D_a V_S)"
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "B",
+          "Z": "E"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "coefficient_original_V": "-1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "+:0001:SBE",
+        "left_word": "barD2(D^a V_S)",
+        "ordered_color_word": "K(B,E;S)",
+        "pqrs": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "right_word": "barD2(D_a V_B V_E)"
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "E",
+          "Z": "B"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "coefficient_original_V": "-1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "+:0001:SEB",
+        "left_word": "barD2(D^a V_S)",
+        "ordered_color_word": "K(E,B;S)",
+        "pqrs": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "right_word": "barD2(D_a V_E V_B)"
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "S",
+          "Z": "E"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "coefficient_original_V": "-1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "+:0001:BSE",
+        "left_word": "barD2(D^a V_B)",
+        "ordered_color_word": "K(S,E;B)",
+        "pqrs": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "right_word": "barD2(D_a V_S V_E)"
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "E",
+          "Z": "S"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "coefficient_original_V": "-1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "+:0001:BES",
+        "left_word": "barD2(D^a V_B)",
+        "ordered_color_word": "K(E,S;B)",
+        "pqrs": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "right_word": "barD2(D_a V_E V_S)"
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "S",
+          "Z": "B"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "coefficient_original_V": "-1*h/512",
+        "external_is_linear_field_strength_slot": true,
+        "id": "+:0001:ESB",
+        "left_word": "barD2(D^a V_E)",
+        "ordered_color_word": "K(S,B;E)",
+        "pqrs": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "right_word": "barD2(D_a V_S V_B)"
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "B",
+          "Z": "S"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "coefficient_original_V": "-1*h/512",
+        "external_is_linear_field_strength_slot": true,
+        "id": "+:0001:EBS",
+        "left_word": "barD2(D^a V_E)",
+        "ordered_color_word": "K(B,S;E)",
+        "pqrs": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "right_word": "barD2(D_a V_B V_S)"
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "B",
+          "Z": "E"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "coefficient_original_V": "-1*h/512",
+        "external_is_linear_field_strength_slot": true,
+        "id": "-:1000:SBE",
+        "left_word": "D2(V_S barD_dot_a V_B)",
+        "ordered_color_word": "K(S,B;E)",
+        "pqrs": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "right_word": "D2(barD^dot_a V_E)"
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "E",
+          "Z": "B"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "coefficient_original_V": "-1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "-:1000:SEB",
+        "left_word": "D2(V_S barD_dot_a V_E)",
+        "ordered_color_word": "K(S,E;B)",
+        "pqrs": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "right_word": "D2(barD^dot_a V_B)"
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "S",
+          "Z": "E"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "coefficient_original_V": "-1*h/512",
+        "external_is_linear_field_strength_slot": true,
+        "id": "-:1000:BSE",
+        "left_word": "D2(V_B barD_dot_a V_S)",
+        "ordered_color_word": "K(B,S;E)",
+        "pqrs": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "right_word": "D2(barD^dot_a V_E)"
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "E",
+          "Z": "S"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "coefficient_original_V": "-1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "-:1000:BES",
+        "left_word": "D2(V_B barD_dot_a V_E)",
+        "ordered_color_word": "K(B,E;S)",
+        "pqrs": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "right_word": "D2(barD^dot_a V_S)"
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "S",
+          "Z": "B"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "coefficient_original_V": "-1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "-:1000:ESB",
+        "left_word": "D2(V_E barD_dot_a V_S)",
+        "ordered_color_word": "K(E,S;B)",
+        "pqrs": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "right_word": "D2(barD^dot_a V_B)"
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "B",
+          "Z": "S"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "coefficient_original_V": "-1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "-:1000:EBS",
+        "left_word": "D2(V_E barD_dot_a V_B)",
+        "ordered_color_word": "K(E,B;S)",
+        "pqrs": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "right_word": "D2(barD^dot_a V_S)"
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "B",
+          "Z": "E"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "coefficient_original_V": "+1*h/512",
+        "external_is_linear_field_strength_slot": true,
+        "id": "-:0100:SBE",
+        "left_word": "D2(barD_dot_a V_S V_B)",
+        "ordered_color_word": "K(S,B;E)",
+        "pqrs": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "right_word": "D2(barD^dot_a V_E)"
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "E",
+          "Z": "B"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "coefficient_original_V": "+1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "-:0100:SEB",
+        "left_word": "D2(barD_dot_a V_S V_E)",
+        "ordered_color_word": "K(S,E;B)",
+        "pqrs": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "right_word": "D2(barD^dot_a V_B)"
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "S",
+          "Z": "E"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "coefficient_original_V": "+1*h/512",
+        "external_is_linear_field_strength_slot": true,
+        "id": "-:0100:BSE",
+        "left_word": "D2(barD_dot_a V_B V_S)",
+        "ordered_color_word": "K(B,S;E)",
+        "pqrs": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "right_word": "D2(barD^dot_a V_E)"
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "E",
+          "Z": "S"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "coefficient_original_V": "+1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "-:0100:BES",
+        "left_word": "D2(barD_dot_a V_B V_E)",
+        "ordered_color_word": "K(B,E;S)",
+        "pqrs": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "right_word": "D2(barD^dot_a V_S)"
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "S",
+          "Z": "B"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "coefficient_original_V": "+1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "-:0100:ESB",
+        "left_word": "D2(barD_dot_a V_E V_S)",
+        "ordered_color_word": "K(E,S;B)",
+        "pqrs": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "right_word": "D2(barD^dot_a V_B)"
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "B",
+          "Z": "S"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "coefficient_original_V": "+1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "-:0100:EBS",
+        "left_word": "D2(barD_dot_a V_E V_B)",
+        "ordered_color_word": "K(E,B;S)",
+        "pqrs": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "right_word": "D2(barD^dot_a V_S)"
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "B",
+          "Z": "E"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "coefficient_original_V": "-1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "-:0010:SBE",
+        "left_word": "D2(barD_dot_a V_S)",
+        "ordered_color_word": "K(B,E;S)",
+        "pqrs": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "right_word": "D2(V_B barD^dot_a V_E)"
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "E",
+          "Z": "B"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "coefficient_original_V": "-1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "-:0010:SEB",
+        "left_word": "D2(barD_dot_a V_S)",
+        "ordered_color_word": "K(E,B;S)",
+        "pqrs": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "right_word": "D2(V_E barD^dot_a V_B)"
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "S",
+          "Z": "E"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "coefficient_original_V": "-1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "-:0010:BSE",
+        "left_word": "D2(barD_dot_a V_B)",
+        "ordered_color_word": "K(S,E;B)",
+        "pqrs": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "right_word": "D2(V_S barD^dot_a V_E)"
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "E",
+          "Z": "S"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "coefficient_original_V": "-1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "-:0010:BES",
+        "left_word": "D2(barD_dot_a V_B)",
+        "ordered_color_word": "K(E,S;B)",
+        "pqrs": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "right_word": "D2(V_E barD^dot_a V_S)"
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "S",
+          "Z": "B"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "coefficient_original_V": "-1*h/512",
+        "external_is_linear_field_strength_slot": true,
+        "id": "-:0010:ESB",
+        "left_word": "D2(barD_dot_a V_E)",
+        "ordered_color_word": "K(S,B;E)",
+        "pqrs": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "right_word": "D2(V_S barD^dot_a V_B)"
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "B",
+          "Z": "S"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "coefficient_original_V": "-1*h/512",
+        "external_is_linear_field_strength_slot": true,
+        "id": "-:0010:EBS",
+        "left_word": "D2(barD_dot_a V_E)",
+        "ordered_color_word": "K(B,S;E)",
+        "pqrs": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "right_word": "D2(V_B barD^dot_a V_S)"
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "B",
+          "Z": "E"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "coefficient_original_V": "+1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "-:0001:SBE",
+        "left_word": "D2(barD_dot_a V_S)",
+        "ordered_color_word": "K(B,E;S)",
+        "pqrs": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "right_word": "D2(barD^dot_a V_B V_E)"
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "E",
+          "Z": "B"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "coefficient_original_V": "+1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "-:0001:SEB",
+        "left_word": "D2(barD_dot_a V_S)",
+        "ordered_color_word": "K(E,B;S)",
+        "pqrs": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "right_word": "D2(barD^dot_a V_E V_B)"
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "S",
+          "Z": "E"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "coefficient_original_V": "+1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "-:0001:BSE",
+        "left_word": "D2(barD_dot_a V_B)",
+        "ordered_color_word": "K(S,E;B)",
+        "pqrs": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "right_word": "D2(barD^dot_a V_S V_E)"
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "E",
+          "Z": "S"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "coefficient_original_V": "+1*h/512",
+        "external_is_linear_field_strength_slot": false,
+        "id": "-:0001:BES",
+        "left_word": "D2(barD_dot_a V_B)",
+        "ordered_color_word": "K(E,S;B)",
+        "pqrs": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "right_word": "D2(barD^dot_a V_E V_S)"
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "S",
+          "Z": "B"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "coefficient_original_V": "+1*h/512",
+        "external_is_linear_field_strength_slot": true,
+        "id": "-:0001:ESB",
+        "left_word": "D2(barD_dot_a V_E)",
+        "ordered_color_word": "K(S,B;E)",
+        "pqrs": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "right_word": "D2(barD^dot_a V_S V_B)"
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "B",
+          "Z": "S"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "coefficient_original_V": "+1*h/512",
+        "external_is_linear_field_strength_slot": true,
+        "id": "-:0001:EBS",
+        "left_word": "D2(barD_dot_a V_E)",
+        "ordered_color_word": "K(B,S;E)",
+        "pqrs": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "right_word": "D2(barD^dot_a V_B V_S)"
+      }
+    ],
+    "rows_per_chirality": 24
+  },
+  "rejection": {
+    "counterexample": "At ell=(2,-1,1,3), N_full=6-19*i/2 while N_fixed_strength=-5.",
+    "reason": "The compact Hessian fixes the external background in the linear field-strength slot and omits the differentiated and undifferentiated commutator slots.",
+    "superseding_artifact": "audits/step5-aa-full-polarized-symbolic-exact.json"
+  },
+  "route_collapse": {
+    "authority_marked_occurrences": 72,
+    "authority_structural_TGG_routes": 36,
+    "chirality_refined_action_rows": 72,
+    "identity": "(1/2!)*(sum_rho Vplus_rho*sum_sigma Vminus_sigma + sum_sigma Vminus_sigma*sum_rho Vplus_rho)=Hplus*Hminus",
+    "interaction_factor": "1",
+    "post_hessian_mark_multiplier": 1,
+    "post_hessian_route_multiplier": 1,
+    "slot_assignments_per_vertex": 6,
+    "slot_pairs": 36
+  },
+  "schema": "awi.step5.aa-gauge-raw-convolution-hessian-exact.v1",
+  "scope": "FIXED_EXTERNAL_LINEAR_FIELD_STRENGTH_SLOT_ONLY",
+  "simplex": {
+    "2int_1": "1",
+    "2int_y": "1/3",
+    "2int_z": "1/3",
+    "direct_DA_raw_rank_one": "-2*(p - q)/3",
+    "mean_r0": "-(p + 2*q)/3",
+    "mean_r2": "(2*p + q)/3",
+    "reflected_AD_raw_rank_one_after_pq_relabel": "-2*(p - q)/3"
+  },
+  "status": "REJECTED_FIXED_FIELD_STRENGTH_SLOT_ONLY__SUPERSEDED_BY_FULL_POLARIZED_SYMBOLIC_AUDIT",
+  "target_blind_ordered_result": {
+    "basis": [
+      "DA_p",
+      "DA_q",
+      "AD_p",
+      "AD_q"
+    ],
+    "compact_DA_AD_vector": [
+      "UNDEFINED",
+      "UNDEFINED"
+    ],
+    "epsilon_identity": "p_dot_a*A*D^dot_a=-D_dot_a*p^dot_a*A",
+    "first_missing_equality": "No target-blind quotient identifies or removes the independent q-derivative structures DA_q and AD_q.",
+    "formula": "lambda1*F*[ (DA_p-DA_q)/48-(AD_p-AD_q)/48 ]",
+    "physical_status": "REJECTED_AS_FULL_AA_RESULT",
+    "vector_in_lambda1_units": [
+      "1/48",
+      "-1/48",
+      "-1/48",
+      "1/48"
+    ]
+  }
+}
