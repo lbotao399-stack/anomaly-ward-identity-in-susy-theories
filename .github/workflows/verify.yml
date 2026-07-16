@@ -14,4 +14,5 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
       - run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - run: python3 -m pip install --break-system-packages "sympy>=1.12" "PyYAML>=6.0"
       - run: python3 -m unittest discover -s tests -v
