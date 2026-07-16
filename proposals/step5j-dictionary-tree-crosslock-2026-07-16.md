@@ -3,17 +3,51 @@
 Status: `NON_AUTHORITY_PROPOSAL`. Numbered items (5J.$n$). This memo does the dictionary
 derivation the owner requested and cross-locks the three executed channels — but at the
 level the physics actually permits without a full loop recomputation, and it is explicit
-about that boundary. The central result is rigorous and sympy-verified; the honest
-residual is stated in §5.
+about that boundary.
 
-**Result in one line.** The HT source gives a **unit-magnitude field dictionary** in the
-component basis (no √2 renormalization freedom); tree-level matching of the classical
-brackets then *derives* the single remaining dictionary factor — the overall differential
-normalization $\zeta_Q=\tfrac12$ — from first principles, reproducing the review's
-recorded $Q_0\leftrightarrow-\tfrac12\boldsymbol\nabla_-$. This cross-locks the **overall
-scale** of all three channels simultaneously. The **relative** factors between channels
-remain a parameter-free loop test, which exposes an error in the 5G topology (§4) and is
-therefore *not yet passed*.
+> **ERRATA (adversarial review, 2026-07-16 — corrections to this memo's own first draft).**
+> An adversarial pass refuted two headline claims of the draft below; both are corrected
+> here and the surviving result is narrowed:
+> - **(E-i) The "unit-magnitude, no √2 freedom" headline is false for the
+>   $\mathcal W$-multiplet letter $\mathfrak f=f_{++}$.** The √2 argument of §1 holds for
+>   the **$\Phi$-multiplet** letters ($\beta,\gamma,\mathfrak d$: each is a component
+>   $\psi=\tfrac1{\sqrt2}\boldsymbol\nabla_+\Phi|$ so the superfield √2 is spent), but
+>   $f_{++}=\tau_E^{-1}\boldsymbol\nabla_+\mathcal W_+|$ carries **no** projection √2,
+>   while the review's $b\leftrightarrow-\tfrac i{\sqrt2}\boldsymbol\nabla_+\mathcal W_+$
+>   does — so $|\zeta_b|=1/\sqrt2$, **not** 1, and a residual √2 survives in every
+>   $(\mathfrak f,\cdot)$ channel. The unit-dictionary claim is restricted to
+>   $\{\beta,\gamma,\mathfrak d\}$; $\zeta_b$ needs the propagator/twist normalization.
+> - **(E-ii) The §4 "5G box → triangle correction" is retracted.** It is not a settled
+>   error but an **unresolved** box-vs-triangle question: 5G's box uses a *colorless*
+>   kinetic insertion $\mathcal I_6^{\rm kin}$ with **two** vertices (building
+>   $f_{ACD}f_{BCE}$ from the two vertices); 5H's triangle uses a *color-carrying*
+>   insertion ($\mathcal I_6^Y,\mathcal I_7^W\propto c$) with **one** vertex. These are
+>   **different graphs from different pieces of the same $\partial\!\cdot\!j$ insertion**,
+>   and both may contribute to the channel. Replacing the box by a one-vertex triangle
+>   *keeping the colorless collapse insertion* would give only one structure constant —
+>   color-inconsistent. The correct statement: the channel's full graph set (boxes **and**
+>   triangles) must be assembled together; neither 5G nor 5H alone is complete. See §4
+>   (rewritten).
+> - **(E-iii) $\zeta_Q=\tfrac12$ is contingent, not unconditional.** (5J.5) gives
+>   $\zeta_Q=\rho_{fc}/2$; the value $\tfrac12$ holds under the identification
+>   $\rho_{fc}=1$ (HT structure constant $=$ project $c$). This is *defensible* — the
+>   source's **tree** $Q_0$ bracket carries no explicit $\kappa$ (the $\kappa$ appears
+>   only in $W$ and at one loop) — but it is an **assumption**, not a derivation. The
+>   sympy check validates the **factor-2 arithmetic** ($\sqrt2F_r=2\cdot\tfrac12\varepsilon
+>   [\gamma,\gamma]$), not the inputs $\rho_{fc}=1$ or $\gamma=\widetilde\phi$.
+>
+> Robust surviving result: the tree bracket pins $\zeta_Q\zeta_\beta/\zeta_\gamma^2
+> =\rho_{fc}/2$; with the $\Phi$-multiplet letters unit and $\rho_{fc}=1$ this gives
+> $\zeta_Q=\tfrac12$, matching the review's recorded $Q_0$-factor. The rest of this memo
+> is the draft, read through the errata above.
+
+**Result in one line (corrected).** In the **component basis** the $\Phi$-multiplet
+letters $\{\beta,\gamma,\mathfrak d\}$ carry a **unit** field dictionary; tree-level
+bracket matching then pins $\zeta_Q=\rho_{fc}/2$, giving the differential normalization
+$\zeta_Q=\tfrac12$ under $\rho_{fc}=1$ — reproducing the review's
+$Q_0\leftrightarrow-\tfrac12\boldsymbol\nabla_-$ and cross-locking the **overall scale**
+of the three channels. The $\mathcal W$-letter $\zeta_b$ and the **relative** channel
+factors remain open (E-i, E-ii); the numeric cross-lock is **not yet passed**.
 
 ---
 
@@ -34,25 +68,39 @@ $$
 
 Matched to the project component letters (5D.2) — $\mathfrak c^r=\widetilde\phi_r$,
 $\mathfrak b_r=\psi_{r+}$, $\mathfrak d_{\dot a}=\widetilde\lambda_{\dot a}$,
-$\mathfrak f=f_{++}$ — each identification is a **field-content** identity of
-**unit magnitude** (up to a phase/sign): $\gamma^r\!=\!\zeta_\gamma\widetilde\phi_r$ with
-$|\zeta_\gamma|=1$ ($\Phi^{4r}$ is $\pm\phi_r$/$\pm\widetilde\phi_r$ with unit coefficient
-from (4.24)/(4.27)); likewise $|\zeta_\beta|=|\zeta_d|=|\zeta_b|=|\zeta_\partial|=1$.
+$\mathfrak f=f_{++}$. For the **$\Phi$-multiplet letters** each identification is a
+**field-content** identity of **unit magnitude** (up to a phase/sign):
+$\gamma^r\!=\!\zeta_\gamma\widetilde\phi_r$ with $|\zeta_\gamma|=1$ (the source object is
+$\Phi^{4r}=\varphi^{4r}=-\phi_r$ by (4.27)–(4.29), unit coefficient; the project letter is
+$\widetilde\phi_r$, and choosing $\gamma=\widetilde\phi$ rather than the source's
+$\gamma\sim-\phi$ is a genuine Euclidean choice — $\phi_r,\widetilde\phi_r$ are
+**independent** on the Euclidean contour (4C.53) — fixed by requiring the tree bracket
+(5J.2) to close; unit magnitude either way); likewise $|\zeta_\beta|=|\zeta_d|=1$.
+The **$\mathcal W$-multiplet letter is different**: $\mathfrak f=f_{++}$ carries no
+projection √2 (see E-i), so $|\zeta_b|=1/\sqrt2$, not 1 — the residual √2 of the
+$(\mathfrak f,\cdot)$ channels lives here and is **not** removed by this section.
 
-**Why the review's √2's are not a contradiction (5J.1a).** The review R.6-5 recorded
+**Why the review's √2's mostly reduce to projections (5J.1a).** The review R.6-5 recorded
 $\beta\leftrightarrow\tfrac1{\sqrt2}B$, $b\leftrightarrow-\tfrac i{\sqrt2}A$ with
 $B=\boldsymbol\nabla_+\Phi$, $A=\boldsymbol\nabla_+\mathcal W_+$ — the **superfield-letter**
-basis. Since $\psi_{r+}=\tfrac1{\sqrt2}\boldsymbol\nabla_+\Phi_r|=\tfrac1{\sqrt2}B|$, the
-√2 is precisely the superfield-to-component projection factor; in the **component** basis
-used by the Step-5G/H computation the √2 is already spent and the dictionary is unit. So
-there is **no per-letter renormalization freedom** in the component computation — a fact
-that makes the cross-lock unforgiving (§3).
+basis. For $\beta$: since $\psi_{r+}=\tfrac1{\sqrt2}\boldsymbol\nabla_+\Phi_r|
+=\tfrac1{\sqrt2}B|$, the √2 is exactly the superfield-to-component projection and
+$\beta\leftrightarrow\psi_{r+}$ is unit in the component basis. For $b$: since
+$f_{++}=\boldsymbol\nabla_+\mathcal W_+|$ has **projection coefficient 1** (no √2, unlike
+$\psi$), the review's $\tfrac1{\sqrt2}$ is **not** absorbed and $|\zeta_b|=1/\sqrt2$
+survives (E-i). So the component dictionary is unit for $\{\beta,\gamma,\mathfrak d\}$ but
+carries a real $1/\sqrt2$ for $\mathfrak f$ — the (E-i) correction.
 
 ## 2. The tree bracket to match
 
 Project side, $\mathbf Q=Q^4_-$ acting on the $+$-fermion (component basis, right-strip
-(5C.1)), from the locked (5C.3)/(4C.46) with $\epsilon_{12}=-1$ so
-$\varepsilon_+=\varepsilon_{a=1}=\epsilon_{12}\varepsilon^2=-\varepsilon^-$:
+(5C.1)), from the locked explicit-auxiliary transformation (4B.33b)/(4C.28) — the
+$-\sqrt2\,\varepsilon_aF_r$ term is in the off-shell-auxiliary form (4B.33b), **not** the
+auxiliary-eliminated (4C.46) — with $\epsilon_{12}=-1$ so
+$\varepsilon_+=\varepsilon_{a=1}=\epsilon_{12}\varepsilon^2=-\varepsilon^-$ (this sign
+convention is the one that yields $+\sqrt2F_r$; the companion memo (5D.3) strips with
+$\varepsilon_{-+}=+1$ and records $-\sqrt2F_r$ — the two differ only by the overall phase
+class, §5, not by magnitude):
 
 $$
 \delta\psi_{ra}=-\sqrt2\,\varepsilon_aF_r+\dots
@@ -101,83 +149,103 @@ $$
 \tag{5J.5}
 $$
 
-With the unit field dictionary of §1 ($\zeta_\beta=\zeta_\gamma=1$) and the natural
-structure-constant identification $f_{\rm HT}=c_{\rm proj}$ ($\rho_{fc}=1$, the source's
-"$\sim$" at unit), this **derives**
+With the $\Phi$-multiplet letters unit ($\zeta_\beta=\zeta_\gamma=1$; $\beta,\gamma$ are
+the only letters in this bracket, so the $\zeta_b$ issue of E-i does **not** enter here)
+and the structure-constant identification $f_{\rm HT}=c_{\rm proj}$ ($\rho_{fc}=1$),
 
 $$
-\boxed{\ \zeta_Q=\tfrac12\ ,}
+\boxed{\ \zeta_Q=\frac{\rho_{fc}}{2}\ \overset{\rho_{fc}=1}{=}\ \tfrac12\ ,}
 \tag{5J.6}
 $$
 
 i.e. $Q_0\leftrightarrow\tfrac12\,Q_-$ (equivalently the review's
-$Q_0\leftrightarrow-\tfrac12\boldsymbol\nabla_-$, magnitude reproduced from first
-principles — the sign is in the phase class, §5). **Sympy verification** (structure
-constants $=\varepsilon_{ABC}$ on su(2), ordered sums as they appear in the locked
-formulas): the project ordered sum $\sqrt2\,F_r$ is exactly $2\times$ the HT
-$\tfrac12\varepsilon[\gamma,\gamma]$, giving ratio $2$ hence $\zeta_Q=1/2$ — confirmed
-exactly, no residual.
+$Q_0\leftrightarrow-\tfrac12\boldsymbol\nabla_-$, magnitude — the sign is in the phase
+class, §5). **On $\rho_{fc}=1$ (E-iii):** the identification is *defensible* — the source's
+**tree** $Q_0$ bracket (main.tex) is the plain $[\gamma,\gamma]$ with no explicit
+$\kappa$ (the $\kappa$ enters only in $W$ and at one loop) — but it is an assumption, not
+a theorem; any structure-constant mismatch flows into $\zeta_Q$ via (5J.5). **Sympy
+scope** (`scripts/check_step5j_tree_crosslock.py`, structure constants
+$=\varepsilon_{ABC}$ on su(2), $\gamma=\widetilde\phi$ baked in): it validates the
+**factor-2 arithmetic** — the project ordered sum $\sqrt2\,F_r$ is exactly $2\times$ the
+HT $\tfrac12\varepsilon[\gamma,\gamma]$ — **not** the physics inputs $\rho_{fc}=1$ or
+$\gamma=\widetilde\phi$, which are argued in prose above.
 
 **What this locks.** $\zeta_Q$ is the **overall** differential normalization common to
 every channel; (5J.6) therefore fixes the common scale $P=\kappa^2\eta_{\mathcal
 D}/\zeta_Q$ of all three one-loop channels **simultaneously** from a single tree
-computation — the cross-lock of the absolute scale. It also settles, from first
-principles, the review's remaining-trust-surface item R.6-5 (the $Q_0$-normalization
-half of it) and is consistent with the factor-2 family of adjudications (this
+computation — the cross-lock of the absolute scale (modulo $\rho_{fc}$, E-iii). It
+addresses, up to that assumption, the review's remaining-trust-surface item R.6-5 (the
+$Q_0$-normalization half of it) and is consistent with the factor-2 family of adjudications
+(this
 $\zeta_Q=\tfrac12$ is the **differential** normalization, distinct from the
 zero-shift-kernel factor-2 of `HT-NORM-CONFLICT-ZERO-SHIFT-FACTOR-TWO`; the two must not
 be conflated).
 
-## 4. Correction to Step-5G exposed by taking the dictionary seriously
+## 4. The box-vs-triangle graph set (rewritten per E-ii)
 
-Because §1 removes all renormalization freedom, the relative factors between channels
-must come out uniform from the **honest** loop coefficients — so any spurious relative
-factor is a computational error, not a normalization to be absorbed. Re-examining the
-provisional backbones under this constraint exposes:
+The color word of every matter channel is $f_{ACD}f_{BCE}$ — **two** structure constants
+(HT T3/T5). A one-loop graph reaches two structure constants in two distinct ways, and
+**both** occur as different pieces of the same $\partial\!\cdot\!j_-$ insertion:
 
-- **(5J.4a) topology error in 5G.** Step-5G drew the $(\mathfrak b,\mathfrak c)$ graph as
-  a **box** (four internal lines, insertion $+$ **two** $V_2$ vertices, nodes
-  $x\!-\!w_1\!-\!y\!-\!w_2$). The correct object — matching both the owner's
-  "insertion $+$ **one** interaction vertex" and the HT triangle (letter pair at one
-  node, interaction data at the other two) — is a **triangle** (three internal lines,
-  insertion $+$ one $V_2$). The box carried an extra $(\sqrt2h/\hbar)(\hbar g^2)$ worth
-  of factors, so the 5G/5H backbone √2-powers are **unreliable** and must be recomputed
-  on the triangle. The *structure* results of 5G (collapse localization, output tensor
-  $\widetilde\lambda\widetilde\lambda$, flavor $\delta_{rs}$, $1/32\pi^2$) are unaffected;
-  the *rational coefficient* is withdrawn pending the triangle recomputation.
+- **(4a) colorless-insertion box.** The *kinetic* insertion piece $\mathcal I_6^{\rm kin}$
+  is a colour singlet; it builds $f_{ACD}f_{BCE}$ from **two** interaction vertices
+  $V_2$ — the box of 5G §4 (nodes $x\!-\!w_1\!-\!y\!-\!w_2$, four internal lines). Its
+  anomaly is the $\mu^2$-branch of the internal $\psi\widetilde\psi$-line collapse
+  (5G.7–5G.11).
+- **(4b) color-carrying-insertion triangle.** The *Yukawa/superpotential* insertion
+  pieces $\mathcal I_6^{Y},\mathcal I_7^{W}\propto c$ carry **one** structure constant;
+  combined with **one** vertex $V_2$ they give $f\!f$ on a **triangle** (three internal
+  lines) — the graphs of 5H.
 
-This is the concrete instance of the honesty caveat of the previous turn: the backbone
-numbers were provisional, and the dictionary derivation — by removing the freedom to hide
-behind normalization — is exactly what makes the error visible.
+These are **not** the same graph, and (E-ii) retracts the first draft's claim that the
+box was an "error corrected to a triangle." Neither 5G (box only) nor 5H (triangle only)
+is the complete channel: the honest one-loop coefficient is the **sum** of (4a) and (4b)
+(plus the classical-closure partners of each, which cancel). The owner's "one interaction
+vertex / all triangles" picture is the (4b) family; whether (4a) contributes independently
+or is a redundant description of the same physics (e.g. the box's collapse-"1" branch
+reducing it to a triangle configuration) is the open question — it must be settled by the
+full assembly, not by picking one topology. The *structure* results common to 5G/5H
+(collapse localization, output tensor $\widetilde\lambda\widetilde\lambda$, flavor
+$\delta_{rs}$, $1/32\pi^2$) stand; the *rational coefficient* is open until (4a)+(4b) are
+assembled together.
 
-## 5. Honest status of the cross-lock
+This is the concrete instance of the honesty caveat of the previous turn, sharpened by the
+adversarial pass: the backbone numbers were provisional; the dictionary derivation
+narrows the freedom, and the adversarial pass shows the graph set itself was not yet
+pinned.
 
-- **Locked (rigorous, sympy-verified):** unit field dictionary (component basis, §1);
-  overall differential normalization $\zeta_Q=\tfrac12$ (5J.6), which cross-locks the
-  common scale of all three channels and reproduces the review's $Q_0$-factor from first
-  principles. Phases/signs of the field ζ's (and of $\zeta_Q$) are **not** pinned by the
-  magnitude computation and sit in the global $\varsigma$ class.
-- **Not yet passed:** the *relative* one-loop factors ($c_3\!:\!c_4\!:\!c_5$) — the test
-  that the three channels collapse to a *single* $\kappa^2$ after the common $\zeta_Q$.
-  This requires the honest triangle coefficients, and the 5G box error (5J.4a) means the
-  current √2-powers cannot be used. The correct statement is: with the dictionary now
-  parameter-free, the relative-factor uniformity is a **clean prediction to be checked**
-  by the triangle recomputation — there is no longer any normalization freedom that could
-  make a mismatched computation "fit."
+## 5. Honest status of the cross-lock (post-adversarial)
 
-## 6. The next bounded step (delegated, now unambiguous)
+- **Locked (rigorous, sympy-verified within its scope):** the $\Phi$-multiplet field
+  dictionary is unit in the component basis (§1, restricted per E-i); the tree bracket
+  pins $\zeta_Q\zeta_\beta/\zeta_\gamma^2=\rho_{fc}/2$ (5J.5), giving the differential
+  normalization $\zeta_Q=\tfrac12$ under $\rho_{fc}=1$ (5J.6) — reproducing the review's
+  $Q_0$-factor. The sympy check verifies the factor-2 arithmetic; $\rho_{fc}=1$ and
+  $\gamma=\widetilde\phi$ are argued in prose (E-iii, A3), not machine-checked. Phases/signs
+  sit in the global $\varsigma$ class.
+- **Open:** (i) the $\mathcal W$-letter normalization $\zeta_b$ ($=1/\sqrt2$ per the
+  review, needs the propagator/twist derivation — E-i); (ii) the *relative* one-loop
+  factors $c_3\!:\!c_4\!:\!c_5$, which need the honest **full graph set** — boxes (4a) and
+  triangles (4b) assembled together (E-ii), not one topology chosen; (iii) $\rho_{fc}$ vs
+  the $\kappa$ normalization of the color word (E-iii, tied to the review's R.6-2). The
+  numeric cross-lock is **not yet passed**.
 
-Recompute the three executed channels' coefficients on the **triangle** topology
-(insertion $+$ one $V_2$), with the unit component dictionary and $\zeta_Q=\tfrac12$:
+## 6. The next bounded steps (delegated)
 
-- **W-J1**: the $(\mathfrak b_r,\mathfrak c^s)$ triangle → coefficient $c_3$; target
-  $\kappa^2 f_{ACD}f_{BCE}\,\widetilde\lambda\widetilde\lambda$ (HT T3).
-- **W-J2/J3**: $(\mathfrak b,\mathfrak b)$ and $(\mathfrak f,\mathfrak c)$ triangles →
-  $c_4,c_5$; check $c_3=c_4=c_5=\kappa^2$ after the common $\zeta_Q$ (the uniformity /
-  cross-lock verdict).
-- **W-J4**: propagate the corrected topology into 5G/5H (replace box by triangle
-  everywhere; the census, collapse, and tensor results stand).
+- **W-J0** (E-ii resolution, prerequisite): enumerate the **complete** one-loop graph set
+  of the $(\mathfrak b,\mathfrak c)$ channel — the colorless-kinetic-insertion boxes (4a)
+  **and** the color-carrying-insertion triangles (4b) — and settle whether they are
+  independent contributions or a redundant description (the box collapse-"1" branch vs the
+  triangle). Only then is the topology fixed.
+- **W-J1–J3**: with the graph set of W-J0, assemble $c_3,c_4,c_5$ using the unit
+  $\Phi$-dictionary, $\zeta_Q=\tfrac12$, and $\zeta_b$ from a propagator match; check
+  $c_3\!:\!c_4\!:\!c_5$ collapse to a single $\kappa^2 f_{ACD}f_{BCE}$ (HT T3/T4/T5) — the
+  uniformity verdict.
+- **W-J4** ($\zeta_b$, E-i): derive the $\mathcal W$-letter normalization from matching
+  the $\langle f_{++}f_{++}\rangle$ / $bc$ free two-point functions.
+- **W-J5** ($\rho_{fc}$, E-iii): pin the HT-$f$/project-$c$ ratio and the absolute
+  $\kappa$ from a channel where the color word is unambiguous.
 
-Only when W-J1–J3 return equal coefficients is the numeric reproduction of the HT
+Only when W-J0–J3 return equal coefficients is the numeric reproduction of the HT
 zero-shift table achieved for the matter channels; the gauge channels (T2/T6) and the
 tower then follow per Step-5H/5I.
