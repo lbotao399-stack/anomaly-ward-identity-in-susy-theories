@@ -361,9 +361,16 @@ calculation with no twist formalism input.
   identity, the $\tfrac1{32\pi^2}$ master integral, the $-2\epsilon$ trace, the full seed
   chain of §6, the 29/52 census (three routes), the factor-two adjudication and closed-form
   tower, the AB/BA $q$-covariance settlement.
-- **Adversarial census review:** an eight-sector find-a-missing-topology review with
-  three-lens refutation is recorded alongside this document; its verdict file is the
-  completeness certificate for the per-channel graph lists.
+- **Adversarial census review:** an eight-sector find-a-missing-topology review
+  (`proposals/step5-census-review-final-verdict-2026-07-16.md`) found **zero confirmed
+  omissions** across two runs; two sectors reproduced the committed parent-triangle census
+  independently. The seventeen raised candidates are all either disclosed-pending ghost/NK
+  presentation rows (the IR flags itself
+  `CONDITIONAL_FF_BARE_CUT_CHECKED__RENORMALIZED_MIXING_PENDING`), machine-artifact encoding,
+  or specific Wick routings bounded by the holomorphic-twist independence argument — none
+  affects an anomaly coefficient. Completeness of the graph census *for the coefficients* is
+  therefore certified; the pending items are presentation/artifact matters routed to the
+  follow-up obligation.
 - **Known scope boundaries (not defects):** fixed-representative quantization (D1) with the
   local-$\mathcal Y$ BV completion, Wess–Zumino/component equivalence, background-covariant
   gauge averaging, and the entire Lorentzian sector deferred as named obligations.
