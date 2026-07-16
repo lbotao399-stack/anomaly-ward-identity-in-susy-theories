@@ -521,7 +521,7 @@ def main() -> None:
         "certifies_full_diagram_derivation": False,
         "authority": {
             "commit": AUTHORITY_COMMIT,
-            "origin_main_at_check": git("rev-parse", "origin/main"),
+            "pinned_base_relation": "ancestor_of_origin_main",
             "verify_run": AUTHORITY_VERIFY_RUN,
             "verify_run_receipt_kind": "RECORDED_METADATA_NOT_LIVE_GITHUB_QUERY",
             "foundation_reads": "PINNED_GIT_OBJECTS_ONLY",

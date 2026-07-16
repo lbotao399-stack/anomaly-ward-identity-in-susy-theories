@@ -831,7 +831,7 @@ class RepositoryPolicyTest(unittest.TestCase):
             result["authority"],
             {
                 "commit": "00000f748fe4bdd1b5d122663cc1fb814faace66",
-                "origin_main_at_check": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+                "pinned_base_relation": "ancestor_of_origin_main",
                 "verify_run": 29306335742,
                 "verify_run_receipt_kind": "RECORDED_METADATA_NOT_LIVE_GITHUB_QUERY",
                 "foundation_reads": "PINNED_GIT_OBJECTS_ONLY",
@@ -862,7 +862,7 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertEqual(checks["rescaled_matter_propagator_sign"]["actual"], "1/16")
         self.assertEqual(checks["authority_exact_vector_momentum_rule"]["status"], "PASS")
         self.assertEqual(checks["authority_exact_matter_momentum_rule"]["status"], "PASS")
-        self.assertEqual(checks["authority_origin_main_pin"]["status"], "PASS")
+        self.assertEqual(checks["authority_pinned_base_is_ancestor_of_origin_main"]["status"], "PASS")
         self.assertEqual(checks["authority_step5a_receipt_status"]["status"], "PASS")
         self.assertEqual(checks["audit_authority_workflow_receipt_metadata"]["status"], "PASS")
         self.assertEqual(checks["audit_exact_rescaled_vector_rule"]["status"], "PASS")
