@@ -1,0 +1,43 @@
+{
+  "id": "AUDIT-CLAUDE-ALTERNATIVE-ROUTES-001",
+  "type": "CONTRACT_CHANGE",
+  "status": "ACCEPTED",
+  "owner_authorization": "2026-07-16 session: owner requested a strict Project-convention and notation audit of the new Claude Code results, with only claims that pass admitted to the authoritative paper.",
+  "outcome": "Audited the Claude heat-kernel, component/BRST/Noether, all-pairs, Majorana, and adversarial-census routes against the accepted Step-5 Schwinger-cut result. Admitted only the bounded heat-kernel lemma and the exact BC bottom projection; rejected the inconsistent typed heat generator, nonexistent ordinary component parent, incomplete Noether/Feynman-rule/all-pairs claims, wrong-branch Majorana canonicalization, and target-based census certificate; retained the final proposal's seventeen census candidates as OPEN without retracting the independently derived coefficient ledger.",
+  "allowed_inputs": [
+    "AUTHORITY.md",
+    "AGENTS.md",
+    "contracts/foundations/step-05-euclidean-n4-awi-one-loop.md",
+    "contracts/foundations/step-05a-component-bv-brst-primitive-supergraph-grammar.md",
+    "audits/step5-bc-full-family-raw-projection-exact.md",
+    "audits/step5-global-81-target-blind-orbit-ledger.json",
+    "proposals/heat-kernel-n4-one-loop-memo-2026-07-16.md",
+    "proposals/step5-census-review-addendum-2026-07-16.md",
+    "contracts/dictionaries/weinberg-srednicki-project-notation-dictionary.md",
+    "paper/awi-n4-one-loop.md"
+  ],
+  "nonauthoritative_challenge_handles": [
+    "d920487",
+    "cd132a8",
+    "11620ee",
+    "0983774"
+  ],
+  "forbidden_inputs": [
+    "Notion content",
+    "Notion fetch, search, page read, block read, or content readback",
+    "external chat conclusions as mathematical evidence",
+    "accepting any unmerged-branch claim without an independent derivation from the allowed Project inputs",
+    "silent field rephasing or replacement of Weinberg quantities and phases by a Srednicki branch",
+    "holomorphic-twist target agreement as a substitute for an internal target-blind absence proof"
+  ],
+  "acceptance": [
+    "derive the BC component coefficient exactly from the accepted superfield map and locked bottom-letter dictionary",
+    "derive the dotted-gaugino color symmetry and evanescent tensor integral without a skipped sign or factor",
+    "prove that the proposed ordinary two-Yukawa parent is absent in the locked propagator table",
+    "classify each heat-kernel, Noether, BRST/BV, all-pairs, and Majorana claim by its actual proved scope",
+    "preserve the Weinberg phase convention while allowing explicit Srednicki-style index placement",
+    "keep the final census proposal's seventeen unadjudicated candidates OPEN and separate that frontier from the accepted coefficient ledger",
+    "record every admitted or rejected conclusion in an equation-linked audit and the core paper",
+    "repository-policy passes after task and ledger rotation"
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "schema": 5,
+  "schema": 6,
   "direction": "GIT_TO_NOTION_ONLY",
   "content_readback_performed": false,
   "pages": [
@@ -206,28 +206,40 @@
     {
       "id": "PAPER-AWI-N4-ONE-LOOP-CORE-THEORY-001",
       "source": "paper/awi-n4-one-loop.md",
-      "source_commit": "f6f3531237176a9ac4579111fdcc72213a116578",
-      "source_sha256": "5d14395aa33d2a790d3c34fff26f253cf451ddc29ace76d20be7d9b9b753e9b6",
+      "source_commit": "d3d0ffdd4012d79c630d454c5211998541c66fda",
+      "source_sha256": "28a10afea877d668d0bd88294a5b465d8378cb48cb1070691b147fb36167a5d6",
       "page_id": "39fee2b7-4b3f-8137-9499-ef28fbce6569",
-      "mutation": "create_pages_then_replace_page_content",
-      "create_response": "succeeded",
+      "page_url": "https://app.notion.com/p/39fee2b74b3f81379499ef28fbce6569",
+      "mutation": "replace_page_content",
       "preserve_child_pages": true,
-      "archived_top_level_blocks": 0,
-      "appended_blocks": 244,
+      "archived_top_level_blocks": 244,
+      "appended_blocks": 291,
       "write_mode": "private",
-      "write_response": "succeeded"
+      "write_response": "succeeded",
+      "previous_write": {
+        "source_commit": "f6f3531237176a9ac4579111fdcc72213a116578",
+        "source_sha256": "5d14395aa33d2a790d3c34fff26f253cf451ddc29ace76d20be7d9b9b753e9b6",
+        "mutation": "create_pages_then_replace_page_content",
+        "create_response": "succeeded",
+        "archived_top_level_blocks": 0,
+        "appended_blocks": 244,
+        "write_mode": "private",
+        "write_response": "succeeded"
+      }
     }
   ],
   "central_log_write": {
     "page_id": "892f30b0-86d6-455f-9909-cec4f1cd8b6e",
     "mutation": "append_markdown",
-    "source_commit": "f6f3531237176a9ac4579111fdcc72213a116578",
-    "appended_blocks": 7,
+    "source_commit": "d3d0ffdd4012d79c630d454c5211998541c66fda",
+    "appended_blocks": 16,
+    "write_batches": [8, 5, 3],
     "write_mode": "private",
     "write_response": "succeeded",
     "content_readback_performed": false,
     "previous_write": {
-      "appended_blocks": 23,
+      "source_commit": "f6f3531237176a9ac4579111fdcc72213a116578",
+      "appended_blocks": 7,
       "write_mode": "private",
       "write_response": "succeeded",
       "content_readback_performed": false
@@ -239,5 +251,5 @@
     "page_id": "399ee2b7-4b3f-8158-9f75-f4a148e431fb",
     "published_at": "2026-07-10T23:46:35Z"
   },
-  "published_at": "2026-07-16T19:37:17Z"
+  "published_at": "2026-07-16T21:38:10Z"
 }
