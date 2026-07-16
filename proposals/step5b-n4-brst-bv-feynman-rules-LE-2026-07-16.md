@@ -155,11 +155,17 @@ as the third convention decision of the Step-5 program (the first two are D1, D2
 > $$
 >
 > **Lorentzian cycle**: the $\epsilon$-damped weight (3D.24) with a positive quadratic
-> $\mathscr Q_{L,\nu}$ selects the Feynman representative
-> $\Box_L^{-1}\mapsto-1/(p_L^2-i\varepsilon)$, $\varepsilon\downarrow0$.
-> This is a **proposed** resolution of `BLOCKED_STEP3D_LC_VECTOR_CYCLE` (5A.80) and
-> requires owner authorization; every Lorentzian momentum-space rule below carries it.
-> The Euclidean rules are cycle-free at this order and match the conditional (5A.74).
+> $\mathscr Q_{L,\nu}$ selects the standard Feynman representative
+> $\Box_L^{-1}\mapsto-1/(p_L^2-i\varepsilon)$, $\varepsilon\downarrow0$ — the ordinary
+> time-ordered prescription in mostly-plus signature, with loop integrals evaluated by
+> the standard Wick rotation onto the Euclidean rules. This is a routine convention
+> (owner 2026-07-16: no separate authorization needed), recorded here only because the
+> blocker token `BLOCKED_STEP3D_LC_VECTOR_CYCLE` (5A.80) formally points at it; the
+> token is closed by the mechanical `CONTRACT_CHANGE` that records this paragraph.
+> The **Euclidean** momentum-space rules involve **no contour choice at all**
+> ($p_E^2>0$ away from the origin): they are unique and match the conditional (5A.74).
+> The Euclidean branch is the program's critical path; the Lorentzian column of this
+> memo is completeness material, to be mechanically maintained.
 
 ## 2. Field content, action, gauge structure
 
@@ -690,17 +696,22 @@ For the one-loop letter program the needed set is closed and finite: (V1) cubic+
 
 ## 10. Decision ledger and blocker status
 
+Owner clarification (2026-07-16): none of the standing (5A.80) blockers is a
+coefficient-level physics problem; all are convention choices or over-strict acceptance
+clauses, to be closed by mechanical `CONTRACT_CHANGE` commits (delegated). The ledger:
+
 | decision | content | status |
 |---|---|---|
-| (5B.D1) | FF perturbative slice, both signatures; kernels (5B.10$'$) | extends seed (D1); owner-authorized 2026-07-16 for $E$; $L$ extension **requires authorization** |
-| (5B.D2) | NK external measure-only branch + irrelevance lemma, both signatures | extends seed (D2); lemma proven §5.3 |
-| (5B.D3) | Fourier ledger + Lorentzian Feynman cycle | **new; requires owner authorization**; resolves `BLOCKED_STEP3D_LC_VECTOR_CYCLE` for the perturbative slice if adopted |
+| (5B.D1) | FF perturbative slice, both signatures; kernels (5B.10$'$) | extends seed (D1); the Step-3D locality clause is an over-strict acceptance condition for the perturbative slice — scope it and close |
+| (5B.D2) | NK external measure-only branch + irrelevance lemma, both signatures | extends seed (D2); lemma proven §5.3 — mechanical to record |
+| (5B.D3) | Fourier ledger + standard Feynman/Wick-rotation prescription (L) | routine convention, no authorization ceremony; Euclidean branch has no contour freedom |
 
-Blocker book-keeping against (5A.80): `…PERTURBATIVE_SLICE_UNFIXED` → discharged by
-(5B.D1) upon authorization (both signatures); `…NK_BRANCH_UNSELECTED` → discharged by
-(5B.D2); `…FOURIER_DRED_LEDGER_UNFIXED` → Fourier half discharged by (5B.D3), DRED half
-remains with the settlement contract; `BLOCKED_STEP3D_LC_VECTOR_CYCLE` → resolution
-proposed by (5B.D3), Lorentzian nonperturbative cycle questions remain outside the slice.
+Blocker book-keeping against (5A.80): `…PERTURBATIVE_SLICE_UNFIXED` → closed by recording
+(5B.D1); `…NK_BRANCH_UNSELECTED` → closed by recording (5B.D2)+lemma;
+`…FOURIER_DRED_LEDGER_UNFIXED` → Fourier half closed by (5B.D3), the DRED half is not a
+blocker but the settlement computation itself; `BLOCKED_STEP3D_LC_VECTOR_CYCLE` →
+standard iε/Wick rotation, closed by recording (5B.D3); Lorentzian-only refinements are
+off the Euclidean critical path (delegated maintenance).
 
 ## 11. What remains deferred (unchanged from the seed memo)
 
