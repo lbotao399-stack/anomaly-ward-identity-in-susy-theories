@@ -1,0 +1,1327 @@
+{
+  "authority": {
+    "authority_base_commit": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+    "authority_verify_run": 29306335742,
+    "external_target_used": false,
+    "foundation_inputs": [
+      {
+        "git_object_commit": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+        "path": "AUTHORITY.md",
+        "sha256": "3970e8769fc21a5f41a1fa0d4e537b577f3d1d7b212bc6795819b37b6d58ae6f"
+      },
+      {
+        "git_object_commit": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+        "path": "AGENTS.md",
+        "sha256": "a8565eb09959193c273746ece9cb08dd4a5f18d644ea9bca0638ad7739cf8d46"
+      },
+      {
+        "git_object_commit": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+        "path": "tasks/CURRENT.yaml",
+        "sha256": "4ed8aa9957868233f4c1b7ff4a4c4ec02744c153ffd0d16e30f6e322042ba749"
+      },
+      {
+        "git_object_commit": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+        "path": "contracts/foundations/step-03c-gauge-vector-representation.md",
+        "sha256": "c4cc6f0504b79e02ce78030ad79b625bee6da7dff9de0f6a1ddc3b33ef2584a1"
+      },
+      {
+        "git_object_commit": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+        "path": "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md",
+        "sha256": "109e0c531da3a1b98313e87dd692fa3d9047c8f745291f8e87021008c7acc538"
+      },
+      {
+        "git_object_commit": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+        "path": "contracts/foundations/step-04-extended-sym-notation.md",
+        "sha256": "3fcf7e242928d3512c02059d8c28d9551b5cb86156f9d6259cd2bba713211d27"
+      },
+      {
+        "git_object_commit": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+        "path": "contracts/foundations/step-04c-n4-super-yang-mills.md",
+        "sha256": "fafc3bc2227b60ca699b3f953b632db82dafe093b221baa74736cc5fb838928f"
+      }
+    ],
+    "other_step5_artifact_used": false
+  },
+  "blockers": [
+    {
+      "id": "BLOCKED_OPEN_COLOR_SOURCE_BV_EXTENSION",
+      "minimal_missing_input": "A locked contragredient source J_DE, its antifield/source slots, and its subtraction conditions.",
+      "severity": "P0",
+      "why": "The ordered tensor O^(DE) is gauge-BRST covariant in Adj tensor Adj and is not BRST closed before source completion or invariant color contraction."
+    },
+    {
+      "id": "BLOCKED_DRED_EVANESCENT_OPERATOR_BASIS",
+      "minimal_missing_input": "A locked DRED continuation of every Step-5 field, composite insertion, EOM, BRST differential, and local projection, including the breve-index tensor grammar.",
+      "severity": "P0",
+      "why": "The allowed foundations contain no genuine breve-index local operator basis, so the number and normalization of evanescent rows are undefined."
+    },
+    {
+      "id": "BLOCKED_ONE_LOOP_COMPOSITE_Z_MATRIX",
+      "minimal_missing_input": "The bare source functional, endpoint/link/contact vertices, all one-loop insertion graphs, and a declared subtraction scheme.",
+      "severity": "P0",
+      "why": "Residual-q, SU(3), parity, dimension, and BRST covariance allow an arbitrary scalar z_ev_to_phys on the unique physical cocycle; none of those identities evaluates its pole residue."
+    },
+    {
+      "id": "BLOCKED_EOM_AND_TOTAL_DERIVATIVE_QUOTIENT",
+      "minimal_missing_input": "The Step-5 source representation and the admissible multiplier/current grammar for the Euler operators (4C.68)-(4C.68a).",
+      "severity": "P0",
+      "why": "The locked foundations define the Euler generators but do not select the multipliers R^i, open-color currents J^m, or the U primitive needed to enumerate the quotient at dimension 9/2."
+    }
+  ],
+  "counterterm_primitive_block": {
+    "SU3_decomposition": "3 + 3 + 3 + bar(6)",
+    "basis": [
+      "<D,PB_1>",
+      "<D,PB_2>",
+      "<D,PB_3>",
+      "<PC_1,PC_1>",
+      "<PC_1,PC_2>",
+      "<PC_1,PC_3>",
+      "<PC_2,PC_1>",
+      "<PC_2,PC_2>",
+      "<PC_2,PC_3>",
+      "<PC_3,PC_1>",
+      "<PC_3,PC_2>",
+      "<PC_3,PC_3>",
+      "<PB_1,D>",
+      "<PB_2,D>",
+      "<PB_3,D>"
+    ],
+    "basis_dimension": 15,
+    "covariant_ansatz": "Y_r=alpha<D,PB_r>+beta<PB_r,D>+gamma*epsilon_rst<PC_s,PC_t>",
+    "degree": 2,
+    "dimension": "4",
+    "exact_covariance": "q_s Y_r=i delta_sr Z",
+    "normalized_primitives": {
+      "1": [
+        {
+          "coefficient": "1",
+          "left_mask": 0,
+          "left_normalized_slot": "iD",
+          "right_mask": 6,
+          "right_normalized_slot": "-PB_1/sqrt(2)"
+        },
+        {
+          "coefficient": "-1",
+          "left_mask": 2,
+          "left_normalized_slot": "PC_2",
+          "right_mask": 4,
+          "right_normalized_slot": "PC_3"
+        },
+        {
+          "coefficient": "1",
+          "left_mask": 4,
+          "left_normalized_slot": "PC_3",
+          "right_mask": 2,
+          "right_normalized_slot": "PC_2"
+        },
+        {
+          "coefficient": "1",
+          "left_mask": 6,
+          "left_normalized_slot": "-PB_1/sqrt(2)",
+          "right_mask": 0,
+          "right_normalized_slot": "iD"
+        }
+      ],
+      "2": [
+        {
+          "coefficient": "-1",
+          "left_mask": 0,
+          "left_normalized_slot": "iD",
+          "right_mask": 5,
+          "right_normalized_slot": "+PB_2/sqrt(2)"
+        },
+        {
+          "coefficient": "1",
+          "left_mask": 1,
+          "left_normalized_slot": "PC_1",
+          "right_mask": 4,
+          "right_normalized_slot": "PC_3"
+        },
+        {
+          "coefficient": "-1",
+          "left_mask": 4,
+          "left_normalized_slot": "PC_3",
+          "right_mask": 1,
+          "right_normalized_slot": "PC_1"
+        },
+        {
+          "coefficient": "-1",
+          "left_mask": 5,
+          "left_normalized_slot": "+PB_2/sqrt(2)",
+          "right_mask": 0,
+          "right_normalized_slot": "iD"
+        }
+      ],
+      "3": [
+        {
+          "coefficient": "1",
+          "left_mask": 0,
+          "left_normalized_slot": "iD",
+          "right_mask": 3,
+          "right_normalized_slot": "-PB_3/sqrt(2)"
+        },
+        {
+          "coefficient": "-1",
+          "left_mask": 1,
+          "left_normalized_slot": "PC_1",
+          "right_mask": 2,
+          "right_normalized_slot": "PC_2"
+        },
+        {
+          "coefficient": "1",
+          "left_mask": 2,
+          "left_normalized_slot": "PC_2",
+          "right_mask": 1,
+          "right_normalized_slot": "PC_1"
+        },
+        {
+          "coefficient": "1",
+          "left_mask": 3,
+          "left_normalized_slot": "-PB_3/sqrt(2)",
+          "right_mask": 0,
+          "right_normalized_slot": "iD"
+        }
+      ]
+    },
+    "parity": 0,
+    "rref": {
+      "constraint_matrix": [
+        [
+          1,
+          0,
+          -1
+        ],
+        [
+          0,
+          1,
+          -1
+        ]
+      ],
+      "definition": "gamma=-i*sqrt(2)*eta",
+      "nullity": 1,
+      "rank": 2,
+      "solution": "alpha=beta=eta",
+      "variables": [
+        "alpha",
+        "beta",
+        "eta"
+      ]
+    },
+    "unique_triplet": "Y_r=<D,PB_r>+<PB_r,D>-i*sqrt(2)*epsilon_rst<PC_s,PC_t>"
+  },
+  "derivative_slot_chain": {
+    "normalized_exterior_map": [
+      "e_empty=iD",
+      "e_r=PC_r",
+      "e_12=-PB_3/sqrt(2)",
+      "e_13=+PB_2/sqrt(2)",
+      "e_23=-PB_1/sqrt(2)",
+      "e_123=+iPA/sqrt(2)"
+    ],
+    "physical_slots": [
+      {
+        "SU3": "1",
+        "dimension": "3/2",
+        "parity": 1,
+        "slot": "D_dot"
+      },
+      {
+        "SU3": "bar(3)",
+        "dimension": "2",
+        "parity": 0,
+        "slot": "P_dot C_r"
+      },
+      {
+        "SU3": "3",
+        "dimension": "5/2",
+        "parity": 1,
+        "slot": "P_dot B_r"
+      },
+      {
+        "SU3": "1",
+        "dimension": "3",
+        "parity": 0,
+        "slot": "P_dot A"
+      }
+    ],
+    "q_P_commutator": "q_r(P_dot_a X)-P_dot_a(q_r X)=(1/sqrt(2))*sigma^m_(+dot_a)*sigma_(m,+dot_b)*(tilde_psi_r^dot_b cross X)=0",
+    "q_action": [
+      "q_r D_dot=-i P_dot C_r",
+      "q_r(P_dot C_s)=-(1/sqrt(2))*epsilon_rst P_dot B_t",
+      "q_r(P_dot B_s)=-i delta_rs P_dot A",
+      "q_r(P_dot A)=0"
+    ]
+  },
+  "deterministic_digest": "e4faa19082459a740b15b257e26a50adfc4baa530cae50bb2c9181dd5c63351b",
+  "dimension_9_over_2_block": {
+    "SU3_decomposition": "4*1 + 2*8",
+    "basis": [
+      "<D,PA>",
+      "<PC_1,PB_1>",
+      "<PC_1,PB_2>",
+      "<PC_1,PB_3>",
+      "<PC_2,PB_1>",
+      "<PC_2,PB_2>",
+      "<PC_2,PB_3>",
+      "<PC_3,PB_1>",
+      "<PC_3,PB_2>",
+      "<PC_3,PB_3>",
+      "<PB_1,PC_1>",
+      "<PB_1,PC_2>",
+      "<PB_1,PC_3>",
+      "<PB_2,PC_1>",
+      "<PB_2,PC_2>",
+      "<PB_2,PC_3>",
+      "<PB_3,PC_1>",
+      "<PB_3,PC_2>",
+      "<PB_3,PC_3>",
+      "<PA,D>"
+    ],
+    "basis_dimension": 20,
+    "degree": 3,
+    "dimension": "9/2",
+    "ghost_number": 0,
+    "joint_q_kernel_dimension": 1,
+    "normalized_kernel_vector": [
+      {
+        "coefficient": "-1",
+        "left_mask": 0,
+        "left_normalized_slot": "iD",
+        "right_mask": 7,
+        "right_normalized_slot": "+iPA/sqrt(2)"
+      },
+      {
+        "coefficient": "1",
+        "left_mask": 1,
+        "left_normalized_slot": "PC_1",
+        "right_mask": 6,
+        "right_normalized_slot": "-PB_1/sqrt(2)"
+      },
+      {
+        "coefficient": "-1",
+        "left_mask": 2,
+        "left_normalized_slot": "PC_2",
+        "right_mask": 5,
+        "right_normalized_slot": "+PB_2/sqrt(2)"
+      },
+      {
+        "coefficient": "-1",
+        "left_mask": 3,
+        "left_normalized_slot": "-PB_3/sqrt(2)",
+        "right_mask": 4,
+        "right_normalized_slot": "PC_3"
+      },
+      {
+        "coefficient": "1",
+        "left_mask": 4,
+        "left_normalized_slot": "PC_3",
+        "right_mask": 3,
+        "right_normalized_slot": "-PB_3/sqrt(2)"
+      },
+      {
+        "coefficient": "1",
+        "left_mask": 5,
+        "left_normalized_slot": "+PB_2/sqrt(2)",
+        "right_mask": 2,
+        "right_normalized_slot": "PC_2"
+      },
+      {
+        "coefficient": "-1",
+        "left_mask": 6,
+        "left_normalized_slot": "-PB_1/sqrt(2)",
+        "right_mask": 1,
+        "right_normalized_slot": "PC_1"
+      },
+      {
+        "coefficient": "1",
+        "left_mask": 7,
+        "left_normalized_slot": "+iPA/sqrt(2)",
+        "right_mask": 0,
+        "right_normalized_slot": "iD"
+      }
+    ],
+    "ordered_color_type": "Adj_D tensor Adj_E",
+    "parity": 1,
+    "physical_cocycle": "Z^(DE)=<D,PA>-<PA,D>+sum_r[<PB_r,PC_r>-<PC_r,PB_r>]",
+    "singlet_basis": [
+      "<D,PA>",
+      "<PA,D>",
+      "sum_r<PB_r,PC_r>",
+      "sum_r<PC_r,PB_r>"
+    ]
+  },
+  "engine_id": "STEP5-LOCAL-OPERATOR-MIXING-TARGET-BLIND-001",
+  "extended_local_space": {
+    "BRST_exact_module": "{s K: [K]=9/2, parity(K)=0, gh(K)=-1, SU3(K)=1, same source/color type}",
+    "EOM_module": "span{A_E^m R_m, P_E,IJ R^IJ, Ptilde_E^IJ Rtilde_IJ, E_E,aI S^(aI), Etilde_E,dot_a^I Stilde_I^dot_a} at dimension 9/2, parity 1, ghost number 0, SU3 singlet, and the same source/color type",
+    "enumeration_status": "BLOCKED_BY_SOURCE_AND_DRED_GRAMMAR",
+    "evanescent_module": "{E_u: E_u restricted to breve_delta=0 is zero, [E_u]=9/2, parity=1, gh=0, SU3=1, same source/color type}",
+    "physical": "span{20 degree-three ordered bilinears}",
+    "total_derivative_module": "{partial_m J^m: [J]=7/2, parity(J)=1, gh(J)=0, SU3(J)=1, same source/color type}"
+  },
+  "koszul_joint_cohomology": {
+    "definition": "H_joint^n=(intersection_r ker q_r on V^n)/(image(q_1 q_2 q_3) from V^(n-3))",
+    "dimensions": [
+      {
+        "joint_kernel_dimension": 1,
+        "quotient_dimension": 0,
+        "target_degree": 3,
+        "triple_q_image_dimension": 1
+      },
+      {
+        "joint_kernel_dimension": 3,
+        "quotient_dimension": 0,
+        "target_degree": 4,
+        "triple_q_image_dimension": 3
+      },
+      {
+        "joint_kernel_dimension": 3,
+        "quotient_dimension": 0,
+        "target_degree": 5,
+        "triple_q_image_dimension": 3
+      },
+      {
+        "joint_kernel_dimension": 1,
+        "quotient_dimension": 0,
+        "target_degree": 6,
+        "triple_q_image_dimension": 1
+      }
+    ],
+    "result": "ZERO_IN_EVERY_DEGREE",
+    "scope": "Only the 64-dimensional derivative-slot open-color module; not the BV/EOM/total-derivative/DRED local cohomology."
+  },
+  "minimal_dred_ms_insertion_block": {
+    "MS_projection": {
+      "condition": "After a direct-sum basis and projector P_Z have been locked",
+      "counterterm_relation": "z_EO=-r_EZ",
+      "loop_pole_definition": "P_Z Res Gamma_JE,[2]^(1)=[hbar*g^2/(16*pi^2)] r_EZ int J Z",
+      "zero_condition": "z_EO=0 iff the complete projected pole r_EZ is exactly zero"
+    },
+    "bare_operator_rows": [
+      {
+        "id": "O_phys",
+        "operator": "Z^(DE)",
+        "status": "EXACT_FROM_RESIDUAL_Q_RREF"
+      },
+      {
+        "id": "E_trivial",
+        "operator": "(4-d) Z^(DE)=2*epsilon*Z^(DE)",
+        "status": "EXACT_BUT_NOT_A_GENUINE_BREVE_TENSOR_BASIS"
+      },
+      {
+        "id": "E_trace_precursor_u",
+        "operator": "E_tr,u=(4-d) E_u with E_u in the same typed pole-renormalized precursor module",
+        "status": "BLOCKED_DRED_EVANESCENT_OPERATOR_BASIS"
+      },
+      {
+        "id": "E_breve_u",
+        "operator": "basis of ker(pi_4) in the same typed local-source module",
+        "status": "BLOCKED_DRED_EVANESCENT_OPERATOR_BASIS"
+      },
+      {
+        "id": "N_EOM_N_BRST_N_TD",
+        "operator": "same-typed EOM, BRST-exact, and total-derivative rows",
+        "status": "BLOCKED_EOM_AND_TOTAL_DERIVATIVE_QUOTIENT"
+      }
+    ],
+    "bilocal_source": {
+      "functional": "S_J=int dx dy J_DE(x,y) O^(DE)(x,y)",
+      "operator": "O^(DE)(x,y)=H_X^D(x) U_ad(x,y)^E_F H_Y^F(y)",
+      "source_BRST": "sJ_DE= -J_FE rho(c(x))^F_D - J_DF rho(c(x))^F_E",
+      "status": "PROPOSED_STEP5_LOCK_REQUIRED"
+    },
+    "exhaustion_scope": "The four STr terms exhaust one-loop 1PI graphs linear in J and quadratic in backgrounds once K,V_n,I_E_n are fully derived; G5 is the separate subtraction tree.",
+    "hessian_notation": {
+      "G": "K^(-1)",
+      "I_E_n": "background-degree-n part of (J E)^(2)",
+      "K": "zero-background gauge-fixed BV Hessian",
+      "V_n": "background-degree-n part of S_Psi^(2)-K"
+    },
+    "numerical_status": "BLOCKED_ONE_LOOP_COMPOSITE_Z_MATRIX",
+    "one_loop_1PI_graph_classes": [
+      {
+        "content": "letter nonlinearity, covariant-derivative endpoint, straight-link, and source-contact vertices",
+        "id": "G1_INSERTION_CONTACT",
+        "term": "+STr[G I_E,2]"
+      },
+      {
+        "content": "one cubic action Hessian vertex and one one-background insertion/link vertex",
+        "id": "G2_MIXED_BUBBLE",
+        "term": "-STr[G V_1 G I_E,1]"
+      },
+      {
+        "content": "one quartic action/gauge-fixing/ghost Hessian vertex and the quadratic insertion",
+        "id": "G3_ACTION_CONTACT",
+        "term": "-STr[G V_2 G I_E,0]"
+      },
+      {
+        "content": "both loop orientations, all field blocks, and every graded supertrace sign",
+        "id": "G4_TRIANGLE",
+        "term": "+STr[G V_1 G V_1 G I_E,0]"
+      },
+      {
+        "content": "operator, elementary-field, coupling, EOM, BRST-exact, and total-derivative counterterm insertions",
+        "id": "G5_COUNTERTERM_TREE",
+        "term": "+J delta_E^(1)"
+      }
+    ],
+    "one_loop_linear_source_degree_two": "Gamma_JE,[2]^(1)=(hbar/2) STr[G I_E,2 - G V_1 G I_E,1 - G V_2 G I_E,0 + G V_1 G V_1 G I_E,0]",
+    "regulator": {
+      "d": "4-2*epsilon",
+      "metric_split": "delta_4=hat_delta+breve_delta",
+      "spin_algebra": "four-dimensional",
+      "subtraction": "MS: subtract every 1/epsilon pole and no finite term",
+      "traces": {
+        "breve_delta": "2*epsilon",
+        "hat_delta": "d"
+      }
+    },
+    "why_zero_is_not_a_prescription": [
+      "In MS, a nonzero r_EZ with z_EO=0 leaves an uncancelled 1/epsilon divergence.",
+      "A non-MS local counterterm proportional to the q-primitive Y_r changes the finite AWI representative because q_s Y_r=i delta_sr Z.",
+      "After that finite change, comparison to any external target requires a transformed operator dictionary in the same scheme; choosing the finite term from target agreement is circular."
+    ]
+  },
+  "one_loop_mixing": {
+    "DRED_factor": "4-d=2*epsilon",
+    "N4_finiteness_verdict": "NOT_AN_ALLOWED_LOCKED_THEOREM; EVEN_ACTION_FINITE_DATA_WOULD_NOT_EVALUATE_THIS_COMPOSITE_INSERTION_RESIDUE",
+    "Slavnov_verdict": "DOES_NOT_FIX_z_EO_BEFORE_SOURCE_BV_AND_REGULATED_QME_CLOSURE",
+    "computed_verdict": "FINITE_EVANESCENT_TO_PHYSICAL_MIXING_CANNOT_BE_EXCLUDED",
+    "finite_physical_term": "hbar*g^2*z_EO/(8*pi^2)*O^R",
+    "general_matrix": "(O^0,E^0)^T=[I+hbar*g^2/(16*pi^2*epsilon)*[[z_OO,z_OE],[z_EO,z_EE]]]*(O^R,E^R)^T",
+    "precursor_convention": "E denotes a same-typed pole-renormalized DRED precursor; the trace-evanescent insertion is E_tr=(4-d)E. E is not an already-projected genuine breve operator.",
+    "residual_q_verdict": "DOES_NOT_FIX_z_EO",
+    "symmetry_allowed_witness": "For O=Z and an evanescent copy E with identical typed q/BRST representation, z_EO=z is an arbitrary scalar intertwiner."
+  },
+  "ordered_open_color_space": {
+    "basis": [
+      {
+        "degree": 0,
+        "engineering_dimension": "6/2",
+        "ghost_number": 0,
+        "left_mask": 0,
+        "left_normalized_slot": "iD",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 0,
+        "right_normalized_slot": "iD"
+      },
+      {
+        "degree": 1,
+        "engineering_dimension": "7/2",
+        "ghost_number": 0,
+        "left_mask": 0,
+        "left_normalized_slot": "iD",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 1,
+        "right_normalized_slot": "PC_1"
+      },
+      {
+        "degree": 1,
+        "engineering_dimension": "7/2",
+        "ghost_number": 0,
+        "left_mask": 0,
+        "left_normalized_slot": "iD",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 2,
+        "right_normalized_slot": "PC_2"
+      },
+      {
+        "degree": 1,
+        "engineering_dimension": "7/2",
+        "ghost_number": 0,
+        "left_mask": 0,
+        "left_normalized_slot": "iD",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 4,
+        "right_normalized_slot": "PC_3"
+      },
+      {
+        "degree": 1,
+        "engineering_dimension": "7/2",
+        "ghost_number": 0,
+        "left_mask": 1,
+        "left_normalized_slot": "PC_1",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 0,
+        "right_normalized_slot": "iD"
+      },
+      {
+        "degree": 1,
+        "engineering_dimension": "7/2",
+        "ghost_number": 0,
+        "left_mask": 2,
+        "left_normalized_slot": "PC_2",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 0,
+        "right_normalized_slot": "iD"
+      },
+      {
+        "degree": 1,
+        "engineering_dimension": "7/2",
+        "ghost_number": 0,
+        "left_mask": 4,
+        "left_normalized_slot": "PC_3",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 0,
+        "right_normalized_slot": "iD"
+      },
+      {
+        "degree": 2,
+        "engineering_dimension": "8/2",
+        "ghost_number": 0,
+        "left_mask": 0,
+        "left_normalized_slot": "iD",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 3,
+        "right_normalized_slot": "-PB_3/sqrt(2)"
+      },
+      {
+        "degree": 2,
+        "engineering_dimension": "8/2",
+        "ghost_number": 0,
+        "left_mask": 0,
+        "left_normalized_slot": "iD",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 5,
+        "right_normalized_slot": "+PB_2/sqrt(2)"
+      },
+      {
+        "degree": 2,
+        "engineering_dimension": "8/2",
+        "ghost_number": 0,
+        "left_mask": 0,
+        "left_normalized_slot": "iD",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 6,
+        "right_normalized_slot": "-PB_1/sqrt(2)"
+      },
+      {
+        "degree": 2,
+        "engineering_dimension": "8/2",
+        "ghost_number": 0,
+        "left_mask": 1,
+        "left_normalized_slot": "PC_1",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 1,
+        "right_normalized_slot": "PC_1"
+      },
+      {
+        "degree": 2,
+        "engineering_dimension": "8/2",
+        "ghost_number": 0,
+        "left_mask": 1,
+        "left_normalized_slot": "PC_1",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 2,
+        "right_normalized_slot": "PC_2"
+      },
+      {
+        "degree": 2,
+        "engineering_dimension": "8/2",
+        "ghost_number": 0,
+        "left_mask": 1,
+        "left_normalized_slot": "PC_1",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 4,
+        "right_normalized_slot": "PC_3"
+      },
+      {
+        "degree": 2,
+        "engineering_dimension": "8/2",
+        "ghost_number": 0,
+        "left_mask": 2,
+        "left_normalized_slot": "PC_2",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 1,
+        "right_normalized_slot": "PC_1"
+      },
+      {
+        "degree": 2,
+        "engineering_dimension": "8/2",
+        "ghost_number": 0,
+        "left_mask": 2,
+        "left_normalized_slot": "PC_2",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 2,
+        "right_normalized_slot": "PC_2"
+      },
+      {
+        "degree": 2,
+        "engineering_dimension": "8/2",
+        "ghost_number": 0,
+        "left_mask": 2,
+        "left_normalized_slot": "PC_2",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 4,
+        "right_normalized_slot": "PC_3"
+      },
+      {
+        "degree": 2,
+        "engineering_dimension": "8/2",
+        "ghost_number": 0,
+        "left_mask": 3,
+        "left_normalized_slot": "-PB_3/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 0,
+        "right_normalized_slot": "iD"
+      },
+      {
+        "degree": 2,
+        "engineering_dimension": "8/2",
+        "ghost_number": 0,
+        "left_mask": 4,
+        "left_normalized_slot": "PC_3",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 1,
+        "right_normalized_slot": "PC_1"
+      },
+      {
+        "degree": 2,
+        "engineering_dimension": "8/2",
+        "ghost_number": 0,
+        "left_mask": 4,
+        "left_normalized_slot": "PC_3",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 2,
+        "right_normalized_slot": "PC_2"
+      },
+      {
+        "degree": 2,
+        "engineering_dimension": "8/2",
+        "ghost_number": 0,
+        "left_mask": 4,
+        "left_normalized_slot": "PC_3",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 4,
+        "right_normalized_slot": "PC_3"
+      },
+      {
+        "degree": 2,
+        "engineering_dimension": "8/2",
+        "ghost_number": 0,
+        "left_mask": 5,
+        "left_normalized_slot": "+PB_2/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 0,
+        "right_normalized_slot": "iD"
+      },
+      {
+        "degree": 2,
+        "engineering_dimension": "8/2",
+        "ghost_number": 0,
+        "left_mask": 6,
+        "left_normalized_slot": "-PB_1/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 0,
+        "right_normalized_slot": "iD"
+      },
+      {
+        "degree": 3,
+        "engineering_dimension": "9/2",
+        "ghost_number": 0,
+        "left_mask": 0,
+        "left_normalized_slot": "iD",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 7,
+        "right_normalized_slot": "+iPA/sqrt(2)"
+      },
+      {
+        "degree": 3,
+        "engineering_dimension": "9/2",
+        "ghost_number": 0,
+        "left_mask": 1,
+        "left_normalized_slot": "PC_1",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 3,
+        "right_normalized_slot": "-PB_3/sqrt(2)"
+      },
+      {
+        "degree": 3,
+        "engineering_dimension": "9/2",
+        "ghost_number": 0,
+        "left_mask": 1,
+        "left_normalized_slot": "PC_1",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 5,
+        "right_normalized_slot": "+PB_2/sqrt(2)"
+      },
+      {
+        "degree": 3,
+        "engineering_dimension": "9/2",
+        "ghost_number": 0,
+        "left_mask": 1,
+        "left_normalized_slot": "PC_1",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 6,
+        "right_normalized_slot": "-PB_1/sqrt(2)"
+      },
+      {
+        "degree": 3,
+        "engineering_dimension": "9/2",
+        "ghost_number": 0,
+        "left_mask": 2,
+        "left_normalized_slot": "PC_2",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 3,
+        "right_normalized_slot": "-PB_3/sqrt(2)"
+      },
+      {
+        "degree": 3,
+        "engineering_dimension": "9/2",
+        "ghost_number": 0,
+        "left_mask": 2,
+        "left_normalized_slot": "PC_2",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 5,
+        "right_normalized_slot": "+PB_2/sqrt(2)"
+      },
+      {
+        "degree": 3,
+        "engineering_dimension": "9/2",
+        "ghost_number": 0,
+        "left_mask": 2,
+        "left_normalized_slot": "PC_2",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 6,
+        "right_normalized_slot": "-PB_1/sqrt(2)"
+      },
+      {
+        "degree": 3,
+        "engineering_dimension": "9/2",
+        "ghost_number": 0,
+        "left_mask": 3,
+        "left_normalized_slot": "-PB_3/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 1,
+        "right_normalized_slot": "PC_1"
+      },
+      {
+        "degree": 3,
+        "engineering_dimension": "9/2",
+        "ghost_number": 0,
+        "left_mask": 3,
+        "left_normalized_slot": "-PB_3/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 2,
+        "right_normalized_slot": "PC_2"
+      },
+      {
+        "degree": 3,
+        "engineering_dimension": "9/2",
+        "ghost_number": 0,
+        "left_mask": 3,
+        "left_normalized_slot": "-PB_3/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 4,
+        "right_normalized_slot": "PC_3"
+      },
+      {
+        "degree": 3,
+        "engineering_dimension": "9/2",
+        "ghost_number": 0,
+        "left_mask": 4,
+        "left_normalized_slot": "PC_3",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 3,
+        "right_normalized_slot": "-PB_3/sqrt(2)"
+      },
+      {
+        "degree": 3,
+        "engineering_dimension": "9/2",
+        "ghost_number": 0,
+        "left_mask": 4,
+        "left_normalized_slot": "PC_3",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 5,
+        "right_normalized_slot": "+PB_2/sqrt(2)"
+      },
+      {
+        "degree": 3,
+        "engineering_dimension": "9/2",
+        "ghost_number": 0,
+        "left_mask": 4,
+        "left_normalized_slot": "PC_3",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 6,
+        "right_normalized_slot": "-PB_1/sqrt(2)"
+      },
+      {
+        "degree": 3,
+        "engineering_dimension": "9/2",
+        "ghost_number": 0,
+        "left_mask": 5,
+        "left_normalized_slot": "+PB_2/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 1,
+        "right_normalized_slot": "PC_1"
+      },
+      {
+        "degree": 3,
+        "engineering_dimension": "9/2",
+        "ghost_number": 0,
+        "left_mask": 5,
+        "left_normalized_slot": "+PB_2/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 2,
+        "right_normalized_slot": "PC_2"
+      },
+      {
+        "degree": 3,
+        "engineering_dimension": "9/2",
+        "ghost_number": 0,
+        "left_mask": 5,
+        "left_normalized_slot": "+PB_2/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 4,
+        "right_normalized_slot": "PC_3"
+      },
+      {
+        "degree": 3,
+        "engineering_dimension": "9/2",
+        "ghost_number": 0,
+        "left_mask": 6,
+        "left_normalized_slot": "-PB_1/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 1,
+        "right_normalized_slot": "PC_1"
+      },
+      {
+        "degree": 3,
+        "engineering_dimension": "9/2",
+        "ghost_number": 0,
+        "left_mask": 6,
+        "left_normalized_slot": "-PB_1/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 2,
+        "right_normalized_slot": "PC_2"
+      },
+      {
+        "degree": 3,
+        "engineering_dimension": "9/2",
+        "ghost_number": 0,
+        "left_mask": 6,
+        "left_normalized_slot": "-PB_1/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 4,
+        "right_normalized_slot": "PC_3"
+      },
+      {
+        "degree": 3,
+        "engineering_dimension": "9/2",
+        "ghost_number": 0,
+        "left_mask": 7,
+        "left_normalized_slot": "+iPA/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 0,
+        "right_normalized_slot": "iD"
+      },
+      {
+        "degree": 4,
+        "engineering_dimension": "10/2",
+        "ghost_number": 0,
+        "left_mask": 1,
+        "left_normalized_slot": "PC_1",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 7,
+        "right_normalized_slot": "+iPA/sqrt(2)"
+      },
+      {
+        "degree": 4,
+        "engineering_dimension": "10/2",
+        "ghost_number": 0,
+        "left_mask": 2,
+        "left_normalized_slot": "PC_2",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 7,
+        "right_normalized_slot": "+iPA/sqrt(2)"
+      },
+      {
+        "degree": 4,
+        "engineering_dimension": "10/2",
+        "ghost_number": 0,
+        "left_mask": 3,
+        "left_normalized_slot": "-PB_3/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 3,
+        "right_normalized_slot": "-PB_3/sqrt(2)"
+      },
+      {
+        "degree": 4,
+        "engineering_dimension": "10/2",
+        "ghost_number": 0,
+        "left_mask": 3,
+        "left_normalized_slot": "-PB_3/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 5,
+        "right_normalized_slot": "+PB_2/sqrt(2)"
+      },
+      {
+        "degree": 4,
+        "engineering_dimension": "10/2",
+        "ghost_number": 0,
+        "left_mask": 3,
+        "left_normalized_slot": "-PB_3/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 6,
+        "right_normalized_slot": "-PB_1/sqrt(2)"
+      },
+      {
+        "degree": 4,
+        "engineering_dimension": "10/2",
+        "ghost_number": 0,
+        "left_mask": 4,
+        "left_normalized_slot": "PC_3",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 7,
+        "right_normalized_slot": "+iPA/sqrt(2)"
+      },
+      {
+        "degree": 4,
+        "engineering_dimension": "10/2",
+        "ghost_number": 0,
+        "left_mask": 5,
+        "left_normalized_slot": "+PB_2/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 3,
+        "right_normalized_slot": "-PB_3/sqrt(2)"
+      },
+      {
+        "degree": 4,
+        "engineering_dimension": "10/2",
+        "ghost_number": 0,
+        "left_mask": 5,
+        "left_normalized_slot": "+PB_2/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 5,
+        "right_normalized_slot": "+PB_2/sqrt(2)"
+      },
+      {
+        "degree": 4,
+        "engineering_dimension": "10/2",
+        "ghost_number": 0,
+        "left_mask": 5,
+        "left_normalized_slot": "+PB_2/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 6,
+        "right_normalized_slot": "-PB_1/sqrt(2)"
+      },
+      {
+        "degree": 4,
+        "engineering_dimension": "10/2",
+        "ghost_number": 0,
+        "left_mask": 6,
+        "left_normalized_slot": "-PB_1/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 3,
+        "right_normalized_slot": "-PB_3/sqrt(2)"
+      },
+      {
+        "degree": 4,
+        "engineering_dimension": "10/2",
+        "ghost_number": 0,
+        "left_mask": 6,
+        "left_normalized_slot": "-PB_1/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 5,
+        "right_normalized_slot": "+PB_2/sqrt(2)"
+      },
+      {
+        "degree": 4,
+        "engineering_dimension": "10/2",
+        "ghost_number": 0,
+        "left_mask": 6,
+        "left_normalized_slot": "-PB_1/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 6,
+        "right_normalized_slot": "-PB_1/sqrt(2)"
+      },
+      {
+        "degree": 4,
+        "engineering_dimension": "10/2",
+        "ghost_number": 0,
+        "left_mask": 7,
+        "left_normalized_slot": "+iPA/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 1,
+        "right_normalized_slot": "PC_1"
+      },
+      {
+        "degree": 4,
+        "engineering_dimension": "10/2",
+        "ghost_number": 0,
+        "left_mask": 7,
+        "left_normalized_slot": "+iPA/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 2,
+        "right_normalized_slot": "PC_2"
+      },
+      {
+        "degree": 4,
+        "engineering_dimension": "10/2",
+        "ghost_number": 0,
+        "left_mask": 7,
+        "left_normalized_slot": "+iPA/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 4,
+        "right_normalized_slot": "PC_3"
+      },
+      {
+        "degree": 5,
+        "engineering_dimension": "11/2",
+        "ghost_number": 0,
+        "left_mask": 3,
+        "left_normalized_slot": "-PB_3/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 7,
+        "right_normalized_slot": "+iPA/sqrt(2)"
+      },
+      {
+        "degree": 5,
+        "engineering_dimension": "11/2",
+        "ghost_number": 0,
+        "left_mask": 5,
+        "left_normalized_slot": "+PB_2/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 7,
+        "right_normalized_slot": "+iPA/sqrt(2)"
+      },
+      {
+        "degree": 5,
+        "engineering_dimension": "11/2",
+        "ghost_number": 0,
+        "left_mask": 6,
+        "left_normalized_slot": "-PB_1/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 7,
+        "right_normalized_slot": "+iPA/sqrt(2)"
+      },
+      {
+        "degree": 5,
+        "engineering_dimension": "11/2",
+        "ghost_number": 0,
+        "left_mask": 7,
+        "left_normalized_slot": "+iPA/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 3,
+        "right_normalized_slot": "-PB_3/sqrt(2)"
+      },
+      {
+        "degree": 5,
+        "engineering_dimension": "11/2",
+        "ghost_number": 0,
+        "left_mask": 7,
+        "left_normalized_slot": "+iPA/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 5,
+        "right_normalized_slot": "+PB_2/sqrt(2)"
+      },
+      {
+        "degree": 5,
+        "engineering_dimension": "11/2",
+        "ghost_number": 0,
+        "left_mask": 7,
+        "left_normalized_slot": "+iPA/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 1,
+        "right_mask": 6,
+        "right_normalized_slot": "-PB_1/sqrt(2)"
+      },
+      {
+        "degree": 6,
+        "engineering_dimension": "12/2",
+        "ghost_number": 0,
+        "left_mask": 7,
+        "left_normalized_slot": "+iPA/sqrt(2)",
+        "ordered_color_type": "Adj_D tensor Adj_E",
+        "parity": 0,
+        "right_mask": 7,
+        "right_normalized_slot": "+iPA/sqrt(2)"
+      }
+    ],
+    "definition": "O_XY^(DE)=H_X,dot_a^D H_Y^(E,dot_a), with D,E retained in order",
+    "dimension": 64,
+    "q_complex_rref": [
+      {
+        "degree": 0,
+        "domain_dimension": 1,
+        "engineering_dimension": "6/2",
+        "joint_kernel_dimension": 0,
+        "parity": 0,
+        "rank": 1,
+        "stacked_row_count": 18
+      },
+      {
+        "degree": 1,
+        "domain_dimension": 6,
+        "engineering_dimension": "7/2",
+        "joint_kernel_dimension": 0,
+        "parity": 1,
+        "rank": 6,
+        "stacked_row_count": 45
+      },
+      {
+        "degree": 2,
+        "domain_dimension": 15,
+        "engineering_dimension": "8/2",
+        "joint_kernel_dimension": 0,
+        "parity": 0,
+        "rank": 15,
+        "stacked_row_count": 60
+      },
+      {
+        "degree": 3,
+        "domain_dimension": 20,
+        "engineering_dimension": "9/2",
+        "joint_kernel_dimension": 1,
+        "parity": 1,
+        "rank": 19,
+        "stacked_row_count": 45
+      },
+      {
+        "degree": 4,
+        "domain_dimension": 15,
+        "engineering_dimension": "10/2",
+        "joint_kernel_dimension": 3,
+        "parity": 0,
+        "rank": 12,
+        "stacked_row_count": 18
+      },
+      {
+        "degree": 5,
+        "domain_dimension": 6,
+        "engineering_dimension": "11/2",
+        "joint_kernel_dimension": 3,
+        "parity": 1,
+        "rank": 3,
+        "stacked_row_count": 3
+      },
+      {
+        "degree": 6,
+        "domain_dimension": 1,
+        "engineering_dimension": "12/2",
+        "joint_kernel_dimension": 1,
+        "parity": 0,
+        "rank": 0,
+        "stacked_row_count": 0
+      }
+    ]
+  },
+  "schema": "awi.step5.local-operator-mixing.v1",
+  "status": "BLOCKED",
+  "tests": [
+    {
+      "id": "T01_RESIDUAL_Q_NILPOTENCY_64",
+      "pass": true
+    },
+    {
+      "id": "T02_RESIDUAL_Q_ANTICOMMUTATIVITY_64",
+      "pass": true
+    },
+    {
+      "id": "T03_HOMOGENEOUS_DIMENSIONS",
+      "pass": true
+    },
+    {
+      "id": "T04_DEGREE_THREE_RREF",
+      "pass": true
+    },
+    {
+      "id": "T05_PHYSICAL_COCYCLE_VECTOR",
+      "pass": true
+    },
+    {
+      "id": "T06_KOSZUL_JOINT_QUOTIENT",
+      "pass": true
+    },
+    {
+      "id": "T07_UNIQUE_TRIPLET_PRIMITIVE_RREF",
+      "pass": true
+    },
+    {
+      "id": "T08_PRIMITIVE_COVARIANCE_9_CASES",
+      "pass": true
+    },
+    {
+      "id": "T09_COCYCLE_SIGN_MUTATION_DETECTED",
+      "pass": true
+    },
+    {
+      "id": "T10_FINITE_EVANESCENT_FACTOR",
+      "observed": "2*epsilon*[hbar*g^2*z/(16*pi^2*epsilon)]=hbar*g^2*z/(8*pi^2)",
+      "pass": true
+    },
+    {
+      "id": "T11_ONE_LOOP_RESOLVENT_GRAPH_COEFFICIENTS",
+      "observed": {
+        "G*I_2": 1,
+        "G*V_1*G*I_1": -1,
+        "G*V_1*G*V_1*G*I_0": 1,
+        "G*V_2*G*I_0": -1
+      },
+      "pass": true
+    }
+  ]
+}

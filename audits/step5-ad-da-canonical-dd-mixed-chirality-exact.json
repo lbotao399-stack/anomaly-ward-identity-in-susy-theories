@@ -1,0 +1,452 @@
+{
+  "checks": {
+    "count": 38,
+    "failed": 0,
+    "passed": 38,
+    "rows": [
+      {
+        "actual": "('I', 'V_tildeW', 'V_W')",
+        "expected": "('I', 'V_tildeW', 'V_W')",
+        "id": "A__Ddot1_VERTICES",
+        "status": "PASS"
+      },
+      {
+        "actual": "('D>D', 'D>D')",
+        "expected": "('D>D', 'D>D')",
+        "id": "A__Ddot1_OUTPUTS",
+        "status": "PASS"
+      },
+      {
+        "actual": "(1/2!)*(1+1)=1",
+        "expected": "(1/2!)*(1+1)=1",
+        "id": "A__Ddot1_WICK_WEIGHT",
+        "status": "PASS"
+      },
+      {
+        "actual": "hat_delta^{mn}",
+        "expected": "hat_delta^{mn}",
+        "id": "A__Ddot1_TRIANGLE_METRIC",
+        "status": "PASS"
+      },
+      {
+        "actual": "delta_4^{mn}",
+        "expected": "delta_4^{mn}",
+        "id": "A__Ddot1_CONTACT_METRIC",
+        "status": "PASS"
+      },
+      {
+        "actual": "('I', 'V_tildeW', 'V_W')",
+        "expected": "('I', 'V_tildeW', 'V_W')",
+        "id": "Ddot1__A_VERTICES",
+        "status": "PASS"
+      },
+      {
+        "actual": "('D>D', 'D>D')",
+        "expected": "('D>D', 'D>D')",
+        "id": "Ddot1__A_OUTPUTS",
+        "status": "PASS"
+      },
+      {
+        "actual": "(1/2!)*(1+1)=1",
+        "expected": "(1/2!)*(1+1)=1",
+        "id": "Ddot1__A_WICK_WEIGHT",
+        "status": "PASS"
+      },
+      {
+        "actual": "hat_delta^{mn}",
+        "expected": "hat_delta^{mn}",
+        "id": "Ddot1__A_TRIANGLE_METRIC",
+        "status": "PASS"
+      },
+      {
+        "actual": "delta_4^{mn}",
+        "expected": "delta_4^{mn}",
+        "id": "Ddot1__A_CONTACT_METRIC",
+        "status": "PASS"
+      },
+      {
+        "actual": "{'I0_N0[A]*D1[B]': A(a=Fraction(0, 1), b=Fraction(0, 1), c=Fraction(1, 4), d=Fraction(0, 1))}",
+        "expected": "{'I0_N0[A]*D1[B]': A(a=Fraction(0, 1), b=Fraction(0, 1), c=Fraction(1, 4), d=Fraction(0, 1))}",
+        "id": "AD_SOURCE_HESSIAN",
+        "status": "PASS"
+      },
+      {
+        "actual": "{'I0_-D1[A]*N0[B]': A(a=Fraction(1, 4), b=Fraction(0, 1), c=Fraction(0, 1), d=Fraction(0, 1))}",
+        "expected": "{'I0_-D1[A]*N0[B]': A(a=Fraction(1, 4), b=Fraction(0, 1), c=Fraction(0, 1), d=Fraction(0, 1))}",
+        "id": "DA_SOURCE_HESSIAN",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "LABELED_HESSIAN_FACTOR",
+        "status": "PASS"
+      },
+      {
+        "actual": "9 + 3*I",
+        "expected": "9 + 3*I",
+        "id": "INTERPOLATION_DETERMINANT",
+        "status": "PASS"
+      },
+      {
+        "actual": "(I/16, I/16, I/32)",
+        "expected": "(I/16, I/16, I/32)",
+        "id": "A__Ddot1_RANK_ONE",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "A__Ddot1_HELD_OUT",
+        "status": "PASS"
+      },
+      {
+        "actual": "(-I/16, 0, 0)",
+        "expected": "(-I/16, 0, 0)",
+        "id": "Ddot1__A_RANK_ONE",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "Ddot1__A_HELD_OUT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/8*sqrt(2)",
+        "expected": "-1/8*sqrt(2)",
+        "id": "LEFT_D_PREIMAGE",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/8*sqrt(2)",
+        "expected": "-1/8*sqrt(2)",
+        "id": "RIGHT_D_PREIMAGE",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/32",
+        "expected": "1/32",
+        "id": "D_PREIMAGE_PRODUCT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2",
+        "expected": "-2",
+        "id": "COLOR_F_01_10",
+        "status": "PASS"
+      },
+      {
+        "actual": "-16",
+        "expected": "-16",
+        "id": "RAW_TO_COMPONENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "FIXED_GRAPH_WEIGHT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/2",
+        "expected": "1/2",
+        "id": "MASTER_OVER_LAMBDA1",
+        "status": "PASS"
+      },
+      {
+        "actual": "-8",
+        "expected": "-8",
+        "id": "RAW_INTEGRATED_TO_LAMBDA1",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FULL_D_SCHWINGER_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-8*Q_omega_e*mu_l2/(P_hat_e*r_ed2)",
+        "expected": "-8*Q_omega_e*mu_l2/(P_hat_e*r_ed2)",
+        "id": "DRED_CUT_FAILURE",
+        "status": "PASS"
+      },
+      {
+        "actual": "3",
+        "expected": "3",
+        "id": "CONTACT_EDGE_COUNT_AD",
+        "status": "PASS"
+      },
+      {
+        "actual": "3",
+        "expected": "3",
+        "id": "CONTACT_EDGE_COUNT_DA",
+        "status": "PASS"
+      },
+      {
+        "actual": "I/48",
+        "expected": "I/48",
+        "id": "AD_SIMPLEX_P",
+        "status": "PASS"
+      },
+      {
+        "actual": "I/96",
+        "expected": "I/96",
+        "id": "AD_SIMPLEX_Q",
+        "status": "PASS"
+      },
+      {
+        "actual": "I/24",
+        "expected": "I/24",
+        "id": "DA_SIMPLEX_P",
+        "status": "PASS"
+      },
+      {
+        "actual": "I/48",
+        "expected": "I/48",
+        "id": "DA_SIMPLEX_Q",
+        "status": "PASS"
+      },
+      {
+        "actual": "I/12",
+        "expected": "I/12",
+        "id": "AD_KLEFT",
+        "status": "PASS"
+      },
+      {
+        "actual": "I/6",
+        "expected": "I/6",
+        "id": "AD_KRIGHT",
+        "status": "PASS"
+      },
+      {
+        "actual": "I/3",
+        "expected": "I/3",
+        "id": "DA_KLEFT",
+        "status": "PASS"
+      },
+      {
+        "actual": "I/6",
+        "expected": "I/6",
+        "id": "DA_KRIGHT",
+        "status": "PASS"
+      }
+    ]
+  },
+  "chirality_and_raw_numerator": {
+    "A__Ddot1": {
+      "all_action_chirality_aggregates": {
+        "++": [
+          "1/4 + 5/16*i",
+          "1/16 + 1/8*i",
+          "1/32 + 3/16*i",
+          "1/32 - 1/16*i"
+        ],
+        "+-": [
+          "1/4 + 5/16*i",
+          "1/16 + 1/8*i",
+          "1/32 + 3/16*i",
+          "1/32 - 1/16*i"
+        ],
+        "-+": [
+          "1/4 + 5/16*i",
+          "1/16 + 1/8*i",
+          "1/32 + 3/16*i",
+          "1/32 - 1/16*i"
+        ],
+        "--": [
+          "1/4 + 5/16*i",
+          "1/16 + 1/8*i",
+          "1/32 + 3/16*i",
+          "1/32 - 1/16*i"
+        ]
+      },
+      "canonical_chirality": "-+",
+      "exact_aggregate_frames": [
+        "1/4 + 5/16*i",
+        "1/16 + 1/8*i",
+        "1/32 + 3/16*i",
+        "1/32 - 1/16*i"
+      ],
+      "held_out_frame_residual": "0",
+      "raw_mu2_rank_one": {
+        "ell_plus_dotted": "I/16",
+        "p_plus_dotted": "I/16",
+        "q_plus_dotted": "I/32"
+      }
+    },
+    "Ddot1__A": {
+      "all_action_chirality_aggregates": {
+        "++": [
+          "-3/16 - 1/4*i",
+          "-1/16*i",
+          "1/8 - 3/16*i",
+          "-1/16 + 1/8*i"
+        ],
+        "+-": [
+          "-3/16 - 1/4*i",
+          "-1/16*i",
+          "1/8 - 3/16*i",
+          "-1/16 + 1/8*i"
+        ],
+        "-+": [
+          "-3/16 - 1/4*i",
+          "-1/16*i",
+          "1/8 - 3/16*i",
+          "-1/16 + 1/8*i"
+        ],
+        "--": [
+          "-3/16 - 1/4*i",
+          "-1/16*i",
+          "1/8 - 3/16*i",
+          "-1/16 + 1/8*i"
+        ]
+      },
+      "canonical_chirality": "-+",
+      "exact_aggregate_frames": [
+        "-3/16 - 1/4*i",
+        "-1/16*i",
+        "1/8 - 3/16*i",
+        "-1/16 + 1/8*i"
+      ],
+      "held_out_frame_residual": "0",
+      "raw_mu2_rank_one": {
+        "ell_plus_dotted": "-I/16",
+        "p_plus_dotted": "0",
+        "q_plus_dotted": "0"
+      }
+    }
+  },
+  "external_target_used": false,
+  "finite_vector": {
+    "absolute_vector_over_lambda1": {
+      "AD": {
+        "k_left": "i/12",
+        "k_right": "i/6"
+      },
+      "DA": {
+        "k_left": "i/3",
+        "k_right": "i/6"
+      }
+    },
+    "mu2_master": "integral mu_l^2/P3=1/(32*pi^2)",
+    "ordered_momentum_maps": {
+      "AD": "k_L=q; k_R=-(p+q)",
+      "DA": "k_L=-(p+q); k_R=q"
+    },
+    "rank_one_moment": "ell -> -(2*p+q)/3",
+    "raw_integrated_bracket": {
+      "AD": {
+        "p": "i/48",
+        "q": "i/96"
+      },
+      "DA": {
+        "p": "i/24",
+        "q": "i/48"
+      }
+    }
+  },
+  "graph_ir": {
+    "A__Ddot1": {
+      "canonical_component_parent": "S_g^-|D x S_g^+|D",
+      "contact_graph_id": "CUT-ORBIT-026::A__Ddot1::0::CUT_CONTACT",
+      "cut_metric": "delta_4^{mn}",
+      "fixed_ordered_wick_weight": "(1/2!)*(1+1)=1",
+      "physical_outputs": [
+        "D>D",
+        "D>D"
+      ],
+      "triangle_graph_id": "CUT-ORBIT-026::A__Ddot1::0::TRIANGLE",
+      "triangle_metric": "hat_delta^{mn}",
+      "vertices": [
+        "I",
+        "V_tildeW",
+        "V_W"
+      ]
+    },
+    "Ddot1__A": {
+      "canonical_component_parent": "S_g^-|D x S_g^+|D",
+      "contact_graph_id": "CUT-ORBIT-064::Ddot1__A::0::CUT_CONTACT",
+      "cut_metric": "delta_4^{mn}",
+      "fixed_ordered_wick_weight": "(1/2!)*(1+1)=1",
+      "physical_outputs": [
+        "D>D",
+        "D>D"
+      ],
+      "triangle_graph_id": "CUT-ORBIT-064::Ddot1__A::0::TRIANGLE",
+      "triangle_metric": "hat_delta^{mn}",
+      "vertices": [
+        "I",
+        "V_tildeW",
+        "V_W"
+      ]
+    }
+  },
+  "normalization": {
+    "SU2_F_01_10": "-2",
+    "external_D_left": "-sqrt(2)/8",
+    "external_D_product": "1/32",
+    "external_D_right": "-sqrt(2)/8",
+    "fixed_ordered_wick_weight": "1",
+    "lambda1": "hbar*g^2/(16*pi^2)",
+    "master_over_lambda1": "1/2",
+    "raw_integrated_to_lambda1": "-8",
+    "raw_to_component": "-16"
+  },
+  "rejection": {
+    "invalid_momentum_maps": [
+      "(q,-p-q)",
+      "(-p-q,q)"
+    ],
+    "omitted_source_hessian": "crossed F^{BA}_{DE}"
+  },
+  "result": {
+    "AD_dot_a": null,
+    "DA_dot_a": null,
+    "derivation_status": "REJECTED_IMPORTED_OUTPUT_ROUTING_AND_DIRECT_ONLY_HESSIAN"
+  },
+  "schema": "step5-ad-da-canonical-dd-mixed-chirality-exact-v1",
+  "schwinger_quotient": {
+    "contact_interpretation": "These are denominator-preserving cut members. They are not standalone anomaly-zero diagrams and are not added again after the parent-minus-cut remainder is formed.",
+    "dred": "-8*Q_omega_e*mu_l^2/P3",
+    "edges": {
+      "e0": "P_hat_e=D1*D2",
+      "e1": "P_hat_e=D0*D2",
+      "e2": "P_hat_e=D0*D1"
+    },
+    "full_d": "-8*Q_omega_e*[r_(e,d)^2/P3-1/P_hat_e]=0",
+    "source_identity": {
+      "gauge_fixing": "+(1/2)*H_omega_e/P3",
+      "longitudinal": "-8*Q_omega_e*bar(r_e)^2/P3-(1/2)*H_omega_e/P3",
+      "same_edge_cut": "+8*Q_omega_e/P_hat_e"
+    },
+    "typed_contact_members": {
+      "A__Ddot1": {
+        "e0__O05": "7*i*q_plus/(D1*D2)",
+        "e1__O06": "0/(D0*D2)",
+        "e2__O05": "2*i*q_plus/(D0*D1)"
+      },
+      "Ddot1__A": {
+        "e0__O05": "-i*q_plus/(2*D1*D2)",
+        "e1__O06": "i*(p+q)_plus/(D0*D2)",
+        "e2__O05": "i*(p+q)_plus/(D0*D1)"
+      }
+    }
+  },
+  "source_hessian": {
+    "direct_components": {
+      "AD": "i/4",
+      "DA": "1/4"
+    },
+    "extra_factor_two": false,
+    "functional_factor": "1!*1!=1",
+    "unit_ordered_insertions": {
+      "AD": "N0^A*D1^B",
+      "DA": "-D1^A*N0^B"
+    }
+  },
+  "status": "REJECTED_OUTPUT_ROUTING_AND_CROSSED_HESSIAN_OMISSION",
+  "superseded_by": "audits/step5-ad-da-ordered-ports-crossed-hessian-exact.json",
+  "supersedes_only": "The rejected v1 DD-port artifact's S_g^- x S_g^- interpretation. The direct source Hessian is unchanged; the canonical parent is S_g^-|D x S_g^+|D."
+}

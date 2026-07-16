@@ -1,0 +1,106 @@
+{
+  "adjudication": {
+    "ht_branches_missing_complete_amplitude_factor_two": "master triangle differential operator + generic shifted formulas + Appendix B",
+    "project_kernel": "2*sum_{k,l} binom(m,k)binom(n,l)/((m+n+2)(k+l+1))",
+    "project_kernel_prefactor": "retain the leading factor 2 in K^P_mn",
+    "reason": "the target-blind Project denominator identity contributes Gamma(3)=2 and 2*Vol(Delta2)=1",
+    "scope": "global HT normalization only; relative Project letter-family discrepancies remain independent",
+    "selected_for_complete_project_comparison": "zero-shift component display + compact display"
+  },
+  "checks": [
+    {
+      "actual": "True",
+      "expected": "True",
+      "id": "HTF2-01-master-triangle-half",
+      "pass": true
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "id": "HTF2-02-Dtri00-half",
+      "pass": true
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "id": "HTF2-03-appendix-Cmn",
+      "pass": true
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "id": "HTF2-04-shifted-pair-anchor",
+      "pass": true
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "id": "HTF2-05-component-pair-anchor",
+      "pass": true
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "id": "HTF2-06-compact-anchor",
+      "pass": true
+    },
+    {
+      "actual": "1/2",
+      "expected": "1/2",
+      "id": "HTF2-07-master-equals-Dtri",
+      "pass": true
+    },
+    {
+      "actual": "1/2",
+      "expected": "1/2",
+      "id": "HTF2-08-appendix-m0n0",
+      "pass": true
+    },
+    {
+      "actual": "1/2",
+      "expected": "1/2",
+      "id": "HTF2-09-shifted-equals-appendix",
+      "pass": true
+    },
+    {
+      "actual": "2",
+      "expected": "2",
+      "id": "HTF2-10-component-over-shifted",
+      "pass": true
+    },
+    {
+      "actual": "2",
+      "expected": "2",
+      "id": "HTF2-11-compact-over-shifted",
+      "pass": true
+    },
+    {
+      "actual": "1",
+      "expected": "1",
+      "id": "HTF2-12-project-feynman-kernel",
+      "pass": true
+    },
+    {
+      "actual": "1/2",
+      "expected": "1/2",
+      "id": "HTF2-13-dropping-gamma3-gives-half",
+      "pass": true
+    }
+  ],
+  "external_project_coefficient_used": false,
+  "schema": "step5-ht-zero-shift-factor-two-adjudication-v1",
+  "source": "references/vendor/arxiv/2512.07771v2/source/main.tex",
+  "status": "SOURCE_INTERNAL_FACTOR_TWO_PROVED__PROJECT_FEYNMAN_AND_COMPONENT_BRANCH_SELECTED",
+  "summary": {
+    "passed": 13,
+    "total": 13
+  },
+  "values": {
+    "Dtri_00": "1/2",
+    "appendix_C00": "1/2",
+    "compact_component_display": "1",
+    "display_over_integral_ratio": "2",
+    "master_triangle_zero_shift": "1/2",
+    "zero_shift_component_display": "1"
+  }
+}

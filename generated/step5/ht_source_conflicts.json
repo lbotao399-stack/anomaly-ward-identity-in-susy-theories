@@ -1,0 +1,53 @@
+{
+  "authority_role": "EXTERNAL_TARGET_ONLY",
+  "conflicts": [
+    {
+      "algebraic_compatibility_condition": "kappa_H^2=1/4",
+      "branches": [
+        {
+          "coefficient": "-1/4",
+          "id": "COMPACT_INTRO_BRANCH"
+        },
+        {
+          "coefficient": "-kappa_H^2",
+          "id": "COMPACT_MAIN_BRANCH"
+        }
+      ],
+      "id": "HT-NORM-CONFLICT-COMPACT-Q1-COEFFICIENT",
+      "project_selection": null,
+      "source_anchors": [
+        "HT-INTRO-N4-COMPACT-Q1",
+        "HT-N4-COMPACT-SUPERFIELD-RESULT",
+        "HT-LIE-NORMALIZATION"
+      ],
+      "status": "UNRESOLVED_IN_SOURCE"
+    },
+    {
+      "algebraic_discrepancy": "kappa_H^2-kappa_H^2/2=kappa_H^2/2",
+      "branches": [
+        {
+          "bilinear_coefficient": "kappa_H^2",
+          "id": "PRINTED_ZERO_COMPONENT_BRANCH"
+        },
+        {
+          "bilinear_coefficient": "kappa_H^2/2",
+          "id": "SHIFTED_DTRI_ZERO_BRANCH"
+        },
+        {
+          "bilinear_coefficient": "kappa_H^2/2",
+          "id": "DERIVATIVE_TOWER_M0_N0_BRANCH"
+        }
+      ],
+      "id": "HT-NORM-CONFLICT-ZERO-SHIFT-FACTOR-TWO",
+      "project_selection": null,
+      "source_anchors": [
+        "HT-PAIR-RULE-AND-DTRI-KERNEL",
+        "HT-N4-COMPONENT-PAIR-RESULTS",
+        "HT-N4-DERIVATIVE-COMPONENT-PAIR-RESULTS"
+      ],
+      "status": "UNRESOLVED_IN_SOURCE"
+    }
+  ],
+  "resolution_status": "UNRESOLVED_PROJECT_DERIVATION_REQUIRED",
+  "schema": 1
+}

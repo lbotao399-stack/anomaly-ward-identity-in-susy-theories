@@ -1,0 +1,1131 @@
+{
+  "coefficient_status": "CONDITIONAL_FF_AGGREGATE_BARE_POLE",
+  "cut_orbit_count": 66,
+  "graph_object_count": 132,
+  "orbits": [
+    {
+      "channel": "A__A",
+      "compact_output": "A>U",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-000::A__A::A>U::CUT_CONTACT": "CUT-ORBIT-000::A__A::A>U::TRIANGLE",
+        "CUT-ORBIT-000::A__A::A>U::TRIANGLE": "CUT-ORBIT-000::A__A::A>U::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-000::A__A::A>U",
+      "members": [
+        "CUT-ORBIT-000::A__A::A>U::TRIANGLE",
+        "CUT-ORBIT-000::A__A::A>U::CUT_CONTACT"
+      ],
+      "pair_id": "A__A",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "A__A",
+      "compact_output": "B1>C1",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-001::A__A::B1>C1::CUT_CONTACT": "CUT-ORBIT-001::A__A::B1>C1::TRIANGLE",
+        "CUT-ORBIT-001::A__A::B1>C1::TRIANGLE": "CUT-ORBIT-001::A__A::B1>C1::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-001::A__A::B1>C1",
+      "members": [
+        "CUT-ORBIT-001::A__A::B1>C1::TRIANGLE",
+        "CUT-ORBIT-001::A__A::B1>C1::CUT_CONTACT"
+      ],
+      "pair_id": "A__A",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "A__A",
+      "compact_output": "B2>C2",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-002::A__A::B2>C2::CUT_CONTACT": "CUT-ORBIT-002::A__A::B2>C2::TRIANGLE",
+        "CUT-ORBIT-002::A__A::B2>C2::TRIANGLE": "CUT-ORBIT-002::A__A::B2>C2::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-002::A__A::B2>C2",
+      "members": [
+        "CUT-ORBIT-002::A__A::B2>C2::TRIANGLE",
+        "CUT-ORBIT-002::A__A::B2>C2::CUT_CONTACT"
+      ],
+      "pair_id": "A__A",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "A__A",
+      "compact_output": "B3>C3",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-003::A__A::B3>C3::CUT_CONTACT": "CUT-ORBIT-003::A__A::B3>C3::TRIANGLE",
+        "CUT-ORBIT-003::A__A::B3>C3::TRIANGLE": "CUT-ORBIT-003::A__A::B3>C3::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-003::A__A::B3>C3",
+      "members": [
+        "CUT-ORBIT-003::A__A::B3>C3::TRIANGLE",
+        "CUT-ORBIT-003::A__A::B3>C3::CUT_CONTACT"
+      ],
+      "pair_id": "A__A",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "A__A",
+      "compact_output": "C1>B1",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-004::A__A::C1>B1::CUT_CONTACT": "CUT-ORBIT-004::A__A::C1>B1::TRIANGLE",
+        "CUT-ORBIT-004::A__A::C1>B1::TRIANGLE": "CUT-ORBIT-004::A__A::C1>B1::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-004::A__A::C1>B1",
+      "members": [
+        "CUT-ORBIT-004::A__A::C1>B1::TRIANGLE",
+        "CUT-ORBIT-004::A__A::C1>B1::CUT_CONTACT"
+      ],
+      "pair_id": "A__A",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "A__A",
+      "compact_output": "C2>B2",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-005::A__A::C2>B2::CUT_CONTACT": "CUT-ORBIT-005::A__A::C2>B2::TRIANGLE",
+        "CUT-ORBIT-005::A__A::C2>B2::TRIANGLE": "CUT-ORBIT-005::A__A::C2>B2::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-005::A__A::C2>B2",
+      "members": [
+        "CUT-ORBIT-005::A__A::C2>B2::TRIANGLE",
+        "CUT-ORBIT-005::A__A::C2>B2::CUT_CONTACT"
+      ],
+      "pair_id": "A__A",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "A__A",
+      "compact_output": "C3>B3",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-006::A__A::C3>B3::CUT_CONTACT": "CUT-ORBIT-006::A__A::C3>B3::TRIANGLE",
+        "CUT-ORBIT-006::A__A::C3>B3::TRIANGLE": "CUT-ORBIT-006::A__A::C3>B3::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-006::A__A::C3>B3",
+      "members": [
+        "CUT-ORBIT-006::A__A::C3>B3::TRIANGLE",
+        "CUT-ORBIT-006::A__A::C3>B3::CUT_CONTACT"
+      ],
+      "pair_id": "A__A",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "A__A",
+      "compact_output": "U>A",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-007::A__A::U>A::CUT_CONTACT": "CUT-ORBIT-007::A__A::U>A::TRIANGLE",
+        "CUT-ORBIT-007::A__A::U>A::TRIANGLE": "CUT-ORBIT-007::A__A::U>A::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-007::A__A::U>A",
+      "members": [
+        "CUT-ORBIT-007::A__A::U>A::TRIANGLE",
+        "CUT-ORBIT-007::A__A::U>A::CUT_CONTACT"
+      ],
+      "pair_id": "A__A",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "B1>U",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-008::A__B1::B1>U::CUT_CONTACT": "CUT-ORBIT-008::A__B1::B1>U::TRIANGLE",
+        "CUT-ORBIT-008::A__B1::B1>U::TRIANGLE": "CUT-ORBIT-008::A__B1::B1>U::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-008::A__B1::B1>U",
+      "members": [
+        "CUT-ORBIT-008::A__B1::B1>U::TRIANGLE",
+        "CUT-ORBIT-008::A__B1::B1>U::CUT_CONTACT"
+      ],
+      "pair_id": "A__B1",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "C2>C3",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-009::A__B1::C2>C3::CUT_CONTACT": "CUT-ORBIT-009::A__B1::C2>C3::TRIANGLE",
+        "CUT-ORBIT-009::A__B1::C2>C3::TRIANGLE": "CUT-ORBIT-009::A__B1::C2>C3::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-009::A__B1::C2>C3",
+      "members": [
+        "CUT-ORBIT-009::A__B1::C2>C3::TRIANGLE",
+        "CUT-ORBIT-009::A__B1::C2>C3::CUT_CONTACT"
+      ],
+      "pair_id": "A__B1",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "C3>C2",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-010::A__B1::C3>C2::CUT_CONTACT": "CUT-ORBIT-010::A__B1::C3>C2::TRIANGLE",
+        "CUT-ORBIT-010::A__B1::C3>C2::TRIANGLE": "CUT-ORBIT-010::A__B1::C3>C2::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-010::A__B1::C3>C2",
+      "members": [
+        "CUT-ORBIT-010::A__B1::C3>C2::TRIANGLE",
+        "CUT-ORBIT-010::A__B1::C3>C2::CUT_CONTACT"
+      ],
+      "pair_id": "A__B1",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "U>B1",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-011::A__B1::U>B1::CUT_CONTACT": "CUT-ORBIT-011::A__B1::U>B1::TRIANGLE",
+        "CUT-ORBIT-011::A__B1::U>B1::TRIANGLE": "CUT-ORBIT-011::A__B1::U>B1::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-011::A__B1::U>B1",
+      "members": [
+        "CUT-ORBIT-011::A__B1::U>B1::TRIANGLE",
+        "CUT-ORBIT-011::A__B1::U>B1::CUT_CONTACT"
+      ],
+      "pair_id": "A__B1",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "B2>U",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-012::A__B2::B2>U::CUT_CONTACT": "CUT-ORBIT-012::A__B2::B2>U::TRIANGLE",
+        "CUT-ORBIT-012::A__B2::B2>U::TRIANGLE": "CUT-ORBIT-012::A__B2::B2>U::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-012::A__B2::B2>U",
+      "members": [
+        "CUT-ORBIT-012::A__B2::B2>U::TRIANGLE",
+        "CUT-ORBIT-012::A__B2::B2>U::CUT_CONTACT"
+      ],
+      "pair_id": "A__B2",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "C1>C3",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-013::A__B2::C1>C3::CUT_CONTACT": "CUT-ORBIT-013::A__B2::C1>C3::TRIANGLE",
+        "CUT-ORBIT-013::A__B2::C1>C3::TRIANGLE": "CUT-ORBIT-013::A__B2::C1>C3::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-013::A__B2::C1>C3",
+      "members": [
+        "CUT-ORBIT-013::A__B2::C1>C3::TRIANGLE",
+        "CUT-ORBIT-013::A__B2::C1>C3::CUT_CONTACT"
+      ],
+      "pair_id": "A__B2",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "C3>C1",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-014::A__B2::C3>C1::CUT_CONTACT": "CUT-ORBIT-014::A__B2::C3>C1::TRIANGLE",
+        "CUT-ORBIT-014::A__B2::C3>C1::TRIANGLE": "CUT-ORBIT-014::A__B2::C3>C1::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-014::A__B2::C3>C1",
+      "members": [
+        "CUT-ORBIT-014::A__B2::C3>C1::TRIANGLE",
+        "CUT-ORBIT-014::A__B2::C3>C1::CUT_CONTACT"
+      ],
+      "pair_id": "A__B2",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "U>B2",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-015::A__B2::U>B2::CUT_CONTACT": "CUT-ORBIT-015::A__B2::U>B2::TRIANGLE",
+        "CUT-ORBIT-015::A__B2::U>B2::TRIANGLE": "CUT-ORBIT-015::A__B2::U>B2::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-015::A__B2::U>B2",
+      "members": [
+        "CUT-ORBIT-015::A__B2::U>B2::TRIANGLE",
+        "CUT-ORBIT-015::A__B2::U>B2::CUT_CONTACT"
+      ],
+      "pair_id": "A__B2",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "B3>U",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-016::A__B3::B3>U::CUT_CONTACT": "CUT-ORBIT-016::A__B3::B3>U::TRIANGLE",
+        "CUT-ORBIT-016::A__B3::B3>U::TRIANGLE": "CUT-ORBIT-016::A__B3::B3>U::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-016::A__B3::B3>U",
+      "members": [
+        "CUT-ORBIT-016::A__B3::B3>U::TRIANGLE",
+        "CUT-ORBIT-016::A__B3::B3>U::CUT_CONTACT"
+      ],
+      "pair_id": "A__B3",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "C1>C2",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-017::A__B3::C1>C2::CUT_CONTACT": "CUT-ORBIT-017::A__B3::C1>C2::TRIANGLE",
+        "CUT-ORBIT-017::A__B3::C1>C2::TRIANGLE": "CUT-ORBIT-017::A__B3::C1>C2::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-017::A__B3::C1>C2",
+      "members": [
+        "CUT-ORBIT-017::A__B3::C1>C2::TRIANGLE",
+        "CUT-ORBIT-017::A__B3::C1>C2::CUT_CONTACT"
+      ],
+      "pair_id": "A__B3",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "C2>C1",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-018::A__B3::C2>C1::CUT_CONTACT": "CUT-ORBIT-018::A__B3::C2>C1::TRIANGLE",
+        "CUT-ORBIT-018::A__B3::C2>C1::TRIANGLE": "CUT-ORBIT-018::A__B3::C2>C1::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-018::A__B3::C2>C1",
+      "members": [
+        "CUT-ORBIT-018::A__B3::C2>C1::TRIANGLE",
+        "CUT-ORBIT-018::A__B3::C2>C1::CUT_CONTACT"
+      ],
+      "pair_id": "A__B3",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "A__B",
+      "compact_output": "U>B3",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-019::A__B3::U>B3::CUT_CONTACT": "CUT-ORBIT-019::A__B3::U>B3::TRIANGLE",
+        "CUT-ORBIT-019::A__B3::U>B3::TRIANGLE": "CUT-ORBIT-019::A__B3::U>B3::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-019::A__B3::U>B3",
+      "members": [
+        "CUT-ORBIT-019::A__B3::U>B3::TRIANGLE",
+        "CUT-ORBIT-019::A__B3::U>B3::CUT_CONTACT"
+      ],
+      "pair_id": "A__B3",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "A__C",
+      "compact_output": "C1>U",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-020::A__C1::C1>U::CUT_CONTACT": "CUT-ORBIT-020::A__C1::C1>U::TRIANGLE",
+        "CUT-ORBIT-020::A__C1::C1>U::TRIANGLE": "CUT-ORBIT-020::A__C1::C1>U::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-020::A__C1::C1>U",
+      "members": [
+        "CUT-ORBIT-020::A__C1::C1>U::TRIANGLE",
+        "CUT-ORBIT-020::A__C1::C1>U::CUT_CONTACT"
+      ],
+      "pair_id": "A__C1",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "A__C",
+      "compact_output": "U>C1",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-021::A__C1::U>C1::CUT_CONTACT": "CUT-ORBIT-021::A__C1::U>C1::TRIANGLE",
+        "CUT-ORBIT-021::A__C1::U>C1::TRIANGLE": "CUT-ORBIT-021::A__C1::U>C1::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-021::A__C1::U>C1",
+      "members": [
+        "CUT-ORBIT-021::A__C1::U>C1::TRIANGLE",
+        "CUT-ORBIT-021::A__C1::U>C1::CUT_CONTACT"
+      ],
+      "pair_id": "A__C1",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "A__C",
+      "compact_output": "C2>U",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-022::A__C2::C2>U::CUT_CONTACT": "CUT-ORBIT-022::A__C2::C2>U::TRIANGLE",
+        "CUT-ORBIT-022::A__C2::C2>U::TRIANGLE": "CUT-ORBIT-022::A__C2::C2>U::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-022::A__C2::C2>U",
+      "members": [
+        "CUT-ORBIT-022::A__C2::C2>U::TRIANGLE",
+        "CUT-ORBIT-022::A__C2::C2>U::CUT_CONTACT"
+      ],
+      "pair_id": "A__C2",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "A__C",
+      "compact_output": "U>C2",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-023::A__C2::U>C2::CUT_CONTACT": "CUT-ORBIT-023::A__C2::U>C2::TRIANGLE",
+        "CUT-ORBIT-023::A__C2::U>C2::TRIANGLE": "CUT-ORBIT-023::A__C2::U>C2::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-023::A__C2::U>C2",
+      "members": [
+        "CUT-ORBIT-023::A__C2::U>C2::TRIANGLE",
+        "CUT-ORBIT-023::A__C2::U>C2::CUT_CONTACT"
+      ],
+      "pair_id": "A__C2",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "A__C",
+      "compact_output": "C3>U",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-024::A__C3::C3>U::CUT_CONTACT": "CUT-ORBIT-024::A__C3::C3>U::TRIANGLE",
+        "CUT-ORBIT-024::A__C3::C3>U::TRIANGLE": "CUT-ORBIT-024::A__C3::C3>U::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-024::A__C3::C3>U",
+      "members": [
+        "CUT-ORBIT-024::A__C3::C3>U::TRIANGLE",
+        "CUT-ORBIT-024::A__C3::C3>U::CUT_CONTACT"
+      ],
+      "pair_id": "A__C3",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "A__C",
+      "compact_output": "U>C3",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-025::A__C3::U>C3::CUT_CONTACT": "CUT-ORBIT-025::A__C3::U>C3::TRIANGLE",
+        "CUT-ORBIT-025::A__C3::U>C3::TRIANGLE": "CUT-ORBIT-025::A__C3::U>C3::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-025::A__C3::U>C3",
+      "members": [
+        "CUT-ORBIT-025::A__C3::U>C3::TRIANGLE",
+        "CUT-ORBIT-025::A__C3::U>C3::CUT_CONTACT"
+      ],
+      "pair_id": "A__C3",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "A__D",
+      "compact_output": "U>U",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-026::A__Ddot1::U>U::CUT_CONTACT": "CUT-ORBIT-026::A__Ddot1::U>U::TRIANGLE",
+        "CUT-ORBIT-026::A__Ddot1::U>U::TRIANGLE": "CUT-ORBIT-026::A__Ddot1::U>U::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-026::A__Ddot1::U>U",
+      "members": [
+        "CUT-ORBIT-026::A__Ddot1::U>U::TRIANGLE",
+        "CUT-ORBIT-026::A__Ddot1::U>U::CUT_CONTACT"
+      ],
+      "pair_id": "A__Ddot1",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "A__D",
+      "compact_output": "U>U",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-027::A__Ddot2::U>U::CUT_CONTACT": "CUT-ORBIT-027::A__Ddot2::U>U::TRIANGLE",
+        "CUT-ORBIT-027::A__Ddot2::U>U::TRIANGLE": "CUT-ORBIT-027::A__Ddot2::U>U::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-027::A__Ddot2::U>U",
+      "members": [
+        "CUT-ORBIT-027::A__Ddot2::U>U::TRIANGLE",
+        "CUT-ORBIT-027::A__Ddot2::U>U::CUT_CONTACT"
+      ],
+      "pair_id": "A__Ddot2",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "B1>U",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-028::B1__A::B1>U::CUT_CONTACT": "CUT-ORBIT-028::B1__A::B1>U::TRIANGLE",
+        "CUT-ORBIT-028::B1__A::B1>U::TRIANGLE": "CUT-ORBIT-028::B1__A::B1>U::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-028::B1__A::B1>U",
+      "members": [
+        "CUT-ORBIT-028::B1__A::B1>U::TRIANGLE",
+        "CUT-ORBIT-028::B1__A::B1>U::CUT_CONTACT"
+      ],
+      "pair_id": "B1__A",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "C2>C3",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-029::B1__A::C2>C3::CUT_CONTACT": "CUT-ORBIT-029::B1__A::C2>C3::TRIANGLE",
+        "CUT-ORBIT-029::B1__A::C2>C3::TRIANGLE": "CUT-ORBIT-029::B1__A::C2>C3::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-029::B1__A::C2>C3",
+      "members": [
+        "CUT-ORBIT-029::B1__A::C2>C3::TRIANGLE",
+        "CUT-ORBIT-029::B1__A::C2>C3::CUT_CONTACT"
+      ],
+      "pair_id": "B1__A",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "C3>C2",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-030::B1__A::C3>C2::CUT_CONTACT": "CUT-ORBIT-030::B1__A::C3>C2::TRIANGLE",
+        "CUT-ORBIT-030::B1__A::C3>C2::TRIANGLE": "CUT-ORBIT-030::B1__A::C3>C2::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-030::B1__A::C3>C2",
+      "members": [
+        "CUT-ORBIT-030::B1__A::C3>C2::TRIANGLE",
+        "CUT-ORBIT-030::B1__A::C3>C2::CUT_CONTACT"
+      ],
+      "pair_id": "B1__A",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "U>B1",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-031::B1__A::U>B1::CUT_CONTACT": "CUT-ORBIT-031::B1__A::U>B1::TRIANGLE",
+        "CUT-ORBIT-031::B1__A::U>B1::TRIANGLE": "CUT-ORBIT-031::B1__A::U>B1::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-031::B1__A::U>B1",
+      "members": [
+        "CUT-ORBIT-031::B1__A::U>B1::TRIANGLE",
+        "CUT-ORBIT-031::B1__A::U>B1::CUT_CONTACT"
+      ],
+      "pair_id": "B1__A",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "C3>U",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-032::B1__B2::C3>U::CUT_CONTACT": "CUT-ORBIT-032::B1__B2::C3>U::TRIANGLE",
+        "CUT-ORBIT-032::B1__B2::C3>U::TRIANGLE": "CUT-ORBIT-032::B1__B2::C3>U::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-032::B1__B2::C3>U",
+      "members": [
+        "CUT-ORBIT-032::B1__B2::C3>U::TRIANGLE",
+        "CUT-ORBIT-032::B1__B2::C3>U::CUT_CONTACT"
+      ],
+      "pair_id": "B1__B2",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "U>C3",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-033::B1__B2::U>C3::CUT_CONTACT": "CUT-ORBIT-033::B1__B2::U>C3::TRIANGLE",
+        "CUT-ORBIT-033::B1__B2::U>C3::TRIANGLE": "CUT-ORBIT-033::B1__B2::U>C3::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-033::B1__B2::U>C3",
+      "members": [
+        "CUT-ORBIT-033::B1__B2::U>C3::TRIANGLE",
+        "CUT-ORBIT-033::B1__B2::U>C3::CUT_CONTACT"
+      ],
+      "pair_id": "B1__B2",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "C2>U",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-034::B1__B3::C2>U::CUT_CONTACT": "CUT-ORBIT-034::B1__B3::C2>U::TRIANGLE",
+        "CUT-ORBIT-034::B1__B3::C2>U::TRIANGLE": "CUT-ORBIT-034::B1__B3::C2>U::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-034::B1__B3::C2>U",
+      "members": [
+        "CUT-ORBIT-034::B1__B3::C2>U::TRIANGLE",
+        "CUT-ORBIT-034::B1__B3::C2>U::CUT_CONTACT"
+      ],
+      "pair_id": "B1__B3",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "U>C2",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-035::B1__B3::U>C2::CUT_CONTACT": "CUT-ORBIT-035::B1__B3::U>C2::TRIANGLE",
+        "CUT-ORBIT-035::B1__B3::U>C2::TRIANGLE": "CUT-ORBIT-035::B1__B3::U>C2::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-035::B1__B3::U>C2",
+      "members": [
+        "CUT-ORBIT-035::B1__B3::U>C2::TRIANGLE",
+        "CUT-ORBIT-035::B1__B3::U>C2::CUT_CONTACT"
+      ],
+      "pair_id": "B1__B3",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "B__C",
+      "compact_output": "U>U",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-036::B1__C1::U>U::CUT_CONTACT": "CUT-ORBIT-036::B1__C1::U>U::TRIANGLE",
+        "CUT-ORBIT-036::B1__C1::U>U::TRIANGLE": "CUT-ORBIT-036::B1__C1::U>U::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-036::B1__C1::U>U",
+      "members": [
+        "CUT-ORBIT-036::B1__C1::U>U::TRIANGLE",
+        "CUT-ORBIT-036::B1__C1::U>U::CUT_CONTACT"
+      ],
+      "pair_id": "B1__C1",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "B2>U",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-037::B2__A::B2>U::CUT_CONTACT": "CUT-ORBIT-037::B2__A::B2>U::TRIANGLE",
+        "CUT-ORBIT-037::B2__A::B2>U::TRIANGLE": "CUT-ORBIT-037::B2__A::B2>U::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-037::B2__A::B2>U",
+      "members": [
+        "CUT-ORBIT-037::B2__A::B2>U::TRIANGLE",
+        "CUT-ORBIT-037::B2__A::B2>U::CUT_CONTACT"
+      ],
+      "pair_id": "B2__A",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "C1>C3",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-038::B2__A::C1>C3::CUT_CONTACT": "CUT-ORBIT-038::B2__A::C1>C3::TRIANGLE",
+        "CUT-ORBIT-038::B2__A::C1>C3::TRIANGLE": "CUT-ORBIT-038::B2__A::C1>C3::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-038::B2__A::C1>C3",
+      "members": [
+        "CUT-ORBIT-038::B2__A::C1>C3::TRIANGLE",
+        "CUT-ORBIT-038::B2__A::C1>C3::CUT_CONTACT"
+      ],
+      "pair_id": "B2__A",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "C3>C1",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-039::B2__A::C3>C1::CUT_CONTACT": "CUT-ORBIT-039::B2__A::C3>C1::TRIANGLE",
+        "CUT-ORBIT-039::B2__A::C3>C1::TRIANGLE": "CUT-ORBIT-039::B2__A::C3>C1::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-039::B2__A::C3>C1",
+      "members": [
+        "CUT-ORBIT-039::B2__A::C3>C1::TRIANGLE",
+        "CUT-ORBIT-039::B2__A::C3>C1::CUT_CONTACT"
+      ],
+      "pair_id": "B2__A",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "U>B2",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-040::B2__A::U>B2::CUT_CONTACT": "CUT-ORBIT-040::B2__A::U>B2::TRIANGLE",
+        "CUT-ORBIT-040::B2__A::U>B2::TRIANGLE": "CUT-ORBIT-040::B2__A::U>B2::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-040::B2__A::U>B2",
+      "members": [
+        "CUT-ORBIT-040::B2__A::U>B2::TRIANGLE",
+        "CUT-ORBIT-040::B2__A::U>B2::CUT_CONTACT"
+      ],
+      "pair_id": "B2__A",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "C3>U",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-041::B2__B1::C3>U::CUT_CONTACT": "CUT-ORBIT-041::B2__B1::C3>U::TRIANGLE",
+        "CUT-ORBIT-041::B2__B1::C3>U::TRIANGLE": "CUT-ORBIT-041::B2__B1::C3>U::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-041::B2__B1::C3>U",
+      "members": [
+        "CUT-ORBIT-041::B2__B1::C3>U::TRIANGLE",
+        "CUT-ORBIT-041::B2__B1::C3>U::CUT_CONTACT"
+      ],
+      "pair_id": "B2__B1",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "U>C3",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-042::B2__B1::U>C3::CUT_CONTACT": "CUT-ORBIT-042::B2__B1::U>C3::TRIANGLE",
+        "CUT-ORBIT-042::B2__B1::U>C3::TRIANGLE": "CUT-ORBIT-042::B2__B1::U>C3::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-042::B2__B1::U>C3",
+      "members": [
+        "CUT-ORBIT-042::B2__B1::U>C3::TRIANGLE",
+        "CUT-ORBIT-042::B2__B1::U>C3::CUT_CONTACT"
+      ],
+      "pair_id": "B2__B1",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "C1>U",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-043::B2__B3::C1>U::CUT_CONTACT": "CUT-ORBIT-043::B2__B3::C1>U::TRIANGLE",
+        "CUT-ORBIT-043::B2__B3::C1>U::TRIANGLE": "CUT-ORBIT-043::B2__B3::C1>U::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-043::B2__B3::C1>U",
+      "members": [
+        "CUT-ORBIT-043::B2__B3::C1>U::TRIANGLE",
+        "CUT-ORBIT-043::B2__B3::C1>U::CUT_CONTACT"
+      ],
+      "pair_id": "B2__B3",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "U>C1",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-044::B2__B3::U>C1::CUT_CONTACT": "CUT-ORBIT-044::B2__B3::U>C1::TRIANGLE",
+        "CUT-ORBIT-044::B2__B3::U>C1::TRIANGLE": "CUT-ORBIT-044::B2__B3::U>C1::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-044::B2__B3::U>C1",
+      "members": [
+        "CUT-ORBIT-044::B2__B3::U>C1::TRIANGLE",
+        "CUT-ORBIT-044::B2__B3::U>C1::CUT_CONTACT"
+      ],
+      "pair_id": "B2__B3",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "B__C",
+      "compact_output": "U>U",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-045::B2__C2::U>U::CUT_CONTACT": "CUT-ORBIT-045::B2__C2::U>U::TRIANGLE",
+        "CUT-ORBIT-045::B2__C2::U>U::TRIANGLE": "CUT-ORBIT-045::B2__C2::U>U::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-045::B2__C2::U>U",
+      "members": [
+        "CUT-ORBIT-045::B2__C2::U>U::TRIANGLE",
+        "CUT-ORBIT-045::B2__C2::U>U::CUT_CONTACT"
+      ],
+      "pair_id": "B2__C2",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "B3>U",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-046::B3__A::B3>U::CUT_CONTACT": "CUT-ORBIT-046::B3__A::B3>U::TRIANGLE",
+        "CUT-ORBIT-046::B3__A::B3>U::TRIANGLE": "CUT-ORBIT-046::B3__A::B3>U::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-046::B3__A::B3>U",
+      "members": [
+        "CUT-ORBIT-046::B3__A::B3>U::TRIANGLE",
+        "CUT-ORBIT-046::B3__A::B3>U::CUT_CONTACT"
+      ],
+      "pair_id": "B3__A",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "C1>C2",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-047::B3__A::C1>C2::CUT_CONTACT": "CUT-ORBIT-047::B3__A::C1>C2::TRIANGLE",
+        "CUT-ORBIT-047::B3__A::C1>C2::TRIANGLE": "CUT-ORBIT-047::B3__A::C1>C2::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-047::B3__A::C1>C2",
+      "members": [
+        "CUT-ORBIT-047::B3__A::C1>C2::TRIANGLE",
+        "CUT-ORBIT-047::B3__A::C1>C2::CUT_CONTACT"
+      ],
+      "pair_id": "B3__A",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "C2>C1",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-048::B3__A::C2>C1::CUT_CONTACT": "CUT-ORBIT-048::B3__A::C2>C1::TRIANGLE",
+        "CUT-ORBIT-048::B3__A::C2>C1::TRIANGLE": "CUT-ORBIT-048::B3__A::C2>C1::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-048::B3__A::C2>C1",
+      "members": [
+        "CUT-ORBIT-048::B3__A::C2>C1::TRIANGLE",
+        "CUT-ORBIT-048::B3__A::C2>C1::CUT_CONTACT"
+      ],
+      "pair_id": "B3__A",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "B__A",
+      "compact_output": "U>B3",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-049::B3__A::U>B3::CUT_CONTACT": "CUT-ORBIT-049::B3__A::U>B3::TRIANGLE",
+        "CUT-ORBIT-049::B3__A::U>B3::TRIANGLE": "CUT-ORBIT-049::B3__A::U>B3::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-049::B3__A::U>B3",
+      "members": [
+        "CUT-ORBIT-049::B3__A::U>B3::TRIANGLE",
+        "CUT-ORBIT-049::B3__A::U>B3::CUT_CONTACT"
+      ],
+      "pair_id": "B3__A",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "C2>U",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-050::B3__B1::C2>U::CUT_CONTACT": "CUT-ORBIT-050::B3__B1::C2>U::TRIANGLE",
+        "CUT-ORBIT-050::B3__B1::C2>U::TRIANGLE": "CUT-ORBIT-050::B3__B1::C2>U::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-050::B3__B1::C2>U",
+      "members": [
+        "CUT-ORBIT-050::B3__B1::C2>U::TRIANGLE",
+        "CUT-ORBIT-050::B3__B1::C2>U::CUT_CONTACT"
+      ],
+      "pair_id": "B3__B1",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "U>C2",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-051::B3__B1::U>C2::CUT_CONTACT": "CUT-ORBIT-051::B3__B1::U>C2::TRIANGLE",
+        "CUT-ORBIT-051::B3__B1::U>C2::TRIANGLE": "CUT-ORBIT-051::B3__B1::U>C2::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-051::B3__B1::U>C2",
+      "members": [
+        "CUT-ORBIT-051::B3__B1::U>C2::TRIANGLE",
+        "CUT-ORBIT-051::B3__B1::U>C2::CUT_CONTACT"
+      ],
+      "pair_id": "B3__B1",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "C1>U",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-052::B3__B2::C1>U::CUT_CONTACT": "CUT-ORBIT-052::B3__B2::C1>U::TRIANGLE",
+        "CUT-ORBIT-052::B3__B2::C1>U::TRIANGLE": "CUT-ORBIT-052::B3__B2::C1>U::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-052::B3__B2::C1>U",
+      "members": [
+        "CUT-ORBIT-052::B3__B2::C1>U::TRIANGLE",
+        "CUT-ORBIT-052::B3__B2::C1>U::CUT_CONTACT"
+      ],
+      "pair_id": "B3__B2",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "B__B",
+      "compact_output": "U>C1",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-053::B3__B2::U>C1::CUT_CONTACT": "CUT-ORBIT-053::B3__B2::U>C1::TRIANGLE",
+        "CUT-ORBIT-053::B3__B2::U>C1::TRIANGLE": "CUT-ORBIT-053::B3__B2::U>C1::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-053::B3__B2::U>C1",
+      "members": [
+        "CUT-ORBIT-053::B3__B2::U>C1::TRIANGLE",
+        "CUT-ORBIT-053::B3__B2::U>C1::CUT_CONTACT"
+      ],
+      "pair_id": "B3__B2",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "B__C",
+      "compact_output": "U>U",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-054::B3__C3::U>U::CUT_CONTACT": "CUT-ORBIT-054::B3__C3::U>U::TRIANGLE",
+        "CUT-ORBIT-054::B3__C3::U>U::TRIANGLE": "CUT-ORBIT-054::B3__C3::U>U::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-054::B3__C3::U>U",
+      "members": [
+        "CUT-ORBIT-054::B3__C3::U>U::TRIANGLE",
+        "CUT-ORBIT-054::B3__C3::U>U::CUT_CONTACT"
+      ],
+      "pair_id": "B3__C3",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "C__A",
+      "compact_output": "C1>U",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-055::C1__A::C1>U::CUT_CONTACT": "CUT-ORBIT-055::C1__A::C1>U::TRIANGLE",
+        "CUT-ORBIT-055::C1__A::C1>U::TRIANGLE": "CUT-ORBIT-055::C1__A::C1>U::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-055::C1__A::C1>U",
+      "members": [
+        "CUT-ORBIT-055::C1__A::C1>U::TRIANGLE",
+        "CUT-ORBIT-055::C1__A::C1>U::CUT_CONTACT"
+      ],
+      "pair_id": "C1__A",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "C__A",
+      "compact_output": "U>C1",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-056::C1__A::U>C1::CUT_CONTACT": "CUT-ORBIT-056::C1__A::U>C1::TRIANGLE",
+        "CUT-ORBIT-056::C1__A::U>C1::TRIANGLE": "CUT-ORBIT-056::C1__A::U>C1::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-056::C1__A::U>C1",
+      "members": [
+        "CUT-ORBIT-056::C1__A::U>C1::TRIANGLE",
+        "CUT-ORBIT-056::C1__A::U>C1::CUT_CONTACT"
+      ],
+      "pair_id": "C1__A",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "C__B",
+      "compact_output": "U>U",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-057::C1__B1::U>U::CUT_CONTACT": "CUT-ORBIT-057::C1__B1::U>U::TRIANGLE",
+        "CUT-ORBIT-057::C1__B1::U>U::TRIANGLE": "CUT-ORBIT-057::C1__B1::U>U::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-057::C1__B1::U>U",
+      "members": [
+        "CUT-ORBIT-057::C1__B1::U>U::TRIANGLE",
+        "CUT-ORBIT-057::C1__B1::U>U::CUT_CONTACT"
+      ],
+      "pair_id": "C1__B1",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "C__A",
+      "compact_output": "C2>U",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-058::C2__A::C2>U::CUT_CONTACT": "CUT-ORBIT-058::C2__A::C2>U::TRIANGLE",
+        "CUT-ORBIT-058::C2__A::C2>U::TRIANGLE": "CUT-ORBIT-058::C2__A::C2>U::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-058::C2__A::C2>U",
+      "members": [
+        "CUT-ORBIT-058::C2__A::C2>U::TRIANGLE",
+        "CUT-ORBIT-058::C2__A::C2>U::CUT_CONTACT"
+      ],
+      "pair_id": "C2__A",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "C__A",
+      "compact_output": "U>C2",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-059::C2__A::U>C2::CUT_CONTACT": "CUT-ORBIT-059::C2__A::U>C2::TRIANGLE",
+        "CUT-ORBIT-059::C2__A::U>C2::TRIANGLE": "CUT-ORBIT-059::C2__A::U>C2::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-059::C2__A::U>C2",
+      "members": [
+        "CUT-ORBIT-059::C2__A::U>C2::TRIANGLE",
+        "CUT-ORBIT-059::C2__A::U>C2::CUT_CONTACT"
+      ],
+      "pair_id": "C2__A",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "C__B",
+      "compact_output": "U>U",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-060::C2__B2::U>U::CUT_CONTACT": "CUT-ORBIT-060::C2__B2::U>U::TRIANGLE",
+        "CUT-ORBIT-060::C2__B2::U>U::TRIANGLE": "CUT-ORBIT-060::C2__B2::U>U::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-060::C2__B2::U>U",
+      "members": [
+        "CUT-ORBIT-060::C2__B2::U>U::TRIANGLE",
+        "CUT-ORBIT-060::C2__B2::U>U::CUT_CONTACT"
+      ],
+      "pair_id": "C2__B2",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "C__A",
+      "compact_output": "C3>U",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-061::C3__A::C3>U::CUT_CONTACT": "CUT-ORBIT-061::C3__A::C3>U::TRIANGLE",
+        "CUT-ORBIT-061::C3__A::C3>U::TRIANGLE": "CUT-ORBIT-061::C3__A::C3>U::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-061::C3__A::C3>U",
+      "members": [
+        "CUT-ORBIT-061::C3__A::C3>U::TRIANGLE",
+        "CUT-ORBIT-061::C3__A::C3>U::CUT_CONTACT"
+      ],
+      "pair_id": "C3__A",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "C__A",
+      "compact_output": "U>C3",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-062::C3__A::U>C3::CUT_CONTACT": "CUT-ORBIT-062::C3__A::U>C3::TRIANGLE",
+        "CUT-ORBIT-062::C3__A::U>C3::TRIANGLE": "CUT-ORBIT-062::C3__A::U>C3::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-062::C3__A::U>C3",
+      "members": [
+        "CUT-ORBIT-062::C3__A::U>C3::TRIANGLE",
+        "CUT-ORBIT-062::C3__A::U>C3::CUT_CONTACT"
+      ],
+      "pair_id": "C3__A",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "C__B",
+      "compact_output": "U>U",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-063::C3__B3::U>U::CUT_CONTACT": "CUT-ORBIT-063::C3__B3::U>U::TRIANGLE",
+        "CUT-ORBIT-063::C3__B3::U>U::TRIANGLE": "CUT-ORBIT-063::C3__B3::U>U::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-063::C3__B3::U>U",
+      "members": [
+        "CUT-ORBIT-063::C3__B3::U>U::TRIANGLE",
+        "CUT-ORBIT-063::C3__B3::U>U::CUT_CONTACT"
+      ],
+      "pair_id": "C3__B3",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "D__A",
+      "compact_output": "U>U",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-064::Ddot1__A::U>U::CUT_CONTACT": "CUT-ORBIT-064::Ddot1__A::U>U::TRIANGLE",
+        "CUT-ORBIT-064::Ddot1__A::U>U::TRIANGLE": "CUT-ORBIT-064::Ddot1__A::U>U::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-064::Ddot1__A::U>U",
+      "members": [
+        "CUT-ORBIT-064::Ddot1__A::U>U::TRIANGLE",
+        "CUT-ORBIT-064::Ddot1__A::U>U::CUT_CONTACT"
+      ],
+      "pair_id": "Ddot1__A",
+      "triangle_metric": "hat_delta"
+    },
+    {
+      "channel": "D__A",
+      "compact_output": "U>U",
+      "conditional_sum": "-C/epsilon*breve_delta",
+      "contact_metric": "delta_4",
+      "cut_involution": {
+        "CUT-ORBIT-065::Ddot2__A::U>U::CUT_CONTACT": "CUT-ORBIT-065::Ddot2__A::U>U::TRIANGLE",
+        "CUT-ORBIT-065::Ddot2__A::U>U::TRIANGLE": "CUT-ORBIT-065::Ddot2__A::U>U::CUT_CONTACT"
+      },
+      "id": "CUT-ORBIT-065::Ddot2__A::U>U",
+      "members": [
+        "CUT-ORBIT-065::Ddot2__A::U>U::TRIANGLE",
+        "CUT-ORBIT-065::Ddot2__A::U>U::CUT_CONTACT"
+      ],
+      "pair_id": "Ddot2__A",
+      "triangle_metric": "hat_delta"
+    }
+  ],
+  "orientation_multiplicity": 1,
+  "schema": 2
+}

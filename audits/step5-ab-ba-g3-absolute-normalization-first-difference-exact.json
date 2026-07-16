@@ -1,0 +1,1472 @@
+{
+  "G1_half_check": {
+    "endpoint_probe_maps": {
+      "D2_barD_u_probe": "eta_D for both dotted slots",
+      "Dplus_phi_probe": "eta_B",
+      "additional_component_half": false,
+      "physical_D2_barD_u": "-4*sqrt(2)*D/g",
+      "physical_Dplus_phi": "B1/g",
+      "product": "-4*sqrt(2)/g^2"
+    },
+    "selected_mark_check": {
+      "A": "2/3",
+      "B": "-2/3"
+    },
+    "source_derivative_convention": {
+      "D2_theta2_value": "-4",
+      "additional_post_replay_half": false,
+      "engine_operator": "D_-*D_+=D^2/2",
+      "engine_theta2_value": "-2",
+      "identity": "D^2=2*D_-*D_+"
+    }
+  },
+  "G3_primitives_and_output": {
+    "false_scale_one_chain": {
+      "DRED_word": "-2048*W",
+      "G32_raw_wedge": "sqrt(2)*i"
+    },
+    "output_chain": {
+      "DRED_word": "-4096*W",
+      "G32_raw_wedge": "2*sqrt(2)*i",
+      "G33_raw_wedge": "-2*sqrt(2)*i",
+      "complete_color": "+i*F^{AB}_{DE}",
+      "external_component_map": "tildephi_2*tildephi_3=g^(-2)*C_2*C_3",
+      "finite_master": "1/(32*pi^2)",
+      "lambda1": "hbar*g^2/(16*pi^2)",
+      "typed_G32_C2_gt_C3": "-2*sqrt(2)*i",
+      "typed_G33_C3_gt_C2": "2*sqrt(2)*i"
+    },
+    "pre_D": {
+      "G32": "-sqrt(2)*g**4*hbar/1024",
+      "G33": "sqrt(2)*g**4*hbar/1024"
+    },
+    "primitive_factors": {
+      "Hminus_G32": "-sqrt(2)*g/hbar",
+      "Hminus_G33": "sqrt(2)*g/hbar",
+      "Hminus_Hessian": "(1/3!)*6=1",
+      "action_orders": "(1/2!)*2=1",
+      "fixed_flavor_Wick": "1",
+      "matter_action": "sqrt(2)*g/hbar",
+      "propagators": "-hbar**3/256",
+      "source": "-sqrt(2)*g**2/8",
+      "source_cycle": "(1/2)*2=1",
+      "total_multiplicity": "1"
+    }
+  },
+  "G3_trace_and_absolute_normalization": {
+    "absolute_metric_coefficient": "4096",
+    "berezin_maps": {
+      "antichiral_H_signed": "1/2",
+      "full_M_signed": "-1/4",
+      "magnitude_product": "1/8"
+    },
+    "correct_dred": "(-1/2)*(2*4096*W)=-4096*W = -4096*W",
+    "earliest_factor_two_error": {
+      "correct_absolute_word": "-4096*W",
+      "correct_equality": "R_DRED=-c*W=(-1/2)*T_perp",
+      "false_equality": "R_DRED=(-1/2)*c*W with c=T_perp/(2*W)",
+      "level": "DRED_RECONSTRUCTION_AFTER_METRIC_RECOVERY",
+      "wrong_absolute_word": "-2048*W"
+    },
+    "exact_comparison": "T_raw=32768*T_old at every sampled affine frame",
+    "old_executable_boundary": {
+      "earliest_absolute_information_loss": "_g3_original_measure_values divides by 32768 and retains only shape",
+      "scale_one_derived_from_g3_replay": false,
+      "scale_one_source": "quotient_exact imports project.build_bundle()"
+    },
+    "old_metric": [
+      "1 - z",
+      "z"
+    ],
+    "old_normalized_trace_samples": {
+      "00": [
+        "-2*i",
+        "0"
+      ],
+      "01": [
+        "0",
+        "-2*i"
+      ],
+      "10": [
+        "-2*i",
+        "0"
+      ],
+      "check": [
+        "-4*i/3",
+        "-2*i/3"
+      ]
+    },
+    "original_measure_mask": 3312,
+    "raw_metric": [
+      "-32768*(z - 1)",
+      "32768*z"
+    ],
+    "raw_trace_samples": {
+      "00": [
+        "-65536*i",
+        "0"
+      ],
+      "01": [
+        "0",
+        "-65536*i"
+      ],
+      "10": [
+        "-65536*i",
+        "0"
+      ],
+      "check": [
+        "-131072*i/3",
+        "-65536*i/3"
+      ]
+    },
+    "scale_one_completion": "(-1/2)*4096*W=-2048*W"
+  },
+  "SU2_color": {
+    "complete_graph": {
+      "extra_half": false,
+      "formula": "kappa^{AU}*kappa^{BP}*kappa^{XY}*(T_U)_{DX}*c_PYE=i*F^{AB}_{DE}",
+      "ratio_to_F": "i"
+    },
+    "conventions": {
+      "(T_a)^d_x": "i*epsilon_axd",
+      "(T_a)_dx": "i*c_axd=i*epsilon_axd/2",
+      "T_a": "sigma_a/2",
+      "c_ab^c": "epsilon_abc",
+      "c_abc": "epsilon_abc/2",
+      "kappa^ab": "2*delta_ab",
+      "kappa_ab": "delta_ab/2"
+    },
+    "literal_shorthand": {
+      "formula": "(T_A)^D_X*c_BXE=(i/4)*F^{AB}_{DE}",
+      "status": "NOT_THE_COMPLETE_GRAPH_COLOR"
+    },
+    "nonzero_frame_count": 12,
+    "sample_0110": {
+      "F": "-2",
+      "complete_graph_color": "-2*i",
+      "frame": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "literal_Tup_c": "-i/2"
+    }
+  },
+  "checks": {
+    "count": 217,
+    "failed": 0,
+    "passed": 217,
+    "rows": [
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_0000",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_0000",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_0001",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_0001",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_0002",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_0002",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_0010",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_0010",
+        "status": "PASS"
+      },
+      {
+        "actual": "i/2",
+        "expected": "i/2",
+        "id": "SU2_LITERAL_0011",
+        "status": "PASS"
+      },
+      {
+        "actual": "2*i",
+        "expected": "2*i",
+        "id": "SU2_COMPLETE_0011",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_0012",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_0012",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_0020",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_0020",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_0021",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_0021",
+        "status": "PASS"
+      },
+      {
+        "actual": "i/2",
+        "expected": "i/2",
+        "id": "SU2_LITERAL_0022",
+        "status": "PASS"
+      },
+      {
+        "actual": "2*i",
+        "expected": "2*i",
+        "id": "SU2_COMPLETE_0022",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_0100",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_0100",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_0101",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_0101",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_0102",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_0102",
+        "status": "PASS"
+      },
+      {
+        "actual": "-i/2",
+        "expected": "-i/2",
+        "id": "SU2_LITERAL_0110",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2*i",
+        "expected": "-2*i",
+        "id": "SU2_COMPLETE_0110",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_0111",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_0111",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_0112",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_0112",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_0120",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_0120",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_0121",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_0121",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_0122",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_0122",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_0200",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_0200",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_0201",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_0201",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_0202",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_0202",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_0210",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_0210",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_0211",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_0211",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_0212",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_0212",
+        "status": "PASS"
+      },
+      {
+        "actual": "-i/2",
+        "expected": "-i/2",
+        "id": "SU2_LITERAL_0220",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2*i",
+        "expected": "-2*i",
+        "id": "SU2_COMPLETE_0220",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_0221",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_0221",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_0222",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_0222",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_1000",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_1000",
+        "status": "PASS"
+      },
+      {
+        "actual": "-i/2",
+        "expected": "-i/2",
+        "id": "SU2_LITERAL_1001",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2*i",
+        "expected": "-2*i",
+        "id": "SU2_COMPLETE_1001",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_1002",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_1002",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_1010",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_1010",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_1011",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_1011",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_1012",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_1012",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_1020",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_1020",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_1021",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_1021",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_1022",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_1022",
+        "status": "PASS"
+      },
+      {
+        "actual": "i/2",
+        "expected": "i/2",
+        "id": "SU2_LITERAL_1100",
+        "status": "PASS"
+      },
+      {
+        "actual": "2*i",
+        "expected": "2*i",
+        "id": "SU2_COMPLETE_1100",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_1101",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_1101",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_1102",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_1102",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_1110",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_1110",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_1111",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_1111",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_1112",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_1112",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_1120",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_1120",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_1121",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_1121",
+        "status": "PASS"
+      },
+      {
+        "actual": "i/2",
+        "expected": "i/2",
+        "id": "SU2_LITERAL_1122",
+        "status": "PASS"
+      },
+      {
+        "actual": "2*i",
+        "expected": "2*i",
+        "id": "SU2_COMPLETE_1122",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_1200",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_1200",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_1201",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_1201",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_1202",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_1202",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_1210",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_1210",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_1211",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_1211",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_1212",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_1212",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_1220",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_1220",
+        "status": "PASS"
+      },
+      {
+        "actual": "-i/2",
+        "expected": "-i/2",
+        "id": "SU2_LITERAL_1221",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2*i",
+        "expected": "-2*i",
+        "id": "SU2_COMPLETE_1221",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_1222",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_1222",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_2000",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_2000",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_2001",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_2001",
+        "status": "PASS"
+      },
+      {
+        "actual": "-i/2",
+        "expected": "-i/2",
+        "id": "SU2_LITERAL_2002",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2*i",
+        "expected": "-2*i",
+        "id": "SU2_COMPLETE_2002",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_2010",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_2010",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_2011",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_2011",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_2012",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_2012",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_2020",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_2020",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_2021",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_2021",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_2022",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_2022",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_2100",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_2100",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_2101",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_2101",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_2102",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_2102",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_2110",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_2110",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_2111",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_2111",
+        "status": "PASS"
+      },
+      {
+        "actual": "-i/2",
+        "expected": "-i/2",
+        "id": "SU2_LITERAL_2112",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2*i",
+        "expected": "-2*i",
+        "id": "SU2_COMPLETE_2112",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_2120",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_2120",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_2121",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_2121",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_2122",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_2122",
+        "status": "PASS"
+      },
+      {
+        "actual": "i/2",
+        "expected": "i/2",
+        "id": "SU2_LITERAL_2200",
+        "status": "PASS"
+      },
+      {
+        "actual": "2*i",
+        "expected": "2*i",
+        "id": "SU2_COMPLETE_2200",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_2201",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_2201",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_2202",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_2202",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_2210",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_2210",
+        "status": "PASS"
+      },
+      {
+        "actual": "i/2",
+        "expected": "i/2",
+        "id": "SU2_LITERAL_2211",
+        "status": "PASS"
+      },
+      {
+        "actual": "2*i",
+        "expected": "2*i",
+        "id": "SU2_COMPLETE_2211",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_2212",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_2212",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_2220",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_2220",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_2221",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_2221",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_LITERAL_2222",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SU2_COMPLETE_2222",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2",
+        "expected": "-2",
+        "id": "SU2_SAMPLE_F_0110",
+        "status": "PASS"
+      },
+      {
+        "actual": "-i/2",
+        "expected": "-i/2",
+        "id": "SU2_SAMPLE_LITERAL_0110",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2*i",
+        "expected": "-2*i",
+        "id": "SU2_SAMPLE_COMPLETE_0110",
+        "status": "PASS"
+      },
+      {
+        "actual": "i",
+        "expected": "i",
+        "id": "SU2_COMPLETE_COLOR_HAS_NO_HALF",
+        "status": "PASS"
+      },
+      {
+        "actual": "-65536*i",
+        "expected": "-65536*i",
+        "id": "RAW_EQUALS_32768_OLD_A_00",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "RAW_EQUALS_32768_OLD_B_00",
+        "status": "PASS"
+      },
+      {
+        "actual": "-65536*i",
+        "expected": "-65536*i",
+        "id": "RAW_EQUALS_32768_OLD_A_10",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "RAW_EQUALS_32768_OLD_B_10",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "RAW_EQUALS_32768_OLD_A_01",
+        "status": "PASS"
+      },
+      {
+        "actual": "-65536*i",
+        "expected": "-65536*i",
+        "id": "RAW_EQUALS_32768_OLD_B_01",
+        "status": "PASS"
+      },
+      {
+        "actual": "-131072*i/3",
+        "expected": "-131072*i/3",
+        "id": "RAW_EQUALS_32768_OLD_A_check",
+        "status": "PASS"
+      },
+      {
+        "actual": "-65536*i/3",
+        "expected": "-65536*i/3",
+        "id": "RAW_EQUALS_32768_OLD_B_check",
+        "status": "PASS"
+      },
+      {
+        "actual": "-i",
+        "expected": "-i",
+        "id": "EXTERNAL_WEDGE",
+        "status": "PASS"
+      },
+      {
+        "actual": "1 - z",
+        "expected": "1 - z",
+        "id": "OLD_NORMALIZED_METRIC_A",
+        "status": "PASS"
+      },
+      {
+        "actual": "z",
+        "expected": "z",
+        "id": "OLD_NORMALIZED_METRIC_B",
+        "status": "PASS"
+      },
+      {
+        "actual": "-32768*(z - 1)",
+        "expected": "-32768*(z - 1)",
+        "id": "RAW_METRIC_A",
+        "status": "PASS"
+      },
+      {
+        "actual": "32768*z",
+        "expected": "32768*z",
+        "id": "RAW_METRIC_B",
+        "status": "PASS"
+      },
+      {
+        "actual": "3312",
+        "expected": "3312",
+        "id": "ORIGINAL_MEASURE_MASK",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/4",
+        "expected": "-1/4",
+        "id": "FULL_M_BEREZIN_CANONICAL_MAP",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/2",
+        "expected": "1/2",
+        "id": "ANTICHIRAL_H_BEREZIN_CANONICAL_MAP",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/8",
+        "expected": "1/8",
+        "id": "ORIGINAL_MEASURE_MAGNITUDE",
+        "status": "PASS"
+      },
+      {
+        "actual": "4096",
+        "expected": "4096",
+        "id": "METRIC_AFTER_ORIGINAL_MEASURE",
+        "status": "PASS"
+      },
+      {
+        "actual": "-8192*i",
+        "expected": "-8192*i",
+        "id": "TWO_AXIS_TRACE_AFTER_MEASURE",
+        "status": "PASS"
+      },
+      {
+        "actual": "4096*i",
+        "expected": "4096*i",
+        "id": "DRED_FROM_TRACE",
+        "status": "PASS"
+      },
+      {
+        "actual": "4096*i",
+        "expected": "4096*i",
+        "id": "DRED_FROM_METRIC",
+        "status": "PASS"
+      },
+      {
+        "actual": "4096*i",
+        "expected": "4096*i",
+        "id": "TRACE_AND_METRIC_ROUTES_EQUAL",
+        "status": "PASS"
+      },
+      {
+        "actual": "2048*i",
+        "expected": "2048*i",
+        "id": "SCALE_ONE_DOUBLE_HALF",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "id": "SCALE_ONE_DIFFERS_BY_TWO",
+        "status": "PASS"
+      },
+      {
+        "actual": "2/3",
+        "expected": "2/3",
+        "id": "A_MARK_WEIGHT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/3",
+        "expected": "1/3",
+        "id": "B_MARK_WEIGHT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "MARK_WEIGHT_SUM",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "OLD_EXPLICIT_DIVISION_BY_32768",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "OLD_SCALE_OUTPUT_IMPORTED_FROM_PROJECT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "SOURCE_CYCLIC_FACTOR",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "ACTION_ORDER_FACTOR",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "HMINUS_HESSIAN_FACTOR",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "FIXED_FLAVOR_WICK",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "TOTAL_PRIMITIVE_MULTIPLICITY",
+        "status": "PASS"
+      },
+      {
+        "actual": "-sqrt(2)*g**4*hbar/1024",
+        "expected": "-sqrt(2)*g**4*hbar/1024",
+        "id": "G32_PRED",
+        "status": "PASS"
+      },
+      {
+        "actual": "sqrt(2)*g**4*hbar/1024",
+        "expected": "sqrt(2)*g**4*hbar/1024",
+        "id": "G33_PRED",
+        "status": "PASS"
+      },
+      {
+        "actual": "2*sqrt(2)*i",
+        "expected": "2*sqrt(2)*i",
+        "id": "G32_RAW_WEDGE_LAMBDA_UNITS",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2*sqrt(2)*i",
+        "expected": "-2*sqrt(2)*i",
+        "id": "G33_RAW_WEDGE_LAMBDA_UNITS",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2*sqrt(2)*i",
+        "expected": "-2*sqrt(2)*i",
+        "id": "G32_TYPED_C2_GT_C3",
+        "status": "PASS"
+      },
+      {
+        "actual": "2*sqrt(2)*i",
+        "expected": "2*sqrt(2)*i",
+        "id": "G33_TYPED_C3_GT_C2",
+        "status": "PASS"
+      },
+      {
+        "actual": "sqrt(2)*i",
+        "expected": "sqrt(2)*i",
+        "id": "FALSE_HALF_G32_RAW_WEDGE",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "G1_THETA2_COORDINATE_MASK_NONZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2",
+        "expected": "-2",
+        "id": "G1_DMINUS_DPLUS_THETA2",
+        "status": "PASS"
+      },
+      {
+        "actual": "-4",
+        "expected": "-4",
+        "id": "G1_D2_THETA2",
+        "status": "PASS"
+      },
+      {
+        "actual": "{0: QI(re=Fraction(-4, 1), im=Fraction(0, 1))}",
+        "expected": "{0: QI(re=Fraction(-4, 1), im=Fraction(0, 1))}",
+        "id": "G1_D2_EQUALS_TWO_DMINUS_DPLUS",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "G1_ENDPOINT_DPLUS_PHI_EQUALS_ETA_B",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "G1_ENDPOINT_D2_BARD_U_EQUALS_ETA_D_0",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "G1_ENDPOINT_D2_BARD_U_EQUALS_ETA_D_1",
+        "status": "PASS"
+      },
+      {
+        "actual": "2/3",
+        "expected": "2/3",
+        "id": "G1_A_MARK_NORMALIZATION",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2/3",
+        "expected": "-2/3",
+        "id": "G1_B_MARK_NORMALIZATION",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "G1_FORBIDDEN_EXTRA_HALF_A",
+        "status": "PASS"
+      }
+    ]
+  },
+  "external_target_used": false,
+  "holomorphic_twist_used": false,
+  "project_engine_called": false,
+  "q_covariance_used": false,
+  "residual_q_used": false,
+  "schema": "step5-ab-ba-g3-absolute-normalization-first-difference-exact-v1",
+  "status": "PASS_G3_COLOR_PLUS_I__RAW_32768_TO_4096__FIRST_SCALE_ONE_ERROR_IS_DOUBLE_TRANSVERSE_HALF__G1_HAS_NO_ADDITIONAL_HALF"
+}

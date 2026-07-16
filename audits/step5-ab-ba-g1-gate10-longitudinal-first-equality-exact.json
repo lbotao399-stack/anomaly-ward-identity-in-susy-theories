@@ -1,0 +1,489 @@
+{
+  "adjudication": {
+    "centered_metric_trace": "S(q/2), diagnostic only; it is not an exact selected-edge cut",
+    "centered_metric_trace_exists": true,
+    "current_contact_warning": "The old formal replacement C_L=-L_A is not promoted here to a raw R2 graph identity; the complete I1-Sm3 replay is zero.  G1 raw contact closure therefore remains open, but Gate10's -(p+q) correction is exactly rejected.",
+    "hidden_exact_bar_r1_square": false,
+    "new_independent_N_L": false
+  },
+  "checks": {
+    "count": 46,
+    "failed": 0,
+    "passed": 46,
+    "rows": [
+      {
+        "actual": "3",
+        "expected": "3",
+        "id": "generic_1:dot0:degree",
+        "status": "PASS"
+      },
+      {
+        "actual": "-4096*ell0**3 + 4096*I*ell0**2*ell1 - 4096*ell0*ell1**2 - 4096*ell0*ell2**2 - 4096*ell0*ell3**2 + 4096*I*ell1**3 + 4096*I*ell1*ell2**2 + 4096*I*ell1*ell3**2",
+        "expected": "(-4096*ell0 + 4096*I*ell1)*(ell0**2 + ell1**2 + ell2**2 + ell3**2)",
+        "id": "generic_1:dot0:universal_cubic",
+        "status": "PASS"
+      },
+      {
+        "actual": "12",
+        "expected": "12",
+        "id": "generic_1:dot0:nonzero_rows",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "generic_1:dot0:no_individual_r1_square",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "generic_1:dot0:aggregate_not_r1_square",
+        "status": "PASS"
+      },
+      {
+        "actual": "-24576",
+        "expected": "-24576",
+        "id": "generic_1:dot0:third_difference_ell0",
+        "status": "PASS"
+      },
+      {
+        "actual": "24576*I",
+        "expected": "24576*I",
+        "id": "generic_1:dot0:third_difference_ell1",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "generic_1:dot0:third_difference_ell2",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "generic_1:dot0:third_difference_ell3",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1 - I/2",
+        "expected": "-1 - I/2",
+        "id": "generic_1:dot0:metric_projection_q_over_2",
+        "status": "PASS"
+      },
+      {
+        "actual": "3",
+        "expected": "3",
+        "id": "generic_1:dot1:degree",
+        "status": "PASS"
+      },
+      {
+        "actual": "4096*ell0**2*ell2 + 4096*I*ell0**2*ell3 + 4096*ell1**2*ell2 + 4096*I*ell1**2*ell3 + 4096*ell2**3 + 4096*I*ell2**2*ell3 + 4096*ell2*ell3**2 + 4096*I*ell3**3",
+        "expected": "(4096*ell2 + 4096*I*ell3)*(ell0**2 + ell1**2 + ell2**2 + ell3**2)",
+        "id": "generic_1:dot1:universal_cubic",
+        "status": "PASS"
+      },
+      {
+        "actual": "12",
+        "expected": "12",
+        "id": "generic_1:dot1:nonzero_rows",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "generic_1:dot1:no_individual_r1_square",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "generic_1:dot1:aggregate_not_r1_square",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "generic_1:dot1:third_difference_ell0",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "generic_1:dot1:third_difference_ell1",
+        "status": "PASS"
+      },
+      {
+        "actual": "24576",
+        "expected": "24576",
+        "id": "generic_1:dot1:third_difference_ell2",
+        "status": "PASS"
+      },
+      {
+        "actual": "24576*I",
+        "expected": "24576*I",
+        "id": "generic_1:dot1:third_difference_ell3",
+        "status": "PASS"
+      },
+      {
+        "actual": "-3/2",
+        "expected": "-3/2",
+        "id": "generic_1:dot1:metric_projection_q_over_2",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[-1 - I/2], [-3/2]])",
+        "expected": "Matrix([[-1 - I/2], [-3/2]])",
+        "id": "generic_1:metric_pair",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "generic_1:metric_pair_not_gate10",
+        "status": "PASS"
+      },
+      {
+        "actual": "3",
+        "expected": "3",
+        "id": "generic_2:dot0:degree",
+        "status": "PASS"
+      },
+      {
+        "actual": "-4096*ell0**3 + 4096*I*ell0**2*ell1 - 4096*ell0*ell1**2 - 4096*ell0*ell2**2 - 4096*ell0*ell3**2 + 4096*I*ell1**3 + 4096*I*ell1*ell2**2 + 4096*I*ell1*ell3**2",
+        "expected": "(-4096*ell0 + 4096*I*ell1)*(ell0**2 + ell1**2 + ell2**2 + ell3**2)",
+        "id": "generic_2:dot0:universal_cubic",
+        "status": "PASS"
+      },
+      {
+        "actual": "12",
+        "expected": "12",
+        "id": "generic_2:dot0:nonzero_rows",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "generic_2:dot0:no_individual_r1_square",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "generic_2:dot0:aggregate_not_r1_square",
+        "status": "PASS"
+      },
+      {
+        "actual": "-24576",
+        "expected": "-24576",
+        "id": "generic_2:dot0:third_difference_ell0",
+        "status": "PASS"
+      },
+      {
+        "actual": "24576*I",
+        "expected": "24576*I",
+        "id": "generic_2:dot0:third_difference_ell1",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "generic_2:dot0:third_difference_ell2",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "generic_2:dot0:third_difference_ell3",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/2",
+        "expected": "1/2",
+        "id": "generic_2:dot0:metric_projection_q_over_2",
+        "status": "PASS"
+      },
+      {
+        "actual": "3",
+        "expected": "3",
+        "id": "generic_2:dot1:degree",
+        "status": "PASS"
+      },
+      {
+        "actual": "4096*ell0**2*ell2 + 4096*I*ell0**2*ell3 + 4096*ell1**2*ell2 + 4096*I*ell1**2*ell3 + 4096*ell2**3 + 4096*I*ell2**2*ell3 + 4096*ell2*ell3**2 + 4096*I*ell3**3",
+        "expected": "(4096*ell2 + 4096*I*ell3)*(ell0**2 + ell1**2 + ell2**2 + ell3**2)",
+        "id": "generic_2:dot1:universal_cubic",
+        "status": "PASS"
+      },
+      {
+        "actual": "12",
+        "expected": "12",
+        "id": "generic_2:dot1:nonzero_rows",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "generic_2:dot1:no_individual_r1_square",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "generic_2:dot1:aggregate_not_r1_square",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "generic_2:dot1:third_difference_ell0",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "generic_2:dot1:third_difference_ell1",
+        "status": "PASS"
+      },
+      {
+        "actual": "24576",
+        "expected": "24576",
+        "id": "generic_2:dot1:third_difference_ell2",
+        "status": "PASS"
+      },
+      {
+        "actual": "24576*I",
+        "expected": "24576*I",
+        "id": "generic_2:dot1:third_difference_ell3",
+        "status": "PASS"
+      },
+      {
+        "actual": "I/2",
+        "expected": "I/2",
+        "id": "generic_2:dot1:metric_projection_q_over_2",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[1/2], [I/2]])",
+        "expected": "Matrix([[1/2], [I/2]])",
+        "id": "generic_2:metric_pair",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "generic_2:metric_pair_not_gate10",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "symbolic_I1Sm3_AB_dot0_zero",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "symbolic_I1Sm3_AB_dot1_zero",
+        "status": "PASS"
+      }
+    ]
+  },
+  "definitions": {
+    "Gate10_claim": "P_L=-bar(r1)^2*(r0-r2)",
+    "chirality_combination": "L_A=L_{A,+}-L_{A,-}",
+    "exact_longitudinal_operator": "L_A=-(1/2) D_+ barD^2 D^2",
+    "routing": "r0=ell, r1=ell-p, r2=ell-p-q",
+    "spinor_map": {
+      "dot0": "S(v)^dot0=v0-i*v1",
+      "dot1": "S(v)^dot1=-(v2+i*v3)"
+    }
+  },
+  "external_target_used": false,
+  "first_equality": {
+    "claimed": "L_A == -bar(r1)^2*(r0-r2)",
+    "claimed_total_degree": 2,
+    "exact_cubic_dot0": "-4096*(ell0 - i*ell1)*(ell0**2 + ell1**2 + ell2**2 + ell3**2)",
+    "exact_cubic_dot1": "4096*(ell2 + i*ell3)*(ell0**2 + ell1**2 + ell2**2 + ell3**2)",
+    "exact_total_degree": 3,
+    "verdict": "FALSE_BEFORE_ANY_SIMPLEX_INTEGRAL_OR_QUOTIENT"
+  },
+  "frames": [
+    {
+      "Gate10_pair": [
+        "1 + 3*i",
+        "2 + i"
+      ],
+      "dotted": {
+        "0": {
+          "Gate10_claimed_projection_minus_p_plus_q": "1 + 3*i",
+          "full_raw_polynomial": "-4096*(ell0**3 - i*ell0**2*ell1 + ell0**2*(2 + 5*i) + ell0*ell1**2 + ell0*ell1*(4 - 2*i) + ell0*ell2**2 + ell0*ell2*(-1 - i) + ell0*ell3**2 + ell0*ell3*(1 - i) + ell0*(-11 + 2*i) - i*ell1**3 + i*ell1**2 - i*ell1*ell2**2 + ell1*ell2*(-1 + i) - i*ell1*ell3**2 + ell1*ell3*(-1 - i) + ell1*(2 + 11*i) + ell2**2*(1 + 3*i) + ell2*(-1 - 13*i) + ell3**2*(1 + 3*i) + ell3*(13 - i))",
+          "homogeneous_cubic": "-4096*(ell0 - i*ell1)*(ell0**2 + ell1**2 + ell2**2 + ell3**2)",
+          "normalized_centered_metric_projection": "-1 - i/2",
+          "r1_square_test": {
+            "aggregate_division_quotient": "-4096*(ell0 - i*ell1 + 4 + 5*i)",
+            "aggregate_division_remainder": "-4096*(ell0*ell1*(8 - 4*i) + ell0*ell2*(-3 - i) + ell0*ell3*(3 - i) + ell0*(-10 + 12*i) + ell1**2*(-4 - 8*i) + ell1*ell2*(-1 + 3*i) + ell1*ell3*(-1 - 3*i) + ell1*(18 + 38*i) + ell2**2*(-3 - 2*i) + ell2*(-9 - 23*i) + ell3**2*(-3 - 2*i) + ell3*(21 + 9*i) - 28 - 35*i)",
+            "aggregate_r1_square_divisible": false,
+            "individually_r1_square_divisible_rows": [],
+            "nonzero_rows": 12,
+            "r1_square": "ell0**2 - 2*ell0 + ell1**2 - 4*ell1 + ell2**2 + 2*ell2 + ell3**2 - 2*ell3 + 7"
+          },
+          "third_forward_differences": {
+            "Delta_ell0^3": "-24576",
+            "Delta_ell1^3": "24576*i"
+          },
+          "total_degree": 3
+        },
+        "1": {
+          "Gate10_claimed_projection_minus_p_plus_q": "2 + i",
+          "full_raw_polynomial": "4096*(ell0**2*ell2 + i*ell0**2*ell3 + ell0**2*(-2 - i) + ell0*ell2*(1 + 2*i) + ell0*ell3*(-2 + i) + ell0*(-5 - 5*i) + ell1**2*ell2 + i*ell1**2*ell3 + ell1**2*(-2 - i) + ell1*ell2*(2 - i) + ell1*ell3*(1 + 2*i) + ell1*(-5 + 5*i) + ell2**3 + i*ell2**2*ell3 + ell2**2*(-3 - 2*i) + ell2*ell3**2 + ell2*ell3*(2 - 2*i) + ell2*(-4 - 2*i) + i*ell3**3 - ell3**2 + ell3*(2 - 4*i))",
+          "homogeneous_cubic": "4096*(ell2 + i*ell3)*(ell0**2 + ell1**2 + ell2**2 + ell3**2)",
+          "normalized_centered_metric_projection": "-3/2",
+          "r1_square_test": {
+            "aggregate_division_quotient": "4096*(ell2 + i*ell3 - 2 - i)",
+            "aggregate_division_remainder": "4096*i*(ell0*ell2*(2 - 3*i) + ell0*ell3*(3 + 2*i) + ell0*(-7 + 9*i) + ell1*ell2*(-1 - 6*i) + ell1*ell3*(6 - i) + ell1*(1 + 13*i) + ell2**2*(-1 + 3*i) + ell2*ell3*(-4 - 4*i) + 7*i*ell2 + ell3**2*(3 - i) + ell3*(-13 + 2*i) + 7 - 14*i)",
+            "aggregate_r1_square_divisible": false,
+            "individually_r1_square_divisible_rows": [],
+            "nonzero_rows": 12,
+            "r1_square": "ell0**2 - 2*ell0 + ell1**2 - 4*ell1 + ell2**2 + 2*ell2 + ell3**2 - 2*ell3 + 7"
+          },
+          "third_forward_differences": {
+            "Delta_ell2^3": "24576",
+            "Delta_ell3^3": "24576*i"
+          },
+          "total_degree": 3
+        }
+      },
+      "exact_pair": [
+        "-1 - i/2",
+        "-3/2"
+      ],
+      "finite_difference_metric_pair": [
+        "-1 - i/2",
+        "-3/2"
+      ],
+      "id": "generic_1",
+      "p": [
+        1,
+        2,
+        -1,
+        1
+      ],
+      "p_plus_q": [
+        -1,
+        3,
+        2,
+        1
+      ],
+      "q": [
+        -2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "Gate10_pair": [
+        "-1 + i",
+        "1 - i"
+      ],
+      "dotted": {
+        "0": {
+          "Gate10_claimed_projection_minus_p_plus_q": "-1 + i",
+          "full_raw_polynomial": "-4096*(ell0**3 - i*ell0**2*ell1 + ell0**2*(-1 + 2*i) + ell0*ell1**2 + 2*ell0*ell1 + ell0*ell2**2 + ell0*ell2 + ell0*ell3**2 + i*ell0*ell3 + ell0*(-2 - 2*i) - i*ell1**3 - ell1**2 - i*ell1*ell2**2 - i*ell1*ell2 - i*ell1*ell3**2 + ell1*ell3 + ell1*(-2 + 2*i) + ell2**2*(-1 + i) + 2*i*ell2 + ell3**2*(-1 + i) - 2*ell3)",
+          "homogeneous_cubic": "-4096*(ell0 - i*ell1)*(ell0**2 + ell1**2 + ell2**2 + ell3**2)",
+          "normalized_centered_metric_projection": "1/2",
+          "r1_square_test": {
+            "aggregate_division_quotient": "-4096*(ell0 - i*ell1 - 1 + 2*i)",
+            "aggregate_division_remainder": "-4096*(4*ell0*ell1 + 3*ell0*ell2 + i*ell0*ell3 + ell0*(-4 - 2*i) - 4*i*ell1**2 - 3*i*ell1*ell2 + ell1*ell3 + ell1*(-4 + 8*i) - i*ell2**2 + ell2*(-2 + 6*i) - i*ell3**2 - 2*ell3 + 2 - 4*i)",
+            "aggregate_r1_square_divisible": false,
+            "individually_r1_square_divisible_rows": [],
+            "nonzero_rows": 12,
+            "r1_square": "ell0**2 + ell1**2 - 2*ell1 + ell2**2 - 2*ell2 + ell3**2 + 2"
+          },
+          "third_forward_differences": {
+            "Delta_ell0^3": "-24576",
+            "Delta_ell1^3": "24576*i"
+          },
+          "total_degree": 3
+        },
+        "1": {
+          "Gate10_claimed_projection_minus_p_plus_q": "1 - i",
+          "full_raw_polynomial": "4096*(ell0**2*ell2 + i*ell0**2*ell3 + ell0**2*(-1 + i) + i*ell0*ell2 - ell0*ell3 - 2*i*ell0 + ell1**2*ell2 + i*ell1**2*ell3 + ell1**2*(-1 + i) + ell1*ell2 + i*ell1*ell3 - 2*ell1 + ell2**3 + i*ell2**2*ell3 + i*ell2**2 + ell2*ell3**2 + 2*i*ell2*ell3 + ell2*(-2 + 2*i) + i*ell3**3 + ell3**2*(-2 + i) + ell3*(-2 - 2*i))",
+          "homogeneous_cubic": "4096*(ell2 + i*ell3)*(ell0**2 + ell1**2 + ell2**2 + ell3**2)",
+          "normalized_centered_metric_projection": "i/2",
+          "r1_square_test": {
+            "aggregate_division_quotient": "4096*(ell2 + i*ell3 - 1 + i)",
+            "aggregate_division_remainder": "4096*i*(ell0*ell2 + i*ell0*ell3 - 2*ell0 - 3*i*ell1*ell2 + 3*ell1*ell3 + ell1*(2 + 4*i) - 3*i*ell2**2 + 4*ell2*ell3 + ell2*(4 + 6*i) + i*ell3**2 + ell3*(-4 + 2*i) - 2 - 2*i)",
+            "aggregate_r1_square_divisible": false,
+            "individually_r1_square_divisible_rows": [],
+            "nonzero_rows": 12,
+            "r1_square": "ell0**2 + ell1**2 - 2*ell1 + ell2**2 - 2*ell2 + ell3**2 + 2"
+          },
+          "third_forward_differences": {
+            "Delta_ell2^3": "24576",
+            "Delta_ell3^3": "24576*i"
+          },
+          "total_degree": 3
+        }
+      },
+      "exact_pair": [
+        "1/2",
+        "i/2"
+      ],
+      "finite_difference_metric_pair": [
+        "1/2",
+        "i/2"
+      ],
+      "id": "generic_2",
+      "p": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "p_plus_q": [
+        1,
+        1,
+        1,
+        -1
+      ],
+      "q": [
+        1,
+        0,
+        0,
+        -1
+      ]
+    }
+  ],
+  "schema": "step5-ab-ba-g1-gate10-longitudinal-first-equality-exact-v1",
+  "source_resolvent_R2_middle_edge": {
+    "claimed_cut": "+D0*D2*(r0-r2)",
+    "classification": "Gate10 reuses the already enumerated L_A occurrence but does not supply a nonzero matching R2 Hessian.  Its added N_L is not an independent graph.",
+    "exact_complete_I1_Sm3_symbolic_replay": [
+      {
+        "BA_follows_from_exact_graded_mirror": "-B1(D_-A)=+(D_-A)B1 with the corresponding SU(2) color relabeling",
+        "complete_I1_terms": [
+          "(NA1_A2+NA1_Gamma+NA1_bridge) B11",
+          "+1"
+        ],
+        "dotted": 0,
+        "is_exact_zero": true,
+        "nonzero_output": {},
+        "orientation": "AB"
+      },
+      {
+        "BA_follows_from_exact_graded_mirror": "-B1(D_-A)=+(D_-A)B1 with the corresponding SU(2) color relabeling",
+        "complete_I1_terms": [
+          "(NA1_A2+NA1_Gamma+NA1_bridge) B11",
+          "+1"
+        ],
+        "dotted": 1,
+        "is_exact_zero": true,
+        "nonzero_output": {},
+        "orientation": "AB"
+      }
+    ]
+  },
+  "status": "GATE10_FIRST_EQUALITY_REJECTED__EXACT_LA_ALREADY_INCLUDED__NO_R1_SQUARE_DIVISOR__METRIC_PROJECTION_IS_Q_OVER_2_NOT_MINUS_P_PLUS_Q"
+}

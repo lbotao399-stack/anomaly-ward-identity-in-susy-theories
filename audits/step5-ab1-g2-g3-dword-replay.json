@@ -1,0 +1,179 @@
+{
+  "G2": {
+    "marked_A_placement": {
+      "full_packaged_projection": [
+        "-1024*r01*(p00*p11 - p00*r11 - p01*p10 + p01*r10 - p10*q01 + p10*r01 + p11*q00 - p11*r00 - q00*r11 + q01*r10 + r00*r11 - r01*r10)",
+        "1024*r00*(p00*p11 - p00*r11 - p01*p10 + p01*r10 - p10*q01 + p10*r01 + p11*q00 - p11*r00 - q00*r11 + q01*r10 + r00*r11 - r01*r10)"
+      ],
+      "longitudinal_remainder": [
+        "1024*r01*(p00*q11 - p01*q10 + q00*q11 - q01*q10 + q10*r01 - q11*r00)",
+        "-1024*r00*(p00*q11 - p01*q10 + q00*q11 - q01*q10 + q10*r01 - q11*r00)"
+      ],
+      "mixed_factor_F": "p00*p11 - p00*r11 - p01*p10 + p01*r10 - p10*q01 + p10*r01 + p11*q00 - p11*r00 - q00*r11 + q01*r10 + r00*r11 - r01*r10",
+      "operator_decomposition": "(1/2)D2 barD2 D_+ = 8 barBox D_+ - (1/2)D_+ barD2 D2",
+      "physical_transverse_word": "-2*(D2 barD_dot-a u)*r0^dot-a*(D_+ phi1)*mu_l^2/(D0 D1 D2)",
+      "rank_one_shift_weights": {
+        "external_B_momentum_q": "1/3",
+        "external_u_momentum_p": "2/3",
+        "result": "int mu_l^2 r0/(D0 D1 D2)=(2*p+q)/(96*pi^2)"
+      },
+      "scope": "transverse selected-edge term is exact; its longitudinal/contact completion is not included in the isolated coefficient",
+      "selected_edge": "source-u to action-u vector edge r2",
+      "transverse_square_residual": [
+        "-128*r01",
+        "128*r00"
+      ]
+    },
+    "marked_B_placement": {
+      "physical_D_dot_P_B_projection": [
+        "0",
+        "0"
+      ],
+      "selected_edge": "source-Phi1 to first action tildePhi1"
+    },
+    "source_color_order": "(T_E)^B_X (T_A)^X_D = -F^{AB}_{DE}; the color-D external Phi and color-E external u must not be transposed"
+  },
+  "G3": {
+    "choice_A": {
+      "description": "retain H-D2 on selected S-H edge; omit H-D2 on M-H",
+      "raw_parent_before_endpoint_constants": "-1024*(p00*r01 - p01*r00)*(p00*p11 + p00*q11 - p00*r11 - p01*p10 - p01*q10 + p01*r10 - p10*q01 + p10*r01 + p11*q00 - p11*r00 + q00*q11 - q00*r11 - q01*q10 + q01*r10 + q10*r01 - q11*r00 + r00*r11 - r01*r10)",
+      "residual_without_endpoint_constants": "-128*(p00*r01 - p01*r00)"
+    },
+    "choice_B": {
+      "description": "omit H-D2 on S-H; retain H-D2 on M-H",
+      "raw_parent_before_endpoint_constants": "-1024*(p00*r01 - p01*r00)*(p00*p11 + p00*q11 - p00*r11 - p01*p10 - p01*q10 + p01*r10 - p10*q01 + p10*r01 + p11*q00 - p11*r00 + q00*q11 - q00*r11 - q01*q10 + q01*r10 + q10*r01 - q11*r00 + r00*r11 - r01*r10)"
+    },
+    "endpoint_factor_product": "-1/64",
+    "evanescent_remainder": "-16*(p_+ wedge r0_+)*mu_l_squared/(D0*D1*D2)",
+    "full_d_SD_cut_replacement": "bar_r2_squared -> r2_d_squared",
+    "isolated_triangle_coefficients": {
+      "G32_external_C2D_C3E": "2*sqrt(2)*I*lambda1/3",
+      "G33_external_C3D_C2E": "-2*sqrt(2)*I*lambda1/3",
+      "normalization": "lambda1=hbar*g^2/(16*pi^2)",
+      "scope": "isolated parent plus its selected full-d Schwinger cut only; not the full descendant/contact orbit"
+    },
+    "marked_A_vector_edge": {
+      "G32": "2*sqrt(2)*I*lambda1/3",
+      "G33": "-2*sqrt(2)*I*lambda1/3",
+      "choice_A_residual_without_endpoint_constants": "-128*(p00*q01 - p01*q00 + q00*r01 - q01*r00)",
+      "choice_B_residual_without_endpoint_constants": "-128*(p00*q01 - p01*q00 + q00*r01 - q01*r00)",
+      "endpoint_weighted_evanescent_word": "-16*(p_+ wedge q_+ + q_+ wedge r0_+)*mu_l_squared/(D0 D1 D2)",
+      "representation_independence_difference": "0",
+      "selected_edge": "source-u to M.u, momentum r0",
+      "simplex_reduction": "1-2*int_Sigma(y+z)=1/3"
+    },
+    "marked_B_chiral_edge": {
+      "G32": "2*sqrt(2)*I*lambda1/3",
+      "G33": "-2*sqrt(2)*I*lambda1/3",
+      "endpoint_weighted_evanescent_word": "-16*(p_+ wedge r0_+)*mu_l_squared/(D0 D1 D2)",
+      "selected_edge": "source-Phi1 to H-tildePhi1, momentum r2",
+      "simplex_reduction": "2*int_Sigma z=1/3"
+    },
+    "marked_placement": "outer D_- on source B1; selected edge is source-Phi1 to H-tildePhi1",
+    "parent_numerator": "16*(p00*r01 - p01*r00)*(p00*p11 + p00*q11 - p00*r11 - p01*p10 - p01*q10 + p01*r10 - p10*q01 + p10*r01 + p11*q00 - p11*r00 + q00*q11 - q00*r11 - q01*q10 + q01*r10 + q10*r01 - q11*r00 + r00*r11 - r01*r10)",
+    "parent_numerator_in_square_notation": "-16*bar_r2_squared*(p_+ wedge r0_+)",
+    "representation_independence_difference": "0",
+    "simplex": {
+      "area": "1/2",
+      "integral_z": "1/6",
+      "rank_one_master": "1/(96*pi**2)",
+      "result": "int mu_l^2 (p_+ wedge r0_+)/(D0 D1 D2) = <C_M,C_H>/(96*pi^2)",
+      "two_times_integral_z": "1/3"
+    },
+    "source_and_slots": {
+      "G32": {
+        "color": "(T_A)^D_X c_BXE = +i F^{AB}_{DE}",
+        "external_slot_D": "M2.tildephi2^D = C2^D",
+        "external_slot_E": "H.tildephi3^E = C3^E",
+        "internal": "M2.phi2^X -> H.tildephi2^X",
+        "source_phi1_color": "B -> H.tildephi1^B",
+        "source_u_color": "A -> M2.u^A"
+      },
+      "G33": {
+        "color": "(T_A)^D_X c_BXE = +i F^{AB}_{DE}",
+        "external_slot_D": "M3.tildephi3^D = C3^D",
+        "external_slot_E": "H.tildephi2^E = C2^E",
+        "internal": "M3.phi3^X -> H.tildephi3^X",
+        "source_phi1_color": "B -> H.tildephi1^B",
+        "source_u_color": "A -> M3.u^A"
+      }
+    },
+    "two_marked_parent_sum_before_contact_completion": {
+      "G32_external_C2D_C3E": "4*sqrt(2)*I*lambda1/3",
+      "G33_external_C3D_C2E": "-4*sqrt(2)*I*lambda1/3",
+      "scope": "sum of A-marked and B-marked selected-edge remainders; Euler/nonlinear/explicit-contact orbit still open"
+    }
+  },
+  "arithmetic": "exact SymPy polynomials and rational simplex integrals; no floating point",
+  "checks": {
+    "D2_barD2_D2_equals_16_Box_D2": true,
+    "G2_A_marked_transverse_plus_longitudinal_equals_full": true,
+    "G2_B_marked_physical_projection_is_zero": true,
+    "G3_A_marked_H_representations_are_equal": true,
+    "G3_A_marked_simplex_factor_is_one_third": true,
+    "G3_choice_A_equals_choice_B_before_endpoint_factors": true,
+    "G3_choice_A_residual_derived": true,
+    "G3_endpoint_weighted_parent_is_minus_16_bar_r2_sq_wedge": true,
+    "G3_omission_choices_are_representations_not_multiplicity": true,
+    "G3_rank_one_simplex_weight_is_one_third": true,
+    "external_antichiral_constraints": true,
+    "external_chiral_constraint": true,
+    "no_HT_coefficient_used_as_input": true
+  },
+  "contract_inputs": [
+    "audits/step5-ab1-standard-feynman-strictification.md Sections 1-3",
+    "audits/step5-dred-cutting-failure-exact.md Sections 2-4",
+    "contracts/foundations/step-05a-component-bv-brst-primitive-supergraph-grammar.md (5A.64)-(5A.75)",
+    "references/vendor/local/superspace-1001-supergraph-pages.pdf Section 6.3, printed pp. 351-352"
+  ],
+  "conventions": {
+    "D2": "2 D_- D_+",
+    "barD2": "2 barD_dot+ barD_dot-",
+    "bar_Box": "det(r_a_dot-a)",
+    "bar_r_squared": "-det(r_a_dot-a)",
+    "delta4": "4 theta+ theta- bartheta_dot+ bartheta_dot-",
+    "endpoint_factor": "-D2/4 or -barD2/4",
+    "full_measure_top_monomial": "1/4 per d4theta vertex",
+    "generator_order_per_vertex": [
+      "theta+",
+      "theta-",
+      "bartheta_dot+",
+      "bartheta_dot-"
+    ]
+  },
+  "descendant_occurrence_ledger": {
+    "A_marked": [
+      "-(nabla_+ E_V_linear) B1: vector-edge parent/cut in G1 and both G2 source attachments",
+      "+2i (nabla_+(Phi_s x tildePhi_s)) B1 inside -nabla_+ E_V",
+      "-2i (B_s x C_s) B1 explicit matter contact"
+    ],
+    "B_marked": [
+      "-2 A E_tilde1,kinetic: source-chiral-edge parent/cut",
+      "+sqrt(2) epsilon_1st A(C_s x C_t) inside -2 A E_tilde1",
+      "-sqrt(2) epsilon_1st A(C_s x C_t) explicit contact"
+    ],
+    "product_rule": "nabla_-(A B1)=(nabla_- A)B1+A(nabla_- B1)",
+    "raw_parent_markings": [
+      "G2_DB_A",
+      "G2_DB_B",
+      "G2_BD_A",
+      "G2_BD_B",
+      "G32_A",
+      "G32_B",
+      "G33_A",
+      "G33_B"
+    ],
+    "unsettled_requirement": "pair every longitudinal/Euler and explicit contact occurrence before comparing the remaining one-third with HT"
+  },
+  "routing": {
+    "p": "outgoing momentum at M/L",
+    "pairing": "<C_M,C_H>=p00*q01-p01*q00",
+    "q": "outgoing momentum at H/R",
+    "r0": "loop momentum on S-M (G3 vector; G2 source-matter)",
+    "r1": "r0-p",
+    "r2": "r0-p-q",
+    "wedge": "p00*r01-p01*r00"
+  },
+  "schema": "step5-ab1-g2-g3-dword-replay-v1",
+  "status": "EXACT_ISOLATED_TRIANGLE_REPLAY__FULL_DESCENDANT_ORBIT_OPEN"
+}

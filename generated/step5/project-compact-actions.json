@@ -1,0 +1,1761 @@
+{
+  "coefficient_unit": "lambda=hbar*g^2/(16*pi^2)",
+  "component_actions": [
+    {
+      "exact_zero": true,
+      "id": "U__U",
+      "left_input": "U",
+      "outputs": [],
+      "right_input": "U"
+    },
+    {
+      "exact_zero": true,
+      "id": "U__C1",
+      "left_input": "U",
+      "outputs": [],
+      "right_input": "C1"
+    },
+    {
+      "exact_zero": true,
+      "id": "U__C2",
+      "left_input": "U",
+      "outputs": [],
+      "right_input": "C2"
+    },
+    {
+      "exact_zero": true,
+      "id": "U__C3",
+      "left_input": "U",
+      "outputs": [],
+      "right_input": "C3"
+    },
+    {
+      "exact_zero": true,
+      "id": "U__B1",
+      "left_input": "U",
+      "outputs": [],
+      "right_input": "B1"
+    },
+    {
+      "exact_zero": true,
+      "id": "U__B2",
+      "left_input": "U",
+      "outputs": [],
+      "right_input": "B2"
+    },
+    {
+      "exact_zero": true,
+      "id": "U__B3",
+      "left_input": "U",
+      "outputs": [],
+      "right_input": "B3"
+    },
+    {
+      "exact_zero": false,
+      "id": "U__A",
+      "left_input": "U",
+      "outputs": [
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "-1",
+              "0"
+            ],
+            "text": "-i"
+          },
+          "left_output": "U",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "U"
+        }
+      ],
+      "right_input": "A"
+    },
+    {
+      "exact_zero": true,
+      "id": "C1__U",
+      "left_input": "C1",
+      "outputs": [],
+      "right_input": "U"
+    },
+    {
+      "exact_zero": true,
+      "id": "C1__C1",
+      "left_input": "C1",
+      "outputs": [],
+      "right_input": "C1"
+    },
+    {
+      "exact_zero": true,
+      "id": "C1__C2",
+      "left_input": "C1",
+      "outputs": [],
+      "right_input": "C2"
+    },
+    {
+      "exact_zero": true,
+      "id": "C1__C3",
+      "left_input": "C1",
+      "outputs": [],
+      "right_input": "C3"
+    },
+    {
+      "exact_zero": false,
+      "id": "C1__B1",
+      "left_input": "C1",
+      "outputs": [
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ],
+            "text": "-1"
+          },
+          "left_output": "U",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "U"
+        }
+      ],
+      "right_input": "B1"
+    },
+    {
+      "exact_zero": true,
+      "id": "C1__B2",
+      "left_input": "C1",
+      "outputs": [],
+      "right_input": "B2"
+    },
+    {
+      "exact_zero": true,
+      "id": "C1__B3",
+      "left_input": "C1",
+      "outputs": [],
+      "right_input": "B3"
+    },
+    {
+      "exact_zero": false,
+      "id": "C1__A",
+      "left_input": "C1",
+      "outputs": [
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "1",
+              "0"
+            ],
+            "text": "i"
+          },
+          "left_output": "C1",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "U"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "-1",
+              "0"
+            ],
+            "text": "-i"
+          },
+          "left_output": "U",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "C1"
+        }
+      ],
+      "right_input": "A"
+    },
+    {
+      "exact_zero": true,
+      "id": "C2__U",
+      "left_input": "C2",
+      "outputs": [],
+      "right_input": "U"
+    },
+    {
+      "exact_zero": true,
+      "id": "C2__C1",
+      "left_input": "C2",
+      "outputs": [],
+      "right_input": "C1"
+    },
+    {
+      "exact_zero": true,
+      "id": "C2__C2",
+      "left_input": "C2",
+      "outputs": [],
+      "right_input": "C2"
+    },
+    {
+      "exact_zero": true,
+      "id": "C2__C3",
+      "left_input": "C2",
+      "outputs": [],
+      "right_input": "C3"
+    },
+    {
+      "exact_zero": true,
+      "id": "C2__B1",
+      "left_input": "C2",
+      "outputs": [],
+      "right_input": "B1"
+    },
+    {
+      "exact_zero": false,
+      "id": "C2__B2",
+      "left_input": "C2",
+      "outputs": [
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ],
+            "text": "-1"
+          },
+          "left_output": "U",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "U"
+        }
+      ],
+      "right_input": "B2"
+    },
+    {
+      "exact_zero": true,
+      "id": "C2__B3",
+      "left_input": "C2",
+      "outputs": [],
+      "right_input": "B3"
+    },
+    {
+      "exact_zero": false,
+      "id": "C2__A",
+      "left_input": "C2",
+      "outputs": [
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "1",
+              "0"
+            ],
+            "text": "i"
+          },
+          "left_output": "C2",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "U"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "-1",
+              "0"
+            ],
+            "text": "-i"
+          },
+          "left_output": "U",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "C2"
+        }
+      ],
+      "right_input": "A"
+    },
+    {
+      "exact_zero": true,
+      "id": "C3__U",
+      "left_input": "C3",
+      "outputs": [],
+      "right_input": "U"
+    },
+    {
+      "exact_zero": true,
+      "id": "C3__C1",
+      "left_input": "C3",
+      "outputs": [],
+      "right_input": "C1"
+    },
+    {
+      "exact_zero": true,
+      "id": "C3__C2",
+      "left_input": "C3",
+      "outputs": [],
+      "right_input": "C2"
+    },
+    {
+      "exact_zero": true,
+      "id": "C3__C3",
+      "left_input": "C3",
+      "outputs": [],
+      "right_input": "C3"
+    },
+    {
+      "exact_zero": true,
+      "id": "C3__B1",
+      "left_input": "C3",
+      "outputs": [],
+      "right_input": "B1"
+    },
+    {
+      "exact_zero": true,
+      "id": "C3__B2",
+      "left_input": "C3",
+      "outputs": [],
+      "right_input": "B2"
+    },
+    {
+      "exact_zero": false,
+      "id": "C3__B3",
+      "left_input": "C3",
+      "outputs": [
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ],
+            "text": "-1"
+          },
+          "left_output": "U",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "U"
+        }
+      ],
+      "right_input": "B3"
+    },
+    {
+      "exact_zero": false,
+      "id": "C3__A",
+      "left_input": "C3",
+      "outputs": [
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "1",
+              "0"
+            ],
+            "text": "i"
+          },
+          "left_output": "C3",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "U"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "-1",
+              "0"
+            ],
+            "text": "-i"
+          },
+          "left_output": "U",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "C3"
+        }
+      ],
+      "right_input": "A"
+    },
+    {
+      "exact_zero": true,
+      "id": "B1__U",
+      "left_input": "B1",
+      "outputs": [],
+      "right_input": "U"
+    },
+    {
+      "exact_zero": false,
+      "id": "B1__C1",
+      "left_input": "B1",
+      "outputs": [
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ],
+            "text": "-1"
+          },
+          "left_output": "U",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "U"
+        }
+      ],
+      "right_input": "C1"
+    },
+    {
+      "exact_zero": true,
+      "id": "B1__C2",
+      "left_input": "B1",
+      "outputs": [],
+      "right_input": "C2"
+    },
+    {
+      "exact_zero": true,
+      "id": "B1__C3",
+      "left_input": "B1",
+      "outputs": [],
+      "right_input": "C3"
+    },
+    {
+      "exact_zero": true,
+      "id": "B1__B1",
+      "left_input": "B1",
+      "outputs": [],
+      "right_input": "B1"
+    },
+    {
+      "exact_zero": false,
+      "id": "B1__B2",
+      "left_input": "B1",
+      "outputs": [
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "1",
+              "0",
+              "0"
+            ],
+            "text": "sqrt(2)"
+          },
+          "left_output": "C3",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "U"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "-1",
+              "0",
+              "0"
+            ],
+            "text": "-sqrt(2)"
+          },
+          "left_output": "U",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "C3"
+        }
+      ],
+      "right_input": "B2"
+    },
+    {
+      "exact_zero": false,
+      "id": "B1__B3",
+      "left_input": "B1",
+      "outputs": [
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "-1",
+              "0",
+              "0"
+            ],
+            "text": "-sqrt(2)"
+          },
+          "left_output": "C2",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "U"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "1",
+              "0",
+              "0"
+            ],
+            "text": "sqrt(2)"
+          },
+          "left_output": "U",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "C2"
+        }
+      ],
+      "right_input": "B3"
+    },
+    {
+      "exact_zero": false,
+      "id": "B1__A",
+      "left_input": "B1",
+      "outputs": [
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "-1",
+              "0"
+            ],
+            "text": "-i"
+          },
+          "left_output": "B1",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "U"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "-1"
+            ],
+            "text": "-i*sqrt(2)"
+          },
+          "left_output": "C2",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "C3"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "1"
+            ],
+            "text": "i*sqrt(2)"
+          },
+          "left_output": "C3",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "C2"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "-1",
+              "0"
+            ],
+            "text": "-i"
+          },
+          "left_output": "U",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "B1"
+        }
+      ],
+      "right_input": "A"
+    },
+    {
+      "exact_zero": true,
+      "id": "B2__U",
+      "left_input": "B2",
+      "outputs": [],
+      "right_input": "U"
+    },
+    {
+      "exact_zero": true,
+      "id": "B2__C1",
+      "left_input": "B2",
+      "outputs": [],
+      "right_input": "C1"
+    },
+    {
+      "exact_zero": false,
+      "id": "B2__C2",
+      "left_input": "B2",
+      "outputs": [
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ],
+            "text": "-1"
+          },
+          "left_output": "U",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "U"
+        }
+      ],
+      "right_input": "C2"
+    },
+    {
+      "exact_zero": true,
+      "id": "B2__C3",
+      "left_input": "B2",
+      "outputs": [],
+      "right_input": "C3"
+    },
+    {
+      "exact_zero": false,
+      "id": "B2__B1",
+      "left_input": "B2",
+      "outputs": [
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "-1",
+              "0",
+              "0"
+            ],
+            "text": "-sqrt(2)"
+          },
+          "left_output": "C3",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "U"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "1",
+              "0",
+              "0"
+            ],
+            "text": "sqrt(2)"
+          },
+          "left_output": "U",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "C3"
+        }
+      ],
+      "right_input": "B1"
+    },
+    {
+      "exact_zero": true,
+      "id": "B2__B2",
+      "left_input": "B2",
+      "outputs": [],
+      "right_input": "B2"
+    },
+    {
+      "exact_zero": false,
+      "id": "B2__B3",
+      "left_input": "B2",
+      "outputs": [
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "1",
+              "0",
+              "0"
+            ],
+            "text": "sqrt(2)"
+          },
+          "left_output": "C1",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "U"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "-1",
+              "0",
+              "0"
+            ],
+            "text": "-sqrt(2)"
+          },
+          "left_output": "U",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "C1"
+        }
+      ],
+      "right_input": "B3"
+    },
+    {
+      "exact_zero": false,
+      "id": "B2__A",
+      "left_input": "B2",
+      "outputs": [
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "-1",
+              "0"
+            ],
+            "text": "-i"
+          },
+          "left_output": "B2",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "U"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "1"
+            ],
+            "text": "i*sqrt(2)"
+          },
+          "left_output": "C1",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "C3"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "-1"
+            ],
+            "text": "-i*sqrt(2)"
+          },
+          "left_output": "C3",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "C1"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "-1",
+              "0"
+            ],
+            "text": "-i"
+          },
+          "left_output": "U",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "B2"
+        }
+      ],
+      "right_input": "A"
+    },
+    {
+      "exact_zero": true,
+      "id": "B3__U",
+      "left_input": "B3",
+      "outputs": [],
+      "right_input": "U"
+    },
+    {
+      "exact_zero": true,
+      "id": "B3__C1",
+      "left_input": "B3",
+      "outputs": [],
+      "right_input": "C1"
+    },
+    {
+      "exact_zero": true,
+      "id": "B3__C2",
+      "left_input": "B3",
+      "outputs": [],
+      "right_input": "C2"
+    },
+    {
+      "exact_zero": false,
+      "id": "B3__C3",
+      "left_input": "B3",
+      "outputs": [
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ],
+            "text": "-1"
+          },
+          "left_output": "U",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "U"
+        }
+      ],
+      "right_input": "C3"
+    },
+    {
+      "exact_zero": false,
+      "id": "B3__B1",
+      "left_input": "B3",
+      "outputs": [
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "1",
+              "0",
+              "0"
+            ],
+            "text": "sqrt(2)"
+          },
+          "left_output": "C2",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "U"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "-1",
+              "0",
+              "0"
+            ],
+            "text": "-sqrt(2)"
+          },
+          "left_output": "U",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "C2"
+        }
+      ],
+      "right_input": "B1"
+    },
+    {
+      "exact_zero": false,
+      "id": "B3__B2",
+      "left_input": "B3",
+      "outputs": [
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "-1",
+              "0",
+              "0"
+            ],
+            "text": "-sqrt(2)"
+          },
+          "left_output": "C1",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "U"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "1",
+              "0",
+              "0"
+            ],
+            "text": "sqrt(2)"
+          },
+          "left_output": "U",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "C1"
+        }
+      ],
+      "right_input": "B2"
+    },
+    {
+      "exact_zero": true,
+      "id": "B3__B3",
+      "left_input": "B3",
+      "outputs": [],
+      "right_input": "B3"
+    },
+    {
+      "exact_zero": false,
+      "id": "B3__A",
+      "left_input": "B3",
+      "outputs": [
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "-1",
+              "0"
+            ],
+            "text": "-i"
+          },
+          "left_output": "B3",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "U"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "-1"
+            ],
+            "text": "-i*sqrt(2)"
+          },
+          "left_output": "C1",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "C2"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "1"
+            ],
+            "text": "i*sqrt(2)"
+          },
+          "left_output": "C2",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "C1"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "-1",
+              "0"
+            ],
+            "text": "-i"
+          },
+          "left_output": "U",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "B3"
+        }
+      ],
+      "right_input": "A"
+    },
+    {
+      "exact_zero": false,
+      "id": "A__U",
+      "left_input": "A",
+      "outputs": [
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "-1",
+              "0"
+            ],
+            "text": "-i"
+          },
+          "left_output": "U",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "U"
+        }
+      ],
+      "right_input": "U"
+    },
+    {
+      "exact_zero": false,
+      "id": "A__C1",
+      "left_input": "A",
+      "outputs": [
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "1",
+              "0"
+            ],
+            "text": "i"
+          },
+          "left_output": "C1",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "U"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "-1",
+              "0"
+            ],
+            "text": "-i"
+          },
+          "left_output": "U",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "C1"
+        }
+      ],
+      "right_input": "C1"
+    },
+    {
+      "exact_zero": false,
+      "id": "A__C2",
+      "left_input": "A",
+      "outputs": [
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "1",
+              "0"
+            ],
+            "text": "i"
+          },
+          "left_output": "C2",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "U"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "-1",
+              "0"
+            ],
+            "text": "-i"
+          },
+          "left_output": "U",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "C2"
+        }
+      ],
+      "right_input": "C2"
+    },
+    {
+      "exact_zero": false,
+      "id": "A__C3",
+      "left_input": "A",
+      "outputs": [
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "1",
+              "0"
+            ],
+            "text": "i"
+          },
+          "left_output": "C3",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "U"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "-1",
+              "0"
+            ],
+            "text": "-i"
+          },
+          "left_output": "U",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "C3"
+        }
+      ],
+      "right_input": "C3"
+    },
+    {
+      "exact_zero": false,
+      "id": "A__B1",
+      "left_input": "A",
+      "outputs": [
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "-1",
+              "0"
+            ],
+            "text": "-i"
+          },
+          "left_output": "B1",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "U"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "-1"
+            ],
+            "text": "-i*sqrt(2)"
+          },
+          "left_output": "C2",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "C3"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "1"
+            ],
+            "text": "i*sqrt(2)"
+          },
+          "left_output": "C3",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "C2"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "-1",
+              "0"
+            ],
+            "text": "-i"
+          },
+          "left_output": "U",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "B1"
+        }
+      ],
+      "right_input": "B1"
+    },
+    {
+      "exact_zero": false,
+      "id": "A__B2",
+      "left_input": "A",
+      "outputs": [
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "-1",
+              "0"
+            ],
+            "text": "-i"
+          },
+          "left_output": "B2",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "U"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "1"
+            ],
+            "text": "i*sqrt(2)"
+          },
+          "left_output": "C1",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "C3"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "-1"
+            ],
+            "text": "-i*sqrt(2)"
+          },
+          "left_output": "C3",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "C1"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "-1",
+              "0"
+            ],
+            "text": "-i"
+          },
+          "left_output": "U",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "B2"
+        }
+      ],
+      "right_input": "B2"
+    },
+    {
+      "exact_zero": false,
+      "id": "A__B3",
+      "left_input": "A",
+      "outputs": [
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "-1",
+              "0"
+            ],
+            "text": "-i"
+          },
+          "left_output": "B3",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "U"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "-1"
+            ],
+            "text": "-i*sqrt(2)"
+          },
+          "left_output": "C1",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "C2"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "1"
+            ],
+            "text": "i*sqrt(2)"
+          },
+          "left_output": "C2",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "C1"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "-1",
+              "0"
+            ],
+            "text": "-i"
+          },
+          "left_output": "U",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "B3"
+        }
+      ],
+      "right_input": "B3"
+    },
+    {
+      "exact_zero": false,
+      "id": "A__A",
+      "left_input": "A",
+      "outputs": [
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "1",
+              "0"
+            ],
+            "text": "i"
+          },
+          "left_output": "A",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "U"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ],
+            "text": "1"
+          },
+          "left_output": "B1",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "C1"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ],
+            "text": "1"
+          },
+          "left_output": "B2",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "C2"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ],
+            "text": "1"
+          },
+          "left_output": "B3",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "C3"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ],
+            "text": "-1"
+          },
+          "left_output": "C1",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "B1"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ],
+            "text": "-1"
+          },
+          "left_output": "C2",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "B2"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ],
+            "text": "-1"
+          },
+          "left_output": "C3",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "B3"
+        },
+        {
+          "coefficient_over_lambda": {
+            "basis": [
+              "1",
+              "sqrt(2)",
+              "i",
+              "i*sqrt(2)"
+            ],
+            "coefficients": [
+              "0",
+              "0",
+              "-1",
+              "0"
+            ],
+            "text": "-i"
+          },
+          "left_output": "U",
+          "operator": "P_dot(left)*P^dot(right)",
+          "right_output": "A"
+        }
+      ],
+      "right_input": "A"
+    }
+  ],
+  "schema": 1
+}

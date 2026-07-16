@@ -1,0 +1,718 @@
+{
+  "authority": {
+    "authority_sha256": "3970e8769fc21a5f41a1fa0d4e537b577f3d1d7b212bc6795819b37b6d58ae6f",
+    "commit": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+    "task": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
+    "task_sha256": "4ed8aa9957868233f4c1b7ff4a4c4ec02744c153ffd0d16e30f6e322042ba749",
+    "verify_run": "29306335742"
+  },
+  "blockers": [
+    {
+      "effect": "The endpoint transfer signs and the two mixed-anticommutator factors are recorded primitives. A full representative superspace D-word, four endpoint integration-by-parts chains, and the exchange map for the second marked placement have not been generated from a noncommutative rewrite trace.",
+      "id": "BLOCKED_EXPLICIT_WW_D_ALGEBRA_WORD_DERIVATION"
+    }
+  ],
+  "checks": [
+    {
+      "actual": {
+        "denominator": 4,
+        "numerator": -1
+      },
+      "expected": {
+        "denominator": 4,
+        "numerator": -1
+      },
+      "id": "dictionary_W_linear",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "denominator": 1,
+        "numerator": 1
+      },
+      "expected": {
+        "denominator": 1,
+        "numerator": 1
+      },
+      "id": "propagator_inverse",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "denominator": 4,
+        "numerator": 1
+      },
+      "expected": {
+        "denominator": 4,
+        "numerator": 1
+      },
+      "id": "vertex_product",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "denominator": 1,
+        "numerator": 1
+      },
+      "expected": {
+        "denominator": 1,
+        "numerator": 1
+      },
+      "id": "wick_weight",
+      "status": "PASS"
+    },
+    {
+      "actual": 8,
+      "expected": 8,
+      "id": "row_count",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "expected": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "id": "all_row_signs",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "denominator": 1,
+        "numerator": 2
+      },
+      "expected": {
+        "denominator": 1,
+        "numerator": 2
+      },
+      "id": "D_weight",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "denominator": 1,
+        "numerator": 1
+      },
+      "expected": {
+        "denominator": 1,
+        "numerator": 1
+      },
+      "id": "tensor_multiplier",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "denominator": 2,
+        "numerator": 1
+      },
+      "expected": {
+        "denominator": 2,
+        "numerator": 1
+      },
+      "id": "preintegral",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "denominator": 32,
+        "numerator": 1
+      },
+      "expected": {
+        "denominator": 32,
+        "numerator": 1
+      },
+      "id": "pole",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS"
+      ],
+      "expected": [
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS"
+      ],
+      "id": "all_mutations_detected",
+      "status": "PASS"
+    }
+  ],
+  "derivation": {
+    "action_vertex_label_assignments": [
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "exponent_order": "S_Wtilde*S_W",
+        "fixed_orientation": "A insertion leg -> Wtilde vertex; B insertion leg -> W vertex",
+        "id": "AVL-Abar-then-BW"
+      },
+      {
+        "coefficient": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "exponent_order": "S_W*S_Wtilde",
+        "fixed_orientation": "A insertion leg -> Wtilde vertex; B insertion leg -> W vertex",
+        "id": "AVL-BW-then-Abar"
+      }
+    ],
+    "amplitude": {
+      "D_algebra_numerator_weight": {
+        "denominator": 1,
+        "numerator": 2
+      },
+      "external_tensor": {
+        "B_placement": "kept as the distinct ordered descendant O_B; it is not added to O_A as a multiplicity",
+        "O_A": "O_(A,mu nu)^{DE}=Wtilde^D_dot-alpha(q)*p^rho*X^E(p)*T_(mu rho nu,+)^dot-alpha",
+        "T": "T_(mu rho nu,+)^dot-alpha=(sigma_E,mu)_(+ dot-beta)*(barsigma_E,rho)^(dot-beta gamma)*(sigma_E,nu)_gamma^dot-alpha",
+        "X": "X^E(p)=D_+ W_+^E(p)"
+      },
+      "marked_object": "fixed orientation A|B with D_- on the A insertion leg",
+      "placement_rule": "the A and B D_- placements are distinct ordered external descendants; each carries this coefficient and they are not an extra Wick multiplicity",
+      "pole": "+hbar*g^2/(32*pi^2*epsilon) times C^{AB}{}_{DE} O^{DE}_{A,mu nu} hatdelta^{mu nu}",
+      "pole_coefficient_without_hbar_g2_pi2": {
+        "denominator": 32,
+        "numerator": 1
+      },
+      "preintegral": "Gamma_T,A=(hbar*g^2/2) C^{AB}{}_{DE} O^{DE}_{A,mu nu} int mu^(2epsilon)d^d k/(2pi)^d L1^mu L2^nu/(D0 D1 D2)",
+      "preintegral_coefficient_without_hbar_g2": {
+        "denominator": 2,
+        "numerator": 1
+      },
+      "three_propagator_scalar_factor": {
+        "denominator": 1,
+        "numerator": 1
+      },
+      "vertex_product_without_g2": {
+        "denominator": 4,
+        "numerator": 1
+      },
+      "wick_weight": {
+        "denominator": 1,
+        "numerator": 1
+      }
+    },
+    "canonical_dictionary": {
+      "W_can_expansion": [
+        "W_(1)a=-(1/4)*barD^2*D_a*v",
+        "W_(2)a=-(1/4)*barD^2*[[D_a*v,v]]",
+        "W_can=W_(1)+g*W_(2)+O(g^2)"
+      ],
+      "W_can_linear_coefficient": {
+        "denominator": 4,
+        "numerator": -1
+      },
+      "W_can_quadratic_coefficient_times_g": {
+        "denominator": 4,
+        "numerator": -1
+      },
+      "forward": {
+        "V_P": "2*g*v",
+        "W_P": "g*W_can"
+      },
+      "inverse": {
+        "W_can": "W_P/g",
+        "v": "V_P/(2*g)"
+      },
+      "roundtrip_factors": {
+        "V": {
+          "denominator": 1,
+          "numerator": 1
+        },
+        "W": {
+          "denominator": 1,
+          "numerator": 1
+        }
+      }
+    },
+    "color": {
+      "definition": "C^{AB}{}_{DE}=kappa^{AU} kappa^{BV} kappa^{CC'} c_{UCD} c_{VC'E}",
+      "kappa_delta_specialization": "C^{AB}{}_{DE}=c_{ACD} c_{BCE}",
+      "orientation": "A insertion leg attaches to Wtilde^D; B insertion leg attaches to W^E"
+    },
+    "dalgebra": {
+      "closed_loop_derivation": "(D^2 theta^2)(barD^2 bartheta^2)=(-4)(-4)=16",
+      "closed_loop_factor": 16,
+      "complex_bispinor": "mathsf p_(a dot-a)=-i sigma_E^m_(a dot-a) p_m",
+      "delta_normalization": "delta^4(theta)=theta^2 bartheta^2",
+      "fourier_phase": "exp(+i p.x)",
+      "insertion_numerical_factor": {
+        "denominator": 32,
+        "numerator": 1
+      },
+      "mixed_anticommutator": "{D_a,barD_dot-a}=2 mathsf p_(a dot-a)",
+      "mixed_anticommutator_product": 4,
+      "numerator_weight_per_marked_Dminus_placement": {
+        "denominator": 1,
+        "numerator": 2
+      },
+      "placement_sums": {
+        "A": {
+          "L1": "r0+r1=2k+q",
+          "L2": "r1+r2=2k+q+P=2k+p+2q",
+          "all_final_signs": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "external_descendant_is_not_summed_with_other_placement": true,
+          "factorized_numerator": "(r0+r1)_(+ dotbeta) p^(dotbeta gamma) (r1+r2)_(gamma dot-alpha)",
+          "row_count": 4
+        },
+        "B": {
+          "L1": "r0+r1=2k+q",
+          "L2": "r1+r2=2k+q+P=2k+p+2q",
+          "all_final_signs": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "external_descendant_is_not_summed_with_other_placement": true,
+          "factorized_numerator": "(r0+r1)_(+ dotbeta) p^(dotbeta gamma) (r1+r2)_(gamma dot-alpha)",
+          "row_count": 4
+        }
+      },
+      "separation_statement": "Wick weight is not included in the D-algebra weight"
+    },
+    "endpoint_rows": [
+      {
+        "D_endpoint": "r1",
+        "Dminus_placement": "A",
+        "barD_endpoint": "r0",
+        "classification": "NONCOLLAPSED_METRIC_NUMERATOR",
+        "collapsed_edge": null,
+        "endpoint_transfer_sign": -1,
+        "final_sign": 1,
+        "id": "WW-DA-01",
+        "momentum_numerator": "(r0)_(+ dotbeta) p^(dotbeta gamma) (r1)_(gamma dot-alpha)",
+        "ordered_external_descendant": "O_A|B",
+        "raw_derivative_word": "(D_-K_+)_A K_+ barD[r0] D[r1]",
+        "raw_vertex_sign": -1
+      },
+      {
+        "D_endpoint": "r2",
+        "Dminus_placement": "A",
+        "barD_endpoint": "r0",
+        "classification": "NONCOLLAPSED_METRIC_NUMERATOR",
+        "collapsed_edge": null,
+        "endpoint_transfer_sign": 1,
+        "final_sign": 1,
+        "id": "WW-DA-02",
+        "momentum_numerator": "(r0)_(+ dotbeta) p^(dotbeta gamma) (r2)_(gamma dot-alpha)",
+        "ordered_external_descendant": "O_A|B",
+        "raw_derivative_word": "(D_-K_+)_A K_+ barD[r0] D[r2]",
+        "raw_vertex_sign": 1
+      },
+      {
+        "D_endpoint": "r1",
+        "Dminus_placement": "A",
+        "barD_endpoint": "r1",
+        "classification": "NONCOLLAPSED_METRIC_NUMERATOR",
+        "collapsed_edge": null,
+        "endpoint_transfer_sign": 1,
+        "final_sign": 1,
+        "id": "WW-DA-03",
+        "momentum_numerator": "(r1)_(+ dotbeta) p^(dotbeta gamma) (r1)_(gamma dot-alpha)",
+        "ordered_external_descendant": "O_A|B",
+        "raw_derivative_word": "(D_-K_+)_A K_+ barD[r1] D[r1]",
+        "raw_vertex_sign": 1
+      },
+      {
+        "D_endpoint": "r2",
+        "Dminus_placement": "A",
+        "barD_endpoint": "r1",
+        "classification": "NONCOLLAPSED_METRIC_NUMERATOR",
+        "collapsed_edge": null,
+        "endpoint_transfer_sign": -1,
+        "final_sign": 1,
+        "id": "WW-DA-04",
+        "momentum_numerator": "(r1)_(+ dotbeta) p^(dotbeta gamma) (r2)_(gamma dot-alpha)",
+        "ordered_external_descendant": "O_A|B",
+        "raw_derivative_word": "(D_-K_+)_A K_+ barD[r1] D[r2]",
+        "raw_vertex_sign": -1
+      },
+      {
+        "D_endpoint": "r1",
+        "Dminus_placement": "B",
+        "barD_endpoint": "r0",
+        "classification": "NONCOLLAPSED_METRIC_NUMERATOR",
+        "collapsed_edge": null,
+        "endpoint_transfer_sign": -1,
+        "final_sign": 1,
+        "id": "WW-DA-05",
+        "momentum_numerator": "(r0)_(+ dotbeta) p^(dotbeta gamma) (r1)_(gamma dot-alpha)",
+        "ordered_external_descendant": "O_B|A",
+        "raw_derivative_word": "(D_-K_+)_B K_+ barD[r0] D[r1]",
+        "raw_vertex_sign": -1
+      },
+      {
+        "D_endpoint": "r2",
+        "Dminus_placement": "B",
+        "barD_endpoint": "r0",
+        "classification": "NONCOLLAPSED_METRIC_NUMERATOR",
+        "collapsed_edge": null,
+        "endpoint_transfer_sign": 1,
+        "final_sign": 1,
+        "id": "WW-DA-06",
+        "momentum_numerator": "(r0)_(+ dotbeta) p^(dotbeta gamma) (r2)_(gamma dot-alpha)",
+        "ordered_external_descendant": "O_B|A",
+        "raw_derivative_word": "(D_-K_+)_B K_+ barD[r0] D[r2]",
+        "raw_vertex_sign": 1
+      },
+      {
+        "D_endpoint": "r1",
+        "Dminus_placement": "B",
+        "barD_endpoint": "r1",
+        "classification": "NONCOLLAPSED_METRIC_NUMERATOR",
+        "collapsed_edge": null,
+        "endpoint_transfer_sign": 1,
+        "final_sign": 1,
+        "id": "WW-DA-07",
+        "momentum_numerator": "(r1)_(+ dotbeta) p^(dotbeta gamma) (r1)_(gamma dot-alpha)",
+        "ordered_external_descendant": "O_B|A",
+        "raw_derivative_word": "(D_-K_+)_B K_+ barD[r1] D[r1]",
+        "raw_vertex_sign": 1
+      },
+      {
+        "D_endpoint": "r2",
+        "Dminus_placement": "B",
+        "barD_endpoint": "r1",
+        "classification": "NONCOLLAPSED_METRIC_NUMERATOR",
+        "collapsed_edge": null,
+        "endpoint_transfer_sign": -1,
+        "final_sign": 1,
+        "id": "WW-DA-08",
+        "momentum_numerator": "(r1)_(+ dotbeta) p^(dotbeta gamma) (r2)_(gamma dot-alpha)",
+        "ordered_external_descendant": "O_B|A",
+        "raw_derivative_word": "(D_-K_+)_B K_+ barD[r1] D[r2]",
+        "raw_vertex_sign": -1
+      }
+    ],
+    "gauge_and_propagator": {
+      "background_split": "E_tot=Btilde_B*exp(2*g*v)*B_B",
+      "conditions": [
+        "F_+(v)=-(1/4)*(barNabla_B)^2*(2*g*v)",
+        "F_-(v)=-(1/4)*(Nabla_B)^2*(2*g*v)"
+      ],
+      "cycle": "Euclidean positive gauge-boson contour inherited from (4A.56b)--(4A.57)",
+      "gauge_name": "PROJECT_STEP5_BACKGROUND_SUPERSYMMETRIC_FERMI_FEYNMAN",
+      "gauge_parameter": 1,
+      "inverse_check": {
+        "denominator": 1,
+        "numerator": 1
+      },
+      "kinetic_hessian_factor": {
+        "denominator": 1,
+        "numerator": 1
+      },
+      "momentum_kernel": "K_AB(p)=kappa_AB*p^2",
+      "propagator": "<v^A(p,theta_1)v^B(-p,theta_2)>_0=hbar*kappa^{AB}*delta^4(theta_1-theta_2)/p^2",
+      "propagator_scalar_factor": {
+        "denominator": 1,
+        "numerator": 1
+      },
+      "quadratic_action": "S_0=(1/2)*int d^d x d^4theta kappa_AB v^A(-partial^2)v^B",
+      "residual_slice": "ker(M_FP) removed as in (3D.92)--(3D.92a)"
+    },
+    "integral": {
+      "Delta": "x*y*q^2+x*z*P^2+y*z*p^2",
+      "Delta_J3_has_pole": false,
+      "J2": "mu^(2epsilon)/(4pi)^(2-epsilon)*Gamma(epsilon)*Delta^(-epsilon)",
+      "J2_laurent_residue": "1/(16*pi^2)",
+      "denominators": [
+        "D0=k^2",
+        "D1=(k+q)^2",
+        "D2=(k+P)^2"
+      ],
+      "dimension": "d=4-2*epsilon",
+      "feynman_identity": "1/(D0 D1 D2)=2 int_Delta dx dy dz /(ell^2+Delta)^3",
+      "measure": "mu^(2 epsilon) d^d k/(2 pi)^d",
+      "routing": {
+        "P": "p+q",
+        "r0": "k",
+        "r1": "k+q",
+        "r2": "k+P"
+      },
+      "shift": "ell=k+y*q+z*P",
+      "shifted_L1": "L1=2 ell+(1-2y)q-2zP",
+      "shifted_L2": "L2=2 ell+(1-2y)q+(1-2z)P",
+      "simplex_volume": {
+        "denominator": 2,
+        "numerator": 1
+      },
+      "tensor_multiplier": {
+        "denominator": 1,
+        "numerator": 1
+      },
+      "tensor_reduction": "int ell^mu ell^nu/(ell^2+Delta)^3=(hatdelta^mu nu/d)*(J2-Delta*J3)",
+      "triangle_tensor_laurent_residue": "1/16/pi^2 * hatdelta^mu nu",
+      "triangle_tensor_residue_without_pi": {
+        "denominator": 16,
+        "numerator": 1
+      },
+      "uv_quadratic_numerator": "4 ell^mu ell^nu"
+    },
+    "source_insertion": {
+      "Dminus_Kplus": "D_-K_+=-(1/8)D^2 barD^2 D_+",
+      "Dminus_Kplus_coefficient": {
+        "denominator": 8,
+        "numerator": -1
+      },
+      "K_plus": "K_+=-(1/4)D_+ barD^2 D_+",
+      "canonical_letter": "X_can^A=g^{-1}(nabla_+ W_P,+)^A",
+      "linear_letter": "X_can,(1)^A=K_+ v^A",
+      "ordered_leibniz": [
+        "I_(2),A^{AB}=(D_-K_+v^A)(K_+v^B)",
+        "I_(2),B^{AB}=(K_+v^A)(D_-K_+v^B)"
+      ],
+      "parity": {
+        "K_+v": "even",
+        "relative_Leibniz_sign": 1
+      },
+      "source": "I_(2)^{AB}=D_-[(K_+v^A)(K_+v^B)]",
+      "spin_frame": [
+        "epsilon^{+-}=+1",
+        "epsilon_{+-}=-1",
+        "D^+=D_-",
+        "D^-=-D_+",
+        "D^2=2 D_-D_+"
+      ],
+      "two_K_insertion_coefficient": {
+        "denominator": 32,
+        "numerator": 1
+      }
+    },
+    "vertices": {
+      "action_cross_coefficient": {
+        "denominator": 2,
+        "numerator": -1
+      },
+      "action_kernel_phases": {
+        "W": "+i",
+        "Wtilde": "-i"
+      },
+      "background_vertex_magnitude_without_g": {
+        "denominator": 2,
+        "numerator": 1
+      },
+      "exponent_vertex_phases": {
+        "W": "-i",
+        "Wtilde": "+i"
+      },
+      "exponent_vertices": {
+        "W": "-(i*g/2)*c_{UCE}*W^{E gamma}*(D_C,gamma-D_U,gamma)",
+        "Wtilde": "+(i*g/2)*c_{UCD}*Wtilde^D_dotgamma*(barD_C^dotgamma-barD_U^dotgamma)"
+      },
+      "project_derivation": [
+        "S_(3),+=( -1/4 )*2*g*[W_(1)^a W_(2)a]_F",
+        "[W_(1)^a W_(2)a]_F=[W_(1)^a [[D_a v,v]]]_D",
+        "S_(3),+=-(g/2)*int tr_kappa(W_(1)^a [[D_a v,v]])",
+        "S_(3),-=+(g/2)*int tr_kappa(Wtilde_(1)_dot a [[barD^dot a v,v]])",
+        "ordered second variation symmetrizes the two quantum v ports",
+        "the perturbative exponent e^{-S_int/hbar} reverses each action-kernel sign"
+      ],
+      "vertex_product_phase": "(+i)*(-i)=+1",
+      "vertex_product_without_g2": {
+        "denominator": 4,
+        "numerator": 1
+      }
+    },
+    "wick_weight": {
+      "denominator": 1,
+      "numerator": 1
+    }
+  },
+  "foundations": [
+    {
+      "path": "contracts/foundations/step-01-supersymmetry-commutator.md",
+      "sha256": "a73d8017c2d07de578f4f98ea25054033b0384ebffb6b426650a22f404c3231b",
+      "uses": [
+        "Euclidean sigma algebra (1.51)--(1.56)"
+      ]
+    },
+    {
+      "path": "contracts/foundations/step-02a-flat-superspace.md",
+      "sha256": "6694f46634d604fac6a8866323c7325a803cbf3079a5771ddea25772c91cef2d",
+      "uses": [
+        "left Grassmann calculus (2A.4)--(2A.8)",
+        "Euclidean D algebra (2A.41)--(2A.43)"
+      ]
+    },
+    {
+      "path": "contracts/foundations/step-03a-gauge-chiral-action.md",
+      "sha256": "48141fc931580f6b73e385b8f900b3e6df5939cdb9348042de07fd8fe9320967",
+      "uses": [
+        "Berezin projectors (3A.13)--(3A.16)",
+        "field strengths (3A.51)--(3A.52)"
+      ]
+    },
+    {
+      "path": "contracts/foundations/step-03c-gauge-vector-representation.md",
+      "sha256": "c4cc6f0504b79e02ce78030ad79b625bee6da7dff9de0f6a1ddc3b33ef2584a1",
+      "uses": [
+        "background vector derivatives (3C.15)--(3C.23)",
+        "strength algebra (3C.33)--(3C.45)"
+      ]
+    },
+    {
+      "path": "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md",
+      "sha256": "109e0c531da3a1b98313e87dd692fa3d9047c8f745291f8e87021008c7acc538",
+      "uses": [
+        "background split (3D.80)",
+        "gauge conditions and gauge fermion (3D.86)--(3D.93b)"
+      ]
+    },
+    {
+      "path": "contracts/foundations/step-04-extended-sym-notation.md",
+      "sha256": "3fcf7e242928d3512c02059d8c28d9551b5cb86156f9d6259cd2bba713211d27",
+      "uses": [
+        "absorbed coupling and invariant trace (4.5)--(4.11)"
+      ]
+    },
+    {
+      "path": "contracts/foundations/step-04a-n1-super-yang-mills.md",
+      "sha256": "b2495f6a98c8cffe21ab2583b1955c81f5bb06af9b0edfb677fc0a3a3ee1fbc1",
+      "uses": [
+        "Euclidean N=1 action (4A.2)",
+        "positive gauge contour (4A.56b)--(4A.57)"
+      ]
+    },
+    {
+      "path": "contracts/foundations/step-04c-n4-super-yang-mills.md",
+      "sha256": "fafc3bc2227b60ca699b3f953b632db82dafe093b221baa74736cc5fb838928f",
+      "uses": [
+        "Euclidean N=4 action (4C.4)"
+      ]
+    }
+  ],
+  "mutation_tests": [
+    {
+      "changed_invariants": [
+        "dictionary_W_linear"
+      ],
+      "name": "MUTATE_V_DICTIONARY_2_TO_1",
+      "status": "PASS"
+    },
+    {
+      "changed_invariants": [
+        "pole",
+        "preintegral"
+      ],
+      "name": "MUTATE_KINETIC_HESSIAN_1_TO_2",
+      "status": "PASS"
+    },
+    {
+      "changed_invariants": [
+        "pole",
+        "preintegral",
+        "wick_weight"
+      ],
+      "name": "MUTATE_SYMMETRY_FACTOR_HALF_TO_ONE",
+      "status": "PASS"
+    },
+    {
+      "changed_invariants": [
+        "pole",
+        "preintegral",
+        "wick_weight"
+      ],
+      "name": "MUTATE_LABEL_ASSIGNMENTS_2_TO_1",
+      "status": "PASS"
+    },
+    {
+      "changed_invariants": [
+        "D_weight",
+        "pole",
+        "preintegral"
+      ],
+      "name": "MUTATE_CLOSED_LOOP_16_TO_8",
+      "status": "PASS"
+    },
+    {
+      "changed_invariants": [
+        "D_weight",
+        "pole",
+        "preintegral"
+      ],
+      "name": "MUTATE_MIXED_ANTICOMMUTATOR_2_TO_1",
+      "status": "PASS"
+    },
+    {
+      "changed_invariants": [
+        "pole",
+        "tensor_multiplier"
+      ],
+      "name": "MUTATE_SIMPLEX_VOLUME_HALF_TO_ONE",
+      "status": "PASS"
+    },
+    {
+      "changed_invariants": [
+        "pole",
+        "tensor_multiplier"
+      ],
+      "name": "MUTATE_TENSOR_ONE_QUARTER_TO_ONE_HALF",
+      "status": "PASS"
+    },
+    {
+      "changed_invariants": [
+        "all_row_signs"
+      ],
+      "name": "MUTATE_ONE_ENDPOINT_TRANSFER_SIGN",
+      "status": "PASS"
+    }
+  ],
+  "schema": "step5-canonical-superfield-ww-seed-v1",
+  "scope": {
+    "excluded": [
+      "holomorphic-twist target",
+      "imported candidate coefficient",
+      "gauge-complete cutting orbit",
+      "finite anomaly remainder"
+    ],
+    "included": [
+      "canonical dictionary",
+      "background supersymmetric Fermi--Feynman gauge lock",
+      "free vector-superfield propagator",
+      "two background field-strength vertices",
+      "ordered quadratic WW source",
+      "two action-vertex label assignments",
+      "eight D-minus/endpoint rows",
+      "fixed-orientation noncollapsed preintegral",
+      "ordinary DRED metric pole"
+    ]
+  },
+  "status": "PASS_ARITHMETIC_WITH_EXPLICIT_D_WORD_BLOCKER"
+}

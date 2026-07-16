@@ -1,0 +1,360 @@
+{
+  "checks": {
+    "count": 42,
+    "failed": 0,
+    "passed": 42,
+    "rows": [
+      {
+        "actual": "K/2",
+        "expected": "K/2",
+        "id": "B1_DESCENDANT_NONLINEAR_CANCELLATION",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1024*(p00*r01 - p01*r00)*(p00*p11 + p00*q11 - p00*r11 - p01*p10 - p01*q10 + p01*r10 - p10*q01 + p10*r01 + p11*q00 - p11*r00 + q00*q11 - q00*r11 - q01*q10 + q01*r10 + q10*r01 - q11*r00 + r00*r11 - r01*r10)",
+        "expected": "-1024*(p00*r01 - p01*r00)*(p00*p11 + p00*q11 - p00*r11 - p01*p10 - p01*q10 + p01*r10 - p10*q01 + p10*r01 + p11*q00 - p11*r00 + q00*q11 - q00*r11 - q01*q10 + q01*r10 + q10*r01 - q11*r00 + r00*r11 - r01*r10)",
+        "id": "RAW_G3_B_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-128*(p00*r01 - p01*r00)",
+        "expected": "-128*(p00*r01 - p01*r00)",
+        "id": "RAW_G3_B_LOCAL_CORE",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "PE_PX_ZERO_SQUARE_SUM",
+        "status": "PASS"
+      },
+      {
+        "actual": "512*(p00*r01 - p01*r00)",
+        "expected": "512*(p00*r01 - p01*r00)",
+        "id": "GATE7_SPURIOUS_PE_PX_SUM",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "GATE7_PE_PX_SUM_IS_NOT_PROJECT_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "8",
+        "expected": "8",
+        "id": "K0_OPERATOR_MULTIPLIER",
+        "status": "PASS"
+      },
+      {
+        "actual": "32",
+        "expected": "32",
+        "id": "K1_OPERATOR_MULTIPLIER",
+        "status": "PASS"
+      },
+      {
+        "actual": "-32",
+        "expected": "-32",
+        "id": "K2_OPERATOR_MULTIPLIER",
+        "status": "PASS"
+      },
+      {
+        "actual": "4096*(p00*q01 - p01*q00 + q00*r01 - q01*r00)",
+        "expected": "4096*(p00*q01 - p01*q00 + q00*r01 - q01*r00)",
+        "id": "K0_SAME_UNIT_WORD",
+        "status": "PASS"
+      },
+      {
+        "actual": "-4096*(p00*r01 - p01*r00 + q00*r01 - q01*r00)",
+        "expected": "-4096*(p00*r01 - p01*r00 + q00*r01 - q01*r00)",
+        "id": "K1_SAME_UNIT_WORD",
+        "status": "PASS"
+      },
+      {
+        "actual": "4096*(p00*r01 - p01*r00)",
+        "expected": "4096*(p00*r01 - p01*r00)",
+        "id": "K2_SAME_UNIT_WORD",
+        "status": "PASS"
+      },
+      {
+        "actual": "4096*(r00*r11 - r01*r10)*(p00*q01 - p01*q00 + q00*r01 - q01*r00)",
+        "expected": "4096*(r00*r11 - r01*r10)*(p00*q01 - p01*q00 + q00*r01 - q01*r00)",
+        "id": "P0_SAME_UNIT_DET_WORD",
+        "status": "PASS"
+      },
+      {
+        "actual": "-4096*(p00*r01 - p01*r00 + q00*r01 - q01*r00)*(p00*p11 - p00*r11 - p01*p10 + p01*r10 + p10*r01 - p11*r00 + r00*r11 - r01*r10)",
+        "expected": "-4096*(p00*r01 - p01*r00 + q00*r01 - q01*r00)*(p00*p11 - p00*r11 - p01*p10 + p01*r10 + p10*r01 - p11*r00 + r00*r11 - r01*r10)",
+        "id": "P1_SAME_UNIT_DET_WORD",
+        "status": "PASS"
+      },
+      {
+        "actual": "4096*(p00*r01 - p01*r00)*(p00*p11 + p00*q11 - p00*r11 - p01*p10 - p01*q10 + p01*r10 - p10*q01 + p10*r01 + p11*q00 - p11*r00 + q00*q11 - q00*r11 - q01*q10 + q01*r10 + q10*r01 - q11*r00 + r00*r11 - r01*r10)",
+        "expected": "4096*(p00*r01 - p01*r00)*(p00*p11 + p00*q11 - p00*r11 - p01*p10 - p01*q10 + p01*r10 - p10*q01 + p10*r01 + p11*q00 - p11*r00 + q00*q11 - q00*r11 - q01*q10 + q01*r10 + q10*r01 - q11*r00 + r00*r11 - r01*r10)",
+        "id": "P2_SAME_UNIT_DET_WORD",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "P0_PLUS_K0_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "P1_PLUS_K1_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "P2_PLUS_K2_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-4096*mu2*(p00*q01 - p01*q00 + q00*r01 - q01*r00)/(D0*D1*D2)",
+        "expected": "-4096*mu2*(p00*q01 - p01*q00 + q00*r01 - q01*r00)/(D0*D1*D2)",
+        "id": "P0_K0_DRED_REMAINDER",
+        "status": "PASS"
+      },
+      {
+        "actual": "4096*mu2*(p00*r01 - p01*r00 + q00*r01 - q01*r00)/(D0*D1*D2)",
+        "expected": "4096*mu2*(p00*r01 - p01*r00 + q00*r01 - q01*r00)/(D0*D1*D2)",
+        "id": "P1_K1_DRED_REMAINDER",
+        "status": "PASS"
+      },
+      {
+        "actual": "-4096*mu2*(p00*r01 - p01*r00)/(D0*D1*D2)",
+        "expected": "-4096*mu2*(p00*r01 - p01*r00)/(D0*D1*D2)",
+        "id": "P2_K2_DRED_REMAINDER",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/2",
+        "expected": "1/2",
+        "id": "GATE7_PARENT_OVER_RAW_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/8",
+        "expected": "1/8",
+        "id": "GATE7_PARENT_OVER_SAME_UNIT_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/8",
+        "expected": "1/8",
+        "id": "GATE7_CONTACT_OVER_K2",
+        "status": "PASS"
+      },
+      {
+        "actual": "4096",
+        "expected": "4096",
+        "id": "METRIC_AFTER_ORIGINAL_MEASURE",
+        "status": "PASS"
+      },
+      {
+        "actual": "-4096*W",
+        "expected": "-4096*W",
+        "id": "DRED_MINUS_HALF_APPLIED_TO_TWO_AXIS_TRACE",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2048*W",
+        "expected": "-2048*W",
+        "id": "GATE7_DOUBLE_HALF_VALUE",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "GATE7_DOUBLE_HALF_IS_NOT_TRACE_EXTRACTION",
+        "status": "PASS"
+      },
+      {
+        "actual": "-p1*q2 + p2*q1",
+        "expected": "-p1*q2 + p2*q1",
+        "id": "FOURIER_TYPED_PAIRING",
+        "status": "PASS"
+      },
+      {
+        "actual": "2*sqrt(2)*i/3",
+        "expected": "2*sqrt(2)*i/3",
+        "id": "G32_RAW_WEDGE_EACH",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2*sqrt(2)*i/3",
+        "expected": "-2*sqrt(2)*i/3",
+        "id": "G33_RAW_WEDGE_EACH",
+        "status": "PASS"
+      },
+      {
+        "actual": "2*sqrt(2)*i",
+        "expected": "2*sqrt(2)*i",
+        "id": "G32_RAW_WEDGE_TOTAL",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2*sqrt(2)*i",
+        "expected": "-2*sqrt(2)*i",
+        "id": "G33_RAW_WEDGE_TOTAL",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2*sqrt(2)*i",
+        "expected": "-2*sqrt(2)*i",
+        "id": "G32_TYPED_TOTAL",
+        "status": "PASS"
+      },
+      {
+        "actual": "2*sqrt(2)*i",
+        "expected": "2*sqrt(2)*i",
+        "id": "G33_TYPED_TOTAL",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[2], [2]])",
+        "expected": "Matrix([[2], [2]])",
+        "id": "G1_EXACT_PAIR_EOM_UNCHANGED",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[4/3], [-1/3]])",
+        "expected": "Matrix([[4/3], [-1/3]])",
+        "id": "G2_RAW_OUTGOING_P_Q_UNCHANGED",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[-1/3], [4/3]])",
+        "expected": "Matrix([[-1/3], [4/3]])",
+        "id": "G2_ROUTED_PAIR_EOM",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[1], [1]])",
+        "expected": "Matrix([[1], [1]])",
+        "id": "GATE7_EXTRA_HALF_WOULD_HALVE_G1",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[2/3], [-1/6]])",
+        "expected": "Matrix([[2/3], [-1/6]])",
+        "id": "GATE7_EXTRA_HALF_WOULD_HALVE_G2_RAW_P_Q",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[2], [-1/3], [2], [2]])",
+        "expected": "Matrix([[2], [-1/3], [2], [2]])",
+        "id": "CORRECTED_Q_SCALE_CANDIDATES",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([\n[7/3],\n[  0],\n[  0]])",
+        "expected": "Matrix([[7/3], [0], [0]])",
+        "id": "CORRECTED_Q_RESIDUAL",
+        "status": "PASS"
+      }
+    ]
+  },
+  "corrected_coefficients_lambda1": {
+    "G32_raw_wedge": "2*sqrt(2)*i",
+    "G32_typed_C2_gt_C3": "-2*sqrt(2)*i",
+    "G33_raw_wedge": "-2*sqrt(2)*i",
+    "G33_typed_C3_gt_C2": "2*sqrt(2)*i"
+  },
+  "external_target_used": false,
+  "first_error": {
+    "claim": "canonical left differentiation independently reverses W01 to W10 after color-slot canonicalization",
+    "exact_replacement": "PE=-128*Wp0, PX=+128*Wp0, PE+PX=0",
+    "failure": "the color exchange was already used to canonicalize c_IJK to c_IKJ; the second wedge reversal is unsupported and destroys the exact local nonlinear cancellation",
+    "section": "4.2 PX routing"
+  },
+  "fourier": {
+    "phase": "exp(i p x)",
+    "raw_wedge_to_typed_pairing": "-1"
+  },
+  "pro_role": "NON_AUTHORITY_PRO_REVIEW",
+  "q_covariance": {
+    "basis": [
+      "D>B1",
+      "B1>D",
+      "C2>C3",
+      "C3>C2"
+    ],
+    "common_G1_G3_scale": "2",
+    "corrected_direct_vector": [
+      "2",
+      "-1/3",
+      "-2*sqrt(2)*i",
+      "2*sqrt(2)*i"
+    ],
+    "remaining_G2_pair_deficit": "7/3",
+    "residual": [
+      "7/3",
+      "0",
+      "0"
+    ],
+    "scale_candidates": [
+      "2",
+      "-1/3",
+      "2",
+      "2"
+    ],
+    "unique_ray": [
+      "1",
+      "1",
+      "-i*sqrt(2)",
+      "+i*sqrt(2)"
+    ]
+  },
+  "same_trace_rule_implication": {
+    "G1_pair_EOM": [
+      "2",
+      "2"
+    ],
+    "G2_pair_EOM_after_Dp_Bq_routing": [
+      "-1/3",
+      "4/3"
+    ],
+    "G2_raw_outgoing_p_q": [
+      "4/3",
+      "-1/3"
+    ],
+    "incorrect_extra_half_G1": [
+      "1",
+      "1"
+    ],
+    "incorrect_extra_half_G2": [
+      "2/3",
+      "-1/6"
+    ]
+  },
+  "same_unit_sd_orbit": {
+    "kinetic_cuts": {
+      "K0": "+4096*W0/(D1*D2)",
+      "K1": "-4096*W1/(D0*D2)",
+      "K2": "+4096*W2/(D0*D1)"
+    },
+    "multipliers": {
+      "K0": "8",
+      "K1": "(-1/2)*16*(-4)=+32",
+      "K2": "(+1/2)*16*(-4)=-32"
+    },
+    "nonlinear_rows": "PE+PX=(-128+128)*Wp0=0; not K2",
+    "parents": {
+      "P0": "-4096*(D0+mu2)*W0/(D0*D1*D2)",
+      "P1": "+4096*(D1+mu2)*W1/(D0*D1*D2)",
+      "P2": "-4096*(D2+mu2)*W2/(D0*D1*D2)"
+    }
+  },
+  "schema": "step5-ab-ba-g3-gate7-normalization-first-error-exact-v1",
+  "status": "GATE7_REJECTED__KINETIC_CUTS_CHI2_FOURIER_SIGN_FIXED__G2_DEFICIT_LOCALIZED",
+  "trace_metric": {
+    "correct_dred": "(-1/2)*T_perp=-4096*W",
+    "gate7_error": "(-1/2)*c=-2048 applies the rank projector twice",
+    "metric_after_measure": "c=32768*(1/4)*(1/2)=4096",
+    "two_axis_trace": "T_perp=2*c*W"
+  }
+}

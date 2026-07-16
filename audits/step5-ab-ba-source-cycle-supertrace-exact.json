@@ -1,0 +1,191 @@
+{
+  "schema": "step5-ab-ba-source-cycle-supertrace-exact-v1",
+  "status": "REVERSE_MIXED_HESSIAN_IS_CYCLIC_DUPLICATE__SUPERTRACE_HALF_TIMES_TWO_STARTS_IS_ONE__NO_G1_G3_HALF",
+  "external_target_used": false,
+  "fixed_source": "I0^{AB}=C_AB*u^A*phi1^B",
+  "source_hessian": {
+    "blocks": [
+      "I_AB[uA,phiB]=C_AB",
+      "I_AB[phiB,uA]=C_AB"
+    ],
+    "two_start_trace": "2*C_AB*K",
+    "one_loop_half": "1/2",
+    "canonical_cycle_weight": "1",
+    "reverse_block_changes_AB_to_BA": false
+  },
+  "action_wick_skeleton": {
+    "XY_trace": "1",
+    "YX_trace": "1",
+    "half_sum": "1",
+    "direct_species_matching": "1"
+  },
+  "topology_weights": {
+    "G1_G_M1": "1",
+    "G2_M1_left_M1_right": "1",
+    "G32_M2_Hminus": "1",
+    "G33_M3_Hminus": "1"
+  },
+  "conclusion": {
+    "G1_source_action_half": "REJECTED",
+    "G3_source_action_half": "REJECTED",
+    "reason": "keeping one canonical cycle already implements (1/2)*(two cyclic starts)=1",
+    "remaining_factor_two_location": "not source mixed-Hessian or action Taylor/Wick skeleton"
+  },
+  "checks": {
+    "count": 25,
+    "passed": 25,
+    "failed": 0,
+    "rows": [
+      {
+        "id": "LOCKED_REVERSE_BLOCK_SAME_CYCLE",
+        "status": "PASS",
+        "actual": "True",
+        "expected": "True"
+      },
+      {
+        "id": "LOCKED_SUPERTRACE_HALF_REMOVES_DUPLICATE",
+        "status": "PASS",
+        "actual": "True",
+        "expected": "True"
+      },
+      {
+        "id": "SOURCE_TWO_CYCLIC_STARTS",
+        "status": "PASS",
+        "actual": "(C_AB*K, C_AB*K)",
+        "expected": "(C_AB*K, C_AB*K)"
+      },
+      {
+        "id": "SOURCE_TRACE_SUM",
+        "status": "PASS",
+        "actual": "2*C_AB*K",
+        "expected": "2*C_AB*K"
+      },
+      {
+        "id": "SOURCE_HALF_TRACE",
+        "status": "PASS",
+        "actual": "C_AB*K",
+        "expected": "C_AB*K"
+      },
+      {
+        "id": "ONE_CANONICAL_CYCLE_FINAL_WEIGHT",
+        "status": "PASS",
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "id": "FORBID_HALF_AFTER_CYCLIC_QUOTIENT",
+        "status": "PASS",
+        "actual": "False",
+        "expected": "False"
+      },
+      {
+        "id": "AB_REVERSE_BLOCK_RETAINS_AB",
+        "status": "PASS",
+        "actual": "C_AB",
+        "expected": "C_AB"
+      },
+      {
+        "id": "AB_REVERSE_BLOCK_IS_NOT_BA",
+        "status": "PASS",
+        "actual": "False",
+        "expected": "False"
+      },
+      {
+        "id": "FIXED_AB_XY_CYCLE",
+        "status": "PASS",
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "id": "FIXED_AB_YX_CYCLE",
+        "status": "PASS",
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "id": "ACTION_TAYLOR_CROSS_TERM",
+        "status": "PASS",
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "id": "DIRECT_WICK_SPECIES_MATCHING",
+        "status": "PASS",
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "id": "DISTINCT_ACTION_SEQUENCE_FACTOR",
+        "status": "PASS",
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "id": "DIRECT_FIXED_AB_TRIANGLE_WEIGHT",
+        "status": "PASS",
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "id": "DIRECTED_AB_ROUTE_COUNT",
+        "status": "PASS",
+        "actual": "4",
+        "expected": "4"
+      },
+      {
+        "id": "DIRECTED_AB_PAIR_IDS",
+        "status": "PASS",
+        "actual": "{'A__B1'}",
+        "expected": "{'A__B1'}"
+      },
+      {
+        "id": "ROUTE_EXPANSION_TRI::A__B1::001::G[0,1]::M1[0,1]",
+        "status": "PASS",
+        "actual": "(1/2!)*(two action orderings)=1",
+        "expected": "(1/2!)*(two action orderings)=1"
+      },
+      {
+        "id": "ROUTE_EXPANSION_TRI::A__B1::007::M1[1,0]::M1[0,2]",
+        "status": "PASS",
+        "actual": "(1/2!)*(two action orderings)=1",
+        "expected": "(1/2!)*(two action orderings)=1"
+      },
+      {
+        "id": "ROUTE_EXPANSION_TRI::A__B1::008::M2[1,2]::Hminus[0,1]",
+        "status": "PASS",
+        "actual": "(1/2!)*(two action orderings)=1",
+        "expected": "(1/2!)*(two action orderings)=1"
+      },
+      {
+        "id": "ROUTE_EXPANSION_TRI::A__B1::009::M3[1,2]::Hminus[0,2]",
+        "status": "PASS",
+        "actual": "(1/2!)*(two action orderings)=1",
+        "expected": "(1/2!)*(two action orderings)=1"
+      },
+      {
+        "id": "TOPOLOGY_WEIGHT_G1_G_M1",
+        "status": "PASS",
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "id": "TOPOLOGY_WEIGHT_G2_M1_left_M1_right",
+        "status": "PASS",
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "id": "TOPOLOGY_WEIGHT_G32_M2_Hminus",
+        "status": "PASS",
+        "actual": "1",
+        "expected": "1"
+      },
+      {
+        "id": "TOPOLOGY_WEIGHT_G33_M3_Hminus",
+        "status": "PASS",
+        "actual": "1",
+        "expected": "1"
+      }
+    ]
+  }
+}

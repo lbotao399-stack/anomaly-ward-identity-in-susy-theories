@@ -1,0 +1,317 @@
+{
+  "authority": {
+    "commit": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+    "head_at_run": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+    "ref": "origin/main",
+    "verified_workflow_status": "NOT_RECHECKED_BY_THIS_LOCAL_AUDIT"
+  },
+  "bottom_letter_projection": {
+    "A": "(boldnabla^V_{E,+} boldW^V_{E,+})| = -i (sigma_E^{mn})_{++} F_mn",
+    "A_components": {
+      "13": "i",
+      "14": "-1",
+      "23": "1",
+      "24": "i"
+    },
+    "B_r": "(boldnabla^V_{E,+} boldPhi^V_r)| = sqrt(2) psi_{r,+}",
+    "C_r": "tildeboldPhi^V_r| = tildephi_r",
+    "D_dot": "tildeboldW^V_{E,dot}| = i tildelambda_dot",
+    "P_dot": "(sigma_E^m)_{+,dot} D_m",
+    "P_dot1": "D_4-i D_3",
+    "P_dot2": "-i D_1-D_2",
+    "P_dot_color": "(P_dot C_r)^A=(sigma_E^m)_{+,dot}(partial_m C_r^A+c_BC^A A_m^B C_r^C)"
+  },
+  "boundaries": [
+    {
+      "id": "FULL_SUPERFIELD_LIFT_REJECTED",
+      "reason": "delta_E tildePhi_r is antichiral, whereas boldnabla_+ boldPhi_r is generically not antichiral because {boldnabla_+,barboldnabla_dot}=-2 sigma^m_{+dot} boldD_m.",
+      "status": "PROVED_REJECTED"
+    },
+    {
+      "id": "U_COMPLETION",
+      "reason": "Steps 1/3B/3C/4/4C fix only physical fields; Step 3D defines BRST ghosts c, tilde-c and s but no residual source U or its q/P law.",
+      "status": "BLOCKED_U_NOT_DEFINED_BY_LOCKED_INPUTS"
+    },
+    {
+      "id": "ABSOLUTE_q_NORMALIZATION",
+      "reason": "The locked normalization is Q^r_{E,+}; division by sqrt(2) is the explicit compact normalization criterion, not a dynamical consequence.",
+      "status": "CONVENTION"
+    },
+    {
+      "id": "FULL_N4_OFFSHELL_COMPLETION",
+      "reason": "The selected four-letter algebra closes without EOM because every Step-4C remainder coefficient vanishes in the plus-spin specialization; Step 4C still supplies no finite SU(4)_R-covariant auxiliary multiplet.",
+      "status": "NOT_ASSERTED"
+    }
+  ],
+  "checks": [
+    {
+      "evidence": {
+        "missing": []
+      },
+      "id": "locked_anchor::contracts/foundations/step-01-supersymmetry-commutator.md",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "missing": []
+      },
+      "id": "locked_anchor::contracts/foundations/step-03b-component-reconstruction.md",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "missing": []
+      },
+      "id": "locked_anchor::contracts/foundations/step-03c-gauge-vector-representation.md",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "missing": []
+      },
+      "id": "locked_anchor::contracts/foundations/step-04-extended-sym-notation.md",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "missing": []
+      },
+      "id": "locked_anchor::contracts/foundations/step-04c-n4-super-yang-mills.md",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "missing": []
+      },
+      "id": "locked_anchor::contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md",
+      "status": "PASS"
+    },
+    {
+      "evidence": "sigma_m barsigma_n + sigma_n barsigma_m = 2 delta_mn",
+      "id": "euclidean_clifford",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "12": "0",
+        "13": "-1/2",
+        "14": "-1/2i",
+        "23": "1/2i",
+        "24": "-1/2",
+        "34": "0"
+      },
+      "id": "sigma_lowered_plus_plus",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "13": "i",
+        "14": "-1",
+        "23": "1",
+        "24": "i"
+      },
+      "id": "A_component_projection",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "m1_dot1": "0",
+        "m1_dot2": "0",
+        "m2_dot1": "0",
+        "m2_dot2": "0",
+        "m3_dot1": "0",
+        "m3_dot2": "0",
+        "m4_dot1": "0",
+        "m4_dot2": "0"
+      },
+      "id": "qA_highest_weight_identity",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "dot1": [
+          "0",
+          "0",
+          "-i",
+          "1"
+        ],
+        "dot2": [
+          "-i",
+          "-1",
+          "0",
+          "0"
+        ]
+      },
+      "id": "P_dot_components",
+      "status": "PASS"
+    },
+    {
+      "evidence": [
+        "0",
+        "1"
+      ],
+      "id": "plus_parameter_lowering",
+      "status": "PASS"
+    },
+    {
+      "evidence": "0",
+      "id": "same_plus_scalar_bilinear",
+      "status": "PASS"
+    },
+    {
+      "evidence": "epsilon_{s4rt}=epsilon_{srt}=-epsilon_{rst}",
+      "id": "su4_to_su3_epsilon",
+      "status": "PASS"
+    },
+    {
+      "evidence": "-i",
+      "id": "normalized_qB",
+      "status": "PASS"
+    },
+    {
+      "evidence": "-1/2sqrt(2)",
+      "id": "normalized_qC",
+      "status": "PASS"
+    },
+    {
+      "evidence": "-i",
+      "id": "normalized_qD",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "11|C1": "0",
+        "11|C2": "0",
+        "11|C3": "0",
+        "12|C1": "0",
+        "12|C2": "0",
+        "12|C3": "0",
+        "13|C1": "0",
+        "13|C2": "0",
+        "13|C3": "0",
+        "21|C1": "0",
+        "21|C2": "0",
+        "21|C3": "0",
+        "22|C1": "0",
+        "22|C2": "0",
+        "22|C3": "0",
+        "23|C1": "0",
+        "23|C2": "0",
+        "23|C3": "0",
+        "31|C1": "0",
+        "31|C2": "0",
+        "31|C3": "0",
+        "32|C1": "0",
+        "32|C2": "0",
+        "32|C3": "0",
+        "33|C1": "0",
+        "33|C2": "0",
+        "33|C3": "0"
+      },
+      "id": "closure_A_B_C",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "consequence": "v_E=Omega_E=R_E,+^I=Rtilde_E,dot,I=0 on selected letters",
+        "epsilon_lower_plus": "0",
+        "epsilon_plus_epsilon_lower_contraction": "0",
+        "tilde_parameter": "0"
+      },
+      "id": "closure_D_from_4C69",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "-b": "-1/2sqrt(2)",
+        "qC*a": "-1/2sqrt(2)"
+      },
+      "id": "compact_C_arrow",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "c": "-1/2i*sqrt(2)",
+        "qB*b": "-1/2i*sqrt(2)"
+      },
+      "id": "compact_B_arrow",
+      "status": "PASS"
+    },
+    {
+      "evidence": "Step 3D defines only (mathfrak c_R, tilde mathfrak c_R, s_R) in (3D.43)-(3D.44); no U_R or q_r law",
+      "id": "no_locked_U_or_residual_q_ghost_law",
+      "status": "PASS"
+    }
+  ],
+  "compact_normalized_q_action": {
+    "closure": "{q_r,q_s}=0 exactly on A,B,C,D bottom letters; no auxiliary or fermion EOM used",
+    "closure_scope": "restricted letter-off-shell closure, not a full off-shell N=4 multiplet",
+    "q_r A": "0",
+    "q_r B_s": "-i delta_rs A",
+    "q_r C_s": "-(1/sqrt(2)) epsilon_rst B_t",
+    "q_r D_dot": "-i P_dot C_r"
+  },
+  "compact_physical_superletter": {
+    "expression": "theta_r C_r + (1/(2 sqrt(2))) epsilon_rst theta_r theta_s B_t - (i/sqrt(2)) theta_1 theta_2 theta_3 A",
+    "identity": "q_r C_phys(theta)=partial^L_{theta_r} C_phys(theta)-C_r",
+    "weights": {
+      "epsilon theta theta B": "1/4sqrt(2)",
+      "theta_1 theta_2 theta_3 A": "-1/2i*sqrt(2)",
+      "theta_r C_r": "1"
+    }
+  },
+  "conditional_completion": {
+    "assumptions": [
+      "an odd U exists with q_r U=C_r",
+      "P_dot U=i D_dot",
+      "q_r commutes with P_dot on U in the chosen gauge-covariant complex"
+    ],
+    "completed_expression": "U + theta_r C_r + (1/(2 sqrt(2))) epsilon_rst theta_r theta_s B_t - (i/sqrt(2)) theta_1 theta_2 theta_3 A",
+    "completed_identity": "q_r C(theta)=partial^L_{theta_r} C(theta)",
+    "status": "CONDITIONAL_NOT_IN_LOCKED_INPUTS"
+  },
+  "input_sha256": {
+    "contracts/foundations/step-01-supersymmetry-commutator.md": "a73d8017c2d07de578f4f98ea25054033b0384ebffb6b426650a22f404c3231b",
+    "contracts/foundations/step-03b-component-reconstruction.md": "4b3ae678463747cc78d3c7e594904647620d919eae769c5b5bfd16d5b556a75b",
+    "contracts/foundations/step-03c-gauge-vector-representation.md": "c4cc6f0504b79e02ce78030ad79b625bee6da7dff9de0f6a1ddc3b33ef2584a1",
+    "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md": "109e0c531da3a1b98313e87dd692fa3d9047c8f745291f8e87021008c7acc538",
+    "contracts/foundations/step-04-extended-sym-notation.md": "3fcf7e242928d3512c02059d8c28d9551b5cb86156f9d6259cd2bba713211d27",
+    "contracts/foundations/step-04c-n4-super-yang-mills.md": "fafc3bc2227b60ca699b3f953b632db82dafe093b221baa74736cc5fb838928f"
+  },
+  "raw_locked_Q_action": {
+    "Q^r_{E,+} A": "0",
+    "Q^r_{E,+} B_s": "-i sqrt(2) delta_rs A",
+    "Q^r_{E,+} C_s": "-epsilon_rst B_t",
+    "Q^r_{E,+} D_dot": "-i sqrt(2) P_dot C_r"
+  },
+  "schema_version": 1,
+  "scope": {
+    "forbidden_inputs_read": [],
+    "holomorphic_twist_target_read": false,
+    "read_inputs": [
+      "contracts/foundations/step-01-supersymmetry-commutator.md",
+      "contracts/foundations/step-03b-component-reconstruction.md",
+      "contracts/foundations/step-03c-gauge-vector-representation.md",
+      "contracts/foundations/step-04-extended-sym-notation.md",
+      "contracts/foundations/step-04c-n4-super-yang-mills.md",
+      "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md"
+    ],
+    "step5_contract_read": false,
+    "step5_engines_read": false
+  },
+  "spin_frame": {
+    "compact_normalized_generator": "q_r:=Q^r_{E,+}/sqrt(2)",
+    "definition": "+ := 1, - := 2",
+    "epsilon_lower_plus_minus": "-1",
+    "epsilon_upper_plus_minus": "+1",
+    "locked_generator": "Q^r_{E,+}",
+    "normalization_status": "DECLARED_UNIQUE_AFTER_REQUIRING_q_r_B_s=-i_delta_rs_A",
+    "selected_parameter": "epsilon^{r,+}=eta^r; epsilon^r_-=eta^r; tilde_epsilon=0"
+  },
+  "summary": {
+    "failed": 0,
+    "passed": 22,
+    "verdict": "PROVED_BOTTOM_PROJECTION_WITH_CONDITIONAL_COMPACT_COMPLETION"
+  },
+  "task": "STEP5_TARGET_BLIND_RESIDUAL_Q_PROJECTION"
+}

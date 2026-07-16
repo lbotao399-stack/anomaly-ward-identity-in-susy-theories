@@ -1,0 +1,725 @@
+{
+  "authority_role": "LOCAL_PROPOSAL_TARGET_BLIND",
+  "checks": {
+    "count": 73,
+    "failed": 0,
+    "passed": 73,
+    "rows": [
+      {
+        "actual": "p00*r01 - p01*r00",
+        "expected": "p00*r01 - p01*r00",
+        "id": "W2_EQUALS_W01",
+        "status": "PASS"
+      },
+      {
+        "actual": "1024*(p00**2*p11*r01 - p00**2*r01*r11 - p00*p01*p10*r01 - p00*p01*p11*r00 + p00*p01*r00*r11 + p00*p01*r01*r10 + p00*p10*r01**2 + p00*p11*q00*r01 - p00*p11*q01*r00 - p00*p11*r00*r01 - p00*q00*r01*r11 + p00*q01*r01*r10 + p00*r00*r01*r11 - p00*r01**2*r10 + p01**2*p10*r00 - p01**2*r00*r10 - p01*p10*q00*r01 + p01*p10*q01*r00 - p01*p10*r00*r01 + p01*p11*r00**2 + p01*q00*r00*r11 - p01*q01*r00*r10 - p01*r00**2*r11 + p01*r00*r01*r10 + p10*q00*r01**2 - p10*q01*r00*r01 - p11*q00*r00*r01 + p11*q01*r00**2)",
+        "expected": "1024*(p00**2*p11*r01 - p00**2*r01*r11 - p00*p01*p10*r01 - p00*p01*p11*r00 + p00*p01*r00*r11 + p00*p01*r01*r10 + p00*p10*r01**2 + p00*p11*q00*r01 - p00*p11*q01*r00 - p00*p11*r00*r01 - p00*q00*r01*r11 + p00*q01*r01*r10 + p00*r00*r01*r11 - p00*r01**2*r10 + p01**2*p10*r00 - p01**2*r00*r10 - p01*p10*q00*r01 + p01*p10*q01*r00 - p01*p10*r00*r01 + p01*p11*r00**2 + p01*q00*r00*r11 - p01*q01*r00*r10 - p01*r00**2*r11 + p01*r00*r01*r10 + p10*q00*r01**2 - p10*q01*r00*r01 - p11*q00*r00*r01 + p11*q01*r00**2)",
+        "id": "RAW_OUTER_A_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1024*(p00*r01 - p01*r00)*(p00*p11 + p00*q11 - p00*r11 - p01*p10 - p01*q10 + p01*r10 - p10*q01 + p10*r01 + p11*q00 - p11*r00 + q00*q11 - q00*r11 - q01*q10 + q01*r10 + q10*r01 - q11*r00 + r00*r11 - r01*r10)",
+        "expected": "-1024*(p00*r01 - p01*r00)*(p00*p11 + p00*q11 - p00*r11 - p01*p10 - p01*q10 + p01*r10 - p10*q01 + p10*r01 + p11*q00 - p11*r00 + q00*q11 - q00*r11 - q01*q10 + q01*r10 + q10*r01 - q11*r00 + r00*r11 - r01*r10)",
+        "id": "RAW_OUTER_B_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "512*(p00*q01 - p01*q00 + q00*r01 - q01*r00)",
+        "expected": "512*(p00*q01 - p01*q00 + q00*r01 - q01*r00)",
+        "id": "RAW_E0_CURRENT_CORE",
+        "status": "PASS"
+      },
+      {
+        "actual": "-128*(p00*r01 - p01*r00 + q00*r01 - q01*r00)",
+        "expected": "-128*(p00*r01 - p01*r00 + q00*r01 - q01*r00)",
+        "id": "RAW_E1_TRANSPORTED_CORE",
+        "status": "PASS"
+      },
+      {
+        "actual": "-128*(p00*r01 - p01*r00)",
+        "expected": "-128*(p00*r01 - p01*r00)",
+        "id": "RAW_E2_POTENTIAL_CORE",
+        "status": "PASS"
+      },
+      {
+        "actual": "-E_V_linear",
+        "expected": "-E_V_linear",
+        "id": "I1_TREE_ZERO_SQUARE_CANCELLATION",
+        "status": "PASS"
+      },
+      {
+        "actual": "K_B/2",
+        "expected": "K_B/2",
+        "id": "I2_TREE_ZERO_SQUARE_CANCELLATION",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "SOURCE_CYCLIC_HALF_TIMES_TWO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "ACTION_TAYLOR_HALF_TIMES_TWO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "HMINUS_HESSIAN_SIX_OVER_SIX",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "FIXED_FLAVOR_WICK_PAIRING",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RESOLVENT_AND_DIRECT_WICK_WEIGHTS_EQUAL",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "SOURCE_AND_ACTION_RAW_TWOS_INDEPENDENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "TOTAL_PRIMITIVE_MULTIPLICITY",
+        "status": "PASS"
+      },
+      {
+        "actual": "8",
+        "expected": "8",
+        "id": "K0_OPERATOR_MULTIPLIER",
+        "status": "PASS"
+      },
+      {
+        "actual": "32",
+        "expected": "32",
+        "id": "K1_OPERATOR_MULTIPLIER",
+        "status": "PASS"
+      },
+      {
+        "actual": "-32",
+        "expected": "-32",
+        "id": "K2_OPERATOR_MULTIPLIER",
+        "status": "PASS"
+      },
+      {
+        "actual": "4096*(p00*q01 - p01*q00 + q00*r01 - q01*r00)",
+        "expected": "4096*(p00*q01 - p01*q00 + q00*r01 - q01*r00)",
+        "id": "K0_SAME_PARENT_UNIT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-4096*(p00*r01 - p01*r00 + q00*r01 - q01*r00)",
+        "expected": "-4096*(p00*r01 - p01*r00 + q00*r01 - q01*r00)",
+        "id": "K1_SAME_PARENT_UNIT",
+        "status": "PASS"
+      },
+      {
+        "actual": "4096*(p00*r01 - p01*r00)",
+        "expected": "4096*(p00*r01 - p01*r00)",
+        "id": "K2_SAME_PARENT_UNIT",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "id": "K2_ORDERED_FLAVOR_COLOR_SUM",
+        "status": "PASS"
+      },
+      {
+        "actual": "-16",
+        "expected": "-16",
+        "id": "K2_ORDERED_SLOT_MULTIPLIER",
+        "status": "PASS"
+      },
+      {
+        "actual": "2048*(p00*r01 - p01*r00)",
+        "expected": "2048*(p00*r01 - p01*r00)",
+        "id": "K2_ORDERED_SLOT_1",
+        "status": "PASS"
+      },
+      {
+        "actual": "2048*(p00*r01 - p01*r00)",
+        "expected": "2048*(p00*r01 - p01*r00)",
+        "id": "K2_ORDERED_SLOT_2",
+        "status": "PASS"
+      },
+      {
+        "actual": "4096*(p00*r01 - p01*r00)",
+        "expected": "4096*(p00*r01 - p01*r00)",
+        "id": "K2_TWO_ORDERED_SLOTS_SUM_TO_ONE_CUT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "E0_FULL_D_PARENT_PLUS_CUT_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "E1_FULL_D_PARENT_PLUS_CUT_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "E2_FULL_D_PARENT_PLUS_CUT_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-4096*mu2*(p00*q01 - p01*q00 + q00*r01 - q01*r00)/(D0*D1*D2)",
+        "expected": "-4096*mu2*(p00*q01 - p01*q00 + q00*r01 - q01*r00)/(D0*D1*D2)",
+        "id": "E0_DRED_REMAINDER",
+        "status": "PASS"
+      },
+      {
+        "actual": "4096*mu2*(p00*r01 - p01*r00 + q00*r01 - q01*r00)/(D0*D1*D2)",
+        "expected": "4096*mu2*(p00*r01 - p01*r00 + q00*r01 - q01*r00)/(D0*D1*D2)",
+        "id": "E1_DRED_REMAINDER",
+        "status": "PASS"
+      },
+      {
+        "actual": "-4096*mu2*(p00*r01 - p01*r00)/(D0*D1*D2)",
+        "expected": "-4096*mu2*(p00*r01 - p01*r00)/(D0*D1*D2)",
+        "id": "E2_DRED_REMAINDER",
+        "status": "PASS"
+      },
+      {
+        "actual": "-p00*q01 + p01*q00",
+        "expected": "-p00*q01 + p01*q00",
+        "id": "THREE_EDGE_WEDGE_IDENTITY",
+        "status": "PASS"
+      },
+      {
+        "actual": "-4096*mu2*(p00*q01 - p01*q00)/(D0*D1*D2)",
+        "expected": "-4096*mu2*(p00*q01 - p01*q00)/(D0*D1*D2)",
+        "id": "THREE_EDGE_DRED_REMAINDER",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "I1_JE_PLUS_JX_LOCAL_INTEGRAND",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "I2_PE_PLUS_PX_LOCAL_INTEGRAND",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "I1_JE_MU2_COEFFICIENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "I1_JX_MU2_COEFFICIENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "I2_PE_MU2_COEFFICIENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "I2_PX_MU2_COEFFICIENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "K0_IS_NOT_JE_OCCURRENCE",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "K2_IS_NOT_PE_OCCURRENCE",
+        "status": "PASS"
+      },
+      {
+        "actual": "C_AB",
+        "expected": "C_AB",
+        "id": "BARE_SOURCE_U_PHI1_HESSIAN",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "BARE_SOURCE_C2_C3_HESSIAN",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "NO_DIRECT_TILDEPHI2_TILDEPHI3_PROPAGATOR",
+        "status": "PASS"
+      },
+      {
+        "actual": "{e0, e1, e2}",
+        "expected": "{e0, e1, e2}",
+        "id": "ALL_THREE_TRIANGLE_EDGES_CUT_ONCE",
+        "status": "PASS"
+      },
+      {
+        "actual": "({D1, D2}, {D0, D2}, {D0, D1})",
+        "expected": "({D1, D2}, {D0, D2}, {D0, D1})",
+        "id": "CUT_DENOMINATOR_COMPLEMENTS",
+        "status": "PASS"
+      },
+      {
+        "actual": "{I1xHminus, I2xM, transported_MH}",
+        "expected": "{I1xHminus, I2xM, transported_MH}",
+        "id": "COLLAPSED_CONTACT_FAMILY_EXHAUSTION",
+        "status": "PASS"
+      },
+      {
+        "actual": "10",
+        "expected": "10",
+        "id": "TOP_LEVEL_OCCURRENCE_COUNT",
+        "status": "PASS"
+      },
+      {
+        "actual": "10",
+        "expected": "10",
+        "id": "TOP_LEVEL_OCCURRENCE_IDS_UNIQUE",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "UNACCOUNTED_G3_SD_OR_ZERO_SQUARE_FAMILY_COUNT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/3",
+        "expected": "1/3",
+        "id": "W0_SIMPLEX_MOMENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/3",
+        "expected": "-1/3",
+        "id": "W1_SIMPLEX_MOMENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/3",
+        "expected": "1/3",
+        "id": "W2_SIMPLEX_MOMENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-4096",
+        "expected": "-4096",
+        "id": "THREE_BRANCH_INTEGRATED_DWORD",
+        "status": "PASS"
+      },
+      {
+        "actual": "-sqrt(2)*g**4*hbar/1024",
+        "expected": "-sqrt(2)*g**4*hbar/1024",
+        "id": "G32_PRE_D_SCALAR",
+        "status": "PASS"
+      },
+      {
+        "actual": "sqrt(2)*g**4*hbar/1024",
+        "expected": "sqrt(2)*g**4*hbar/1024",
+        "id": "G33_PRE_D_SCALAR",
+        "status": "PASS"
+      },
+      {
+        "actual": "2*sqrt(2)*i",
+        "expected": "2*sqrt(2)*i",
+        "id": "G32_RAW_WEDGE_COEFFICIENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2*sqrt(2)*i",
+        "expected": "-2*sqrt(2)*i",
+        "id": "G33_RAW_WEDGE_COEFFICIENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2*sqrt(2)*i",
+        "expected": "-2*sqrt(2)*i",
+        "id": "G32_TYPED_COEFFICIENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "2*sqrt(2)*i",
+        "expected": "2*sqrt(2)*i",
+        "id": "G33_TYPED_COEFFICIENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "id": "AB_TMH_ROUTE_COUNT",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "id": "BA_TMH_ROUTE_COUNT",
+        "status": "PASS"
+      },
+      {
+        "actual": "((tildephi2, tildephi3), (tildephi3, tildephi2))",
+        "expected": "((tildephi2, tildephi3), (tildephi3, tildephi2))",
+        "id": "AB_TMH_EXTERNAL_ORDER",
+        "status": "PASS"
+      },
+      {
+        "actual": "((tildephi3, tildephi2), (tildephi2, tildephi3))",
+        "expected": "((tildephi3, tildephi2), (tildephi2, tildephi3))",
+        "id": "BA_TMH_EXTERNAL_ORDER",
+        "status": "PASS"
+      },
+      {
+        "actual": "((M2, Hminus), (M3, Hminus))",
+        "expected": "((M2, Hminus), (M3, Hminus))",
+        "id": "AB_TMH_VERTICES",
+        "status": "PASS"
+      },
+      {
+        "actual": "((Hminus, M2), (Hminus, M3))",
+        "expected": "((Hminus, M2), (Hminus, M3))",
+        "id": "BA_TMH_VERTICES",
+        "status": "PASS"
+      },
+      {
+        "actual": "(((u, u), (phi2, tildephi2), (phi1, tildephi1)), ((u, u), (phi3, tildephi3), (phi1, tildephi1)))",
+        "expected": "(((u, u), (phi2, tildephi2), (phi1, tildephi1)), ((u, u), (phi3, tildephi3), (phi1, tildephi1)))",
+        "id": "AB_TMH_EDGE_SIGNATURES",
+        "status": "PASS"
+      },
+      {
+        "actual": "(((phi1, tildephi1), (tildephi2, phi2), (u, u)), ((phi1, tildephi1), (tildephi3, phi3), (u, u)))",
+        "expected": "(((phi1, tildephi1), (tildephi2, phi2), (u, u)), ((phi1, tildephi1), (tildephi3, phi3), (u, u)))",
+        "id": "BA_TMH_EDGE_SIGNATURES",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "BA_OUTER_A_KOSZUL_PRODUCT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "BA_OUTER_B1_KOSZUL_PRODUCT",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[2*sqrt(2)*i], [-2*sqrt(2)*i]]",
+        "expected": "[[2*sqrt(2)*i], [-2*sqrt(2)*i]]",
+        "id": "BA_IS_ORDER_SWAP_OF_AB",
+        "status": "PASS"
+      },
+      {
+        "actual": "[[1, 0], [0, 1]]",
+        "expected": "[[1, 0], [0, 1]]",
+        "id": "AB_BA_REFLECTION_INVOLUTION",
+        "status": "PASS"
+      }
+    ]
+  },
+  "cohomology_projection_used": false,
+  "definitions": {
+    "D_e": "r_(e,d)^2",
+    "I1": "(nabla_- A) B1",
+    "I2": "A (nabla_- B1)",
+    "P3": "D0*D1*D2",
+    "W0": "W12",
+    "W1": "W_(p+q,0)",
+    "W2": "W_(p,0)=W01",
+    "bar_r_e_squared": "D_e+mu_l^2"
+  },
+  "external_target_used": false,
+  "occurrence_exhaustion": {
+    "K2_algebraic_summands_are_new_cuts": false,
+    "contact_families": [
+      "I1xHminus",
+      "transported_MH",
+      "I2xM"
+    ],
+    "cut_edges": [
+      "e0",
+      "e1",
+      "e2"
+    ],
+    "omitted_independent_I1_I2_contact_family": false,
+    "top_level_count": 10,
+    "top_level_ids": [
+      "P0::outer-A-linear-Euler",
+      "K0::functional-cut-e0",
+      "P1::outer-A-transported",
+      "K1::functional-cut-e1",
+      "P2::outer-B1-kinetic-Euler",
+      "K2::functional-cut-e2",
+      "JE::I1-Euler-current",
+      "JX::I1-explicit-current",
+      "PE::I2-Euler-potential",
+      "PX::I2-explicit-potential"
+    ],
+    "unaccounted": []
+  },
+  "operator_multipliers": {
+    "K0": "8",
+    "K1": "(-1/2)*16*(-4)=32",
+    "K2": "(1/2)*16*(-4)=-32",
+    "K2_ordered_flavor_color_sum": "epsilon123*(C2xC3)+epsilon132*(C3xC2)=2*(C2xC3)",
+    "K2_ordered_slots": [
+      "(-32)/2=-16",
+      "(-32)/2=-16"
+    ]
+  },
+  "parent_numerators_before_endpoint_normalization": {
+    "outer_A": "-1024*det4(r0)*W0+1024*det4(r1)*W1",
+    "outer_B1": "-1024*det4(r2)*W2"
+  },
+  "precohomology_coefficients_lambda1": {
+    "AB_typed_basis_(C2>C3,C3>C2)": [
+      "-2*sqrt(2)*i",
+      "2*sqrt(2)*i"
+    ],
+    "BA_typed_basis_(C2>C3,C3>C2)": [
+      "2*sqrt(2)*i",
+      "-2*sqrt(2)*i"
+    ],
+    "raw_wedge": {
+      "G32": "2*sqrt(2)*i",
+      "G33": "-2*sqrt(2)*i"
+    }
+  },
+  "primitive_multiplicity": {
+    "Hminus_Hessian": "(1/3!)*6=1",
+    "direct_Wick_representation": "(1/2!)*(2_action_sequences)*(1_unique_Wick)=1",
+    "representations_are_independent_multipliers": false,
+    "resolvent_cycle_representation": "(1/2)*(2_correlated_cycles)=1",
+    "total": "1"
+  },
+  "quotient_layers": {
+    "EOM_SD": {
+      "DRED": "-4096*mu2*(p_wedge_q)/P3",
+      "G3_magnitude": "2*sqrt(2)",
+      "full_d": "0 edgewise",
+      "operation": "pair P_e only with K_e on e=0,1,2"
+    },
+    "cohomology": {
+      "HT_dictionary_used": false,
+      "applied": false
+    },
+    "local_jet": {
+      "G3_magnitude": "2*sqrt(2)",
+      "I1_I2_zero_square_net": "0",
+      "operation": "retain all ten provenance-tagged occurrences"
+    },
+    "total_divergence": {
+      "applied": false,
+      "identifications": []
+    }
+  },
+  "residual_q_used": false,
+  "routes": {
+    "AB": [
+      {
+        "edge_signature": [
+          [
+            "u",
+            "u"
+          ],
+          [
+            "phi2",
+            "tildephi2"
+          ],
+          [
+            "phi1",
+            "tildephi1"
+          ]
+        ],
+        "external_fields": [
+          "tildephi2",
+          "tildephi3"
+        ],
+        "route_id": "TRI::A__B1::008::M2[1,2]::Hminus[0,1]",
+        "vertices": [
+          "M2",
+          "Hminus"
+        ]
+      },
+      {
+        "edge_signature": [
+          [
+            "u",
+            "u"
+          ],
+          [
+            "phi3",
+            "tildephi3"
+          ],
+          [
+            "phi1",
+            "tildephi1"
+          ]
+        ],
+        "external_fields": [
+          "tildephi3",
+          "tildephi2"
+        ],
+        "route_id": "TRI::A__B1::009::M3[1,2]::Hminus[0,2]",
+        "vertices": [
+          "M3",
+          "Hminus"
+        ]
+      }
+    ],
+    "BA": [
+      {
+        "edge_signature": [
+          [
+            "phi1",
+            "tildephi1"
+          ],
+          [
+            "tildephi2",
+            "phi2"
+          ],
+          [
+            "u",
+            "u"
+          ]
+        ],
+        "external_fields": [
+          "tildephi3",
+          "tildephi2"
+        ],
+        "route_id": "TRI::B1__A::008::Hminus[0,1]::M2[1,2]",
+        "vertices": [
+          "Hminus",
+          "M2"
+        ]
+      },
+      {
+        "edge_signature": [
+          [
+            "phi1",
+            "tildephi1"
+          ],
+          [
+            "tildephi3",
+            "phi3"
+          ],
+          [
+            "u",
+            "u"
+          ]
+        ],
+        "external_fields": [
+          "tildephi2",
+          "tildephi3"
+        ],
+        "route_id": "TRI::B1__A::009::Hminus[0,2]::M3[1,2]",
+        "vertices": [
+          "Hminus",
+          "M3"
+        ]
+      }
+    ],
+    "BA_Koszul": {
+      "outer_A": "(-1)_Leibniz*(-1)_(B1,J_A swap)=+1",
+      "outer_B1": "(+1)_Leibniz*(+1)_(J_B,A swap)=+1"
+    }
+  },
+  "schema": "step5-ab-ba-g3-sd-zero-square-occurrence-exact-v1",
+  "simplex": {
+    "integrated_Dword": "-4096",
+    "moments": {
+      "W0": "1/3",
+      "W1": "-1/3",
+      "W2": "1/3"
+    },
+    "shifted_words": {
+      "W0": "1-y-z",
+      "W1": "-y",
+      "W2": "z"
+    }
+  },
+  "source_support": {
+    "bare_(tildephi2,tildephi3)_Hessian": "0",
+    "bare_I0": "C_AB*u^A*phi1^B",
+    "descended_I2_PE_PX_retained": true,
+    "direct_tildephi2_tildephi3_propagator": false,
+    "nonzero_Hessian_blocks": [
+      "(u,phi1)",
+      "(phi1,u)"
+    ]
+  },
+  "status": "PASS_G3_THREE_SD_CUTS_AND_ZERO_SQUARE_I1_I2_FAMILIES_EXHAUSTED__NO_NET_CC_EXTERNAL_PORT_CORRECTION__PRECOHOMOLOGY_MAGNITUDE_TWO_RETAINED",
+  "three_SD_rows": {
+    "e0": {
+      "cut": "+4096*W0/(D1*D2)",
+      "family": "I1xHminus",
+      "full_d_sum": "0",
+      "parent": "-4096*(D0+mu2)*W0/P3",
+      "remainder": "-4096*mu2*W0/P3"
+    },
+    "e1": {
+      "cut": "-4096*W1/(D0*D2)",
+      "family": "transported_MH",
+      "full_d_sum": "0",
+      "parent": "+4096*(D1+mu2)*W1/P3",
+      "remainder": "+4096*mu2*W1/P3"
+    },
+    "e2": {
+      "cut": "+4096*W2/(D0*D1)",
+      "family": "I2xM",
+      "full_d_sum": "0",
+      "ordered_Hessian_summands": [
+        "+2048*W2",
+        "+2048*W2"
+      ],
+      "parent": "-4096*(D2+mu2)*W2/P3",
+      "remainder": "-4096*mu2*W2/P3"
+    }
+  },
+  "total_divergence_used": false,
+  "zero_square_descendants": {
+    "I1": {
+      "JE": "+512*W0/(D1*D2)",
+      "JX": "-512*W0/(D1*D2)",
+      "standalone_mu2": "0",
+      "sum": "0"
+    },
+    "I2": {
+      "PE": "-128*W2/(D0*D1)",
+      "PX": "+128*W2/(D0*D1)",
+      "standalone_mu2": "0",
+      "sum": "0"
+    },
+    "individual_occurrences_absent": false,
+    "net_CC_external_port_correction": "0",
+    "occurrence_alias_with_K0_or_K2": false
+  }
+}

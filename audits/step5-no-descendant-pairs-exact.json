@@ -1,0 +1,290 @@
+{
+  "letters": [
+    "C1",
+    "C2",
+    "C3",
+    "Ddot1",
+    "Ddot2"
+  ],
+  "ordered_pair_count": 25,
+  "rows": [
+    {
+      "anomaly_sector": "0",
+      "dred_cutting_failure_words": 0,
+      "left_descendant": 0,
+      "left_parity": 0,
+      "marked_inverse_kernel_occurrences": 0,
+      "outer_Dminus_product": 0,
+      "pair_id": "C1__C1",
+      "right_descendant": 0,
+      "right_koszul_sign": 1
+    },
+    {
+      "anomaly_sector": "0",
+      "dred_cutting_failure_words": 0,
+      "left_descendant": 0,
+      "left_parity": 0,
+      "marked_inverse_kernel_occurrences": 0,
+      "outer_Dminus_product": 0,
+      "pair_id": "C1__C2",
+      "right_descendant": 0,
+      "right_koszul_sign": 1
+    },
+    {
+      "anomaly_sector": "0",
+      "dred_cutting_failure_words": 0,
+      "left_descendant": 0,
+      "left_parity": 0,
+      "marked_inverse_kernel_occurrences": 0,
+      "outer_Dminus_product": 0,
+      "pair_id": "C1__C3",
+      "right_descendant": 0,
+      "right_koszul_sign": 1
+    },
+    {
+      "anomaly_sector": "0",
+      "dred_cutting_failure_words": 0,
+      "left_descendant": 0,
+      "left_parity": 0,
+      "marked_inverse_kernel_occurrences": 0,
+      "outer_Dminus_product": 0,
+      "pair_id": "C1__Ddot1",
+      "right_descendant": 0,
+      "right_koszul_sign": 1
+    },
+    {
+      "anomaly_sector": "0",
+      "dred_cutting_failure_words": 0,
+      "left_descendant": 0,
+      "left_parity": 0,
+      "marked_inverse_kernel_occurrences": 0,
+      "outer_Dminus_product": 0,
+      "pair_id": "C1__Ddot2",
+      "right_descendant": 0,
+      "right_koszul_sign": 1
+    },
+    {
+      "anomaly_sector": "0",
+      "dred_cutting_failure_words": 0,
+      "left_descendant": 0,
+      "left_parity": 0,
+      "marked_inverse_kernel_occurrences": 0,
+      "outer_Dminus_product": 0,
+      "pair_id": "C2__C1",
+      "right_descendant": 0,
+      "right_koszul_sign": 1
+    },
+    {
+      "anomaly_sector": "0",
+      "dred_cutting_failure_words": 0,
+      "left_descendant": 0,
+      "left_parity": 0,
+      "marked_inverse_kernel_occurrences": 0,
+      "outer_Dminus_product": 0,
+      "pair_id": "C2__C2",
+      "right_descendant": 0,
+      "right_koszul_sign": 1
+    },
+    {
+      "anomaly_sector": "0",
+      "dred_cutting_failure_words": 0,
+      "left_descendant": 0,
+      "left_parity": 0,
+      "marked_inverse_kernel_occurrences": 0,
+      "outer_Dminus_product": 0,
+      "pair_id": "C2__C3",
+      "right_descendant": 0,
+      "right_koszul_sign": 1
+    },
+    {
+      "anomaly_sector": "0",
+      "dred_cutting_failure_words": 0,
+      "left_descendant": 0,
+      "left_parity": 0,
+      "marked_inverse_kernel_occurrences": 0,
+      "outer_Dminus_product": 0,
+      "pair_id": "C2__Ddot1",
+      "right_descendant": 0,
+      "right_koszul_sign": 1
+    },
+    {
+      "anomaly_sector": "0",
+      "dred_cutting_failure_words": 0,
+      "left_descendant": 0,
+      "left_parity": 0,
+      "marked_inverse_kernel_occurrences": 0,
+      "outer_Dminus_product": 0,
+      "pair_id": "C2__Ddot2",
+      "right_descendant": 0,
+      "right_koszul_sign": 1
+    },
+    {
+      "anomaly_sector": "0",
+      "dred_cutting_failure_words": 0,
+      "left_descendant": 0,
+      "left_parity": 0,
+      "marked_inverse_kernel_occurrences": 0,
+      "outer_Dminus_product": 0,
+      "pair_id": "C3__C1",
+      "right_descendant": 0,
+      "right_koszul_sign": 1
+    },
+    {
+      "anomaly_sector": "0",
+      "dred_cutting_failure_words": 0,
+      "left_descendant": 0,
+      "left_parity": 0,
+      "marked_inverse_kernel_occurrences": 0,
+      "outer_Dminus_product": 0,
+      "pair_id": "C3__C2",
+      "right_descendant": 0,
+      "right_koszul_sign": 1
+    },
+    {
+      "anomaly_sector": "0",
+      "dred_cutting_failure_words": 0,
+      "left_descendant": 0,
+      "left_parity": 0,
+      "marked_inverse_kernel_occurrences": 0,
+      "outer_Dminus_product": 0,
+      "pair_id": "C3__C3",
+      "right_descendant": 0,
+      "right_koszul_sign": 1
+    },
+    {
+      "anomaly_sector": "0",
+      "dred_cutting_failure_words": 0,
+      "left_descendant": 0,
+      "left_parity": 0,
+      "marked_inverse_kernel_occurrences": 0,
+      "outer_Dminus_product": 0,
+      "pair_id": "C3__Ddot1",
+      "right_descendant": 0,
+      "right_koszul_sign": 1
+    },
+    {
+      "anomaly_sector": "0",
+      "dred_cutting_failure_words": 0,
+      "left_descendant": 0,
+      "left_parity": 0,
+      "marked_inverse_kernel_occurrences": 0,
+      "outer_Dminus_product": 0,
+      "pair_id": "C3__Ddot2",
+      "right_descendant": 0,
+      "right_koszul_sign": 1
+    },
+    {
+      "anomaly_sector": "0",
+      "dred_cutting_failure_words": 0,
+      "left_descendant": 0,
+      "left_parity": 1,
+      "marked_inverse_kernel_occurrences": 0,
+      "outer_Dminus_product": 0,
+      "pair_id": "Ddot1__C1",
+      "right_descendant": 0,
+      "right_koszul_sign": -1
+    },
+    {
+      "anomaly_sector": "0",
+      "dred_cutting_failure_words": 0,
+      "left_descendant": 0,
+      "left_parity": 1,
+      "marked_inverse_kernel_occurrences": 0,
+      "outer_Dminus_product": 0,
+      "pair_id": "Ddot1__C2",
+      "right_descendant": 0,
+      "right_koszul_sign": -1
+    },
+    {
+      "anomaly_sector": "0",
+      "dred_cutting_failure_words": 0,
+      "left_descendant": 0,
+      "left_parity": 1,
+      "marked_inverse_kernel_occurrences": 0,
+      "outer_Dminus_product": 0,
+      "pair_id": "Ddot1__C3",
+      "right_descendant": 0,
+      "right_koszul_sign": -1
+    },
+    {
+      "anomaly_sector": "0",
+      "dred_cutting_failure_words": 0,
+      "left_descendant": 0,
+      "left_parity": 1,
+      "marked_inverse_kernel_occurrences": 0,
+      "outer_Dminus_product": 0,
+      "pair_id": "Ddot1__Ddot1",
+      "right_descendant": 0,
+      "right_koszul_sign": -1
+    },
+    {
+      "anomaly_sector": "0",
+      "dred_cutting_failure_words": 0,
+      "left_descendant": 0,
+      "left_parity": 1,
+      "marked_inverse_kernel_occurrences": 0,
+      "outer_Dminus_product": 0,
+      "pair_id": "Ddot1__Ddot2",
+      "right_descendant": 0,
+      "right_koszul_sign": -1
+    },
+    {
+      "anomaly_sector": "0",
+      "dred_cutting_failure_words": 0,
+      "left_descendant": 0,
+      "left_parity": 1,
+      "marked_inverse_kernel_occurrences": 0,
+      "outer_Dminus_product": 0,
+      "pair_id": "Ddot2__C1",
+      "right_descendant": 0,
+      "right_koszul_sign": -1
+    },
+    {
+      "anomaly_sector": "0",
+      "dred_cutting_failure_words": 0,
+      "left_descendant": 0,
+      "left_parity": 1,
+      "marked_inverse_kernel_occurrences": 0,
+      "outer_Dminus_product": 0,
+      "pair_id": "Ddot2__C2",
+      "right_descendant": 0,
+      "right_koszul_sign": -1
+    },
+    {
+      "anomaly_sector": "0",
+      "dred_cutting_failure_words": 0,
+      "left_descendant": 0,
+      "left_parity": 1,
+      "marked_inverse_kernel_occurrences": 0,
+      "outer_Dminus_product": 0,
+      "pair_id": "Ddot2__C3",
+      "right_descendant": 0,
+      "right_koszul_sign": -1
+    },
+    {
+      "anomaly_sector": "0",
+      "dred_cutting_failure_words": 0,
+      "left_descendant": 0,
+      "left_parity": 1,
+      "marked_inverse_kernel_occurrences": 0,
+      "outer_Dminus_product": 0,
+      "pair_id": "Ddot2__Ddot1",
+      "right_descendant": 0,
+      "right_koszul_sign": -1
+    },
+    {
+      "anomaly_sector": "0",
+      "dred_cutting_failure_words": 0,
+      "left_descendant": 0,
+      "left_parity": 1,
+      "marked_inverse_kernel_occurrences": 0,
+      "outer_Dminus_product": 0,
+      "pair_id": "Ddot2__Ddot2",
+      "right_descendant": 0,
+      "right_koszul_sign": -1
+    }
+  ],
+  "schema": "step5-no-descendant-pairs-exact-v1",
+  "status": "TARGET_BLIND_EXACT_ZERO__NO_OUTER_DESCENDANT__NO_CUTTING_FAILURE_WORD",
+  "target_used": false
+}

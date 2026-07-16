@@ -1,0 +1,4185 @@
+{
+  "checks": {
+    "count": 269,
+    "failed": 0,
+    "passed": 269,
+    "rows": [
+      {
+        "actual": "6",
+        "expected": "6",
+        "id": "FORMAL_FULL_TERM_COUNT",
+        "status": "PASS"
+      },
+      {
+        "actual": "(2,2,2)",
+        "expected": "(2,2,2)",
+        "id": "FORMAL_PARTITION_COUNTS",
+        "status": "PASS"
+      },
+      {
+        "actual": "6",
+        "expected": "6",
+        "id": "FORMAL_PARTITION_EXHAUSTIVE",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_+:1000:SBE",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_+:1000:SEB",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_+:1000:BSE",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_+:1000:BES",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_+:1000:ESB",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_+:1000:EBS",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_+:0100:SBE",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_+:0100:SEB",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_+:0100:BSE",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_+:0100:BES",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_+:0100:ESB",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_+:0100:EBS",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_+:0010:SBE",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_+:0010:SEB",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_+:0010:BSE",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_+:0010:BES",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_+:0010:ESB",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_+:0010:EBS",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_+:0001:SBE",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_+:0001:SEB",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_+:0001:BSE",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_+:0001:BES",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_+:0001:ESB",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_+:0001:EBS",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_-:1000:SBE",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_-:1000:SEB",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_-:1000:BSE",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_-:1000:BES",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_-:1000:ESB",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_-:1000:EBS",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_-:0100:SBE",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_-:0100:SEB",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_-:0100:BSE",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_-:0100:BES",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_-:0100:ESB",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_-:0100:EBS",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_-:0010:SBE",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_-:0010:SEB",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_-:0010:BSE",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_-:0010:BES",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_-:0010:ESB",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_-:0010:EBS",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_-:0001:SBE",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_-:0001:SEB",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_-:0001:BSE",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_-:0001:BES",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_-:0001:ESB",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "RAW_UNIQUE_CLASS_-:0001:EBS",
+        "status": "PASS"
+      },
+      {
+        "actual": "24",
+        "expected": "24",
+        "id": "RAW_+_TOTAL",
+        "status": "PASS"
+      },
+      {
+        "actual": "(8,8,8)",
+        "expected": "(8,8,8)",
+        "id": "RAW_+_CLASS_COUNTS",
+        "status": "PASS"
+      },
+      {
+        "actual": "24",
+        "expected": "24",
+        "id": "RAW_-_TOTAL",
+        "status": "PASS"
+      },
+      {
+        "actual": "(8,8,8)",
+        "expected": "(8,8,8)",
+        "id": "RAW_-_CLASS_COUNTS",
+        "status": "PASS"
+      },
+      {
+        "actual": "16",
+        "expected": "16",
+        "id": "OLD_FIXED_RAW_ROWS",
+        "status": "PASS"
+      },
+      {
+        "actual": "32",
+        "expected": "32",
+        "id": "OLD_FIXED_OMITTED_ROWS",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/8*sqrt(2)",
+        "expected": "3/8*sqrt(2)",
+        "id": "SAMPLE_plus_A_00_linear_field_strength",
+        "status": "PASS"
+      },
+      {
+        "actual": "-3/32*sqrt(2)",
+        "expected": "-3/32*sqrt(2)",
+        "id": "SAMPLE_plus_A_00_derivative_commutator",
+        "status": "PASS"
+      },
+      {
+        "actual": "-3/32*sqrt(2)",
+        "expected": "-3/32*sqrt(2)",
+        "id": "SAMPLE_plus_A_00_plain_commutator",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/16*sqrt(2)",
+        "expected": "3/16*sqrt(2)",
+        "id": "SAMPLE_plus_A_00_SUM_FULL",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/16*sqrt(2)",
+        "expected": "3/16*sqrt(2)",
+        "id": "SAMPLE_plus_A_00_FULL",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/8*sqrt(2)",
+        "expected": "3/8*sqrt(2)",
+        "id": "SAMPLE_plus_A_00_OLD_FIXED",
+        "status": "PASS"
+      },
+      {
+        "actual": "-3/32*sqrt(2) - 1/32*i sqrt(2)",
+        "expected": "-3/32*sqrt(2) - 1/32*i sqrt(2)",
+        "id": "SAMPLE_plus_A_1_13_linear_field_strength",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/32*sqrt(2) + 3/128*i sqrt(2)",
+        "expected": "1/32*sqrt(2) + 3/128*i sqrt(2)",
+        "id": "SAMPLE_plus_A_1_13_derivative_commutator",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/64*sqrt(2) - 1/128*i sqrt(2)",
+        "expected": "1/64*sqrt(2) - 1/128*i sqrt(2)",
+        "id": "SAMPLE_plus_A_1_13_plain_commutator",
+        "status": "PASS"
+      },
+      {
+        "actual": "-3/64*sqrt(2) - 1/64*i sqrt(2)",
+        "expected": "-3/64*sqrt(2) - 1/64*i sqrt(2)",
+        "id": "SAMPLE_plus_A_1_13_SUM_FULL",
+        "status": "PASS"
+      },
+      {
+        "actual": "-3/64*sqrt(2) - 1/64*i sqrt(2)",
+        "expected": "-3/64*sqrt(2) - 1/64*i sqrt(2)",
+        "id": "SAMPLE_plus_A_1_13_FULL",
+        "status": "PASS"
+      },
+      {
+        "actual": "-3/32*sqrt(2) - 1/32*i sqrt(2)",
+        "expected": "-3/32*sqrt(2) - 1/32*i sqrt(2)",
+        "id": "SAMPLE_plus_A_1_13_OLD_FIXED",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/8*sqrt(2)",
+        "expected": "3/8*sqrt(2)",
+        "id": "SAMPLE_minus_A_cross_linear_field_strength",
+        "status": "PASS"
+      },
+      {
+        "actual": "-3/32*sqrt(2)",
+        "expected": "-3/32*sqrt(2)",
+        "id": "SAMPLE_minus_A_cross_derivative_commutator",
+        "status": "PASS"
+      },
+      {
+        "actual": "-3/32*sqrt(2)",
+        "expected": "-3/32*sqrt(2)",
+        "id": "SAMPLE_minus_A_cross_plain_commutator",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/16*sqrt(2)",
+        "expected": "3/16*sqrt(2)",
+        "id": "SAMPLE_minus_A_cross_SUM_FULL",
+        "status": "PASS"
+      },
+      {
+        "actual": "3/16*sqrt(2)",
+        "expected": "3/16*sqrt(2)",
+        "id": "SAMPLE_minus_A_cross_FULL",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SAMPLE_minus_A_cross_OLD_FIXED",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/32*sqrt(2) + 3/64*i sqrt(2)",
+        "expected": "1/32*sqrt(2) + 3/64*i sqrt(2)",
+        "id": "SAMPLE_minus_D_0_4_linear_field_strength",
+        "status": "PASS"
+      },
+      {
+        "actual": "-3/128*i sqrt(2)",
+        "expected": "-3/128*i sqrt(2)",
+        "id": "SAMPLE_minus_D_0_4_derivative_commutator",
+        "status": "PASS"
+      },
+      {
+        "actual": "-3/128*i sqrt(2)",
+        "expected": "-3/128*i sqrt(2)",
+        "id": "SAMPLE_minus_D_0_4_plain_commutator",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/32*sqrt(2)",
+        "expected": "1/32*sqrt(2)",
+        "id": "SAMPLE_minus_D_0_4_SUM_FULL",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/32*sqrt(2)",
+        "expected": "1/32*sqrt(2)",
+        "id": "SAMPLE_minus_D_0_4_FULL",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/32*sqrt(2) + 3/64*i sqrt(2)",
+        "expected": "1/32*sqrt(2) + 3/64*i sqrt(2)",
+        "id": "SAMPLE_minus_D_0_4_OLD_FIXED",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/16*sqrt(2)",
+        "expected": "1/16*sqrt(2)",
+        "id": "SAMPLE_plus_D_cross_linear_field_strength",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/64*sqrt(2)",
+        "expected": "-1/64*sqrt(2)",
+        "id": "SAMPLE_plus_D_cross_derivative_commutator",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/64*sqrt(2)",
+        "expected": "-1/64*sqrt(2)",
+        "id": "SAMPLE_plus_D_cross_plain_commutator",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/32*sqrt(2)",
+        "expected": "1/32*sqrt(2)",
+        "id": "SAMPLE_plus_D_cross_SUM_FULL",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/32*sqrt(2)",
+        "expected": "1/32*sqrt(2)",
+        "id": "SAMPLE_plus_D_cross_FULL",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SAMPLE_plus_D_cross_OLD_FIXED",
+        "status": "PASS"
+      },
+      {
+        "actual": "-97/4 + 103/2*i",
+        "expected": "-97/4 + 103/2*i",
+        "id": "SECTOR_++_FULL",
+        "status": "PASS"
+      },
+      {
+        "actual": "-97/4 + 103/2*i",
+        "expected": "-97/4 + 103/2*i",
+        "id": "SECTOR_++_FULL_SPLIT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-97/4 + 103/2*i",
+        "expected": "-97/4 + 103/2*i",
+        "id": "SECTOR_+-_FULL",
+        "status": "PASS"
+      },
+      {
+        "actual": "-97/4 + 103/2*i",
+        "expected": "-97/4 + 103/2*i",
+        "id": "SECTOR_+-_FULL_SPLIT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-97/4 + 103/2*i",
+        "expected": "-97/4 + 103/2*i",
+        "id": "SECTOR_-+_FULL",
+        "status": "PASS"
+      },
+      {
+        "actual": "-97/4 + 103/2*i",
+        "expected": "-97/4 + 103/2*i",
+        "id": "SECTOR_-+_FULL_SPLIT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-97/4 + 103/2*i",
+        "expected": "-97/4 + 103/2*i",
+        "id": "SECTOR_--_FULL",
+        "status": "PASS"
+      },
+      {
+        "actual": "-97/4 + 103/2*i",
+        "expected": "-97/4 + 103/2*i",
+        "id": "SECTOR_--_FULL_SPLIT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-97 + 206*i",
+        "expected": "-97 + 206*i",
+        "id": "FULL_SECTOR_SUM",
+        "status": "PASS"
+      },
+      {
+        "actual": "7 + 4*i",
+        "expected": "7 + 4*i",
+        "id": "FIXED_ONLY_MINUS_PLUS",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "FIXED_NOT_FULL_MINUS_PLUS",
+        "status": "PASS"
+      },
+      {
+        "actual": "{'source': 24, 'action_d': 88, 'action_a': 180, 'fixed_d': 60, 'fixed_a': 50}",
+        "expected": "{'source': 24, 'action_d': 88, 'action_a': 180, 'fixed_d': 60, 'fixed_a': 50}",
+        "id": "PROBE_TABLE_SIZES",
+        "status": "PASS"
+      },
+      {
+        "actual": "-97/4 + 103/2*i",
+        "expected": "-97/4 + 103/2*i",
+        "id": "PROBE_SECTOR_++_FULL",
+        "status": "PASS"
+      },
+      {
+        "actual": "-49 + 97*i",
+        "expected": "-49 + 97*i",
+        "id": "PROBE_SECTOR_++_SELECTED",
+        "status": "PASS"
+      },
+      {
+        "actual": "99/4 - 91/2*i",
+        "expected": "99/4 - 91/2*i",
+        "id": "PROBE_SECTOR_++_LONGITUDINAL",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "PROBE_SECTOR_++_FIXED",
+        "status": "PASS"
+      },
+      {
+        "actual": "-97/4 + 103/2*i",
+        "expected": "-97/4 + 103/2*i",
+        "id": "PROBE_SECTOR_+-_FULL",
+        "status": "PASS"
+      },
+      {
+        "actual": "-49 + 97*i",
+        "expected": "-49 + 97*i",
+        "id": "PROBE_SECTOR_+-_SELECTED",
+        "status": "PASS"
+      },
+      {
+        "actual": "99/4 - 91/2*i",
+        "expected": "99/4 - 91/2*i",
+        "id": "PROBE_SECTOR_+-_LONGITUDINAL",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "PROBE_SECTOR_+-_FIXED",
+        "status": "PASS"
+      },
+      {
+        "actual": "-97/4 + 103/2*i",
+        "expected": "-97/4 + 103/2*i",
+        "id": "PROBE_SECTOR_-+_FULL",
+        "status": "PASS"
+      },
+      {
+        "actual": "-49 + 97*i",
+        "expected": "-49 + 97*i",
+        "id": "PROBE_SECTOR_-+_SELECTED",
+        "status": "PASS"
+      },
+      {
+        "actual": "99/4 - 91/2*i",
+        "expected": "99/4 - 91/2*i",
+        "id": "PROBE_SECTOR_-+_LONGITUDINAL",
+        "status": "PASS"
+      },
+      {
+        "actual": "7 + 4*i",
+        "expected": "7 + 4*i",
+        "id": "PROBE_SECTOR_-+_FIXED",
+        "status": "PASS"
+      },
+      {
+        "actual": "-97/4 + 103/2*i",
+        "expected": "-97/4 + 103/2*i",
+        "id": "PROBE_SECTOR_--_FULL",
+        "status": "PASS"
+      },
+      {
+        "actual": "-49 + 97*i",
+        "expected": "-49 + 97*i",
+        "id": "PROBE_SECTOR_--_SELECTED",
+        "status": "PASS"
+      },
+      {
+        "actual": "99/4 - 91/2*i",
+        "expected": "99/4 - 91/2*i",
+        "id": "PROBE_SECTOR_--_LONGITUDINAL",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "PROBE_SECTOR_--_FIXED",
+        "status": "PASS"
+      },
+      {
+        "actual": "9",
+        "expected": "9",
+        "id": "PLACEMENT_PAIR_COUNT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-l0**2 + 2*I*l0*l1 + l1**2",
+        "expected": "-l0**2 + 2*I*l0*l1 + l1**2",
+        "id": "QUADRATIC_TRACELESS_SUM",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "QUADRATIC_LAPLACIAN",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/2 + 3*I/2",
+        "expected": "-1/2 + 3*I/2",
+        "id": "HELD_OUT_Q0",
+        "status": "PASS"
+      },
+      {
+        "actual": "-4 + 7*I",
+        "expected": "-4 + 7*I",
+        "id": "HELD_OUT_Q2",
+        "status": "PASS"
+      },
+      {
+        "actual": "-9 + 27*I",
+        "expected": "-9 + 27*I",
+        "id": "HELD_OUT_T0",
+        "status": "PASS"
+      },
+      {
+        "actual": "-40 + 70*I",
+        "expected": "-40 + 70*I",
+        "id": "HELD_OUT_T2",
+        "status": "PASS"
+      },
+      {
+        "actual": "-9 + 27*i",
+        "expected": "-9 + 27*i",
+        "id": "PROBE_HELD_OUT_T0",
+        "status": "PASS"
+      },
+      {
+        "actual": "-40 + 70*i",
+        "expected": "-40 + 70*i",
+        "id": "PROBE_HELD_OUT_T2",
+        "status": "PASS"
+      },
+      {
+        "actual": "((0,2,1))",
+        "expected": "((0,2,1))",
+        "id": "OCCURRENCE_UNIQUE_COLOR_CHAIN",
+        "status": "PASS"
+      },
+      {
+        "actual": "e0",
+        "expected": "e0",
+        "id": "OCCURRENCE_T0_EDGE",
+        "status": "PASS"
+      },
+      {
+        "actual": "e2",
+        "expected": "e2",
+        "id": "OCCURRENCE_T2_EDGE",
+        "status": "PASS"
+      },
+      {
+        "actual": "e0",
+        "expected": "e0",
+        "id": "OCCURRENCE_EDGE_REFLECTION_01",
+        "status": "PASS"
+      },
+      {
+        "actual": "e0",
+        "expected": "e0",
+        "id": "OCCURRENCE_EDGE_REFLECTION_02",
+        "status": "PASS"
+      },
+      {
+        "actual": "e0",
+        "expected": "e0",
+        "id": "OCCURRENCE_EDGE_REFLECTION_03",
+        "status": "PASS"
+      },
+      {
+        "actual": "e0",
+        "expected": "e0",
+        "id": "OCCURRENCE_EDGE_REFLECTION_04",
+        "status": "PASS"
+      },
+      {
+        "actual": "e0",
+        "expected": "e0",
+        "id": "OCCURRENCE_EDGE_REFLECTION_05",
+        "status": "PASS"
+      },
+      {
+        "actual": "e0",
+        "expected": "e0",
+        "id": "OCCURRENCE_EDGE_REFLECTION_06",
+        "status": "PASS"
+      },
+      {
+        "actual": "e0",
+        "expected": "e0",
+        "id": "OCCURRENCE_EDGE_REFLECTION_07",
+        "status": "PASS"
+      },
+      {
+        "actual": "e0",
+        "expected": "e0",
+        "id": "OCCURRENCE_EDGE_REFLECTION_08",
+        "status": "PASS"
+      },
+      {
+        "actual": "e0",
+        "expected": "e0",
+        "id": "OCCURRENCE_EDGE_REFLECTION_09",
+        "status": "PASS"
+      },
+      {
+        "actual": "e2",
+        "expected": "e2",
+        "id": "OCCURRENCE_EDGE_REFLECTION_10",
+        "status": "PASS"
+      },
+      {
+        "actual": "e2",
+        "expected": "e2",
+        "id": "OCCURRENCE_EDGE_REFLECTION_11",
+        "status": "PASS"
+      },
+      {
+        "actual": "e2",
+        "expected": "e2",
+        "id": "OCCURRENCE_EDGE_REFLECTION_12",
+        "status": "PASS"
+      },
+      {
+        "actual": "e2",
+        "expected": "e2",
+        "id": "OCCURRENCE_EDGE_REFLECTION_13",
+        "status": "PASS"
+      },
+      {
+        "actual": "e2",
+        "expected": "e2",
+        "id": "OCCURRENCE_EDGE_REFLECTION_14",
+        "status": "PASS"
+      },
+      {
+        "actual": "e2",
+        "expected": "e2",
+        "id": "OCCURRENCE_EDGE_REFLECTION_15",
+        "status": "PASS"
+      },
+      {
+        "actual": "e2",
+        "expected": "e2",
+        "id": "OCCURRENCE_EDGE_REFLECTION_16",
+        "status": "PASS"
+      },
+      {
+        "actual": "e2",
+        "expected": "e2",
+        "id": "OCCURRENCE_EDGE_REFLECTION_17",
+        "status": "PASS"
+      },
+      {
+        "actual": "e2",
+        "expected": "e2",
+        "id": "OCCURRENCE_EDGE_REFLECTION_18",
+        "status": "PASS"
+      },
+      {
+        "actual": "18",
+        "expected": "18",
+        "id": "OCCURRENCE_TAG_PLACEMENT_ROW_COUNT",
+        "status": "PASS"
+      },
+      {
+        "actual": "18",
+        "expected": "18",
+        "id": "SCHWINGER_TAGGED_PRODUCT_COUNT",
+        "status": "PASS"
+      },
+      {
+        "actual": "(I0_A1[A]*DminusA1[B],I0_DminusA1[A]*A1[B])",
+        "expected": "(I0_A1[A]*DminusA1[B],I0_DminusA1[A]*A1[B])",
+        "id": "SCHWINGER_DERIVATIVE_TAG_DIAGONAL",
+        "status": "PASS"
+      },
+      {
+        "actual": "-L0*m0 + L0 + Q0*bar_r0_sq - Q0*m0*r0d_sq",
+        "expected": "-L0*m0 + L0 + Q0*bar_r0_sq - Q0*m0*r0d_sq",
+        "id": "PARAMETERIZED_CONTACT_IDENTITY_e0",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "CONDITIONAL_CONTACT_IDENTITY_AT_M_e0_1",
+        "status": "PASS"
+      },
+      {
+        "actual": "-L0*m0 + L0 - Q0*m0*r0d_sq + Q0*r0d_sq",
+        "expected": "-L0*m0 + L0 - Q0*m0*r0d_sq + Q0*r0d_sq",
+        "id": "RAW_CONTACT_OBSTRUCTION_e0",
+        "status": "PASS"
+      },
+      {
+        "actual": "-L2*m2 + L2 + Q2*bar_r2_sq - Q2*m2*r2d_sq",
+        "expected": "-L2*m2 + L2 + Q2*bar_r2_sq - Q2*m2*r2d_sq",
+        "id": "PARAMETERIZED_CONTACT_IDENTITY_e2",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "CONDITIONAL_CONTACT_IDENTITY_AT_M_e2_1",
+        "status": "PASS"
+      },
+      {
+        "actual": "-L2*m2 + L2 - Q2*m2*r2d_sq + Q2*r2d_sq",
+        "expected": "-L2*m2 + L2 - Q2*m2*r2d_sq + Q2*r2d_sq",
+        "id": "RAW_CONTACT_OBSTRUCTION_e2",
+        "status": "PASS"
+      },
+      {
+        "actual": "24",
+        "expected": "24",
+        "id": "RAW_SD_HESSIAN_GROUP_COUNT",
+        "status": "PASS"
+      },
+      {
+        "actual": "(BS,SB)",
+        "expected": "(BS,SB)",
+        "id": "RAW_SD_ENDPOINT_PAIR_01",
+        "status": "PASS"
+      },
+      {
+        "actual": "(BS,SB)",
+        "expected": "(BS,SB)",
+        "id": "RAW_SD_ENDPOINT_PAIR_02",
+        "status": "PASS"
+      },
+      {
+        "actual": "(BS,SB)",
+        "expected": "(BS,SB)",
+        "id": "RAW_SD_ENDPOINT_PAIR_03",
+        "status": "PASS"
+      },
+      {
+        "actual": "(BS,SB)",
+        "expected": "(BS,SB)",
+        "id": "RAW_SD_ENDPOINT_PAIR_04",
+        "status": "PASS"
+      },
+      {
+        "actual": "(BS,SB)",
+        "expected": "(BS,SB)",
+        "id": "RAW_SD_ENDPOINT_PAIR_05",
+        "status": "PASS"
+      },
+      {
+        "actual": "(BS,SB)",
+        "expected": "(BS,SB)",
+        "id": "RAW_SD_ENDPOINT_PAIR_06",
+        "status": "PASS"
+      },
+      {
+        "actual": "(BS,SB)",
+        "expected": "(BS,SB)",
+        "id": "RAW_SD_ENDPOINT_PAIR_07",
+        "status": "PASS"
+      },
+      {
+        "actual": "(BS,SB)",
+        "expected": "(BS,SB)",
+        "id": "RAW_SD_ENDPOINT_PAIR_08",
+        "status": "PASS"
+      },
+      {
+        "actual": "(BS,SB)",
+        "expected": "(BS,SB)",
+        "id": "RAW_SD_ENDPOINT_PAIR_09",
+        "status": "PASS"
+      },
+      {
+        "actual": "(BS,SB)",
+        "expected": "(BS,SB)",
+        "id": "RAW_SD_ENDPOINT_PAIR_10",
+        "status": "PASS"
+      },
+      {
+        "actual": "(BS,SB)",
+        "expected": "(BS,SB)",
+        "id": "RAW_SD_ENDPOINT_PAIR_11",
+        "status": "PASS"
+      },
+      {
+        "actual": "(BS,SB)",
+        "expected": "(BS,SB)",
+        "id": "RAW_SD_ENDPOINT_PAIR_12",
+        "status": "PASS"
+      },
+      {
+        "actual": "(BS,SB)",
+        "expected": "(BS,SB)",
+        "id": "RAW_SD_ENDPOINT_PAIR_13",
+        "status": "PASS"
+      },
+      {
+        "actual": "(BS,SB)",
+        "expected": "(BS,SB)",
+        "id": "RAW_SD_ENDPOINT_PAIR_14",
+        "status": "PASS"
+      },
+      {
+        "actual": "(BS,SB)",
+        "expected": "(BS,SB)",
+        "id": "RAW_SD_ENDPOINT_PAIR_15",
+        "status": "PASS"
+      },
+      {
+        "actual": "(BS,SB)",
+        "expected": "(BS,SB)",
+        "id": "RAW_SD_ENDPOINT_PAIR_16",
+        "status": "PASS"
+      },
+      {
+        "actual": "(BS,SB)",
+        "expected": "(BS,SB)",
+        "id": "RAW_SD_ENDPOINT_PAIR_17",
+        "status": "PASS"
+      },
+      {
+        "actual": "(BS,SB)",
+        "expected": "(BS,SB)",
+        "id": "RAW_SD_ENDPOINT_PAIR_18",
+        "status": "PASS"
+      },
+      {
+        "actual": "(BS,SB)",
+        "expected": "(BS,SB)",
+        "id": "RAW_SD_ENDPOINT_PAIR_19",
+        "status": "PASS"
+      },
+      {
+        "actual": "(BS,SB)",
+        "expected": "(BS,SB)",
+        "id": "RAW_SD_ENDPOINT_PAIR_20",
+        "status": "PASS"
+      },
+      {
+        "actual": "(BS,SB)",
+        "expected": "(BS,SB)",
+        "id": "RAW_SD_ENDPOINT_PAIR_21",
+        "status": "PASS"
+      },
+      {
+        "actual": "(BS,SB)",
+        "expected": "(BS,SB)",
+        "id": "RAW_SD_ENDPOINT_PAIR_22",
+        "status": "PASS"
+      },
+      {
+        "actual": "(BS,SB)",
+        "expected": "(BS,SB)",
+        "id": "RAW_SD_ENDPOINT_PAIR_23",
+        "status": "PASS"
+      },
+      {
+        "actual": "(BS,SB)",
+        "expected": "(BS,SB)",
+        "id": "RAW_SD_ENDPOINT_PAIR_24",
+        "status": "PASS"
+      },
+      {
+        "actual": "48",
+        "expected": "48",
+        "id": "RAW_SD_TOTAL_HESSIAN_ENDPOINT_ROWS",
+        "status": "PASS"
+      },
+      {
+        "actual": "N_BS + N_SB",
+        "expected": "N_BS + N_SB",
+        "id": "RAW_SD_TAYLOR_ACTION_ORDER_ENDPOINT_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-N_BS - N_SB",
+        "expected": "-N_BS - N_SB",
+        "id": "RAW_SD_TAYLOR_ACTION_ORDER_ENDPOINT_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "RAW_SD_ROWWISE_PARENT_PLUS_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "RAW_SD_FULL_D_CANCELLATION_e0",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "RAW_SD_FULL_D_CANCELLATION_e2",
+        "status": "PASS"
+      },
+      {
+        "actual": "PASS",
+        "expected": "PASS",
+        "id": "FRAME_canonical_STATUS",
+        "status": "PASS"
+      },
+      {
+        "actual": "PASS",
+        "expected": "PASS",
+        "id": "FRAME_alternate_STATUS",
+        "status": "PASS"
+      },
+      {
+        "actual": "PASS",
+        "expected": "PASS",
+        "id": "FRAME_p_only_STATUS",
+        "status": "PASS"
+      },
+      {
+        "actual": "PASS",
+        "expected": "PASS",
+        "id": "FRAME_q_only_STATUS",
+        "status": "PASS"
+      },
+      {
+        "actual": "PASS",
+        "expected": "PASS",
+        "id": "FRAME_p_transverse_STATUS",
+        "status": "PASS"
+      },
+      {
+        "actual": "PASS",
+        "expected": "PASS",
+        "id": "FRAME_q_transverse_STATUS",
+        "status": "PASS"
+      },
+      {
+        "actual": "PASS",
+        "expected": "PASS",
+        "id": "FRAME_swapped_transverse_STATUS",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME_canonical_EPSILON_DOT_P",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME_canonical_EPSILON_DOT_Q",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME_alternate_EPSILON_DOT_P",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME_alternate_EPSILON_DOT_Q",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME_p_transverse_EPSILON_DOT_P",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME_p_transverse_EPSILON_DOT_Q",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME_q_transverse_EPSILON_DOT_P",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME_q_transverse_EPSILON_DOT_Q",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME_swapped_transverse_EPSILON_DOT_P",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME_swapped_transverse_EPSILON_DOT_Q",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "FRAME_p_only_LONGITUDINAL_CONTAMINATION",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "FRAME_q_only_LONGITUDINAL_CONTAMINATION",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME_canonical_P_OPPOSITE_UNDOTTED_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME_canonical_Q_OPPOSITE_UNDOTTED_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME_alternate_P_OPPOSITE_UNDOTTED_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME_alternate_Q_OPPOSITE_UNDOTTED_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME_swapped_transverse_P_OPPOSITE_UNDOTTED_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FRAME_swapped_transverse_Q_OPPOSITE_UNDOTTED_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "P_TRANSVERSE_Q_OPPOSITE_UNDOTTED_NONZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "Q_TRANSVERSE_P_OPPOSITE_UNDOTTED_NONZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2",
+        "expected": "-2",
+        "id": "TYPED_PLUS_PROJECTOR_DETERMINANT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-I/2",
+        "expected": "-I/2",
+        "id": "TYPED_SCALAR_COEFFICIENT_P",
+        "status": "PASS"
+      },
+      {
+        "actual": "-I",
+        "expected": "-I",
+        "id": "TYPED_SCALAR_COEFFICIENT_Q",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/2 + I",
+        "expected": "-1/2 + I",
+        "id": "TYPED_FRAME_RECONSTRUCTION_canonical",
+        "status": "PASS"
+      },
+      {
+        "actual": "1 + I/2",
+        "expected": "1 + I/2",
+        "id": "TYPED_FRAME_RECONSTRUCTION_alternate",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1 + I/2",
+        "expected": "-1 + I/2",
+        "id": "TYPED_FRAME_RECONSTRUCTION_swapped_transverse",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/3",
+        "expected": "-1/3",
+        "id": "P_TRANSVERSE_Q_OPPOSITE_COEFFICIENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/12",
+        "expected": "-1/12",
+        "id": "Q_TRANSVERSE_P_OPPOSITE_COEFFICIENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "P_TRANSVERSE_all_four_sector_full_polynomials_equal",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "P_TRANSVERSE_all_four_sector_selected_polynomials_equal",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "P_TRANSVERSE_all_four_sector_longitudinal_polynomials_equal",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "P_TRANSVERSE_full_d_contact_identity_e0",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "P_TRANSVERSE_full_d_contact_identity_e2",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "P_TRANSVERSE_four_dimensional_trace_q0_zero",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "P_TRANSVERSE_four_dimensional_trace_q2_zero",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "Q_TRANSVERSE_all_four_sector_full_polynomials_equal",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "Q_TRANSVERSE_all_four_sector_selected_polynomials_equal",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "Q_TRANSVERSE_all_four_sector_longitudinal_polynomials_equal",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "Q_TRANSVERSE_full_d_contact_identity_e0",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "Q_TRANSVERSE_full_d_contact_identity_e2",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "Q_TRANSVERSE_four_dimensional_trace_q0_zero",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "Q_TRANSVERSE_four_dimensional_trace_q2_zero",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "SWAPPED_TRANSVERSE_all_four_sector_full_polynomials_equal",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "SWAPPED_TRANSVERSE_all_four_sector_selected_polynomials_equal",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "SWAPPED_TRANSVERSE_all_four_sector_longitudinal_polynomials_equal",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "SWAPPED_TRANSVERSE_full_d_contact_identity_e0",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "SWAPPED_TRANSVERSE_full_d_contact_identity_e2",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "SWAPPED_TRANSVERSE_four_dimensional_trace_q0_zero",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "SWAPPED_TRANSVERSE_four_dimensional_trace_q2_zero",
+        "status": "PASS"
+      },
+      {
+        "actual": "-g**2*hbar",
+        "expected": "-g**2*hbar",
+        "id": "TYPED_PRIMITIVE_PREFACTOR",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "TYPED_SECTOR_++_TAYLOR_WEIGHT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "TYPED_SECTOR_+-_TAYLOR_WEIGHT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "TYPED_SECTOR_-+_TAYLOR_WEIGHT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "TYPED_SECTOR_--_TAYLOR_WEIGHT",
+        "status": "PASS"
+      },
+      {
+        "actual": "4",
+        "expected": "4",
+        "id": "TYPED_SECTOR_SUM_WEIGHT_FROM_ROWS",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2",
+        "expected": "-2",
+        "id": "TYPED_PROBE_COLOR_FRAME",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2",
+        "expected": "-2",
+        "id": "TYPED_REFLECTED_COLOR_FRAME",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/2",
+        "expected": "-1/2",
+        "id": "TYPED_PER_SECTOR_OVER_LAMBDA1",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2",
+        "expected": "-2",
+        "id": "TYPED_FOUR_SECTOR_OVER_LAMBDA1",
+        "status": "PASS"
+      },
+      {
+        "actual": "(I,2*I,-I,-2*I)",
+        "expected": "(I,2*I,-I,-2*I)",
+        "id": "TYPED_ORDERED_VECTOR_OVER_LAMBDA1",
+        "status": "PASS"
+      },
+      {
+        "actual": "(1,2,-1,-2)",
+        "expected": "(1,2,-1,-2)",
+        "id": "TYPED_COMMON_FOURIER_VECTOR_OVER_LAMBDA1",
+        "status": "PASS"
+      },
+      {
+        "actual": "(1,0,-1,0)",
+        "expected": "(1,0,-1,0)",
+        "id": "TYPED_EOM_DIVERGENCE_QUOTIENT_VECTOR",
+        "status": "PASS"
+      },
+      {
+        "actual": "(1,-1)",
+        "expected": "(1,-1)",
+        "id": "TYPED_PHYSICAL_ORDERED_P_VECTOR",
+        "status": "PASS"
+      },
+      {
+        "actual": "-16384*a0*a1*b2*d0 + 16384*a0*a1*b2*d1 + 16384*a0*a2*b1*d0 - 16384*a0*b1*b2*c1 - 16384*a1*a2*b0*d1 + 16384*a1*b0*b2*c0 - 16384*a2*b0*b1*c0 + 16384*a2*b0*b1*c1",
+        "expected": "-16384*a0*a1*b2*d0 + 16384*a0*a1*b2*d1 + 16384*a0*a2*b1*d0 - 16384*a0*b1*b2*c1 - 16384*a1*a2*b0*d1 + 16384*a1*b0*b2*c0 - 16384*a2*b0*b1*c0 + 16384*a2*b0*b1*c1",
+        "id": "MATTER_RAW_G0_SIGN",
+        "status": "PASS"
+      },
+      {
+        "actual": "-16384*a0*a2*b1*d1 + 16384*a0*b1*b2*c1 + 16384*a1*a2*b0*d1 - 16384*a1*b0*b2*c1",
+        "expected": "-16384*a0*a2*b1*d1 + 16384*a0*b1*b2*c1 + 16384*a1*a2*b0*d1 - 16384*a1*b0*b2*c1",
+        "id": "MATTER_RAW_G2_SIGN",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "MATTER_SOURCE_FACTOR_SIGN",
+        "status": "PASS"
+      },
+      {
+        "actual": "(1,1)",
+        "expected": "(1,1)",
+        "id": "MATTER_EXPONENT_VERTEX_SIGNS",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "MATTER_TWO_VECTOR_PROPAGATOR_SIGN",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "MATTER_CHIRAL_PROPAGATOR_SIGN",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "MATTER_LABELED_WICK_TAYLOR_SIGN",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "MATTER_COLOR_CHAIN_SIGN",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "MATTER_ETA_SOURCE",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1",
+        "expected": "-1",
+        "id": "MATTER_FORWARD_CB_OVER_LAMBDA1",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1",
+        "expected": "-1",
+        "id": "MATTER_CROSSED_QWEDGEP_OVER_LAMBDA1",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "MATTER_CROSSED_BC_OVER_LAMBDA1",
+        "status": "PASS"
+      },
+      {
+        "actual": "(1,-1)",
+        "expected": "(1,-1)",
+        "id": "MATTER_ORDERED_BC_CB_VECTOR",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "EXHAUSTIVE_EQUALITY_FAILURES",
+        "status": "PASS"
+      }
+    ]
+  },
+  "exhaustive_component_replay": {
+    "color_zero_proof": "epsilon(c1,c2,c_external)=0 unless all three colors are distinct",
+    "frame": {
+      "background_momentum": [
+        "1",
+        "-3",
+        "-1",
+        "-1"
+      ],
+      "momentum_1": [
+        "1",
+        "2",
+        "0",
+        "1"
+      ],
+      "momentum_2": [
+        "-2",
+        "1",
+        "1",
+        "0"
+      ],
+      "polarization": [
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    "summaries": {
+      "+_A": {
+        "all_color_mask_rows": 2304,
+        "analytic_color_zero_rows": 1792,
+        "equality_failures": 0,
+        "fingerprints": {
+          "derivative_commutator": {
+            "sum": "0",
+            "weighted_sum": "-5/32*sqrt(2) - 3/8*i sqrt(2)"
+          },
+          "derivative_plus_plain": {
+            "sum": "0",
+            "weighted_sum": "-11/16*sqrt(2) - 5/8*i sqrt(2)"
+          },
+          "full": {
+            "sum": "0",
+            "weighted_sum": "9/16*sqrt(2) - 5/8*i sqrt(2)"
+          },
+          "linear_field_strength": {
+            "sum": "0",
+            "weighted_sum": "5/4*sqrt(2)"
+          },
+          "plain_commutator": {
+            "sum": "0",
+            "weighted_sum": "-17/32*sqrt(2) - 1/4*i sqrt(2)"
+          }
+        },
+        "nonzero_counts": {
+          "derivative_commutator": 112,
+          "derivative_plus_plain": 104,
+          "full": 88,
+          "linear_field_strength": 66,
+          "old_fixed_full_mismatch": 104,
+          "old_fixed_model": 66,
+          "plain_commutator": 112
+        },
+        "sparse_replayed_rows": 512
+      },
+      "+_D": {
+        "all_color_mask_rows": 2304,
+        "analytic_color_zero_rows": 1792,
+        "equality_failures": 0,
+        "fingerprints": {
+          "derivative_commutator": {
+            "sum": "0",
+            "weighted_sum": "-1/4*sqrt(2)"
+          },
+          "derivative_plus_plain": {
+            "sum": "0",
+            "weighted_sum": "-9/16*sqrt(2) - 1/16*i sqrt(2)"
+          },
+          "full": {
+            "sum": "0",
+            "weighted_sum": "7/16*sqrt(2) + 3/16*i sqrt(2)"
+          },
+          "linear_field_strength": {
+            "sum": "0",
+            "weighted_sum": "sqrt(2) + 1/4*i sqrt(2)"
+          },
+          "plain_commutator": {
+            "sum": "0",
+            "weighted_sum": "-5/16*sqrt(2) - 1/16*i sqrt(2)"
+          }
+        },
+        "nonzero_counts": {
+          "derivative_commutator": 44,
+          "derivative_plus_plain": 44,
+          "full": 52,
+          "linear_field_strength": 40,
+          "old_fixed_full_mismatch": 52,
+          "old_fixed_model": 0,
+          "plain_commutator": 40
+        },
+        "sparse_replayed_rows": 512
+      },
+      "-_A": {
+        "all_color_mask_rows": 2304,
+        "analytic_color_zero_rows": 1792,
+        "equality_failures": 0,
+        "fingerprints": {
+          "derivative_commutator": {
+            "sum": "0",
+            "weighted_sum": "-45/32*sqrt(2) - 1/8*i sqrt(2)"
+          },
+          "derivative_plus_plain": {
+            "sum": "0",
+            "weighted_sum": "-39/16*sqrt(2) - 3/8*i sqrt(2)"
+          },
+          "full": {
+            "sum": "0",
+            "weighted_sum": "9/16*sqrt(2) - 5/8*i sqrt(2)"
+          },
+          "linear_field_strength": {
+            "sum": "0",
+            "weighted_sum": "3*sqrt(2) - 1/4*i sqrt(2)"
+          },
+          "plain_commutator": {
+            "sum": "0",
+            "weighted_sum": "-33/32*sqrt(2) - 1/4*i sqrt(2)"
+          }
+        },
+        "nonzero_counts": {
+          "derivative_commutator": 108,
+          "derivative_plus_plain": 100,
+          "full": 88,
+          "linear_field_strength": 66,
+          "old_fixed_full_mismatch": 88,
+          "old_fixed_model": 0,
+          "plain_commutator": 104
+        },
+        "sparse_replayed_rows": 512
+      },
+      "-_D": {
+        "all_color_mask_rows": 2304,
+        "analytic_color_zero_rows": 1792,
+        "equality_failures": 0,
+        "fingerprints": {
+          "derivative_commutator": {
+            "sum": "0",
+            "weighted_sum": "-1/8*sqrt(2) - 1/16*i sqrt(2)"
+          },
+          "derivative_plus_plain": {
+            "sum": "0",
+            "weighted_sum": "-3/16*sqrt(2) - 1/16*i sqrt(2)"
+          },
+          "full": {
+            "sum": "0",
+            "weighted_sum": "7/16*sqrt(2) + 3/16*i sqrt(2)"
+          },
+          "linear_field_strength": {
+            "sum": "0",
+            "weighted_sum": "5/8*sqrt(2) + 1/4*i sqrt(2)"
+          },
+          "plain_commutator": {
+            "sum": "0",
+            "weighted_sum": "-1/16*sqrt(2)"
+          }
+        },
+        "nonzero_counts": {
+          "derivative_commutator": 52,
+          "derivative_plus_plain": 48,
+          "full": 52,
+          "linear_field_strength": 64,
+          "old_fixed_full_mismatch": 48,
+          "old_fixed_model": 64,
+          "plain_commutator": 44
+        },
+        "sparse_replayed_rows": 512
+      }
+    },
+    "total_analytic_color_zero_rows": 7168,
+    "total_equality_failures": 0,
+    "total_full_color_mask_rows": 9216,
+    "total_sparse_replayed_rows": 2048
+  },
+  "external_target_used": false,
+  "formal_polarization": {
+    "classes": {
+      "derivative_commutator": [
+        {
+          "D_slot": "E",
+          "W_linear": "Q1",
+          "plain_slot": "Q2"
+        },
+        {
+          "D_slot": "E",
+          "W_linear": "Q2",
+          "plain_slot": "Q1"
+        }
+      ],
+      "linear_field_strength": [
+        {
+          "D_slot": "Q1",
+          "W_linear": "E",
+          "plain_slot": "Q2"
+        },
+        {
+          "D_slot": "Q2",
+          "W_linear": "E",
+          "plain_slot": "Q1"
+        }
+      ],
+      "plain_commutator": [
+        {
+          "D_slot": "Q2",
+          "W_linear": "Q1",
+          "plain_slot": "E"
+        },
+        {
+          "D_slot": "Q1",
+          "W_linear": "Q2",
+          "plain_slot": "E"
+        }
+      ]
+    },
+    "coefficient": "[t1*t2*tE]",
+    "identity": "H_full=H_linear_field_strength+H_derivative_commutator+H_plain_commutator",
+    "labeled_fields": [
+      "Q1",
+      "Q2",
+      "E"
+    ],
+    "trilinear_word": "c_chi*Tr(W_chi^(1)(U)*[D_chi U,U])"
+  },
+  "latest_unresolved_gate": "NONE_IN_AA_RAW_CONTACT_AND_TYPED_SECTOR",
+  "matter_primitive_sign": {
+    "directed_rows_over_lambda1": {
+      "F1_forward_CB": "-4/3",
+      "F2_forward_CB": "+1/3",
+      "X1_crossed_q_wedge_p": "+1/3",
+      "X2_crossed_q_wedge_p": "-4/3"
+    },
+    "external_target_used": false,
+    "ordered_basis": [
+      "BC",
+      "CB"
+    ],
+    "ordered_vector_over_lambda1_times_F": [
+      "1",
+      "-1"
+    ],
+    "primitive_sign_chain": {
+      "chiral_matter_propagator": "+1",
+      "color_chain": "+F",
+      "eta_src": "+1",
+      "exponent_vertex_signs": [
+        "+1",
+        "+1"
+      ],
+      "labeled_wick_taylor": "(1/2!)*2=+1",
+      "matter_action_derivatives": [
+        "-1",
+        "-1"
+      ],
+      "two_exponent_tau_factors": [
+        "-1",
+        "-1"
+      ],
+      "two_source_factors": "(-1/8)^2=+1/64",
+      "two_vector_propagators": "(-1)^2=+1"
+    },
+    "raw_grassmann": {
+      "G0": "-16384*S012",
+      "G2": "-16384*T012",
+      "sign_already_embedded": true
+    },
+    "status": "TARGET_BLIND_MATTER_PRIMITIVE_SIGN_EXACT",
+    "wedge_reversal": "q_plus_wedge_p_plus=-p_plus_wedge_q_plus"
+  },
+  "occurrence_edge_structural_lemma": {
+    "color_constraints": [
+      "epsilon(c0,c1,external_D=1)!=0",
+      "epsilon(c1,c2,external_A=0)!=0"
+    ],
+    "combined_raw_row_edge_status": "CLOSED_BY_OCCURRENCE_EDGE_STRUCTURAL_LEMMA",
+    "contact_identities": [
+      {
+        "candidate_contact_at_m_e_1": "-L0 - Q0*r0d_sq",
+        "conditional_full_plus_contact_at_m_e_1": "Q0*bar_r0_sq - Q0*r0d_sq",
+        "dred_obstruction": "-L0*m0 + L0 - Q0*m0*r0d_sq + Q0*r0d_sq",
+        "edge": "e0",
+        "full": "L0 + Q0*bar_r0_sq",
+        "full_plus_parameterized_raw_contact": "-L0*m0 + L0 + Q0*bar_r0_sq - Q0*m0*r0d_sq",
+        "longitudinal": "L0",
+        "mu_definition": "bar_r0_sq - r0d_sq",
+        "parameterized_raw_contact": "-L0*m0 - Q0*m0*r0d_sq",
+        "raw_contact_multiplicity": "m0",
+        "selected": "Q0*bar_r0_sq",
+        "verified_raw_contact": "-L0 - Q0*r0d_sq",
+        "verified_raw_multiplicity": "1"
+      },
+      {
+        "candidate_contact_at_m_e_1": "-L2 - Q2*r2d_sq",
+        "conditional_full_plus_contact_at_m_e_1": "Q2*bar_r2_sq - Q2*r2d_sq",
+        "dred_obstruction": "-L2*m2 + L2 - Q2*m2*r2d_sq + Q2*r2d_sq",
+        "edge": "e2",
+        "full": "L2 + Q2*bar_r2_sq",
+        "full_plus_parameterized_raw_contact": "-L2*m2 + L2 + Q2*bar_r2_sq - Q2*m2*r2d_sq",
+        "longitudinal": "L2",
+        "mu_definition": "bar_r2_sq - r2d_sq",
+        "parameterized_raw_contact": "-L2*m2 - Q2*m2*r2d_sq",
+        "raw_contact_multiplicity": "m2",
+        "selected": "Q2*bar_r2_sq",
+        "verified_raw_contact": "-L2 - Q2*r2d_sq",
+        "verified_raw_multiplicity": "1"
+      }
+    ],
+    "contact_identity_scope": "PARAMETERIZATION_CHECKED_AGAINST_RAW_PORT_HESSIAN_SD_ROW_MAP",
+    "placement_reflection_rows": [
+      {
+        "left_action_placement": "linear_field_strength",
+        "physical_source_edge": "e0",
+        "reflected_left_action_placement": "linear_field_strength",
+        "reflected_physical_source_edge": "e0",
+        "reflected_right_action_placement": "linear_field_strength",
+        "right_action_placement": "linear_field_strength",
+        "source_tag": "I0_DminusA1[A]*A1[B]"
+      },
+      {
+        "left_action_placement": "linear_field_strength",
+        "physical_source_edge": "e0",
+        "reflected_left_action_placement": "derivative_commutator",
+        "reflected_physical_source_edge": "e0",
+        "reflected_right_action_placement": "linear_field_strength",
+        "right_action_placement": "derivative_commutator",
+        "source_tag": "I0_DminusA1[A]*A1[B]"
+      },
+      {
+        "left_action_placement": "linear_field_strength",
+        "physical_source_edge": "e0",
+        "reflected_left_action_placement": "plain_commutator",
+        "reflected_physical_source_edge": "e0",
+        "reflected_right_action_placement": "linear_field_strength",
+        "right_action_placement": "plain_commutator",
+        "source_tag": "I0_DminusA1[A]*A1[B]"
+      },
+      {
+        "left_action_placement": "derivative_commutator",
+        "physical_source_edge": "e0",
+        "reflected_left_action_placement": "linear_field_strength",
+        "reflected_physical_source_edge": "e0",
+        "reflected_right_action_placement": "derivative_commutator",
+        "right_action_placement": "linear_field_strength",
+        "source_tag": "I0_DminusA1[A]*A1[B]"
+      },
+      {
+        "left_action_placement": "derivative_commutator",
+        "physical_source_edge": "e0",
+        "reflected_left_action_placement": "derivative_commutator",
+        "reflected_physical_source_edge": "e0",
+        "reflected_right_action_placement": "derivative_commutator",
+        "right_action_placement": "derivative_commutator",
+        "source_tag": "I0_DminusA1[A]*A1[B]"
+      },
+      {
+        "left_action_placement": "derivative_commutator",
+        "physical_source_edge": "e0",
+        "reflected_left_action_placement": "plain_commutator",
+        "reflected_physical_source_edge": "e0",
+        "reflected_right_action_placement": "derivative_commutator",
+        "right_action_placement": "plain_commutator",
+        "source_tag": "I0_DminusA1[A]*A1[B]"
+      },
+      {
+        "left_action_placement": "plain_commutator",
+        "physical_source_edge": "e0",
+        "reflected_left_action_placement": "linear_field_strength",
+        "reflected_physical_source_edge": "e0",
+        "reflected_right_action_placement": "plain_commutator",
+        "right_action_placement": "linear_field_strength",
+        "source_tag": "I0_DminusA1[A]*A1[B]"
+      },
+      {
+        "left_action_placement": "plain_commutator",
+        "physical_source_edge": "e0",
+        "reflected_left_action_placement": "derivative_commutator",
+        "reflected_physical_source_edge": "e0",
+        "reflected_right_action_placement": "plain_commutator",
+        "right_action_placement": "derivative_commutator",
+        "source_tag": "I0_DminusA1[A]*A1[B]"
+      },
+      {
+        "left_action_placement": "plain_commutator",
+        "physical_source_edge": "e0",
+        "reflected_left_action_placement": "plain_commutator",
+        "reflected_physical_source_edge": "e0",
+        "reflected_right_action_placement": "plain_commutator",
+        "right_action_placement": "plain_commutator",
+        "source_tag": "I0_DminusA1[A]*A1[B]"
+      },
+      {
+        "left_action_placement": "linear_field_strength",
+        "physical_source_edge": "e2",
+        "reflected_left_action_placement": "linear_field_strength",
+        "reflected_physical_source_edge": "e2",
+        "reflected_right_action_placement": "linear_field_strength",
+        "right_action_placement": "linear_field_strength",
+        "source_tag": "I0_A1[A]*DminusA1[B]"
+      },
+      {
+        "left_action_placement": "linear_field_strength",
+        "physical_source_edge": "e2",
+        "reflected_left_action_placement": "derivative_commutator",
+        "reflected_physical_source_edge": "e2",
+        "reflected_right_action_placement": "linear_field_strength",
+        "right_action_placement": "derivative_commutator",
+        "source_tag": "I0_A1[A]*DminusA1[B]"
+      },
+      {
+        "left_action_placement": "linear_field_strength",
+        "physical_source_edge": "e2",
+        "reflected_left_action_placement": "plain_commutator",
+        "reflected_physical_source_edge": "e2",
+        "reflected_right_action_placement": "linear_field_strength",
+        "right_action_placement": "plain_commutator",
+        "source_tag": "I0_A1[A]*DminusA1[B]"
+      },
+      {
+        "left_action_placement": "derivative_commutator",
+        "physical_source_edge": "e2",
+        "reflected_left_action_placement": "linear_field_strength",
+        "reflected_physical_source_edge": "e2",
+        "reflected_right_action_placement": "derivative_commutator",
+        "right_action_placement": "linear_field_strength",
+        "source_tag": "I0_A1[A]*DminusA1[B]"
+      },
+      {
+        "left_action_placement": "derivative_commutator",
+        "physical_source_edge": "e2",
+        "reflected_left_action_placement": "derivative_commutator",
+        "reflected_physical_source_edge": "e2",
+        "reflected_right_action_placement": "derivative_commutator",
+        "right_action_placement": "derivative_commutator",
+        "source_tag": "I0_A1[A]*DminusA1[B]"
+      },
+      {
+        "left_action_placement": "derivative_commutator",
+        "physical_source_edge": "e2",
+        "reflected_left_action_placement": "plain_commutator",
+        "reflected_physical_source_edge": "e2",
+        "reflected_right_action_placement": "derivative_commutator",
+        "right_action_placement": "plain_commutator",
+        "source_tag": "I0_A1[A]*DminusA1[B]"
+      },
+      {
+        "left_action_placement": "plain_commutator",
+        "physical_source_edge": "e2",
+        "reflected_left_action_placement": "linear_field_strength",
+        "reflected_physical_source_edge": "e2",
+        "reflected_right_action_placement": "plain_commutator",
+        "right_action_placement": "linear_field_strength",
+        "source_tag": "I0_A1[A]*DminusA1[B]"
+      },
+      {
+        "left_action_placement": "plain_commutator",
+        "physical_source_edge": "e2",
+        "reflected_left_action_placement": "derivative_commutator",
+        "reflected_physical_source_edge": "e2",
+        "reflected_right_action_placement": "plain_commutator",
+        "right_action_placement": "derivative_commutator",
+        "source_tag": "I0_A1[A]*DminusA1[B]"
+      },
+      {
+        "left_action_placement": "plain_commutator",
+        "physical_source_edge": "e2",
+        "reflected_left_action_placement": "plain_commutator",
+        "reflected_physical_source_edge": "e2",
+        "reflected_right_action_placement": "plain_commutator",
+        "right_action_placement": "plain_commutator",
+        "source_tag": "I0_A1[A]*DminusA1[B]"
+      }
+    ],
+    "raw_action_hessian_contact_rows_generated": true,
+    "raw_schwinger_contact_hessian_certificate": {
+      "Gaussian_SD_identity": "<F_e*K_e*v_e>-hbar<delta F_e/delta v_e>=0",
+      "edge_ledgers": [
+        {
+          "Wick_endpoint_count": 2,
+          "action_ordering_count": 2,
+          "collapsed_count_product": "(1/2!)*2*2=2",
+          "contact_contains_same_endpoint_sum_with_SD_sign": "-N_SB-N_BS",
+          "differentiated_action": "left_D_action_Hessian",
+          "even_action_orderings": [
+            "D_then_A",
+            "A_then_D"
+          ],
+          "interaction_Taylor_factor": "1/2!",
+          "ordered_two_line_Wick_endpoints_per_raw_Hessian_group": [
+            "SB",
+            "BS"
+          ],
+          "parent_contains_same_endpoint_sum": "N_SB+N_BS",
+          "physical_edge": "e0",
+          "relative_contact_multiplicity": "1",
+          "source_tag": "I0_DminusA1[A]*A1[B]"
+        },
+        {
+          "Wick_endpoint_count": 2,
+          "action_ordering_count": 2,
+          "collapsed_count_product": "(1/2!)*2*2=2",
+          "contact_contains_same_endpoint_sum_with_SD_sign": "-N_SB-N_BS",
+          "differentiated_action": "right_A_action_Hessian",
+          "even_action_orderings": [
+            "D_then_A",
+            "A_then_D"
+          ],
+          "interaction_Taylor_factor": "1/2!",
+          "ordered_two_line_Wick_endpoints_per_raw_Hessian_group": [
+            "SB",
+            "BS"
+          ],
+          "parent_contains_same_endpoint_sum": "N_SB+N_BS",
+          "physical_edge": "e2",
+          "relative_contact_multiplicity": "1",
+          "source_tag": "I0_A1[A]*DminusA1[B]"
+        }
+      ],
+      "factor_identity": {
+        "Taylor_times_action_orderings": "(1/2!)*2=1",
+        "if_endpoint_values_are_equal": "(1/2!)*2*2=2",
+        "not_an_extra_multiplier_reason": "the full-d parent Hessian and its raw SD derivative contain the identical SB/BS endpoint pair",
+        "ordered_endpoint_sum": "N_SB+N_BS"
+      },
+      "polynomial_cancellations": [
+        {
+          "N_d_plus_K_raw": "0",
+          "edge": "e0",
+          "full_d_parent_N_d": "I*l0**3/4 + l0**2*l1/4 - l0**2*r0d2/2 - 3*I*l0**2/4 + I*l0*l1**2/4 + I*l0*l1*r0d2 - l0*l1 - I*l0*l1/2 + I*l0*l2**2/4 + I*l0*l3**2/4 + 3*l0*r0d2/2 - I*l0*r0d2 + l0/4 + 3*I*l0/4 + l1**3/4 + l1**2*r0d2/2 - l1**2/2 + I*l1**2/4 + l1*l2**2/4 + l1*l3**2/4 - l1*r0d2 - 3*I*l1*r0d2/2 + 3*l1/4 - I*l1/4 - l2**2/4 + I*l2**2/4 - I*l2*l3 + 3*l3**2/4 + I*l3**2/4 - r0d2/2 + 3*I*r0d2/2",
+          "raw_contact_K_raw": "-I*l0**3/4 - l0**2*l1/4 + l0**2*r0d2/2 + 3*I*l0**2/4 - I*l0*l1**2/4 - I*l0*l1*r0d2 + l0*l1 + I*l0*l1/2 - I*l0*l2**2/4 - I*l0*l3**2/4 - 3*l0*r0d2/2 + I*l0*r0d2 - l0/4 - 3*I*l0/4 - l1**3/4 - l1**2*r0d2/2 + l1**2/2 - I*l1**2/4 - l1*l2**2/4 - l1*l3**2/4 + l1*r0d2 + 3*I*l1*r0d2/2 - 3*l1/4 + I*l1/4 + l2**2/4 - I*l2**2/4 + I*l2*l3 - 3*l3**2/4 - I*l3**2/4 + r0d2/2 - 3*I*r0d2/2"
+        },
+        {
+          "N_d_plus_K_raw": "0",
+          "edge": "e2",
+          "full_d_parent_N_d": "l0**4/2 - I*l0**3*l1 - l0**3/2 + I*l0**3/4 - 3*l0**2*l1/4 + I*l0**2*l1/2 + l0**2*l2**2/2 + l0**2*l3**2/2 - l0**2*r2d2/2 + I*l0**2/4 - I*l0*l1**3 - l0*l1**2/2 + 9*I*l0*l1**2/4 - I*l0*l1*l2**2 - I*l0*l1*l3**2 + I*l0*l1*r2d2 + l0*l1 - I*l0*l1/2 - l0*l2**2/2 + I*l0*l2**2/4 - l0*l3**2/2 + I*l0*l3**2/4 - l0*r2d2/2 + l0/4 - I*l0/4 - l1**4/2 + 5*l1**3/4 + I*l1**3/2 - l1**2*l2**2/2 - l1**2*l3**2/2 + l1**2*r2d2/2 - l1**2/2 - 3*I*l1**2/4 + l1*l2**2/4 + I*l1*l2**2/2 + l1*l3**2/4 + I*l1*l3**2/2 + I*l1*r2d2/2 - l1/4 - I*l1/4 + I*l2**2/4 - I*l2*l3/2 + l3**2/2 + I*l3**2/4",
+          "raw_contact_K_raw": "-l0**4/2 + I*l0**3*l1 + l0**3/2 - I*l0**3/4 + 3*l0**2*l1/4 - I*l0**2*l1/2 - l0**2*l2**2/2 - l0**2*l3**2/2 + l0**2*r2d2/2 - I*l0**2/4 + I*l0*l1**3 + l0*l1**2/2 - 9*I*l0*l1**2/4 + I*l0*l1*l2**2 + I*l0*l1*l3**2 - I*l0*l1*r2d2 - l0*l1 + I*l0*l1/2 + l0*l2**2/2 - I*l0*l2**2/4 + l0*l3**2/2 - I*l0*l3**2/4 + l0*r2d2/2 - l0/4 + I*l0/4 + l1**4/2 - 5*l1**3/4 - I*l1**3/2 + l1**2*l2**2/2 + l1**2*l3**2/2 - l1**2*r2d2/2 + l1**2/2 + 3*I*l1**2/4 - l1*l2**2/4 - I*l1*l2**2/2 - l1*l3**2/4 - I*l1*l3**2/2 - I*l1*r2d2/2 + l1/4 + I*l1/4 - I*l2**2/4 + I*l2*l3/2 - l3**2/2 - I*l3**2/4"
+        }
+      ],
+      "raw_Hessian_endpoint_groups": [
+        {
+          "chirality": "+",
+          "endpoint_count": 2,
+          "external_placement": "derivative_commutator",
+          "ordered_two_line_Wick_endpoints": [
+            {
+              "external_slot": "Y",
+              "ordered_quantum_roles": "BS",
+              "quantum_slots": "XZ",
+              "raw_row_id": "+:0001:BES"
+            },
+            {
+              "external_slot": "Y",
+              "ordered_quantum_roles": "SB",
+              "quantum_slots": "XZ",
+              "raw_row_id": "+:0001:SEB"
+            }
+          ],
+          "raw_word": "0001"
+        },
+        {
+          "chirality": "+",
+          "endpoint_count": 2,
+          "external_placement": "linear_field_strength",
+          "ordered_two_line_Wick_endpoints": [
+            {
+              "external_slot": "X",
+              "ordered_quantum_roles": "BS",
+              "quantum_slots": "YZ",
+              "raw_row_id": "+:0001:EBS"
+            },
+            {
+              "external_slot": "X",
+              "ordered_quantum_roles": "SB",
+              "quantum_slots": "YZ",
+              "raw_row_id": "+:0001:ESB"
+            }
+          ],
+          "raw_word": "0001"
+        },
+        {
+          "chirality": "+",
+          "endpoint_count": 2,
+          "external_placement": "plain_commutator",
+          "ordered_two_line_Wick_endpoints": [
+            {
+              "external_slot": "Z",
+              "ordered_quantum_roles": "BS",
+              "quantum_slots": "XY",
+              "raw_row_id": "+:0001:BSE"
+            },
+            {
+              "external_slot": "Z",
+              "ordered_quantum_roles": "SB",
+              "quantum_slots": "XY",
+              "raw_row_id": "+:0001:SBE"
+            }
+          ],
+          "raw_word": "0001"
+        },
+        {
+          "chirality": "+",
+          "endpoint_count": 2,
+          "external_placement": "derivative_commutator",
+          "ordered_two_line_Wick_endpoints": [
+            {
+              "external_slot": "Z",
+              "ordered_quantum_roles": "BS",
+              "quantum_slots": "XY",
+              "raw_row_id": "+:0010:BSE"
+            },
+            {
+              "external_slot": "Z",
+              "ordered_quantum_roles": "SB",
+              "quantum_slots": "XY",
+              "raw_row_id": "+:0010:SBE"
+            }
+          ],
+          "raw_word": "0010"
+        },
+        {
+          "chirality": "+",
+          "endpoint_count": 2,
+          "external_placement": "linear_field_strength",
+          "ordered_two_line_Wick_endpoints": [
+            {
+              "external_slot": "X",
+              "ordered_quantum_roles": "BS",
+              "quantum_slots": "YZ",
+              "raw_row_id": "+:0010:EBS"
+            },
+            {
+              "external_slot": "X",
+              "ordered_quantum_roles": "SB",
+              "quantum_slots": "YZ",
+              "raw_row_id": "+:0010:ESB"
+            }
+          ],
+          "raw_word": "0010"
+        },
+        {
+          "chirality": "+",
+          "endpoint_count": 2,
+          "external_placement": "plain_commutator",
+          "ordered_two_line_Wick_endpoints": [
+            {
+              "external_slot": "Y",
+              "ordered_quantum_roles": "BS",
+              "quantum_slots": "XZ",
+              "raw_row_id": "+:0010:BES"
+            },
+            {
+              "external_slot": "Y",
+              "ordered_quantum_roles": "SB",
+              "quantum_slots": "XZ",
+              "raw_row_id": "+:0010:SEB"
+            }
+          ],
+          "raw_word": "0010"
+        },
+        {
+          "chirality": "+",
+          "endpoint_count": 2,
+          "external_placement": "derivative_commutator",
+          "ordered_two_line_Wick_endpoints": [
+            {
+              "external_slot": "X",
+              "ordered_quantum_roles": "BS",
+              "quantum_slots": "YZ",
+              "raw_row_id": "+:0100:EBS"
+            },
+            {
+              "external_slot": "X",
+              "ordered_quantum_roles": "SB",
+              "quantum_slots": "YZ",
+              "raw_row_id": "+:0100:ESB"
+            }
+          ],
+          "raw_word": "0100"
+        },
+        {
+          "chirality": "+",
+          "endpoint_count": 2,
+          "external_placement": "linear_field_strength",
+          "ordered_two_line_Wick_endpoints": [
+            {
+              "external_slot": "Z",
+              "ordered_quantum_roles": "BS",
+              "quantum_slots": "XY",
+              "raw_row_id": "+:0100:BSE"
+            },
+            {
+              "external_slot": "Z",
+              "ordered_quantum_roles": "SB",
+              "quantum_slots": "XY",
+              "raw_row_id": "+:0100:SBE"
+            }
+          ],
+          "raw_word": "0100"
+        },
+        {
+          "chirality": "+",
+          "endpoint_count": 2,
+          "external_placement": "plain_commutator",
+          "ordered_two_line_Wick_endpoints": [
+            {
+              "external_slot": "Y",
+              "ordered_quantum_roles": "BS",
+              "quantum_slots": "XZ",
+              "raw_row_id": "+:0100:BES"
+            },
+            {
+              "external_slot": "Y",
+              "ordered_quantum_roles": "SB",
+              "quantum_slots": "XZ",
+              "raw_row_id": "+:0100:SEB"
+            }
+          ],
+          "raw_word": "0100"
+        },
+        {
+          "chirality": "+",
+          "endpoint_count": 2,
+          "external_placement": "derivative_commutator",
+          "ordered_two_line_Wick_endpoints": [
+            {
+              "external_slot": "Y",
+              "ordered_quantum_roles": "BS",
+              "quantum_slots": "XZ",
+              "raw_row_id": "+:1000:BES"
+            },
+            {
+              "external_slot": "Y",
+              "ordered_quantum_roles": "SB",
+              "quantum_slots": "XZ",
+              "raw_row_id": "+:1000:SEB"
+            }
+          ],
+          "raw_word": "1000"
+        },
+        {
+          "chirality": "+",
+          "endpoint_count": 2,
+          "external_placement": "linear_field_strength",
+          "ordered_two_line_Wick_endpoints": [
+            {
+              "external_slot": "Z",
+              "ordered_quantum_roles": "BS",
+              "quantum_slots": "XY",
+              "raw_row_id": "+:1000:BSE"
+            },
+            {
+              "external_slot": "Z",
+              "ordered_quantum_roles": "SB",
+              "quantum_slots": "XY",
+              "raw_row_id": "+:1000:SBE"
+            }
+          ],
+          "raw_word": "1000"
+        },
+        {
+          "chirality": "+",
+          "endpoint_count": 2,
+          "external_placement": "plain_commutator",
+          "ordered_two_line_Wick_endpoints": [
+            {
+              "external_slot": "X",
+              "ordered_quantum_roles": "BS",
+              "quantum_slots": "YZ",
+              "raw_row_id": "+:1000:EBS"
+            },
+            {
+              "external_slot": "X",
+              "ordered_quantum_roles": "SB",
+              "quantum_slots": "YZ",
+              "raw_row_id": "+:1000:ESB"
+            }
+          ],
+          "raw_word": "1000"
+        },
+        {
+          "chirality": "-",
+          "endpoint_count": 2,
+          "external_placement": "derivative_commutator",
+          "ordered_two_line_Wick_endpoints": [
+            {
+              "external_slot": "Y",
+              "ordered_quantum_roles": "BS",
+              "quantum_slots": "XZ",
+              "raw_row_id": "-:0001:BES"
+            },
+            {
+              "external_slot": "Y",
+              "ordered_quantum_roles": "SB",
+              "quantum_slots": "XZ",
+              "raw_row_id": "-:0001:SEB"
+            }
+          ],
+          "raw_word": "0001"
+        },
+        {
+          "chirality": "-",
+          "endpoint_count": 2,
+          "external_placement": "linear_field_strength",
+          "ordered_two_line_Wick_endpoints": [
+            {
+              "external_slot": "X",
+              "ordered_quantum_roles": "BS",
+              "quantum_slots": "YZ",
+              "raw_row_id": "-:0001:EBS"
+            },
+            {
+              "external_slot": "X",
+              "ordered_quantum_roles": "SB",
+              "quantum_slots": "YZ",
+              "raw_row_id": "-:0001:ESB"
+            }
+          ],
+          "raw_word": "0001"
+        },
+        {
+          "chirality": "-",
+          "endpoint_count": 2,
+          "external_placement": "plain_commutator",
+          "ordered_two_line_Wick_endpoints": [
+            {
+              "external_slot": "Z",
+              "ordered_quantum_roles": "BS",
+              "quantum_slots": "XY",
+              "raw_row_id": "-:0001:BSE"
+            },
+            {
+              "external_slot": "Z",
+              "ordered_quantum_roles": "SB",
+              "quantum_slots": "XY",
+              "raw_row_id": "-:0001:SBE"
+            }
+          ],
+          "raw_word": "0001"
+        },
+        {
+          "chirality": "-",
+          "endpoint_count": 2,
+          "external_placement": "derivative_commutator",
+          "ordered_two_line_Wick_endpoints": [
+            {
+              "external_slot": "Z",
+              "ordered_quantum_roles": "BS",
+              "quantum_slots": "XY",
+              "raw_row_id": "-:0010:BSE"
+            },
+            {
+              "external_slot": "Z",
+              "ordered_quantum_roles": "SB",
+              "quantum_slots": "XY",
+              "raw_row_id": "-:0010:SBE"
+            }
+          ],
+          "raw_word": "0010"
+        },
+        {
+          "chirality": "-",
+          "endpoint_count": 2,
+          "external_placement": "linear_field_strength",
+          "ordered_two_line_Wick_endpoints": [
+            {
+              "external_slot": "X",
+              "ordered_quantum_roles": "BS",
+              "quantum_slots": "YZ",
+              "raw_row_id": "-:0010:EBS"
+            },
+            {
+              "external_slot": "X",
+              "ordered_quantum_roles": "SB",
+              "quantum_slots": "YZ",
+              "raw_row_id": "-:0010:ESB"
+            }
+          ],
+          "raw_word": "0010"
+        },
+        {
+          "chirality": "-",
+          "endpoint_count": 2,
+          "external_placement": "plain_commutator",
+          "ordered_two_line_Wick_endpoints": [
+            {
+              "external_slot": "Y",
+              "ordered_quantum_roles": "BS",
+              "quantum_slots": "XZ",
+              "raw_row_id": "-:0010:BES"
+            },
+            {
+              "external_slot": "Y",
+              "ordered_quantum_roles": "SB",
+              "quantum_slots": "XZ",
+              "raw_row_id": "-:0010:SEB"
+            }
+          ],
+          "raw_word": "0010"
+        },
+        {
+          "chirality": "-",
+          "endpoint_count": 2,
+          "external_placement": "derivative_commutator",
+          "ordered_two_line_Wick_endpoints": [
+            {
+              "external_slot": "X",
+              "ordered_quantum_roles": "BS",
+              "quantum_slots": "YZ",
+              "raw_row_id": "-:0100:EBS"
+            },
+            {
+              "external_slot": "X",
+              "ordered_quantum_roles": "SB",
+              "quantum_slots": "YZ",
+              "raw_row_id": "-:0100:ESB"
+            }
+          ],
+          "raw_word": "0100"
+        },
+        {
+          "chirality": "-",
+          "endpoint_count": 2,
+          "external_placement": "linear_field_strength",
+          "ordered_two_line_Wick_endpoints": [
+            {
+              "external_slot": "Z",
+              "ordered_quantum_roles": "BS",
+              "quantum_slots": "XY",
+              "raw_row_id": "-:0100:BSE"
+            },
+            {
+              "external_slot": "Z",
+              "ordered_quantum_roles": "SB",
+              "quantum_slots": "XY",
+              "raw_row_id": "-:0100:SBE"
+            }
+          ],
+          "raw_word": "0100"
+        },
+        {
+          "chirality": "-",
+          "endpoint_count": 2,
+          "external_placement": "plain_commutator",
+          "ordered_two_line_Wick_endpoints": [
+            {
+              "external_slot": "Y",
+              "ordered_quantum_roles": "BS",
+              "quantum_slots": "XZ",
+              "raw_row_id": "-:0100:BES"
+            },
+            {
+              "external_slot": "Y",
+              "ordered_quantum_roles": "SB",
+              "quantum_slots": "XZ",
+              "raw_row_id": "-:0100:SEB"
+            }
+          ],
+          "raw_word": "0100"
+        },
+        {
+          "chirality": "-",
+          "endpoint_count": 2,
+          "external_placement": "derivative_commutator",
+          "ordered_two_line_Wick_endpoints": [
+            {
+              "external_slot": "Y",
+              "ordered_quantum_roles": "BS",
+              "quantum_slots": "XZ",
+              "raw_row_id": "-:1000:BES"
+            },
+            {
+              "external_slot": "Y",
+              "ordered_quantum_roles": "SB",
+              "quantum_slots": "XZ",
+              "raw_row_id": "-:1000:SEB"
+            }
+          ],
+          "raw_word": "1000"
+        },
+        {
+          "chirality": "-",
+          "endpoint_count": 2,
+          "external_placement": "linear_field_strength",
+          "ordered_two_line_Wick_endpoints": [
+            {
+              "external_slot": "Z",
+              "ordered_quantum_roles": "BS",
+              "quantum_slots": "XY",
+              "raw_row_id": "-:1000:BSE"
+            },
+            {
+              "external_slot": "Z",
+              "ordered_quantum_roles": "SB",
+              "quantum_slots": "XY",
+              "raw_row_id": "-:1000:SBE"
+            }
+          ],
+          "raw_word": "1000"
+        },
+        {
+          "chirality": "-",
+          "endpoint_count": 2,
+          "external_placement": "plain_commutator",
+          "ordered_two_line_Wick_endpoints": [
+            {
+              "external_slot": "X",
+              "ordered_quantum_roles": "BS",
+              "quantum_slots": "YZ",
+              "raw_row_id": "-:1000:EBS"
+            },
+            {
+              "external_slot": "X",
+              "ordered_quantum_roles": "SB",
+              "quantum_slots": "YZ",
+              "raw_row_id": "-:1000:ESB"
+            }
+          ],
+          "raw_word": "1000"
+        }
+      ],
+      "raw_Hessian_endpoint_row_count": 48,
+      "raw_Hessian_group_count": 24,
+      "raw_input": "48 exact raw cubic port rows from raw_port_rows(); no compact-Hessian multiplicity inferred",
+      "row_map": "K_raw,rho=-N_d,rho",
+      "status": "CLOSED_RAW_SCHWINGER_CONTACT_HESSIAN_MULTIPLICITY_ONE",
+      "verified_multiplicity": {
+        "m0": "1",
+        "m2": "1"
+      }
+    },
+    "raw_schwinger_contact_hessian_multiplicity": {
+      "not_supplied_by": [
+        "selected_parent_divisibility",
+        "occurrence_edge_color_chain",
+        "algebraic_definition_C=-L-Q*r_d^2",
+        "fixed_field_strength_I0_Sg4_bubble"
+      ],
+      "obstruction_if_unproved": "(1-m_e)*(L_e+Q_e*r_(e,d)^2)",
+      "raw_statement_verified": true,
+      "required_raw_statement": "C_raw,e=-m_e*(L_e+Q_e*r_(e,d)^2)",
+      "status": "CLOSED_RAW_SCHWINGER_CONTACT_HESSIAN_MULTIPLICITY_ONE",
+      "supplied_by": "raw_port_Hessian_endpoint_pairs_plus_rowwise_Gaussian_SD_map",
+      "verified_values": {
+        "m0": "1",
+        "m2": "1"
+      }
+    },
+    "reflection_action": "R(T,H_L,H_R)=(T,H_R,H_L)",
+    "reflection_changes_physical_source_edge": false,
+    "schwinger_derivative_linearity": "P_T(S*H_L*H_R)=P_T(S)*H_L*H_R",
+    "source_occurrence_edge_map": {
+      "I0_A1[A]*DminusA1[B]": {
+        "differentiated_source_color": 1,
+        "physical_source_edge": "e2"
+      },
+      "I0_DminusA1[A]*A1[B]": {
+        "differentiated_source_color": 0,
+        "physical_source_edge": "e0"
+      }
+    },
+    "unique_surviving_color_chain": [
+      0,
+      2,
+      1
+    ]
+  },
+  "old_fixed_W_error": {
+    "cross_chirality_gate_effect": "the old probe returned zero before evaluating even the linear class for (-,A) and (+,D)",
+    "matched_chirality_effect": "old_fixed=H_linear, while H_full-H_old_fixed=H_derivative+H_plain",
+    "omitted_classes": [
+      "derivative_commutator",
+      "plain_commutator"
+    ],
+    "retained_class": "linear_field_strength"
+  },
+  "raw_port_partition": {
+    "all_rows": 48,
+    "counts": {
+      "+": {
+        "derivative_commutator": 8,
+        "linear_field_strength": 8,
+        "plain_commutator": 8
+      },
+      "-": {
+        "derivative_commutator": 8,
+        "linear_field_strength": 8,
+        "plain_commutator": 8
+      }
+    },
+    "old_fixed_linear_rows": 16,
+    "old_fixed_omitted_classes": [
+      "derivative_commutator",
+      "plain_commutator"
+    ],
+    "old_fixed_omitted_rows": 32,
+    "role_slots_by_raw_word": {
+      "0001": {
+        "derivative_commutator": "Y",
+        "linear_field_strength": "X",
+        "plain_commutator": "Z"
+      },
+      "0010": {
+        "derivative_commutator": "Z",
+        "linear_field_strength": "X",
+        "plain_commutator": "Y"
+      },
+      "0100": {
+        "derivative_commutator": "X",
+        "linear_field_strength": "Z",
+        "plain_commutator": "Y"
+      },
+      "1000": {
+        "derivative_commutator": "Y",
+        "linear_field_strength": "Z",
+        "plain_commutator": "X"
+      }
+    },
+    "rows": [
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "B",
+          "Z": "E"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "id": "+:1000:SBE",
+        "placement": "linear_field_strength",
+        "pqrs": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "E",
+          "Z": "B"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "id": "+:1000:SEB",
+        "placement": "derivative_commutator",
+        "pqrs": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "S",
+          "Z": "E"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "id": "+:1000:BSE",
+        "placement": "linear_field_strength",
+        "pqrs": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "E",
+          "Z": "S"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "id": "+:1000:BES",
+        "placement": "derivative_commutator",
+        "pqrs": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "S",
+          "Z": "B"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "id": "+:1000:ESB",
+        "placement": "plain_commutator",
+        "pqrs": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "B",
+          "Z": "S"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "id": "+:1000:EBS",
+        "placement": "plain_commutator",
+        "pqrs": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "B",
+          "Z": "E"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "id": "+:0100:SBE",
+        "placement": "linear_field_strength",
+        "pqrs": [
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "E",
+          "Z": "B"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "id": "+:0100:SEB",
+        "placement": "plain_commutator",
+        "pqrs": [
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "S",
+          "Z": "E"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "id": "+:0100:BSE",
+        "placement": "linear_field_strength",
+        "pqrs": [
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "E",
+          "Z": "S"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "id": "+:0100:BES",
+        "placement": "plain_commutator",
+        "pqrs": [
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "S",
+          "Z": "B"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "id": "+:0100:ESB",
+        "placement": "derivative_commutator",
+        "pqrs": [
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "B",
+          "Z": "S"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "id": "+:0100:EBS",
+        "placement": "derivative_commutator",
+        "pqrs": [
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "B",
+          "Z": "E"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "id": "+:0010:SBE",
+        "placement": "derivative_commutator",
+        "pqrs": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "E",
+          "Z": "B"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "id": "+:0010:SEB",
+        "placement": "plain_commutator",
+        "pqrs": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "S",
+          "Z": "E"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "id": "+:0010:BSE",
+        "placement": "derivative_commutator",
+        "pqrs": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "E",
+          "Z": "S"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "id": "+:0010:BES",
+        "placement": "plain_commutator",
+        "pqrs": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "S",
+          "Z": "B"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "id": "+:0010:ESB",
+        "placement": "linear_field_strength",
+        "pqrs": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "B",
+          "Z": "S"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "id": "+:0010:EBS",
+        "placement": "linear_field_strength",
+        "pqrs": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "B",
+          "Z": "E"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "id": "+:0001:SBE",
+        "placement": "plain_commutator",
+        "pqrs": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "E",
+          "Z": "B"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "id": "+:0001:SEB",
+        "placement": "derivative_commutator",
+        "pqrs": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "S",
+          "Z": "E"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "id": "+:0001:BSE",
+        "placement": "plain_commutator",
+        "pqrs": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "E",
+          "Z": "S"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "id": "+:0001:BES",
+        "placement": "derivative_commutator",
+        "pqrs": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "S",
+          "Z": "B"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "id": "+:0001:ESB",
+        "placement": "linear_field_strength",
+        "pqrs": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "B",
+          "Z": "S"
+        },
+        "chirality": "+",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "id": "+:0001:EBS",
+        "placement": "linear_field_strength",
+        "pqrs": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "B",
+          "Z": "E"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "id": "-:1000:SBE",
+        "placement": "linear_field_strength",
+        "pqrs": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "E",
+          "Z": "B"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "id": "-:1000:SEB",
+        "placement": "derivative_commutator",
+        "pqrs": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "S",
+          "Z": "E"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "id": "-:1000:BSE",
+        "placement": "linear_field_strength",
+        "pqrs": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "E",
+          "Z": "S"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "id": "-:1000:BES",
+        "placement": "derivative_commutator",
+        "pqrs": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "S",
+          "Z": "B"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "id": "-:1000:ESB",
+        "placement": "plain_commutator",
+        "pqrs": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "B",
+          "Z": "S"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "id": "-:1000:EBS",
+        "placement": "plain_commutator",
+        "pqrs": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "B",
+          "Z": "E"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "id": "-:0100:SBE",
+        "placement": "linear_field_strength",
+        "pqrs": [
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "E",
+          "Z": "B"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "id": "-:0100:SEB",
+        "placement": "plain_commutator",
+        "pqrs": [
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "S",
+          "Z": "E"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "id": "-:0100:BSE",
+        "placement": "linear_field_strength",
+        "pqrs": [
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "E",
+          "Z": "S"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "id": "-:0100:BES",
+        "placement": "plain_commutator",
+        "pqrs": [
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "S",
+          "Z": "B"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "id": "-:0100:ESB",
+        "placement": "derivative_commutator",
+        "pqrs": [
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "B",
+          "Z": "S"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "id": "-:0100:EBS",
+        "placement": "derivative_commutator",
+        "pqrs": [
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "B",
+          "Z": "E"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "id": "-:0010:SBE",
+        "placement": "derivative_commutator",
+        "pqrs": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "E",
+          "Z": "B"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "id": "-:0010:SEB",
+        "placement": "plain_commutator",
+        "pqrs": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "S",
+          "Z": "E"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "id": "-:0010:BSE",
+        "placement": "derivative_commutator",
+        "pqrs": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "E",
+          "Z": "S"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "id": "-:0010:BES",
+        "placement": "plain_commutator",
+        "pqrs": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "S",
+          "Z": "B"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "id": "-:0010:ESB",
+        "placement": "linear_field_strength",
+        "pqrs": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "B",
+          "Z": "S"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+        "id": "-:0010:EBS",
+        "placement": "linear_field_strength",
+        "pqrs": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "B",
+          "Z": "E"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "id": "-:0001:SBE",
+        "placement": "plain_commutator",
+        "pqrs": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "assignment": {
+          "X": "S",
+          "Y": "E",
+          "Z": "B"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "id": "-:0001:SEB",
+        "placement": "derivative_commutator",
+        "pqrs": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "S",
+          "Z": "E"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "id": "-:0001:BSE",
+        "placement": "plain_commutator",
+        "pqrs": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "assignment": {
+          "X": "B",
+          "Y": "E",
+          "Z": "S"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "id": "-:0001:BES",
+        "placement": "derivative_commutator",
+        "pqrs": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "S",
+          "Z": "B"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "id": "-:0001:ESB",
+        "placement": "linear_field_strength",
+        "pqrs": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "assignment": {
+          "X": "E",
+          "Y": "B",
+          "Z": "S"
+        },
+        "chirality": "-",
+        "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+        "id": "-:0001:EBS",
+        "placement": "linear_field_strength",
+        "pqrs": [
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "sample_component_replay": [
+    {
+      "background_type": "A",
+      "colors": [
+        1,
+        2
+      ],
+      "full_action_hessian": "3/16*sqrt(2)",
+      "id": "plus_A_00",
+      "old_fixed_minus_full": "3/16*sqrt(2)",
+      "old_fixed_probe": "3/8*sqrt(2)",
+      "placement_sum": "3/16*sqrt(2)",
+      "placements": {
+        "derivative_commutator": "-3/32*sqrt(2)",
+        "linear_field_strength": "3/8*sqrt(2)",
+        "plain_commutator": "-3/32*sqrt(2)"
+      },
+      "sector": "+",
+      "theta_masks": [
+        0,
+        0
+      ]
+    },
+    {
+      "background_type": "A",
+      "colors": [
+        1,
+        2
+      ],
+      "full_action_hessian": "-3/64*sqrt(2) - 1/64*i sqrt(2)",
+      "id": "plus_A_1_13",
+      "old_fixed_minus_full": "-3/64*sqrt(2) - 1/64*i sqrt(2)",
+      "old_fixed_probe": "-3/32*sqrt(2) - 1/32*i sqrt(2)",
+      "placement_sum": "-3/64*sqrt(2) - 1/64*i sqrt(2)",
+      "placements": {
+        "derivative_commutator": "1/32*sqrt(2) + 3/128*i sqrt(2)",
+        "linear_field_strength": "-3/32*sqrt(2) - 1/32*i sqrt(2)",
+        "plain_commutator": "1/64*sqrt(2) - 1/128*i sqrt(2)"
+      },
+      "sector": "+",
+      "theta_masks": [
+        1,
+        13
+      ]
+    },
+    {
+      "background_type": "A",
+      "colors": [
+        1,
+        2
+      ],
+      "full_action_hessian": "3/16*sqrt(2)",
+      "id": "minus_A_cross",
+      "old_fixed_minus_full": "-3/16*sqrt(2)",
+      "old_fixed_probe": "0",
+      "placement_sum": "3/16*sqrt(2)",
+      "placements": {
+        "derivative_commutator": "-3/32*sqrt(2)",
+        "linear_field_strength": "3/8*sqrt(2)",
+        "plain_commutator": "-3/32*sqrt(2)"
+      },
+      "sector": "-",
+      "theta_masks": [
+        0,
+        0
+      ]
+    },
+    {
+      "background_type": "D",
+      "colors": [
+        0,
+        2
+      ],
+      "full_action_hessian": "1/32*sqrt(2)",
+      "id": "minus_D_0_4",
+      "old_fixed_minus_full": "3/64*i sqrt(2)",
+      "old_fixed_probe": "1/32*sqrt(2) + 3/64*i sqrt(2)",
+      "placement_sum": "1/32*sqrt(2)",
+      "placements": {
+        "derivative_commutator": "-3/128*i sqrt(2)",
+        "linear_field_strength": "1/32*sqrt(2) + 3/64*i sqrt(2)",
+        "plain_commutator": "-3/128*i sqrt(2)"
+      },
+      "sector": "-",
+      "theta_masks": [
+        0,
+        4
+      ]
+    },
+    {
+      "background_type": "D",
+      "colors": [
+        0,
+        2
+      ],
+      "full_action_hessian": "1/32*sqrt(2)",
+      "id": "plus_D_cross",
+      "old_fixed_minus_full": "-1/32*sqrt(2)",
+      "old_fixed_probe": "0",
+      "placement_sum": "1/32*sqrt(2)",
+      "placements": {
+        "derivative_commutator": "-1/64*sqrt(2)",
+        "linear_field_strength": "1/16*sqrt(2)",
+        "plain_commutator": "-1/64*sqrt(2)"
+      },
+      "sector": "+",
+      "theta_masks": [
+        0,
+        4
+      ]
+    }
+  ],
+  "schema": "step5-aa-external-slot-decomposition-exact-v1",
+  "sector_pair_interaction": {
+    "after_left_right_labeling": "sum_(chi,psi in {+,-}) H_chi^D(L)*H_psi^A(R)",
+    "even_vertex_exchange": "H_psi^A(R)*H_chi^D(L)=H_chi^D(L)*H_psi^A(R)",
+    "gate_verdict": {
+      "mixed_only_graph_ir_is_complete": false,
+      "reason": "External D/A components can occupy derivative or plain commutator slots; chirality is not fixed by the external component once those placements are restored.",
+      "same_chirality_excluded_by_full_action": false,
+      "two_independent_old_fixed_errors": [
+        "omits derivative-commutator and plain-commutator placements",
+        "omits ++, +-, and -- sector pairs"
+      ]
+    },
+    "held_out_probe": {
+      "fixed_field_strength": {
+        "++": "0",
+        "+-": "0",
+        "-+": "7 + 4*i",
+        "--": "0"
+      },
+      "full": {
+        "++": "-97/4 + 103/2*i",
+        "+-": "-97/4 + 103/2*i",
+        "-+": "-97/4 + 103/2*i",
+        "--": "-97/4 + 103/2*i"
+      },
+      "full_equals_selected_plus_longitudinal": true,
+      "full_sector_sum": "-97 + 206*i",
+      "longitudinal": {
+        "++": "99/4 - 91/2*i",
+        "+-": "99/4 - 91/2*i",
+        "-+": "99/4 - 91/2*i",
+        "--": "99/4 - 91/2*i"
+      },
+      "loop": [
+        "3",
+        "2",
+        "-2",
+        "1"
+      ],
+      "replayed_from_full_probe": true,
+      "selected": {
+        "++": "-49 + 97*i",
+        "+-": "-49 + 97*i",
+        "-+": "-49 + 97*i",
+        "--": "-49 + 97*i"
+      },
+      "table_sizes": {
+        "action_a": 180,
+        "action_d": 88,
+        "fixed_a": 50,
+        "fixed_d": 60,
+        "source": 24
+      }
+    },
+    "interaction_expansion": "(1/2!)*sum_(chi,psi)[H_chi^D(L)*H_psi^A(R)+H_psi^A(R)*H_chi^D(L)]",
+    "sector_pairs": [
+      "++",
+      "+-",
+      "-+",
+      "--"
+    ],
+    "weight_per_sector_pair": "1"
+  },
+  "source_edge_quotient": {
+    "aggregate_edge_divisibility": {
+      "Q0": "-l0**2/2 + I*l0*l1 + 3*l0/2 - I*l0 + l1**2/2 - l1 - 3*I*l1/2 - 1/2 + 3*I/2",
+      "Q2": "-l0**2/2 + I*l0*l1 - l0/2 + l1**2/2 + I*l1/2",
+      "T0": "N_S,T0=bar(r0)^2*Q0",
+      "T2": "N_S,T2=bar(r2)^2*Q2",
+      "affine_fit_valid": false,
+      "division_remainders": {
+        "T0": "0",
+        "T2": "0"
+      },
+      "held_out": {
+        "Q0": "-1/2 + 3*I/2",
+        "Q2": "-4 + 7*I",
+        "T0": "-9 + 27*I",
+        "T2": "-40 + 70*I",
+        "bar_r0_squared": "18",
+        "bar_r2_squared": "10",
+        "loop": [
+          "3",
+          "2",
+          "-2",
+          "1"
+        ],
+        "replayed_from_full_probe": true
+      },
+      "quotient_degree": 2
+    },
+    "combined_raw_row_edge_table": "CLOSED_BY_OCCURRENCE_EDGE_STRUCTURAL_LEMMA",
+    "old_fixed_block": "linear_field_strength__linear_field_strength only",
+    "old_fixed_missing_blocks": [
+      "linear_field_strength__derivative_commutator",
+      "linear_field_strength__plain_commutator",
+      "derivative_commutator__linear_field_strength",
+      "derivative_commutator__derivative_commutator",
+      "derivative_commutator__plain_commutator",
+      "plain_commutator__linear_field_strength",
+      "plain_commutator__derivative_commutator",
+      "plain_commutator__plain_commutator"
+    ],
+    "per_pair_identity": {
+      "longitudinal_parent": "L_rho",
+      "raw_contact_multiplicity_status": "CLOSED_RAW_SCHWINGER_CONTACT_HESSIAN_MULTIPLICITY_ONE",
+      "selected_parent": "N_(S,rho)=Q_rho*bar(r_(e(rho)))^2",
+      "verified_dred_remainder_at_m_e_1": "Q_rho*mu_l^2",
+      "verified_full_d_contact_at_m_e_1": "-Q_rho*r_(e(rho),d)^2-L_rho"
+    },
+    "placement_pairs": [
+      "linear_field_strength__linear_field_strength",
+      "linear_field_strength__derivative_commutator",
+      "linear_field_strength__plain_commutator",
+      "derivative_commutator__linear_field_strength",
+      "derivative_commutator__derivative_commutator",
+      "derivative_commutator__plain_commutator",
+      "plain_commutator__linear_field_strength",
+      "plain_commutator__derivative_commutator",
+      "plain_commutator__plain_commutator"
+    ],
+    "quadratic_homogeneous_sum": {
+      "Q0_degree2": "-l0**2/2 + I*l0*l1 + l1**2/2",
+      "Q2_degree2": "-l0**2/2 + I*l0*l1 + l1**2/2",
+      "laplacian_l0_l1": "0",
+      "sum": "-l0**2 + 2*I*l0*l1 + l1**2"
+    },
+    "source_tags": {
+      "e0": "I0_DminusA1[A]*A1[B]",
+      "e2": "I0_A1[A]*DminusA1[B]"
+    }
+  },
+  "status": "TARGET_BLIND_AA_FULL_POLARIZED_TYPED_ORDERED_RECONSTRUCTION_EXACT__RAW_SD_CONTACT_MULTIPLICITY_ONE_VERIFIED",
+  "typed_ordered_reconstruction": {
+    "basis": [
+      "DA_p",
+      "DA_q",
+      "AD_p",
+      "AD_q"
+    ],
+    "contact_only_frames": {
+      "p_transverse": "REJECTED_OPPOSITE_UNDOTTED_CONTAMINATION_FOR_TYPED_SOLVE",
+      "q_transverse": "REJECTED_OPPOSITE_UNDOTTED_CONTAMINATION_FOR_TYPED_SOLVE"
+    },
+    "external_target_used": false,
+    "formula": "lambda1*F^{AB}_{DE}*[I*DA_p+2*I*DA_q-I*AD_p-2*I*AD_q]",
+    "fourier_and_physical_quotient": {
+      "common_fourier_map": "-I",
+      "direct_p_coefficient": "+1",
+      "physical_extended_vector_over_lambda1_times_F": [
+        "1",
+        "0",
+        "-1",
+        "0"
+      ],
+      "physical_ordered_p_basis": [
+        "DA_p",
+        "AD_p"
+      ],
+      "physical_ordered_p_vector_over_lambda1_times_F": [
+        "1",
+        "-1"
+      ],
+      "physical_quotient_rule": "set_only_the_typed_q_carrier_rows_to_zero",
+      "physical_status": "ACCEPTED_RAW_SCHWINGER_CONTACT_MULTIPLICITY_ONE_VERIFIED",
+      "post_fourier_extended_basis": [
+        "DA_p",
+        "DA_q",
+        "AD_p",
+        "AD_q"
+      ],
+      "post_fourier_extended_vector_over_lambda1_times_F": [
+        "1",
+        "2",
+        "-1",
+        "-2"
+      ],
+      "q_rows": {
+        "AD_q": "A(P dot D)_EOM_or_divergence_carrier",
+        "DA_q": "(P dot D)A_EOM_or_divergence_carrier",
+        "not_identified_with": "p_plus_q"
+      },
+      "reflected_p_coefficient": "-1",
+      "verified_raw_values": {
+        "m0": "1",
+        "m2": "1"
+      }
+    },
+    "frame_reconstruction": {
+      "alternate": {
+        "actual": "1 + I/2",
+        "predicted": "1 + I/2",
+        "remainder": "0"
+      },
+      "canonical": {
+        "actual": "-1/2 + I",
+        "predicted": "-1/2 + I",
+        "remainder": "0"
+      },
+      "swapped_transverse": {
+        "actual": "-1 + I/2",
+        "predicted": "-1 + I/2",
+        "remainder": "0"
+      }
+    },
+    "frame_rows": {
+      "alternate": {
+        "dotted": 1,
+        "epsilon_dot_p": "0",
+        "epsilon_dot_q": "0",
+        "p": [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "p_minus_upper_dotted": "0",
+        "p_plus_upper_dotted": "-1",
+        "polarization": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        "q": [
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        "q_minus_upper_dotted": "0",
+        "q_plus_upper_dotted": "I",
+        "simplex_average": "1 + I/2"
+      },
+      "canonical": {
+        "dotted": 0,
+        "epsilon_dot_p": "0",
+        "epsilon_dot_q": "0",
+        "p": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        "p_minus_upper_dotted": "0",
+        "p_plus_upper_dotted": "-I",
+        "polarization": [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "q": [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        "q_minus_upper_dotted": "0",
+        "q_plus_upper_dotted": "-1",
+        "simplex_average": "-1/2 + I"
+      },
+      "p_only": {
+        "dotted": 0,
+        "epsilon_dot_p": "0",
+        "epsilon_dot_q": "1",
+        "p": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        "p_minus_upper_dotted": "0",
+        "p_plus_upper_dotted": "-I",
+        "polarization": [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "q": [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "q_minus_upper_dotted": "1",
+        "q_plus_upper_dotted": "0",
+        "simplex_average": "-5/6"
+      },
+      "p_transverse": {
+        "dotted": 0,
+        "epsilon_dot_p": "0",
+        "epsilon_dot_q": "0",
+        "p": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        "p_minus_upper_dotted": "0",
+        "p_plus_upper_dotted": "-I",
+        "polarization": [
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        "q": [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "q_minus_upper_dotted": "1",
+        "q_plus_upper_dotted": "0",
+        "simplex_average": "-5/6"
+      },
+      "q_only": {
+        "dotted": 0,
+        "epsilon_dot_p": "0",
+        "epsilon_dot_q": "1",
+        "p": [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "p_minus_upper_dotted": "1",
+        "p_plus_upper_dotted": "0",
+        "polarization": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        "q": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        "q_minus_upper_dotted": "0",
+        "q_plus_upper_dotted": "-I",
+        "simplex_average": "-13/12"
+      },
+      "q_transverse": {
+        "dotted": 0,
+        "epsilon_dot_p": "0",
+        "epsilon_dot_q": "0",
+        "p": [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "p_minus_upper_dotted": "1",
+        "p_plus_upper_dotted": "0",
+        "polarization": [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        "q": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        "q_minus_upper_dotted": "0",
+        "q_plus_upper_dotted": "-I",
+        "simplex_average": "-13/12"
+      },
+      "swapped_transverse": {
+        "dotted": 0,
+        "epsilon_dot_p": "0",
+        "epsilon_dot_q": "0",
+        "p": [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        "p_minus_upper_dotted": "0",
+        "p_plus_upper_dotted": "-1",
+        "polarization": [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "q": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        "q_minus_upper_dotted": "0",
+        "q_plus_upper_dotted": "-I",
+        "simplex_average": "-1 + I/2"
+      }
+    },
+    "opposite_undotted_diagnostic_coefficients": {
+      "p_minus_from_q_transverse": "-1/12",
+      "q_minus_from_p_transverse": "-1/3",
+      "typed_plus_basis_used": false
+    },
+    "ordered_vector_over_lambda1_times_F": [
+      "I",
+      "2*I",
+      "-I",
+      "-2*I"
+    ],
+    "ordered_vector_scope": "EXACT_RAW_m0=m2=1_VERIFIED",
+    "physical_formula_after_typed_EOM_quotient": "lambda1*F^{AB}_{DE}*(DA_p-AD_p)",
+    "primitive_normalization": {
+      "AD_reordering_sign": "-1_from_p_lower*A*D_upper=-D_lower*p_upper*A",
+      "color_restore": "multiply the general tensor F^{AB}_{DE}, not an extra -2",
+      "coupling_restore": "g^2",
+      "edge_contact_sum": "Q0+Q2_after_raw_same_edge_SD_row_map",
+      "edge_multiplicity": "1_per_Qe_verified_by_raw_SB_BS_endpoint_bijection",
+      "four_sector_over_lambda1": "-2",
+      "interaction_taylor_factor": "1/2!",
+      "lambda1": "hbar*g^2/(16*pi^2)",
+      "metric_trace_multiplicity": "1_no_global_d_or_4_trace_factor_by_Nd_plus_Kraw_zero",
+      "mu2_master": "1/(32*pi^2)",
+      "per_sector_over_lambda1": "-1/2",
+      "primitive_prefactor": "-hbar*g^2",
+      "probe_color_frame": "F^(01)_(10)=-2",
+      "reflected_color_frame": "F^(10)_(01)=-2",
+      "reflection_weight": "1_as_distinct_ordered_output_not_multiplier",
+      "sector_sum_weight": "4",
+      "sector_taylor_rows": {
+        "++": {
+          "exponential_coefficient": "1/2!",
+          "labeled_left_right_assignments": 2,
+          "net_weight": "1"
+        },
+        "+-": {
+          "exponential_coefficient": "1/2!",
+          "labeled_left_right_assignments": 2,
+          "net_weight": "1"
+        },
+        "-+": {
+          "exponential_coefficient": "1/2!",
+          "labeled_left_right_assignments": 2,
+          "net_weight": "1"
+        },
+        "--": {
+          "exponential_coefficient": "1/2!",
+          "labeled_left_right_assignments": 2,
+          "net_weight": "1"
+        }
+      },
+      "source_and_action_exact_coefficients": "embedded_in_probe",
+      "three_vector_propagators": "(-hbar)^3",
+      "two_exponent_factors": "(-1/hbar)^2"
+    },
+    "rejected_longitudinal_frames": {
+      "p_only": "REJECTED_LONGITUDINAL_FRAME",
+      "q_only": "REJECTED_LONGITUDINAL_FRAME"
+    },
+    "scalar_coefficients_before_global_normalization": {
+      "p": "-I/2",
+      "q": "-I"
+    },
+    "spinor_component_definition": {
+      "k_minus_upper_dot0": "sigma_E(k)[undotted=1,lower_dotted=1]",
+      "k_minus_upper_dot1": "-sigma_E(k)[undotted=1,lower_dotted=0]",
+      "k_plus_upper_dot0": "sigma_E(k)[undotted=0,lower_dotted=1]",
+      "k_plus_upper_dot1": "-sigma_E(k)[undotted=0,lower_dotted=0]"
+    },
+    "status": "TARGET_BLIND_TYPED_ORDERED_RECONSTRUCTION_EXACT__RAW_CONTACT_MULTIPLICITY_VERIFIED",
+    "typed_projector_frames": [
+      "canonical",
+      "swapped_transverse"
+    ],
+    "typed_projector_matrix": {
+      "determinant": "-2",
+      "matrix": [
+        [
+          "-I",
+          "-1"
+        ],
+        [
+          "-1",
+          "-I"
+        ]
+      ],
+      "opposite_undotted_components": {
+        "canonical": {
+          "p_minus_upper_dotted": "0",
+          "q_minus_upper_dotted": "0"
+        },
+        "swapped_transverse": {
+          "p_minus_upper_dotted": "0",
+          "q_minus_upper_dotted": "0"
+        }
+      },
+      "rhs": [
+        "-1/2 + I",
+        "-1 + I/2"
+      ]
+    }
+  }
+}

@@ -1,0 +1,6059 @@
+{
+  "checks": {
+    "count": 887,
+    "failed": 0,
+    "passed": 887
+  },
+  "definitions": {
+    "dimension": "d=4-2*epsilon",
+    "evanescent_square": "mu_l^2=bar(r_e)^2-r_(e,d)^2=-hat(ell)_user^2",
+    "finite_master": "1/(32*pi^2)",
+    "routing": {
+      "P_d": "r0_d^2*r1_d^2*r2_d^2",
+      "r0": "ell",
+      "r1": "ell-p",
+      "r2": "ell-p-q"
+    }
+  },
+  "derived_before_HT": {
+    "AB": {
+      "D>B1": "0"
+    },
+    "BA": {
+      "B1>D": "0"
+    },
+    "reason": "A_mark+B_mark=2/3-2/3=0 at q=-p"
+  },
+  "external_target_used_in_derivation": false,
+  "induced_SD_contact": {
+    "A_mark": {
+      "DRED": "F_A+C_A,d=alpha_A*mu_l^2",
+      "alpha_A": "-8*R_A",
+      "contact": "C_A,d=-L_A-alpha_A*r2_d^2",
+      "full_d": "F_A|bar(r2)^2=r2_d^2+C_A,d=0",
+      "independent_longitudinal_operator": "L_A=-(1/2)*D_+*barD^2*D^2",
+      "parent": "F_A=alpha_A*bar(r2)^2+L_A",
+      "selected_edge": "e2"
+    },
+    "B_mark": {
+      "DRED": "F_B+C_B,d=alpha_B*mu_l^2",
+      "alpha_B": "-8*R_B",
+      "contact": "C_B,d=-alpha_B*r0_d^2",
+      "full_d": "F_B|bar(r0)^2=r0_d^2+C_B,d=0",
+      "parent": "F_B=alpha_B*bar(r0)^2",
+      "selected_edge": "e0"
+    },
+    "e1": "The transported longitudinal term -L_A is part of the same derivative-of-action contact, not a fourth anomaly graph."
+  },
+  "raw_VVV_orbit": {
+    "AB_BA_rows": 192,
+    "base_rows_all_dotted_components": 96,
+    "marked_rows_per_dotted_component": 48,
+    "permutations_per_sector": 6,
+    "placements_per_permutation": [
+      "QL",
+      "LQ"
+    ],
+    "raw_words": 24,
+    "sectors": [
+      "+",
+      "-"
+    ]
+  },
+  "schema": "step5-ab-ba-g1-longitudinal-contact-exact-v1",
+  "simplex_and_quotient": {
+    "generic_p_q_lambda1_units": {
+      "A_mark": [
+        "4/3",
+        "2/3"
+      ],
+      "B_mark": [
+        "2/3",
+        "4/3"
+      ],
+      "sum": [
+        "2",
+        "2"
+      ],
+      "sum_word": "2*(p+q)"
+    },
+    "local_product_q_equals_minus_p": {
+      "A_mark": "2/3",
+      "B_mark": "-2/3",
+      "sum": "0"
+    },
+    "normalization": "lambda1 coefficient=(S_plus-S_minus)/4096",
+    "raw_selected_Dwords": {
+      "+": {
+        "A": [
+          "8192/3",
+          "4096/3"
+        ],
+        "B": [
+          "4096/3",
+          "8192/3"
+        ]
+      },
+      "-": {
+        "A": [
+          "-8192/3",
+          "-4096/3"
+        ],
+        "B": [
+          "-4096/3",
+          "-8192/3"
+        ]
+      }
+    }
+  },
+  "source_resolvent_probe": {
+    "classification": "These are not extra anomaly graphs.  The SD cut is the induced functional derivative of the same action occurrence.",
+    "decisive_mismatch": {
+      "dot0_all_three_standalone_presentations": "0",
+      "dot0_parent_minus_plus_chirality_raw_word": "61440"
+    },
+    "replay_command": "python scripts/step5_ab_ba_g1_longitudinal_contact_exact_audit.py --probe",
+    "sample": {
+      "loop": [
+        "2",
+        "1",
+        "-1",
+        "3"
+      ],
+      "p": [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      "q": [
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    "standalone_source_resolvent_values": {
+      "AB": {
+        "0": {
+          "e0_I1Sg3": {},
+          "e1_I0Sm4": {},
+          "e2_I1Sm3": {}
+        },
+        "1": {
+          "e0_I1Sg3": {
+            "A1*NB1_gamma:Sg3+": "1/4*i sqrt(2)",
+            "A1*NB1_gamma:Sg3-": "1/4*i sqrt(2)",
+            "NA0*B12_bridge:Sg3+": "-1/8*i sqrt(2)",
+            "NA0*B12_bridge:Sg3-": "-1/8*i sqrt(2)"
+          },
+          "e1_I0Sm4": {},
+          "e2_I1Sm3": {}
+        }
+      },
+      "BA": {
+        "0": {
+          "e0_I1Sg3": {},
+          "e1_I0Sm4": {},
+          "e2_I1Sm3": {}
+        },
+        "1": {
+          "e0_I1Sg3": {
+            "-B12_bridge*NA0:Sg3+": "-1/8*i sqrt(2)",
+            "-B12_bridge*NA0:Sg3-": "-1/8*i sqrt(2)",
+            "NB1_gamma*A1:Sg3+": "1/4*i sqrt(2)",
+            "NB1_gamma*A1:Sg3-": "1/4*i sqrt(2)"
+          },
+          "e1_I0Sm4": {},
+          "e2_I1Sm3": {}
+        }
+      }
+    },
+    "status": "SAME_CONTACT_PRESENTATION_NOT_INDEPENDENT"
+  },
+  "source_word_orbit": {
+    "AB": {
+      "Leibniz": "D_-(A B1)=(D_-A) B1+A(D_-B1)",
+      "e0_B_mark": {
+        "left_right_sign": "+1",
+        "word": "A1(NB1_B12+NB1_Gamma+NB1_bridge)"
+      },
+      "e1_longitudinal": {
+        "left_right_sign": "+1",
+        "word": "NA0 B11 with delta(S_m4)/delta(U)"
+      },
+      "e2_A_mark": {
+        "left_right_sign": "+1",
+        "word": "(NA1_A2+NA1_Gamma+NA1_bridge) B11"
+      }
+    },
+    "BA": {
+      "Leibniz": "D_-(B1 A)=(D_-B1)A-B1(D_-A)",
+      "e0_B_mark": {
+        "Koszul_reorder_sign": "+1",
+        "Leibniz_sign": "+1",
+        "canonical_factor": "+1",
+        "word": "(NB1_B12+NB1_Gamma+NB1_bridge)A1"
+      },
+      "e1_longitudinal": {
+        "Koszul_reorder_sign": "-1",
+        "Leibniz_sign": "-1",
+        "canonical_factor": "+1",
+        "word": "-B11 NA0 with delta(S_m4)/delta(U)"
+      },
+      "e2_A_mark": {
+        "Koszul_reorder_sign": "-1",
+        "Leibniz_sign": "-1",
+        "canonical_factor": "+1",
+        "word": "-B11(NA1_A2+NA1_Gamma+NA1_bridge)"
+      }
+    },
+    "mirror_identity": "-B1(D_-A)=+(D_-A)B1 and (D_-B1)A=+A(D_-B1)",
+    "parities": {
+      "A": "even",
+      "B1": "odd",
+      "D_minus_A": "odd",
+      "D_minus_B1": "even"
+    }
+  },
+  "status": "EXACT_TARGET_BLIND_G1_CONTACT_ORBIT_CLOSED",
+  "validation": {
+    "all_primary_AB_BA_rows": [
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "-1024-2048*i",
+        "L": "-1024-2048*i",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(-1024-2048*i)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(-1024-2048*i)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:+:dot0:012:QL:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "-1024-2048*i",
+        "L": "-1024-2048*i",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(-1024-2048*i)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(-1024-2048*i)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:+:dot0:012:QL:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:+:dot0:012:QL:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:+:dot0:012:QL:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(-2048+1024*i)*mu_l^2",
+        "F": "-14336+7168*i",
+        "L": "0",
+        "R": "256-128*i",
+        "alpha_minus_8R": "-2048+1024*i",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(-2048+1024*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(-2048+1024*i)*bar(r2)^2+(0)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:+:dot0:012:LQ:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(-2048+1024*i)*mu_l^2",
+        "F": "-14336+7168*i",
+        "L": "0",
+        "R": "256-128*i",
+        "alpha_minus_8R": "-2048+1024*i",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(-2048+1024*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(-2048+1024*i)*bar(r2)^2+(0)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:+:dot0:012:LQ:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:+:dot0:012:LQ:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:+:dot0:012:LQ:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "-16384+18432*i",
+        "L": "-16384+18432*i",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(-16384+18432*i)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(-16384+18432*i)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:+:dot0:021:QL:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "-16384+18432*i",
+        "L": "-16384+18432*i",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(-16384+18432*i)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(-16384+18432*i)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:+:dot0:021:QL:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(1024-1024*i)*mu_l^2",
+        "F": "15360-15360*i",
+        "L": "0",
+        "R": "-128+128*i",
+        "alpha_minus_8R": "1024-1024*i",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(1024-1024*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(1024-1024*i)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:+:dot0:021:QL:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(1024-1024*i)*mu_l^2",
+        "F": "15360-15360*i",
+        "L": "0",
+        "R": "-128+128*i",
+        "alpha_minus_8R": "1024-1024*i",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(1024-1024*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(1024-1024*i)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:+:dot0:021:QL:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(-2048+1024*i)*mu_l^2",
+        "F": "-14336+7168*i",
+        "L": "0",
+        "R": "256-128*i",
+        "alpha_minus_8R": "-2048+1024*i",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(-2048+1024*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(-2048+1024*i)*bar(r2)^2+(0)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:+:dot0:021:LQ:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(-2048+1024*i)*mu_l^2",
+        "F": "-14336+7168*i",
+        "L": "0",
+        "R": "256-128*i",
+        "alpha_minus_8R": "-2048+1024*i",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(-2048+1024*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(-2048+1024*i)*bar(r2)^2+(0)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:+:dot0:021:LQ:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:+:dot0:021:LQ:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:+:dot0:021:LQ:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:+:dot0:102:QL:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:+:dot0:102:QL:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:+:dot0:102:QL:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:+:dot0:102:QL:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "-16384+18432*i",
+        "L": "-16384+18432*i",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(-16384+18432*i)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(-16384+18432*i)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:+:dot0:102:LQ:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "-16384+18432*i",
+        "L": "-16384+18432*i",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(-16384+18432*i)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(-16384+18432*i)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:+:dot0:102:LQ:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(1024-1024*i)*mu_l^2",
+        "F": "15360-15360*i",
+        "L": "0",
+        "R": "-128+128*i",
+        "alpha_minus_8R": "1024-1024*i",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(1024-1024*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(1024-1024*i)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:+:dot0:102:LQ:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(1024-1024*i)*mu_l^2",
+        "F": "15360-15360*i",
+        "L": "0",
+        "R": "-128+128*i",
+        "alpha_minus_8R": "1024-1024*i",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(1024-1024*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(1024-1024*i)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:+:dot0:102:LQ:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(-2048+1024*i)*mu_l^2",
+        "F": "-14336+7168*i",
+        "L": "0",
+        "R": "256-128*i",
+        "alpha_minus_8R": "-2048+1024*i",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(-2048+1024*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(-2048+1024*i)*bar(r2)^2+(0)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:+:dot0:120:QL:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(-2048+1024*i)*mu_l^2",
+        "F": "-14336+7168*i",
+        "L": "0",
+        "R": "256-128*i",
+        "alpha_minus_8R": "-2048+1024*i",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(-2048+1024*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(-2048+1024*i)*bar(r2)^2+(0)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:+:dot0:120:QL:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:+:dot0:120:QL:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:+:dot0:120:QL:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:+:dot0:120:LQ:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:+:dot0:120:LQ:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(1024-1024*i)*mu_l^2",
+        "F": "15360-15360*i",
+        "L": "0",
+        "R": "-128+128*i",
+        "alpha_minus_8R": "1024-1024*i",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(1024-1024*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(1024-1024*i)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:+:dot0:120:LQ:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(1024-1024*i)*mu_l^2",
+        "F": "15360-15360*i",
+        "L": "0",
+        "R": "-128+128*i",
+        "alpha_minus_8R": "1024-1024*i",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(1024-1024*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(1024-1024*i)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:+:dot0:120:LQ:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:+:dot0:201:QL:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:+:dot0:201:QL:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(1024-1024*i)*mu_l^2",
+        "F": "15360-15360*i",
+        "L": "0",
+        "R": "-128+128*i",
+        "alpha_minus_8R": "1024-1024*i",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(1024-1024*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(1024-1024*i)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:+:dot0:201:QL:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(1024-1024*i)*mu_l^2",
+        "F": "15360-15360*i",
+        "L": "0",
+        "R": "-128+128*i",
+        "alpha_minus_8R": "1024-1024*i",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(1024-1024*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(1024-1024*i)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:+:dot0:201:QL:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "-1024-2048*i",
+        "L": "-1024-2048*i",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(-1024-2048*i)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(-1024-2048*i)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:+:dot0:201:LQ:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "-1024-2048*i",
+        "L": "-1024-2048*i",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(-1024-2048*i)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(-1024-2048*i)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:+:dot0:201:LQ:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:+:dot0:201:LQ:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:+:dot0:201:LQ:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(-2048+1024*i)*mu_l^2",
+        "F": "-14336+7168*i",
+        "L": "0",
+        "R": "256-128*i",
+        "alpha_minus_8R": "-2048+1024*i",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(-2048+1024*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(-2048+1024*i)*bar(r2)^2+(0)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:+:dot0:210:QL:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(-2048+1024*i)*mu_l^2",
+        "F": "-14336+7168*i",
+        "L": "0",
+        "R": "256-128*i",
+        "alpha_minus_8R": "-2048+1024*i",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(-2048+1024*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(-2048+1024*i)*bar(r2)^2+(0)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:+:dot0:210:QL:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:+:dot0:210:QL:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:+:dot0:210:QL:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:+:dot0:210:LQ:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:+:dot0:210:LQ:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:+:dot0:210:LQ:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:+:dot0:210:LQ:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:+:dot1:012:QL:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:+:dot1:012:QL:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:+:dot1:012:QL:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:+:dot1:012:QL:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(-1024+3072*i)*mu_l^2",
+        "F": "-7168+21504*i",
+        "L": "0",
+        "R": "128-384*i",
+        "alpha_minus_8R": "-1024+3072*i",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(-1024+3072*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(-1024+3072*i)*bar(r2)^2+(0)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:+:dot1:012:LQ:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(-1024+3072*i)*mu_l^2",
+        "F": "-7168+21504*i",
+        "L": "0",
+        "R": "128-384*i",
+        "alpha_minus_8R": "-1024+3072*i",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(-1024+3072*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(-1024+3072*i)*bar(r2)^2+(0)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:+:dot1:012:LQ:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:+:dot1:012:LQ:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:+:dot1:012:LQ:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "-15360+35840*i",
+        "L": "-15360+35840*i",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(-15360+35840*i)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(-15360+35840*i)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:+:dot1:021:QL:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "-15360+35840*i",
+        "L": "-15360+35840*i",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(-15360+35840*i)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(-15360+35840*i)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:+:dot1:021:QL:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(1024-2048*i)*mu_l^2",
+        "F": "15360-30720*i",
+        "L": "0",
+        "R": "-128+256*i",
+        "alpha_minus_8R": "1024-2048*i",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(1024-2048*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(1024-2048*i)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:+:dot1:021:QL:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(1024-2048*i)*mu_l^2",
+        "F": "15360-30720*i",
+        "L": "0",
+        "R": "-128+256*i",
+        "alpha_minus_8R": "1024-2048*i",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(1024-2048*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(1024-2048*i)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:+:dot1:021:QL:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(-1024+3072*i)*mu_l^2",
+        "F": "-7168+21504*i",
+        "L": "0",
+        "R": "128-384*i",
+        "alpha_minus_8R": "-1024+3072*i",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(-1024+3072*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(-1024+3072*i)*bar(r2)^2+(0)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:+:dot1:021:LQ:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(-1024+3072*i)*mu_l^2",
+        "F": "-7168+21504*i",
+        "L": "0",
+        "R": "128-384*i",
+        "alpha_minus_8R": "-1024+3072*i",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(-1024+3072*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(-1024+3072*i)*bar(r2)^2+(0)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:+:dot1:021:LQ:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:+:dot1:021:LQ:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:+:dot1:021:LQ:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:+:dot1:102:QL:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:+:dot1:102:QL:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:+:dot1:102:QL:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:+:dot1:102:QL:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "-15360+35840*i",
+        "L": "-15360+35840*i",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(-15360+35840*i)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(-15360+35840*i)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:+:dot1:102:LQ:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "-15360+35840*i",
+        "L": "-15360+35840*i",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(-15360+35840*i)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(-15360+35840*i)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:+:dot1:102:LQ:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(1024-2048*i)*mu_l^2",
+        "F": "15360-30720*i",
+        "L": "0",
+        "R": "-128+256*i",
+        "alpha_minus_8R": "1024-2048*i",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(1024-2048*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(1024-2048*i)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:+:dot1:102:LQ:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(1024-2048*i)*mu_l^2",
+        "F": "15360-30720*i",
+        "L": "0",
+        "R": "-128+256*i",
+        "alpha_minus_8R": "1024-2048*i",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(1024-2048*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(1024-2048*i)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:+:dot1:102:LQ:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(-1024+3072*i)*mu_l^2",
+        "F": "-7168+21504*i",
+        "L": "0",
+        "R": "128-384*i",
+        "alpha_minus_8R": "-1024+3072*i",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(-1024+3072*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(-1024+3072*i)*bar(r2)^2+(0)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:+:dot1:120:QL:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(-1024+3072*i)*mu_l^2",
+        "F": "-7168+21504*i",
+        "L": "0",
+        "R": "128-384*i",
+        "alpha_minus_8R": "-1024+3072*i",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(-1024+3072*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(-1024+3072*i)*bar(r2)^2+(0)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:+:dot1:120:QL:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:+:dot1:120:QL:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:+:dot1:120:QL:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:+:dot1:120:LQ:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:+:dot1:120:LQ:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(1024-2048*i)*mu_l^2",
+        "F": "15360-30720*i",
+        "L": "0",
+        "R": "-128+256*i",
+        "alpha_minus_8R": "1024-2048*i",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(1024-2048*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(1024-2048*i)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:+:dot1:120:LQ:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(1024-2048*i)*mu_l^2",
+        "F": "15360-30720*i",
+        "L": "0",
+        "R": "-128+256*i",
+        "alpha_minus_8R": "1024-2048*i",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(1024-2048*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(1024-2048*i)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:+:dot1:120:LQ:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:+:dot1:201:QL:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:+:dot1:201:QL:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(1024-2048*i)*mu_l^2",
+        "F": "15360-30720*i",
+        "L": "0",
+        "R": "-128+256*i",
+        "alpha_minus_8R": "1024-2048*i",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(1024-2048*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(1024-2048*i)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:+:dot1:201:QL:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(1024-2048*i)*mu_l^2",
+        "F": "15360-30720*i",
+        "L": "0",
+        "R": "-128+256*i",
+        "alpha_minus_8R": "1024-2048*i",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(1024-2048*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(1024-2048*i)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:+:dot1:201:QL:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:+:dot1:201:LQ:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:+:dot1:201:LQ:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:+:dot1:201:LQ:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:+:dot1:201:LQ:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(-1024+3072*i)*mu_l^2",
+        "F": "-7168+21504*i",
+        "L": "0",
+        "R": "128-384*i",
+        "alpha_minus_8R": "-1024+3072*i",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(-1024+3072*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(-1024+3072*i)*bar(r2)^2+(0)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:+:dot1:210:QL:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(-1024+3072*i)*mu_l^2",
+        "F": "-7168+21504*i",
+        "L": "0",
+        "R": "128-384*i",
+        "alpha_minus_8R": "-1024+3072*i",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(-1024+3072*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(-1024+3072*i)*bar(r2)^2+(0)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:+:dot1:210:QL:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:+:dot1:210:QL:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:+:dot1:210:QL:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:+:dot1:210:LQ:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:+:dot1:210:LQ:A",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:+:dot1:210:LQ:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:+:dot1:210:LQ:B",
+        "sample": "primary",
+        "sector": "+",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(2048-1024*i)*mu_l^2",
+        "F": "10240-15360*i",
+        "L": "-4096-8192*i",
+        "R": "-256+128*i",
+        "alpha_minus_8R": "2048-1024*i",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(-4096-8192*i)",
+          "e2": "-(2048-1024*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(2048-1024*i)*bar(r2)^2+(-4096-8192*i)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:-:dot0:012:QL:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(2048-1024*i)*mu_l^2",
+        "F": "10240-15360*i",
+        "L": "-4096-8192*i",
+        "R": "-256+128*i",
+        "alpha_minus_8R": "2048-1024*i",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(-4096-8192*i)",
+          "e2": "-(2048-1024*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(2048-1024*i)*bar(r2)^2+(-4096-8192*i)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:-:dot0:012:QL:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(-1024+1024*i)*mu_l^2",
+        "F": "-15360+15360*i",
+        "L": "0",
+        "R": "128-128*i",
+        "alpha_minus_8R": "-1024+1024*i",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(-1024+1024*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(-1024+1024*i)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:-:dot0:012:QL:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(-1024+1024*i)*mu_l^2",
+        "F": "-15360+15360*i",
+        "L": "0",
+        "R": "128-128*i",
+        "alpha_minus_8R": "-1024+1024*i",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(-1024+1024*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(-1024+1024*i)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:-:dot0:012:QL:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:-:dot0:012:LQ:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:-:dot0:012:LQ:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:-:dot0:012:LQ:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:-:dot0:012:LQ:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "4096+8192*i",
+        "L": "4096+8192*i",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(4096+8192*i)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(4096+8192*i)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:-:dot0:021:QL:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "4096+8192*i",
+        "L": "4096+8192*i",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(4096+8192*i)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(4096+8192*i)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:-:dot0:021:QL:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:-:dot0:021:QL:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:-:dot0:021:QL:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:-:dot0:021:LQ:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:-:dot0:021:LQ:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:-:dot0:021:LQ:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:-:dot0:021:LQ:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(2048-1024*i)*mu_l^2",
+        "F": "11264-13312*i",
+        "L": "-3072-6144*i",
+        "R": "-256+128*i",
+        "alpha_minus_8R": "2048-1024*i",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(-3072-6144*i)",
+          "e2": "-(2048-1024*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(2048-1024*i)*bar(r2)^2+(-3072-6144*i)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:-:dot0:102:QL:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(2048-1024*i)*mu_l^2",
+        "F": "11264-13312*i",
+        "L": "-3072-6144*i",
+        "R": "-256+128*i",
+        "alpha_minus_8R": "2048-1024*i",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(-3072-6144*i)",
+          "e2": "-(2048-1024*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(2048-1024*i)*bar(r2)^2+(-3072-6144*i)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:-:dot0:102:QL:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(-1024+1024*i)*mu_l^2",
+        "F": "-15360+15360*i",
+        "L": "0",
+        "R": "128-128*i",
+        "alpha_minus_8R": "-1024+1024*i",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(-1024+1024*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(-1024+1024*i)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:-:dot0:102:QL:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(-1024+1024*i)*mu_l^2",
+        "F": "-15360+15360*i",
+        "L": "0",
+        "R": "128-128*i",
+        "alpha_minus_8R": "-1024+1024*i",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(-1024+1024*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(-1024+1024*i)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:-:dot0:102:QL:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "4096+8192*i",
+        "L": "4096+8192*i",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(4096+8192*i)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(4096+8192*i)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:-:dot0:102:LQ:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "4096+8192*i",
+        "L": "4096+8192*i",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(4096+8192*i)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(4096+8192*i)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:-:dot0:102:LQ:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:-:dot0:102:LQ:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:-:dot0:102:LQ:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:-:dot0:120:QL:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:-:dot0:120:QL:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:-:dot0:120:QL:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:-:dot0:120:QL:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "20480-10240*i",
+        "L": "20480-10240*i",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(20480-10240*i)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(20480-10240*i)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:-:dot0:120:LQ:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "20480-10240*i",
+        "L": "20480-10240*i",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(20480-10240*i)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(20480-10240*i)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:-:dot0:120:LQ:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:-:dot0:120:LQ:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:-:dot0:120:LQ:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "20480-10240*i",
+        "L": "20480-10240*i",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(20480-10240*i)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(20480-10240*i)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:-:dot0:201:QL:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "20480-10240*i",
+        "L": "20480-10240*i",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(20480-10240*i)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(20480-10240*i)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:-:dot0:201:QL:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:-:dot0:201:QL:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:-:dot0:201:QL:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(2048-1024*i)*mu_l^2",
+        "F": "10240-15360*i",
+        "L": "-4096-8192*i",
+        "R": "-256+128*i",
+        "alpha_minus_8R": "2048-1024*i",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(-4096-8192*i)",
+          "e2": "-(2048-1024*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(2048-1024*i)*bar(r2)^2+(-4096-8192*i)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:-:dot0:201:LQ:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(2048-1024*i)*mu_l^2",
+        "F": "10240-15360*i",
+        "L": "-4096-8192*i",
+        "R": "-256+128*i",
+        "alpha_minus_8R": "2048-1024*i",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(-4096-8192*i)",
+          "e2": "-(2048-1024*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(2048-1024*i)*bar(r2)^2+(-4096-8192*i)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:-:dot0:201:LQ:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(-1024+1024*i)*mu_l^2",
+        "F": "-15360+15360*i",
+        "L": "0",
+        "R": "128-128*i",
+        "alpha_minus_8R": "-1024+1024*i",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(-1024+1024*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(-1024+1024*i)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:-:dot0:201:LQ:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(-1024+1024*i)*mu_l^2",
+        "F": "-15360+15360*i",
+        "L": "0",
+        "R": "128-128*i",
+        "alpha_minus_8R": "-1024+1024*i",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(-1024+1024*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(-1024+1024*i)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:-:dot0:201:LQ:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:-:dot0:210:QL:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:-:dot0:210:QL:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:-:dot0:210:QL:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:-:dot0:210:QL:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(2048-1024*i)*mu_l^2",
+        "F": "11264-13312*i",
+        "L": "-3072-6144*i",
+        "R": "-256+128*i",
+        "alpha_minus_8R": "2048-1024*i",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(-3072-6144*i)",
+          "e2": "-(2048-1024*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(2048-1024*i)*bar(r2)^2+(-3072-6144*i)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:-:dot0:210:LQ:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(2048-1024*i)*mu_l^2",
+        "F": "11264-13312*i",
+        "L": "-3072-6144*i",
+        "R": "-256+128*i",
+        "alpha_minus_8R": "2048-1024*i",
+        "bar_edge_square": "7",
+        "dotted": 0,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(-3072-6144*i)",
+          "e2": "-(2048-1024*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(2048-1024*i)*bar(r2)^2+(-3072-6144*i)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:-:dot0:210:LQ:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(-1024+1024*i)*mu_l^2",
+        "F": "-15360+15360*i",
+        "L": "0",
+        "R": "128-128*i",
+        "alpha_minus_8R": "-1024+1024*i",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(-1024+1024*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(-1024+1024*i)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:-:dot0:210:LQ:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(-1024+1024*i)*mu_l^2",
+        "F": "-15360+15360*i",
+        "L": "0",
+        "R": "128-128*i",
+        "alpha_minus_8R": "-1024+1024*i",
+        "bar_edge_square": "15",
+        "dotted": 0,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(-1024+1024*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(-1024+1024*i)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:-:dot0:210:LQ:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(1024-3072*i)*mu_l^2",
+        "F": "10240-25600*i",
+        "L": "3072-4096*i",
+        "R": "-128+384*i",
+        "alpha_minus_8R": "1024-3072*i",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(3072-4096*i)",
+          "e2": "-(1024-3072*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(1024-3072*i)*bar(r2)^2+(3072-4096*i)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:-:dot1:012:QL:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(1024-3072*i)*mu_l^2",
+        "F": "10240-25600*i",
+        "L": "3072-4096*i",
+        "R": "-128+384*i",
+        "alpha_minus_8R": "1024-3072*i",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(3072-4096*i)",
+          "e2": "-(1024-3072*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(1024-3072*i)*bar(r2)^2+(3072-4096*i)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:-:dot1:012:QL:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(-1024+2048*i)*mu_l^2",
+        "F": "-15360+30720*i",
+        "L": "0",
+        "R": "128-256*i",
+        "alpha_minus_8R": "-1024+2048*i",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(-1024+2048*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(-1024+2048*i)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:-:dot1:012:QL:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(-1024+2048*i)*mu_l^2",
+        "F": "-15360+30720*i",
+        "L": "0",
+        "R": "128-256*i",
+        "alpha_minus_8R": "-1024+2048*i",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(-1024+2048*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(-1024+2048*i)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:-:dot1:012:QL:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:-:dot1:012:LQ:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:-:dot1:012:LQ:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:-:dot1:012:LQ:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:-:dot1:012:LQ:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "-3072+4096*i",
+        "L": "-3072+4096*i",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(-3072+4096*i)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(-3072+4096*i)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:-:dot1:021:QL:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "-3072+4096*i",
+        "L": "-3072+4096*i",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(-3072+4096*i)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(-3072+4096*i)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:-:dot1:021:QL:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:-:dot1:021:QL:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:-:dot1:021:QL:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:-:dot1:021:LQ:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:-:dot1:021:LQ:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:-:dot1:021:LQ:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:-:dot1:021:LQ:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(1024-3072*i)*mu_l^2",
+        "F": "10240-25600*i",
+        "L": "3072-4096*i",
+        "R": "-128+384*i",
+        "alpha_minus_8R": "1024-3072*i",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(3072-4096*i)",
+          "e2": "-(1024-3072*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(1024-3072*i)*bar(r2)^2+(3072-4096*i)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:-:dot1:102:QL:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(1024-3072*i)*mu_l^2",
+        "F": "10240-25600*i",
+        "L": "3072-4096*i",
+        "R": "-128+384*i",
+        "alpha_minus_8R": "1024-3072*i",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(3072-4096*i)",
+          "e2": "-(1024-3072*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(1024-3072*i)*bar(r2)^2+(3072-4096*i)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:-:dot1:102:QL:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(-1024+2048*i)*mu_l^2",
+        "F": "-15360+30720*i",
+        "L": "0",
+        "R": "128-256*i",
+        "alpha_minus_8R": "-1024+2048*i",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(-1024+2048*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(-1024+2048*i)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:-:dot1:102:QL:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(-1024+2048*i)*mu_l^2",
+        "F": "-15360+30720*i",
+        "L": "0",
+        "R": "128-256*i",
+        "alpha_minus_8R": "-1024+2048*i",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(-1024+2048*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(-1024+2048*i)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:-:dot1:102:QL:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "-3072+4096*i",
+        "L": "-3072+4096*i",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(-3072+4096*i)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(-3072+4096*i)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:-:dot1:102:LQ:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "-3072+4096*i",
+        "L": "-3072+4096*i",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(-3072+4096*i)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(-3072+4096*i)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:-:dot1:102:LQ:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:-:dot1:102:LQ:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:-:dot1:102:LQ:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:-:dot1:120:QL:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:-:dot1:120:QL:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:-:dot1:120:QL:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:-:dot1:120:QL:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "12288-31744*i",
+        "L": "12288-31744*i",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(12288-31744*i)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(12288-31744*i)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:-:dot1:120:LQ:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "12288-31744*i",
+        "L": "12288-31744*i",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(12288-31744*i)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(12288-31744*i)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:-:dot1:120:LQ:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:-:dot1:120:LQ:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:-:dot1:120:LQ:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "12288-31744*i",
+        "L": "12288-31744*i",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(12288-31744*i)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(12288-31744*i)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:-:dot1:201:QL:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "12288-31744*i",
+        "L": "12288-31744*i",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(12288-31744*i)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(12288-31744*i)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:-:dot1:201:QL:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:-:dot1:201:QL:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:-:dot1:201:QL:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(1024-3072*i)*mu_l^2",
+        "F": "10240-25600*i",
+        "L": "3072-4096*i",
+        "R": "-128+384*i",
+        "alpha_minus_8R": "1024-3072*i",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(3072-4096*i)",
+          "e2": "-(1024-3072*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(1024-3072*i)*bar(r2)^2+(3072-4096*i)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:-:dot1:201:LQ:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(1024-3072*i)*mu_l^2",
+        "F": "10240-25600*i",
+        "L": "3072-4096*i",
+        "R": "-128+384*i",
+        "alpha_minus_8R": "1024-3072*i",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(3072-4096*i)",
+          "e2": "-(1024-3072*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(1024-3072*i)*bar(r2)^2+(3072-4096*i)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:-:dot1:201:LQ:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(-1024+2048*i)*mu_l^2",
+        "F": "-15360+30720*i",
+        "L": "0",
+        "R": "128-256*i",
+        "alpha_minus_8R": "-1024+2048*i",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(-1024+2048*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(-1024+2048*i)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:-:dot1:201:LQ:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(-1024+2048*i)*mu_l^2",
+        "F": "-15360+30720*i",
+        "L": "0",
+        "R": "128-256*i",
+        "alpha_minus_8R": "-1024+2048*i",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(-1024+2048*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(-1024+2048*i)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:-:dot1:201:LQ:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:-:dot1:210:QL:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(0)",
+          "e2": "-(0)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r2)^2+(0)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:-:dot1:210:QL:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "AB:primary:-:dot1:210:QL:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(0)*mu_l^2",
+        "F": "0",
+        "L": "0",
+        "R": "0",
+        "alpha_minus_8R": "0",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(0)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(0)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "QL",
+        "row_id": "BA:primary:-:dot1:210:QL:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "DRED_parent_plus_contact": "(1024-3072*i)*mu_l^2",
+        "F": "10240-25600*i",
+        "L": "3072-4096*i",
+        "R": "-128+384*i",
+        "alpha_minus_8R": "1024-3072*i",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(3072-4096*i)",
+          "e2": "-(1024-3072*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(1024-3072*i)*bar(r2)^2+(3072-4096*i)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:-:dot1:210:LQ:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(-1)*Koszul(-1)=+1",
+        "DRED_parent_plus_contact": "(1024-3072*i)*mu_l^2",
+        "F": "10240-25600*i",
+        "L": "3072-4096*i",
+        "R": "-128+384*i",
+        "alpha_minus_8R": "1024-3072*i",
+        "bar_edge_square": "7",
+        "dotted": 1,
+        "edge_momentum": "r2",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e1_longitudinal": "-(3072-4096*i)",
+          "e2": "-(1024-3072*i)*r2_d^2"
+        },
+        "mark": "A",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(1024-3072*i)*bar(r2)^2+(3072-4096*i)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:-:dot1:210:LQ:A",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e2"
+      },
+      {
+        "DRED_parent_plus_contact": "(-1024+2048*i)*mu_l^2",
+        "F": "-15360+30720*i",
+        "L": "0",
+        "R": "128-256*i",
+        "alpha_minus_8R": "-1024+2048*i",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(-1024+2048*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "D>B1",
+        "orientation": "AB",
+        "parent_identity": "F=(-1024+2048*i)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "AB:primary:-:dot1:210:LQ:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      },
+      {
+        "BA_sign_resolution": "Leibniz(+1)*Koszul(+1)=+1",
+        "DRED_parent_plus_contact": "(-1024+2048*i)*mu_l^2",
+        "F": "-15360+30720*i",
+        "L": "0",
+        "R": "128-256*i",
+        "alpha_minus_8R": "-1024+2048*i",
+        "bar_edge_square": "15",
+        "dotted": 1,
+        "edge_momentum": "r0",
+        "full_d_parent_plus_contact": "0",
+        "induced_contact": {
+          "e0": "-(-1024+2048*i)*r0_d^2",
+          "e1_longitudinal": "-(0)"
+        },
+        "mark": "B",
+        "ordered_output": "B1>D",
+        "orientation": "BA",
+        "parent_identity": "F=(-1024+2048*i)*bar(r0)^2+(0)",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "placement": "LQ",
+        "row_id": "BA:primary:-:dot1:210:LQ:B",
+        "sample": "primary",
+        "sector": "-",
+        "selected_edge": "e0"
+      }
+    ],
+    "first_nonzero_A_anomaly_row": {
+      "DRED_parent_plus_contact": "(-2048+1024*i)*mu_l^2",
+      "F": "-14336+7168*i",
+      "L": "0",
+      "R": "256-128*i",
+      "alpha_minus_8R": "-2048+1024*i",
+      "bar_edge_square": "7",
+      "dotted": 0,
+      "edge_momentum": "r2",
+      "full_d_parent_plus_contact": "0",
+      "induced_contact": {
+        "e1_longitudinal": "-(0)",
+        "e2": "-(-2048+1024*i)*r2_d^2"
+      },
+      "mark": "A",
+      "ordered_output": "D>B1",
+      "orientation": "AB",
+      "parent_identity": "F=(-2048+1024*i)*bar(r2)^2+(0)",
+      "permutation": [
+        0,
+        1,
+        2
+      ],
+      "placement": "LQ",
+      "row_id": "AB:primary:+:dot0:012:LQ:A",
+      "sample": "primary",
+      "sector": "+",
+      "selected_edge": "e2"
+    },
+    "first_nonzero_B_anomaly_row": {
+      "DRED_parent_plus_contact": "(1024-1024*i)*mu_l^2",
+      "F": "15360-15360*i",
+      "L": "0",
+      "R": "-128+128*i",
+      "alpha_minus_8R": "1024-1024*i",
+      "bar_edge_square": "15",
+      "dotted": 0,
+      "edge_momentum": "r0",
+      "full_d_parent_plus_contact": "0",
+      "induced_contact": {
+        "e0": "-(1024-1024*i)*r0_d^2",
+        "e1_longitudinal": "-(0)"
+      },
+      "mark": "B",
+      "ordered_output": "D>B1",
+      "orientation": "AB",
+      "parent_identity": "F=(1024-1024*i)*bar(r0)^2+(0)",
+      "permutation": [
+        0,
+        2,
+        1
+      ],
+      "placement": "QL",
+      "row_id": "AB:primary:+:dot0:021:QL:B",
+      "sample": "primary",
+      "sector": "+",
+      "selected_edge": "e0"
+    },
+    "first_nonzero_longitudinal_row": {
+      "DRED_parent_plus_contact": "(0)*mu_l^2",
+      "F": "-1024-2048*i",
+      "L": "-1024-2048*i",
+      "R": "0",
+      "alpha_minus_8R": "0",
+      "bar_edge_square": "7",
+      "dotted": 0,
+      "edge_momentum": "r2",
+      "full_d_parent_plus_contact": "0",
+      "induced_contact": {
+        "e1_longitudinal": "-(-1024-2048*i)",
+        "e2": "-(0)*r2_d^2"
+      },
+      "mark": "A",
+      "ordered_output": "D>B1",
+      "orientation": "AB",
+      "parent_identity": "F=(0)*bar(r2)^2+(-1024-2048*i)",
+      "permutation": [
+        0,
+        1,
+        2
+      ],
+      "placement": "QL",
+      "row_id": "AB:primary:+:dot0:012:QL:A",
+      "sample": "primary",
+      "sector": "+",
+      "selected_edge": "e2"
+    },
+    "primary": {
+      "AB_BA_rows_exported": 192,
+      "bar_r0_square": "15",
+      "bar_r2_square": "7",
+      "base_rows": 96,
+      "loop": [
+        "2",
+        "1",
+        "-1",
+        "3"
+      ],
+      "nonzero_alpha": {
+        "A": 16,
+        "B": 16
+      },
+      "nonzero_longitudinal_A_rows": 22,
+      "p": [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      "q": [
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      "r0": [
+        "2",
+        "1",
+        "-1",
+        "3"
+      ],
+      "r2": [
+        "1",
+        "1",
+        "-1",
+        "2"
+      ],
+      "sample_id": "primary"
+    },
+    "secondary": {
+      "AB_BA_rows_exported": 0,
+      "bar_r0_square": "18",
+      "bar_r2_square": "22",
+      "base_rows": 96,
+      "loop": [
+        "1",
+        "-2",
+        "3",
+        "2"
+      ],
+      "nonzero_alpha": {
+        "A": 16,
+        "B": 16
+      },
+      "nonzero_longitudinal_A_rows": 24,
+      "p": [
+        "0",
+        "1",
+        "1",
+        "0"
+      ],
+      "q": [
+        "1",
+        "0",
+        "0",
+        "-1"
+      ],
+      "r0": [
+        "1",
+        "-2",
+        "3",
+        "2"
+      ],
+      "r2": [
+        "0",
+        "-3",
+        "2",
+        "3"
+      ],
+      "sample_id": "secondary"
+    }
+  }
+}
