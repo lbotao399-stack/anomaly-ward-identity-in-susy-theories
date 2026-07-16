@@ -11,6 +11,16 @@ one vertex, then bring in one interaction vertex, and obtain the one-loop result
 $Q_-(\psi_+^A\bar\phi^B)$ beyond the tree-level classical result. This sector is
 Konishi-anomaly-like.*
 
+> **Errata (recorded 2026-07-16, found during the Step-5G execution):** (i) the
+> one-interaction-vertex census below is incomplete — F1c–F1f (from the
+> $\mathcal E_{\mathscr D}$- and $\mathcal E_A$-terms of the insertion) also exist; they
+> join the classical-closure set and do not change the anomaly bookkeeping; (ii) in
+> (5F.2) the external detection legs must be undotted gauginos $\lambda\lambda$ (or
+> amputated $\widetilde\lambda$-legs), since only
+> $\langle\lambda\widetilde\lambda\rangle$ propagates. See
+> `proposals/step5g-bc-channel-one-loop-dred-2026-07-16.md` §0, where the computation is
+> executed.
+
 ---
 
 ## 0. The channel and why it is Konishi-like
