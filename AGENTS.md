@@ -37,6 +37,30 @@
 - Emit every Wick pairing, fermion permutation, color ordering, and symmetry factor.
 - Every symbolic rewrite must emit its input, rule, conditions, sign, output, and invariant checks.
 
+## Derivation-first law (2026-07-16)
+
+- The primary artifact of every mathematical obligation is a human-readable derivation memo:
+  numbered equations, locked conventions, and prose a physicist reviews start to finish.
+  Scripts, audits, IR files, and tests are subordinate evidence, never the deliverable.
+- Every verification script and audit must name the memo equations it checks. A check that
+  corresponds to no numbered equation must not be added; delete such checks on sight.
+- A reviewed pull request is sized for one human evening: at most about 3000 hand-written
+  lines. Regenerable artifacts live under `generated/`, are marked as generated, and are not
+  acceptance evidence by themselves.
+- One active mathematical obligation at a time. Do not open work on the next obligation, a
+  higher loop order, or a parallel program before the current obligation is merged, unless
+  the user authorizes it in the task file. Stacked draft pull requests deeper than one are
+  forbidden.
+- A blocker that is a convention or scheme choice (gauge, regulator ledger, ghost branch,
+  normalization, integration cycle) must be surfaced to the user as a short decision list in
+  the same session that finds it. It must not persist as a standing BLOCKED state across
+  sessions.
+- External chat review (GPT Pro or any assistant) enters the repository as at most two files
+  per obligation: one consolidated transcript, one verdict summary. Per-gate file pairs are
+  forbidden.
+- Check counts are not results. A pull request body states the derived formula and where its
+  derivation lives; test totals belong at the end, in one line.
+
 ## State machine
 
 `SPECIFIED -> FROZEN -> RULES_DERIVED -> ENUMERATED -> EVALUATED -> CUT_COMPLETE -> RENORMALIZED -> WARD_CLOSED -> COHOMOLOGY_PROJECTED -> ACCEPTED`

@@ -16,4 +16,5 @@ jobs:
         with:
           fetch-depth: 0
       - run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - run: python3 -m pip install --break-system-packages "sympy>=1.12" "PyYAML>=6.0"
       - run: python3 -m unittest discover -s tests -v
