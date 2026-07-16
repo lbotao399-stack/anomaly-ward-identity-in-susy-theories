@@ -1825,6 +1825,18 @@ class RepositoryPolicyTest(unittest.TestCase):
             stdout=subprocess.DEVNULL,
         )
 
+    def test_heat_kernel_stage4_seed_checks(self) -> None:
+        script = ROOT / "scripts/verify_heat_kernel_stage4_seed.py"
+        memo = ROOT / "proposals/heat-kernel-n4-stage4-seed-coefficient-2026-07-16.md"
+        if not script.exists() or not memo.exists():
+            self.skipTest("heat-kernel Stage-IV seed verifier is not registered")
+        subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+
     def test_channel_sources_do_not_cross_read(self) -> None:
         channels = ("ec", "es", "lc", "ls")
         for channel in channels:

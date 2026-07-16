@@ -619,13 +619,22 @@ $\{1/((p{+}q{+}2)(p{+}1))\}$ simplex family — no other rational structure can 
 recorded source conflict `HT-NORM-CONFLICT-ZERO-SHIFT-FACTOR-TWO` (printed kernel
 $\frac12\partial\!\otimes\!\partial$, main.tex line 726, vs printed components,
 lines 1226–1245); (iii) the heat-kernel frame reduces its resolution to counting Duhamel
-Wick assignments — a *sharper-posed* question than graph orientation, to be closed in
-Stage IV. The settled adjudication direction (components right, kernel missing a 2 —
-review R.5, verified independently there) is *consistent* with this frame and is not
-re-derived here; the earlier draft's claim of a completed "third independent adjudication"
-is withdrawn to Stage IV. The method's independence from the HT computation is an
-independence of **inputs** (the locked action and Schwinger identity), not of technique:
-the universal integrals parallel HT's own Schwinger-parametrized Appendix A, as they must.
+Wick assignments — a *sharper-posed* question than graph orientation.
+
+**Zero-shift resolution, now derived (Stage IV, seed).** The Stage-IV seed memo
+`proposals/heat-kernel-n4-stage4-seed-coefficient-2026-07-16.md` (S4.4)–(S4.5) carries out
+that count for the seed: the second-order Duhamel term of $e^{-s\mathcal K}$ with
+$\mathcal K=\mathcal K_0+V_1+V_2$ has exactly **two** nonzero cross-terms
+$V_1(s_2)V_2(s_1)+V_2(s_2)V_1(s_1)$ (the diagonals $V_iV_i$ vanish, each triangle vertex
+being single-use). These are identically HT's *two triangle diagrams* (main.tex line 744)
+and its "$\mathcal I+(z,D)\!\leftrightarrow\!(w,E)$" (commented line 767). At zero shift, for
+same-type outputs they add — multiplicity $2$ — so the heat kernel lands on the component
+normalization $1$, not the single-ordering printed kernel $\tfrac12$. The factor $2$ is thus
+**derived** as the cross-term census, and the earlier draft's withdrawn "third independent
+adjudication" is now substantiated for the seed. The method's independence from the HT
+computation is an independence of **inputs** (the locked action and Schwinger identity), not
+of technique: the universal integrals parallel HT's own Schwinger-parametrized Appendix A,
+as they must.
 
 ## 6. The worked channel $(B_r,C^s)$ and the coefficient chain
 
@@ -690,19 +699,16 @@ $D_{\dot a}\leftrightarrow$ $i\,\partial_{\dot a}c$, $Q_0\leftrightarrow-\frac12
 \boldsymbol\nabla_-$) this is exactly the shape of the admitted target
 $Q_1((\beta_I)^A(\gamma^J)^B)
 =\kappa^2\delta_I^J f_{ACD}f_{BCE}\,\partial_{\dot a}c^D\partial^{\dot a}c^E$
-(main.tex line 1234–1235), with the adjudicated tower (HK.24) entering as the target
-shape and (HK.23)/(HK.24a) as the project-derived single-ordering part. The numerical
-chain
-$\frac{2}{h}\cdot\hbar\cdot\frac{1}{16\pi^2}\cdot
-[\text{(F.6) saturation }16]\cdot[\text{two }(-\tfrac14)^2\text{ conversions}]
-\cdot\frac12
-=\frac{\hbar g^2}{16\pi^2}$
-is recorded factor-by-factor in script check C11; the $16$ and the final $\frac12$
-($\epsilon$-pairing weight fixed by the R.3 spin chain) are inherited locked/reviewed
-inputs, their independent heat-kernel rederivation from the Step-1 $\sigma$-tables being
-part of Stage IV, together with the block-normalization sign of (HK.13). The
-insertion-pair multiplicity of §5.4 is *not* an extra factor here — at zero shift it is
-absorbed in the tower weight, whose adjudicated value is $K^P_{0,0;0,0}=1$.
+(main.tex line 1234–1235). The complete factor chain is now closed end-to-end in the
+Stage-IV seed memo (S4.1)/(S4.7):
+$\frac2h\cdot\hbar\cdot\underbrace{2}_{\text{orderings}}\cdot\underbrace{\tfrac12}_{\text{Duhamel simplex}}\cdot\frac{1}{16\pi^2}\cdot\underbrace{1}_{16\cdot\frac1{16}}\cdot\underbrace{\tfrac12}_{\dot a\text{-pairing}}=\frac{\hbar g^2}{16\pi^2}$
+— the ordering-$2$ cancels the Duhamel-simplex $\tfrac12$, and the EOM $\tfrac2h$ times the
+pairing $\tfrac12$ gives $\tfrac1h=g^2$. (The Stage-I–III sketch above omitted the explicit
+Duhamel $\tfrac12$ and ordering-$2$; they cancel, so the number was right but the ledger
+incomplete.) The one factor not independently re-derived is the $\dot a$-pairing $\tfrac12$,
+pinned by cross-regulator agreement with the review-verified DRED value R.1–R.3
+($+\frac{\hbar g^2}{16\pi^2}$); its Step-1 $\sigma$-table rederivation and the (HK.13)
+vector-block sign are the seed's only remaining bounded checks (Stage-IV memo §7).
 
 ### 6.3 The $(B_r,B_s)$ channel: the mixing block at work
 
