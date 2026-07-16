@@ -2,13 +2,13 @@
   "schema": 1,
   "state": "PUBLISHED_WRITE_RECEIPT",
   "source": "paper/awi-n4-one-loop.md",
-  "source_sha256": "5d14395aa33d2a790d3c34fff26f253cf451ddc29ace76d20be7d9b9b753e9b6",
-  "git_commit": "f6f3531237176a9ac4579111fdcc72213a116578",
+  "source_sha256": "28a10afea877d668d0bd88294a5b465d8378cb48cb1070691b147fb36167a5d6",
+  "git_commit": "d3d0ffdd4012d79c630d454c5211998541c66fda",
   "notion_page_id": "39fee2b7-4b3f-8137-9499-ef28fbce6569",
   "verification": "WRITE_RECEIPT_ONLY_NO_NOTION_READBACK",
-  "published_at": "2026-07-16T15:42:36Z",
-  "mutation": "create_pages_then_replace_page_content",
+  "published_at": "2026-07-16T21:32:52Z",
+  "mutation": "replace_page_content",
   "preserve_child_pages": true,
-  "archived_top_level_blocks": 0,
-  "appended_blocks": 244
+  "archived_top_level_blocks": 244,
+  "appended_blocks": 291
 }

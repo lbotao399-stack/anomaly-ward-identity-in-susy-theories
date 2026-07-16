@@ -1,0 +1,97 @@
+{
+  "scope": "VERIFIED_AUDIT_WITH_EXACT_BOTTOM_PROJECTION",
+  "memo": "audits/claude-step5b-step5h-independent-review.md",
+  "memo_sha256": "9d03f5b0eecc13a7041c26fb2b6dd6c6a6c2a1ef9404460e0b4434c0b34b72f2",
+  "authoritative_source": "audits/step5-bc-full-family-raw-projection-exact.md",
+  "authoritative_source_sha256": "070475da4e816e73842a8a09061c72fd00f4fd316c8b61d92ff4b8d17039e14d",
+  "check_count": 10,
+  "checks": [
+    {
+      "name": "Dotted gaugino bilinear is color-symmetric",
+      "equations": [
+        "CR.7",
+        "CR.8"
+      ],
+      "passed": true
+    },
+    {
+      "name": "Antisymmetric color word annihilates symmetric bilinear",
+      "equations": [
+        "CR.9"
+      ],
+      "passed": true
+    },
+    {
+      "name": "Evanescent scalar masters",
+      "equations": [
+        "CR.10",
+        "CR.11",
+        "CR.12"
+      ],
+      "passed": true
+    },
+    {
+      "name": "Tensor integral J",
+      "equations": [
+        "CR.13",
+        "CR.14"
+      ],
+      "passed": true
+    },
+    {
+      "name": "Explicit Fierz factor multiplies J",
+      "equations": [
+        "CR.14"
+      ],
+      "passed": true
+    },
+    {
+      "name": "Accepted BC map fixes the component coefficient",
+      "equations": [
+        "CR.1",
+        "CR.6"
+      ],
+      "passed": true
+    },
+    {
+      "name": "Authoritative BC source separates ordinary parent from regulated Jacobian",
+      "equations": [
+        "CR.15",
+        "CR.16"
+      ],
+      "passed": true
+    },
+    {
+      "name": "Typed heat-kernel free generator contradicts its displayed blocks",
+      "equations": [
+        "CR.18",
+        "CR.19",
+        "CR.20"
+      ],
+      "passed": true
+    },
+    {
+      "name": "Majorana Weinberg/Srednicki bridge is a nontrivial phase translation",
+      "equations": [
+        "CR.21"
+      ],
+      "passed": true
+    },
+    {
+      "name": "Target agreement does not prove termwise census exhaustion",
+      "equations": [
+        "CR.22",
+        "CR.23"
+      ],
+      "passed": true
+    }
+  ],
+  "independent_component_box_status": "REJECTED_ORDINARY_PARENT_ZERO",
+  "noether_status": "NOT_ACCEPTED_NOETHER_B1_B4_MISSING",
+  "typed_heat_kernel_status": "NOT_ACCEPTED_TYPED_HEAT_KERNEL_GENERATOR",
+  "majorana_matrix_status": "VERIFIED_CONDITIONAL_SREDNICKI_DICTIONARY",
+  "majorana_canonicalization_status": "NOT_ACCEPTED_MAJORANA_CANONICALIZATION_WRONG_BRANCH",
+  "final_census_certificate_status": "NOT_ACCEPTED_COEFFICIENT_CENSUS_CERTIFICATE",
+  "final_census_status": "OPEN_FINAL_CENSUS_17_CANDIDATES",
+  "passed": true
+}

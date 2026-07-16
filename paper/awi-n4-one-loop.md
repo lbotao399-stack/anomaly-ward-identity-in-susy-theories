@@ -351,7 +351,111 @@ Physically, the $(B,C)$ channel is the regulated generalized-Konishi anomaly, an
 supercharge $Q_1$ of the twisted theory, obtained here by a direct superspace supergraph
 calculation with no twist formalism input.
 
-## 9. Verification status
+## 9. Audit of the heat-kernel and direct-component alternative routes
+
+The post-settlement heat-kernel work proves a useful auxiliary layer but not a second full
+derivation.  For a typed even operator family
+
+$$
+K(g)=K_0+gK_1+g^2K_2,
+$$
+
+the exact second-order semigroup coefficient is
+
+$$
+\begin{aligned}
+[g^2]e^{-sK(g)}
+={}&-\int_0^sdt\,e^{-(s-t)K_0}K_2e^{-tK_0}\\
+&+\int_{0<t_1<t_2<s}dt_1dt_2\,
+e^{-(s-t_2)K_0}K_1e^{-(t_2-t_1)K_0}K_1e^{-t_1K_0}.
+\end{aligned}
+$$
+
+Thus the quadratic background block cannot be omitted in favor of two linear insertions.  The
+scalar Gaussian convolution, bridge means, DRED master integral, and the single-ordering simplex
+moment are exact:
+
+$$
+\int_{0<a<b<1}a^pb^q\,da\,db
+=\frac1{(p+1)(p+q+2)},
+$$
+
+but a second ordering supplies no automatic factor two.  Moreover, for fixed nonzero $w$,
+
+$$
+\lim_{s\downarrow0}\frac1{(4\pi s)^2}e^{-w^2/(4s)}=0,
+$$
+
+so the local derivative tower requires distributional coefficient extraction at $w=0$.
+The later typed-regulator proposal does not close this blocker.  Its own free matter blocks give
+
+$$
+(G^{-1}S'')^2|_{E_+}=16\Box_E\mathcal P_+,
+$$
+
+whereas its declared generator is $-\Box_E\mathcal P_+$; its verifier inserts an absent
+$-1/16$.  The vector weights likewise give $G_V^{-1}S''_{VV}=+\Box_E$, while the verifier
+adds an undeclared sign.  Finally, using $\mathcal K^2$ on matter rows and $\mathcal K$ on the
+vector row is not one operator functional calculus when vector--matter mixing is retained.
+Until a single typed elliptic generator, its dual Euler action, full $K_2$, and the
+distributional limit are derived together, the full alternative route remains
+`BLOCKED_HEAT_KERNEL_TYPED_REGULATOR_AND_COEFFICIENT_DERIVATION`.
+
+The direct-component BC calculation has one exact consequence, obtained by bottom projection of
+the accepted superfield map.  Since
+
+$$
+B_r|=\sqrt2\psi_{r+},\qquad C_s|=\widetilde\phi_s,\qquad
+D_{\dot a}|=i\widetilde\lambda_{\dot a},
+$$
+
+the channel $\Delta(B_r,C_s)=\delta_{rs}\langle D,D\rangle$ gives
+
+$$
+\boxed{
+Q_-(\psi_{r+}^A\widetilde\phi_s^B)\big|_{1\text{-loop}}
+=-\frac{\sqrt2\hbar g^2}{32\pi^2}
+\delta_{rs}\mathbb F^{AB}{}_{DE}
+\widetilde\lambda_{\dot a}^D\widetilde\lambda^{E\dot a}.}
+$$
+
+The dotted bilinear is color-symmetric:
+
+$$
+\widetilde\lambda_{\dot a}^D\widetilde\lambda^{E\dot a}
+=\widetilde\lambda_{\dot a}^E\widetilde\lambda^{D\dot a},
+$$
+
+hence every antisymmetric color word annihilates it.  The relevant tensor integral also separates
+from its Fierz numerator factor:
+
+$$
+\lim_{\epsilon\to0}
+\frac1d\int\frac{d^d\ell}{(2\pi)^d}
+\frac{\mu_\ell^2\ell^2}{(\ell^2+\Delta)^4}
+=\frac1{128\pi^2},
+\qquad
+2J=\frac1{64\pi^2}.
+$$
+
+These identities reject the former antisymmetric crossed-color expression and fix its free sign
+and loop-counting power.  They do not rescue the proposed ordinary two-Yukawa parent: the locked
+propagators give $G_{\phi\widetilde\psi}=G_{\psi\widetilde\phi}=0$.  The nonzero BC anomaly is
+the regulated coincident Euler Jacobian, differentiated before bottom projection.  The incomplete
+off-shell Noether identity, Lorentzian vector cycle, and target-seeded component 81-channel sweep
+remain outside the accepted result.
+
+A later adversarial census proposal raised seventeen topology/artifact candidates.  Its final
+run completed six of eight enumeration sectors, but the ghost--Nielsen--Kallosh sector, the
+zero/cut-orbit sector, and the automated three-lens refutation did not run; four
+physics-relevant Wick routings were deferred rather than derived.  Exact holomorphic-twist
+agreement is a final comparison, not an internal proof that every typed absence row has been
+emitted: equality of the total coefficient does not imply termwise vanishing of alleged omitted
+routings.  These seventeen candidates therefore remain `OPEN`, and the advertised census
+certificate is not accepted.  They do not alter the accepted coefficient ledger, whose
+derivation is the target-blind Schwinger-cut construction above.
+
+## 10. Verification status
 
 - **Machine-locked (exact arithmetic, regenerated in CI):** the 81-row ledger, the AA
   external-slot replay (269 rows), the color-mask replay (9216), the HT round trip (81 rows,

@@ -1,34 +1,41 @@
 {
-  "id": "MIRROR-STEP-05-NOTION-001",
+  "id": "MIRROR-STEP-05-CLAUDE-AUDIT-NOTION-001",
   "type": "CONTRACT_CHANGE",
   "status": "ACCEPTED",
-  "owner_authorization": "2026-07-16 session: owner authorized removal of the Step-5 Notion gate; the write itself is executed by a Codex session holding Notion access.",
-  "outcome": "Published the accepted Step-5 Euclidean N=4 one-loop anomaly Ward identity settlement (pure theoretical derivation: contracts/foundations/step-05-euclidean-n4-awi-one-loop.md) from verified origin/main commit f6f3531237176a9ac4579111fdcc72213a116578 to Notion page 39fee2b7-4b3f-812f-a3f0-ce2cee625bbb as a write-only mirror, without reading any Notion content. The core-theory paper page remains the separate human-readable mirror published by MIRROR-STEP-05-CORE-THEORY-NOTION-001.",
+  "owner_authorization": "2026-07-16 session: owner requested strict review of the new Claude Code results followed by Notion synchronization and a human-readable frontier explanation.",
+  "outcome": "Published the post-audit Step-5 core-theory paper from verified origin/main commit d3d0ffdd4012d79c630d454c5211998541c66fda to the existing Notion core-paper page and appended the latest unresolved frontier first to the central parallel log, using write-only mutations without reading Notion content. A post-cutoff fetch also admitted the two-line archived-task test repair from 61f8c70. The corrected frontier memo e97e5c8 honestly narrows its tree result to a conditional scale relation and leaves the full box-plus-triangle graph assembly open, so it closes no accepted physics blocker.",
   "allowed_inputs": [
     "AUTHORITY.md",
     "AGENTS.md",
+    "paper/awi-n4-one-loop.md",
+    "audits/claude-step5b-step5h-independent-review.md",
     "contracts/foundations/step-05-euclidean-n4-awi-one-loop.md",
-    "contracts/foundations/step-05a-component-bv-brst-primitive-supergraph-grammar.md",
-    "contracts/manifest.yaml",
     "mirror/page_map.yaml",
-    "mirror/README.md",
+    "mirror/status.json",
     "scripts/build_notion_payload.py",
-    "audits/notion_write_receipt.json"
+    "audits/notion_write_receipt.json",
+    "Current work日志.md"
+  ],
+  "nonauthoritative_post_cutoff_handles": [
+    "61f8c70",
+    "e97e5c8"
   ],
   "forbidden_inputs": [
     "Notion content",
     "Notion fetch, search, page read, block read, or content readback",
-    "legacy repositories",
-    "other local files",
-    "unmerged branches",
-    "manual mathematical edits on the Notion side"
+    "unmerged branches as mathematical evidence",
+    "manual mathematical edits on the Notion side",
+    "publishing an unverified Git commit"
   ],
   "acceptance": [
-    "the published mathematical source is exactly contracts/foundations/step-05-euclidean-n4-awi-one-loop.md at verified origin/main commit f6f3531237176a9ac4579111fdcc72213a116578",
-    "the Step-5 settlement child page is created only through write operations under root page 39e80ed3e5844b17b3ccf2579e2a64ca",
-    "each payload contains the Git authority header, exact source path, commit, and SHA-256",
-    "mirror page map records each Notion page id, source path, source commit, and source sha256",
-    "write receipt records the exact mutation responses and states content_readback_performed=false",
-    "repository-policy passes after the mirror metadata update"
+    "the published source is exactly paper/awi-n4-one-loop.md at verified origin/main commit d3d0ffdd4012d79c630d454c5211998541c66fda with SHA-256 28a10afea877d668d0bd88294a5b465d8378cb48cb1070691b147fb36167a5d6",
+    "the payload contains the Git authority header, exact source path, commit, and SHA-256",
+    "the existing core-paper page is replaced through a private write while preserving child pages",
+    "the central log places OPEN and BLOCKED frontier items before accepted content",
+    "mirror page map and status record the exact source commit and SHA-256",
+    "write receipt records archived and appended block counts and content_readback_performed=false",
+    "the accepted task-rotation test reads Step-5A admissibility from its ledger obligation's archived packet",
+    "the Step-5J tree-scale result remains conditional on explicit dictionary and structure-constant normalizations",
+    "repository-policy passes after task and ledger rotation"
   ]
 }

@@ -1684,14 +1684,14 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertEqual(entry["status"], "DERIVED_UNFROZEN")
         self.assertEqual(entry["sha256"], hashlib.sha256(path.read_bytes()).hexdigest())
 
-        task = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
-        self.assertIn(relative, task["allowed_inputs"])
         ledger = json.loads((ROOT / "ledger/proof_obligations.json").read_text(encoding="utf-8"))
         obligation = next(
             item
             for item in ledger["proof_obligations"]
             if item["id"] == "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001"
         )
+        task = json.loads((ROOT / obligation["task"]).read_text(encoding="utf-8"))
+        self.assertIn(relative, task["allowed_inputs"])
         self.assertEqual(obligation["state"], "ACCEPTED")
         checked = obligation["checked_scope"]["STEP5A_COMPONENT_BV_BRST_PRIMITIVE_GRAMMAR"]
         self.assertEqual(checked["result"], "PASS_EXACT_PARTIAL_SCOPE")
@@ -2392,6 +2392,8 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertFalse(receipt["content_readback_performed"])
         self.assertFalse(receipt["central_log_write"]["content_readback_performed"])
         self.assertEqual(receipt["central_log_write"]["write_response"], "succeeded")
+        self.assertEqual(receipt["central_log_write"]["appended_blocks"], 16)
+        self.assertEqual(receipt["central_log_write"]["write_batches"], [8, 5, 3])
 
         self.assertEqual(mirror_task["id"], "MIRROR-STEP-05A-NOTION-001")
         self.assertEqual(mirror_task["status"], "ACCEPTED")
@@ -2409,7 +2411,7 @@ class RepositoryPolicyTest(unittest.TestCase):
     def test_step5_core_theory_write_only_mirror_receipt(self) -> None:
         page_map = json.loads((ROOT / "mirror/page_map.yaml").read_text(encoding="utf-8"))
         receipt = json.loads((ROOT / "audits/notion_write_receipt.json").read_text(encoding="utf-8"))
-        task_path = ROOT / "tasks/archive/MIRROR-STEP-05-CORE-THEORY-NOTION-001.yaml"
+        task_path = ROOT / "tasks/CURRENT.yaml"
         mirror_task = json.loads(task_path.read_text(encoding="utf-8"))
         ledger = json.loads((ROOT / "ledger/proof_obligations.json").read_text(encoding="utf-8"))
 
@@ -2417,21 +2419,23 @@ class RepositoryPolicyTest(unittest.TestCase):
         page = next(item for item in page_map["pages"] if item["id"] == page_id)
         write = next(item for item in receipt["pages"] if item["id"] == page_id)
         self.assertEqual(page["source"], "paper/awi-n4-one-loop.md")
-        self.assertEqual(page["source_commit"], "f6f3531237176a9ac4579111fdcc72213a116578")
-        self.assertEqual(page["source_sha256"], "5d14395aa33d2a790d3c34fff26f253cf451ddc29ace76d20be7d9b9b753e9b6")
+        self.assertEqual(page["source_commit"], "d3d0ffdd4012d79c630d454c5211998541c66fda")
+        self.assertEqual(page["source_sha256"], "28a10afea877d668d0bd88294a5b465d8378cb48cb1070691b147fb36167a5d6")
         self.assertEqual(page["notion_page_id"], "39fee2b7-4b3f-8137-9499-ef28fbce6569")
         self.assertEqual(write["page_id"], page["notion_page_id"])
-        self.assertEqual(write["mutation"], "create_pages_then_replace_page_content")
-        self.assertEqual(write["appended_blocks"], 244)
+        self.assertEqual(write["mutation"], "replace_page_content")
+        self.assertEqual(write["archived_top_level_blocks"], 244)
+        self.assertEqual(write["appended_blocks"], 291)
         self.assertEqual(write["write_response"], "succeeded")
         self.assertFalse(receipt["content_readback_performed"])
         self.assertFalse(receipt["central_log_write"]["content_readback_performed"])
         self.assertEqual(receipt["central_log_write"]["write_response"], "succeeded")
+        self.assertEqual(mirror_task["id"], "MIRROR-STEP-05-CLAUDE-AUDIT-NOTION-001")
         self.assertEqual(mirror_task["status"], "ACCEPTED")
         obligation = next(
             item
             for item in ledger["proof_obligations"]
-            if item["id"] == "MIRROR-STEP-05-CORE-THEORY-NOTION-001"
+            if item["id"] == "MIRROR-STEP-05-CLAUDE-AUDIT-NOTION-001"
         )
         self.assertEqual(obligation["state"], "ACCEPTED")
         self.assertEqual(obligation["task_sha256"], hashlib.sha256(task_path.read_bytes()).hexdigest())
@@ -2439,7 +2443,7 @@ class RepositoryPolicyTest(unittest.TestCase):
     def test_step5_settlement_write_only_mirror_receipt(self) -> None:
         page_map = json.loads((ROOT / "mirror/page_map.yaml").read_text(encoding="utf-8"))
         receipt = json.loads((ROOT / "audits/notion_write_receipt.json").read_text(encoding="utf-8"))
-        task_path = ROOT / "tasks/CURRENT.yaml"
+        task_path = ROOT / "tasks/archive/MIRROR-STEP-05-NOTION-001.yaml"
         mirror_task = json.loads(task_path.read_text(encoding="utf-8"))
         ledger = json.loads((ROOT / "ledger/proof_obligations.json").read_text(encoding="utf-8"))
 
@@ -2968,6 +2972,48 @@ class RepositoryPolicyTest(unittest.TestCase):
             payload["full_heat_kernel_step5_status"],
             "BLOCKED_HEAT_KERNEL_TYPED_REGULATOR_AND_COEFFICIENT_DERIVATION",
         )
+
+    def test_claude_step5b_step5h_independent_review(self) -> None:
+        script = ROOT / "scripts/verify_claude_step5b_step5h_review.py"
+        memo = ROOT / "audits/claude-step5b-step5h-independent-review.md"
+        source = ROOT / "audits/step5-bc-full-family-raw-projection-exact.md"
+        audit = ROOT / "audits/claude-step5b-step5h-verification.json"
+        self.assertTrue(script.is_file())
+        self.assertTrue(memo.is_file())
+        subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        payload = json.loads(audit.read_text(encoding="utf-8"))
+        self.assertEqual(payload["scope"], "VERIFIED_AUDIT_WITH_EXACT_BOTTOM_PROJECTION")
+        self.assertEqual(payload["check_count"], 10)
+        self.assertTrue(payload["passed"])
+        self.assertEqual(payload["memo_sha256"], hashlib.sha256(memo.read_bytes()).hexdigest())
+        self.assertEqual(
+            payload["authoritative_source_sha256"],
+            hashlib.sha256(source.read_bytes()).hexdigest(),
+        )
+        self.assertEqual(payload["independent_component_box_status"], "REJECTED_ORDINARY_PARENT_ZERO")
+        self.assertEqual(payload["noether_status"], "NOT_ACCEPTED_NOETHER_B1_B4_MISSING")
+        self.assertEqual(
+            payload["typed_heat_kernel_status"],
+            "NOT_ACCEPTED_TYPED_HEAT_KERNEL_GENERATOR",
+        )
+        self.assertEqual(
+            payload["majorana_matrix_status"],
+            "VERIFIED_CONDITIONAL_SREDNICKI_DICTIONARY",
+        )
+        self.assertEqual(
+            payload["majorana_canonicalization_status"],
+            "NOT_ACCEPTED_MAJORANA_CANONICALIZATION_WRONG_BRANCH",
+        )
+        self.assertEqual(
+            payload["final_census_certificate_status"],
+            "NOT_ACCEPTED_COEFFICIENT_CENSUS_CERTIFICATE",
+        )
+        self.assertEqual(payload["final_census_status"], "OPEN_FINAL_CENSUS_17_CANDIDATES")
 
     def test_channel_sources_do_not_cross_read(self) -> None:
         channels = ("ec", "es", "lc", "ls")
