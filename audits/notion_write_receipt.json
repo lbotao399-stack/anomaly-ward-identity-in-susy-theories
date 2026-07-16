@@ -189,6 +189,21 @@
       "write_response": "succeeded"
     },
     {
+      "id": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
+      "source": "contracts/foundations/step-05-euclidean-n4-awi-one-loop.md",
+      "source_commit": "f6f3531237176a9ac4579111fdcc72213a116578",
+      "source_sha256": "3a3c3ce5d54ed159b7a61fd6f834554d70c3b987a5916f43b4d4db322167d173",
+      "page_id": "39fee2b7-4b3f-812f-a3f0-ce2cee625bbb",
+      "page_url": "https://app.notion.com/p/39fee2b74b3f812fa3f0ce2cee625bbb",
+      "mutation": "create_pages_then_replace_page_content",
+      "create_response": "succeeded",
+      "preserve_child_pages": true,
+      "archived_top_level_blocks": 0,
+      "appended_blocks": 350,
+      "write_mode": "private",
+      "write_response": "succeeded"
+    },
+    {
       "id": "PAPER-AWI-N4-ONE-LOOP-CORE-THEORY-001",
       "source": "paper/awi-n4-one-loop.md",
       "source_commit": "f6f3531237176a9ac4579111fdcc72213a116578",
@@ -224,5 +239,5 @@
     "page_id": "399ee2b7-4b3f-8158-9f75-f4a148e431fb",
     "published_at": "2026-07-10T23:46:35Z"
   },
-  "published_at": "2026-07-16T15:42:36Z"
+  "published_at": "2026-07-16T19:37:17Z"
 }
