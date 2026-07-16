@@ -2411,7 +2411,7 @@ class RepositoryPolicyTest(unittest.TestCase):
     def test_step5_core_theory_write_only_mirror_receipt(self) -> None:
         page_map = json.loads((ROOT / "mirror/page_map.yaml").read_text(encoding="utf-8"))
         receipt = json.loads((ROOT / "audits/notion_write_receipt.json").read_text(encoding="utf-8"))
-        task_path = ROOT / "tasks/CURRENT.yaml"
+        task_path = ROOT / "tasks/archive/MIRROR-STEP-05-CLAUDE-AUDIT-NOTION-001.yaml"
         mirror_task = json.loads(task_path.read_text(encoding="utf-8"))
         ledger = json.loads((ROOT / "ledger/proof_obligations.json").read_text(encoding="utf-8"))
 
