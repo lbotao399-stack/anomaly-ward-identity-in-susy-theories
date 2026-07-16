@@ -1,0 +1,654 @@
+{
+  "authority_base_commit": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+  "blockers": [],
+  "checks": [
+    {
+      "actual": "True",
+      "id": "locked_antichiral_projector_3A78",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "id": "locked_euclidean_SD_3D34",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "id": "locked_n4_euclidean_action_4C4",
+      "status": "PASS"
+    },
+    {
+      "actual": "exact Grassmann equality",
+      "id": "complete_outer_B_word",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "id": "Ddot1_preimage_normalization",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "Ddot1_preimage_cross_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "id": "Ddot2_preimage_normalization",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "Ddot2_preimage_cross_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "TMM_BC_full_D1D1",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "TMM_BC_mu2_residual_D1D1",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "TMM_BC_full_D1D2",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "TMM_BC_mu2_residual_D1D2",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "TMM_BC_full_D2D1",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "TMM_BC_mu2_residual_D2D1",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "TMM_BC_full_D2D2",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "TMM_BC_mu2_residual_D2D2",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "TMM_CB_full_D1D1",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "TMM_CB_mu2_residual_D1D1",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "TMM_CB_full_D1D2",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "TMM_CB_mu2_residual_D1D2",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "TMM_CB_full_D2D1",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "TMM_CB_mu2_residual_D2D1",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "TMM_CB_full_D2D2",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "TMM_CB_mu2_residual_D2D2",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2048",
+      "id": "TMM_BC_kernel_nonzero_control",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2048",
+      "id": "TMM_CB_kernel_nonzero_control",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "TMM_vector_bridge_BC_physical_BC",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "TMM_vector_bridge_CB_physical_CB",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "source_I1_D1D1",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "source_I1_D1D2",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "source_I1_D2D1",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "source_I1_D2D2",
+      "status": "PASS"
+    },
+    {
+      "actual": "exact Grassmann equality",
+      "id": "same_point_D_preimages_11",
+      "status": "PASS"
+    },
+    {
+      "actual": "exact Grassmann equality",
+      "id": "same_point_D_preimages_12",
+      "status": "PASS"
+    },
+    {
+      "actual": "exact Grassmann equality",
+      "id": "same_point_D_preimages_21",
+      "status": "PASS"
+    },
+    {
+      "actual": "exact Grassmann equality",
+      "id": "same_point_D_preimages_22",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "THH_BC_C_Bslot0",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "THH_BC_C_Bslot1",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "THH_CB_Bslot0_C",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "THH_CB_Bslot1_C",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "nonlinear_contact_BC_CCB",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "nonlinear_contact_CB_BCC",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "id": "flavor_same_TMM_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "id": "flavor_same_THH_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "id": "flavor_mixed_TMM_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "id": "flavor_mixed_THH_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "id": "flavor_same_DD_route_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "flavor_mixed_DD_route_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1, 1]",
+      "id": "flavor_same_THH_signs",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-1]",
+      "id": "flavor_mixed_THH_sign",
+      "status": "PASS"
+    },
+    {
+      "actual": "sqrt(2)*I",
+      "id": "component_D_vertex_coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "id": "component_phi_tildepsi_Hessian_block",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "id": "component_psi_tildephi_Hessian_block",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "component_same_flavor_DD_closed_routes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "component_mixed_flavor_DD_closed_routes",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "id": "component_two_source_vertex_assignments_exhausted",
+      "status": "PASS"
+    },
+    {
+      "actual": "hbar_g2/4096",
+      "id": "TMM_matter_bridge_primitive_weight",
+      "status": "PASS"
+    },
+    {
+      "actual": "-hbar_g2/128",
+      "id": "TMM_vector_bridge_primitive_weight",
+      "status": "PASS"
+    },
+    {
+      "actual": "hbar_g2/2048",
+      "id": "THH_primitive_weight",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "id": "action_copy_Wick_weight",
+      "status": "PASS"
+    },
+    {
+      "actual": "exact Grassmann equality",
+      "id": "antichiral_symbol_XiD_XiE",
+      "status": "PASS"
+    },
+    {
+      "actual": "exact Grassmann equality",
+      "id": "antichiral_symbol_Xi_squared",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1",
+      "id": "3A78_normalized_middle_coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "id": "two_antichiral_endpoint_coefficients",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/32",
+      "id": "quadratic_Dyson_times_four_dimensional_Gaussian",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1/(D1*D2) + (mu_loop_squared + r_d_squared)/(D1*D2*r_d_squared)",
+      "id": "full_d_cutting_failure_is_mu2",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "full_loop_square_would_cut_exactly",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/(32*pi**2)",
+      "id": "DRED_mu2_triangle_master",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "id": "h_inverse_g_squared",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/(4*g_squared)",
+      "id": "ordered_action_variation_kinetic",
+      "status": "PASS"
+    },
+    {
+      "actual": "sqrt(2)/(2*g_squared)",
+      "id": "ordered_action_variation_potential",
+      "status": "PASS"
+    },
+    {
+      "actual": "-g_squared*hbar",
+      "id": "euclidean_SD_C_times_E",
+      "status": "PASS"
+    },
+    {
+      "actual": "2*g_squared*hbar",
+      "id": "minus_two_E_descendant_factor",
+      "status": "PASS"
+    },
+    {
+      "actual": "g_squared*hbar/(16*pi**2)",
+      "id": "regulated_BC_coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "Euler_potential_plus_explicit_potential_after_regulation",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "id": "BC_flavor_diagonal_density_divergence",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "BC_flavor_offdiagonal_density_divergence",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "id": "CB_flavor_diagonal_density_divergence",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "id": "CB_flavor_offdiagonal_density_divergence",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "id": "BCH_Gamma_linear_coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/2",
+      "id": "BCH_Gamma_quadratic_coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/2",
+      "id": "covariant_source_I0_coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1, 1/2]",
+      "id": "covariant_source_I1_coefficients",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1/2, 1/4, 1/2]",
+      "id": "covariant_source_I2_coefficients",
+      "status": "PASS"
+    }
+  ],
+  "color": {
+    "TMM_DD_chain": "(T_D)^A_Z (T_E)^Z_C kappa^(CB)=F^(AB)_(DE)",
+    "TMM_DD_tensor_if_nonzero": "F^(AB)_(DE)<D^D,D^E>",
+    "actual_coefficient_over_lambda1": "delta_rs",
+    "reverse_DD_chain": "(T_E)^B_Z (T_D)^Z_C kappa^(CA)=F^(AB)_(DE)"
+  },
+  "complete_outer_B_identity": "D_-D_+ barD^2 D^2 delta=-8 det(r) D^2 delta=8 bar(r)^2 D^2 delta",
+  "covariant_source_expansion": {
+    "I0": "(1/2)(D^2 Phi_r)C_s",
+    "I1": "[(D^a V)D_a Phi_r+(1/2)(D^2 V)Phi_r]C_s",
+    "I2": "[(1/2)[D^a V,V]D_a Phi_r+(1/4)D^a[D_a V,V]Phi_r+(1/2)(D^a V)(D_a V)Phi_r]C_s",
+    "connection": "Gamma_a=D_a V+(1/2)[D_a V,V]+O(V^3)",
+    "covariant_sum": "the four rows form K_-; none is deleted before the SD subtraction",
+    "nabla_squared": "nabla^2 Phi=D^2 Phi+2 Gamma^a D_a Phi+(D^a Gamma_a)Phi+Gamma^a Gamma_a Phi",
+    "order_V2_orbit": [
+      "I0 with (1/2!)*M1*M1: triangle parent",
+      "I1 with M1: nonlinear-source/collapsed contact",
+      "I0 with M2: matter seagull",
+      "I2: source seagull/tadpole contact"
+    ]
+  },
+  "cutting_failure": {
+    "DRED_difference": "bar(r_e)^2-r_(e,d)^2=mu_loop^2",
+    "full_d_zero": "r_(e,d)^2/(D0*D1*D2)-1/(D1*D2)=0",
+    "master": "1/(32*pi^2)",
+    "regulated_kernel": "mu_loop^2/(D0*D1*D2)"
+  },
+  "external_target_used": false,
+  "independent_component_wick_audit": {
+    "bottom_map": {
+      "B_r": "sqrt(2)*psi_(r,+)",
+      "C_s": "tildephi_s",
+      "D_dot": "i*tildelambda_dot"
+    },
+    "external_D_vertex": "+i*sqrt(2)*h*c*phi*tildepsi*D",
+    "locked_Yukawa": "-sqrt(2)*h*c*(tildephi*psi*lambda+phi*tildepsi*tildelambda)",
+    "quadratic_mixed_blocks": {
+      "G_(phi,tildepsi)": "0",
+      "G_(psi,tildephi)": "0",
+      "K_(phi,tildepsi)": "0",
+      "K_(psi,tildephi)": "0"
+    },
+    "r_eq_s_routes": [
+      {
+        "B_source_attachment": "psi1->tildepsi1@L",
+        "C_source_attachment": "tildephi1->phi1@R",
+        "bridge_kernel": "0",
+        "closed_triangle": false,
+        "remaining_bridge": "phi1->tildepsi1"
+      },
+      {
+        "B_source_attachment": "psi1->tildepsi1@R",
+        "C_source_attachment": "tildephi1->phi1@L",
+        "bridge_kernel": "0",
+        "closed_triangle": false,
+        "remaining_bridge": "phi1->tildepsi1"
+      }
+    ],
+    "r_neq_s_routes": [
+      {
+        "B_source_attachment": "psi1->tildepsi1@L",
+        "C_source_attachment": "tildephi2->phi2@R",
+        "bridge_kernel": "0",
+        "closed_triangle": false,
+        "remaining_bridge": "phi1->tildepsi2"
+      },
+      {
+        "B_source_attachment": "psi1->tildepsi1@R",
+        "C_source_attachment": "tildephi2->phi2@L",
+        "bridge_kernel": "0",
+        "closed_triangle": false,
+        "remaining_bridge": "phi1->tildepsi2"
+      }
+    ],
+    "verdict": "NO_ORDINARY_COMPONENT_DD_TMM_TRIANGLE; NOT_A_TEST_OF_THE_REGULATED_EOM_JACOBIAN"
+  },
+  "letters": {
+    "B_r": "(nabla_+ Phi_r)|",
+    "C_s": "tildePhi_s|",
+    "D_dot": "tildeW_dot|"
+  },
+  "normalization_trace": {
+    "Schwinger_descendant": "(-2)*(-hbar*g^2)=+2*hbar*g^2",
+    "coincident_kernel": "(1/2)*(1/(16*pi^2))=1/(32*pi^2)",
+    "final": "+2*hbar*g^2*(1/(32*pi^2))=+lambda1",
+    "four_dimensional_Gaussian": "M^4/(16*pi^2)",
+    "interaction_copy_Wick": "(1/2!)*(1+1)=1",
+    "locked_projector": "(1/16)*[-16*(barD U)*tildeW]=-1*(barD U)*tildeW",
+    "marked_source_to_antichiral_delta": "(1/2)*D^2 delta=(1/2)*(-4)*delta_-=-2*delta_-",
+    "odd_symbol_trace": "int d^2pi Xi_D Xi_E=<tildeW^D,tildeW^E>",
+    "quadratic_Dyson_factor": "1/2!",
+    "two_antichiral_endpoints": "(-1)*(-1)=+1"
+  },
+  "occurrence_orbit": [
+    {
+      "id": "BC-E-KIN",
+      "inverse_edge": true,
+      "regulated_remainder": "delta_rs*lambda1*F<D,D>",
+      "word": "-2*E_tilde_r,kin*C_s"
+    },
+    {
+      "id": "BC-E-POT",
+      "inverse_edge": false,
+      "regulated_remainder": "+sqrt(2)*K_potential",
+      "word": "+sqrt(2)*epsilon_rtu*(C_t cross C_u)*C_s inside -2E_tilde_r"
+    },
+    {
+      "id": "BC-X-POT",
+      "inverse_edge": false,
+      "regulated_remainder": "-sqrt(2)*K_potential",
+      "word": "-sqrt(2)*epsilon_rtu*(C_t cross C_u)*C_s explicit"
+    },
+    {
+      "id": "CB-E-KIN",
+      "inverse_edge": true,
+      "regulated_remainder": "delta_rs*lambda1*F<D,D>",
+      "word": "-2*C_s*E_tilde_r,kin"
+    },
+    {
+      "id": "CB-E-POT",
+      "inverse_edge": false,
+      "regulated_remainder": "+sqrt(2)*K_potential",
+      "word": "+sqrt(2)*C_s*epsilon_rtu*(C_t cross C_u) inside -2E_tilde_r"
+    },
+    {
+      "id": "CB-X-POT",
+      "inverse_edge": false,
+      "regulated_remainder": "-sqrt(2)*K_potential",
+      "word": "-sqrt(2)*C_s*epsilon_rtu*(C_t cross C_u) explicit"
+    }
+  ],
+  "old_raw_bottom_contact_projection_not_sd_divergence": {
+    "matter_seagull": "isolated pre-cut two-preimage projection is zero",
+    "nonlinear_epsilon_CCC_Hplus": "retained separately from the equal-and-opposite Euler-potential occurrence; identical regulated kernels cancel only after occurrence tagging",
+    "scope": "these are ordinary pre-cut bottom-source projections; they do not replace the covariant coincident density divergence K_-",
+    "source_I1": "isolated pre-cut tildeW-bottom projection is zero",
+    "source_I2": "isolated pre-cut two-preimage projection is zero"
+  },
+  "ordered_results": {
+    "B_r>C_s": "delta_rs*lambda1*F^(AB)_(DE)<D^D,D^E>",
+    "C_s>B_r": "delta_rs*lambda1*F^(AB)_(DE)<D^D,D^E>",
+    "r_eq_s_DD_port": "NONZERO_REGULATED_ANTICHIRAL_DENSITY_DIVERGENCE",
+    "r_neq_s_DD_port": "EXACT_ZERO_ANTICHIRAL_FUNCTIONAL_DERIVATIVE_DELTA_RS"
+  },
+  "physical_D_preimages": {
+    "Ddot1": "4 theta+ theta- bartheta^2",
+    "Ddot2": "-4 theta+ theta- bartheta^1",
+    "projector": "tildeW_dot^(1)=-(1/8)D^2 barD_dot V"
+  },
+  "primitive_weights": {
+    "THH": "hbar*g^2/2048",
+    "TMM_matter_bridge": "hbar*g^2/4096",
+    "TMM_vector_bridge": "-hbar*g^2/128",
+    "Wick": "(1/2!)*(1+1)=1"
+  },
+  "regulated_eom_jacobian": {
+    "antichiral_symbol": "Xi_D=tildeW_(D,dot-a)*pi^dot-a",
+    "bottom_projection": "tildeW_dot|=D_dot",
+    "coefficient": "2*hbar*g^2*(1/(32*pi^2))=lambda1",
+    "descendant": "-2*<E_tilde_r C_s>=+2*delta_rs*hbar*g^2*K_-",
+    "ordered_action_variation": "delta S_E/delta tildePhi_r=-h*E_tilde_r",
+    "quadratic_kernel": "K_-^(2)=F^(AB)_(DE)<tildeW^D,tildeW^E>*J_mu2",
+    "schwinger_vector_field": "X_rs^(AB)=tildePhi_s^B delta/delta(tildePhi_r^A)",
+    "sd_identity": "<C_s E_tilde_r>=-delta_rs*hbar*g^2*K_-",
+    "support": "tildePhi block only; vector, FP, NK, and non-minimal components are zero",
+    "symbol_trace": "int d^2pi Xi_D Xi_E=<tildeW^D,tildeW^E>"
+  },
+  "route_census": {
+    "r_eq_s": {
+      "THH": [
+        {
+          "bridge": 2,
+          "dd": false,
+          "flavor_sign": 1,
+          "output": "tildephi3>phi3"
+        },
+        {
+          "bridge": 3,
+          "dd": false,
+          "flavor_sign": 1,
+          "output": "tildephi2>phi2"
+        }
+      ],
+      "TMM": [
+        {
+          "bridge": "u",
+          "dd": false,
+          "output": "phi1>tildephi1"
+        },
+        {
+          "bridge": "phi1>tildephi1",
+          "dd": true,
+          "output": "u>u"
+        }
+      ]
+    },
+    "r_neq_s": {
+      "THH": [
+        {
+          "bridge": 3,
+          "dd": false,
+          "flavor_sign": -1,
+          "output": "tildephi2>phi1"
+        }
+      ],
+      "TMM": [
+        {
+          "bridge": "u",
+          "dd": false,
+          "output": "phi1>tildephi2"
+        }
+      ]
+    }
+  },
+  "schema": "awi.step5.bc-regulated-sd-konishi-exact.v2",
+  "status": "PASS_BC_CB_REGULATED_SD_KONISHI_EXACT",
+  "summary": {
+    "checks": 84,
+    "failed": 0,
+    "passed": 84
+  },
+  "why_old_component_zero_does_not_apply": [
+    "the old rows enumerate two ordinary Yukawa vertices before the Euler cut",
+    "the regulated Schwinger row differentiates the coincident C_s insertion and collapses the EOM edge",
+    "the surviving carrier is the antichiral density divergence K_-, not G_(phi,tildepsi)",
+    "the two D letters are the bottom component of the K_- coefficient <tildeW,tildeW>",
+    "no mixed boson-fermion propagator occurs in the Jacobian orbit"
+  ]
+}

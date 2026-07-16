@@ -1,0 +1,2262 @@
+{
+  "arithmetic": "Q(i), exact fractions only; no floating point",
+  "checks": {
+    "all_feynman_shift_midpoints_affine": true,
+    "all_three_momenta_and_both_dotted_indices_agree": true,
+    "color_parity_included_in_each_entry": true,
+    "minus_total_is_negative_plus_total": true,
+    "no_output_integer_is_used_as_an_input": true,
+    "six_permutations_times_two_placements_per_chirality": true
+  },
+  "contract_inputs": [
+    "step-01-supersymmetry-commutator.md (1.3)-(1.4), (1.51)-(1.52)",
+    "step-02a-flat-superspace.md (2A.4)-(2A.5), (2A.41)",
+    "step-05a-component-bv-brst-primitive-supergraph-grammar.md (5A.52), (5A.61)-(5A.62), (5A.64)-(5A.74)"
+  ],
+  "exact_validation_samples": [
+    {
+      "external_dotted_index_zero_based": 0,
+      "matches_sector_reference_exactly": true,
+      "momentum_p": [
+        {
+          "imag": "0",
+          "integer": 1,
+          "real": "1",
+          "text": "1"
+        },
+        {
+          "imag": "0",
+          "integer": 2,
+          "real": "2",
+          "text": "2"
+        },
+        {
+          "imag": "0",
+          "integer": 3,
+          "real": "3",
+          "text": "3"
+        },
+        {
+          "imag": "0",
+          "integer": 1,
+          "real": "1",
+          "text": "1"
+        }
+      ],
+      "momentum_q": [
+        {
+          "imag": "0",
+          "integer": -1,
+          "real": "-1",
+          "text": "-1"
+        },
+        {
+          "imag": "0",
+          "integer": -2,
+          "real": "-2",
+          "text": "-2"
+        },
+        {
+          "imag": "0",
+          "integer": -3,
+          "real": "-3",
+          "text": "-3"
+        },
+        {
+          "imag": "0",
+          "integer": -1,
+          "real": "-1",
+          "text": "-1"
+        }
+      ],
+      "normalized_total": {
+        "imag": "0",
+        "integer": 1024,
+        "real": "1024",
+        "text": "1024"
+      },
+      "sector": "+"
+    },
+    {
+      "external_dotted_index_zero_based": 0,
+      "matches_sector_reference_exactly": true,
+      "momentum_p": [
+        {
+          "imag": "0",
+          "integer": 1,
+          "real": "1",
+          "text": "1"
+        },
+        {
+          "imag": "0",
+          "integer": 2,
+          "real": "2",
+          "text": "2"
+        },
+        {
+          "imag": "0",
+          "integer": 3,
+          "real": "3",
+          "text": "3"
+        },
+        {
+          "imag": "0",
+          "integer": 1,
+          "real": "1",
+          "text": "1"
+        }
+      ],
+      "momentum_q": [
+        {
+          "imag": "0",
+          "integer": -1,
+          "real": "-1",
+          "text": "-1"
+        },
+        {
+          "imag": "0",
+          "integer": -2,
+          "real": "-2",
+          "text": "-2"
+        },
+        {
+          "imag": "0",
+          "integer": -3,
+          "real": "-3",
+          "text": "-3"
+        },
+        {
+          "imag": "0",
+          "integer": -1,
+          "real": "-1",
+          "text": "-1"
+        }
+      ],
+      "normalized_total": {
+        "imag": "0",
+        "integer": -1024,
+        "real": "-1024",
+        "text": "-1024"
+      },
+      "sector": "-"
+    },
+    {
+      "external_dotted_index_zero_based": 1,
+      "matches_sector_reference_exactly": true,
+      "momentum_p": [
+        {
+          "imag": "0",
+          "integer": 1,
+          "real": "1",
+          "text": "1"
+        },
+        {
+          "imag": "0",
+          "integer": 2,
+          "real": "2",
+          "text": "2"
+        },
+        {
+          "imag": "0",
+          "integer": 3,
+          "real": "3",
+          "text": "3"
+        },
+        {
+          "imag": "0",
+          "integer": 1,
+          "real": "1",
+          "text": "1"
+        }
+      ],
+      "momentum_q": [
+        {
+          "imag": "0",
+          "integer": -1,
+          "real": "-1",
+          "text": "-1"
+        },
+        {
+          "imag": "0",
+          "integer": -2,
+          "real": "-2",
+          "text": "-2"
+        },
+        {
+          "imag": "0",
+          "integer": -3,
+          "real": "-3",
+          "text": "-3"
+        },
+        {
+          "imag": "0",
+          "integer": -1,
+          "real": "-1",
+          "text": "-1"
+        }
+      ],
+      "normalized_total": {
+        "imag": "0",
+        "integer": 1024,
+        "real": "1024",
+        "text": "1024"
+      },
+      "sector": "+"
+    },
+    {
+      "external_dotted_index_zero_based": 1,
+      "matches_sector_reference_exactly": true,
+      "momentum_p": [
+        {
+          "imag": "0",
+          "integer": 1,
+          "real": "1",
+          "text": "1"
+        },
+        {
+          "imag": "0",
+          "integer": 2,
+          "real": "2",
+          "text": "2"
+        },
+        {
+          "imag": "0",
+          "integer": 3,
+          "real": "3",
+          "text": "3"
+        },
+        {
+          "imag": "0",
+          "integer": 1,
+          "real": "1",
+          "text": "1"
+        }
+      ],
+      "momentum_q": [
+        {
+          "imag": "0",
+          "integer": -1,
+          "real": "-1",
+          "text": "-1"
+        },
+        {
+          "imag": "0",
+          "integer": -2,
+          "real": "-2",
+          "text": "-2"
+        },
+        {
+          "imag": "0",
+          "integer": -3,
+          "real": "-3",
+          "text": "-3"
+        },
+        {
+          "imag": "0",
+          "integer": -1,
+          "real": "-1",
+          "text": "-1"
+        }
+      ],
+      "normalized_total": {
+        "imag": "0",
+        "integer": -1024,
+        "real": "-1024",
+        "text": "-1024"
+      },
+      "sector": "-"
+    },
+    {
+      "external_dotted_index_zero_based": 0,
+      "matches_sector_reference_exactly": true,
+      "momentum_p": [
+        {
+          "imag": "0",
+          "integer": 2,
+          "real": "2",
+          "text": "2"
+        },
+        {
+          "imag": "0",
+          "integer": -1,
+          "real": "-1",
+          "text": "-1"
+        },
+        {
+          "imag": "0",
+          "integer": 1,
+          "real": "1",
+          "text": "1"
+        },
+        {
+          "imag": "0",
+          "integer": 3,
+          "real": "3",
+          "text": "3"
+        }
+      ],
+      "momentum_q": [
+        {
+          "imag": "0",
+          "integer": -2,
+          "real": "-2",
+          "text": "-2"
+        },
+        {
+          "imag": "0",
+          "integer": 1,
+          "real": "1",
+          "text": "1"
+        },
+        {
+          "imag": "0",
+          "integer": -1,
+          "real": "-1",
+          "text": "-1"
+        },
+        {
+          "imag": "0",
+          "integer": -3,
+          "real": "-3",
+          "text": "-3"
+        }
+      ],
+      "normalized_total": {
+        "imag": "0",
+        "integer": 1024,
+        "real": "1024",
+        "text": "1024"
+      },
+      "sector": "+"
+    },
+    {
+      "external_dotted_index_zero_based": 0,
+      "matches_sector_reference_exactly": true,
+      "momentum_p": [
+        {
+          "imag": "0",
+          "integer": 2,
+          "real": "2",
+          "text": "2"
+        },
+        {
+          "imag": "0",
+          "integer": -1,
+          "real": "-1",
+          "text": "-1"
+        },
+        {
+          "imag": "0",
+          "integer": 1,
+          "real": "1",
+          "text": "1"
+        },
+        {
+          "imag": "0",
+          "integer": 3,
+          "real": "3",
+          "text": "3"
+        }
+      ],
+      "momentum_q": [
+        {
+          "imag": "0",
+          "integer": -2,
+          "real": "-2",
+          "text": "-2"
+        },
+        {
+          "imag": "0",
+          "integer": 1,
+          "real": "1",
+          "text": "1"
+        },
+        {
+          "imag": "0",
+          "integer": -1,
+          "real": "-1",
+          "text": "-1"
+        },
+        {
+          "imag": "0",
+          "integer": -3,
+          "real": "-3",
+          "text": "-3"
+        }
+      ],
+      "normalized_total": {
+        "imag": "0",
+        "integer": -1024,
+        "real": "-1024",
+        "text": "-1024"
+      },
+      "sector": "-"
+    },
+    {
+      "external_dotted_index_zero_based": 1,
+      "matches_sector_reference_exactly": true,
+      "momentum_p": [
+        {
+          "imag": "0",
+          "integer": 2,
+          "real": "2",
+          "text": "2"
+        },
+        {
+          "imag": "0",
+          "integer": -1,
+          "real": "-1",
+          "text": "-1"
+        },
+        {
+          "imag": "0",
+          "integer": 1,
+          "real": "1",
+          "text": "1"
+        },
+        {
+          "imag": "0",
+          "integer": 3,
+          "real": "3",
+          "text": "3"
+        }
+      ],
+      "momentum_q": [
+        {
+          "imag": "0",
+          "integer": -2,
+          "real": "-2",
+          "text": "-2"
+        },
+        {
+          "imag": "0",
+          "integer": 1,
+          "real": "1",
+          "text": "1"
+        },
+        {
+          "imag": "0",
+          "integer": -1,
+          "real": "-1",
+          "text": "-1"
+        },
+        {
+          "imag": "0",
+          "integer": -3,
+          "real": "-3",
+          "text": "-3"
+        }
+      ],
+      "normalized_total": {
+        "imag": "0",
+        "integer": 1024,
+        "real": "1024",
+        "text": "1024"
+      },
+      "sector": "+"
+    },
+    {
+      "external_dotted_index_zero_based": 1,
+      "matches_sector_reference_exactly": true,
+      "momentum_p": [
+        {
+          "imag": "0",
+          "integer": 2,
+          "real": "2",
+          "text": "2"
+        },
+        {
+          "imag": "0",
+          "integer": -1,
+          "real": "-1",
+          "text": "-1"
+        },
+        {
+          "imag": "0",
+          "integer": 1,
+          "real": "1",
+          "text": "1"
+        },
+        {
+          "imag": "0",
+          "integer": 3,
+          "real": "3",
+          "text": "3"
+        }
+      ],
+      "momentum_q": [
+        {
+          "imag": "0",
+          "integer": -2,
+          "real": "-2",
+          "text": "-2"
+        },
+        {
+          "imag": "0",
+          "integer": 1,
+          "real": "1",
+          "text": "1"
+        },
+        {
+          "imag": "0",
+          "integer": -1,
+          "real": "-1",
+          "text": "-1"
+        },
+        {
+          "imag": "0",
+          "integer": -3,
+          "real": "-3",
+          "text": "-3"
+        }
+      ],
+      "normalized_total": {
+        "imag": "0",
+        "integer": -1024,
+        "real": "-1024",
+        "text": "-1024"
+      },
+      "sector": "-"
+    },
+    {
+      "external_dotted_index_zero_based": 0,
+      "matches_sector_reference_exactly": true,
+      "momentum_p": [
+        {
+          "imag": "0",
+          "integer": -1,
+          "real": "-1",
+          "text": "-1"
+        },
+        {
+          "imag": "0",
+          "integer": 3,
+          "real": "3",
+          "text": "3"
+        },
+        {
+          "imag": "0",
+          "integer": 2,
+          "real": "2",
+          "text": "2"
+        },
+        {
+          "imag": "0",
+          "integer": 2,
+          "real": "2",
+          "text": "2"
+        }
+      ],
+      "momentum_q": [
+        {
+          "imag": "0",
+          "integer": 1,
+          "real": "1",
+          "text": "1"
+        },
+        {
+          "imag": "0",
+          "integer": -3,
+          "real": "-3",
+          "text": "-3"
+        },
+        {
+          "imag": "0",
+          "integer": -2,
+          "real": "-2",
+          "text": "-2"
+        },
+        {
+          "imag": "0",
+          "integer": -2,
+          "real": "-2",
+          "text": "-2"
+        }
+      ],
+      "normalized_total": {
+        "imag": "0",
+        "integer": 1024,
+        "real": "1024",
+        "text": "1024"
+      },
+      "sector": "+"
+    },
+    {
+      "external_dotted_index_zero_based": 0,
+      "matches_sector_reference_exactly": true,
+      "momentum_p": [
+        {
+          "imag": "0",
+          "integer": -1,
+          "real": "-1",
+          "text": "-1"
+        },
+        {
+          "imag": "0",
+          "integer": 3,
+          "real": "3",
+          "text": "3"
+        },
+        {
+          "imag": "0",
+          "integer": 2,
+          "real": "2",
+          "text": "2"
+        },
+        {
+          "imag": "0",
+          "integer": 2,
+          "real": "2",
+          "text": "2"
+        }
+      ],
+      "momentum_q": [
+        {
+          "imag": "0",
+          "integer": 1,
+          "real": "1",
+          "text": "1"
+        },
+        {
+          "imag": "0",
+          "integer": -3,
+          "real": "-3",
+          "text": "-3"
+        },
+        {
+          "imag": "0",
+          "integer": -2,
+          "real": "-2",
+          "text": "-2"
+        },
+        {
+          "imag": "0",
+          "integer": -2,
+          "real": "-2",
+          "text": "-2"
+        }
+      ],
+      "normalized_total": {
+        "imag": "0",
+        "integer": -1024,
+        "real": "-1024",
+        "text": "-1024"
+      },
+      "sector": "-"
+    },
+    {
+      "external_dotted_index_zero_based": 1,
+      "matches_sector_reference_exactly": true,
+      "momentum_p": [
+        {
+          "imag": "0",
+          "integer": -1,
+          "real": "-1",
+          "text": "-1"
+        },
+        {
+          "imag": "0",
+          "integer": 3,
+          "real": "3",
+          "text": "3"
+        },
+        {
+          "imag": "0",
+          "integer": 2,
+          "real": "2",
+          "text": "2"
+        },
+        {
+          "imag": "0",
+          "integer": 2,
+          "real": "2",
+          "text": "2"
+        }
+      ],
+      "momentum_q": [
+        {
+          "imag": "0",
+          "integer": 1,
+          "real": "1",
+          "text": "1"
+        },
+        {
+          "imag": "0",
+          "integer": -3,
+          "real": "-3",
+          "text": "-3"
+        },
+        {
+          "imag": "0",
+          "integer": -2,
+          "real": "-2",
+          "text": "-2"
+        },
+        {
+          "imag": "0",
+          "integer": -2,
+          "real": "-2",
+          "text": "-2"
+        }
+      ],
+      "normalized_total": {
+        "imag": "0",
+        "integer": 1024,
+        "real": "1024",
+        "text": "1024"
+      },
+      "sector": "+"
+    },
+    {
+      "external_dotted_index_zero_based": 1,
+      "matches_sector_reference_exactly": true,
+      "momentum_p": [
+        {
+          "imag": "0",
+          "integer": -1,
+          "real": "-1",
+          "text": "-1"
+        },
+        {
+          "imag": "0",
+          "integer": 3,
+          "real": "3",
+          "text": "3"
+        },
+        {
+          "imag": "0",
+          "integer": 2,
+          "real": "2",
+          "text": "2"
+        },
+        {
+          "imag": "0",
+          "integer": 2,
+          "real": "2",
+          "text": "2"
+        }
+      ],
+      "momentum_q": [
+        {
+          "imag": "0",
+          "integer": 1,
+          "real": "1",
+          "text": "1"
+        },
+        {
+          "imag": "0",
+          "integer": -3,
+          "real": "-3",
+          "text": "-3"
+        },
+        {
+          "imag": "0",
+          "integer": -2,
+          "real": "-2",
+          "text": "-2"
+        },
+        {
+          "imag": "0",
+          "integer": -2,
+          "real": "-2",
+          "text": "-2"
+        }
+      ],
+      "normalized_total": {
+        "imag": "0",
+        "integer": -1024,
+        "real": "-1024",
+        "text": "-1024"
+      },
+      "sector": "-"
+    }
+  ],
+  "external_order": "eta_B eta_D = (P_dot-a B_1^E) D^{D dot-a}",
+  "generated_tables": {
+    "minus": [
+      {
+        "LQ": {
+          "imag": "0",
+          "integer": 0,
+          "real": "0",
+          "text": "0"
+        },
+        "QL": {
+          "imag": "0",
+          "integer": 0,
+          "real": "0",
+          "text": "0"
+        },
+        "color_permutation_sign": 1,
+        "permutation": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "LQ": {
+          "imag": "0",
+          "integer": 0,
+          "real": "0",
+          "text": "0"
+        },
+        "QL": {
+          "imag": "0",
+          "integer": 0,
+          "real": "0",
+          "text": "0"
+        },
+        "color_permutation_sign": -1,
+        "permutation": [
+          0,
+          2,
+          1
+        ]
+      },
+      {
+        "LQ": {
+          "imag": "0",
+          "integer": 0,
+          "real": "0",
+          "text": "0"
+        },
+        "QL": {
+          "imag": "0",
+          "integer": 0,
+          "real": "0",
+          "text": "0"
+        },
+        "color_permutation_sign": -1,
+        "permutation": [
+          1,
+          0,
+          2
+        ]
+      },
+      {
+        "LQ": {
+          "imag": "0",
+          "integer": -512,
+          "real": "-512",
+          "text": "-512"
+        },
+        "QL": {
+          "imag": "0",
+          "integer": 0,
+          "real": "0",
+          "text": "0"
+        },
+        "color_permutation_sign": 1,
+        "permutation": [
+          1,
+          2,
+          0
+        ]
+      },
+      {
+        "LQ": {
+          "imag": "0",
+          "integer": 0,
+          "real": "0",
+          "text": "0"
+        },
+        "QL": {
+          "imag": "0",
+          "integer": -512,
+          "real": "-512",
+          "text": "-512"
+        },
+        "color_permutation_sign": 1,
+        "permutation": [
+          2,
+          0,
+          1
+        ]
+      },
+      {
+        "LQ": {
+          "imag": "0",
+          "integer": 0,
+          "real": "0",
+          "text": "0"
+        },
+        "QL": {
+          "imag": "0",
+          "integer": 0,
+          "real": "0",
+          "text": "0"
+        },
+        "color_permutation_sign": -1,
+        "permutation": [
+          2,
+          1,
+          0
+        ]
+      }
+    ],
+    "minus_total": {
+      "imag": "0",
+      "integer": -1024,
+      "real": "-1024",
+      "text": "-1024"
+    },
+    "plus": [
+      {
+        "LQ": {
+          "imag": "0",
+          "integer": 512,
+          "real": "512",
+          "text": "512"
+        },
+        "QL": {
+          "imag": "0",
+          "integer": 0,
+          "real": "0",
+          "text": "0"
+        },
+        "color_permutation_sign": 1,
+        "permutation": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "LQ": {
+          "imag": "0",
+          "integer": 512,
+          "real": "512",
+          "text": "512"
+        },
+        "QL": {
+          "imag": "0",
+          "integer": 0,
+          "real": "0",
+          "text": "0"
+        },
+        "color_permutation_sign": -1,
+        "permutation": [
+          0,
+          2,
+          1
+        ]
+      },
+      {
+        "LQ": {
+          "imag": "0",
+          "integer": 0,
+          "real": "0",
+          "text": "0"
+        },
+        "QL": {
+          "imag": "0",
+          "integer": 0,
+          "real": "0",
+          "text": "0"
+        },
+        "color_permutation_sign": -1,
+        "permutation": [
+          1,
+          0,
+          2
+        ]
+      },
+      {
+        "LQ": {
+          "imag": "0",
+          "integer": -512,
+          "real": "-512",
+          "text": "-512"
+        },
+        "QL": {
+          "imag": "0",
+          "integer": 512,
+          "real": "512",
+          "text": "512"
+        },
+        "color_permutation_sign": 1,
+        "permutation": [
+          1,
+          2,
+          0
+        ]
+      },
+      {
+        "LQ": {
+          "imag": "0",
+          "integer": 0,
+          "real": "0",
+          "text": "0"
+        },
+        "QL": {
+          "imag": "0",
+          "integer": -512,
+          "real": "-512",
+          "text": "-512"
+        },
+        "color_permutation_sign": 1,
+        "permutation": [
+          2,
+          0,
+          1
+        ]
+      },
+      {
+        "LQ": {
+          "imag": "0",
+          "integer": 0,
+          "real": "0",
+          "text": "0"
+        },
+        "QL": {
+          "imag": "0",
+          "integer": 512,
+          "real": "512",
+          "text": "512"
+        },
+        "color_permutation_sign": -1,
+        "permutation": [
+          2,
+          1,
+          0
+        ]
+      }
+    ],
+    "plus_total": {
+      "imag": "0",
+      "integer": 1024,
+      "real": "1024",
+      "text": "1024"
+    }
+  },
+  "reference_word_traces": [
+    {
+      "entries": [
+        {
+          "affine_midpoint_check": true,
+          "color_permutation_sign": 1,
+          "endpoint_spinor_i_barsigma_p": {
+            "imag": "2",
+            "real": "-1",
+            "text": "-1+2*i"
+          },
+          "loop_hessian_trace_at_y_0": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_1": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_half": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "normalized_coefficient": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "permutation": [
+            0,
+            1,
+            2
+          ],
+          "placement": "QL",
+          "polarized_word": "barD2(source_vector D^a matter_vector) barD2(D_a external_D)",
+          "simplex_trace_before_endpoint_division": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          }
+        },
+        {
+          "affine_midpoint_check": true,
+          "color_permutation_sign": 1,
+          "endpoint_spinor_i_barsigma_p": {
+            "imag": "2",
+            "real": "-1",
+            "text": "-1+2*i"
+          },
+          "loop_hessian_trace_at_y_0": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_1": {
+            "imag": "24576",
+            "real": "-12288",
+            "text": "-12288+24576*i"
+          },
+          "loop_hessian_trace_at_y_half": {
+            "imag": "12288",
+            "real": "-6144",
+            "text": "-6144+12288*i"
+          },
+          "normalized_coefficient": {
+            "imag": "0",
+            "integer": 512,
+            "real": "512",
+            "text": "512"
+          },
+          "permutation": [
+            0,
+            1,
+            2
+          ],
+          "placement": "LQ",
+          "polarized_word": "barD2(D^a source_vector) barD2(matter_vector D_a external_D)",
+          "simplex_trace_before_endpoint_division": {
+            "imag": "1024",
+            "real": "-512",
+            "text": "-512+1024*i"
+          }
+        },
+        {
+          "affine_midpoint_check": true,
+          "color_permutation_sign": -1,
+          "endpoint_spinor_i_barsigma_p": {
+            "imag": "2",
+            "real": "-1",
+            "text": "-1+2*i"
+          },
+          "loop_hessian_trace_at_y_0": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_1": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_half": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "normalized_coefficient": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "permutation": [
+            0,
+            2,
+            1
+          ],
+          "placement": "QL",
+          "polarized_word": "barD2(source_vector D^a external_D) barD2(D_a matter_vector)",
+          "simplex_trace_before_endpoint_division": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          }
+        },
+        {
+          "affine_midpoint_check": true,
+          "color_permutation_sign": -1,
+          "endpoint_spinor_i_barsigma_p": {
+            "imag": "2",
+            "real": "-1",
+            "text": "-1+2*i"
+          },
+          "loop_hessian_trace_at_y_0": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_1": {
+            "imag": "24576",
+            "real": "-12288",
+            "text": "-12288+24576*i"
+          },
+          "loop_hessian_trace_at_y_half": {
+            "imag": "12288",
+            "real": "-6144",
+            "text": "-6144+12288*i"
+          },
+          "normalized_coefficient": {
+            "imag": "0",
+            "integer": 512,
+            "real": "512",
+            "text": "512"
+          },
+          "permutation": [
+            0,
+            2,
+            1
+          ],
+          "placement": "LQ",
+          "polarized_word": "barD2(D^a source_vector) barD2(external_D D_a matter_vector)",
+          "simplex_trace_before_endpoint_division": {
+            "imag": "1024",
+            "real": "-512",
+            "text": "-512+1024*i"
+          }
+        },
+        {
+          "affine_midpoint_check": true,
+          "color_permutation_sign": -1,
+          "endpoint_spinor_i_barsigma_p": {
+            "imag": "2",
+            "real": "-1",
+            "text": "-1+2*i"
+          },
+          "loop_hessian_trace_at_y_0": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_1": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_half": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "normalized_coefficient": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "permutation": [
+            1,
+            0,
+            2
+          ],
+          "placement": "QL",
+          "polarized_word": "barD2(matter_vector D^a source_vector) barD2(D_a external_D)",
+          "simplex_trace_before_endpoint_division": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          }
+        },
+        {
+          "affine_midpoint_check": true,
+          "color_permutation_sign": -1,
+          "endpoint_spinor_i_barsigma_p": {
+            "imag": "2",
+            "real": "-1",
+            "text": "-1+2*i"
+          },
+          "loop_hessian_trace_at_y_0": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_1": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_half": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "normalized_coefficient": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "permutation": [
+            1,
+            0,
+            2
+          ],
+          "placement": "LQ",
+          "polarized_word": "barD2(D^a matter_vector) barD2(source_vector D_a external_D)",
+          "simplex_trace_before_endpoint_division": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          }
+        },
+        {
+          "affine_midpoint_check": true,
+          "color_permutation_sign": 1,
+          "endpoint_spinor_i_barsigma_p": {
+            "imag": "2",
+            "real": "-1",
+            "text": "-1+2*i"
+          },
+          "loop_hessian_trace_at_y_0": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_1": {
+            "imag": "24576",
+            "real": "-12288",
+            "text": "-12288+24576*i"
+          },
+          "loop_hessian_trace_at_y_half": {
+            "imag": "12288",
+            "real": "-6144",
+            "text": "-6144+12288*i"
+          },
+          "normalized_coefficient": {
+            "imag": "0",
+            "integer": 512,
+            "real": "512",
+            "text": "512"
+          },
+          "permutation": [
+            1,
+            2,
+            0
+          ],
+          "placement": "QL",
+          "polarized_word": "barD2(matter_vector D^a external_D) barD2(D_a source_vector)",
+          "simplex_trace_before_endpoint_division": {
+            "imag": "1024",
+            "real": "-512",
+            "text": "-512+1024*i"
+          }
+        },
+        {
+          "affine_midpoint_check": true,
+          "color_permutation_sign": 1,
+          "endpoint_spinor_i_barsigma_p": {
+            "imag": "2",
+            "real": "-1",
+            "text": "-1+2*i"
+          },
+          "loop_hessian_trace_at_y_0": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_1": {
+            "imag": "-24576",
+            "real": "12288",
+            "text": "12288-24576*i"
+          },
+          "loop_hessian_trace_at_y_half": {
+            "imag": "-12288",
+            "real": "6144",
+            "text": "6144-12288*i"
+          },
+          "normalized_coefficient": {
+            "imag": "0",
+            "integer": -512,
+            "real": "-512",
+            "text": "-512"
+          },
+          "permutation": [
+            1,
+            2,
+            0
+          ],
+          "placement": "LQ",
+          "polarized_word": "barD2(D^a matter_vector) barD2(external_D D_a source_vector)",
+          "simplex_trace_before_endpoint_division": {
+            "imag": "-1024",
+            "real": "512",
+            "text": "512-1024*i"
+          }
+        },
+        {
+          "affine_midpoint_check": true,
+          "color_permutation_sign": 1,
+          "endpoint_spinor_i_barsigma_p": {
+            "imag": "2",
+            "real": "-1",
+            "text": "-1+2*i"
+          },
+          "loop_hessian_trace_at_y_0": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_1": {
+            "imag": "-24576",
+            "real": "12288",
+            "text": "12288-24576*i"
+          },
+          "loop_hessian_trace_at_y_half": {
+            "imag": "-12288",
+            "real": "6144",
+            "text": "6144-12288*i"
+          },
+          "normalized_coefficient": {
+            "imag": "0",
+            "integer": -512,
+            "real": "-512",
+            "text": "-512"
+          },
+          "permutation": [
+            2,
+            0,
+            1
+          ],
+          "placement": "QL",
+          "polarized_word": "barD2(external_D D^a source_vector) barD2(D_a matter_vector)",
+          "simplex_trace_before_endpoint_division": {
+            "imag": "-1024",
+            "real": "512",
+            "text": "512-1024*i"
+          }
+        },
+        {
+          "affine_midpoint_check": true,
+          "color_permutation_sign": 1,
+          "endpoint_spinor_i_barsigma_p": {
+            "imag": "2",
+            "real": "-1",
+            "text": "-1+2*i"
+          },
+          "loop_hessian_trace_at_y_0": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_1": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_half": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "normalized_coefficient": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "permutation": [
+            2,
+            0,
+            1
+          ],
+          "placement": "LQ",
+          "polarized_word": "barD2(D^a external_D) barD2(source_vector D_a matter_vector)",
+          "simplex_trace_before_endpoint_division": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          }
+        },
+        {
+          "affine_midpoint_check": true,
+          "color_permutation_sign": -1,
+          "endpoint_spinor_i_barsigma_p": {
+            "imag": "2",
+            "real": "-1",
+            "text": "-1+2*i"
+          },
+          "loop_hessian_trace_at_y_0": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_1": {
+            "imag": "24576",
+            "real": "-12288",
+            "text": "-12288+24576*i"
+          },
+          "loop_hessian_trace_at_y_half": {
+            "imag": "12288",
+            "real": "-6144",
+            "text": "-6144+12288*i"
+          },
+          "normalized_coefficient": {
+            "imag": "0",
+            "integer": 512,
+            "real": "512",
+            "text": "512"
+          },
+          "permutation": [
+            2,
+            1,
+            0
+          ],
+          "placement": "QL",
+          "polarized_word": "barD2(external_D D^a matter_vector) barD2(D_a source_vector)",
+          "simplex_trace_before_endpoint_division": {
+            "imag": "1024",
+            "real": "-512",
+            "text": "-512+1024*i"
+          }
+        },
+        {
+          "affine_midpoint_check": true,
+          "color_permutation_sign": -1,
+          "endpoint_spinor_i_barsigma_p": {
+            "imag": "2",
+            "real": "-1",
+            "text": "-1+2*i"
+          },
+          "loop_hessian_trace_at_y_0": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_1": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_half": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "normalized_coefficient": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "permutation": [
+            2,
+            1,
+            0
+          ],
+          "placement": "LQ",
+          "polarized_word": "barD2(D^a external_D) barD2(matter_vector D_a source_vector)",
+          "simplex_trace_before_endpoint_division": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          }
+        }
+      ],
+      "external_dotted_index_zero_based": 0,
+      "momentum_p": [
+        {
+          "imag": "0",
+          "integer": 1,
+          "real": "1",
+          "text": "1"
+        },
+        {
+          "imag": "0",
+          "integer": 2,
+          "real": "2",
+          "text": "2"
+        },
+        {
+          "imag": "0",
+          "integer": 3,
+          "real": "3",
+          "text": "3"
+        },
+        {
+          "imag": "0",
+          "integer": 1,
+          "real": "1",
+          "text": "1"
+        }
+      ],
+      "momentum_q": [
+        {
+          "imag": "0",
+          "integer": -1,
+          "real": "-1",
+          "text": "-1"
+        },
+        {
+          "imag": "0",
+          "integer": -2,
+          "real": "-2",
+          "text": "-2"
+        },
+        {
+          "imag": "0",
+          "integer": -3,
+          "real": "-3",
+          "text": "-3"
+        },
+        {
+          "imag": "0",
+          "integer": -1,
+          "real": "-1",
+          "text": "-1"
+        }
+      ],
+      "normalized_total": {
+        "imag": "0",
+        "integer": 1024,
+        "real": "1024",
+        "text": "1024"
+      },
+      "sector": "+"
+    },
+    {
+      "entries": [
+        {
+          "affine_midpoint_check": true,
+          "color_permutation_sign": 1,
+          "endpoint_spinor_i_barsigma_p": {
+            "imag": "2",
+            "real": "-1",
+            "text": "-1+2*i"
+          },
+          "loop_hessian_trace_at_y_0": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_1": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_half": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "normalized_coefficient": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "permutation": [
+            0,
+            1,
+            2
+          ],
+          "placement": "QL",
+          "polarized_word": "D2(source_vector barD_dot-a matter_vector) D2(barD^dot-a external_D)",
+          "simplex_trace_before_endpoint_division": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          }
+        },
+        {
+          "affine_midpoint_check": true,
+          "color_permutation_sign": 1,
+          "endpoint_spinor_i_barsigma_p": {
+            "imag": "2",
+            "real": "-1",
+            "text": "-1+2*i"
+          },
+          "loop_hessian_trace_at_y_0": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_1": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_half": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "normalized_coefficient": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "permutation": [
+            0,
+            1,
+            2
+          ],
+          "placement": "LQ",
+          "polarized_word": "D2(barD_dot-a source_vector) D2(matter_vector barD^dot-a external_D)",
+          "simplex_trace_before_endpoint_division": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          }
+        },
+        {
+          "affine_midpoint_check": true,
+          "color_permutation_sign": -1,
+          "endpoint_spinor_i_barsigma_p": {
+            "imag": "2",
+            "real": "-1",
+            "text": "-1+2*i"
+          },
+          "loop_hessian_trace_at_y_0": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_1": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_half": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "normalized_coefficient": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "permutation": [
+            0,
+            2,
+            1
+          ],
+          "placement": "QL",
+          "polarized_word": "D2(source_vector barD_dot-a external_D) D2(barD^dot-a matter_vector)",
+          "simplex_trace_before_endpoint_division": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          }
+        },
+        {
+          "affine_midpoint_check": true,
+          "color_permutation_sign": -1,
+          "endpoint_spinor_i_barsigma_p": {
+            "imag": "2",
+            "real": "-1",
+            "text": "-1+2*i"
+          },
+          "loop_hessian_trace_at_y_0": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_1": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_half": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "normalized_coefficient": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "permutation": [
+            0,
+            2,
+            1
+          ],
+          "placement": "LQ",
+          "polarized_word": "D2(barD_dot-a source_vector) D2(external_D barD^dot-a matter_vector)",
+          "simplex_trace_before_endpoint_division": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          }
+        },
+        {
+          "affine_midpoint_check": true,
+          "color_permutation_sign": -1,
+          "endpoint_spinor_i_barsigma_p": {
+            "imag": "2",
+            "real": "-1",
+            "text": "-1+2*i"
+          },
+          "loop_hessian_trace_at_y_0": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_1": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_half": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "normalized_coefficient": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "permutation": [
+            1,
+            0,
+            2
+          ],
+          "placement": "QL",
+          "polarized_word": "D2(matter_vector barD_dot-a source_vector) D2(barD^dot-a external_D)",
+          "simplex_trace_before_endpoint_division": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          }
+        },
+        {
+          "affine_midpoint_check": true,
+          "color_permutation_sign": -1,
+          "endpoint_spinor_i_barsigma_p": {
+            "imag": "2",
+            "real": "-1",
+            "text": "-1+2*i"
+          },
+          "loop_hessian_trace_at_y_0": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_1": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_half": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "normalized_coefficient": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "permutation": [
+            1,
+            0,
+            2
+          ],
+          "placement": "LQ",
+          "polarized_word": "D2(barD_dot-a matter_vector) D2(source_vector barD^dot-a external_D)",
+          "simplex_trace_before_endpoint_division": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          }
+        },
+        {
+          "affine_midpoint_check": true,
+          "color_permutation_sign": 1,
+          "endpoint_spinor_i_barsigma_p": {
+            "imag": "2",
+            "real": "-1",
+            "text": "-1+2*i"
+          },
+          "loop_hessian_trace_at_y_0": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_1": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_half": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "normalized_coefficient": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "permutation": [
+            1,
+            2,
+            0
+          ],
+          "placement": "QL",
+          "polarized_word": "D2(matter_vector barD_dot-a external_D) D2(barD^dot-a source_vector)",
+          "simplex_trace_before_endpoint_division": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          }
+        },
+        {
+          "affine_midpoint_check": true,
+          "color_permutation_sign": 1,
+          "endpoint_spinor_i_barsigma_p": {
+            "imag": "2",
+            "real": "-1",
+            "text": "-1+2*i"
+          },
+          "loop_hessian_trace_at_y_0": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_1": {
+            "imag": "-24576",
+            "real": "12288",
+            "text": "12288-24576*i"
+          },
+          "loop_hessian_trace_at_y_half": {
+            "imag": "-12288",
+            "real": "6144",
+            "text": "6144-12288*i"
+          },
+          "normalized_coefficient": {
+            "imag": "0",
+            "integer": -512,
+            "real": "-512",
+            "text": "-512"
+          },
+          "permutation": [
+            1,
+            2,
+            0
+          ],
+          "placement": "LQ",
+          "polarized_word": "D2(barD_dot-a matter_vector) D2(external_D barD^dot-a source_vector)",
+          "simplex_trace_before_endpoint_division": {
+            "imag": "-1024",
+            "real": "512",
+            "text": "512-1024*i"
+          }
+        },
+        {
+          "affine_midpoint_check": true,
+          "color_permutation_sign": 1,
+          "endpoint_spinor_i_barsigma_p": {
+            "imag": "2",
+            "real": "-1",
+            "text": "-1+2*i"
+          },
+          "loop_hessian_trace_at_y_0": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_1": {
+            "imag": "-24576",
+            "real": "12288",
+            "text": "12288-24576*i"
+          },
+          "loop_hessian_trace_at_y_half": {
+            "imag": "-12288",
+            "real": "6144",
+            "text": "6144-12288*i"
+          },
+          "normalized_coefficient": {
+            "imag": "0",
+            "integer": -512,
+            "real": "-512",
+            "text": "-512"
+          },
+          "permutation": [
+            2,
+            0,
+            1
+          ],
+          "placement": "QL",
+          "polarized_word": "D2(external_D barD_dot-a source_vector) D2(barD^dot-a matter_vector)",
+          "simplex_trace_before_endpoint_division": {
+            "imag": "-1024",
+            "real": "512",
+            "text": "512-1024*i"
+          }
+        },
+        {
+          "affine_midpoint_check": true,
+          "color_permutation_sign": 1,
+          "endpoint_spinor_i_barsigma_p": {
+            "imag": "2",
+            "real": "-1",
+            "text": "-1+2*i"
+          },
+          "loop_hessian_trace_at_y_0": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_1": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_half": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "normalized_coefficient": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "permutation": [
+            2,
+            0,
+            1
+          ],
+          "placement": "LQ",
+          "polarized_word": "D2(barD_dot-a external_D) D2(source_vector barD^dot-a matter_vector)",
+          "simplex_trace_before_endpoint_division": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          }
+        },
+        {
+          "affine_midpoint_check": true,
+          "color_permutation_sign": -1,
+          "endpoint_spinor_i_barsigma_p": {
+            "imag": "2",
+            "real": "-1",
+            "text": "-1+2*i"
+          },
+          "loop_hessian_trace_at_y_0": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_1": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_half": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "normalized_coefficient": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "permutation": [
+            2,
+            1,
+            0
+          ],
+          "placement": "QL",
+          "polarized_word": "D2(external_D barD_dot-a matter_vector) D2(barD^dot-a source_vector)",
+          "simplex_trace_before_endpoint_division": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          }
+        },
+        {
+          "affine_midpoint_check": true,
+          "color_permutation_sign": -1,
+          "endpoint_spinor_i_barsigma_p": {
+            "imag": "2",
+            "real": "-1",
+            "text": "-1+2*i"
+          },
+          "loop_hessian_trace_at_y_0": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_1": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "loop_hessian_trace_at_y_half": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "normalized_coefficient": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          },
+          "permutation": [
+            2,
+            1,
+            0
+          ],
+          "placement": "LQ",
+          "polarized_word": "D2(barD_dot-a external_D) D2(matter_vector barD^dot-a source_vector)",
+          "simplex_trace_before_endpoint_division": {
+            "imag": "0",
+            "integer": 0,
+            "real": "0",
+            "text": "0"
+          }
+        }
+      ],
+      "external_dotted_index_zero_based": 0,
+      "momentum_p": [
+        {
+          "imag": "0",
+          "integer": 1,
+          "real": "1",
+          "text": "1"
+        },
+        {
+          "imag": "0",
+          "integer": 2,
+          "real": "2",
+          "text": "2"
+        },
+        {
+          "imag": "0",
+          "integer": 3,
+          "real": "3",
+          "text": "3"
+        },
+        {
+          "imag": "0",
+          "integer": 1,
+          "real": "1",
+          "text": "1"
+        }
+      ],
+      "momentum_q": [
+        {
+          "imag": "0",
+          "integer": -1,
+          "real": "-1",
+          "text": "-1"
+        },
+        {
+          "imag": "0",
+          "integer": -2,
+          "real": "-2",
+          "text": "-2"
+        },
+        {
+          "imag": "0",
+          "integer": -3,
+          "real": "-3",
+          "text": "-3"
+        },
+        {
+          "imag": "0",
+          "integer": -1,
+          "real": "-1",
+          "text": "-1"
+        }
+      ],
+      "normalized_total": {
+        "imag": "0",
+        "integer": -1024,
+        "real": "-1024",
+        "text": "-1024"
+      },
+      "sector": "-"
+    }
+  ],
+  "role_order": [
+    "source_vector",
+    "matter_vector",
+    "external_D"
+  ],
+  "schema": "step5-ab1-g1-vvv-dword-replay-v1",
+  "source_transfer": {
+    "gauge_endpoint": "vector u with D2 barD_dot-a u|=eta_D",
+    "gauge_factor_before_outer_D2": "D_1 barD2 D_1 VVV",
+    "graded_outer_source_D2": "(D_2 D_1 barD2 D_1 VVV)(D_1 matter_line) + (D_1 barD2 D_1 VVV)(D_2 D_1 matter_line)",
+    "matter_endpoint": "chiral Phi with D_1 Phi|=eta_B",
+    "matter_line": "barD2 D2 delta^4(theta_S-theta_M)"
+  },
+  "tensor_and_simplex_rule": {
+    "kinematics": "q=-p after retaining P_dot-a on the external leg",
+    "midpoint_proof": "2 Delta_l N(p/2)=Delta_l N(0)+Delta_l N(p), checked word-by-word exactly",
+    "rank_two_trace": "C(y)=Delta_l N(l=y p)/8",
+    "simplex": "2 int_0^1 dy (1-y) C(y)=(2 Delta_l N(0)+Delta_l N(p))/24"
+  }
+}

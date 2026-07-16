@@ -1,0 +1,170 @@
+{
+  "basis": {
+    "identity": "a*X+b*Y=(a-b)*X+b*T_DB; T_DB=X+Y",
+    "matrix": [
+      [
+        "1",
+        "-1"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ],
+    "raw": [
+      "p_on_B1",
+      "q_on_D"
+    ],
+    "typed": [
+      "pair_<D,B1>",
+      "total_derivative_T_DB"
+    ]
+  },
+  "checks": {
+    "count": 17,
+    "failed": 0,
+    "passed": 17,
+    "rows": [
+      {
+        "actual": "Matrix([[4/3], [2/3]])",
+        "expected": "Matrix([[4/3], [2/3]])",
+        "id": "SOURCE_SELECTED_A",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[2/3], [4/3]])",
+        "expected": "Matrix([[2/3], [4/3]])",
+        "id": "SOURCE_SELECTED_B",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[2], [2]])",
+        "expected": "Matrix([[2], [2]])",
+        "id": "SOURCE_SELECTED_SUM",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[0], [2]])",
+        "expected": "Matrix([[0], [2]])",
+        "id": "D_GT_B1_PAIR_TOTAL_DERIVATIVE_MAP",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SOURCE_SELECTED_PHYSICAL_MOD_TOTAL_DERIVATIVE",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "id": "SOURCE_SELECTED_IS_TWO_T_DB",
+        "status": "PASS"
+      },
+      {
+        "actual": "2/3",
+        "expected": "2/3",
+        "id": "SOURCE_SELECTED_A_Q_EQUALS_MINUS_P",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2/3",
+        "expected": "-2/3",
+        "id": "SOURCE_SELECTED_B_Q_EQUALS_MINUS_P",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "SOURCE_SELECTED_LOCAL_SUM",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "G1_ARTIFACT_DERIVED_AB",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/6",
+        "expected": "1/6",
+        "id": "REJECTED_GENERIC_Q_EQUALS_MINUS_P",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/2",
+        "expected": "-1/2",
+        "id": "DIRECT_ONE_VARIABLE_Q_EQUALS_MINUS_P",
+        "status": "PASS"
+      },
+      {
+        "actual": "2/3",
+        "expected": "2/3",
+        "id": "GENERIC_SPECIALIZATION_MISMATCH",
+        "status": "PASS"
+      },
+      {
+        "actual": "BLOCKED_RAW_GRAPH_Q_DATA_MISSING",
+        "expected": "BLOCKED_RAW_GRAPH_Q_DATA_MISSING",
+        "id": "FULL_1PI_RAW_G1_STATUS",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "FULL_1PI_REJECTS_GENERIC_LIFT",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[0], [2]])",
+        "expected": "Matrix([[0], [2]])",
+        "id": "UNIFIED_STORED_G1_PAIR_TD",
+        "status": "PASS"
+      },
+      {
+        "actual": "True",
+        "expected": "True",
+        "id": "UNIFIED_STATUS_CONTAINS_G1_FACTOR_TWO",
+        "status": "PASS"
+      }
+    ]
+  },
+  "external_target_used": false,
+  "first_error": {
+    "consequence": "G1 cannot be grouped with G3 as a common physical factor-two mismatch",
+    "exact_correction": "(2,2)=2*T_DB maps to (pair,total derivative)=(0,2)",
+    "invalid_step": "(2,2) in raw (p,q) basis was called a physical factor two",
+    "location": "unified G1 status after G1_TYPED_PAIR_TOTAL_DERIVATIVE"
+  },
+  "rejected_generic_lift": {
+    "difference": "2/3",
+    "direct_one_variable": "-1/2",
+    "q_equals_minus_p": "1/6",
+    "raw_p_q": [
+      "-7/6",
+      "-4/3"
+    ],
+    "status": "BLOCKED_RAW_GRAPH_Q_DATA_MISSING"
+  },
+  "schema": "step5-ab-ba-g1-provenance-first-error-exact-v1",
+  "source_selected_orbit": {
+    "A": [
+      "4/3",
+      "2/3"
+    ],
+    "B": [
+      "2/3",
+      "4/3"
+    ],
+    "physical_mod_total_derivative": "0",
+    "sum_raw": [
+      "2",
+      "2"
+    ],
+    "sum_typed": [
+      "0",
+      "2"
+    ]
+  },
+  "status": "PASS_G1_FIRST_ERROR_IS_PURE_DIVERGENCE_MISREPORTED_AS_PHYSICAL_TWO"
+}

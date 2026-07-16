@@ -239,6 +239,841 @@ class RepositoryPolicyTest(unittest.TestCase):
                 digest = hashlib.sha256((ROOT / obligation["task"]).read_bytes()).hexdigest()
                 self.assertEqual(digest, obligation["task_sha256"])
 
+    def test_step5_aa_standard_feynman_strictification(self) -> None:
+        script = ROOT / "scripts/step5_aa_standard_feynman_strict_audit.py"
+        audit = ROOT / "audits/step5-aa-standard-feynman-strictification.md"
+        pro_review = ROOT / "proposals/gpt-pro-aa-standard-feynman-2026-07-14.md"
+        pro_correction = ROOT / "proposals/gpt-pro-aa-derivation-correction-2026-07-14.md"
+        pro_final = ROOT / "proposals/gpt-pro-aa-final-settlement-2026-07-14.md"
+        second_mark_sd = ROOT / "audits/step5-aa-matter-second-mark-full-sd-independent.md"
+        self.assertTrue(script.is_file())
+        self.assertTrue(audit.is_file())
+        self.assertTrue(pro_review.is_file())
+        self.assertTrue(pro_correction.is_file())
+        self.assertTrue(pro_final.is_file())
+        self.assertTrue(second_mark_sd.is_file())
+        completed = subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        result = json.loads(completed.stdout)
+        self.assertEqual(result["summary"]["status"], "PASS")
+        self.assertEqual(result["summary"]["failed"], 0)
+        self.assertGreater(result["summary"]["passed"], 200)
+        self.assertEqual(
+            result["scope"],
+            "FULL_AA_ONE_LOOP_ANOMALY_SECTOR_TARGET_BLIND_EXACT",
+        )
+        self.assertEqual(
+            result["summary"]["scope"],
+            "FULL_AA_ONE_LOOP_ANOMALY_SECTOR_TARGET_BLIND_EXACT",
+        )
+        self.assertEqual(
+            result["claim_boundary"],
+            "AA_SECTOR_ONLY__DOES_NOT_CERTIFY_GLOBAL_81_LEDGER",
+        )
+        self.assertTrue(result["certifies_full_diagram_derivation"])
+        self.assertEqual(
+            result["full_diagram_derivation"]["status"],
+            "ACCEPTED_AA_ONE_LOOP_ANOMALY_SECTOR__HT_CHECK_ONLY_EXACT_MATCH",
+        )
+        self.assertTrue(
+            result["full_diagram_derivation"][
+                "pass_from_this_script_implies_completion"
+            ]
+        )
+        self.assertEqual(result["full_diagram_derivation"]["required_blockers"], [])
+        checks = {row["id"]: row for row in result["checks"]}
+        self.assertEqual(checks["gauge_signed_hessian_propagator_weight"]["status"], "PASS")
+        self.assertEqual(checks["gauge_signed_hessian_propagator_weight"]["actual"], "-1/16")
+        final_check_ids = {
+            "aa_final_external_target_absent_from_derivation",
+            "aa_final_exact_artifact_status",
+            "aa_final_raw_hessian_group_count",
+            "aa_final_raw_hessian_endpoint_row_count",
+            "aa_final_raw_contact_multiplicity",
+            "aa_final_raw_full_d_edge_cancellations",
+            "aa_final_exhaustive_component_replay",
+            "aa_final_gauge_ordered_vector",
+            "aa_final_matter_ordered_vector",
+            "aa_ht_check_only_unique_target_row",
+            "aa_ht_check_only_color_tensor_dictionary",
+            "aa_ht_check_only_exact_ordered_vector_match",
+        }
+        self.assertTrue(final_check_ids.issubset(checks))
+        self.assertTrue(
+            all(
+                checks[check_id]["scope"]
+                == "FULL_AA_ONE_LOOP_ANOMALY_SECTOR_TARGET_BLIND_EXACT"
+                and checks[check_id]["certifies_full_diagram_derivation"]
+                and checks[check_id]["status"] == "PASS"
+                for check_id in final_check_ids
+            )
+        )
+        conditional_matter_arithmetic_checks = {
+            "matter_naive_2x2_bispinor_matrix",
+            "matter_naive_2x2_bispinor_determinant",
+            "matter_cut_e0_vector_bubble_zero",
+            "matter_cut_e1_vector_bubble_zero",
+            "matter_cut_seagull_vector_bubble_zero",
+            "matter_cut_J_C_vector_bubble_zero",
+            "matter_cut_J_B_vector_bubble_zero",
+            "matter_rank_two_parent_ell_1_squared_coefficient",
+            "matter_rank_two_parent_ell_2_squared_coefficient",
+            "matter_rank_two_parent_ell_3_squared_coefficient",
+            "matter_rank_two_parent_ell_4_squared_coefficient",
+            "matter_rank_two_simplex_projection_factor",
+            "matter_rank_two_forward_simplex_ratios",
+            "matter_rank_two_reflected_simplex_ratios",
+            "matter_rank_two_derived_symmetric_diagonal_weights",
+            "matter_rank_two_H_displayed_ratio",
+            "matter_rank_two_H_delta4_zero",
+            "matter_rank_two_H_locked_trace_constraint",
+            "matter_rank_two_H_epsilon_ratio",
+            "matter_second_marked_mixed21_det_omega_identity",
+            "matter_second_marked_longitudinal_posttransport_identity",
+            "matter_second_marked_posttransport_r1_inverse_kernel_coefficient",
+            "matter_second_marked_operator_transport_ledger",
+            "matter_second_marked_determinant_simplex",
+            "matter_second_marked_omega_simplex",
+            "matter_second_marked_full_simplex",
+            "matter_second_marked_full_lambda1_units_from_simplex",
+        }
+        self.assertTrue(conditional_matter_arithmetic_checks.issubset(checks))
+        self.assertTrue(
+            all(checks[check_id]["status"] == "PASS" for check_id in conditional_matter_arithmetic_checks)
+        )
+        self.assertEqual(checks["matter_first_marked_placement_magnitude_in_lambda1_units"]["actual"], "4/3")
+        self.assertEqual(checks["matter_second_marked_placement_in_lambda1_units"]["actual"], "-1/3")
+        self.assertEqual(checks["matter_complete_marked_orbit_magnitude_in_lambda1_units"]["actual"], "1")
+        self.assertEqual(checks["matter_to_gauge_selected_orbit_magnitude_ratio"]["actual"], "8")
+        self.assertEqual(
+            result["second_mark_full_sd_artifact"],
+            "audits/step5-aa-matter-second-mark-full-sd-independent.md",
+        )
+        text = audit.read_text(encoding="utf-8")
+        missing_derivation_blockers = {
+            "BLOCKED_EXPLICIT_WW_D_ALGEBRA_WORD_DERIVATION",
+            "BLOCKED_STEP5A_LOCAL_FERMI_FEYNMAN_PROPER_SLICE",
+            "BLOCKED_LOCKED_ORDERED_BILOCAL_SOURCE",
+            "BLOCKED_LOCKED_BACKGROUND_QUANTUM_PORT_GRAMMAR",
+            "BLOCKED_TOTAL_PROJECT_HT_COMPONENT_INTERTWINER",
+            "BLOCKED_COMPLETE_AA_GRAPH_CENSUS",
+            "AA_MATTER_UNIT_MAGNITUDE_REPRODUCED__GLOBAL_ORIENTATION_SIGN_OPEN",
+        }
+        self.assertEqual(
+            set(
+                result["full_diagram_derivation"][
+                    "legacy_blockers_superseded_for_AA_sector"
+                ]
+            ),
+            missing_derivation_blockers,
+        )
+        for blocker in missing_derivation_blockers:
+            self.assertIn(blocker, text)
+        self.assertIn("CONDITIONAL_DOWNSTREAM_ARITHMETIC_ONLY", text)
+        self.assertIn("These are occurrence-resolved $D$-word results, not ansaetze.", text)
+        self.assertIn("AA_MATTER_UNIT_MAGNITUDE_REPRODUCED__GLOBAL_ORIENTATION_SIGN_OPEN", text)
+        self.assertIn(r"\mathcal S_2", text)
+        self.assertIn(r"\Omega_{21}", text)
+        self.assertIn(r"\left(z-\frac12\right)", text)
+        second_mark_text = second_mark_sd.read_text(encoding="utf-8")
+        self.assertIn(
+            "SECOND_MARK_FULL_SD_REPAIRED__DISCARDED_LONGITUDINAL_RESIDUAL_WAS_THE_ERROR__TARGET_BLIND_UNIT_MAGNITUDE",
+            second_mark_text,
+        )
+        self.assertIn(r"D_2^2(-r_1)\bar D_2^2(-r_1)D_2^2(-r_1)", second_mark_text)
+        self.assertIn("42/42 PASS", second_mark_text)
+        self.assertIn(r"N_{\rm parent}-N_{\rm cut}", text)
+        self.assertIn("REJECTED_PROPAGATOR_NORMALIZATION", text)
+        self.assertIn("REJECTED_BY_EVIDENCE__EXACT_FACTOR_8", text)
+        self.assertIn("NON_AUTHORITY_PRO_REVIEW", pro_review.read_text(encoding="utf-8"))
+        correction_text = pro_correction.read_text(encoding="utf-8")
+        self.assertIn("NON_AUTHORITY_PRO_REVIEW", correction_text)
+        self.assertIn("# CORRECTED_G_RESULT", correction_text)
+        final_text = pro_final.read_text(encoding="utf-8")
+        self.assertIn("NON_AUTHORITY_PRO_REVIEW", final_text)
+        self.assertIn("1efd04011130a3f64f4e57e42bc58fc1d0aa576af8bc8e7eb68b7f0eaab1f90b", final_text)
+        self.assertIn("BLOCKED_UNREDUCED_Q4S_MATTER_WORD", final_text)
+        self.assertIn("BLOCKED_PROJECT_HT_COMPONENT_INTERTWINER", final_text)
+        self.assertIn("GRAPH_CENSUS", final_text)
+        self.assertIn("FULL_AA_MATCH", final_text)
+        acceptance = result["aa_final_acceptance"]
+        self.assertEqual(
+            acceptance["status"],
+            "ACCEPTED_AA_ONE_LOOP_ANOMALY_SECTOR__HT_CHECK_ONLY_EXACT_MATCH",
+        )
+        self.assertFalse(acceptance["global_81_ledger_modified"])
+        self.assertEqual(
+            acceptance["derived_before_HT"],
+            {
+                "D>A": "1",
+                "A>D": "-1",
+                "B_1>C_1": "1",
+                "C_1>B_1": "-1",
+                "B_2>C_2": "1",
+                "C_2>B_2": "-1",
+                "B_3>C_3": "1",
+                "C_3>B_3": "-1",
+            },
+        )
+        self.assertEqual(
+            acceptance["raw_multiplicity_ledger"]["verified_multiplicity"],
+            {"m0": "1", "m2": "1"},
+        )
+        self.assertTrue(acceptance["HT_check_only"]["exact_match"])
+        self.assertFalse(
+            acceptance["HT_check_only"][
+                "target_used_to_determine_coefficient"
+            ]
+        )
+        self.assertEqual(
+            acceptance["HT_check_only"]["seal"],
+            "AA_HT_CHECK_ONLY_SEAL__DERIVATION_TARGET_BLIND__EXACT_MATCH",
+        )
+        self.assertIn(
+            "ACCEPTED_AA_ONE_LOOP_ANOMALY_SECTOR__HT_CHECK_ONLY_EXACT_MATCH",
+            text,
+        )
+        self.assertIn(
+            "AA_HT_CHECK_ONLY_SEAL__DERIVATION_TARGET_BLIND__EXACT_MATCH",
+            text,
+        )
+        self.assertIn(r"\boxed{m_0=m_2=1}", text)
+        self.assertIn(r"\Gamma_{AA}^{(1)}", text)
+
+    def test_step5_aa_source_sd_orbit_exact_audit(self) -> None:
+        script = ROOT / "scripts/step5_aa_source_sd_orbit_exact_audit.py"
+        audit = ROOT / "audits/step5-aa-source-expansion-sd-orbit.md"
+        self.assertTrue(script.is_file())
+        self.assertTrue(audit.is_file())
+        completed = subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertIn("SUMMARY 40/40 PASS", completed.stdout)
+        text = audit.read_text(encoding="utf-8")
+        self.assertIn("RETRACTED_SINGLE_MARKED_PLACEMENT", text)
+        self.assertIn("NO_DOUBLE_COUNT_PARENT_MINUS_CUT", text)
+        self.assertIn("BLOCKED_AA_GAUGE_FULL_MARKED_OCCURRENCE_RECOUNT", text)
+        self.assertIn("BLOCKED_AA_MATTER_PHYSICAL_CUT_ASSIGNMENT", text)
+        self.assertIn("CANDIDATE_NOT_ACCEPTED", text)
+
+    def test_step5_aa_matter_full_placements_independent_audit(self) -> None:
+        script = ROOT / "scripts/step5_aa_matter_full_placements_independent_audit.py"
+        audit = ROOT / "audits/step5-aa-matter-full-placements-independent.md"
+        self.assertTrue(script.is_file())
+        self.assertTrue(audit.is_file())
+        completed = subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertIn("40/40 PASS", completed.stdout)
+        text = audit.read_text(encoding="utf-8")
+        self.assertIn(
+            "SECOND_MARK_FULL_SD_REPAIRED__FOUR_OCCURRENCES_TARGET_BLIND_UNIT_MAGNITUDE",
+            text,
+        )
+        self.assertIn(r"\mathcal C_0^{\mathrm{raw}}=-1024W_{02}", text)
+        self.assertIn(r"\mathcal C_2^{\mathrm{raw}}=+1024W_{02}", text)
+        self.assertIn(r"\Delta_2^{\mathrm{full}}", text)
+        self.assertIn(r"\left(\frac12-z\right)", text)
+        self.assertIn(r"\Omega_{21}", text)
+
+    def test_step5_aa_matter_second_mark_full_sd_independent_audit(self) -> None:
+        script = ROOT / "scripts/step5_aa_matter_second_mark_full_sd_independent_audit.py"
+        audit = ROOT / "audits/step5-aa-matter-second-mark-full-sd-independent.md"
+        self.assertTrue(script.is_file())
+        self.assertTrue(audit.is_file())
+        completed = subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+            timeout=1800,
+        )
+        self.assertIn("PASS SECOND_SOURCE_TRANSVERSE_PLUS_LONGITUDINAL", completed.stdout)
+        self.assertIn("PASS LONGITUDINAL_ENDPOINT_ORDER_REVERSAL", completed.stdout)
+        self.assertIn("PASS POST_TRANSPORT_R1_D2_BARD2_D2_COLLAPSE", completed.stdout)
+        self.assertIn("PASS DRED_FULL_S2_DEFECT", completed.stdout)
+        self.assertIn("PASS SECOND_MARKED_LAMBDA_UNITS", completed.stdout)
+        self.assertIn("42/42 PASS", completed.stdout)
+        text = audit.read_text(encoding="utf-8")
+        self.assertIn(r"\Omega_{21}", text)
+        self.assertIn(r"\mathcal R_2^{\mathrm{full}}", text)
+        self.assertIn(r"-\frac13\lambda_1", text)
+
+    def test_step5_aa_gauge_marked_occurrence_exact_audit(self) -> None:
+        script = ROOT / "scripts/step5_aa_gauge_marked_occurrence_exact_audit.py"
+        audit = ROOT / "audits/step5-aa-gauge-marked-occurrence-recount.md"
+        self.assertTrue(script.is_file())
+        self.assertTrue(audit.is_file())
+        completed = subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertIn("SUMMARY 23/23 PASS", completed.stdout)
+        text = audit.read_text(encoding="utf-8")
+        self.assertIn("NO_RANK_TWO_DRED_DEFECT", text)
+        self.assertIn("NO_EXTRA_POLARIZATION_MULTIPLICITY", text)
+        self.assertIn(r"-\frac{\lambda_1}{8}", text)
+
+    def test_step5_aa_gauge_canonical_normalization_audit(self) -> None:
+        script = ROOT / "scripts/step5_aa_gauge_canonical_normalization_audit.py"
+        audit = ROOT / "audits/step5-aa-gauge-canonical-normalization-ledger.md"
+        self.assertTrue(script.is_file())
+        self.assertTrue(audit.is_file())
+        completed = subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertIn("SUMMARY 42/42 PASS", completed.stdout)
+        text = audit.read_text(encoding="utf-8")
+        self.assertIn("AA_GAUGE_CANONICAL_NORMALIZATION_REDERIVED_TARGET_BLIND", text)
+        self.assertIn(r"-4(\bar L^2-L_d^2)", text)
+        self.assertIn(r"2^3=8", text)
+
+    def test_step5_aa_gauge_full_source_sd_orbit_exact_audit(self) -> None:
+        script = ROOT / "scripts/step5_aa_gauge_full_source_sd_orbit_exact_audit.py"
+        audit = ROOT / "audits/step5-aa-gauge-full-source-sd-orbit-exact.md"
+        artifact_path = ROOT / "audits/step5-aa-gauge-full-source-sd-orbit-exact.json"
+        for path in (script, audit, artifact_path):
+            self.assertTrue(path.is_file(), path)
+        completed = subprocess.run(
+            [sys.executable, str(script), "--check-artifact", str(artifact_path)],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertIn("SUMMARY 24/24 PASS", completed.stdout)
+        artifact = json.loads(artifact_path.read_text(encoding="utf-8"))
+        self.assertEqual(artifact["route_coverage"]["AA_directed_parents"], 42)
+        self.assertEqual(artifact["route_coverage"]["AA_gauge_gauge_routes"], 36)
+        self.assertEqual(
+            artifact["I1_Sg3_bubbles"]["attachment_quadratic_numerator_sum"],
+            "0",
+        )
+        self.assertEqual(
+            artifact["I1_Sg3_bubbles"]["source_A_four_dimensional_trace"]["text"],
+            "0",
+        )
+        self.assertEqual(
+            artifact["I1_Sg3_bubbles"]["source_D_four_dimensional_trace"]["text"],
+            "0",
+        )
+        self.assertEqual(artifact["I0_Sg4_bubble"]["four_dimensional_trace"]["text"], "0")
+        self.assertEqual(artifact["full_gauge_source_orbit"]["coefficient_in_lambda1_units"], "-1/8")
+        text = audit.read_text(encoding="utf-8")
+        self.assertIn("GAUGE_SOURCE_ORBIT_ZERO", text)
+        self.assertIn(r"H_{A|D}+H_{D|A}=0", text)
+        self.assertIn(r"C_{AA,\mathrm{gauge}}^{\mathrm{full}}", text)
+
+    def test_step5_aa_gauge_bc_current_orbit_exact_audit(self) -> None:
+        script = ROOT / "scripts/step5_aa_gauge_bc_current_orbit_exact_audit.py"
+        audit = ROOT / "audits/step5-aa-gauge-bc-current-orbit-exact.md"
+        artifact_path = ROOT / "audits/step5-aa-gauge-bc-current-orbit-exact.json"
+        for path in (script, audit, artifact_path):
+            self.assertTrue(path.is_file(), path)
+        completed = subprocess.run(
+            [sys.executable, str(script), "--check"],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertIn("SUMMARY 12/12 PASS", completed.stdout)
+        artifact = json.loads(artifact_path.read_text(encoding="utf-8"))
+        self.assertEqual(artifact["pointwise_sum"], "0")
+        self.assertEqual(artifact["anomaly_coefficient_in_lambda1_units"], "0")
+        self.assertFalse(artifact["omega21_boundary"]["included_here"])
+        text = audit.read_text(encoding="utf-8")
+        self.assertIn("NO_MINUS_ONE_THIRD_FROM_GAUGE_BC_CURRENT", text)
+        self.assertIn(r"\delta^2S_{\mathrm{gf}}", text)
+        self.assertIn(r"2i-2i", text)
+
+    def test_step5_ad_da_gauge_family_raw_exact_audit(self) -> None:
+        script = ROOT / "scripts/step5_ad_da_gauge_family_raw_audit.py"
+        audit = ROOT / "audits/step5-ad-da-gauge-family-raw-exact.md"
+        artifact = ROOT / "audits/step5-ad-da-gauge-family-raw-exact.json"
+        for path in (script, audit, artifact):
+            self.assertTrue(path.is_file(), path)
+        completed = subprocess.run(
+            [sys.executable, str(script), "--check", "--workers", "8"],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+            timeout=1800,
+        )
+        self.assertIn("SUMMARY 9/9 PASS", completed.stdout)
+        payload = json.loads(artifact.read_text(encoding="utf-8"))
+        self.assertFalse(payload["external_target_used"])
+        self.assertFalse(payload["full_pair_result_claimed"])
+        self.assertTrue(payload["conditional_ff_anomaly_sector_claimed"])
+        self.assertEqual(
+            payload["route_counts"],
+            {
+                "amputated_1PI_legacy": {
+                    "A__Ddot1": 42,
+                    "Ddot1__A": 42,
+                },
+                "connected_1PR_spectator": {
+                    "A__Ddot1": 42,
+                    "Ddot1__A": 42,
+                },
+                "connected_total": {
+                    "A__Ddot1": 84,
+                    "Ddot1__A": 84,
+                },
+            },
+        )
+        self.assertEqual(
+            payload["topology_counts"],
+            {
+                "A__Ddot1": {"TGG": 36, "TMM": 6},
+                "Ddot1__A": {"TGG": 36, "TMM": 6},
+            },
+        )
+        for pair in ("A__Ddot1", "Ddot1__A", "A__Ddot2", "Ddot2__A"):
+            self.assertEqual(len(payload["pairs"][pair]), 42)
+        self.assertEqual(
+            payload["aggregates"]["A__Ddot1"]["loop_routing_distribution"],
+            {
+                "derivation": "ell -> -(2*p+q)/3 from the exact rank-one triangle simplex moment",
+                "p": "2/3",
+                "q": "1/3",
+            },
+        )
+        self.assertEqual(
+            payload["aggregates"]["Ddot1__A"]["loop_routing_distribution"]["p"],
+            "2/3",
+        )
+        self.assertEqual(
+            payload["aggregates"]["Ddot1__A"]["loop_routing_distribution"]["q"],
+            "1/3",
+        )
+        self.assertEqual(
+            payload["target_blind_ordered_external_vector"]["AD_shape"],
+            {"k_left": "1/3", "k_right": "2/3"},
+        )
+        self.assertEqual(
+            payload["target_blind_ordered_external_vector"]["DA_shape"],
+            {"k_left": "2/3", "k_right": "1/3"},
+        )
+        self.assertEqual(len(payload["conditional_ff_occurrence_census"]), 15)
+        fp = next(
+            row
+            for row in payload["conditional_ff_occurrence_census"]
+            if row["id"] == "ADDA-O09-FP-EULER-BUBBLE"
+        )
+        self.assertTrue(fp["DD_reachable"])
+        self.assertEqual(fp["loop_number"], 1)
+        self.assertEqual(fp["status"], "EVALUATED_NONZERO_EULER_BUBBLE__FULL_D_CUT_REQUIRED")
+        self.assertTrue(
+            payload["gauge_fixing_ghost_nk"]["fp_full_schwinger_family_zero"]
+        )
+        self.assertIn(
+            "BLOCKED_AD_DA_AUTHORITY_ORDERED_SOURCE_HESSIAN_NORMALIZATION",
+            payload["gauge_fixing_ghost_nk"]["blockers"],
+        )
+        text = audit.read_text(encoding="utf-8")
+        self.assertIn(r"AD:\left(\frac13,\frac23\right)", text)
+        self.assertIn(r"DA:\left(\frac23,\frac13\right)", text)
+        self.assertIn("FP Euler bubble", text)
+        self.assertIn("Nielsen--Kallosh", text)
+
+    def test_step5_no_descendant_pairs_exact_audit(self) -> None:
+        script = ROOT / "scripts/step5_no_descendant_pairs_exact_audit.py"
+        audit = ROOT / "audits/step5-no-descendant-pairs-exact.md"
+        artifact = ROOT / "audits/step5-no-descendant-pairs-exact.json"
+        for path in (script, audit, artifact):
+            self.assertTrue(path.is_file(), path)
+        completed = subprocess.run(
+            [sys.executable, str(script), "--check"],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertIn("SUMMARY 11/11 PASS", completed.stdout)
+        payload = json.loads(artifact.read_text(encoding="utf-8"))
+        self.assertEqual(payload["ordered_pair_count"], 25)
+        self.assertTrue(all(row["anomaly_sector"] == "0" for row in payload["rows"]))
+        text = audit.read_text(encoding="utf-8")
+        self.assertIn("NO_OUTER_DESCENDANT__NO_CUTTING_FAILURE_WORD", text)
+        self.assertIn(r"N_{\mathrm{marked\ inverse\ kernels}}", text)
+
+    def test_step5_bc_full_family_raw_projection_exact_audit(self) -> None:
+        script = ROOT / "scripts/step5_bc_full_family_raw_projection_audit.py"
+        audit = ROOT / "audits/step5-bc-full-family-raw-projection-exact.md"
+        artifact = ROOT / "audits/step5-bc-full-family-raw-projection-exact.json"
+        for path in (script, audit, artifact):
+            self.assertTrue(path.is_file(), path)
+        completed = subprocess.run(
+            [sys.executable, str(script), "--check"],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+            timeout=1800,
+        )
+        self.assertIn("84/84 PASS", completed.stdout)
+        payload = json.loads(artifact.read_text(encoding="utf-8"))
+        self.assertEqual(
+            payload["status"],
+            "PASS_BC_CB_REGULATED_SD_KONISHI_EXACT",
+        )
+        self.assertFalse(payload["external_target_used"])
+        self.assertEqual(payload["summary"], {"checks": 84, "passed": 84, "failed": 0})
+        self.assertEqual(payload["blockers"], [])
+        self.assertEqual(payload["color"]["actual_coefficient_over_lambda1"], "delta_rs")
+        self.assertEqual(
+            payload["ordered_results"]["r_neq_s_DD_port"],
+            "EXACT_ZERO_ANTICHIRAL_FUNCTIONAL_DERIVATIVE_DELTA_RS",
+        )
+        self.assertEqual(
+            payload["ordered_results"]["r_eq_s_DD_port"],
+            "NONZERO_REGULATED_ANTICHIRAL_DENSITY_DIVERGENCE",
+        )
+        self.assertEqual(
+            payload["ordered_results"]["B_r>C_s"],
+            "delta_rs*lambda1*F^(AB)_(DE)<D^D,D^E>",
+        )
+        self.assertEqual(
+            payload["ordered_results"]["C_s>B_r"],
+            "delta_rs*lambda1*F^(AB)_(DE)<D^D,D^E>",
+        )
+        self.assertEqual(
+            payload["cutting_failure"],
+            {
+                "DRED_difference": "bar(r_e)^2-r_(e,d)^2=mu_loop^2",
+                "full_d_zero": "r_(e,d)^2/(D0*D1*D2)-1/(D1*D2)=0",
+                "master": "1/(32*pi^2)",
+                "regulated_kernel": "mu_loop^2/(D0*D1*D2)",
+            },
+        )
+        self.assertEqual(
+            payload["regulated_eom_jacobian"]["coefficient"],
+            "2*hbar*g^2*(1/(32*pi^2))=lambda1",
+        )
+        self.assertEqual(
+            payload["regulated_eom_jacobian"]["support"],
+            "tildePhi block only; vector, FP, NK, and non-minimal components are zero",
+        )
+        check_ids = {row["id"] for row in payload["checks"]}
+        self.assertIn("complete_outer_B_word", check_ids)
+        self.assertIn("TMM_BC_kernel_nonzero_control", check_ids)
+        self.assertIn("TMM_CB_kernel_nonzero_control", check_ids)
+        self.assertIn("nonlinear_contact_BC_CCB", check_ids)
+        self.assertIn("component_D_vertex_coefficient", check_ids)
+        self.assertIn("component_same_flavor_DD_closed_routes", check_ids)
+        self.assertIn("component_mixed_flavor_DD_closed_routes", check_ids)
+        self.assertIn("regulated_BC_coefficient", check_ids)
+        self.assertIn("BC_flavor_diagonal_density_divergence", check_ids)
+        self.assertIn("CB_flavor_diagonal_density_divergence", check_ids)
+        self.assertTrue(all(row["status"] == "PASS" for row in payload["checks"]))
+        component = payload["independent_component_wick_audit"]
+        self.assertEqual(
+            component["verdict"],
+            "NO_ORDINARY_COMPONENT_DD_TMM_TRIANGLE; NOT_A_TEST_OF_THE_REGULATED_EOM_JACOBIAN",
+        )
+        self.assertTrue(all(not row["closed_triangle"] for row in component["r_eq_s_routes"]))
+        self.assertTrue(all(not row["closed_triangle"] for row in component["r_neq_s_routes"]))
+        text = audit.read_text(encoding="utf-8")
+        self.assertIn("PASS_BC_CB_REGULATED_SD_KONISHI_EXACT", text)
+        self.assertIn(r"\bar r_e^2=r_{e,d}^2+\mu_\ell^2", text)
+        self.assertIn(r"\delta_{rs}\lambda_1", text)
+        self.assertIn("regulated Schwinger orbit", text)
+
+    def test_step5_ab1_standard_feynman_strictification(self) -> None:
+        script = ROOT / "scripts/step5_ab1_standard_feynman_strict_audit.py"
+        audit = ROOT / "audits/step5-ab1-standard-feynman-strictification.md"
+        pro_initial = ROOT / "proposals/gpt-pro-ab1-standard-feynman-2026-07-14.md"
+        pro_derivation = ROOT / "proposals/gpt-pro-ab1-derivation-correction-2026-07-14.md"
+        pro_final = ROOT / "proposals/gpt-pro-ab1-final-settlement-2026-07-14.md"
+        for path in (script, audit, pro_initial, pro_derivation, pro_final):
+            self.assertTrue(path.is_file())
+        completed = subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        result = json.loads(completed.stdout)
+        self.assertEqual(result["summary"]["status"], "PASS")
+        self.assertEqual(result["summary"]["failed"], 0)
+        self.assertGreater(result["summary"]["passed"], 80)
+        self.assertEqual(result["scope"], "CONDITIONAL_FF_Q4S_AB1_ARITHMETIC_ONLY")
+        self.assertEqual(
+            result["claim_boundary"],
+            "PASS_DOES_NOT_CERTIFY_AB1_OCCURRENCE_CENSUS_DWORD_CUT_COMPLETION_OR_RENORMALIZED_MATCH",
+        )
+        self.assertFalse(result["certifies_full_diagram_derivation"])
+        self.assertEqual(
+            result["authority"],
+            {
+                "commit": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+                "pinned_base_relation": "ancestor_of_origin_main",
+                "verify_run": 29306335742,
+                "verify_run_receipt_kind": "RECORDED_METADATA_NOT_LIVE_GITHUB_QUERY",
+                "foundation_reads": "PINNED_GIT_OBJECTS_ONLY",
+            },
+        )
+        self.assertEqual(
+            result["full_diagram_derivation"]["status"],
+            "BLOCKED_NO_ADMITTED_AB1_TREE_GRAPH_DRED_RESULT",
+        )
+        self.assertFalse(result["full_diagram_derivation"]["pass_from_this_script_implies_completion"])
+        self.assertNotIn("source_hessian_census", result)
+        self.assertEqual(
+            result["coarse_port_pair_count"],
+            {
+                "status": "COARSE_ORDERED_PORT_PAIR_COUNT_ONLY__NOT_SOURCE_HESSIAN_CENSUS",
+                "count_kind": "ORDERED_DISTINCT_COARSE_PORT_PAIRS",
+                "certifies_source_hessian_census": False,
+                "I0": 2,
+                "I1": 18,
+                "I2": 72,
+                "total": 92,
+                "nonlink": 50,
+                "link_dependent": 42,
+            },
+        )
+        checks = {row["id"]: row for row in result["checks"]}
+        self.assertEqual(checks["rescaled_vector_propagator_sign"]["actual"], "-1")
+        self.assertEqual(checks["rescaled_matter_propagator_sign"]["actual"], "1/16")
+        self.assertEqual(checks["authority_exact_vector_momentum_rule"]["status"], "PASS")
+        self.assertEqual(checks["authority_exact_matter_momentum_rule"]["status"], "PASS")
+        self.assertEqual(checks["authority_pinned_base_is_ancestor_of_origin_main"]["status"], "PASS")
+        self.assertEqual(checks["authority_step5a_receipt_status"]["status"], "PASS")
+        self.assertEqual(checks["audit_authority_workflow_receipt_metadata"]["status"], "PASS")
+        self.assertEqual(checks["audit_exact_rescaled_vector_rule"]["status"], "PASS")
+        self.assertEqual(checks["audit_exact_rescaled_matter_rule"]["status"], "PASS")
+        self.assertEqual(checks["degree_two_resolvent_neumann_words"]["status"], "PASS")
+        self.assertEqual(checks["conditional_Q4S_trace_unit"]["actual"], "1/32")
+        self.assertEqual(checks["evanescent_edge_square_unit"]["actual"], "1/32")
+        self.assertEqual(checks["full_inverse_square_cut_edge_0"]["status"], "PASS")
+        self.assertEqual(checks["full_inverse_square_cut_edge_1"]["status"], "PASS")
+        self.assertEqual(checks["full_inverse_square_cut_edge_2"]["status"], "PASS")
+        self.assertEqual(checks["g1_replay_plus_total"]["actual"], "1024")
+        self.assertEqual(checks["g1_replay_minus_total"]["actual"], "-1024")
+        self.assertEqual(checks["g1_a_marked_parent_DB_in_lambda1_units"]["actual"], "-3/2")
+        self.assertEqual(checks["g1_b_marked_parent_DB_in_lambda1_units"]["actual"], "1")
+        self.assertEqual(checks["g1_combined_parent_DB_in_lambda1_units"]["actual"], "-1/2")
+        self.assertEqual(checks["g1_replay_internal_checks"]["status"], "PASS")
+        self.assertEqual(checks["coarse_ordered_port_pair_total"]["actual"], "92")
+        self.assertEqual(
+            result["evanescent_cut_mechanism"],
+            {
+                "status": "REPRODUCED",
+                "d_algebra_square": "four_dimensional",
+                "schwinger_inverse_square": "full_d_dimensional",
+                "anomaly_numerator": "mu_l^2=bar_l^2-l_d^2",
+                "finite_triangle_unit": "1/(32*pi^2)",
+            },
+        )
+        self.assertNotIn("BLOCKED_EQUAL_CONTACT_AND_LONGITUDINAL_RESIDUES", result["blockers"])
+        self.assertNotIn("BLOCKED_LOCKED_Q4S_SPINOR_REALIZATION", result["blockers"])
+        self.assertTrue(
+            all(
+                row["scope"] == "CONDITIONAL_FF_Q4S_AB1_ARITHMETIC_ONLY"
+                and not row["certifies_full_diagram_derivation"]
+                for row in result["checks"]
+            )
+        )
+        audit_text = audit.read_text(encoding="utf-8")
+        independently_required_blockers = {
+            "BLOCKED_CHIRAL_TO_VECTOR_FRAME_SOURCE_BRIDGE",
+            "BLOCKED_TYPED_ORIENTED_EDGE_KERNEL_ASSIGNMENT",
+            "BLOCKED_DESCENDANT_CONTACT_HESSIANS_UNSPECIFIED",
+            "BLOCKED_AB1_G1_EDGE_TAGGED_SD_CONTACT_PAIRING",
+        }
+        self.assertTrue(independently_required_blockers.issubset(set(result["blockers"])))
+        for blocker in independently_required_blockers:
+            self.assertIn(blocker, audit_text)
+        for blocker in result["blockers"]:
+            self.assertIn(blocker, audit_text)
+        self.assertNotIn("BLOCKED_AB1_SOURCE_OVERALL_G_NORMALIZATION", result["blockers"])
+        self.assertNotIn("BLOCKED_SOURCE_COUPLING_INSERTION_SIGN", result["blockers"])
+        self.assertNotIn("BLOCKED_VVV_ORDERED_HESSIAN", result["blockers"])
+
+        for label in ("initial_pro", "derivation_pro", "final_pro"):
+            self.assertEqual(checks[f"{label}_archive_exists"]["status"], "PASS")
+            self.assertEqual(checks[f"{label}_archive_non_authority_status"]["status"], "PASS")
+            self.assertEqual(checks[f"{label}_archive_prompt_hash_declared"]["status"], "PASS")
+            body_hash_id = f"{label}_archive_body_hash"
+            if body_hash_id in checks:
+                self.assertEqual(checks[body_hash_id]["status"], "PASS")
+        self.assertEqual(
+            checks["initial_pro_archive_prompt_hash"]["actual"],
+            "2f8307295b028b317ca07ae29696eca93a8c3850f0c4fe3005584439add1b658",
+        )
+        self.assertEqual(
+            checks["derivation_pro_archive_prompt_hash"]["actual"],
+            "059d7aa7bef7ac723ec8969ef1af172a983c2073233fe75dab32c198be45b3fd",
+        )
+        self.assertEqual(
+            checks["final_pro_archive_prompt_hash"]["actual"],
+            "d179b8b7b80d902b7789cab3d7cfed13a6e96ef2ee152c82028883e57c88853c",
+        )
+
+    def test_step5_ab1_g1_vvv_dword_replay(self) -> None:
+        script = ROOT / "scripts/step5_ab1_g1_vvv_dword_replay.py"
+        artifact = ROOT / "audits/step5-ab1-g1-vvv-dword-replay.json"
+        self.assertTrue(script.is_file())
+        self.assertTrue(artifact.is_file())
+        completed = subprocess.run(
+            [sys.executable, str(script), "--check", str(artifact)],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+            timeout=1800,
+        )
+        self.assertIn("PASS: exact replay matches", completed.stdout)
+        payload = json.loads(artifact.read_text(encoding="utf-8"))
+        self.assertEqual(payload["generated_tables"]["plus_total"]["integer"], 1024)
+        self.assertEqual(payload["generated_tables"]["minus_total"]["integer"], -1024)
+        self.assertTrue(all(payload["checks"].values()))
+
+    def test_step5_dred_cutting_failure_exact(self) -> None:
+        script = ROOT / "scripts/step5_dred_cutting_failure_exact_audit.py"
+        audit = ROOT / "audits/step5-dred-cutting-failure-exact.md"
+        self.assertTrue(script.is_file())
+        self.assertTrue(audit.is_file())
+        completed = subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertIn("PASS full_square_cut_edge_0", completed.stdout)
+        self.assertIn("PASS full_square_cut_edge_1", completed.stdout)
+        self.assertIn("PASS full_square_cut_edge_2", completed.stdout)
+        self.assertIn("PASS finite_triangle", completed.stdout)
+        self.assertIn("PASS AB1_G2_direct_Wick_preD", completed.stdout)
+        self.assertIn("PASS AB1_G32_direct_Wick_preD", completed.stdout)
+        self.assertIn("PASS AB1_G33_direct_Wick_preD", completed.stdout)
+        self.assertIn("PASS AB1_G1_plus_per_word_preD", completed.stdout)
+        self.assertIn("SUMMARY 32/32 PASS", completed.stdout)
+
+    def test_step5_dred_mu2_triangle_moments_exact(self) -> None:
+        script = ROOT / "scripts/step5_dred_mu2_triangle_moments_exact_audit.py"
+        self.assertTrue(script.is_file())
+        completed = subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertIn("PASS centered_scalar_limit", completed.stdout)
+        self.assertIn("PASS centered_rank_two_limit", completed.stdout)
+        self.assertIn("PASS rank_one_p", completed.stdout)
+        self.assertIn("PASS rank_two_metric_q2", completed.stdout)
+        self.assertIn("SUMMARY 23/23 PASS", completed.stdout)
+
+    def test_step5_all_letter_pairs_triangle_census(self) -> None:
+        script = ROOT / "scripts/step5_all_letter_pairs_triangle_census_audit.py"
+        audit = ROOT / "audits/step5-all-letter-pairs-triangle-census.md"
+        self.assertTrue(script.is_file())
+        self.assertTrue(audit.is_file())
+        completed = subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertIn("PASS ordered_pair_count=81", completed.stdout)
+        self.assertIn("PASS nonzero_count=29", completed.stdout)
+        self.assertIn("PASS zero_count=52", completed.stdout)
+        self.assertIn("PASS marked_occurrence_count=72", completed.stdout)
+        self.assertIn("PASS project_exact_zero_classification_crosscheck=81", completed.stdout)
+        self.assertIn("PASS ht_exact_zero_classification_crosscheck=81", completed.stdout)
+        self.assertIn("PASS classification_crosscheck_uses_coefficients=false", completed.stdout)
+        self.assertIn(
+            "PASS status=BLOCKED_RAW_ALL_PAIR_TRIANGLE_AND_DESCENDANT_ORBITS",
+            completed.stdout,
+        )
+
+    def test_step5_all_triangle_parent_port_census(self) -> None:
+        script = ROOT / "scripts/step5_all_triangle_parent_port_census_audit.py"
+        audit = ROOT / "audits/step5-all-triangle-parent-port-census.md"
+        artifact = ROOT / "audits/step5-all-triangle-parent-port-census.json"
+        self.assertTrue(script.is_file())
+        self.assertTrue(audit.is_file())
+        self.assertTrue(artifact.is_file())
+        completed = subprocess.run(
+            [sys.executable, str(script), "--check"],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertIn("PASS external_target_used: False", completed.stdout)
+        self.assertIn("PASS ordered_pair_count: 81", completed.stdout)
+        self.assertIn("PASS marked_pair_count: 56", completed.stdout)
+        self.assertIn("PASS directed_parent_route_count: 1365", completed.stdout)
+        self.assertIn(
+            "PASS legacy_directed_parent_route_count: 495",
+            completed.stdout,
+        )
+        self.assertIn(
+            "PASS spectator_directed_parent_route_count: 870",
+            completed.stdout,
+        )
+        self.assertIn(
+            "PASS marked_inverse_edge_occurrence_count: 1098",
+            completed.stdout,
+        )
+        self.assertIn("PASS route_ids_unique: 1365", completed.stdout)
+        self.assertIn(
+            "PASS spectator_connected_but_1pr: 870",
+            completed.stdout,
+        )
+        self.assertIn("PASS no_coefficient_claim: True", completed.stdout)
+        self.assertIn("SUMMARY 16/16 PASS", completed.stdout)
+
+    def test_step5_aa_matter_order_g2_support_independent(self) -> None:
+        script = ROOT / "scripts/step5_aa_matter_order_g2_support_independent_audit.py"
+        audit = ROOT / "audits/step5-aa-matter-order-g2-support-independent.md"
+        self.assertTrue(script.is_file())
+        self.assertTrue(audit.is_file())
+        completed = subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+            timeout=1800,
+        )
+        self.assertIn("PASS MATTER_PARENT_ROUTE_COUNT", completed.stdout)
+        self.assertIn("PASS MATTER_MARKED_OCCURRENCE_COUNT", completed.stdout)
+        self.assertIn("PASS I0_SM4_SHIFTED_WEDGE", completed.stdout)
+        self.assertIn("PASS PROJECT_ORDER_G2_TOTAL_MAGNITUDE", completed.stdout)
+        self.assertIn("PASS AFTER_CHECK_CONDITIONAL_HT_MISMATCH", completed.stdout)
+        self.assertIn("68/68 PASS", completed.stdout)
+
     def test_reference_import_has_narrow_acquisition_scope(self) -> None:
         task = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
         if task["type"] != "REFERENCE_IMPORT":
@@ -532,7 +1367,8 @@ class RepositoryPolicyTest(unittest.TestCase):
         if task["id"] != "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001":
             self.skipTest("Step-5 Euclidean N=4 AWI task is not current")
         self.assertEqual(task["type"], "CONTRACT_CHANGE")
-        self.assertEqual(task["status"], "SPECIFIED")
+        self.assertEqual(task["status"], "ACCEPTED")
+        self.assertEqual(task["accepted_scope"], "PHYSICAL_ONE_LOOP_ANOMALY_SECTOR")
         self.assertTrue(task["reference_admission"]["source_translation_required_before_formula_adoption"])
         self.assertTrue(task["reference_admission"]["independent_project_derivation_required_before_target_comparison"])
         self.assertEqual(len(task["acceptance"]), 16)
@@ -558,6 +1394,231 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertTrue(any("holomorphic-twist round-trip audit" in item for item in task["acceptance"]))
         self.assertTrue(any("external leg" in item for item in task["acceptance"]))
         self.assertTrue(any("isolated triangle" in item for item in task["forbidden_inputs"]))
+        evidence = set(task["acceptance_evidence"])
+        self.assertTrue(
+            {
+                "contracts/foundations/step-05-euclidean-n4-awi-one-loop.md",
+                "audits/step5-euclidean-n4-awi-verification.json",
+                "audits/step5-global-81-target-blind-orbit-ledger.json",
+                "audits/step5_global_81_ht_symbolic_roundtrip_exact.json",
+                "audits/step5-ab-ba-project-ward-finite-renormalization-exact.json",
+                "audits/step5-aa-external-slot-decomposition-exact.json",
+            }
+            <= evidence
+        )
+        self.assertTrue(all((ROOT / relative).is_file() for relative in evidence))
+        obsolete = set(task["excluded_obsolete_acceptance_evidence"])
+        self.assertEqual(
+            obsolete,
+            {
+                "audits/step5-ab-ba-full-1pi-quotient-exact.json",
+                "audits/step5-ab-ba-full-1pi-quotient-exact.md",
+                "scripts/step5_ab_ba_full_1pi_quotient_exact_audit.py",
+            },
+        )
+        self.assertTrue(evidence.isdisjoint(obsolete))
+        self.assertTrue(
+            all(item.startswith("OUT_OF_SCOPE_") for item in task["out_of_scope_nonblocking"])
+        )
+
+    def test_step5_physical_settlement_contract(self) -> None:
+        task = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
+        if task["id"] != "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001":
+            self.skipTest("Step-5 Euclidean N=4 AWI task is not current")
+
+        relative = "contracts/foundations/step-05-euclidean-n4-awi-one-loop.md"
+        path = ROOT / relative
+        text = path.read_text(encoding="utf-8")
+        digest = hashlib.sha256(path.read_bytes()).hexdigest()
+        manifest = json.loads((ROOT / "contracts/manifest.yaml").read_text(encoding="utf-8"))
+        entries = [
+            entry
+            for entry in manifest["contracts"]
+            if entry["id"] == "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001"
+        ]
+        self.assertEqual(manifest["state"], "ACCEPTED")
+        self.assertEqual(manifest["accepted_scope"], "PHYSICAL_ONE_LOOP_ANOMALY_SECTOR")
+        self.assertEqual(len(entries), 1)
+        self.assertEqual(entries[0]["path"], relative)
+        self.assertEqual(entries[0]["status"], "DERIVED_UNFROZEN")
+        self.assertEqual(entries[0]["sha256"], digest)
+        self.assertIn(
+            "Status: `ACCEPTED_PHYSICAL_ONE_LOOP_ANOMALY_SECTOR__81_COMPLETE_EXACT__HT_CORRECTED_ROUNDTRIP_EXACT`",
+            text,
+        )
+        self.assertEqual(text.count("$$") % 2, 0)
+        for token in (r"\sim", r"\approx", r"\propto"):
+            self.assertNotIn(token, text)
+        for character in text:
+            self.assertFalse(ord(character) < 32 and character not in "\n\t")
+
+        self.assertEqual(task["status"], "ACCEPTED")
+        self.assertEqual(task["accepted_scope"], "PHYSICAL_ONE_LOOP_ANOMALY_SECTOR")
+        self.assertNotIn(relative, task["allowed_inputs"])
+        self.assertIn(relative, task["acceptance_evidence"])
+        proof_ledger = json.loads(
+            (ROOT / "ledger/proof_obligations.json").read_text(encoding="utf-8")
+        )
+        obligation = next(
+            row
+            for row in proof_ledger["proof_obligations"]
+            if row["id"] == task["id"]
+        )
+        self.assertEqual(obligation["state"], "ACCEPTED")
+        self.assertIsNone(obligation["blocking_reason"])
+        self.assertEqual(
+            obligation["task_sha256"],
+            hashlib.sha256((ROOT / obligation["task"]).read_bytes()).hexdigest(),
+        )
+        self.assertNotIn(
+            "STEP5_ONE_LOOP_FAIL_CLOSED_CHECKPOINT",
+            obligation["checked_scope"],
+        )
+        settlement = obligation["checked_scope"]["STEP5_PHYSICAL_ONE_LOOP_ANOMALY_SETTLEMENT"]
+        self.assertEqual(
+            settlement["result"],
+            "ACCEPTED_PHYSICAL_ONE_LOOP_ANOMALY_SECTOR__81_COMPLETE_EXACT__HT_CORRECTED_ROUNDTRIP_EXACT",
+        )
+        self.assertEqual(settlement["verification_status"], "ACCEPTED")
+        self.assertEqual(settlement["accepted_scope"], "PHYSICAL_ONE_LOOP_ANOMALY_SECTOR")
+        self.assertEqual(settlement["contract_sha256"], digest)
+        self.assertEqual(settlement["verifier_totals"], {"checks": 33, "passed": 33, "failed": 0})
+        self.assertEqual(
+            settlement["global_81_ledger"],
+            {
+                "audit": "audits/step5-global-81-target-blind-orbit-ledger.json",
+                "final_state_counts": {"COMPLETE_EXACT": 81},
+                "ordered_pairs": 81,
+                "exact_nonzero": 29,
+                "exact_zero": 52,
+                "unresolved": 0,
+            },
+        )
+        self.assertEqual(settlement["holomorphic_twist_roundtrip"]["direct_rows"], 81)
+        self.assertEqual(settlement["holomorphic_twist_roundtrip"]["output_words"], 70)
+        self.assertEqual(settlement["holomorphic_twist_roundtrip"]["finite_kernel_checks"], 2025)
+        self.assertEqual(
+            settlement["bc_cb_regulated_sd_konishi"],
+            {
+                "audit": "audits/step5-bc-full-family-raw-projection-exact.json",
+                "status": "PASS_BC_CB_REGULATED_SD_KONISHI_EXACT",
+                "checks": 84,
+                "failed": 0,
+            },
+        )
+        self.assertTrue(
+            all(item.startswith("OUT_OF_SCOPE_") for item in settlement["out_of_scope_nonblocking"])
+        )
+        self.assertTrue(
+            set(settlement["excluded_obsolete_acceptance_evidence"]).isdisjoint(
+                task["acceptance_evidence"]
+            )
+        )
+        step5a = obligation["checked_scope"]["STEP5A_COMPONENT_BV_BRST_PRIMITIVE_GRAMMAR"]
+        self.assertEqual(
+            step5a["acceptance_relation"],
+            "OUT_OF_SCOPE_FOR_PHYSICAL_ONE_LOOP_ANOMALY_SECTOR",
+        )
+        self.assertTrue(
+            all(item.startswith("OUT_OF_SCOPE_") for item in step5a["out_of_scope_limits"])
+        )
+        unescaped_text = text.replace(r"\_", "_")
+        for boundary in (
+            "OUT_OF_SCOPE_RAW_GRAPH_Q_EQUIVARIANT_FUNCTOR",
+            "OUT_OF_SCOPE_GENERAL_BV_WZ_REDUCTION",
+            "OUT_OF_SCOPE_OPEN_COLOR_SOURCE_BV_EXTENSION",
+            "OUT_OF_SCOPE_FORMAL_U_Q0_ABSOLUTE_INTERTWINER",
+            "OUT_OF_SCOPE_GENERAL_REDUCTIVE_COLOR_FRAME",
+        ):
+            self.assertIn(boundary, unescaped_text)
+
+    def test_step5_physical_settlement_verifier(self) -> None:
+        task = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
+        if task["id"] != "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001":
+            self.skipTest("Step-5 Euclidean N=4 AWI task is not current")
+        script = ROOT / "scripts/verify_step5_euclidean_n4_awi.py"
+        audit_path = ROOT / "audits/step5-euclidean-n4-awi-verification.json"
+        expected = audit_path.read_bytes()
+        completed = subprocess.run(
+            [sys.executable, str(script), "--check"],
+            cwd=ROOT,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stdout + completed.stderr)
+        self.assertEqual(audit_path.read_bytes(), expected)
+        audit = json.loads(expected)
+        self.assertEqual(audit["status"], "ACCEPTED")
+        self.assertEqual(audit["accepted_scope"], "PHYSICAL_ONE_LOOP_ANOMALY_SECTOR")
+        self.assertEqual(audit["failed_checks"], [])
+        self.assertEqual(audit["totals"], {"checks": 33, "passed": 33, "failed": 0})
+        self.assertEqual(
+            audit["counts"],
+            {
+                "ordered_pairs": 81,
+                "exact_nonzero": 29,
+                "exact_zero": 52,
+                "direct_ht_rows": 81,
+                "base_output_words": 70,
+                "finite_symbolic_kernel_checks": 2025,
+            },
+        )
+        self.assertEqual(
+            audit["scope_boundary"],
+            {
+                "accepted": ["PHYSICAL_ONE_LOOP_ANOMALY_SECTOR"],
+                "out_of_scope": {
+                    "RAW_Q_FUNCTOR": "OUT_OF_SCOPE",
+                    "BV_WZ_COMPLETION": "OUT_OF_SCOPE",
+                    "OPEN_COLOR_SOURCE_EXTENSION": "OUT_OF_SCOPE",
+                    "FORMAL_U_INTERTWINER": "OUT_OF_SCOPE",
+                    "GENERAL_REDUCTIVE_COLOR_THEOREM": "OUT_OF_SCOPE",
+                },
+                "out_of_scope_items_are_not_acceptance_blockers": True,
+            },
+        )
+        self.assertEqual(
+            audit["exact_identity"],
+            "full_d_square+Schwinger_cut=0; bar_loop_square-full_d_loop_square=mu_l^2; J_mu2=1/(32*pi^2)",
+        )
+        self.assertEqual(
+            audit["holomorphic_twist_identity"],
+            "K_Project=2*T_HT_printed=T_HT_corrected for all m,n>=0",
+        )
+        self.assertTrue(all(row["status"] == "PASS" for row in audit["checks"]))
+        freshness_ids = {
+            row["id"] for row in audit["checks"] if row["id"].startswith("freshness.")
+        }
+        self.assertEqual(
+            freshness_ids,
+            {
+                "freshness.global_81_target_blind_ledger",
+                "freshness.ab_ba_project_ward_finite_renormalization",
+                "freshness.ab_ba_vector_frame_missing_orbit",
+                "freshness.ab_ba_g3_original_full_measure",
+                "freshness.global_81_ht_symbolic_roundtrip",
+                "freshness.dred_cutting_failure",
+                "freshness.dred_mu2_triangle_moments",
+            },
+        )
+        authority_gate = next(
+            row
+            for row in audit["checks"]
+            if row["id"] == "authority.frozen_base_is_ancestor_of_origin_main"
+        )
+        self.assertEqual(authority_gate["status"], "PASS")
+        for relative, expected_digest in audit["evidence_sha256"].items():
+            self.assertEqual(
+                hashlib.sha256((ROOT / relative).read_bytes()).hexdigest(),
+                expected_digest,
+            )
+        self.assertEqual(
+            set(audit["excluded_obsolete_evidence"]),
+            set(task["excluded_obsolete_acceptance_evidence"]),
+        )
+        self.assertTrue(
+            set(audit["evidence_sha256"]).isdisjoint(audit["excluded_obsolete_evidence"])
+        )
 
     def test_step5a_component_bv_brst_primitive_grammar(self) -> None:
         relative = "contracts/foundations/step-05a-component-bv-brst-primitive-supergraph-grammar.md"
@@ -631,11 +1692,23 @@ class RepositoryPolicyTest(unittest.TestCase):
             for item in ledger["proof_obligations"]
             if item["id"] == "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001"
         )
-        self.assertEqual(obligation["state"], "SPECIFIED")
+        self.assertEqual(obligation["state"], "ACCEPTED")
         checked = obligation["checked_scope"]["STEP5A_COMPONENT_BV_BRST_PRIMITIVE_GRAMMAR"]
         self.assertEqual(checked["result"], "PASS_EXACT_PARTIAL_SCOPE")
+        self.assertEqual(
+            checked["acceptance_relation"],
+            "OUT_OF_SCOPE_FOR_PHYSICAL_ONE_LOOP_ANOMALY_SECTOR",
+        )
         self.assertEqual(checked["contract_sha256"], entry["sha256"])
-        self.assertEqual(checked["blockers"], list(blockers))
+        self.assertEqual(
+            checked["out_of_scope_limits"],
+            [
+                "OUT_OF_SCOPE_STEP5A_UNIQUE_PROPAGATORS_PERTURBATIVE_SLICE",
+                "OUT_OF_SCOPE_STEP5A_NK_BRANCH",
+                "OUT_OF_SCOPE_STEP5A_GENERAL_MOMENTUM_RULES_FOURIER_DRED_LEDGER",
+                "OUT_OF_SCOPE_STEP3D_LORENTZIAN_VECTOR_CYCLE",
+            ],
+        )
 
     def test_step5a_exact_verifier_and_audits(self) -> None:
         script = ROOT / "scripts/verify_step5a_component_bv_brst_grammar.py"
@@ -1332,6 +2405,36 @@ class RepositoryPolicyTest(unittest.TestCase):
             obligation["task_sha256"],
             hashlib.sha256(task_path.read_bytes()).hexdigest(),
         )
+
+    def test_step5_core_theory_write_only_mirror_receipt(self) -> None:
+        page_map = json.loads((ROOT / "mirror/page_map.yaml").read_text(encoding="utf-8"))
+        receipt = json.loads((ROOT / "audits/notion_write_receipt.json").read_text(encoding="utf-8"))
+        task_path = ROOT / "tasks/archive/MIRROR-STEP-05-CORE-THEORY-NOTION-001.yaml"
+        mirror_task = json.loads(task_path.read_text(encoding="utf-8"))
+        ledger = json.loads((ROOT / "ledger/proof_obligations.json").read_text(encoding="utf-8"))
+
+        page_id = "PAPER-AWI-N4-ONE-LOOP-CORE-THEORY-001"
+        page = next(item for item in page_map["pages"] if item["id"] == page_id)
+        write = next(item for item in receipt["pages"] if item["id"] == page_id)
+        self.assertEqual(page["source"], "paper/awi-n4-one-loop.md")
+        self.assertEqual(page["source_commit"], "f6f3531237176a9ac4579111fdcc72213a116578")
+        self.assertEqual(page["source_sha256"], "5d14395aa33d2a790d3c34fff26f253cf451ddc29ace76d20be7d9b9b753e9b6")
+        self.assertEqual(page["notion_page_id"], "39fee2b7-4b3f-8137-9499-ef28fbce6569")
+        self.assertEqual(write["page_id"], page["notion_page_id"])
+        self.assertEqual(write["mutation"], "create_pages_then_replace_page_content")
+        self.assertEqual(write["appended_blocks"], 244)
+        self.assertEqual(write["write_response"], "succeeded")
+        self.assertFalse(receipt["content_readback_performed"])
+        self.assertFalse(receipt["central_log_write"]["content_readback_performed"])
+        self.assertEqual(receipt["central_log_write"]["write_response"], "succeeded")
+        self.assertEqual(mirror_task["status"], "ACCEPTED")
+        obligation = next(
+            item
+            for item in ledger["proof_obligations"]
+            if item["id"] == "MIRROR-STEP-05-CORE-THEORY-NOTION-001"
+        )
+        self.assertEqual(obligation["state"], "ACCEPTED")
+        self.assertEqual(obligation["task_sha256"], hashlib.sha256(task_path.read_bytes()).hexdigest())
 
     def test_step_3d_path_integral_bv_brst_contract(self) -> None:
         path = ROOT / "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md"

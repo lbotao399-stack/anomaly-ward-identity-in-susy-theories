@@ -1,0 +1,4043 @@
+{
+  "audit_rectangle": {
+    "max_m": 4,
+    "max_n": 4,
+    "sample_count": 25,
+    "samples": [
+      {
+        "m": 0,
+        "n": 0,
+        "term_count": 1,
+        "terms": [
+          {
+            "coefficient": {
+              "denominator": 2,
+              "numerator": 1,
+              "text": "1/2"
+            },
+            "ell": 0,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              0
+            ],
+            "right_output_derivative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "m": 0,
+        "n": 1,
+        "term_count": 2,
+        "terms": [
+          {
+            "coefficient": {
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            "ell": 0,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              0
+            ],
+            "right_output_derivative": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 6,
+              "numerator": 1,
+              "text": "1/6"
+            },
+            "ell": 1,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              1
+            ],
+            "right_output_derivative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "m": 0,
+        "n": 2,
+        "term_count": 3,
+        "terms": [
+          {
+            "coefficient": {
+              "denominator": 4,
+              "numerator": 1,
+              "text": "1/4"
+            },
+            "ell": 0,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              0
+            ],
+            "right_output_derivative": [
+              0,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 4,
+              "numerator": 1,
+              "text": "1/4"
+            },
+            "ell": 1,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              1
+            ],
+            "right_output_derivative": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 12,
+              "numerator": 1,
+              "text": "1/12"
+            },
+            "ell": 2,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              2
+            ],
+            "right_output_derivative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "m": 0,
+        "n": 3,
+        "term_count": 4,
+        "terms": [
+          {
+            "coefficient": {
+              "denominator": 5,
+              "numerator": 1,
+              "text": "1/5"
+            },
+            "ell": 0,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              0
+            ],
+            "right_output_derivative": [
+              0,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 10,
+              "numerator": 3,
+              "text": "3/10"
+            },
+            "ell": 1,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              1
+            ],
+            "right_output_derivative": [
+              0,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 5,
+              "numerator": 1,
+              "text": "1/5"
+            },
+            "ell": 2,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              2
+            ],
+            "right_output_derivative": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 20,
+              "numerator": 1,
+              "text": "1/20"
+            },
+            "ell": 3,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              3
+            ],
+            "right_output_derivative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "m": 0,
+        "n": 4,
+        "term_count": 5,
+        "terms": [
+          {
+            "coefficient": {
+              "denominator": 6,
+              "numerator": 1,
+              "text": "1/6"
+            },
+            "ell": 0,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              0
+            ],
+            "right_output_derivative": [
+              0,
+              4
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            "ell": 1,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              1
+            ],
+            "right_output_derivative": [
+              0,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            "ell": 2,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              2
+            ],
+            "right_output_derivative": [
+              0,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 6,
+              "numerator": 1,
+              "text": "1/6"
+            },
+            "ell": 3,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              3
+            ],
+            "right_output_derivative": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 30,
+              "numerator": 1,
+              "text": "1/30"
+            },
+            "ell": 4,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              4
+            ],
+            "right_output_derivative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "m": 1,
+        "n": 0,
+        "term_count": 2,
+        "terms": [
+          {
+            "coefficient": {
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            "ell": 0,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              0
+            ],
+            "right_output_derivative": [
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 6,
+              "numerator": 1,
+              "text": "1/6"
+            },
+            "ell": 0,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              0
+            ],
+            "right_output_derivative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "m": 1,
+        "n": 1,
+        "term_count": 4,
+        "terms": [
+          {
+            "coefficient": {
+              "denominator": 4,
+              "numerator": 1,
+              "text": "1/4"
+            },
+            "ell": 0,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              0
+            ],
+            "right_output_derivative": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 8,
+              "numerator": 1,
+              "text": "1/8"
+            },
+            "ell": 1,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              1
+            ],
+            "right_output_derivative": [
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 8,
+              "numerator": 1,
+              "text": "1/8"
+            },
+            "ell": 0,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              0
+            ],
+            "right_output_derivative": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 12,
+              "numerator": 1,
+              "text": "1/12"
+            },
+            "ell": 1,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              1
+            ],
+            "right_output_derivative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "m": 1,
+        "n": 2,
+        "term_count": 6,
+        "terms": [
+          {
+            "coefficient": {
+              "denominator": 5,
+              "numerator": 1,
+              "text": "1/5"
+            },
+            "ell": 0,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              0
+            ],
+            "right_output_derivative": [
+              1,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 5,
+              "numerator": 1,
+              "text": "1/5"
+            },
+            "ell": 1,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              1
+            ],
+            "right_output_derivative": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 15,
+              "numerator": 1,
+              "text": "1/15"
+            },
+            "ell": 2,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              2
+            ],
+            "right_output_derivative": [
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 10,
+              "numerator": 1,
+              "text": "1/10"
+            },
+            "ell": 0,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              0
+            ],
+            "right_output_derivative": [
+              0,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 15,
+              "numerator": 2,
+              "text": "2/15"
+            },
+            "ell": 1,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              1
+            ],
+            "right_output_derivative": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 20,
+              "numerator": 1,
+              "text": "1/20"
+            },
+            "ell": 2,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              2
+            ],
+            "right_output_derivative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "m": 1,
+        "n": 3,
+        "term_count": 8,
+        "terms": [
+          {
+            "coefficient": {
+              "denominator": 6,
+              "numerator": 1,
+              "text": "1/6"
+            },
+            "ell": 0,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              0
+            ],
+            "right_output_derivative": [
+              1,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 4,
+              "numerator": 1,
+              "text": "1/4"
+            },
+            "ell": 1,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              1
+            ],
+            "right_output_derivative": [
+              1,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 6,
+              "numerator": 1,
+              "text": "1/6"
+            },
+            "ell": 2,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              2
+            ],
+            "right_output_derivative": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 24,
+              "numerator": 1,
+              "text": "1/24"
+            },
+            "ell": 3,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              3
+            ],
+            "right_output_derivative": [
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 12,
+              "numerator": 1,
+              "text": "1/12"
+            },
+            "ell": 0,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              0
+            ],
+            "right_output_derivative": [
+              0,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 6,
+              "numerator": 1,
+              "text": "1/6"
+            },
+            "ell": 1,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              1
+            ],
+            "right_output_derivative": [
+              0,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 8,
+              "numerator": 1,
+              "text": "1/8"
+            },
+            "ell": 2,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              2
+            ],
+            "right_output_derivative": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 30,
+              "numerator": 1,
+              "text": "1/30"
+            },
+            "ell": 3,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              3
+            ],
+            "right_output_derivative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "m": 1,
+        "n": 4,
+        "term_count": 10,
+        "terms": [
+          {
+            "coefficient": {
+              "denominator": 7,
+              "numerator": 1,
+              "text": "1/7"
+            },
+            "ell": 0,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              0
+            ],
+            "right_output_derivative": [
+              1,
+              4
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 7,
+              "numerator": 2,
+              "text": "2/7"
+            },
+            "ell": 1,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              1
+            ],
+            "right_output_derivative": [
+              1,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 7,
+              "numerator": 2,
+              "text": "2/7"
+            },
+            "ell": 2,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              2
+            ],
+            "right_output_derivative": [
+              1,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 7,
+              "numerator": 1,
+              "text": "1/7"
+            },
+            "ell": 3,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              3
+            ],
+            "right_output_derivative": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 35,
+              "numerator": 1,
+              "text": "1/35"
+            },
+            "ell": 4,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              4
+            ],
+            "right_output_derivative": [
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 14,
+              "numerator": 1,
+              "text": "1/14"
+            },
+            "ell": 0,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              0
+            ],
+            "right_output_derivative": [
+              0,
+              4
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 21,
+              "numerator": 4,
+              "text": "4/21"
+            },
+            "ell": 1,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              1
+            ],
+            "right_output_derivative": [
+              0,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 14,
+              "numerator": 3,
+              "text": "3/14"
+            },
+            "ell": 2,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              2
+            ],
+            "right_output_derivative": [
+              0,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 35,
+              "numerator": 4,
+              "text": "4/35"
+            },
+            "ell": 3,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              3
+            ],
+            "right_output_derivative": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 42,
+              "numerator": 1,
+              "text": "1/42"
+            },
+            "ell": 4,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              4
+            ],
+            "right_output_derivative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "m": 2,
+        "n": 0,
+        "term_count": 3,
+        "terms": [
+          {
+            "coefficient": {
+              "denominator": 4,
+              "numerator": 1,
+              "text": "1/4"
+            },
+            "ell": 0,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              0
+            ],
+            "right_output_derivative": [
+              2,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 4,
+              "numerator": 1,
+              "text": "1/4"
+            },
+            "ell": 0,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              0
+            ],
+            "right_output_derivative": [
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 12,
+              "numerator": 1,
+              "text": "1/12"
+            },
+            "ell": 0,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              0
+            ],
+            "right_output_derivative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "m": 2,
+        "n": 1,
+        "term_count": 6,
+        "terms": [
+          {
+            "coefficient": {
+              "denominator": 5,
+              "numerator": 1,
+              "text": "1/5"
+            },
+            "ell": 0,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              0
+            ],
+            "right_output_derivative": [
+              2,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 10,
+              "numerator": 1,
+              "text": "1/10"
+            },
+            "ell": 1,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              1
+            ],
+            "right_output_derivative": [
+              2,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 5,
+              "numerator": 1,
+              "text": "1/5"
+            },
+            "ell": 0,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              0
+            ],
+            "right_output_derivative": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 15,
+              "numerator": 2,
+              "text": "2/15"
+            },
+            "ell": 1,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              1
+            ],
+            "right_output_derivative": [
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 15,
+              "numerator": 1,
+              "text": "1/15"
+            },
+            "ell": 0,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              0
+            ],
+            "right_output_derivative": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 20,
+              "numerator": 1,
+              "text": "1/20"
+            },
+            "ell": 1,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              1
+            ],
+            "right_output_derivative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "m": 2,
+        "n": 2,
+        "term_count": 9,
+        "terms": [
+          {
+            "coefficient": {
+              "denominator": 6,
+              "numerator": 1,
+              "text": "1/6"
+            },
+            "ell": 0,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              0
+            ],
+            "right_output_derivative": [
+              2,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 6,
+              "numerator": 1,
+              "text": "1/6"
+            },
+            "ell": 1,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              1
+            ],
+            "right_output_derivative": [
+              2,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 18,
+              "numerator": 1,
+              "text": "1/18"
+            },
+            "ell": 2,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              2
+            ],
+            "right_output_derivative": [
+              2,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 6,
+              "numerator": 1,
+              "text": "1/6"
+            },
+            "ell": 0,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              0
+            ],
+            "right_output_derivative": [
+              1,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 9,
+              "numerator": 2,
+              "text": "2/9"
+            },
+            "ell": 1,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              1
+            ],
+            "right_output_derivative": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 12,
+              "numerator": 1,
+              "text": "1/12"
+            },
+            "ell": 2,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              2
+            ],
+            "right_output_derivative": [
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 18,
+              "numerator": 1,
+              "text": "1/18"
+            },
+            "ell": 0,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              0
+            ],
+            "right_output_derivative": [
+              0,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 12,
+              "numerator": 1,
+              "text": "1/12"
+            },
+            "ell": 1,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              1
+            ],
+            "right_output_derivative": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 30,
+              "numerator": 1,
+              "text": "1/30"
+            },
+            "ell": 2,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              2
+            ],
+            "right_output_derivative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "m": 2,
+        "n": 3,
+        "term_count": 12,
+        "terms": [
+          {
+            "coefficient": {
+              "denominator": 7,
+              "numerator": 1,
+              "text": "1/7"
+            },
+            "ell": 0,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              0
+            ],
+            "right_output_derivative": [
+              2,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 14,
+              "numerator": 3,
+              "text": "3/14"
+            },
+            "ell": 1,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              1
+            ],
+            "right_output_derivative": [
+              2,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 7,
+              "numerator": 1,
+              "text": "1/7"
+            },
+            "ell": 2,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              2
+            ],
+            "right_output_derivative": [
+              2,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 28,
+              "numerator": 1,
+              "text": "1/28"
+            },
+            "ell": 3,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              3
+            ],
+            "right_output_derivative": [
+              2,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 7,
+              "numerator": 1,
+              "text": "1/7"
+            },
+            "ell": 0,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              0
+            ],
+            "right_output_derivative": [
+              1,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 7,
+              "numerator": 2,
+              "text": "2/7"
+            },
+            "ell": 1,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              1
+            ],
+            "right_output_derivative": [
+              1,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 14,
+              "numerator": 3,
+              "text": "3/14"
+            },
+            "ell": 2,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              2
+            ],
+            "right_output_derivative": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 35,
+              "numerator": 2,
+              "text": "2/35"
+            },
+            "ell": 3,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              3
+            ],
+            "right_output_derivative": [
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 21,
+              "numerator": 1,
+              "text": "1/21"
+            },
+            "ell": 0,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              0
+            ],
+            "right_output_derivative": [
+              0,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 28,
+              "numerator": 3,
+              "text": "3/28"
+            },
+            "ell": 1,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              1
+            ],
+            "right_output_derivative": [
+              0,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 35,
+              "numerator": 3,
+              "text": "3/35"
+            },
+            "ell": 2,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              2
+            ],
+            "right_output_derivative": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 42,
+              "numerator": 1,
+              "text": "1/42"
+            },
+            "ell": 3,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              3
+            ],
+            "right_output_derivative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "m": 2,
+        "n": 4,
+        "term_count": 15,
+        "terms": [
+          {
+            "coefficient": {
+              "denominator": 8,
+              "numerator": 1,
+              "text": "1/8"
+            },
+            "ell": 0,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              0
+            ],
+            "right_output_derivative": [
+              2,
+              4
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 4,
+              "numerator": 1,
+              "text": "1/4"
+            },
+            "ell": 1,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              1
+            ],
+            "right_output_derivative": [
+              2,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 4,
+              "numerator": 1,
+              "text": "1/4"
+            },
+            "ell": 2,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              2
+            ],
+            "right_output_derivative": [
+              2,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 8,
+              "numerator": 1,
+              "text": "1/8"
+            },
+            "ell": 3,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              3
+            ],
+            "right_output_derivative": [
+              2,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 40,
+              "numerator": 1,
+              "text": "1/40"
+            },
+            "ell": 4,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              4
+            ],
+            "right_output_derivative": [
+              2,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 8,
+              "numerator": 1,
+              "text": "1/8"
+            },
+            "ell": 0,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              0
+            ],
+            "right_output_derivative": [
+              1,
+              4
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            "ell": 1,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              1
+            ],
+            "right_output_derivative": [
+              1,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 8,
+              "numerator": 3,
+              "text": "3/8"
+            },
+            "ell": 2,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              2
+            ],
+            "right_output_derivative": [
+              1,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 5,
+              "numerator": 1,
+              "text": "1/5"
+            },
+            "ell": 3,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              3
+            ],
+            "right_output_derivative": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 24,
+              "numerator": 1,
+              "text": "1/24"
+            },
+            "ell": 4,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              4
+            ],
+            "right_output_derivative": [
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 24,
+              "numerator": 1,
+              "text": "1/24"
+            },
+            "ell": 0,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              0
+            ],
+            "right_output_derivative": [
+              0,
+              4
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 8,
+              "numerator": 1,
+              "text": "1/8"
+            },
+            "ell": 1,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              1
+            ],
+            "right_output_derivative": [
+              0,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 20,
+              "numerator": 3,
+              "text": "3/20"
+            },
+            "ell": 2,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              2
+            ],
+            "right_output_derivative": [
+              0,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 12,
+              "numerator": 1,
+              "text": "1/12"
+            },
+            "ell": 3,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              3
+            ],
+            "right_output_derivative": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 56,
+              "numerator": 1,
+              "text": "1/56"
+            },
+            "ell": 4,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              4
+            ],
+            "right_output_derivative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "m": 3,
+        "n": 0,
+        "term_count": 4,
+        "terms": [
+          {
+            "coefficient": {
+              "denominator": 5,
+              "numerator": 1,
+              "text": "1/5"
+            },
+            "ell": 0,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              0
+            ],
+            "right_output_derivative": [
+              3,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 10,
+              "numerator": 3,
+              "text": "3/10"
+            },
+            "ell": 0,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              0
+            ],
+            "right_output_derivative": [
+              2,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 5,
+              "numerator": 1,
+              "text": "1/5"
+            },
+            "ell": 0,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              0
+            ],
+            "right_output_derivative": [
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 20,
+              "numerator": 1,
+              "text": "1/20"
+            },
+            "ell": 0,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              0
+            ],
+            "right_output_derivative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "m": 3,
+        "n": 1,
+        "term_count": 8,
+        "terms": [
+          {
+            "coefficient": {
+              "denominator": 6,
+              "numerator": 1,
+              "text": "1/6"
+            },
+            "ell": 0,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              0
+            ],
+            "right_output_derivative": [
+              3,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 12,
+              "numerator": 1,
+              "text": "1/12"
+            },
+            "ell": 1,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              1
+            ],
+            "right_output_derivative": [
+              3,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 4,
+              "numerator": 1,
+              "text": "1/4"
+            },
+            "ell": 0,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              0
+            ],
+            "right_output_derivative": [
+              2,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 6,
+              "numerator": 1,
+              "text": "1/6"
+            },
+            "ell": 1,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              1
+            ],
+            "right_output_derivative": [
+              2,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 6,
+              "numerator": 1,
+              "text": "1/6"
+            },
+            "ell": 0,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              0
+            ],
+            "right_output_derivative": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 8,
+              "numerator": 1,
+              "text": "1/8"
+            },
+            "ell": 1,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              1
+            ],
+            "right_output_derivative": [
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 24,
+              "numerator": 1,
+              "text": "1/24"
+            },
+            "ell": 0,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              0
+            ],
+            "right_output_derivative": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 30,
+              "numerator": 1,
+              "text": "1/30"
+            },
+            "ell": 1,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              1
+            ],
+            "right_output_derivative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "m": 3,
+        "n": 2,
+        "term_count": 12,
+        "terms": [
+          {
+            "coefficient": {
+              "denominator": 7,
+              "numerator": 1,
+              "text": "1/7"
+            },
+            "ell": 0,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              0
+            ],
+            "right_output_derivative": [
+              3,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 7,
+              "numerator": 1,
+              "text": "1/7"
+            },
+            "ell": 1,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              1
+            ],
+            "right_output_derivative": [
+              3,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 21,
+              "numerator": 1,
+              "text": "1/21"
+            },
+            "ell": 2,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              2
+            ],
+            "right_output_derivative": [
+              3,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 14,
+              "numerator": 3,
+              "text": "3/14"
+            },
+            "ell": 0,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              0
+            ],
+            "right_output_derivative": [
+              2,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 7,
+              "numerator": 2,
+              "text": "2/7"
+            },
+            "ell": 1,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              1
+            ],
+            "right_output_derivative": [
+              2,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 28,
+              "numerator": 3,
+              "text": "3/28"
+            },
+            "ell": 2,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              2
+            ],
+            "right_output_derivative": [
+              2,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 7,
+              "numerator": 1,
+              "text": "1/7"
+            },
+            "ell": 0,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              0
+            ],
+            "right_output_derivative": [
+              1,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 14,
+              "numerator": 3,
+              "text": "3/14"
+            },
+            "ell": 1,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              1
+            ],
+            "right_output_derivative": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 35,
+              "numerator": 3,
+              "text": "3/35"
+            },
+            "ell": 2,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              2
+            ],
+            "right_output_derivative": [
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 28,
+              "numerator": 1,
+              "text": "1/28"
+            },
+            "ell": 0,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              0
+            ],
+            "right_output_derivative": [
+              0,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 35,
+              "numerator": 2,
+              "text": "2/35"
+            },
+            "ell": 1,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              1
+            ],
+            "right_output_derivative": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 42,
+              "numerator": 1,
+              "text": "1/42"
+            },
+            "ell": 2,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              2
+            ],
+            "right_output_derivative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "m": 3,
+        "n": 3,
+        "term_count": 16,
+        "terms": [
+          {
+            "coefficient": {
+              "denominator": 8,
+              "numerator": 1,
+              "text": "1/8"
+            },
+            "ell": 0,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              0
+            ],
+            "right_output_derivative": [
+              3,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 16,
+              "numerator": 3,
+              "text": "3/16"
+            },
+            "ell": 1,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              1
+            ],
+            "right_output_derivative": [
+              3,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 8,
+              "numerator": 1,
+              "text": "1/8"
+            },
+            "ell": 2,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              2
+            ],
+            "right_output_derivative": [
+              3,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            "ell": 3,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              3
+            ],
+            "right_output_derivative": [
+              3,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 16,
+              "numerator": 3,
+              "text": "3/16"
+            },
+            "ell": 0,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              0
+            ],
+            "right_output_derivative": [
+              2,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 8,
+              "numerator": 3,
+              "text": "3/8"
+            },
+            "ell": 1,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              1
+            ],
+            "right_output_derivative": [
+              2,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 32,
+              "numerator": 9,
+              "text": "9/32"
+            },
+            "ell": 2,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              2
+            ],
+            "right_output_derivative": [
+              2,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 40,
+              "numerator": 3,
+              "text": "3/40"
+            },
+            "ell": 3,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              3
+            ],
+            "right_output_derivative": [
+              2,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 8,
+              "numerator": 1,
+              "text": "1/8"
+            },
+            "ell": 0,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              0
+            ],
+            "right_output_derivative": [
+              1,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 32,
+              "numerator": 9,
+              "text": "9/32"
+            },
+            "ell": 1,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              1
+            ],
+            "right_output_derivative": [
+              1,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 40,
+              "numerator": 9,
+              "text": "9/40"
+            },
+            "ell": 2,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              2
+            ],
+            "right_output_derivative": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 16,
+              "numerator": 1,
+              "text": "1/16"
+            },
+            "ell": 3,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              3
+            ],
+            "right_output_derivative": [
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            "ell": 0,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              0
+            ],
+            "right_output_derivative": [
+              0,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 40,
+              "numerator": 3,
+              "text": "3/40"
+            },
+            "ell": 1,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              1
+            ],
+            "right_output_derivative": [
+              0,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 16,
+              "numerator": 1,
+              "text": "1/16"
+            },
+            "ell": 2,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              2
+            ],
+            "right_output_derivative": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 56,
+              "numerator": 1,
+              "text": "1/56"
+            },
+            "ell": 3,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              3
+            ],
+            "right_output_derivative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "m": 3,
+        "n": 4,
+        "term_count": 20,
+        "terms": [
+          {
+            "coefficient": {
+              "denominator": 9,
+              "numerator": 1,
+              "text": "1/9"
+            },
+            "ell": 0,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              0
+            ],
+            "right_output_derivative": [
+              3,
+              4
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 9,
+              "numerator": 2,
+              "text": "2/9"
+            },
+            "ell": 1,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              1
+            ],
+            "right_output_derivative": [
+              3,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 9,
+              "numerator": 2,
+              "text": "2/9"
+            },
+            "ell": 2,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              2
+            ],
+            "right_output_derivative": [
+              3,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 9,
+              "numerator": 1,
+              "text": "1/9"
+            },
+            "ell": 3,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              3
+            ],
+            "right_output_derivative": [
+              3,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 45,
+              "numerator": 1,
+              "text": "1/45"
+            },
+            "ell": 4,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              4
+            ],
+            "right_output_derivative": [
+              3,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 6,
+              "numerator": 1,
+              "text": "1/6"
+            },
+            "ell": 0,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              0
+            ],
+            "right_output_derivative": [
+              2,
+              4
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 9,
+              "numerator": 4,
+              "text": "4/9"
+            },
+            "ell": 1,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              1
+            ],
+            "right_output_derivative": [
+              2,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 2,
+              "numerator": 1,
+              "text": "1/2"
+            },
+            "ell": 2,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              2
+            ],
+            "right_output_derivative": [
+              2,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 15,
+              "numerator": 4,
+              "text": "4/15"
+            },
+            "ell": 3,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              3
+            ],
+            "right_output_derivative": [
+              2,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 18,
+              "numerator": 1,
+              "text": "1/18"
+            },
+            "ell": 4,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              4
+            ],
+            "right_output_derivative": [
+              2,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 9,
+              "numerator": 1,
+              "text": "1/9"
+            },
+            "ell": 0,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              0
+            ],
+            "right_output_derivative": [
+              1,
+              4
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            "ell": 1,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              1
+            ],
+            "right_output_derivative": [
+              1,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 5,
+              "numerator": 2,
+              "text": "2/5"
+            },
+            "ell": 2,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              2
+            ],
+            "right_output_derivative": [
+              1,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 9,
+              "numerator": 2,
+              "text": "2/9"
+            },
+            "ell": 3,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              3
+            ],
+            "right_output_derivative": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 21,
+              "numerator": 1,
+              "text": "1/21"
+            },
+            "ell": 4,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              4
+            ],
+            "right_output_derivative": [
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 36,
+              "numerator": 1,
+              "text": "1/36"
+            },
+            "ell": 0,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              0
+            ],
+            "right_output_derivative": [
+              0,
+              4
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 45,
+              "numerator": 4,
+              "text": "4/45"
+            },
+            "ell": 1,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              1
+            ],
+            "right_output_derivative": [
+              0,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 9,
+              "numerator": 1,
+              "text": "1/9"
+            },
+            "ell": 2,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              2
+            ],
+            "right_output_derivative": [
+              0,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 63,
+              "numerator": 4,
+              "text": "4/63"
+            },
+            "ell": 3,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              3
+            ],
+            "right_output_derivative": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 72,
+              "numerator": 1,
+              "text": "1/72"
+            },
+            "ell": 4,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              4
+            ],
+            "right_output_derivative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "m": 4,
+        "n": 0,
+        "term_count": 5,
+        "terms": [
+          {
+            "coefficient": {
+              "denominator": 6,
+              "numerator": 1,
+              "text": "1/6"
+            },
+            "ell": 0,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              0
+            ],
+            "right_output_derivative": [
+              4,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            "ell": 0,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              0
+            ],
+            "right_output_derivative": [
+              3,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            "ell": 0,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              0
+            ],
+            "right_output_derivative": [
+              2,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 6,
+              "numerator": 1,
+              "text": "1/6"
+            },
+            "ell": 0,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              0
+            ],
+            "right_output_derivative": [
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 30,
+              "numerator": 1,
+              "text": "1/30"
+            },
+            "ell": 0,
+            "k": 4,
+            "left_output_derivative": [
+              4,
+              0
+            ],
+            "right_output_derivative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "m": 4,
+        "n": 1,
+        "term_count": 10,
+        "terms": [
+          {
+            "coefficient": {
+              "denominator": 7,
+              "numerator": 1,
+              "text": "1/7"
+            },
+            "ell": 0,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              0
+            ],
+            "right_output_derivative": [
+              4,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 14,
+              "numerator": 1,
+              "text": "1/14"
+            },
+            "ell": 1,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              1
+            ],
+            "right_output_derivative": [
+              4,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 7,
+              "numerator": 2,
+              "text": "2/7"
+            },
+            "ell": 0,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              0
+            ],
+            "right_output_derivative": [
+              3,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 21,
+              "numerator": 4,
+              "text": "4/21"
+            },
+            "ell": 1,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              1
+            ],
+            "right_output_derivative": [
+              3,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 7,
+              "numerator": 2,
+              "text": "2/7"
+            },
+            "ell": 0,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              0
+            ],
+            "right_output_derivative": [
+              2,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 14,
+              "numerator": 3,
+              "text": "3/14"
+            },
+            "ell": 1,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              1
+            ],
+            "right_output_derivative": [
+              2,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 7,
+              "numerator": 1,
+              "text": "1/7"
+            },
+            "ell": 0,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              0
+            ],
+            "right_output_derivative": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 35,
+              "numerator": 4,
+              "text": "4/35"
+            },
+            "ell": 1,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              1
+            ],
+            "right_output_derivative": [
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 35,
+              "numerator": 1,
+              "text": "1/35"
+            },
+            "ell": 0,
+            "k": 4,
+            "left_output_derivative": [
+              4,
+              0
+            ],
+            "right_output_derivative": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 42,
+              "numerator": 1,
+              "text": "1/42"
+            },
+            "ell": 1,
+            "k": 4,
+            "left_output_derivative": [
+              4,
+              1
+            ],
+            "right_output_derivative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "m": 4,
+        "n": 2,
+        "term_count": 15,
+        "terms": [
+          {
+            "coefficient": {
+              "denominator": 8,
+              "numerator": 1,
+              "text": "1/8"
+            },
+            "ell": 0,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              0
+            ],
+            "right_output_derivative": [
+              4,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 8,
+              "numerator": 1,
+              "text": "1/8"
+            },
+            "ell": 1,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              1
+            ],
+            "right_output_derivative": [
+              4,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 24,
+              "numerator": 1,
+              "text": "1/24"
+            },
+            "ell": 2,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              2
+            ],
+            "right_output_derivative": [
+              4,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 4,
+              "numerator": 1,
+              "text": "1/4"
+            },
+            "ell": 0,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              0
+            ],
+            "right_output_derivative": [
+              3,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            "ell": 1,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              1
+            ],
+            "right_output_derivative": [
+              3,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 8,
+              "numerator": 1,
+              "text": "1/8"
+            },
+            "ell": 2,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              2
+            ],
+            "right_output_derivative": [
+              3,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 4,
+              "numerator": 1,
+              "text": "1/4"
+            },
+            "ell": 0,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              0
+            ],
+            "right_output_derivative": [
+              2,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 8,
+              "numerator": 3,
+              "text": "3/8"
+            },
+            "ell": 1,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              1
+            ],
+            "right_output_derivative": [
+              2,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 20,
+              "numerator": 3,
+              "text": "3/20"
+            },
+            "ell": 2,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              2
+            ],
+            "right_output_derivative": [
+              2,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 8,
+              "numerator": 1,
+              "text": "1/8"
+            },
+            "ell": 0,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              0
+            ],
+            "right_output_derivative": [
+              1,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 5,
+              "numerator": 1,
+              "text": "1/5"
+            },
+            "ell": 1,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              1
+            ],
+            "right_output_derivative": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 12,
+              "numerator": 1,
+              "text": "1/12"
+            },
+            "ell": 2,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              2
+            ],
+            "right_output_derivative": [
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 40,
+              "numerator": 1,
+              "text": "1/40"
+            },
+            "ell": 0,
+            "k": 4,
+            "left_output_derivative": [
+              4,
+              0
+            ],
+            "right_output_derivative": [
+              0,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 24,
+              "numerator": 1,
+              "text": "1/24"
+            },
+            "ell": 1,
+            "k": 4,
+            "left_output_derivative": [
+              4,
+              1
+            ],
+            "right_output_derivative": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 56,
+              "numerator": 1,
+              "text": "1/56"
+            },
+            "ell": 2,
+            "k": 4,
+            "left_output_derivative": [
+              4,
+              2
+            ],
+            "right_output_derivative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "m": 4,
+        "n": 3,
+        "term_count": 20,
+        "terms": [
+          {
+            "coefficient": {
+              "denominator": 9,
+              "numerator": 1,
+              "text": "1/9"
+            },
+            "ell": 0,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              0
+            ],
+            "right_output_derivative": [
+              4,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 6,
+              "numerator": 1,
+              "text": "1/6"
+            },
+            "ell": 1,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              1
+            ],
+            "right_output_derivative": [
+              4,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 9,
+              "numerator": 1,
+              "text": "1/9"
+            },
+            "ell": 2,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              2
+            ],
+            "right_output_derivative": [
+              4,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 36,
+              "numerator": 1,
+              "text": "1/36"
+            },
+            "ell": 3,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              3
+            ],
+            "right_output_derivative": [
+              4,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 9,
+              "numerator": 2,
+              "text": "2/9"
+            },
+            "ell": 0,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              0
+            ],
+            "right_output_derivative": [
+              3,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 9,
+              "numerator": 4,
+              "text": "4/9"
+            },
+            "ell": 1,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              1
+            ],
+            "right_output_derivative": [
+              3,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            "ell": 2,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              2
+            ],
+            "right_output_derivative": [
+              3,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 45,
+              "numerator": 4,
+              "text": "4/45"
+            },
+            "ell": 3,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              3
+            ],
+            "right_output_derivative": [
+              3,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 9,
+              "numerator": 2,
+              "text": "2/9"
+            },
+            "ell": 0,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              0
+            ],
+            "right_output_derivative": [
+              2,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 2,
+              "numerator": 1,
+              "text": "1/2"
+            },
+            "ell": 1,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              1
+            ],
+            "right_output_derivative": [
+              2,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 5,
+              "numerator": 2,
+              "text": "2/5"
+            },
+            "ell": 2,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              2
+            ],
+            "right_output_derivative": [
+              2,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 9,
+              "numerator": 1,
+              "text": "1/9"
+            },
+            "ell": 3,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              3
+            ],
+            "right_output_derivative": [
+              2,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 9,
+              "numerator": 1,
+              "text": "1/9"
+            },
+            "ell": 0,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              0
+            ],
+            "right_output_derivative": [
+              1,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 15,
+              "numerator": 4,
+              "text": "4/15"
+            },
+            "ell": 1,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              1
+            ],
+            "right_output_derivative": [
+              1,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 9,
+              "numerator": 2,
+              "text": "2/9"
+            },
+            "ell": 2,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              2
+            ],
+            "right_output_derivative": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 63,
+              "numerator": 4,
+              "text": "4/63"
+            },
+            "ell": 3,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              3
+            ],
+            "right_output_derivative": [
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 45,
+              "numerator": 1,
+              "text": "1/45"
+            },
+            "ell": 0,
+            "k": 4,
+            "left_output_derivative": [
+              4,
+              0
+            ],
+            "right_output_derivative": [
+              0,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 18,
+              "numerator": 1,
+              "text": "1/18"
+            },
+            "ell": 1,
+            "k": 4,
+            "left_output_derivative": [
+              4,
+              1
+            ],
+            "right_output_derivative": [
+              0,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 21,
+              "numerator": 1,
+              "text": "1/21"
+            },
+            "ell": 2,
+            "k": 4,
+            "left_output_derivative": [
+              4,
+              2
+            ],
+            "right_output_derivative": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 72,
+              "numerator": 1,
+              "text": "1/72"
+            },
+            "ell": 3,
+            "k": 4,
+            "left_output_derivative": [
+              4,
+              3
+            ],
+            "right_output_derivative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "m": 4,
+        "n": 4,
+        "term_count": 25,
+        "terms": [
+          {
+            "coefficient": {
+              "denominator": 10,
+              "numerator": 1,
+              "text": "1/10"
+            },
+            "ell": 0,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              0
+            ],
+            "right_output_derivative": [
+              4,
+              4
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 5,
+              "numerator": 1,
+              "text": "1/5"
+            },
+            "ell": 1,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              1
+            ],
+            "right_output_derivative": [
+              4,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 5,
+              "numerator": 1,
+              "text": "1/5"
+            },
+            "ell": 2,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              2
+            ],
+            "right_output_derivative": [
+              4,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 10,
+              "numerator": 1,
+              "text": "1/10"
+            },
+            "ell": 3,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              3
+            ],
+            "right_output_derivative": [
+              4,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 50,
+              "numerator": 1,
+              "text": "1/50"
+            },
+            "ell": 4,
+            "k": 0,
+            "left_output_derivative": [
+              0,
+              4
+            ],
+            "right_output_derivative": [
+              4,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 5,
+              "numerator": 1,
+              "text": "1/5"
+            },
+            "ell": 0,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              0
+            ],
+            "right_output_derivative": [
+              3,
+              4
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 15,
+              "numerator": 8,
+              "text": "8/15"
+            },
+            "ell": 1,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              1
+            ],
+            "right_output_derivative": [
+              3,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 5,
+              "numerator": 3,
+              "text": "3/5"
+            },
+            "ell": 2,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              2
+            ],
+            "right_output_derivative": [
+              3,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 25,
+              "numerator": 8,
+              "text": "8/25"
+            },
+            "ell": 3,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              3
+            ],
+            "right_output_derivative": [
+              3,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 15,
+              "numerator": 1,
+              "text": "1/15"
+            },
+            "ell": 4,
+            "k": 1,
+            "left_output_derivative": [
+              1,
+              4
+            ],
+            "right_output_derivative": [
+              3,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 5,
+              "numerator": 1,
+              "text": "1/5"
+            },
+            "ell": 0,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              0
+            ],
+            "right_output_derivative": [
+              2,
+              4
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 5,
+              "numerator": 3,
+              "text": "3/5"
+            },
+            "ell": 1,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              1
+            ],
+            "right_output_derivative": [
+              2,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 25,
+              "numerator": 18,
+              "text": "18/25"
+            },
+            "ell": 2,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              2
+            ],
+            "right_output_derivative": [
+              2,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 5,
+              "numerator": 2,
+              "text": "2/5"
+            },
+            "ell": 3,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              3
+            ],
+            "right_output_derivative": [
+              2,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 35,
+              "numerator": 3,
+              "text": "3/35"
+            },
+            "ell": 4,
+            "k": 2,
+            "left_output_derivative": [
+              2,
+              4
+            ],
+            "right_output_derivative": [
+              2,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 10,
+              "numerator": 1,
+              "text": "1/10"
+            },
+            "ell": 0,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              0
+            ],
+            "right_output_derivative": [
+              1,
+              4
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 25,
+              "numerator": 8,
+              "text": "8/25"
+            },
+            "ell": 1,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              1
+            ],
+            "right_output_derivative": [
+              1,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 5,
+              "numerator": 2,
+              "text": "2/5"
+            },
+            "ell": 2,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              2
+            ],
+            "right_output_derivative": [
+              1,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 35,
+              "numerator": 8,
+              "text": "8/35"
+            },
+            "ell": 3,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              3
+            ],
+            "right_output_derivative": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 20,
+              "numerator": 1,
+              "text": "1/20"
+            },
+            "ell": 4,
+            "k": 3,
+            "left_output_derivative": [
+              3,
+              4
+            ],
+            "right_output_derivative": [
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 50,
+              "numerator": 1,
+              "text": "1/50"
+            },
+            "ell": 0,
+            "k": 4,
+            "left_output_derivative": [
+              4,
+              0
+            ],
+            "right_output_derivative": [
+              0,
+              4
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 15,
+              "numerator": 1,
+              "text": "1/15"
+            },
+            "ell": 1,
+            "k": 4,
+            "left_output_derivative": [
+              4,
+              1
+            ],
+            "right_output_derivative": [
+              0,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 35,
+              "numerator": 3,
+              "text": "3/35"
+            },
+            "ell": 2,
+            "k": 4,
+            "left_output_derivative": [
+              4,
+              2
+            ],
+            "right_output_derivative": [
+              0,
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 20,
+              "numerator": 1,
+              "text": "1/20"
+            },
+            "ell": 3,
+            "k": 4,
+            "left_output_derivative": [
+              4,
+              3
+            ],
+            "right_output_derivative": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "denominator": 90,
+              "numerator": 1,
+              "text": "1/90"
+            },
+            "ell": 4,
+            "k": 4,
+            "left_output_derivative": [
+              4,
+              4
+            ],
+            "right_output_derivative": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "authority_role": "EXTERNAL_TARGET_ONLY",
+  "first_input_lift": {
+    "formula": "Q1((partial^u f)(partial^v g))=sum_{r<=u} (-1)^|r| binom(u,r) partial^(u-r) Q1(f partial^(v+r) g)",
+    "multiindex_binomial": "binom(u,r)=binom(u1,r1)binom(u2,r2)",
+    "validity": "all u,v in N^2"
+  },
+  "kernel": {
+    "coefficient": "binom(m,k) binom(n,ell) / ((m+n+2)(k+ell+1))",
+    "domain": "m,n,k,ell are nonnegative integers with 0<=k<=m and 0<=ell<=n",
+    "id": "T_mn",
+    "left_factor": "partial_1^k partial_2^ell partial_dot_alpha f",
+    "right_factor": "partial_1^(m-k) partial_2^(n-ell) partial^dot_alpha g"
+  },
+  "schema": 1,
+  "source": {
+    "anchor": "HT-N4-DERIVATIVE-COMPONENT-PAIR-RESULTS",
+    "equation_labels": [
+      "eq:rec",
+      "eq:Cmn"
+    ],
+    "lines": [
+      1339,
+      1395
+    ],
+    "path": "references/vendor/arxiv/2512.07771v2/source/main.tex"
+  },
+  "zero_shift": {
+    "T_0_0_coefficient": {
+      "denominator": 2,
+      "numerator": 1,
+      "text": "1/2"
+    },
+    "formula": "T_0_0(f,g)=(1/2) partial_dot_alpha f partial^dot_alpha g"
+  }
+}

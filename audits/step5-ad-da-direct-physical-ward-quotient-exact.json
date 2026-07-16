@@ -1,0 +1,725 @@
+{
+  "checks": {
+    "count": 82,
+    "failed": 0,
+    "passed": 82,
+    "rows": [
+      {
+        "actual": "1/2*sqrt(2)",
+        "expected": "1/2*sqrt(2)",
+        "id": "AD_N0_PREIMAGE",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/4*i sqrt(2)",
+        "expected": "1/4*i sqrt(2)",
+        "id": "AD_D1_PREIMAGE",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/4*sqrt(2)",
+        "expected": "-1/4*sqrt(2)",
+        "id": "DA_D1_PREIMAGE",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/2*sqrt(2)",
+        "expected": "1/2*sqrt(2)",
+        "id": "DA_N0_PREIMAGE",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/4*i",
+        "expected": "1/4*i",
+        "id": "AD_ORDERED_PRODUCT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/4",
+        "expected": "1/4",
+        "id": "DA_ORDERED_PRODUCT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "AD_HESSIAN_TAG_COUNT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "DA_HESSIAN_TAG_COUNT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/4*i",
+        "expected": "1/4*i",
+        "id": "AD_HESSIAN_DIRECT_COMPONENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/4",
+        "expected": "1/4",
+        "id": "DA_HESSIAN_DIRECT_COMPONENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "ORDERED_LABELED_HESSIAN_FACTOR",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "PHYSICAL_OPERATOR_COEFFICIENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/8*sqrt(2)",
+        "expected": "-1/8*sqrt(2)",
+        "id": "EXTERNAL_D_LEFT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/8*sqrt(2)",
+        "expected": "-1/8*sqrt(2)",
+        "id": "EXTERNAL_D_RIGHT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/32",
+        "expected": "1/32",
+        "id": "EXTERNAL_D_PRODUCT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2",
+        "expected": "-2",
+        "id": "SU2_F_01_10",
+        "status": "PASS"
+      },
+      {
+        "actual": "-16",
+        "expected": "-16",
+        "id": "RAW_TO_CANONICAL_COMPONENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/2",
+        "expected": "1/2",
+        "id": "LOOP_MASTER_OVER_LAMBDA",
+        "status": "PASS"
+      },
+      {
+        "actual": "-8",
+        "expected": "-8",
+        "id": "RAW_INTEGRATED_TO_LAMBDA",
+        "status": "PASS"
+      },
+      {
+        "actual": "32",
+        "expected": "32",
+        "id": "OPERATOR_MASK_CHECKS",
+        "status": "PASS"
+      },
+      {
+        "actual": "32",
+        "expected": "32",
+        "id": "SELECTED_FACTORIZATION_MASK_CHECKS",
+        "status": "PASS"
+      },
+      {
+        "actual": "32",
+        "expected": "32",
+        "id": "GF_CANCELLATION_MASK_CHECKS",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FULL_D_PARENT_MINUS_CUT",
+        "status": "PASS"
+      },
+      {
+        "actual": "R_e*mu_l2/(P_hat_e*r_ed2)",
+        "expected": "R_e*mu_l2/(P_hat_e*r_ed2)",
+        "id": "DRED_PARENT_MINUS_CUT",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "id": "O05_SAMPLE0_TAG_COUNT_A__Ddot1_source_dot1_action_dot2",
+        "status": "PASS"
+      },
+      {
+        "actual": "10*i",
+        "expected": "10*i",
+        "id": "O05_SAMPLE0_A__Ddot1_source_dot1_action_dot2_I1_N1A2[A]*D1[B]",
+        "status": "PASS"
+      },
+      {
+        "actual": "4*i",
+        "expected": "4*i",
+        "id": "O05_SAMPLE0_A__Ddot1_source_dot1_action_dot2_I1_N1gamma1[A]*D1[B]",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "O05_SAMPLE0_TAG_COUNT_A__Ddot1_source_dot2_action_dot1",
+        "status": "PASS"
+      },
+      {
+        "actual": "4*i",
+        "expected": "4*i",
+        "id": "O05_SAMPLE0_A__Ddot1_source_dot2_action_dot1_I1_N0[A]*D2[B]",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "O05_SAMPLE0_TAG_COUNT_Ddot1__A_source_dot1_action_dot2",
+        "status": "PASS"
+      },
+      {
+        "actual": "-i",
+        "expected": "-i",
+        "id": "O05_SAMPLE0_Ddot1__A_source_dot1_action_dot2_I1_-D2[A]*N0[B]",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "O05_SAMPLE0_TAG_COUNT_Ddot1__A_source_dot2_action_dot1",
+        "status": "PASS"
+      },
+      {
+        "actual": "1 + 2*i",
+        "expected": "1 + 2*i",
+        "id": "O05_SAMPLE0_Ddot1__A_source_dot2_action_dot1_I1_-D1[A]*N1A2[B]",
+        "status": "PASS"
+      },
+      {
+        "actual": "3",
+        "expected": "3",
+        "id": "O05_INTERPOLATED_ROW_COUNT_A__Ddot1",
+        "status": "PASS"
+      },
+      {
+        "actual": "('r0', '0', '0', '5*I')",
+        "expected": "('r0', '0', '0', '5*I')",
+        "id": "O05_RANK_ONE_A__Ddot1_source_dot1_action_dot2::I1_N1A2[A]*D1[B]",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "O05_NO_SCALAR_SQUARE_A__Ddot1_source_dot1_action_dot2::I1_N1A2[A]*D1[B]",
+        "status": "PASS"
+      },
+      {
+        "actual": "('r0', '0', '0', '2*I')",
+        "expected": "('r0', '0', '0', '2*I')",
+        "id": "O05_RANK_ONE_A__Ddot1_source_dot1_action_dot2::I1_N1gamma1[A]*D1[B]",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "O05_NO_SCALAR_SQUARE_A__Ddot1_source_dot1_action_dot2::I1_N1gamma1[A]*D1[B]",
+        "status": "PASS"
+      },
+      {
+        "actual": "('r2', '0', '0', '2*I')",
+        "expected": "('r2', '0', '0', '2*I')",
+        "id": "O05_RANK_ONE_A__Ddot1_source_dot2_action_dot1::I1_N0[A]*D2[B]",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "O05_NO_SCALAR_SQUARE_A__Ddot1_source_dot2_action_dot1::I1_N0[A]*D2[B]",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "id": "O05_INTERPOLATED_ROW_COUNT_Ddot1__A",
+        "status": "PASS"
+      },
+      {
+        "actual": "('r0', '0', '0', '-I/2')",
+        "expected": "('r0', '0', '0', '-I/2')",
+        "id": "O05_RANK_ONE_Ddot1__A_source_dot1_action_dot2::I1_-D2[A]*N0[B]",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "O05_NO_SCALAR_SQUARE_Ddot1__A_source_dot1_action_dot2::I1_-D2[A]*N0[B]",
+        "status": "PASS"
+      },
+      {
+        "actual": "('r2', '0', 'I', 'I')",
+        "expected": "('r2', '0', 'I', 'I')",
+        "id": "O05_RANK_ONE_Ddot1__A_source_dot2_action_dot1::I1_-D1[A]*N1A2[B]",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "O05_NO_SCALAR_SQUARE_Ddot1__A_source_dot2_action_dot1::I1_-D1[A]*N1A2[B]",
+        "status": "PASS"
+      },
+      {
+        "actual": "r1",
+        "expected": "r1",
+        "id": "O06_COLLAPSED_EDGE",
+        "status": "PASS"
+      },
+      {
+        "actual": "D0*D2",
+        "expected": "D0*D2",
+        "id": "O06_DENOMINATOR",
+        "status": "PASS"
+      },
+      {
+        "actual": "{'ell_plus_dotted': '0', 'p_plus_dotted': '0', 'q_plus_dotted': '0'}",
+        "expected": "{'ell_plus_dotted': '0', 'p_plus_dotted': '0', 'q_plus_dotted': '0'}",
+        "id": "O06_AD_RANK_ONE",
+        "status": "PASS"
+      },
+      {
+        "actual": "{'ell_plus_dotted': '0', 'p_plus_dotted': 'i', 'q_plus_dotted': 'i'}",
+        "expected": "{'ell_plus_dotted': '0', 'p_plus_dotted': 'i', 'q_plus_dotted': 'i'}",
+        "id": "O06_DA_RANK_ONE",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/2",
+        "expected": "1/2",
+        "id": "O06_CHIRAL_HALF",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/2",
+        "expected": "1/2",
+        "id": "O06_ANTICHIRAL_HALF",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "O06_NO_SCALAR_SQUARE",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "O06_STANDALONE_ANOMALY",
+        "status": "PASS"
+      },
+      {
+        "actual": "{}",
+        "expected": "{}",
+        "id": "O06_FRAME0_AD",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/2 + i",
+        "expected": "1/2 + i",
+        "id": "O06_FRAME0_DA_PLUS",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/2 + i",
+        "expected": "1/2 + i",
+        "id": "O06_FRAME0_DA_MINUS",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "MATTER_CURRENT_FULL_D_SUM",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "MATTER_CURRENT_MU2",
+        "status": "PASS"
+      },
+      {
+        "actual": "8",
+        "expected": "8",
+        "id": "FP_HESSIAN_CHECKS",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FP_SCALAR_SQUARE",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FP_FULL_SD",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FP_MU2",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "FP_ANOMALY",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2/3",
+        "expected": "-2/3",
+        "id": "RANK_ONE_ELL_P_MOMENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/3",
+        "expected": "-1/3",
+        "id": "RANK_ONE_ELL_Q_MOMENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "I/48",
+        "expected": "I/48",
+        "id": "AD_RAW_INTEGRATED_P",
+        "status": "PASS"
+      },
+      {
+        "actual": "I/96",
+        "expected": "I/96",
+        "id": "AD_RAW_INTEGRATED_Q",
+        "status": "PASS"
+      },
+      {
+        "actual": "I/24",
+        "expected": "I/24",
+        "id": "DA_RAW_INTEGRATED_P",
+        "status": "PASS"
+      },
+      {
+        "actual": "I/48",
+        "expected": "I/48",
+        "id": "DA_RAW_INTEGRATED_Q",
+        "status": "PASS"
+      },
+      {
+        "actual": "-I/6",
+        "expected": "-I/6",
+        "id": "AD_INTERNAL_P_OVER_LAMBDA",
+        "status": "PASS"
+      },
+      {
+        "actual": "-I/12",
+        "expected": "-I/12",
+        "id": "AD_INTERNAL_Q_OVER_LAMBDA",
+        "status": "PASS"
+      },
+      {
+        "actual": "-I/3",
+        "expected": "-I/3",
+        "id": "DA_INTERNAL_P_OVER_LAMBDA",
+        "status": "PASS"
+      },
+      {
+        "actual": "-I/6",
+        "expected": "-I/6",
+        "id": "DA_INTERNAL_Q_OVER_LAMBDA",
+        "status": "PASS"
+      },
+      {
+        "actual": "I/12",
+        "expected": "I/12",
+        "id": "AD_ORDERED_LEFT_OVER_LAMBDA",
+        "status": "PASS"
+      },
+      {
+        "actual": "I/6",
+        "expected": "I/6",
+        "id": "AD_ORDERED_RIGHT_OVER_LAMBDA",
+        "status": "PASS"
+      },
+      {
+        "actual": "I/3",
+        "expected": "I/3",
+        "id": "DA_ORDERED_LEFT_OVER_LAMBDA",
+        "status": "PASS"
+      },
+      {
+        "actual": "I/6",
+        "expected": "I/6",
+        "id": "DA_ORDERED_RIGHT_OVER_LAMBDA",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/3",
+        "expected": "1/3",
+        "id": "AD_NORMALIZED_LEFT_SHAPE",
+        "status": "PASS"
+      },
+      {
+        "actual": "2/3",
+        "expected": "2/3",
+        "id": "AD_NORMALIZED_RIGHT_SHAPE",
+        "status": "PASS"
+      },
+      {
+        "actual": "2/3",
+        "expected": "2/3",
+        "id": "DA_NORMALIZED_LEFT_SHAPE",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/3",
+        "expected": "1/3",
+        "id": "DA_NORMALIZED_RIGHT_SHAPE",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/2",
+        "expected": "1/2",
+        "id": "ABSOLUTE_AD_OVER_DA_SUM_RATIO",
+        "status": "PASS"
+      }
+    ]
+  },
+  "external_target_used": false,
+  "physical_source_hessian": {
+    "extra_factor_two": false,
+    "functional_factor": "1!*1!=1",
+    "linear_preimages": {
+      "AD": {
+        "D1": "1/4*i sqrt(2)",
+        "N0": "1/2*sqrt(2)"
+      },
+      "DA": {
+        "D1": "-1/4*sqrt(2)",
+        "N0": "1/2*sqrt(2)"
+      }
+    },
+    "ordered_hessian_components": {
+      "AD": "1/4*i",
+      "DA": "1/4"
+    },
+    "physical_insertion": {
+      "AD": "O_AD^{AB}=N0^A*D1^B",
+      "DA": "O_DA^{AB}=-D1^A*N0^B",
+      "coefficient": "1"
+    },
+    "source_J_convention_used": false
+  },
+  "rejected_DD_diagnostic": {
+    "O05": {
+      "edge_aggregates": {
+        "AD": {
+          "r0_over_D1D2": "7*i*q_plus",
+          "r2_over_D0D1": "2*i*q_plus"
+        },
+        "DA": {
+          "r0_over_D1D2": "-i*q_plus/2",
+          "r2_over_D0D1": "i*(p+q)_plus"
+        }
+      },
+      "loop_hessian": "0",
+      "raw_replay_frame0": {
+        "AD": {
+          "I1_N0[A]*D2[B]": "4*i",
+          "I1_N1A2[A]*D1[B]": "10*i",
+          "I1_N1gamma1[A]*D1[B]": "4*i"
+        },
+        "DA": {
+          "I1_-D1[A]*N1A2[B]": "1+2*i",
+          "I1_-D2[A]*N0[B]": "-i"
+        },
+        "loop": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "p": [
+          "2",
+          "-1",
+          "1",
+          "0"
+        ],
+        "q": [
+          "-1",
+          "3",
+          "0",
+          "2"
+        ],
+        "q_plus_dot1": "2"
+      },
+      "standalone_mu2_anomaly": "0"
+    },
+    "O06": {
+      "AD": "0",
+      "DA_antichiral": "i*(p+q)_plus/2",
+      "DA_chiral": "i*(p+q)_plus/2",
+      "DA_sum": "i*(p+q)_plus",
+      "collapsed_edge": "r1",
+      "four_dimensional_scalar_square": "0",
+      "loop_hessian": "0",
+      "raw_replay_frame0": {
+        "AD": {},
+        "DA_minus": "1/2+i",
+        "DA_plus": "1/2+i"
+      },
+      "standalone_mu2_anomaly": "0",
+      "transported_r1_square": "0"
+    },
+    "crossed_TGG_routing": {
+      "exact_frames": 8,
+      "role": "rejected DD routing diagnostic",
+      "sum": "0",
+      "surviving_routes": 0
+    },
+    "current_and_FP": {
+      "FP": {
+        "Euler_bubble": "+B_FP_DD",
+        "four_dimensional_scalar_square": "0",
+        "full_Schwinger_family": "0",
+        "full_d_cut": "-B_FP_DD",
+        "kernel": "full-d Box",
+        "mu2_remainder": "0"
+      },
+      "matter_current": {
+        "Euler": "+2*i*K_dot_a",
+        "explicit_contact": "-2*i*K_dot_a",
+        "full_d_sum": "0",
+        "mu2_remainder": "0"
+      }
+    },
+    "finite_vector": {
+      "absolute_ordered_vector_over_lambda1": {
+        "AD": {
+          "k_left": "i/12",
+          "k_right": "i/6"
+        },
+        "DA": {
+          "k_left": "i/3",
+          "k_right": "i/6"
+        }
+      },
+      "absolute_sum_ratio_AD_over_DA": "1/2",
+      "internal_momenta_over_lambda1": {
+        "AD": {
+          "p": "-i/6",
+          "q": "-i/12"
+        },
+        "DA": {
+          "p": "-i/3",
+          "q": "-i/6"
+        }
+      },
+      "normalized_shapes": {
+        "AD": {
+          "k_left": "1/3",
+          "k_right": "2/3"
+        },
+        "DA": {
+          "k_left": "2/3",
+          "k_right": "1/3"
+        }
+      },
+      "ordered_momentum_maps": {
+        "AD": "k_L=q; k_R=-(p+q)",
+        "DA": "k_L=-(p+q); k_R=q"
+      },
+      "raw_integrated_bracket_after_1_over_32pi2": {
+        "AD": {
+          "p": "i/48",
+          "q": "i/96"
+        },
+        "DA": {
+          "p": "i/24",
+          "q": "i/48"
+        }
+      },
+      "raw_mu2_numerator": {
+        "AD": "(i/16)*mu_l^2*(ell+p+q/2)_plus_dot_a",
+        "DA": "-(i/16)*mu_l^2*ell_plus_dot_a"
+      },
+      "simplex_moment": "ell -> -(2*p+q)/3"
+    },
+    "normalization": {
+      "SU2_F_01_10": "-2",
+      "external_D_each": "-sqrt(2)/8",
+      "external_D_product": "1/32",
+      "hbar_g2_over_32pi2_divided_by_lambda1": "1/2",
+      "lambda1": "hbar*g^2/(16*pi^2)",
+      "raw_integrated_to_lambda1": "-8",
+      "raw_to_canonical_component": "-16"
+    },
+    "operator_and_gauge_fixing": {
+      "gauge_fixing": "+(1/2)*D_+*barD^2*D^2",
+      "identity": "D_-A1=sqrt(2)*bar(r_e)^2*D_+U+(sqrt(2)/16)*D_+*barD^2*D^2*U",
+      "mask_checks": {
+        "gauge_fixing": 32,
+        "operator": 32,
+        "selected_factorization": 32
+      },
+      "source_longitudinal": "-(1/2)*D_+*barD^2*D^2",
+      "sum": "-8*bar(r_e)^2*D_+",
+      "transported_longitudinal_square_survives": false
+    },
+    "parent_minus_cut": {
+      "finite_master": "integral mu_l^2/P3=1/(32*pi^2)",
+      "for_each_edge": {
+        "dred": "mu_l^2*R_e/P3",
+        "full_d": "R_e*[r_(e,d)^2/P3-1/P_hat_e]=0",
+        "parent_4d": "bar(r_e)^2*R_e/(D0*D1*D2)",
+        "same_edge_cut": "-R_e/P_hat_e"
+      },
+      "mu_l_squared": "bar(l)^2-l_d^2=-hat(l)_user^2"
+    }
+  },
+  "rejection": {
+    "affine_contact_warning": "A two-denominator affine contact may be the selected-edge cut of a parent containing bar(r_e)^2; affine does not imply zero DRED anomaly.",
+    "code": "WRONG_EXTERNAL_VERTEX_TYPE",
+    "computed_parent": "S_g^- endpoint_D x S_g^- endpoint_D",
+    "fixed_ordered_wick_weight": "(1/2!)*(1+1)=1",
+    "graph_ir_rows": [
+      "CUT-ORBIT-026::A__Ddot1::0::TRIANGLE",
+      "CUT-ORBIT-064::Ddot1__A::0::TRIANGLE"
+    ],
+    "invalidated": [
+      "DD TGG finite vector",
+      "DD raw-to-component conversion -16",
+      "DD raw-to-lambda1 conversion -8",
+      "standalone O05/O06 anomaly-zero claims",
+      "absolute AD/DA compact coefficients"
+    ],
+    "required_parent": "V_tildeW/S_g^- endpoint_D x V_W/S_g^+ endpoint_A",
+    "still_valid": [
+      "unit ordered source coefficient",
+      "AD direct source Hessian i/4",
+      "DA direct source Hessian 1/4",
+      "no extra labeled-Hessian factor two"
+    ]
+  },
+  "result": {
+    "AD_dot_a": null,
+    "DA_dot_a": null,
+    "derivation_status": "REJECTED_WRONG_EXTERNAL_VERTEX_TYPE",
+    "normalization_status": "SOURCE_HESSIAN_ONLY_FIXED"
+  },
+  "schema": "step5-ad-da-direct-physical-ward-quotient-exact-v2",
+  "status": "REJECTED_WRONG_EXTERNAL_VERTEX_TYPE"
+}

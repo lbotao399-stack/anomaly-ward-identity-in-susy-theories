@@ -60,6 +60,17 @@
   forbidden.
 - Check counts are not results. A pull request body states the derived formula and where its
   derivation lives; test totals belong at the end, in one line.
+- Check budget: a mathematical obligation carries at most ten exact machine checks, chosen
+  for the load-bearing factors (kernel inversions, saturation identities, master integrals,
+  one seed coefficient chain, census counts, external round trips). Everything else is
+  human-verified derivation.
+- Terminology: standard physics vocabulary first. An invented term is admissible only with a
+  one-line definition at first use and at least three uses; otherwise rewrite in standard
+  language.
+- Paper layer: `paper/awi-n4-one-loop.md` is the evergreen, paper-format statement of the
+  core theory. Every obligation that changes a result or convention updates it in the same
+  pull request, citing contract tags instead of duplicating derivations. It is the standing
+  source for the core-theory Notion page.
 
 ## State machine
 

@@ -1,0 +1,45 @@
+{
+  "authority_base_commit": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+  "cutting_statement": "The four-dimensional cut replaces hat_delta by delta_4; their difference is -breve_delta.  No finite remainder survives if breve_delta is set to zero before the UV residue.",
+  "definitions": {
+    "J2": "mu^(2 epsilon)/(4 pi)^(2-epsilon) Gamma(epsilon) Delta^(-epsilon)",
+    "J3": "mu^(2 epsilon)/(2(4 pi)^(2-epsilon)) Gamma(1+epsilon) Delta^(-1-epsilon)",
+    "T_mrho_n": "(sigma_m bar_sigma_rho sigma_n)_(+ dot_alpha)",
+    "d": "4-2*epsilon"
+  },
+  "evanescent_clifford_chain": [
+    "p^rho breve_delta^mn sigma_m bar_sigma_rho sigma_n",
+    "=2 p^rho breve_delta_rho^n sigma_n-p^rho sigma_rho breve_delta^mn bar_sigma_m sigma_n",
+    "=0-(4-d) p^rho sigma_rho",
+    "=-2 epsilon p^rho sigma_rho"
+  ],
+  "exact_reduction": [
+    "Delta*J3=(epsilon/2)*J2",
+    "integral r_m r_n/(r^2+Delta)^3=(hat_delta_mn/4)*J2",
+    "Res_epsilon(J2)=1/(16*pi^2)"
+  ],
+  "external_target_used": false,
+  "finite_remainder": {
+    "calculation": "[-g^2/(32*pi^2*epsilon)]*(-2*epsilon)=g^2/(16*pi^2)",
+    "fixed_orientation_operator": "lambda*F_ABDE*D_dot_alpha^D*P_+^dot_alpha*A^E",
+    "lambda": "hbar*g^2/(16*pi^2)"
+  },
+  "normalization_trace": {
+    "feynman_simplex": "R_mn=2*int_Delta2 int_r r_m r_n/(r^2+Delta)^3",
+    "four_dimensional_cut_tensor": "R_mn^cut|UV=(delta_4_mn/4)*J2|UV",
+    "insertion_closed_loop_mixed_D_weight": "(1/32)*16*2*2=2",
+    "ordered_wick_weight": "(1/2!)*(1+1)=1",
+    "pole_coefficient": "(g^2/2)*(1/(16*pi^2*epsilon))=g^2/(32*pi^2*epsilon)",
+    "preintegral_weight": "1*(g^2/4)*2=g^2/2",
+    "regulated_tensor": "R_mn|UV=(hat_delta_mn/4)*J2|UV",
+    "simplex_volume": "int_Delta2 1=1/2",
+    "tensor_residue": "Res integral L1_m L2_n/(D0 D1 D2)=hat_delta_mn/(16*pi^2)",
+    "vertex_product": "(+i*g/2)*(-i*g/2)=g^2/4"
+  },
+  "ordered_wick_numerator": {
+    "cut_contact_uv_pole": "-hbar*g^2/(32*pi^2*epsilon) F_ABDE delta_4^mn T_mrho_n p^rho",
+    "physical_metric_cancellation": "exact",
+    "triangle_uv_pole": "+hbar*g^2/(32*pi^2*epsilon) F_ABDE hat_delta^mn T_mrho_n p^rho"
+  },
+  "schema": 1
+}

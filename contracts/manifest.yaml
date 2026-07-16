@@ -1,6 +1,7 @@
 {
   "schema": 1,
-  "state": "SPECIFIED",
+  "state": "ACCEPTED",
+  "accepted_scope": "PHYSICAL_ONE_LOOP_ANOMALY_SECTOR",
   "bootstrap_exception": "STEP_01_ONLY",
   "contracts": [
     {
@@ -86,6 +87,12 @@
       "path": "contracts/foundations/step-05a-component-bv-brst-primitive-supergraph-grammar.md",
       "status": "DERIVED_UNFROZEN",
       "sha256": "300d55a07534a312bfad582c6702ba1991ef7e439a3b999c4c228c1329ca05bc"
+    },
+    {
+      "id": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
+      "path": "contracts/foundations/step-05-euclidean-n4-awi-one-loop.md",
+      "status": "DERIVED_UNFROZEN",
+      "sha256": "3a3c3ce5d54ed159b7a61fd6f834554d70c3b987a5916f43b4d4db322167d173"
     },
     {
       "id": "CONTRACT-STEP-04-EXTENDED-SYM-DICTIONARY-001",

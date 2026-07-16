@@ -1,0 +1,1963 @@
+{
+  "authority": {
+    "commit": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+    "holomorphic_twist_read": false,
+    "inputs": [
+      "AUTHORITY.md",
+      "AGENTS.md",
+      "tasks/CURRENT.yaml",
+      "contracts/foundations/step-01-supersymmetry-commutator.md",
+      "contracts/foundations/step-02a-flat-superspace.md",
+      "contracts/foundations/step-03a-gauge-chiral-action.md",
+      "contracts/foundations/step-03b-component-reconstruction.md",
+      "contracts/foundations/step-03c-gauge-vector-representation.md",
+      "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md",
+      "contracts/foundations/step-04-extended-sym-notation.md",
+      "contracts/foundations/step-04a-n1-super-yang-mills.md",
+      "contracts/foundations/step-04b-n2-super-yang-mills.md",
+      "contracts/foundations/step-04c-n4-super-yang-mills.md"
+    ],
+    "project_inputs_only": true,
+    "unmerged_step5_filesystem_read": false,
+    "verified": true,
+    "verify_run": 29306335742
+  },
+  "blockers": [
+    {
+      "claim_blocked": "Normalized identification of U,C_r,B_r,A with the four Step-5 Project letter families.",
+      "evidence": "The locked contracts define N=4 component fields and vector/chiral representations, while tasks/CURRENT.yaml only names nabla_+W_+, nabla_+Phi_r, tildePhi_r, tildeW_dot-a; it does not define their plus-spin-frame projections or compact-slot map.",
+      "id": "BLOCKED_STEP5_LETTER_PROJECTIONS_ABSENT"
+    },
+    {
+      "claim_blocked": "Physical q_r action and the numerical compact weights a,b,c,d.",
+      "evidence": "Step 4C equations (4C.44)-(4C.47) provide all epsilon and tilde-epsilon transformations, but no locked input selects the three residual components q_r, their spinor slots, or their normalization after the Step-5 projection.",
+      "id": "BLOCKED_RESIDUAL_Q_SELECTION_AND_NORMALIZATION"
+    },
+    {
+      "claim_blocked": "Derivation of the compact weights from tree Euler descendants.",
+      "evidence": "Step 4C equations (4C.68)-(4C.69a1) fix component Euler operators, but no locked input derives the specific Schwinger descendants of the four Step-5 letters or maps them to U,C_r,B_r,A and P_dot.",
+      "id": "BLOCKED_TREE_EULER_TO_COMPACT_DESCENDANT_MAP"
+    },
+    {
+      "claim_blocked": "Unconditional intertwining of the physical DRED-minus-cut commutator with q_r.",
+      "evidence": "No allowed Project contract defines the DRED field continuation, regulated cut operator, or their action on the projected Step-5 letter complex.",
+      "id": "BLOCKED_DRED_CUT_OPERATOR_NOT_LOCKED"
+    },
+    {
+      "claim_blocked": "Uniqueness of the full local bilinear two-holomorphic-derivative cocycle.",
+      "evidence": "Diagonal theta-translation invariance fixes the Grassmann polynomial, but the locked inputs do not specify the Step-5 local-operator space, color-tensor sector, derivative-weight restriction, BRST/EOM quotient, or admissible counterterm coboundaries.",
+      "id": "BLOCKED_LOCAL_COHOMOLOGY_COMPLEX_NOT_LOCKED"
+    }
+  ],
+  "compact_64": [
+    {
+      "input_left": "U",
+      "input_right": "U",
+      "ordered_input_word": "U>U",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "U",
+      "input_right": "C_1",
+      "ordered_input_word": "U>C_1",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "U",
+      "input_right": "C_2",
+      "ordered_input_word": "U>C_2",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "U",
+      "input_right": "C_3",
+      "ordered_input_word": "U>C_3",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "U",
+      "input_right": "B_1",
+      "ordered_input_word": "U>B_1",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "U",
+      "input_right": "B_2",
+      "ordered_input_word": "U>B_2",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "U",
+      "input_right": "B_3",
+      "ordered_input_word": "U>B_3",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "U",
+      "input_right": "A",
+      "ordered_input_word": "U>A",
+      "state": "CONDITIONAL_WEIGHTED_COMPACT_ANSATZ",
+      "terms": [
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta'_1 theta'_2 theta'_3",
+          "output_left": "U",
+          "output_right": "U",
+          "weight_ratio": "(a*a)/(a*d)",
+          "word": "P(U)>P(U)"
+        }
+      ]
+    },
+    {
+      "input_left": "C_1",
+      "input_right": "U",
+      "ordered_input_word": "C_1>U",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "C_1",
+      "input_right": "C_1",
+      "ordered_input_word": "C_1>C_1",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "C_1",
+      "input_right": "C_2",
+      "ordered_input_word": "C_1>C_2",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "C_1",
+      "input_right": "C_3",
+      "ordered_input_word": "C_1>C_3",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "C_1",
+      "input_right": "B_1",
+      "ordered_input_word": "C_1>B_1",
+      "state": "CONDITIONAL_WEIGHTED_COMPACT_ANSATZ",
+      "terms": [
+        {
+          "integer_sign": 1,
+          "kernel_monomial": "theta_1 theta'_2 theta'_3",
+          "output_left": "U",
+          "output_right": "U",
+          "weight_ratio": "(a*a)/(b*c)",
+          "word": "P(U)>P(U)"
+        }
+      ]
+    },
+    {
+      "input_left": "C_1",
+      "input_right": "B_2",
+      "ordered_input_word": "C_1>B_2",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "C_1",
+      "input_right": "B_3",
+      "ordered_input_word": "C_1>B_3",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "C_1",
+      "input_right": "A",
+      "ordered_input_word": "C_1>A",
+      "state": "CONDITIONAL_WEIGHTED_COMPACT_ANSATZ",
+      "terms": [
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta'_1 theta'_2 theta'_3",
+          "output_left": "C_1",
+          "output_right": "U",
+          "weight_ratio": "(b*a)/(b*d)",
+          "word": "P(C_1)>P(U)"
+        },
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_1 theta'_2 theta'_3",
+          "output_left": "U",
+          "output_right": "C_1",
+          "weight_ratio": "(a*b)/(b*d)",
+          "word": "P(U)>P(C_1)"
+        }
+      ]
+    },
+    {
+      "input_left": "C_2",
+      "input_right": "U",
+      "ordered_input_word": "C_2>U",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "C_2",
+      "input_right": "C_1",
+      "ordered_input_word": "C_2>C_1",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "C_2",
+      "input_right": "C_2",
+      "ordered_input_word": "C_2>C_2",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "C_2",
+      "input_right": "C_3",
+      "ordered_input_word": "C_2>C_3",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "C_2",
+      "input_right": "B_1",
+      "ordered_input_word": "C_2>B_1",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "C_2",
+      "input_right": "B_2",
+      "ordered_input_word": "C_2>B_2",
+      "state": "CONDITIONAL_WEIGHTED_COMPACT_ANSATZ",
+      "terms": [
+        {
+          "integer_sign": 1,
+          "kernel_monomial": "theta_2 theta'_1 theta'_3",
+          "output_left": "U",
+          "output_right": "U",
+          "weight_ratio": "(a*a)/(b*c)",
+          "word": "P(U)>P(U)"
+        }
+      ]
+    },
+    {
+      "input_left": "C_2",
+      "input_right": "B_3",
+      "ordered_input_word": "C_2>B_3",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "C_2",
+      "input_right": "A",
+      "ordered_input_word": "C_2>A",
+      "state": "CONDITIONAL_WEIGHTED_COMPACT_ANSATZ",
+      "terms": [
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta'_1 theta'_2 theta'_3",
+          "output_left": "C_2",
+          "output_right": "U",
+          "weight_ratio": "(b*a)/(b*d)",
+          "word": "P(C_2)>P(U)"
+        },
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_2 theta'_1 theta'_3",
+          "output_left": "U",
+          "output_right": "C_2",
+          "weight_ratio": "(a*b)/(b*d)",
+          "word": "P(U)>P(C_2)"
+        }
+      ]
+    },
+    {
+      "input_left": "C_3",
+      "input_right": "U",
+      "ordered_input_word": "C_3>U",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "C_3",
+      "input_right": "C_1",
+      "ordered_input_word": "C_3>C_1",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "C_3",
+      "input_right": "C_2",
+      "ordered_input_word": "C_3>C_2",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "C_3",
+      "input_right": "C_3",
+      "ordered_input_word": "C_3>C_3",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "C_3",
+      "input_right": "B_1",
+      "ordered_input_word": "C_3>B_1",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "C_3",
+      "input_right": "B_2",
+      "ordered_input_word": "C_3>B_2",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "C_3",
+      "input_right": "B_3",
+      "ordered_input_word": "C_3>B_3",
+      "state": "CONDITIONAL_WEIGHTED_COMPACT_ANSATZ",
+      "terms": [
+        {
+          "integer_sign": 1,
+          "kernel_monomial": "theta_3 theta'_1 theta'_2",
+          "output_left": "U",
+          "output_right": "U",
+          "weight_ratio": "(a*a)/(b*c)",
+          "word": "P(U)>P(U)"
+        }
+      ]
+    },
+    {
+      "input_left": "C_3",
+      "input_right": "A",
+      "ordered_input_word": "C_3>A",
+      "state": "CONDITIONAL_WEIGHTED_COMPACT_ANSATZ",
+      "terms": [
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta'_1 theta'_2 theta'_3",
+          "output_left": "C_3",
+          "output_right": "U",
+          "weight_ratio": "(b*a)/(b*d)",
+          "word": "P(C_3)>P(U)"
+        },
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_3 theta'_1 theta'_2",
+          "output_left": "U",
+          "output_right": "C_3",
+          "weight_ratio": "(a*b)/(b*d)",
+          "word": "P(U)>P(C_3)"
+        }
+      ]
+    },
+    {
+      "input_left": "B_1",
+      "input_right": "U",
+      "ordered_input_word": "B_1>U",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "B_1",
+      "input_right": "C_1",
+      "ordered_input_word": "B_1>C_1",
+      "state": "CONDITIONAL_WEIGHTED_COMPACT_ANSATZ",
+      "terms": [
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_2 theta_3 theta'_1",
+          "output_left": "U",
+          "output_right": "U",
+          "weight_ratio": "(a*a)/(c*b)",
+          "word": "P(U)>P(U)"
+        }
+      ]
+    },
+    {
+      "input_left": "B_1",
+      "input_right": "C_2",
+      "ordered_input_word": "B_1>C_2",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "B_1",
+      "input_right": "C_3",
+      "ordered_input_word": "B_1>C_3",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "B_1",
+      "input_right": "B_1",
+      "ordered_input_word": "B_1>B_1",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "B_1",
+      "input_right": "B_2",
+      "ordered_input_word": "B_1>B_2",
+      "state": "CONDITIONAL_WEIGHTED_COMPACT_ANSATZ",
+      "terms": [
+        {
+          "integer_sign": 1,
+          "kernel_monomial": "theta_2 theta'_1 theta'_3",
+          "output_left": "C_3",
+          "output_right": "U",
+          "weight_ratio": "(b*a)/(c*c)",
+          "word": "P(C_3)>P(U)"
+        },
+        {
+          "integer_sign": 1,
+          "kernel_monomial": "theta_2 theta_3 theta'_1",
+          "output_left": "U",
+          "output_right": "C_3",
+          "weight_ratio": "(a*b)/(c*c)",
+          "word": "P(U)>P(C_3)"
+        }
+      ]
+    },
+    {
+      "input_left": "B_1",
+      "input_right": "B_3",
+      "ordered_input_word": "B_1>B_3",
+      "state": "CONDITIONAL_WEIGHTED_COMPACT_ANSATZ",
+      "terms": [
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_3 theta'_1 theta'_2",
+          "output_left": "C_2",
+          "output_right": "U",
+          "weight_ratio": "(b*a)/(c*c)",
+          "word": "P(C_2)>P(U)"
+        },
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_2 theta_3 theta'_1",
+          "output_left": "U",
+          "output_right": "C_2",
+          "weight_ratio": "(a*b)/(c*c)",
+          "word": "P(U)>P(C_2)"
+        }
+      ]
+    },
+    {
+      "input_left": "B_1",
+      "input_right": "A",
+      "ordered_input_word": "B_1>A",
+      "state": "CONDITIONAL_WEIGHTED_COMPACT_ANSATZ",
+      "terms": [
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta'_1 theta'_2 theta'_3",
+          "output_left": "B_1",
+          "output_right": "U",
+          "weight_ratio": "(c*a)/(c*d)",
+          "word": "P(B_1)>P(U)"
+        },
+        {
+          "integer_sign": 1,
+          "kernel_monomial": "theta_3 theta'_1 theta'_2",
+          "output_left": "C_2",
+          "output_right": "C_3",
+          "weight_ratio": "(b*b)/(c*d)",
+          "word": "P(C_2)>P(C_3)"
+        },
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_2 theta'_1 theta'_3",
+          "output_left": "C_3",
+          "output_right": "C_2",
+          "weight_ratio": "(b*b)/(c*d)",
+          "word": "P(C_3)>P(C_2)"
+        },
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_2 theta_3 theta'_1",
+          "output_left": "U",
+          "output_right": "B_1",
+          "weight_ratio": "(a*c)/(c*d)",
+          "word": "P(U)>P(B_1)"
+        }
+      ]
+    },
+    {
+      "input_left": "B_2",
+      "input_right": "U",
+      "ordered_input_word": "B_2>U",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "B_2",
+      "input_right": "C_1",
+      "ordered_input_word": "B_2>C_1",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "B_2",
+      "input_right": "C_2",
+      "ordered_input_word": "B_2>C_2",
+      "state": "CONDITIONAL_WEIGHTED_COMPACT_ANSATZ",
+      "terms": [
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_1 theta_3 theta'_2",
+          "output_left": "U",
+          "output_right": "U",
+          "weight_ratio": "(a*a)/(c*b)",
+          "word": "P(U)>P(U)"
+        }
+      ]
+    },
+    {
+      "input_left": "B_2",
+      "input_right": "C_3",
+      "ordered_input_word": "B_2>C_3",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "B_2",
+      "input_right": "B_1",
+      "ordered_input_word": "B_2>B_1",
+      "state": "CONDITIONAL_WEIGHTED_COMPACT_ANSATZ",
+      "terms": [
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_1 theta'_2 theta'_3",
+          "output_left": "C_3",
+          "output_right": "U",
+          "weight_ratio": "(b*a)/(c*c)",
+          "word": "P(C_3)>P(U)"
+        },
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_1 theta_3 theta'_2",
+          "output_left": "U",
+          "output_right": "C_3",
+          "weight_ratio": "(a*b)/(c*c)",
+          "word": "P(U)>P(C_3)"
+        }
+      ]
+    },
+    {
+      "input_left": "B_2",
+      "input_right": "B_2",
+      "ordered_input_word": "B_2>B_2",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "B_2",
+      "input_right": "B_3",
+      "ordered_input_word": "B_2>B_3",
+      "state": "CONDITIONAL_WEIGHTED_COMPACT_ANSATZ",
+      "terms": [
+        {
+          "integer_sign": 1,
+          "kernel_monomial": "theta_3 theta'_1 theta'_2",
+          "output_left": "C_1",
+          "output_right": "U",
+          "weight_ratio": "(b*a)/(c*c)",
+          "word": "P(C_1)>P(U)"
+        },
+        {
+          "integer_sign": 1,
+          "kernel_monomial": "theta_1 theta_3 theta'_2",
+          "output_left": "U",
+          "output_right": "C_1",
+          "weight_ratio": "(a*b)/(c*c)",
+          "word": "P(U)>P(C_1)"
+        }
+      ]
+    },
+    {
+      "input_left": "B_2",
+      "input_right": "A",
+      "ordered_input_word": "B_2>A",
+      "state": "CONDITIONAL_WEIGHTED_COMPACT_ANSATZ",
+      "terms": [
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta'_1 theta'_2 theta'_3",
+          "output_left": "B_2",
+          "output_right": "U",
+          "weight_ratio": "(c*a)/(c*d)",
+          "word": "P(B_2)>P(U)"
+        },
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_3 theta'_1 theta'_2",
+          "output_left": "C_1",
+          "output_right": "C_3",
+          "weight_ratio": "(b*b)/(c*d)",
+          "word": "P(C_1)>P(C_3)"
+        },
+        {
+          "integer_sign": 1,
+          "kernel_monomial": "theta_1 theta'_2 theta'_3",
+          "output_left": "C_3",
+          "output_right": "C_1",
+          "weight_ratio": "(b*b)/(c*d)",
+          "word": "P(C_3)>P(C_1)"
+        },
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_1 theta_3 theta'_2",
+          "output_left": "U",
+          "output_right": "B_2",
+          "weight_ratio": "(a*c)/(c*d)",
+          "word": "P(U)>P(B_2)"
+        }
+      ]
+    },
+    {
+      "input_left": "B_3",
+      "input_right": "U",
+      "ordered_input_word": "B_3>U",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "B_3",
+      "input_right": "C_1",
+      "ordered_input_word": "B_3>C_1",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "B_3",
+      "input_right": "C_2",
+      "ordered_input_word": "B_3>C_2",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "B_3",
+      "input_right": "C_3",
+      "ordered_input_word": "B_3>C_3",
+      "state": "CONDITIONAL_WEIGHTED_COMPACT_ANSATZ",
+      "terms": [
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_1 theta_2 theta'_3",
+          "output_left": "U",
+          "output_right": "U",
+          "weight_ratio": "(a*a)/(c*b)",
+          "word": "P(U)>P(U)"
+        }
+      ]
+    },
+    {
+      "input_left": "B_3",
+      "input_right": "B_1",
+      "ordered_input_word": "B_3>B_1",
+      "state": "CONDITIONAL_WEIGHTED_COMPACT_ANSATZ",
+      "terms": [
+        {
+          "integer_sign": 1,
+          "kernel_monomial": "theta_1 theta'_2 theta'_3",
+          "output_left": "C_2",
+          "output_right": "U",
+          "weight_ratio": "(b*a)/(c*c)",
+          "word": "P(C_2)>P(U)"
+        },
+        {
+          "integer_sign": 1,
+          "kernel_monomial": "theta_1 theta_2 theta'_3",
+          "output_left": "U",
+          "output_right": "C_2",
+          "weight_ratio": "(a*b)/(c*c)",
+          "word": "P(U)>P(C_2)"
+        }
+      ]
+    },
+    {
+      "input_left": "B_3",
+      "input_right": "B_2",
+      "ordered_input_word": "B_3>B_2",
+      "state": "CONDITIONAL_WEIGHTED_COMPACT_ANSATZ",
+      "terms": [
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_2 theta'_1 theta'_3",
+          "output_left": "C_1",
+          "output_right": "U",
+          "weight_ratio": "(b*a)/(c*c)",
+          "word": "P(C_1)>P(U)"
+        },
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_1 theta_2 theta'_3",
+          "output_left": "U",
+          "output_right": "C_1",
+          "weight_ratio": "(a*b)/(c*c)",
+          "word": "P(U)>P(C_1)"
+        }
+      ]
+    },
+    {
+      "input_left": "B_3",
+      "input_right": "B_3",
+      "ordered_input_word": "B_3>B_3",
+      "state": "CONDITIONAL_EXACT_ZERO",
+      "terms": []
+    },
+    {
+      "input_left": "B_3",
+      "input_right": "A",
+      "ordered_input_word": "B_3>A",
+      "state": "CONDITIONAL_WEIGHTED_COMPACT_ANSATZ",
+      "terms": [
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta'_1 theta'_2 theta'_3",
+          "output_left": "B_3",
+          "output_right": "U",
+          "weight_ratio": "(c*a)/(c*d)",
+          "word": "P(B_3)>P(U)"
+        },
+        {
+          "integer_sign": 1,
+          "kernel_monomial": "theta_2 theta'_1 theta'_3",
+          "output_left": "C_1",
+          "output_right": "C_2",
+          "weight_ratio": "(b*b)/(c*d)",
+          "word": "P(C_1)>P(C_2)"
+        },
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_1 theta'_2 theta'_3",
+          "output_left": "C_2",
+          "output_right": "C_1",
+          "weight_ratio": "(b*b)/(c*d)",
+          "word": "P(C_2)>P(C_1)"
+        },
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_1 theta_2 theta'_3",
+          "output_left": "U",
+          "output_right": "B_3",
+          "weight_ratio": "(a*c)/(c*d)",
+          "word": "P(U)>P(B_3)"
+        }
+      ]
+    },
+    {
+      "input_left": "A",
+      "input_right": "U",
+      "ordered_input_word": "A>U",
+      "state": "CONDITIONAL_WEIGHTED_COMPACT_ANSATZ",
+      "terms": [
+        {
+          "integer_sign": 1,
+          "kernel_monomial": "theta_1 theta_2 theta_3",
+          "output_left": "U",
+          "output_right": "U",
+          "weight_ratio": "(a*a)/(d*a)",
+          "word": "P(U)>P(U)"
+        }
+      ]
+    },
+    {
+      "input_left": "A",
+      "input_right": "C_1",
+      "ordered_input_word": "A>C_1",
+      "state": "CONDITIONAL_WEIGHTED_COMPACT_ANSATZ",
+      "terms": [
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_2 theta_3 theta'_1",
+          "output_left": "C_1",
+          "output_right": "U",
+          "weight_ratio": "(b*a)/(d*b)",
+          "word": "P(C_1)>P(U)"
+        },
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_1 theta_2 theta_3",
+          "output_left": "U",
+          "output_right": "C_1",
+          "weight_ratio": "(a*b)/(d*b)",
+          "word": "P(U)>P(C_1)"
+        }
+      ]
+    },
+    {
+      "input_left": "A",
+      "input_right": "C_2",
+      "ordered_input_word": "A>C_2",
+      "state": "CONDITIONAL_WEIGHTED_COMPACT_ANSATZ",
+      "terms": [
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_1 theta_3 theta'_2",
+          "output_left": "C_2",
+          "output_right": "U",
+          "weight_ratio": "(b*a)/(d*b)",
+          "word": "P(C_2)>P(U)"
+        },
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_1 theta_2 theta_3",
+          "output_left": "U",
+          "output_right": "C_2",
+          "weight_ratio": "(a*b)/(d*b)",
+          "word": "P(U)>P(C_2)"
+        }
+      ]
+    },
+    {
+      "input_left": "A",
+      "input_right": "C_3",
+      "ordered_input_word": "A>C_3",
+      "state": "CONDITIONAL_WEIGHTED_COMPACT_ANSATZ",
+      "terms": [
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_1 theta_2 theta'_3",
+          "output_left": "C_3",
+          "output_right": "U",
+          "weight_ratio": "(b*a)/(d*b)",
+          "word": "P(C_3)>P(U)"
+        },
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_1 theta_2 theta_3",
+          "output_left": "U",
+          "output_right": "C_3",
+          "weight_ratio": "(a*b)/(d*b)",
+          "word": "P(U)>P(C_3)"
+        }
+      ]
+    },
+    {
+      "input_left": "A",
+      "input_right": "B_1",
+      "ordered_input_word": "A>B_1",
+      "state": "CONDITIONAL_WEIGHTED_COMPACT_ANSATZ",
+      "terms": [
+        {
+          "integer_sign": 1,
+          "kernel_monomial": "theta_1 theta'_2 theta'_3",
+          "output_left": "B_1",
+          "output_right": "U",
+          "weight_ratio": "(c*a)/(d*c)",
+          "word": "P(B_1)>P(U)"
+        },
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_1 theta_3 theta'_2",
+          "output_left": "C_2",
+          "output_right": "C_3",
+          "weight_ratio": "(b*b)/(d*c)",
+          "word": "P(C_2)>P(C_3)"
+        },
+        {
+          "integer_sign": 1,
+          "kernel_monomial": "theta_1 theta_2 theta'_3",
+          "output_left": "C_3",
+          "output_right": "C_2",
+          "weight_ratio": "(b*b)/(d*c)",
+          "word": "P(C_3)>P(C_2)"
+        },
+        {
+          "integer_sign": 1,
+          "kernel_monomial": "theta_1 theta_2 theta_3",
+          "output_left": "U",
+          "output_right": "B_1",
+          "weight_ratio": "(a*c)/(d*c)",
+          "word": "P(U)>P(B_1)"
+        }
+      ]
+    },
+    {
+      "input_left": "A",
+      "input_right": "B_2",
+      "ordered_input_word": "A>B_2",
+      "state": "CONDITIONAL_WEIGHTED_COMPACT_ANSATZ",
+      "terms": [
+        {
+          "integer_sign": 1,
+          "kernel_monomial": "theta_2 theta'_1 theta'_3",
+          "output_left": "B_2",
+          "output_right": "U",
+          "weight_ratio": "(c*a)/(d*c)",
+          "word": "P(B_2)>P(U)"
+        },
+        {
+          "integer_sign": 1,
+          "kernel_monomial": "theta_2 theta_3 theta'_1",
+          "output_left": "C_1",
+          "output_right": "C_3",
+          "weight_ratio": "(b*b)/(d*c)",
+          "word": "P(C_1)>P(C_3)"
+        },
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_1 theta_2 theta'_3",
+          "output_left": "C_3",
+          "output_right": "C_1",
+          "weight_ratio": "(b*b)/(d*c)",
+          "word": "P(C_3)>P(C_1)"
+        },
+        {
+          "integer_sign": 1,
+          "kernel_monomial": "theta_1 theta_2 theta_3",
+          "output_left": "U",
+          "output_right": "B_2",
+          "weight_ratio": "(a*c)/(d*c)",
+          "word": "P(U)>P(B_2)"
+        }
+      ]
+    },
+    {
+      "input_left": "A",
+      "input_right": "B_3",
+      "ordered_input_word": "A>B_3",
+      "state": "CONDITIONAL_WEIGHTED_COMPACT_ANSATZ",
+      "terms": [
+        {
+          "integer_sign": 1,
+          "kernel_monomial": "theta_3 theta'_1 theta'_2",
+          "output_left": "B_3",
+          "output_right": "U",
+          "weight_ratio": "(c*a)/(d*c)",
+          "word": "P(B_3)>P(U)"
+        },
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_2 theta_3 theta'_1",
+          "output_left": "C_1",
+          "output_right": "C_2",
+          "weight_ratio": "(b*b)/(d*c)",
+          "word": "P(C_1)>P(C_2)"
+        },
+        {
+          "integer_sign": 1,
+          "kernel_monomial": "theta_1 theta_3 theta'_2",
+          "output_left": "C_2",
+          "output_right": "C_1",
+          "weight_ratio": "(b*b)/(d*c)",
+          "word": "P(C_2)>P(C_1)"
+        },
+        {
+          "integer_sign": 1,
+          "kernel_monomial": "theta_1 theta_2 theta_3",
+          "output_left": "U",
+          "output_right": "B_3",
+          "weight_ratio": "(a*c)/(d*c)",
+          "word": "P(U)>P(B_3)"
+        }
+      ]
+    },
+    {
+      "input_left": "A",
+      "input_right": "A",
+      "ordered_input_word": "A>A",
+      "state": "CONDITIONAL_WEIGHTED_COMPACT_ANSATZ",
+      "terms": [
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta'_1 theta'_2 theta'_3",
+          "output_left": "A",
+          "output_right": "U",
+          "weight_ratio": "(d*a)/(d*d)",
+          "word": "P(A)>P(U)"
+        },
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_1 theta'_2 theta'_3",
+          "output_left": "B_1",
+          "output_right": "C_1",
+          "weight_ratio": "(c*b)/(d*d)",
+          "word": "P(B_1)>P(C_1)"
+        },
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_2 theta'_1 theta'_3",
+          "output_left": "B_2",
+          "output_right": "C_2",
+          "weight_ratio": "(c*b)/(d*d)",
+          "word": "P(B_2)>P(C_2)"
+        },
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_3 theta'_1 theta'_2",
+          "output_left": "B_3",
+          "output_right": "C_3",
+          "weight_ratio": "(c*b)/(d*d)",
+          "word": "P(B_3)>P(C_3)"
+        },
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_2 theta_3 theta'_1",
+          "output_left": "C_1",
+          "output_right": "B_1",
+          "weight_ratio": "(b*c)/(d*d)",
+          "word": "P(C_1)>P(B_1)"
+        },
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_1 theta_3 theta'_2",
+          "output_left": "C_2",
+          "output_right": "B_2",
+          "weight_ratio": "(b*c)/(d*d)",
+          "word": "P(C_2)>P(B_2)"
+        },
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_1 theta_2 theta'_3",
+          "output_left": "C_3",
+          "output_right": "B_3",
+          "weight_ratio": "(b*c)/(d*d)",
+          "word": "P(C_3)>P(B_3)"
+        },
+        {
+          "integer_sign": -1,
+          "kernel_monomial": "theta_1 theta_2 theta_3",
+          "output_left": "U",
+          "output_right": "A",
+          "weight_ratio": "(a*d)/(d*d)",
+          "word": "P(U)>P(A)"
+        }
+      ]
+    }
+  ],
+  "compact_counts": {
+    "conditional_nonzero": 27,
+    "conditional_zero": 37,
+    "total": 64
+  },
+  "conditional_intertwiner": {
+    "ansatz": "Omega=kappa_color K(theta,theta') P C(theta) P C(theta')",
+    "conditional_zero_if": [
+      "q_r C(theta)=left_d C(theta)/dtheta_r",
+      "D_r K=0",
+      "[q_r,P]=0",
+      "the color tensor is q_r-inert",
+      "the regulator and cut are separately q_r-equivariant"
+    ],
+    "identity": "q_r Omega-Omega(q_r tensor 1+1 tensor q_r)=(D_r K) P C P C+K([q_r,P]C P C+P C [q_r,P]C)",
+    "physical_status": "BLOCKED_DRED_CUT_OPERATOR_NOT_LOCKED"
+  },
+  "grassmann_invariants": {
+    "degree3_domain_dimension": 20,
+    "derivatives": {
+      "D_1": [],
+      "D_2": [],
+      "D_3": []
+    },
+    "diagonal_generators": [
+      "D_r=left_d/dtheta_r+left_d/dtheta'_r",
+      "D_r=left_d/dtheta_r+left_d/dtheta'_r",
+      "D_r=left_d/dtheta_r+left_d/dtheta'_r"
+    ],
+    "generator": [
+      {
+        "coefficient": "1",
+        "mask": 7,
+        "monomial": "theta_1 theta_2 theta_3"
+      },
+      {
+        "coefficient": "-1",
+        "mask": 14,
+        "monomial": "theta_2 theta_3 theta'_1"
+      },
+      {
+        "coefficient": "1",
+        "mask": 21,
+        "monomial": "theta_1 theta_3 theta'_2"
+      },
+      {
+        "coefficient": "1",
+        "mask": 28,
+        "monomial": "theta_3 theta'_1 theta'_2"
+      },
+      {
+        "coefficient": "-1",
+        "mask": 35,
+        "monomial": "theta_1 theta_2 theta'_3"
+      },
+      {
+        "coefficient": "-1",
+        "mask": 42,
+        "monomial": "theta_2 theta'_1 theta'_3"
+      },
+      {
+        "coefficient": "1",
+        "mask": 49,
+        "monomial": "theta_1 theta'_2 theta'_3"
+      },
+      {
+        "coefficient": "-1",
+        "mask": 56,
+        "monomial": "theta'_1 theta'_2 theta'_3"
+      }
+    ],
+    "invariant_hilbert_dimensions_degrees_0_to_6": {
+      "0": 1,
+      "1": 3,
+      "2": 3,
+      "3": 1,
+      "4": 0,
+      "5": 0,
+      "6": 0
+    },
+    "nullity": 1,
+    "rank": 19,
+    "rref_basis": [
+      {
+        "coefficient": "-1",
+        "mask": 7,
+        "monomial": "theta_1 theta_2 theta_3"
+      },
+      {
+        "coefficient": "1",
+        "mask": 14,
+        "monomial": "theta_2 theta_3 theta'_1"
+      },
+      {
+        "coefficient": "-1",
+        "mask": 21,
+        "monomial": "theta_1 theta_3 theta'_2"
+      },
+      {
+        "coefficient": "-1",
+        "mask": 28,
+        "monomial": "theta_3 theta'_1 theta'_2"
+      },
+      {
+        "coefficient": "1",
+        "mask": 35,
+        "monomial": "theta_1 theta_2 theta'_3"
+      },
+      {
+        "coefficient": "1",
+        "mask": 42,
+        "monomial": "theta_2 theta'_1 theta'_3"
+      },
+      {
+        "coefficient": "-1",
+        "mask": 49,
+        "monomial": "theta_1 theta'_2 theta'_3"
+      },
+      {
+        "coefficient": "1",
+        "mask": 56,
+        "monomial": "theta'_1 theta'_2 theta'_3"
+      }
+    ],
+    "rref_basis_to_generator_ratio": "-1",
+    "stacked_constraint_rows": 45,
+    "variable_order": [
+      "theta_1",
+      "theta_2",
+      "theta_3",
+      "theta'_1",
+      "theta'_2",
+      "theta'_3"
+    ]
+  },
+  "mutation_tests": [
+    {
+      "id": "T01_DEGREE3_KERNEL_DIMENSION",
+      "observed": {
+        "domain": 20,
+        "nullity": 1,
+        "stacked_rows": 45
+      },
+      "pass": true
+    },
+    {
+      "id": "T02_KERNEL_EQUALS_PRODUCT_OF_DIFFERENCES",
+      "observed": {
+        "basis_to_product_ratio": "-1",
+        "same_span": true
+      },
+      "pass": true
+    },
+    {
+      "id": "T03_DIAGONAL_TRANSLATION_CLOSURE",
+      "observed": {
+        "D_1_term_count": 0,
+        "D_2_term_count": 0,
+        "D_3_term_count": 0
+      },
+      "pass": true
+    },
+    {
+      "id": "T04_PLUS_MUTATION_DETECTED",
+      "observed": {
+        "D_1_term_count": 4,
+        "D_2_term_count": 4,
+        "D_3_term_count": 4
+      },
+      "pass": true
+    },
+    {
+      "id": "T05_TERM_DELETION_MUTATION_DETECTED",
+      "observed": {
+        "D_1_term_count": 1,
+        "D_2_term_count": 1,
+        "D_3_term_count": 1
+      },
+      "pass": true
+    },
+    {
+      "id": "T06_WEIGHTED_Q_ANTICOMMUTATOR",
+      "observed": "a=2,b=3,c=5,d=7",
+      "pass": true
+    },
+    {
+      "id": "T07_Q_INDEX_SIGN_MUTATION_DETECTED",
+      "observed": "sign of q_1(C_2)->B_3 reversed",
+      "pass": true
+    },
+    {
+      "id": "T08_COMPACT_ORDERED_PAIR_CENSUS",
+      "observed": {
+        "conditional_nonzero": 27,
+        "conditional_zero": 37,
+        "total": 64
+      },
+      "pass": true
+    },
+    {
+      "id": "T09_PHYSICAL_ORDERED_PAIR_CENSUS",
+      "observed": {
+        "distinct_ordered_words": 81,
+        "total": 81
+      },
+      "pass": true
+    },
+    {
+      "id": "T10_REVERSED_WORDS_RETAINED",
+      "observed": {
+        "off_diagonal_directional_rows": 72
+      },
+      "pass": true
+    },
+    {
+      "id": "T11_DETERMINISTIC_EXPANSION",
+      "observed": "e1e3acf6382eae2be7657e0a1af48bd72faba20033478b828dfd9caeb46c2f04",
+      "pass": true
+    },
+    {
+      "id": "T12_NORMALIZATION_UNDERDETERMINATION_WITNESS",
+      "observed": {
+        "normalization_1": "(a,b,c,d)=(1,1,1,1)",
+        "normalization_2": "(a,b,c,d)=(2,3,5,7)",
+        "representations_are_distinct": true
+      },
+      "pass": true
+    }
+  ],
+  "not_proved": [
+    "Normalized identification of U,C_r,B_r,A with the four Step-5 Project letter families.",
+    "Physical q_r action and the numerical compact weights a,b,c,d.",
+    "Derivation of the compact weights from tree Euler descendants.",
+    "Unconditional intertwining of the physical DRED-minus-cut commutator with q_r.",
+    "Uniqueness of the full local bilinear two-holomorphic-derivative cocycle."
+  ],
+  "physical_81": [
+    {
+      "left": "nabla_+W_+",
+      "ordered_word": "nabla_+W_+>nabla_+W_+",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+W_+>nabla_+W_+",
+      "right": "nabla_+W_+",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+W_+",
+      "ordered_word": "nabla_+W_+>nabla_+Phi_1",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+Phi_1>nabla_+W_+",
+      "right": "nabla_+Phi_1",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+W_+",
+      "ordered_word": "nabla_+W_+>nabla_+Phi_2",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+Phi_2>nabla_+W_+",
+      "right": "nabla_+Phi_2",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+W_+",
+      "ordered_word": "nabla_+W_+>nabla_+Phi_3",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+Phi_3>nabla_+W_+",
+      "right": "nabla_+Phi_3",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+W_+",
+      "ordered_word": "nabla_+W_+>tildePhi_1",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildePhi_1>nabla_+W_+",
+      "right": "tildePhi_1",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+W_+",
+      "ordered_word": "nabla_+W_+>tildePhi_2",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildePhi_2>nabla_+W_+",
+      "right": "tildePhi_2",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+W_+",
+      "ordered_word": "nabla_+W_+>tildePhi_3",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildePhi_3>nabla_+W_+",
+      "right": "tildePhi_3",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+W_+",
+      "ordered_word": "nabla_+W_+>tildeW_dot1",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildeW_dot1>nabla_+W_+",
+      "right": "tildeW_dot1",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+W_+",
+      "ordered_word": "nabla_+W_+>tildeW_dot2",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildeW_dot2>nabla_+W_+",
+      "right": "tildeW_dot2",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+Phi_1",
+      "ordered_word": "nabla_+Phi_1>nabla_+W_+",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+W_+>nabla_+Phi_1",
+      "right": "nabla_+W_+",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+Phi_1",
+      "ordered_word": "nabla_+Phi_1>nabla_+Phi_1",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+Phi_1>nabla_+Phi_1",
+      "right": "nabla_+Phi_1",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+Phi_1",
+      "ordered_word": "nabla_+Phi_1>nabla_+Phi_2",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+Phi_2>nabla_+Phi_1",
+      "right": "nabla_+Phi_2",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+Phi_1",
+      "ordered_word": "nabla_+Phi_1>nabla_+Phi_3",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+Phi_3>nabla_+Phi_1",
+      "right": "nabla_+Phi_3",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+Phi_1",
+      "ordered_word": "nabla_+Phi_1>tildePhi_1",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildePhi_1>nabla_+Phi_1",
+      "right": "tildePhi_1",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+Phi_1",
+      "ordered_word": "nabla_+Phi_1>tildePhi_2",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildePhi_2>nabla_+Phi_1",
+      "right": "tildePhi_2",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+Phi_1",
+      "ordered_word": "nabla_+Phi_1>tildePhi_3",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildePhi_3>nabla_+Phi_1",
+      "right": "tildePhi_3",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+Phi_1",
+      "ordered_word": "nabla_+Phi_1>tildeW_dot1",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildeW_dot1>nabla_+Phi_1",
+      "right": "tildeW_dot1",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+Phi_1",
+      "ordered_word": "nabla_+Phi_1>tildeW_dot2",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildeW_dot2>nabla_+Phi_1",
+      "right": "tildeW_dot2",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+Phi_2",
+      "ordered_word": "nabla_+Phi_2>nabla_+W_+",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+W_+>nabla_+Phi_2",
+      "right": "nabla_+W_+",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+Phi_2",
+      "ordered_word": "nabla_+Phi_2>nabla_+Phi_1",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+Phi_1>nabla_+Phi_2",
+      "right": "nabla_+Phi_1",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+Phi_2",
+      "ordered_word": "nabla_+Phi_2>nabla_+Phi_2",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+Phi_2>nabla_+Phi_2",
+      "right": "nabla_+Phi_2",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+Phi_2",
+      "ordered_word": "nabla_+Phi_2>nabla_+Phi_3",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+Phi_3>nabla_+Phi_2",
+      "right": "nabla_+Phi_3",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+Phi_2",
+      "ordered_word": "nabla_+Phi_2>tildePhi_1",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildePhi_1>nabla_+Phi_2",
+      "right": "tildePhi_1",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+Phi_2",
+      "ordered_word": "nabla_+Phi_2>tildePhi_2",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildePhi_2>nabla_+Phi_2",
+      "right": "tildePhi_2",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+Phi_2",
+      "ordered_word": "nabla_+Phi_2>tildePhi_3",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildePhi_3>nabla_+Phi_2",
+      "right": "tildePhi_3",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+Phi_2",
+      "ordered_word": "nabla_+Phi_2>tildeW_dot1",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildeW_dot1>nabla_+Phi_2",
+      "right": "tildeW_dot1",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+Phi_2",
+      "ordered_word": "nabla_+Phi_2>tildeW_dot2",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildeW_dot2>nabla_+Phi_2",
+      "right": "tildeW_dot2",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+Phi_3",
+      "ordered_word": "nabla_+Phi_3>nabla_+W_+",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+W_+>nabla_+Phi_3",
+      "right": "nabla_+W_+",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+Phi_3",
+      "ordered_word": "nabla_+Phi_3>nabla_+Phi_1",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+Phi_1>nabla_+Phi_3",
+      "right": "nabla_+Phi_1",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+Phi_3",
+      "ordered_word": "nabla_+Phi_3>nabla_+Phi_2",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+Phi_2>nabla_+Phi_3",
+      "right": "nabla_+Phi_2",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+Phi_3",
+      "ordered_word": "nabla_+Phi_3>nabla_+Phi_3",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+Phi_3>nabla_+Phi_3",
+      "right": "nabla_+Phi_3",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+Phi_3",
+      "ordered_word": "nabla_+Phi_3>tildePhi_1",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildePhi_1>nabla_+Phi_3",
+      "right": "tildePhi_1",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+Phi_3",
+      "ordered_word": "nabla_+Phi_3>tildePhi_2",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildePhi_2>nabla_+Phi_3",
+      "right": "tildePhi_2",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+Phi_3",
+      "ordered_word": "nabla_+Phi_3>tildePhi_3",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildePhi_3>nabla_+Phi_3",
+      "right": "tildePhi_3",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+Phi_3",
+      "ordered_word": "nabla_+Phi_3>tildeW_dot1",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildeW_dot1>nabla_+Phi_3",
+      "right": "tildeW_dot1",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "nabla_+Phi_3",
+      "ordered_word": "nabla_+Phi_3>tildeW_dot2",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildeW_dot2>nabla_+Phi_3",
+      "right": "tildeW_dot2",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildePhi_1",
+      "ordered_word": "tildePhi_1>nabla_+W_+",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+W_+>tildePhi_1",
+      "right": "nabla_+W_+",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildePhi_1",
+      "ordered_word": "tildePhi_1>nabla_+Phi_1",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+Phi_1>tildePhi_1",
+      "right": "nabla_+Phi_1",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildePhi_1",
+      "ordered_word": "tildePhi_1>nabla_+Phi_2",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+Phi_2>tildePhi_1",
+      "right": "nabla_+Phi_2",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildePhi_1",
+      "ordered_word": "tildePhi_1>nabla_+Phi_3",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+Phi_3>tildePhi_1",
+      "right": "nabla_+Phi_3",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildePhi_1",
+      "ordered_word": "tildePhi_1>tildePhi_1",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildePhi_1>tildePhi_1",
+      "right": "tildePhi_1",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildePhi_1",
+      "ordered_word": "tildePhi_1>tildePhi_2",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildePhi_2>tildePhi_1",
+      "right": "tildePhi_2",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildePhi_1",
+      "ordered_word": "tildePhi_1>tildePhi_3",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildePhi_3>tildePhi_1",
+      "right": "tildePhi_3",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildePhi_1",
+      "ordered_word": "tildePhi_1>tildeW_dot1",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildeW_dot1>tildePhi_1",
+      "right": "tildeW_dot1",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildePhi_1",
+      "ordered_word": "tildePhi_1>tildeW_dot2",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildeW_dot2>tildePhi_1",
+      "right": "tildeW_dot2",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildePhi_2",
+      "ordered_word": "tildePhi_2>nabla_+W_+",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+W_+>tildePhi_2",
+      "right": "nabla_+W_+",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildePhi_2",
+      "ordered_word": "tildePhi_2>nabla_+Phi_1",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+Phi_1>tildePhi_2",
+      "right": "nabla_+Phi_1",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildePhi_2",
+      "ordered_word": "tildePhi_2>nabla_+Phi_2",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+Phi_2>tildePhi_2",
+      "right": "nabla_+Phi_2",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildePhi_2",
+      "ordered_word": "tildePhi_2>nabla_+Phi_3",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+Phi_3>tildePhi_2",
+      "right": "nabla_+Phi_3",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildePhi_2",
+      "ordered_word": "tildePhi_2>tildePhi_1",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildePhi_1>tildePhi_2",
+      "right": "tildePhi_1",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildePhi_2",
+      "ordered_word": "tildePhi_2>tildePhi_2",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildePhi_2>tildePhi_2",
+      "right": "tildePhi_2",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildePhi_2",
+      "ordered_word": "tildePhi_2>tildePhi_3",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildePhi_3>tildePhi_2",
+      "right": "tildePhi_3",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildePhi_2",
+      "ordered_word": "tildePhi_2>tildeW_dot1",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildeW_dot1>tildePhi_2",
+      "right": "tildeW_dot1",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildePhi_2",
+      "ordered_word": "tildePhi_2>tildeW_dot2",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildeW_dot2>tildePhi_2",
+      "right": "tildeW_dot2",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildePhi_3",
+      "ordered_word": "tildePhi_3>nabla_+W_+",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+W_+>tildePhi_3",
+      "right": "nabla_+W_+",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildePhi_3",
+      "ordered_word": "tildePhi_3>nabla_+Phi_1",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+Phi_1>tildePhi_3",
+      "right": "nabla_+Phi_1",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildePhi_3",
+      "ordered_word": "tildePhi_3>nabla_+Phi_2",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+Phi_2>tildePhi_3",
+      "right": "nabla_+Phi_2",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildePhi_3",
+      "ordered_word": "tildePhi_3>nabla_+Phi_3",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+Phi_3>tildePhi_3",
+      "right": "nabla_+Phi_3",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildePhi_3",
+      "ordered_word": "tildePhi_3>tildePhi_1",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildePhi_1>tildePhi_3",
+      "right": "tildePhi_1",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildePhi_3",
+      "ordered_word": "tildePhi_3>tildePhi_2",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildePhi_2>tildePhi_3",
+      "right": "tildePhi_2",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildePhi_3",
+      "ordered_word": "tildePhi_3>tildePhi_3",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildePhi_3>tildePhi_3",
+      "right": "tildePhi_3",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildePhi_3",
+      "ordered_word": "tildePhi_3>tildeW_dot1",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildeW_dot1>tildePhi_3",
+      "right": "tildeW_dot1",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildePhi_3",
+      "ordered_word": "tildePhi_3>tildeW_dot2",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildeW_dot2>tildePhi_3",
+      "right": "tildeW_dot2",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildeW_dot1",
+      "ordered_word": "tildeW_dot1>nabla_+W_+",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+W_+>tildeW_dot1",
+      "right": "nabla_+W_+",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildeW_dot1",
+      "ordered_word": "tildeW_dot1>nabla_+Phi_1",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+Phi_1>tildeW_dot1",
+      "right": "nabla_+Phi_1",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildeW_dot1",
+      "ordered_word": "tildeW_dot1>nabla_+Phi_2",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+Phi_2>tildeW_dot1",
+      "right": "nabla_+Phi_2",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildeW_dot1",
+      "ordered_word": "tildeW_dot1>nabla_+Phi_3",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+Phi_3>tildeW_dot1",
+      "right": "nabla_+Phi_3",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildeW_dot1",
+      "ordered_word": "tildeW_dot1>tildePhi_1",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildePhi_1>tildeW_dot1",
+      "right": "tildePhi_1",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildeW_dot1",
+      "ordered_word": "tildeW_dot1>tildePhi_2",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildePhi_2>tildeW_dot1",
+      "right": "tildePhi_2",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildeW_dot1",
+      "ordered_word": "tildeW_dot1>tildePhi_3",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildePhi_3>tildeW_dot1",
+      "right": "tildePhi_3",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildeW_dot1",
+      "ordered_word": "tildeW_dot1>tildeW_dot1",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildeW_dot1>tildeW_dot1",
+      "right": "tildeW_dot1",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildeW_dot1",
+      "ordered_word": "tildeW_dot1>tildeW_dot2",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildeW_dot2>tildeW_dot1",
+      "right": "tildeW_dot2",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildeW_dot2",
+      "ordered_word": "tildeW_dot2>nabla_+W_+",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+W_+>tildeW_dot2",
+      "right": "nabla_+W_+",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildeW_dot2",
+      "ordered_word": "tildeW_dot2>nabla_+Phi_1",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+Phi_1>tildeW_dot2",
+      "right": "nabla_+Phi_1",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildeW_dot2",
+      "ordered_word": "tildeW_dot2>nabla_+Phi_2",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+Phi_2>tildeW_dot2",
+      "right": "nabla_+Phi_2",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildeW_dot2",
+      "ordered_word": "tildeW_dot2>nabla_+Phi_3",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "nabla_+Phi_3>tildeW_dot2",
+      "right": "nabla_+Phi_3",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildeW_dot2",
+      "ordered_word": "tildeW_dot2>tildePhi_1",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildePhi_1>tildeW_dot2",
+      "right": "tildePhi_1",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildeW_dot2",
+      "ordered_word": "tildeW_dot2>tildePhi_2",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildePhi_2>tildeW_dot2",
+      "right": "tildePhi_2",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildeW_dot2",
+      "ordered_word": "tildeW_dot2>tildePhi_3",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildePhi_3>tildeW_dot2",
+      "right": "tildePhi_3",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildeW_dot2",
+      "ordered_word": "tildeW_dot2>tildeW_dot1",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildeW_dot1>tildeW_dot2",
+      "right": "tildeW_dot1",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    },
+    {
+      "left": "tildeW_dot2",
+      "ordered_word": "tildeW_dot2>tildeW_dot2",
+      "reason": "No locked Project map from the nine Step-5 component letters to the eight weighted compact slots and the holomorphic derivative operator exists.",
+      "reversed_word": "tildeW_dot2>tildeW_dot2",
+      "right": "tildeW_dot2",
+      "state": "BLOCKED_TYPED_COMPONENT_MAP"
+    }
+  ],
+  "physical_counts": {
+    "blocked": 81,
+    "total": 81
+  },
+  "proved": [
+    "The degree-three diagonal odd-translation invariant subspace is one-dimensional.",
+    "Its generator is exactly (theta_1-theta'_1)(theta_2-theta'_2)(theta_3-theta'_3).",
+    "A weighted eight-slot compact superletter has the conditional q_r index map displayed in weighted_superletter.",
+    "That conditional q_r representation satisfies q_r q_s+q_s q_r=0 for arbitrary nonzero weights.",
+    "The conditional kernel expansion has 64 ordered compact input pairs and preserves output word order.",
+    "The named physical alphabet has 81 ordered pairs and preserves both directions."
+  ],
+  "schema": "step5-project-covariance-kernel-v1",
+  "test_summary": {
+    "passed": 12,
+    "total": 12
+  },
+  "verdict": "BLOCKED_PROJECT_NORMALIZATION_AND_PHYSICAL_INTERTWINING",
+  "weighted_superletter": {
+    "conditional_action": [
+      "q_r U=(b/a) C_r",
+      "q_r C_s=(c/b) epsilon_rst B_t",
+      "q_r B_s=(d/c) delta_rs A",
+      "q_r A=0"
+    ],
+    "definition": "C(theta)=a U+b theta_r C_r+(c/2) epsilon_rst theta_r theta_s B_t+d theta_1 theta_2 theta_3 A",
+    "derivation": "Coefficient comparison in q_r C(theta)=left_d C(theta)/dtheta_r.",
+    "normalization_status": "BLOCKED_RESIDUAL_Q_SELECTION_AND_NORMALIZATION",
+    "underdetermination_witness": "Every nonzero quadruple (a,b,c,d) gives an isomorphic nilpotent exterior-algebra representation; nilpotency alone cannot select numerical weights.",
+    "weights_required_nonzero": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ]
+  }
+}

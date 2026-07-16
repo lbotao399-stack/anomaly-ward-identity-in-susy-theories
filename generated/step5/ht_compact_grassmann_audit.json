@@ -1,0 +1,2395 @@
+{
+  "audit_statement": "Both compact branches have the identical normalized 64-component Grassmann expansion; only their unresolved overall coefficients differ.",
+  "authority_role": "EXTERNAL_TARGET_ONLY",
+  "branches": [
+    {
+      "equation_label": "eq:Q1C",
+      "id": "COMPACT_INTRO_BRANCH",
+      "overall_coefficient": "1/4",
+      "source_lines": [
+        200,
+        206
+      ]
+    },
+    {
+      "equation_label": "eq:Q1N4",
+      "id": "COMPACT_MAIN_BRANCH",
+      "overall_coefficient": "kappa_H^2",
+      "source_lines": [
+        1248,
+        1252
+      ]
+    }
+  ],
+  "canonical_rule_audit_count": 42,
+  "canonical_rule_audit_failed": 0,
+  "canonical_rule_audit_passed": 42,
+  "component_actions": [
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 0,
+        "expected_term_count": 0,
+        "rule_id": "HT-ZERO-CC",
+        "status": "PASS"
+      },
+      "exact_zero": true,
+      "id": "c__c",
+      "left_input": "c",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "c",
+      "theta_mask": "000000"
+    },
+    {
+      "canonical_rule_audit": {
+        "detail": "The ordered-pair target engine performs the Koszul and A<->B color swap without reducing the color tensor.",
+        "status": "NOT_APPLICABLE_REVERSED_COLOR_ORDER_RETAINED"
+      },
+      "exact_zero": true,
+      "id": "c__gamma_1",
+      "left_input": "c",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "gamma_1",
+      "theta_mask": "001000"
+    },
+    {
+      "canonical_rule_audit": {
+        "detail": "The ordered-pair target engine performs the Koszul and A<->B color swap without reducing the color tensor.",
+        "status": "NOT_APPLICABLE_REVERSED_COLOR_ORDER_RETAINED"
+      },
+      "exact_zero": true,
+      "id": "c__gamma_2",
+      "left_input": "c",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "gamma_2",
+      "theta_mask": "010000"
+    },
+    {
+      "canonical_rule_audit": {
+        "detail": "The ordered-pair target engine performs the Koszul and A<->B color swap without reducing the color tensor.",
+        "status": "NOT_APPLICABLE_REVERSED_COLOR_ORDER_RETAINED"
+      },
+      "exact_zero": true,
+      "id": "c__gamma_3",
+      "left_input": "c",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "gamma_3",
+      "theta_mask": "100000"
+    },
+    {
+      "canonical_rule_audit": {
+        "detail": "The ordered-pair target engine performs the Koszul and A<->B color swap without reducing the color tensor.",
+        "status": "NOT_APPLICABLE_REVERSED_COLOR_ORDER_RETAINED"
+      },
+      "exact_zero": true,
+      "id": "c__beta_1",
+      "left_input": "c",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "beta_1",
+      "theta_mask": "110000"
+    },
+    {
+      "canonical_rule_audit": {
+        "detail": "The ordered-pair target engine performs the Koszul and A<->B color swap without reducing the color tensor.",
+        "status": "NOT_APPLICABLE_REVERSED_COLOR_ORDER_RETAINED"
+      },
+      "exact_zero": true,
+      "id": "c__beta_2",
+      "left_input": "c",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "beta_2",
+      "theta_mask": "101000"
+    },
+    {
+      "canonical_rule_audit": {
+        "detail": "The ordered-pair target engine performs the Koszul and A<->B color swap without reducing the color tensor.",
+        "status": "NOT_APPLICABLE_REVERSED_COLOR_ORDER_RETAINED"
+      },
+      "exact_zero": true,
+      "id": "c__beta_3",
+      "left_input": "c",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "beta_3",
+      "theta_mask": "011000"
+    },
+    {
+      "canonical_rule_audit": {
+        "detail": "The ordered-pair target engine performs the Koszul and A<->B color swap without reducing the color tensor.",
+        "status": "NOT_APPLICABLE_REVERSED_COLOR_ORDER_RETAINED"
+      },
+      "exact_zero": false,
+      "id": "c__b",
+      "left_input": "c",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "c",
+          "right_output": "c"
+        }
+      ],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "b",
+      "theta_mask": "111000"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 0,
+        "expected_term_count": 0,
+        "rule_id": "HT-ZERO-GAMMA-C",
+        "status": "PASS"
+      },
+      "exact_zero": true,
+      "id": "gamma_1__c",
+      "left_input": "gamma_1",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "c",
+      "theta_mask": "000001"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 0,
+        "expected_term_count": 0,
+        "rule_id": "HT-ZERO-GAMMA-GAMMA",
+        "status": "PASS"
+      },
+      "exact_zero": true,
+      "id": "gamma_1__gamma_1",
+      "left_input": "gamma_1",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "gamma_1",
+      "theta_mask": "001001"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 0,
+        "expected_term_count": 0,
+        "rule_id": "HT-ZERO-GAMMA-GAMMA",
+        "status": "PASS"
+      },
+      "exact_zero": true,
+      "id": "gamma_1__gamma_2",
+      "left_input": "gamma_1",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "gamma_2",
+      "theta_mask": "010001"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 0,
+        "expected_term_count": 0,
+        "rule_id": "HT-ZERO-GAMMA-GAMMA",
+        "status": "PASS"
+      },
+      "exact_zero": true,
+      "id": "gamma_1__gamma_3",
+      "left_input": "gamma_1",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "gamma_3",
+      "theta_mask": "100001"
+    },
+    {
+      "canonical_rule_audit": {
+        "detail": "The ordered-pair target engine performs the Koszul and A<->B color swap without reducing the color tensor.",
+        "status": "NOT_APPLICABLE_REVERSED_COLOR_ORDER_RETAINED"
+      },
+      "exact_zero": false,
+      "id": "gamma_1__beta_1",
+      "left_input": "gamma_1",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "normalized_compact_outputs": [
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "c",
+          "right_output": "c"
+        }
+      ],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "beta_1",
+      "theta_mask": "110001"
+    },
+    {
+      "canonical_rule_audit": {
+        "detail": "The ordered-pair target engine performs the Koszul and A<->B color swap without reducing the color tensor.",
+        "status": "NOT_APPLICABLE_REVERSED_COLOR_ORDER_RETAINED"
+      },
+      "exact_zero": true,
+      "id": "gamma_1__beta_2",
+      "left_input": "gamma_1",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "beta_2",
+      "theta_mask": "101001"
+    },
+    {
+      "canonical_rule_audit": {
+        "detail": "The ordered-pair target engine performs the Koszul and A<->B color swap without reducing the color tensor.",
+        "status": "NOT_APPLICABLE_REVERSED_COLOR_ORDER_RETAINED"
+      },
+      "exact_zero": true,
+      "id": "gamma_1__beta_3",
+      "left_input": "gamma_1",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "beta_3",
+      "theta_mask": "011001"
+    },
+    {
+      "canonical_rule_audit": {
+        "detail": "The ordered-pair target engine performs the Koszul and A<->B color swap without reducing the color tensor.",
+        "status": "NOT_APPLICABLE_REVERSED_COLOR_ORDER_RETAINED"
+      },
+      "exact_zero": false,
+      "id": "gamma_1__b",
+      "left_input": "gamma_1",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "c",
+          "right_output": "gamma_1"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": -1,
+            "text": "-1"
+          },
+          "left_output": "gamma_1",
+          "right_output": "c"
+        }
+      ],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "b",
+      "theta_mask": "111001"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 0,
+        "expected_term_count": 0,
+        "rule_id": "HT-ZERO-GAMMA-C",
+        "status": "PASS"
+      },
+      "exact_zero": true,
+      "id": "gamma_2__c",
+      "left_input": "gamma_2",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "c",
+      "theta_mask": "000010"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 0,
+        "expected_term_count": 0,
+        "rule_id": "HT-ZERO-GAMMA-GAMMA",
+        "status": "PASS"
+      },
+      "exact_zero": true,
+      "id": "gamma_2__gamma_1",
+      "left_input": "gamma_2",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "gamma_1",
+      "theta_mask": "001010"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 0,
+        "expected_term_count": 0,
+        "rule_id": "HT-ZERO-GAMMA-GAMMA",
+        "status": "PASS"
+      },
+      "exact_zero": true,
+      "id": "gamma_2__gamma_2",
+      "left_input": "gamma_2",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "gamma_2",
+      "theta_mask": "010010"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 0,
+        "expected_term_count": 0,
+        "rule_id": "HT-ZERO-GAMMA-GAMMA",
+        "status": "PASS"
+      },
+      "exact_zero": true,
+      "id": "gamma_2__gamma_3",
+      "left_input": "gamma_2",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "gamma_3",
+      "theta_mask": "100010"
+    },
+    {
+      "canonical_rule_audit": {
+        "detail": "The ordered-pair target engine performs the Koszul and A<->B color swap without reducing the color tensor.",
+        "status": "NOT_APPLICABLE_REVERSED_COLOR_ORDER_RETAINED"
+      },
+      "exact_zero": true,
+      "id": "gamma_2__beta_1",
+      "left_input": "gamma_2",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "beta_1",
+      "theta_mask": "110010"
+    },
+    {
+      "canonical_rule_audit": {
+        "detail": "The ordered-pair target engine performs the Koszul and A<->B color swap without reducing the color tensor.",
+        "status": "NOT_APPLICABLE_REVERSED_COLOR_ORDER_RETAINED"
+      },
+      "exact_zero": false,
+      "id": "gamma_2__beta_2",
+      "left_input": "gamma_2",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "c",
+          "right_output": "c"
+        }
+      ],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "beta_2",
+      "theta_mask": "101010"
+    },
+    {
+      "canonical_rule_audit": {
+        "detail": "The ordered-pair target engine performs the Koszul and A<->B color swap without reducing the color tensor.",
+        "status": "NOT_APPLICABLE_REVERSED_COLOR_ORDER_RETAINED"
+      },
+      "exact_zero": true,
+      "id": "gamma_2__beta_3",
+      "left_input": "gamma_2",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "beta_3",
+      "theta_mask": "011010"
+    },
+    {
+      "canonical_rule_audit": {
+        "detail": "The ordered-pair target engine performs the Koszul and A<->B color swap without reducing the color tensor.",
+        "status": "NOT_APPLICABLE_REVERSED_COLOR_ORDER_RETAINED"
+      },
+      "exact_zero": false,
+      "id": "gamma_2__b",
+      "left_input": "gamma_2",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "c",
+          "right_output": "gamma_2"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": -1,
+            "text": "-1"
+          },
+          "left_output": "gamma_2",
+          "right_output": "c"
+        }
+      ],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "b",
+      "theta_mask": "111010"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 0,
+        "expected_term_count": 0,
+        "rule_id": "HT-ZERO-GAMMA-C",
+        "status": "PASS"
+      },
+      "exact_zero": true,
+      "id": "gamma_3__c",
+      "left_input": "gamma_3",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "c",
+      "theta_mask": "000100"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 0,
+        "expected_term_count": 0,
+        "rule_id": "HT-ZERO-GAMMA-GAMMA",
+        "status": "PASS"
+      },
+      "exact_zero": true,
+      "id": "gamma_3__gamma_1",
+      "left_input": "gamma_3",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "gamma_1",
+      "theta_mask": "001100"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 0,
+        "expected_term_count": 0,
+        "rule_id": "HT-ZERO-GAMMA-GAMMA",
+        "status": "PASS"
+      },
+      "exact_zero": true,
+      "id": "gamma_3__gamma_2",
+      "left_input": "gamma_3",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "gamma_2",
+      "theta_mask": "010100"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 0,
+        "expected_term_count": 0,
+        "rule_id": "HT-ZERO-GAMMA-GAMMA",
+        "status": "PASS"
+      },
+      "exact_zero": true,
+      "id": "gamma_3__gamma_3",
+      "left_input": "gamma_3",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "gamma_3",
+      "theta_mask": "100100"
+    },
+    {
+      "canonical_rule_audit": {
+        "detail": "The ordered-pair target engine performs the Koszul and A<->B color swap without reducing the color tensor.",
+        "status": "NOT_APPLICABLE_REVERSED_COLOR_ORDER_RETAINED"
+      },
+      "exact_zero": true,
+      "id": "gamma_3__beta_1",
+      "left_input": "gamma_3",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "beta_1",
+      "theta_mask": "110100"
+    },
+    {
+      "canonical_rule_audit": {
+        "detail": "The ordered-pair target engine performs the Koszul and A<->B color swap without reducing the color tensor.",
+        "status": "NOT_APPLICABLE_REVERSED_COLOR_ORDER_RETAINED"
+      },
+      "exact_zero": true,
+      "id": "gamma_3__beta_2",
+      "left_input": "gamma_3",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "beta_2",
+      "theta_mask": "101100"
+    },
+    {
+      "canonical_rule_audit": {
+        "detail": "The ordered-pair target engine performs the Koszul and A<->B color swap without reducing the color tensor.",
+        "status": "NOT_APPLICABLE_REVERSED_COLOR_ORDER_RETAINED"
+      },
+      "exact_zero": false,
+      "id": "gamma_3__beta_3",
+      "left_input": "gamma_3",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "normalized_compact_outputs": [
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "c",
+          "right_output": "c"
+        }
+      ],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "beta_3",
+      "theta_mask": "011100"
+    },
+    {
+      "canonical_rule_audit": {
+        "detail": "The ordered-pair target engine performs the Koszul and A<->B color swap without reducing the color tensor.",
+        "status": "NOT_APPLICABLE_REVERSED_COLOR_ORDER_RETAINED"
+      },
+      "exact_zero": false,
+      "id": "gamma_3__b",
+      "left_input": "gamma_3",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "c",
+          "right_output": "gamma_3"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": -1,
+            "text": "-1"
+          },
+          "left_output": "gamma_3",
+          "right_output": "c"
+        }
+      ],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "b",
+      "theta_mask": "111100"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 0,
+        "expected_term_count": 0,
+        "rule_id": "HT-ZERO-BETA-C",
+        "status": "PASS"
+      },
+      "exact_zero": true,
+      "id": "beta_1__c",
+      "left_input": "beta_1",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "c",
+      "theta_mask": "000110"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 1,
+        "expected_term_count": 1,
+        "rule_id": "HT-RULE-BETA-GAMMA",
+        "status": "PASS"
+      },
+      "exact_zero": false,
+      "id": "beta_1__gamma_1",
+      "left_input": "beta_1",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "c",
+          "right_output": "c"
+        }
+      ],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "gamma_1",
+      "theta_mask": "001110"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 0,
+        "expected_term_count": 0,
+        "rule_id": "HT-RULE-BETA-GAMMA",
+        "status": "PASS"
+      },
+      "exact_zero": true,
+      "id": "beta_1__gamma_2",
+      "left_input": "beta_1",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "gamma_2",
+      "theta_mask": "010110"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 0,
+        "expected_term_count": 0,
+        "rule_id": "HT-RULE-BETA-GAMMA",
+        "status": "PASS"
+      },
+      "exact_zero": true,
+      "id": "beta_1__gamma_3",
+      "left_input": "beta_1",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "gamma_3",
+      "theta_mask": "100110"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 0,
+        "expected_term_count": 0,
+        "rule_id": "HT-RULE-BETA-BETA",
+        "status": "PASS"
+      },
+      "exact_zero": true,
+      "id": "beta_1__beta_1",
+      "left_input": "beta_1",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "beta_1",
+      "theta_mask": "110110"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 2,
+        "expected_term_count": 2,
+        "rule_id": "HT-RULE-BETA-BETA",
+        "status": "PASS"
+      },
+      "exact_zero": false,
+      "id": "beta_1__beta_2",
+      "left_input": "beta_1",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "normalized_compact_outputs": [
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "c",
+          "right_output": "gamma_3"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": -1,
+            "text": "-1"
+          },
+          "left_output": "gamma_3",
+          "right_output": "c"
+        }
+      ],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "beta_2",
+      "theta_mask": "101110"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 2,
+        "expected_term_count": 2,
+        "rule_id": "HT-RULE-BETA-BETA",
+        "status": "PASS"
+      },
+      "exact_zero": false,
+      "id": "beta_1__beta_3",
+      "left_input": "beta_1",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": -1,
+            "text": "-1"
+          },
+          "left_output": "c",
+          "right_output": "gamma_2"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "gamma_2",
+          "right_output": "c"
+        }
+      ],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "beta_3",
+      "theta_mask": "011110"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 4,
+        "expected_term_count": 4,
+        "rule_id": "HT-RULE-BETA-B",
+        "status": "PASS"
+      },
+      "exact_zero": false,
+      "id": "beta_1__b",
+      "left_input": "beta_1",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "beta_1",
+          "right_output": "c"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "c",
+          "right_output": "beta_1"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "gamma_2",
+          "right_output": "gamma_3"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": -1,
+            "text": "-1"
+          },
+          "left_output": "gamma_3",
+          "right_output": "gamma_2"
+        }
+      ],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "b",
+      "theta_mask": "111110"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 0,
+        "expected_term_count": 0,
+        "rule_id": "HT-ZERO-BETA-C",
+        "status": "PASS"
+      },
+      "exact_zero": true,
+      "id": "beta_2__c",
+      "left_input": "beta_2",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "c",
+      "theta_mask": "000101"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 0,
+        "expected_term_count": 0,
+        "rule_id": "HT-RULE-BETA-GAMMA",
+        "status": "PASS"
+      },
+      "exact_zero": true,
+      "id": "beta_2__gamma_1",
+      "left_input": "beta_2",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "gamma_1",
+      "theta_mask": "001101"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 1,
+        "expected_term_count": 1,
+        "rule_id": "HT-RULE-BETA-GAMMA",
+        "status": "PASS"
+      },
+      "exact_zero": false,
+      "id": "beta_2__gamma_2",
+      "left_input": "beta_2",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "normalized_compact_outputs": [
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "c",
+          "right_output": "c"
+        }
+      ],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "gamma_2",
+      "theta_mask": "010101"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 0,
+        "expected_term_count": 0,
+        "rule_id": "HT-RULE-BETA-GAMMA",
+        "status": "PASS"
+      },
+      "exact_zero": true,
+      "id": "beta_2__gamma_3",
+      "left_input": "beta_2",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "gamma_3",
+      "theta_mask": "100101"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 2,
+        "expected_term_count": 2,
+        "rule_id": "HT-RULE-BETA-BETA",
+        "status": "PASS"
+      },
+      "exact_zero": false,
+      "id": "beta_2__beta_1",
+      "left_input": "beta_2",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "normalized_compact_outputs": [
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": -1,
+            "text": "-1"
+          },
+          "left_output": "c",
+          "right_output": "gamma_3"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "gamma_3",
+          "right_output": "c"
+        }
+      ],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "beta_1",
+      "theta_mask": "110101"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 0,
+        "expected_term_count": 0,
+        "rule_id": "HT-RULE-BETA-BETA",
+        "status": "PASS"
+      },
+      "exact_zero": true,
+      "id": "beta_2__beta_2",
+      "left_input": "beta_2",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "beta_2",
+      "theta_mask": "101101"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 2,
+        "expected_term_count": 2,
+        "rule_id": "HT-RULE-BETA-BETA",
+        "status": "PASS"
+      },
+      "exact_zero": false,
+      "id": "beta_2__beta_3",
+      "left_input": "beta_2",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "normalized_compact_outputs": [
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "c",
+          "right_output": "gamma_1"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": -1,
+            "text": "-1"
+          },
+          "left_output": "gamma_1",
+          "right_output": "c"
+        }
+      ],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "beta_3",
+      "theta_mask": "011101"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 4,
+        "expected_term_count": 4,
+        "rule_id": "HT-RULE-BETA-B",
+        "status": "PASS"
+      },
+      "exact_zero": false,
+      "id": "beta_2__b",
+      "left_input": "beta_2",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "normalized_compact_outputs": [
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "beta_2",
+          "right_output": "c"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "c",
+          "right_output": "beta_2"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": -1,
+            "text": "-1"
+          },
+          "left_output": "gamma_1",
+          "right_output": "gamma_3"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "gamma_3",
+          "right_output": "gamma_1"
+        }
+      ],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "b",
+      "theta_mask": "111101"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 0,
+        "expected_term_count": 0,
+        "rule_id": "HT-ZERO-BETA-C",
+        "status": "PASS"
+      },
+      "exact_zero": true,
+      "id": "beta_3__c",
+      "left_input": "beta_3",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "c",
+      "theta_mask": "000011"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 0,
+        "expected_term_count": 0,
+        "rule_id": "HT-RULE-BETA-GAMMA",
+        "status": "PASS"
+      },
+      "exact_zero": true,
+      "id": "beta_3__gamma_1",
+      "left_input": "beta_3",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "gamma_1",
+      "theta_mask": "001011"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 0,
+        "expected_term_count": 0,
+        "rule_id": "HT-RULE-BETA-GAMMA",
+        "status": "PASS"
+      },
+      "exact_zero": true,
+      "id": "beta_3__gamma_2",
+      "left_input": "beta_3",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "gamma_2",
+      "theta_mask": "010011"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 1,
+        "expected_term_count": 1,
+        "rule_id": "HT-RULE-BETA-GAMMA",
+        "status": "PASS"
+      },
+      "exact_zero": false,
+      "id": "beta_3__gamma_3",
+      "left_input": "beta_3",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "c",
+          "right_output": "c"
+        }
+      ],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "gamma_3",
+      "theta_mask": "100011"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 2,
+        "expected_term_count": 2,
+        "rule_id": "HT-RULE-BETA-BETA",
+        "status": "PASS"
+      },
+      "exact_zero": false,
+      "id": "beta_3__beta_1",
+      "left_input": "beta_3",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "c",
+          "right_output": "gamma_2"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": -1,
+            "text": "-1"
+          },
+          "left_output": "gamma_2",
+          "right_output": "c"
+        }
+      ],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "beta_1",
+      "theta_mask": "110011"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 2,
+        "expected_term_count": 2,
+        "rule_id": "HT-RULE-BETA-BETA",
+        "status": "PASS"
+      },
+      "exact_zero": false,
+      "id": "beta_3__beta_2",
+      "left_input": "beta_3",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "normalized_compact_outputs": [
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": -1,
+            "text": "-1"
+          },
+          "left_output": "c",
+          "right_output": "gamma_1"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "gamma_1",
+          "right_output": "c"
+        }
+      ],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "beta_2",
+      "theta_mask": "101011"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 0,
+        "expected_term_count": 0,
+        "rule_id": "HT-RULE-BETA-BETA",
+        "status": "PASS"
+      },
+      "exact_zero": true,
+      "id": "beta_3__beta_3",
+      "left_input": "beta_3",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "beta_3",
+      "theta_mask": "011011"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 4,
+        "expected_term_count": 4,
+        "rule_id": "HT-RULE-BETA-B",
+        "status": "PASS"
+      },
+      "exact_zero": false,
+      "id": "beta_3__b",
+      "left_input": "beta_3",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "beta_3",
+          "right_output": "c"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "c",
+          "right_output": "beta_3"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "gamma_1",
+          "right_output": "gamma_2"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": -1,
+            "text": "-1"
+          },
+          "left_output": "gamma_2",
+          "right_output": "gamma_1"
+        }
+      ],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "b",
+      "theta_mask": "111011"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 1,
+        "expected_term_count": 1,
+        "rule_id": "HT-RULE-BC",
+        "status": "PASS"
+      },
+      "exact_zero": false,
+      "id": "b__c",
+      "left_input": "b",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "normalized_compact_outputs": [
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "c",
+          "right_output": "c"
+        }
+      ],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "c",
+      "theta_mask": "000111"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 2,
+        "expected_term_count": 2,
+        "rule_id": "HT-RULE-B-GAMMA",
+        "status": "PASS"
+      },
+      "exact_zero": false,
+      "id": "b__gamma_1",
+      "left_input": "b",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "c",
+          "right_output": "gamma_1"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": -1,
+            "text": "-1"
+          },
+          "left_output": "gamma_1",
+          "right_output": "c"
+        }
+      ],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "gamma_1",
+      "theta_mask": "001111"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 2,
+        "expected_term_count": 2,
+        "rule_id": "HT-RULE-B-GAMMA",
+        "status": "PASS"
+      },
+      "exact_zero": false,
+      "id": "b__gamma_2",
+      "left_input": "b",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "c",
+          "right_output": "gamma_2"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": -1,
+            "text": "-1"
+          },
+          "left_output": "gamma_2",
+          "right_output": "c"
+        }
+      ],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "gamma_2",
+      "theta_mask": "010111"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 2,
+        "expected_term_count": 2,
+        "rule_id": "HT-RULE-B-GAMMA",
+        "status": "PASS"
+      },
+      "exact_zero": false,
+      "id": "b__gamma_3",
+      "left_input": "b",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "c",
+          "right_output": "gamma_3"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": -1,
+            "text": "-1"
+          },
+          "left_output": "gamma_3",
+          "right_output": "c"
+        }
+      ],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "gamma_3",
+      "theta_mask": "100111"
+    },
+    {
+      "canonical_rule_audit": {
+        "detail": "The ordered-pair target engine performs the Koszul and A<->B color swap without reducing the color tensor.",
+        "status": "NOT_APPLICABLE_REVERSED_COLOR_ORDER_RETAINED"
+      },
+      "exact_zero": false,
+      "id": "b__beta_1",
+      "left_input": "b",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "normalized_compact_outputs": [
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "beta_1",
+          "right_output": "c"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "c",
+          "right_output": "beta_1"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "gamma_2",
+          "right_output": "gamma_3"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": -1,
+            "text": "-1"
+          },
+          "left_output": "gamma_3",
+          "right_output": "gamma_2"
+        }
+      ],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "beta_1",
+      "theta_mask": "110111"
+    },
+    {
+      "canonical_rule_audit": {
+        "detail": "The ordered-pair target engine performs the Koszul and A<->B color swap without reducing the color tensor.",
+        "status": "NOT_APPLICABLE_REVERSED_COLOR_ORDER_RETAINED"
+      },
+      "exact_zero": false,
+      "id": "b__beta_2",
+      "left_input": "b",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "beta_2",
+          "right_output": "c"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "c",
+          "right_output": "beta_2"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": -1,
+            "text": "-1"
+          },
+          "left_output": "gamma_1",
+          "right_output": "gamma_3"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "gamma_3",
+          "right_output": "gamma_1"
+        }
+      ],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "beta_2",
+      "theta_mask": "101111"
+    },
+    {
+      "canonical_rule_audit": {
+        "detail": "The ordered-pair target engine performs the Koszul and A<->B color swap without reducing the color tensor.",
+        "status": "NOT_APPLICABLE_REVERSED_COLOR_ORDER_RETAINED"
+      },
+      "exact_zero": false,
+      "id": "b__beta_3",
+      "left_input": "b",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "normalized_compact_outputs": [
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "beta_3",
+          "right_output": "c"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "c",
+          "right_output": "beta_3"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "gamma_1",
+          "right_output": "gamma_2"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": -1,
+            "text": "-1"
+          },
+          "left_output": "gamma_2",
+          "right_output": "gamma_1"
+        }
+      ],
+      "q1_theta_extraction_sign": -1,
+      "right_input": "beta_3",
+      "theta_mask": "011111"
+    },
+    {
+      "canonical_rule_audit": {
+        "actual_term_count": 8,
+        "expected_term_count": 8,
+        "rule_id": "HT-RULE-BB",
+        "status": "PASS"
+      },
+      "exact_zero": false,
+      "id": "b__b",
+      "left_input": "b",
+      "lhs_product_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "lhs_theta_coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "normalized_compact_outputs": [
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": -1,
+            "text": "-1"
+          },
+          "left_output": "b",
+          "right_output": "c"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "beta_1",
+          "right_output": "gamma_1"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "beta_2",
+          "right_output": "gamma_2"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "beta_3",
+          "right_output": "gamma_3"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1"
+          },
+          "left_output": "c",
+          "right_output": "b"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": -1,
+            "text": "-1"
+          },
+          "left_output": "gamma_1",
+          "right_output": "beta_1"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": -1,
+            "text": "-1"
+          },
+          "left_output": "gamma_2",
+          "right_output": "beta_2"
+        },
+        {
+          "bilinear": "partial_dot_alpha(left_D) partial^dot_alpha(right_E)",
+          "coefficient": {
+            "denominator": 1,
+            "numerator": -1,
+            "text": "-1"
+          },
+          "left_output": "gamma_3",
+          "right_output": "beta_3"
+        }
+      ],
+      "q1_theta_extraction_sign": 1,
+      "right_input": "b",
+      "theta_mask": "111111"
+    }
+  ],
+  "component_pair_count": 64,
+  "delta_theta_product": [
+    {
+      "coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "theta_mask": "000111"
+    },
+    {
+      "coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "theta_mask": "001110"
+    },
+    {
+      "coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "theta_mask": "010101"
+    },
+    {
+      "coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "theta_mask": "011100"
+    },
+    {
+      "coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "theta_mask": "100011"
+    },
+    {
+      "coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "theta_mask": "101010"
+    },
+    {
+      "coefficient": {
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1"
+      },
+      "theta_mask": "110001"
+    },
+    {
+      "coefficient": {
+        "denominator": 1,
+        "numerator": -1,
+        "text": "-1"
+      },
+      "theta_mask": "111000"
+    }
+  ],
+  "epsilon_orientation_for_expansion": "epsilon^123=+1",
+  "exact_nonzero_count": 27,
+  "exact_zero_count": 37,
+  "grassmann_order": [
+    "theta_1",
+    "theta_2",
+    "theta_3",
+    "theta_prime_1",
+    "theta_prime_2",
+    "theta_prime_3"
+  ],
+  "normalized_formula": "-prod_I(theta_I-theta_prime_I) partial C^D(theta) partial C^E(theta_prime)",
+  "schema": 1,
+  "sign_conventions": [
+    "All theta monomials are canonicalized to the displayed grassmann_order.",
+    "Moving the first component field through the primed theta monomial contributes its Koszul sign.",
+    "Extracting the odd Q1 through the complete theta monomial contributes (-1)^(total theta degree)."
+  ],
+  "source": {
+    "compact_anchors": [
+      "HT-INTRO-N4-COMPACT-Q1",
+      "HT-N4-COMPACT-SUPERFIELD-RESULT"
+    ],
+    "path": "references/vendor/arxiv/2512.07771v2/source/main.tex",
+    "superfield_anchor": "HT-N4-SETUP-SUPERFIELD"
+  },
+  "superfield_components": [
+    {
+      "id": "c",
+      "parity": 1,
+      "theta_coefficient": 1,
+      "theta_mask_unprimed": "000"
+    },
+    {
+      "id": "gamma_1",
+      "parity": 0,
+      "theta_coefficient": 1,
+      "theta_mask_unprimed": "001"
+    },
+    {
+      "id": "gamma_2",
+      "parity": 0,
+      "theta_coefficient": 1,
+      "theta_mask_unprimed": "010"
+    },
+    {
+      "id": "gamma_3",
+      "parity": 0,
+      "theta_coefficient": 1,
+      "theta_mask_unprimed": "100"
+    },
+    {
+      "id": "beta_1",
+      "parity": 1,
+      "theta_coefficient": 1,
+      "theta_mask_unprimed": "110"
+    },
+    {
+      "id": "beta_2",
+      "parity": 1,
+      "theta_coefficient": -1,
+      "theta_mask_unprimed": "101"
+    },
+    {
+      "id": "beta_3",
+      "parity": 1,
+      "theta_coefficient": 1,
+      "theta_mask_unprimed": "011"
+    },
+    {
+      "id": "b",
+      "parity": 0,
+      "theta_coefficient": 1,
+      "theta_mask_unprimed": "111"
+    }
+  ]
+}

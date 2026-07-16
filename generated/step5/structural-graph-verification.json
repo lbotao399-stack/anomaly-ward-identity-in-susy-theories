@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "id": "dual_census",
+      "status": "PASS"
+    },
+    {
+      "id": "pair_count",
+      "status": "PASS"
+    },
+    {
+      "id": "nonzero_pair_count",
+      "status": "PASS"
+    },
+    {
+      "id": "zero_pair_count",
+      "status": "PASS"
+    },
+    {
+      "id": "kernel_count",
+      "status": "PASS"
+    },
+    {
+      "id": "orbit_count",
+      "status": "PASS"
+    },
+    {
+      "id": "graph_count",
+      "status": "PASS"
+    },
+    {
+      "id": "orientation_once",
+      "status": "PASS"
+    },
+    {
+      "id": "mutations",
+      "status": "PASS"
+    }
+  ],
+  "counts": {
+    "cut_orbits": 66,
+    "graphs": 132,
+    "kernels": 66,
+    "nonzero_pairs": 29,
+    "pairs": 81,
+    "zero_pairs": 52
+  },
+  "mutation_tests": [
+    {
+      "id": "DROP_FIRST_KERNEL",
+      "status": "PASS"
+    },
+    {
+      "id": "DUPLICATE_FIRST_KERNEL",
+      "status": "PASS"
+    },
+    {
+      "id": "REVERSE_ONE_OUTPUT_WORD",
+      "status": "PASS"
+    },
+    {
+      "id": "ADD_ORIENTATION_COPY",
+      "status": "PASS"
+    }
+  ],
+  "physical_pole_status": "CONDITIONAL_FF_BARE_CUT_CHECKED__RENORMALIZED_MIXING_PENDING",
+  "schema": 2,
+  "status": "PASS"
+}

@@ -1,0 +1,558 @@
+{
+  "G1": {
+    "contact_identity": {
+      "A": "F_A+C_A,d=(-8*R_A)*mu_l^2",
+      "B": "F_B+C_B,d=(-8*R_B)*mu_l^2"
+    },
+    "generic_kernel": "2*(p_L+q_R)",
+    "marked_generic_pq_lambda1_units": {
+      "A": [
+        "4/3",
+        "2/3"
+      ],
+      "B": [
+        "2/3",
+        "4/3"
+      ],
+      "sum": [
+        "2",
+        "2"
+      ]
+    },
+    "normalization": {
+      "lambda1_map": "(S_plus-S_minus)/4096",
+      "raw_selected_minus": {
+        "A": [
+          "-8192/3",
+          "-4096/3"
+        ],
+        "B": [
+          "-4096/3",
+          "-8192/3"
+        ]
+      },
+      "raw_selected_plus": {
+        "A": [
+          "8192/3",
+          "4096/3"
+        ],
+        "B": [
+          "4096/3",
+          "8192/3"
+        ]
+      }
+    },
+    "orientation_outputs": {
+      "AB": "D>B1",
+      "BA": "B1>D"
+    },
+    "physical_momentum_constraint": {
+      "A_mark": "2/3",
+      "B_mark": "-2/3",
+      "equation": "p_L+q_R=0",
+      "sum": "0"
+    },
+    "source_resolvent_bubbles_in_graph_sum": false,
+    "source_resolvent_status": "same-contact presentations; excluded from independent graph count"
+  },
+  "G2": {
+    "D_first_kernel_lambda1_units": "(q_R-4*p_L)/3",
+    "cohomology_letter_coefficient": "1",
+    "graded_reordering": "D and B1 are odd: D(q_R-4*p_L)B1=B1(4*p_L-q_R)D",
+    "labeled_factorials": {
+      "interaction_exponential": "1/2!",
+      "product": "1",
+      "source_insertion_factor": "1",
+      "two_labeled_M1_vertex_assignments": "2"
+    },
+    "marked_lambda1_units": {
+      "first_mark": "4/3",
+      "second_mark_complete": "-1/3",
+      "sum": "1"
+    },
+    "metric_words": {
+      "first_mark": "1 - z",
+      "second_mark_complete": "(2*z - 1)/2",
+      "second_mark_determinant": "z",
+      "second_mark_omega": "-1/2"
+    },
+    "ordered_generic_kernel": "(4*p_L-q_R)/3",
+    "ordered_generic_pq_lambda1_units": [
+      "4/3",
+      "-1/3"
+    ],
+    "orientation_outputs": {
+      "AB": "B1>D",
+      "BA": "D>B1"
+    },
+    "pre_D_scalar": "sqrt(2)*g**4*hbar/1024",
+    "simplex": {
+      "first_mark": "2/3",
+      "second_mark_complete": "-1/6",
+      "second_mark_determinant": "1/3",
+      "second_mark_omega": "-1/2"
+    }
+  },
+  "G3": {
+    "labeled_factorial_census": {
+      "Hminus_cubic_Hessian": {
+        "factor": "1",
+        "term": "(1/3!)*sum_(sigma in S3) flavor_sign(sigma)*color_sign(sigma)",
+        "weights": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "fixed_flavor_internal_lines": {
+        "G32": [
+          "Phi1",
+          "Phi2"
+        ],
+        "G33": [
+          "Phi1",
+          "Phi3"
+        ],
+        "Wick_pairings": 1,
+        "identical_line_factorial": "none"
+      },
+      "interaction_exponential": {
+        "factor": "1",
+        "ordered_vertex_sequences": 2,
+        "term": "(1/2!)*(M_r H_minus+H_minus M_r)"
+      },
+      "raw_32768_scope": "one labeled S-M vector edge, one labeled S-H matter edge, one labeled M-H matter edge, and one mark; no reflected route",
+      "reflected_route_scope": "BA is separate from AB",
+      "source": {
+        "direct_insertion": "O_phys^(0)=C_I X[u^A]Y[phi1^B]",
+        "factor": "1",
+        "mixed_Hessian_representation": "(1/2!)*(u,phi1 + phi1,u)",
+        "ordered_derivatives": 2
+      },
+      "total_factor": "1"
+    },
+    "lambda1_per_unit_weight": {
+      "G32": "2*sqrt(2)*i",
+      "G33": "-2*sqrt(2)*i"
+    },
+    "marked_contributions": {
+      "G32": {
+        "A_mark": "4*sqrt(2)*i/3",
+        "B_mark": "2*sqrt(2)*i/3",
+        "sum": "2*sqrt(2)*i"
+      },
+      "G33": {
+        "A_mark": "-4*sqrt(2)*i/3",
+        "B_mark": "-2*sqrt(2)*i/3",
+        "sum": "-2*sqrt(2)*i"
+      }
+    },
+    "metric_words": {
+      "A_mark": "1 - z",
+      "B_mark": "z"
+    },
+    "orientation_outputs": {
+      "AB": {
+        "G32": "C2>C3",
+        "G33": "C3>C2"
+      },
+      "BA": {
+        "G32": "C3>C2",
+        "G33": "C2>C3"
+      }
+    },
+    "original_measure_normalization": {
+      "Dword_per_unit_metric": "-4096",
+      "antichiral_H_measure": "1/2",
+      "full_M_measure": "1/4",
+      "mu2_rank_extraction": "-1/2",
+      "raw_monomial_normalization": "32768",
+      "trace_factor_is_not_a_graph_multiplicity": true,
+      "trace_per_metric": "2"
+    },
+    "pre_D_scalars": {
+      "G32": "-sqrt(2)*g**4*hbar/1024",
+      "G33": "sqrt(2)*g**4*hbar/1024"
+    },
+    "simplex_weights": {
+      "A_mark": "2/3",
+      "B_mark": "1/3",
+      "sum": "1"
+    }
+  },
+  "G3_full_SD_orbit": {
+    "AB_BA_reflection": {
+      "current_pairs_cancel_in_AB": true,
+      "current_pairs_cancel_in_BA": true,
+      "induced_contacts_reflect_with_their_parents": true
+    },
+    "complete_over_isolated_G3_factor": "1",
+    "factor_one_half_generated": false,
+    "full_DRED_remainder": "-4096*mu2*(p_wedge_q)/(D0*D1*D2)",
+    "induced_SD_contacts": {
+      "classification": "INDUCED_INVERSE_KERNEL_SD_CONTACT",
+      "not_identified_with_current_bubbles": true,
+      "r0": {
+        "cut": "+4096*W12/(D1*D2)",
+        "parent": "+4096*det4(r0)*W12/(D0*D1*D2)",
+        "remainder": "-4096*mu2*W12/(D0*D1*D2)"
+      },
+      "r1": {
+        "classification": "SAME_OUTER_A_OCCURRENCE_NEW_EDGE_SQUARE",
+        "cut": "-4096*WP0/(D0*D2)",
+        "parent": "-4096*det4(r1)*WP0/(D0*D1*D2)",
+        "remainder": "+4096*mu2*WP0/(D0*D1*D2)"
+      },
+      "r2": {
+        "cut": "+4096*Wp0/(D0*D1)",
+        "parent": "+4096*det4(r2)*Wp0/(D0*D1*D2)",
+        "remainder": "-4096*mu2*Wp0/(D0*D1*D2)"
+      }
+    },
+    "source_current_occurrences": {
+      "G3-A-JE": {
+        "DRED_defect": "0",
+        "coefficient": "+2*i",
+        "edge_denominators": [
+          "D1",
+          "D2"
+        ],
+        "raw_Dword": "+512*W12"
+      },
+      "G3-A-JX": {
+        "DRED_defect": "0",
+        "coefficient": "-2*i",
+        "edge_denominators": [
+          "D1",
+          "D2"
+        ],
+        "raw_Dword": "-512*W12"
+      },
+      "G3-B-PE": {
+        "DRED_defect": "0",
+        "coefficient": "+sqrt(2)*epsilon_1st",
+        "edge_denominators": [
+          "D0",
+          "D1"
+        ],
+        "raw_Dword": "-128*Wp0"
+      },
+      "G3-B-PX": {
+        "DRED_defect": "0",
+        "coefficient": "-sqrt(2)*epsilon_1st",
+        "edge_denominators": [
+          "D0",
+          "D1"
+        ],
+        "raw_Dword": "+128*Wp0"
+      },
+      "classification": "SOURCE_DESCENDANT_CURRENT_BUBBLE_NOT_SD_CUT",
+      "pairwise_integrand_sum": {
+        "A": "0",
+        "B": "0"
+      }
+    },
+    "status": "FULL_G3_DESCENDANT_SD_ORBIT_CLOSED__CURRENT_PAIRS_CANCEL__TRANSPORTED_R1_RETAINED",
+    "tree_descendant_expansion": {
+      "AB_current_coefficients": {
+        "JE": "+2*i",
+        "JX": "-2*i",
+        "PE": "+sqrt(2)*epsilon_1st",
+        "PX": "-sqrt(2)*epsilon_1st"
+      },
+      "A_mark": "-Dplus(EV_linear-2*i*(Phi_s x C_s))-2*i*(B_s x C_s)=-Dplus(EV_linear)",
+      "BA_Koszul_reordering": "-B1*J_A=+J_A*B1 because |B1|=|J_A|=1; J_B*A=A*J_B because both are even",
+      "B_mark": "-2*(-D2Phi1/4-epsilon_1st*(C_s x C_t)/sqrt(2))-sqrt(2)*epsilon_1st*(C_s x C_t)=D2Phi1/2"
+    },
+    "wedge_identity": "-W12+WP0-Wp0=-p_wedge_q"
+  },
+  "after_check_only": {
+    "HT_rows": {
+      "AB": {
+        "B1>D": "1",
+        "C2>C3": "-i*sqrt(2)",
+        "C3>C2": "i*sqrt(2)",
+        "D>B1": "1"
+      },
+      "BA": {
+        "B1>D": "1",
+        "C2>C3": "-i*sqrt(2)",
+        "C3>C2": "i*sqrt(2)",
+        "D>B1": "1"
+      }
+    },
+    "mismatches": [
+      {
+        "HT": "1",
+        "direct": "0",
+        "orientation": "AB",
+        "word": "D>B1"
+      },
+      {
+        "HT": "i*sqrt(2)",
+        "direct": "-2*sqrt(2)*i",
+        "orientation": "AB",
+        "word": "C3>C2"
+      },
+      {
+        "HT": "-i*sqrt(2)",
+        "direct": "2*sqrt(2)*i",
+        "orientation": "AB",
+        "word": "C2>C3"
+      },
+      {
+        "HT": "1",
+        "direct": "0",
+        "orientation": "BA",
+        "word": "B1>D"
+      },
+      {
+        "HT": "i*sqrt(2)",
+        "direct": "2*sqrt(2)*i",
+        "orientation": "BA",
+        "word": "C3>C2"
+      },
+      {
+        "HT": "-i*sqrt(2)",
+        "direct": "-2*sqrt(2)*i",
+        "orientation": "BA",
+        "word": "C2>C3"
+      }
+    ],
+    "read_after_direct_seal": "390dd450a0397445b675229ba1f22d9ce86bc16f956bc999ac23e7342781a3b6",
+    "source": "audits/step5-ht-roundtrip-audit.json",
+    "status": "MISMATCH"
+  },
+  "checks": {
+    "count": 112,
+    "failed": 0,
+    "ids": [
+      "FINITE_MU2_MASTER",
+      "G1_CORE_REPLAY_EQUALS_STORED_ARTIFACT",
+      "G1_CORE_REPLAY_INTERNAL_CHECKS",
+      "G1_STORED_TARGET_NOT_USED",
+      "G1_SOURCE_RESOLVENT_NOT_AN_INDEPENDENT_CUT",
+      "G1_SOURCE_RESOLVENT_EXCLUSION_COUNTEREXAMPLE",
+      "G1_A_GENERIC_PQ",
+      "G1_B_GENERIC_PQ",
+      "G1_TOTAL_GENERIC_PQ",
+      "G1_PHYSICAL_TOTAL_MOMENTUM_ZERO",
+      "G2_M21_DET_OMEGA_IDENTITY",
+      "G2_EXTERNAL_WEDGE",
+      "G2_FIRST_MARK_METRIC",
+      "G2_SECOND_MARK_DET_METRIC",
+      "G2_SECOND_MARK_OMEGA_METRIC",
+      "G2_SECOND_MARK_FULL_METRIC",
+      "G2_SECOND_MARK_DET_PLUS_OMEGA",
+      "G2_FIRST_MARK_FULL_D_ZERO",
+      "G2_FIRST_MARK_DRED_DEFECT",
+      "G2_SECOND_DET_FULL_D_ZERO",
+      "G2_SECOND_DET_DRED_DEFECT",
+      "G2_SECOND_OMEGA_FULL_D_ZERO",
+      "G2_SECOND_OMEGA_DRED_DEFECT",
+      "G2_OMEGA_RANK_ZERO_COMPLETION",
+      "G2_FIRST_SIMPLEX",
+      "G2_SECOND_DET_SIMPLEX",
+      "G2_SECOND_OMEGA_SIMPLEX",
+      "G2_SECOND_FULL_SIMPLEX",
+      "G2_FIRST_LAMBDA",
+      "G2_SECOND_LAMBDA",
+      "G2_COMPLETE_LAMBDA",
+      "G2_INTERACTION_EXPONENTIAL_FACTOR",
+      "G2_PRED_SCALAR",
+      "G2_D_FIRST_Q_MINUS_4P_FACTOR",
+      "G2_ORDERED_B1_D_PQ",
+      "G2_FIRST_MARK",
+      "G2_SECOND_MARK_COMPLETE",
+      "G2_MARK_SUM",
+      "G3_ORIGINAL_MEASURE_00_A",
+      "G3_ORIGINAL_MEASURE_00_B",
+      "G3_ORIGINAL_MEASURE_10_A",
+      "G3_ORIGINAL_MEASURE_10_B",
+      "G3_ORIGINAL_MEASURE_01_A",
+      "G3_ORIGINAL_MEASURE_01_B",
+      "G3_ORIGINAL_MEASURE_check_A",
+      "G3_ORIGINAL_MEASURE_check_B",
+      "G3_A_AFFINE_CHECK_POINT",
+      "G3_B_AFFINE_CHECK_POINT",
+      "G3_A_METRIC",
+      "G3_B_METRIC",
+      "G3_A_FULL_D_ZERO",
+      "G3_A_DRED_DEFECT",
+      "G3_B_FULL_D_ZERO",
+      "G3_B_DRED_DEFECT",
+      "G3_A_SIMPLEX",
+      "G3_B_SIMPLEX",
+      "G3_COMPLETE_SIMPLEX",
+      "G3_SOURCE_MIXED_HESSIAN_FACTOR",
+      "G3_TWO_ACTION_VERTEX_FACTOR",
+      "G3_HMINUS_SIX_FLAVOR_COLOR_WEIGHTS",
+      "G3_HMINUS_1_OVER_3_FACTORIAL",
+      "G3_G32_INTERNAL_LINES_ARE_DISTINCT",
+      "G3_G33_INTERNAL_LINES_ARE_DISTINCT",
+      "G3_FIXED_FLAVOR_WICK_PAIRING",
+      "G3_COLOR_SIMULTANEOUS_INPUT_OUTPUT_SWAP",
+      "G3_TOTAL_LABELED_COMBINATORIC_FACTOR",
+      "G3_ORIGINAL_MEASURE_DWORD_PER_METRIC",
+      "G32_PRED_SCALAR",
+      "G33_PRED_SCALAR",
+      "G32_UNIT_WEIGHT_LAMBDA1",
+      "G33_UNIT_WEIGHT_LAMBDA1",
+      "G3_DIRECT_A_WEIGHT",
+      "G3_DIRECT_B_WEIGHT",
+      "G3_DIRECT_WEIGHT_SUM",
+      "G32_A_PLUS_B",
+      "G33_A_PLUS_B",
+      "G3_CURRENT_A_RAW_JE",
+      "G3_CURRENT_B_RAW_PE",
+      "G3_A_NONLINEAR_EULER_PLUS_EXPLICIT_COEFFICIENT",
+      "G3_B_EULER_POTENTIAL_PLUS_EXPLICIT_COEFFICIENT",
+      "G3_A_JE_PLUS_JX_INTEGRAND",
+      "G3_B_PE_PLUS_PX_INTEGRAND",
+      "G3_A_JE_DRED_DEFECT",
+      "G3_A_JX_DRED_DEFECT",
+      "G3_B_PE_DRED_DEFECT",
+      "G3_B_PX_DRED_DEFECT",
+      "G3_EDGE_R0_PARENT_PLUS_INDUCED_CUT",
+      "G3_EDGE_R1_PARENT_PLUS_INDUCED_CUT",
+      "G3_EDGE_R2_PARENT_PLUS_INDUCED_CUT",
+      "G3_EDGE_R0_FULL_D_SD_ZERO",
+      "G3_EDGE_R1_FULL_D_SD_ZERO",
+      "G3_EDGE_R2_FULL_D_SD_ZERO",
+      "G3_THREE_EDGE_WEDGE_IDENTITY",
+      "G3_FULL_SD_ORBIT_DRED_REMAINDER",
+      "G3_FULL_SD_OCCURRENCE_IDS_UNIQUE",
+      "G3_TRANSPORTED_R1_IS_INDEPENDENT_EDGE_BRANCH",
+      "G3_TRANSPORTED_R1_IS_NEW_OUTER_MARK",
+      "G3_CURRENT_BUBBLE_ALIASED_TO_INDUCED_CUT",
+      "ROUTE_ORDER_AB_G1",
+      "ROUTE_ORDER_BA_G1",
+      "ROUTE_ORDER_AB_G2",
+      "ROUTE_ORDER_BA_G2",
+      "ROUTE_ORDER_AB_G32",
+      "ROUTE_ORDER_AB_G33",
+      "ROUTE_ORDER_BA_G32",
+      "ROUTE_ORDER_BA_G33",
+      "G3_COMPLETE_OVER_ISOLATED_FACTOR",
+      "G3_FULL_SD_ORBIT_FACTOR_ONE_HALF_ABSENT",
+      "AB_G1_PHYSICAL_ZERO",
+      "BA_G1_PHYSICAL_ZERO",
+      "AB_G2_ORDER",
+      "BA_G2_ORDER"
+    ],
+    "passed": 112
+  },
+  "definitions": {
+    "dimension": "d=4-2*epsilon",
+    "finite_master": "1/(32*pi^2)",
+    "lambda1": "hbar*g^2/(16*pi^2)",
+    "local_external_momenta": "p_L+q_R=0",
+    "mu_l_squared": "bar(l)^2-l_d^2=-hat(l)_user^2"
+  },
+  "direct_outputs_before_HT": {
+    "after_G1_physical_p_L_plus_q_R_zero": {
+      "AB": {
+        "B1>D": "1",
+        "C2>C3": "2*sqrt(2)*i",
+        "C3>C2": "-2*sqrt(2)*i",
+        "D>B1": "0"
+      },
+      "BA": {
+        "B1>D": "0",
+        "C2>C3": "-2*sqrt(2)*i",
+        "C3>C2": "2*sqrt(2)*i",
+        "D>B1": "1"
+      }
+    },
+    "basis": [
+      "B1>D",
+      "D>B1",
+      "C3>C2",
+      "C2>C3"
+    ],
+    "generic_before_total_momentum_constraint": {
+      "AB": {
+        "B1>D": "(4*p_L-q_R)/3",
+        "C2>C3": "2*sqrt(2)*i",
+        "C3>C2": "-2*sqrt(2)*i",
+        "D>B1": "2*(p_L+q_R)"
+      },
+      "BA": {
+        "B1>D": "2*(p_L+q_R)",
+        "C2>C3": "-2*sqrt(2)*i",
+        "C3>C2": "2*sqrt(2)*i",
+        "D>B1": "(4*p_L-q_R)/3"
+      }
+    }
+  },
+  "direct_seal_sha256": "390dd450a0397445b675229ba1f22d9ce86bc16f956bc999ac23e7342781a3b6",
+  "discrepancy": {
+    "G1": "generic 2*(p_L+q_R) is nonzero off the physical momentum surface and vanishes at p_L+q_R=0; it cannot supply the second B1/D ordered coefficient",
+    "G3": "the labeled factorial census leaves unit normalization 1; JE/JX and PE/PX cancel pointwise with zero DRED defect; the transported r1 inverse square remains an independent edge branch inside the same outer-A occurrence; the full SD orbit therefore gives magnitude 2*i*sqrt(2), not i*sqrt(2)",
+    "source_resolvent_bubbles": "excluded: same-contact presentations are not independent cuts"
+  },
+  "external_target_used_in_derivation": false,
+  "route_order": {
+    "AB_G1": {
+      "external_fields": [
+        "u",
+        "phi1"
+      ],
+      "route_id": "TRI::A__B1::001::G[0,1]::M1[0,1]"
+    },
+    "AB_G2": {
+      "external_fields": [
+        "phi1",
+        "u"
+      ],
+      "route_id": "TRI::A__B1::007::M1[1,0]::M1[0,2]"
+    },
+    "AB_G32": {
+      "external_fields": [
+        "tildephi2",
+        "tildephi3"
+      ],
+      "route_id": "TRI::A__B1::008::M2[1,2]::Hminus[0,1]"
+    },
+    "AB_G33": {
+      "external_fields": [
+        "tildephi3",
+        "tildephi2"
+      ],
+      "route_id": "TRI::A__B1::009::M3[1,2]::Hminus[0,2]"
+    },
+    "BA_G1": {
+      "external_fields": [
+        "phi1",
+        "u"
+      ],
+      "route_id": "TRI::B1__A::001::M1[0,1]::G[0,1]"
+    },
+    "BA_G2": {
+      "external_fields": [
+        "u",
+        "phi1"
+      ],
+      "route_id": "TRI::B1__A::007::M1[0,2]::M1[1,0]"
+    },
+    "BA_G32": {
+      "external_fields": [
+        "tildephi3",
+        "tildephi2"
+      ],
+      "route_id": "TRI::B1__A::008::Hminus[0,1]::M2[1,2]"
+    },
+    "BA_G33": {
+      "external_fields": [
+        "tildephi2",
+        "tildephi3"
+      ],
+      "route_id": "TRI::B1__A::009::Hminus[0,2]::M3[1,2]"
+    }
+  },
+  "schema": "step5-ab-ba-full-family-exact-v1",
+  "status": "TARGET_BLIND_FULL_G1_G2_G3_SD_ORBIT_INTEGRATED__HT_MISMATCH"
+}

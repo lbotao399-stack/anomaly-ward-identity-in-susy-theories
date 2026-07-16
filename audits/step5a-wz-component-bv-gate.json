@@ -1,0 +1,50 @@
+{
+  "artifact": "STEP5A-WZ-COMPONENT-BV-GATE",
+  "authority_status": "UNTRACKED_PROPOSAL_NOT_PROJECT_AUTHORITY",
+  "blockers": [
+    {
+      "id": "BLOCKED_STEP5A_WZ_BV_REDUCTION_UNDEFINED",
+      "missing": [
+        "WZ-preserving constraints on every chiral and antichiral ghost component",
+        "induced residual component BRST differential and minimal BV action",
+        "canonical BV pushforward or reduction from the unrestricted prepotential",
+        "algebraic WZ-gauge FP determinant and its density carrier",
+        "Euclidean component integration cycle and Berezinian"
+      ]
+    },
+    {
+      "id": "BLOCKED_STEP5A_COMPONENT_TO_SUPERFIELD_WW_EQUIVALENCE_UNPROVED",
+      "missing": [
+        "a regulator-compatible BV chain map for the WW composite insertion",
+        "equality of component and full-superfield contact/cutting descendants",
+        "equality of DRED evanescent operator mixing and counterterms"
+      ]
+    }
+  ],
+  "checks": {
+    "euclidean_ghosts_are_independent": true,
+    "full_prepotential_brst_rule_exists": true,
+    "step3d_forbids_implicit_wz_restriction": true,
+    "step5a_forbids_component_propagator_inference": true,
+    "step5a_uses_unrestricted_prepotential": true,
+    "wz_lowest_component_is_zero": true
+  },
+  "component_lorenz_gauge_status": "CONSTRUCTIBLE_ONLY_AS_A_NEW_INDEPENDENT_COMPONENT_QUANTIZATION;NOT_AN_ADMISSIBLE_REDUCTION_OF_CURRENT_STEP3D",
+  "result": "BLOCKED_CURRENT_AUTHORITY",
+  "schema": 1,
+  "tangent_test": {
+    "brst_images": [
+      "(s_E V_WZ)|=i*(tildec|-c|)",
+      "D_a(s_E V_WZ)|=-i*D_a c|",
+      "barD_dota(s_E V_WZ)|=+i*barD_dota tildec|"
+    ],
+    "result": "NOT_TANGENT_FOR_THE_INDEPENDENT_STEP5A_GHOST_DOMAIN",
+    "wz_constraints": [
+      "V_WZ|=0",
+      "D_a V_WZ|=0",
+      "barD_dota V_WZ|=0"
+    ]
+  },
+  "task": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
+  "ww_seed_status": "CANNOT_AUTHORIZE_OR_REPRODUCE_WITHOUT_THE_MISSING_EQUIVALENCE"
+}

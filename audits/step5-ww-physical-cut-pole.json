@@ -1,0 +1,896 @@
+{
+  "authority_commit": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+  "checks": [
+    {
+      "id": "input_hash::contracts/foundations/step-01-supersymmetry-commutator.md",
+      "status": "PASS"
+    },
+    {
+      "id": "input_hash::contracts/foundations/step-02a-flat-superspace.md",
+      "status": "PASS"
+    },
+    {
+      "id": "input_hash::contracts/foundations/step-03a-gauge-chiral-action.md",
+      "status": "PASS"
+    },
+    {
+      "id": "input_hash::contracts/foundations/step-03c-gauge-vector-representation.md",
+      "status": "PASS"
+    },
+    {
+      "id": "input_hash::contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md",
+      "status": "PASS"
+    },
+    {
+      "id": "input_hash::contracts/foundations/step-04c-n4-super-yang-mills.md",
+      "status": "PASS"
+    },
+    {
+      "id": "input_hash::ordered_source_proposal",
+      "status": "PASS"
+    },
+    {
+      "id": "triangle_endpoint_signs_all_plus",
+      "status": "PASS"
+    },
+    {
+      "id": "contact_endpoint_effective_signs_all_minus",
+      "status": "PASS"
+    },
+    {
+      "id": "contact_row_Dalgebra_multiplier_minus_quarter",
+      "status": "PASS"
+    },
+    {
+      "id": "single_triangle_row_is_plus_1_over_128",
+      "status": "PASS"
+    },
+    {
+      "id": "single_contact_row_is_minus_1_over_128",
+      "status": "PASS"
+    },
+    {
+      "id": "aggregate_triangle_is_plus_1_over_32",
+      "status": "PASS"
+    },
+    {
+      "id": "aggregate_contact_is_minus_1_over_32",
+      "status": "PASS"
+    },
+    {
+      "id": "pole_magnitudes_C_C_equals_C_T",
+      "status": "PASS"
+    },
+    {
+      "id": "sixteen_already_oriented_occurrence_orbits",
+      "status": "PASS"
+    },
+    {
+      "id": "no_orientation_or_placement_double_count",
+      "status": "PASS"
+    }
+  ],
+  "contact_Dalgebra_and_residue": {
+    "B0_residue_without_pi2": {
+      "denominator": 16,
+      "numerator": 1
+    },
+    "aggregate_derivative_word": "(D_minus^A-D_minus^C) K_plus (barD^C-barD^A)",
+    "aggregate_source_origin": "sum of the product-rule descendants listed in gaussian_cut_identity; it is not an added bare vertex",
+    "aggregate_source_word": "g*c^{BCE}*X^E*[(D_minus K_plus v^A)v^C-(K_plus v^A)D_minus v^C] modulo EOM",
+    "common_prefactor": [
+      "source order g",
+      "barW vertex +i*g/2",
+      "mathsf p Fourier phase -i",
+      "(+i)*(-i)=+1",
+      "therefore +g^2/2 before the row multiplier",
+      "the ordered two-line Wick factor 2 is retained inside each row multiplier"
+    ],
+    "common_prefactor_without_hbar_g2": {
+      "denominator": 2,
+      "numerator": 1
+    },
+    "four_row_pole_without_hbar_g2_pi2": {
+      "denominator": 32,
+      "numerator": -1
+    },
+    "pole": "-hbar*g^2/(32*pi^2*epsilon) color*word*T_mu rho nu*delta4^mu nu",
+    "rows": [
+      {
+        "effective_sign_before_Kplus": -1,
+        "endpoint_transfer_sign": -1,
+        "factor_trace": [
+          [
+            "K_plus",
+            {
+              "denominator": 4,
+              "numerator": -1
+            }
+          ],
+          [
+            "effective_endpoint_sign",
+            {
+              "denominator": 1,
+              "numerator": -1
+            }
+          ],
+          [
+            "D_minus_D_plus_to_half_D2",
+            {
+              "denominator": 2,
+              "numerator": 1
+            }
+          ],
+          [
+            "mixed_anticommutator",
+            {
+              "denominator": 1,
+              "numerator": 2
+            }
+          ],
+          [
+            "ordered_two_line_Wick_pairings",
+            {
+              "denominator": 1,
+              "numerator": 2
+            }
+          ],
+          [
+            "p_plus_to_delta4_Tp",
+            {
+              "denominator": 2,
+              "numerator": -1
+            }
+          ]
+        ],
+        "id": "C-DA-01",
+        "metric_multiplier_in_B0_units": {
+          "denominator": 4,
+          "numerator": -1
+        },
+        "raw_difference_sign": 1,
+        "raw_word": "D_A barD_C"
+      },
+      {
+        "effective_sign_before_Kplus": -1,
+        "endpoint_transfer_sign": 1,
+        "factor_trace": [
+          [
+            "K_plus",
+            {
+              "denominator": 4,
+              "numerator": -1
+            }
+          ],
+          [
+            "effective_endpoint_sign",
+            {
+              "denominator": 1,
+              "numerator": -1
+            }
+          ],
+          [
+            "D_minus_D_plus_to_half_D2",
+            {
+              "denominator": 2,
+              "numerator": 1
+            }
+          ],
+          [
+            "mixed_anticommutator",
+            {
+              "denominator": 1,
+              "numerator": 2
+            }
+          ],
+          [
+            "ordered_two_line_Wick_pairings",
+            {
+              "denominator": 1,
+              "numerator": 2
+            }
+          ],
+          [
+            "p_plus_to_delta4_Tp",
+            {
+              "denominator": 2,
+              "numerator": -1
+            }
+          ]
+        ],
+        "id": "C-DA-02",
+        "metric_multiplier_in_B0_units": {
+          "denominator": 4,
+          "numerator": -1
+        },
+        "raw_difference_sign": -1,
+        "raw_word": "D_A (-barD_A)"
+      },
+      {
+        "effective_sign_before_Kplus": -1,
+        "endpoint_transfer_sign": 1,
+        "factor_trace": [
+          [
+            "K_plus",
+            {
+              "denominator": 4,
+              "numerator": -1
+            }
+          ],
+          [
+            "effective_endpoint_sign",
+            {
+              "denominator": 1,
+              "numerator": -1
+            }
+          ],
+          [
+            "D_minus_D_plus_to_half_D2",
+            {
+              "denominator": 2,
+              "numerator": 1
+            }
+          ],
+          [
+            "mixed_anticommutator",
+            {
+              "denominator": 1,
+              "numerator": 2
+            }
+          ],
+          [
+            "ordered_two_line_Wick_pairings",
+            {
+              "denominator": 1,
+              "numerator": 2
+            }
+          ],
+          [
+            "p_plus_to_delta4_Tp",
+            {
+              "denominator": 2,
+              "numerator": -1
+            }
+          ]
+        ],
+        "id": "C-DA-03",
+        "metric_multiplier_in_B0_units": {
+          "denominator": 4,
+          "numerator": -1
+        },
+        "raw_difference_sign": -1,
+        "raw_word": "(-D_C) barD_C"
+      },
+      {
+        "effective_sign_before_Kplus": -1,
+        "endpoint_transfer_sign": -1,
+        "factor_trace": [
+          [
+            "K_plus",
+            {
+              "denominator": 4,
+              "numerator": -1
+            }
+          ],
+          [
+            "effective_endpoint_sign",
+            {
+              "denominator": 1,
+              "numerator": -1
+            }
+          ],
+          [
+            "D_minus_D_plus_to_half_D2",
+            {
+              "denominator": 2,
+              "numerator": 1
+            }
+          ],
+          [
+            "mixed_anticommutator",
+            {
+              "denominator": 1,
+              "numerator": 2
+            }
+          ],
+          [
+            "ordered_two_line_Wick_pairings",
+            {
+              "denominator": 1,
+              "numerator": 2
+            }
+          ],
+          [
+            "p_plus_to_delta4_Tp",
+            {
+              "denominator": 2,
+              "numerator": -1
+            }
+          ]
+        ],
+        "id": "C-DA-04",
+        "metric_multiplier_in_B0_units": {
+          "denominator": 4,
+          "numerator": -1
+        },
+        "raw_difference_sign": 1,
+        "raw_word": "(-D_C)(-barD_A)"
+      }
+    ],
+    "single_row_pole_without_hbar_g2_pi2": {
+      "denominator": 128,
+      "numerator": -1
+    }
+  },
+  "exact_blockers": [
+    {
+      "claim": "the recorded endpoint-transfer signs and mixed-anticommutator factors are derived from a complete superspace D-word trace",
+      "does_not_block": "conditional arithmetic consistency of the displayed FF pole ledger",
+      "id": "BLOCKED_EXPLICIT_WW_D_ALGEBRA_WORD_DERIVATION",
+      "reason": "The present audit checks coefficient arithmetic after those signs and factors are supplied. It does not emit the noncommutative integration-by-parts rewrite chain."
+    },
+    {
+      "claim": "A unique separate pole for NONLINEAR_LETTER, QUARTIC_ACTION, COLLAPSED_R0/R1/R2, ONE_LINK, and TWO_LINK.",
+      "does_not_block": "aggregate C_C=C_T",
+      "id": "BLOCKED_TOPOLOGY_RESOLVED_CONTACT_ALLOCATION",
+      "reason": "Superspace integration by parts and ordered vertex symmetrization move terms among these topology names while preserving each occurrence-row sum. CURRENT has no locked D-algebra normal form selecting one allocation."
+    },
+    {
+      "claim": "renormalized contact-sector closure",
+      "does_not_block": "bare one-loop aggregate metric mismatch",
+      "id": "BLOCKED_RENORMALIZED_COMPOSITE_MIXING",
+      "reason": "The local composite basis and evanescent-to-physical one-loop mixing matrix are not locked."
+    },
+    {
+      "claim": "use of DEF-WW-PHYS-01--06 as Project law",
+      "does_not_block": "internal reproducibility of this audit",
+      "id": "PROPOSAL_NOT_AUTHORITY",
+      "reason": "The definitions and this derivation are uncommitted proposals until reviewed origin/main passes verify."
+    }
+  ],
+  "gaussian_cut_identity": {
+    "euclidean_coefficient_identity": [
+      "0=int Dv delta/dv^I [F^I(v) exp(-S0/hbar)]",
+      "0=<delta F^I/dv^I>-(1/hbar)<F^I delta S0/dv^I>",
+      "<F^I K_IJ v^J>-hbar<delta F^I/dv^I>=0"
+    ],
+    "product_rule_exhaustion": [
+      {
+        "derivative_target": "L1/L2/L3 in the insertion",
+        "sector": "NONLINEAR_LETTER"
+      },
+      {
+        "derivative_target": "cubic action word",
+        "sector": "QUARTIC_ACTION"
+      },
+      {
+        "derivative_target": "edge projector/inverse kernel",
+        "sector": "COLLAPSED_DALGEBRA"
+      },
+      {
+        "derivative_target": "T1",
+        "sector": "ONE_LINK"
+      },
+      {
+        "derivative_target": "T2 or the second link derivative",
+        "sector": "TWO_LINK"
+      },
+      {
+        "derivative_target": "left/right transported endpoint",
+        "sector": "EXTERNAL_ENDPOINT"
+      },
+      {
+        "derivative_target": "constant coefficient density",
+        "sector": "ZERO_BY_DEF_WW_PHYS_02"
+      },
+      {
+        "derivative_target": "FP/NK field",
+        "sector": "ABSENT_NO_GHOST_PORT_IN_S_J"
+      }
+    ],
+    "relative_cut_sign": -1,
+    "ward_combination": "parent inverse-kernel occurrence minus its product-rule functional derivative",
+    "why_not_a_definition": "The sign is the minus sign between the two terms obtained by differentiating exp(-S0/hbar); no contact coefficient is inserted."
+  },
+  "input_boundary": {
+    "not_read": [
+      "HT target",
+      "untracked canonical seed audit",
+      "untracked Step-5 contract",
+      "other untracked Step-5 engines/audits",
+      "live chats",
+      "Notion"
+    ],
+    "read": [
+      "contracts/foundations/step-01-supersymmetry-commutator.md",
+      "contracts/foundations/step-02a-flat-superspace.md",
+      "contracts/foundations/step-03a-gauge-chiral-action.md",
+      "contracts/foundations/step-03c-gauge-vector-representation.md",
+      "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md",
+      "contracts/foundations/step-04c-n4-super-yang-mills.md",
+      "audits/step5-ww-contact-link-completion.json"
+    ]
+  },
+  "inputs": [
+    {
+      "expected_sha256": "a73d8017c2d07de578f4f98ea25054033b0384ebffb6b426650a22f404c3231b",
+      "path": "contracts/foundations/step-01-supersymmetry-commutator.md",
+      "sha256": "a73d8017c2d07de578f4f98ea25054033b0384ebffb6b426650a22f404c3231b",
+      "status": "PASS",
+      "use": "Euclidean sigma identities"
+    },
+    {
+      "expected_sha256": "6694f46634d604fac6a8866323c7325a803cbf3079a5771ddea25772c91cef2d",
+      "path": "contracts/foundations/step-02a-flat-superspace.md",
+      "sha256": "6694f46634d604fac6a8866323c7325a803cbf3079a5771ddea25772c91cef2d",
+      "status": "PASS",
+      "use": "(2A.41)--(2A.43): Euclidean D algebra"
+    },
+    {
+      "expected_sha256": "48141fc931580f6b73e385b8f900b3e6df5939cdb9348042de07fd8fe9320967",
+      "path": "contracts/foundations/step-03a-gauge-chiral-action.md",
+      "sha256": "48141fc931580f6b73e385b8f900b3e6df5939cdb9348042de07fd8fe9320967",
+      "status": "PASS",
+      "use": "(3A.34), (3A.48), (3A.51): connection and W"
+    },
+    {
+      "expected_sha256": "c4cc6f0504b79e02ce78030ad79b625bee6da7dff9de0f6a1ddc3b33ef2584a1",
+      "path": "contracts/foundations/step-03c-gauge-vector-representation.md",
+      "sha256": "c4cc6f0504b79e02ce78030ad79b625bee6da7dff9de0f6a1ddc3b33ef2584a1",
+      "status": "PASS",
+      "use": "(3C.18), (3C.33)--(3C.45): covariance and curvature"
+    },
+    {
+      "expected_sha256": "109e0c531da3a1b98313e87dd692fa3d9047c8f745291f8e87021008c7acc538",
+      "path": "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md",
+      "sha256": "109e0c531da3a1b98313e87dd692fa3d9047c8f745291f8e87021008c7acc538",
+      "status": "PASS",
+      "use": "(3D.34), (3D.80)--(3D.93): Schwinger equation and gauge family"
+    },
+    {
+      "expected_sha256": "fafc3bc2227b60ca699b3f953b632db82dafe093b221baa74736cc5fb838928f",
+      "path": "contracts/foundations/step-04c-n4-super-yang-mills.md",
+      "sha256": "fafc3bc2227b60ca699b3f953b632db82dafe093b221baa74736cc5fb838928f",
+      "status": "PASS",
+      "use": "(4C.1), (4C.4): canonical coupling normalization"
+    },
+    {
+      "expected_sha256": "322a92140e557fee666df4bfb652dfb6472aa07a915fa1ea8a8501e5d18635cd",
+      "path": "audits/step5-ww-contact-link-completion.json",
+      "sha256": "322a92140e557fee666df4bfb652dfb6472aa07a915fa1ea8a8501e5d18635cd",
+      "status": "PASS",
+      "use": "ordered source, Duhamel expansion, and occurrence labels"
+    }
+  ],
+  "link_and_endpoint_poles": {
+    "endpoint": {
+      "link_right_endpoint_coefficient": -1,
+      "sum": 0,
+      "transported_field_coefficient": 1
+    },
+    "one_link_rows": [
+      {
+        "identity": "i*w.(r-r')*int_0^1 ds ...=E(r)-E(r')",
+        "one_link": "-C_row*i*w.(r-r')*int_0^1 ds exp(i*s*w.r)exp(i*(1-s)*w.r')",
+        "sum": "0",
+        "triangle_longitudinal": "+C_row*(E(r)-E(r'))"
+      }
+    ],
+    "row_magnitude_without_hbar_g2_pi2": {
+      "denominator": 128,
+      "numerator": 1
+    },
+    "total_longitudinal_pole": "0",
+    "two_link_rows": [
+      {
+        "boundary": "int_0^1 db [E02(b)-E12(b)]",
+        "bulk": "i*w.(r0-r1)*int_{0<=a<=b<=1}E012",
+        "one_link_completion": "negative of the boundary",
+        "sum": "0"
+      },
+      {
+        "boundary": "int_0^1 da [E01(a)-E02(a)]",
+        "bulk": "i*w.(r1-r2)*int_{0<=a<=b<=1}E012",
+        "one_link_completion": "negative of the boundary",
+        "sum": "0"
+      }
+    ]
+  },
+  "new_step5_definitions": [
+    {
+      "consequence": "G^{AB}(p;theta1,theta2)=hbar*kappa^{AB}*delta^4(theta1-theta2)/p^2 and K*G=hbar*identity.",
+      "definition": "Stay in the vector-frame residual-free canonical coordinate v and choose the background supersymmetric Fermi-Feynman slice with S0=(1/2) int v^A kappa_AB(-partial^2)v^B.",
+      "id": "DEF-WW-PHYS-01"
+    },
+    {
+      "consequence": "The coefficient Schwinger identity contains only insertion derivatives and the Euler insertion.",
+      "definition": "Choose a constant coefficient density in this residual-free canonical chart. Measure divergence in (3D.34) is zero.",
+      "id": "DEF-WW-PHYS-02"
+    },
+    {
+      "consequence": "Loop tensor reduction returns hatdelta; four-dimensional D-algebra returns delta4.",
+      "definition": "DRED: d=4-2*epsilon, delta4=hatdelta+brevedelta, tr(hatdelta)=d, tr(brevedelta)=2*epsilon; loop momenta are hatted and external p,q,w have no breve components.",
+      "id": "DEF-WW-PHYS-03"
+    },
+    {
+      "consequence": "The i from the barW vertex and -i from mathsf p multiply to +1.",
+      "definition": "Fourier phase exp(+i p.x), mathsf p_a dot-a=-i sigma^m_a dot-a p_m, so {D_a,barD_dot-a}=2 mathsf p_a dot-a.",
+      "id": "DEF-WW-PHYS-04"
+    },
+    {
+      "consequence": "Every order-g^2 source vertex is generated by L1,L2,L3 and T0,T1,T2; no coefficient is adjusted to enforce a pole match.",
+      "definition": "Use exactly S_J=int J_AB L^A(tau_w L)^B from the source proposal. No independent curvature improvement or local J counterterm is included in the bare insertion.",
+      "id": "DEF-WW-PHYS-05"
+    },
+    {
+      "consequence": "Topology reallocations may change nonlinear/quartic/collapsed labels, but cannot change an occurrence-row sum.",
+      "definition": "Retain occurrence tags through all superspace integrations by parts. A cut row is the full product-rule descendant of one tagged parent row.",
+      "id": "DEF-WW-PHYS-06"
+    }
+  ],
+  "occurrence_orbits": [
+    {
+      "D_edge": "r1",
+      "barD_edge": "r0",
+      "contact_effective_sign": -1,
+      "contact_pole": "-hbar*g^2/(128*pi^2*epsilon)*delta4",
+      "id": "A_to_Wtilde__B_to_W::Dminus_left::occurrence-1",
+      "marked_Dminus_placement": "Dminus_left",
+      "marked_cut_edge": "r0",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "reflected_or_other_placement_is_not_multiplicity": true,
+      "same_color_word": true,
+      "same_external_word": true,
+      "triangle_final_sign": 1,
+      "triangle_pole": "+hbar*g^2/(128*pi^2*epsilon)*hatdelta"
+    },
+    {
+      "D_edge": "r2",
+      "barD_edge": "r0",
+      "contact_effective_sign": -1,
+      "contact_pole": "-hbar*g^2/(128*pi^2*epsilon)*delta4",
+      "id": "A_to_Wtilde__B_to_W::Dminus_left::occurrence-2",
+      "marked_Dminus_placement": "Dminus_left",
+      "marked_cut_edge": "r0",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "reflected_or_other_placement_is_not_multiplicity": true,
+      "same_color_word": true,
+      "same_external_word": true,
+      "triangle_final_sign": 1,
+      "triangle_pole": "+hbar*g^2/(128*pi^2*epsilon)*hatdelta"
+    },
+    {
+      "D_edge": "r1",
+      "barD_edge": "r1",
+      "contact_effective_sign": -1,
+      "contact_pole": "-hbar*g^2/(128*pi^2*epsilon)*delta4",
+      "id": "A_to_Wtilde__B_to_W::Dminus_left::occurrence-3",
+      "marked_Dminus_placement": "Dminus_left",
+      "marked_cut_edge": "r0",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "reflected_or_other_placement_is_not_multiplicity": true,
+      "same_color_word": true,
+      "same_external_word": true,
+      "triangle_final_sign": 1,
+      "triangle_pole": "+hbar*g^2/(128*pi^2*epsilon)*hatdelta"
+    },
+    {
+      "D_edge": "r2",
+      "barD_edge": "r1",
+      "contact_effective_sign": -1,
+      "contact_pole": "-hbar*g^2/(128*pi^2*epsilon)*delta4",
+      "id": "A_to_Wtilde__B_to_W::Dminus_left::occurrence-4",
+      "marked_Dminus_placement": "Dminus_left",
+      "marked_cut_edge": "r0",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "reflected_or_other_placement_is_not_multiplicity": true,
+      "same_color_word": true,
+      "same_external_word": true,
+      "triangle_final_sign": 1,
+      "triangle_pole": "+hbar*g^2/(128*pi^2*epsilon)*hatdelta"
+    },
+    {
+      "D_edge": "r1",
+      "barD_edge": "r0",
+      "contact_effective_sign": -1,
+      "contact_pole": "-hbar*g^2/(128*pi^2*epsilon)*delta4",
+      "id": "A_to_Wtilde__B_to_W::Dminus_right::occurrence-1",
+      "marked_Dminus_placement": "Dminus_right",
+      "marked_cut_edge": "r2",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "reflected_or_other_placement_is_not_multiplicity": true,
+      "same_color_word": true,
+      "same_external_word": true,
+      "triangle_final_sign": 1,
+      "triangle_pole": "+hbar*g^2/(128*pi^2*epsilon)*hatdelta"
+    },
+    {
+      "D_edge": "r2",
+      "barD_edge": "r0",
+      "contact_effective_sign": -1,
+      "contact_pole": "-hbar*g^2/(128*pi^2*epsilon)*delta4",
+      "id": "A_to_Wtilde__B_to_W::Dminus_right::occurrence-2",
+      "marked_Dminus_placement": "Dminus_right",
+      "marked_cut_edge": "r2",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "reflected_or_other_placement_is_not_multiplicity": true,
+      "same_color_word": true,
+      "same_external_word": true,
+      "triangle_final_sign": 1,
+      "triangle_pole": "+hbar*g^2/(128*pi^2*epsilon)*hatdelta"
+    },
+    {
+      "D_edge": "r1",
+      "barD_edge": "r1",
+      "contact_effective_sign": -1,
+      "contact_pole": "-hbar*g^2/(128*pi^2*epsilon)*delta4",
+      "id": "A_to_Wtilde__B_to_W::Dminus_right::occurrence-3",
+      "marked_Dminus_placement": "Dminus_right",
+      "marked_cut_edge": "r2",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "reflected_or_other_placement_is_not_multiplicity": true,
+      "same_color_word": true,
+      "same_external_word": true,
+      "triangle_final_sign": 1,
+      "triangle_pole": "+hbar*g^2/(128*pi^2*epsilon)*hatdelta"
+    },
+    {
+      "D_edge": "r2",
+      "barD_edge": "r1",
+      "contact_effective_sign": -1,
+      "contact_pole": "-hbar*g^2/(128*pi^2*epsilon)*delta4",
+      "id": "A_to_Wtilde__B_to_W::Dminus_right::occurrence-4",
+      "marked_Dminus_placement": "Dminus_right",
+      "marked_cut_edge": "r2",
+      "orientation": "A_to_Wtilde__B_to_W",
+      "reflected_or_other_placement_is_not_multiplicity": true,
+      "same_color_word": true,
+      "same_external_word": true,
+      "triangle_final_sign": 1,
+      "triangle_pole": "+hbar*g^2/(128*pi^2*epsilon)*hatdelta"
+    },
+    {
+      "D_edge": "r1",
+      "barD_edge": "r0",
+      "contact_effective_sign": -1,
+      "contact_pole": "-hbar*g^2/(128*pi^2*epsilon)*delta4",
+      "id": "B_to_Wtilde__A_to_W::Dminus_left::occurrence-1",
+      "marked_Dminus_placement": "Dminus_left",
+      "marked_cut_edge": "r0",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "reflected_or_other_placement_is_not_multiplicity": true,
+      "same_color_word": true,
+      "same_external_word": true,
+      "triangle_final_sign": 1,
+      "triangle_pole": "+hbar*g^2/(128*pi^2*epsilon)*hatdelta"
+    },
+    {
+      "D_edge": "r2",
+      "barD_edge": "r0",
+      "contact_effective_sign": -1,
+      "contact_pole": "-hbar*g^2/(128*pi^2*epsilon)*delta4",
+      "id": "B_to_Wtilde__A_to_W::Dminus_left::occurrence-2",
+      "marked_Dminus_placement": "Dminus_left",
+      "marked_cut_edge": "r0",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "reflected_or_other_placement_is_not_multiplicity": true,
+      "same_color_word": true,
+      "same_external_word": true,
+      "triangle_final_sign": 1,
+      "triangle_pole": "+hbar*g^2/(128*pi^2*epsilon)*hatdelta"
+    },
+    {
+      "D_edge": "r1",
+      "barD_edge": "r1",
+      "contact_effective_sign": -1,
+      "contact_pole": "-hbar*g^2/(128*pi^2*epsilon)*delta4",
+      "id": "B_to_Wtilde__A_to_W::Dminus_left::occurrence-3",
+      "marked_Dminus_placement": "Dminus_left",
+      "marked_cut_edge": "r0",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "reflected_or_other_placement_is_not_multiplicity": true,
+      "same_color_word": true,
+      "same_external_word": true,
+      "triangle_final_sign": 1,
+      "triangle_pole": "+hbar*g^2/(128*pi^2*epsilon)*hatdelta"
+    },
+    {
+      "D_edge": "r2",
+      "barD_edge": "r1",
+      "contact_effective_sign": -1,
+      "contact_pole": "-hbar*g^2/(128*pi^2*epsilon)*delta4",
+      "id": "B_to_Wtilde__A_to_W::Dminus_left::occurrence-4",
+      "marked_Dminus_placement": "Dminus_left",
+      "marked_cut_edge": "r0",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "reflected_or_other_placement_is_not_multiplicity": true,
+      "same_color_word": true,
+      "same_external_word": true,
+      "triangle_final_sign": 1,
+      "triangle_pole": "+hbar*g^2/(128*pi^2*epsilon)*hatdelta"
+    },
+    {
+      "D_edge": "r1",
+      "barD_edge": "r0",
+      "contact_effective_sign": -1,
+      "contact_pole": "-hbar*g^2/(128*pi^2*epsilon)*delta4",
+      "id": "B_to_Wtilde__A_to_W::Dminus_right::occurrence-1",
+      "marked_Dminus_placement": "Dminus_right",
+      "marked_cut_edge": "r2",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "reflected_or_other_placement_is_not_multiplicity": true,
+      "same_color_word": true,
+      "same_external_word": true,
+      "triangle_final_sign": 1,
+      "triangle_pole": "+hbar*g^2/(128*pi^2*epsilon)*hatdelta"
+    },
+    {
+      "D_edge": "r2",
+      "barD_edge": "r0",
+      "contact_effective_sign": -1,
+      "contact_pole": "-hbar*g^2/(128*pi^2*epsilon)*delta4",
+      "id": "B_to_Wtilde__A_to_W::Dminus_right::occurrence-2",
+      "marked_Dminus_placement": "Dminus_right",
+      "marked_cut_edge": "r2",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "reflected_or_other_placement_is_not_multiplicity": true,
+      "same_color_word": true,
+      "same_external_word": true,
+      "triangle_final_sign": 1,
+      "triangle_pole": "+hbar*g^2/(128*pi^2*epsilon)*hatdelta"
+    },
+    {
+      "D_edge": "r1",
+      "barD_edge": "r1",
+      "contact_effective_sign": -1,
+      "contact_pole": "-hbar*g^2/(128*pi^2*epsilon)*delta4",
+      "id": "B_to_Wtilde__A_to_W::Dminus_right::occurrence-3",
+      "marked_Dminus_placement": "Dminus_right",
+      "marked_cut_edge": "r2",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "reflected_or_other_placement_is_not_multiplicity": true,
+      "same_color_word": true,
+      "same_external_word": true,
+      "triangle_final_sign": 1,
+      "triangle_pole": "+hbar*g^2/(128*pi^2*epsilon)*hatdelta"
+    },
+    {
+      "D_edge": "r2",
+      "barD_edge": "r1",
+      "contact_effective_sign": -1,
+      "contact_pole": "-hbar*g^2/(128*pi^2*epsilon)*delta4",
+      "id": "B_to_Wtilde__A_to_W::Dminus_right::occurrence-4",
+      "marked_Dminus_placement": "Dminus_right",
+      "marked_cut_edge": "r2",
+      "orientation": "B_to_Wtilde__A_to_W",
+      "reflected_or_other_placement_is_not_multiplicity": true,
+      "same_color_word": true,
+      "same_external_word": true,
+      "triangle_final_sign": 1,
+      "triangle_pole": "+hbar*g^2/(128*pi^2*epsilon)*hatdelta"
+    }
+  ],
+  "overall_status": "CONDITIONAL_FF_AGGREGATE_BARE_POLE_ARITHMETIC_CHECKED__BLOCKED_D_WORD_TOPOLOGY_ALLOCATION_AND_RENORMALIZED_MIXING",
+  "result": {
+    "C_C": "hbar*g^2/(32*pi^2) times the same fixed color/external/ordered kernel",
+    "C_T": "hbar*g^2/(32*pi^2) times the fixed color/external/ordered kernel",
+    "breve_contraction": "brevedelta^mu nu*T_mu rho nu*p^rho=-2*epsilon*sigma_rho*p^rho",
+    "definition_of_C_T_and_C_C": "Gamma_T=(C_T/epsilon)*hatdelta; Gamma_C=-(C_C/epsilon)*delta4",
+    "derivation_not_definition": true,
+    "finite_defect": "+hbar*g^2/(16*pi^2)*color*ordered_kernel*barW_dot-alpha*p_+^dot-alpha*X",
+    "longitudinal_pole_after_link_completion": "0",
+    "magnitude_equality": "C_C=C_T",
+    "metric_sum": "-hbar*g^2/(32*pi^2*epsilon)*color*ordered_kernel*T_mu rho nu*brevedelta^mu nu"
+  },
+  "schema": "awi.step5.ww-physical-cut-pole-audit.v1",
+  "triangle_Dalgebra_and_residue": {
+    "factor_chain": {
+      "B0_residue_without_pi2": {
+        "denominator": 16,
+        "numerator": 1
+      },
+      "closed_D_loop": {
+        "denominator": 1,
+        "numerator": 16
+      },
+      "common_prefactor_without_hbar_g2": {
+        "denominator": 2,
+        "numerator": 1
+      },
+      "fixed_orientation_action_order_weight": {
+        "denominator": 1,
+        "numerator": 1
+      },
+      "insertion_KK_Dminus_coefficient": {
+        "denominator": 32,
+        "numerator": 1
+      },
+      "insertion_and_closed_D_loop": {
+        "denominator": 1,
+        "numerator": 2
+      },
+      "single_row_rank_two_in_B0_units": {
+        "denominator": 4,
+        "numerator": 1
+      },
+      "two_mixed_anticommutators": [
+        {
+          "denominator": 1,
+          "numerator": 2
+        },
+        {
+          "denominator": 1,
+          "numerator": 2
+        }
+      ],
+      "vertex_product_without_g2": {
+        "denominator": 4,
+        "numerator": 1
+      }
+    },
+    "four_row_pole_without_hbar_g2_pi2": {
+      "denominator": 32,
+      "numerator": 1
+    },
+    "pole": "+hbar*g^2/(32*pi^2*epsilon) color*word*T_mu rho nu*hatdelta^mu nu",
+    "rows": [
+      {
+        "D_edge": "r1",
+        "barD_edge": "r0",
+        "endpoint_transfer_sign": -1,
+        "final_sign": 1,
+        "id": "T-DA-01",
+        "rank_two_residue_in_B0_units": {
+          "denominator": 4,
+          "numerator": 1
+        },
+        "raw_vertex_sign": -1,
+        "uv_numerator": "ell^mu p^rho ell^nu"
+      },
+      {
+        "D_edge": "r2",
+        "barD_edge": "r0",
+        "endpoint_transfer_sign": 1,
+        "final_sign": 1,
+        "id": "T-DA-02",
+        "rank_two_residue_in_B0_units": {
+          "denominator": 4,
+          "numerator": 1
+        },
+        "raw_vertex_sign": 1,
+        "uv_numerator": "ell^mu p^rho ell^nu"
+      },
+      {
+        "D_edge": "r1",
+        "barD_edge": "r1",
+        "endpoint_transfer_sign": 1,
+        "final_sign": 1,
+        "id": "T-DA-03",
+        "rank_two_residue_in_B0_units": {
+          "denominator": 4,
+          "numerator": 1
+        },
+        "raw_vertex_sign": 1,
+        "uv_numerator": "ell^mu p^rho ell^nu"
+      },
+      {
+        "D_edge": "r2",
+        "barD_edge": "r1",
+        "endpoint_transfer_sign": -1,
+        "final_sign": 1,
+        "id": "T-DA-04",
+        "rank_two_residue_in_B0_units": {
+          "denominator": 4,
+          "numerator": 1
+        },
+        "raw_vertex_sign": -1,
+        "uv_numerator": "ell^mu p^rho ell^nu"
+      }
+    ],
+    "single_row_pole_without_hbar_g2_pi2": {
+      "denominator": 128,
+      "numerator": 1
+    }
+  },
+  "verify_run": "29306335742"
+}

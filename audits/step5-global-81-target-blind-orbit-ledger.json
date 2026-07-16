@@ -1,0 +1,3863 @@
+{
+  "authority_status": "LOCAL_PROPOSAL_FROM_DIRTY_WORKTREE; NOT_ORIGIN_MAIN_AUTHORITY",
+  "coefficient_policy": "coefficient only from completed target-blind representative audit; every unresolved result is null",
+  "evidence_inputs": [
+    "audits/step5-all-triangle-parent-port-census.json",
+    "audits/step5-no-descendant-pairs-exact.json",
+    "audits/step5-ac-ca-family-exact.json",
+    "audits/step5-bb-offdiagonal-family-exact.json",
+    "audits/step5-bc-full-family-raw-projection-exact.json",
+    "audits/step5-bbdiagonal-bd-db-exact-zero.json",
+    "audits/step5-aa-standard-feynman-strictification.md",
+    "audits/step5-aa-external-slot-decomposition-exact.json",
+    "audits/step5-ab-ba-project-ward-finite-renormalization-exact.json",
+    "audits/step5-ab-ba-vector-frame-missing-orbit-exact.json",
+    "audits/step5-ab-ba-g1-actual-resolvent-contact-orbit-exact.json",
+    "audits/step5-ab-ba-g3-original-full-measure-equivalence-exact.json",
+    "audits/step5-ab-ba-g3-gate7-normalization-first-error-exact.json",
+    "audits/step5-ad-da-ordered-ports-crossed-hessian-exact.json",
+    "audits/step5-ad-da-ordered-ports-crossed-hessian-exact.md",
+    "audits/step5-ad-da-raw-contact-hessian-multiplicity-exact.json",
+    "audits/step5-ad-da-raw-contact-hessian-multiplicity-exact.md"
+  ],
+  "external_target_used": false,
+  "frozen_base": "origin/main@00000f748fe4bdd1b5d122663cc1fb814faace66",
+  "graded_leibniz": "nabla_-(L_i L_j)=(nabla_-L_i)L_j+(-1)^|L_i| L_i(nabla_-L_j)",
+  "letters": [
+    {
+      "family": "A",
+      "has_outer_nabla_minus_descendant": true,
+      "id": "A",
+      "parity": 0
+    },
+    {
+      "family": "B",
+      "has_outer_nabla_minus_descendant": true,
+      "id": "B1",
+      "parity": 1
+    },
+    {
+      "family": "B",
+      "has_outer_nabla_minus_descendant": true,
+      "id": "B2",
+      "parity": 1
+    },
+    {
+      "family": "B",
+      "has_outer_nabla_minus_descendant": true,
+      "id": "B3",
+      "parity": 1
+    },
+    {
+      "family": "C",
+      "has_outer_nabla_minus_descendant": false,
+      "id": "C1",
+      "parity": 0
+    },
+    {
+      "family": "C",
+      "has_outer_nabla_minus_descendant": false,
+      "id": "C2",
+      "parity": 0
+    },
+    {
+      "family": "C",
+      "has_outer_nabla_minus_descendant": false,
+      "id": "C3",
+      "parity": 0
+    },
+    {
+      "family": "D",
+      "has_outer_nabla_minus_descendant": false,
+      "id": "Ddot1",
+      "parity": 1
+    },
+    {
+      "family": "D",
+      "has_outer_nabla_minus_descendant": false,
+      "id": "Ddot2",
+      "parity": 1
+    }
+  ],
+  "project_result_ledger_used": false,
+  "proposal_start_head": "6bb93d8df5a05af709a364be0d387795a5e18842",
+  "representatives": [
+    {
+      "blocker": null,
+      "family": "AA",
+      "final_state": "COMPLETE_EXACT",
+      "locally_proved_subresult": "full gauge-plus-three-flavor matter ordered vector (1,-1,1,-1,1,-1,1,-1)",
+      "maturity": "COMPLETED",
+      "status_source": "ACCEPTED_AA_ONE_LOOP_ANOMALY_SECTOR__HT_CHECK_ONLY_EXACT_MATCH"
+    },
+    {
+      "blocker": null,
+      "family": "AB/BA",
+      "final_state": "COMPLETE_EXACT",
+      "locally_proved_subresult": "six flavor-covariant ordered rows on the Project-Ward-renormalized vector (1,1,-i*sqrt(2),+i*sqrt(2))",
+      "maturity": "COMPLETED",
+      "status_source": "PASS_TARGET_BLIND_FINITE_PROJECT_WARD_RENORMALIZATION__AB_BA_HT_CHECK_ONLY_EXACT_MATCH"
+    },
+    {
+      "blocker": null,
+      "family": "AC/CA",
+      "final_state": "COMPLETE_EXACT",
+      "locally_proved_subresult": "full order-g^2 orbit",
+      "maturity": "COMPLETED",
+      "status_source": "TARGET_BLIND_COMPLETE_ORDER_G2_ORBIT__HT_UNIT_MATCH"
+    },
+    {
+      "blocker": null,
+      "family": "AD/DA",
+      "final_state": "COMPLETE_EXACT",
+      "locally_proved_subresult": "four dotted ordered pairs with raw contact multiplicity one and finite W-link longitudinal zero",
+      "maturity": "COMPLETED",
+      "status_source": "PASS_TARGET_BLIND_AD_DA_FULL_CHIRALITY_RAW_CONTACT_AND_LINK__HOLOMORPHIC_TWIST_COEFFICIENTS_MATCH"
+    },
+    {
+      "blocker": null,
+      "family": "BB off-diagonal",
+      "final_state": "COMPLETE_EXACT",
+      "locally_proved_subresult": "six ordered epsilon_rst components",
+      "maturity": "COMPLETED",
+      "status_source": "PASS_BB_OFFDIAGONAL_DRED_SD_ORBIT_EXACT_HT_MATCH"
+    },
+    {
+      "blocker": null,
+      "family": "BB diagonal",
+      "final_state": "COMPLETE_EXACT",
+      "locally_proved_subresult": "three exact zeros; TMM D-words zero and epsilon repeated-index H routes zero",
+      "maturity": "COMPLETED",
+      "status_source": "PASS_BB_DIAGONAL_BD_DB_TARGET_BLIND_EXACT_ZERO"
+    },
+    {
+      "blocker": null,
+      "family": "BC/CB",
+      "final_state": "COMPLETE_EXACT",
+      "locally_proved_subresult": "all eighteen delta_rs components",
+      "maturity": "COMPLETED",
+      "status_source": "PASS_BC_CB_REGULATED_SD_KONISHI_EXACT"
+    },
+    {
+      "blocker": null,
+      "family": "BD/DB",
+      "final_state": "COMPLETE_EXACT",
+      "locally_proved_subresult": "twelve exact zeros; 399 typed routes and 117 symbolic D-word checks",
+      "maturity": "COMPLETED",
+      "status_source": "PASS_BB_DIAGONAL_BD_DB_TARGET_BLIND_EXACT_ZERO"
+    },
+    {
+      "blocker": null,
+      "family": "CC/CD/DC/DD",
+      "final_state": "COMPLETE_EXACT",
+      "locally_proved_subresult": "twenty-five no-descendant exact zeros",
+      "maturity": "COMPLETED",
+      "status_source": "TARGET_BLIND_EXACT_ZERO__NO_OUTER_DESCENDANT__NO_CUTTING_FAILURE_WORD"
+    }
+  ],
+  "rows": [
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "raw Schwinger contact multiplicity m0=m2=1; N_full,e+K_raw,e=Q_e*(bar(r_e)^2-r_(e,d)^2)=Q_e*mu_l^2",
+      "evidence": [
+        "audits/step5-aa-standard-feynman-strictification.md",
+        "audits/step5-aa-external-slot-decomposition-exact.json"
+      ],
+      "family_pair": "A>A",
+      "final_state": "COMPLETE_EXACT",
+      "left": "A",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "A",
+          "side": "L"
+        },
+        {
+          "leibniz_sign": 1,
+          "letter": "A",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "AA_FULL_TARGET_BLIND",
+      "ordinal": 1,
+      "pair_id": "A__A",
+      "parities": [
+        0,
+        0
+      ],
+      "representative": "A__A",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_NONZERO",
+      "result": {
+        "basis": [
+          "<D^D,A^E>",
+          "<A^D,D^E>",
+          "<B1^D,C1^E>",
+          "<C1^D,B1^E>",
+          "<B2^D,C2^E>",
+          "<C2^D,B2^E>",
+          "<B3^D,C3^E>",
+          "<C3^D,B3^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "1",
+          "-1",
+          "1",
+          "-1",
+          "1",
+          "-1",
+          "1",
+          "-1"
+        ],
+        "formula": "lambda1*F^(AB)_(DE)*[<D^D,A^E>-<A^D,D^E>+sum_r(<B_r^D,C_r^E>-<C_r^D,B_r^E>)]"
+      },
+      "right": "A",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "identity",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "raw G1/G2/G3 carriers arise from DRED mu_l^2 cutting failures; the unique finite Project-Ward normal-product change is not an independent anomaly graph",
+      "evidence": [
+        "audits/step5-ab-ba-project-ward-finite-renormalization-exact.json",
+        "audits/step5-ab-ba-vector-frame-missing-orbit-exact.json",
+        "audits/step5-ab-ba-g1-actual-resolvent-contact-orbit-exact.json",
+        "audits/step5-ab-ba-g3-original-full-measure-equivalence-exact.json",
+        "audits/step5-ab-ba-g3-gate7-normalization-first-error-exact.json"
+      ],
+      "family_pair": "A>B",
+      "final_state": "COMPLETE_EXACT",
+      "left": "A",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "A",
+          "side": "L"
+        },
+        {
+          "leibniz_sign": 1,
+          "letter": "B1",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "AB_BA_PROJECT_WARD_RENORMALIZED::A>B",
+      "ordinal": 2,
+      "pair_id": "A__B1",
+      "parities": [
+        0,
+        1
+      ],
+      "representative": "A__B1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_NONZERO",
+      "result": {
+        "basis": [
+          "<D^D,B1^E>",
+          "<B1^D,D^E>",
+          "<C2^D,C3^E>",
+          "<C3^D,C2^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "1",
+          "1",
+          "-sqrt(2)*I",
+          "sqrt(2)*I"
+        ],
+        "formula": "lambda1*F^(AB)_(DE)*[<D^D,B_r^E>+<B_r^D,D^E>-i*sqrt(2)*epsilon_rst*<C_s^D,C_t^E>]"
+      },
+      "right": "B1",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(1, 2, 3); B1->B1",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "raw G1/G2/G3 carriers arise from DRED mu_l^2 cutting failures; the unique finite Project-Ward normal-product change is not an independent anomaly graph",
+      "evidence": [
+        "audits/step5-ab-ba-project-ward-finite-renormalization-exact.json",
+        "audits/step5-ab-ba-vector-frame-missing-orbit-exact.json",
+        "audits/step5-ab-ba-g1-actual-resolvent-contact-orbit-exact.json",
+        "audits/step5-ab-ba-g3-original-full-measure-equivalence-exact.json",
+        "audits/step5-ab-ba-g3-gate7-normalization-first-error-exact.json"
+      ],
+      "family_pair": "A>B",
+      "final_state": "COMPLETE_EXACT",
+      "left": "A",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "A",
+          "side": "L"
+        },
+        {
+          "leibniz_sign": 1,
+          "letter": "B2",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "AB_BA_PROJECT_WARD_RENORMALIZED::A>B",
+      "ordinal": 3,
+      "pair_id": "A__B2",
+      "parities": [
+        0,
+        1
+      ],
+      "representative": "A__B1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_NONZERO",
+      "result": {
+        "basis": [
+          "<D^D,B2^E>",
+          "<B2^D,D^E>",
+          "<C3^D,C1^E>",
+          "<C1^D,C3^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "1",
+          "1",
+          "-sqrt(2)*I",
+          "sqrt(2)*I"
+        ],
+        "formula": "lambda1*F^(AB)_(DE)*[<D^D,B_r^E>+<B_r^D,D^E>-i*sqrt(2)*epsilon_rst*<C_s^D,C_t^E>]"
+      },
+      "right": "B2",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(2, 3, 1); B1->B2",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "raw G1/G2/G3 carriers arise from DRED mu_l^2 cutting failures; the unique finite Project-Ward normal-product change is not an independent anomaly graph",
+      "evidence": [
+        "audits/step5-ab-ba-project-ward-finite-renormalization-exact.json",
+        "audits/step5-ab-ba-vector-frame-missing-orbit-exact.json",
+        "audits/step5-ab-ba-g1-actual-resolvent-contact-orbit-exact.json",
+        "audits/step5-ab-ba-g3-original-full-measure-equivalence-exact.json",
+        "audits/step5-ab-ba-g3-gate7-normalization-first-error-exact.json"
+      ],
+      "family_pair": "A>B",
+      "final_state": "COMPLETE_EXACT",
+      "left": "A",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "A",
+          "side": "L"
+        },
+        {
+          "leibniz_sign": 1,
+          "letter": "B3",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "AB_BA_PROJECT_WARD_RENORMALIZED::A>B",
+      "ordinal": 4,
+      "pair_id": "A__B3",
+      "parities": [
+        0,
+        1
+      ],
+      "representative": "A__B1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_NONZERO",
+      "result": {
+        "basis": [
+          "<D^D,B3^E>",
+          "<B3^D,D^E>",
+          "<C1^D,C2^E>",
+          "<C2^D,C1^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "1",
+          "1",
+          "-sqrt(2)*I",
+          "sqrt(2)*I"
+        ],
+        "formula": "lambda1*F^(AB)_(DE)*[<D^D,B_r^E>+<B_r^D,D^E>-i*sqrt(2)*epsilon_rst*<C_s^D,C_t^E>]"
+      },
+      "right": "B3",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(3, 1, 2); B1->B3",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "single completed TMM metric-pole orbit; J_mu2=1/(32*pi^2)",
+      "evidence": [
+        "audits/step5-ac-ca-family-exact.json"
+      ],
+      "family_pair": "A>C",
+      "final_state": "COMPLETE_EXACT",
+      "left": "A",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "A",
+          "side": "L"
+        }
+      ],
+      "orbit_id": "AC_CA::A>C",
+      "ordinal": 5,
+      "pair_id": "A__C1",
+      "parities": [
+        0,
+        0
+      ],
+      "representative": "A__C1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_NONZERO",
+      "result": {
+        "basis": [
+          "(P_dot C_r)^D D^(E dot)",
+          "D_dot^D (P^dot C_r)^E"
+        ],
+        "coefficients_over_lambda1": [
+          "-1",
+          "+1"
+        ],
+        "formula": "lambda1*F^(AB)_(DE)*[D_dot^D(P^dot C_r)^E-(P_dot C_r)^D D^(E dot)]"
+      },
+      "right": "C1",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(1, 2, 3); C1->C1",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "single completed TMM metric-pole orbit; J_mu2=1/(32*pi^2)",
+      "evidence": [
+        "audits/step5-ac-ca-family-exact.json"
+      ],
+      "family_pair": "A>C",
+      "final_state": "COMPLETE_EXACT",
+      "left": "A",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "A",
+          "side": "L"
+        }
+      ],
+      "orbit_id": "AC_CA::A>C",
+      "ordinal": 6,
+      "pair_id": "A__C2",
+      "parities": [
+        0,
+        0
+      ],
+      "representative": "A__C1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_NONZERO",
+      "result": {
+        "basis": [
+          "(P_dot C_r)^D D^(E dot)",
+          "D_dot^D (P^dot C_r)^E"
+        ],
+        "coefficients_over_lambda1": [
+          "-1",
+          "+1"
+        ],
+        "formula": "lambda1*F^(AB)_(DE)*[D_dot^D(P^dot C_r)^E-(P_dot C_r)^D D^(E dot)]"
+      },
+      "right": "C2",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(2, 3, 1); C1->C2",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "single completed TMM metric-pole orbit; J_mu2=1/(32*pi^2)",
+      "evidence": [
+        "audits/step5-ac-ca-family-exact.json"
+      ],
+      "family_pair": "A>C",
+      "final_state": "COMPLETE_EXACT",
+      "left": "A",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "A",
+          "side": "L"
+        }
+      ],
+      "orbit_id": "AC_CA::A>C",
+      "ordinal": 7,
+      "pair_id": "A__C3",
+      "parities": [
+        0,
+        0
+      ],
+      "representative": "A__C1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_NONZERO",
+      "result": {
+        "basis": [
+          "(P_dot C_r)^D D^(E dot)",
+          "D_dot^D (P^dot C_r)^E"
+        ],
+        "coefficients_over_lambda1": [
+          "-1",
+          "+1"
+        ],
+        "formula": "lambda1*F^(AB)_(DE)*[D_dot^D(P^dot C_r)^E-(P_dot C_r)^D D^(E dot)]"
+      },
+      "right": "C3",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(3, 1, 2); C1->C3",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "raw local Schwinger contact multiplicity m_parent=m_contact=1; R*bar(r_e)^2/P3-R/P_hat_e=R*mu_l^2/P3 and the full-d gate is zero",
+      "evidence": [
+        "audits/step5-ad-da-ordered-ports-crossed-hessian-exact.json",
+        "audits/step5-ad-da-ordered-ports-crossed-hessian-exact.md",
+        "audits/step5-ad-da-raw-contact-hessian-multiplicity-exact.json",
+        "audits/step5-ad-da-raw-contact-hessian-multiplicity-exact.md"
+      ],
+      "family_pair": "A>D",
+      "final_state": "COMPLETE_EXACT",
+      "left": "A",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "A",
+          "side": "L"
+        }
+      ],
+      "orbit_id": "AD_DA_FULL::A>D",
+      "ordinal": 8,
+      "pair_id": "A__Ddot1",
+      "parities": [
+        0,
+        1
+      ],
+      "representative": "A__Ddot1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_NONZERO",
+      "result": {
+        "basis": [
+          "<P_dot_a D^D,D^E>",
+          "<D^D,P_dot_a D^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "1/3",
+          "2/3"
+        ],
+        "formula": "lambda1*F^(AB)_(DE)*[(1/3)<P_dot_a D^D,D^E>+(2/3)<D^D,P_dot_a D^E>]"
+      },
+      "right": "Ddot1",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "dotted S:dot1->dot1; Ddot1->Ddot1",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "raw local Schwinger contact multiplicity m_parent=m_contact=1; R*bar(r_e)^2/P3-R/P_hat_e=R*mu_l^2/P3 and the full-d gate is zero",
+      "evidence": [
+        "audits/step5-ad-da-ordered-ports-crossed-hessian-exact.json",
+        "audits/step5-ad-da-ordered-ports-crossed-hessian-exact.md",
+        "audits/step5-ad-da-raw-contact-hessian-multiplicity-exact.json",
+        "audits/step5-ad-da-raw-contact-hessian-multiplicity-exact.md"
+      ],
+      "family_pair": "A>D",
+      "final_state": "COMPLETE_EXACT",
+      "left": "A",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "A",
+          "side": "L"
+        }
+      ],
+      "orbit_id": "AD_DA_FULL::A>D",
+      "ordinal": 9,
+      "pair_id": "A__Ddot2",
+      "parities": [
+        0,
+        1
+      ],
+      "representative": "A__Ddot1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_NONZERO",
+      "result": {
+        "basis": [
+          "<P_dot_a D^D,D^E>",
+          "<D^D,P_dot_a D^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "1/3",
+          "2/3"
+        ],
+        "formula": "lambda1*F^(AB)_(DE)*[(1/3)<P_dot_a D^D,D^E>+(2/3)<D^D,P_dot_a D^E>]"
+      },
+      "right": "Ddot2",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "dotted S:dot1->dot2; Ddot1->Ddot2",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "raw G1/G2/G3 carriers arise from DRED mu_l^2 cutting failures; the unique finite Project-Ward normal-product change is not an independent anomaly graph",
+      "evidence": [
+        "audits/step5-ab-ba-project-ward-finite-renormalization-exact.json",
+        "audits/step5-ab-ba-vector-frame-missing-orbit-exact.json",
+        "audits/step5-ab-ba-g1-actual-resolvent-contact-orbit-exact.json",
+        "audits/step5-ab-ba-g3-original-full-measure-equivalence-exact.json",
+        "audits/step5-ab-ba-g3-gate7-normalization-first-error-exact.json"
+      ],
+      "family_pair": "B>A",
+      "final_state": "COMPLETE_EXACT",
+      "left": "B1",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B1",
+          "side": "L"
+        },
+        {
+          "leibniz_sign": -1,
+          "letter": "A",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "AB_BA_PROJECT_WARD_RENORMALIZED::B>A",
+      "ordinal": 10,
+      "pair_id": "B1__A",
+      "parities": [
+        1,
+        0
+      ],
+      "representative": "B1__A",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_NONZERO",
+      "result": {
+        "basis": [
+          "<D^D,B1^E>",
+          "<B1^D,D^E>",
+          "<C2^D,C3^E>",
+          "<C3^D,C2^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "1",
+          "1",
+          "-sqrt(2)*I",
+          "sqrt(2)*I"
+        ],
+        "formula": "lambda1*F^(AB)_(DE)*[<D^D,B_r^E>+<B_r^D,D^E>-i*sqrt(2)*epsilon_rst*<C_s^D,C_t^E>]"
+      },
+      "right": "A",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(1, 2, 3); B1->B1",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "TMM left/right projected D-words vanish; epsilon_rru=epsilon_rtr=0; all spectator parents 1PR",
+      "evidence": [
+        "audits/step5-bbdiagonal-bd-db-exact-zero.json"
+      ],
+      "family_pair": "B>B",
+      "final_state": "COMPLETE_EXACT",
+      "left": "B1",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B1",
+          "side": "L"
+        },
+        {
+          "leibniz_sign": -1,
+          "letter": "B1",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "BB_DIAGONAL_EXACT_ZERO",
+      "ordinal": 11,
+      "pair_id": "B1__B1",
+      "parities": [
+        1,
+        1
+      ],
+      "representative": "B1__B1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "B1",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(1, 2, 3); B1->B1",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "completed direct plus transported marked-edge DRED SD orbit",
+      "evidence": [
+        "audits/step5-bb-offdiagonal-family-exact.json"
+      ],
+      "family_pair": "B>B",
+      "final_state": "COMPLETE_EXACT",
+      "left": "B1",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B1",
+          "side": "L"
+        },
+        {
+          "leibniz_sign": -1,
+          "letter": "B2",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "BB_OFFDIAGONAL",
+      "ordinal": 12,
+      "pair_id": "B1__B2",
+      "parities": [
+        1,
+        1
+      ],
+      "representative": "B1__B2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_NONZERO",
+      "result": {
+        "basis": [
+          "<D^D,C_t^E>",
+          "<C_t^D,D^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "-sqrt(2)*I",
+          "sqrt(2)*I"
+        ],
+        "formula": "epsilon_rst*lambda1*F^(AB)_(DE)*[-i*sqrt(2)<D^D,C_t^E>+i*sqrt(2)<C_t^D,D^E>]"
+      },
+      "right": "B2",
+      "transport": {
+        "coefficient_sign": "epsilon_123=1; Koszul source-order sign not used",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(1, 2, 3); (B1,B2,C3)->(B1,B2,C3)",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "completed direct plus transported marked-edge DRED SD orbit",
+      "evidence": [
+        "audits/step5-bb-offdiagonal-family-exact.json"
+      ],
+      "family_pair": "B>B",
+      "final_state": "COMPLETE_EXACT",
+      "left": "B1",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B1",
+          "side": "L"
+        },
+        {
+          "leibniz_sign": -1,
+          "letter": "B3",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "BB_OFFDIAGONAL",
+      "ordinal": 13,
+      "pair_id": "B1__B3",
+      "parities": [
+        1,
+        1
+      ],
+      "representative": "B1__B2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_NONZERO",
+      "result": {
+        "basis": [
+          "<D^D,C_t^E>",
+          "<C_t^D,D^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "sqrt(2)*I",
+          "-sqrt(2)*I"
+        ],
+        "formula": "epsilon_rst*lambda1*F^(AB)_(DE)*[-i*sqrt(2)<D^D,C_t^E>+i*sqrt(2)<C_t^D,D^E>]"
+      },
+      "right": "B3",
+      "transport": {
+        "coefficient_sign": "epsilon_132=-1; Koszul source-order sign not used",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(1, 3, 2); (B1,B2,C3)->(B1,B3,C2)",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "regulated antichiral density divergence leaves mu_l^2/D0 and J_mu2=1/(32*pi^2)",
+      "evidence": [
+        "audits/step5-bc-full-family-raw-projection-exact.json"
+      ],
+      "family_pair": "B>C",
+      "final_state": "COMPLETE_EXACT",
+      "left": "B1",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B1",
+          "side": "L"
+        }
+      ],
+      "orbit_id": "BC_CB::B>C::delta=1",
+      "ordinal": 14,
+      "pair_id": "B1__C1",
+      "parities": [
+        1,
+        0
+      ],
+      "representative": "B1__C1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_NONZERO",
+      "result": {
+        "basis": [
+          "<D^D,D^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "1"
+        ],
+        "formula": "delta_rs*lambda1*F^(AB)_(DE)*<D^D,D^E>"
+      },
+      "right": "C1",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "diagonal flavor pi:(1,2,3)->(1, 2, 3); (B1,C1)->(B1,C1)",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "functional derivative flavor factor delta_rs=0 before integration",
+      "evidence": [
+        "audits/step5-bc-full-family-raw-projection-exact.json"
+      ],
+      "family_pair": "B>C",
+      "final_state": "COMPLETE_EXACT",
+      "left": "B1",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B1",
+          "side": "L"
+        }
+      ],
+      "orbit_id": "BC_CB::B>C::delta=0",
+      "ordinal": 15,
+      "pair_id": "B1__C2",
+      "parities": [
+        1,
+        0
+      ],
+      "representative": "B1__C2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "<D^D,D^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "delta_rs*lambda1*F^(AB)_(DE)*<D^D,D^E>"
+      },
+      "right": "C2",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "off-diagonal flavor pi:(1,2,3)->(1, 2, 3); (B1,C2)->(B1,C2)",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "functional derivative flavor factor delta_rs=0 before integration",
+      "evidence": [
+        "audits/step5-bc-full-family-raw-projection-exact.json"
+      ],
+      "family_pair": "B>C",
+      "final_state": "COMPLETE_EXACT",
+      "left": "B1",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B1",
+          "side": "L"
+        }
+      ],
+      "orbit_id": "BC_CB::B>C::delta=0",
+      "ordinal": 16,
+      "pair_id": "B1__C3",
+      "parities": [
+        1,
+        0
+      ],
+      "representative": "B1__C2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "<D^D,D^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "delta_rs*lambda1*F^(AB)_(DE)*<D^D,D^E>"
+      },
+      "right": "C3",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "off-diagonal flavor pi:(1,2,3)->(1, 3, 2); (B1,C2)->(B1,C3)",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "TGM/TMM/TMH/quartic projected D-words vanish; potential pair cancels; spectator parents 1PR",
+      "evidence": [
+        "audits/step5-bbdiagonal-bd-db-exact-zero.json"
+      ],
+      "family_pair": "B>D",
+      "final_state": "COMPLETE_EXACT",
+      "left": "B1",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B1",
+          "side": "L"
+        }
+      ],
+      "orbit_id": "BD_DB_EXACT_ZERO::B>D",
+      "ordinal": 17,
+      "pair_id": "B1__Ddot1",
+      "parities": [
+        1,
+        1
+      ],
+      "representative": "B1__Ddot1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "Ddot1",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(1, 2, 3); B1->B1; dotted S:dot1->dot1",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "TGM/TMM/TMH/quartic projected D-words vanish; potential pair cancels; spectator parents 1PR",
+      "evidence": [
+        "audits/step5-bbdiagonal-bd-db-exact-zero.json"
+      ],
+      "family_pair": "B>D",
+      "final_state": "COMPLETE_EXACT",
+      "left": "B1",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B1",
+          "side": "L"
+        }
+      ],
+      "orbit_id": "BD_DB_EXACT_ZERO::B>D",
+      "ordinal": 18,
+      "pair_id": "B1__Ddot2",
+      "parities": [
+        1,
+        1
+      ],
+      "representative": "B1__Ddot1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "Ddot2",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(1, 2, 3); B1->B1; dotted S:dot1->dot2",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "raw G1/G2/G3 carriers arise from DRED mu_l^2 cutting failures; the unique finite Project-Ward normal-product change is not an independent anomaly graph",
+      "evidence": [
+        "audits/step5-ab-ba-project-ward-finite-renormalization-exact.json",
+        "audits/step5-ab-ba-vector-frame-missing-orbit-exact.json",
+        "audits/step5-ab-ba-g1-actual-resolvent-contact-orbit-exact.json",
+        "audits/step5-ab-ba-g3-original-full-measure-equivalence-exact.json",
+        "audits/step5-ab-ba-g3-gate7-normalization-first-error-exact.json"
+      ],
+      "family_pair": "B>A",
+      "final_state": "COMPLETE_EXACT",
+      "left": "B2",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B2",
+          "side": "L"
+        },
+        {
+          "leibniz_sign": -1,
+          "letter": "A",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "AB_BA_PROJECT_WARD_RENORMALIZED::B>A",
+      "ordinal": 19,
+      "pair_id": "B2__A",
+      "parities": [
+        1,
+        0
+      ],
+      "representative": "B1__A",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_NONZERO",
+      "result": {
+        "basis": [
+          "<D^D,B2^E>",
+          "<B2^D,D^E>",
+          "<C3^D,C1^E>",
+          "<C1^D,C3^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "1",
+          "1",
+          "-sqrt(2)*I",
+          "sqrt(2)*I"
+        ],
+        "formula": "lambda1*F^(AB)_(DE)*[<D^D,B_r^E>+<B_r^D,D^E>-i*sqrt(2)*epsilon_rst*<C_s^D,C_t^E>]"
+      },
+      "right": "A",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(2, 3, 1); B1->B2",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "completed direct plus transported marked-edge DRED SD orbit",
+      "evidence": [
+        "audits/step5-bb-offdiagonal-family-exact.json"
+      ],
+      "family_pair": "B>B",
+      "final_state": "COMPLETE_EXACT",
+      "left": "B2",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B2",
+          "side": "L"
+        },
+        {
+          "leibniz_sign": -1,
+          "letter": "B1",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "BB_OFFDIAGONAL",
+      "ordinal": 20,
+      "pair_id": "B2__B1",
+      "parities": [
+        1,
+        1
+      ],
+      "representative": "B1__B2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_NONZERO",
+      "result": {
+        "basis": [
+          "<D^D,C_t^E>",
+          "<C_t^D,D^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "sqrt(2)*I",
+          "-sqrt(2)*I"
+        ],
+        "formula": "epsilon_rst*lambda1*F^(AB)_(DE)*[-i*sqrt(2)<D^D,C_t^E>+i*sqrt(2)<C_t^D,D^E>]"
+      },
+      "right": "B1",
+      "transport": {
+        "coefficient_sign": "epsilon_213=-1; Koszul source-order sign not used",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(2, 1, 3); (B1,B2,C3)->(B2,B1,C3)",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "TMM left/right projected D-words vanish; epsilon_rru=epsilon_rtr=0; all spectator parents 1PR",
+      "evidence": [
+        "audits/step5-bbdiagonal-bd-db-exact-zero.json"
+      ],
+      "family_pair": "B>B",
+      "final_state": "COMPLETE_EXACT",
+      "left": "B2",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B2",
+          "side": "L"
+        },
+        {
+          "leibniz_sign": -1,
+          "letter": "B2",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "BB_DIAGONAL_EXACT_ZERO",
+      "ordinal": 21,
+      "pair_id": "B2__B2",
+      "parities": [
+        1,
+        1
+      ],
+      "representative": "B1__B1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "B2",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(2, 3, 1); B1->B2",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "completed direct plus transported marked-edge DRED SD orbit",
+      "evidence": [
+        "audits/step5-bb-offdiagonal-family-exact.json"
+      ],
+      "family_pair": "B>B",
+      "final_state": "COMPLETE_EXACT",
+      "left": "B2",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B2",
+          "side": "L"
+        },
+        {
+          "leibniz_sign": -1,
+          "letter": "B3",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "BB_OFFDIAGONAL",
+      "ordinal": 22,
+      "pair_id": "B2__B3",
+      "parities": [
+        1,
+        1
+      ],
+      "representative": "B1__B2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_NONZERO",
+      "result": {
+        "basis": [
+          "<D^D,C_t^E>",
+          "<C_t^D,D^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "-sqrt(2)*I",
+          "sqrt(2)*I"
+        ],
+        "formula": "epsilon_rst*lambda1*F^(AB)_(DE)*[-i*sqrt(2)<D^D,C_t^E>+i*sqrt(2)<C_t^D,D^E>]"
+      },
+      "right": "B3",
+      "transport": {
+        "coefficient_sign": "epsilon_231=1; Koszul source-order sign not used",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(2, 3, 1); (B1,B2,C3)->(B2,B3,C1)",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "functional derivative flavor factor delta_rs=0 before integration",
+      "evidence": [
+        "audits/step5-bc-full-family-raw-projection-exact.json"
+      ],
+      "family_pair": "B>C",
+      "final_state": "COMPLETE_EXACT",
+      "left": "B2",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B2",
+          "side": "L"
+        }
+      ],
+      "orbit_id": "BC_CB::B>C::delta=0",
+      "ordinal": 23,
+      "pair_id": "B2__C1",
+      "parities": [
+        1,
+        0
+      ],
+      "representative": "B1__C2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "<D^D,D^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "delta_rs*lambda1*F^(AB)_(DE)*<D^D,D^E>"
+      },
+      "right": "C1",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "off-diagonal flavor pi:(1,2,3)->(2, 1, 3); (B1,C2)->(B2,C1)",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "regulated antichiral density divergence leaves mu_l^2/D0 and J_mu2=1/(32*pi^2)",
+      "evidence": [
+        "audits/step5-bc-full-family-raw-projection-exact.json"
+      ],
+      "family_pair": "B>C",
+      "final_state": "COMPLETE_EXACT",
+      "left": "B2",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B2",
+          "side": "L"
+        }
+      ],
+      "orbit_id": "BC_CB::B>C::delta=1",
+      "ordinal": 24,
+      "pair_id": "B2__C2",
+      "parities": [
+        1,
+        0
+      ],
+      "representative": "B1__C1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_NONZERO",
+      "result": {
+        "basis": [
+          "<D^D,D^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "1"
+        ],
+        "formula": "delta_rs*lambda1*F^(AB)_(DE)*<D^D,D^E>"
+      },
+      "right": "C2",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "diagonal flavor pi:(1,2,3)->(2, 3, 1); (B1,C1)->(B2,C2)",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "functional derivative flavor factor delta_rs=0 before integration",
+      "evidence": [
+        "audits/step5-bc-full-family-raw-projection-exact.json"
+      ],
+      "family_pair": "B>C",
+      "final_state": "COMPLETE_EXACT",
+      "left": "B2",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B2",
+          "side": "L"
+        }
+      ],
+      "orbit_id": "BC_CB::B>C::delta=0",
+      "ordinal": 25,
+      "pair_id": "B2__C3",
+      "parities": [
+        1,
+        0
+      ],
+      "representative": "B1__C2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "<D^D,D^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "delta_rs*lambda1*F^(AB)_(DE)*<D^D,D^E>"
+      },
+      "right": "C3",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "off-diagonal flavor pi:(1,2,3)->(2, 3, 1); (B1,C2)->(B2,C3)",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "TGM/TMM/TMH/quartic projected D-words vanish; potential pair cancels; spectator parents 1PR",
+      "evidence": [
+        "audits/step5-bbdiagonal-bd-db-exact-zero.json"
+      ],
+      "family_pair": "B>D",
+      "final_state": "COMPLETE_EXACT",
+      "left": "B2",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B2",
+          "side": "L"
+        }
+      ],
+      "orbit_id": "BD_DB_EXACT_ZERO::B>D",
+      "ordinal": 26,
+      "pair_id": "B2__Ddot1",
+      "parities": [
+        1,
+        1
+      ],
+      "representative": "B1__Ddot1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "Ddot1",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(2, 3, 1); B1->B2; dotted S:dot1->dot1",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "TGM/TMM/TMH/quartic projected D-words vanish; potential pair cancels; spectator parents 1PR",
+      "evidence": [
+        "audits/step5-bbdiagonal-bd-db-exact-zero.json"
+      ],
+      "family_pair": "B>D",
+      "final_state": "COMPLETE_EXACT",
+      "left": "B2",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B2",
+          "side": "L"
+        }
+      ],
+      "orbit_id": "BD_DB_EXACT_ZERO::B>D",
+      "ordinal": 27,
+      "pair_id": "B2__Ddot2",
+      "parities": [
+        1,
+        1
+      ],
+      "representative": "B1__Ddot1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "Ddot2",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(2, 3, 1); B1->B2; dotted S:dot1->dot2",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "raw G1/G2/G3 carriers arise from DRED mu_l^2 cutting failures; the unique finite Project-Ward normal-product change is not an independent anomaly graph",
+      "evidence": [
+        "audits/step5-ab-ba-project-ward-finite-renormalization-exact.json",
+        "audits/step5-ab-ba-vector-frame-missing-orbit-exact.json",
+        "audits/step5-ab-ba-g1-actual-resolvent-contact-orbit-exact.json",
+        "audits/step5-ab-ba-g3-original-full-measure-equivalence-exact.json",
+        "audits/step5-ab-ba-g3-gate7-normalization-first-error-exact.json"
+      ],
+      "family_pair": "B>A",
+      "final_state": "COMPLETE_EXACT",
+      "left": "B3",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B3",
+          "side": "L"
+        },
+        {
+          "leibniz_sign": -1,
+          "letter": "A",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "AB_BA_PROJECT_WARD_RENORMALIZED::B>A",
+      "ordinal": 28,
+      "pair_id": "B3__A",
+      "parities": [
+        1,
+        0
+      ],
+      "representative": "B1__A",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_NONZERO",
+      "result": {
+        "basis": [
+          "<D^D,B3^E>",
+          "<B3^D,D^E>",
+          "<C1^D,C2^E>",
+          "<C2^D,C1^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "1",
+          "1",
+          "-sqrt(2)*I",
+          "sqrt(2)*I"
+        ],
+        "formula": "lambda1*F^(AB)_(DE)*[<D^D,B_r^E>+<B_r^D,D^E>-i*sqrt(2)*epsilon_rst*<C_s^D,C_t^E>]"
+      },
+      "right": "A",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(3, 1, 2); B1->B3",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "completed direct plus transported marked-edge DRED SD orbit",
+      "evidence": [
+        "audits/step5-bb-offdiagonal-family-exact.json"
+      ],
+      "family_pair": "B>B",
+      "final_state": "COMPLETE_EXACT",
+      "left": "B3",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B3",
+          "side": "L"
+        },
+        {
+          "leibniz_sign": -1,
+          "letter": "B1",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "BB_OFFDIAGONAL",
+      "ordinal": 29,
+      "pair_id": "B3__B1",
+      "parities": [
+        1,
+        1
+      ],
+      "representative": "B1__B2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_NONZERO",
+      "result": {
+        "basis": [
+          "<D^D,C_t^E>",
+          "<C_t^D,D^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "-sqrt(2)*I",
+          "sqrt(2)*I"
+        ],
+        "formula": "epsilon_rst*lambda1*F^(AB)_(DE)*[-i*sqrt(2)<D^D,C_t^E>+i*sqrt(2)<C_t^D,D^E>]"
+      },
+      "right": "B1",
+      "transport": {
+        "coefficient_sign": "epsilon_312=1; Koszul source-order sign not used",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(3, 1, 2); (B1,B2,C3)->(B3,B1,C2)",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "completed direct plus transported marked-edge DRED SD orbit",
+      "evidence": [
+        "audits/step5-bb-offdiagonal-family-exact.json"
+      ],
+      "family_pair": "B>B",
+      "final_state": "COMPLETE_EXACT",
+      "left": "B3",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B3",
+          "side": "L"
+        },
+        {
+          "leibniz_sign": -1,
+          "letter": "B2",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "BB_OFFDIAGONAL",
+      "ordinal": 30,
+      "pair_id": "B3__B2",
+      "parities": [
+        1,
+        1
+      ],
+      "representative": "B1__B2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_NONZERO",
+      "result": {
+        "basis": [
+          "<D^D,C_t^E>",
+          "<C_t^D,D^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "sqrt(2)*I",
+          "-sqrt(2)*I"
+        ],
+        "formula": "epsilon_rst*lambda1*F^(AB)_(DE)*[-i*sqrt(2)<D^D,C_t^E>+i*sqrt(2)<C_t^D,D^E>]"
+      },
+      "right": "B2",
+      "transport": {
+        "coefficient_sign": "epsilon_321=-1; Koszul source-order sign not used",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(3, 2, 1); (B1,B2,C3)->(B3,B2,C1)",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "TMM left/right projected D-words vanish; epsilon_rru=epsilon_rtr=0; all spectator parents 1PR",
+      "evidence": [
+        "audits/step5-bbdiagonal-bd-db-exact-zero.json"
+      ],
+      "family_pair": "B>B",
+      "final_state": "COMPLETE_EXACT",
+      "left": "B3",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B3",
+          "side": "L"
+        },
+        {
+          "leibniz_sign": -1,
+          "letter": "B3",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "BB_DIAGONAL_EXACT_ZERO",
+      "ordinal": 31,
+      "pair_id": "B3__B3",
+      "parities": [
+        1,
+        1
+      ],
+      "representative": "B1__B1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "B3",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(3, 1, 2); B1->B3",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "functional derivative flavor factor delta_rs=0 before integration",
+      "evidence": [
+        "audits/step5-bc-full-family-raw-projection-exact.json"
+      ],
+      "family_pair": "B>C",
+      "final_state": "COMPLETE_EXACT",
+      "left": "B3",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B3",
+          "side": "L"
+        }
+      ],
+      "orbit_id": "BC_CB::B>C::delta=0",
+      "ordinal": 32,
+      "pair_id": "B3__C1",
+      "parities": [
+        1,
+        0
+      ],
+      "representative": "B1__C2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "<D^D,D^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "delta_rs*lambda1*F^(AB)_(DE)*<D^D,D^E>"
+      },
+      "right": "C1",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "off-diagonal flavor pi:(1,2,3)->(3, 1, 2); (B1,C2)->(B3,C1)",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "functional derivative flavor factor delta_rs=0 before integration",
+      "evidence": [
+        "audits/step5-bc-full-family-raw-projection-exact.json"
+      ],
+      "family_pair": "B>C",
+      "final_state": "COMPLETE_EXACT",
+      "left": "B3",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B3",
+          "side": "L"
+        }
+      ],
+      "orbit_id": "BC_CB::B>C::delta=0",
+      "ordinal": 33,
+      "pair_id": "B3__C2",
+      "parities": [
+        1,
+        0
+      ],
+      "representative": "B1__C2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "<D^D,D^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "delta_rs*lambda1*F^(AB)_(DE)*<D^D,D^E>"
+      },
+      "right": "C2",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "off-diagonal flavor pi:(1,2,3)->(3, 2, 1); (B1,C2)->(B3,C2)",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "regulated antichiral density divergence leaves mu_l^2/D0 and J_mu2=1/(32*pi^2)",
+      "evidence": [
+        "audits/step5-bc-full-family-raw-projection-exact.json"
+      ],
+      "family_pair": "B>C",
+      "final_state": "COMPLETE_EXACT",
+      "left": "B3",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B3",
+          "side": "L"
+        }
+      ],
+      "orbit_id": "BC_CB::B>C::delta=1",
+      "ordinal": 34,
+      "pair_id": "B3__C3",
+      "parities": [
+        1,
+        0
+      ],
+      "representative": "B1__C1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_NONZERO",
+      "result": {
+        "basis": [
+          "<D^D,D^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "1"
+        ],
+        "formula": "delta_rs*lambda1*F^(AB)_(DE)*<D^D,D^E>"
+      },
+      "right": "C3",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "diagonal flavor pi:(1,2,3)->(3, 1, 2); (B1,C1)->(B3,C3)",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "TGM/TMM/TMH/quartic projected D-words vanish; potential pair cancels; spectator parents 1PR",
+      "evidence": [
+        "audits/step5-bbdiagonal-bd-db-exact-zero.json"
+      ],
+      "family_pair": "B>D",
+      "final_state": "COMPLETE_EXACT",
+      "left": "B3",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B3",
+          "side": "L"
+        }
+      ],
+      "orbit_id": "BD_DB_EXACT_ZERO::B>D",
+      "ordinal": 35,
+      "pair_id": "B3__Ddot1",
+      "parities": [
+        1,
+        1
+      ],
+      "representative": "B1__Ddot1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "Ddot1",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(3, 1, 2); B1->B3; dotted S:dot1->dot1",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "TGM/TMM/TMH/quartic projected D-words vanish; potential pair cancels; spectator parents 1PR",
+      "evidence": [
+        "audits/step5-bbdiagonal-bd-db-exact-zero.json"
+      ],
+      "family_pair": "B>D",
+      "final_state": "COMPLETE_EXACT",
+      "left": "B3",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B3",
+          "side": "L"
+        }
+      ],
+      "orbit_id": "BD_DB_EXACT_ZERO::B>D",
+      "ordinal": 36,
+      "pair_id": "B3__Ddot2",
+      "parities": [
+        1,
+        1
+      ],
+      "representative": "B1__Ddot1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "Ddot2",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(3, 1, 2); B1->B3; dotted S:dot1->dot2",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "single completed TMM metric-pole orbit; J_mu2=1/(32*pi^2)",
+      "evidence": [
+        "audits/step5-ac-ca-family-exact.json"
+      ],
+      "family_pair": "C>A",
+      "final_state": "COMPLETE_EXACT",
+      "left": "C1",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "A",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "AC_CA::C>A",
+      "ordinal": 37,
+      "pair_id": "C1__A",
+      "parities": [
+        0,
+        0
+      ],
+      "representative": "C1__A",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_NONZERO",
+      "result": {
+        "basis": [
+          "(P_dot C_r)^D D^(E dot)",
+          "D_dot^D (P^dot C_r)^E"
+        ],
+        "coefficients_over_lambda1": [
+          "-1",
+          "+1"
+        ],
+        "formula": "lambda1*F^(AB)_(DE)*[D_dot^D(P^dot C_r)^E-(P_dot C_r)^D D^(E dot)]"
+      },
+      "right": "A",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(1, 2, 3); C1->C1",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "regulated antichiral density divergence leaves mu_l^2/D0 and J_mu2=1/(32*pi^2)",
+      "evidence": [
+        "audits/step5-bc-full-family-raw-projection-exact.json"
+      ],
+      "family_pair": "C>B",
+      "final_state": "COMPLETE_EXACT",
+      "left": "C1",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B1",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "BC_CB::C>B::delta=1",
+      "ordinal": 38,
+      "pair_id": "C1__B1",
+      "parities": [
+        0,
+        1
+      ],
+      "representative": "C1__B1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_NONZERO",
+      "result": {
+        "basis": [
+          "<D^D,D^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "1"
+        ],
+        "formula": "delta_rs*lambda1*F^(AB)_(DE)*<D^D,D^E>"
+      },
+      "right": "B1",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "diagonal flavor pi:(1,2,3)->(1, 2, 3); (B1,C1)->(B1,C1)",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "functional derivative flavor factor delta_rs=0 before integration",
+      "evidence": [
+        "audits/step5-bc-full-family-raw-projection-exact.json"
+      ],
+      "family_pair": "C>B",
+      "final_state": "COMPLETE_EXACT",
+      "left": "C1",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B2",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "BC_CB::C>B::delta=0",
+      "ordinal": 39,
+      "pair_id": "C1__B2",
+      "parities": [
+        0,
+        1
+      ],
+      "representative": "C2__B1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "<D^D,D^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "delta_rs*lambda1*F^(AB)_(DE)*<D^D,D^E>"
+      },
+      "right": "B2",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "off-diagonal flavor pi:(1,2,3)->(2, 1, 3); (B1,C2)->(B2,C1)",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "functional derivative flavor factor delta_rs=0 before integration",
+      "evidence": [
+        "audits/step5-bc-full-family-raw-projection-exact.json"
+      ],
+      "family_pair": "C>B",
+      "final_state": "COMPLETE_EXACT",
+      "left": "C1",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B3",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "BC_CB::C>B::delta=0",
+      "ordinal": 40,
+      "pair_id": "C1__B3",
+      "parities": [
+        0,
+        1
+      ],
+      "representative": "C2__B1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "<D^D,D^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "delta_rs*lambda1*F^(AB)_(DE)*<D^D,D^E>"
+      },
+      "right": "B3",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "off-diagonal flavor pi:(1,2,3)->(3, 1, 2); (B1,C2)->(B3,C1)",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "nabla_-X=nabla_-Y=0; marked_inverse_kernel_count=0",
+      "evidence": [
+        "audits/step5-no-descendant-pairs-exact.json"
+      ],
+      "family_pair": "C>C",
+      "final_state": "COMPLETE_EXACT",
+      "left": "C1",
+      "marked_terms": [],
+      "orbit_id": "NO_DESCENDANT::C>C",
+      "ordinal": 41,
+      "pair_id": "C1__C1",
+      "parities": [
+        0,
+        0
+      ],
+      "representative": "(X,Y) in {C1,C2,C3,Ddot1,Ddot2}^2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "C1",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "DIRECT_UNIVERSAL_LEMMA; no coefficient transport",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "nabla_-X=nabla_-Y=0; marked_inverse_kernel_count=0",
+      "evidence": [
+        "audits/step5-no-descendant-pairs-exact.json"
+      ],
+      "family_pair": "C>C",
+      "final_state": "COMPLETE_EXACT",
+      "left": "C1",
+      "marked_terms": [],
+      "orbit_id": "NO_DESCENDANT::C>C",
+      "ordinal": 42,
+      "pair_id": "C1__C2",
+      "parities": [
+        0,
+        0
+      ],
+      "representative": "(X,Y) in {C1,C2,C3,Ddot1,Ddot2}^2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "C2",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "DIRECT_UNIVERSAL_LEMMA; no coefficient transport",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "nabla_-X=nabla_-Y=0; marked_inverse_kernel_count=0",
+      "evidence": [
+        "audits/step5-no-descendant-pairs-exact.json"
+      ],
+      "family_pair": "C>C",
+      "final_state": "COMPLETE_EXACT",
+      "left": "C1",
+      "marked_terms": [],
+      "orbit_id": "NO_DESCENDANT::C>C",
+      "ordinal": 43,
+      "pair_id": "C1__C3",
+      "parities": [
+        0,
+        0
+      ],
+      "representative": "(X,Y) in {C1,C2,C3,Ddot1,Ddot2}^2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "C3",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "DIRECT_UNIVERSAL_LEMMA; no coefficient transport",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "nabla_-X=nabla_-Y=0; marked_inverse_kernel_count=0",
+      "evidence": [
+        "audits/step5-no-descendant-pairs-exact.json"
+      ],
+      "family_pair": "C>D",
+      "final_state": "COMPLETE_EXACT",
+      "left": "C1",
+      "marked_terms": [],
+      "orbit_id": "NO_DESCENDANT::C>D",
+      "ordinal": 44,
+      "pair_id": "C1__Ddot1",
+      "parities": [
+        0,
+        1
+      ],
+      "representative": "(X,Y) in {C1,C2,C3,Ddot1,Ddot2}^2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "Ddot1",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "DIRECT_UNIVERSAL_LEMMA; no coefficient transport",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "nabla_-X=nabla_-Y=0; marked_inverse_kernel_count=0",
+      "evidence": [
+        "audits/step5-no-descendant-pairs-exact.json"
+      ],
+      "family_pair": "C>D",
+      "final_state": "COMPLETE_EXACT",
+      "left": "C1",
+      "marked_terms": [],
+      "orbit_id": "NO_DESCENDANT::C>D",
+      "ordinal": 45,
+      "pair_id": "C1__Ddot2",
+      "parities": [
+        0,
+        1
+      ],
+      "representative": "(X,Y) in {C1,C2,C3,Ddot1,Ddot2}^2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "Ddot2",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "DIRECT_UNIVERSAL_LEMMA; no coefficient transport",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "single completed TMM metric-pole orbit; J_mu2=1/(32*pi^2)",
+      "evidence": [
+        "audits/step5-ac-ca-family-exact.json"
+      ],
+      "family_pair": "C>A",
+      "final_state": "COMPLETE_EXACT",
+      "left": "C2",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "A",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "AC_CA::C>A",
+      "ordinal": 46,
+      "pair_id": "C2__A",
+      "parities": [
+        0,
+        0
+      ],
+      "representative": "C1__A",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_NONZERO",
+      "result": {
+        "basis": [
+          "(P_dot C_r)^D D^(E dot)",
+          "D_dot^D (P^dot C_r)^E"
+        ],
+        "coefficients_over_lambda1": [
+          "-1",
+          "+1"
+        ],
+        "formula": "lambda1*F^(AB)_(DE)*[D_dot^D(P^dot C_r)^E-(P_dot C_r)^D D^(E dot)]"
+      },
+      "right": "A",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(2, 3, 1); C1->C2",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "functional derivative flavor factor delta_rs=0 before integration",
+      "evidence": [
+        "audits/step5-bc-full-family-raw-projection-exact.json"
+      ],
+      "family_pair": "C>B",
+      "final_state": "COMPLETE_EXACT",
+      "left": "C2",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B1",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "BC_CB::C>B::delta=0",
+      "ordinal": 47,
+      "pair_id": "C2__B1",
+      "parities": [
+        0,
+        1
+      ],
+      "representative": "C2__B1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "<D^D,D^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "delta_rs*lambda1*F^(AB)_(DE)*<D^D,D^E>"
+      },
+      "right": "B1",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "off-diagonal flavor pi:(1,2,3)->(1, 2, 3); (B1,C2)->(B1,C2)",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "regulated antichiral density divergence leaves mu_l^2/D0 and J_mu2=1/(32*pi^2)",
+      "evidence": [
+        "audits/step5-bc-full-family-raw-projection-exact.json"
+      ],
+      "family_pair": "C>B",
+      "final_state": "COMPLETE_EXACT",
+      "left": "C2",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B2",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "BC_CB::C>B::delta=1",
+      "ordinal": 48,
+      "pair_id": "C2__B2",
+      "parities": [
+        0,
+        1
+      ],
+      "representative": "C1__B1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_NONZERO",
+      "result": {
+        "basis": [
+          "<D^D,D^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "1"
+        ],
+        "formula": "delta_rs*lambda1*F^(AB)_(DE)*<D^D,D^E>"
+      },
+      "right": "B2",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "diagonal flavor pi:(1,2,3)->(2, 3, 1); (B1,C1)->(B2,C2)",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "functional derivative flavor factor delta_rs=0 before integration",
+      "evidence": [
+        "audits/step5-bc-full-family-raw-projection-exact.json"
+      ],
+      "family_pair": "C>B",
+      "final_state": "COMPLETE_EXACT",
+      "left": "C2",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B3",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "BC_CB::C>B::delta=0",
+      "ordinal": 49,
+      "pair_id": "C2__B3",
+      "parities": [
+        0,
+        1
+      ],
+      "representative": "C2__B1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "<D^D,D^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "delta_rs*lambda1*F^(AB)_(DE)*<D^D,D^E>"
+      },
+      "right": "B3",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "off-diagonal flavor pi:(1,2,3)->(3, 2, 1); (B1,C2)->(B3,C2)",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "nabla_-X=nabla_-Y=0; marked_inverse_kernel_count=0",
+      "evidence": [
+        "audits/step5-no-descendant-pairs-exact.json"
+      ],
+      "family_pair": "C>C",
+      "final_state": "COMPLETE_EXACT",
+      "left": "C2",
+      "marked_terms": [],
+      "orbit_id": "NO_DESCENDANT::C>C",
+      "ordinal": 50,
+      "pair_id": "C2__C1",
+      "parities": [
+        0,
+        0
+      ],
+      "representative": "(X,Y) in {C1,C2,C3,Ddot1,Ddot2}^2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "C1",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "DIRECT_UNIVERSAL_LEMMA; no coefficient transport",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "nabla_-X=nabla_-Y=0; marked_inverse_kernel_count=0",
+      "evidence": [
+        "audits/step5-no-descendant-pairs-exact.json"
+      ],
+      "family_pair": "C>C",
+      "final_state": "COMPLETE_EXACT",
+      "left": "C2",
+      "marked_terms": [],
+      "orbit_id": "NO_DESCENDANT::C>C",
+      "ordinal": 51,
+      "pair_id": "C2__C2",
+      "parities": [
+        0,
+        0
+      ],
+      "representative": "(X,Y) in {C1,C2,C3,Ddot1,Ddot2}^2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "C2",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "DIRECT_UNIVERSAL_LEMMA; no coefficient transport",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "nabla_-X=nabla_-Y=0; marked_inverse_kernel_count=0",
+      "evidence": [
+        "audits/step5-no-descendant-pairs-exact.json"
+      ],
+      "family_pair": "C>C",
+      "final_state": "COMPLETE_EXACT",
+      "left": "C2",
+      "marked_terms": [],
+      "orbit_id": "NO_DESCENDANT::C>C",
+      "ordinal": 52,
+      "pair_id": "C2__C3",
+      "parities": [
+        0,
+        0
+      ],
+      "representative": "(X,Y) in {C1,C2,C3,Ddot1,Ddot2}^2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "C3",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "DIRECT_UNIVERSAL_LEMMA; no coefficient transport",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "nabla_-X=nabla_-Y=0; marked_inverse_kernel_count=0",
+      "evidence": [
+        "audits/step5-no-descendant-pairs-exact.json"
+      ],
+      "family_pair": "C>D",
+      "final_state": "COMPLETE_EXACT",
+      "left": "C2",
+      "marked_terms": [],
+      "orbit_id": "NO_DESCENDANT::C>D",
+      "ordinal": 53,
+      "pair_id": "C2__Ddot1",
+      "parities": [
+        0,
+        1
+      ],
+      "representative": "(X,Y) in {C1,C2,C3,Ddot1,Ddot2}^2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "Ddot1",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "DIRECT_UNIVERSAL_LEMMA; no coefficient transport",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "nabla_-X=nabla_-Y=0; marked_inverse_kernel_count=0",
+      "evidence": [
+        "audits/step5-no-descendant-pairs-exact.json"
+      ],
+      "family_pair": "C>D",
+      "final_state": "COMPLETE_EXACT",
+      "left": "C2",
+      "marked_terms": [],
+      "orbit_id": "NO_DESCENDANT::C>D",
+      "ordinal": 54,
+      "pair_id": "C2__Ddot2",
+      "parities": [
+        0,
+        1
+      ],
+      "representative": "(X,Y) in {C1,C2,C3,Ddot1,Ddot2}^2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "Ddot2",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "DIRECT_UNIVERSAL_LEMMA; no coefficient transport",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "single completed TMM metric-pole orbit; J_mu2=1/(32*pi^2)",
+      "evidence": [
+        "audits/step5-ac-ca-family-exact.json"
+      ],
+      "family_pair": "C>A",
+      "final_state": "COMPLETE_EXACT",
+      "left": "C3",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "A",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "AC_CA::C>A",
+      "ordinal": 55,
+      "pair_id": "C3__A",
+      "parities": [
+        0,
+        0
+      ],
+      "representative": "C1__A",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_NONZERO",
+      "result": {
+        "basis": [
+          "(P_dot C_r)^D D^(E dot)",
+          "D_dot^D (P^dot C_r)^E"
+        ],
+        "coefficients_over_lambda1": [
+          "-1",
+          "+1"
+        ],
+        "formula": "lambda1*F^(AB)_(DE)*[D_dot^D(P^dot C_r)^E-(P_dot C_r)^D D^(E dot)]"
+      },
+      "right": "A",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(3, 1, 2); C1->C3",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "functional derivative flavor factor delta_rs=0 before integration",
+      "evidence": [
+        "audits/step5-bc-full-family-raw-projection-exact.json"
+      ],
+      "family_pair": "C>B",
+      "final_state": "COMPLETE_EXACT",
+      "left": "C3",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B1",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "BC_CB::C>B::delta=0",
+      "ordinal": 56,
+      "pair_id": "C3__B1",
+      "parities": [
+        0,
+        1
+      ],
+      "representative": "C2__B1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "<D^D,D^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "delta_rs*lambda1*F^(AB)_(DE)*<D^D,D^E>"
+      },
+      "right": "B1",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "off-diagonal flavor pi:(1,2,3)->(1, 3, 2); (B1,C2)->(B1,C3)",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "functional derivative flavor factor delta_rs=0 before integration",
+      "evidence": [
+        "audits/step5-bc-full-family-raw-projection-exact.json"
+      ],
+      "family_pair": "C>B",
+      "final_state": "COMPLETE_EXACT",
+      "left": "C3",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B2",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "BC_CB::C>B::delta=0",
+      "ordinal": 57,
+      "pair_id": "C3__B2",
+      "parities": [
+        0,
+        1
+      ],
+      "representative": "C2__B1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "<D^D,D^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "delta_rs*lambda1*F^(AB)_(DE)*<D^D,D^E>"
+      },
+      "right": "B2",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "off-diagonal flavor pi:(1,2,3)->(2, 3, 1); (B1,C2)->(B2,C3)",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "regulated antichiral density divergence leaves mu_l^2/D0 and J_mu2=1/(32*pi^2)",
+      "evidence": [
+        "audits/step5-bc-full-family-raw-projection-exact.json"
+      ],
+      "family_pair": "C>B",
+      "final_state": "COMPLETE_EXACT",
+      "left": "C3",
+      "marked_terms": [
+        {
+          "leibniz_sign": 1,
+          "letter": "B3",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "BC_CB::C>B::delta=1",
+      "ordinal": 58,
+      "pair_id": "C3__B3",
+      "parities": [
+        0,
+        1
+      ],
+      "representative": "C1__B1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_NONZERO",
+      "result": {
+        "basis": [
+          "<D^D,D^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "1"
+        ],
+        "formula": "delta_rs*lambda1*F^(AB)_(DE)*<D^D,D^E>"
+      },
+      "right": "B3",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "diagonal flavor pi:(1,2,3)->(3, 1, 2); (B1,C1)->(B3,C3)",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "nabla_-X=nabla_-Y=0; marked_inverse_kernel_count=0",
+      "evidence": [
+        "audits/step5-no-descendant-pairs-exact.json"
+      ],
+      "family_pair": "C>C",
+      "final_state": "COMPLETE_EXACT",
+      "left": "C3",
+      "marked_terms": [],
+      "orbit_id": "NO_DESCENDANT::C>C",
+      "ordinal": 59,
+      "pair_id": "C3__C1",
+      "parities": [
+        0,
+        0
+      ],
+      "representative": "(X,Y) in {C1,C2,C3,Ddot1,Ddot2}^2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "C1",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "DIRECT_UNIVERSAL_LEMMA; no coefficient transport",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "nabla_-X=nabla_-Y=0; marked_inverse_kernel_count=0",
+      "evidence": [
+        "audits/step5-no-descendant-pairs-exact.json"
+      ],
+      "family_pair": "C>C",
+      "final_state": "COMPLETE_EXACT",
+      "left": "C3",
+      "marked_terms": [],
+      "orbit_id": "NO_DESCENDANT::C>C",
+      "ordinal": 60,
+      "pair_id": "C3__C2",
+      "parities": [
+        0,
+        0
+      ],
+      "representative": "(X,Y) in {C1,C2,C3,Ddot1,Ddot2}^2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "C2",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "DIRECT_UNIVERSAL_LEMMA; no coefficient transport",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "nabla_-X=nabla_-Y=0; marked_inverse_kernel_count=0",
+      "evidence": [
+        "audits/step5-no-descendant-pairs-exact.json"
+      ],
+      "family_pair": "C>C",
+      "final_state": "COMPLETE_EXACT",
+      "left": "C3",
+      "marked_terms": [],
+      "orbit_id": "NO_DESCENDANT::C>C",
+      "ordinal": 61,
+      "pair_id": "C3__C3",
+      "parities": [
+        0,
+        0
+      ],
+      "representative": "(X,Y) in {C1,C2,C3,Ddot1,Ddot2}^2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "C3",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "DIRECT_UNIVERSAL_LEMMA; no coefficient transport",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "nabla_-X=nabla_-Y=0; marked_inverse_kernel_count=0",
+      "evidence": [
+        "audits/step5-no-descendant-pairs-exact.json"
+      ],
+      "family_pair": "C>D",
+      "final_state": "COMPLETE_EXACT",
+      "left": "C3",
+      "marked_terms": [],
+      "orbit_id": "NO_DESCENDANT::C>D",
+      "ordinal": 62,
+      "pair_id": "C3__Ddot1",
+      "parities": [
+        0,
+        1
+      ],
+      "representative": "(X,Y) in {C1,C2,C3,Ddot1,Ddot2}^2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "Ddot1",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "DIRECT_UNIVERSAL_LEMMA; no coefficient transport",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "nabla_-X=nabla_-Y=0; marked_inverse_kernel_count=0",
+      "evidence": [
+        "audits/step5-no-descendant-pairs-exact.json"
+      ],
+      "family_pair": "C>D",
+      "final_state": "COMPLETE_EXACT",
+      "left": "C3",
+      "marked_terms": [],
+      "orbit_id": "NO_DESCENDANT::C>D",
+      "ordinal": 63,
+      "pair_id": "C3__Ddot2",
+      "parities": [
+        0,
+        1
+      ],
+      "representative": "(X,Y) in {C1,C2,C3,Ddot1,Ddot2}^2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "Ddot2",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "DIRECT_UNIVERSAL_LEMMA; no coefficient transport",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "raw local Schwinger contact multiplicity m_parent=m_contact=1; R*bar(r_e)^2/P3-R/P_hat_e=R*mu_l^2/P3 and the full-d gate is zero",
+      "evidence": [
+        "audits/step5-ad-da-ordered-ports-crossed-hessian-exact.json",
+        "audits/step5-ad-da-ordered-ports-crossed-hessian-exact.md",
+        "audits/step5-ad-da-raw-contact-hessian-multiplicity-exact.json",
+        "audits/step5-ad-da-raw-contact-hessian-multiplicity-exact.md"
+      ],
+      "family_pair": "D>A",
+      "final_state": "COMPLETE_EXACT",
+      "left": "Ddot1",
+      "marked_terms": [
+        {
+          "leibniz_sign": -1,
+          "letter": "A",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "AD_DA_FULL::D>A",
+      "ordinal": 64,
+      "pair_id": "Ddot1__A",
+      "parities": [
+        1,
+        0
+      ],
+      "representative": "Ddot1__A",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_NONZERO",
+      "result": {
+        "basis": [
+          "<P_dot_a D^D,D^E>",
+          "<D^D,P_dot_a D^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "2/3",
+          "1/3"
+        ],
+        "formula": "lambda1*F^(AB)_(DE)*[(2/3)<P_dot_a D^D,D^E>+(1/3)<D^D,P_dot_a D^E>]"
+      },
+      "right": "A",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "dotted S:dot1->dot1; Ddot1->Ddot1",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "TGM/TMM/TMH/quartic projected D-words vanish; potential pair cancels; spectator parents 1PR",
+      "evidence": [
+        "audits/step5-bbdiagonal-bd-db-exact-zero.json"
+      ],
+      "family_pair": "D>B",
+      "final_state": "COMPLETE_EXACT",
+      "left": "Ddot1",
+      "marked_terms": [
+        {
+          "leibniz_sign": -1,
+          "letter": "B1",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "BD_DB_EXACT_ZERO::D>B",
+      "ordinal": 65,
+      "pair_id": "Ddot1__B1",
+      "parities": [
+        1,
+        1
+      ],
+      "representative": "Ddot1__B1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "B1",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(1, 2, 3); B1->B1; dotted S:dot1->dot1",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "TGM/TMM/TMH/quartic projected D-words vanish; potential pair cancels; spectator parents 1PR",
+      "evidence": [
+        "audits/step5-bbdiagonal-bd-db-exact-zero.json"
+      ],
+      "family_pair": "D>B",
+      "final_state": "COMPLETE_EXACT",
+      "left": "Ddot1",
+      "marked_terms": [
+        {
+          "leibniz_sign": -1,
+          "letter": "B2",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "BD_DB_EXACT_ZERO::D>B",
+      "ordinal": 66,
+      "pair_id": "Ddot1__B2",
+      "parities": [
+        1,
+        1
+      ],
+      "representative": "Ddot1__B1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "B2",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(2, 3, 1); B1->B2; dotted S:dot1->dot1",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "TGM/TMM/TMH/quartic projected D-words vanish; potential pair cancels; spectator parents 1PR",
+      "evidence": [
+        "audits/step5-bbdiagonal-bd-db-exact-zero.json"
+      ],
+      "family_pair": "D>B",
+      "final_state": "COMPLETE_EXACT",
+      "left": "Ddot1",
+      "marked_terms": [
+        {
+          "leibniz_sign": -1,
+          "letter": "B3",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "BD_DB_EXACT_ZERO::D>B",
+      "ordinal": 67,
+      "pair_id": "Ddot1__B3",
+      "parities": [
+        1,
+        1
+      ],
+      "representative": "Ddot1__B1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "B3",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(3, 1, 2); B1->B3; dotted S:dot1->dot1",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "nabla_-X=nabla_-Y=0; marked_inverse_kernel_count=0",
+      "evidence": [
+        "audits/step5-no-descendant-pairs-exact.json"
+      ],
+      "family_pair": "D>C",
+      "final_state": "COMPLETE_EXACT",
+      "left": "Ddot1",
+      "marked_terms": [],
+      "orbit_id": "NO_DESCENDANT::D>C",
+      "ordinal": 68,
+      "pair_id": "Ddot1__C1",
+      "parities": [
+        1,
+        0
+      ],
+      "representative": "(X,Y) in {C1,C2,C3,Ddot1,Ddot2}^2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "C1",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "DIRECT_UNIVERSAL_LEMMA; no coefficient transport",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "nabla_-X=nabla_-Y=0; marked_inverse_kernel_count=0",
+      "evidence": [
+        "audits/step5-no-descendant-pairs-exact.json"
+      ],
+      "family_pair": "D>C",
+      "final_state": "COMPLETE_EXACT",
+      "left": "Ddot1",
+      "marked_terms": [],
+      "orbit_id": "NO_DESCENDANT::D>C",
+      "ordinal": 69,
+      "pair_id": "Ddot1__C2",
+      "parities": [
+        1,
+        0
+      ],
+      "representative": "(X,Y) in {C1,C2,C3,Ddot1,Ddot2}^2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "C2",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "DIRECT_UNIVERSAL_LEMMA; no coefficient transport",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "nabla_-X=nabla_-Y=0; marked_inverse_kernel_count=0",
+      "evidence": [
+        "audits/step5-no-descendant-pairs-exact.json"
+      ],
+      "family_pair": "D>C",
+      "final_state": "COMPLETE_EXACT",
+      "left": "Ddot1",
+      "marked_terms": [],
+      "orbit_id": "NO_DESCENDANT::D>C",
+      "ordinal": 70,
+      "pair_id": "Ddot1__C3",
+      "parities": [
+        1,
+        0
+      ],
+      "representative": "(X,Y) in {C1,C2,C3,Ddot1,Ddot2}^2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "C3",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "DIRECT_UNIVERSAL_LEMMA; no coefficient transport",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "nabla_-X=nabla_-Y=0; marked_inverse_kernel_count=0",
+      "evidence": [
+        "audits/step5-no-descendant-pairs-exact.json"
+      ],
+      "family_pair": "D>D",
+      "final_state": "COMPLETE_EXACT",
+      "left": "Ddot1",
+      "marked_terms": [],
+      "orbit_id": "NO_DESCENDANT::D>D",
+      "ordinal": 71,
+      "pair_id": "Ddot1__Ddot1",
+      "parities": [
+        1,
+        1
+      ],
+      "representative": "(X,Y) in {C1,C2,C3,Ddot1,Ddot2}^2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "Ddot1",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "DIRECT_UNIVERSAL_LEMMA; no coefficient transport",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "nabla_-X=nabla_-Y=0; marked_inverse_kernel_count=0",
+      "evidence": [
+        "audits/step5-no-descendant-pairs-exact.json"
+      ],
+      "family_pair": "D>D",
+      "final_state": "COMPLETE_EXACT",
+      "left": "Ddot1",
+      "marked_terms": [],
+      "orbit_id": "NO_DESCENDANT::D>D",
+      "ordinal": 72,
+      "pair_id": "Ddot1__Ddot2",
+      "parities": [
+        1,
+        1
+      ],
+      "representative": "(X,Y) in {C1,C2,C3,Ddot1,Ddot2}^2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "Ddot2",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "DIRECT_UNIVERSAL_LEMMA; no coefficient transport",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "raw local Schwinger contact multiplicity m_parent=m_contact=1; R*bar(r_e)^2/P3-R/P_hat_e=R*mu_l^2/P3 and the full-d gate is zero",
+      "evidence": [
+        "audits/step5-ad-da-ordered-ports-crossed-hessian-exact.json",
+        "audits/step5-ad-da-ordered-ports-crossed-hessian-exact.md",
+        "audits/step5-ad-da-raw-contact-hessian-multiplicity-exact.json",
+        "audits/step5-ad-da-raw-contact-hessian-multiplicity-exact.md"
+      ],
+      "family_pair": "D>A",
+      "final_state": "COMPLETE_EXACT",
+      "left": "Ddot2",
+      "marked_terms": [
+        {
+          "leibniz_sign": -1,
+          "letter": "A",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "AD_DA_FULL::D>A",
+      "ordinal": 73,
+      "pair_id": "Ddot2__A",
+      "parities": [
+        1,
+        0
+      ],
+      "representative": "Ddot1__A",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_NONZERO",
+      "result": {
+        "basis": [
+          "<P_dot_a D^D,D^E>",
+          "<D^D,P_dot_a D^E>"
+        ],
+        "coefficients_over_lambda1": [
+          "2/3",
+          "1/3"
+        ],
+        "formula": "lambda1*F^(AB)_(DE)*[(2/3)<P_dot_a D^D,D^E>+(1/3)<D^D,P_dot_a D^E>]"
+      },
+      "right": "A",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "dotted S:dot1->dot2; Ddot1->Ddot2",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "TGM/TMM/TMH/quartic projected D-words vanish; potential pair cancels; spectator parents 1PR",
+      "evidence": [
+        "audits/step5-bbdiagonal-bd-db-exact-zero.json"
+      ],
+      "family_pair": "D>B",
+      "final_state": "COMPLETE_EXACT",
+      "left": "Ddot2",
+      "marked_terms": [
+        {
+          "leibniz_sign": -1,
+          "letter": "B1",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "BD_DB_EXACT_ZERO::D>B",
+      "ordinal": 74,
+      "pair_id": "Ddot2__B1",
+      "parities": [
+        1,
+        1
+      ],
+      "representative": "Ddot1__B1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "B1",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(1, 2, 3); B1->B1; dotted S:dot1->dot2",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "TGM/TMM/TMH/quartic projected D-words vanish; potential pair cancels; spectator parents 1PR",
+      "evidence": [
+        "audits/step5-bbdiagonal-bd-db-exact-zero.json"
+      ],
+      "family_pair": "D>B",
+      "final_state": "COMPLETE_EXACT",
+      "left": "Ddot2",
+      "marked_terms": [
+        {
+          "leibniz_sign": -1,
+          "letter": "B2",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "BD_DB_EXACT_ZERO::D>B",
+      "ordinal": 75,
+      "pair_id": "Ddot2__B2",
+      "parities": [
+        1,
+        1
+      ],
+      "representative": "Ddot1__B1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "B2",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(2, 3, 1); B1->B2; dotted S:dot1->dot2",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "TGM/TMM/TMH/quartic projected D-words vanish; potential pair cancels; spectator parents 1PR",
+      "evidence": [
+        "audits/step5-bbdiagonal-bd-db-exact-zero.json"
+      ],
+      "family_pair": "D>B",
+      "final_state": "COMPLETE_EXACT",
+      "left": "Ddot2",
+      "marked_terms": [
+        {
+          "leibniz_sign": -1,
+          "letter": "B3",
+          "side": "R"
+        }
+      ],
+      "orbit_id": "BD_DB_EXACT_ZERO::D>B",
+      "ordinal": 76,
+      "pair_id": "Ddot2__B3",
+      "parities": [
+        1,
+        1
+      ],
+      "representative": "Ddot1__B1",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "B3",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "flavor pi:(1,2,3)->(3, 1, 2); B1->B3; dotted S:dot1->dot2",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "nabla_-X=nabla_-Y=0; marked_inverse_kernel_count=0",
+      "evidence": [
+        "audits/step5-no-descendant-pairs-exact.json"
+      ],
+      "family_pair": "D>C",
+      "final_state": "COMPLETE_EXACT",
+      "left": "Ddot2",
+      "marked_terms": [],
+      "orbit_id": "NO_DESCENDANT::D>C",
+      "ordinal": 77,
+      "pair_id": "Ddot2__C1",
+      "parities": [
+        1,
+        0
+      ],
+      "representative": "(X,Y) in {C1,C2,C3,Ddot1,Ddot2}^2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "C1",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "DIRECT_UNIVERSAL_LEMMA; no coefficient transport",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "nabla_-X=nabla_-Y=0; marked_inverse_kernel_count=0",
+      "evidence": [
+        "audits/step5-no-descendant-pairs-exact.json"
+      ],
+      "family_pair": "D>C",
+      "final_state": "COMPLETE_EXACT",
+      "left": "Ddot2",
+      "marked_terms": [],
+      "orbit_id": "NO_DESCENDANT::D>C",
+      "ordinal": 78,
+      "pair_id": "Ddot2__C2",
+      "parities": [
+        1,
+        0
+      ],
+      "representative": "(X,Y) in {C1,C2,C3,Ddot1,Ddot2}^2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "C2",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "DIRECT_UNIVERSAL_LEMMA; no coefficient transport",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "nabla_-X=nabla_-Y=0; marked_inverse_kernel_count=0",
+      "evidence": [
+        "audits/step5-no-descendant-pairs-exact.json"
+      ],
+      "family_pair": "D>C",
+      "final_state": "COMPLETE_EXACT",
+      "left": "Ddot2",
+      "marked_terms": [],
+      "orbit_id": "NO_DESCENDANT::D>C",
+      "ordinal": 79,
+      "pair_id": "Ddot2__C3",
+      "parities": [
+        1,
+        0
+      ],
+      "representative": "(X,Y) in {C1,C2,C3,Ddot1,Ddot2}^2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "C3",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "DIRECT_UNIVERSAL_LEMMA; no coefficient transport",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "nabla_-X=nabla_-Y=0; marked_inverse_kernel_count=0",
+      "evidence": [
+        "audits/step5-no-descendant-pairs-exact.json"
+      ],
+      "family_pair": "D>D",
+      "final_state": "COMPLETE_EXACT",
+      "left": "Ddot2",
+      "marked_terms": [],
+      "orbit_id": "NO_DESCENDANT::D>D",
+      "ordinal": 80,
+      "pair_id": "Ddot2__Ddot1",
+      "parities": [
+        1,
+        1
+      ],
+      "representative": "(X,Y) in {C1,C2,C3,Ddot1,Ddot2}^2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "Ddot1",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "DIRECT_UNIVERSAL_LEMMA; no coefficient transport",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    },
+    {
+      "blocker": null,
+      "cutting_failure_certificate": "nabla_-X=nabla_-Y=0; marked_inverse_kernel_count=0",
+      "evidence": [
+        "audits/step5-no-descendant-pairs-exact.json"
+      ],
+      "family_pair": "D>D",
+      "final_state": "COMPLETE_EXACT",
+      "left": "Ddot2",
+      "marked_terms": [],
+      "orbit_id": "NO_DESCENDANT::D>D",
+      "ordinal": 81,
+      "pair_id": "Ddot2__Ddot2",
+      "parities": [
+        1,
+        1
+      ],
+      "representative": "(X,Y) in {C1,C2,C3,Ddot1,Ddot2}^2",
+      "representative_maturity": "COMPLETED",
+      "resolution": "EXACT_ZERO",
+      "result": {
+        "basis": [
+          "anomaly_sector"
+        ],
+        "coefficients_over_lambda1": [
+          "0"
+        ],
+        "formula": "0"
+      },
+      "right": "Ddot2",
+      "transport": {
+        "coefficient_sign": "+1",
+        "color_map": "(A,B,D,E)->(A,B,D,E); F^(AB)_(DE) unchanged",
+        "koszul_sign": "+1 (no source-slot exchange)",
+        "letter_index": "DIRECT_UNIVERSAL_LEMMA; no coefficient transport",
+        "source_slot_map": "L->L;R->R;ORDER_REVERSAL_NOT_USED"
+      }
+    }
+  ],
+  "schema": "awi.step5.global-81-target-blind-representative-orbit-ledger.v1",
+  "summary": {
+    "family_state_counts": {
+      "A>A": {
+        "COMPLETE_EXACT": 1
+      },
+      "A>B": {
+        "COMPLETE_EXACT": 3
+      },
+      "A>C": {
+        "COMPLETE_EXACT": 3
+      },
+      "A>D": {
+        "COMPLETE_EXACT": 2
+      },
+      "B>A": {
+        "COMPLETE_EXACT": 3
+      },
+      "B>B": {
+        "COMPLETE_EXACT": 9
+      },
+      "B>C": {
+        "COMPLETE_EXACT": 9
+      },
+      "B>D": {
+        "COMPLETE_EXACT": 6
+      },
+      "C>A": {
+        "COMPLETE_EXACT": 3
+      },
+      "C>B": {
+        "COMPLETE_EXACT": 9
+      },
+      "C>C": {
+        "COMPLETE_EXACT": 9
+      },
+      "C>D": {
+        "COMPLETE_EXACT": 6
+      },
+      "D>A": {
+        "COMPLETE_EXACT": 2
+      },
+      "D>B": {
+        "COMPLETE_EXACT": 6
+      },
+      "D>C": {
+        "COMPLETE_EXACT": 6
+      },
+      "D>D": {
+        "COMPLETE_EXACT": 4
+      }
+    },
+    "final_state_counts": {
+      "COMPLETE_EXACT": 81
+    },
+    "ordered_pairs": 81,
+    "representative_maturity_counts": {
+      "COMPLETED": 81
+    },
+    "resolution_counts": {
+      "EXACT_NONZERO": 29,
+      "EXACT_ZERO": 52
+    },
+    "structural_directed_parent_routes": 1365,
+    "structural_marked_pairs": 56,
+    "structural_no_descendant_pairs": 25,
+    "unique_pairs": 81
+  },
+  "symmetry_maps": {
+    "DOTTED": {
+      "coefficient": "scalar coefficient unchanged",
+      "color": "identity on (A,B,D,E)",
+      "koszul_sign": "+1 because source slots are not exchanged",
+      "letter_index": "D_dota->S_dota^dotb D_dotb"
+    },
+    "FLAVOR": {
+      "color": "identity on (A,B,D,E)",
+      "delta": "delta_rs -> delta_pi(r)pi(s)=delta_rs",
+      "epsilon": "epsilon_123=+1 -> epsilon_pi(1)pi(2)pi(3)=sgn(pi)",
+      "koszul_sign": "+1 because source slots are not exchanged",
+      "letter_index": "B_r->B_pi(r), C_r->C_pi(r)"
+    },
+    "ORDER_REBASE_RECORDED_BUT_NOT_USED": {
+      "color": "(A,B,D,E)->(B,A,E,D)",
+      "descendant_marks": "left sign=+1; right sign=(-1)^|L_i|",
+      "rule": "no reverse coefficient inferred; completed reverse orientations have independent representative rows",
+      "source": "(L_i^A,L_j^B)->(L_j^B,L_i^A)",
+      "source_koszul": "(-1)^(|L_i||L_j|)"
+    }
+  }
+}

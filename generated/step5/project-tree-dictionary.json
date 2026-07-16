@@ -1,0 +1,29 @@
+{
+  "compact_project_letter": {
+    "formula": "C_P=U+theta_r C_r+(1/(2*sqrt(2))) epsilon^rst theta_r theta_s B_t-(i/sqrt(2)) theta_1 theta_2 theta_3 A",
+    "gauge_potential_relation": "P_dot_a U=i D_dot_a",
+    "physical_weights_source": "exact bottom-letter residual-q action derived from Step 4C",
+    "residual_q_extension": "q_r U=C_r; the defining ideal is stable because q_r D_dot=-i P_dot C_r",
+    "status": "FORMAL_JET_EXTENSION; U is not a locked physical superfield"
+  },
+  "external_dictionary_boundary": "No external-target field, color, derivative, or loop-normalization map is encoded in this target-blind Project engine.  A separate round-trip audit must derive every such map after this bundle is fixed.",
+  "pbw_jet_dictionary": {
+    "curvature": "[P_dot1,P_dot2]=epsilon_dot1dot2*A acting in the declared adjoint order",
+    "definition": "J_(u1,u2)(X)=binom(u1+u2,u1)^(-1) sum over (u1,u2)-shuffles of P_dot1^u1 P_dot2^u2 X",
+    "degree_two_example": "J_(1,1)(X)=P_dot1 P_dot2 X-(1/2)[P_dot1,P_dot2]X",
+    "inverse": "free-Lie PBW inverse retains curvature jets and nested commutators",
+    "map_type": "filtered linear isomorphism, not an ordinary-product algebra map",
+    "star_product": "f star g=PBW^(-1)(PBW(f) PBW(g))"
+  },
+  "project_one_loop_compact_result": {
+    "coefficient_source": "PROJECT_DRED_TRIANGLE_PLUS_CUT_CONTACT",
+    "formula": "Delta_P(C_P^A(theta) C_P^B(theta'))=(hbar*g^2/(16*sqrt(2)*pi^2))*F_ABDE*prod_r(theta_r-theta'_r)*P_dot C_P^D(theta)*P^dot C_P^E(theta')"
+  },
+  "schema": 1,
+  "tree_descendants": {
+    "nabla_minus_A": "-nabla_plus(E_V)-2*i*(B_s cross C_s)",
+    "nabla_minus_B_r": "-2*E_tilde_r-sqrt(2)*epsilon_rst*(C_s cross C_t)",
+    "nabla_minus_C_r": "0",
+    "nabla_minus_D_dot_a": "0"
+  }
+}

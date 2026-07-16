@@ -1,0 +1,669 @@
+{
+  "A__C_r_matter": {
+    "tmh": {
+      "alternate_internal_P_plus_full_polynomial": "0",
+      "longitudinal_polynomial": "0",
+      "ordered_pair": "A__C_r",
+      "oriented_internal_P_minus_full_polynomial": "0",
+      "route_008": "EXACT_ZERO_FULL_PROJECTED_POLYNOMIAL",
+      "route_009": "EXACT_ZERO_FULL_PROJECTED_POLYNOMIAL",
+      "transverse_polynomial": "0"
+    },
+    "tmm": {
+      "A__C_lambda_coefficient": "2",
+      "A__C_output": "C_r^D>D^E",
+      "collapsed_neighbor_raw": [
+        "64*r01",
+        "-64*r00"
+      ],
+      "color": "-F^{AB}_{DE}",
+      "contact_sum_rule": "F_DRED+C_d=8*mu2*(J1-R0)",
+      "evanescent_probe": [
+        "-1024*p01",
+        "1024*p00"
+      ],
+      "full_d_contacts": [
+        "+8*D0*R0",
+        "-8*D1*J1"
+      ],
+      "full_probe": [
+        "1024*(p00*p11*r01 - p00*r01*r11 - p01*p10*r01 + p01*r00*r11 + p10*r01**2 - p11*r00*r01)",
+        "-1024*(p00*p11*r00 - p00*r01*r10 - p01*p10*r00 + p01*r00*r10 + p10*r00*r01 - p11*r00**2)"
+      ],
+      "lambda_coefficient_before_color": "-2",
+      "migrated_r1_residual": [
+        "-128*r01",
+        "128*r00"
+      ],
+      "ordered_pair": "A__C_r",
+      "projector_collapse_check": "16*det(r1)*K_neighbor=-8*det(r1)*J1",
+      "routing": {
+        "p": "external C momentum",
+        "q": "external D momentum",
+        "r0": "source A vector edge",
+        "r1": "M-M chiral bridge",
+        "r2": "source C reversed-chiral edge"
+      },
+      "simplex_weight": "1",
+      "transverse_r0_residual": [
+        "128*(p01 - r01)",
+        "-128*(p00 - r00)"
+      ]
+    }
+  },
+  "C_r__A_matter": {
+    "tmh": {
+      "alternate_internal_P_minus_full_polynomial": "0",
+      "longitudinal_polynomial": "0",
+      "ordered_pair": "C_r__A",
+      "oriented_internal_P_plus_full_polynomial": "0",
+      "route_008": "EXACT_ZERO_FULL_PROJECTED_POLYNOMIAL",
+      "route_009": "EXACT_ZERO_FULL_PROJECTED_POLYNOMIAL",
+      "transverse_polynomial": "0"
+    },
+    "tmm": {
+      "C__A_lambda_coefficient": "+2",
+      "C__A_output_kernel": "D^D>q*C_r^E",
+      "collapsed_neighbor_raw": [
+        "64*(p01 + q01 - r01)",
+        "-64*(p00 + q00 - r00)"
+      ],
+      "color": "(i*c_{DAX})(i*c_{BXE})=-F^{AB}_{DE}",
+      "contact_sum_rule": "F_DRED+C_d=8*mu2*(R2-R1)",
+      "evanescent_probe_after_simplex": [
+        "-1024*q01",
+        "1024*q00"
+      ],
+      "evanescent_probe_before_simplex": [
+        "-1024*q01",
+        "1024*q00"
+      ],
+      "full_d_contacts": [
+        "+8*D2*R1",
+        "-8*D1*R2"
+      ],
+      "full_probe": [
+        "-1024*(p00*p01*q11 - p00*p11*q01 + p00*q01*r11 - p00*q11*r01 - p01**2*q10 + p01*p11*q00 + p01*q00*q11 - p01*q00*r11 - p01*q01*q10 + 2*p01*q10*r01 - p01*q11*r00 - p11*q00*r01 + p11*q01*r00 - q00*q11*r01 + q00*r01*r11 + q01*q10*r01 - q01*r00*r11 - q10*r01**2 + q11*r00*r01)",
+        "1024*(p00**2*q11 - p00*p01*q10 - p00*p10*q01 + p00*q00*q11 - p00*q01*q10 + p00*q01*r10 + p00*q10*r01 - 2*p00*q11*r00 + p01*p10*q00 - p01*q00*r10 + p01*q10*r00 - p10*q00*r01 + p10*q01*r00 - q00*q11*r00 + q00*r01*r10 + q01*q10*r00 - q01*r00*r10 - q10*r00*r01 + q11*r00**2)"
+      ],
+      "lambda_coefficient_before_color": "-2",
+      "longitudinal_polynomial": [
+        "1024*(p01 + q01 - r01)*(p00*p11 - p00*r11 - p01*p10 + p01*r10 + p10*r01 - p11*r00 + r00*r11 - r01*r10)",
+        "-1024*(p00 + q00 - r00)*(p00*p11 - p00*r11 - p01*p10 + p01*r10 + p10*r01 - p11*r00 + r00*r11 - r01*r10)"
+      ],
+      "ordered_pair": "C_r__A",
+      "projector_collapse_check": "16*det(r1)*K_neighbor=-8*det(r1)*R2",
+      "routing": {
+        "p": "external D momentum",
+        "q": "external C momentum",
+        "r0": "source C reversed-chiral edge to left M",
+        "r1": "left M to right M reversed-chiral bridge",
+        "r2": "source A vector edge to right M"
+      },
+      "transverse_r2_residual": [
+        "-128*(p01 - r01)",
+        "128*(p00 - r00)"
+      ],
+      "zero_source_momentum_q_equals_minus_p": "-2 on D^D>p*C_r^E"
+    }
+  },
+  "TGM": {
+    "A__C_color": "c_{ARD}c_{RBE}=-F^{AB}_{DE}",
+    "C__A_color": "c_{BRE}c_{RAD}=-F^{AB}_{DE}",
+    "full_d_SD_contacts": {
+      "DRED_remainder": "F_route^DRED+C_source^(d)+C_neighbor^(d) is the displayed mu2 trace",
+      "identity": "F_route^(4)+C_source^(d)+C_neighbor^(d)=0 when mu2=0",
+      "migrated_neighbor_edge": "after longitudinal IBP replace the tagged adjacent bridge square by D_neighbor with its retained numerator sign",
+      "source_edge": "replace the tagged four-dimensional source-vector square by D_source with the opposite Ward sign"
+    },
+    "lambda_sum": "-2",
+    "preD_minus": "+hbar*g^2/(8192sqrt(2))",
+    "preD_plus": "-hbar*g^2/(8192sqrt(2))",
+    "route_count": 6,
+    "routes": [
+      {
+        "A__C_output": "D^D>C_r^E",
+        "C__A_output": "C_r^D>D^E",
+        "lambda_coefficient": "-3/8",
+        "minus_full_trace": "-512",
+        "minus_longitudinal_trace": "1024",
+        "minus_transverse_trace": "-1536",
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "plus_full_trace": "1024",
+        "plus_longitudinal_trace": "1024",
+        "plus_transverse_trace": "0",
+        "route": "001"
+      },
+      {
+        "A__C_output": "D^D>C_r^E",
+        "C__A_output": "C_r^D>D^E",
+        "lambda_coefficient": "-1/4",
+        "minus_full_trace": "-1024",
+        "minus_longitudinal_trace": "-1024",
+        "minus_transverse_trace": "0",
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "plus_full_trace": "0",
+        "plus_longitudinal_trace": "-512",
+        "plus_transverse_trace": "512",
+        "route": "002"
+      },
+      {
+        "A__C_output": "D^D>C_r^E",
+        "C__A_output": "C_r^D>D^E",
+        "lambda_coefficient": "-3/8",
+        "minus_full_trace": "-1024",
+        "minus_longitudinal_trace": "-1024",
+        "minus_transverse_trace": "0",
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "plus_full_trace": "512",
+        "plus_longitudinal_trace": "-512",
+        "plus_transverse_trace": "1024",
+        "route": "003"
+      },
+      {
+        "A__C_output": "D^D>C_r^E",
+        "C__A_output": "C_r^D>D^E",
+        "lambda_coefficient": "-3/8",
+        "minus_full_trace": "-512",
+        "minus_longitudinal_trace": "512",
+        "minus_transverse_trace": "-1024",
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "plus_full_trace": "1024",
+        "plus_longitudinal_trace": "1024",
+        "plus_transverse_trace": "0",
+        "route": "004"
+      },
+      {
+        "A__C_output": "D^D>C_r^E",
+        "C__A_output": "C_r^D>D^E",
+        "lambda_coefficient": "-1/4",
+        "minus_full_trace": "-1024",
+        "minus_longitudinal_trace": "-512",
+        "minus_transverse_trace": "-512",
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "plus_full_trace": "0",
+        "plus_longitudinal_trace": "0",
+        "plus_transverse_trace": "0",
+        "route": "005"
+      },
+      {
+        "A__C_output": "D^D>C_r^E",
+        "C__A_output": "C_r^D>D^E",
+        "lambda_coefficient": "-3/8",
+        "minus_full_trace": "0",
+        "minus_longitudinal_trace": "0",
+        "minus_transverse_trace": "0",
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "plus_full_trace": "1536",
+        "plus_longitudinal_trace": "0",
+        "plus_transverse_trace": "1536",
+        "route": "006"
+      }
+    ],
+    "validation_samples": [
+      {
+        "dotted": 0,
+        "momentum_C": [
+          "1",
+          "2",
+          "3",
+          "1"
+        ],
+        "momentum_D": [
+          "-1",
+          "-2",
+          "-3",
+          "-1"
+        ],
+        "ordered_pair": "A__C_r",
+        "sectors": {
+          "minus": {
+            "(0, 1, 2)": {
+              "full": "-512",
+              "longitudinal_migrated_r1": "1024",
+              "transverse_r0": "-1536"
+            },
+            "(0, 2, 1)": {
+              "full": "-1024",
+              "longitudinal_migrated_r1": "-1024",
+              "transverse_r0": "0"
+            },
+            "(1, 0, 2)": {
+              "full": "-1024",
+              "longitudinal_migrated_r1": "-1024",
+              "transverse_r0": "0"
+            },
+            "(1, 2, 0)": {
+              "full": "-1024",
+              "longitudinal_migrated_r1": "-512",
+              "transverse_r0": "-512"
+            },
+            "(2, 0, 1)": {
+              "full": "-512",
+              "longitudinal_migrated_r1": "512",
+              "transverse_r0": "-1024"
+            },
+            "(2, 1, 0)": {
+              "full": "0",
+              "longitudinal_migrated_r1": "0",
+              "transverse_r0": "0"
+            }
+          },
+          "plus": {
+            "(0, 1, 2)": {
+              "full": "1024",
+              "longitudinal_migrated_r1": "1024",
+              "transverse_r0": "0"
+            },
+            "(0, 2, 1)": {
+              "full": "0",
+              "longitudinal_migrated_r1": "-512",
+              "transverse_r0": "512"
+            },
+            "(1, 0, 2)": {
+              "full": "512",
+              "longitudinal_migrated_r1": "-512",
+              "transverse_r0": "1024"
+            },
+            "(1, 2, 0)": {
+              "full": "0",
+              "longitudinal_migrated_r1": "0",
+              "transverse_r0": "0"
+            },
+            "(2, 0, 1)": {
+              "full": "1024",
+              "longitudinal_migrated_r1": "1024",
+              "transverse_r0": "0"
+            },
+            "(2, 1, 0)": {
+              "full": "1536",
+              "longitudinal_migrated_r1": "0",
+              "transverse_r0": "1536"
+            }
+          }
+        }
+      },
+      {
+        "dotted": 1,
+        "momentum_C": [
+          "2",
+          "-1",
+          "1",
+          "3"
+        ],
+        "momentum_D": [
+          "-2",
+          "1",
+          "-1",
+          "-3"
+        ],
+        "ordered_pair": "C_r__A",
+        "sectors": {
+          "minus": {
+            "(0, 1, 2)": {
+              "full": "-512",
+              "longitudinal_migrated_r1": "1024",
+              "transverse_r0": "-1536"
+            },
+            "(0, 2, 1)": {
+              "full": "-1024",
+              "longitudinal_migrated_r1": "-1024",
+              "transverse_r0": "0"
+            },
+            "(1, 0, 2)": {
+              "full": "-1024",
+              "longitudinal_migrated_r1": "-1024",
+              "transverse_r0": "0"
+            },
+            "(1, 2, 0)": {
+              "full": "-1024",
+              "longitudinal_migrated_r1": "-512",
+              "transverse_r0": "-512"
+            },
+            "(2, 0, 1)": {
+              "full": "-512",
+              "longitudinal_migrated_r1": "512",
+              "transverse_r0": "-1024"
+            },
+            "(2, 1, 0)": {
+              "full": "0",
+              "longitudinal_migrated_r1": "0",
+              "transverse_r0": "0"
+            }
+          },
+          "plus": {
+            "(0, 1, 2)": {
+              "full": "1024",
+              "longitudinal_migrated_r1": "1024",
+              "transverse_r0": "0"
+            },
+            "(0, 2, 1)": {
+              "full": "0",
+              "longitudinal_migrated_r1": "-512",
+              "transverse_r0": "512"
+            },
+            "(1, 0, 2)": {
+              "full": "512",
+              "longitudinal_migrated_r1": "-512",
+              "transverse_r0": "1024"
+            },
+            "(1, 2, 0)": {
+              "full": "0",
+              "longitudinal_migrated_r1": "0",
+              "transverse_r0": "0"
+            },
+            "(2, 0, 1)": {
+              "full": "1024",
+              "longitudinal_migrated_r1": "1024",
+              "transverse_r0": "0"
+            },
+            "(2, 1, 0)": {
+              "full": "1536",
+              "longitudinal_migrated_r1": "0",
+              "transverse_r0": "1536"
+            }
+          }
+        }
+      }
+    ],
+    "word_count_per_route": "2 derivative placements x 2 Euclidean chiralities"
+  },
+  "after_check_only": {
+    "HT_anchor": "main.tex:1238-1239 b gamma",
+    "HT_zero_shift_vector_C_D__D_C": [
+      "-1",
+      "1"
+    ],
+    "Project_A__C_vector_C_D__D_C": [
+      "-1",
+      "+1"
+    ],
+    "Project_C__A_vector_C_D__D_C": [
+      "-1",
+      "+1"
+    ],
+    "current_orbit_factor_half_test": "HALF_FROM_METRIC_OCCURRENCE_DECOMPOSITION_NOT_CURRENT_CANCELLATION",
+    "raw_ratio_to_printed_HT_zero_shift": "1",
+    "status": "EXACT_MATCH"
+  },
+  "external_target_used_in_derivation": false,
+  "flavor_lift": [
+    {
+      "TGM_action_flavor": 1,
+      "TMH_complement_routes": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "TMH_each_route": "EXACT_ZERO_FULL_PROJECTED_POLYNOMIAL",
+      "TMM_action_flavors": [
+        1,
+        1
+      ],
+      "r": 1
+    },
+    {
+      "TGM_action_flavor": 2,
+      "TMH_complement_routes": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "TMH_each_route": "EXACT_ZERO_FULL_PROJECTED_POLYNOMIAL",
+      "TMM_action_flavors": [
+        2,
+        2
+      ],
+      "r": 2
+    },
+    {
+      "TGM_action_flavor": 3,
+      "TMH_complement_routes": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "TMH_each_route": "EXACT_ZERO_FULL_PROJECTED_POLYNOMIAL",
+      "TMM_action_flavors": [
+        3,
+        3
+      ],
+      "r": 3
+    }
+  ],
+  "full_order_g2_orbit": {
+    "AC_words": {
+      "A1_M2_TGM_samples": [
+        "0",
+        "8*sqrt(2)",
+        "-8*i sqrt(2)",
+        "16*sqrt(2) + 8*i sqrt(2)"
+      ],
+      "A1_M2_TMM_samples": [
+        "0",
+        "-16*sqrt(2)",
+        "16*i sqrt(2)",
+        "-32*sqrt(2) - 16*i sqrt(2)"
+      ],
+      "A2_M1_samples": [
+        "0",
+        "-8",
+        "8*i",
+        "-16 - 8*i"
+      ],
+      "I0_Sm4_A1_M2_C_gt_D": "-32*sqrt(2) - 16*i sqrt(2)",
+      "I0_Sm4_A1_M2_D_gt_C": "16*sqrt(2) + 8*i sqrt(2)",
+      "I1_Sm3_A2_M1_D_gt_C": "-16 - 8*i",
+      "sample_z": "2 + i"
+    },
+    "CA_words": {
+      "I0_Sm4_A1_M2_C_gt_D": "16*sqrt(2) + 8*i sqrt(2)",
+      "I0_Sm4_A1_M2_D_gt_C": "-32*sqrt(2) - 16*i sqrt(2)",
+      "I1_Sm3_A2_M1_C_gt_D": "-16 - 8*i"
+    },
+    "exact_color": {
+      "F_frame": "-2",
+      "frame": "SU(2): A=0,B=1,D=1,E=0",
+      "full_covariance_contraction": "-2",
+      "identity": "C_full=F^{AB}_{DE}"
+    },
+    "first_invalid_old_line": {
+      "classification": "OCCURRENCE_DECOMPOSITION_DOUBLE_COUNT",
+      "complete_metric_defect": "plus_or_minus_2*J_mu2",
+      "old_scalar_defect": "plus_or_minus_4*J_mu2",
+      "ratio": "1/2",
+      "statement": "both transported inverse-square rows were promoted to independent anomaly descendants"
+    },
+    "metric_poles": {
+      "J_mu2_over_J2": "(4-d)/d",
+      "TGM_I0_Sm4": "-1",
+      "TGM_I1_Sm3": "-1",
+      "TGM_normalized": "+1",
+      "TGM_sum": "8/d-2=+2*(4-d)/d=+2*J_mu2/J2",
+      "TGM_triangle": "+8/d",
+      "TMM_I0_Sm4": "+2",
+      "TMM_normalized": "-1",
+      "TMM_sum": "2-8/d=-2*(4-d)/d=-2*J_mu2/J2",
+      "TMM_triangle": "-8/d"
+    },
+    "ordered_results": {
+      "A__C_r": [
+        "-1",
+        "+1"
+      ],
+      "C_r__A": [
+        "-1",
+        "+1"
+      ],
+      "basis": [
+        "C_r^D>D^E",
+        "D^D>C_r^E"
+      ],
+      "unit": "lambda1*F^{AB}_{DE}"
+    },
+    "remaining_rows": [
+      {
+        "id": "I2_A3_TADPOLE",
+        "result": "0_SCALELESS_DRED"
+      },
+      {
+        "id": "TMH_SUPERPOTENTIAL_1",
+        "result": "0_EXACT_D_WORD"
+      },
+      {
+        "id": "TMH_SUPERPOTENTIAL_2",
+        "result": "0_EXACT_D_WORD"
+      },
+      {
+        "id": "GAUGE_GF_FP_NK",
+        "result": "0_F_SECTOR_METRIC_TRACE"
+      },
+      {
+        "coefficients": [
+          "+2i",
+          "-2i"
+        ],
+        "id": "EULER_EXPLICIT_CURRENT_PAIR",
+        "result": "0_AFTER_IDENTICAL_PORT_DENOMINATOR_EDGE_TAG_MATCH",
+        "selected_inverse_square": "none"
+      }
+    ],
+    "source_expansion": {
+      "A_c": "A1+g*A2+g^2*A3",
+      "N0": "Dminus*A1",
+      "N1": "Dminus*A2+[gamma1,A1]",
+      "N2": "Dminus*A3+[gamma1,A2]+[gamma2,A1]",
+      "resolvent": [
+        "+<I2>",
+        "-<I1*S3>/hbar",
+        "-<I0*S4>/hbar",
+        "+<I0*S3*S3>/(2*hbar^2)"
+      ]
+    }
+  },
+  "normalization": {
+    "AA_canonical_cross_check": {
+      "action_copy_Wick": "(1/2!)*(2)=1",
+      "canonical_to_physical_roundtrip": "(gA_c)(gC_c) and (gD_c)(gC_c) cancel the same g^2",
+      "external_C_c_map": "1",
+      "external_D_c_map": "D2barD_dot-a u=-4sqrt(2)D_dot-a",
+      "external_D_probe": "D2barD_dot-a(theta+theta-bartheta_dot-a)=-2",
+      "full_vertex_measure_in_D_word": "(1/4)*(1/4)=1/16",
+      "matter_exponent_vertex_each": "+sqrt(2)g/hbar*T_U",
+      "matter_projector_count": 2,
+      "matter_propagator_each": "+hbar*projector/(16D)",
+      "source_A_c": "-1/(4sqrt(2))",
+      "source_C_c": "1",
+      "vector_propagator": "-hbar/D"
+    },
+    "TMM_preD_exact": "sqrt(2)*g**2*hbar/1024",
+    "chiral_propagator": "+hbar barD2D2/(16D)",
+    "external_D_map": "D2barD_dot-a u=-4sqrt(2)D_dot-a",
+    "factor_two_origin": "old transported-square occurrence decomposition counted two scalar cut defects; the SD-complete metric orbit leaves one half",
+    "lambda1": "hbar*g^2/(16pi^2)",
+    "matter_exponent_vertex": "+sqrt(2)g/hbar T_U",
+    "mu2_master": "1/(32pi^2)",
+    "reversed_chiral_propagator": "+hbar D2barD2/(16D)",
+    "source_A_C": "-1/(4sqrt(2))",
+    "vector_propagator": "-hbar/D",
+    "wick_action_order": "(1/2!)*(two labeled action orders)=1"
+  },
+  "operator_identity": {
+    "D_word": "D_-D_+barD2D_+=8barBox D_+-(1/2)D_+barD2D2",
+    "TGM_longitudinal_tag": "source vector r0 -> adjacent bridge vector r1",
+    "TMM_longitudinal_tag": "source vector r0 -> adjacent chiral projector r1",
+    "current_cancellation_after_pairing": "(+2i-2i)*(B_s x C_s) C_r=0",
+    "current_occurrence_rule": "retain the two current rows until their identical ordered port word is established",
+    "outer_A": "nabla_- A=-nabla_+ E_V-2i(B_s x C_s)"
+  },
+  "ordered_results": {
+    "A__C_r": {
+      "C_r^D>D^E": "-1",
+      "D^D>C_r^E": "+1"
+    },
+    "C_r__A": {
+      "C_r^D>D^E": "-1",
+      "D^D>C_r^E": "+1"
+    },
+    "common_unit": "lambda1*F^{AB}_{DE}*P_dot contraction"
+  },
+  "outer_A_occurrence_resolved_orbit": {
+    "A__C_inverse_edge_rows": [
+      "PRIMARY: +8*det(r0)*R0",
+      "NEIGHBOR_AFTER_LONGITUDINAL_IBP: -8*det(r1)*J1"
+    ],
+    "C__A_inverse_edge_rows": [
+      "PRIMARY: +8*det(r2)*R1",
+      "NEIGHBOR_AFTER_LONGITUDINAL_IBP: -8*det(r1)*R2"
+    ],
+    "common_collapsed_D_words": {
+      "A__C_r": "K_neighbor=(64*r0_{+dot2},-64*r0_{+dot1})",
+      "C_r__A": "K_neighbor=(-64*r2_{+dot2},+64*r2_{+dot1})"
+    },
+    "current_rows": [
+      {
+        "coefficient": "+2i",
+        "id": "EV_MATTER_CURRENT",
+        "inverse_edge_tag": "none",
+        "ordered_words": [
+          "(B_s x C_s)^A C_r^B",
+          "C_r^A (B_s x C_s)^B"
+        ]
+      },
+      {
+        "coefficient": "-2i",
+        "id": "EXPLICIT_MINUS_2I_BC",
+        "inverse_edge_tag": "none",
+        "ordered_words": [
+          "(B_s x C_s)^A C_r^B",
+          "C_r^A (B_s x C_s)^B"
+        ]
+      }
+    ],
+    "paired_sum": "0",
+    "pairing_stage": "after ordered flavor/color/field ports are matched; before loop integration",
+    "regulator_square_in_current_pair": "absent",
+    "verdict": "CURRENT_PAIR_ZERO; FACTOR_HALF_COMES_FROM_SD_COMPLETE_METRIC_OCCURRENCE_DECOMPOSITION"
+  },
+  "schema": "step5-ac-ca-family-exact-v2",
+  "status": "TARGET_BLIND_COMPLETE_ORDER_G2_ORBIT__HT_UNIT_MATCH"
+}

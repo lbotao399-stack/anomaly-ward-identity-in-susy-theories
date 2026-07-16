@@ -1,0 +1,355 @@
+{
+  "checks": {
+    "count": 40,
+    "failed": 0,
+    "passed": 40,
+    "rows": [
+      {
+        "actual": "21",
+        "expected": "21",
+        "id": "G2_POLYNOMIAL_REPLAY_CHECK_COUNT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1 - z",
+        "expected": "1 - z",
+        "id": "G2_C1",
+        "status": "PASS"
+      },
+      {
+        "actual": "z",
+        "expected": "z",
+        "id": "G2_C2_DET",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1/2",
+        "expected": "-1/2",
+        "id": "G2_C2_OMEGA",
+        "status": "PASS"
+      },
+      {
+        "actual": "(2*z - 1)/2",
+        "expected": "(2*z - 1)/2",
+        "id": "G2_C2_FULL",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1",
+        "expected": "-1",
+        "id": "OMEGA_ENDPOINT_TRANSFER_SIGN",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "OMEGA_FIVE_ODD_REVERSAL_SIGN",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "OMEGA_EVEN_BLOCK_IBP_SIGN",
+        "status": "PASS"
+      },
+      {
+        "actual": "-16",
+        "expected": "-16",
+        "id": "OMEGA_ADJACENT_R1_PROJECTOR",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "OMEGA_FULL_D_PARENT_PLUS_CONTACT_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-W*mu2/2",
+        "expected": "-W*mu2/2",
+        "id": "OMEGA_DRED_REMAINDER",
+        "status": "PASS"
+      },
+      {
+        "actual": "Ld2/(Delta + Ld2)**3",
+        "expected": "Ld2/(Delta + Ld2)**3",
+        "id": "OMEGA_RANK_ZERO_COMPLETION",
+        "status": "PASS"
+      },
+      {
+        "actual": "(2048*I*(y + z), 2048*z)",
+        "expected": "(2048*I*(y + z), 2048*z)",
+        "id": "G2_TRANSVERSE_TRACE",
+        "status": "PASS"
+      },
+      {
+        "actual": "(0, -1024)",
+        "expected": "(0, -1024)",
+        "id": "G2_LONGITUDINAL_OMEGA_TRACE",
+        "status": "PASS"
+      },
+      {
+        "actual": "(-2048*I/3, -1024/3)",
+        "expected": "(-2048*I/3, -1024/3)",
+        "id": "G2_TRANSVERSE_EVANESCENT_PROBE",
+        "status": "PASS"
+      },
+      {
+        "actual": "(0, 512)",
+        "expected": "(0, 512)",
+        "id": "G2_LONGITUDINAL_OMEGA_EVANESCENT_PROBE",
+        "status": "PASS"
+      },
+      {
+        "actual": "(0, 0)",
+        "expected": "(0, 0)",
+        "id": "G2_B_MARK_SELECTED_PROJECTION",
+        "status": "PASS"
+      },
+      {
+        "actual": "(0, 0)",
+        "expected": "(0, 0)",
+        "id": "G2_B_MARK_FULL_EULER_PROJECTION",
+        "status": "PASS"
+      },
+      {
+        "actual": "(-128*r01, 128*r00)",
+        "expected": "(-128*r01, 128*r00)",
+        "id": "G2_CURRENT_LOCAL_WORD_EQUALITY",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[p0], [p1], [p2], [p3]])",
+        "expected": "Matrix([[p0], [p1], [p2], [p3]])",
+        "id": "M_SLOT_MOMENTUM_IS_P",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[q0], [q1], [q2], [q3]])",
+        "expected": "Matrix([[q0], [q1], [q2], [q3]])",
+        "id": "H_SLOT_MOMENTUM_IS_Q",
+        "status": "PASS"
+      },
+      {
+        "actual": "(4*p_carrier - q_carrier)/3",
+        "expected": "(4*p_carrier - q_carrier)/3",
+        "id": "G2_GRADED_REORDERED_B_FIRST",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[4/3], [2/3]])",
+        "expected": "Matrix([[4/3], [2/3]])",
+        "id": "G2_SELECTED_RAW_P_Q",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[0], [-1]])",
+        "expected": "Matrix([[0], [-1]])",
+        "id": "G2_OMEGA_RAW_P_Q",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[4/3], [-1/3]])",
+        "expected": "Matrix([[4/3], [-1/3]])",
+        "id": "G2_FULL_RAW_P_Q",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[2/3], [4/3]])",
+        "expected": "Matrix([[2/3], [4/3]])",
+        "id": "G2_SELECTED_PAIR_EOM",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[-1], [0]])",
+        "expected": "Matrix([[-1], [0]])",
+        "id": "G2_OMEGA_PAIR_EOM",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[-1/3], [4/3]])",
+        "expected": "Matrix([[-1/3], [4/3]])",
+        "id": "G2_FULL_PAIR_EOM",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[4/3], [-1/3]])",
+        "expected": "Matrix([[4/3], [-1/3]])",
+        "id": "OLD_TYPED_COMMENT_SWAPPED_PAIR_EOM",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "OLD_TYPED_COMMENT_DIFFERS_FROM_ROUTED_MAP",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "id": "G2_MARK_SUM_WITHOUT_OMEGA",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "G2_MARK_SUM_WITH_OMEGA",
+        "status": "PASS"
+      },
+      {
+        "actual": "4/3",
+        "expected": "4/3",
+        "id": "G2_FIRST_MARK_IS_EOM_CARRIER",
+        "status": "PASS"
+      },
+      {
+        "actual": "2/3",
+        "expected": "2/3",
+        "id": "G2_SECOND_DET_IS_PAIR_CARRIER",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1",
+        "expected": "-1",
+        "id": "G2_OMEGA_IS_PAIR_CARRIER",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "MARK_SUM_TWO_IS_NOT_PAIR_COEFFICIENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "i*(EOM_F*a + Pair_F*b)",
+        "expected": "i*(EOM_F*a + Pair_F*b)",
+        "id": "OUTGOING_FOURIER_COMMON_FACTOR",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([[2], [-1/3], [2], [2]])",
+        "expected": "Matrix([[2], [-1/3], [2], [2]])",
+        "id": "G2_FULL_CORRECTED_Q_SCALES",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([\n[7/3],\n[  0],\n[  0]])",
+        "expected": "Matrix([[7/3], [0], [0]])",
+        "id": "G2_FULL_CORRECTED_Q_RESIDUAL",
+        "status": "PASS"
+      },
+      {
+        "actual": "Matrix([\n[4/3],\n[  0],\n[  0]])",
+        "expected": "Matrix([[4/3], [0], [0]])",
+        "id": "G2_TRANSVERSE_ONLY_Q_RESIDUAL",
+        "status": "PASS"
+      }
+    ]
+  },
+  "completion": {
+    "B_marked_full_Euler": "0",
+    "B_marked_selected": "0",
+    "nonlinear_current_rows": "same local word, opposite source coefficients"
+  },
+  "external_target_used": false,
+  "first_error": {
+    "claim": "p is B1 momentum and q is D momentum",
+    "exact": "p exits M and belongs to D; q exits H and belongs to B1",
+    "location": "marked/unified typed comment after G2_B1>D reconstruction"
+  },
+  "mark_vs_carrier": {
+    "first_mark": "4/3 -> p_out -> EOM",
+    "second_determinant": "2/3 -> q_out -> pair",
+    "second_omega": "-1 -> q_out -> pair",
+    "with_omega_pair": "-1/3",
+    "without_omega_mark_sum": "2",
+    "without_omega_pair": "2/3"
+  },
+  "omega_classification": {
+    "contact": "+(1/2)*Ld2*W",
+    "delete_as_zero_square": false,
+    "dred": "-(1/2)*mu2*W",
+    "full_d": "0",
+    "parent": "-(1/2)*barL2*W",
+    "type": "transported_r1_inverse_kernel_with_rank_zero_completion"
+  },
+  "q_covariance": {
+    "conclusion": "Omega removal does not produce scale 2; the old sum 4/3+2/3 mixed EOM and pair carriers",
+    "full_direct_vector": [
+      "2",
+      "-1/3",
+      "-2*sqrt(2)*i",
+      "2*sqrt(2)*i"
+    ],
+    "full_residual": [
+      "7/3",
+      "0",
+      "0"
+    ],
+    "full_scale_candidates": [
+      "2",
+      "-1/3",
+      "2",
+      "2"
+    ],
+    "transverse_only_residual": [
+      "4/3",
+      "0",
+      "0"
+    ],
+    "transverse_only_vector": [
+      "2",
+      "2/3",
+      "-2*sqrt(2)*i",
+      "2*sqrt(2)*i"
+    ]
+  },
+  "routing": {
+    "H_external": "B1(q)",
+    "M_external": "D(p)",
+    "old_comment": "B1(p)>D(q)",
+    "old_comment_verdict": "REJECTED",
+    "proof": [
+      "r0-r1=p",
+      "r1-r2=q",
+      "chiral_b_plus is at H with q",
+      "D probe is at M"
+    ],
+    "raw_convention": "p,q outgoing"
+  },
+  "schema": "step5-ab-ba-g2-omega-typed-routing-exact-v1",
+  "status": "OMEGA_RETAINED_AS_TRANSPORTED_R1_CUT__OLD_G2_TYPED_SLOT_MAP_REJECTED",
+  "typed_projection": {
+    "full": [
+      "-1/3",
+      "4/3"
+    ],
+    "matrix": [
+      [
+        "0",
+        "1"
+      ],
+      [
+        "1",
+        "0"
+      ]
+    ],
+    "omega": [
+      "-1",
+      "0"
+    ],
+    "outgoing_fourier": "B(a*p_out+b*q_out)D=i*(a*EOM_F+b*Pair_F)",
+    "raw_basis": [
+      "p_out_on_D",
+      "q_out_on_B1"
+    ],
+    "selected_transverse": [
+      "2/3",
+      "4/3"
+    ],
+    "typed_basis": [
+      "<B1,D>",
+      "B1(P.D)"
+    ]
+  }
+}

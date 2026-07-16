@@ -1,0 +1,622 @@
+{
+  "G1": {
+    "axis_trace_sample": {
+      "axis_2": [
+        "4096",
+        "-4096"
+      ],
+      "axis_3": [
+        "2048",
+        "-4096"
+      ],
+      "frame": "p=e1,q=e4,L=0,sector=+,dotted=0",
+      "two_axis_trace": [
+        "6144",
+        "-8192"
+      ]
+    },
+    "current_G1_scale": "2",
+    "cyclic_source_factor": "(1/2)*(1+1)=1",
+    "decision": "RETAIN",
+    "primitive_multiplicity": {
+      "action_expansion": "(1/2!)*2_(Sg3,Sm3 orders)=1",
+      "fixed_connected_Wick_pairing": "1",
+      "gauge_cubic_Hessian": "(1/3!)*6_label_permutations=1",
+      "gauge_derivative_placements": "QL and LQ are two algebraic Hessian summands",
+      "matter_cubic_Hessian": "(1/3!)*6_distinct_role_derivatives=1",
+      "source_mixed_blocks": "(1/2)_STr*2_cyclic_starts=1",
+      "total": "1"
+    },
+    "raw_generic_(p_B,q_D)": [
+      "2",
+      "2"
+    ],
+    "source_marks": {
+      "A": {
+        "cut": "-alpha_A*r2_d^2/(D0*D1*D2)",
+        "edge": "e2",
+        "generic_(p_B,q_D)": [
+          "4/3",
+          "2/3"
+        ],
+        "parent": "alpha_A*bar(r2)^2/(D0*D1*D2)",
+        "remainder": "alpha_A*mu_l^2/(D0*D1*D2)"
+      },
+      "B": {
+        "cut": "-alpha_B*r0_d^2/(D0*D1*D2)",
+        "edge": "e0",
+        "generic_(p_B,q_D)": [
+          "2/3",
+          "4/3"
+        ],
+        "parent": "alpha_B*bar(r0)^2/(D0*D1*D2)",
+        "remainder": "alpha_B*mu_l^2/(D0*D1*D2)"
+      },
+      "classification": "two distinct product-rule parent occurrences"
+    },
+    "unique_connected_pairing": [
+      "u_source<->u_gauge",
+      "u_matter<->u_gauge",
+      "phi_source<->tildephi_matter"
+    ]
+  },
+  "G3": {
+    "current_G3_magnitude": "2*sqrt(2)",
+    "cyclic_source_factor": "(1/2)*(1+1)=1",
+    "decision": "RETAIN",
+    "occurrences": {
+      "e0": {
+        "cut": "+4096*W0/(D1*D2)",
+        "parent": "-4096*(D0+mu2)*W0/P3",
+        "remainder": "-4096*mu2*W0/P3"
+      },
+      "e1": {
+        "cut": "-4096*W1/(D0*D2)",
+        "parent": "+4096*(D1+mu2)*W1/P3",
+        "remainder": "+4096*mu2*W1/P3"
+      },
+      "e2": {
+        "cut": "+4096*W2/(D0*D1)",
+        "parent": "-4096*(D2+mu2)*W2/P3",
+        "remainder": "-4096*mu2*W2/P3"
+      }
+    },
+    "original_measure_trace": {
+      "correct_metric_route": "c=4096, then -c*W=-4096*W",
+      "correct_trace_route": "(-1/2)*(2*4096*W)=-4096*W",
+      "external_wedge": "-i",
+      "measure_magnitude": "1/8",
+      "metric_after_measure": "4096",
+      "metric_coefficient": "32768",
+      "one_nonzero_monomial": "-32768 - 32768*i",
+      "rejected_double_half": "(-1/2)*c*W=-2048*W",
+      "two_axis_trace": "-65536*i"
+    },
+    "outer_marks": {
+      "A": {
+        "simplex_weight": "2/3",
+        "square_edges": [
+          "e0",
+          "e1"
+        ]
+      },
+      "B": {
+        "simplex_weight": "1/3",
+        "square_edges": [
+          "e2"
+        ]
+      },
+      "sum": "1"
+    },
+    "primitive_multiplicity": {
+      "Hminus_cubic_Hessian": "(1/3!)*6_flavor-color permutations=1",
+      "action_expansion": "(1/2!)*2_(M,Hminus orders)=1",
+      "fixed_flavor_Wick_pairing": "1",
+      "source_mixed_blocks": "(1/2)_STr*2_cyclic_starts=1",
+      "total": "1"
+    },
+    "raw_wedge_coefficients": {
+      "G32": "2*sqrt(2)*i",
+      "G33": "-2*sqrt(2)*i"
+    },
+    "typed_coefficients": {
+      "G32_C2_gt_C3": "-2*sqrt(2)*i",
+      "G33_C3_gt_C2": "2*sqrt(2)*i"
+    }
+  },
+  "checks": {
+    "count": 76,
+    "failed": 0,
+    "passed": 76,
+    "rows": [
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "CYCLIC_FORWARD_BLOCK",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "CYCLIC_REVERSE_BLOCK",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "HALF_STRTIMES_TWO_STARTING_POINTS",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "ONE_REPRESENTATIVE_ORBIT_WEIGHT",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "REJECT_HALF_OF_ONE_REPRESENTATIVE",
+        "status": "PASS"
+      },
+      {
+        "actual": "2*W*c",
+        "expected": "2*W*c",
+        "id": "TRACE_IS_TWO_METRIC_COMPONENTS",
+        "status": "PASS"
+      },
+      {
+        "actual": "c",
+        "expected": "c",
+        "id": "METRIC_FROM_TRACE_OVER_TWO_W",
+        "status": "PASS"
+      },
+      {
+        "actual": "-W*c",
+        "expected": "-W*c",
+        "id": "DRED_FROM_FULL_TRACE",
+        "status": "PASS"
+      },
+      {
+        "actual": "-W*c",
+        "expected": "-W*c",
+        "id": "DRED_FROM_RECOVERED_METRIC",
+        "status": "PASS"
+      },
+      {
+        "actual": "-W*c",
+        "expected": "-W*c",
+        "id": "TRACE_AND_METRIC_ROUTES_EQUAL",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "EXTRA_HALF_AFTER_METRIC_IS_WRONG",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "G1_SOURCE_CYCLIC_CLASS_FACTOR",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "G1_ACTION_TAYLOR_TWO_ORDERS",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "G1_GAUGE_CUBIC_HESSIAN_FACTOR",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "G1_MATTER_CUBIC_HESSIAN_FACTOR",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "G1_FIXED_ROLE_WICK_PAIRING",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "G1_TOTAL_RAW_MULTIPLICITY",
+        "status": "PASS"
+      },
+      {
+        "actual": "6",
+        "expected": "6",
+        "id": "G1_VVV_PERMUTATIONS",
+        "status": "PASS"
+      },
+      {
+        "actual": "2",
+        "expected": "2",
+        "id": "G1_VVV_DERIVATIVE_PLACEMENTS",
+        "status": "PASS"
+      },
+      {
+        "actual": "12",
+        "expected": "12",
+        "id": "G1_VVV_ROWS_PER_CHIRALITY",
+        "status": "PASS"
+      },
+      {
+        "actual": "24",
+        "expected": "24",
+        "id": "G1_VVV_ROWS_BOTH_CHIRALITIES",
+        "status": "PASS"
+      },
+      {
+        "actual": "-sqrt(2)*g**4*hbar/16384",
+        "expected": "-sqrt(2)*g**4*hbar/16384",
+        "id": "G1_PRE_D_PLUS_FROM_PRIMITIVES",
+        "status": "PASS"
+      },
+      {
+        "actual": "sqrt(2)*g**4*hbar/16384",
+        "expected": "sqrt(2)*g**4*hbar/16384",
+        "id": "G1_PRE_D_MINUS_FROM_CHIRAL_REFLECTION",
+        "status": "PASS"
+      },
+      {
+        "actual": "(4/3, 2/3)",
+        "expected": "(4/3, 2/3)",
+        "id": "G1_A_MARK_GENERIC_PB_QD",
+        "status": "PASS"
+      },
+      {
+        "actual": "(2/3, 4/3)",
+        "expected": "(2/3, 4/3)",
+        "id": "G1_B_MARK_GENERIC_PB_QD",
+        "status": "PASS"
+      },
+      {
+        "actual": "(2, 2)",
+        "expected": "(2, 2)",
+        "id": "G1_TWO_MARK_SUM_GENERIC_PB_QD",
+        "status": "PASS"
+      },
+      {
+        "actual": "EXACT_TARGET_BLIND_G1_CONTACT_ORBIT_CLOSED",
+        "expected": "EXACT_TARGET_BLIND_G1_CONTACT_ORBIT_CLOSED",
+        "id": "G1_RAW_CONTACT_REPLAY_STATUS",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "G1_RAW_CONTACT_REPLAY_FAILURES",
+        "status": "PASS"
+      },
+      {
+        "actual": "874",
+        "expected": "874",
+        "id": "G1_RAW_CONTACT_CORE_CHECKS",
+        "status": "PASS"
+      },
+      {
+        "actual": "e2",
+        "expected": "e2",
+        "id": "G1_A_MARK_EDGE",
+        "status": "PASS"
+      },
+      {
+        "actual": "e0",
+        "expected": "e0",
+        "id": "G1_B_MARK_EDGE",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "G1_A_FULL_D_PARENT_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "G1_B_FULL_D_PARENT_CONTACT",
+        "status": "PASS"
+      },
+      {
+        "actual": "(4096, -4096)",
+        "expected": "(4096, -4096)",
+        "id": "G1_PLUS_DOT0_AXIS1_COEFFICIENTS",
+        "status": "PASS"
+      },
+      {
+        "actual": "(2048, -4096)",
+        "expected": "(2048, -4096)",
+        "id": "G1_PLUS_DOT0_AXIS2_COEFFICIENTS",
+        "status": "PASS"
+      },
+      {
+        "actual": "(6144, -8192)",
+        "expected": "(6144, -8192)",
+        "id": "G1_PLUS_DOT0_TWO_AXIS_TRACE",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "G3_SOURCE_CYCLIC_CLASS_FACTOR",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "G3_ACTION_TAYLOR_TWO_ORDERS",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "G3_HMINUS_THIRD_DERIVATIVE_FACTOR",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "G3_FIXED_FLAVOR_WICK_PAIRING",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "G3_TOTAL_RAW_MULTIPLICITY",
+        "status": "PASS"
+      },
+      {
+        "actual": "2/3",
+        "expected": "2/3",
+        "id": "G3_A_MARK_SIMPLEX_WEIGHT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1/3",
+        "expected": "1/3",
+        "id": "G3_B_MARK_SIMPLEX_WEIGHT",
+        "status": "PASS"
+      },
+      {
+        "actual": "1",
+        "expected": "1",
+        "id": "G3_MARK_WEIGHT_SUM",
+        "status": "PASS"
+      },
+      {
+        "actual": "-32768 - 32768*i",
+        "expected": "-32768 - 32768*i",
+        "id": "G3_RAW_MONOMIAL_L2_PLUS_A",
+        "status": "PASS"
+      },
+      {
+        "actual": "32768 - 32768*i",
+        "expected": "32768 - 32768*i",
+        "id": "G3_RAW_MONOMIAL_L2_MINUS_A",
+        "status": "PASS"
+      },
+      {
+        "actual": "65536 - 32768*i",
+        "expected": "65536 - 32768*i",
+        "id": "G3_RAW_MONOMIAL_L3_PLUS_A",
+        "status": "PASS"
+      },
+      {
+        "actual": "-65536 - 32768*i",
+        "expected": "-65536 - 32768*i",
+        "id": "G3_RAW_MONOMIAL_L3_MINUS_A",
+        "status": "PASS"
+      },
+      {
+        "actual": "(-65536*i, 0)",
+        "expected": "(-65536*i, 0)",
+        "id": "G3_RAW_TWO_AXIS_TRACE_AT_00",
+        "status": "PASS"
+      },
+      {
+        "actual": "-i",
+        "expected": "-i",
+        "id": "G3_FRAME_EXTERNAL_WEDGE",
+        "status": "PASS"
+      },
+      {
+        "actual": "32768",
+        "expected": "32768",
+        "id": "G3_METRIC_FROM_TRACE_OVER_2W",
+        "status": "PASS"
+      },
+      {
+        "actual": "4096",
+        "expected": "4096",
+        "id": "G3_METRIC_AFTER_ORIGINAL_MEASURES",
+        "status": "PASS"
+      },
+      {
+        "actual": "4096*i",
+        "expected": "4096*i",
+        "id": "G3_DRED_FROM_FULL_TWO_AXIS_TRACE",
+        "status": "PASS"
+      },
+      {
+        "actual": "4096*i",
+        "expected": "4096*i",
+        "id": "G3_DRED_FROM_RECOVERED_METRIC",
+        "status": "PASS"
+      },
+      {
+        "actual": "4096*i",
+        "expected": "4096*i",
+        "id": "G3_TRACE_AND_METRIC_DRED_EQUAL",
+        "status": "PASS"
+      },
+      {
+        "actual": "False",
+        "expected": "False",
+        "id": "G3_REJECT_EXTRA_HALF_AFTER_METRIC",
+        "status": "PASS"
+      },
+      {
+        "actual": "1024*(p00**2*p11*r01 - p00**2*r01*r11 - p00*p01*p10*r01 - p00*p01*p11*r00 + p00*p01*r00*r11 + p00*p01*r01*r10 + p00*p10*r01**2 + p00*p11*q00*r01 - p00*p11*q01*r00 - p00*p11*r00*r01 - p00*q00*r01*r11 + p00*q01*r01*r10 + p00*r00*r01*r11 - p00*r01**2*r10 + p01**2*p10*r00 - p01**2*r00*r10 - p01*p10*q00*r01 + p01*p10*q01*r00 - p01*p10*r00*r01 + p01*p11*r00**2 + p01*q00*r00*r11 - p01*q01*r00*r10 - p01*r00**2*r11 + p01*r00*r01*r10 + p10*q00*r01**2 - p10*q01*r00*r01 - p11*q00*r00*r01 + p11*q01*r00**2)",
+        "expected": "1024*(p00**2*p11*r01 - p00**2*r01*r11 - p00*p01*p10*r01 - p00*p01*p11*r00 + p00*p01*r00*r11 + p00*p01*r01*r10 + p00*p10*r01**2 + p00*p11*q00*r01 - p00*p11*q01*r00 - p00*p11*r00*r01 - p00*q00*r01*r11 + p00*q01*r01*r10 + p00*r00*r01*r11 - p00*r01**2*r10 + p01**2*p10*r00 - p01**2*r00*r10 - p01*p10*q00*r01 + p01*p10*q01*r00 - p01*p10*r00*r01 + p01*p11*r00**2 + p01*q00*r00*r11 - p01*q01*r00*r10 - p01*r00**2*r11 + p01*r00*r01*r10 + p10*q00*r01**2 - p10*q01*r00*r01 - p11*q00*r00*r01 + p11*q01*r00**2)",
+        "id": "G3_RAW_A_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-1024*(p00*r01 - p01*r00)*(p00*p11 + p00*q11 - p00*r11 - p01*p10 - p01*q10 + p01*r10 - p10*q01 + p10*r01 + p11*q00 - p11*r00 + q00*q11 - q00*r11 - q01*q10 + q01*r10 + q10*r01 - q11*r00 + r00*r11 - r01*r10)",
+        "expected": "-1024*(p00*r01 - p01*r00)*(p00*p11 + p00*q11 - p00*r11 - p01*p10 - p01*q10 + p01*r10 - p10*q01 + p10*r01 + p11*q00 - p11*r00 + q00*q11 - q00*r11 - q01*q10 + q01*r10 + q10*r01 - q11*r00 + r00*r11 - r01*r10)",
+        "id": "G3_RAW_B_PARENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "512*(p00*q01 - p01*q00 + q00*r01 - q01*r00)",
+        "expected": "512*(p00*q01 - p01*q00 + q00*r01 - q01*r00)",
+        "id": "G3_RAW_K0_CORE",
+        "status": "PASS"
+      },
+      {
+        "actual": "-128*(p00*r01 - p01*r00 + q00*r01 - q01*r00)",
+        "expected": "-128*(p00*r01 - p01*r00 + q00*r01 - q01*r00)",
+        "id": "G3_RAW_K1_CORE",
+        "status": "PASS"
+      },
+      {
+        "actual": "-128*(p00*r01 - p01*r00)",
+        "expected": "-128*(p00*r01 - p01*r00)",
+        "id": "G3_RAW_K2_CORE",
+        "status": "PASS"
+      },
+      {
+        "actual": "4096*(p00*q01 - p01*q00 + q00*r01 - q01*r00)",
+        "expected": "4096*(p00*q01 - p01*q00 + q00*r01 - q01*r00)",
+        "id": "G3_K0_SAME_UNIT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-4096*(p00*r01 - p01*r00 + q00*r01 - q01*r00)",
+        "expected": "-4096*(p00*r01 - p01*r00 + q00*r01 - q01*r00)",
+        "id": "G3_K1_SAME_UNIT",
+        "status": "PASS"
+      },
+      {
+        "actual": "4096*(p00*r01 - p01*r00)",
+        "expected": "4096*(p00*r01 - p01*r00)",
+        "id": "G3_K2_SAME_UNIT",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "G3_E0_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "G3_E1_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "0",
+        "expected": "0",
+        "id": "G3_E2_FULL_D_ZERO",
+        "status": "PASS"
+      },
+      {
+        "actual": "-4096*mu2*(p00*q01 - p01*q00 + q00*r01 - q01*r00)/(D0*D1*D2)",
+        "expected": "-4096*mu2*(p00*q01 - p01*q00 + q00*r01 - q01*r00)/(D0*D1*D2)",
+        "id": "G3_E0_DRED",
+        "status": "PASS"
+      },
+      {
+        "actual": "4096*mu2*(p00*r01 - p01*r00 + q00*r01 - q01*r00)/(D0*D1*D2)",
+        "expected": "4096*mu2*(p00*r01 - p01*r00 + q00*r01 - q01*r00)/(D0*D1*D2)",
+        "id": "G3_E1_DRED",
+        "status": "PASS"
+      },
+      {
+        "actual": "-4096*mu2*(p00*r01 - p01*r00)/(D0*D1*D2)",
+        "expected": "-4096*mu2*(p00*r01 - p01*r00)/(D0*D1*D2)",
+        "id": "G3_E2_DRED",
+        "status": "PASS"
+      },
+      {
+        "actual": "-sqrt(2)*g**4*hbar/1024",
+        "expected": "-sqrt(2)*g**4*hbar/1024",
+        "id": "G32_PRE_D_FROM_PRIMITIVES",
+        "status": "PASS"
+      },
+      {
+        "actual": "sqrt(2)*g**4*hbar/1024",
+        "expected": "sqrt(2)*g**4*hbar/1024",
+        "id": "G33_PRE_D_FROM_PRIMITIVES",
+        "status": "PASS"
+      },
+      {
+        "actual": "2*sqrt(2)*i",
+        "expected": "2*sqrt(2)*i",
+        "id": "G32_RAW_WEDGE_COEFFICIENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2*sqrt(2)*i",
+        "expected": "-2*sqrt(2)*i",
+        "id": "G33_RAW_WEDGE_COEFFICIENT",
+        "status": "PASS"
+      },
+      {
+        "actual": "-2*sqrt(2)*i",
+        "expected": "-2*sqrt(2)*i",
+        "id": "G32_TYPED_C2_GT_C3",
+        "status": "PASS"
+      },
+      {
+        "actual": "2*sqrt(2)*i",
+        "expected": "2*sqrt(2)*i",
+        "id": "G33_TYPED_C3_GT_C2",
+        "status": "PASS"
+      }
+    ]
+  },
+  "cyclic_source_hessian": {
+    "block_traces": [
+      "1",
+      "1"
+    ],
+    "cyclic_equivalence_classes": 1,
+    "forbidden_weight": "1/2",
+    "mixed_blocks": [
+      "I_{u,phi}",
+      "I_{phi,u}"
+    ],
+    "reason": "The retained directed row represents the complete cyclic class; the omitted reverse block is precisely the second term cancelled by the supertrace half.",
+    "supertrace": "(1/2)*(1+1)=1",
+    "weight_of_one_retained_representative": "1"
+  },
+  "decision": {
+    "G1_current_2": "RETAIN",
+    "G3_current_plus_minus_2i_sqrt2": "RETAIN",
+    "directed_source_factor_half": "REJECTED",
+    "extra_half_after_trace_over_2W": "REJECTED"
+  },
+  "external_target_used": false,
+  "residual_q_used": false,
+  "schema": "step5-ab-ba-g1-g3-raw-multiplicity-trace-exact-v1",
+  "status": "PASS_AB_BA_G1_G3_RAW_MULTIPLICITY_ONE__NO_EXTRA_TRANSVERSE_HALF__CURRENT_MAGNITUDES_RETAINED",
+  "transverse_rank": {
+    "extra_rank_trace_half": false,
+    "forbidden_mixed_route": "(-1/2)*[T_perp/(2*W)]*W=-c*W/2",
+    "metric_route": "c=T_perp/(2*W), then DRED=-c*W",
+    "trace_route": "(-1/2)*T_perp=-c*W",
+    "two_axis_trace": "T_perp=2*c*W"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "checks": [
+    {
+      "detail": "64",
+      "id": "compact.count",
+      "status": "PASS"
+    },
+    {
+      "detail": "9",
+      "id": "physical.letter_count",
+      "status": "PASS"
+    },
+    {
+      "detail": "81",
+      "id": "physical.pair_count",
+      "status": "PASS"
+    },
+    {
+      "detail": "29",
+      "id": "physical.nonzero_count",
+      "status": "PASS"
+    },
+    {
+      "detail": "52",
+      "id": "physical.zero_count",
+      "status": "PASS"
+    },
+    {
+      "detail": "[{'k': 0, 'ell': 0, 'coefficient': '1', 'left_output_derivative': [0, 0], 'right_output_derivative': [0, 0]}]",
+      "id": "ordered_kernel.K00",
+      "status": "PASS"
+    },
+    {
+      "detail": "[{'k': 0, 'ell': 0, 'coefficient': '2/5', 'left_output_derivative': [0, 0], 'right_output_derivative': [2, 1]}, {'k': 0, 'ell': 1, 'coefficient': '1/5', 'left_output_derivative': [0, 1], 'right_output_derivative': [2, 0]}, {'k': 1, 'ell': 0, 'coefficient': '2/5', 'left_output_derivative': [1, 0], 'right_output_derivative': [1, 1]}, {'k': 1, 'ell': 1, 'coefficient': '4/15', 'left_output_derivative': [1, 1], 'right_output_derivative': [1, 0]}, {'k': 2, 'ell': 0, 'coefficient': '2/15', 'left_output_derivative': [2, 0], 'right_output_derivative': [0, 1]}, {'k': 2, 'ell': 1, 'coefficient': '1/10', 'left_output_derivative': [2, 1], 'right_output_derivative': [0, 0]}]",
+      "id": "ordered_kernel.K21",
+      "status": "PASS"
+    },
+    {
+      "detail": "{'id': 'A__A', 'left_input': 'A', 'right_input': 'A', 'exact_zero': False, 'outputs': [{'coefficient_over_lambda': {'basis': ['1', 'sqrt(2)', 'i', 'i*sqrt(2)'], 'coefficients': ['0', '0', '1', '0'], 'text': 'i'}, 'left_output': 'A', 'right_output': 'U', 'operator': 'P_dot(left)*P^dot(right)'}, {'coefficient_over_lambda': {'basis': ['1', 'sqrt(2)', 'i', 'i*sqrt(2)'], 'coefficients': ['1', '0', '0', '0'], 'text': '1'}, 'left_output': 'B1', 'right_output': 'C1', 'operator': 'P_dot(left)*P^dot(right)'}, {'coefficient_over_lambda': {'basis': ['1', 'sqrt(2)', 'i', 'i*sqrt(2)'], 'coefficients': ['1', '0', '0', '0'], 'text': '1'}, 'left_output': 'B2', 'right_output': 'C2', 'operator': 'P_dot(left)*P^dot(right)'}, {'coefficient_over_lambda': {'basis': ['1', 'sqrt(2)', 'i', 'i*sqrt(2)'], 'coefficients': ['1', '0', '0', '0'], 'text': '1'}, 'left_output': 'B3', 'right_output': 'C3', 'operator': 'P_dot(left)*P^dot(right)'}, {'coefficient_over_lambda': {'basis': ['1', 'sqrt(2)', 'i', 'i*sqrt(2)'], 'coefficients': ['-1', '0', '0', '0'], 'text': '-1'}, 'left_output': 'C1', 'right_output': 'B1', 'operator': 'P_dot(left)*P^dot(right)'}, {'coefficient_over_lambda': {'basis': ['1', 'sqrt(2)', 'i', 'i*sqrt(2)'], 'coefficients': ['-1', '0', '0', '0'], 'text': '-1'}, 'left_output': 'C2', 'right_output': 'B2', 'operator': 'P_dot(left)*P^dot(right)'}, {'coefficient_over_lambda': {'basis': ['1', 'sqrt(2)', 'i', 'i*sqrt(2)'], 'coefficients': ['-1', '0', '0', '0'], 'text': '-1'}, 'left_output': 'C3', 'right_output': 'B3', 'operator': 'P_dot(left)*P^dot(right)'}, {'coefficient_over_lambda': {'basis': ['1', 'sqrt(2)', 'i', 'i*sqrt(2)'], 'coefficients': ['0', '0', '-1', '0'], 'text': '-i'}, 'left_output': 'U', 'right_output': 'A', 'operator': 'P_dot(left)*P^dot(right)'}]}",
+      "id": "compact.AA.nonzero",
+      "status": "PASS"
+    },
+    {
+      "detail": "{'id': 'C1__C1', 'left_input': 'C1', 'right_input': 'C1', 'exact_zero': True, 'outputs': []}",
+      "id": "compact.CC.zero",
+      "status": "PASS"
+    },
+    {
+      "detail": "B1C1 nonzero, B1C2 zero",
+      "id": "compact.BC.flavor_diagonal",
+      "status": "PASS"
+    },
+    {
+      "detail": "B1B1 zero, B1B2 nonzero",
+      "id": "compact.BB.antisymmetric_flavor",
+      "status": "PASS"
+    },
+    {
+      "detail": "(1/32)*2=1/16",
+      "id": "dred.residue",
+      "status": "PASS"
+    },
+    {
+      "detail": "all physical-to-compact jet scales invertible",
+      "id": "tree.scale_nonzero",
+      "status": "PASS"
+    }
+  ],
+  "schema": 1,
+  "status": "PASS",
+  "totals": {
+    "checks": 13,
+    "failed": 0,
+    "passed": 13
+  }
+}

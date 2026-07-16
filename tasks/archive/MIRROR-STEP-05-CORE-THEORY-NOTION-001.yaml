@@ -1,0 +1,35 @@
+{
+  "id": "MIRROR-STEP-05-CORE-THEORY-NOTION-001",
+  "type": "CONTRACT_CHANGE",
+  "status": "ACCEPTED",
+  "outcome": "Publish the standing human-readable Step-5 core-theory paper from verified origin/main commit f6f3531237176a9ac4579111fdcc72213a116578 to Notion without reading any Notion content; contracts remain the legal mathematical layer.",
+  "allowed_inputs": [
+    "AUTHORITY.md",
+    "AGENTS.md",
+    "paper/awi-n4-one-loop.md",
+    "contracts/foundations/step-05-euclidean-n4-awi-one-loop.md",
+    "contracts/manifest.yaml",
+    "mirror/page_map.yaml",
+    "mirror/README.md",
+    "scripts/build_notion_payload.py",
+    "audits/notion_write_receipt.json"
+  ],
+  "forbidden_inputs": [
+    "Notion content",
+    "Notion fetch, search, page read, block read, or content readback",
+    "legacy repositories",
+    "other local files",
+    "unmerged branches",
+    "manual mathematical edits on the Notion side"
+  ],
+  "acceptance": [
+    "the published source is exactly paper/awi-n4-one-loop.md at verified origin/main commit f6f3531237176a9ac4579111fdcc72213a116578 with SHA-256 5d14395aa33d2a790d3c34fff26f253cf451ddc29ace76d20be7d9b9b753e9b6",
+    "the paper is an output-only human-readable rendering whose cited contracts remain the legal mathematical authority",
+    "the Notion child page is created only through write operations under root page 39e80ed3e5844b17b3ccf2579e2a64ca",
+    "the payload contains the Git authority header, exact source path, commit, and SHA-256",
+    "mirror/page_map.yaml records the Notion page id, source path, source commit, and source SHA-256",
+    "audits/notion_write_receipt.json records the exact mutation response and content_readback_performed=false",
+    "the central parallel log records the broader out-of-scope frontier first and content_readback_performed=false",
+    "repository-policy passes after the mirror metadata update"
+  ]
+}

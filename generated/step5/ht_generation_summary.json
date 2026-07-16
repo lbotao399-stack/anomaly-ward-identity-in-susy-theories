@@ -1,0 +1,155 @@
+{
+  "artifact_sha256": {
+    "ht_compact_grassmann_audit.json": "8814aed74c5b6f48ec81c9afec0b4bc8442fb9a0f516751e5b5fc76ee30659af",
+    "ht_derivative_kernel.json": "9fa49a34f7e276ca3df19e984304ac6372a37e0407e94b4bcbf21642b0f7c50f",
+    "ht_ordered_pair_targets.json": "6e60b0de7a3becda03bc58c22b29cb6bf991dfaaecba511c2e6f9db080da53ad",
+    "ht_source_conflicts.json": "e90a00c1601fbc431aa6796398f7b3710613921b29e46fe3e7f868ef18aac63e",
+    "ht_typed_alphabet.json": "a104c67dd2dd928dc6666dbab42bd719fd4dae0c881e83b73d7ccf798ea57221",
+    "ht_typed_dictionary.json": "c5dce28bce5122fbcfdd1ca581acb3220c8d4b1ff3343ca345e6a57183e37896"
+  },
+  "authority_role": "EXTERNAL_TARGET_ONLY",
+  "checks": [
+    {
+      "detail": "9",
+      "id": "alphabet.count",
+      "status": "PASS"
+    },
+    {
+      "detail": "90352c555f69eac3a99b9742c59e63afc785df333399a0730f8ac1ae094d9899",
+      "id": "source.sha256",
+      "status": "PASS"
+    },
+    {
+      "detail": "nine unique ids",
+      "id": "alphabet.unique_ids",
+      "status": "PASS"
+    },
+    {
+      "detail": "81",
+      "id": "pairs.count",
+      "status": "PASS"
+    },
+    {
+      "detail": "eighty-one unique ids",
+      "id": "pairs.unique_ids",
+      "status": "PASS"
+    },
+    {
+      "detail": "ordinals 0..80",
+      "id": "pairs.ordinals",
+      "status": "PASS"
+    },
+    {
+      "detail": "six",
+      "id": "rules.nonzero_count",
+      "status": "PASS"
+    },
+    {
+      "detail": "four",
+      "id": "rules.zero_count",
+      "status": "PASS"
+    },
+    {
+      "detail": "52",
+      "id": "pairs.direct_count",
+      "status": "PASS"
+    },
+    {
+      "detail": "29",
+      "id": "pairs.reversed_count",
+      "status": "PASS"
+    },
+    {
+      "detail": "52",
+      "id": "pairs.zero_count",
+      "status": "PASS"
+    },
+    {
+      "detail": "29",
+      "id": "pairs.nonzero_count",
+      "status": "PASS"
+    },
+    {
+      "detail": "color order follows canonical reversal",
+      "id": "pairs.reversed_color_order",
+      "status": "PASS"
+    },
+    {
+      "detail": "1/2",
+      "id": "derivative.T00",
+      "status": "PASS"
+    },
+    {
+      "detail": "all denominators positive",
+      "id": "derivative.exact_coefficients",
+      "status": "PASS"
+    },
+    {
+      "detail": "64",
+      "id": "compact.component_count",
+      "status": "PASS"
+    },
+    {
+      "detail": "2",
+      "id": "compact.branch_count",
+      "status": "PASS"
+    },
+    {
+      "detail": "8",
+      "id": "compact.delta_term_count",
+      "status": "PASS"
+    },
+    {
+      "detail": "42",
+      "id": "compact.canonical_audit_count",
+      "status": "PASS"
+    },
+    {
+      "detail": "42",
+      "id": "compact.canonical_audit_passed",
+      "status": "PASS"
+    },
+    {
+      "detail": "0",
+      "id": "compact.canonical_audit_failed",
+      "status": "PASS"
+    },
+    {
+      "detail": "2",
+      "id": "conflicts.count",
+      "status": "PASS"
+    },
+    {
+      "detail": "both named conflicts",
+      "id": "conflicts.ids",
+      "status": "PASS"
+    },
+    {
+      "detail": "4",
+      "id": "dictionary.map_count",
+      "status": "PASS"
+    },
+    {
+      "detail": "all four field scales explicitly nonzero",
+      "id": "dictionary.nonzero_scales",
+      "status": "PASS"
+    }
+  ],
+  "counts": {
+    "canonical_nonzero_rules": 6,
+    "canonical_zero_rules": 4,
+    "checks": 25,
+    "checks_failed": 0,
+    "checks_passed": 25,
+    "compact_component_pairs": 64,
+    "exact_nonzero_pairs": 29,
+    "exact_zero_pairs": 52,
+    "letters": 9,
+    "ordered_pairs": 81,
+    "source_conflicts": 2
+  },
+  "determinism_contract": "sorted JSON keys, UTF-8, two-space indentation, trailing newline, no timestamp",
+  "generator": "scripts/step5_ht_target_engine.py",
+  "output_directory": "generated/step5",
+  "schema": 1
+}

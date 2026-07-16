@@ -1,0 +1,67 @@
+{
+  "checks": [
+    {
+      "detail": 81,
+      "id": "pair_count",
+      "status": "PASS"
+    },
+    {
+      "detail": 29,
+      "id": "nonzero_pair_count",
+      "status": "PASS"
+    },
+    {
+      "detail": 52,
+      "id": "zero_pair_count",
+      "status": "PASS"
+    },
+    {
+      "detail": 66,
+      "id": "kernel_count",
+      "status": "PASS"
+    },
+    {
+      "detail": 66,
+      "id": "orbit_count",
+      "status": "PASS"
+    },
+    {
+      "detail": 132,
+      "id": "graph_count",
+      "status": "PASS"
+    },
+    {
+      "detail": 1,
+      "id": "no_orientation_doubling",
+      "status": "PASS"
+    },
+    {
+      "detail": 132,
+      "id": "graph_ids_unique",
+      "status": "PASS"
+    },
+    {
+      "detail": "C_cut^2=1",
+      "id": "cut_involution",
+      "status": "PASS"
+    },
+    {
+      "detail": "one per already-oriented word",
+      "id": "wick_weight",
+      "status": "PASS"
+    },
+    {
+      "detail": "four contact rows give the same magnitude and opposite sign",
+      "id": "contact_pole_independently_fixed",
+      "status": "PASS"
+    }
+  ],
+  "physical_status": "CONDITIONAL_FF_BARE_CUT_CHECKED__RENORMALIZED_MIXING_PENDING",
+  "schema": 2,
+  "structural_status": "PASS",
+  "totals": {
+    "checks": 11,
+    "failed": 0,
+    "passed": 11
+  }
+}

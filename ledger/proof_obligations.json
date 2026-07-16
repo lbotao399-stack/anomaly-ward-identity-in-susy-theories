@@ -234,13 +234,14 @@
     },
     {
       "id": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
-      "state": "SPECIFIED",
+      "state": "ACCEPTED",
       "blocking_reason": null,
-      "task_sha256": "4ed8aa9957868233f4c1b7ff4a4c4ec02744c153ffd0d16e30f6e322042ba749",
+      "task_sha256": "d89d4604e598e924af058eaff5117ef60e873bbd7b185d2f4f019fbd06e8d685",
       "task": "tasks/CURRENT.yaml",
       "checked_scope": {
         "STEP5A_COMPONENT_BV_BRST_PRIMITIVE_GRAMMAR": {
           "result": "PASS_EXACT_PARTIAL_SCOPE",
+          "acceptance_relation": "OUT_OF_SCOPE_FOR_PHYSICAL_ONE_LOOP_ANOMALY_SECTOR",
           "contract": "contracts/foundations/step-05a-component-bv-brst-primitive-supergraph-grammar.md",
           "contract_sha256": "300d55a07534a312bfad582c6702ba1991ef7e439a3b999c4c228c1329ca05bc",
           "verifier": "scripts/verify_step5a_component_bv_brst_grammar.py",
@@ -251,11 +252,63 @@
             "all-valence coordinate-superspace gauge, matter, superpotential, and FP primitive word coefficients",
             "conditional Euclidean Fermi-Feynman projector inversion and its exact Step-3D locality obstruction"
           ],
-          "blockers": [
-            "BLOCKED_STEP5A_UNIQUE_PROPAGATORS_PERTURBATIVE_SLICE_UNFIXED",
-            "BLOCKED_STEP5A_NK_BRANCH_UNSELECTED",
-            "BLOCKED_STEP5A_MOMENTUM_RULES_FOURIER_DRED_LEDGER_UNFIXED",
-            "BLOCKED_STEP3D_LC_VECTOR_CYCLE"
+          "out_of_scope_limits": [
+            "OUT_OF_SCOPE_STEP5A_UNIQUE_PROPAGATORS_PERTURBATIVE_SLICE",
+            "OUT_OF_SCOPE_STEP5A_NK_BRANCH",
+            "OUT_OF_SCOPE_STEP5A_GENERAL_MOMENTUM_RULES_FOURIER_DRED_LEDGER",
+            "OUT_OF_SCOPE_STEP3D_LORENTZIAN_VECTOR_CYCLE"
+          ]
+        },
+        "STEP5_PHYSICAL_ONE_LOOP_ANOMALY_SETTLEMENT": {
+          "result": "ACCEPTED_PHYSICAL_ONE_LOOP_ANOMALY_SECTOR__81_COMPLETE_EXACT__HT_CORRECTED_ROUNDTRIP_EXACT",
+          "verification_status": "ACCEPTED",
+          "accepted_scope": "PHYSICAL_ONE_LOOP_ANOMALY_SECTOR",
+          "contract": "contracts/foundations/step-05-euclidean-n4-awi-one-loop.md",
+          "contract_sha256": "3a3c3ce5d54ed159b7a61fd6f834554d70c3b987a5916f43b4d4db322167d173",
+          "verifier": "scripts/verify_step5_euclidean_n4_awi.py",
+          "verification_audit": "audits/step5-euclidean-n4-awi-verification.json",
+          "verifier_totals": {
+            "checks": 33,
+            "passed": 33,
+            "failed": 0
+          },
+          "global_81_ledger": {
+            "audit": "audits/step5-global-81-target-blind-orbit-ledger.json",
+            "final_state_counts": {
+              "COMPLETE_EXACT": 81
+            },
+            "ordered_pairs": 81,
+            "exact_nonzero": 29,
+            "exact_zero": 52,
+            "unresolved": 0
+          },
+          "holomorphic_twist_roundtrip": {
+            "audit": "audits/step5_global_81_ht_symbolic_roundtrip_exact.json",
+            "direct_rows": 81,
+            "output_words": 70,
+            "finite_kernel_checks": 2025,
+            "identity": "K_Project=2*T_HT_printed=T_HT_corrected for all m,n>=0"
+          },
+          "bc_cb_regulated_sd_konishi": {
+            "audit": "audits/step5-bc-full-family-raw-projection-exact.json",
+            "status": "PASS_BC_CB_REGULATED_SD_KONISHI_EXACT",
+            "checks": 84,
+            "failed": 0
+          },
+          "excluded_obsolete_acceptance_evidence": [
+            "audits/step5-ab-ba-full-1pi-quotient-exact.json",
+            "audits/step5-ab-ba-full-1pi-quotient-exact.md",
+            "scripts/step5_ab_ba_full_1pi_quotient_exact_audit.py"
+          ],
+          "out_of_scope_nonblocking": [
+            "OUT_OF_SCOPE_RAW_GRAPH_Q_EQUIVARIANT_FUNCTOR",
+            "OUT_OF_SCOPE_GENERAL_BV_WZ_REDUCTION",
+            "OUT_OF_SCOPE_OPEN_COLOR_SOURCE_BV_EXTENSION",
+            "OUT_OF_SCOPE_COMPLETE_BV_DRED_EVANESCENT_MODULE",
+            "OUT_OF_SCOPE_GENERAL_DRED_EPSILON_TENSOR_THEOREM",
+            "OUT_OF_SCOPE_GENERAL_BV_MOMENTUM_LEDGER",
+            "OUT_OF_SCOPE_FORMAL_U_Q0_ABSOLUTE_INTERTWINER",
+            "OUT_OF_SCOPE_GENERAL_REDUCTIVE_COLOR_FRAME"
           ]
         }
       }
@@ -273,6 +326,13 @@
       "blocking_reason": null,
       "task_sha256": "23714346018bba14aad3156cadbf1ac168205893263a94f68f88e8d4e108798e",
       "task": "tasks/archive/MIRROR-STEP-05A-NOTION-001.yaml"
+    },
+    {
+      "id": "MIRROR-STEP-05-CORE-THEORY-NOTION-001",
+      "state": "ACCEPTED",
+      "blocking_reason": null,
+      "task_sha256": "9a2f58f4829e93c88b5f2f5e98d4cf1eb1498e4582e902a9b7213018dc3a0ede",
+      "task": "tasks/archive/MIRROR-STEP-05-CORE-THEORY-NOTION-001.yaml"
     }
   ]
 }

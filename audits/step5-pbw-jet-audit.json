@@ -1,0 +1,1219 @@
+{
+  "authority_base": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+  "degree_audit": {
+    "0": {
+      "forward_inverse": "PASS",
+      "inverse_forward": "PASS",
+      "symmetric_dimension": 1,
+      "word_dimension": 1
+    },
+    "1": {
+      "forward_inverse": "PASS",
+      "inverse_forward": "PASS",
+      "symmetric_dimension": 2,
+      "word_dimension": 2
+    },
+    "2": {
+      "forward_inverse": "PASS",
+      "inverse_forward": "PASS",
+      "symmetric_dimension": 4,
+      "word_dimension": 4
+    },
+    "3": {
+      "forward_inverse": "PASS",
+      "inverse_forward": "PASS",
+      "symmetric_dimension": 8,
+      "word_dimension": 8
+    },
+    "4": {
+      "forward_inverse": "PASS",
+      "inverse_forward": "PASS",
+      "symmetric_dimension": 16,
+      "word_dimension": 16
+    }
+  },
+  "degree_three_inverse": {
+    "111": {
+      "p1*p1*p1": "1"
+    },
+    "112": {
+      "l112": "1/6",
+      "p1*l12": "1",
+      "p1*p1*p2": "1"
+    },
+    "121": {
+      "l112": "-1/3",
+      "p1*p1*p2": "1"
+    },
+    "122": {
+      "l122": "1/6",
+      "p1*p2*p2": "1",
+      "p2*l12": "1"
+    },
+    "211": {
+      "l112": "1/6",
+      "p1*l12": "-1",
+      "p1*p1*p2": "1"
+    },
+    "212": {
+      "l122": "-1/3",
+      "p1*p2*p2": "1"
+    },
+    "221": {
+      "l122": "1/6",
+      "p1*p2*p2": "1",
+      "p2*l12": "-1"
+    },
+    "222": {
+      "p2*p2*p2": "1"
+    }
+  },
+  "exact_pbw_matrices": {
+    "0": {
+      "forward_rows_word_columns_symmetric": [
+        [
+          "1"
+        ]
+      ],
+      "inverse_rows_symmetric_columns_word": [
+        [
+          "1"
+        ]
+      ],
+      "symmetric_basis": [
+        "1"
+      ],
+      "word_basis": [
+        "1"
+      ]
+    },
+    "1": {
+      "forward_rows_word_columns_symmetric": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "inverse_rows_symmetric_columns_word": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "symmetric_basis": [
+        "p1",
+        "p2"
+      ],
+      "word_basis": [
+        "1",
+        "2"
+      ]
+    },
+    "2": {
+      "forward_rows_word_columns_symmetric": [
+        [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "1/2",
+          "0"
+        ],
+        [
+          "-1",
+          "0",
+          "1/2",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "inverse_rows_symmetric_columns_word": [
+        [
+          "0",
+          "1/2",
+          "-1/2",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "symmetric_basis": [
+        "l12",
+        "p1*p1",
+        "p1*p2",
+        "p2*p2"
+      ],
+      "word_basis": [
+        "11",
+        "12",
+        "21",
+        "22"
+      ]
+    },
+    "3": {
+      "forward_rows_word_columns_symmetric": [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "1/3",
+          "0",
+          "0"
+        ],
+        [
+          "-2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/3",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "1/3",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "1/3",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "-2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/3",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "1/3",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "inverse_rows_symmetric_columns_word": [
+        [
+          "0",
+          "1/6",
+          "-1/3",
+          "0",
+          "1/6",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1/6",
+          "0",
+          "-1/3",
+          "1/6",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0",
+          "-1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "-1",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "1",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "1",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "symmetric_basis": [
+        "l112",
+        "l122",
+        "p1*l12",
+        "p2*l12",
+        "p1*p1*p1",
+        "p1*p1*p2",
+        "p1*p2*p2",
+        "p2*p2*p2"
+      ],
+      "word_basis": [
+        "111",
+        "112",
+        "121",
+        "122",
+        "211",
+        "212",
+        "221",
+        "222"
+      ]
+    },
+    "4": {
+      "forward_rows_word_columns_symmetric": [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/3",
+          "0",
+          "0",
+          "0",
+          "1/4",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-3",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/4",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "1/6",
+          "0",
+          "0",
+          "0",
+          "1/6",
+          "0",
+          "0"
+        ],
+        [
+          "3",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/4",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "-2",
+          "0",
+          "0",
+          "-1",
+          "1",
+          "-1",
+          "0",
+          "0",
+          "1/6",
+          "0",
+          "0",
+          "0",
+          "1/6",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/6",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "1/3",
+          "0",
+          "0",
+          "0",
+          "1/4",
+          "0"
+        ],
+        [
+          "-1",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/3",
+          "0",
+          "0",
+          "0",
+          "1/4",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/6",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "2",
+          "0",
+          "0",
+          "-1",
+          "1",
+          "-1",
+          "0",
+          "0",
+          "-1/6",
+          "0",
+          "0",
+          "0",
+          "1/6",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-3",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/4",
+          "0"
+        ],
+        [
+          "0",
+          "-1",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "-1/6",
+          "0",
+          "0",
+          "0",
+          "1/6",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "3",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/4",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "-1/3",
+          "0",
+          "0",
+          "0",
+          "1/4",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "inverse_rows_symmetric_columns_word": [
+        [
+          "0",
+          "0",
+          "-1/6",
+          "0",
+          "1/6",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1/6",
+          "0",
+          "-1/6",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/6",
+          "0",
+          "-1/6",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/6",
+          "0",
+          "1/6",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1/2",
+          "-1/2",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1/3",
+          "0",
+          "-1/6",
+          "1/3",
+          "0",
+          "0",
+          "-2/3",
+          "-1/6",
+          "0",
+          "1/3",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1/3",
+          "0",
+          "-1/6",
+          "-2/3",
+          "0",
+          "0",
+          "1/3",
+          "-1/6",
+          "0",
+          "1/3",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "-1/2",
+          "1/2",
+          "0"
+        ],
+        [
+          "0",
+          "3/2",
+          "1/2",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "0",
+          "-3/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "2",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1",
+          "0",
+          "-2",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "3/2",
+          "0",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "-1/2",
+          "-3/2",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "1",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "1",
+          "1",
+          "0",
+          "0",
+          "1",
+          "1",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "1",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "symmetric_basis": [
+        "l1112",
+        "l1122",
+        "l1222",
+        "p1*l112",
+        "p1*l122",
+        "l12*l12",
+        "p2*l112",
+        "p2*l122",
+        "p1*p1*l12",
+        "p1*p2*l12",
+        "p2*p2*l12",
+        "p1*p1*p1*p1",
+        "p1*p1*p1*p2",
+        "p1*p1*p2*p2",
+        "p1*p2*p2*p2",
+        "p2*p2*p2*p2"
+      ],
+      "word_basis": [
+        "1111",
+        "1112",
+        "1121",
+        "1122",
+        "1211",
+        "1212",
+        "1221",
+        "1222",
+        "2111",
+        "2112",
+        "2121",
+        "2122",
+        "2211",
+        "2212",
+        "2221",
+        "2222"
+      ]
+    }
+  },
+  "forbidden_reads": [
+    "contracts/foundations/step-05-euclidean-n4-awi-one-loop.md",
+    "scripts/step5_* other than this audit",
+    "references/vendor/arxiv/2512.07771v2/*",
+    "any live chat, web page, Notion page, memory, or external file"
+  ],
+  "link_completion": {
+    "matches": [],
+    "required_output_for_curvature_free_commuting_projection": "PBW-symmetrized jets",
+    "search_terms": [
+      "wilson",
+      "duhamel",
+      "parallel transport",
+      "path-order",
+      "path order",
+      "link completion",
+      "bilocal"
+    ],
+    "searched_locked_foundations": [
+      "contracts/foundations/step-01-supersymmetry-commutator.md",
+      "contracts/foundations/step-02a-flat-superspace.md",
+      "contracts/foundations/step-03a-gauge-chiral-action.md",
+      "contracts/foundations/step-03b-component-reconstruction.md",
+      "contracts/foundations/step-03c-gauge-vector-representation.md",
+      "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md",
+      "contracts/foundations/step-04-extended-sym-notation.md",
+      "contracts/foundations/step-04a-n1-super-yang-mills.md",
+      "contracts/foundations/step-04b-n2-super-yang-mills.md",
+      "contracts/foundations/step-04c-n4-super-yang-mills.md"
+    ],
+    "status": "BLOCKED_LINK_COMPLETION_NOT_IN_LOCKED_INPUT"
+  },
+  "locked_relations": {
+    "A": "nabla^V_(E,+) W^V_(E,+)",
+    "C": "[P1,P2]=-ad_A",
+    "P_dot_a": "D^V_(E,+,dot-a)",
+    "commutator": "[P_dot-a,P_dot-b]=epsilon_(dot-a,dot-b) ad_A",
+    "epsilon_dot1_dot2": "-1",
+    "rho_E": "1"
+  },
+  "lyndon_associative_expansions": {
+    "1": {
+      "1": "1"
+    },
+    "1112": {
+      "1112": "1",
+      "1121": "-3",
+      "1211": "3",
+      "2111": "-1"
+    },
+    "112": {
+      "112": "1",
+      "121": "-2",
+      "211": "1"
+    },
+    "1122": {
+      "1122": "1",
+      "1212": "-2",
+      "2121": "2",
+      "2211": "-1"
+    },
+    "12": {
+      "12": "1",
+      "21": "-1"
+    },
+    "122": {
+      "122": "1",
+      "212": "-2",
+      "221": "1"
+    },
+    "1222": {
+      "1222": "1",
+      "2122": "-3",
+      "2212": "3",
+      "2221": "-1"
+    },
+    "2": {
+      "2": "1"
+    }
+  },
+  "lyndon_factors_through_degree_4": [
+    "1",
+    "2",
+    "12",
+    "112",
+    "122",
+    "1112",
+    "1122",
+    "1222"
+  ],
+  "mutation_guards": {
+    "factorial_denominator_for_J_2_1": {
+      "mutated_coefficient_per_shuffle": "1/6",
+      "required_sum": "1",
+      "status": "REJECTED",
+      "three_term_coefficient_sum": "1/2"
+    },
+    "ordinary_product_algebra_map": "REJECTED_BY_p1_p2_COUNTEREXAMPLE"
+  },
+  "ordinary_product_homomorphism": {
+    "ordinary_p1p2": {
+      "p1*p2": "1"
+    },
+    "star_p1p2": {
+      "l12": "1/2",
+      "p1*p2": "1"
+    },
+    "star_p2p1": {
+      "l12": "-1/2",
+      "p1*p2": "1"
+    },
+    "status": "FAIL_AS_EXPECTED"
+  },
+  "overall": "CONDITIONAL_PBW_PROVED_LINK_COMPLETION_BLOCKED",
+  "schema": "step5-target-blind-pbw-jet-audit-v1",
+  "shuffle_normalization": [
+    {
+      "coefficient": "1",
+      "distinct_shuffles": 1,
+      "m": 0,
+      "n": 0
+    },
+    {
+      "coefficient": "1",
+      "distinct_shuffles": 1,
+      "m": 0,
+      "n": 1
+    },
+    {
+      "coefficient": "1",
+      "distinct_shuffles": 1,
+      "m": 1,
+      "n": 0
+    },
+    {
+      "coefficient": "1",
+      "distinct_shuffles": 1,
+      "m": 0,
+      "n": 2
+    },
+    {
+      "coefficient": "1/2",
+      "distinct_shuffles": 2,
+      "m": 1,
+      "n": 1
+    },
+    {
+      "coefficient": "1",
+      "distinct_shuffles": 1,
+      "m": 2,
+      "n": 0
+    },
+    {
+      "coefficient": "1",
+      "distinct_shuffles": 1,
+      "m": 0,
+      "n": 3
+    },
+    {
+      "coefficient": "1/3",
+      "distinct_shuffles": 3,
+      "m": 1,
+      "n": 2
+    },
+    {
+      "coefficient": "1/3",
+      "distinct_shuffles": 3,
+      "m": 2,
+      "n": 1
+    },
+    {
+      "coefficient": "1",
+      "distinct_shuffles": 1,
+      "m": 3,
+      "n": 0
+    },
+    {
+      "coefficient": "1",
+      "distinct_shuffles": 1,
+      "m": 0,
+      "n": 4
+    },
+    {
+      "coefficient": "1/4",
+      "distinct_shuffles": 4,
+      "m": 1,
+      "n": 3
+    },
+    {
+      "coefficient": "1/6",
+      "distinct_shuffles": 6,
+      "m": 2,
+      "n": 2
+    },
+    {
+      "coefficient": "1/4",
+      "distinct_shuffles": 4,
+      "m": 3,
+      "n": 1
+    },
+    {
+      "coefficient": "1",
+      "distinct_shuffles": 1,
+      "m": 4,
+      "n": 0
+    }
+  ],
+  "source_files": [
+    "contracts/foundations/step-03c-gauge-vector-representation.md",
+    "contracts/foundations/step-04-extended-sym-notation.md"
+  ],
+  "source_sha256": {
+    "contracts/foundations/step-03c-gauge-vector-representation.md": "c4cc6f0504b79e02ce78030ad79b625bee6da7dff9de0f6a1ddc3b33ef2584a1",
+    "contracts/foundations/step-04-extended-sym-notation.md": "3fcf7e242928d3512c02059d8c28d9551b5cb86156f9d6259cd2bba713211d27"
+  },
+  "star_associativity": {
+    "exact_rational": true,
+    "maximum_total_degree": 4,
+    "status": "PASS",
+    "triples_checked": 351
+  },
+  "star_intertwining": {
+    "exact_rational": true,
+    "maximum_total_degree": 4,
+    "pairs_checked": 129,
+    "status": "PASS"
+  },
+  "target_blind": true
+}
