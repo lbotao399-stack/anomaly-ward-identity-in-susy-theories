@@ -103,3 +103,14 @@ the **sum** of six numerators rather than one graph.
 Honest status: census **closed** under (5K.P) — six triangles, absences proved; the
 template integrand is assembled; the six-numerator sum and its DRED evaluation (steps
 2–4) are the next computation and are **not yet done**. No coefficient is claimed.
+
+---
+
+**Addendum (same day, after execution — see Step-5L).** Steps 2–3 of §4 are
+superseded: the six triangles do **not** cancel divergences among themselves; each
+cancels *identically at the integrand level* against the "1"-branch of its parent
+insertion piece's SD collapse (pairing theorem (5L.1), machine-certified for the T-a
+pair). The channel coefficient is carried by the $\mu^2$-branch of the unique
+fermionic collapse site, which pinches to the three-denominator $\mu^2$-triangle
+master ((5L.2)) — this is the precise realization of (5K.P). The evaluated
+coefficient is $c_3=-\sqrt2$ in units $\hbar g^2/32\pi^2$ ((5L.4)).
