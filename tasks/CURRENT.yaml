@@ -1,9 +1,9 @@
 {
   "id": "MIRROR-STEP-05-NOTION-001",
   "type": "CONTRACT_CHANGE",
-  "status": "SPECIFIED",
+  "status": "ACCEPTED",
   "owner_authorization": "2026-07-16 session: owner authorized removal of the Step-5 Notion gate; the write itself is executed by a Codex session holding Notion access.",
-  "outcome": "Publish the accepted Step-5 Euclidean N=4 one-loop anomaly Ward identity settlement (pure theoretical derivation: contracts/foundations/step-05-euclidean-n4-awi-one-loop.md) from verified origin/main commit f6f3531237176a9ac4579111fdcc72213a116578 to Notion as a write-only mirror page, without reading any Notion content. The core-theory paper page was already published by MIRROR-STEP-05-CORE-THEORY-NOTION-001.",
+  "outcome": "Published the accepted Step-5 Euclidean N=4 one-loop anomaly Ward identity settlement (pure theoretical derivation: contracts/foundations/step-05-euclidean-n4-awi-one-loop.md) from verified origin/main commit f6f3531237176a9ac4579111fdcc72213a116578 to Notion page 39fee2b7-4b3f-812f-a3f0-ce2cee625bbb as a write-only mirror, without reading any Notion content. The core-theory paper page remains the separate human-readable mirror published by MIRROR-STEP-05-CORE-THEORY-NOTION-001.",
   "allowed_inputs": [
     "AUTHORITY.md",
     "AGENTS.md",
