@@ -2,10 +2,31 @@
 
 ## Current Difficulty
 
-- **LATEST — physical one-loop anomaly sector:** no unresolved row.  The target-blind ledger has `81 COMPLETE_EXACT`, `29 EXACT_NONZERO`, `52 EXACT_ZERO`, `0 OPEN`, and `0 UNRESOLVED`.
-- `OUT_OF_SCOPE`: general raw-graph (q)-equivariant functor, complete BV/Wess--Zumino/open-color evanescent-module theorem, formal (U/Q_0) absolute intertwiner, and general reductive-color inverse.  None is used in the accepted physical result.
+- **LATEST — `OPEN_FINAL_CENSUS_17_CANDIDATES`:** the final Claude census proposal did not run the ghost--Nielsen--Kallosh sector, the zero/cut-orbit sector, or the automated three-lens refutation, and deferred four physics-relevant Wick routings.  Holomorphic-twist agreement does not prove termwise absence.  The accepted coefficient ledger is unchanged.
+- `BLOCKED_HEAT_KERNEL_TYPED_REGULATOR_AND_COEFFICIENT_DERIVATION`: the proposal's matter blocks give $16\Box_E\mathcal P_+$ and its vector block gives $+\Box_E$, not the declared $-\Box_E$ generator; the mixed blockwise prescription is not one functional calculus.
+- `NOT_ACCEPTED_NOETHER_B1_B4_MISSING`: complete Euler operators and the announced B1--B4 termwise checks are absent.  The locked Lorentzian vector cycle also remains blocked.
+- `VERIFIED_CONDITIONAL_STEP5J_TREE_SCALE` (`e97e5c8`): the corrected tree cross-lock derives only $\zeta_Q\zeta_\beta/\zeta_\gamma^2=\rho_{fc}/2$.  It explicitly treats $\rho_{fc}=1$ as an assumption, retracts the unconditional unit dictionary for the $\mathcal W$ letter, and retracts the claim that the box must be replaced by a triangle.  The full box-plus-triangle graph set and relative coefficients remain open; the script verifies only the factor-two arithmetic and not the phase/sign or dictionary inputs.
+- **Physical one-loop anomaly sector:** no unresolved coefficient row.  The target-blind ledger has `81 COMPLETE_EXACT`, `29 EXACT_NONZERO`, `52 EXACT_ZERO`, `0 OPEN`, and `0 UNRESOLVED`.
+- `OUT_OF_SCOPE`: general raw-graph $q$-equivariant functor, complete BV/Wess--Zumino/open-color evanescent-module theorem, formal $U/Q_0$ absolute intertwiner, and general reductive-color inverse.  None is used in the accepted physical result.
 
 ## Certain
+
+- The accepted BC bottom projection is
+
+$$
+Q_-\!\left(\psi_{r+}^A\widetilde\phi_s^B\right)\Big|_{1\text{-loop}}
+=-\frac{\sqrt2\hbar g^2}{32\pi^2}
+\delta_{rs}\mathbb F^{AB}{}_{DE}
+\widetilde\lambda_{\dot a}^D\widetilde\lambda^{E\dot a}.
+$$
+
+It is the bottom projection of the regulated superfield Euler Jacobian, not an independent ordinary two-Yukawa box.  The mixed propagators $G_{\phi\widetilde\psi}$ and $G_{\psi\widetilde\phi}$ vanish.
+
+- The dotted-gaugino bilinear is symmetric in $D,E$; antisymmetric color words therefore vanish.  The corrected tensor integral is $J=1/(128\pi^2)$, while the explicit numerator factor gives $2J=1/(64\pi^2)$.
+
+- Majorana matrix identities on the proposed Srednicki branch are conditional checks only.  Project quantities and phases remain Weinberg; explicit Srednicki-style index placement does not authorize a field rephasing.
+
+- The post-cutoff task-rotation test repair is accepted: Step-5A admissibility is read from the ledger obligation's archived task packet, not from whichever unrelated obligation is currently `tasks/CURRENT.yaml`.
 
 - Every bare graph residue is the occurrence-wise DRED cutting failure
 
