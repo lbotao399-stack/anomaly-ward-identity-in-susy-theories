@@ -1,8 +1,9 @@
 {
   "id": "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001",
   "type": "CONTRACT_CHANGE",
-  "status": "SPECIFIED",
-  "outcome": "Construct the first Euclidean N=4 SYM anomaly-Ward-identity contract in Project conventions: derive the tree Schwinger-EOM descendants and the complete regulated one-loop supergraph calculation for every ordered pair from the four letter families nabla_+ W_+, nabla_+ Phi_r, tilde Phi_r, and tilde W_dot-a; independently audit the imported chat attempts; and implement a typed draw-map plus exact superspace D-algebra integration-by-parts trace that retains derivatives routed to external legs.",
+  "status": "ACCEPTED",
+  "accepted_scope": "PHYSICAL_ONE_LOOP_ANOMALY_SECTOR",
+  "outcome": "Construct the first Euclidean N=4 SYM anomaly-Ward-identity contract in Project conventions: derive the tree Schwinger-EOM descendants and the complete regulated one-loop supergraph calculation for every ordered pair from the four letter families nabla_+ W_+, nabla_+ Phi_r, tilde Phi_r, and tilde W_dot-a; isolate the full dimensional-reduction evanescent anomaly sector as the exact failure of the regulated Schwinger cutting rules; and prove an exact componentwise and arbitrary-holomorphic-derivative match to the admitted holomorphic-twist one-loop external target.",
   "allowed_inputs": [
     "AUTHORITY.md",
     "AGENTS.md",
@@ -14,7 +15,10 @@
     "contracts/foundations/step-03c-gauge-vector-representation.md",
     "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md",
     "contracts/foundations/step-04-extended-sym-notation.md",
+    "contracts/foundations/step-04a-n1-super-yang-mills.md",
+    "contracts/foundations/step-04b-n2-super-yang-mills.md",
     "contracts/foundations/step-04c-n4-super-yang-mills.md",
+    "contracts/foundations/step-05a-component-bv-brst-primitive-supergraph-grammar.md",
     "references/manifest.yaml",
     "references/claim-map.yaml",
     "references/step5-chat-weinberg30-source-ledger.json",
@@ -27,11 +31,23 @@
     "references/vendor/notion/weinberg/chapter-30/30-03-calculations-with-supergraphs-34cee2b74b3f817499daf036a9bdca44.md",
     "references/superspace-1001-supergraph-source-ledger.json",
     "references/vendor/local/superspace-1001-supergraph-pages.pdf",
+    "references/ht-n4-one-loop-source-ledger.json",
+    "references/vendor/arxiv/2512.07771v2/source/main.tex",
+    "references/vendor/arxiv/2512.07771v2/2512.07771v2.pdf",
+    "references/vendor/arxiv/2512.07771v2/metadata.json",
     "audits/step5-reference-import-verification.json",
+    "audits/step5a-component-bv-brst-grammar-verification.json",
+    "audits/step5a-notation-ledger.json",
+    "audits/step5a-gap-audit.json",
+    "audits/step5a-independent-review.json",
     "audits/superspace-1001-supergraph-reference-import-verification.json",
+    "audits/ht-n4-one-loop-reference-import-verification.json",
     "scripts/verify_step5_reference_import.py",
+    "scripts/verify_step5a_component_bv_brst_grammar.py",
     "scripts/verify_superspace_1001_supergraph_reference_import.py",
+    "scripts/verify_ht_n4_one_loop_reference_import.py",
     "tasks/archive/REFERENCE-IMPORT-STEP5-CHAT-WEINBERG30-001.yaml",
+    "tasks/archive/REFERENCE-IMPORT-HT-N4-ONE-LOOP-001.yaml",
     "ledger/proof_obligations.json",
     "tests/test_repository_policy.py",
     ".github/workflows/verify.yml"
@@ -62,15 +78,51 @@
       "SUPERSPACE-1001-VECTOR-GAUGE-FIXING-EVIDENCE",
       "SUPERSPACE-1001-FP-NK-GHOST-EVIDENCE",
       "SUPERSPACE-1001-ORDERED-SUPERGRAPH-VERTEX-EVIDENCE",
-      "SUPERSPACE-1001-D-ALGEBRA-EVIDENCE"
+      "SUPERSPACE-1001-D-ALGEBRA-EVIDENCE",
+      "HT-N4-ONE-LOOP-COMPLETE-SUPERFIELD-CANDIDATE",
+      "HT-N4-ONE-LOOP-COMPONENT-PAIR-CANDIDATE",
+      "HT-ONE-LOOP-MASTER-INTEGRAL-CANDIDATE"
     ],
-    "role": "CANDIDATE_REQUIRING_INDEPENDENT_PROJECT_REDERIVATION",
-    "source_translation_required_before_formula_adoption": true
+    "role": "PROJECT_REDERIVATION_REQUIRED_WITH_HT_EXTERNAL_TARGET_ONLY",
+    "external_target_only_claim_ids": [
+      "HT-N4-ONE-LOOP-COMPLETE-SUPERFIELD-CANDIDATE",
+      "HT-N4-ONE-LOOP-COMPONENT-PAIR-CANDIDATE",
+      "HT-ONE-LOOP-MASTER-INTEGRAL-CANDIDATE"
+    ],
+    "source_translation_required_before_formula_adoption": true,
+    "independent_project_derivation_required_before_target_comparison": true
   },
+  "acceptance_evidence": [
+    "contracts/foundations/step-05-euclidean-n4-awi-one-loop.md",
+    "audits/step5-euclidean-n4-awi-verification.json",
+    "audits/step5-global-81-target-blind-orbit-ledger.json",
+    "audits/step5_global_81_ht_symbolic_roundtrip_exact.json",
+    "audits/step5-ab-ba-project-ward-finite-renormalization-exact.json",
+    "audits/step5-aa-external-slot-decomposition-exact.json",
+    "scripts/verify_step5_euclidean_n4_awi.py",
+    "scripts/step5_global_81_target_blind_orbit_ledger_audit.py",
+    "scripts/step5_global_81_ht_symbolic_roundtrip_exact_audit.py"
+  ],
+  "excluded_obsolete_acceptance_evidence": [
+    "audits/step5-ab-ba-full-1pi-quotient-exact.json",
+    "audits/step5-ab-ba-full-1pi-quotient-exact.md",
+    "scripts/step5_ab_ba_full_1pi_quotient_exact_audit.py"
+  ],
+  "out_of_scope_nonblocking": [
+    "OUT_OF_SCOPE_STEP5A_UNIQUE_PROPAGATOR_AND_NK_COMPLETION",
+    "OUT_OF_SCOPE_RAW_GRAPH_Q_EQUIVARIANT_FUNCTOR",
+    "OUT_OF_SCOPE_GENERAL_BV_WZ_REDUCTION",
+    "OUT_OF_SCOPE_OPEN_COLOR_SOURCE_BV_EXTENSION",
+    "OUT_OF_SCOPE_COMPLETE_BV_DRED_EVANESCENT_MODULE",
+    "OUT_OF_SCOPE_GENERAL_DRED_EPSILON_TENSOR_THEOREM",
+    "OUT_OF_SCOPE_GENERAL_BV_MOMENTUM_LEDGER",
+    "OUT_OF_SCOPE_FORMAL_U_Q0_ABSOLUTE_INTERTWINER",
+    "OUT_OF_SCOPE_GENERAL_REDUCTIVE_COLOR_FRAME"
+  ],
   "acceptance": [
     "before any loop formula, a Step-5 notation ledger fixes the Euclidean plus/minus spin frame, epsilon components, all raised and lowered spinor slots, the complex Euclidean momentum bispinor map, Fourier phase, all-incoming momentum convention, adjoint and flavor order, Grassmann normal order, and the distinction between untilded and tilded independent Euclidean fields",
     "the DRED contract fixes d=4-2 epsilon, the d-dimensional loop subspace, the four-dimensional spinor-algebra metric, the evanescent complement, all metric traces and projectors, the loop measure with its mu power, and the sign of every momentum square; any identity involving p_(+ dot-a) p_-^(dot-a), p^2, or hat-p^2 is derived from these definitions rather than assumed",
-    "a source dictionary reconstructs separately the notation and assertions of chat messages 1-7, Weinberg Chapter 30, and the admitted Superspace-1001 pages; every nontrivial source statement receives an exact Project translation plus verdict PROVED, REJECTED, CONDITIONAL, or OUT_OF_SCOPE, with the initial and later chat attempts never silently merged",
+    "a total bidirectional source dictionary reconstructs separately the notation and assertions of chat messages 1-7, Weinberg Chapter 30, the admitted Superspace-1001 pages, and every admitted holomorphic-twist v2 anchor; the holomorphic-twist dictionary covers fields, parity, color and trace normalization, coupling and loop-order convention, supercharge bracket, master-integral normalization, shifted letters, all zero-derivative component pairs, the compact N=4 superfield, and the arbitrary holomorphic-derivative tower; both recorded source-internal normalization conflicts HT-NORM-CONFLICT-COMPACT-Q1-COEFFICIENT and HT-NORM-CONFLICT-ZERO-SHIFT-FACTOR-TWO are resolved by independent Project derivations without selecting either printed branch by source authority; the forward and inverse maps compose to the identity on every compared typed expression; every nontrivial source statement receives an exact Project translation plus verdict PROVED, REJECTED, CONDITIONAL, or OUT_OF_SCOPE, with distinct sources and conflicting statements never silently merged",
     "the Euclidean N=4 superfield Euler operators are derived by ordered variation of the accepted action (4C.4), including gauge, three chiral, three tilded-chiral, gauge-fixing, ghost, and measure terms required by the chosen perturbative slice; the local Schwinger equation is obtained only from (3D.34)",
     "the four typed letter families are defined in Project vector representation with all color, flavor, undotted, and dotted indices retained; their 4 by 4 ordered family product gives exactly sixteen channel classes, and the emitter expands every flavor and spinor component without identifying reversed orderings",
     "for each ordered channel, the graded Leibniz expansion of nabla_-(L_i L_j) is shown and reduced to the complete tree Euler-operator expression before imposing any EOM; zero, Bianchi, chirality, total-derivative, gauge-BRST, and genuine EOM terms remain separately typed",
@@ -81,8 +133,8 @@
     "for each channel, all one-loop triangle orientations are evaluated in momentum space with explicit numerator chains and unintegrated external momenta; any same-order contact, letter-expansion, Schwinger-cut, ghost, and counterterm graphs required for the regulated Ward identity are evaluated alongside the triangles, and absent topologies are proved absent from the typed vertex grammar",
     "tensor reduction and Feynman parametrization display the complete shift, denominator polynomial, numerator expansion, physical-metric part, and evanescent-metric part; propagator-cut cancellations are checked graph by graph before any finite anomaly remainder is asserted",
     "the seed ordered channel (nabla_+ W_+^A, nabla_+ W_+^B) is reproduced from the bare insertion through renormalized local result with every coefficient, color tensor, external momentum polynomial, and external superfield operator fixed; no coefficient may be inherited from either chat attempt",
-    "the remaining fifteen ordered channel classes are emitted with the same calculation trace and end in one of exactly three states: exact renormalized result, exact zero with proof, or BLOCKED_<REASON> naming the missing locked input; no channel is filled by symmetry unless the symmetry map including every sign and index permutation is proved",
+    "the remaining fifteen ordered family channel classes and all exactly eighty-one ordered component pairs are emitted with the same calculation trace and end in one of exactly three states: exact renormalized result, exact zero with proof, or BLOCKED_<REASON> naming the missing locked input; no channel is filled by symmetry unless the symmetry map including every sign and index permutation is proved; after a total Project-to-source dictionary is fixed, every zero-derivative component pair and every member of the arbitrary holomorphic-derivative tower is compared by an invertible round trip to the holomorphic-twist external target, with exact equality of coefficient, sign, parity, color tensor, derivative placement, and field ordering",
     "exact tests cover spin-frame identities, Euclidean derivative algebra, DRED projectors, quadratic-kernel inversion, ordered vertices, complete Wick census, graph-IR/render equivalence, D-algebra confluence on the admitted rule set, external-leg derivative conservation, Schwinger-cut pairing, color/Jacobi reduction, pole cancellation, and the sixteen-channel result ledger",
-    "a derivation-gap audit, notation-consistency audit, reverse-order independent graph census, and independent numerator/integral audit leave no unresolved P0 or P1 finding; contract hashes and repository policy pass, the reviewed contract reaches verified origin/main, and only then may a write-only Git-to-Notion Step-5 mirror be emitted"
+    "a derivation-gap audit, notation-consistency audit, reverse-order independent graph census, independent numerator/integral audit, cutting-failure exhaustion audit, and holomorphic-twist round-trip audit leave no unresolved P0 or P1 finding; contract hashes and repository policy pass, the reviewed contract reaches verified origin/main, and only then may a write-only Git-to-Notion Step-5 mirror be emitted"
   ]
 }
