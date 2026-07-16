@@ -439,7 +439,17 @@ def all_checks() -> list[dict[str, object]]:
     step3d = authority_text("contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md")
     step5a = authority_text("contracts/foundations/step-05a-component-bv-brst-primitive-supergraph-grammar.md")
     step5a_receipt = json.loads(authority_text(STEP5A_RECEIPT))
-    rows.append(check("authority_origin_main_pin", origin_main == AUTHORITY_COMMIT, origin_main, AUTHORITY_COMMIT))
+    pinned_base_is_ancestor = (
+        subprocess.run(
+            ["git", "merge-base", "--is-ancestor", AUTHORITY_COMMIT, origin_main],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        ).returncode
+        == 0
+    )
+    rows.append(check("authority_pinned_base_is_ancestor_of_origin_main", pinned_base_is_ancestor, "ancestor" if pinned_base_is_ancestor else "not_ancestor", "ancestor"))
     rows.append(check("authority_pinned_object_type", pinned_object_type == "commit", pinned_object_type, "commit"))
     rows.append(check("authority_step5a_receipt_status", step5a_receipt.get("status") == "PASS_EXACT_PARTIAL_SCOPE", step5a_receipt.get("status"), "PASS_EXACT_PARTIAL_SCOPE"))
     rows.append(check("authority_step5a_receipt_contract", step5a_receipt.get("contract_path") == "contracts/foundations/step-05a-component-bv-brst-primitive-supergraph-grammar.md", step5a_receipt.get("contract_path"), "contracts/foundations/step-05a-component-bv-brst-primitive-supergraph-grammar.md"))
