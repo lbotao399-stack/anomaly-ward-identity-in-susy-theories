@@ -339,6 +339,13 @@
       "state": "ACCEPTED",
       "blocking_reason": null,
       "task_sha256": "a5b88ad14302074f04222fbabafd6dd46dbeb35524683c4e14559869dc0be36c",
+      "task": "tasks/archive/MIRROR-STEP-05-NOTION-001.yaml"
+    },
+    {
+      "id": "AUDIT-CLAUDE-ALTERNATIVE-ROUTES-001",
+      "state": "ACCEPTED",
+      "blocking_reason": null,
+      "task_sha256": "cb0bb2198cd186ce7dc8b22b02c3bf85e500b4c536ce947ee27b9753f3f11e7e",
       "task": "tasks/CURRENT.yaml"
     }
   ]
