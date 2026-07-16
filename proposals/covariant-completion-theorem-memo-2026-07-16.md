@@ -257,6 +257,77 @@ $\Gamma(4)\int_{\Delta_2}x=6\cdot\operatorname{Vol}(\Delta_2)\langle x\rangle
 master is *also* $\tfrac{\widehat\delta^{mn}}{4}\cdot\tfrac1{32\pi^2}$ — the universality of
 (T.3) extends to the eikonal boxes.
 
+## 6b. Transverse sector decomposition of the box [PROVED-HERE at sector level]
+
+Write the eikonal insertion on line $i$ as $2r_i\cdot\varepsilon=2\ell\cdot\varepsilon
++2Q_i\cdot\varepsilon$ ($r_i=\ell+Q_i$, $Q_i\in\{0,p,p+q\}$) against the triangle chain
+$L_1^mp^\rho L_2^n\,T_{m\rho n}$ with $L_{1,2}=2\ell+(\text{ext})$. Loop-momentum parity at
+threshold splits the surviving numerator into exactly two sectors:
+
+- **Slot-insertion sector** (chain-$\ell$ × eikonal-$\ell$): the $\widehat\delta$-average
+  pairs the eikonal momentum with one chain slot,
+  $\ell^m\ell^\alpha\to\tfrac{\widehat\delta^{m\alpha}}4$, so the polarization
+  $\varepsilon_\alpha$ **enters the $\sigma$-chain exactly where an output derivative
+  sat** — mechanically producing the $-i[\Gamma_{\dot a},\cdot]$ insertion on output slot 1
+  or 2, normalized by the doubled-line master (T.8),
+  $\tfrac{\widehat\delta}{4}\cdot\tfrac1{32\pi^2}$, per insertion point.
+- **Weighted sector** (chain-$\ell\ell$ × $2Q_i\cdot\varepsilon$, and chain-external ×
+  eikonal-$\ell$): external-momentum-weighted terms; these carry precisely the $p,q$
+  weights that the momentum-space form of the covariantized output
+  ($\partial^{\dot a}Y\to$ momentum factor) and the letter-dressing words demand.
+
+So the covariantization structure is not imposed — it *emerges from the tensor average*.
+What remains open is pure bookkeeping: summing the slot-insertion sector over the three
+insertion points with per-line color routing and checking the total coefficient
+$(t_1,t_2,t_W)=(-i\lambda_1,-i\lambda_1,0)$ — [MACHINE-CHECK-4] — and matching the weighted
+sector against the dressing words — part of the same check.
+
+## 6c. The Wess–Zumino consistency condition and the ABJ precedent
+
+**Consistency condition [strengthens S3].** The $L_\infty$/Maurer–Cartan relation of the
+loop-corrected supercharge gives, at one loop,
+
+$$
+\{Q_0,\,Q_1\}=0
+\qquad\Longlongleftrightarrow\qquad
+Q_0\,\mathcal A_{ij}
+=\;\mathcal A\big(Q_0\text{-descendants of }L_iL_j\big)_{\rm Koszul},
+\tag{T.9}
+$$
+
+i.e. the anomaly must be a **cocycle of the classical letter differential** — the exact
+analogue of the Wess–Zumino consistency condition for the ABJ/Bardeen anomaly. Two
+consequences: (a) the correct arena for the uniqueness step S3 is the $Q_0$-cohomology
+$H(Q_0)$ on covariant local bilinears (cocycles that are coboundaries are removable by
+finite normal-product redefinitions — the scheme freedom already used in the AB/BA
+settlement); (b) any invisible primitive $t_W$ must be an independent $Q_0$-cocycle at its
+quantum numbers, a far stronger constraint than charge counting. Crucially, **(T.9) is
+verifiable letter-algebraically, with no loop integrals**, on all 81 settled rows —
+[MACHINE-CHECK-7].
+
+**ABJ precedent (historical guidance, not imported input).** The theorem being proved here
+is the superspace/DRED avatar of a classical result chain:
+
+1. *Adler (Phys. Rev. 177, 1969); Bell–Jackiw (1969)*: the divergent AVV triangle carries
+   the anomaly $\partial A\partial A$.
+2. *Bardeen (Phys. Rev. 184, 1969)*: the non-abelian anomaly computed **including the AVVV
+   box and AVVVV pentagon**; the boxes/pentagons contribute exactly the $A^2\partial A$ and
+   $A^4$ terms that complete $\partial A\partial A$ into the gauge-covariant
+   $\varepsilon^{\mu\nu\rho\sigma}F_{\mu\nu}F_{\rho\sigma}$ — the original covariant
+   completion computation, done by honest diagram evaluation.
+3. *Adler–Bardeen (1969)*: the completed coefficient receives no higher-order corrections.
+4. *Wess–Zumino (1971); Bardeen–Zumino (1984)*: the consistency conditions and the
+   consistent/covariant dictionary that fix the completion's form cohomologically.
+
+The mechanism-level correspondence: in the ABJ analysis, box contributions to the *new*
+tensor structures are superficially convergent, hence shift-unambiguous and anomaly-free;
+only the sectors tied to the divergent triangle by the vector Ward identities survive — and
+those are fixed to be the covariantization. Lemma 1 is the DRED version: the
+$\mu^2$-remainder is supported exactly on the UV-marginal (threshold) sectors, which the
+Ward telescoping (§5) ties to the triangle. If Bardeen's box/pentagon evaluation is wanted
+as a working reference, it must enter through a `REFERENCE_IMPORT` with claims classified
+`EXTERNAL_METHOD_PRECEDENT` — method admitted, coefficients never.
+
 ## 7. Pentagon and beyond [sketch]
 
 At $O(\Gamma^2)$ (pentagons / two soft legs): threshold $a\ge2$, universality (T.3) again
@@ -294,8 +365,13 @@ transcribe that argument as a target-blind typed row from the FP words 5A.58–5
 5. Doubled-line parametric weight in (T.8) equals $1$.
 6. Ghost typed-absence row from 5A.58–5A.60 (two-line argument, transcribe target-blind).
 
-Item 4 is the decisive one; 1 and 3 are its supporting arithmetic (5 is now proved in T.8); 2 closes uniqueness; 6
-is independent of CCT.
+7. Consistency condition (T.9) on all 81 settled rows: verify
+   $Q_0\Delta(L_i,L_j) = \Delta(Q_0\text{-descendants})_{\rm Koszul}$ letter-algebraically —
+   loop-integral-free, and independently valuable as a global cross-check of the ledger.
+
+Item 4 is the decisive one; 1 and 3 are its supporting arithmetic (5 is now proved in T.8);
+2 closes uniqueness and is now sharpened to an $H(Q_0)$ classification by (T.9); 6 is
+independent of CCT; 7 is free of loop integrals and should run first.
 
 ## 10. Honest summary
 
