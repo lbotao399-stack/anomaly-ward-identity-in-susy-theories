@@ -2406,6 +2406,36 @@ class RepositoryPolicyTest(unittest.TestCase):
             hashlib.sha256(task_path.read_bytes()).hexdigest(),
         )
 
+    def test_step5_core_theory_write_only_mirror_receipt(self) -> None:
+        page_map = json.loads((ROOT / "mirror/page_map.yaml").read_text(encoding="utf-8"))
+        receipt = json.loads((ROOT / "audits/notion_write_receipt.json").read_text(encoding="utf-8"))
+        task_path = ROOT / "tasks/archive/MIRROR-STEP-05-CORE-THEORY-NOTION-001.yaml"
+        mirror_task = json.loads(task_path.read_text(encoding="utf-8"))
+        ledger = json.loads((ROOT / "ledger/proof_obligations.json").read_text(encoding="utf-8"))
+
+        page_id = "PAPER-AWI-N4-ONE-LOOP-CORE-THEORY-001"
+        page = next(item for item in page_map["pages"] if item["id"] == page_id)
+        write = next(item for item in receipt["pages"] if item["id"] == page_id)
+        self.assertEqual(page["source"], "paper/awi-n4-one-loop.md")
+        self.assertEqual(page["source_commit"], "f6f3531237176a9ac4579111fdcc72213a116578")
+        self.assertEqual(page["source_sha256"], "5d14395aa33d2a790d3c34fff26f253cf451ddc29ace76d20be7d9b9b753e9b6")
+        self.assertEqual(page["notion_page_id"], "39fee2b7-4b3f-8137-9499-ef28fbce6569")
+        self.assertEqual(write["page_id"], page["notion_page_id"])
+        self.assertEqual(write["mutation"], "create_pages_then_replace_page_content")
+        self.assertEqual(write["appended_blocks"], 244)
+        self.assertEqual(write["write_response"], "succeeded")
+        self.assertFalse(receipt["content_readback_performed"])
+        self.assertFalse(receipt["central_log_write"]["content_readback_performed"])
+        self.assertEqual(receipt["central_log_write"]["write_response"], "succeeded")
+        self.assertEqual(mirror_task["status"], "ACCEPTED")
+        obligation = next(
+            item
+            for item in ledger["proof_obligations"]
+            if item["id"] == "MIRROR-STEP-05-CORE-THEORY-NOTION-001"
+        )
+        self.assertEqual(obligation["state"], "ACCEPTED")
+        self.assertEqual(obligation["task_sha256"], hashlib.sha256(task_path.read_bytes()).hexdigest())
+
     def test_step_3d_path_integral_bv_brst_contract(self) -> None:
         path = ROOT / "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md"
         if not path.exists():

@@ -1,5 +1,5 @@
 {
-  "schema": 4,
+  "schema": 5,
   "direction": "GIT_TO_NOTION_ONLY",
   "content_readback_performed": false,
   "pages": [
@@ -187,15 +187,36 @@
       "appended_blocks": 197,
       "write_mode": "private",
       "write_response": "succeeded"
+    },
+    {
+      "id": "PAPER-AWI-N4-ONE-LOOP-CORE-THEORY-001",
+      "source": "paper/awi-n4-one-loop.md",
+      "source_commit": "f6f3531237176a9ac4579111fdcc72213a116578",
+      "source_sha256": "5d14395aa33d2a790d3c34fff26f253cf451ddc29ace76d20be7d9b9b753e9b6",
+      "page_id": "39fee2b7-4b3f-8137-9499-ef28fbce6569",
+      "mutation": "create_pages_then_replace_page_content",
+      "create_response": "succeeded",
+      "preserve_child_pages": true,
+      "archived_top_level_blocks": 0,
+      "appended_blocks": 244,
+      "write_mode": "private",
+      "write_response": "succeeded"
     }
   ],
   "central_log_write": {
     "page_id": "892f30b0-86d6-455f-9909-cec4f1cd8b6e",
     "mutation": "append_markdown",
-    "appended_blocks": 23,
+    "source_commit": "f6f3531237176a9ac4579111fdcc72213a116578",
+    "appended_blocks": 7,
     "write_mode": "private",
     "write_response": "succeeded",
-    "content_readback_performed": false
+    "content_readback_performed": false,
+    "previous_write": {
+      "appended_blocks": 23,
+      "write_mode": "private",
+      "write_response": "succeeded",
+      "content_readback_performed": false
+    }
   },
   "previous_receipt": {
     "source_commit": "8a0b55889b08690f21a42b46d9d54c3a0508ef08",
@@ -203,5 +224,5 @@
     "page_id": "399ee2b7-4b3f-8158-9f75-f4a148e431fb",
     "published_at": "2026-07-10T23:46:35Z"
   },
-  "published_at": "2026-07-14T04:05:33Z"
+  "published_at": "2026-07-16T15:42:36Z"
 }
