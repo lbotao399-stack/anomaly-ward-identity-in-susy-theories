@@ -46,7 +46,7 @@ $$
 
 ## 1. Canonical project boundary
 
-The locked project contracts define two-component Lorentzian and Euclidean systems through Step 2B. They do not define a four-component Clifford package or component gauge-superfield normalization:
+The locked project contracts define two-component Lorentzian and Euclidean systems through Step 2B. At the time this dictionary was first locked they did not define a four-component Clifford package or component gauge-superfield normalization:
 
 $$
 \gamma_C^\mu,\ \gamma_{5C},\ \beta_C,\ \mathcal C_C,\ \Psi_C,
@@ -55,7 +55,7 @@ $$
 \tag{D.1.1}
 $$
 
-Therefore no (W\leftrightarrow S) four-component, component-field, (F/D)-projection, or gauge-coupling map is automatically a project convention.
+Therefore no (W\leftrightarrow S) four-component, component-field, (F/D)-projection, or gauge-coupling map is automatically a project convention.  The gauge-superfield and \(F/D\) symbols were later fixed by Steps 3A--3B (Sections 8--9 below); the four-component symbols \(\gamma_C^\mu,\gamma_{5C},\beta_C,\mathcal C_C,\Psi_C\) are now fixed by the Step-4D Majorana contract, and their two-sided book rows are recorded in Section 12.
 
 ## 2. Lorentzian metric, epsilon, and sigma matrices
 
@@ -1557,3 +1557,59 @@ $$
 $$
 
 The checked rings are $\mathbb Q(i)$, the four-generator superspace exterior algebra, and the eight-generator chiral-coordinate/component contraction sector. Output: `audits/ws-dictionary/exact-verification.json`.
+
+## 12. Project four-component column (fixed by Step 4D)
+
+The Step-4D contract
+`contracts/foundations/step-04d-majorana-spinor-system.md` fixes the
+four-component symbols of (D.1.1) on the Srednicki branch, opposite to
+Weinberg in every branch-dependent choice (its equation (4D.1)).  The
+two-sided rows are:
+
+$$
+\boxed{
+\gamma_C^\mu:=\text{(4D.3)}=\gamma_S^\mu,
+\qquad
+\gamma_W^\mu=-i\gamma_C^\mu,
+\qquad
+\{\gamma_C^\mu,\gamma_C^\nu\}=-2\eta^{\mu\nu}\mathbf1_4,}
+\tag{D.12.1}
+$$
+
+$$
+\boxed{
+\gamma_{5C}:=\text{(4D.8)}=\gamma_{5S}=-\gamma_{5W},
+\qquad
+\beta_C:=\text{(4D.20)}=\beta_S,
+\qquad
+\mathcal C_C:=\text{(4D.23)}=\mathcal C_S=\mathcal C_W,}
+\tag{D.12.2}
+$$
+
+$$
+\boxed{
+\Psi_C[\psi]:=\text{(4D.27)}=\Psi_{M,S},
+\qquad
+\bar\Psi_C=\Psi_C^{\rm T}\mathcal C_C,
+\qquad
+\Psi_{M,W}=+i\,\Psi_C,
+\qquad
+\Theta_W=-i\,\Theta_C,}
+\tag{D.12.3}
+$$
+
+$$
+\mathcal L_{M,C}
+=\frac i2\bar\Psi_C\gamma_C^\mu\partial_\mu\Psi_C
+-\frac12m\bar\Psi_C\Psi_C
+=\mathcal L_{M,S}.
+\tag{D.12.4}
+$$
+
+With \(S\to C\) the Srednicki columns of (D.3.21), (D.3.22), and
+(D.3.33) hold verbatim as Project statements; they are rederived from
+the Step-1 conventions and machine-checked in
+`audits/step4d-majorana-verification.json`.  The Euclidean
+four-component package (independent tilde fields, transpose bar only)
+is Project-only, `NOT_DEFINED_IN_SOURCE` for both books, consistent
+with Section 5.

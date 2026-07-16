@@ -2553,6 +2553,18 @@ class RepositoryPolicyTest(unittest.TestCase):
                     r"+\widetilde\varepsilon_{\mathcal I}\bar\sigma_{E,m}",
                 ),
             ),
+            "contracts/foundations/step-04d-majorana-spinor-system.md": (
+                "4D.",
+                70,
+                (
+                    r"\{\gamma_L^\mu,\gamma_L^\nu\}",
+                    r"\bar\Psi=\Psi^{\rm T}\mathcal C",
+                    r"\Psi^*=-\beta\mathcal C\Psi",
+                    r"\mathcal J_{L,\mathcal I}^\mu",
+                    r"\delta_L\Psi^{\mathcal I}",
+                    r"\mathfrak E_L^{\mathcal I}",
+                ),
+            ),
         }
         all_tags: list[str] = []
         for relative, (prefix, minimum_tags, required) in surfaces.items():
@@ -2603,6 +2615,29 @@ class RepositoryPolicyTest(unittest.TestCase):
             audit["checks"]["n4_fermion_closure_eom_reduction"]["failure_count"],
             0,
         )
+
+    def test_step_4d_majorana_exact_verifier(self) -> None:
+        script = ROOT / "scripts/verify_step4d_majorana_spinor_system.py"
+        audit_path = ROOT / "audits/step4d-majorana-verification.json"
+        contract = ROOT / "contracts/foundations/step-04d-majorana-spinor-system.md"
+        self.assertTrue(script.is_file())
+        self.assertTrue(audit_path.is_file())
+        self.assertTrue(contract.is_file())
+        expected = audit_path.read_text(encoding="utf-8")
+        subprocess.run(
+            [sys.executable, str(script), "--write-audit"],
+            cwd=ROOT / "scripts",
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
+        audit = json.loads(expected)
+        self.assertEqual(audit["status"], "PASS")
+        self.assertEqual(audit["failure_count"], 0)
+        self.assertEqual(len(audit["checks"]), 10)
+        for name, entry in audit["checks"].items():
+            self.assertEqual(entry["failure_count"], 0, name)
+            self.assertEqual(entry["failures"], [], name)
 
     def test_step_4_n2_closure_verifier(self) -> None:
         script = ROOT / "scripts/verify_step4_n2_closure.py"

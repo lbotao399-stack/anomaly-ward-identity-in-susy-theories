@@ -26,7 +26,7 @@
       "id": "CONTRACT-WEINBERG-SREDNICKI-CODEX-DICTIONARY-001",
       "path": "contracts/dictionaries/weinberg-srednicki-project-notation-dictionary.md",
       "status": "DERIVED_UNFROZEN",
-      "sha256": "8160df012d8a65b4e0f8fdb387591e42e3d3e2b70a33e0d21408e5ccc483f4ab"
+      "sha256": "daa47778763483c1c2be6c6abf8a4036dd171e0572ddc6d55797cb52c4a4e22a"
     },
     {
       "id": "FOUNDATION-COMPLETE-SUPERCONFORMAL-COVARIANCE-002C",
@@ -99,6 +99,12 @@
       "path": "contracts/dictionaries/step-04-extended-sym-weinberg-srednicki-dictionary.md",
       "status": "DERIVED_UNFROZEN",
       "sha256": "0909093c4afa22d5d8ae9c540880a524e57353c573795bf1937de1cfdcdd0a7b"
+    },
+    {
+      "id": "FOUNDATION-MAJORANA-SPINOR-SYSTEM-004D",
+      "path": "contracts/foundations/step-04d-majorana-spinor-system.md",
+      "status": "DERIVED_UNFROZEN",
+      "sha256": "460f388d6f52305b25cdad134a5c0ed3cf475638658aa7e5f8eb63505f11da69"
     }
   ]
 }

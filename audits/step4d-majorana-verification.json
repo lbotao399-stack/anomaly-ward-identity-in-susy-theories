@@ -1,0 +1,56 @@
+{
+ "checks": {
+  "beta_hermiticity": {
+   "failure_count": 0,
+   "failures": []
+  },
+  "bilinear_dictionary": {
+   "failure_count": 0,
+   "failures": []
+  },
+  "charge_conjugation_majorana": {
+   "failure_count": 0,
+   "failures": [],
+   "transpose_signs": {
+    "Gamma^munu": "-1",
+    "gamma5": "+1",
+    "gamma5 gamma^mu": "+1",
+    "gamma^mu": "-1",
+    "identity": "+1"
+   }
+  },
+  "gamma_clifford_chirality_traces": {
+   "failure_count": 0,
+   "failures": []
+  },
+  "kinetic_equivalence": {
+   "failure_count": 0,
+   "failures": []
+  },
+  "majorana_fierz": {
+   "failure_count": 0,
+   "failures": []
+  },
+  "majorana_flips": {
+   "failure_count": 0,
+   "failures": []
+  },
+  "n4_action_fermion_sector": {
+   "failure_count": 0,
+   "failures": []
+  },
+  "n4_sixteen_transformations": {
+   "failure_count": 0,
+   "failures": []
+  },
+  "susy_algebra_superspace": {
+   "failure_count": 0,
+   "failures": []
+  }
+ },
+ "contract": "contracts/foundations/step-04d-majorana-spinor-system.md",
+ "failure_count": 0,
+ "ring": "Q(i,sqrt(2)) with formal anticommuting generators",
+ "status": "PASS",
+ "task": "CONTRACT-STEP-04D-MAJORANA-SPINOR-SYSTEM-001"
+}

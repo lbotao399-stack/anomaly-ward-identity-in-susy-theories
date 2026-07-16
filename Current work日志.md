@@ -1,5 +1,22 @@
 # Current Work
 
+## Active obligation (2026-07-16): Step 4D Majorana spinor system
+
+- 新契约 `contracts/foundations/step-04d-majorana-spinor-system.md`：把此前 (D.1.1) 标记为
+  `UNFIXED` 的四分量 (Majorana) 记号体系全部锁定，取 **Srednicki 分支、与 Weinberg 相反**
+  （(4D.1) 分支表）：$\{\gamma^\mu,\gamma^\nu\}=-2\eta^{\mu\nu}$、
+  $\gamma_5=+i\gamma^{0}\gamma^{1}\gamma^{2}\gamma^{3}$、$\bar\Psi=+\Psi^{\rm T}\mathcal C$、
+  $\Psi^*=-\beta\mathcal C\Psi$、动能项 $+\tfrac i2\bar\Psi\gamma^\mu\partial_\mu\Psi$。
+- 过去的 Weyl 记号体系全部建立了 Majorana 平行（完备性表 (4D.75)）：Step-1 代数、Step-2A
+  超空间（Majorana $\Theta$、$\mathsf Q$、$\mathbb D$ 包）、Step-3B 手征/WZ 矢量超场投影、
+  Step-4A 的 $\mathcal N=1$、Step-4 的 $\mathcal N=2$ 打包，以及 **完备的 $\mathcal N=4$**：
+  Lorentzian/Euclidean 作用量 (4D.62)-(4D.63)、全部十六个超对称变换 (4D.64)-(4D.65)、
+  费米子 Euler 算子 (4D.67)、超对称流打包 (4D.68)-(4D.70)，逐分量等于锁定的 4C 方程。
+- Euclidean 侧无实性条件：四分量对象只是独立 $(\psi,\widetilde\psi)$ 的打包，bar 仅由
+  转置定义 (4D.33)，与 Step-5 的独立 tilde 场约定一致。
+- 10 项精确机器检查全部通过（`audits/step4d-majorana-verification.json`），词典新增 §12
+  关闭 (D.1.1)。Step-5 已接受的一切结果不变。
+
 ## Current Difficulty
 
 - **LATEST — physical one-loop anomaly sector:** no unresolved row.  The target-blind ledger has `81 COMPLETE_EXACT`, `29 EXACT_NONZERO`, `52 EXACT_ZERO`, `0 OPEN`, and `0 UNRESOLVED`.

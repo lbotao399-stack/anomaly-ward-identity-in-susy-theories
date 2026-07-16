@@ -237,7 +237,7 @@
       "state": "ACCEPTED",
       "blocking_reason": null,
       "task_sha256": "d89d4604e598e924af058eaff5117ef60e873bbd7b185d2f4f019fbd06e8d685",
-      "task": "tasks/CURRENT.yaml",
+      "task": "tasks/archive/CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001.yaml",
       "checked_scope": {
         "STEP5A_COMPONENT_BV_BRST_PRIMITIVE_GRAMMAR": {
           "result": "PASS_EXACT_PARTIAL_SCOPE",
@@ -333,6 +333,17 @@
       "blocking_reason": null,
       "task_sha256": "9a2f58f4829e93c88b5f2f5e98d4cf1eb1498e4582e902a9b7213018dc3a0ede",
       "task": "tasks/archive/MIRROR-STEP-05-CORE-THEORY-NOTION-001.yaml"
+    },
+    {
+      "id": "CONTRACT-STEP-04D-MAJORANA-SPINOR-SYSTEM-001",
+      "state": "DERIVED_UNFROZEN",
+      "blocking_reason": null,
+      "task_sha256": "7e9fe9e2c93aef0574f7ffdc62839a3d2230915c138620b20bee2c0f7ed7b183",
+      "task": "tasks/CURRENT.yaml",
+      "contract": "contracts/foundations/step-04d-majorana-spinor-system.md",
+      "verifier": "scripts/verify_step4d_majorana_spinor_system.py",
+      "verification_audit": "audits/step4d-majorana-verification.json",
+      "exact_machine_checks": 10
     }
   ]
 }

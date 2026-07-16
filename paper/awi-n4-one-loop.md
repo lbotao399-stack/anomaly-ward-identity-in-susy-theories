@@ -46,6 +46,19 @@ Killing form $\kappa_{AB}$ and totally antisymmetric $c_{ABC}$ (4C.1); absorbed 
 $h=g^{-2}$ (5A.2). In Euclidean signature the chiral and antichiral fields are independent
 (no conjugation relates $\Phi_r$ to $\widetilde\Phi_r$), a fact used throughout.
 
+*Convention note (2026-07-16).* The Project now also carries a locked four-component
+(Majorana) convention layer, step-04d: gamma package
+$\{\gamma^\mu,\gamma^\nu\}=-2\eta^{\mu\nu}$, $\gamma_5=+i\gamma^0\gamma^1\gamma^2\gamma^3$,
+charge conjugation $\mathcal C=\operatorname{diag}(\epsilon_{ab},\epsilon^{\dot a\dot b})$,
+Majorana bar $\bar\Psi=+\Psi^{\rm T}\mathcal C$ — the Srednicki branch, opposite Weinberg
+in every branch-dependent choice (4D.1). The $\mathcal N=4$ actions, all sixteen
+supersymmetry transformations, Euler operators, and supersymmetry currents have exact
+Majorana forms (4D.58–4D.70), proved componentwise equal to the two-component equations
+used here; in Euclidean signature the four-component package is pure packaging of the
+independent tilde pairs with a transpose bar and no reality condition (4D.33). Every
+result in this document is unchanged; the Majorana layer is a parallel notation, not a new
+input.
+
 The $\mathcal N=4$ theory is three adjoint chirals coupled to the $\mathcal N=1$ vector,
 with action (4C.4) and superpotential
 $\mathscr U_4=-\frac{\sqrt2}{6g^2}\varepsilon_{rst}c_{ABC}\Phi_r^A\Phi_s^B\Phi_t^C$
