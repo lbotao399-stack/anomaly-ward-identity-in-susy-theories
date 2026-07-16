@@ -2941,6 +2941,18 @@ class RepositoryPolicyTest(unittest.TestCase):
             "BLOCKED_HEAT_KERNEL_TYPED_REGULATOR_AND_COEFFICIENT_DERIVATION",
         )
 
+    def test_heat_kernel_typed_regulator_checks(self) -> None:
+        script = ROOT / "scripts/verify_heat_kernel_typed_regulator.py"
+        memo = ROOT / "proposals/heat-kernel-typed-regulator-2026-07-16.md"
+        if not script.exists() or not memo.exists():
+            self.skipTest("heat-kernel typed-regulator verifier is not registered")
+        subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+
     def test_channel_sources_do_not_cross_read(self) -> None:
         channels = ("ec", "es", "lc", "ls")
         for channel in channels:
