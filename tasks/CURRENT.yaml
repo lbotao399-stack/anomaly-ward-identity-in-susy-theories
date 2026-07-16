@@ -3,12 +3,11 @@
   "type": "CONTRACT_CHANGE",
   "status": "SPECIFIED",
   "owner_authorization": "2026-07-16 session: owner authorized removal of the Step-5 Notion gate; the write itself is executed by a Codex session holding Notion access.",
-  "outcome": "Publish the accepted Step-5 Euclidean N=4 one-loop anomaly Ward identity settlement (pure theoretical derivation: contracts/foundations/step-05-euclidean-n4-awi-one-loop.md) from verified origin/main commit f6f3531237176a9ac4579111fdcc72213a116578 and the evergreen core-theory paper (paper/awi-n4-one-loop.md) to Notion as write-only mirror pages, without reading any Notion content.",
+  "outcome": "Publish the accepted Step-5 Euclidean N=4 one-loop anomaly Ward identity settlement (pure theoretical derivation: contracts/foundations/step-05-euclidean-n4-awi-one-loop.md) from verified origin/main commit f6f3531237176a9ac4579111fdcc72213a116578 to Notion as a write-only mirror page, without reading any Notion content. The core-theory paper page was already published by MIRROR-STEP-05-CORE-THEORY-NOTION-001.",
   "allowed_inputs": [
     "AUTHORITY.md",
     "AGENTS.md",
     "contracts/foundations/step-05-euclidean-n4-awi-one-loop.md",
-    "paper/awi-n4-one-loop.md",
     "contracts/foundations/step-05a-component-bv-brst-primitive-supergraph-grammar.md",
     "contracts/manifest.yaml",
     "mirror/page_map.yaml",
@@ -25,8 +24,8 @@
     "manual mathematical edits on the Notion side"
   ],
   "acceptance": [
-    "the published mathematical sources are exactly contracts/foundations/step-05-euclidean-n4-awi-one-loop.md and paper/awi-n4-one-loop.md at verified origin/main commit f6f3531237176a9ac4579111fdcc72213a116578",
-    "the Step-5 settlement child page and the core-theory paper page are created only through write operations under root page 39e80ed3e5844b17b3ccf2579e2a64ca",
+    "the published mathematical source is exactly contracts/foundations/step-05-euclidean-n4-awi-one-loop.md at verified origin/main commit f6f3531237176a9ac4579111fdcc72213a116578",
+    "the Step-5 settlement child page is created only through write operations under root page 39e80ed3e5844b17b3ccf2579e2a64ca",
     "each payload contains the Git authority header, exact source path, commit, and SHA-256",
     "mirror page map records each Notion page id, source path, source commit, and source sha256",
     "write receipt records the exact mutation responses and states content_readback_performed=false",
