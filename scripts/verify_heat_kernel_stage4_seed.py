@@ -31,7 +31,11 @@ def check(name: str, condition: bool, detail: str = "") -> None:
 # K = K0 + V1 + V2 has exactly TWO nonzero cross-terms (V1 V2, V2 V1); the
 # diagonal terms V1 V1 and V2 V2 vanish because each triangle vertex is used
 # once (V1^2 = V2^2 = 0 as insertion operators on the single-use vertices).
-# This is the factor 2 = HT's two triangle diagrams (main.tex line 744).
+# NOTE (correction of record): this vertex census is a fact about the worldline;
+# it is NOT the resolution of the HT kernel-vs-component factor 2, which is the
+# Feynman Gamma(3) (S4-C3/S4-OPEN-3, review R.5 "not a second orientation").
+# Summing the two cross-terms over the ordered simplex = one assignment over the
+# full square, a change of region, not an extra factor.
 # ----------------------------------------------------------------------------
 def c1() -> None:
     # Model the two single-use vertex insertions as nilpotent, non-commuting
@@ -46,10 +50,10 @@ def c1() -> None:
         "S4-C1 (S4.4-S4.5): exactly two Duhamel cross-terms V1V2 + V2V1 survive; diagonals vanish",
         sp.simplify(reduced - (V1 * V2 + V2 * V1)) == 0,
     )
-    # Count: 2 nonzero of 4 -> the factor-2 multiplicity.
+    # Count: 2 nonzero of 4 -> vertex census (NOT the Gamma(3) factor).
     terms = [V1 * V1, V1 * V2, V2 * V1, V2 * V2]
     nonzero = sum(1 for t in terms if t not in (V1 * V1, V2 * V2))
-    check("S4-C1b (S4.5): cross-term census = 2 (the derived factor 2)", nonzero == 2)
+    check("S4-C1b (S4.5): cross-term census = 2 (vertex arrangements; not the Gamma(3))", nonzero == 2)
 
 
 # ----------------------------------------------------------------------------
@@ -62,20 +66,24 @@ def c2() -> None:
 
 
 # ----------------------------------------------------------------------------
-# S4-C3 — (S4.6): per-ordering coincident value = (s^2/2)*(1/(16 pi^2 s^2))
-# = 1/(32 pi^2); two orderings sum to 1/(16 pi^2). K_s(0)=1/(16 pi^2 s^2).
+# S4-C3 — (S4.6)/section 3: per-assignment coincident value =
+# (s^2/2)*(1/(16 pi^2 s^2)) = 1/(32 pi^2); times the Feynman Gamma(3)=2 gives
+# the physical 1/(16 pi^2). K_s(0)=1/(16 pi^2 s^2). The factor 2 here is Gamma(3)
+# (three-propagator simplex normalization), consistent with review R.5 --
+# NOT an orientation count (correction of record; value DRED-anchored, S4-OPEN-3).
 # ----------------------------------------------------------------------------
 def c3() -> None:
     s = sp.symbols("s", positive=True)
     Ks0 = 1 / (16 * sp.pi**2 * s**2)
-    per_ordering = (s**2 / 2) * Ks0
+    per_assignment = (s**2 / 2) * Ks0
     check(
-        "S4-C3a (S4.6): one ordering = 1/(32 pi^2)",
-        sp.simplify(per_ordering - 1 / (32 * sp.pi**2)) == 0,
+        "S4-C3a (S4.6): per-assignment ordered simplex value = 1/(32 pi^2)",
+        sp.simplify(per_assignment - 1 / (32 * sp.pi**2)) == 0,
     )
+    Gamma3 = sp.factorial(2)  # Gamma(3) = 2! = 2, the 3-propagator Feynman factor
     check(
-        "S4-C3b (S4.6): two orderings = 2 * 1/(32 pi^2) = 1/(16 pi^2)",
-        sp.simplify(2 * per_ordering - 1 / (16 * sp.pi**2)) == 0,
+        "S4-C3b (S4.6/section 3): times Gamma(3)=2 gives physical 1/(16 pi^2)",
+        sp.simplify(Gamma3 * per_assignment - 1 / (16 * sp.pi**2)) == 0,
     )
 
 
@@ -103,8 +111,8 @@ def c5() -> None:
     factors = {
         "EOM 2/h": 2 / h,
         "Schwinger hbar": hbar,
-        "orderings 2": sp.Integer(2),
-        "Duhamel simplex 1/2": sp.Rational(1, 2),
+        "Gamma(3) 2": sp.Integer(2),
+        "per-assignment simplex 1/2": sp.Rational(1, 2),
         "kernel 1/16pi^2": 1 / (16 * sp.pi**2),
         "Grassmann 1": sp.Integer(1),
         "pairing 1/2": sp.Rational(1, 2),
@@ -117,9 +125,9 @@ def c5() -> None:
         "S4-C5a (S4.1/S4.7): full factor chain = hbar g^2/16 pi^2 (h=g^-2)",
         sp.simplify(chain.subs(h, g**-2) - lam1) == 0,
     )
-    # The ordering-2 cancels the Duhamel-1/2:
+    # The Gamma(3)-2 cancels the per-assignment simplex-1/2:
     check(
-        "S4-C5b (S4.7): ordering-2 cancels Duhamel-1/2",
+        "S4-C5b (S4.7): Gamma(3)-2 cancels per-assignment simplex-1/2",
         sp.Integer(2) * sp.Rational(1, 2) == 1,
     )
     # The EOM-2/h times pairing-1/2 = 1/h = g^2:
@@ -168,28 +176,29 @@ def c6() -> None:
 
 
 # ----------------------------------------------------------------------------
-# S4-C7 — section 5: (A,A)->Q_1(bb) row assembly. Four output pairs from four
-# rows of K; same-type outputs add (Konishi (B,C)), different-type outputs
-# antisymmetrize (Q_1(bb): partial c partial b - partial b partial c, etc.).
+# S4-C7 — section 5: (A,A)->Q_1(bb) row assembly. The two vertex cross-terms
+# populate the full square [0,s]^2 (one assignment over both half-squares).
+# WORD SYMMETRY (not a normalization factor): same-type outputs give a symmetric
+# single word (Konishi (B,C): partial c partial c); different-type outputs give
+# the antisymmetric difference (Q_1(bb): partial c partial b - partial b partial c).
+# The universal coefficient lambda_1 is shared and Gamma(3)-fixed for both (S4-C3).
 # ----------------------------------------------------------------------------
 def c7() -> None:
-    # The two Duhamel cross-terms produce outputs (X,Y) from vertex-1 and
-    # vertex-2. If X,Y same type: term1 = X Y, term2 = Y X = X Y (same word) -> 2 X Y.
-    # If X,Y different type: term1 = X Y, term2 = Y X (distinct words) -> X Y - Y X
-    # after the fermionic orientation sign. Model with (non)commuting symbols.
-    a, b_ = sp.symbols("a b", commutative=False)  # different-type outputs
-    # different-type: cross-terms with relative orientation sign give a*b - b*a
+    # Different-type outputs: the two half-squares give X Y and Y X with the
+    # fermionic orientation sign -> antisymmetric X Y - Y X.
+    a, b_ = sp.symbols("a b", commutative=False)
     diff = a * b_ - b_ * a
     check(
         "S4-C7a (section 5): different-type outputs give antisymmetric a*b - b*a (Q_1(bb) shape)",
         sp.simplify(diff - (a * b_ - b_ * a)) == 0 and diff != 0,
     )
-    # same-type (commuting scalar model for the contracted symmetric word): add -> 2x
-    x = sp.Symbol("x")
-    same = x + x
+    # Same-type outputs: the full-square gives one symmetric word (D<->E symmetric
+    # under the simultaneous color+position swap); NOT a separate factor 2.
+    D, E = sp.symbols("D E", commutative=True)
+    same = D * E
     check(
-        "S4-C7b (section 5): same-type outputs add -> factor 2 (Konishi (B,C) shape)",
-        same == 2 * x,
+        "S4-C7b (section 5): same-type outputs give one symmetric word (Konishi (B,C) shape), not x2",
+        sp.simplify(same - E * D) == 0,
     )
     # Four rows -> four output pairs for Q_1(bb): (c,b) ghost + (beta_I,gamma^I) x3
     rows = ["ghost:(c,b)", "matter1:(beta1,gamma1)", "matter2:(beta2,gamma2)", "matter3:(beta3,gamma3)"]

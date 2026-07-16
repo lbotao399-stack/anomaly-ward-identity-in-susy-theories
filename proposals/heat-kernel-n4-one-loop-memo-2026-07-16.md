@@ -621,20 +621,19 @@ $\frac12\partial\!\otimes\!\partial$, main.tex line 726, vs printed components,
 lines 1226–1245); (iii) the heat-kernel frame reduces its resolution to counting Duhamel
 Wick assignments — a *sharper-posed* question than graph orientation.
 
-**Zero-shift resolution, now derived (Stage IV, seed).** The Stage-IV seed memo
-`proposals/heat-kernel-n4-stage4-seed-coefficient-2026-07-16.md` (S4.4)–(S4.5) carries out
-that count for the seed: the second-order Duhamel term of $e^{-s\mathcal K}$ with
-$\mathcal K=\mathcal K_0+V_1+V_2$ has exactly **two** nonzero cross-terms
-$V_1(s_2)V_2(s_1)+V_2(s_2)V_1(s_1)$ (the diagonals $V_iV_i$ vanish, each triangle vertex
-being single-use). These are identically HT's *two triangle diagrams* (main.tex line 744)
-and its "$\mathcal I+(z,D)\!\leftrightarrow\!(w,E)$" (commented line 767). At zero shift, for
-same-type outputs they add — multiplicity $2$ — so the heat kernel lands on the component
-normalization $1$, not the single-ordering printed kernel $\tfrac12$. The factor $2$ is thus
-**derived** as the cross-term census, and the earlier draft's withdrawn "third independent
-adjudication" is now substantiated for the seed. The method's independence from the HT
-computation is an independence of **inputs** (the locked action and Schwinger identity), not
-of technique: the universal integrals parallel HT's own Schwinger-parametrized Appendix A,
-as they must.
+**Zero-shift resolution (Stage IV, seed) — R.5-consistent.** The Stage-IV seed memo
+`proposals/heat-kernel-n4-stage4-seed-coefficient-2026-07-16.md` §3 identifies the factor $2$
+that lifts the printed kernel $\tfrac12$ to the component $1$ with the **Feynman $\Gamma(3)$**
+of the three-propagator triangle (equivalently the DRED $\sigma$-trace $2$, review R.3), in
+agreement with the project's verified review R.5 ("the Feynman-parameter $\Gamma(3)$, not a
+second orientation"). An earlier draft here mis-attributed this factor to "two Duhamel
+orderings = HT's two triangle diagrams"; that reading (which misread HT line 744 — two
+*external states* — and leaned on the commented-out line 767) is **withdrawn**. The
+heat-kernel proper-time triangle produces $\tfrac1{16\pi^2}$ via the three-segment worldline
+simplex; the coefficient value is fixed independently by the DRED anchor. The method's
+independence from HT is an independence of **inputs** (the locked action and Schwinger
+identity), not of technique: the universal integrals parallel HT's own Schwinger-parametrized
+Appendix A, as they must.
 
 ## 6. The worked channel $(B_r,C^s)$ and the coefficient chain
 
