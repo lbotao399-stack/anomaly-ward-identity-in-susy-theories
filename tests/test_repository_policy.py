@@ -2916,6 +2916,31 @@ class RepositoryPolicyTest(unittest.TestCase):
                 text = path.read_text(encoding="utf-8")
                 self.assertNotIn("/Users/", text, str(path))
 
+    def test_heat_kernel_memo_exact_checks(self) -> None:
+        script = ROOT / "scripts/verify_heat_kernel_n4_one_loop_memo.py"
+        memo = ROOT / "proposals/heat-kernel-n4-one-loop-memo-2026-07-16.md"
+        audit = ROOT / "audits/heat-kernel-ordered-simplex-verification.json"
+        self.assertTrue(script.is_file())
+        self.assertTrue(memo.is_file())
+        subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        payload = json.loads(audit.read_text(encoding="utf-8"))
+        self.assertEqual(payload["scope"], "VERIFIED_AUXILIARY_LEMMA")
+        self.assertEqual(payload["check_count"], 8)
+        self.assertTrue(payload["passed"])
+        self.assertEqual(
+            payload["memo_sha256"],
+            hashlib.sha256(memo.read_bytes()).hexdigest(),
+        )
+        self.assertEqual(
+            payload["full_heat_kernel_step5_status"],
+            "BLOCKED_HEAT_KERNEL_TYPED_REGULATOR_AND_COEFFICIENT_DERIVATION",
+        )
+
     def test_channel_sources_do_not_cross_read(self) -> None:
         channels = ("ec", "es", "lc", "ls")
         for channel in channels:

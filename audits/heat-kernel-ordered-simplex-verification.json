@@ -1,0 +1,72 @@
+{
+  "scope": "VERIFIED_AUXILIARY_LEMMA",
+  "memo": "proposals/heat-kernel-n4-one-loop-memo-2026-07-16.md",
+  "memo_sha256": "ab9f74afa4fcb2e74628474083e7403d47739a35641ee0973297f9eb7567916c",
+  "check_count": 8,
+  "checks": [
+    {
+      "name": "Gaussian normalization, diagonal, and heat equation",
+      "equations": [
+        "HK.4",
+        "HK.5",
+        "HK.8"
+      ],
+      "passed": true
+    },
+    {
+      "name": "Gaussian completion and semigroup prefactor",
+      "equations": [
+        "HK.9",
+        "HK.10"
+      ],
+      "passed": true
+    },
+    {
+      "name": "Three-segment bridge mean and covariance",
+      "equations": [
+        "HK.13",
+        "HK.14"
+      ],
+      "passed": true
+    },
+    {
+      "name": "Fixed nonzero shift has zero short-time pointwise limit",
+      "equations": [
+        "HK.15"
+      ],
+      "passed": true
+    },
+    {
+      "name": "Single-ordering simplex moment",
+      "equations": [
+        "HK.18"
+      ],
+      "passed": true
+    },
+    {
+      "name": "Single-ordering derivative tower",
+      "equations": [
+        "HK.19"
+      ],
+      "passed": true
+    },
+    {
+      "name": "Alternating factorial identity",
+      "equations": [
+        "HK.20"
+      ],
+      "passed": true
+    },
+    {
+      "name": "DRED evanescent master integral",
+      "equations": [
+        "HK.21",
+        "HK.22",
+        "HK.24"
+      ],
+      "passed": true
+    }
+  ],
+  "full_heat_kernel_step5_status": "BLOCKED_HEAT_KERNEL_TYPED_REGULATOR_AND_COEFFICIENT_DERIVATION",
+  "passed": true
+}
