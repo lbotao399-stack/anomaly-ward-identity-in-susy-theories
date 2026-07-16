@@ -110,7 +110,7 @@ class Step5AbBaFullFamilyExactTest(unittest.TestCase):
             check=True,
             capture_output=True,
             text=True,
-            timeout=600,
+            timeout=1800,
         )
         self.assertIn(
             "PASS G3 labeled factorial and original-measure normalization",

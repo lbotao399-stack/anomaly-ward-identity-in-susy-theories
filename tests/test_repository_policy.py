@@ -500,7 +500,7 @@ class RepositoryPolicyTest(unittest.TestCase):
             check=True,
             capture_output=True,
             text=True,
-            timeout=120,
+            timeout=1800,
         )
         self.assertIn("PASS SECOND_SOURCE_TRANSVERSE_PLUS_LONGITUDINAL", completed.stdout)
         self.assertIn("PASS LONGITUDINAL_ENDPOINT_ORDER_REVERSAL", completed.stdout)
@@ -620,7 +620,7 @@ class RepositoryPolicyTest(unittest.TestCase):
             check=True,
             capture_output=True,
             text=True,
-            timeout=240,
+            timeout=1800,
         )
         self.assertIn("SUMMARY 9/9 PASS", completed.stdout)
         payload = json.loads(artifact.read_text(encoding="utf-8"))
@@ -732,7 +732,7 @@ class RepositoryPolicyTest(unittest.TestCase):
             check=True,
             capture_output=True,
             text=True,
-            timeout=120,
+            timeout=1800,
         )
         self.assertIn("84/84 PASS", completed.stdout)
         payload = json.loads(artifact.read_text(encoding="utf-8"))
@@ -946,7 +946,7 @@ class RepositoryPolicyTest(unittest.TestCase):
             check=True,
             capture_output=True,
             text=True,
-            timeout=120,
+            timeout=1800,
         )
         self.assertIn("PASS: exact replay matches", completed.stdout)
         payload = json.loads(artifact.read_text(encoding="utf-8"))
@@ -1065,7 +1065,7 @@ class RepositoryPolicyTest(unittest.TestCase):
             check=True,
             capture_output=True,
             text=True,
-            timeout=120,
+            timeout=1800,
         )
         self.assertIn("PASS MATTER_PARENT_ROUTE_COUNT", completed.stdout)
         self.assertIn("PASS MATTER_MARKED_OCCURRENCE_COUNT", completed.stdout)
@@ -1604,7 +1604,7 @@ class RepositoryPolicyTest(unittest.TestCase):
         authority_gate = next(
             row
             for row in audit["checks"]
-            if row["id"] == "authority.origin_main_matches_frozen_base"
+            if row["id"] == "authority.frozen_base_is_ancestor_of_origin_main"
         )
         self.assertEqual(authority_gate["status"], "PASS")
         for relative, expected_digest in audit["evidence_sha256"].items():

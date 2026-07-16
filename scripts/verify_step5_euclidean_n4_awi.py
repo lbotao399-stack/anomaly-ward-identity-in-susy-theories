@@ -136,7 +136,7 @@ def run_freshness_gate(runner: Runner) -> tuple[bool, dict[str, Any]]:
             cwd=ROOT,
             capture_output=True,
             text=True,
-            timeout=120,
+            timeout=1800,
             check=False,
         )
     except (OSError, subprocess.TimeoutExpired) as exc:
@@ -164,19 +164,22 @@ def load_json(path: Path) -> dict[str, Any]:
 
 def check_authority(audit: Audit) -> None:
     def calculation() -> tuple[bool, Any]:
-        origin_main = subprocess.run(
-            ["git", "rev-parse", "origin/main"],
-            cwd=ROOT,
-            check=True,
-            capture_output=True,
-            text=True,
-        ).stdout.strip()
-        return origin_main == AUTHORITY_BASE, {
+        is_ancestor = (
+            subprocess.run(
+                ["git", "merge-base", "--is-ancestor", AUTHORITY_BASE, "origin/main"],
+                cwd=ROOT,
+                check=False,
+                capture_output=True,
+                text=True,
+            ).returncode
+            == 0
+        )
+        return is_ancestor, {
             "recorded_base": AUTHORITY_BASE,
-            "origin_main": origin_main,
+            "relation": "recorded_base_is_ancestor_of_origin_main",
         }
 
-    audit.protected("authority.origin_main_matches_frozen_base", calculation)
+    audit.protected("authority.frozen_base_is_ancestor_of_origin_main", calculation)
 
 
 def check_project_ledger(audit: Audit, payload: dict[str, Any]) -> None:

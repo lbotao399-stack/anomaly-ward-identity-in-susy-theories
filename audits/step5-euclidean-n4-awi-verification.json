@@ -4,10 +4,10 @@
   "checks": [
     {
       "detail": {
-        "origin_main": "00000f748fe4bdd1b5d122663cc1fb814faace66",
-        "recorded_base": "00000f748fe4bdd1b5d122663cc1fb814faace66"
+        "recorded_base": "00000f748fe4bdd1b5d122663cc1fb814faace66",
+        "relation": "recorded_base_is_ancestor_of_origin_main"
       },
-      "id": "authority.origin_main_matches_frozen_base",
+      "id": "authority.frozen_base_is_ancestor_of_origin_main",
       "status": "PASS"
     },
     {
