@@ -1684,14 +1684,14 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertEqual(entry["status"], "DERIVED_UNFROZEN")
         self.assertEqual(entry["sha256"], hashlib.sha256(path.read_bytes()).hexdigest())
 
-        task = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
-        self.assertIn(relative, task["allowed_inputs"])
         ledger = json.loads((ROOT / "ledger/proof_obligations.json").read_text(encoding="utf-8"))
         obligation = next(
             item
             for item in ledger["proof_obligations"]
             if item["id"] == "CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001"
         )
+        task = json.loads((ROOT / obligation["task"]).read_text(encoding="utf-8"))
+        self.assertIn(relative, task["allowed_inputs"])
         self.assertEqual(obligation["state"], "ACCEPTED")
         checked = obligation["checked_scope"]["STEP5A_COMPONENT_BV_BRST_PRIMITIVE_GRAMMAR"]
         self.assertEqual(checked["result"], "PASS_EXACT_PARTIAL_SCOPE")
