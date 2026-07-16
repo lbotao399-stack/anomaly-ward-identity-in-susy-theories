@@ -237,7 +237,7 @@
       "state": "ACCEPTED",
       "blocking_reason": null,
       "task_sha256": "d89d4604e598e924af058eaff5117ef60e873bbd7b185d2f4f019fbd06e8d685",
-      "task": "tasks/CURRENT.yaml",
+      "task": "tasks/archive/CONTRACT-STEP-05-EUCLIDEAN-N4-AWI-SUPERGRAPH-001-ACCEPTED.yaml",
       "checked_scope": {
         "STEP5A_COMPONENT_BV_BRST_PRIMITIVE_GRAMMAR": {
           "result": "PASS_EXACT_PARTIAL_SCOPE",
@@ -326,6 +326,13 @@
       "blocking_reason": null,
       "task_sha256": "23714346018bba14aad3156cadbf1ac168205893263a94f68f88e8d4e108798e",
       "task": "tasks/archive/MIRROR-STEP-05A-NOTION-001.yaml"
+    },
+    {
+      "id": "MIRROR-STEP-05-NOTION-001",
+      "state": "SPECIFIED",
+      "blocking_reason": null,
+      "task_sha256": "24217c83471b3b360026fb995e983639c1a1efaca1e87b058f9163d20cccb2dd",
+      "task": "tasks/CURRENT.yaml"
     }
   ]
 }
