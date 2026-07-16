@@ -3,8 +3,14 @@
 Status: `NON_AUTHORITY_PROPOSAL`. Numbered equations are (5E.$n$). Companions: Step-5C
 (off-shell Noether machinery), Step-5D (component Ward-identity method). This memo
 executes the method of Step-5D on the **simplest anomalous channel that exists** — the
-Konishi current — as the pilot/go-no-go test of the whole component route, and specifies
-the verification workflow for mechanical execution (§8).
+Konishi current — and specifies the verification workflow for mechanical execution (§8).
+
+> **Re-designation (owner correction, 2026-07-16):** the designated pilot of the
+> component route is the SUSY-current letter channel $Q_-(\psi_+^A\widetilde\phi^B)$ —
+> see `proposals/step5f-bc-letter-channel-pilot-2026-07-16.md`. This memo's
+> Konishi-current channel is an optional warm-up; its toolkit sections (the collapse
+> identity (5E.6), master integral (5E.8), and workflow items W2/W4/W5) are shared
+> infrastructure consumed by Step-5F and remain in force.
 
 Owner instructions implemented (2026-07-16): *the immediate priority is to verify the
 component Feynman-diagram method computationally: with an interaction vertex inserted,
