@@ -4,5 +4,7 @@ __pycache__/
 .venv/
 generated/*
 !generated/README.md
+!generated/step5k-ww-gauge-dword.json
+!generated/step5k-momentum-rule-ledger.json
 mirror/.payload/
 tmp/

@@ -353,6 +353,13 @@
       "state": "ACCEPTED",
       "blocking_reason": null,
       "task_sha256": "0ac669c8f432b1bbe7f37c962f2e2bc4d1781d055d7f08cd455b7a4a9684b86d",
+      "task": "tasks/archive/MIRROR-STEP-05-CLAUDE-AUDIT-NOTION-001.yaml"
+    },
+    {
+      "id": "CONTRACT-STEP-05K-STRICT-SUPERGRAPH-COMPLETION-001",
+      "state": "ACCEPTED",
+      "blocking_reason": null,
+      "task_sha256": "93e6a955712d27a3254ead5e2a9bf34511b08cbcee1b0bbc0ad525d78b3594fa",
       "task": "tasks/CURRENT.yaml"
     }
   ]

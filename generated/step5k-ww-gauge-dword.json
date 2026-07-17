@@ -1,0 +1,3760 @@
+{
+  "generated": true,
+  "schema_version": "step5k.dword.v1",
+  "graph_id": "G-WW-GAUGE-01",
+  "status": "CANONICAL_ISOLATED_DWORD_AND_FULL_48_ROW_CONTACT_STREAM_EXACT",
+  "generator": {
+    "path": "scripts/build_step5k_ww_gauge_dword.py",
+    "check": "python3 scripts/build_step5k_ww_gauge_dword.py --check",
+    "cartesian_product": "2 chirality * 4 raw monomial * 3 placement * 2 endpoint = 48"
+  },
+  "scope": {
+    "signature": "EUCLIDEAN_DRED",
+    "gauge": "FERMI_FEYNMAN_D1",
+    "seed": "(nabla_+ W_+^A,nabla_+ W_+^B)",
+    "sector": "GAUGE_VECTOR_FP_NK",
+    "external_target_used": false,
+    "canonical_quantum_field": "u=V/(sqrt(2)*g)",
+    "source": "S_J=int J_AB L^A exp(w dot D_adj) L^B",
+    "source_letter": "L=g^(-1)*nabla_+ W_+",
+    "routing": "r0=k,r1=k+q,r2=k+p+q"
+  },
+  "symbols": {
+    "edge_momenta": {
+      "e0": "r0=k",
+      "e1": "r1=k+q",
+      "e2": "r2=k+p+q"
+    },
+    "denominators": {
+      "D0": "r0_d^2",
+      "D1": "r1_d^2",
+      "D2": "r2_d^2"
+    },
+    "mixed_momenta": {
+      "L1": "r0+r1=2*k+q",
+      "L2": "r1+r2=2*k+p+2*q"
+    },
+    "external_letters": {
+      "A": "g^(-1)*(nabla_+ W_+)",
+      "D_dotalpha": "g^(-1)*bar(W)_dotalpha"
+    },
+    "color_tensor": "F^{AB}_{DE}=kappa^{AU}*kappa^{BV}*kappa^{CC'}*c_{UCD}*c_{VC'E}",
+    "lambda1": "hbar*g^2/(16*pi^2)"
+  },
+  "fourier_and_local_algebra": {
+    "phase": "exp(i*r*x)",
+    "D": "D_i,alpha(r)=partial_i,alpha+i*r_(alpha,dotbeta)*bartheta_i^dotbeta",
+    "barD": "barD_i,dotalpha(r)=barpartial_i,dotalpha-i*theta_i^beta*r_(beta,dotalpha)",
+    "mixed_anticommutator": "{D_alpha(r),barD_dotbeta(s)}=-i*(r+s)_(alpha,dotbeta)",
+    "same_edge_anticommutator": "{D_alpha(r_i),barD_dotbeta(r_i)}=-2*i*r_i_(alpha,dotbeta)",
+    "endpoint_D": "D_i(r)*Delta_ij(r)=-D_j(-r)*Delta_ij(r)",
+    "endpoint_barD": "barD_i(r)*Delta_ij(r)=-barD_j(-r)*Delta_ij(r)",
+    "delta_saturation": "delta4(theta)*D^2*barD^2*delta4(theta)=16*delta4(theta)"
+  },
+  "raw_word": {
+    "id": "RAW_LINEAR_FIELD_STRENGTH_PAIR",
+    "word": "(D^[e0]-D^[e1])*K_+^c*(barD^[e1]-barD^[e2])",
+    "kernel": "K_+^c=-(1/(4*sqrt(2)))*D_+*barD^2*D_+",
+    "marked_kernel": "D_-K_+^c=-(1/(8*sqrt(2)))*D^2*barD^2*D_+",
+    "parity_K": 0,
+    "expanded_raw_signs": [
+      1,
+      -1,
+      -1,
+      1
+    ]
+  },
+  "endpoint_rows": [
+    {
+      "row_id": "R01",
+      "left_edge_tag": "e0",
+      "right_edge_tag": "e1",
+      "before": "+D^[e0]*K_+^c*barD^[e1]",
+      "raw_sign": 1,
+      "endpoint_rewrites": [
+        {
+          "rule": "ENDPOINT_D",
+          "edge_tag": "e0",
+          "sign": -1,
+          "before": "D_1^[e0]*Delta_01",
+          "after": "-D_0^[e0]*Delta_01"
+        }
+      ],
+      "transport_sign": -1,
+      "raw_times_transport": -1
+    },
+    {
+      "row_id": "R02",
+      "left_edge_tag": "e0",
+      "right_edge_tag": "e2",
+      "before": "-D^[e0]*K_+^c*barD^[e2]",
+      "raw_sign": -1,
+      "endpoint_rewrites": [
+        {
+          "rule": "ENDPOINT_D",
+          "edge_tag": "e0",
+          "sign": -1,
+          "before": "D_1^[e0]*Delta_01",
+          "after": "-D_0^[e0]*Delta_01"
+        },
+        {
+          "rule": "ENDPOINT_BARD",
+          "edge_tag": "e2",
+          "sign": -1,
+          "before": "barD_2^[e2]*Delta_20",
+          "after": "-barD_0^[e2]*Delta_20"
+        }
+      ],
+      "transport_sign": 1,
+      "raw_times_transport": -1
+    },
+    {
+      "row_id": "R11",
+      "left_edge_tag": "e1",
+      "right_edge_tag": "e1",
+      "before": "-D^[e1]*K_+^c*barD^[e1]",
+      "raw_sign": -1,
+      "endpoint_rewrites": [],
+      "transport_sign": 1,
+      "raw_times_transport": -1
+    },
+    {
+      "row_id": "R12",
+      "left_edge_tag": "e1",
+      "right_edge_tag": "e2",
+      "before": "+D^[e1]*K_+^c*barD^[e2]",
+      "raw_sign": 1,
+      "endpoint_rewrites": [
+        {
+          "rule": "ENDPOINT_BARD",
+          "edge_tag": "e2",
+          "sign": -1,
+          "before": "barD_2^[e2]*Delta_20",
+          "after": "-barD_0^[e2]*Delta_20"
+        }
+      ],
+      "transport_sign": -1,
+      "raw_times_transport": -1
+    }
+  ],
+  "dminus_marks": [
+    {
+      "mark_id": "T0",
+      "ordered_source_word": "I0_DminusA1[A]*A1[B]",
+      "kernel_word": "(D_-K_+^c)^[e0]*(K_+^c)^[e2]",
+      "physical_cut_edge": "e0",
+      "selected_parent": "N_S,T0=Q0*bar(r0)^2",
+      "contact": "K_raw,T0=-Q0*r0_d^2-L_T0",
+      "dred_remainder": "Q0*mu_ell^2"
+    },
+    {
+      "mark_id": "T2",
+      "ordered_source_word": "I0_A1[A]*DminusA1[B]",
+      "kernel_word": "(K_+^c)^[e0]*(D_-K_+^c)^[e2]",
+      "physical_cut_edge": "e2",
+      "selected_parent": "N_S,T2=Q2*bar(r2)^2",
+      "contact": "K_raw,T2=-Q2*r2_d^2-L_T2",
+      "dred_remainder": "Q2*mu_ell^2"
+    }
+  ],
+  "ordered_local_rewrites": [
+    {
+      "rewrite_id": "W0_DELTA_SATURATION",
+      "rule": "CLOSED_GRASSMANN_LOOP",
+      "sign": 1,
+      "edge_tags": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "before": "Delta_01*Delta_12*Delta_20 with ordered D^2*barD^2 on the surviving delta",
+      "after": "16*Delta_closed"
+    },
+    {
+      "rewrite_id": "W1_LEFT_SAME_EDGE_ROW_SUM",
+      "rule": "SAME_EDGE_MIXED_ANTICOMMUTATOR",
+      "common_factor": 2,
+      "edge_tags": [
+        "e0",
+        "e1"
+      ],
+      "row_rewrites": [
+        "{D_+(r0),barD_dotbeta(r0)}=-2*i*r0_(+,dotbeta)",
+        "{D_+(r1),barD_dotbeta(r1)}=-2*i*r1_(+,dotbeta)"
+      ],
+      "after": "-2*i*(r0+r1)_(+,dotbeta)=-2*i*L1_(+,dotbeta)"
+    },
+    {
+      "rewrite_id": "W2_RIGHT_SAME_EDGE_ROW_SUM",
+      "rule": "SAME_EDGE_MIXED_ANTICOMMUTATOR",
+      "common_factor": 2,
+      "edge_tags": [
+        "e1",
+        "e2"
+      ],
+      "row_rewrites": [
+        "{D_gamma(r1),barD^dotalpha(r1)}=-2*i*r1_gamma^dotalpha",
+        "{D_gamma(r2),barD^dotalpha(r2)}=-2*i*r2_gamma^dotalpha"
+      ],
+      "after": "-2*i*(r1+r2)_gamma^dotalpha=-2*i*L2_gamma^dotalpha"
+    },
+    {
+      "rewrite_id": "W3_NONCOMMUTATIVE_PRODUCT_EXPANSION",
+      "rule": "ORDERED_DISTRIBUTIVE_EXPANSION",
+      "sign": 1,
+      "edge_tags": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "before": "normalized_left_pair*(i*p)^(dotbeta,gamma)*normalized_right_pair after extracting same-edge factors 2*2",
+      "after_terms": [
+        {
+          "term_id": "W3_4D",
+          "word": "barD_dotbeta*D_+*(i*p)^(dotbeta,gamma)*barD^dotalpha*D_gamma",
+          "coefficient": 1,
+          "type": "LONGITUDINAL_OR_CONTACT"
+        },
+        {
+          "term_id": "W3_2D_RIGHT",
+          "word": "i*barD_dotbeta*D_+*(i*p)^(dotbeta,gamma)*L2_gamma^dotalpha",
+          "coefficient": 1,
+          "type": "EOM_OR_DIVERGENCE"
+        },
+        {
+          "term_id": "W3_2D_LEFT",
+          "word": "i*L1_(+,dotbeta)*(i*p)^(dotbeta,gamma)*barD^dotalpha*D_gamma",
+          "coefficient": 1,
+          "type": "EOM_OR_DIVERGENCE"
+        },
+        {
+          "term_id": "W3_SELECTED",
+          "word": "-L1_(+,dotbeta)*(i*p)^(dotbeta,gamma)*L2_gamma^dotalpha",
+          "coefficient": -1,
+          "type": "SELECTED_PARENT"
+        }
+      ]
+    },
+    {
+      "rewrite_id": "W4_FOUR_ENDPOINT_ROW_SUM",
+      "rule": "ROW_SIGN_TIMES_SAME_EDGE_SELECTED_BRANCH",
+      "edge_tags": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "row_numerators": [
+        "R01:(-1)*[-4*N_01]=+4*N_01",
+        "R02:(-1)*[-4*N_02]=+4*N_02",
+        "R11:(-1)*[-4*N_11]=+4*N_11",
+        "R12:(-1)*[-4*N_12]=+4*N_12"
+      ],
+      "after": "4*sum_(i=0,1;j=1,2)N_ij=4*(r0+r1)*(i*p)*(r1+r2)=4*N_T"
+    }
+  ],
+  "numerator_provenance": {
+    "selected_numerator": "N_T,+^dotalpha=L1_(+,dotbeta)*(i*p)^(dotbeta,gamma)*L2_gamma^dotalpha",
+    "L1": {
+      "source": "sum of two same-edge anticommutator endpoint rows after extracting common factor 2",
+      "edge_tags": [
+        "e0",
+        "e1"
+      ],
+      "formula": "r0+r1"
+    },
+    "middle_p": {
+      "source": "external chiral derivative conversion",
+      "external_operator": "A=g^(-1)*nabla_+ W_+",
+      "formula": "i*p"
+    },
+    "L2": {
+      "source": "sum of two same-edge anticommutator endpoint rows after extracting common factor 2",
+      "edge_tags": [
+        "e1",
+        "e2"
+      ],
+      "formula": "r1+r2"
+    },
+    "external_remnant": "D_dotalpha^D*N_T,+^dotalpha*A^E",
+    "delta_saturation_factor": 16,
+    "rank_two_loop_term": "(2*ell^m)*(2*ell^n)=4*ell^m*ell^n",
+    "nonselected_terms": {
+      "L_rho": "raw longitudinal/contact word paired rowwise with K_raw,rho",
+      "q_rows": [
+        "DA_q=(P dot D)A",
+        "AD_q=A(P dot D)"
+      ]
+    }
+  },
+  "wick_contractions": {
+    "direct": [
+      "<u0^a0 u1^a1>",
+      "<u1^b1 u2^a2>",
+      "<u2^b2 u0^b0>"
+    ],
+    "source_reflected": [
+      "<u0^b0 u1^a1>",
+      "<u1^b1 u2^a2>",
+      "<u2^b2 u0^a0>"
+    ],
+    "propagator_product": "(-hbar)^3*kappa^(a0,a1)*kappa^(b1,a2)*kappa^(b2,b0)*Delta01*Delta12*Delta20/(D0*D1*D2)",
+    "koszul_sign": 1,
+    "taylor_and_labeled_action_weight": "(1/2!)*(1+1)=1"
+  },
+  "coefficient_ledger": {
+    "canonical_source_marked_times_unmarked": "(-1/(8*sqrt(2)))*(-1/(4*sqrt(2)))=1/64",
+    "closed_delta": 16,
+    "same_edge_anticommutator_factor_left": 2,
+    "same_edge_anticommutator_factor_right": 2,
+    "D_weight": "(1/64)*16*2*2=1",
+    "action_order_factor": "(1/2!)*(S_plus*S_minus+S_minus*S_plus)=1",
+    "port_preserving_wick_factor": 1,
+    "exponent_vertex_W": "-i*g/(4*hbar)",
+    "exponent_vertex_barW": "+i*g/(4*hbar)",
+    "three_canonical_vector_propagators": "(-hbar)^3",
+    "vertices_times_propagators": "(-i*g/(4*hbar))*(+i*g/(4*hbar))*(-hbar)^3=-hbar*g^2/16",
+    "global_odd_source_loop_IBP_sign": -1,
+    "fixed_parent_prefactor": "+hbar*g^2/16",
+    "selected_square_minus_cut": "-4*(bar(L)^2-L_d^2)*sigma.p=-4*mu_L^2*sigma.p",
+    "simplex_factor": "2*int_Sigma2(1)=1",
+    "evanescent_master": "int d^dL/(2*pi)^d mu_L^2/(L^2+Delta)^3=1/(32*pi^2)",
+    "isolated_directed_result": "-hbar*g^2/(128*pi^2)=-lambda1/8"
+  },
+  "preintegral_amplitude": {
+    "graph_id": "G-WW-GAUGE-01",
+    "scope": "ISOLATED_CANONICAL_DIRECTED_TRIANGLE_WITH_SAME_EDGE_DRED_CUT",
+    "parent": "(+hbar*g^2/16)*F^{AB}_{DE}*D_dotalpha^D*int_k[exp(i*w*r2)*N_T,+^dotalpha*A^E/(D0*D1*D2)]",
+    "numerator": "N_T,+^dotalpha=(r0+r1)_(+,dotbeta)*(i*p)^(dotbeta,gamma)*(r1+r2)_gamma^dotalpha",
+    "phase_shift": "r2=L+a*q+b*p, 0<=a<=b<=1",
+    "loop_phase_projection": "omega_(a,dota)=delta_a^+*w_dota has omega^2=0, so exp(i*w*L) contributes only its constant jet",
+    "selected_parent_minus_cut": "(+hbar*g^2/16)*F^{AB}_{DE}*D^D*int_L[-4*mu_L^2*sigma.p*A^E/(L^2+Delta)^3]",
+    "result": "-lambda1/8",
+    "forbidden_identification": "This isolated integral is not the full gauge orbit."
+  },
+  "anomaly_projection": {
+    "isolated_directed": {
+      "four_dimensional_spinor_identity": "4*sigma.L*barsigma.p*sigma.L=8*(L.p)*sigma.L-4*bar(L)^2*sigma.p",
+      "schwinger_exact_term": "8*(L.p)*sigma.L",
+      "selected_square": "-4*bar(L)^2*sigma.p",
+      "full_d_cut": "-4*L_d^2*sigma.p",
+      "difference": "-4*mu_L^2*sigma.p",
+      "master": "1/(32*pi^2)",
+      "result": "-lambda1/8"
+    },
+    "full_gauge_orbit": {
+      "provenance": "audits/step5-aa-external-slot-decomposition-exact.json; not derived by the Step-5K 48-row local contact generator",
+      "derived_by_this_generator": false,
+      "raw_ordered_basis": [
+        "DA_p",
+        "DA_q",
+        "AD_p",
+        "AD_q"
+      ],
+      "raw_coefficients_before_common_fourier": [
+        "i",
+        "2*i",
+        "-i",
+        "-2*i"
+      ],
+      "common_fourier_map": "-i",
+      "coefficients_after_common_fourier": [
+        "1",
+        "2",
+        "-1",
+        "-2"
+      ],
+      "eom_quotient": {
+        "DA_q": "EOM",
+        "AD_q": "EOM",
+        "surviving": [
+          "1",
+          "0",
+          "-1",
+          "0"
+        ]
+      },
+      "physical_result": "lambda1*F^{AB}_{DE}*(DA_p-AD_p)"
+    }
+  },
+  "fp_block": {
+    "kernel_K_E_FP": [
+      [
+        "0",
+        "+(i/4)*barD^2"
+      ],
+      [
+        "-(i/4)*D^2",
+        "0"
+      ]
+    ],
+    "inverse_bar4": [
+      [
+        "0",
+        "+(i/4)*barBox_E^-1*barD^2"
+      ],
+      [
+        "-(i/4)*barBox_E^-1*D^2",
+        "0"
+      ]
+    ],
+    "inverse_d": [
+      [
+        "0",
+        "+(i/4)*Box_d^-1*barD^2"
+      ],
+      [
+        "-(i/4)*Box_d^-1*D^2",
+        "0"
+      ]
+    ],
+    "right_inverse_check": "K_E^FP*inverse_bar4=diag(P_+^bar4,P_-^bar4)=1_Fperp",
+    "left_inverse_check": "inverse_bar4*K_E^FP=diag(P_+^bar4,P_-^bar4)=1_Gperp",
+    "regulated_right_defect": "mu_r^2/r_d^2",
+    "regulated_left_defect": "mu_r^2/r_d^2",
+    "cubic_vertex": "(i*g/(4*sqrt(2)))*[int_+ c'_+*barD^2[tilde(c)+c,u]+int_- tilde(c)'_-*D^2[tilde(c)+c,u]]",
+    "one_loop_candidate": "I1_source*S_FP3 with one vector edge and one same-vertex ghost edge",
+    "candidate_verdict": "EXACT_ZERO",
+    "zero_reason": "delta4(Q) for generic Q; at Q=0 every remaining DRED integral is scaleless",
+    "two_cubic_vertex_graph_loop_number": "I-V+1=4-3+1=2"
+  },
+  "sector_verdicts": [
+    {
+      "sector": "VECTOR_PARENT",
+      "verdict": "EVALUATED"
+    },
+    {
+      "sector": "RAW_SAME_EDGE_SCHWINGER",
+      "verdict": "PAIRED_CONTACT"
+    },
+    {
+      "sector": "Q_CARRIER_ROWS",
+      "verdict": "EOM"
+    },
+    {
+      "sector": "FP",
+      "verdict": "EXACT_ZERO"
+    },
+    {
+      "sector": "GAUGE_FIXING_INTERACTIONS",
+      "verdict": "EXACT_ZERO",
+      "reason": "fixed FF gauge-fixing action is quadratic"
+    },
+    {
+      "sector": "NIELSEN_KALLOSH",
+      "verdict": "EXACT_ZERO",
+      "reason": "D2 field-independent external measure cancels in normalized correlators"
+    }
+  ],
+  "invariants": {
+    "endpoint_row_count": 4,
+    "mark_count": 2,
+    "all_raw_times_transport_equal": -1,
+    "contact_multiplicity_per_physical_edge": 1,
+    "reflection_changes_physical_source_edge": false,
+    "ghost_modifies_physical_coefficient": false,
+    "nk_modifies_physical_coefficient": false,
+    "full_contact_row_count": 48,
+    "full_contact_unique_row_id_count": 48,
+    "full_hessian_group_count": 24,
+    "endpoints_per_hessian_group": 2,
+    "source_mark_count": 2,
+    "unresolved_count": 0
+  },
+  "unresolved": [],
+  "isolated_directed_result": {
+    "graph_id": "G-WW-GAUGE-01",
+    "value": "-lambda1/8",
+    "status": "CANONICAL_CONDITIONAL_FF_SLICE",
+    "coefficient_source": "canonical source 1/64, canonical vertices, three canonical propagators, odd IBP, selected DRED square"
+  },
+  "full_gauge_orbit_result": {
+    "value": "lambda1*F^{AB}_{DE}*(DA_p-AD_p)",
+    "status": "IMPORTED_ACCEPTED_TARGET_BLIND_EXTERNAL_SLOT_RECONSTRUCTION",
+    "source": "audits/step5-aa-external-slot-decomposition-exact.json",
+    "source_exact_checks": 269,
+    "source_color_mask_rows": 9216,
+    "derived_by_this_generator": false,
+    "not_equal_to_single_triangle_integral": true
+  },
+  "legacy_rejected_factor8": {
+    "status": "REJECTED_FACTOR_8",
+    "old_source_coefficient": "1/32",
+    "old_D_weight": 2,
+    "old_vertices": "(+i*g/2)*(-i*g/2)",
+    "old_prefactor": "hbar*g^2/2",
+    "missing_three_line_factor": "(1/2)^3=1/8",
+    "ratio_to_canonical": 8
+  },
+  "full_contact_rows": [
+    {
+      "row_id": "+:0001:BES",
+      "hessian_group_id": "+:0001:derivative_commutator",
+      "chirality": "+",
+      "raw_monomial": "0001",
+      "external_placement": "derivative_commutator",
+      "input_word": "c_+*Tr(W_+^(1)(X=B)*[mathscrD_+(Y=E),Z=S])::0001",
+      "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+      "quantum_slots": "XZ",
+      "ordered_quantum_roles": "BS",
+      "edge_tags": {
+        "T0": [
+          "e1",
+          "e0"
+        ],
+        "T2": [
+          "e1",
+          "e2"
+        ]
+      },
+      "raw_sign": -1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"B\",\"Y\":\"E\",\"Z\":\"S\"}",
+          "after": "external=Y,quantum=XZ"
+        },
+        {
+          "rule": "EVEN_SWAP_BS_TO_SB",
+          "sign": 1,
+          "before": "BS",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "+:0001:SEB",
+      "hessian_group_id": "+:0001:derivative_commutator",
+      "chirality": "+",
+      "raw_monomial": "0001",
+      "external_placement": "derivative_commutator",
+      "input_word": "c_+*Tr(W_+^(1)(X=S)*[mathscrD_+(Y=E),Z=B])::0001",
+      "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+      "quantum_slots": "XZ",
+      "ordered_quantum_roles": "SB",
+      "edge_tags": {
+        "T0": [
+          "e0",
+          "e1"
+        ],
+        "T2": [
+          "e2",
+          "e1"
+        ]
+      },
+      "raw_sign": -1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"S\",\"Y\":\"E\",\"Z\":\"B\"}",
+          "after": "external=Y,quantum=XZ"
+        },
+        {
+          "rule": "KEEP_SB",
+          "sign": 1,
+          "before": "SB",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "+:0001:EBS",
+      "hessian_group_id": "+:0001:linear_field_strength",
+      "chirality": "+",
+      "raw_monomial": "0001",
+      "external_placement": "linear_field_strength",
+      "input_word": "c_+*Tr(W_+^(1)(X=E)*[mathscrD_+(Y=B),Z=S])::0001",
+      "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+      "quantum_slots": "YZ",
+      "ordered_quantum_roles": "BS",
+      "edge_tags": {
+        "T0": [
+          "e1",
+          "e0"
+        ],
+        "T2": [
+          "e1",
+          "e2"
+        ]
+      },
+      "raw_sign": -1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"E\",\"Y\":\"B\",\"Z\":\"S\"}",
+          "after": "external=X,quantum=YZ"
+        },
+        {
+          "rule": "EVEN_SWAP_BS_TO_SB",
+          "sign": 1,
+          "before": "BS",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "+:0001:ESB",
+      "hessian_group_id": "+:0001:linear_field_strength",
+      "chirality": "+",
+      "raw_monomial": "0001",
+      "external_placement": "linear_field_strength",
+      "input_word": "c_+*Tr(W_+^(1)(X=E)*[mathscrD_+(Y=S),Z=B])::0001",
+      "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+      "quantum_slots": "YZ",
+      "ordered_quantum_roles": "SB",
+      "edge_tags": {
+        "T0": [
+          "e0",
+          "e1"
+        ],
+        "T2": [
+          "e2",
+          "e1"
+        ]
+      },
+      "raw_sign": -1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"E\",\"Y\":\"S\",\"Z\":\"B\"}",
+          "after": "external=X,quantum=YZ"
+        },
+        {
+          "rule": "KEEP_SB",
+          "sign": 1,
+          "before": "SB",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "+:0001:BSE",
+      "hessian_group_id": "+:0001:plain_commutator",
+      "chirality": "+",
+      "raw_monomial": "0001",
+      "external_placement": "plain_commutator",
+      "input_word": "c_+*Tr(W_+^(1)(X=B)*[mathscrD_+(Y=S),Z=E])::0001",
+      "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+      "quantum_slots": "XY",
+      "ordered_quantum_roles": "BS",
+      "edge_tags": {
+        "T0": [
+          "e1",
+          "e0"
+        ],
+        "T2": [
+          "e1",
+          "e2"
+        ]
+      },
+      "raw_sign": -1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"B\",\"Y\":\"S\",\"Z\":\"E\"}",
+          "after": "external=Z,quantum=XY"
+        },
+        {
+          "rule": "EVEN_SWAP_BS_TO_SB",
+          "sign": 1,
+          "before": "BS",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "+:0001:SBE",
+      "hessian_group_id": "+:0001:plain_commutator",
+      "chirality": "+",
+      "raw_monomial": "0001",
+      "external_placement": "plain_commutator",
+      "input_word": "c_+*Tr(W_+^(1)(X=S)*[mathscrD_+(Y=B),Z=E])::0001",
+      "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+      "quantum_slots": "XY",
+      "ordered_quantum_roles": "SB",
+      "edge_tags": {
+        "T0": [
+          "e0",
+          "e1"
+        ],
+        "T2": [
+          "e2",
+          "e1"
+        ]
+      },
+      "raw_sign": -1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"S\",\"Y\":\"B\",\"Z\":\"E\"}",
+          "after": "external=Z,quantum=XY"
+        },
+        {
+          "rule": "KEEP_SB",
+          "sign": 1,
+          "before": "SB",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "+:0010:BSE",
+      "hessian_group_id": "+:0010:derivative_commutator",
+      "chirality": "+",
+      "raw_monomial": "0010",
+      "external_placement": "derivative_commutator",
+      "input_word": "c_+*Tr(W_+^(1)(X=B)*[mathscrD_+(Y=S),Z=E])::0010",
+      "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+      "quantum_slots": "XY",
+      "ordered_quantum_roles": "BS",
+      "edge_tags": {
+        "T0": [
+          "e1",
+          "e0"
+        ],
+        "T2": [
+          "e1",
+          "e2"
+        ]
+      },
+      "raw_sign": 1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"B\",\"Y\":\"S\",\"Z\":\"E\"}",
+          "after": "external=Z,quantum=XY"
+        },
+        {
+          "rule": "EVEN_SWAP_BS_TO_SB",
+          "sign": 1,
+          "before": "BS",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "+:0010:SBE",
+      "hessian_group_id": "+:0010:derivative_commutator",
+      "chirality": "+",
+      "raw_monomial": "0010",
+      "external_placement": "derivative_commutator",
+      "input_word": "c_+*Tr(W_+^(1)(X=S)*[mathscrD_+(Y=B),Z=E])::0010",
+      "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+      "quantum_slots": "XY",
+      "ordered_quantum_roles": "SB",
+      "edge_tags": {
+        "T0": [
+          "e0",
+          "e1"
+        ],
+        "T2": [
+          "e2",
+          "e1"
+        ]
+      },
+      "raw_sign": 1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"S\",\"Y\":\"B\",\"Z\":\"E\"}",
+          "after": "external=Z,quantum=XY"
+        },
+        {
+          "rule": "KEEP_SB",
+          "sign": 1,
+          "before": "SB",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "+:0010:EBS",
+      "hessian_group_id": "+:0010:linear_field_strength",
+      "chirality": "+",
+      "raw_monomial": "0010",
+      "external_placement": "linear_field_strength",
+      "input_word": "c_+*Tr(W_+^(1)(X=E)*[mathscrD_+(Y=B),Z=S])::0010",
+      "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+      "quantum_slots": "YZ",
+      "ordered_quantum_roles": "BS",
+      "edge_tags": {
+        "T0": [
+          "e1",
+          "e0"
+        ],
+        "T2": [
+          "e1",
+          "e2"
+        ]
+      },
+      "raw_sign": 1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"E\",\"Y\":\"B\",\"Z\":\"S\"}",
+          "after": "external=X,quantum=YZ"
+        },
+        {
+          "rule": "EVEN_SWAP_BS_TO_SB",
+          "sign": 1,
+          "before": "BS",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "+:0010:ESB",
+      "hessian_group_id": "+:0010:linear_field_strength",
+      "chirality": "+",
+      "raw_monomial": "0010",
+      "external_placement": "linear_field_strength",
+      "input_word": "c_+*Tr(W_+^(1)(X=E)*[mathscrD_+(Y=S),Z=B])::0010",
+      "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+      "quantum_slots": "YZ",
+      "ordered_quantum_roles": "SB",
+      "edge_tags": {
+        "T0": [
+          "e0",
+          "e1"
+        ],
+        "T2": [
+          "e2",
+          "e1"
+        ]
+      },
+      "raw_sign": 1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"E\",\"Y\":\"S\",\"Z\":\"B\"}",
+          "after": "external=X,quantum=YZ"
+        },
+        {
+          "rule": "KEEP_SB",
+          "sign": 1,
+          "before": "SB",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "+:0010:BES",
+      "hessian_group_id": "+:0010:plain_commutator",
+      "chirality": "+",
+      "raw_monomial": "0010",
+      "external_placement": "plain_commutator",
+      "input_word": "c_+*Tr(W_+^(1)(X=B)*[mathscrD_+(Y=E),Z=S])::0010",
+      "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+      "quantum_slots": "XZ",
+      "ordered_quantum_roles": "BS",
+      "edge_tags": {
+        "T0": [
+          "e1",
+          "e0"
+        ],
+        "T2": [
+          "e1",
+          "e2"
+        ]
+      },
+      "raw_sign": 1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"B\",\"Y\":\"E\",\"Z\":\"S\"}",
+          "after": "external=Y,quantum=XZ"
+        },
+        {
+          "rule": "EVEN_SWAP_BS_TO_SB",
+          "sign": 1,
+          "before": "BS",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "+:0010:SEB",
+      "hessian_group_id": "+:0010:plain_commutator",
+      "chirality": "+",
+      "raw_monomial": "0010",
+      "external_placement": "plain_commutator",
+      "input_word": "c_+*Tr(W_+^(1)(X=S)*[mathscrD_+(Y=E),Z=B])::0010",
+      "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+      "quantum_slots": "XZ",
+      "ordered_quantum_roles": "SB",
+      "edge_tags": {
+        "T0": [
+          "e0",
+          "e1"
+        ],
+        "T2": [
+          "e2",
+          "e1"
+        ]
+      },
+      "raw_sign": 1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"S\",\"Y\":\"E\",\"Z\":\"B\"}",
+          "after": "external=Y,quantum=XZ"
+        },
+        {
+          "rule": "KEEP_SB",
+          "sign": 1,
+          "before": "SB",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "+:0100:EBS",
+      "hessian_group_id": "+:0100:derivative_commutator",
+      "chirality": "+",
+      "raw_monomial": "0100",
+      "external_placement": "derivative_commutator",
+      "input_word": "c_+*Tr(W_+^(1)(X=E)*[mathscrD_+(Y=B),Z=S])::0100",
+      "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+      "quantum_slots": "YZ",
+      "ordered_quantum_roles": "BS",
+      "edge_tags": {
+        "T0": [
+          "e1",
+          "e0"
+        ],
+        "T2": [
+          "e1",
+          "e2"
+        ]
+      },
+      "raw_sign": -1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"E\",\"Y\":\"B\",\"Z\":\"S\"}",
+          "after": "external=X,quantum=YZ"
+        },
+        {
+          "rule": "EVEN_SWAP_BS_TO_SB",
+          "sign": 1,
+          "before": "BS",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "+:0100:ESB",
+      "hessian_group_id": "+:0100:derivative_commutator",
+      "chirality": "+",
+      "raw_monomial": "0100",
+      "external_placement": "derivative_commutator",
+      "input_word": "c_+*Tr(W_+^(1)(X=E)*[mathscrD_+(Y=S),Z=B])::0100",
+      "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+      "quantum_slots": "YZ",
+      "ordered_quantum_roles": "SB",
+      "edge_tags": {
+        "T0": [
+          "e0",
+          "e1"
+        ],
+        "T2": [
+          "e2",
+          "e1"
+        ]
+      },
+      "raw_sign": -1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"E\",\"Y\":\"S\",\"Z\":\"B\"}",
+          "after": "external=X,quantum=YZ"
+        },
+        {
+          "rule": "KEEP_SB",
+          "sign": 1,
+          "before": "SB",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "+:0100:BSE",
+      "hessian_group_id": "+:0100:linear_field_strength",
+      "chirality": "+",
+      "raw_monomial": "0100",
+      "external_placement": "linear_field_strength",
+      "input_word": "c_+*Tr(W_+^(1)(X=B)*[mathscrD_+(Y=S),Z=E])::0100",
+      "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+      "quantum_slots": "XY",
+      "ordered_quantum_roles": "BS",
+      "edge_tags": {
+        "T0": [
+          "e1",
+          "e0"
+        ],
+        "T2": [
+          "e1",
+          "e2"
+        ]
+      },
+      "raw_sign": -1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"B\",\"Y\":\"S\",\"Z\":\"E\"}",
+          "after": "external=Z,quantum=XY"
+        },
+        {
+          "rule": "EVEN_SWAP_BS_TO_SB",
+          "sign": 1,
+          "before": "BS",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "+:0100:SBE",
+      "hessian_group_id": "+:0100:linear_field_strength",
+      "chirality": "+",
+      "raw_monomial": "0100",
+      "external_placement": "linear_field_strength",
+      "input_word": "c_+*Tr(W_+^(1)(X=S)*[mathscrD_+(Y=B),Z=E])::0100",
+      "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+      "quantum_slots": "XY",
+      "ordered_quantum_roles": "SB",
+      "edge_tags": {
+        "T0": [
+          "e0",
+          "e1"
+        ],
+        "T2": [
+          "e2",
+          "e1"
+        ]
+      },
+      "raw_sign": -1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"S\",\"Y\":\"B\",\"Z\":\"E\"}",
+          "after": "external=Z,quantum=XY"
+        },
+        {
+          "rule": "KEEP_SB",
+          "sign": 1,
+          "before": "SB",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "+:0100:BES",
+      "hessian_group_id": "+:0100:plain_commutator",
+      "chirality": "+",
+      "raw_monomial": "0100",
+      "external_placement": "plain_commutator",
+      "input_word": "c_+*Tr(W_+^(1)(X=B)*[mathscrD_+(Y=E),Z=S])::0100",
+      "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+      "quantum_slots": "XZ",
+      "ordered_quantum_roles": "BS",
+      "edge_tags": {
+        "T0": [
+          "e1",
+          "e0"
+        ],
+        "T2": [
+          "e1",
+          "e2"
+        ]
+      },
+      "raw_sign": -1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"B\",\"Y\":\"E\",\"Z\":\"S\"}",
+          "after": "external=Y,quantum=XZ"
+        },
+        {
+          "rule": "EVEN_SWAP_BS_TO_SB",
+          "sign": 1,
+          "before": "BS",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "+:0100:SEB",
+      "hessian_group_id": "+:0100:plain_commutator",
+      "chirality": "+",
+      "raw_monomial": "0100",
+      "external_placement": "plain_commutator",
+      "input_word": "c_+*Tr(W_+^(1)(X=S)*[mathscrD_+(Y=E),Z=B])::0100",
+      "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+      "quantum_slots": "XZ",
+      "ordered_quantum_roles": "SB",
+      "edge_tags": {
+        "T0": [
+          "e0",
+          "e1"
+        ],
+        "T2": [
+          "e2",
+          "e1"
+        ]
+      },
+      "raw_sign": -1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"S\",\"Y\":\"E\",\"Z\":\"B\"}",
+          "after": "external=Y,quantum=XZ"
+        },
+        {
+          "rule": "KEEP_SB",
+          "sign": 1,
+          "before": "SB",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "+:1000:BES",
+      "hessian_group_id": "+:1000:derivative_commutator",
+      "chirality": "+",
+      "raw_monomial": "1000",
+      "external_placement": "derivative_commutator",
+      "input_word": "c_+*Tr(W_+^(1)(X=B)*[mathscrD_+(Y=E),Z=S])::1000",
+      "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+      "quantum_slots": "XZ",
+      "ordered_quantum_roles": "BS",
+      "edge_tags": {
+        "T0": [
+          "e1",
+          "e0"
+        ],
+        "T2": [
+          "e1",
+          "e2"
+        ]
+      },
+      "raw_sign": 1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"B\",\"Y\":\"E\",\"Z\":\"S\"}",
+          "after": "external=Y,quantum=XZ"
+        },
+        {
+          "rule": "EVEN_SWAP_BS_TO_SB",
+          "sign": 1,
+          "before": "BS",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "+:1000:SEB",
+      "hessian_group_id": "+:1000:derivative_commutator",
+      "chirality": "+",
+      "raw_monomial": "1000",
+      "external_placement": "derivative_commutator",
+      "input_word": "c_+*Tr(W_+^(1)(X=S)*[mathscrD_+(Y=E),Z=B])::1000",
+      "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+      "quantum_slots": "XZ",
+      "ordered_quantum_roles": "SB",
+      "edge_tags": {
+        "T0": [
+          "e0",
+          "e1"
+        ],
+        "T2": [
+          "e2",
+          "e1"
+        ]
+      },
+      "raw_sign": 1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"S\",\"Y\":\"E\",\"Z\":\"B\"}",
+          "after": "external=Y,quantum=XZ"
+        },
+        {
+          "rule": "KEEP_SB",
+          "sign": 1,
+          "before": "SB",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "+:1000:BSE",
+      "hessian_group_id": "+:1000:linear_field_strength",
+      "chirality": "+",
+      "raw_monomial": "1000",
+      "external_placement": "linear_field_strength",
+      "input_word": "c_+*Tr(W_+^(1)(X=B)*[mathscrD_+(Y=S),Z=E])::1000",
+      "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+      "quantum_slots": "XY",
+      "ordered_quantum_roles": "BS",
+      "edge_tags": {
+        "T0": [
+          "e1",
+          "e0"
+        ],
+        "T2": [
+          "e1",
+          "e2"
+        ]
+      },
+      "raw_sign": 1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"B\",\"Y\":\"S\",\"Z\":\"E\"}",
+          "after": "external=Z,quantum=XY"
+        },
+        {
+          "rule": "EVEN_SWAP_BS_TO_SB",
+          "sign": 1,
+          "before": "BS",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "+:1000:SBE",
+      "hessian_group_id": "+:1000:linear_field_strength",
+      "chirality": "+",
+      "raw_monomial": "1000",
+      "external_placement": "linear_field_strength",
+      "input_word": "c_+*Tr(W_+^(1)(X=S)*[mathscrD_+(Y=B),Z=E])::1000",
+      "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+      "quantum_slots": "XY",
+      "ordered_quantum_roles": "SB",
+      "edge_tags": {
+        "T0": [
+          "e0",
+          "e1"
+        ],
+        "T2": [
+          "e2",
+          "e1"
+        ]
+      },
+      "raw_sign": 1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"S\",\"Y\":\"B\",\"Z\":\"E\"}",
+          "after": "external=Z,quantum=XY"
+        },
+        {
+          "rule": "KEEP_SB",
+          "sign": 1,
+          "before": "SB",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "+:1000:EBS",
+      "hessian_group_id": "+:1000:plain_commutator",
+      "chirality": "+",
+      "raw_monomial": "1000",
+      "external_placement": "plain_commutator",
+      "input_word": "c_+*Tr(W_+^(1)(X=E)*[mathscrD_+(Y=B),Z=S])::1000",
+      "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+      "quantum_slots": "YZ",
+      "ordered_quantum_roles": "BS",
+      "edge_tags": {
+        "T0": [
+          "e1",
+          "e0"
+        ],
+        "T2": [
+          "e1",
+          "e2"
+        ]
+      },
+      "raw_sign": 1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"E\",\"Y\":\"B\",\"Z\":\"S\"}",
+          "after": "external=X,quantum=YZ"
+        },
+        {
+          "rule": "EVEN_SWAP_BS_TO_SB",
+          "sign": 1,
+          "before": "BS",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "+:1000:ESB",
+      "hessian_group_id": "+:1000:plain_commutator",
+      "chirality": "+",
+      "raw_monomial": "1000",
+      "external_placement": "plain_commutator",
+      "input_word": "c_+*Tr(W_+^(1)(X=E)*[mathscrD_+(Y=S),Z=B])::1000",
+      "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+      "quantum_slots": "YZ",
+      "ordered_quantum_roles": "SB",
+      "edge_tags": {
+        "T0": [
+          "e0",
+          "e1"
+        ],
+        "T2": [
+          "e2",
+          "e1"
+        ]
+      },
+      "raw_sign": 1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"E\",\"Y\":\"S\",\"Z\":\"B\"}",
+          "after": "external=X,quantum=YZ"
+        },
+        {
+          "rule": "KEEP_SB",
+          "sign": 1,
+          "before": "SB",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "-:0001:BES",
+      "hessian_group_id": "-:0001:derivative_commutator",
+      "chirality": "-",
+      "raw_monomial": "0001",
+      "external_placement": "derivative_commutator",
+      "input_word": "c_-*Tr(W_-^(1)(X=B)*[mathscrD_-(Y=E),Z=S])::0001",
+      "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+      "quantum_slots": "XZ",
+      "ordered_quantum_roles": "BS",
+      "edge_tags": {
+        "T0": [
+          "e1",
+          "e0"
+        ],
+        "T2": [
+          "e1",
+          "e2"
+        ]
+      },
+      "raw_sign": 1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"B\",\"Y\":\"E\",\"Z\":\"S\"}",
+          "after": "external=Y,quantum=XZ"
+        },
+        {
+          "rule": "EVEN_SWAP_BS_TO_SB",
+          "sign": 1,
+          "before": "BS",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "-:0001:SEB",
+      "hessian_group_id": "-:0001:derivative_commutator",
+      "chirality": "-",
+      "raw_monomial": "0001",
+      "external_placement": "derivative_commutator",
+      "input_word": "c_-*Tr(W_-^(1)(X=S)*[mathscrD_-(Y=E),Z=B])::0001",
+      "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+      "quantum_slots": "XZ",
+      "ordered_quantum_roles": "SB",
+      "edge_tags": {
+        "T0": [
+          "e0",
+          "e1"
+        ],
+        "T2": [
+          "e2",
+          "e1"
+        ]
+      },
+      "raw_sign": 1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"S\",\"Y\":\"E\",\"Z\":\"B\"}",
+          "after": "external=Y,quantum=XZ"
+        },
+        {
+          "rule": "KEEP_SB",
+          "sign": 1,
+          "before": "SB",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "-:0001:EBS",
+      "hessian_group_id": "-:0001:linear_field_strength",
+      "chirality": "-",
+      "raw_monomial": "0001",
+      "external_placement": "linear_field_strength",
+      "input_word": "c_-*Tr(W_-^(1)(X=E)*[mathscrD_-(Y=B),Z=S])::0001",
+      "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+      "quantum_slots": "YZ",
+      "ordered_quantum_roles": "BS",
+      "edge_tags": {
+        "T0": [
+          "e1",
+          "e0"
+        ],
+        "T2": [
+          "e1",
+          "e2"
+        ]
+      },
+      "raw_sign": 1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"E\",\"Y\":\"B\",\"Z\":\"S\"}",
+          "after": "external=X,quantum=YZ"
+        },
+        {
+          "rule": "EVEN_SWAP_BS_TO_SB",
+          "sign": 1,
+          "before": "BS",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "-:0001:ESB",
+      "hessian_group_id": "-:0001:linear_field_strength",
+      "chirality": "-",
+      "raw_monomial": "0001",
+      "external_placement": "linear_field_strength",
+      "input_word": "c_-*Tr(W_-^(1)(X=E)*[mathscrD_-(Y=S),Z=B])::0001",
+      "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+      "quantum_slots": "YZ",
+      "ordered_quantum_roles": "SB",
+      "edge_tags": {
+        "T0": [
+          "e0",
+          "e1"
+        ],
+        "T2": [
+          "e2",
+          "e1"
+        ]
+      },
+      "raw_sign": 1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"E\",\"Y\":\"S\",\"Z\":\"B\"}",
+          "after": "external=X,quantum=YZ"
+        },
+        {
+          "rule": "KEEP_SB",
+          "sign": 1,
+          "before": "SB",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "-:0001:BSE",
+      "hessian_group_id": "-:0001:plain_commutator",
+      "chirality": "-",
+      "raw_monomial": "0001",
+      "external_placement": "plain_commutator",
+      "input_word": "c_-*Tr(W_-^(1)(X=B)*[mathscrD_-(Y=S),Z=E])::0001",
+      "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+      "quantum_slots": "XY",
+      "ordered_quantum_roles": "BS",
+      "edge_tags": {
+        "T0": [
+          "e1",
+          "e0"
+        ],
+        "T2": [
+          "e1",
+          "e2"
+        ]
+      },
+      "raw_sign": 1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"B\",\"Y\":\"S\",\"Z\":\"E\"}",
+          "after": "external=Z,quantum=XY"
+        },
+        {
+          "rule": "EVEN_SWAP_BS_TO_SB",
+          "sign": 1,
+          "before": "BS",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "-:0001:SBE",
+      "hessian_group_id": "-:0001:plain_commutator",
+      "chirality": "-",
+      "raw_monomial": "0001",
+      "external_placement": "plain_commutator",
+      "input_word": "c_-*Tr(W_-^(1)(X=S)*[mathscrD_-(Y=B),Z=E])::0001",
+      "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+      "quantum_slots": "XY",
+      "ordered_quantum_roles": "SB",
+      "edge_tags": {
+        "T0": [
+          "e0",
+          "e1"
+        ],
+        "T2": [
+          "e2",
+          "e1"
+        ]
+      },
+      "raw_sign": 1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"S\",\"Y\":\"B\",\"Z\":\"E\"}",
+          "after": "external=Z,quantum=XY"
+        },
+        {
+          "rule": "KEEP_SB",
+          "sign": 1,
+          "before": "SB",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "-:0010:BSE",
+      "hessian_group_id": "-:0010:derivative_commutator",
+      "chirality": "-",
+      "raw_monomial": "0010",
+      "external_placement": "derivative_commutator",
+      "input_word": "c_-*Tr(W_-^(1)(X=B)*[mathscrD_-(Y=S),Z=E])::0010",
+      "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+      "quantum_slots": "XY",
+      "ordered_quantum_roles": "BS",
+      "edge_tags": {
+        "T0": [
+          "e1",
+          "e0"
+        ],
+        "T2": [
+          "e1",
+          "e2"
+        ]
+      },
+      "raw_sign": -1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"B\",\"Y\":\"S\",\"Z\":\"E\"}",
+          "after": "external=Z,quantum=XY"
+        },
+        {
+          "rule": "EVEN_SWAP_BS_TO_SB",
+          "sign": 1,
+          "before": "BS",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "-:0010:SBE",
+      "hessian_group_id": "-:0010:derivative_commutator",
+      "chirality": "-",
+      "raw_monomial": "0010",
+      "external_placement": "derivative_commutator",
+      "input_word": "c_-*Tr(W_-^(1)(X=S)*[mathscrD_-(Y=B),Z=E])::0010",
+      "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+      "quantum_slots": "XY",
+      "ordered_quantum_roles": "SB",
+      "edge_tags": {
+        "T0": [
+          "e0",
+          "e1"
+        ],
+        "T2": [
+          "e2",
+          "e1"
+        ]
+      },
+      "raw_sign": -1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"S\",\"Y\":\"B\",\"Z\":\"E\"}",
+          "after": "external=Z,quantum=XY"
+        },
+        {
+          "rule": "KEEP_SB",
+          "sign": 1,
+          "before": "SB",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "-:0010:EBS",
+      "hessian_group_id": "-:0010:linear_field_strength",
+      "chirality": "-",
+      "raw_monomial": "0010",
+      "external_placement": "linear_field_strength",
+      "input_word": "c_-*Tr(W_-^(1)(X=E)*[mathscrD_-(Y=B),Z=S])::0010",
+      "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+      "quantum_slots": "YZ",
+      "ordered_quantum_roles": "BS",
+      "edge_tags": {
+        "T0": [
+          "e1",
+          "e0"
+        ],
+        "T2": [
+          "e1",
+          "e2"
+        ]
+      },
+      "raw_sign": -1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"E\",\"Y\":\"B\",\"Z\":\"S\"}",
+          "after": "external=X,quantum=YZ"
+        },
+        {
+          "rule": "EVEN_SWAP_BS_TO_SB",
+          "sign": 1,
+          "before": "BS",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "-:0010:ESB",
+      "hessian_group_id": "-:0010:linear_field_strength",
+      "chirality": "-",
+      "raw_monomial": "0010",
+      "external_placement": "linear_field_strength",
+      "input_word": "c_-*Tr(W_-^(1)(X=E)*[mathscrD_-(Y=S),Z=B])::0010",
+      "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+      "quantum_slots": "YZ",
+      "ordered_quantum_roles": "SB",
+      "edge_tags": {
+        "T0": [
+          "e0",
+          "e1"
+        ],
+        "T2": [
+          "e2",
+          "e1"
+        ]
+      },
+      "raw_sign": -1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"E\",\"Y\":\"S\",\"Z\":\"B\"}",
+          "after": "external=X,quantum=YZ"
+        },
+        {
+          "rule": "KEEP_SB",
+          "sign": 1,
+          "before": "SB",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "-:0010:BES",
+      "hessian_group_id": "-:0010:plain_commutator",
+      "chirality": "-",
+      "raw_monomial": "0010",
+      "external_placement": "plain_commutator",
+      "input_word": "c_-*Tr(W_-^(1)(X=B)*[mathscrD_-(Y=E),Z=S])::0010",
+      "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+      "quantum_slots": "XZ",
+      "ordered_quantum_roles": "BS",
+      "edge_tags": {
+        "T0": [
+          "e1",
+          "e0"
+        ],
+        "T2": [
+          "e1",
+          "e2"
+        ]
+      },
+      "raw_sign": -1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"B\",\"Y\":\"E\",\"Z\":\"S\"}",
+          "after": "external=Y,quantum=XZ"
+        },
+        {
+          "rule": "EVEN_SWAP_BS_TO_SB",
+          "sign": 1,
+          "before": "BS",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "-:0010:SEB",
+      "hessian_group_id": "-:0010:plain_commutator",
+      "chirality": "-",
+      "raw_monomial": "0010",
+      "external_placement": "plain_commutator",
+      "input_word": "c_-*Tr(W_-^(1)(X=S)*[mathscrD_-(Y=E),Z=B])::0010",
+      "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+      "quantum_slots": "XZ",
+      "ordered_quantum_roles": "SB",
+      "edge_tags": {
+        "T0": [
+          "e0",
+          "e1"
+        ],
+        "T2": [
+          "e2",
+          "e1"
+        ]
+      },
+      "raw_sign": -1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"S\",\"Y\":\"E\",\"Z\":\"B\"}",
+          "after": "external=Y,quantum=XZ"
+        },
+        {
+          "rule": "KEEP_SB",
+          "sign": 1,
+          "before": "SB",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "-:0100:EBS",
+      "hessian_group_id": "-:0100:derivative_commutator",
+      "chirality": "-",
+      "raw_monomial": "0100",
+      "external_placement": "derivative_commutator",
+      "input_word": "c_-*Tr(W_-^(1)(X=E)*[mathscrD_-(Y=B),Z=S])::0100",
+      "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+      "quantum_slots": "YZ",
+      "ordered_quantum_roles": "BS",
+      "edge_tags": {
+        "T0": [
+          "e1",
+          "e0"
+        ],
+        "T2": [
+          "e1",
+          "e2"
+        ]
+      },
+      "raw_sign": 1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"E\",\"Y\":\"B\",\"Z\":\"S\"}",
+          "after": "external=X,quantum=YZ"
+        },
+        {
+          "rule": "EVEN_SWAP_BS_TO_SB",
+          "sign": 1,
+          "before": "BS",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "-:0100:ESB",
+      "hessian_group_id": "-:0100:derivative_commutator",
+      "chirality": "-",
+      "raw_monomial": "0100",
+      "external_placement": "derivative_commutator",
+      "input_word": "c_-*Tr(W_-^(1)(X=E)*[mathscrD_-(Y=S),Z=B])::0100",
+      "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+      "quantum_slots": "YZ",
+      "ordered_quantum_roles": "SB",
+      "edge_tags": {
+        "T0": [
+          "e0",
+          "e1"
+        ],
+        "T2": [
+          "e2",
+          "e1"
+        ]
+      },
+      "raw_sign": 1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"E\",\"Y\":\"S\",\"Z\":\"B\"}",
+          "after": "external=X,quantum=YZ"
+        },
+        {
+          "rule": "KEEP_SB",
+          "sign": 1,
+          "before": "SB",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "-:0100:BSE",
+      "hessian_group_id": "-:0100:linear_field_strength",
+      "chirality": "-",
+      "raw_monomial": "0100",
+      "external_placement": "linear_field_strength",
+      "input_word": "c_-*Tr(W_-^(1)(X=B)*[mathscrD_-(Y=S),Z=E])::0100",
+      "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+      "quantum_slots": "XY",
+      "ordered_quantum_roles": "BS",
+      "edge_tags": {
+        "T0": [
+          "e1",
+          "e0"
+        ],
+        "T2": [
+          "e1",
+          "e2"
+        ]
+      },
+      "raw_sign": 1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"B\",\"Y\":\"S\",\"Z\":\"E\"}",
+          "after": "external=Z,quantum=XY"
+        },
+        {
+          "rule": "EVEN_SWAP_BS_TO_SB",
+          "sign": 1,
+          "before": "BS",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "-:0100:SBE",
+      "hessian_group_id": "-:0100:linear_field_strength",
+      "chirality": "-",
+      "raw_monomial": "0100",
+      "external_placement": "linear_field_strength",
+      "input_word": "c_-*Tr(W_-^(1)(X=S)*[mathscrD_-(Y=B),Z=E])::0100",
+      "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+      "quantum_slots": "XY",
+      "ordered_quantum_roles": "SB",
+      "edge_tags": {
+        "T0": [
+          "e0",
+          "e1"
+        ],
+        "T2": [
+          "e2",
+          "e1"
+        ]
+      },
+      "raw_sign": 1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"S\",\"Y\":\"B\",\"Z\":\"E\"}",
+          "after": "external=Z,quantum=XY"
+        },
+        {
+          "rule": "KEEP_SB",
+          "sign": 1,
+          "before": "SB",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "-:0100:BES",
+      "hessian_group_id": "-:0100:plain_commutator",
+      "chirality": "-",
+      "raw_monomial": "0100",
+      "external_placement": "plain_commutator",
+      "input_word": "c_-*Tr(W_-^(1)(X=B)*[mathscrD_-(Y=E),Z=S])::0100",
+      "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+      "quantum_slots": "XZ",
+      "ordered_quantum_roles": "BS",
+      "edge_tags": {
+        "T0": [
+          "e1",
+          "e0"
+        ],
+        "T2": [
+          "e1",
+          "e2"
+        ]
+      },
+      "raw_sign": 1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"B\",\"Y\":\"E\",\"Z\":\"S\"}",
+          "after": "external=Y,quantum=XZ"
+        },
+        {
+          "rule": "EVEN_SWAP_BS_TO_SB",
+          "sign": 1,
+          "before": "BS",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "-:0100:SEB",
+      "hessian_group_id": "-:0100:plain_commutator",
+      "chirality": "-",
+      "raw_monomial": "0100",
+      "external_placement": "plain_commutator",
+      "input_word": "c_-*Tr(W_-^(1)(X=S)*[mathscrD_-(Y=E),Z=B])::0100",
+      "coefficient_canonical_u": "+1*sqrt(2)*g/256",
+      "quantum_slots": "XZ",
+      "ordered_quantum_roles": "SB",
+      "edge_tags": {
+        "T0": [
+          "e0",
+          "e1"
+        ],
+        "T2": [
+          "e2",
+          "e1"
+        ]
+      },
+      "raw_sign": 1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"S\",\"Y\":\"E\",\"Z\":\"B\"}",
+          "after": "external=Y,quantum=XZ"
+        },
+        {
+          "rule": "KEEP_SB",
+          "sign": 1,
+          "before": "SB",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "-:1000:BES",
+      "hessian_group_id": "-:1000:derivative_commutator",
+      "chirality": "-",
+      "raw_monomial": "1000",
+      "external_placement": "derivative_commutator",
+      "input_word": "c_-*Tr(W_-^(1)(X=B)*[mathscrD_-(Y=E),Z=S])::1000",
+      "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+      "quantum_slots": "XZ",
+      "ordered_quantum_roles": "BS",
+      "edge_tags": {
+        "T0": [
+          "e1",
+          "e0"
+        ],
+        "T2": [
+          "e1",
+          "e2"
+        ]
+      },
+      "raw_sign": -1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"B\",\"Y\":\"E\",\"Z\":\"S\"}",
+          "after": "external=Y,quantum=XZ"
+        },
+        {
+          "rule": "EVEN_SWAP_BS_TO_SB",
+          "sign": 1,
+          "before": "BS",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "-:1000:SEB",
+      "hessian_group_id": "-:1000:derivative_commutator",
+      "chirality": "-",
+      "raw_monomial": "1000",
+      "external_placement": "derivative_commutator",
+      "input_word": "c_-*Tr(W_-^(1)(X=S)*[mathscrD_-(Y=E),Z=B])::1000",
+      "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+      "quantum_slots": "XZ",
+      "ordered_quantum_roles": "SB",
+      "edge_tags": {
+        "T0": [
+          "e0",
+          "e1"
+        ],
+        "T2": [
+          "e2",
+          "e1"
+        ]
+      },
+      "raw_sign": -1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"S\",\"Y\":\"E\",\"Z\":\"B\"}",
+          "after": "external=Y,quantum=XZ"
+        },
+        {
+          "rule": "KEEP_SB",
+          "sign": 1,
+          "before": "SB",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "-:1000:BSE",
+      "hessian_group_id": "-:1000:linear_field_strength",
+      "chirality": "-",
+      "raw_monomial": "1000",
+      "external_placement": "linear_field_strength",
+      "input_word": "c_-*Tr(W_-^(1)(X=B)*[mathscrD_-(Y=S),Z=E])::1000",
+      "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+      "quantum_slots": "XY",
+      "ordered_quantum_roles": "BS",
+      "edge_tags": {
+        "T0": [
+          "e1",
+          "e0"
+        ],
+        "T2": [
+          "e1",
+          "e2"
+        ]
+      },
+      "raw_sign": -1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"B\",\"Y\":\"S\",\"Z\":\"E\"}",
+          "after": "external=Z,quantum=XY"
+        },
+        {
+          "rule": "EVEN_SWAP_BS_TO_SB",
+          "sign": 1,
+          "before": "BS",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "-:1000:SBE",
+      "hessian_group_id": "-:1000:linear_field_strength",
+      "chirality": "-",
+      "raw_monomial": "1000",
+      "external_placement": "linear_field_strength",
+      "input_word": "c_-*Tr(W_-^(1)(X=S)*[mathscrD_-(Y=B),Z=E])::1000",
+      "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+      "quantum_slots": "XY",
+      "ordered_quantum_roles": "SB",
+      "edge_tags": {
+        "T0": [
+          "e0",
+          "e1"
+        ],
+        "T2": [
+          "e2",
+          "e1"
+        ]
+      },
+      "raw_sign": -1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"S\",\"Y\":\"B\",\"Z\":\"E\"}",
+          "after": "external=Z,quantum=XY"
+        },
+        {
+          "rule": "KEEP_SB",
+          "sign": 1,
+          "before": "SB",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "-:1000:EBS",
+      "hessian_group_id": "-:1000:plain_commutator",
+      "chirality": "-",
+      "raw_monomial": "1000",
+      "external_placement": "plain_commutator",
+      "input_word": "c_-*Tr(W_-^(1)(X=E)*[mathscrD_-(Y=B),Z=S])::1000",
+      "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+      "quantum_slots": "YZ",
+      "ordered_quantum_roles": "BS",
+      "edge_tags": {
+        "T0": [
+          "e1",
+          "e0"
+        ],
+        "T2": [
+          "e1",
+          "e2"
+        ]
+      },
+      "raw_sign": -1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"E\",\"Y\":\"B\",\"Z\":\"S\"}",
+          "after": "external=X,quantum=YZ"
+        },
+        {
+          "rule": "EVEN_SWAP_BS_TO_SB",
+          "sign": 1,
+          "before": "BS",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    },
+    {
+      "row_id": "-:1000:ESB",
+      "hessian_group_id": "-:1000:plain_commutator",
+      "chirality": "-",
+      "raw_monomial": "1000",
+      "external_placement": "plain_commutator",
+      "input_word": "c_-*Tr(W_-^(1)(X=E)*[mathscrD_-(Y=S),Z=B])::1000",
+      "coefficient_canonical_u": "-1*sqrt(2)*g/256",
+      "quantum_slots": "YZ",
+      "ordered_quantum_roles": "SB",
+      "edge_tags": {
+        "T0": [
+          "e0",
+          "e1"
+        ],
+        "T2": [
+          "e2",
+          "e1"
+        ]
+      },
+      "raw_sign": -1,
+      "ordered_transfers": [
+        {
+          "rule": "POLARIZED_SLOT_TO_ROLE",
+          "sign": 1,
+          "before": "XYZ={\"X\":\"E\",\"Y\":\"S\",\"Z\":\"B\"}",
+          "after": "external=X,quantum=YZ"
+        },
+        {
+          "rule": "KEEP_SB",
+          "sign": 1,
+          "before": "SB",
+          "after": "SB"
+        },
+        {
+          "rule": "SOURCE_ROLE_TO_MARKED_EDGE",
+          "sign": 1,
+          "before": "S",
+          "after": "T0:e0,T2:e2"
+        },
+        {
+          "rule": "GAUSSIAN_SD_SAME_EDGE",
+          "sign": -1,
+          "before": "N_d,rho",
+          "after": "K_raw,rho=-N_d,rho"
+        }
+      ],
+      "transport_sign": 1,
+      "sd_contact_sign": -1,
+      "delta_saturation": {
+        "rule": "CLOSED_GRASSMANN_LOOP",
+        "factor": 16,
+        "before": "delta4(theta)*D^2*barD^2*delta4(theta)",
+        "after": "16*delta4(theta)"
+      },
+      "local_output": {
+        "parent": "N_d,rho=L_rho+Q_rho*r_(e,d)^2",
+        "contact": "K_raw,rho=-L_rho-Q_rho*r_(e,d)^2",
+        "full_d_sum": "N_d,rho+K_raw,rho=0",
+        "dred_sum": "N_full,rho+K_raw,rho=Q_rho*mu_ell^2"
+      },
+      "terminal_class": {
+        "contact": "PAIRED_CONTACT",
+        "eom": "EOM_IF_Q_CARRIER",
+        "anomaly": "ANOMALY_CANDIDATE_QRHO_MU2",
+        "verdict": "PAIRED_CONTACT"
+      }
+    }
+  ],
+  "memo_equations": [
+    "K.55--K.64",
+    "K.65--K.76f",
+    "K.87--K.96",
+    "K.122"
+  ]
+}

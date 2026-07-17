@@ -1,0 +1,189 @@
+{
+  "schema": "step5k-formula-rendered-supergraph-ir-v1",
+  "authority_base": "origin/main@06601a0ed4e6060e2d872980509e1b949e61506c",
+  "memo_equations": ["K.47", "K.48", "K.49--K.64", "K.97--K.116"],
+  "graphs": [
+    {
+      "id": "G-WW-GAUGE-01",
+      "sector": "GAUGE_VECTOR",
+      "title_tex": "\\text{gauge-vector triangle}",
+      "source_word_tex": "\\mathcal I_{0,w}^{AB}=D_-[(Ku^A)e^{w\\cdot\\partial}(Ku^B)],\\ K=-\\frac{D_+\\bar D^2D_+}{4\\sqrt2}",
+      "vertices": [
+        {
+          "id": "I",
+          "kind": "COMPOSITE_INSERTION",
+          "position": [0.0, -1.9],
+          "label_tex": "\\mathcal I_{0,w}^{AB}"
+        },
+        {
+          "id": "VBAR",
+          "kind": "GAUGE_CUBIC_ANTICHIRAL",
+          "position": [-2.7, 1.6],
+          "label_tex": "\\mathfrak V_{\\widetilde W}=+\\frac{ig}{4\\hbar}c_{UCD}\\widetilde W_c^D{}_{\\dot\\alpha}(\\bar D_C^{\\dot\\alpha}-\\bar D_U^{\\dot\\alpha})"
+        },
+        {
+          "id": "VW",
+          "kind": "GAUGE_CUBIC_CHIRAL",
+          "position": [2.7, 1.6],
+          "label_tex": "\\mathfrak V_W=-\\frac{ig}{4\\hbar}c_{VC'E}W_c^{E\\gamma}(D_{C'\\gamma}-D_{V\\gamma})"
+        }
+      ],
+      "internal_edges": [
+        {
+          "id": "e0",
+          "from": "I",
+          "to": "VBAR",
+          "field_tex": "u^A\\!\\leftrightarrow u^U",
+          "momentum_tex": "r_0=k",
+          "propagator_tex": "-\\hbar\\kappa^{AU}\\delta^4(\\theta_I-\\theta_{\\bar W})/D_0"
+        },
+        {
+          "id": "e1",
+          "from": "VBAR",
+          "to": "VW",
+          "field_tex": "u^C\\!\\leftrightarrow u^{C'}",
+          "momentum_tex": "r_1=k+q",
+          "propagator_tex": "-\\hbar\\kappa^{CC'}\\delta^4(\\theta_{\\bar W}-\\theta_W)/D_1"
+        },
+        {
+          "id": "e2",
+          "from": "VW",
+          "to": "I",
+          "field_tex": "u^V\\!\\leftrightarrow u^B",
+          "momentum_tex": "r_2=k+p+q",
+          "propagator_tex": "-e^{iw\\cdot r_2}\\hbar\\kappa^{VB}\\delta^4(\\theta_W-\\theta_I)/D_2"
+        }
+      ],
+      "external_legs": [
+        {
+          "at": "VBAR",
+          "label_tex": "\\widetilde W_{c,\\dot\\alpha}^D(q)"
+        },
+        {
+          "at": "VW",
+          "label_tex": "A_c^E(p)=D_+W_{c,+}^E(p)"
+        }
+      ],
+      "wick_contractions": [
+        {
+          "id": "GW-WC-01",
+          "action_order": "S_{\\widetilde W}S_W",
+          "pairings": ["u_I^A--u_{\\widetilde W}^U", "u_{\\widetilde W}^C--u_W^{C'}", "u_W^V--u_I^B"],
+          "weight": "1/2"
+        },
+        {
+          "id": "GW-WC-02",
+          "action_order": "S_WS_{\\widetilde W}",
+          "pairings": ["u_I^A--u_{\\widetilde W}^U", "u_{\\widetilde W}^C--u_W^{C'}", "u_W^V--u_I^B"],
+          "weight": "1/2"
+        }
+      ],
+      "fixed_orientation_weight": "(1/2!)(1+1)=1",
+      "denominator": "D_0D_1D_2=r_{0,d}^2r_{1,d}^2r_{2,d}^2",
+      "numerator_type": "DERIVATIVE_DIFFERENCE_SIGMA_CHAIN",
+      "amplitude_id": "AMP-GW-01"
+    },
+    {
+      "id": "G-WW-MATTER-01",
+      "sector": "ADJOINT_CHIRAL_MATTER",
+      "title_tex": "\\text{adjoint-chiral matter triangle}",
+      "source_word_tex": "\\mathcal I_{0,w}^{AB}=D_-[(A_1^A)e^{w\\cdot\\partial}(A_1^B)]",
+      "vertices": [
+        {
+          "id": "I",
+          "kind": "COMPOSITE_INSERTION",
+          "position": [0.0, -1.9],
+          "label_tex": "\\mathcal I_{0,w}^{AB}"
+        },
+        {
+          "id": "MC",
+          "kind": "MATTER_CUBIC",
+          "position": [-2.7, 1.6],
+          "label_tex": "S_{m3}=-\\sqrt2g\\!\\int d^8z\\,\\widetilde\\Phi_{c,r}u^AT_A\\Phi_{c,r}"
+        },
+        {
+          "id": "MB",
+          "kind": "MATTER_CUBIC",
+          "position": [2.7, 1.6],
+          "label_tex": "S_{m3}=-\\sqrt2g\\!\\int d^8z\\,\\widetilde\\Phi_{c,r}u^AT_A\\Phi_{c,r}"
+        }
+      ],
+      "internal_edges": [
+        {
+          "id": "e0",
+          "from": "I",
+          "to": "MC",
+          "field_tex": "u^A\\!\\leftrightarrow u^U",
+          "momentum_tex": "r_0=k",
+          "propagator_tex": "-\\hbar\\kappa^{AU}\\delta^4(\\theta_I-\\theta_C)/D_0"
+        },
+        {
+          "id": "e1",
+          "from": "MC",
+          "to": "MB",
+          "field_tex": "\\Phi_{c,r}\\!\\longleftrightarrow\\widetilde\\Phi_{c,r}",
+          "momentum_tex": "r_1=k-q",
+          "propagator_tex": "\\hbar\\delta_{rs}\\kappa^{CC'}\\bar D^2D^2\\delta^4(\\theta_C-\\theta_B)/(16D_1)"
+        },
+        {
+          "id": "e2",
+          "from": "MB",
+          "to": "I",
+          "field_tex": "u^V\\!\\leftrightarrow u^B",
+          "momentum_tex": "r_2=k-p-q",
+          "propagator_tex": "-e^{iw\\cdot r_2}\\hbar\\kappa^{VB}\\delta^4(\\theta_B-\\theta_I)/D_2"
+        }
+      ],
+      "external_legs": [
+        {
+          "at": "MC",
+          "label_tex": "C_{c,r}^D(q)=\\widetilde\\Phi_{c,r}^D(q)|"
+        },
+        {
+          "at": "MB",
+          "label_tex": "B_{c,r}^E(p)=(D_+\\Phi_{c,r}^E)(p)|"
+        }
+      ],
+      "wick_contractions": [
+        {
+          "id": "MW-F1",
+          "attachment": "A\\to C,\\ B\\to B",
+          "marked_edge": "e0",
+          "pairings": ["u_I^A--u_{MC}", "Phi_{MC}--tildePhi_{MB}", "u_{MB}--u_I^B"],
+          "color": "mathbb F^{AB}{}_{DE}"
+        },
+        {
+          "id": "MW-F2",
+          "attachment": "A\\to C,\\ B\\to B",
+          "marked_edge": "e2",
+          "pairings": ["u_I^A--u_{MC}", "Phi_{MC}--tildePhi_{MB}", "u_{MB}--u_I^B"],
+          "color": "mathbb F^{AB}{}_{DE}"
+        },
+        {
+          "id": "MW-X1",
+          "attachment": "A\\to B,\\ B\\to C",
+          "marked_edge": "e2",
+          "pairings": ["u_I^A--u_{MB}", "Phi_{MC}--tildePhi_{MB}", "u_{MC}--u_I^B"],
+          "color": "mathbb F^{AB}{}_{ED}"
+        },
+        {
+          "id": "MW-X2",
+          "attachment": "A\\to B,\\ B\\to C",
+          "marked_edge": "e0",
+          "pairings": ["u_I^A--u_{MB}", "Phi_{MC}--tildePhi_{MB}", "u_{MC}--u_I^B"],
+          "color": "mathbb F^{AB}{}_{ED}"
+        }
+      ],
+      "fixed_orientation_weight": "(1/2!)(1+1)=1 for each directed parent",
+      "denominator": "D_0D_1D_2=r_{0,d}^2r_{1,d}^2r_{2,d}^2",
+      "numerator_type": "CHIRAL_PROJECTOR_GRASSMANN_WORD",
+      "amplitude_id": "AMP-MW-01"
+    }
+  ],
+  "nonconflation_checks": [
+    "G-WW-GAUGE-01 has three u--u propagators; G-WW-MATTER-01 has two u--u propagators and one Phi_c--tildePhi_c projector propagator",
+    "G-WW-GAUGE-01 uses V_W and V_tildeW derivative-difference vertices; G-WW-MATTER-01 uses two nondifferential matter cubic vertices",
+    "G-WW-GAUGE-01 produces the L1^mu p^rho L2^nu sigma_mu barsigma_rho sigma_nu numerator; G-WW-MATTER-01 produces the distinct S_012 and S_2 chiral-projector polynomials",
+    "the gauge contact is a vector Schwinger cut with a four-dimensional metric; the matter contact is generated by an inverse chiral-projector factor det(r_i) and its explicit adjacent-edge collapse"
+  ]
+}
