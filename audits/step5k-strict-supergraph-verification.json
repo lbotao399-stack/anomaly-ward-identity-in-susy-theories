@@ -1,0 +1,314 @@
+{
+  "check_count": 10,
+  "checks": [
+    {
+      "evidence": {
+        "ledger_rows": [
+          {
+            "blocking_reason": null,
+            "id": "CONTRACT-STEP-05K-STRICT-SUPERGRAPH-COMPLETION-001",
+            "state": "ACCEPTED",
+            "task": "tasks/CURRENT.yaml",
+            "task_sha256": "93e6a955712d27a3254ead5e2a9bf34511b08cbcee1b0bbc0ad525d78b3594fa"
+          }
+        ],
+        "state_trace": [
+          "SPECIFIED",
+          "FROZEN",
+          "RULES_DERIVED",
+          "ENUMERATED",
+          "EVALUATED",
+          "CUT_COMPLETE",
+          "RENORMALIZED",
+          "WARD_CLOSED",
+          "COHOMOLOGY_PROJECTED",
+          "ACCEPTED"
+        ],
+        "task_sha256": "93e6a955712d27a3254ead5e2a9bf34511b08cbcee1b0bbc0ad525d78b3594fa",
+        "task_status": "ACCEPTED"
+      },
+      "memo_equations": [
+        "K.121",
+        "K.128"
+      ],
+      "name": "TASK_LEDGER_HASH_AND_ACCEPTANCE",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "forbidden_controls": [],
+        "gauge_dispatcher": {
+          "cubic_antichiral_sum": "0",
+          "cubic_chiral_sum": "0",
+          "cubic_rows": 4,
+          "exact_rows": [
+            "| $3$ | $(0,0,0,1)$ | $-1/512$ | $+1/512$ |",
+            "| $3$ | $(0,0,1,0)$ | $+1/512$ | $-1/512$ |",
+            "| $3$ | $(0,1,0,0)$ | $-1/512$ | $+1/512$ |",
+            "| $3$ | $(1,0,0,0)$ | $+1/512$ | $-1/512$ |",
+            "| $4$ | $(0,0,0,2)$ | $-1/1536$ | $-1/1536$ |",
+            "| $4$ | $(0,0,1,1)$ | $+1/768$ | $+1/768$ |",
+            "| $4$ | $(0,0,2,0)$ | $-1/1536$ | $-1/1536$ |",
+            "| $4$ | $(0,1,0,1)$ | $-1/1024$ | $-1/1024$ |",
+            "| $4$ | $(0,1,1,0)$ | $+1/1024$ | $+1/1024$ |",
+            "| $4$ | $(0,2,0,0)$ | $-1/1536$ | $-1/1536$ |",
+            "| $4$ | $(1,0,0,1)$ | $+1/1024$ | $+1/1024$ |",
+            "| $4$ | $(1,0,1,0)$ | $-1/1024$ | $-1/1024$ |",
+            "| $4$ | $(1,1,0,0)$ | $+1/768$ | $+1/768$ |",
+            "| $4$ | $(2,0,0,0)$ | $-1/1536$ | $-1/1536$ |"
+          ],
+          "quartic_antichiral_sum": "0",
+          "quartic_chiral_sum": "0",
+          "quartic_rows": 10
+        },
+        "missing": [],
+        "missing_dispatcher_rows": [],
+        "missing_exact_word_tokens": [],
+        "momentum_rule_ledger": {
+          "builder": "PASS STEP5K_MOMENTUM_RULE_LEDGER 28 RAW / 528 LABELED / FP+VECTOR+MATTER TYPED",
+          "diagram_cross_binding": true,
+          "dword_cross_binding": true,
+          "labeled_exact": true,
+          "labeled_rows": 528,
+          "raw_exact": true,
+          "raw_rows": 28,
+          "unresolved": []
+        }
+      },
+      "memo_equations": [
+        "K.10--K.46"
+      ],
+      "name": "COMPLETE_MOMENTUM_RULE_TABLE",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "fp_left_product": "[[((Fraction(1, 16), Fraction(0, 1)), ('barBoxInv', 'barD2', 'D2'), 'G_plus', 'G_plus'), None], [None, ((Fraction(1, 16), Fraction(0, 1)), ('barBoxInv', 'D2', 'barD2'), 'G_minus', 'G_minus')]]",
+        "fp_right_product": "[[((Fraction(1, 16), Fraction(0, 1)), ('barBoxInv', 'barD2', 'D2'), 'F_plus', 'F_plus'), None], [None, ((Fraction(1, 16), Fraction(0, 1)), ('barBoxInv', 'D2', 'barD2'), 'F_minus', 'F_minus')]]",
+        "matter_compositions": "{'plus': {'kernel': (Fraction(-1, 1), ('kappa_down', 'identity_plus')), 'inverse': (Fraction(-1, 1), ('kappa_up', 'projector_plus_bar4'))}, 'minus': {'kernel': (Fraction(-1, 1), ('kappa_down', 'identity_minus')), 'inverse': (Fraction(-1, 1), ('kappa_up', 'projector_minus_bar4'))}}",
+        "matter_exact": true,
+        "missing": [],
+        "missing_exact_tex": [],
+        "regulated_defects": {
+          "fp_left": {
+            "barp2_times_pd2_inverse": {
+              "pd2^-1*mu2^1": "1",
+              "pd2^0*mu2^0": "1"
+            },
+            "minus_identity": {
+              "pd2^-1*mu2^1": "1"
+            },
+            "result": "mu_p^2/p_d^2"
+          },
+          "fp_right": {
+            "barp2_times_pd2_inverse": {
+              "pd2^-1*mu2^1": "1",
+              "pd2^0*mu2^0": "1"
+            },
+            "minus_identity": {
+              "pd2^-1*mu2^1": "1"
+            },
+            "result": "mu_p^2/p_d^2"
+          },
+          "matter": {
+            "barp2_times_pd2_inverse": {
+              "pd2^-1*mu2^1": "1",
+              "pd2^0*mu2^0": "1"
+            },
+            "minus_identity": {
+              "pd2^-1*mu2^1": "1"
+            },
+            "result": "mu_p^2/p_d^2"
+          },
+          "vector": {
+            "barp2_times_pd2_inverse": {
+              "pd2^-1*mu2^1": "1",
+              "pd2^0*mu2^0": "1"
+            },
+            "minus_identity": {
+              "pd2^-1*mu2^1": "1"
+            },
+            "result": "mu_p^2/p_d^2"
+          }
+        },
+        "typed_rule_ledger": {
+          "fp": true,
+          "matter_minus": true,
+          "matter_plus": true,
+          "vector": true
+        },
+        "vector_exact": true
+      },
+      "memo_equations": [
+        "K.23--K.28"
+      ],
+      "name": "TYPED_FP_LEFT_RIGHT_INVERSE_AND_DRED_DEFECT",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "gauge_fields": [
+          "u^A\\!\\leftrightarrow u^U",
+          "u^C\\!\\leftrightarrow u^{C'}",
+          "u^V\\!\\leftrightarrow u^B"
+        ],
+        "matter_fields": [
+          "u^A\\!\\leftrightarrow u^U",
+          "\\Phi_{c,r}\\!\\longleftrightarrow\\widetilde\\Phi_{c,r}",
+          "u^V\\!\\leftrightarrow u^B"
+        ]
+      },
+      "memo_equations": [
+        "K.47--K.48"
+      ],
+      "name": "GAUGE_MATTER_FIELD_WORD_NONCONFLATION",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "outputs": [
+          {
+            "pdf_bytes": 114634,
+            "stem": "step5k-gauge-vector-triangle",
+            "svg_formula_paths": true,
+            "tex": true
+          },
+          {
+            "pdf_bytes": 93766,
+            "stem": "step5k-adjoint-matter-triangle",
+            "svg_formula_paths": true,
+            "tex": true
+          }
+        ],
+        "renderer": "PASS STEP5K_FORMULA_RENDERED_SUPERGRAPHS topology=IR+PDF+SVG memo=(K.47)--(K.48)"
+      },
+      "memo_equations": [
+        "K.47--K.48"
+      ],
+      "name": "FORMULA_RENDERED_TIKZ_PDF_SVG",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "accepted_full_orbit": {
+          "checks": 269,
+          "formula": "lambda1*F^{AB}_{DE}*(DA_p-AD_p)",
+          "full_color_rows": 9216,
+          "source": "audits/step5-aa-external-slot-decomposition-exact.json",
+          "target_used": false
+        },
+        "coefficient": {
+          "D_weight": "(1/64)*16*2*2=1",
+          "action_order_factor": "(1/2!)*(S_plus*S_minus+S_minus*S_plus)=1",
+          "canonical_source_marked_times_unmarked": "(-1/(8*sqrt(2)))*(-1/(4*sqrt(2)))=1/64",
+          "closed_delta": 16,
+          "evanescent_master": "int d^dL/(2*pi)^d mu_L^2/(L^2+Delta)^3=1/(32*pi^2)",
+          "exponent_vertex_W": "-i*g/(4*hbar)",
+          "exponent_vertex_barW": "+i*g/(4*hbar)",
+          "fixed_parent_prefactor": "+hbar*g^2/16",
+          "global_odd_source_loop_IBP_sign": -1,
+          "isolated_directed_result": "-hbar*g^2/(128*pi^2)=-lambda1/8",
+          "port_preserving_wick_factor": 1,
+          "same_edge_anticommutator_factor_left": 2,
+          "same_edge_anticommutator_factor_right": 2,
+          "selected_square_minus_cut": "-4*(bar(L)^2-L_d^2)*sigma.p=-4*mu_L^2*sigma.p",
+          "simplex_factor": "2*int_Sigma2(1)=1",
+          "three_canonical_vector_propagators": "(-hbar)^3",
+          "vertices_times_propagators": "(-i*g/(4*hbar))*(+i*g/(4*hbar))*(-hbar)^3=-hbar*g^2/16"
+        },
+        "endpoint_rows": 4,
+        "full_contact_rows": 48,
+        "generator": "PASS G-WW-GAUGE-01: 48 rows, 48 unique IDs, 24 groups, 2 endpoints/group, canonical ledger, unresolved=[], memo equations K.55--K.122",
+        "marks": 2
+      },
+      "memo_equations": [
+        "K.55--K.76",
+        "K.87--K.96",
+        "K.122"
+      ],
+      "name": "NONCOMMUTATIVE_GAUGE_DWORD_AND_COEFFICIENT",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "missing": [],
+        "provenance_rows": 8
+      },
+      "memo_equations": [
+        "K.49--K.76f"
+      ],
+      "name": "PREINTEGRAL_NUMERATOR_PROVENANCE",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "bucket3_count": 4,
+        "candidate_count": 17,
+        "unresolved": 0
+      },
+      "memo_equations": [
+        "K.117--K.121"
+      ],
+      "name": "SEVENTEEN_CANDIDATES_AND_FOUR_DEFERRED_ROUTES",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "missing": []
+      },
+      "memo_equations": [
+        "K.97--K.116"
+      ],
+      "name": "FOUR_MATTER_OCCURRENCE_WICK_ROUTES",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "brace_violations": {},
+        "control_bytes": {
+          "audits/step5k-graph-census-and-four-routes-review.md": [],
+          "audits/step5k-momentum-rules-and-fp-inverse.md": [],
+          "audits/step5k-strict-supergraph-completion.md": [],
+          "audits/step5k-ww-gauge-triangle-dword.md": [],
+          "paper/awi-n4-one-loop.md": []
+        },
+        "forbidden_tokens": {
+          "audits/step5k-graph-census-and-four-routes-review.md": [],
+          "audits/step5k-momentum-rules-and-fp-inverse.md": [],
+          "audits/step5k-strict-supergraph-completion.md": [],
+          "audits/step5k-ww-gauge-triangle-dword.md": [],
+          "paper/awi-n4-one-loop.md": []
+        },
+        "math_delimiter_violations": {
+          "audits/step5k-graph-census-and-four-routes-review.md": [],
+          "audits/step5k-momentum-rules-and-fp-inverse.md": [],
+          "audits/step5k-strict-supergraph-completion.md": [],
+          "audits/step5k-ww-gauge-triangle-dword.md": [],
+          "paper/awi-n4-one-loop.md": []
+        },
+        "missing": []
+      },
+      "memo_equations": [
+        "K.122--K.129"
+      ],
+      "name": "MEMO_PAPER_RESULT_AND_HT_ROUNDTRIP",
+      "passed": true
+    }
+  ],
+  "failed": 0,
+  "input_sha256": {
+    "audits/step5-aa-external-slot-decomposition-exact.json": "4223a7a962c455697566c3b211ee6b700be861c833aa7cd86d1c739923e9edc1",
+    "audits/step5k-diagram-ir.json": "12bab301272322c4fa278f00b710beacbc49ef7421db2fab77537873571f48fa",
+    "audits/step5k-graph-census-17.json": "21e03cde99a099a3e4c63e2d9643c5f848eafa84ea512e640eb188c859245166",
+    "audits/step5k-graph-census-and-four-routes-review.md": "23fcedafcc0d3914859ff8ecb2efb2b38036e0f1779e2d62fafbd63d8025988e",
+    "audits/step5k-momentum-rules-and-fp-inverse.md": "c10373c80f7d239fce43818691d9fe2e7c62c524a1fe3f9fa91e8b86c19fd3f5",
+    "audits/step5k-strict-supergraph-completion.md": "a500a375c60c97996ab9c21eb9e3f479818254285634728eb00ec30445db8bbc",
+    "generated/step5k-momentum-rule-ledger.json": "c1a7e80ab523e07ac1d388e2ca81941ade94f979d582b883e59a6687c55c9b0c",
+    "generated/step5k-ww-gauge-dword.json": "8d5df8543073e132e01ce09887741742621349e1cc2d9d6017d243b67fa08aea",
+    "ledger/proof_obligations.json": "d06a12e326aae73a81c4575958d639670412bec17a8b73f66c787a60f24d68c9",
+    "paper/awi-n4-one-loop.md": "456d790ece1c000de1bef14505a9153febd509f52edd7940be45da93486ed715",
+    "tasks/CURRENT.yaml": "93e6a955712d27a3254ead5e2a9bf34511b08cbcee1b0bbc0ad525d78b3594fa"
+  },
+  "schema": "step5k-strict-supergraph-verification-v1",
+  "status": "PASS"
+}

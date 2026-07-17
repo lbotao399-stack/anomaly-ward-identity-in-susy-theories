@@ -1,41 +1,120 @@
 {
-  "id": "MIRROR-STEP-05-CLAUDE-AUDIT-NOTION-001",
+  "id": "CONTRACT-STEP-05K-STRICT-SUPERGRAPH-COMPLETION-001",
   "type": "CONTRACT_CHANGE",
   "status": "ACCEPTED",
-  "owner_authorization": "2026-07-16 session: owner requested strict review of the new Claude Code results followed by Notion synchronization and a human-readable frontier explanation.",
-  "outcome": "Published the post-audit Step-5 core-theory paper from verified origin/main commit d3d0ffdd4012d79c630d454c5211998541c66fda to the existing Notion core-paper page and appended the latest unresolved frontier first to the central parallel log, using write-only mutations without reading Notion content. A post-cutoff fetch also admitted the two-line archived-task test repair from 61f8c70. The corrected frontier memo e97e5c8 honestly narrows its tree result to a conditional scale relation and leaves the full box-plus-triangle graph assembly open, so it closes no accepted physics blocker.",
+  "owner_authorization": "2026-07-17 session: owner requested point-by-point repair of the rendered triangle diagrams, the two-triangle-to-amplitude derivation, the matter-versus-gauge distinction, the complete momentum-space rules including the FP ghost inverse, every relevant Wick routing, the noncommutative D-word trace, and the deferred seventeen-candidate/four-routing census.",
+  "outcome": "Close the ordinary-supergraph presentation and derivation gaps surrounding the accepted Step-5 physical one-loop anomaly sector without changing an accepted coefficient unless a fully explicit Project-side derivation forces that change.",
+  "target_memo": "audits/step5k-strict-supergraph-completion.md",
   "allowed_inputs": [
     "AUTHORITY.md",
     "AGENTS.md",
-    "paper/awi-n4-one-loop.md",
-    "audits/claude-step5b-step5h-independent-review.md",
+    "contracts/manifest.yaml",
+    "contracts/foundations/step-02a-flat-superspace.md",
+    "contracts/foundations/step-03a-gauge-chiral-action.md",
+    "contracts/foundations/step-03c-gauge-vector-representation.md",
+    "contracts/foundations/step-03d-n1-superfield-path-integral-bv-brst.md",
+    "contracts/foundations/step-04c-n4-super-yang-mills.md",
+    "contracts/foundations/step-05a-component-bv-brst-primitive-supergraph-grammar.md",
     "contracts/foundations/step-05-euclidean-n4-awi-one-loop.md",
-    "mirror/page_map.yaml",
-    "mirror/status.json",
-    "scripts/build_notion_payload.py",
-    "audits/notion_write_receipt.json",
-    "Current work日志.md"
+    "paper/awi-n4-one-loop.md",
+    "audits/step5-canonical-superfield-ww-seed.md",
+    "audits/step5-ww-physical-cut-pole.md",
+    "audits/step5-aa-standard-feynman-strictification.md",
+    "audits/step5-aa-gauge-canonical-normalization-ledger.md",
+    "audits/step5-aa-external-slot-decomposition-exact.md",
+    "audits/step5-aa-external-slot-decomposition-exact.json",
+    "audits/step5-aa-matter-full-placements-independent.md",
+    "audits/step5-aa-matter-order-g2-support-independent.md",
+    "audits/step5-spectator-source-self-energy-orbit-exact.md",
+    "audits/step5-bc-full-family-raw-projection-exact.md",
+    "audits/step5-ac-ca-family-exact.md",
+    "audits/step5-ad-da-ordered-ports-crossed-hessian-exact.md",
+    "audits/step5-ad-da-raw-contact-hessian-multiplicity-exact.md",
+    "audits/claude-step5b-step5h-independent-review.md",
+    "audits/step5-euclidean-n4-awi-verification.json",
+    "references/superspace-1001-supergraph-source-ledger.json",
+    "references/vendor/local/superspace-1001-supergraph-pages.pdf",
+    "scripts/verify_step5_euclidean_n4_awi.py",
+    "scripts/step5_aa_standard_feynman_strict_audit.py",
+    "scripts/step5_aa_gauge_canonical_normalization_audit.py",
+    "ledger/proof_obligations.json",
+    "tests/test_repository_policy.py",
+    ".github/workflows/verify.yml"
   ],
-  "nonauthoritative_post_cutoff_handles": [
-    "61f8c70",
-    "e97e5c8"
+  "nonauthoritative_adversarial_handles": [
+    "0983774045f276ad4869fc6623d8069e5f74c25a"
   ],
   "forbidden_inputs": [
-    "Notion content",
-    "Notion fetch, search, page read, block read, or content readback",
+    "Notion content, search, fetch, export, or readback",
     "unmerged branches as mathematical evidence",
-    "manual mathematical edits on the Notion side",
-    "publishing an unverified Git commit"
+    "the screenshot as mathematical evidence rather than presentation-defect evidence",
+    "unstated textbook conventions",
+    "copying a propagator, vertex, D-algebra identity, graph multiplicity, sign, symmetry factor, or loop coefficient without Project-side derivation",
+    "combining gauge and matter internal routings into one unnamed triangle",
+    "declaring the ordinary-graph census complete while any generated candidate or Wick routing lacks a typed verdict"
+  ],
+  "scope": {
+    "signature": "EUCLIDEAN_DRED",
+    "seed_ordered_pair": "(nabla_+ W_+^A,nabla_+ W_+^B)",
+    "accepted_result_boundary": "PHYSICAL_ONE_LOOP_ANOMALY_SECTOR",
+    "diagram_source_of_truth": "audits/step5k-diagram-ir.json",
+    "ordinary_graph_classes": [
+      "GAUGE_VECTOR_FP_NK",
+      "ADJOINT_CHIRAL_MATTER"
+    ]
+  },
+  "state_trace": [
+    {
+      "state": "SPECIFIED",
+      "evidence": "owner authorization and the acceptance surface in this task packet"
+    },
+    {
+      "state": "FROZEN",
+      "evidence": "memo equations K.1--K.15 lock fields, action, Fourier signs, and DRED squares"
+    },
+    {
+      "state": "RULES_DERIVED",
+      "evidence": "memo equations K.16--K.46 and audits/step5k-momentum-rules-and-fp-inverse.md"
+    },
+    {
+      "state": "ENUMERATED",
+      "evidence": "memo equations K.47--K.48 and K.119--K.121; typed diagram and seventeen-row census IR"
+    },
+    {
+      "state": "EVALUATED",
+      "evidence": "memo equations K.49--K.116; explicit gauge and matter Wick/D-word evaluations"
+    },
+    {
+      "state": "CUT_COMPLETE",
+      "evidence": "memo equations K.87--K.96 and K.117--K.121; every cut/candidate has a typed verdict"
+    },
+    {
+      "state": "RENORMALIZED",
+      "evidence": "memo equations K.90--K.96; the DRED evanescent master and isolated finite seed are evaluated"
+    },
+    {
+      "state": "WARD_CLOSED",
+      "evidence": "memo equations K.117--K.122; zero unresolved census rows and the full ordered AA Ward output"
+    },
+    {
+      "state": "COHOMOLOGY_PROJECTED",
+      "evidence": "memo equations K.122--K.128; EOM quotient and typed Project-to-HT output-word comparison"
+    },
+    {
+      "state": "ACCEPTED",
+      "evidence": "audits/step5k-strict-supergraph-verification.json and repository unittest discovery"
+    }
   ],
   "acceptance": [
-    "the published source is exactly paper/awi-n4-one-loop.md at verified origin/main commit d3d0ffdd4012d79c630d454c5211998541c66fda with SHA-256 28a10afea877d668d0bd88294a5b465d8378cb48cb1070691b147fb36167a5d6",
-    "the payload contains the Git authority header, exact source path, commit, and SHA-256",
-    "the existing core-paper page is replaced through a private write while preserving child pages",
-    "the central log places OPEN and BLOCKED frontier items before accepted content",
-    "mirror page map and status record the exact source commit and SHA-256",
-    "write receipt records archived and appended block counts and content_readback_performed=false",
-    "the accepted task-rotation test reads Step-5A admissibility from its ledger obligation's archived packet",
-    "the Step-5J tree-scale result remains conditional on explicit dictionary and structure-constant normalizations",
-    "repository-policy passes after task and ledger rotation"
+    "a complete Step-5K symbol and Fourier ledger fixes fields, parities, measures, momentum directions, color order, delta functions, left/right derivatives, and DRED decomposition before any rule is emitted",
+    "the Euclidean quadratic blocks are displayed and inverted on their declared projector complements, including the odd FP ghost block with typed left and right inverse checks",
+    "every momentum-space propagator, physical interaction vertex, FP/NK vertex, and composite-letter insertion vertex needed by the generated census is obtained by ordered differentiation of the locked action",
+    "gauge-sector and adjoint-chiral-matter triangle families have separate field words, propagators, vertices, Wick signs, D-words, numerator traces, and external-leg remnants",
+    "for the WW seed, every displayed pre-integral numerator factor is traced to one named derivative, projector, momentum conversion, color contraction, Wick multiplicity, or identical-leg stabilizer",
+    "the noncommutative D-algebra trace records each input word, local rewrite, anticommutator term, Koszul sign, integration-by-parts routing, delta saturation, loop-momentum term, and surviving external-leg operator",
+    "the deferred seventeen candidate topologies and four physics-relevant Wick routings are represented in machine-readable graph IR and each ends in EVALUATED, EXACT_ZERO, PAIRED_CONTACT, EOM, BRST_EXACT, or BLOCKED_<REASON>",
+    "the two triangle figures are rendered from the same graph IR with TeX-set formula labels and legible SVG/PDF output; graph-to-amplitude identifiers agree exactly",
+    "an exact verifier checks kernel inverses, field-word closure, graph-IR/render equality, Wick multiplicities, D-word trace invariants, numerator provenance, and census closure with no unresolved P0 or P1 gap",
+    "the human-readable memo and paper distinguish newly proved content from the previously accepted Schwinger-cut coefficient; repository policy and the full verify suite pass before review"
   ]
 }

@@ -1,0 +1,41 @@
+{
+  "id": "MIRROR-STEP-05-CLAUDE-AUDIT-NOTION-001",
+  "type": "CONTRACT_CHANGE",
+  "status": "ACCEPTED",
+  "owner_authorization": "2026-07-16 session: owner requested strict review of the new Claude Code results followed by Notion synchronization and a human-readable frontier explanation.",
+  "outcome": "Published the post-audit Step-5 core-theory paper from verified origin/main commit d3d0ffdd4012d79c630d454c5211998541c66fda to the existing Notion core-paper page and appended the latest unresolved frontier first to the central parallel log, using write-only mutations without reading Notion content. A post-cutoff fetch also admitted the two-line archived-task test repair from 61f8c70. The corrected frontier memo e97e5c8 honestly narrows its tree result to a conditional scale relation and leaves the full box-plus-triangle graph assembly open, so it closes no accepted physics blocker.",
+  "allowed_inputs": [
+    "AUTHORITY.md",
+    "AGENTS.md",
+    "paper/awi-n4-one-loop.md",
+    "audits/claude-step5b-step5h-independent-review.md",
+    "contracts/foundations/step-05-euclidean-n4-awi-one-loop.md",
+    "mirror/page_map.yaml",
+    "mirror/status.json",
+    "scripts/build_notion_payload.py",
+    "audits/notion_write_receipt.json",
+    "Current work日志.md"
+  ],
+  "nonauthoritative_post_cutoff_handles": [
+    "61f8c70",
+    "e97e5c8"
+  ],
+  "forbidden_inputs": [
+    "Notion content",
+    "Notion fetch, search, page read, block read, or content readback",
+    "unmerged branches as mathematical evidence",
+    "manual mathematical edits on the Notion side",
+    "publishing an unverified Git commit"
+  ],
+  "acceptance": [
+    "the published source is exactly paper/awi-n4-one-loop.md at verified origin/main commit d3d0ffdd4012d79c630d454c5211998541c66fda with SHA-256 28a10afea877d668d0bd88294a5b465d8378cb48cb1070691b147fb36167a5d6",
+    "the payload contains the Git authority header, exact source path, commit, and SHA-256",
+    "the existing core-paper page is replaced through a private write while preserving child pages",
+    "the central log places OPEN and BLOCKED frontier items before accepted content",
+    "mirror page map and status record the exact source commit and SHA-256",
+    "write receipt records archived and appended block counts and content_readback_performed=false",
+    "the accepted task-rotation test reads Step-5A admissibility from its ledger obligation's archived packet",
+    "the Step-5J tree-scale result remains conditional on explicit dictionary and structure-constant normalizations",
+    "repository-policy passes after task and ledger rotation"
+  ]
+}

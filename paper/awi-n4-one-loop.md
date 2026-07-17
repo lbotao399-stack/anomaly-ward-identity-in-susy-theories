@@ -211,8 +211,8 @@ Two structural consequences organize the whole calculation:
 ## 5. Selection rules: which of the 81 ordered pairs can be anomalous
 
 Before any loop integral, conservation laws restrict the possible uncontracted outputs. The
-gradings that survive the construction are: $SU(3)$ flavor ($A,D$ singlets, $B_r\in\mathbf
-3$, $C^r\in\bar{\mathbf 3}$); Grassmann parity; the twisted dimension
+gradings that survive the construction are: $SU(3)$ flavor, with $A,D$ singlets,
+$B_r\in\mathbf 3$, and $C^r\in\bar{\mathbf 3}$; Grassmann parity; the twisted dimension
 $[C]=1$, $[B]=[D]=\tfrac32$, $[A]=2$, $[P_{\dot a}]=1$, with the anomaly operator carrying
 $+\tfrac12$; and the output structure $\mathfrak p_{\dot a}X\,\mathfrak p^{\dot a}Y$ forced
 by the $\sigma$-chain trace (§6). Checking each ordered family against these and against the
@@ -232,43 +232,58 @@ list — three agreeing routes in total.
 
 ## 6. The seed channel $(A,A)$ in full
 
-Fix the orientation and marking of the settlement §4. The two ordered cubic gauge vertices
-contribute $(+\frac{ig}2)(-\frac{ig}2)=\frac{g^2}4$; the Wick weight is $1$; the closed-loop
-D-algebra weight is $w_D=\frac1{32}\cdot16\cdot2\cdot2=2$ (the $16$ is the loop-saturation
-identity); total prefactor $\frac{g^2}2$. With $D_0=\ell^2$, $D_1=(\ell+p)^2$,
-$D_2=(\ell+p+q)^2$ and the ordered parametrization
-$\frac1{D_0D_1D_2}=2\int\delta(1-x-y-z)\,[r^2+\Delta]^{-3}$, the exact tensor reduction
+Use the canonical vector $u=V/(\sqrt2g)$.  For one fixed orientation and one fixed
+$D_-$ mark, the two background-field-strength vertices, three vector propagators, source
+normalization, closed Grassmann loop, two mixed anticommutators, and odd source-loop
+integration by parts give
 
 $$
-\int_r\frac{r_mr_n}{(r^2+\Delta)^3}=\frac{\widehat\delta_{mn}}4\,J_2,
-\qquad
-J_2\big|_{\rm pole}=\frac1{16\pi^2\epsilon},
+\begin{aligned}
+&\left(-\frac{ig}{4\hbar}\right)
+\left(+\frac{ig}{4\hbar}\right)(-\hbar)^3
+\left[\frac1{64}(16)(2)(2)\right](-1)\\
+&\hspace{45mm}=\frac{\hbar g^2}{16}.
+\end{aligned}
 $$
 
-(the $\tfrac14$ is exact: $(1-\tfrac\epsilon2)/(4-2\epsilon)=\tfrac14$) gives the parent
-triangle pole
-$\Gamma_T=+\frac{\hbar g^2}{32\pi^2\epsilon}\,\mathbb F^{AB}{}_{DE}\,
-\widehat\delta^{mn}T_{m\rho n}\,p^\rho$ with
-$T_{m\rho n}=\sigma_m\bar\sigma_\rho\sigma_n$. The four occurrence-resolved Schwinger
-contact rows sum to
-$\Gamma_C=-\frac{\hbar g^2}{32\pi^2\epsilon}\,\mathbb F^{AB}{}_{DE}\,
-\delta_4^{mn}T_{m\rho n}\,p^\rho$; the physical poles cancel and the evanescent trace
+With $r_0=k$, $r_1=k+q$, $r_2=k+p+q$, $D_i=r_{i,d}^2$,
+$L_1=r_0+r_1$ and $L_2=r_1+r_2$, the noncollapsed numerator is
 
 $$
-p^\rho\,\breve\delta^{mn}\,(\sigma_m\bar\sigma_\rho\sigma_n)=-2\epsilon\;p^\rho\sigma_\rho
+N_{G,+}{}^{\dot\alpha}
+=(L_1)_{+\dot\beta}(ip)^{\dot\beta\gamma}
+(L_2)_\gamma{}^{\dot\alpha}.
 $$
 
-(for physical $p$: $\breve\delta\,p=0$ and
-$\breve\delta^{mn}\bar\sigma_m\sigma_n=\breve\delta^m{}_m=2\epsilon$) leaves the finite
-local result
+The same-edge Schwinger cut leaves the exact DRED numerator
 
 $$
-\Gamma_T+\Gamma_C
-=+\frac{\hbar g^2}{16\pi^2}\,\mathbb F^{AB}{}_{DE}\,\sigma_\rho p^\rho
-\;=\;\lambda_1\,\mathbb F^{AB}{}_{DE}\,\sigma\!\cdot\!p .
+-4\bigl(\bar\ell^2-\ell_d^2\bigr)\sigma\!\cdot\!p
+=-4\mu_\ell^2\sigma\!\cdot\!p,
 $$
 
-In position space this is the letter bilinear $\mathscr Z^{DE}$ of §7.
+and
+
+$$
+\lim_{\epsilon\to0}\mu^{2\epsilon}
+\int\frac{d^{4-2\epsilon}\ell}{(2\pi)^{4-2\epsilon}}
+\frac{\mu_\ell^2}{(\ell^2+\Delta)^3}
+=\frac1{32\pi^2}.
+$$
+
+Therefore the isolated directed gauge seed and its same-edge cut give
+
+$$
+\Gamma_{G,\mathrm{directed}}
+=\frac{\hbar g^2}{16}(-4)\frac1{32\pi^2}
+=-\frac{\lambda_1}{8}.
+$$
+
+This isolated seed is not the full gauge answer.  Summing the complete external-slot and
+contact orbit gives
+$\lambda_1\mathbb F^{AB}{}_{DE}(\langle D^D,A^E\rangle-\langle A^D,D^E\rangle)$;
+the separately typed matter orbit
+supplies the three flavor terms in $\mathscr Z^{DE}$ of §7.
 
 ## 7. The complete ordered-channel result
 
@@ -315,6 +330,21 @@ pairs vanish exactly (§5).
 Shifting the second letter by $w$ (equivalently, resumming all holomorphic derivatives), the
 one-loop kernel follows from the ordered parametrization with the insertion-leg phase
 $e^{iw\cdot(aq+bp)}$:
+
+$$
+r_2=\ell+aq+bp,
+\qquad
+e^{iw\cdot r_2}=e^{iw\cdot\ell}e^{iw\cdot(aq+bp)},
+\qquad
+\omega_{a\dot a}:=\delta_a{}^+w_{\dot a},\qquad \omega^2=0.
+$$
+
+Odd loop moments of $e^{iw\cdot\ell}$ vanish; every nonconstant even moment contains
+$(\omega^2)^j=0$.  Therefore the loop phase equals one coefficient by coefficient in the
+formal holomorphic jet, while the external ordered phase remains.  For a fixed allocation of
+$k$ of the first $m$ derivatives and $\ell$ of the second $n$ derivatives to the first
+output, its binomial weight is
+$\binom mk\binom n\ell a^{k+\ell}b^{m+n-k-\ell}$.  Hence
 
 $$
 2\int_0^1\!db\int_0^b\!da\;a^{k+\ell}\,b^{(m-k)+(n-\ell)}
@@ -445,15 +475,41 @@ the regulated coincident Euler Jacobian, differentiated before bottom projection
 off-shell Noether identity, Lorentzian vector cycle, and target-seeded component 81-channel sweep
 remain outside the accepted result.
 
-A later adversarial census proposal raised seventeen topology/artifact candidates.  Its final
-run completed six of eight enumeration sectors, but the ghost--Nielsen--Kallosh sector, the
-zero/cut-orbit sector, and the automated three-lens refutation did not run; four
-physics-relevant Wick routings were deferred rather than derived.  Exact holomorphic-twist
-agreement is a final comparison, not an internal proof that every typed absence row has been
-emitted: equality of the total coefficient does not imply termwise vanishing of alleged omitted
-routings.  These seventeen candidates therefore remain `OPEN`, and the advertised census
-certificate is not accepted.  They do not alter the accepted coefficient ledger, whose
-derivation is the target-blind Schwinger-cut construction above.
+### Step-5K strict ordinary-supergraph completion
+
+`STEP5K_STRICT_SUPERGRAPH_COMPLETION`.  The momentum-space rule table now includes the
+typed two-sided FP inverse on its residual complement, its DRED defect, all physical and FP
+vertices through $g^2$, the absence of an NK graph field, and the ordered composite-source
+vertices.  Gauge and adjoint-chiral matter triangles are separate typed graph objects:
+
+![Gauge-vector triangle](figures/step5k-gauge-vector-triangle.svg)
+
+![Adjoint-chiral matter triangle](figures/step5k-adjoint-matter-triangle.svg)
+
+The former WW pre-integral used $v_{\rm old}=V/(2g)=u/\sqrt2$ with a unit propagator.  Three
+such lines overcounted the graph by $2^3=8$.  In canonical variables,
+
+$$
+\left(-\frac{ig}{4\hbar}\right)
+\left(+\frac{ig}{4\hbar}\right)(-\hbar)^3
+\left[\frac1{64}(16)(2)(2)\right](-1)
+=\frac{\hbar g^2}{16},
+$$
+
+not $\hbar g^2/2$.  The isolated directed gauge triangle plus its same-edge cut is
+$-\lambda_1/8$.  The new 48-row generator proves the local noncommutative
+$D$-word/contact stream; it does not derive the integrated full-orbit coefficient.  The
+separately accepted 269-check target-blind external-slot reconstruction gives the
+$\lambda_1(DA-AD)$ term.  The matter triangle instead has two vector lines and one chiral
+projector line; its four occurrence rows give $-4\lambda_1/3,+\lambda_1/3$ and their crossed
+ordered partners, with unit directed magnitude.
+
+The seventeen adversarial observations are now represented individually: ten FP/NK/measure
+absence rows, three artifact repairs, and four previously deferred physical Wick routings.
+Each is decided from the locked field ports, loop number, 1PI bridge test, explicit
+$D$-word, and DRED anomaly projector without reading the holomorphic-twist target.  All four
+deferred routes have zero anomaly projection and the machine census has no unresolved row:
+`CENSUS_17_CANDIDATES_CLOSED_TARGET_BLIND`.
 
 ## 10. Verification status
 
@@ -465,9 +521,9 @@ derivation is the target-blind Schwinger-cut construction above.
   identity, the $\tfrac1{32\pi^2}$ master integral, the $-2\epsilon$ trace, the full seed
   chain of §6, the 29/52 census (three routes), the factor-two adjudication and closed-form
   tower, the AB/BA $q$-covariance settlement.
-- **Adversarial census review:** an eight-sector find-a-missing-topology review with
-  three-lens refutation is recorded alongside this document; its verdict file is the
-  completeness certificate for the per-channel graph lists.
+- **Step-5K adversarial closure:** the seventeen-row machine census, the four explicit
+  deferred-route Wick derivations, and the 48-row gauge contact stream are regenerated and
+  checked target-blind; the earlier unrun three-lens proposal is not acceptance evidence.
 - **Known scope boundaries (not defects):** fixed-representative quantization (D1) with the
   local-$\mathcal Y$ BV completion, Wess–Zumino/component equivalence, background-covariant
   gauge averaging, and the entire Lorentzian sector deferred as named obligations.
