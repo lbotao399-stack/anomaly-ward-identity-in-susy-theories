@@ -2,6 +2,7 @@
 
 Canonical proof repository for the AWI program.
 
+- Core showcase paper: [`paper/anomaly-susy-transformation-in-susy-gauge-theory/`](paper/anomaly-susy-transformation-in-susy-gauge-theory/) — *Anomaly SUSY Transformation in SUSY Gauge Theory* (LaTeX + compiled PDF)
 - Authority: [`AUTHORITY.md`](AUTHORITY.md)
 - Agent law: [`AGENTS.md`](AGENTS.md)
 - Active proof obligation: [`tasks/CURRENT.yaml`](tasks/CURRENT.yaml)

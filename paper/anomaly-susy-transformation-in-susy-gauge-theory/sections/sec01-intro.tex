@@ -1,0 +1,141 @@
+% sec01-intro.tex — Introduction. Pure body LaTeX: one section, no preamble.
+\section{Introduction}\label{sec:intro}
+
+\subsection{The anomalous supersymmetry transformation law}
+
+Global supersymmetry Ward identities are among the most rigid constraints of quantum field theory: they organize composite
+operators into supermultiplets and underlie the non-renormalization properties of supersymmetric gauge theories
+\cite{WeinbergIII}. A sharper question than the validity of such identities is whether the \emph{transformation law itself}
+--- the statement that a supercharge acts on a composite operator through the classical variations of its factors ---
+survives quantization, or whether it is deformed at loop level. When such a deformation is ultraviolet-finite, local in the
+external momenta, and scheme-independent, it is an anomaly of the supersymmetry transformation law, in the same lineage as
+the Konishi anomaly, rather than a renormalization effect.
+
+This paper determines the complete one-loop answer for the maximally supersymmetric case: Euclidean $\mathcal N=4$
+super-Yang--Mills theory with a compact gauge algebra, quantized in $\mathcal N=1$ superspace \cite{GGRS}. The sharp probe
+is supplied by the BPS letters and their semi-chiral composites. In the Euclidean plus/minus spin frame, the
+gauge-covariant superspace spinor derivative splits into two components $\nabla_\pm$, and the elementary fields assemble
+into nine BPS letters: one built from the chiral field-strength superfield, three from the chiral matter multiplets, three
+from the independent Euclidean antichiral multiplets, and two from the antichiral field strength (Secs.~\ref{sec:notation}
+and \ref{sec:superspace}). At tree level the semi-chiral derivative $\nabla_-$ of every letter is either zero or a sum of
+equation-of-motion (Euler) operators and explicit composites, so the ordered products $L_iL_j$ --- the semi-chiral
+composites --- obey a closed Ward identity modulo equations of motion. Precisely because the tree reduction is exact and
+Euler insertions are eliminated by the Schwinger--Dyson identity, the one-loop correction to this transformation law is
+finite and local: any nonzero answer is an anomaly, not an artifact of subtraction. The same letters are the avatars of the
+$1/16$-BPS sector under the holomorphic twist of the theory \cite{Costello}, where the one-loop deformation of the
+supercharge action on letter pairs has been computed from the holomorphic anomaly by Budzik and Kulp \cite{BK}.
+
+Microscopically, the entire anomaly originates in a single mechanism: dimensional reduction's evanescent failure of the
+cutting rule \cite{SiegelDRED}. In the superspace Schwinger--Dyson derivation, an Euler operator attached to a propagator
+collapses it, and every one-loop graph reduces to a cut line times a tree subgraph. In dimensional reduction (DRED) with
+$d=4-2\epsilon$, the superspace spin algebra is kept four-dimensional while the propagator denominators are
+$d$-dimensional; the two structures are kept strictly separate and are never fused into one another before the Schwinger
+sum is performed. For every marked internal line of every one-loop graph, with four-dimensional numerator square
+$\bar r_e^{\,2}$ and $d$-dimensional denominators $D_i$, the cutting rule therefore fails by one universal evanescent
+insertion,
+\begin{equation}\label{eq:intro:cutfail}
+\frac{\bar r_e^{\,2}}{D_0D_1D_2}-\frac{1}{D_1D_2}=\frac{\mul^2}{D_0D_1D_2}\,,
+\qquad
+\lim_{\epsilon\to0}\,\mu^{2\epsilon}\!\int\!\frac{d^{\,4-2\epsilon}\ell}{(2\pi)^{4-2\epsilon}}\,
+\frac{\mul^2}{(\ell^2+\Delta)^3}=\frac{1}{32\pi^2}\,,
+\end{equation}
+with no graph-specific factor of $4-d$. The evanescent master integral is finite because
+$\epsilon\,\Gamma(\epsilon)\to1$, and its would-be nonlocal $\Delta$-dependence enters only at order $\epsilon$: the
+anomaly is a polynomial in the external momenta, i.e.\ the insertion of a local composite operator. Replacing the
+numerator by its $d$-dimensional form before the subtraction would annihilate \eqref{eq:intro:cutfail} identically and
+erase the anomaly.
+
+\subsection{Main result}
+
+Consider Euclidean $\mathcal N=4$ super-Yang--Mills theory, with gauge generators $[T_A,T_B]=i f_{AB}{}^C T_C$ and Killing
+form normalized to $\kappa_{AB}=\delta_{AB}$, quantized in $\mathcal N=1$ superspace. The main result of this paper is the
+complete one-loop anomalous supersymmetry Ward identity of the BPS-letter composites: for each of the $9\times9=81$
+ordered pairs $(L_i,L_j)$,
+\begin{equation}\label{eq:intro:master}
+\nabla_-\!\bigl(L_i^A L_j^B\bigr)\Big|_{\text{1-loop}}
+=\frac{\h g^2}{16\pi^2}\;f^{ACD}f^{BCE}\;\Delta(L_i,L_j)^{DE}\,,
+\end{equation}
+with the sum over $C$ understood. Three features are universal. First, the coefficient $\h g^2/(16\pi^2)$ and the ordered
+color tensor $f^{ACD}f^{BCE}$ are the same in every channel. Second, the letter bilinear $\Delta(L_i,L_j)^{DE}$ is fixed
+explicitly (Sec.~\ref{sec:superspace}): exactly $29$ of the $81$ ordered channels are nonzero and the remaining $52$
+vanish exactly, for four independent structural reasons; reversed orderings $(L_j,L_i)$ are independent rows, not
+quotients of $(L_i,L_j)$. Third, the anomaly is local, finite, and --- up to a finite normal-product term fixed by the
+residual supersymmetries of the vacuum, under which the $29$ nonzero channels close --- scheme-independent.
+
+Resumming the holomorphic-derivative tower, the anomaly of an arbitrary derivative composite is governed by the
+closed-form kernel
+\begin{equation}\label{eq:intro:kernel}
+K_{m,n;k,\ell}=\frac{2\binom{m}{k}\binom{n}{\ell}}{(m+n+2)(k+\ell+1)}\,,
+\qquad 0\le k\le m\,,\quad 0\le\ell\le n\,,
+\end{equation}
+where the overall factor $2$ is $\Gamma(3)$ of the triangle Feynman parametrization, not an orientation multiplicity. The
+same $81$ channels and the same tower were predicted, up to normalization, by the holomorphic-twist computation of
+\cite{BK}. After a factor-two correction of the source --- its printed master-triangle and Appendix-B tower coefficients
+miss exactly $\Gamma(3)=2$ relative to its own displayed component results --- the agreement is exact on all $81$ ordered
+output words and on the full derivative tower (Sec.~\ref{sec:ht}). The comparison simultaneously adjudicates a second
+internal inconsistency of the source, whose compact one-loop coefficient is printed both as $-1/4$ and as $-\kappa^2$ with
+$\kappa^2=1/4$, selecting the main-text branch.
+
+\subsection{Four approaches, four statuses}
+
+The result \eqref{eq:intro:master} was attacked along four parallel routes, which have reached sharply different levels of
+completion; we state each status honestly, and Sec.~\ref{sec:conclusion} collects the open problems.
+
+The first route is the direct \emph{superspace Feynman-diagram} computation (Sec.~\ref{sec:superspace}): the
+Schwinger--Dyson reduction of every ordered letter pair, the occurrence-resolved cutting failure
+\eqref{eq:intro:cutfail}, and exact-arithmetic evaluation of all $81$ channels.
+\begin{remark}\label{rem:intro:superspace}
+The superspace route is complete and is the accepted derivation of \eqref{eq:intro:master}: $81$ channels computed
+exactly, $29$ nonzero and $52$ exactly zero, with no unresolved coefficient row. An adversarial census of potentially
+omitted graph sectors remains open as a completeness question; it does not touch any accepted coefficient
+(Sec.~\ref{sec:ht} and App.~\ref{sec:verification}).
+\end{remark}
+
+The second route is the \emph{component Feynman-diagram} formulation (Sec.~\ref{sec:component}), which has locked the
+exact Euclidean $\mathcal N=4$ component actions, the BV--BRST data \cite{BV}, and one exact physical channel: the bottom
+projection of the matter-fermion/antichiral-scalar composite,
+\begin{equation}\label{eq:intro:bc}
+Q_-\!\left(\psi_{r+}^A\,\widetilde\phi_s^{\,B}\right)\Big|_{\text{1-loop}}
+=-\frac{\sqrt2\,\h g^2}{32\pi^2}\,\delta_{rs}\,f^{ACD}f^{BCE}\,
+\widetilde\lambda_{\dot\alpha}^D\,\widetilde\lambda^{E\dot\alpha}\,,
+\end{equation}
+whose dotted-gaugino bilinear is color-symmetric, so every antisymmetric color word annihilates it.
+\begin{remark}\label{rem:intro:component}
+The component route is partial. Equation \eqref{eq:intro:bc} is an exact projection of the superfield result, not an
+independent component derivation: the would-be ordinary two-Yukawa parent graph does not exist because the mixed
+propagators vanish identically. The complete component Euler operators and the announced termwise off-shell Noether
+checks, the complete component Feynman rules, an independent all-pairs component sweep, and the Lorentzian vector
+integration cycle all remain open (Sec.~\ref{sec:conclusion}).
+\end{remark}
+
+The third route is a non-perturbative \emph{heat-kernel} derivation (Sec.~\ref{sec:heatkernel}) in the spirit of
+\cite{Vassilevich}: regulate the one-loop fluctuation determinant by the semigroup of a single elliptic operator and read
+the anomaly off a short-time coefficient.
+\begin{remark}\label{rem:intro:heatkernel}
+The heat-kernel route has produced exact, machine-verified auxiliary lemmas --- the ordered-simplex moment
+$1/((p+1)(p+q+2))$, the second-order semigroup/Duhamel coefficient, the vanishing short-time limit at fixed nonzero shift,
+and consistency with the master integral of \eqref{eq:intro:cutfail} --- but the full derivation is blocked: the proposed
+regulator's matter blocks give $16\BoxE\mathcal P_+$ and its vector block gives $+\BoxE$, against the declared $-\BoxE$
+generator, and applying different powers of the operator on different blocks is not one functional calculus. The accepted
+coefficient does not come from this route.
+\end{remark}
+
+The fourth route is the \emph{holomorphic-twist} comparison (Sec.~\ref{sec:ht}): translate the external one-loop
+prediction of \cite{BK} into the present alphabet and compare, word by word and jet by jet.
+\begin{remark}\label{rem:intro:ht}
+The holomorphic-twist agreement is settled as an external comparison only: the independently sealed coefficient table
+matches the factor-two-corrected prediction of \cite{BK} on all $81$ ordered output words and all checked tower
+coefficients. Equality of totals is a cross-check, not an internal completeness proof --- omitted contributions could
+cancel in the sum --- and the $17$-candidate adversarial census remains open. The twisted source is also not one-loop
+exact: its own algebra requires higher-loop corrections.
+\end{remark}
+
+\subsection{Organization}
+
+Section~\ref{sec:notation} fixes notation and conventions. Section~\ref{sec:gaugebv} presents the gauge fixing and
+BV--BRST quantization. Section~\ref{sec:superspace} contains the superspace derivation of \eqref{eq:intro:master}, the
+$81$-channel census, and the kernel \eqref{eq:intro:kernel}. Section~\ref{sec:component} treats the component formulation
+and proves \eqref{eq:intro:bc}. Section~\ref{sec:heatkernel} presents the heat-kernel auxiliary lemmas and the blocker.
+Section~\ref{sec:ht} gives the holomorphic-twist comparison and its admissibility verdict. Section~\ref{sec:conclusion}
+summarizes and lists the open problems. Appendix~\ref{sec:verification} records the verification status: the
+machine-locked exact-arithmetic checks and the independent review trail.

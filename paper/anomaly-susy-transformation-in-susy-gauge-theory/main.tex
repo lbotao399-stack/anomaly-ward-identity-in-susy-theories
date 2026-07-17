@@ -1,0 +1,99 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{mathrsfs}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{enumitem}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
+
+\numberwithin{equation}{section}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+% ---- shared macros (contract: no other \newcommand allowed in section files) ----
+\newcommand{\cD}{\mathcal{D}}                 % spinor covariant derivative
+\newcommand{\bcD}{\bar{\mathcal{D}}}
+\newcommand{\cW}{\mathcal{W}}                 % gaugino field-strength superfield
+\newcommand{\bcW}{\widetilde{\mathcal{W}}}    % its Euclidean antichiral partner
+\newcommand{\cV}{\mathcal{V}}                 % gauge prepotential
+\newcommand{\h}{\hbar}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\mul}{\mu_\ell}                   % evanescent scale, \mul^2
+\newcommand{\BoxE}{\Box}                      % Euclidean d'Alembertian
+
+\title{\textbf{Anomaly SUSY Transformation in SUSY Gauge Theory}\\[4pt]
+\large The one-loop anomalous supersymmetry Ward identity of BPS letters in
+$\mathcal N=4$ super-Yang--Mills: superspace, component, heat-kernel and
+holomorphic-twist approaches}
+\author{AWI Project\\ \small\texttt{lbotao399-stack/anomaly-ward-identity-in-susy-theories}}
+\date{July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\input{sections/sec00-abstract}
+\end{abstract}
+
+\tableofcontents
+\bigskip
+
+\input{sections/sec01-intro}
+\input{sections/sec02-notation}
+\input{sections/sec03-gauge-bv}
+\input{sections/sec04-superspace}
+\input{sections/sec05-component}
+\input{sections/sec06-heatkernel}
+\input{sections/sec07-holomorphic-twist}
+\input{sections/sec08-conclusion}
+
+\appendix
+\input{sections/sec09-verification}
+
+\begin{thebibliography}{9}
+
+\bibitem{BK}
+K.~Budzik and J.~Kulp,
+\textit{Loop Corrected Supercharges from Holomorphic Anomalies},
+arXiv:2512.07771.
+
+\bibitem{WeinbergIII}
+S.~Weinberg,
+\textit{The Quantum Theory of Fields, Vol.~III: Supersymmetry},
+Cambridge University Press, 2000, Chapter 30.
+
+\bibitem{GGRS}
+S.~J.~Gates, M.~T.~Grisaru, M.~Ro\v{c}ek and W.~Siegel,
+\textit{Superspace, or One Thousand and One Lessons in Supersymmetry},
+Front. Phys. \textbf{58} (1983) 1, arXiv:hep-th/0108200.
+
+\bibitem{BV}
+I.~A.~Batalin and G.~A.~Vilkovisky,
+\textit{Gauge Algebra and Quantization},
+Phys. Lett. B \textbf{102} (1981) 27.
+
+\bibitem{SiegelDRED}
+W.~Siegel,
+\textit{Supersymmetric Dimensional Regularization via Dimensional Reduction},
+Phys. Lett. B \textbf{84} (1979) 193.
+
+\bibitem{Vassilevich}
+D.~V.~Vassilevich,
+\textit{Heat kernel expansion: user's manual},
+Phys. Rept. \textbf{388} (2003) 279, arXiv:hep-th/0306138.
+
+\bibitem{Costello}
+K.~Costello,
+\textit{Notes on supersymmetric and holomorphic field theories in dimensions 2 and 4},
+arXiv:1111.4234.
+
+\end{thebibliography}
+
+\end{document}
