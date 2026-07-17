@@ -23,6 +23,8 @@ not $\hbar g^2/2$; the isolated directed seed is $-\lambda_1/8$.  The two factor
 
 - `CENSUS_17_CANDIDATES_CLOSED_TARGET_BLIND`: all seventeen adversarial candidates and the four deferred routes have typed verdicts, with zero unresolved row.  `MW-F1/MW-F2/MW-X1/MW-X2` remain the separate matter-occurrence routes with coefficients $(-4/3,+1/3,+1/3,-4/3)\lambda_1$.  Primary files: `audits/step5k-strict-supergraph-completion.md`, `audits/step5k-momentum-rules-and-fp-inverse.md`, `audits/step5k-graph-census-and-four-routes-review.md`, and `generated/step5k-ww-gauge-dword.json`.
 
+- GitHub receipt: branch `agent/step5-supergraph-strict-completion`, commit `57f8037`, draft PR [#74](https://github.com/lbotao399-stack/anomaly-ward-identity-in-susy-theories/pull/74).  The strict verifier is `10/10 PASS`; the complete rule ledger has `28` raw and `528` labeled rows, the gauge $D$-word generator has `48` closed rows, and full repository unittest discovery passes.
+
 - The accepted BC bottom projection is
 
 $$
