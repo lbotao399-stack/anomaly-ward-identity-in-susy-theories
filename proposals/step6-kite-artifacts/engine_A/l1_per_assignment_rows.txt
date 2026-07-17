@@ -1,0 +1,72 @@
+### term a  Y1:C_T1  Y2:C_T2  color c[A,D,m]c[B,E,m]
+== assignment: 4 rows
+   th0=-      [v wt0]x[D[+]v wm]   2*Pk_00*Pk_01*Pk_11 + -2*Pk_01*Pk_01*Pk_10 + -2*Pk_01*Pk_10*Pp_01 + -2*Pk_01*Pk_10*Pq_01 + 2*Pk_01*Pk_11*Pp_00 + 2*Pk_01*Pk_11*Pq_00
+   th0=-      [v wt0]x[D[+]v wp]   -2*Pk_00*Pk_01*Pp_01 + -2*Pk_00*Pk_01*Pq_01 + 2*Pk_01*Pk_01*Pp_00 + 2*Pk_01*Pk_01*Pq_00
+   th0=-      [v wt1]x[D[+]v wm]   -2*Pk_00*Pk_00*Pk_11 + 2*Pk_00*Pk_01*Pk_10 + 2*Pk_00*Pk_10*Pp_01 + 2*Pk_00*Pk_10*Pq_01 + -2*Pk_00*Pk_11*Pp_00 + -2*Pk_00*Pk_11*Pq_00
+   th0=-      [v wt1]x[D[+]v wp]   2*Pk_00*Pk_00*Pp_01 + 2*Pk_00*Pk_00*Pq_01 + -2*Pk_00*Pk_01*Pp_00 + -2*Pk_00*Pk_01*Pq_00
+
+### term a  Y1:C_T1  Y2:C_T3  color c[A,D,m]c[B,E,m]
+== assignment: 8 rows
+   th0=-      [Db[1]v wt0]x[D2v wm]   1/2*Pk_01*Pk_01 + 1/2*Pk_01*Pp_01 + 1/2*Pk_01*Pq_01
+   th0=-      [Db[1]v wt1]x[D2v wm]   -1/2*Pk_00*Pk_01 + -1/2*Pk_00*Pp_01 + -1/2*Pk_00*Pq_01
+   th0=-      [Db[2]v wt0]x[D2v wm]   -1/2*Pk_00*Pk_01 + -1/2*Pk_01*Pp_00 + -1/2*Pk_01*Pq_00
+   th0=-      [Db[2]v wt1]x[D2v wm]   1/2*Pk_00*Pk_00 + 1/2*Pk_00*Pp_00 + 1/2*Pk_00*Pq_00
+   th0=-      [v wt0]x[D[+]v wm]   2*Pk_00*Pk_01*Pk_11 + 2*Pk_00*Pk_01*Pp_11 + -2*Pk_01*Pk_01*Pk_10 + -2*Pk_01*Pk_01*Pp_10 + -2*Pk_01*Pk_10*Pp_01 + -2*Pk_01*Pk_10*Pq_01 + 2*Pk_01*Pk_11*Pp_00 + 2*Pk_01*Pk_11*Pq_00 + 2*Pk_01*Pp_00*Pp_11 + -2*Pk_01*Pp_01*Pp_10 + -2*Pk_01*Pp_10*Pq_01 + 2*Pk_01*Pp_11*Pq_00
+   th0=-      [v wt0]x[D[-]v wm]   2*Pk_00*Pk_01*Pq_01 + -2*Pk_01*Pk_01*Pq_00 + 2*Pk_01*Pp_00*Pq_01 + -2*Pk_01*Pp_01*Pq_00
+   th0=-      [v wt1]x[D[+]v wm]   -2*Pk_00*Pk_00*Pk_11 + -2*Pk_00*Pk_00*Pp_11 + 2*Pk_00*Pk_01*Pk_10 + 2*Pk_00*Pk_01*Pp_10 + 2*Pk_00*Pk_10*Pp_01 + 2*Pk_00*Pk_10*Pq_01 + -2*Pk_00*Pk_11*Pp_00 + -2*Pk_00*Pk_11*Pq_00 + -2*Pk_00*Pp_00*Pp_11 + 2*Pk_00*Pp_01*Pp_10 + 2*Pk_00*Pp_10*Pq_01 + -2*Pk_00*Pp_11*Pq_00
+   th0=-      [v wt1]x[D[-]v wm]   -2*Pk_00*Pk_00*Pq_01 + 2*Pk_00*Pk_01*Pq_00 + -2*Pk_00*Pp_00*Pq_01 + 2*Pk_00*Pp_01*Pq_00
+
+### term a  Y1:C_T2  Y2:C_T2  color c[A,D,m]c[B,E,m]
+== assignment: 4 rows
+   th0=-      [v wt0]x[D[+]v wm]   2*Pk_00*Pk_01*Pk_11 + -2*Pk_00*Pp_01*Pq_11 + -2*Pk_00*Pq_01*Pq_11 + -2*Pk_01*Pk_01*Pk_10 + -2*Pk_01*Pk_10*Pp_01 + -2*Pk_01*Pk_10*Pq_01 + 2*Pk_01*Pk_11*Pp_00 + 2*Pk_01*Pk_11*Pq_00 + 2*Pk_01*Pp_00*Pq_11 + 2*Pk_01*Pq_00*Pq_11
+   th0=-      [v wt0]x[D[+]v wp]   -2*Pk_00*Pk_01*Pp_01 + -2*Pk_00*Pk_01*Pq_01 + -2*Pk_00*Pp_01*Pq_01 + -2*Pk_00*Pq_01*Pq_01 + 2*Pk_01*Pk_01*Pp_00 + 2*Pk_01*Pk_01*Pq_00 + 2*Pk_01*Pp_00*Pq_01 + 2*Pk_01*Pq_00*Pq_01
+   th0=-      [v wt1]x[D[+]v wm]   -2*Pk_00*Pk_00*Pk_11 + 2*Pk_00*Pk_01*Pk_10 + 2*Pk_00*Pk_10*Pp_01 + 2*Pk_00*Pk_10*Pq_01 + -2*Pk_00*Pk_11*Pp_00 + -2*Pk_00*Pk_11*Pq_00 + 2*Pk_00*Pp_01*Pq_10 + 2*Pk_00*Pq_01*Pq_10 + -2*Pk_01*Pp_00*Pq_10 + -2*Pk_01*Pq_00*Pq_10
+   th0=-      [v wt1]x[D[+]v wp]   2*Pk_00*Pk_00*Pp_01 + 2*Pk_00*Pk_00*Pq_01 + -2*Pk_00*Pk_01*Pp_00 + -2*Pk_00*Pk_01*Pq_00 + 2*Pk_00*Pp_01*Pq_00 + 2*Pk_00*Pq_00*Pq_01 + -2*Pk_01*Pp_00*Pq_00 + -2*Pk_01*Pq_00*Pq_00
+
+### term a  Y1:C_T2  Y2:C_T3  color c[A,D,m]c[B,E,m]
+== assignment: 8 rows
+   th0=-      [Db[1]v wt0]x[D2v wm]   1/2*Pk_01*Pk_01 + 1/2*Pk_01*Pp_01 + 1/2*Pk_01*Pq_01
+   th0=-      [Db[1]v wt1]x[D2v wm]   -1/2*Pk_00*Pk_01 + -1/2*Pk_01*Pp_00 + -1/2*Pk_01*Pq_00
+   th0=-      [Db[2]v wt0]x[D2v wm]   -1/2*Pk_00*Pk_01 + -1/2*Pk_00*Pp_01 + -1/2*Pk_00*Pq_01
+   th0=-      [Db[2]v wt1]x[D2v wm]   1/2*Pk_00*Pk_00 + 1/2*Pk_00*Pp_00 + 1/2*Pk_00*Pq_00
+   th0=-      [v wt0]x[D[+]v wm]   2*Pk_00*Pk_01*Pk_11 + 2*Pk_00*Pk_01*Pp_11 + -2*Pk_00*Pp_01*Pq_11 + -2*Pk_00*Pq_01*Pq_11 + -2*Pk_01*Pk_01*Pk_10 + -2*Pk_01*Pk_01*Pp_10 + -2*Pk_01*Pk_10*Pp_01 + -2*Pk_01*Pk_10*Pq_01 + 2*Pk_01*Pk_11*Pp_00 + 2*Pk_01*Pk_11*Pq_00 + 2*Pk_01*Pp_00*Pp_11 + 2*Pk_01*Pp_00*Pq_11 + -2*Pk_01*Pp_01*Pp_10 + -2*Pk_01*Pp_10*Pq_01 + 2*Pk_01*Pp_11*Pq_00 + 2*Pk_01*Pq_00*Pq_11
+   th0=-      [v wt0]x[D[-]v wm]   2*Pk_00*Pk_01*Pq_01 + 2*Pk_00*Pp_01*Pq_01 + 2*Pk_00*Pq_01*Pq_01 + -2*Pk_01*Pk_01*Pq_00 + -2*Pk_01*Pp_01*Pq_00 + -2*Pk_01*Pq_00*Pq_01
+   th0=-      [v wt1]x[D[+]v wm]   -2*Pk_00*Pk_00*Pk_11 + -2*Pk_00*Pk_00*Pp_11 + 2*Pk_00*Pk_01*Pk_10 + 2*Pk_00*Pk_01*Pp_10 + 2*Pk_00*Pk_10*Pp_01 + 2*Pk_00*Pk_10*Pq_01 + -2*Pk_00*Pk_11*Pp_00 + -2*Pk_00*Pk_11*Pq_00 + -2*Pk_00*Pp_00*Pp_11 + 2*Pk_00*Pp_01*Pp_10 + 2*Pk_00*Pp_01*Pq_10 + 2*Pk_00*Pp_10*Pq_01 + -2*Pk_00*Pp_11*Pq_00 + 2*Pk_00*Pq_01*Pq_10 + -2*Pk_01*Pp_00*Pq_10 + -2*Pk_01*Pq_00*Pq_10
+   th0=-      [v wt1]x[D[-]v wm]   -2*Pk_00*Pk_00*Pq_01 + 2*Pk_00*Pk_01*Pq_00 + -2*Pk_00*Pp_00*Pq_01 + -2*Pk_00*Pq_00*Pq_01 + 2*Pk_01*Pp_00*Pq_00 + 2*Pk_01*Pq_00*Pq_00
+
+### term b  Y1:C_T1  Y2:C_T2  color c[A,D,m]c[B,E,m]
+== assignment: 10 rows
+   th0=-      [Db[1]v wt0]x[D2v wm]   1/2*Pk_01*Pk_01 + 1/2*Pk_01*Pp_01 + 1/2*Pk_01*Pq_01
+   th0=-      [Db[1]v wt1]x[D2v wm]   -1/2*Pk_00*Pk_01 + -1/2*Pk_00*Pp_01 + -1/2*Pk_00*Pq_01
+   th0=-      [Db[2]v wt0]x[D2v wm]   -1/2*Pk_00*Pk_01 + -1/2*Pk_01*Pp_00 + -1/2*Pk_01*Pq_00
+   th0=-      [Db[2]v wt1]x[D2v wm]   1/2*Pk_00*Pk_00 + 1/2*Pk_00*Pp_00 + 1/2*Pk_00*Pq_00
+   th0=-      [v wt0]x[D[+]v wm]   -2*Pk_00*Pk_01*Pk_11 + -2*Pk_00*Pk_01*Pq_11 + 2*Pk_01*Pk_01*Pk_10 + 2*Pk_01*Pk_01*Pq_10 + 2*Pk_01*Pk_10*Pp_01 + 2*Pk_01*Pk_10*Pq_01 + -2*Pk_01*Pk_11*Pp_00 + -2*Pk_01*Pk_11*Pq_00 + -2*Pk_01*Pp_00*Pq_11 + 2*Pk_01*Pp_01*Pq_10 + -2*Pk_01*Pq_00*Pq_11 + 2*Pk_01*Pq_01*Pq_10
+   th0=-      [v wt0]x[D[+]v wp]   2*Pk_00*Pk_01*Pp_01 + 2*Pk_00*Pk_01*Pq_01 + -2*Pk_01*Pk_01*Pp_00 + -2*Pk_01*Pk_01*Pq_00
+   th0=-      [v wt0]x[D[-]v wm]   2*Pk_00*Pk_01*Pq_01 + -2*Pk_01*Pk_01*Pq_00 + 2*Pk_01*Pp_00*Pq_01 + -2*Pk_01*Pp_01*Pq_00
+   th0=-      [v wt1]x[D[+]v wm]   2*Pk_00*Pk_00*Pk_11 + 2*Pk_00*Pk_00*Pq_11 + -2*Pk_00*Pk_01*Pk_10 + -2*Pk_00*Pk_01*Pq_10 + -2*Pk_00*Pk_10*Pp_01 + -2*Pk_00*Pk_10*Pq_01 + 2*Pk_00*Pk_11*Pp_00 + 2*Pk_00*Pk_11*Pq_00 + 2*Pk_00*Pp_00*Pq_11 + -2*Pk_00*Pp_01*Pq_10 + 2*Pk_00*Pq_00*Pq_11 + -2*Pk_00*Pq_01*Pq_10
+   th0=-      [v wt1]x[D[+]v wp]   -2*Pk_00*Pk_00*Pp_01 + -2*Pk_00*Pk_00*Pq_01 + 2*Pk_00*Pk_01*Pp_00 + 2*Pk_00*Pk_01*Pq_00
+   th0=-      [v wt1]x[D[-]v wm]   -2*Pk_00*Pk_00*Pq_01 + 2*Pk_00*Pk_01*Pq_00 + -2*Pk_00*Pp_00*Pq_01 + 2*Pk_00*Pp_01*Pq_00
+
+### term b  Y1:C_T1  Y2:C_T3  color c[A,D,m]c[B,E,m]
+== assignment: 2 rows
+   th0=-      [v wt0]x[D[+]v wm]   -2*Pk_00*Pk_01*Pk_11 + -2*Pk_00*Pk_01*Pp_11 + -2*Pk_00*Pk_01*Pq_11 + 2*Pk_01*Pk_01*Pk_10 + 2*Pk_01*Pk_01*Pp_10 + 2*Pk_01*Pk_01*Pq_10 + 2*Pk_01*Pk_10*Pp_01 + 2*Pk_01*Pk_10*Pq_01 + -2*Pk_01*Pk_11*Pp_00 + -2*Pk_01*Pk_11*Pq_00 + -2*Pk_01*Pp_00*Pp_11 + -2*Pk_01*Pp_00*Pq_11 + 2*Pk_01*Pp_01*Pp_10 + 2*Pk_01*Pp_01*Pq_10 + 2*Pk_01*Pp_10*Pq_01 + -2*Pk_01*Pp_11*Pq_00 + -2*Pk_01*Pq_00*Pq_11 + 2*Pk_01*Pq_01*Pq_10
+   th0=-      [v wt1]x[D[+]v wm]   2*Pk_00*Pk_00*Pk_11 + 2*Pk_00*Pk_00*Pp_11 + 2*Pk_00*Pk_00*Pq_11 + -2*Pk_00*Pk_01*Pk_10 + -2*Pk_00*Pk_01*Pp_10 + -2*Pk_00*Pk_01*Pq_10 + -2*Pk_00*Pk_10*Pp_01 + -2*Pk_00*Pk_10*Pq_01 + 2*Pk_00*Pk_11*Pp_00 + 2*Pk_00*Pk_11*Pq_00 + 2*Pk_00*Pp_00*Pp_11 + 2*Pk_00*Pp_00*Pq_11 + -2*Pk_00*Pp_01*Pp_10 + -2*Pk_00*Pp_01*Pq_10 + -2*Pk_00*Pp_10*Pq_01 + 2*Pk_00*Pp_11*Pq_00 + 2*Pk_00*Pq_00*Pq_11 + -2*Pk_00*Pq_01*Pq_10
+
+### term b  Y1:C_T2  Y2:C_T2  color c[A,D,m]c[B,E,m]
+== assignment: 10 rows
+   th0=-      [Db[1]v wt0]x[D2v wm]   1/2*Pk_01*Pk_01 + 1/2*Pk_01*Pp_01 + 1/2*Pk_01*Pq_01
+   th0=-      [Db[1]v wt1]x[D2v wm]   -1/2*Pk_00*Pk_01 + -1/2*Pk_01*Pp_00 + -1/2*Pk_01*Pq_00
+   th0=-      [Db[2]v wt0]x[D2v wm]   -1/2*Pk_00*Pk_01 + -1/2*Pk_00*Pp_01 + -1/2*Pk_00*Pq_01
+   th0=-      [Db[2]v wt1]x[D2v wm]   1/2*Pk_00*Pk_00 + 1/2*Pk_00*Pp_00 + 1/2*Pk_00*Pq_00
+   th0=-      [v wt0]x[D[+]v wm]   -2*Pk_00*Pk_01*Pk_11 + -2*Pk_00*Pk_01*Pq_11 + 2*Pk_01*Pk_01*Pk_10 + 2*Pk_01*Pk_01*Pq_10 + 2*Pk_01*Pk_10*Pp_01 + 2*Pk_01*Pk_10*Pq_01 + -2*Pk_01*Pk_11*Pp_00 + -2*Pk_01*Pk_11*Pq_00 + -2*Pk_01*Pp_00*Pq_11 + 2*Pk_01*Pp_01*Pq_10 + -2*Pk_01*Pq_00*Pq_11 + 2*Pk_01*Pq_01*Pq_10
+   th0=-      [v wt0]x[D[+]v wp]   2*Pk_00*Pk_01*Pp_01 + 2*Pk_00*Pk_01*Pq_01 + 2*Pk_00*Pp_01*Pq_01 + 2*Pk_00*Pq_01*Pq_01 + -2*Pk_01*Pk_01*Pp_00 + -2*Pk_01*Pk_01*Pq_00 + -2*Pk_01*Pp_00*Pq_01 + -2*Pk_01*Pq_00*Pq_01
+   th0=-      [v wt0]x[D[-]v wm]   2*Pk_00*Pk_01*Pq_01 + 2*Pk_00*Pp_01*Pq_01 + 2*Pk_00*Pq_01*Pq_01 + -2*Pk_01*Pk_01*Pq_00 + -2*Pk_01*Pp_01*Pq_00 + -2*Pk_01*Pq_00*Pq_01
+   th0=-      [v wt1]x[D[+]v wm]   2*Pk_00*Pk_00*Pk_11 + 2*Pk_00*Pk_00*Pq_11 + -2*Pk_00*Pk_01*Pk_10 + -2*Pk_00*Pk_01*Pq_10 + -2*Pk_00*Pk_10*Pp_01 + -2*Pk_00*Pk_10*Pq_01 + 2*Pk_00*Pk_11*Pp_00 + 2*Pk_00*Pk_11*Pq_00 + 2*Pk_00*Pp_00*Pq_11 + -2*Pk_00*Pp_01*Pq_10 + 2*Pk_00*Pq_00*Pq_11 + -2*Pk_00*Pq_01*Pq_10
+   th0=-      [v wt1]x[D[+]v wp]   -2*Pk_00*Pk_00*Pp_01 + -2*Pk_00*Pk_00*Pq_01 + 2*Pk_00*Pk_01*Pp_00 + 2*Pk_00*Pk_01*Pq_00 + -2*Pk_00*Pp_01*Pq_00 + -2*Pk_00*Pq_00*Pq_01 + 2*Pk_01*Pp_00*Pq_00 + 2*Pk_01*Pq_00*Pq_00
+   th0=-      [v wt1]x[D[-]v wm]   -2*Pk_00*Pk_00*Pq_01 + 2*Pk_00*Pk_01*Pq_00 + -2*Pk_00*Pp_00*Pq_01 + -2*Pk_00*Pq_00*Pq_01 + 2*Pk_01*Pp_00*Pq_00 + 2*Pk_01*Pq_00*Pq_00
+
+### term b  Y1:C_T2  Y2:C_T3  color c[A,D,m]c[B,E,m]
+== assignment: 2 rows
+   th0=-      [v wt0]x[D[+]v wm]   -2*Pk_00*Pk_01*Pk_11 + -2*Pk_00*Pk_01*Pp_11 + -2*Pk_00*Pk_01*Pq_11 + 2*Pk_01*Pk_01*Pk_10 + 2*Pk_01*Pk_01*Pp_10 + 2*Pk_01*Pk_01*Pq_10 + 2*Pk_01*Pk_10*Pp_01 + 2*Pk_01*Pk_10*Pq_01 + -2*Pk_01*Pk_11*Pp_00 + -2*Pk_01*Pk_11*Pq_00 + -2*Pk_01*Pp_00*Pp_11 + -2*Pk_01*Pp_00*Pq_11 + 2*Pk_01*Pp_01*Pp_10 + 2*Pk_01*Pp_01*Pq_10 + 2*Pk_01*Pp_10*Pq_01 + -2*Pk_01*Pp_11*Pq_00 + -2*Pk_01*Pq_00*Pq_11 + 2*Pk_01*Pq_01*Pq_10
+   th0=-      [v wt1]x[D[+]v wm]   2*Pk_00*Pk_00*Pk_11 + 2*Pk_00*Pk_00*Pp_11 + 2*Pk_00*Pk_00*Pq_11 + -2*Pk_00*Pk_01*Pk_10 + -2*Pk_00*Pk_01*Pp_10 + -2*Pk_00*Pk_01*Pq_10 + -2*Pk_00*Pk_10*Pp_01 + -2*Pk_00*Pk_10*Pq_01 + 2*Pk_00*Pk_11*Pp_00 + 2*Pk_00*Pk_11*Pq_00 + 2*Pk_00*Pp_00*Pp_11 + 2*Pk_00*Pp_00*Pq_11 + -2*Pk_00*Pp_01*Pp_10 + -2*Pk_00*Pp_01*Pq_10 + -2*Pk_00*Pp_10*Pq_01 + 2*Pk_00*Pp_11*Pq_00 + 2*Pk_00*Pq_00*Pq_11 + -2*Pk_00*Pq_01*Pq_10
+
