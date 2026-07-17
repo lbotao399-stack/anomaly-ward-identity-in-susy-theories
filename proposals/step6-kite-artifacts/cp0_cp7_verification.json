@@ -1,0 +1,71 @@
+{
+  "schema": 1,
+  "status": "PASS_BLOCKER_CHECKPOINT",
+  "checked_at": "2026-07-16 America/Los_Angeles",
+  "authority": {
+    "origin_main": "06601a0ed4e6060e2d872980509e1b949e61506c",
+    "origin_main_verify": "SUCCESS",
+    "proposal_start": "cca5d343f9bd575c5cfef89fcc4ccc092f9a1e23",
+    "proposal_role": "NON_AUTHORITY_PROPOSAL"
+  },
+  "checkpoints": {
+    "CP0": {
+      "status": "CP0_ANCHORS_PASS",
+      "anchors": 5,
+      "ww_wD_status": "WW_WD_ARITHMETIC_REPLAY_PASS",
+      "w_D": "2"
+    },
+    "CP1": {
+      "status": "BLOCKED_EXPLICIT_WW_D_ALGEBRA_WORD_DERIVATION",
+      "current_engine_raw_dictionary_failures": 8,
+      "first_unprojected_component": "112",
+      "fast_engine_expected_exit": 3,
+      "fast_engine_runtime_seconds": 33.054
+    },
+    "CP2": {"status": "NOT_RUN_AFTER_MANDATORY_CP1_FAILURE"},
+    "CP3": {"status": "NOT_RUN_AFTER_MANDATORY_CP1_FAILURE"},
+    "CP4": {"status": "NOT_RUN_AFTER_MANDATORY_CP1_FAILURE"},
+    "CP5": {
+      "status": "CP5_COMMON_D3_SCALAR_PARENT_EQUATIONS_PASS__BLOCKED_CP4_DEPENDENT_PARENTS_DAUGHTERS_TENSORS_AND_SUBTRACTION",
+      "equation_linked_checks": 8,
+      "exact_parameter_checks": {
+        "I_C_over_U3": "1/2",
+        "I_C2F_over_U5": ["1/24", "1/24", "1/48"]
+      },
+      "independent_common_D3_audit": "PASS",
+      "rejected_draft_claim": "STARTING_SNAPSHOT_ASYMMETRIC_N1"
+    },
+    "CP6": {
+      "status": "PASS_SPECIFIED_SHELL_WITH_UNCLASSIFIED_REMAINDER__NO_ANOMALY_COEFFICIENT",
+      "su2_color_components": 243,
+      "su2_color_max_deviation": 0,
+      "coefficient_status": "BLOCKED"
+    },
+    "CP7": {
+      "memo_slots_remaining": 0,
+      "git_diff_check": "PASS",
+      "push_status": "OUT_OF_BAND_POST_COMMIT_STATE"
+    }
+  },
+  "repository_tests": {
+    "command": "PYTHONPATH=/opt/homebrew/lib/python3.14/site-packages /opt/homebrew/bin/python3.11 -m unittest discover -s tests -v",
+    "ran": 169,
+    "passed_before_split_rerun": 164,
+    "skipped": 4,
+    "sandbox_multiprocessing_errors": 1,
+    "sandbox_error_test": "RepositoryPolicyTest.test_step5_ad_da_gauge_family_raw_exact_audit",
+    "outside_sandbox_rerun": {
+      "command": "python3 scripts/step5_ad_da_gauge_family_raw_audit.py --check --workers 8",
+      "status": "PASS",
+      "checks": 9,
+      "failed": 0
+    },
+    "effective_status": "LOCAL_RECEIPT_164_PASS_4_SKIP_1_SANDBOX_ERROR__ISOLATED_VERIFIER_9_OF_9_PASS"
+  },
+  "procodex": {
+    "gate_1": "SETTLED_NO_GO_CP1_AND_D3_BLOCKERS_LOCALLY_REPRODUCED",
+    "gate_2": "SETTLED_HOLD_CORE_DERIVATION",
+    "gate_3": "SETTLED_PUSH_BLOCKED_SPECIFIED_PROPOSAL_PASS__ACCEPT_PHYSICAL_TWO_LOOP_COEFFICIENT_FAIL"
+  },
+  "notion_used": false
+}

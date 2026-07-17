@@ -1,0 +1,548 @@
+{
+  "authority_status": "NON_AUTHORITY_PROPOSAL",
+  "blocked_effect": "SPEC section 6 forbids CP2--CP4 after the failed CP1 go/no-go gate.",
+  "cp0": [
+    {
+      "detail": "-4",
+      "memo_tag": "(K.1)/SPEC-1-anchor-1",
+      "name": "(D^2 theta^2)| = -4",
+      "pass": true
+    },
+    {
+      "detail": "-4",
+      "memo_tag": "(K.1)/SPEC-1-anchor-2",
+      "name": "(Db^2 thetabar^2)| = -4",
+      "pass": true
+    },
+    {
+      "detail": "16",
+      "memo_tag": "F.6/SPEC-1-anchor-3",
+      "name": "[D^2 Db^2 delta4]| = 16",
+      "pass": true
+    },
+    {
+      "detail": "terms=16",
+      "memo_tag": "F.6/SPEC-1-anchor-4",
+      "name": "delta4_01 D^2 Db^2 delta4_01 = 16 delta4_01",
+      "pass": true
+    },
+    {
+      "detail": "words_checked=13",
+      "memo_tag": "F.6/SPEC-1-anchor-5",
+      "name": "closed theta loop with <2 D and <2 Db vanishes",
+      "pass": true
+    }
+  ],
+  "cp1": {
+    "L1": "2k+q",
+    "L2": "2k+p+2q",
+    "explicit_trace_pass": false,
+    "memo_tags": [
+      "seed-6",
+      "seed-7",
+      "seed-8"
+    ],
+    "required_gamma": "Gamma_T,A=(hbar*g^2/2) C O_A,mn int L1^m L2^n/[k^2(k+q)^2(k+P)^2]",
+    "rows": [
+      {
+        "D_endpoint": "r1",
+        "actual_terms": 13238,
+        "barD_endpoint": "r0",
+        "difference_terms": 18690,
+        "exact_match": false,
+        "expected_final_sign": 1,
+        "expected_weight_in_p_basis": "-i/2",
+        "id": "WW-DA-01",
+        "overall_dictionary_scan": {
+          "+1/2": false,
+          "+i/2": false,
+          "-1/2": false,
+          "-i/2": false
+        },
+        "placement": "A",
+        "random_component_comparison": {
+          "nonzero_components": [
+            {
+              "grassmann_mask": "0x4",
+              "value": "(-364-364*i)"
+            },
+            {
+              "grassmann_mask": "0x8",
+              "value": "(252+252*i)"
+            },
+            {
+              "grassmann_mask": "0xd",
+              "value": "(616+616*i)"
+            },
+            {
+              "grassmann_mask": "0xe",
+              "value": "(6320-6748*i)"
+            }
+          ],
+          "symbols_assigned": 48
+        },
+        "symbolic_difference_examples": [
+          {
+            "coefficient": "-1",
+            "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_00*Pq_11*Pp_00*vq_e*vp_03",
+            "grassmann_mask": "0x4"
+          },
+          {
+            "coefficient": "1",
+            "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_00*Pq_11*Pp_01*vq_e*vp_02",
+            "grassmann_mask": "0x4"
+          },
+          {
+            "coefficient": "1",
+            "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_00*Pp_00*vq_13*vp_03",
+            "grassmann_mask": "0x4"
+          }
+        ]
+      },
+      {
+        "D_endpoint": "r2",
+        "actual_terms": 20737,
+        "barD_endpoint": "r0",
+        "difference_terms": 23890,
+        "exact_match": false,
+        "expected_final_sign": 1,
+        "expected_weight_in_p_basis": "-i/2",
+        "id": "WW-DA-02",
+        "overall_dictionary_scan": {
+          "+1/2": false,
+          "+i/2": false,
+          "-1/2": false,
+          "-i/2": false
+        },
+        "placement": "A",
+        "random_component_comparison": {
+          "nonzero_components": [
+            {
+              "grassmann_mask": "0x4",
+              "value": "(-3744-845*i)"
+            },
+            {
+              "grassmann_mask": "0x8",
+              "value": "(-2340-780*i)"
+            },
+            {
+              "grassmann_mask": "0xd",
+              "value": "(468-650*i)"
+            },
+            {
+              "grassmann_mask": "0xe",
+              "value": "(-17056+1365/2*i)"
+            }
+          ],
+          "symbols_assigned": 48
+        },
+        "symbolic_difference_examples": [
+          {
+            "coefficient": "-1",
+            "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_00*Pq_11*Pp_00*vq_e*vp_03",
+            "grassmann_mask": "0x4"
+          },
+          {
+            "coefficient": "1",
+            "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_00*Pq_11*Pp_01*vq_e*vp_02",
+            "grassmann_mask": "0x4"
+          },
+          {
+            "coefficient": "1",
+            "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_00*Pp_00*vq_13*vp_03",
+            "grassmann_mask": "0x4"
+          }
+        ]
+      },
+      {
+        "D_endpoint": "r1",
+        "actual_terms": 21588,
+        "barD_endpoint": "r1",
+        "difference_terms": 31110,
+        "exact_match": false,
+        "expected_final_sign": 1,
+        "expected_weight_in_p_basis": "-i/2",
+        "id": "WW-DA-03",
+        "overall_dictionary_scan": {
+          "+1/2": false,
+          "+i/2": false,
+          "-1/2": false,
+          "-i/2": false
+        },
+        "placement": "A",
+        "random_component_comparison": {
+          "nonzero_components": [
+            {
+              "grassmann_mask": "0x4",
+              "value": "(2702+97783/4*i)"
+            },
+            {
+              "grassmann_mask": "0x8",
+              "value": "(6160-8624*i)"
+            },
+            {
+              "grassmann_mask": "0xd",
+              "value": "(-37716+218519/2*i)"
+            },
+            {
+              "grassmann_mask": "0xe",
+              "value": "(-69466-49981/4*i)"
+            }
+          ],
+          "symbols_assigned": 48
+        },
+        "symbolic_difference_examples": [
+          {
+            "coefficient": "-1",
+            "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_00*Pq_11*Pp_00*vq_e*vp_03",
+            "grassmann_mask": "0x4"
+          },
+          {
+            "coefficient": "1",
+            "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_00*Pq_11*Pp_01*vq_e*vp_02",
+            "grassmann_mask": "0x4"
+          },
+          {
+            "coefficient": "1",
+            "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_00*Pp_00*vq_13*vp_03",
+            "grassmann_mask": "0x4"
+          }
+        ]
+      },
+      {
+        "D_endpoint": "r2",
+        "actual_terms": 25155,
+        "barD_endpoint": "r1",
+        "difference_terms": 34092,
+        "exact_match": false,
+        "expected_final_sign": 1,
+        "expected_weight_in_p_basis": "-i/2",
+        "id": "WW-DA-04",
+        "overall_dictionary_scan": {
+          "+1/2": false,
+          "+i/2": false,
+          "-1/2": false,
+          "-i/2": false
+        },
+        "placement": "A",
+        "random_component_comparison": {
+          "nonzero_components": [
+            {
+              "grassmann_mask": "0x4",
+              "value": "(97776-366*i)"
+            },
+            {
+              "grassmann_mask": "0x8",
+              "value": "(55392-1182*i)"
+            },
+            {
+              "grassmann_mask": "0xd",
+              "value": "(39024-5994*i)"
+            },
+            {
+              "grassmann_mask": "0xe",
+              "value": "(1171296+86178*i)"
+            }
+          ],
+          "symbols_assigned": 48
+        },
+        "symbolic_difference_examples": [
+          {
+            "coefficient": "-1",
+            "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_00*Pq_11*Pp_00*vq_e*vp_03",
+            "grassmann_mask": "0x4"
+          },
+          {
+            "coefficient": "1",
+            "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_00*Pq_11*Pp_01*vq_e*vp_02",
+            "grassmann_mask": "0x4"
+          },
+          {
+            "coefficient": "1",
+            "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_00*Pp_00*vq_13*vp_03",
+            "grassmann_mask": "0x4"
+          }
+        ]
+      },
+      {
+        "D_endpoint": "r1",
+        "actual_terms": 22310,
+        "barD_endpoint": "r0",
+        "difference_terms": 25466,
+        "exact_match": false,
+        "expected_final_sign": 1,
+        "expected_weight_in_p_basis": "-i/2",
+        "id": "WW-DA-05",
+        "overall_dictionary_scan": {
+          "+1/2": false,
+          "+i/2": false,
+          "-1/2": false,
+          "-i/2": false
+        },
+        "placement": "B",
+        "random_component_comparison": {
+          "nonzero_components": [
+            {
+              "grassmann_mask": "0x4",
+              "value": "(19151-807*i)"
+            },
+            {
+              "grassmann_mask": "0x8",
+              "value": "(76593-7443/2*i)"
+            },
+            {
+              "grassmann_mask": "0xd",
+              "value": "(-440418+42057/2*i)"
+            },
+            {
+              "grassmann_mask": "0xe",
+              "value": "(-591217+61785/2*i)"
+            }
+          ],
+          "symbols_assigned": 48
+        },
+        "symbolic_difference_examples": [
+          {
+            "coefficient": "1",
+            "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_00*Pq_11*Pp_00*vq_e*vp_03",
+            "grassmann_mask": "0x4"
+          },
+          {
+            "coefficient": "-1",
+            "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_00*Pq_11*Pp_01*vq_e*vp_02",
+            "grassmann_mask": "0x4"
+          },
+          {
+            "coefficient": "-1",
+            "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_00*Pp_00*vq_13*vp_03",
+            "grassmann_mask": "0x4"
+          }
+        ]
+      },
+      {
+        "D_endpoint": "r2",
+        "actual_terms": 18691,
+        "barD_endpoint": "r0",
+        "difference_terms": 20993,
+        "exact_match": false,
+        "expected_final_sign": 1,
+        "expected_weight_in_p_basis": "-i/2",
+        "id": "WW-DA-06",
+        "overall_dictionary_scan": {
+          "+1/2": false,
+          "+i/2": false,
+          "-1/2": false,
+          "-i/2": false
+        },
+        "placement": "B",
+        "random_component_comparison": {
+          "nonzero_components": [
+            {
+              "grassmann_mask": "0x4",
+              "value": "(-3920-504*i)"
+            },
+            {
+              "grassmann_mask": "0x8",
+              "value": "(36960-13032*i)"
+            },
+            {
+              "grassmann_mask": "0xd",
+              "value": "(3920+504*i)"
+            },
+            {
+              "grassmann_mask": "0xe",
+              "value": "(-180460+61272*i)"
+            }
+          ],
+          "symbols_assigned": 48
+        },
+        "symbolic_difference_examples": [
+          {
+            "coefficient": "1",
+            "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_00*Pq_11*Pp_00*vq_e*vp_03",
+            "grassmann_mask": "0x4"
+          },
+          {
+            "coefficient": "-1",
+            "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_00*Pq_11*Pp_01*vq_e*vp_02",
+            "grassmann_mask": "0x4"
+          },
+          {
+            "coefficient": "-1",
+            "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_00*Pp_00*vq_13*vp_03",
+            "grassmann_mask": "0x4"
+          }
+        ]
+      },
+      {
+        "D_endpoint": "r1",
+        "actual_terms": 26068,
+        "barD_endpoint": "r1",
+        "difference_terms": 34498,
+        "exact_match": false,
+        "expected_final_sign": 1,
+        "expected_weight_in_p_basis": "-i/2",
+        "id": "WW-DA-07",
+        "overall_dictionary_scan": {
+          "+1/2": false,
+          "+i/2": false,
+          "-1/2": false,
+          "-i/2": false
+        },
+        "placement": "B",
+        "random_component_comparison": {
+          "nonzero_components": [
+            {
+              "grassmann_mask": "0x4",
+              "value": "(-1663260-103005/2*i)"
+            },
+            {
+              "grassmann_mask": "0x8",
+              "value": "(50592-80055/2*i)"
+            },
+            {
+              "grassmann_mask": "0xd",
+              "value": "(1410300+251640*i)"
+            },
+            {
+              "grassmann_mask": "0xe",
+              "value": "(8395548+2119230*i)"
+            }
+          ],
+          "symbols_assigned": 48
+        },
+        "symbolic_difference_examples": [
+          {
+            "coefficient": "1",
+            "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_00*Pq_11*Pp_00*vq_e*vp_03",
+            "grassmann_mask": "0x4"
+          },
+          {
+            "coefficient": "-1",
+            "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_00*Pq_11*Pp_01*vq_e*vp_02",
+            "grassmann_mask": "0x4"
+          },
+          {
+            "coefficient": "-1",
+            "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_00*Pp_00*vq_13*vp_03",
+            "grassmann_mask": "0x4"
+          }
+        ]
+      },
+      {
+        "D_endpoint": "r2",
+        "actual_terms": 18691,
+        "barD_endpoint": "r1",
+        "difference_terms": 27829,
+        "exact_match": false,
+        "expected_final_sign": 1,
+        "expected_weight_in_p_basis": "-i/2",
+        "id": "WW-DA-08",
+        "overall_dictionary_scan": {
+          "+1/2": false,
+          "+i/2": false,
+          "-1/2": false,
+          "-i/2": false
+        },
+        "placement": "B",
+        "random_component_comparison": {
+          "nonzero_components": [
+            {
+              "grassmann_mask": "0x4",
+              "value": "(208+5182*i)"
+            },
+            {
+              "grassmann_mask": "0x8",
+              "value": "(1352+7040*i)"
+            },
+            {
+              "grassmann_mask": "0xd",
+              "value": "(5512+4108*i)"
+            },
+            {
+              "grassmann_mask": "0xe",
+              "value": "(40430+245699/4*i)"
+            }
+          ],
+          "symbols_assigned": 48
+        },
+        "symbolic_difference_examples": [
+          {
+            "coefficient": "1",
+            "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_00*Pq_11*Pp_00*vq_e*vp_03",
+            "grassmann_mask": "0x4"
+          },
+          {
+            "coefficient": "-1",
+            "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_00*Pq_11*Pp_01*vq_e*vp_02",
+            "grassmann_mask": "0x4"
+          },
+          {
+            "coefficient": "-1",
+            "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_00*Pp_00*vq_13*vp_03",
+            "grassmann_mask": "0x4"
+          }
+        ]
+      }
+    ],
+    "total_checks": {
+      "a": {
+        "difference_terms": 36099,
+        "exact_match": false,
+        "random_component_comparison": {
+          "nonzero_components": [
+            {
+              "grassmann_mask": "0x4",
+              "value": "(-53452+78693/4*i)"
+            },
+            {
+              "grassmann_mask": "0x8",
+              "value": "(401024-333863/4*i)"
+            },
+            {
+              "grassmann_mask": "0xd",
+              "value": "(-427616+157386*i)"
+            },
+            {
+              "grassmann_mask": "0xe",
+              "value": "(-1726576+1356133/4*i)"
+            }
+          ],
+          "symbols_assigned": 48
+        }
+      },
+      "b": {
+        "difference_terms": 37058,
+        "exact_match": false,
+        "random_component_comparison": {
+          "nonzero_components": [
+            {
+              "grassmann_mask": "0x4",
+              "value": "(154105+30976*i)"
+            },
+            {
+              "grassmann_mask": "0x8",
+              "value": "(396620+45738*i)"
+            },
+            {
+              "grassmann_mask": "0xd",
+              "value": "(-1255555-184404*i)"
+            },
+            {
+              "grassmann_mask": "0xe",
+              "value": "(958470+147158*i)"
+            }
+          ],
+          "symbols_assigned": 48
+        }
+      }
+    },
+    "w_D": "2"
+  },
+  "engine": "fast bitmask + sparse Fraction polynomial",
+  "first_blocker": "BLOCKED_EXPLICIT_WW_D_ALGEBRA_WORD_DERIVATION",
+  "generated_artifact": true,
+  "generated_by": "proposals/step6-kite-artifacts/fast_cp0_cp1_engine.py",
+  "runtime_seconds": 33.053969500004314,
+  "sympy_in_hot_loop": false
+}

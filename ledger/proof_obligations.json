@@ -353,6 +353,12 @@
       "state": "ACCEPTED",
       "blocking_reason": null,
       "task_sha256": "0ac669c8f432b1bbe7f37c962f2e2bc4d1781d055d7f08cd455b7a4a9684b86d",
+      "task": "tasks/archive/MIRROR-STEP-05-CLAUDE-AUDIT-NOTION-001.yaml"
+    },
+    {
+      "id": "STEP-06-TWO-LOOP-KITE-AAA-ANOMALY-001",
+      "state": "SPECIFIED",
+      "blocking_reason": "BLOCKED_EXPLICIT_WW_D_ALGEBRA_WORD_DERIVATION: the current engine does not reproduce the eight locked CP1 representatives before the missing typed projection/contact quotient; CP2-CP4 and the CP6 coefficient are not admissible. REJECTED_STARTING_DRAFT_MASTER_EVANESCENT_SHIFT and BLOCKED_TWO_LOOP_SUBTRACTION_SCHEME are independent downstream blockers.",
       "task": "tasks/CURRENT.yaml"
     }
   ]

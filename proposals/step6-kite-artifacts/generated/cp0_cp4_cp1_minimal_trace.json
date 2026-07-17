@@ -1,0 +1,325 @@
+{
+  "checkpoint": "CP1/WW-DA-01",
+  "endpoint_word": "(D_-K_+)_A K_{+,B} barD[r0] D[r1]",
+  "first_symbolic_difference_examples_against_minus_i_over_2": [
+    {
+      "coefficient": "-1",
+      "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_00*Pq_11*Pp_00*vq_e*vp_03",
+      "grassmann_mask": "0x4"
+    },
+    {
+      "coefficient": "1",
+      "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_00*Pq_11*Pp_01*vq_e*vp_02",
+      "grassmann_mask": "0x4"
+    },
+    {
+      "coefficient": "1",
+      "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_00*Pp_00*vq_13*vp_03",
+      "grassmann_mask": "0x4"
+    },
+    {
+      "coefficient": "-1",
+      "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_00*Pp_01*vq_13*vp_02",
+      "grassmann_mask": "0x4"
+    },
+    {
+      "coefficient": "1",
+      "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_01*Pq_10*Pp_00*vq_e*vp_03",
+      "grassmann_mask": "0x4"
+    },
+    {
+      "coefficient": "-1",
+      "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_01*Pq_10*Pp_01*vq_e*vp_02",
+      "grassmann_mask": "0x4"
+    },
+    {
+      "coefficient": "1",
+      "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_01*Pp_00*vq_12*vp_03",
+      "grassmann_mask": "0x4"
+    },
+    {
+      "coefficient": "-1",
+      "commutative_monomial": "Pk_00*Pk_00*Pk_11*Pq_01*Pp_01*vq_12*vp_02",
+      "grassmann_mask": "0x4"
+    }
+  ],
+  "full_spin_sum_actual": {
+    "coefficient_terms": 13238,
+    "grassmann_masks": 22,
+    "max_grassmann_degree": 5
+  },
+  "generated_artifact": true,
+  "generated_by": "proposals/step6-kite-artifacts/fast_cp1_minimal_trace.py",
+  "internal_leibniz_check_from_engine_A": "R_a+R_b = +D_- T exactly; the mismatch is not a failure of the ordinary Leibniz rule.",
+  "koszul_inversions": [
+    [
+      3,
+      2
+    ],
+    [
+      6,
+      2
+    ],
+    [
+      6,
+      5
+    ]
+  ],
+  "koszul_sign": -1,
+  "line_traces": [
+    {
+      "evaluation_order": "right word from rightmost letter to leftmost, then left word from rightmost letter to leftmost",
+      "left_word_operator_order": "-1/2 D_1 D_0 Db_0 Db_1 D_0",
+      "line": "T1:r0",
+      "right_word_operator_order": "1 Db_1",
+      "stages": [
+        {
+          "action": "delta4",
+          "coefficient_terms": 16,
+          "grassmann_masks": 16,
+          "max_grassmann_degree": 4
+        },
+        {
+          "action": "right:Db_1",
+          "coefficient_terms": 24,
+          "grassmann_masks": 24,
+          "max_grassmann_degree": 5
+        },
+        {
+          "action": "right:coefficient=1",
+          "coefficient_terms": 24,
+          "grassmann_masks": 24,
+          "max_grassmann_degree": 5
+        },
+        {
+          "action": "left:D_0",
+          "coefficient_terms": 40,
+          "grassmann_masks": 40,
+          "max_grassmann_degree": 6
+        },
+        {
+          "action": "left:Db_1",
+          "coefficient_terms": 24,
+          "grassmann_masks": 24,
+          "max_grassmann_degree": 5
+        },
+        {
+          "action": "left:Db_0",
+          "coefficient_terms": 28,
+          "grassmann_masks": 24,
+          "max_grassmann_degree": 6
+        },
+        {
+          "action": "left:D_0",
+          "coefficient_terms": 50,
+          "grassmann_masks": 41,
+          "max_grassmann_degree": 7
+        },
+        {
+          "action": "left:D_1",
+          "coefficient_terms": 70,
+          "grassmann_masks": 49,
+          "max_grassmann_degree": 8
+        },
+        {
+          "action": "left:coefficient=-1/2",
+          "coefficient_terms": 70,
+          "grassmann_masks": 49,
+          "max_grassmann_degree": 8
+        }
+      ]
+    },
+    {
+      "evaluation_order": "right word from rightmost letter to leftmost, then left word from rightmost letter to leftmost",
+      "left_word_operator_order": "1 ",
+      "line": "T2:r1",
+      "right_word_operator_order": "1 D_0",
+      "stages": [
+        {
+          "action": "delta4",
+          "coefficient_terms": 16,
+          "grassmann_masks": 16,
+          "max_grassmann_degree": 4
+        },
+        {
+          "action": "right:D_0",
+          "coefficient_terms": 40,
+          "grassmann_masks": 24,
+          "max_grassmann_degree": 5
+        },
+        {
+          "action": "right:coefficient=1",
+          "coefficient_terms": 40,
+          "grassmann_masks": 24,
+          "max_grassmann_degree": 5
+        },
+        {
+          "action": "left:coefficient=1",
+          "coefficient_terms": 40,
+          "grassmann_masks": 24,
+          "max_grassmann_degree": 5
+        }
+      ]
+    },
+    {
+      "evaluation_order": "right word from rightmost letter to leftmost, then left word from rightmost letter to leftmost",
+      "left_word_operator_order": "-1/2 D_0 Db_0 Db_1 D_0",
+      "line": "T3:r2",
+      "right_word_operator_order": "1 ",
+      "stages": [
+        {
+          "action": "delta4",
+          "coefficient_terms": 16,
+          "grassmann_masks": 16,
+          "max_grassmann_degree": 4
+        },
+        {
+          "action": "right:coefficient=1",
+          "coefficient_terms": 16,
+          "grassmann_masks": 16,
+          "max_grassmann_degree": 4
+        },
+        {
+          "action": "left:D_0",
+          "coefficient_terms": 56,
+          "grassmann_masks": 24,
+          "max_grassmann_degree": 5
+        },
+        {
+          "action": "left:Db_1",
+          "coefficient_terms": 196,
+          "grassmann_masks": 40,
+          "max_grassmann_degree": 6
+        },
+        {
+          "action": "left:Db_0",
+          "coefficient_terms": 434,
+          "grassmann_masks": 41,
+          "max_grassmann_degree": 7
+        },
+        {
+          "action": "left:D_0",
+          "coefficient_terms": 576,
+          "grassmann_masks": 36,
+          "max_grassmann_degree": 6
+        },
+        {
+          "action": "left:coefficient=-1/2",
+          "coefficient_terms": 576,
+          "grassmann_masks": 36,
+          "max_grassmann_degree": 6
+        }
+      ]
+    }
+  ],
+  "memo_tags": [
+    "seed-6",
+    "seed-7",
+    "seed-8"
+  ],
+  "missing_typed_rule": "No allowed input defines the IBP/external-jet/EOM projection that deletes Wtilde*D_+W^+, Wtilde*D_-W^-, and (barD Wtilde)*(D^2 W) branches and converts the surviving branch into r_i*p*r_j.",
+  "multiplication_and_berezin_trace": [
+    {
+      "action": "T1*T2",
+      "coefficient_terms": 621,
+      "grassmann_masks": 292,
+      "max_grassmann_degree": 11
+    },
+    {
+      "action": "T1*T2*T3",
+      "coefficient_terms": 1374,
+      "grassmann_masks": 225,
+      "max_grassmann_degree": 11
+    },
+    {
+      "action": "*Wtilde_dot0(q)",
+      "coefficient_terms": 6283,
+      "grassmann_masks": 317,
+      "max_grassmann_degree": 12
+    },
+    {
+      "action": "*W^+(p)",
+      "coefficient_terms": 58658,
+      "grassmann_masks": 673,
+      "max_grassmann_degree": 13
+    },
+    {
+      "action": "Koszul then int d4theta_1",
+      "coefficient_terms": 10590,
+      "grassmann_masks": 108,
+      "max_grassmann_degree": 9
+    },
+    {
+      "action": "int d4theta_2",
+      "coefficient_terms": 3666,
+      "grassmann_masks": 22,
+      "max_grassmann_degree": 5
+    },
+    {
+      "action": "vertex product (+1/4) * color sign (-1)",
+      "coefficient_terms": 3666,
+      "grassmann_masks": 22,
+      "max_grassmann_degree": 5
+    }
+  ],
+  "odd_source_order": [
+    0,
+    2,
+    3,
+    5,
+    6
+  ],
+  "odd_target_order": [
+    0,
+    3,
+    6,
+    2,
+    5
+  ],
+  "overall_dictionary_scan": {
+    "+1/2": false,
+    "+i/2": false,
+    "-1/2": false,
+    "-i/2": false
+  },
+  "seed_structure": {
+    "coefficient_terms": 7997,
+    "grassmann_masks": 22,
+    "max_grassmann_degree": 5
+  },
+  "source_factor_labels": {
+    "0": "(D_-K_+) on r0",
+    "1": "K_+ on r2",
+    "2": "Wtilde_dot0 external",
+    "3": "barD^dot0 on r0",
+    "4": "identity on r1 at Y1",
+    "5": "W^+ external",
+    "6": "D_+ on r1",
+    "7": "identity on r2 at Y2"
+  },
+  "source_factor_order": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "spin_branch_result": {
+    "coefficient_terms": 3666,
+    "grassmann_masks": 22,
+    "max_grassmann_degree": 5
+  },
+  "target_factor_order": [
+    0,
+    3,
+    4,
+    6,
+    1,
+    7,
+    2,
+    5
+  ]
+}
