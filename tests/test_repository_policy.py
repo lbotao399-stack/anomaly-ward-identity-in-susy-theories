@@ -2411,7 +2411,7 @@ class RepositoryPolicyTest(unittest.TestCase):
     def test_step5_core_theory_write_only_mirror_receipt(self) -> None:
         page_map = json.loads((ROOT / "mirror/page_map.yaml").read_text(encoding="utf-8"))
         receipt = json.loads((ROOT / "audits/notion_write_receipt.json").read_text(encoding="utf-8"))
-        task_path = ROOT / "tasks/CURRENT.yaml"
+        task_path = ROOT / "tasks/archive/MIRROR-STEP-05-CLAUDE-AUDIT-NOTION-001.yaml"
         mirror_task = json.loads(task_path.read_text(encoding="utf-8"))
         ledger = json.loads((ROOT / "ledger/proof_obligations.json").read_text(encoding="utf-8"))
 
@@ -3014,6 +3014,82 @@ class RepositoryPolicyTest(unittest.TestCase):
             "NOT_ACCEPTED_COEFFICIENT_CENSUS_CERTIFICATE",
         )
         self.assertEqual(payload["final_census_status"], "OPEN_FINAL_CENSUS_17_CANDIDATES")
+
+    def test_step6_covariant_completion_phase0_blocker(self) -> None:
+        task = json.loads((ROOT / "tasks/CURRENT.yaml").read_text(encoding="utf-8"))
+        if task["id"] != "CONTRACT-STEP-06-COVARIANT-COMPLETION-001":
+            self.skipTest("Step-6 covariant-completion task is not current")
+
+        self.assertEqual(task["status"], "SPECIFIED")
+        self.assertEqual(
+            task["blocking_reason"],
+            "BLOCKED_PHASE0_CHAIN_MAP_ACTION_NOT_LOCKED",
+        )
+
+        contract = ROOT / "contracts/foundations/step-06-covariant-completion.md"
+        audit_path = ROOT / "audits/step6-q0-q1-consistency.json"
+        trace_path = ROOT / "generated/step6/q0-q1-consistency.json"
+        checker = ROOT / "scripts/verify_step6_q0_q1_consistency.py"
+        audit = json.loads(audit_path.read_text(encoding="utf-8"))
+
+        self.assertIn(
+            "Status: `BLOCKED_PHASE0_CHAIN_MAP_ACTION_NOT_LOCKED__COVARIANT_COMPLETION_NOT_PROVED`",
+            contract.read_text(encoding="utf-8"),
+        )
+        self.assertEqual(audit["overall_status"], "BLOCKED_PHASE0_CHAIN_MAP_ACTION_NOT_LOCKED")
+        self.assertEqual(audit["ledger_census"]["loaded_rows"], 81)
+        self.assertEqual(audit["phase0_gate"]["contract_grade_evaluated_rows"], 25)
+        self.assertEqual(audit["phase0_gate"]["contract_grade_passed_rows"], 25)
+        self.assertEqual(audit["phase0_gate"]["contract_grade_blocked_rows"], 56)
+        self.assertEqual(len(audit["phase0_gate"]["defined_pair_ids"]), 25)
+        self.assertEqual(
+            {item["id"] for item in audit["locked_input_boundary"]["missing_rules"]},
+            {
+                "MISSING_DELTA_ON_EULER_DESCENDANTS",
+                "MISSING_NABLA_MINUS_TRANSLATION_COMMUTATOR",
+                "MISSING_NONLINEAR_DELTA_EXTENSION",
+                "MISSING_Q1_STABLE_EOM_QUOTIENT",
+            },
+        )
+        self.assertEqual(audit["conditional_diagnostic"]["status"], "CONDITIONAL_NONZERO_NOT_A_P0")
+        self.assertEqual(
+            audit["conditional_diagnostic"]["residual_dDelta_minus_Deltad"][
+                "coefficient_over_lambda1_times_T"
+            ],
+            "2*I",
+        )
+        self.assertEqual(audit["conditional_diagnostic"]["exact_color_witness"]["value"], 1)
+        self.assertFalse(audit["conditional_diagnostic"]["acceptance_use"])
+        self.assertEqual(audit["residual_q"]["status"], "NOT_RUN_AFTER_PHASE0_BLOCKER")
+        self.assertEqual(
+            hashlib.sha256(trace_path.read_bytes()).hexdigest(),
+            audit["hashes"]["generated_trace_sha256"],
+        )
+
+        contract_text = contract.read_text(encoding="utf-8")
+        blind_text = checker.read_text(encoding="utf-8") + audit_path.read_text(encoding="utf-8")
+        self.assertNotIn("-i*lambda1", blind_text)
+        self.assertNotIn("(-i*lambda1,-i*lambda1,0)", blind_text)
+        self.assertNotIn("P0_FAIL_Q0_Q1_19_ROWS", contract_text + blind_text)
+        self.assertNotIn("62/81", contract_text + blind_text)
+        self.assertNotIn("147/147", contract_text + blind_text)
+
+        checked = subprocess.run(
+            [sys.executable, str(checker), "--check"],
+            cwd=ROOT,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        self.assertEqual(checked.returncode, 0, checked.stdout + checked.stderr)
+        strict = subprocess.run(
+            [sys.executable, str(checker), "--check", "--require-pass"],
+            cwd=ROOT,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        self.assertEqual(strict.returncode, 1, strict.stdout + strict.stderr)
 
     def test_channel_sources_do_not_cross_read(self) -> None:
         channels = ("ec", "es", "lc", "ls")

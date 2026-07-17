@@ -353,6 +353,13 @@
       "state": "ACCEPTED",
       "blocking_reason": null,
       "task_sha256": "0ac669c8f432b1bbe7f37c962f2e2bc4d1781d055d7f08cd455b7a4a9684b86d",
+      "task": "tasks/archive/MIRROR-STEP-05-CLAUDE-AUDIT-NOTION-001.yaml"
+    },
+    {
+      "id": "CONTRACT-STEP-06-COVARIANT-COMPLETION-001",
+      "state": "SPECIFIED",
+      "blocking_reason": "BLOCKED_PHASE0_CHAIN_MAP_ACTION_NOT_LOCKED",
+      "task_sha256": "1cf0682fe4823c14f3e3e2d1c37505d42c8f939f9b6c6f69439bb3c5d2e728da",
       "task": "tasks/CURRENT.yaml"
     }
   ]
