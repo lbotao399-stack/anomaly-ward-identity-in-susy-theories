@@ -358,8 +358,8 @@
     {
       "id": "CONTRACT-STEP-06-COVARIANT-COMPLETION-001",
       "state": "SPECIFIED",
-      "blocking_reason": null,
-      "task_sha256": "7cb4b11cbba1a24bc13838dd9059876371458bccf416379bfd2dceae9b3e824b",
+      "blocking_reason": "BLOCKED_PHASE0_CHAIN_MAP_ACTION_NOT_LOCKED",
+      "task_sha256": "1cf0682fe4823c14f3e3e2d1c37505d42c8f939f9b6c6f69439bb3c5d2e728da",
       "task": "tasks/CURRENT.yaml"
     }
   ]

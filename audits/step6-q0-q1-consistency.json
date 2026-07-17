@@ -1,0 +1,199 @@
+{
+  "checked_equations": [
+    "(T.9)",
+    "(5A.2)",
+    "(5A.61)-(5A.62)",
+    "(6.1)-(6.6)"
+  ],
+  "conditional_diagnostic": {
+    "Delta_d_Koszul": {
+      "coefficient_over_lambda1_times_T": "-2*I",
+      "terms": [
+        {
+          "coefficient_over_lambda1_times_T": "-2*I",
+          "functional_derivative_sign_5A61": 1,
+          "left_word": [
+            "D_dot^D",
+            "C1^G"
+          ],
+          "right_word": [
+            "D^(E dot)"
+          ],
+          "source_occurrence": "B1^F in B1^F C1^G"
+        }
+      ],
+      "zero_occurrences": [
+        "Delta(B2,C1)=0",
+        "Delta(B3,C1)=0",
+        "Delta(C_s,C1)=0 for s=1,2,3"
+      ]
+    },
+    "acceptance_use": false,
+    "dA_EOM_quotient": "-2*i*sum_(s,F,G) c^A_(F G) B_s^F C_s^G",
+    "dC1": "0",
+    "d_Delta": {
+      "coefficient_over_lambda1_times_T": "0",
+      "reason": "Delta(A,C1) contains only D, C1, and even translations; dD=dC1=0",
+      "terms": []
+    },
+    "exact_color_witness": {
+      "component": {
+        "A": 1,
+        "B": 2,
+        "D": 1,
+        "E": 1,
+        "G": 3
+      },
+      "contraction": "T^(AB)_(GDE)=sum_F c^A_(FG) F^(FB)_(DE)",
+      "definition": "kappa_ab=delta_ab; c_abc=epsilon_abc for a,b,c in {1,2,3}",
+      "summands": [
+        {
+          "F": 1,
+          "F^(F B)_(D E)": 0,
+          "c^A_(F G)": 0,
+          "product": 0
+        },
+        {
+          "F": 2,
+          "F^(F B)_(D E)": 1,
+          "c^A_(F G)": 1,
+          "product": 1
+        },
+        {
+          "F": 3,
+          "F^(F B)_(D E)": 0,
+          "c^A_(F G)": 0,
+          "product": 0
+        }
+      ],
+      "value": 1,
+      "verification": {
+        "antisymmetry_exhaustive": true,
+        "jacobi_exhaustive": true,
+        "status": "PASS"
+      }
+    },
+    "extra_assumptions": [
+      "set E_V=E_tilde_r=0 in a Q1-stable quotient",
+      "[nabla_minus,P_dot]=0",
+      "extend Delta to composite words by literal occurrence replacement using (5A.61)"
+    ],
+    "ordinal": 5,
+    "pair_id": "A__C1",
+    "residual_dDelta_minus_Deltad": {
+      "coefficient_over_lambda1_times_T": "2*I",
+      "conditionally_nonzero": true,
+      "formula": "+2*i*lambda1*T^(AB)_(GDE)*(D_dot^D C1^G) D^(E dot)"
+    },
+    "status": "CONDITIONAL_NONZERO_NOT_A_P0"
+  },
+  "generated": false,
+  "generated_trace": {
+    "path": "generated/step6/q0-q1-consistency.json",
+    "schema": "awi.step6.q0-q1-phase0-blocker-trace.v3"
+  },
+  "hashes": {
+    "checker_sha256": "738d3e68038aad17b05d59b118d654fded8b0c9cb2032ddafd0ed527481d1dcc",
+    "generated_trace_sha256": "dc95baf3136b33e8e6ec1b3665f2b339fb08b34ab1734be1d7ebe341671c184f",
+    "sealed_step5_ledger_sha256": "1f57859836fd2956e0640c5378ebb98eff5d3700a768bb5ab024f0ae6e1a7df6"
+  },
+  "ledger_census": {
+    "canonical_order_verified": true,
+    "loaded_rows": 81
+  },
+  "locked_color_semantics": {
+    "cross_is_single_ordered_monomial": true,
+    "cross_product": "(X cross Y)^A=c^A_(F G) X^F Y^G",
+    "graded_commutator_used": false,
+    "symbolic_tensor": "T^(AB)_(GDE)=sum_F c^A_(F G) F^(F B)_(D E)"
+  },
+  "locked_input_boundary": {
+    "covariance_boundary_sha256": "fedc50ef751c44192c2c1077d95aa836e98806b232b01babbbe35ba6e77b2847",
+    "locked_blocker_ids_used": [
+      "BLOCKED_LOCAL_COHOMOLOGY_COMPLEX_NOT_LOCKED",
+      "BLOCKED_TREE_EULER_TO_COMPACT_DESCENDANT_MAP"
+    ],
+    "missing_rules": [
+      {
+        "id": "MISSING_DELTA_ON_EULER_DESCENDANTS",
+        "reason": "the work order retains the full tree descendants, but the 81-row ledger has only bottom-letter inputs",
+        "required": [
+          "Delta(nabla_plus(E_V),L)",
+          "Delta(L,nabla_plus(E_V))",
+          "Delta(E_tilde_r,L)",
+          "Delta(L,E_tilde_r)"
+        ]
+      },
+      {
+        "id": "MISSING_NABLA_MINUS_TRANSLATION_COMMUTATOR",
+        "reason": "the locked covariance audit treats even [q_r,P]=0 as a conditional assumption; no nabla-minus analogue is fixed",
+        "required": "[nabla_minus,P_dot] on every translated output letter"
+      },
+      {
+        "id": "MISSING_NONLINEAR_DELTA_EXTENSION",
+        "reason": "(5A.61)-(5A.62) define ordered functional differentiation and leg permutation, not a Q1 biderivation",
+        "required": "Delta(X_1...X_m,Y_1...Y_n) from the bilinear 81-row map"
+      },
+      {
+        "id": "MISSING_Q1_STABLE_EOM_QUOTIENT",
+        "reason": "the locked covariance audit explicitly leaves the BRST/EOM quotient unspecified",
+        "required": "a declared BRST/EOM quotient stable under Q0 and Q1"
+      }
+    ],
+    "status": "BLOCKED_PHASE0_CHAIN_MAP_ACTION_NOT_LOCKED"
+  },
+  "overall_status": "BLOCKED_PHASE0_CHAIN_MAP_ACTION_NOT_LOCKED",
+  "phase0_gate": {
+    "contract_grade_blocked_rows": 56,
+    "contract_grade_evaluated_rows": 25,
+    "contract_grade_passed_rows": 25,
+    "defined_pair_ids": [
+      "C1__C1",
+      "C1__C2",
+      "C1__C3",
+      "C1__Ddot1",
+      "C1__Ddot2",
+      "C2__C1",
+      "C2__C2",
+      "C2__C3",
+      "C2__Ddot1",
+      "C2__Ddot2",
+      "C3__C1",
+      "C3__C2",
+      "C3__C3",
+      "C3__Ddot1",
+      "C3__Ddot2",
+      "Ddot1__C1",
+      "Ddot1__C2",
+      "Ddot1__C3",
+      "Ddot1__Ddot1",
+      "Ddot1__Ddot2",
+      "Ddot2__C1",
+      "Ddot2__C2",
+      "Ddot2__C3",
+      "Ddot2__Ddot1",
+      "Ddot2__Ddot2"
+    ],
+    "downstream_phases": "NOT_RUN_AFTER_PHASE0_BLOCKER",
+    "reason": "the C/C, C/D, D/C, and D/D zero rows are defined; every row containing A or B_r requires missing chain-map action",
+    "status": "BLOCKED_PHASE0_CHAIN_MAP_ACTION_NOT_LOCKED"
+  },
+  "residual_q": {
+    "additional_missing_domain": "Delta(P_dot C_r,L) and Delta(L,P_dot C_r) for rows containing D_dot",
+    "status": "NOT_RUN_AFTER_PHASE0_BLOCKER"
+  },
+  "schema": "awi.step6.q0-q1-phase0-blocker-summary.v3",
+  "scope": "locked-input definability of the full Phase-0 chain-map identity",
+  "sources": {
+    "covariance_boundary": "audits/step5-project-covariance-kernel.json",
+    "covariance_boundary_sha256": "fedc50ef751c44192c2c1077d95aa836e98806b232b01babbbe35ba6e77b2847",
+    "project_result_ledger_used": false,
+    "sealed_rows": "audits/step5-global-81-target-blind-orbit-ledger.json",
+    "sealed_rows_sha256": "1f57859836fd2956e0640c5378ebb98eff5d3700a768bb5ab024f0ae6e1a7df6"
+  },
+  "target_blindness": {
+    "holomorphic_twist_used": false,
+    "literature_coefficient_used": false,
+    "memo_prediction_used": false
+  }
+}

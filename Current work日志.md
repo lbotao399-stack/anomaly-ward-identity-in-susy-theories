@@ -2,7 +2,16 @@
 
 ## Current Difficulty
 
-- **LATEST — `OPEN_FINAL_CENSUS_17_CANDIDATES`:** the final Claude census proposal did not run the ghost--Nielsen--Kallosh sector, the zero/cut-orbit sector, or the automated three-lens refutation, and deferred four physics-relevant Wick routings.  Holomorphic-twist agreement does not prove termwise absence.  The accepted coefficient ledger is unchanged.
+- **LATEST — `BLOCKED_PHASE0_CHAIN_MAP_ACTION_NOT_LOCKED`:** Step-6 Phase 0 gives 25 exact PASS rows in $\{C_1,C_2,C_3,D_{\dot1},D_{\dot2}\}^2$ and 56 BLOCKED rows containing $A$ or $B_r$.  The full descendants require $\Delta(\boldsymbol\nabla_+\mathscr E_V,L)$ and $\Delta(\mathscr E_{\widetilde r},L)$; the locked inputs also omit $[\boldsymbol\nabla_-,P_{\dot a}]$, a nonlinear-word extension of $\Delta$, and a $Q_1$-stable BRST/EOM quotient.  Under the explicitly non-authoritative conditional rules $\mathscr E=0$, $[d,P]=0$, and literal occurrence replacement, the $A>C_1$ diagnostic is
+
+$$
+\mathfrak R_{A,C_1}^{AB}
+=2i\lambda_1c_{FG}{}^A\mathbb F^{FB}{}_{DE}
+(D_{\dot a}^{D}C_1^{G})D^{E\dot a}.
+$$
+
+  The exact model $c_{abc}=\varepsilon_{abc}$ gives the conditional color tensor component $1$, but the diagnostic is not a P0 against the ledger.  Phases 1--5 stopped; $(t_1,t_2,t_W)$ was not computed and no regression target was used.  Evidence: `contracts/foundations/step-06-covariant-completion.md`, `audits/step6-q0-q1-consistency.json`, and `generated/step6/q0-q1-consistency.json`.
+- **PREVIOUS — `OPEN_FINAL_CENSUS_17_CANDIDATES`:** the final Claude census proposal did not run the ghost--Nielsen--Kallosh sector, the zero/cut-orbit sector, or the automated three-lens refutation, and deferred four physics-relevant Wick routings.  Holomorphic-twist agreement does not prove termwise absence.  The accepted coefficient ledger is unchanged.
 - `BLOCKED_HEAT_KERNEL_TYPED_REGULATOR_AND_COEFFICIENT_DERIVATION`: the proposal's matter blocks give $16\Box_E\mathcal P_+$ and its vector block gives $+\Box_E$, not the declared $-\Box_E$ generator; the mixed blockwise prescription is not one functional calculus.
 - `NOT_ACCEPTED_NOETHER_B1_B4_MISSING`: complete Euler operators and the announced B1--B4 termwise checks are absent.  The locked Lorentzian vector cycle also remains blocked.
 - `VERIFIED_CONDITIONAL_STEP5J_TREE_SCALE` (`e97e5c8`): the corrected tree cross-lock derives only $\zeta_Q\zeta_\beta/\zeta_\gamma^2=\rho_{fc}/2$.  It explicitly treats $\rho_{fc}=1$ as an assumption, retracts the unconditional unit dictionary for the $\mathcal W$ letter, and retracts the claim that the box must be replaced by a triangle.  The full box-plus-triangle graph set and relative coefficients remain open; the script verifies only the factor-two arithmetic and not the phase/sign or dictionary inputs.

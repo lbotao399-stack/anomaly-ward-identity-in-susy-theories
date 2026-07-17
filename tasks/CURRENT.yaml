@@ -1,9 +1,11 @@
 {
   "id": "CONTRACT-STEP-06-COVARIANT-COMPLETION-001",
   "type": "CONTRACT_CHANGE",
-  "status": "IN_PROGRESS",
+  "status": "SPECIFIED",
   "owner_authorization": "2026-07-16 session: owner ordered execution of tasks/instructions/2026-07-16-covariant-completion-proof.md, sourced from proposals/covariant-completion-theorem-memo-2026-07-16.md (T.1--T.9), in phases 0--5 and in the existing PR.",
   "goal": "Prove at contract grade that every one-loop supergraph with the letter-pair insertion and n>=4 legs is exactly the background-gauge-covariant dressing of the settled triangle bracket, with the transverse box coefficient derived target-blind before regression comparison.",
+  "outcome": "Phase 0 gives 25 contract-grade PASS rows in {C1,C2,C3,Ddot1,Ddot2}^2 and 56 BLOCKED rows containing A or B_r. The full work-order descendants require Delta on nabla_plus(E_V) and E_tilde_r; the locked inputs also omit [nabla_minus,P_dot], a nonlinear-word extension of the bilinear 81-row map, and a Q1-stable BRST/EOM quotient. A target-blind A__C1 calculation under three explicit extra assumptions gives a nonzero one-word residual with an exact epsilon-color witness, but it is conditional and is not a P0 against the settled ledger. Phases 1--5 were stopped, no (t1,t2,tW) vector was computed, and no regression target was used.",
+  "blocking_reason": "BLOCKED_PHASE0_CHAIN_MAP_ACTION_NOT_LOCKED",
   "allowed_inputs": [
     "AUTHORITY.md",
     "AGENTS.md",

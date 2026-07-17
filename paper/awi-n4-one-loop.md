@@ -455,7 +455,55 @@ routings.  These seventeen candidates therefore remain `OPEN`, and the advertise
 certificate is not accepted.  They do not alter the accepted coefficient ledger, whose
 derivation is the target-blind Schwinger-cut construction above.
 
-## 10. Verification status
+## 10. Covariant-completion consistency gate
+
+The owner-issued covariant-completion obligation first tests the one-loop consistency
+condition
+
+$$
+\mathfrak R_{ij}
+=d\Delta(L_i,L_j)-\Delta\!\left(d(L_iL_j)\right)_{\rm Koszul}=0,
+$$
+
+on the settled 81-row bracket.  The full locked descendants retain
+$\boldsymbol\nabla_+\mathscr E_V$ and $\mathscr E_{\widetilde r}$.  The ledger does not
+define $\Delta$ on these descendants, $[d,P_{\dot a}]$ is not locked, and
+(5A.61)--(5A.62) do not define a nonlinear-word extension of the bilinear map.  Therefore
+
+$$
+\boxed{\operatorname{status}(\text{Phase 0})
+=\texttt{BLOCKED\_PHASE0\_CHAIN\_MAP\_ACTION\_NOT\_LOCKED}.}
+$$
+
+The 25 rows in $\{C_1,C_2,C_3,D_{\dot1},D_{\dot2}\}^2$ satisfy the identity exactly,
+because both their descendants and settled outputs vanish.  The remaining 56 rows are
+undefined on the locked domain.  If one conditionally adds an EOM quotient,
+$[d,P_{\dot a}]=0$, and literal occurrence replacement, the $A>C_1$ row gives the
+diagnostic
+
+$$
+\boxed{
+\mathfrak R_{A,C_1}^{AB}\big|_{\rm conditional}
+=2i\lambda_1c_{FG}{}^A\mathbb F^{FB}{}_{DE}
+(D_{\dot a}^{D}C_1^{G})D^{E\dot a}.}
+$$
+
+The cross product is the single color monomial
+$(X\times Y)^A=c_{FG}{}^AX^FY^G$; no second word
+$(C_1^GD^D)D^E$ is generated.  The exact model
+$\kappa_{ab}=\delta_{ab}$, $c_{abc}=\varepsilon_{abc}$ gives
+
+$$
+\sum_Fc_{F3}{}^1\mathbb F^{F2}{}_{11}=1,
+$$
+
+so the conditional coefficient is nonzero.  This is not a P0 against the settled ledger:
+the missing chain-map actions can change it.  The covariant-completion theorem is not
+proved; the transverse box, cohomology, trace-covariance, induction, and ghost phases were
+stopped before any regression target was used.  The derivation and exact boundary audit
+are in contract `CONTRACT-STEP-06-COVARIANT-COMPLETION-001`.
+
+## 11. Verification status
 
 - **Machine-locked (exact arithmetic, regenerated in CI):** the 81-row ledger, the AA
   external-slot replay (269 rows), the color-mask replay (9216), the HT round trip (81 rows,
@@ -479,7 +527,7 @@ derivation is the target-blind Schwinger-cut construction above.
   local-$\mathcal Y$ BV completion, Wess–Zumino/component equivalence, background-covariant
   gauge averaging, and the entire Lorentzian sector deferred as named obligations.
 
-## References
+## 12. References
 
 1. Project contracts: `contracts/foundations/step-01…step-05a`, and
    `contracts/foundations/step-05-euclidean-n4-awi-one-loop.md` (equation tags cited inline).
