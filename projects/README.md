@@ -20,14 +20,23 @@ Inside every project:
 - **`machine/`** — not for human reading. Verifiers, audits, generated IR, tests. Isolated;
   its only contract with `readable/` is "this check corresponds to equation (X.n)".
 
+**Machine layout (option C, chosen 2026-07-17):** the machine tree physically stays at the
+repository root (`scripts/`, `audits/`, `tests/`, `generated/`) so the single CI `verify`
+gate runs it as one unit; each project's `machine/INDEX.md` records which root files belong
+to it. Reading isolation is already complete (you read `readable/`, never the machine tree).
+A future true repo-split (`git filter-repo`) would relocate each cluster physically then.
+
 ## Status of the split
 
 - **Phase 1 (done / in progress):** scaffold + `readable/` populated from the accepted
   contracts. Additive; the legacy top-level tree (`contracts/`, `audits/`, `scripts/`,
   `tests/`, `generated/`) is untouched and still the CI authority.
-- **Phase 2 (next):** migrate the machine tree under each project's `machine/`, updating hash
-  manifests and test paths per project so `verify` stays green.
-- **Phase 3:** retire the legacy top-level tree once every path has moved.
+- **Phase 2 (done — option C):** machine files grouped per project via `machine/INDEX.md`
+  without physically moving them (near-zero risk; reading isolation already complete). Only
+  `notation` and `superspace` have large machine clusters on `main`; `heat-kernel` and
+  `holomorphic-twist` have a couple of files each; `component` has none dedicated yet.
+- **Phase 3 (optional):** physically relocate a cluster under its `machine/` only if/when a
+  true repo-split is scheduled — done together with the manifest/test path rewrite.
 - **Phase 4 (optional):** `git filter-repo --path projects/<p>` to spin any project into its
   own repository, carrying history, with `notation/` vendored or submoduled.
 
