@@ -1,0 +1,67 @@
+% sec08-conclusion.tex — Conclusions and open problems. Pure body LaTeX: one section, no preamble.
+\section{Conclusions and open problems}\label{sec:conclusion}
+
+We have determined the complete one-loop anomalous supersymmetry transformation law of the BPS-letter composites in
+Euclidean $\mathcal N=4$ super-Yang--Mills theory quantized in $\mathcal N=1$ superspace. For each of the $81$ ordered
+letter pairs, the semi-chiral derivative of the composite equals the universal coefficient $\h g^2/(16\pi^2)$ times the
+ordered color tensor $f^{ACD}f^{BCE}$ times a fixed, explicitly known letter bilinear: $29$ channels are nonzero and $52$
+vanish exactly, with the zeros accounted for by four independent structural mechanisms (pairs with no tree descendant,
+flavor-off-diagonal mixed pairs, repeated-index diagonal pairs, and pairs killed by the charge and vertex analysis). The
+sole microscopic origin of the anomaly is the evanescent failure of the DRED cutting rule, \eqref{eq:intro:cutfail}: one
+universal $\mul^2$ insertion per marked line, whose master integral is the finite constant $1/(32\pi^2)$. The anomaly is
+therefore ultraviolet-finite, local in the external momenta, and --- after a finite normal-product term fixed by the
+residual supersymmetries, under which the nonzero channels close --- scheme-independent. Resummed over the holomorphic
+derivatives, the anomaly is governed by the closed-form kernel \eqref{eq:intro:kernel}, whose prefactor is the
+$\Gamma(3)=2$ of the triangle Feynman parametrization.
+
+Three independent bodies of evidence support the result. First, the superspace derivation is target-blind: every channel
+was computed from the locked action by the Schwinger--Dyson reduction and the cutting failure, with exact arithmetic,
+before any external target was consulted. Second, the holomorphic-twist comparison of Sec.~\ref{sec:ht} is exact: all
+$81$ ordered output words and all checked tower coefficients agree with the one-loop prediction of \cite{BK} once its
+printed tower coefficient is corrected by the factor $2$, and the same comparison selects the main-text branch of the
+source's compact coefficient. Third, the component bottom projection \eqref{eq:intro:bc} provides an exact
+component-level corollary, with the color-symmetric dotted-gaugino bilinear. The heat-kernel route contributes exact
+auxiliary lemmas but not a second derivation.
+
+\begin{remark}\label{rem:concl:scope}
+The scope of the accepted result is the physical one-loop anomaly sector in Euclidean signature. The holomorphic-twist
+agreement is an external cross-check, not an internal completeness proof, and no Lorentzian-signature statement is made.
+\end{remark}
+
+\subsection*{Open problems}
+
+\begin{itemize}[leftmargin=1.6em]
+
+\item \textbf{Adversarial census completeness.} Seventeen candidate graph sectors or routings raised by the adversarial
+census review remain unadjudicated: the ghost--Nielsen--Kallosh sector, the zero/cut-orbit sector, the automated
+refutation pass, and four physics-relevant Wick routings have not been derived from the locked action without reference
+to the target. Status: \texttt{OPEN\_FINAL\_CENSUS\_17\_CANDIDATES}. This does not alter any accepted coefficient; it is
+the remaining completeness-type question, since equality with the external target cannot by itself exclude omitted
+contributions that cancel in the total.
+
+\item \textbf{Heat-kernel second derivation.} A non-perturbative derivation requires, derived together rather than
+declared: a single elliptic generator with the correct sign and normalization on every block (matter, vector, ghost, and
+the off-diagonal mixing blocks), a field-space supermetric, the full second-order coefficient of the semigroup expansion,
+and distributional short-time extraction at coincident points. Status:
+\texttt{BLOCKED\_HEAT\_KERNEL\_TYPED\_REGULATOR\_AND\_COEFFICIENT\_DERIVATION}.
+
+\item \textbf{Component off-shell Noether identity.} The component-level off-shell supersymmetry current whose divergence
+reproduces the anomalous transformation law term by term has not been established: the complete component Euler operators
+and the announced termwise checks are absent. Status: \texttt{NOT\_ACCEPTED\_NOETHER\_B1\_B4\_MISSING}. The complete
+component Feynman rules and an independent all-pairs component sweep are likewise not accepted; the only accepted
+component statement is the exact bottom projection \eqref{eq:intro:bc}.
+
+\item \textbf{Lorentzian vector integration cycle.} The Lorentzian vector integration cycle of the regulated
+path-integral measure remains unfixed. Status: \texttt{BLOCKED\_STEP3D\_LC\_VECTOR\_CYCLE}.
+
+\item \textbf{Lorentzian sector.} All results of this paper are Euclidean. The Lorentzian component and Lorentzian
+superspace calculations are gated on a frozen Euclidean bridge and on the vector cycle above; the continuation of the
+anomalous Ward identity to Lorentzian signature is deferred.
+
+\end{itemize}
+
+\begin{remark}\label{rem:concl:higher}
+The holomorphic-twist algebra of \cite{BK} requires higher-loop corrections (the one-loop operator squares to zero only
+on the tree cohomology). Extending the present exact one-loop census of the anomalous supersymmetry transformation law
+beyond one loop is an open problem on both sides of the comparison.
+\end{remark}

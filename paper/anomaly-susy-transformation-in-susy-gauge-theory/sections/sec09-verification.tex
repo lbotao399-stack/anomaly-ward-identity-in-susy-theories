@@ -1,0 +1,64 @@
+% sec09-verification.tex — Appendix: verification status. Pure body LaTeX: one section, no preamble.
+\section{Verification status}\label{sec:verification}
+
+All coefficient-level statements of this paper are backed by machine-locked exact-arithmetic checks, performed over the
+rational field extended by $i$ and $\sqrt2$ (no floating-point approximation at any stage). This appendix records what
+was checked, what the independent reviews concluded, and what remains open. Tokens in typewriter font are verbatim status
+strings of the underlying audits.
+
+\subsection*{Machine-locked exact-arithmetic checks}
+
+\begin{itemize}[leftmargin=1.6em]
+
+\item \textbf{81-channel census.} The target-blind $81$-row coefficient table of Sec.~\ref{sec:superspace}: all $81$
+ordered channels complete and exact, $29$ nonzero and $52$ exactly zero, $0$ open and $0$ unresolved rows; the table was
+read, validated, canonicalized and sealed (SHA-256) before the external holomorphic-twist target was read.
+
+\item \textbf{Seed-channel replays.} The field-strength seed channel: $269$ external-slot replay checks, $0$ failures.
+Color-mask replay: $9216$ full color-mask checks plus a $2048$-entry sparse replay, $0$ equality failures.
+
+\item \textbf{DRED audits.} The cutting-failure identity \eqref{eq:intro:cutfail} for every marked line, and the
+evanescent $\mul^2$-moment master integrals --- the triangle value $1/(32\pi^2)$ and the rank-two values
+$J=1/(128\pi^2)$, $2J=1/(64\pi^2)$ --- are locked in a machine-regenerated master-integral table, including the
+identities $\Delta J_3=(\epsilon/2)J_2$ and $\operatorname*{Res}_{\epsilon=0}J_2=1/(16\pi^2)$.
+
+\item \textbf{Sector checks.} Finite residual-Ward checks of the mixed-chirality channels: $31/31$. Regulated
+Schwinger--Dyson audit of the channel underlying \eqref{eq:intro:bc}: $84/84$. Epsilon-canonicalization audit of the
+mixed flavor sector: $42/42$. Heat-kernel auxiliary lemmas (Gaussian semigroup, bridge moments, short-time limit,
+simplex moment, Duhamel coefficient, DRED master integral): $8/8$.
+
+\item \textbf{Holomorphic-twist round trip.} Direct ordered output-word matches: $81/81$, $0$ mismatches.
+Finite-rectangle kernel checks on $0\le m,n\le 8$: $2025/2025$ ($=45^2$), $0$ mismatches. Lifted to all $70$ nonzero
+base output words: $2025\times70=141750/141750$ lifted coefficient checks, $0$ mismatches. The external source import
+itself passed $267$ consistency checks.
+
+\item \textbf{Physical verifier.} $33/33$ checks passed, $0$ failed; status \texttt{ACCEPTED}, accepted scope
+\texttt{PHYSICAL\_ONE\_LOOP\_ANOMALY\_SECTOR}.
+
+\end{itemize}
+
+\subsection*{Independent review trail}
+
+An independent physics re-derivation review of the one-loop result was conducted on 2026-07-16 (non-authority review
+evidence). Its spot-check verdict, \texttt{SPOT\_CHECKS\_PASSED\_WITH\_BOUNDED\_RESIDUAL\_SURFACE}, confirms the
+seed-channel derivation chain, the $81$-channel census, and the factor-two adjudication, leaving four named bounded
+residual surface items, none of which is a defect in any accepted coefficient. An external review (GPT Pro, Gate-15)
+independently returned \texttt{FINAL\_ONE\_LOOP\_HT\_SETTLEMENT\_ACCEPTED} for the physical one-loop anomaly sector,
+covering the universal cutting-failure identity, the exact census $29=1+6+6+6+6+4$ with $81-29=52$, the
+residual-Ward-compatible finite renormalization of the mixed-chirality channels, the anchor-free scale fixing, and the
+holomorphic-twist kernel identity.
+
+\begin{remark}\label{rem:verif:caveat}
+The adversarial-census review remains open: \texttt{OPEN\_FINAL\_CENSUS\_17\_CANDIDATES}. Its proposed completeness
+certificate --- exact agreement with the holomorphic-twist target --- was rejected, because equality of totals,
+$C_{\mathrm{enum}}=C_{\mathrm{HT}}$, does not imply an empty omission set: additional routings with contributions $c_j$
+satisfying $\sum_j c_j=0$ would leave the total unchanged, e.g.\ $c_1=t$, $c_2=-t$ with $t\neq0$. The holomorphic-twist
+agreement is therefore a final cross-check, not a target-blind absence proof. The accepted coefficient table is
+unaffected: its acceptance rests on the independent target-blind superspace derivation, not on either census proposal.
+\end{remark}
+
+\begin{remark}\label{rem:verif:scope}
+The machine checks verify exact-arithmetic equalities, replays of locked derivation chains, and target comparisons; they
+are not by themselves an independent re-derivation. The independent reviews cited above are advisory evidence; the
+authority for the accepted result is the derivation of Sec.~\ref{sec:superspace} itself.
+\end{remark}

@@ -1,0 +1,224 @@
+% sec06 — The heat-kernel approach (writer: Writer_HeatKernel)
+% Pure body LaTeX: one \section, no preamble, no \newcommand.
+% Source: extract-06-heat-kernel.md; glyphs per NOTATION.md.
+
+\section{The heat-kernel approach}\label{sec:heatkernel}
+
+\subsection{Motivation: a semigroup-based second derivation}
+
+The one-loop anomalous Ward identity of Section~\ref{sec:superspace}, with its
+universal coefficient $\frac{\h g^2}{16\pi^2}$, is derived perturbatively: a
+Schwinger--Dyson identity plus the cutting-failure mechanism of dimensional
+reduction, graph by graph. A second, independent and non-perturbative
+derivation of the same coefficient is highly desirable. The heat-kernel
+strategy would regulate the one-loop fluctuation determinant of the full
+$\mathcal N=4$ Hessian complex by the semigroup $e^{-sH}$ of a single elliptic
+operator $H$ on the graded fluctuation bundle, and would extract the anomaly
+from a short-time Seeley--DeWitt coefficient of that semigroup
+\cite{Vassilevich}. Such a derivation would
+(i)~cross-check the perturbative Schwinger-cut result without enumerating
+graphs;
+(ii)~make the finiteness and locality of the anomaly manifest from short-time
+heat-kernel asymptotics; and
+(iii)~connect directly to the evanescent structure of dimensional reduction
+through the same master integral $\frac{1}{32\pi^2}$ \cite{SiegelDRED}.
+
+This section reports the exact status of that programme. The scalar auxiliary
+identities on which any such derivation must rest are established and
+machine-verified (Subsection~\ref{subsec:hk:lemmas}). The full derivation,
+however, is blocked at the regulator level: no single elliptic generator on
+the full $\mathcal N=4$ fluctuation complex has been constructed, and the
+anomaly coefficient used elsewhere in this paper is \emph{not} obtained from
+this route. Subsection~\ref{subsec:hk:blocker} states the obstruction
+precisely, and Subsection~\ref{subsec:hk:closure} lists what would close the
+route.
+
+\subsection{Established scalar and semigroup lemmas}\label{subsec:hk:lemmas}
+
+Every identity in this subsection is exact; each is proved by direct scalar
+computation and is machine-verified in the source repository. We write
+$H(g)=H_0+gH_1+g^2H_2$ for the one-loop fluctuation operator expanded in the
+coupling, and $s>0$ for the proper-time parameter.
+
+\begin{lemma}[Second-order Duhamel coefficient]\label{lem:hk:duhamel}
+Let $E\to M$ be a fixed graded bundle, let $H_0:E\to E$ be an even operator,
+and let $H_1,H_2$ be even endomorphism-valued differential operators. Set
+\begin{equation}\label{eq:hk:Hg}
+H(g)=H_0+gH_1+g^2H_2 .
+\end{equation}
+Then the coefficient of $g^2$ in the semigroup $e^{-sH(g)}$ is the two-term
+ordered integral
+\begin{equation}\label{eq:hk:duhamel}
+\begin{aligned}
+[g^2]\,e^{-sH(g)}
+={}&-\int_0^s dt\; e^{-(s-t)H_0}\,H_2\,e^{-tH_0} \\
+&+\int_{0<t_1<t_2<s} dt_1\,dt_2\;
+e^{-(s-t_2)H_0}\,H_1\,e^{-(t_2-t_1)H_0}\,H_1\,e^{-t_1H_0} .
+\end{aligned}
+\end{equation}
+\end{lemma}
+
+\begin{remark}[The quadratic background block cannot be omitted]
+The first line of \eqref{eq:hk:duhamel} is at the same background order as the
+second line. Hence a heat-kernel derivation of the physical coefficient must
+derive the full $H_2$ seagull, connection-square, gauge and ghost blocks; the
+quadratic background block cannot be omitted in favor of two linear $H_1$
+insertions.
+\end{remark}
+
+\begin{lemma}[Ordered-simplex moment]\label{lem:hk:simplex}
+For integers $p,q\ge0$,
+\begin{equation}\label{eq:hk:simplex}
+M_{p,q}:=\int_{0<a<b<1} a^p b^q \,da\,db
+=\frac{1}{(p+1)(p+q+2)} .
+\end{equation}
+Consequently, for $0\le k\le m$ and $0\le\ell\le n$, the tower coefficient is
+\begin{equation}\label{eq:hk:tower}
+T_{m,n;k,\ell}
+:=\binom{m}{k}\binom{n}{\ell}\,M_{k+\ell,\,m+n-k-\ell}
+=\frac{\binom{m}{k}\binom{n}{\ell}}{(m+n+2)(k+\ell+1)} .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Integrating $a$ at fixed $b$ gives
+$M_{p,q}=\int_0^1 db\,b^q\,\frac{b^{p+1}}{p+1}=\frac{1}{(p+1)(p+q+2)}$,
+and \eqref{eq:hk:tower} follows by substitution of \eqref{eq:hk:simplex}.
+\end{proof}
+
+\begin{remark}[A second ordering supplies no automatic factor two]
+\label{rem:hk:factortwo}
+The moment \eqref{eq:hk:simplex} sums a single ordering of the simplex; no
+factor from the reversed ordering is included. A factor of two may be added
+only after an independent ordered-vertex calculation proves equality of the
+two orderings, including color order and Koszul sign.
+\end{remark}
+
+\begin{lemma}[Gaussian convolution and bridge means]\label{lem:hk:gaussian}
+For $s>0$ and $x\in\mathbb R^4$ let
+\begin{equation}\label{eq:hk:kernel}
+K_s(x)=\frac{1}{(4\pi s)^2}\,e^{-x^2/4s} .
+\end{equation}
+Then $K_s$ is normalized, solves the heat equation, and has diagonal value
+\begin{equation}\label{eq:hk:heateq}
+\int_{\mathbb R^4} d^4x\,K_s(x)=1,\qquad
+\partial_s K_s=\Delta_{\mathbb R^4}K_s,\qquad
+K_s(0)=\frac{1}{16\pi^2 s^2} ,
+\end{equation}
+and it obeys the convolution (Chapman--Kolmogorov) identity
+\begin{equation}\label{eq:hk:conv}
+\int_{\mathbb R^4} d^4y\,K_s(x-y)K_t(y)=K_{s+t}(x) .
+\end{equation}
+Moreover, for the three-segment bridge with $t_1,t_2,t_3>0$,
+$T=t_1+t_2+t_3$, and Gaussian weight
+$Q(x,y)=\frac{(x-w)^2}{4t_1}+\frac{(y-x)^2}{4t_2}+\frac{y^2}{4t_3}$ in one
+Cartesian component, the stationary means are
+\begin{equation}\label{eq:hk:bridge}
+\langle x\rangle=\frac{t_2+t_3}{T}\,w,\qquad
+\langle y\rangle=\frac{t_3}{T}\,w ,
+\end{equation}
+and the inverse Hessian of $Q$ is homogeneous of degree one under
+$(t_1,t_2,t_3)\mapsto(\rho t_1,\rho t_2,\rho t_3)$, $\rho>0$.
+\end{lemma}
+
+\begin{remark}
+Equation \eqref{eq:hk:bridge} proves the exact bridge mean and covariance
+scaling; it does not remove the endpoint factor $K_T(w)$.
+\end{remark}
+
+\begin{lemma}[Master-integral consistency with dimensional reduction]
+\label{lem:hk:dred}
+Let $d=4-2\varepsilon$, and let $\mul^2$ be the evanescent component of the
+loop momentum squared (Section~\ref{sec:gaugebv}). Then
+\begin{equation}\label{eq:hk:dred}
+\lim_{\varepsilon\to0}\mu^{2\varepsilon}
+\int\frac{d^d\ell}{(2\pi)^d}\,
+\frac{\mul^2}{(\ell^2+\Delta)^3}
+=\frac{1}{32\pi^2} .
+\end{equation}
+\end{lemma}
+
+\begin{remark}
+The value \eqref{eq:hk:dred} agrees with the master integral of the accepted
+derivation (Sections~\ref{sec:superspace} and \ref{sec:component}), so the
+scalar heat-kernel layer is consistent with the evanescent mechanism of
+dimensional reduction \cite{SiegelDRED}. Equality of this scalar integral does
+not, however, determine the $\mathcal N=4$ operator pairing, the color tensor,
+the orientation sign, or the anomaly multiplicity.
+\end{remark}
+
+\begin{lemma}[Vanishing short-time limit at fixed nonzero shift]
+\label{lem:hk:shorttime}
+For fixed $w\neq0$,
+\begin{equation}\label{eq:hk:shorttime}
+\lim_{s\downarrow0}\frac{1}{(4\pi s)^2}\,e^{-w^2/4s}=0 .
+\end{equation}
+Consequently a local derivative tower requires distributional coefficient
+extraction at $w=0$; it cannot be obtained by deleting $K_s(w)$ before taking
+the limit.
+\end{lemma}
+
+\subsection{The obstruction: the regulator proposal fails}
+\label{subsec:hk:blocker}
+
+The proposed continuation defines its would-be generator blockwise from a
+Hessian two-form $\delta^2S$ and a field-space identification $\mathcal G$.
+Its own displayed free matter blocks give
+\begin{equation}\label{eq:hk:matter}
+\big(\mathcal G^{-1}\delta^2S\big)^2\Big|_{E_+}
+=\bar\nabla^2\nabla^2
+=16\,\BoxE\,\mathcal P_+ ,
+\end{equation}
+whereas the declared generator is $-\BoxE\,\mathcal P_+$; the accompanying
+verifier inserts a factor $-1/16$ that appears nowhere in the proposal. Both
+the normalization ($16$) and the sign are wrong relative to the declared
+generator. Likewise, the proposal's own vector-block weights give
+\begin{equation}\label{eq:hk:vector}
+\mathcal G_V^{-1}\,\delta^2S_{VV}
+=\big(2g^2\big)\frac{1}{2g^2}\,\BoxE
+=\BoxE ,
+\end{equation}
+whereas the declared generator is $-\BoxE$; the verifier adds an undeclared
+Euclidean sign. Finally, the prescription applies the squared operator on the
+matter and ghost rows but the unsquared operator on the vector row. This is
+not a single operator functional calculus when nonzero vector--matter mixing
+blocks are retained: different powers on different blocks define different
+operators, so the off-diagonal mixing blocks have no defined heat evolution
+under this prescription.
+
+\begin{remark}[Status of the route: blocked]\label{rem:hk:blocked}
+For the three independent reasons above, the full heat-kernel derivation of
+the anomaly coefficient is currently blocked; the source repository records
+the status
+\texttt{BLOCKED\_HEAT\_KERNEL\_TYPED\_REGULATOR\_AND\_COEFFICIENT\_DERIVATION}.
+The identities of Subsection~\ref{subsec:hk:lemmas} are admitted as verified
+auxiliary lemmas only: they do not define a regulator on the full
+$\mathcal N=4$ fluctuation complex, and they do not independently derive the
+coefficient $\frac{\h g^2}{16\pi^2}$, which remains the result of the
+Schwinger-cut derivation of Section~\ref{sec:superspace}.
+\end{remark}
+
+\subsection{What would close the route}\label{subsec:hk:closure}
+
+The route would produce a regulator only when the following are derived
+together, not declared:
+\begin{itemize}
+\item a \emph{single elliptic generator} on the full graded $\mathcal N=4$
+fluctuation bundle---one operator, one functional calculus, with the correct
+sign and normalization on every block (matter, vector, ghost), covering also
+the off-diagonal vector--matter mixing blocks;
+\item its \emph{dual Euler action} on the letter bilinears, consistent with
+the Schwinger--Dyson/Euler reduction of Section~\ref{sec:superspace};
+\item the \emph{full quadratic coefficient} $H_2$---the seagull,
+connection-square, gauge and ghost blocks at order $g^2$---which by
+Lemma~\ref{lem:hk:duhamel} sits at the same background order as two linear
+insertions and cannot be dropped;
+\item the \emph{distributional short-time limit}: coefficient extraction at
+$w=0$ in the distributional sense, as required by Lemma~\ref{lem:hk:shorttime}.
+\end{itemize}
+Reproducing the accepted coefficient $\frac{\h g^2}{16\pi^2}$ with the correct
+color tensor and the correct census of nonzero channels would in addition
+require the $\mathcal N=4$ operator pairing, the orientation sign and the
+anomaly multiplicity to be derived from that generator, since none of them
+follow from the verified scalar identities alone. Until then, the heat-kernel
+approach stands as an auxiliary consistency layer, not as a second derivation.

@@ -1,0 +1,200 @@
+\subsection{The complete channel table}\label{sec:superspace:table}
+
+We now state all seven nonzero families of the master
+identity~\eqref{eq:ss:master}. The letter
+definitions~\eqref{eq:ss:letters} induce a uniform rescaling between the
+unit-normalized field-strength composites used in the graph computations and
+the letters of Definition~\ref{def:ss:letters}. The bookkeeping is immediate:
+in the seed channel the two insertions contribute $(-i/\sqrt2)^2=-\tfrac12$
+and the output bilinears contribute $\sqrt2$, giving the net prefactor
+$-\tfrac12\cdot\sqrt2\cdot\tfrac{\h g^2}{16\pi^2}
+=-\tfrac{\h g^{2}}{16\sqrt2\,\pi^{2}}$ of equation~\eqref{eq:ss:bbresult}.
+The same arithmetic, applied family by family, yields the common prefactor
+$-\h g^{2}/(16\sqrt2\,\pi^{2})$ for every family, including the
+$(b,\beta)/(\beta,b)$ family, whose output word is fixed by the
+residual-supersymmetry closure discussed below.
+With $\langle X,Y\rangle$ as in~\eqref{eq:ss:bilinear} and
+$\partial_{\dot\alpha}(\partial c)$ the holomorphic derivative of the letter
+$\partial c$, the complete set of nonzero channels is
+\begin{align}
+\nabla_{-}\big(b^{A}b^{B}\big)
+&=-\frac{\h g^{2}}{16\sqrt2\,\pi^{2}}\,f^{ACD}f^{BCE}\,
+\Big\{\langle\partial c,b\rangle-\langle b,\partial c\rangle
++\textstyle\sum_r\big(\langle\beta_r,\gamma^r\rangle
+-\langle\gamma^r,\beta_r\rangle\big)\Big\}^{DE},
+\label{eq:ss:ch-bb}\\[4pt]
+\nabla_{-}\big(b^{A}\gamma^{rB}\big),\quad
+\nabla_{-}\big(\gamma^{rA}b^{B}\big)
+&=-\frac{\h g^{2}}{16\sqrt2\,\pi^{2}}\,f^{ACD}f^{BCE}\,
+\big\{\langle\partial c,\gamma^{r}\rangle
+-\langle\gamma^{r},\partial c\rangle\big\}^{DE},
+\label{eq:ss:ch-bgamma}\\[4pt]
+\nabla_{-}\big(\beta_{r}^{A}\gamma^{sB}\big),\quad
+\nabla_{-}\big(\gamma^{sA}\beta_{r}^{B}\big)
+&=-\frac{\h g^{2}}{16\sqrt2\,\pi^{2}}\,f^{ACD}f^{BCE}\,
+\delta_{rs}\,\langle\partial c,\partial c\rangle^{DE},
+\label{eq:ss:ch-betagamma}\\[4pt]
+\nabla_{-}\big(\beta_{r}^{A}\beta_{s}^{B}\big)
+&=-\frac{\h g^{2}}{16\sqrt2\,\pi^{2}}\,f^{ACD}f^{BCE}\,
+\varepsilon_{rst}\,
+\big\{\langle\partial c,\gamma^{t}\rangle
+-\langle\gamma^{t},\partial c\rangle\big\}^{DE},
+\label{eq:ss:ch-betabeta}\\[4pt]
+\nabla_{-}\big(b^{A}\beta_{r}^{B}\big),\quad
+\nabla_{-}\big(\beta_{r}^{A}b^{B}\big)
+&=-\frac{\h g^{2}}{16\sqrt2\,\pi^{2}}\,f^{ACD}f^{BCE}\,
+\big\{\langle\beta_{r},\partial c\rangle
++\langle\partial c,\beta_{r}\rangle
++\varepsilon_{rst}\langle\gamma^{s},\gamma^{t}\rangle\big\}^{DE},
+\label{eq:ss:ch-bbeta}\\[4pt]
+\nabla_{-}\big(b^{A}\partial_{\dot\alpha}c^{B}\big)
+&=-\frac{\h g^{2}}{16\sqrt2\,\pi^{2}}\,f^{ACD}f^{BCE}\,
+\Big\{\tfrac13\big\langle\partial_{\dot\alpha}(\partial c),\partial c\big\rangle
++\tfrac23\big\langle\partial c,\partial_{\dot\alpha}(\partial c)\big\rangle
+\Big\}^{DE},
+\label{eq:ss:ch-bdc}\\[4pt]
+\nabla_{-}\big(\partial_{\dot\alpha}c^{A}b^{B}\big)
+&=-\frac{\h g^{2}}{16\sqrt2\,\pi^{2}}\,f^{ACD}f^{BCE}\,
+\Big\{\tfrac23\big\langle\partial_{\dot\alpha}(\partial c),\partial c\big\rangle
++\tfrac13\big\langle\partial c,\partial_{\dot\alpha}(\partial c)\big\rangle
+\Big\}^{DE}.
+\label{eq:ss:ch-dcb}
+\end{align}
+The free dotted index in~\eqref{eq:ss:ch-bdc} and~\eqref{eq:ss:ch-dcb} is the
+letter index of $\partial_{\dot\alpha}c$ on the left and the extra holomorphic
+derivative on the right; the weights $(\tfrac13,\tfrac23)$ are the
+$(m,n)=(1,0)$ instance of the tower kernel of
+Section~\ref{sec:superspace:tower}. Together with the fifty-two zeros of
+Section~\ref{sec:superspace:selection}, the rows
+\eqref{eq:ss:ch-bb}--\eqref{eq:ss:ch-dcb} exhaust the eighty-one ordered
+channels: $1+6+6+4+6+6=29$ nonzero, as in~\eqref{eq:ss:29}.
+
+\subsubsection*{Residual-supersymmetry closure of the $(b,\beta)/(\beta,b)$
+channels}
+
+The family~\eqref{eq:ss:ch-bbeta} is the only one whose output word is not
+read off a cut parent graph directly. The raw graph carrier of this family
+contains an equation-of-motion (total-derivative) layer; the physical answer
+is the unique residual-supersymmetry-closed vector obtained after removing
+that layer and adding a finite normal-product (scheme) term, with the
+remaining one-parameter freedom anchored to the $(b,b)$ scale. The closure
+works as follows. The residual supercharges of the bottom-letter sector,
+$q_r:=\tfrac{1}{\sqrt2}Q^{r}_{E,+}$, act on the letters by
+\begin{equation}\label{eq:ss:qaction}
+q_r\,b=0,
+\qquad
+q_r\,\beta_s=\delta_{rs}\,b,
+\qquad
+q_r\,\gamma^{s}=-\varepsilon_{rst}\,\beta_t,
+\qquad
+q_r\,(\partial_{\dot\alpha}c)=\partial_{\dot\alpha}\gamma^{r} .
+\end{equation}
+At twisted dimension $\tfrac92$, the space of odd $SU(3)$-singlet letter
+bilinears annihilated by all $q_r$ is one-dimensional, spanned by the seed
+output word
+\begin{equation}\label{eq:ss:singlet}
+\big\{\langle\partial c,b\rangle-\langle b,\partial c\rangle
++\textstyle\sum_r\big(\langle\beta_r,\gamma^r\rangle
+-\langle\gamma^r,\beta_r\rangle\big)\big\}^{DE}
+\end{equation}
+of~\eqref{eq:ss:ch-bb}. The $(b,\beta_r)$ output word is its unique triplet
+$q$-primitive:
+\begin{equation}\label{eq:ss:triplet}
+q_s\big\{\langle\beta_r,\partial c\rangle+\langle\partial c,\beta_r\rangle
++\varepsilon_{rtu}\langle\gamma^{t},\gamma^{u}\rangle\big\}
+=-\delta_{sr}\,
+\Big\{\langle\partial c,b\rangle-\langle b,\partial c\rangle
++\textstyle\sum_{r'}\big(\langle\beta_{r'},\gamma^{r'}\rangle
+-\langle\gamma^{r'},\beta_{r'}\rangle\big)\Big\} .
+\end{equation}
+Equivalently, in the ordered basis
+$\big(\langle\partial c,\beta_r\rangle,\,\langle\beta_r,\partial c\rangle,\,
+\langle\gamma^{s},\gamma^{t}\rangle,\,\langle\gamma^{t},\gamma^{s}\rangle\big)$
+with $\varepsilon_{rst}=+1$, the three Ward equations $q_s[\,\cdot\,]=0$
+($s=1,2,3$) cut out the one-dimensional ray spanned by $(1,1,1,-1)$, and
+anchoring this ray to the $(b,b)$ scale through~\eqref{eq:ss:triplet} fixes
+the unit normalization displayed in~\eqref{eq:ss:ch-bbeta}. Since
+$q_r(b^Ab^B)=0$, the seed channel's own forward orbit is only itself: the
+physical families were each computed directly, and the closure is a
+cross-check that fixes the $(b,\beta)$ normalization.
+
+\begin{remark}[The finite shift is a scheme term, not an anomaly graph]%
+\label{rem:ss:finiteshift}
+The passage from the raw graph carrier to the renormalized coefficient vector
+of the $(b,\beta)/(\beta,b)$ family removes an equation-of-motion
+(total-derivative) layer and adds a finite normal-product term. This is a
+finite scheme adjustment, not an additional anomaly graph: all bare-graph
+anomaly in every channel comes only from the $\mul^{2}$ cutting
+failure~\eqref{eq:ss:cuttingfailure}. The closure was verified by thirty-one
+independent finite Ward-identity checks. Through this finite shift and the
+anchoring to the $(b,b)$ scale, the $(b,\beta)/(\beta,b)$ family lands on the
+same universal prefactor $-\h g^{2}/(16\sqrt2\,\pi^{2})$ as every other
+nonzero family, with the output word displayed in~\eqref{eq:ss:ch-bbeta}.
+\end{remark}
+
+\subsection{The holomorphic-derivative tower}\label{sec:superspace:tower}
+
+Shifting the second letter of a channel bilinear by a formal vector $w$ ---
+equivalently, resumming all holomorphic derivatives --- inserts the leg phase
+$e^{iw\cdot(aq+bp)}$ into the ordered Feynman parametrization of the triangle.
+The ordered-simplex moment is
+\begin{equation}\label{eq:ss:simplexmoment}
+\int_{0<a<b<1}a^{p}b^{q}\,da\,db=\frac{1}{(p+1)(p+q+2)} ,
+\end{equation}
+so that
+\begin{equation}\label{eq:ss:simplexderivation}
+2\int_{0}^{1}\!db\int_{0}^{b}\!da\;a^{k+\ell}\,b^{(m-k)+(n-\ell)}
+=\frac{2}{(k+\ell+1)(m+n+2)} .
+\end{equation}
+Restoring the binomial weights of the derivative expansion gives the one-loop
+holomorphic-derivative kernel
+\begin{equation}\label{eq:ss:kernel}
+\boxed{\;
+K_{m,n;k,\ell}
+=\frac{2\binom{m}{k}\binom{n}{\ell}}{(m+n+2)(k+\ell+1)}\;}
+\qquad
+(m,n\in\mathbb Z_{\geq0},\ 0\leq k\leq m,\ 0\leq\ell\leq n).
+\end{equation}
+
+\begin{remark}[The overall factor $2$ is $\Gamma(3)$]\label{rem:ss:gamma3}
+The numerator factor $2$ in~\eqref{eq:ss:kernel} is
+$\Gamma(3)$ from combining the three denominators,
+$\frac{1}{D_0D_1D_2}=2\int_{\Delta_2}\frac{1}{(r^{2}+\Delta)^{3}}$; it is not
+an orientation multiplicity and not a second loop orientation.
+\end{remark}
+
+Because the $\partial_{\dot\alpha}$ are gauge-covariant and do not commute,
+derivative monomials are understood as shuffle-symmetrized averages over the
+$(m,n)$ orderings of $\partial_{\dot1}^{m}\partial_{\dot2}^{n}$. The full
+kernel operator on letter pairs is
+\begin{equation}\label{eq:ss:kerneloperator}
+\mathcal K_{m,n}(f^{D},g^{E})
+=\sum_{k=0}^{m}\sum_{\ell=0}^{n}
+\frac{2\binom{m}{k}\binom{n}{\ell}}{(m+n+2)(k+\ell+1)}\,
+\big(\partial_{\dot1}^{k}\partial_{\dot2}^{\ell}\partial_{\dot\alpha}f\big)^{D}
+\big(\partial_{\dot1}^{\,m-k}\partial_{\dot2}^{\,n-\ell}
+\partial^{\dot\alpha}g\big)^{E} .
+\end{equation}
+Its first instances are
+\begin{align}
+\mathcal K_{0,0}&=\langle f,g\rangle,
+\qquad
+\mathcal K_{1,0}=\frac13\langle\partial_{\dot1}f,g\rangle
++\frac23\langle f,\partial_{\dot1}g\rangle,
+\label{eq:ss:kernelexamples1}\\
+\mathcal K_{2,0}&=\frac16\langle\partial_{\dot1}^{2}f,g\rangle
++\frac12\langle\partial_{\dot1}f,\partial_{\dot1}g\rangle
++\frac12\langle f,\partial_{\dot1}^{2}g\rangle,
+\label{eq:ss:kernelexamples2}\\
+\mathcal K_{1,1}&=\frac16\langle\partial_{\dot1}\partial_{\dot2}f,g\rangle
++\frac14\langle\partial_{\dot1}f,\partial_{\dot2}g\rangle
++\frac14\langle\partial_{\dot2}f,\partial_{\dot1}g\rangle
++\frac12\langle f,\partial_{\dot1}\partial_{\dot2}g\rangle .
+\label{eq:ss:kernelexamples3}
+\end{align}
+In particular the $(b,\partial c)$ weights $(\tfrac13,\tfrac23)$ of
+\eqref{eq:ss:ch-bdc}--\eqref{eq:ss:ch-dcb} are the $(m,n)=(1,0)$ instance:
+$K_{1,0;1,0}=\tfrac{2}{3\cdot2}=\tfrac13$ for the derivative on the first
+letter and $K_{1,0;0,0}=\tfrac{2}{3\cdot1}=\tfrac23$ for the derivative on
+the second. The comparison of~\eqref{eq:ss:kernel} with the holomorphic-twist
+kernel of \cite{BK} is the subject of Section~\ref{sec:ht}.

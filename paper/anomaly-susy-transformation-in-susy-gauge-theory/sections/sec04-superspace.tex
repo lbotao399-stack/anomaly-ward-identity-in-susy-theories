@@ -1,0 +1,367 @@
+% sec04-superspace.tex — Section 4: The superspace Feynman-diagram derivation
+% Writer: 作家_超空间 (Writer_Superspace). Body LaTeX only; macros live in main.tex.
+
+\section{The superspace Feynman-diagram derivation}\label{sec:superspace}
+
+This section contains the core computation of the paper: the one-loop anomalous
+Schwinger--Dyson (Ward) identity for the BPS letters of Euclidean $\mathcal N=4$
+super-Yang--Mills theory, quantized in $\mathcal N=1$ superspace
+\cite{GGRS,WeinbergIII} and regularized by dimensional reduction (DRED)
+\cite{SiegelDRED}. We define the letter alphabet
+(Section~\ref{sec:superspace:letters}), reduce the tree-level Schwinger--Dyson
+identity to Euler operators (Section~\ref{sec:superspace:sd}), isolate the unique
+regulated cutting failure (Section~\ref{sec:superspace:cutting}), and derive the
+selection rules that organize the eighty-one ordered channels
+(Section~\ref{sec:superspace:selection}). We then fix the supergraph Feynman
+rules and diagram conventions (Section~\ref{sec:superspace:rules}) and present
+the complete one-loop computation of every nonzero channel family, with all
+supergraphs, Wick contractions, amplitudes, $D$-algebra and loop integrations
+shown explicitly: the seed channel $(b,b)$
+(Section~\ref{sec:superspace:seed}), the channels $(b,\beta_r)$ and
+$(\beta_r,b)$ (Section~\ref{sec:superspace:ab}), $(b,\gamma^r)$ and
+$(\gamma^r,b)$ (Section~\ref{sec:superspace:bgamma}), $(b,\partial c)$ and
+$(\partial c,b)$ (Section~\ref{sec:superspace:ad}), $(\beta_r,\beta_s)$
+(Section~\ref{sec:superspace:bb}), and $(\beta_r,\gamma^s)$ with
+$(\gamma^s,\beta_r)$ (Section~\ref{sec:superspace:bc}). The results are
+collected in the complete channel table (Section~\ref{sec:superspace:table}),
+and we close with the holomorphic-derivative tower kernel
+(Section~\ref{sec:superspace:tower}).
+
+\subsection{The letters}\label{sec:superspace:letters}
+
+We work in the Euclidean plus/minus spin frame of Section~\ref{sec:notation},
+with gauge-covariant superspace derivatives whose frame components are
+$\nabla_\pm$ and the dotted components $\cD_{+\dot\alpha}$. In Euclidean
+signature the chiral and antichiral fields are independent: no conjugation
+relates $\Phi_r$ to $\widetilde\Phi^r$. The semi-chiral fermionic derivative
+$\nabla_-$ is a frame component of the gauge-covariant spinor derivative; it is
+the operator whose action on composite letters we compute.
+
+\begin{definition}[BPS letters]\label{def:ss:letters}
+The \emph{letters} are the gauge-covariant single-trace composites
+\begin{equation}\label{eq:ss:letters}
+b := -\frac{i}{\sqrt2}\,\nabla_{+}\cW_{+},
+\qquad
+\beta_{r} := \frac{1}{\sqrt2}\,\nabla_{+}\Phi_{r},
+\qquad
+\gamma^{r} := \widetilde\Phi^{r},
+\qquad
+\partial_{\dot\alpha}c := i\,\bcW_{\dot\alpha},
+\qquad r=1,2,3,\quad \dot\alpha=\dot1,\dot2 ,
+\end{equation}
+built from the chiral gaugino field strength $\cW_+$, the three adjoint chiral
+superfields $\Phi_r$, their independent Euclidean antichiral partners
+$\widetilde\Phi^r$, and the antichiral field strength $\bcW_{\dot\alpha}$ of
+Section~\ref{sec:notation}. These are the Euclidean avatars of the $1/16$-BPS
+letters of the holomorphic twist \cite{BK}.
+\end{definition}
+
+The letters carry three gradings, summarized here and used throughout:
+\begin{center}
+\begin{tabular}{lcccc}
+\hline
+letter & definition & Grassmann parity & $SU(3)$ flavor & twisted dimension\\
+\hline
+$b$ & $-\frac{i}{\sqrt2}\,\nabla_+\cW_+$ & $0$ & $\mathbf 1$ & $2$\\[2pt]
+$\beta_r$ & $\frac{1}{\sqrt2}\,\nabla_+\Phi_r$ & $1$ & $\mathbf 3$ & $\tfrac32$\\[2pt]
+$\gamma^r$ & $\widetilde\Phi^r$ & $0$ & $\bar{\mathbf 3}$ & $1$\\[2pt]
+$\partial_{\dot\alpha}c$ & $i\,\bcW_{\dot\alpha}$ & $1$ & $\mathbf 1$ & $\tfrac32$\\
+\hline
+\end{tabular}
+\end{center}
+The holomorphic (dotted) covariant derivatives are
+\begin{equation}\label{eq:ss:dotted}
+\partial_{\dot\alpha} := \cD_{+\dot\alpha},
+\qquad
+\partial^{\dot\alpha} := \epsilon^{\dot\alpha\dot\beta}\,\partial_{\dot\beta},
+\qquad
+\epsilon^{\dot1\dot2}=+1,\qquad \epsilon_{\dot1\dot2}=-1 ,
+\end{equation}
+of twisted dimension $[\partial_{\dot\alpha}]=1$, and the elementary output
+bilinear of the anomaly is the ordered dotted contraction
+\begin{equation}\label{eq:ss:bilinear}
+\langle X,Y\rangle := (\partial_{\dot\alpha}X)(\partial^{\dot\alpha}Y) .
+\end{equation}
+For two odd letters the dotted spinor contraction is symmetric under exchange
+of the two entries; no symmetry property is needed for mixed-parity pairs.
+
+The alphabet contains nine letters --- $b$ (one), $\beta_r$ (three), $\gamma^r$
+(three), $\partial_{\dot\alpha}c$ (two) --- and we study the $9\times9=81$
+ordered composite insertions $\nabla_-(L_i^A L_j^B)$. Reversed orderings are
+independent: $(L_i,L_j)$ and $(L_j,L_i)$ are separate channels, never
+quotiented. The anomaly operator itself carries twisted dimension $+\tfrac12$,
+so both sides of the master identity below are homogeneous of dimension
+$[L_i]+[L_j]+\tfrac12$.
+
+\begin{remark}[The $Q_0$ correspondence]\label{rem:ss:q0}
+The classical supercharge of the BPS sector is identified with the semi-chiral
+derivative by
+\begin{equation}\label{eq:ss:q0}
+Q_0 \;\longleftrightarrow\; -\tfrac12\,\nabla_{-} .
+\end{equation}
+The tree-level contact terms of the Schwinger--Dyson family are exactly the
+classical bracket (the $Q_0$ sector); they are computed and removed first. The
+one-loop remainder derived below is the one-loop correction to the $Q_0$ Ward
+identity. The correspondence~\eqref{eq:ss:q0} is used again in
+Section~\ref{sec:ht}.
+\end{remark}
+
+\subsection{The Schwinger--Dyson identity and the Euler-operator reduction}%
+\label{sec:superspace:sd}
+
+The regulated path integral obeys a local Schwinger--Dyson identity. Its tree
+content in the letter sector is a reduction to Euler operators --- the
+functional equation-of-motion operators of the vector and of the antichiral
+matter fields. Writing $(X\times Y)^A := f^{ABC}X^BY^C$ for the adjoint
+commutator, the two Euler operators are
+\begin{equation}\label{eq:ss:euler}
+\frac{\delta S}{\delta\cV}
+=\nabla^{a}\cW_{a}-2i\,(\Phi_{s}\times\widetilde\Phi^{s}),
+\qquad
+\frac{\delta S}{\delta\widetilde\Phi^{r}}
+=-\frac14\,\nabla^{2}\Phi_{r}
+-\frac{1}{\sqrt2}\,\varepsilon_{rst}\,(\gamma^{s}\times\gamma^{t}),
+\end{equation}
+with a sum over the flavor index $s$ understood, and with the overall
+$g^{-2}$ of the absorbed frame of Section~\ref{sec:gaugebv} stripped from the
+Euler operators throughout this section. Using
+$\nabla^{2}=2\nabla_{-}\nabla_{+}$, the tree-level Schwinger--Dyson reduction
+of the letters is the exact system
+\begin{equation}\label{eq:ss:treeduction}
+\boxed{\;
+\begin{aligned}
+\nabla_{-}b
+&=\frac{i}{\sqrt2}\,\nabla_{+}\frac{\delta S}{\delta\cV}
+-2\,(\beta_{s}\times\gamma^{s}),\\[2pt]
+\nabla_{-}\beta_{r}
+&=-\sqrt2\,\frac{\delta S}{\delta\widetilde\Phi^{r}}
+-\varepsilon_{rst}\,(\gamma^{s}\times\gamma^{t}),\\[2pt]
+\nabla_{-}\gamma^{r}&=0,
+\qquad
+\nabla_{-}(\partial_{\dot\alpha}c)=0 .
+\end{aligned}\;}
+\end{equation}
+Every ordered pair is then reduced by the graded Leibniz rule
+\begin{equation}\label{eq:ss:leibniz}
+\nabla_{-}(L_iL_j)
+=(\nabla_{-}L_i)L_j+(-1)^{|L_i|}L_i(\nabla_{-}L_j) .
+\end{equation}
+Graphically, an Euler-operator insertion attached to a propagator collapses
+it, $K K^{-1}=\delta$: this is the \emph{cutting rule}. The surviving tree
+contact terms are precisely the classical bracket of
+Remark~\ref{rem:ss:q0}. The one-loop content of the same identity is the
+master result of this paper:
+
+\begin{proposition}[One-loop anomalous Ward identity]\label{prop:ss:master}
+For each of the eighty-one ordered pairs of letters,
+\begin{equation}\label{eq:ss:master}
+\nabla_{-}\big(L_i^{A}L_j^{B}\big)\Big|_{\mathrm{1\text{-}loop}}
+=\frac{\h g^{2}}{16\pi^{2}}\,f^{ACD}f^{BCE}\,\Delta(L_i,L_j)^{DE},
+\end{equation}
+where $\Delta(L_i,L_j)$ are the fixed letter bilinears collected in
+Section~\ref{sec:superspace:table}; $\Delta$ vanishes for $52$ of the $81$
+ordered pairs.
+\end{proposition}
+
+\begin{remark}[Classical/quantum separation]\label{rem:ss:separation}
+If a regulator preserved simultaneously (i) the equation-of-motion/variation
+correspondence, (ii) the cutting rule $KK^{-1}=\delta$, and (iii)
+four-dimensional $D$-algebra, the complete Schwinger--Dyson graph family would
+cancel and no anomaly could exist. DRED preserves (i) and (iii) but deforms
+(ii): the quantum remainder is carried solely by the evanescent insertions of
+Section~\ref{sec:superspace:cutting}.
+\end{remark}
+
+\subsection{The cutting mechanism}\label{sec:superspace:cutting}
+
+\subsubsection*{The two metric splits of DRED}
+
+Dimensional reduction keeps $d=4-2\epsilon$ while splitting the
+four-dimensional metric and the $d$-dimensional metric as
+\begin{equation}\label{eq:ss:dredsplit}
+\delta_4^{mn}=\widehat\delta^{mn}+\breve\delta^{mn},
+\qquad
+\widehat\delta^{m}{}_{m}=d,
+\qquad
+\breve\delta^{m}{}_{m}=4-d=2\epsilon,
+\qquad
+\widehat\delta^{m}{}_{r}\,\breve\delta^{r}{}_{n}=0 ,
+\end{equation}
+the quasi-four-dimensional split, and the scalar dimension-shift split
+\begin{equation}\label{eq:ss:scalarsplit}
+\delta_d^{MN}=\bar\delta^{MN}+\widetilde\delta^{MN},
+\qquad
+\operatorname{tr}\bar\delta=4,
+\qquad
+\operatorname{tr}\widetilde\delta=d-4=-2\epsilon,
+\qquad
+\ell_d^{2}=\bar\ell^{2}+\widetilde\ell^{2} .
+\end{equation}
+The loop momentum has only hatted components,
+$\ell^{m}=\widehat\delta^{m}{}_{n}\ell^{n}$, and the measure is
+$\mu^{2\epsilon}\int d^{d}\ell/(2\pi)^{d}$. The evanescent loop-momentum square
+is
+\begin{equation}\label{eq:ss:mul}
+\boxed{\;\mul^{2}:=\bar\ell^{2}-\ell_d^{2}=-\widetilde\ell^{2}\;}
+\end{equation}
+and the single regulator axiom of the computation is
+\begin{equation}\label{eq:ss:axiom}
+\boxed{\;\text{finite superspace spin words use }\bar\delta,
+\qquad\text{propagator inverses use }\delta_d .\;}
+\end{equation}
+The spin algebra is four-dimensional in this representation,
+\begin{equation}\label{eq:ss:sigmaalgebra}
+\sigma_m\bar\sigma_n+\sigma_n\bar\sigma_m=2\bar\delta_{mn}\,\mathbf 1_2 .
+\end{equation}
+
+\begin{remark}[The two splits are never contracted with each other]%
+\label{rem:ss:nevercontract}
+Combining the two representations~\eqref{eq:ss:dredsplit}
+and~\eqref{eq:ss:scalarsplit} before the Schwinger family is summed would set
+the scalar difference~\eqref{eq:ss:mul} to zero and erase the anomaly. Our
+Fourier convention is $X(x)=\int\frac{d^{d}p}{(2\pi)^{d}}e^{ip\cdot x}X(p)$
+with all momenta incoming, so $\BoxE\mapsto-p^{2}$.
+\end{remark}
+
+\subsubsection*{The exact cutting-failure identity}
+
+On an internal edge $e$ the momentum is $r_e=\ell+Q_e$, and the external
+shifts $Q_e$ carry no evanescent components, so
+$\bar r_e^{\,2}=r_{e,d}^{\,2}+\mul^{2}$ and
+\begin{equation}\label{eq:ss:ratio}
+\frac{\bar r_e^{\,2}}{r_{e,d}^{\,2}}=1+\frac{\mul^{2}}{r_{e,d}^{\,2}} .
+\end{equation}
+The first term is exactly the Schwinger cut. For a triangle with denominators
+$D_i=r_{i,d}^{2}$ one therefore has, for \emph{every marked line $e$ of every
+one-loop graph}, the exact cutting-failure identity
+\begin{equation}\label{eq:ss:cuttingfailure}
+\boxed{\;
+\frac{\bar r_e^{\,2}}{D_0D_1D_2}-\frac{1}{\prod_{j\ne e}D_j}
+=\frac{\mul^{2}}{D_0D_1D_2}\;}
+\end{equation}
+--- one universal insertion, with no graph-specific $(4-d)$ factor. The entire
+anomaly is the sum of these remainders. Replacing $\bar r_e^{\,2}$ by
+$r_{e,d}^{\,2}$ before the subtraction makes the expression identically zero
+and removes the anomaly.
+
+\subsubsection*{The evanescent master integral}
+
+Finiteness and locality of the anomaly follow from the master integral
+\begin{equation}\label{eq:ss:masterintegral}
+\boxed{\;
+\lim_{\epsilon\to0}\,
+\mu^{2\epsilon}\!\int\!\frac{d^{\,4-2\epsilon}\ell}{(2\pi)^{4-2\epsilon}}\,
+\frac{\mul^{2}}{(\ell_d^{2}+\Delta)^{3}}
+=\frac{1}{32\pi^{2}}\;}
+\end{equation}
+which is independent of the Feynman-parameter combination $\Delta$. The proof
+uses two ingredients. First, by $d$-dimensional rotational invariance inside a
+rotationally invariant integral,
+\begin{equation}\label{eq:ss:evanescenttrace}
+\int \widetilde\ell^{2} f(\ell^{2})
+=\frac{d-4}{d}\int \ell^{2} f(\ell^{2}) .
+\end{equation}
+Second, the scalar master family
+\begin{equation}\label{eq:ss:Jn}
+J_n(\Delta)
+:=\mu^{2\epsilon}\!\int\!\frac{d^{d}r}{(2\pi)^{d}}\frac1{(r^{2}+\Delta)^{n}}
+=\frac{\mu^{2\epsilon}}{(4\pi)^{d/2}}\,
+\frac{\Gamma(n-d/2)}{\Gamma(n)}\,\Delta^{d/2-n}
+\end{equation}
+obeys
+\begin{equation}\label{eq:ss:Jnidentities}
+\Delta J_3=\frac{\epsilon}{2}\,J_2,
+\qquad
+\operatorname*{Res}_{\epsilon=0}J_2=\frac{1}{16\pi^{2}},
+\qquad
+J_2-\Delta J_3=\Big(1-\frac{\epsilon}{2}\Big)J_2 .
+\end{equation}
+Combining~\eqref{eq:ss:mul}, \eqref{eq:ss:evanescenttrace}
+and~\eqref{eq:ss:Jnidentities},
+\begin{equation}\label{eq:ss:masterproof}
+\int_{\ell}\frac{\mul^{2}}{(\ell_d^{2}+\Delta)^{3}}
+=-\frac{d-4}{d}\,(J_2-\Delta J_3)
+=\frac{2\epsilon}{4-2\epsilon}\cdot\frac{4-2\epsilon}{4}\,J_2
+=\frac{\epsilon}{2}\,J_2
+\;\xrightarrow[\epsilon\to0]{}\;
+\frac12\cdot\frac{1}{16\pi^{2}}
+=\frac{1}{32\pi^{2}},
+\end{equation}
+using $\epsilon\,\Gamma(\epsilon)\to1$. The would-be nonlocal
+$\Delta$-dependence enters only at $O(\epsilon)$ through $\Delta^{-\epsilon}$,
+so the anomaly is a polynomial in external momenta: a local operator.
+
+\begin{remark}[Pole bookkeeping as a cross-check principle]%
+\label{rem:ss:polebookkeeping}
+For each channel the isolated parent graphs are UV divergent; the complete
+Schwinger--Dyson family is finite. The $1/\epsilon$ poles cancel between the
+parent tensor reduction, which involves the physical metric $\widehat\delta$,
+and the Schwinger contact rows, which involve the four-dimensional metric
+$\delta_4$, leaving $\widehat\delta-\delta_4=-\breve\delta$: a pure evanescent
+numerator whose trace supplies the finite answer. Equivalently, every anomaly
+factorizes as (evanescent trace $\propto2\epsilon$) $\times$ (pole residue
+$1/(16\pi^{2}\epsilon)$). Any error in a single vertex factor or sign would
+break this cancellation, so the finiteness of each channel is itself a
+consistency proof of its factor chain.
+\end{remark}
+
+\subsection{Selection rules: the census of the eighty-one ordered pairs}%
+\label{sec:superspace:selection}
+
+Before any loop integral, conservation laws restrict the possible
+uncontracted outputs. The gradings that survive the construction are:
+\begin{enumerate}[label=(\roman*)]
+\item $SU(3)$ flavor: $b$ and $\partial_{\dot\alpha}c$ are singlets,
+$\beta_r\in\mathbf 3$, $\gamma^r\in\bar{\mathbf 3}$;
+\item Grassmann parity: $|b|=|\gamma|=0$, $|\beta_r|=|\partial_{\dot\alpha}c|=1$;
+\item twisted dimension: $[\gamma]=1$, $[\beta]=[\partial c]=\tfrac32$,
+$[b]=2$, $[\partial_{\dot\alpha}]=1$, with the anomaly operator carrying
+$+\tfrac12$;
+\item the output structure $\langle X,Y\rangle$ of
+equation~\eqref{eq:ss:bilinear} --- exactly one holomorphic derivative on
+each of two letters --- forced by the $\sigma$-chain trace of
+Section~\ref{sec:superspace:seed}.
+\end{enumerate}
+Checking each ordered family against these gradings and against the
+cubic-vertex spectator structure yields exactly
+\begin{equation}\label{eq:ss:29}
+29\ \text{nonzero}
+=1_{(b,b)}
++6_{(b,\beta),(\beta,b)}
++6_{(b,\gamma),(\gamma,b)}
++4_{(b,\partial c),(\partial c,b)}
++6_{(\beta,\gamma)\ \delta\text{-diagonal}}
++6_{(\beta,\beta)\ \varepsilon\text{-offdiagonal}} .
+\end{equation}
+The remaining $52$ ordered pairs vanish exactly, in four structural classes:
+\begin{enumerate}
+\item \textbf{$25$ no-descendant pairs.} Since
+$\nabla_{-}\gamma=\nabla_{-}(\partial c)=0$, the Leibniz
+rule~\eqref{eq:ss:leibniz} makes $\nabla_{-}(L_iL_j)$ vanish identically when
+both letters are drawn from
+$\{\gamma^{1},\gamma^{2},\gamma^{3},\partial_{\dot1}c,\partial_{\dot2}c\}$ ---
+all $5\times5=25$ pairs of this set.
+\item \textbf{$12$ flavor-off-diagonal $(\beta_r,\gamma^s)/(\gamma^s,\beta_r)$,
+$r\ne s$.} Exact zeros: the available singlet contraction
+$\delta_{rs}\langle\partial c,\partial c\rangle$ has no off-diagonal support.
+\item \textbf{$3$ diagonal $(\beta_r,\beta_r)$.} Exact zeros: the candidate
+$D$-word and the repeated-index $\varepsilon$ routes both vanish.
+\item \textbf{$12$ $(\beta_r,\partial_{\dot\alpha}c)/(\partial_{\dot\alpha}c,\beta_r)$.}
+Killed exactly by the charge and cubic-vertex basis analysis.
+\end{enumerate}
+
+\begin{remark}[Three independent routes to the same census]\label{rem:ss:threeroutes}
+The $29/52$ census is obtained independently by (a) the selection-rule
+analysis above, (b) the explicit evaluation of all eighty-one ordered
+Schwinger--Dyson families, and (c) the vanishing list of the holomorphic-twist
+calculation \cite{BK} (Section~\ref{sec:ht}). All three routes agree.
+\end{remark}
+
+\begin{remark}[Status]\label{rem:ss:status}
+The eighty-one-row result --- twenty-nine exact nonzero channels and fifty-two
+exact zeros --- is the accepted physical one-loop anomaly sector of the
+project, with the physical verifier passing all thirty-three checks. An
+adversarial census review (seventeen candidate structures) remains open; it
+does not alter the accepted coefficients stated here.
+\end{remark}
+

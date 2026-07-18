@@ -1,0 +1,291 @@
+\subsection{The channels $(b,\gamma^{r})$ and $(\gamma^{r},b)$}%
+\label{sec:superspace:bgamma}
+
+We now compute the mixed vector--antichiral family: the six ordered channels $(b,\gamma^{r})$ and $(\gamma^{r},b)$,
+$r=1,2,3$, of the master identity~\eqref{eq:ss:master}. The two ordered insertions are
+\begin{equation}\label{eq:bg:insert}
+I_{b\gamma^{r}}=\nabla_{-}\big(b^{A}\gamma^{rB}\big), \qquad I_{\gamma^{r}b}=\nabla_{-}\big(\gamma^{rA}b^{B}\big) .
+\end{equation}
+Both letters are Grassmann-even and $\nabla_{-}\gamma^{r}=0$, so in each insertion the outer derivative marks only
+the $b$ line; every nonlinear occurrence of the covariantized source is nevertheless retained. The two directions
+are computed independently below --- no graph coefficient is copied from one ordering to the other. As in the seed
+channel, the graph weights are assembled with the unit-normalized field-strength insertion $X:=\nabla_{+}\cW_{+}$;
+the letter normalization $b=-(i/\sqrt2)X$ is restored only in the final step.
+
+\paragraph{1. Graph inventory.} The covariant completion of the insertion and its $\cD_{-}$-words are
+\begin{equation}\label{eq:bg:source}
+X_{c}=X_{1}+gX_{2}+g^{2}X_{3}, \qquad N_{0}=\cD_{-}X_{1}, \quad N_{1}=\cD_{-}X_{2}+[\Gamma_{1},X_{1}], \quad N_{2}=\cD_{-}X_{3}+[\Gamma_{1},X_{2}]+[\Gamma_{2},X_{1}],
+\end{equation}
+where $\nabla_{-}=\cD_{-}+g\Gamma_{1}+g^{2}\Gamma_{2}$ is the connection expansion of the semi-chiral derivative,
+while $\gamma^{r}=\widetilde\Phi^{r}$ has no nonlinear completion. The connected order-$g^{2}$ orbit is
+\begin{equation}\label{eq:bg:orbit}
+\Gamma^{(1)}_{g^{2}} =\langle I_{2}\rangle_{0} -\frac1\h\langle I_{1}S_{3}\rangle_{0,c} -\frac1\h\langle I_{0}S_{4}\rangle_{0,c} +\frac1{2\h^{2}}\langle I_{0}S_{3}S_{3}\rangle_{0,c} ,
+\end{equation}
+with $I_{n}$ the source term at order $g^{n}$, $S_{3}$ and $S_{4}$ the cubic and quartic action vertices, and
+$\langle\;\rangle_{0,c}$ the connected Gaussian average. The admitted parent triangle skeletons are the
+gauge--matter class $T_{GM}^{(r)}=(I,G,M_{r})$ and the two-matter class $T_{MM}^{(r,r)}=(I,M_{r},M_{r})$, with
+$G=\mathcal V_{VVV}$ the cubic gauge vertex and $M_{r}=\mathcal V_{\widetilde\Phi_{r}V\Phi_{r}}$ the matter--gauge
+cubic; the superpotential class $T_{MH}=(I,M_{r},H_{\widetilde\Phi^{3}})$ contributes two complement-flavor routes
+per direction, both exactly zero by
+\eqref{eq:bg:tmh} below, and there is no all-gauge parent for this letter pair. Per ordered direction the route census is
+\begin{equation}\label{eq:bg:census}
+N_{TGM}=6, \qquad N_{TMM}=1, \qquad N_{TMH}=2 ,
+\end{equation}
+the six gauge--matter routes being the six permutations of the three internal edges $(r_{0},r_{1},r_{2})$, each
+with two derivative placements times two Euclidean chiralities of the matter line. Figure~\ref{fig:bg:triangle}
+shows the ordered triangle in the two-matter topology.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[scale=1.15]
+  \coordinate (I)  at (90:2.0);
+  \coordinate (ML) at (210:2.0);
+  \coordinate (MR) at (330:2.0);
+  \draw[sV]    (I)  -- (ML) node[midway,left=3pt]  {$r_{0}$};
+  \draw[sPhi]  (ML) -- (MR) node[midway,below=3pt] {$r_{1}$};
+  \draw[sPhit] (MR) -- (I)  node[midway,right=3pt] {$r_{2}$};
+  \draw[sPhit] (ML) -- ++(180:1.5) node[left]  {$\widetilde\Phi^{r}\ (p)$};
+  \draw[sleg] (MR) -- ++(0:1.5)   node[right] {$\partial_{\dot\alpha}c\ (q)$};
+  \node[sinsert,label={90:$\nabla_{-}\bigl(b^{A}\gamma^{rB}\bigr)$}] at (I) {};
+  \node[svertex,label=below left:{$M_{r}$}]  at (ML) {};
+  \node[svertex,label=below right:{$M_{r}$}] at (MR) {};
+\end{tikzpicture}
+\caption{The ordered triangle of the $(b,\gamma^{r})$ family in the two-matter topology $T_{MM}^{(r,r)}$. The filled
+insertion node carries the letter operator $\nabla_{-}(b^{A}\gamma^{rB})$ with $b=-(i/\sqrt2)\nabla_{+}\cW_{+}$;
+the internal edges are the source-$b$ vector line $r_{0}$ (wavy), the chiral matter bridge $r_{1}$, and the
+source-$\gamma$ reversed-chiral line $r_{2}$, with $r_{1}-r_{0}=p$. The external antichiral letter
+$\gamma^{r}=\widetilde\Phi^{r}$ (momentum $p$) enters at the left matter vertex, the vertex where the vector
+edge $r_{0}$ attaches (each matter cubic vertex has exactly one vector slot); the vector output letter
+$\partial_{\dot\alpha}c$ (momentum $q$) enters at the right matter vertex. The gauge--matter topology
+$T_{GM}^{(r)}$ replaces the left matter vertex by the cubic gauge vertex $G$ (the edges incident to $G$ are
+vector lines); its six ordered routings of $(r_{0},r_{1},r_{2})$ are the six permutation routes of the text, and
+the reversed channel $(\gamma^{r},b)$ has the same figure with the source attachments exchanged.}
+\label{fig:bg:triangle}
+\end{figure}
+
+\paragraph{2. Wick contractions.} Every labeled Wick contraction carries weight $1$: the $1/2!$ of the two cubic action
+copies is canceled by the two labeled action orderings,
+\begin{equation}\label{eq:bg:wick}
+w_{\mathrm{Wick}}=\frac{1}{2!}\,(1+1)=1 ,
+\end{equation}
+and no residual symmetry factor occurs anywhere in the family. In the triangle term $\langle
+I_{0}S_{3}S_{3}\rangle_{0,c}$ the two external ports attach to two distinct cubic vertices and the three internal
+edges are paired among the vertex slots, giving the six $T_{GM}$ routings, the single $T_{MM}$ routing (two matter
+propagators, hence two chiral projectors), and the two $T_{MH}$ routings. In the nonlinear-source bubble $\langle
+I_{1}S_{3}\rangle_{0,c}$ the two internal legs of the connection word $[\Gamma_{1},X_{1}]$ pair with each other
+through the loop, and the cubic matter vertex ties the loop to the external $\gamma^{r}$ leg. The quartic seagull
+$\langle I_{0}S_{4}\rangle_{0,c}$ is a single graph: differentiating
+\begin{equation}\label{eq:bg:seagull}
+[\cV,[\cV,\Phi]]=\cV^{2}\Phi-2\cV\Phi\cV+\Phi\cV^{2}
+\end{equation}
+with respect to one internal and one external $\cV$ places both orderings inside one seagull vertex; they are not
+two Feynman graphs. The remaining source tadpole $\langle I_{2}\rangle_{0}$ is a single coincident vector loop. The
+full color contraction of the family --- two matter vertices, two matter inverse metrics, and the complete vector
+covariance --- reduces, with $[T_{A},T_{B}]=if_{AB}{}^{C}T_{C}$ and $\operatorname{tr}(T_{A}T_{B})=\delta_{AB}/2$,
+to
+\begin{equation}\label{eq:bg:color}
+C_{\mathrm{full}} \;\propto\; \sum_{X}\operatorname{tr}\big(T_{D}[T_{A},T_{X}]\big) \operatorname{tr}\big(T_{X}[T_{E},T_{B}]\big) \;\longrightarrow\; +\,f^{ACD}f^{BCE} ,
+\end{equation}
+the numerical proportionality being carried into the assembled prefactors of paragraph 3. This is the adjudicated
+signed color word of the family: the same tensor unit as in the master identity~\eqref{eq:ss:master}.
+
+\paragraph{3. Amplitude assembly.} The propagators entering the orbit are the vector line and the two matter
+orientations,
+\begin{equation}\label{eq:bg:props}
+-\frac{\h}{\BoxE}, \qquad +\frac{\h\,\bcD^{2}\cD^{2}}{16\,\BoxE}, \qquad +\frac{\h\,\cD^{2}\bcD^{2}}{16\,\BoxE} ;
+\end{equation}
+each matter vertex contributes $+\sqrt2\,g/\h$ with measure $1/4$ per vertex, and the canonical source
+normalization is $-1/(4\sqrt2)$. The two-matter orbit therefore assembles to the exact pre-$D$ factor
+\begin{equation}\label{eq:bg:tmmpre}
+\left(-\frac{1}{4\sqrt2}\right)\left(\frac{\sqrt2\,g}{\h}\right)^{2} \left[-\h\left(\frac{\h}{16}\right)^{2}\right]=\frac{\sqrt2\,\h g^{2}}{1024} ,
+\end{equation}
+while each gauge--matter route carries, per Euclidean chirality,
+\begin{equation}\label{eq:bg:tmpre}
+\mathrm{preD}_{-}=+\frac{\h g^{2}}{8192\sqrt2}, \qquad \mathrm{preD}_{+}=-\frac{\h g^{2}}{8192\sqrt2} .
+\end{equation}
+After loop saturation the external legs carry residual operator words: the $\gamma^{r}$ leg is a plain antichiral
+field (factor $1$), and the vector output leg collapses as
+\begin{equation}\label{eq:bg:residual}
+\cD^{2}\bcD_{\dot\alpha}\,u=-4\sqrt2\,D_{\dot\alpha}, \qquad \cD^{2}\bcD_{\dot\alpha}\,(\theta+\bar\theta\,\theta_{\dot\alpha})=-2 ,
+\end{equation}
+where $u$ is the formal leg slot and $D_{\dot\alpha}$ the unit vector output slot (the antichiral field strength
+$\bcW_{\dot\alpha}$; the letter $\partial_{\dot\alpha}c=i\bcW_{\dot\alpha}$ is restored in paragraph 7). The
+ordered output kernels are $(\partial_{\dot\alpha}Y)^{D}D^{E\dot\alpha}$ for the two-matter orbit and
+$D_{\dot\alpha}^{D}(\partial^{\dot\alpha}Y)^{E}$ for the gauge--matter orbit, with $Y=\widetilde\Phi^{r}$.
+
+\paragraph{4. The $D$-algebra chain.} The master $D$-word behind every route is
+\begin{equation}\label{eq:bg:masterD}
+\cD_{-}\cD_{+}\bcD^{2}\cD_{+} =8\,\bar\Box\,\cD_{+}-\frac12\,\cD_{+}\bcD^{2}\cD^{2} ,
+\end{equation}
+with $\bar\Box$ the d'Alembertian of the barred spin metric of \eqref{eq:ss:sigmaalgebra}; loop saturation uses
+$\delta^{4}(\theta_{12})\cD^{2}\bcD^{2}\delta^{4}(\theta_{12})=16\,\delta^{4}(\theta_{12})$ as in the seed channel.
+For the two-matter route the four-dimensional numerator before the metric split is
+\begin{equation}\label{eq:bg:tmmnum}
+\mathcal F^{(4)}_{b>\gamma} =8(\det r_{0})\,\mathcal R_{0}-8(\det r_{1})\,\mathcal J_{1}, \qquad \mathcal R_{0}=-128\,\mathfrak b(r_{1}), \qquad \mathcal J_{1}=-128\,\mathfrak b(r_{0}) ,
+\end{equation}
+where $r_{0}$ is the source-$b$ vector edge, $r_{1}$ the chiral bridge, $\det r_{e}$ the $2\times2$ determinant of
+the edge momentum (kept symbolic; its index-level definition is not needed below), and $\mathfrak b(\cdot)$ the
+external bilinear carrier. The collapsed neighbor of the same cut orbit, its migrated and transverse residuals, and
+the projector-collapse check are
+\begin{equation}\label{eq:bg:tmmcontact}
+K_{\mathrm{neighbor}}=(64\,r_{0\dot2},\,-64\,r_{0\dot1}), \quad (-128\,r_{0\dot2},\,+128\,r_{0\dot1}), \quad \big(+128(p_{\dot2}-r_{0\dot2}),\,-128(p_{\dot1}-r_{0\dot1})\big), \quad 16\det(r_{1})\,K_{\mathrm{neighbor}}=-8\det(r_{1})\,\mathcal J_{1} ,
+\end{equation}
+with the longitudinal tag migrating the source vector $r_{0}$ into the adjacent chiral projector $r_{1}$; for the
+reversed direction the inverse-edge rows read $+8\det(r_{2})\mathcal R_{1}$ (primary) and $-8\det(r_{1})\mathcal
+R_{2}$ (neighbor after longitudinal integration by parts). The finite-Grassmann replay of the nonlinear contact
+words returns the same polynomials in the reversed ports for the two directions; no reflected coefficient is
+assumed. Route by route, the full-$d$ Schwinger contact identity
+\begin{equation}\label{eq:bg:sdcontact}
+\mathcal F^{(4)}_{\mathrm{route}} +\mathcal C^{(d)}_{\mathrm{source}} +\mathcal C^{(d)}_{\mathrm{neighbor}}=0 \qquad(\mul^{2}=0)
+\end{equation}
+holds before the evanescent remainder is extracted. The six gauge--matter routes give the following signed traces
+(full, longitudinal, transverse; per Euclidean chirality $\pm$), reproduced identically at two independent
+external-momentum samples:
+\begin{center}
+\begin{tabular}{ccrrrrrr}
+\hline
+route & permutation & $-$ full & $-$ long. & $-$ trans. & $+$ full & $+$ long. & $+$ trans.\\
+\hline
+001 & $(0,1,2)$ & $-512$  & $1024$  & $-1536$ & $1024$ & $1024$  & $0$\\
+002 & $(0,2,1)$ & $-1024$ & $-1024$ & $0$     & $0$    & $-512$  & $512$\\
+003 & $(1,0,2)$ & $-1024$ & $-1024$ & $0$     & $512$  & $-512$  & $1024$\\
+004 & $(2,0,1)$ & $-512$  & $512$   & $-1024$ & $1024$ & $1024$  & $0$\\
+005 & $(1,2,0)$ & $-1024$ & $-512$  & $-512$  & $0$    & $0$     & $0$\\
+006 & $(2,1,0)$ & $0$     & $0$     & $0$     & $1536$ & $0$     & $1536$\\
+\hline
+\end{tabular}
+\end{center}
+The per-route coefficients of the master unit, $-3/8,-1/4,-3/8,-3/8,-1/4,-3/8$ in the order of the table, sum to
+$-2$; combined with the signed color word $-f^{ACD}f^{BCE}$ carried by the gauge--matter orbit before assembly,
+this supplies the $+2$ of paragraph 6.
+
+\paragraph{5. Evanescent extraction.} On every marked edge $e$ of every route the two metric splits of
+Section~\ref{sec:superspace:cutting} give
+\begin{equation}\label{eq:bg:edge}
+\frac{r_{e,d}^{2}\,\mathcal R_{e}}{D_{0}D_{1}D_{2}} -\frac{\mathcal R_{e}}{\prod_{j\neq e}D_{j}}=0, \qquad \frac{\bar r_{e}^{\,2}\,\mathcal R_{e}}{D_{0}D_{1}D_{2}} -\frac{\mathcal R_{e}}{\prod_{j\neq e}D_{j}} =\frac{\mul^{2}\,\mathcal R_{e}}{D_{0}D_{1}D_{2}} ,
+\end{equation}
+the numerator-weighted form of the exact cutting-failure identity~\eqref{eq:ss:cuttingfailure}; no graph-specific
+$(4-d)$ factor is inserted. With the ordered Feynman parametrization of \eqref{eq:ss:feynman}, the numerator
+integral is
+\begin{equation}\label{eq:bg:i2}
+I_{\ell^{2}}(\Delta) :=\mu^{2\epsilon}\!\int\!\frac{d^{d}\ell}{(2\pi)^{d}}\, \frac{\ell_{d}^{2}}{(\ell_{d}^{2}+\Delta)^{3}} =J_{2}-\Delta J_{3}
+\end{equation}
+in the notation of \eqref{eq:ss:Jn}, and the evanescent master integral of
+\eqref{eq:ss:masterintegral}--\eqref{eq:ss:masterproof} reads
+\begin{equation}\label{eq:bg:jmu2}
+J_{\mu^{2}} :=\mu^{2\epsilon}\!\int\!\frac{d^{d}\ell}{(2\pi)^{d}}\, \frac{\mul^{2}}{(\ell_{d}^{2}+\Delta)^{3}} =\frac{4-d}{d}\,I_{\ell^{2}} =\frac{1}{32\pi^{2}} .
+\end{equation}
+For the two-matter route the contact sum rule and evanescent probe are
+\begin{equation}\label{eq:bg:sumrule}
+\mathcal F^{\mathrm{DRED}}_{b>\gamma} +\mathcal C^{(d)}_{0}+\mathcal C^{(d)}_{1} =8\mul^{2}\big(\mathcal R_{0}-\mathcal J_{1}\big) =-1024\,\mul^{2}\,\mathfrak b(p) ,
+\end{equation}
+collapsing to $(-1024\,p_{\dot2},\,+1024\,p_{\dot1})$ on the two dotted spinor components (the ordering convention of
+the recorded orbit replay), with $r_{1}-r_{0}=p$ by momentum conservation, so that $\mathfrak b(r_{1})-\mathfrak
+b(r_{0})=\mathfrak b(p)$. The reversed direction gives $8\mul^{2}(\mathcal R_{2}-\mathcal R_{1})$ with probe
+$(-1024\,q_{\dot2},\,+1024\,q_{\dot1})$, and the zero-source-momentum check at $q=-p$ returns the same magnitude.
+The two superpotential routes are exact zeros,
+\begin{equation}\label{eq:bg:tmh}
+T_{MH}^{(1)}=T_{MH}^{(2)}=0 ,
+\end{equation}
+each with vanishing longitudinal, transverse, and full projected polynomials.
+
+\paragraph{6. Pole cancellation.} In the two-matter orbit the parent triangle and the seagull contribute, in their
+$I_{\ell^{2}}$ parts,
+\begin{equation}\label{eq:bg:tmmpole}
+\Gamma^{\triangle}_{TMM}\Big|_{I_{\ell^{2}}}=-\frac8d\,I_{\ell^{2}}, \qquad \Gamma^{I_{0}S_{m4}}_{TMM}\Big|_{I_{\ell^{2}}}=+2\,I_{\ell^{2}} \quad\Longrightarrow\quad \Big(-\frac84+2\Big)I_{\ell^{2}}=0 \quad(d=4) .
+\end{equation}
+In DRED the same pair leaves
+\begin{equation}\label{eq:bg:tmmdred}
+\Gamma^{\mathrm{DRED}}_{TMM}\Big|_{\mathrm{local}} =\Big(2-\frac8d\Big)I_{\ell^{2}} =\frac{2d-8}{d}\,I_{\ell^{2}} =-2\,\frac{4-d}{d}\,I_{\ell^{2}} =-2J_{\mu^{2}} \quad\Longrightarrow\quad \h g^{2}\,(-2)J_{\mu^{2}} =-\frac{\h g^{2}}{16\pi^{2}} .
+\end{equation}
+The gauge--matter orbit pairs its parent triangle with both the nonlinear-source bubble and the seagull:
+\begin{equation}\label{eq:bg:tmpole}
+\Gamma^{\triangle}_{TGM}\Big|_{I_{\ell^{2}}}=+\frac8d\,I_{\ell^{2}}, \quad \Gamma^{I_{1}S_{m3}}_{TGM}\Big|_{I_{\ell^{2}}}=-I_{\ell^{2}}, \quad \Gamma^{I_{0}S_{m4}}_{TGM}\Big|_{I_{\ell^{2}}}=-I_{\ell^{2}} \quad\Longrightarrow\quad \Big(\frac84-1-1\Big)I_{\ell^{2}}=0 \quad(d=4) ,
+\end{equation}
+\begin{equation}\label{eq:bg:tmdred}
+\Gamma^{\mathrm{DRED}}_{TGM}\Big|_{\mathrm{local}} =\Big(\frac8d-2\Big)I_{\ell^{2}} =\frac{8-2d}{d}\,I_{\ell^{2}} =+2\,\frac{4-d}{d}\,I_{\ell^{2}} =+2J_{\mu^{2}} \quad\Longrightarrow\quad \h g^{2}\,(+2)J_{\mu^{2}} =+\frac{\h g^{2}}{16\pi^{2}} .
+\end{equation}
+The remaining order-$g^{2}$ rows vanish: the $X_{3}$ source tadpole is scaleless,
+\begin{equation}\label{eq:bg:tadpole}
+\langle I_{2}\rangle_{0} \;\supset\; \int\!\frac{d^{d}k}{(2\pi)^{d}}\,\frac{(k^{2})^{n}}{k^{2}}=0 ;
+\end{equation}
+the superpotential routes vanish by \eqref{eq:bg:tmh}; and the gauge, gauge-fixing, Faddeev--Popov, and
+Nielsen--Kallosh rows have zero color trace in this sector and contain no $J_{\mu^{2}}$ remainder. The
+Euler-current and explicit-current rows of the outer reduction of the unit insertion
+$X$, $\nabla_{-}X=-\nabla_{+}(\delta
+S/\delta\cV)-2i\sqrt2\,(\beta_{s}\!\times\!\gamma^{s})$ (flavor-summed), remain separate until their ports, denominators,
+and edge tags are matched:
+\begin{equation}\label{eq:bg:current}
+E_{\mathrm{cur}}:\ +2i\ \text{on}\ D_{0}D_{1}, \qquad X_{\mathrm{cur}}:\ -2i\ \text{on}\ D_{0}D_{1}, \qquad (+2i-2i)\,K_{\mathrm{cur}}(k)=0 ,
+\end{equation}
+(the $\pm2i$ are quoted in the recorded machine units of the current rows,
+i.e. before the $\sqrt2$ of the letter normalization in the reduction above),
+with no marked inverse edge on either row (selected square $\varnothing$); this pairing vanishes before loop
+integration and does not produce the factor $1/2$ below.
+
+\begin{remark}[The occurrence decomposition]\label{rem:bg:occurrence}
+An earlier replay of this family transported both inverse-square rows $\bar r_{0}^{2}-r_{0,d}^{2}=\mul^{2}$ and
+$\bar r_{1}^{2}-r_{1,d}^{2}=\mul^{2}$ to independent nonlinear descendants and recorded
+$|\Gamma_{\mathrm{old}}|=4J_{\mu^{2}}$, twice the accepted value. The complete orbit shows that these are two
+decompositions of one metric pole orbit, so the complete value is $|\Gamma_{\mathrm{complete}}|=2J_{\mu^{2}}$: the
+factor $1/2$ is the occurrence-decomposition correction, not the current-pair cancellation of
+\eqref{eq:bg:current}. An external review of this family proposing a different repair was rejected for an
+arithmetic gap; the occurrence decomposition above is the adjudicated mechanism.
+\end{remark}
+
+\paragraph{7. Final result.} In the ordered basis
+\begin{equation}\label{eq:bg:basis}
+\big(e_{1},e_{2}\big)^{DE} :=\Big((\partial_{\dot\alpha}\gamma^{r})^{D}(\partial^{\dot\alpha}c)^{E},\; (\partial_{\dot\alpha}c)^{D}(\partial^{\dot\alpha}\gamma^{r})^{E}\Big) =\Big(\langle\gamma^{r},\partial c\rangle,\, \langle\partial c,\gamma^{r}\rangle\Big)^{DE}
+\end{equation}
+the two surviving orbits of paragraph 6 sum to the independent coefficient pairs
+\begin{equation}\label{eq:bg:coeffs}
+\mathbf c_{b>\gamma^{r}}=(-1,+1), \qquad \mathbf c_{\gamma^{r}>b}=(-1,+1)
+\end{equation}
+in units of $(\h g^{2}/16\pi^{2})\,f^{ACD}f^{BCE}$: for the forward direction the two-matter orbit contributes
+$-1$ on $e_{1}$ and the gauge--matter orbit $+1$ on $e_{2}$; the reversed direction exchanges the orbit--word
+assignment and returns the same pair. Equivalently, in the unit normalization $X=\nabla_{+}\cW_{+}$,
+$Y=\widetilde\Phi^{r}$, $D_{\dot\alpha}=\bcW_{\dot\alpha}$ of paragraphs 1--6,
+\begin{equation}\label{eq:bg:unitresult}
+\nabla_{-}\big(X^{A}Y^{B}\big)\Big|_{\mathrm{1\text{-}loop}} =\frac{\h g^{2}}{16\pi^{2}}\,f^{ACD}f^{BCE}\, \Big[D_{\dot\alpha}^{D}\big(\partial^{\dot\alpha}Y\big)^{E} -\big(\partial_{\dot\alpha}Y\big)^{D}D^{E\dot\alpha}\Big] .
+\end{equation}
+Restoring the letters of Definition~\ref{def:ss:letters} --- one insertion factor $-i/\sqrt2$ from
+$b=-(i/\sqrt2)X$, none from $\gamma^{r}=Y$, and $D_{\dot\alpha}=-i\,\partial_{\dot\alpha}c$ from
+$\partial_{\dot\alpha}c=i\bcW_{\dot\alpha}$ on each output word ---
+\begin{equation}\label{eq:bg:conversion}
+\nabla_{-}\big(b^{A}\gamma^{rB}\big) =-\frac{i}{\sqrt2}\cdot\frac{\h g^{2}}{16\pi^{2}}\,f^{ACD}f^{BCE}\, (-i)\,\big\{\langle\partial c,\gamma^{r}\rangle -\langle\gamma^{r},\partial c\rangle\big\}^{DE} ,
+\end{equation}
+and $(-i/\sqrt2)(-i)=-1/\sqrt2$ gives the channel formula
+\begin{equation}\label{eq:bg:final}
+\boxed{\; \nabla_{-}\big(b^{A}\gamma^{rB}\big) =\nabla_{-}\big(\gamma^{rA}b^{B}\big) =-\frac{\h g^{2}}{16\sqrt2\,\pi^{2}}\,f^{ACD}f^{BCE}\, \big\{\langle\partial c,\gamma^{r}\rangle -\langle\gamma^{r},\partial c\rangle\big\}^{DE} .\;}
+\end{equation}
+This is row \eqref{eq:ss:ch-bgamma} of the channel table. The two orderings are equal for a one-line reason: both
+letters are Grassmann-even, so the graded Leibniz rule gives no Koszul sign under exchange, and
+$\nabla_{-}\gamma^{r}=0$, so both insertions expand into the same source orbit with reversed attachments --- and
+the two independent replays return the same ordered bracket, as \eqref{eq:bg:coeffs} records.
+
+\paragraph{8. Holomorphic-twist comparison.} Budzik and Kulp compute the one-loop shift of the holomorphic supercharge
+on the same letter pair (their equation (3.67))~\cite{BK}:
+\begin{equation}\label{eq:bg:bk}
+Q_{1}\big(b^{A}(\gamma^{I})^{B}\big) =\kappa^{2}f_{ACD}f_{BCE}\left[ \partial_{\dot\alpha}c^{D}\,\partial^{\dot\alpha}(\gamma^{I})^{E} -\partial_{\dot\alpha}(\gamma^{I})^{D}\,\partial^{\dot\alpha}c^{E}\right] .
+\end{equation}
+The output word is exactly $\langle\partial c,\gamma^{r}\rangle-\langle\gamma^{r},\partial c\rangle$: translating
+\eqref{eq:bg:bk} into the present alphabet, the coefficient pair in the ordered basis \eqref{eq:bg:basis} is $(-1,+1)$,
+in word-by-word agreement with \eqref{eq:bg:coeffs}, and the raw ratio to the printed zero-shift row is $1$. On the
+holomorphic-twist side the row is obtained by the $\mathfrak{psl}(3|3)$ descent
+$Q_{1}(b\gamma^{I})=-Q_{+}^{I}Q_{1}(bc)$ from the $(b,c)$ channel.
+
+\begin{remark}[Status of the comparison]\label{rem:bg:ht}
+The reversed row $Q_{1}((\gamma^{I})^{A}b^{B})$ is not printed in~\cite{BK}; the $(\gamma^{r},b)$ channel above is
+an independent computation, not a quotient of the forward row. The comparison of this paragraph is an after-check
+only: no coefficient of~\cite{BK} enters the derivation in paragraphs 1--7, and the agreement is a cross-check, not
+an internal completeness proof of the graph census.
+\end{remark}
+
+\begin{remark}[Recorded granularity]\label{rem:bg:gaps}
+The sources record the stage outputs of the $D$-algebra --- traces, residuals, probes, and the table above --- but
+not the index-level intermediate spinor manipulations of the seven surviving routes; accordingly
+\eqref{eq:bg:tmmnum}--\eqref{eq:bg:sdcontact} display the recorded outputs of each step rather than unattributed
+intermediate lines, and Figure~\ref{fig:bg:triangle} is drawn from the recorded edge routings and the vertex
+slot structure.
+\end{remark}
+

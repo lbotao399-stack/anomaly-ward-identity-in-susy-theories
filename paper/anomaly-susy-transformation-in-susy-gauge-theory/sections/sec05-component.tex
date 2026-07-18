@@ -1,0 +1,275 @@
+% sec05-component.tex -- pure body LaTeX; shared macros from main.tex only.
+\section{The component Feynman-diagram approach}\label{sec:component}
+
+\subsection{The program: component quantization of the same action}%
+\label{sec:component:program}
+
+The one-loop anomalous supersymmetry Ward identity of this paper was derived in
+Euclidean $\mathcal N=1$ superspace (Section~\ref{sec:superspace}). The present
+section develops the parallel component-field approach: the same Euclidean
+action of Sections~\ref{sec:notation} and \ref{sec:gaugebv}, expanded in
+component fields and quantized by ordinary Feynman diagrams. An independent
+component check is desirable for three reasons: the component expansion makes
+the anomaly directly readable as a bottom-component transformation law; the
+off-shell formulation carries an off-shell Noether current for the
+supersymmetry, in whose divergence the anomaly would appear as an
+Euler-operator insertion, checkable term by term \cite{WeinbergIII,GGRS}; and
+ordinary Wick diagrams, regulable by dimensional reduction \cite{SiegelDRED},
+give a graph-by-graph cross-check of the superspace Schwinger--Dyson
+derivation, with no superspace $D$-algebra anywhere in the loop evaluation.
+
+The component content of the theory is the $\mathcal N=1$ vector multiplet
+$(A_m,\lambda,D)$ together with three adjoint chiral multiplets
+$(\phi_r,\psi_r,F_r)$, $r=1,2,3$, and their independent Euclidean antichiral
+partners $(\widetilde\phi_r,\widetilde\psi_r,\widetilde F_r)$ and
+$\widetilde\lambda$: tilded and untilded fields are independent integration
+variables in Euclidean signature and become Lorentzian conjugates only after a
+real integration cycle is selected. With the color commutator
+$[X,Y]^A:=f^{BCA}X^BY^C$ and $\kappa_{AB}=\delta_{AB}$
+(Section~\ref{sec:notation}), the exact Euclidean off-shell $\mathcal N=4$
+component Lagrangian is
+\begin{equation}\label{eq:05:offshell}
+\boxed{
+\begin{aligned}
+\mathcal L_{E,\mathrm{off}}^{(4)}={}&
+\frac{1}{g^{2}}\delta_{AB}\Big[
+\frac14 F_{mn}^{A}F_{mn}^{B}
++\widetilde\lambda^{A}\bar\sigma_E^{m}\mathcal D_m\lambda^{B}
+-\frac12 D^{A}D^{B}
++(\mathcal D_m\widetilde\phi_r)^{A}(\mathcal D_m\phi_r)^{B}
++\widetilde\psi_r^{A}\bar\sigma_E^{m}\mathcal D_m\psi_r^{B}
+-\widetilde F_r^{A}F_r^{B}
+-iD^{A}[\phi_r,\widetilde\phi_r]^{B}\Big]\\
+&-\frac{\sqrt2}{g^{2}}f^{ABC}
+\big(\widetilde\phi_r^{A}\psi_r^{B}\lambda^{C}
++\phi_r^{A}\widetilde\psi_r^{B}\widetilde\lambda^{C}\big)
++\frac{1}{\sqrt2\,g^{2}}\varepsilon_{rst}f^{ABC}
+\big(F_r^{A}\phi_s^{B}\phi_t^{C}
++\widetilde F_r^{A}\widetilde\phi_s^{B}\widetilde\phi_t^{C}
+-\phi_t^{A}\psi_r^{B}\psi_s^{C}
+-\widetilde\phi_t^{A}\widetilde\psi_r^{B}\widetilde\psi_s^{C}\big),
+\end{aligned}}
+\end{equation}
+plus a topological term that plays no role below and is omitted from the
+display. Here $D^A$ is the vector-multiplet auxiliary scalar (not a
+derivative), $\bar\sigma_E^m$ are the Euclidean sigma matrices, and repeated
+flavor indices are summed. Eliminating the auxiliaries through
+$D=-i[\phi_r,\widetilde\phi_r]$,
+$\widetilde F_r=\tfrac{1}{\sqrt2}\varepsilon_{rst}[\phi_s,\phi_t]$,
+$F_r=\tfrac{1}{\sqrt2}\varepsilon_{rst}[\widetilde\phi_s,\widetilde\phi_t]$
+gives the on-shell component action. The two Yukawa families
+$-\frac{\sqrt2}{g^2}f^{ABC}\widetilde\phi_r^A\psi_r^B\lambda^C$ and
+$-\frac{\sqrt2}{g^2}f^{ABC}\phi_r^A\widetilde\psi_r^B\widetilde\lambda^C$
+in \eqref{eq:05:offshell} are the only vertices carrying the fields of the
+anomaly; they are the vertices from which a naive ordinary component
+derivation would have to be built (Section~\ref{sec:component:accepted}).
+
+The component framework also locks the BV--BRST structure exactly. With chiral
+and antichiral Faddeev--Popov ghost superfields $c$ and $\widetilde c$, both of
+ghost number $+1$, the BRST differential acts on the unrestricted vector
+prepotential $\cV$ and the matter superfields as
+\begin{equation}\label{eq:05:brst}
+\boxed{
+s\,e^{\cV}=i\widetilde c\,e^{\cV}-i e^{\cV}c,\quad
+s\,c=ic^{2},\quad
+s\,\widetilde c=i\widetilde c^{\,2},\quad
+s\,\Phi_r=ic\,\Phi_r,\quad
+s\,\widetilde\Phi_r=-i\widetilde\Phi_r\,\widetilde c.}
+\end{equation}
+This differential is nilpotent, $s^2=0$. The minimal Batalin--Vilkovisky action
+obeys the classical master equation and, after the finite-cutoff regulator
+insertion, the order-by-order quantum master equation \cite{BV}. Gauge fixing
+uses a nonminimal sector with the antighost $\bar c$ and the gauge functions
+$\mathcal F_\pm(\cV)=-\tfrac14\bcD^{2}\cV,\,-\tfrac14\cD^{2}\cV$;
+the Wess--Zumino surface is not imposed before gauge fixing.
+
+\begin{remark}[Partial scope of the component Feynman rules]%
+\label{rem:05:partialscope}
+Locked exactly are the component actions, the BV--BRST structure, and the
+all-order primitive graph grammar with labeled-graph weights; this grammar
+becomes a numerical Feynman rule only after every edge inverse and integration
+cycle is locked. The Fermi--Feynman gauge-averaged propagators exist only
+conditionally: the corresponding gauge-fixing kernel contains $\BoxE^{-1}$ and
+is nonlocal, so an admissible completed perturbative slice is not claimed
+(status \texttt{PASS\_EXACT\_PARTIAL\_SCOPE}). The accepted superspace
+computation of Section~\ref{sec:superspace} therefore adopts the
+Fermi--Feynman Gaussian average as a recorded scheme decision and keeps the
+Nielsen--Kallosh factor as an external, field-independent measure. Former
+claims of complete component momentum-space Feynman rules are
+\texttt{NOT\_ACCEPTED\_COMPLETE\_FEYNMAN\_RULES}.
+\end{remark}
+
+This component approach is one of four mutually independent computations into
+which the proof program is organized: signature (Euclidean or Lorentzian) times
+formulation (superspace or component). Each works from the shared frozen
+conventions and its own derivations only, and results are compared only at the
+final canonical level. Gating rules order them: the Euclidean component
+computation begins once the conventions are frozen, the Euclidean superspace
+one starts after the Euclidean component canonical result is locked, and the
+two Lorentzian ones start only after a Euclidean bridge is frozen. The accepted
+component statement below is in fact obtained as the bottom projection of the
+Euclidean superspace result---explicitly not as an independent component-box
+derivation.
+
+\subsection{The accepted result: bottom projection of the
+\texorpdfstring{$(\beta,\gamma)$}{(beta,gamma)} anomaly}%
+\label{sec:component:accepted}
+
+Section~\ref{sec:superspace} establishes, for the ordered letter pair
+$(\beta_r,\gamma^s)$ and equally for the reversed ordering
+$(\gamma^s,\beta_r)$, the exact one-loop identity
+\begin{equation}\label{eq:05:superfieldBC}
+\nabla_-\!\big(\beta_r^{A}\gamma^{sB}\big)\Big|_{\text{1-loop}}
+=-\frac{\h g^{2}}{16\sqrt2\,\pi^{2}}\,\delta_{rs}\,f^{ACD}f^{BCE}\,
+\langle\partial c^{D},\partial c^{E}\rangle ,
+\end{equation}
+where $\langle X,Y\rangle:=(\partial_{\dot\alpha}X)(\partial^{\dot\alpha}Y)$
+is the dotted pairing and $\nabla_-$ is the anomalous frame component of the
+gauge-covariant spinor derivative. Its component content is read off by bottom
+projection. The bottom components of the letters are
+\begin{equation}\label{eq:05:bottomproj}
+\beta_r^{A}\big|=\psi_{r+}^{A},
+\qquad
+\gamma^{sB}\big|=\widetilde\phi_s^{B},
+\qquad
+\partial_{\dot\alpha}c^{D}\big|=-\widetilde\lambda_{\dot\alpha}^{D},
+\end{equation}
+where $\psi_{r+}$ is the $+$-frame bottom component of the $r$-th matter Weyl
+fermion, $\widetilde\phi_s$ the bottom scalar of the antichiral multiplet, and
+$\widetilde\lambda$ the dotted gaugino. The component variation $Q_-$ is the
+bottom action induced by the same locked $\nabla_-$ acting on the letters; no
+independent rephasing is introduced. The dotted pairing projects as
+\begin{equation}\label{eq:05:pairingproj}
+\langle\partial c^{D},\partial c^{E}\rangle\Big|
+=\big(\partial_{\dot\alpha}c^{D}\big)\big(\partial^{\dot\alpha}c^{E}\big)\Big|
+=\widetilde\lambda_{\dot\alpha}^{D}\widetilde\lambda^{E\dot\alpha}.
+\end{equation}
+Combining \eqref{eq:05:superfieldBC}--\eqref{eq:05:pairingproj} gives the
+accepted component formula
+\begin{equation}\label{eq:05:bccomponent}
+\boxed{
+Q_-\!\left(\psi_{r+}^{A}\widetilde\phi_s^{B}\right)\Big|_{\text{1-loop}}
+=-\frac{\sqrt2\,\h g^{2}}{32\pi^{2}}\,\delta_{rs}\,f^{ACD}f^{BCE}\,
+\widetilde\lambda_{\dot\alpha}^{D}\widetilde\lambda^{E\dot\alpha}.}
+\end{equation}
+
+\begin{remark}[Status of the boxed formula]\label{rem:05:status}
+Equation \eqref{eq:05:bccomponent} is an exact projection of the accepted
+superfield result of Section~\ref{sec:superspace}, not an independent
+component-box derivation. It fixes the former free sign of the component-box
+proposal to $-1$, and the loop order contains exactly one power of $\h$.
+\end{remark}
+
+The dotted gaugino bilinear on the right of \eqref{eq:05:bccomponent} has a
+color symmetry that constrains every component realization. With
+$\epsilon^{\dot1\dot2}=+1$, define
+\begin{equation}\label{eq:05:gauginoS}
+S^{DE}:=\widetilde\lambda_{\dot\alpha}^{D}\widetilde\lambda^{E\dot\alpha}
+=\widetilde\lambda_{\dot1}^{D}\widetilde\lambda_{\dot2}^{E}
+-\widetilde\lambda_{\dot2}^{D}\widetilde\lambda_{\dot1}^{E},
+\qquad S^{ED}=S^{DE},
+\end{equation}
+where the second relation is Grassmann reordering. Consequently, any
+antisymmetric color coefficient $A_{DE}=-A_{ED}$ obeys
+\begin{equation}\label{eq:05:antisymm}
+A_{DE}S^{DE}=\frac12\big(A_{DE}+A_{ED}\big)S^{DE}=0:
+\end{equation}
+antisymmetric color words vanish, the former crossed word $W_{DE}-W_{ED}$
+gives zero, and a nonzero result for the ordered pair $(\beta,\gamma)$ must
+carry the symmetric color projection $f^{ACD}f^{BCE}S^{DE}$, which is indeed
+symmetric in $D\leftrightarrow E$.
+
+The evanescent tensor integrals behind the loop coefficient are standard
+dimensional-reduction integrals \cite{SiegelDRED}: with $d=4-2\epsilon$,
+$\Delta>0$, $\mul^{2}$ the evanescent part of the loop-momentum square, and
+$I_n(\Delta):=\int\frac{d^{d}\ell}{(2\pi)^{d}}\mul^{2}(\ell^{2}+\Delta)^{-n}$,
+\begin{equation}\label{eq:05:masterI}
+\lim_{\epsilon\to0}I_3(\Delta)=\frac{1}{32\pi^{2}},
+\qquad\lim_{\epsilon\to0}\Delta\,I_4(\Delta)=0.
+\end{equation}
+The tensor integral used in the former component-box evaluation is
+\begin{equation}\label{eq:05:Jint}
+J:=\frac1d\int\frac{d^{d}\ell}{(2\pi)^{d}}\frac{\mul^{2}\ell^{2}}{(\ell^{2}+\Delta)^{4}}
+=\frac1d\big[I_3(\Delta)-\Delta I_4(\Delta)\big],
+\qquad
+\lim_{\epsilon\to0}J=\frac{1}{128\pi^{2}},\qquad\lim_{\epsilon\to0}2J=\frac{1}{64\pi^{2}}.
+\end{equation}
+The first value is the tensor integral itself; the second includes the
+explicit factor $2$ from the four-dimensional sigma/Fierz numerator. The two
+numbers cannot be identified with each other, and their separation rejects the
+former component-box evaluation and fixes its free sign and loop-counting
+power.
+
+Why can the boxed formula \eqref{eq:05:bccomponent} not be reproduced by an
+ordinary component graph? The locked component quadratic action pairs scalars
+with scalars (the $(\phi,\widetilde\phi)$ kinetic term) and fermions with
+fermions (the $(\psi,\widetilde\psi)$ kinetic term), so the mixed propagators
+vanish exactly,
+\begin{equation}\label{eq:05:mixedprop}
+G_{\phi_r\widetilde\psi_s}=0,\qquad G_{\psi_r\widetilde\phi_s}=0.
+\end{equation}
+A naive ordinary Wick box or triangle built from the two Yukawa families of
+\eqref{eq:05:offshell}, with external bottoms $\psi_{r+}$, $\widetilde\phi_s$
+and an output pair $\widetilde\lambda\widetilde\lambda$, would need precisely
+these scalar--fermion converting propagators; by \eqref{eq:05:mixedprop} no
+such graph exists, and the ordinary two-Yukawa box is rejected as the parent of
+the $(\beta,\gamma)$ anomaly. (An earlier argument had incorrectly promoted
+this ordinary-Wick obstruction to a statement about the regulated density
+divergence.)
+
+What the nonzero $(\beta,\gamma)$ anomaly actually is, at the component level,
+is the regulated coincident Euler Jacobian, differentiated before the bottom
+projection:
+\begin{equation}\label{eq:05:eulerjacobian}
+\widetilde\Phi_s^{B}\,\frac{\vec\delta}{\delta\widetilde\Phi_r^{A}}
+\;\longrightarrow\;\delta_{rs}\,K_{-,\epsilon}^{AB}(z,z)
+\;\longrightarrow\;\delta_{rs}\,f^{ACD}f^{BCE}\,\bcW_{\dot\alpha}^{D}\bcW^{E\dot\alpha},
+\end{equation}
+with the regulated coincident kernel
+\begin{equation}\label{eq:05:kernelvalue}
+K_{-,\epsilon}^{AB}(z,z)\big|_{\bcW^{2}}
+=\frac{1}{32\pi^{2}}\,f^{ACD}f^{BCE}\,\bcW_{\dot\alpha}^{D}\bcW^{E\dot\alpha}.
+\end{equation}
+Any future component realization must prove equality with
+\eqref{eq:05:eulerjacobian}; a nonzero ordinary box cannot be substituted for
+it. The supporting orbit evaluation fixes every factor: the regulated
+Schwinger--Dyson equation for the source vector field
+$X_{rs}^{AB}=\widetilde\Phi_s^{B}\,\vec\delta/\delta\widetilde\Phi_r^{A}$
+shows that $r\neq s$ vanishes independently of any external target; the two
+opposite-sign superpotential occurrences have identical regulated contact
+kernels and cancel; the kinetic Euler occurrence is evaluated by
+\eqref{eq:05:masterI} with no graph-specific factor $4-d$; both color routings
+give the same tensor $f^{ACD}f^{BCE}$; and the interaction-copy factor is $1$.
+Since $\partial_{\dot\alpha}c=i\bcW_{\dot\alpha}$, the dotted bilinear in
+\eqref{eq:05:superfieldBC} is minus the $\bcW$ bilinear in
+\eqref{eq:05:kernelvalue}, which accounts for the overall sign of
+\eqref{eq:05:bccomponent}.
+
+\subsection{Open items}\label{sec:component:open}
+
+\begin{remark}[Open and blocked items in the component route]%
+\label{rem:05:open}
+Three component-route items remain outside the accepted result; none of them
+affects the boxed formula \eqref{eq:05:bccomponent}.
+\begin{enumerate}[label=(\roman*)]
+\item \textbf{The off-shell Noether identity is not accepted}
+(\texttt{NOT\_ACCEPTED\_NOETHER\_B1\_B4\_MISSING}): the complete Euler
+operators and the announced termwise checks B1--B4 are absent; only the sign
+pattern of the proposed right-hand side is on record, unverified, so a
+component-level off-shell supersymmetry current with a fully verified
+divergence identity does not exist.
+\item \textbf{The Lorentzian vector cycle is blocked}
+(\texttt{BLOCKED\_STEP3D\_LC\_VECTOR\_CYCLE}): the Lorentzian vector
+integration cycle remains unfixed, so no Lorentzian component graph
+calculation can start.
+\item \textbf{The target-seeded component sweep of the 81 ordered letter pairs
+is not accepted} (\texttt{NOT\_ACCEPTED}): the former sweep inherited the
+nonexistent ordinary two-Yukawa parent and classified pairs by comparison with
+a target-shaped table. The authoritative all-81 result is the target-blind
+superspace Schwinger-cut table of Section~\ref{sec:superspace}, with $29$
+nonzero and $52$ zero ordered pairs.
+\end{enumerate}
+The physical one-loop anomaly sector has no unresolved coefficient row; the
+open items above concern independent component re-derivations and the
+Lorentzian continuation only.
+\end{remark}

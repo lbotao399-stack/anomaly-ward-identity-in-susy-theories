@@ -1,0 +1,569 @@
+% sec04g-bc.tex — Section 4 subsection: the (β_r,γ^s)/(γ^s,β_r) channels
+% Writer: 作家_BG (Writer_BC). Body LaTeX only; shared macros live in main.tex.
+
+\subsection{The channels $(\beta_r,\gamma^s)$ and $(\gamma^s,\beta_r)$}%
+\label{sec:superspace:bc}
+
+The mixed matter family~\eqref{eq:ss:ch-betagamma} is structurally different
+from every other nonzero family: its anomaly is \emph{not} an ordinary parent
+graph. Every ordinary triangle parent of the ordered sources
+$(\nabla_{+}\Phi_{r},\widetilde\Phi^{s})$ can be enumerated, and each vanishes
+on the physical output word $\langle\partial c,\partial c\rangle$; the anomaly
+is instead the \emph{regulated coincident Euler Jacobian} --- the Schwinger
+density divergence $K_{-,\epsilon}^{AB}(z,z)$ of the kinetic Euler occurrence,
+evaluated through the cutting failure of Section~\ref{sec:superspace:cutting}
+and the antichiral symbol trace. We present the ordinary inventory first and
+prove its vanishing, then the Euler-Jacobian mechanism; conflating the two was
+the historical error diagnosed in Remark~\ref{rem:ss:bc:olderror}. As in the
+seed channel, the orbit is computed with the unit-normalized insertion
+$\nabla_{+}\Phi_{r}=\sqrt2\,\beta_{r}$; the letter normalization of
+Definition~\ref{def:ss:letters} is restored at the end.
+
+\paragraph{1. Ordinary graph inventory: the route census.}
+The ordinary one-matter-loop parents fall into two classes. The \emph{TMM}
+triangles (two matter edges and one edge carrying the full $d^{4}\theta$
+measure) give, for $r=s$, two routes: the vector-line bridge, whose output is
+a $\Phi\widetilde\Phi$ pair and which cannot carry two external antichiral
+field strengths, and the matter bridge, whose output is a pair of vector
+lines --- the only ordinary route that can carry the two $\partial c$ letters.
+For $r\neq s$ there is a single TMM route, the vector-line bridge, with no
+two-$\partial c$ output. The \emph{THH} triangles (whose chiral and antichiral
+measure edges are evaluated directly rather than replaced by the full measure)
+give, for $r=s$, two routes, both with flavor sign $+1$, and, for $r\neq s$, a
+single route with flavor sign $-1$; none carries the two-$\partial c$ output.
+Figure~\ref{fig:ss:bc-triangle} shows the representative parent. The primitive
+coupling weights before Grassmann projection are
+\begin{equation}\label{eq:ss:bc:weights}
+w_{\mathrm{TMM,\,matter}}=\frac{\h g^{2}}{4096},
+\qquad
+w_{\mathrm{TMM,\,vector}}=-\frac{\h g^{2}}{128},
+\qquad
+w_{\mathrm{THH}}=\frac{\h g^{2}}{2048},
+\qquad
+w_{\mathrm{Wick}}=\frac{1}{2!}(1+1)=1 ,
+\end{equation}
+from three matter propagators, $(1/16)^{3}$; from the vector line with its
+factor $2$ and sign, $-2(1/16)^{2}$; from two matter propagators and the
+$\bcW$ projector, $(1/16)^{2}(1/8)$; and from the quadratic Dyson coefficient
+times the two equivalent contraction assignments. These weights belong to the
+ordinary parents, which vanish on the physical word; the physical coefficient
+is fixed by the Schwinger orbit below.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}
+\coordinate (v0) at (90:1.6);
+\coordinate (v1) at (210:1.6);
+\coordinate (v2) at (330:1.6);
+\node[svertex,label=above:{\scriptsize composite source}] at (v0) {};
+\node[svertex] at (v1) {};
+\node[svertex] at (v2) {};
+\draw[sPhi] (v1) -- (v0) node[midway,left=3pt] {$r_{0}$};
+\draw[sPhi] (v2) -- (v1) node[midway,below=3pt] {$r_{1}$};
+\draw[sPhit] (v0) -- (v2) node[midway,right=3pt] {$r_{2}$};
+\draw[sleg] (v0) -- ++(125:1.35) node[pos=0.55,sinsert]{}
+  node[pos=1,above left=-2pt] {$\nabla_{+}\Phi_{r}$};
+\draw[sleg] (v0) -- ++(55:1.35)
+  node[pos=1,above right=-2pt] {$\widetilde\Phi^{s}$};
+\draw[sV] (v1) -- ++(210:1.3)
+  node[pos=1,below left=-2pt] {$\cV\ (\partial_{\dot\alpha}c)$};
+\draw[sV] (v2) -- ++(330:1.3)
+  node[pos=1,below right=-2pt] {$\cV\ (\partial_{\dot\alpha}c)$};
+\node at (3.5,0) {$=\;0$};
+\end{tikzpicture}
+\caption{The representative ordinary matter-triangle parent of the
+$(\beta_{r},\gamma^{s})$ family. The three edges are matter propagators with
+edge momenta $r_{0},r_{1},r_{2}$, denominators $D_{i}=r_{i,d}^{2}$. The two
+ordered sources sit at one composite-source vertex: the marked insertion
+$\nabla_{+}\Phi_{r}$ (filled node) and the antichiral leg
+$\widetilde\Phi^{s}$. The two output letters enter as the field-strength
+preimages $\bcW_{\dot\alpha}^{(1)}=-\tfrac18\cD^{2}\bcD_{\dot\alpha}\cV$ on
+the two vector legs at the two distinct remaining vertices (two distinct
+superspace points). Every ordinary parent of the family vanishes on the
+physical output word $\langle\partial c,\partial c\rangle$, as displayed;
+the kernels themselves are nonzero
+(Remark~\ref{rem:ss:bc:control}). The anomaly is instead the regulated
+coincident Euler Jacobian of the kinetic
+occurrence~\eqref{eq:ss:bc:kin}.}
+\label{fig:ss:bc-triangle}
+\end{figure}
+
+\begin{remark}[Machine-zero verdict with nonzero-kernel control]%
+\label{rem:ss:bc:control}
+An external replay of the route census confirms the counts ($2+2$ routes for
+$r=s$, $1+1$ for $r\neq s$, exactly one ordinary route able to carry the
+two-$\partial c$ word) and the physical-word projection: every ordinary
+parent --- all four $\partial c$-preimage assignments of the TMM triangles,
+the evanescent residuals, the THH routes, the vector bridge, and the
+nonlinear contact rows, in both orderings --- vanishes on
+$\langle\partial c,\partial c\rangle$. The kernels themselves are nonzero: a
+control evaluation of the same kernels on an off-physical test word returns a
+nonzero value for both orderings, so the zeros are projections, not zero
+kernels. Mechanically, two $\partial c$ letters cannot be saturated at a
+single superspace point --- all same-point products of their preimages
+vanish --- and the anomaly needs the two independent antichiral Fourier
+variables of the coincident kernel of step 9.
+\end{remark}
+
+\paragraph{2. The kinetic source expansion and the order-$\cV^{2}$ orbit.}
+The antichiral Euler operator was given in~\eqref{eq:ss:euler}:
+\begin{equation}\label{eq:ss:bc:euler}
+\frac{\delta S}{\delta\widetilde\Phi^{r}}
+=-\frac14\,\nabla^{2}\Phi_{r}
+-\frac{1}{\sqrt2}\,\varepsilon_{rtu}\,(\gamma^{t}\times\gamma^{u}) .
+\end{equation}
+Its kinetic piece is expanded covariantly \emph{before} any graph enumeration.
+With the undotted frame index $a=(+,-)$, the gauge connection and its
+expansion are
+\begin{equation}\label{eq:ss:bc:gamma}
+\Gamma_{a}:=e^{-\cV}\cD_{a}e^{\cV}
+=\cD_{a}\cV+\frac12[\cD_{a}\cV,\cV]+O(\cV^{3}),
+\qquad
+\nabla_{a}=\cD_{a}+\Gamma_{a} ,
+\end{equation}
+and the graded Leibniz expansion on the even column $\Phi_{r}$ gives
+\begin{equation}\label{eq:ss:bc:nablasq}
+\begin{aligned}
+\nabla^{2}\Phi_{r}
+&=(\cD^{a}+\Gamma^{a})(\cD_{a}\Phi_{r}+\Gamma_{a}\Phi_{r})\\
+&=\cD^{2}\Phi_{r}
++2\Gamma^{a}\cD_{a}\Phi_{r}
++(\cD^{a}\Gamma_{a})\Phi_{r}
++\Gamma^{a}\Gamma_{a}\Phi_{r} ,
+\end{aligned}
+\end{equation}
+using $\Gamma_{a}\cD^{a}=-\Gamma^{a}\cD_{a}$. Therefore
+$\tfrac12(\nabla^{2}\Phi_{r})\gamma^{s}
+=\mathcal I_{0}+\mathcal I_{1}+\mathcal I_{2}+O(\cV^{3})$ with
+\begin{align}
+\mathcal I_{0}&=\frac12(\cD^{2}\Phi_{r})\gamma^{s} ,
+\label{eq:ss:bc:I0}\\
+\mathcal I_{1}&=\Big[(\cD^{a}\cV)\cD_{a}\Phi_{r}
++\frac12(\cD^{2}\cV)\Phi_{r}\Big]\gamma^{s} ,
+\label{eq:ss:bc:I1}\\
+\mathcal I_{2}&=\Big[
+\frac12[\cD^{a}\cV,\cV]\cD_{a}\Phi_{r}
++\frac14\cD^{a}[\cD_{a}\cV,\cV]\Phi_{r}
++\frac12(\cD^{a}\cV)(\cD_{a}\cV)\Phi_{r}\Big]\gamma^{s} .
+\label{eq:ss:bc:I2}
+\end{align}
+Writing $M_{1}$ and $M_{2}$ for the $\cV$ and $\cV^{2}/2$ terms of the
+matter--gauge chain $\widetilde\Phi e^{\cV}\Phi$, the complete order-$\cV^{2}$
+regulated orbit is the direct sum
+\begin{equation}\label{eq:ss:bc:orbit}
+\boxed{\;
+\mathcal I_{0}\,\frac{1}{2!}M_{1}M_{1}
+\;\oplus\;
+\mathcal I_{1}M_{1}
+\;\oplus\;
+\mathcal I_{0}M_{2}
+\;\oplus\;
+\mathcal I_{2}\;}
+\end{equation}
+whose four rows are respectively the triangle parent, the nonlinear-source
+collapsed contact, the matter seagull, and the source seagull. Their covariant
+sum is the coincident kernel $K_{-}$ of step 9. The Schwinger source vector
+field of step 4 has no vector, ghost, or non-minimal component, so there is no
+gauge or ghost Jacobian orbit in this channel.
+
+\paragraph{3. The three occurrence tags.}
+The tree descendant of the unit-normalized insertion follows
+from~\eqref{eq:ss:treeduction}:
+\begin{equation}\label{eq:ss:bc:descendant}
+\nabla_{-}(\nabla_{+}\Phi_{r})
+=-2\,\frac{\delta S}{\delta\widetilde\Phi^{r}}
+-\sqrt2\,\varepsilon_{rtu}\,(\gamma^{t}\times\gamma^{u}) .
+\end{equation}
+It must be expanded into three \emph{separately tagged occurrences}:
+\begin{align}
+\mathcal I_{E,\mathrm{kin}}^{AB}
+&:=+\frac12(\nabla^{2}\Phi_{r})^{A}\,\gamma^{sB} ,
+\label{eq:ss:bc:kin}\\
+\mathcal I_{E,\mathrm{pot}}^{AB}
+&:=+\sqrt2\,\varepsilon_{rtu}\,(\gamma^{t}\times\gamma^{u})^{A}\,\gamma^{sB} ,
+\label{eq:ss:bc:epot}\\
+\mathcal I_{X,\mathrm{pot}}^{AB}
+&:=-\sqrt2\,\varepsilon_{rtu}\,(\gamma^{t}\times\gamma^{u})^{A}\,\gamma^{sB} ,
+\label{eq:ss:bc:xpot}
+\end{align}
+the kinetic Euler occurrence (containing the inverse kinetic edge), the
+Euler-potential occurrence, and the explicit-potential occurrence. The last
+two rows have identical regulated contact kernels and opposite source
+coefficients, and neither contains an inverse kinetic edge; they are retained
+until their regulated evaluation pairs them in step 7. Replacing the tagged
+descendant~\eqref{eq:ss:bc:descendant} by the single kinetic term
+$\tfrac12\nabla^{2}\Phi_{r}$ before regulation erases the occurrence tags and
+is not the computation performed here.
+
+\begin{remark}[No contribution from the gauge-current orbit]%
+\label{rem:ss:bc:gaugecurrent}
+The vector equation of motion of~\eqref{eq:ss:euler} contains the current
+$-2i(\Phi_{s}\times\widetilde\Phi^{s})$. Acting on it with $-\nabla_{+}$ and
+using $\nabla_{+}\widetilde\Phi^{s}=0$ gives
+$+2i\,(\nabla_{+}\Phi_{s}\times\widetilde\Phi^{s})$, which cancels the
+explicit outer contact $-2i\,(\nabla_{+}\Phi_{s}\times\widetilde\Phi^{s})$
+pointwise, for arbitrary independent external momenta, before any propagator
+or loop integration; the gauge-fixing functional has only vector ports and
+contributes nothing on this source. Hence no gauge-current or gauge-fixing
+Jacobian feeds the $(\beta_r,\gamma^s)$ family: the entire anomaly is the
+matter Euler Jacobian below.
+\end{remark}
+
+\paragraph{4. The Schwinger vector field and the surviving contraction.}
+For the ordered source $(\beta_{r}^{A},\gamma^{sB})$ the Schwinger vector
+field is the antichiral field redefinition
+\begin{equation}\label{eq:ss:bc:X}
+X_{rs}^{AB}(z)
+:=\widetilde\Phi^{sB}(z)\,
+\frac{\vec\delta}{\delta\widetilde\Phi^{rA}(z)} ,
+\end{equation}
+with support only on the integrated $\widetilde\Phi$ block: its vector,
+Faddeev--Popov ghost, Nielsen--Kallosh and non-minimal components vanish
+identically. The regulated Schwinger--Dyson identity of
+Section~\ref{sec:superspace:sd} applied to $X_{rs}^{AB}$ gives
+\begin{equation}\label{eq:ss:bc:sd}
+0=\Big\langle
+\operatorname{div}_{E,\epsilon}X_{rs}^{AB}
+-\frac{1}{\h}\,X_{rs}^{AB}(S_{E})\Big\rangle,
+\qquad
+\Big\langle\gamma^{sB}\,
+\Big(\frac{\delta S}{\delta\widetilde\Phi^{r}}\Big)^{A}\Big\rangle
+=-\h g^{2}\,
+\Big\langle\operatorname{div}_{E,\epsilon}X_{rs}^{AB}\Big\rangle ,
+\end{equation}
+the absorbed factor $g^{-2}$ of the frame of Section~\ref{sec:gaugebv} being
+restored in this step only. The differentiated insertion fixes the flavor
+tensor before any loop calculation:
+\begin{equation}\label{eq:ss:bc:div}
+\frac{\vec\delta\,\widetilde\Phi^{sB}(z)}{\delta\widetilde\Phi^{rA}(z)}
+=\delta_{rs}\,\delta_{A}{}^{B}\,\delta_{-},
+\qquad
+\operatorname{div}_{E,\epsilon}X_{rs}^{AB}
+=\delta_{rs}\,K_{-,\epsilon}^{AB}(z,z) ,
+\end{equation}
+with $\delta_{-}:=-\tfrac14\cD^{2}\delta_{e}$ the constrained coincident
+antichiral delta and $K_{-,\epsilon}^{AB}(z,z)$ the coincident Euler-Jacobian
+kernel. Thus $r\neq s$ vanishes independently of any external target. This
+coincident self-contraction of the source pair is the only Wick contraction
+surviving in the channel; at second order in the interaction the Dyson--Wick
+weight is $\tfrac{1}{2!}(1+1)=1$, the two equivalent assignments of the two
+interaction copies cancelling the $1/2!$.
+
+\paragraph{5. The marked-edge $D$-algebra word.}
+The marked linear source carries the exact edge word
+\begin{equation}\label{eq:ss:bc:marked}
+\mathcal M_{B}(r_{e})\,\delta_{e}
+:=\cD_{-}\cD_{+}\bcD^{2}\cD^{2}\,\delta_{e}
+=\frac12\,\cD^{2}\bcD^{2}\cD^{2}\,\delta_{e}
+=8\,\bar r_{e}^{2}\,\cD^{2}\delta_{e} ,
+\end{equation}
+where the first equality uses $\cD_{-}\cD_{+}=\tfrac12\cD^{2}$ and the second
+is the four-dimensional spinor $D$-algebra square of the edge momentum.
+Dividing by the constrained matter-propagator factor $16D_{0}$,
+$D_{0}:=r_{e,d}^{2}$,
+\begin{equation}\label{eq:ss:bc:markedover}
+\frac{\mathcal M_{B}(r_{e})\,\delta_{e}}{16D_{0}}
+=\frac12\,\frac{\bar r_{e}^{2}}{D_{0}}\,\cD^{2}\delta_{e} .
+\end{equation}
+The full-$d$ Schwinger contact on the same edge is
+$\tfrac12\big(r_{e,d}^{2}/D_{0}\big)\cD^{2}\delta_{e}$, and their difference
+is
+\begin{equation}\label{eq:ss:bc:markeddiff}
+\frac12\,\frac{\mul^{2}}{D_{0}}\,\cD^{2}\delta_{e}
+=-2\,\frac{\mul^{2}}{D_{0}}\,\delta_{-} .
+\end{equation}
+\begin{remark}[Two recorded conventions for the spinor-square identity]%
+\label{rem:ss:bc:detsign}
+The square $\cD^{2}\bcD^{2}\cD^{2}\delta^{4}=16\det(r)\,\cD^{2}\delta^{4}$ of
+Section~\ref{sec:superspace:bb} (equation~\eqref{eq:ss:bb-projectorid}) and
+the half square $8\,\bar r_{e}^{2}\,\cD^{2}\delta_{e}$
+of~\eqref{eq:ss:bc:marked} are recorded with opposite signs relative to the
+same determinant $\det r=-\bar r^{\,2}$. The two verification engines use
+different superspace-derivative conventions --- one with real spinor
+derivatives, the other with $i$-loaded ones, under which the operator square
+scales by $i^{6}=-1$ --- and each machine-checks its own identity with its
+recorded sign ($+16\det(r)$, respectively $-16\det(r)$, for the full square).
+Each convention is used consistently within its own subsection, the physical
+coefficients of both channels were machine-verified independently, and no
+result is affected.
+\end{remark}
+The factor $2$ is the descendant factor of~\eqref{eq:ss:bc:descendant}; it is
+not an additional graph multiplicity.
+
+\paragraph{6. Cutting failure on the marked edge.}
+On the selected Euler edge the four-dimensional square exceeds the
+$d$-dimensional propagator inverse by the evanescent square,
+$\bar r_{e}^{2}=r_{e,d}^{2}+\mul^{2}$. If the $D$-algebra square were the full
+loop square, the Schwinger cut would be exact and the row would vanish:
+\begin{equation}\label{eq:ss:bc:exactcut}
+\frac{r_{e,d}^{2}}{D_{0}D_{1}D_{2}}-\frac{1}{D_{1}D_{2}}=0 .
+\end{equation}
+The spinor $D$-algebra supplies the four-dimensional square instead, so the
+universal cutting-failure identity~\eqref{eq:ss:cuttingfailure} leaves only
+\begin{equation}\label{eq:ss:bc:cutfail}
+\frac{\bar r_{e}^{2}}{D_{0}D_{1}D_{2}}-\frac{1}{D_{1}D_{2}}
+=\frac{\bar r_{e}^{2}-r_{e,d}^{2}}{D_{0}D_{1}D_{2}}
+=\frac{\mul^{2}}{D_{0}D_{1}D_{2}} .
+\end{equation}
+Replacing $\bar r_{e}^{2}$ by $r_{e,d}^{2}$ before this subtraction makes the
+expression identically zero and removes the anomaly.
+
+\paragraph{7. The potential-row pairing.}
+The two potential occurrences~\eqref{eq:ss:bc:epot} and~\eqref{eq:ss:bc:xpot}
+carry no inverse kinetic edge; their regulated evaluations
+$\mathcal R_{\epsilon}$ are ordinary contact rows built on one common kernel
+$K_{\mathrm{pot}}$, and their opposite source coefficients pair them exactly:
+\begin{equation}\label{eq:ss:bc:potpair}
+\mathcal R_{\epsilon}\,\mathcal I_{E,\mathrm{pot}}^{AB}
++\mathcal R_{\epsilon}\,\mathcal I_{X,\mathrm{pot}}^{AB}
+=\sqrt2\,K_{\mathrm{pot}}-\sqrt2\,K_{\mathrm{pot}}=0 .
+\end{equation}
+The kinetic Euler occurrence~\eqref{eq:ss:bc:kin} cannot be deleted with them:
+it contains the inverse edge, and its Schwinger cut fails by exactly the
+evanescent remainder~\eqref{eq:ss:bc:cutfail}.
+
+\paragraph{8. The antichiral projector and the symbol trace.}
+The external antichiral field strengths enter through the linearized preimage
+\begin{equation}\label{eq:ss:bc:preimage}
+\bcW_{\dot\alpha}^{(1)}=-\frac18\,\cD^{2}\bcD_{\dot\alpha}\cV ,
+\end{equation}
+and the locked antichiral projector of Section~\ref{sec:gaugebv}, normalized
+per closed projector,
+\begin{equation}\label{eq:ss:bc:projector}
+\frac{1}{16}\,\nabla^{2}\bcD^{2}U
+=\cD_{M}\cD^{M}U
+-(\bcD_{\dot\beta}U)\,\bcW^{\dot\beta}
+-\frac12\,U\,\nabla^{a}\cW_{a} ,
+\end{equation}
+($M$ the summed superspace derivative index of the locked projector)
+contributes its $\bcW^{2}$ coefficient through exactly two copies of the
+middle term, with squared coefficient $(-1)(-1)=+1$; the last term contains no
+odd antichiral Fourier variable and cannot saturate the trace below. Let
+$\bar\pi^{\dot1},\bar\pi^{\dot2}$ be the odd Fourier variables of the
+antichiral delta and define the even symbol
+\begin{equation}\label{eq:ss:bc:xi}
+\Xi_{D}:=\bcW_{\dot\alpha}^{D}\,\bar\pi^{\dot\alpha}
+=\bcW_{\dot1}^{D}\bar\pi^{\dot1}+\bcW_{\dot2}^{D}\bar\pi^{\dot2} .
+\end{equation}
+All four $\bcW$ and $\bar\pi$ generators are odd, so anticommuting them gives
+\begin{equation}\label{eq:ss:bc:xixi}
+\Xi_{D}\Xi_{E}
+=\big(
+\bcW_{\dot2}^{D}\bcW_{\dot1}^{E}
+-\bcW_{\dot1}^{D}\bcW_{\dot2}^{E}
+\big)\,\bar\pi^{\dot1}\bar\pi^{\dot2}
+=\big\langle\bcW^{D},\bcW^{E}\big\rangle\,\bar\pi^{\dot1}\bar\pi^{\dot2} ,
+\end{equation}
+the dotted pairing of~\eqref{eq:ss:bilinear}. With the Berezin rule
+$\int d\bar\pi^{\dot2}d\bar\pi^{\dot1}\,\bar\pi^{\dot1}\bar\pi^{\dot2}=1$, the
+exact dotted trace is
+\begin{equation}\label{eq:ss:bc:trace}
+\boxed{\;\int d^{2}\bar\pi\;\Xi_{D}\Xi_{E}
+=\big\langle\bcW^{D},\bcW^{E}\big\rangle .\;}
+\end{equation}
+For one color label,
+$\Xi_{D}^{2}=\bcW^{D\dot\alpha}\bcW_{\dot\alpha}^{D}\,
+\bar\pi^{\dot1}\bar\pi^{\dot2}$. The quadratic Dyson coefficient $1/2!$ and
+the four-dimensional Gaussian
+$\int\frac{d^{4}L}{(2\pi)^{4}}e^{-L^{2}/M^{2}}=\frac{M^{4}}{16\pi^{2}}$ fix
+the coincident quadratic coefficient at
+\begin{equation}\label{eq:ss:bc:gauss}
+\frac{1}{2!}\cdot\frac{1}{M^{4}}\cdot\frac{M^{4}}{16\pi^{2}}
+=\frac{1}{32\pi^{2}} ,
+\end{equation}
+the same normalization as the evanescent master
+integral~\eqref{eq:ss:masterintegral}.
+
+\paragraph{9. Color chains and the coincident kernel.}
+For the ordered source $(\beta_{r}^{A},\gamma^{sB})$ the open adjoint chain of
+the orbit is
+\begin{equation}\label{eq:ss:bc:color}
+(T_{D})^{A}{}_{Z}(T_{E})^{Z}{}_{C}\,\kappa^{CB}
+=-f_{DZA}f_{EBZ}
+=f_{AZD}f_{BZE}
+=f^{ACD}f^{BCE} ,
+\end{equation}
+with the summed index relabeled in the last step. The independently routed
+reverse source $(\gamma^{sA},\beta_{r}^{B})$ gives
+\begin{equation}\label{eq:ss:bc:colorrev}
+(T_{E})^{B}{}_{Z}(T_{D})^{Z}{}_{C}\,\kappa^{CA}
+=-f_{EZB}f_{DAZ}
+=f_{BZE}f_{AZD}
+=f^{ACD}f^{BCE} ,
+\end{equation}
+the same ordered tensor. Since the dotted pairing of two odd letters is
+symmetric (Section~\ref{sec:superspace:letters}), only the
+$(D\!\leftrightarrow\!E)$-symmetric part of the color tensor contributes.
+Combining the symbol trace~\eqref{eq:ss:bc:trace}, the color
+chain~\eqref{eq:ss:bc:color}, the cutting failure~\eqref{eq:ss:bc:cutfail},
+and the master value~\eqref{eq:ss:masterintegral}, the coincident kernel at
+quadratic order in the antichiral field strength is
+\begin{equation}\label{eq:ss:bc:kernel}
+\boxed{\;
+K_{-,\epsilon}^{AB}(z,z)\Big|_{\bcW^{2}}
+=\frac{1}{32\pi^{2}}\,f^{ACD}f^{BCE}\,
+\big\langle\bcW^{D},\bcW^{E}\big\rangle .\;}
+\end{equation}
+
+\paragraph{10. The evanescent master value and the tensor-integral pair.}
+The triangle master integral of the channel is the universal
+one~\eqref{eq:ss:masterintegral},
+\begin{equation}\label{eq:ss:bc:master}
+\lim_{\epsilon\to0}\mu^{2\epsilon}\!\int\!
+\frac{d^{\,4-2\epsilon}L}{(2\pi)^{4-2\epsilon}}\,
+\frac{\mul^{2}}{(L^{2}+\Delta)^{3}}
+=\frac{1}{32\pi^{2}} ,
+\end{equation}
+independent of the Feynman-parameter combination $\Delta$, so the anomaly is a
+polynomial in external momenta: a local operator. There is no graph-specific
+factor $4-d$; the finite number is entirely the evanescent square multiplying
+the logarithmic ultraviolet residue. Two further integrals belong to the
+component cross-check of Section~\ref{sec:component}: with
+$I_{n}(\Delta):=\int\frac{d^{d}\ell}{(2\pi)^{d}}\,
+\mul^{2}/(\ell^{2}+\Delta)^{n}$ one has
+$\lim_{\epsilon\to0}I_{3}(\Delta)=1/(32\pi^{2})$ and
+$\lim_{\epsilon\to0}\Delta I_{4}(\Delta)=0$, and the rank-two box-type pair
+\begin{equation}\label{eq:ss:bc:Jpair}
+J:=\frac1d\int\frac{d^{d}\ell}{(2\pi)^{d}}\,
+\frac{\mul^{2}\ell^{2}}{(\ell^{2}+\Delta)^{4}}
+=\frac1d\big[I_{3}(\Delta)-\Delta I_{4}(\Delta)\big],
+\qquad
+\lim_{\epsilon\to0}J=\frac{1}{128\pi^{2}},
+\qquad
+\lim_{\epsilon\to0}2J=\frac{1}{64\pi^{2}} .
+\end{equation}
+The first number is the tensor integral; the second includes the explicit
+factor $2$ of the four-dimensional sigma-matrix numerator. They cannot be
+identified with each other, and neither is the triangle
+master~\eqref{eq:ss:bc:master}: their role is to fix the free sign and the
+loop-counting power (exactly one power of $\h$) of the component projection
+quoted in step 13.
+
+\paragraph{11. Final result.}
+Since $\nabla_{-}\gamma^{s}=0$, only the descendant of the first letter acts.
+Assembling the three occurrences, the Schwinger identity~\eqref{eq:ss:bc:sd},
+the pairing~\eqref{eq:ss:bc:potpair}, and the kernel~\eqref{eq:ss:bc:kernel},
+\begin{equation}\label{eq:ss:bc:assembly}
+\begin{aligned}
+\nabla_{-}\big((\nabla_{+}\Phi_{r})^{A}\gamma^{sB}\big)
+\Big|_{\mathrm{1\text{-}loop}}
+&=\Big\langle\Big[
+-2\,\Big(\frac{\delta S}{\delta\widetilde\Phi^{r}}\Big)^{A}
+-\sqrt2\,\varepsilon_{rtu}(\gamma^{t}\times\gamma^{u})^{A}
+\Big]\gamma^{sB}\Big\rangle_{\!\mathrm{ev}}\\
+&=\Big\langle
+-2\,\Big(\frac{\delta S}{\delta\widetilde\Phi^{r}}\Big)^{A}
+\Big|_{\mathrm{kin}}\gamma^{sB}\Big\rangle_{\!\mathrm{ev}}
++\big(\sqrt2\,K_{\mathrm{pot}}-\sqrt2\,K_{\mathrm{pot}}\big)\\
+&=+2\,\delta_{rs}\,\h g^{2}\,
+K_{-,\epsilon}^{AB}(z,z)\Big|_{\bcW^{2}}\\
+&=2\,\delta_{rs}\,\h g^{2}\cdot\frac{1}{32\pi^{2}}\,
+f^{ACD}f^{BCE}\,\big\langle\bcW^{D},\bcW^{E}\big\rangle\\
+&=\delta_{rs}\,\frac{\h g^{2}}{16\pi^{2}}\,
+f^{ACD}f^{BCE}\,\big\langle\bcW^{D},\bcW^{E}\big\rangle .
+\end{aligned}
+\end{equation}
+The normalization trace is: Schwinger descendant $(-2)(-\h g^{2})=+2\h g^{2}$;
+coincident kernel $\tfrac{1}{2!}\cdot\tfrac{1}{16\pi^{2}}=\tfrac{1}{32\pi^{2}}$;
+product $2\h g^{2}/(32\pi^{2})=\h g^{2}/(16\pi^{2})$ --- exactly one power of
+$\h$, the universal one-loop coefficient. Restoring the letter normalization,
+$\beta_{r}=\tfrac{1}{\sqrt2}\nabla_{+}\Phi_{r}$ absorbs one factor $\sqrt2$,
+and $\partial_{\dot\alpha}c=i\bcW_{\dot\alpha}$ contributes $i^{2}=-1$ to the
+dotted pairing, so
+\begin{equation}\label{eq:ss:bc:result}
+\boxed{\;
+\nabla_{-}\big(\beta_{r}^{A}\gamma^{sB}\big),\quad
+\nabla_{-}\big(\gamma^{sA}\beta_{r}^{B}\big)
+=-\frac{\h g^{2}}{16\sqrt2\,\pi^{2}}\,f^{ACD}f^{BCE}\,
+\delta_{rs}\,\langle\partial c,\partial c\rangle^{DE} ,\;}
+\end{equation}
+exactly the row~\eqref{eq:ss:ch-betagamma} of the channel table. The two
+orderings are equal and independent: $|\gamma^{s}|=0$ and
+$\nabla_{-}\gamma^{s}=0$ give
+$\nabla_{-}(\gamma^{sA}\beta_{r}^{B})=\gamma^{sA}\nabla_{-}\beta_{r}^{B}$, and
+the independent reverse Schwinger vector field with the reverse color
+chain~\eqref{eq:ss:bc:colorrev} produces the same ordered tensor. The twelve
+flavor-off-diagonal pairs, $r\neq s$, are exact zeros by the $\delta_{rs}$
+of~\eqref{eq:ss:bc:div} --- the singlet contraction
+$\delta_{rs}\langle\partial c,\partial c\rangle$ has no off-diagonal support,
+census class (ii) of Section~\ref{sec:superspace:selection}.
+
+\begin{remark}[Where the ordinary-parent obstruction applies, and where it
+does not]\label{rem:ss:bc:olderror}
+The ordinary bottom-component census remains correct on its own terrain: the
+mixed quadratic blocks vanish,
+$G_{\phi\widetilde\psi}=G_{\psi\widetilde\phi}=0$, so no ordinary component
+triangle with two external-$\partial c$ Yukawa vertices and the bottom sources
+exists. That statement does not evaluate the Schwinger occurrence. The
+occurrence first differentiates the coincident insertion,
+$\widetilde\Phi^{sB}\vec\delta/\delta\widetilde\Phi^{rA}
+\to\delta_{rs}K_{-,\epsilon}^{AB}(z,z)$, and only then admits a bottom
+projection; promoting the ordinary-parent obstruction to a statement about the
+regulated density divergence is rejected. The order of operations in this
+subsection --- occurrence tags, Schwinger--Dyson identity, regulated pairing,
+coincident kernel --- is the accepted one; an external audit of the full
+family passes all $84$ of its checks, and the physical verifier passes all
+$33$ of its sector checks.
+\end{remark}
+
+\paragraph{12. Holomorphic-twist comparison and the generalized Konishi
+anomaly.}
+The holomorphic-twist computation of \cite{BK} prints, for this family (their
+eq.~(3.65)),
+\begin{equation}\label{eq:ss:bc:bk}
+Q_{1}\big((\beta_{I})^{A}(\gamma^{J})^{B}\big)
+=\kappa_{H}^{2}\,\delta^{J}_{I}\,f_{ACD}f_{BCE}\,
+\partial_{\dot\alpha}c^{D}\,\partial^{\dot\alpha}c^{E} .
+\end{equation}
+With the loop-scale identification
+$\hbar_{\mathrm{HT}}\kappa_{H}^{2}=\h g^{2}/(32\sqrt2\,\pi^{2})$ of
+Section~\ref{sec:ht}, the twist prefactor $-2\kappa_{H}^{2}\hbar_{\mathrm{HT}}$
+is exactly the uniform prefactor $-\h g^{2}/(16\sqrt2\,\pi^{2})$
+of~\eqref{eq:ss:bc:result}, and the output words agree for both orderings ---
+only $(\beta,\gamma)$ is printed in \cite{BK}; $(\gamma,\beta)$ follows from
+supercommutative normal ordering with no sign --- and for all off-diagonal
+pairs, which vanish on both sides. Physically, the $(\beta_r,\gamma^s)$
+channel \emph{is} the regulated generalized Konishi anomaly: the density
+divergence of the functional measure under the antichiral source
+redefinition~\eqref{eq:ss:bc:X}. The full eighty-one-channel table is its
+completion over the BPS letter alphabet, obtained here by a direct superspace
+supergraph computation with no twist-formalism input.
+
+\begin{remark}[Status of the comparison]\label{rem:ss:bc:htstatus}
+The loop-scale identification is a conditional dictionary entry, not a theorem
+of this paper; the comparison is performed on output words, and it is a
+cross-check, not an internal completeness proof of the graph census. The
+Konishi identification is stated at the level of the mechanism --- the
+regulated density divergence of the measure; an independent re-derivation of
+the classic generalized-Konishi formula in the present conventions is not
+claimed: the channel computation itself is the derivation offered. The full
+dictionary, the derivative-tower kernel, and the factor-two adjudication are
+in Section~\ref{sec:ht}.
+\end{remark}
+
+\paragraph{13. Component bottom-projection cross-check.}
+The bottom components of the letters are $\beta_{r}|=\psi_{r+}$,
+$\gamma^{s}|=\widetilde\phi^{s}$,
+$\partial_{\dot\alpha}c|=-\widetilde\lambda_{\dot\alpha}$
+(Section~\ref{sec:component}), so at zero extra holomorphic derivative
+$\langle\partial c,\partial c\rangle^{DE}\big|
+=\widetilde\lambda_{\dot\alpha}^{D}\widetilde\lambda^{E\dot\alpha}$, and the
+left-hand side of~\eqref{eq:ss:bc:result} projects to
+$Q_{-}(\psi_{r+}^{A}\widetilde\phi_{s}^{B})$. The bottom projection of the
+superfield result is therefore
+\begin{equation}\label{eq:ss:bc:component}
+Q_{-}\!\left(\psi_{r+}^{A}\widetilde\phi_{s}^{B}\right)
+\Big|_{\mathrm{1\text{-}loop}}
+=-\frac{\sqrt2\,\h g^{2}}{32\pi^{2}}\,
+\delta_{rs}\,f^{ACD}f^{BCE}\,
+\widetilde\lambda_{\dot\alpha}^{D}\widetilde\lambda^{E\dot\alpha} ,
+\end{equation}
+using $1/(16\sqrt2)=\sqrt2/32$. This is an exact projection
+of~\eqref{eq:ss:bc:result}, not an independent component-box derivation: the
+mixed propagators vanish, so no ordinary two-Yukawa parent exists at the
+component level, and the dotted gaugino bilinear is color-symmetric,
+$\widetilde\lambda_{\dot\alpha}^{D}\widetilde\lambda^{E\dot\alpha}
+=\widetilde\lambda_{\dot\alpha}^{E}\widetilde\lambda^{D\dot\alpha}$, so any
+antisymmetric color word would annihilate it. The full component treatment,
+including the role of the tensor pair~\eqref{eq:ss:bc:Jpair}, is in
+Section~\ref{sec:component}.

@@ -1,0 +1,505 @@
+\subsection{The channels $(b,\partial_{\dot\alpha}c)$ and $(\partial_{\dot\alpha}c,b)$}\label{sec:superspace:ad}
+
+We now compute the mixed-chirality family in full: the ordered channels
+$(b,\partial_{\dot\alpha}c)$ and $(\partial_{\dot\alpha}c,b)$,
+$\dot\alpha=\dot1,\dot2$, the block $4_{(b,\partial c),(\partial c,b)}$ of the
+census~\eqref{eq:ss:29}. The computation repeats the seed-channel pattern of
+Section~\ref{sec:superspace:seed} with three new features: the cubic vertices
+have opposite chirality, the $D$-algebra numerator is rank one in the loop
+momentum, and the ordered source admits two color allocations. Graph weights
+are computed with unit-normalized insertions $\nabla_{+}\cW_{+}$ and
+$\bcW_{\dot\alpha}$; the letter normalization of
+Definition~\ref{def:ss:letters} is restored in step 7. The dotted transport
+$\dot1\mapsto\dot2$ leaves $f^{ACD}f^{BCE}$ and the sign fixed, so we display
+$\dot\alpha=\dot1$.
+
+\subsubsection*{1. Graph inventory and the occurrence census}
+
+Each ordering is carried by \emph{one ordered triangle plus one Schwinger
+cut/contact graph}, paired by the cutting rule of
+Section~\ref{sec:superspace:cutting}. The triangle
+(Figure~\ref{fig:ss:ad-triangle}) has the ordered bilocal insertion $I$ and two
+cubic background vertices of opposite chirality, the same mixed pair as the
+seed chain,
+\begin{equation}\label{eq:ss:ad-vertices}
+V_{\widetilde\cW}:\ +\frac{ig}{2}\,f^{UCD}\,
+\bcW^{D}_{\dot\gamma}\,\big(\bcD_{C}^{\dot\gamma}-\bcD_{U}^{\dot\gamma}\big),
+\qquad
+V_{\cW}:\ -\frac{ig}{2}\,f^{VC'E}\,
+\cW^{E}_{\gamma}\,\big(\cD_{C'}^{\gamma}-\cD_{V}^{\gamma}\big).
+\end{equation}
+$V_{\cW}$ emits the $\nabla_{+}\cW_{+}$ insertion (the $b$ leg),
+$V_{\widetilde\cW}$ emits the $\bcW_{\dot\alpha}$ insertion (the
+$\partial_{\dot\alpha}c$ leg), and the three internal vector lines carry the
+raw routing $r_{0}=\ell$, $r_{1}=\ell+p$, $r_{2}=\ell+p+q$, so
+$D_{0}=\ell^{2}$, $D_{1}=(\ell+p)^{2}$, $D_{2}=(\ell+p+q)^{2}$ as in the seed
+channel. The marked line is $e_{0}$ for $(b,\partial_{\dot\alpha}c)$ and
+$e_{2}$ for $(\partial_{\dot\alpha}c,b)$.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[scale=1.2]
+  \node[svertex, label=below left:{$I$}] (I) at (0,0) {};
+  \node[svertex, label=above:{$V_{\widetilde\cW}$}] (Vt) at (2.9,1.7) {};
+  \node[svertex, label=below:{$V_{\cW}$}] (Vw) at (2.9,-1.7) {};
+  \draw[sV] (I) -- (Vt) node[midway, above left=-2pt, font=\small] {$e_{0}{:}\ \ell$};
+  \draw[sV] (Vt) -- (Vw) node[midway, right, font=\small] {$e_{1}{:}\ \ell+p$};
+  \draw[sV] (Vw) -- (I) node[midway, below left=-2pt, font=\small] {$e_{2}{:}\ \ell+p+q$};
+  \draw[sV] (Vt) -- ++(1.9,0.95) node[midway, sinsert,
+        label=above right:{$\partial_{\dot\alpha}c=i\bcW_{\dot\alpha}$}] {};
+  \draw[sV] (Vw) -- ++(1.9,-0.95) node[midway, sinsert,
+        label=below right:{$b=-\frac{i}{\sqrt2}\nabla_{+}\cW_{+}$}] {};
+  \node[left=4pt of I, font=\small, align=right] {ordered bilocal\\ insertion $J_{AB}$};
+\end{tikzpicture}
+\caption{The ordered triangle of $(b,\partial_{\dot\alpha}c)$ and
+$(\partial_{\dot\alpha}c,b)$. The bilocal insertion $I$ carries the two
+letters; $V_{\cW}$ emits the $\nabla_{+}\cW_{+}$ insertion (the $b$ leg) and
+$V_{\widetilde\cW}$ the $\bcW_{\dot\alpha}$ insertion (the
+$\partial_{\dot\alpha}c$ leg); all internal lines are vector-superfield
+propagators. The marked line is $e_{0}$ for $(b,\partial_{\dot\alpha}c)$ and
+$e_{2}$ for $(\partial_{\dot\alpha}c,b)$; the Schwinger cut/contact partner
+collapses the marked line with the same two vertices.}
+\label{fig:ss:ad-triangle}
+\end{figure}
+
+The raw engine census per ordering is $36$ TGG $+$ $6$ TMM $+$ $42$ spectator
+$=84$ connected $=42_{\rm split\ source}+42_{\rm spectator}$, where TGG (two
+gauge cubic vertices) is one ordered triangle of
+Figure~\ref{fig:ss:ad-triangle} with a distinguished marked edge, and TMM has
+two matter vertices. The occurrence resolution: the $36$ TGG rows per
+ordering, with their same-edge Schwinger cuts, carry the entire anomaly (steps
+2--6). The $6$ TMM rows vanish exactly (wrong external field type for two
+gauge letters). The matter-current Euler and explicit-contact pair shares the
+word $K_{\dot1}=ir_{+\dot2}$, $K_{\dot2}=-ir_{+\dot1}$ with weights
+$\pm2iK_{\dot\alpha}$ and cancels before regulation; the word is affine, so
+its $\mul^{2}$ coefficient vanishes. The source-tagged bubbles have affine
+numerators and zero standalone anomaly; their two-denominator rows belong to
+the inverse-kernel brackets of step 4 and are not additional finite diagrams.
+The tadpole is scaleless, $\int d^{d}\ell\,P(\ell)/\ell^{2}=0$ in DRED
+\cite{SiegelDRED}. The gauge-fixing Euler sector cancels the longitudinal
+source row (step 4) on $32$ component masks. In the ghost sector, the Euler
+bubble and its full-$d$ cut are exact negatives and the ghost kernel is the
+full-$d$ $\BoxE$, so no $\mul^{2}$ residue arises; the ghost triangle with
+linear source is absent at one loop by the edge/vertex count, and the
+Nielsen--Kallosh factor is absent from the selected graph set. The $42$
+spectator routes per ordering are connected but one-particle reducible
+(external-leg self-energies), and the amputated 1PI projector annihilates
+them.
+
+\begin{remark}[Status of the auxiliary sectors]\label{rem:ss:ad-census}
+The local Fermi--Feynman proper slice is not derived from first principles; it
+is fixed by the scheme decisions of Section~\ref{sec:gaugebv} (Gaussian
+averaging; the Nielsen--Kallosh factor kept external). Every contributing
+graph is accounted for by the triangle and its same-edge cut; all other
+occurrences are exactly zero, cancel in pairs, or are absent.
+\end{remark}
+
+\subsubsection*{2. Wick contractions}
+
+The two vertices of~\eqref{eq:ss:ad-vertices} are distinct (one chiral, one
+antichiral), so the interaction expansion contributes once at second order:
+\begin{equation}\label{eq:ss:ad-wick}
+w_{\mathrm{Wick}}=\frac{1}{2!}\,(1+1)=1,
+\end{equation}
+the $(1+1)$ counting the two equivalent Wick pairings, and the labeled source
+Hessian contributes $1!\,1!=1$. There is \emph{no reflection multiplicity}:
+$(b,\partial_{\dot\alpha}c)$ (marked edge $e_{0}$) and
+$(\partial_{\dot\alpha}c,b)$ (marked edge $e_{2}$) are distinct ordered
+descendants, stored separately; the compact output word is already oriented.
+The three internal lines contract against the vertices and the source with the
+vector propagators of the Fermi--Feynman slice ($\kappa_{AB}=\delta_{AB}$,
+Section~\ref{sec:gaugebv}):
+\begin{equation}\label{eq:ss:ad-props}
+\langle\cV^{A}\cV^{U}\rangle_{e_{0}}
+=\frac{\h\,\delta^{AU}\delta^{4}(\theta_{12})}{\ell^{2}},
+\qquad
+\langle\cV^{C}\cV^{C'}\rangle_{e_{1}}
+=\frac{\h\,\delta^{CC'}\delta^{4}(\theta_{12})}{(\ell+p)^{2}},
+\qquad
+\langle\cV^{V}\cV^{B}\rangle_{e_{2}}
+=\frac{\h\,\delta^{VB}\delta^{4}(\theta_{12})}{(\ell+p+q)^{2}} .
+\end{equation}
+\begin{remark}[Edge-weight sign convention]\label{rem:ss:ad-edgesign}
+The edge weights displayed in~\eqref{eq:ss:ad-props} are recorded in the
+graph-IR convention of the underlying computation, in which the overall
+minus sign of the Feynman propagator $\langle uu\rangle=-\h\kappa^{AB}/p^{2}$
+of Section~\ref{sec:superspace:rules} is folded into the vertex signs of the
+closed word; the displayed $+\h\kappa^{AB}/p^{2}$ is the edge weight per
+line, not an independent propagator sign. All downstream factors of this
+subsection use the same convention consistently, and the final coefficients
+are machine-verified against the propagator-level replay.
+\end{remark}
+Contraction with the vertex structure constants and the source yields the
+common color tensor in its two allocations, $f^{ACD}f^{BCE}$ (direct) and
+$f^{BCD}f^{ACE}$ (crossed), exchanged by $A\leftrightarrow B$ and independent
+for a general gauge algebra. The surviving direct ordered source Hessians on
+the fixed odd component directions are $i/4$ for $(b,\partial_{\dot\alpha}c)$
+and $1/4$ for $(\partial_{\dot\alpha}c,b)$, with $1!\,1!=1$; each external
+$\partial_{\dot\alpha}c$ leg carries the component preimage
+$-\frac{\sqrt2}{8}\eta_{\dot\alpha}$. Reversing the functional order of the
+two odd directions changes the sign of the crossed Hessian, which is why both
+color allocations must be kept.
+
+\subsubsection*{3. Amplitude assembly}
+
+The two ordered cubic vertices contribute
+$\big(+\frac{ig}{2}\big)\big(-\frac{ig}{2}\big)=\frac{g^{2}}{4}$
+as in~\eqref{eq:ss:vertices}, and the closed loop is saturated by
+$\delta^{4}(\theta_{12})\cD^{2}\bcD^{2}\delta^{4}(\theta_{12})
+=16\,\delta^{4}(\theta_{12})$. The expansion runs over the four chirality
+sectors $(++),(+-),(-+),(--)$ of the two vertices, each of weight $1$; the
+four contractions coincide polynomially, so the full action contribution is
+$4_{\rm chirality}\times(\text{one sector})$. For each occurrence $(\omega,e)$
+the frozen source identity splits the marked $D$-algebra word as
+\begin{equation}\label{eq:ss:ad-split}
+\cD_{-}\cD_{+}\bcD^{2}\cD_{+}
+=-8\,\bar r_{e}^{\,2}\,\cD_{+}-\frac12\,\cD_{+}\bcD^{2}\cD^{2},
+\end{equation}
+so that, writing $\mathscr W^{K}_{\omega,e}$ and $\mathscr W^{L}_{\omega,e}$
+for the kinetic and longitudinal spin words,
+\begin{equation}\label{eq:ss:ad-kl}
+K_{\omega,e}=-8\,\bar r_{e}^{\,2}\,\mathscr W^{K}_{\omega,e},
+\qquad
+L^{\mathrm{source}}_{\omega,e}=-\tfrac12\,\mathscr W^{L}_{\omega,e},
+\qquad
+L^{\mathrm{gf}}_{\omega,e}=+\tfrac12\,\mathscr W^{L}_{\omega,e},
+\qquad
+L^{\mathrm{source}}_{\omega,e}+L^{\mathrm{gf}}_{\omega,e}=0 .
+\end{equation}
+With $R_{\omega,e}$ the reduced numerator and
+$C^{\mathrm{SD}}_{\omega,e}=-R_{\omega,e}/\prod_{j\ne e}D_{j}$ the same-edge
+Schwinger contact, the full-$d$ and four-dimensional identities are
+\begin{equation}\label{eq:ss:ad-sd}
+K^{(d)}_{\omega,e}+C^{\mathrm{SD}}_{\omega,e}=0,
+\qquad
+K^{(4)}_{\omega,e}+C^{\mathrm{SD}}_{\omega,e}
+=\frac{\mul^{2}\,R_{\omega,e}}{D_{0}D_{1}D_{2}},
+\end{equation}
+the edgewise parent-minus-cut of~\eqref{eq:ss:cuttingfailure}.
+
+\begin{remark}[The factored weight chain is recorded, not displayed]%
+\label{rem:ss:ad-weightchain}
+Unlike the seed channel, no single displayed chain
+$w_{\mathrm{Wick}}\frac{g^{2}}{4}w_{D}$ exists for this family; the total is
+fixed by the recorded conversions: a per-chirality conditional factor $-8$, the
+absolute conversion
+$4_{\rm chirality}\times\big(\tfrac12\big)_{\rm rank/trace}\times
+(-8)_{\rm legacy}=-16$,
+and the isolating color value $-2$ (the $SU(2)$ sample $(A,B;D,E)=(0,1;1,0)$
+gives $(f^{ACD}f^{BCE},f^{BCD}f^{ACE})=(-2,0)$). The rank/trace factor
+$\tfrac12$ is inserted exactly once; $m_{\mathrm{contact}}=1$ of step 6
+supplies no second factor.
+\end{remark}
+
+\subsubsection*{4. The $D$-algebra numerator chain}
+
+With the conditional Fermi--Feynman projector
+$\mathcal P_{0}=(\bcD^{2}\cD^{2}+\cD^{2}\bcD^{2})/(16\BoxE)$ and
+$\cD_{+}\cD^{2}\bcD^{2}=0$,
+\begin{equation}\label{eq:ss:ad-projector}
+8\,\cD_{+}\BoxE\,\mathcal P_{0}
+=\tfrac12\,\cD_{+}\bcD^{2}\cD^{2}+\tfrac12\,\cD_{+}\cD^{2}\bcD^{2}
+=\tfrac12\,\cD_{+}\bcD^{2}\cD^{2},
+\end{equation}
+so the longitudinal term of~\eqref{eq:ss:ad-split} is pure gauge and cancels
+the gauge-fixing Euler row,
+$-\tfrac12\cD_{+}\bcD^{2}\cD^{2}+\tfrac12\cD_{+}\bcD^{2}\cD^{2}=0$, verified
+sparsely on $32+32$ component masks. What survives is the first term
+of~\eqref{eq:ss:ad-split}: per marked edge the parent-minus-cut
+of~\eqref{eq:ss:ad-sd} leaves exactly the evanescent
+remainder~\eqref{eq:ss:cuttingfailure}. Summing the $36$ TGG routes per
+ordering gives the two rank-one route sums
+\begin{equation}\label{eq:ss:ad-r12}
+R_{1}=\frac{i}{16}\,\mul^{2}\,\Big(\ell+p+\frac12q\Big)_{+\dot1},
+\qquad
+R_{2}=-\frac{i}{16}\,\mul^{2}\,\ell_{+\dot1},
+\end{equation}
+with $X_{+\dot1}$ the plus-frame dotted spinor component, and the evanescent
+numerators of the two orderings carry the color mix
+\begin{equation}\label{eq:ss:ad-nev}
+N^{\mathrm{ev}}_{(b,\partial c)}
+=f^{ACD}f^{BCE}\,R_{1}+f^{BCD}f^{ACE}\,R_{2},
+\qquad
+N^{\mathrm{ev}}_{(\partial c,b)}
+=f^{ACD}f^{BCE}\,R_{2}+f^{BCD}f^{ACE}\,R_{1},
+\end{equation}
+the marked edge being $e_{0}$ for the direct $(b,\partial c)$ and crossed
+$(\partial c,b)$ rows and $e_{2}$ for the other two. Occurrence by occurrence,
+the aggregated two-denominator contact rows and the same-edge remainders obey
+\begin{align}
+(b,\partial c),\ e_{0}:&\quad
+7iq_{+\dot1}+\Big[i\Big(\ell+p+\tfrac12q\Big)_{+\dot1}-7iq_{+\dot1}\Big]
+=i\Big(\ell+p+\tfrac12q\Big)_{+\dot1},\notag\\
+(b,\partial c),\ e_{1}:&\quad 0+0=0,
+\qquad\qquad
+(b,\partial c),\ e_{2}:\quad 2iq_{+\dot1}-2iq_{+\dot1}=0,\notag\\
+(\partial c,b),\ e_{0}:&\quad
+-\tfrac{i}{2}q_{+\dot1}+\tfrac{i}{2}q_{+\dot1}=0,
+\qquad\quad
+(\partial c,b),\ e_{1}:\quad
+i(p+q)_{+\dot1}-i(p+q)_{+\dot1}=0,\notag\\
+(\partial c,b),\ e_{2}:&\quad
+i(p+q)_{+\dot1}+\big[-i\ell_{+\dot1}-i(p+q)_{+\dot1}\big]
+=-i\ell_{+\dot1},
+\label{eq:ss:ad-sameedge}
+\end{align}
+and the crossed-color replay exchanges the two orderings edge by edge. The
+two-denominator members of~\eqref{eq:ss:ad-sameedge} belong to the
+inverse-kernel brackets and must not be added again as finite diagrams once
+$N^{\mathrm{ev}}$ is formed.
+
+\subsubsection*{5. Tensor integrals and the ordered simplex moments}
+
+The two DRED masters are the scalar master~\eqref{eq:ss:masterintegral} and
+its rank-one partner,
+\begin{equation}\label{eq:ss:ad-masters}
+\int\!\frac{d^{d}\ell}{(2\pi)^{d}}\,\frac{\mul^{2}}{D_{0}D_{1}D_{2}}
+=\frac{1}{32\pi^{2}},
+\qquad
+\int\!\frac{d^{d}\ell}{(2\pi)^{d}}\,
+\frac{\mul^{2}\,\ell_{+\dot1}}{D_{0}D_{1}D_{2}}
+=-\frac{(2p+q)_{+\dot1}}{96\pi^{2}} .
+\end{equation}
+Combining denominators,
+\begin{equation}\label{eq:ss:ad-feynman}
+\frac{1}{D_{0}D_{1}D_{2}}
+=2\int_{0}^{1}\!dy\int_{0}^{1-y}\!dz\,\frac{1}{(L^{2}+\Delta)^{3}},
+\qquad
+L=\ell+(y+z)p+zq,
+\end{equation}
+with exact simplex moments, writing $x=1-y-z$,
+\begin{equation}\label{eq:ss:ad-simplex}
+2\!\int_{\Delta_{2}}\!1=1,\qquad
+2\!\int_{\Delta_{2}}\!x=\frac13,\qquad
+2\!\int_{\Delta_{2}}\!(y+z)=\frac23,\qquad
+2\!\int_{\Delta_{2}}\!z=\frac13 .
+\end{equation}
+For $(b,\partial_{\dot\alpha}c)$ the shifted numerator is
+$\ell+p+\frac12q=L+xp+\big(\frac12-z\big)q$; the term odd in $L$ integrates to
+zero, and $2\int_{\Delta_{2}}(\tfrac12-z)=2(\tfrac14-\tfrac16)=\tfrac16$, so
+\begin{equation}\label{eq:ss:ad-adint}
+\int_{\ell}\frac{N^{\mathrm{ev}}_{(b,\partial c)}}{D_{0}D_{1}D_{2}}\Big|_{R_{1}}
+=\frac{i}{16}\cdot\frac{1}{32\pi^{2}}
+\left(\frac13\,p+\frac16\,q\right)_{+\dot1}
+=\frac{i}{512\pi^{2}}\left(\frac13\,p+\frac16\,q\right)_{+\dot1} .
+\end{equation}
+For $(\partial_{\dot\alpha}c,b)$, $-\ell=-L+(y+z)p+zq$ and the
+moments~\eqref{eq:ss:ad-simplex} give
+\begin{equation}\label{eq:ss:ad-daint}
+\int_{\ell}\frac{N^{\mathrm{ev}}_{(\partial c,b)}}{D_{0}D_{1}D_{2}}\Big|_{R_{2}}
+=-\frac{i}{16}\left(-\frac{1}{32\pi^{2}}\right)
+\left(\frac23\,p+\frac13\,q\right)_{+\dot1}
+=\frac{i}{512\pi^{2}}\left(\frac23\,p+\frac13\,q\right)_{+\dot1} ,
+\end{equation}
+in agreement with the direct evaluation of~\eqref{eq:ss:ad-masters},
+$-\frac{i}{16}\big(-\frac{(2p+q)_{+\dot1}}{96\pi^{2}}\big)
+=\frac{i}{512\pi^{2}}(\frac23p+\frac13q)_{+\dot1}$. In the authority routing
+the raw external momenta are the ordered action ports, $p=k_{L}$ (left output
+leg) and $q=k_{R}$ (right output leg). The jet weights of the final bilinear
+are the ordered-simplex moments of the tower
+parametrization~\eqref{eq:ss:simplexderivation} at $(m,n)=(1,0)$:
+\begin{align}
+2\int_{0}^{1}\!db\int_{0}^{b}\!da\;a
+&=2\int_{0}^{1}\frac{b^{2}}{2}\,db=\frac13
+\quad(\text{jet on the first letter}),\notag\\
+2\int_{0}^{1}\!db\int_{0}^{b}\!da\;b
+&=2\int_{0}^{1}b^{2}\,db=\frac23
+\quad(\text{jet on the second letter}),
+\label{eq:ss:ad-simplex10}
+\end{align}
+precisely $K_{1,0;1,0}=\frac{2}{3\cdot2}$ and $K_{1,0;0,0}=\frac{2}{3\cdot1}$
+of~\eqref{eq:ss:kernel}. Assembling the four chirality sectors, the two color
+allocations and the contact rows, the target-blind momentum shapes are
+\begin{align}
+\Gamma_{(b,\partial c)}
+&=-i\,\frac{\h g^{2}}{16\pi^{2}}\left[
+f^{ACD}f^{BCE}\left(\frac13k_{L}+\frac16k_{R}\right)
++f^{BCD}f^{ACE}\left(\frac23k_{L}+\frac13k_{R}\right)\right]_{+\dot1},\notag\\
+\Gamma_{(\partial c,b)}
+&=-i\,\frac{\h g^{2}}{16\pi^{2}}\left[
+f^{ACD}f^{BCE}\left(\frac23k_{L}+\frac13k_{R}\right)
++f^{BCD}f^{ACE}\left(\frac13k_{L}+\frac16k_{R}\right)\right]_{+\dot1}.
+\label{eq:ss:ad-shapes}
+\end{align}
+
+\begin{remark}[The jet readout is the assembled output, not a Fourier map]%
+\label{rem:ss:ad-fourier}
+A naive identification of momentum shape with jet weights fails: the
+direct-color shape in~\eqref{eq:ss:ad-shapes} is $(\tfrac13,\tfrac16)$, not
+$(\tfrac13,\tfrac23)$. The canonical bilinear coefficients of step 7 are the
+recorded output of the full four-chirality, two-color, contact-inclusive
+assembly, not of a one-line Fourier identification;
+\eqref{eq:ss:ad-simplex10} displays the intrinsic jet weights of that
+assembled result.
+\end{remark}
+
+\subsubsection*{6. Pole cancellation}
+
+The triangle parent and the aggregate Schwinger contact row carry the UV-pole
+pair
+\begin{align}
+\Gamma_{T}&=+\frac{\h g^{2}}{32\pi^{2}\epsilon}\times(\text{edge-tagged
+tensor with }\widehat\delta^{mn}),\notag\\
+\Gamma_{C}&=-\frac{\h g^{2}}{32\pi^{2}\epsilon}\times(\text{the identical
+tensor with }\delta_{4}^{mn}),
+\label{eq:ss:ad-polepair}
+\end{align}
+so the four-dimensional metric parts cancel exactly and the remainder is the
+pure evanescent numerator $\widehat\delta^{mn}-\delta_{4}^{mn}
+=-\breve\delta^{mn}$, whose sigma-trace supplies the $-2\epsilon$
+of~\eqref{eq:ss:sigmatrace}: finiteness holds precisely as in
+Remark~\ref{rem:ss:polebookkeeping}. At the occurrence level, the local
+contact kernel $K_{AB}=-\kappa_{AB}r_{e}^{2}$ with
+$\kappa_{AB}=\tfrac12\delta_{AB}$ obeys $r_{e}^{2}P^{A}=-2P^{A}K_{A}$, and
+\begin{align}
+c_{\mathrm{parent}}&=(-2)^{3}=-8,
+\qquad
+c_{\mathrm{contact}}
+=(-1)_{\mathrm{SD}}\,(-2)_{r^{2}P=-2PK}\,(-2)^{2}_{\mathrm{uncut}}=+8,\notag\\
+m_{\mathrm{contact}}
+&=\Big(\tfrac{1}{2!}\,2_{\mathrm{action}}\Big)
+\Big(\tfrac{1}{2!}\,2_{\mathrm{cut}}\Big)
+\Big(\tfrac{1}{2!}\,2_{\mathrm{Wick}}\Big)=1 .
+\label{eq:ss:ad-signs}
+\end{align}
+Consequently, occurrence by occurrence and in each chirality sector,
+\begin{equation}\label{eq:ss:ad-occcancel}
+N^{\mathrm{parent}}_{d,\omega}+K^{\mathrm{contact}}_{\mathrm{raw},\omega}=0,
+\qquad
+N^{\mathrm{parent}}_{4,\omega}+K^{\mathrm{contact}}_{\mathrm{raw},\omega}
+=\frac{R_{\omega}\,\mul^{2}}{D_{0}D_{1}D_{2}} .
+\end{equation}
+The finite-$w$ link sector cancels before loop integration: with $x=iwr$,
+$y=iwr'$ and $(x-y)\int_{0}^{1}ds\,e^{sx+(1-s)y}=e^{x}-e^{y}$, the one-link
+term and the two endpoint terms cancel,
+$C_{\omega,e}(e^{x}-e^{y})-C_{\omega,e}(e^{x}-e^{y})=0$; the sector is
+longitudinal in arbitrary $d$, so its $\mul^{2}$ coefficient is exactly zero.
+
+\subsubsection*{7. The final coefficients and the tower-kernel instance}
+
+With unit-normalized insertions the assembled channel results are
+\begin{align}
+\nabla_{-}\big((\nabla_{+}\cW_{+})^{A}\,\bcW_{\dot\alpha}^{B}\big)
+&=\frac{\h g^{2}}{16\pi^{2}}\,f^{ACD}f^{BCE}\,
+\Big\{\tfrac13\big\langle\partial_{\dot\alpha}\bcW,\bcW\big\rangle
++\tfrac23\big\langle\bcW,\partial_{\dot\alpha}\bcW\big\rangle\Big\}^{DE},
+\label{eq:ss:ad-unit1}\\
+\nabla_{-}\big(\bcW_{\dot\alpha}^{A}\,(\nabla_{+}\cW_{+})^{B}\big)
+&=\frac{\h g^{2}}{16\pi^{2}}\,f^{ACD}f^{BCE}\,
+\Big\{\tfrac23\big\langle\partial_{\dot\alpha}\bcW,\bcW\big\rangle
++\tfrac13\big\langle\bcW,\partial_{\dot\alpha}\bcW\big\rangle\Big\}^{DE}.
+\label{eq:ss:ad-unit2}
+\end{align}
+Restoring the letters of Definition~\ref{def:ss:letters} is exact arithmetic:
+the insertions and the output letters give
+\begin{align}
+b^{A}\,\partial_{\dot\alpha}c^{B}
+&=\Big(-\frac{i}{\sqrt2}\Big)(i)\,
+(\nabla_{+}\cW_{+})^{A}\,\bcW_{\dot\alpha}^{B}
+=\frac{1}{\sqrt2}\,(\nabla_{+}\cW_{+})^{A}\,\bcW_{\dot\alpha}^{B},
+\notag\\
+\big\langle\partial_{\dot\alpha}\bcW,\bcW\big\rangle
+&=(-i)^{2}\,\big\langle\partial_{\dot\alpha}(\partial c),\partial c\big\rangle ,
+\label{eq:ss:ad-restore}
+\end{align}
+and $\frac{1}{\sqrt2}\times(-1)\times\frac{\h g^{2}}{16\pi^{2}}
+=-\frac{\h g^{2}}{16\sqrt2\,\pi^{2}}$. Substituting
+into~\eqref{eq:ss:ad-unit1}--\eqref{eq:ss:ad-unit2},
+\begin{equation}\label{eq:ss:ad-bdc}
+\boxed{\begin{aligned}
+\nabla_{-}\big(b^{A}\partial_{\dot\alpha}c^{B}\big)
+&=-\frac{\h g^{2}}{16\sqrt2\,\pi^{2}}\,f^{ACD}f^{BCE}\\
+&\quad\times
+\Big\{\tfrac13\big\langle\partial_{\dot\alpha}(\partial c),\partial c\big\rangle
++\tfrac23\big\langle\partial c,\partial_{\dot\alpha}(\partial c)\big\rangle
+\Big\}^{DE}
+\end{aligned}}
+\end{equation}
+\begin{equation}\label{eq:ss:ad-dcb}
+\boxed{\begin{aligned}
+\nabla_{-}\big(\partial_{\dot\alpha}c^{A}b^{B}\big)
+&=-\frac{\h g^{2}}{16\sqrt2\,\pi^{2}}\,f^{ACD}f^{BCE}\\
+&\quad\times
+\Big\{\tfrac23\big\langle\partial_{\dot\alpha}(\partial c),\partial c\big\rangle
++\tfrac13\big\langle\partial c,\partial_{\dot\alpha}(\partial c)\big\rangle
+\Big\}^{DE}
+\end{aligned}}
+\end{equation}
+--- exactly the rows~\eqref{eq:ss:ch-bdc} and~\eqref{eq:ss:ch-dcb} of the
+channel table. The weights are the $(m,n)=(1,0)$ instance of the tower
+kernel~\eqref{eq:ss:kernel}: by~\eqref{eq:ss:ad-simplex10},
+$K_{1,0;1,0}=\frac{2}{3\cdot2}=\frac13$ (jet on the first letter) and
+$K_{1,0;0,0}=\frac{2}{3\cdot1}=\frac23$ (jet on the second), and the two
+orderings are exchanged by the Leibniz distribution
+$(1,1)-(\tfrac13,\tfrac23)=(\tfrac23,\tfrac13)$.
+
+\begin{remark}[No $1:2$ ratio between the two orderings]\label{rem:ss:ad-ratio}
+An earlier conditional proposal assigned the two orderings the ratio
+$\mathcal N_{(b,\partial c)}/\mathcal N_{(\partial c,b)}=1/2$ through a
+rejected momentum map; it was explicitly \emph{not} promoted to a coefficient
+of this paper. The final results~\eqref{eq:ss:ad-bdc}--\eqref{eq:ss:ad-dcb}
+share the single prefactor
+$-\frac{\h g^{2}}{16\sqrt2\,\pi^{2}}f^{ACD}f^{BCE}$ and differ only in the
+jet weights $(\tfrac13,\tfrac23)\leftrightarrow(\tfrac23,\tfrac13)$.
+\end{remark}
+
+\begin{remark}[Machine cross-checks for this family]\label{rem:ss:ad-checks}
+The full chain of this subsection was replayed externally: $94/94$ checks on
+the ordered-port crossed-Hessian assembly, $112/112$ on each of the two
+polarized $D$-algebra replays, and $255/255$ on the raw contact and finite-$w$
+link replay, with zero failures.
+\end{remark}
+
+\subsubsection*{8. Comparison with the holomorphic twist}
+
+In the holomorphic twist of~\cite{BK} this family has no zero-derivative
+display; it exists only through the derivative tower applied to the seed pair
+$Q_{1}(b^{A}c^{B})
+=\kappa_{H}^{2}f_{ACD}f_{BCE}\,\partial_{\dot\alpha}c^{D}
+\partial^{\dot\alpha}c^{E}$ (their eq.~(3.63)). Their Appendix-B tower
+(their eq.~(B.6)),
+\begin{align}
+Q_{1}\big(b^{A}\partial_{1}^{m}\partial_{2}^{n}c^{B}\big)
+&=\kappa_{H}^{2}f_{ACD}f_{BCE}\,\frac{1}{m+n+2}
+\sum_{k=0}^{m}\sum_{\ell=0}^{n}\frac{1}{k+\ell+1}\binom{m}{k}\binom{n}{\ell}
+\notag\\
+&\quad\times
+\big[\partial_{1}^{k}\partial_{2}^{\ell}\partial_{\dot\alpha}c^{D}\,
+\partial_{1}^{m-k}\partial_{2}^{\,n-\ell}\partial^{\dot\alpha}c^{E}\big],
+\label{eq:ss:ad-bktower}
+\end{align}
+evaluated at $(m,n)=(1,0)$, gives the printed weights
+\begin{align}
+k=0:&\quad \frac13\ \text{on}\ \partial_{\dot\alpha}c^{D}\,
+\partial_{1}\partial^{\dot\alpha}c^{E}\ (\text{jet on the second letter}),
+\notag\\
+k=1:&\quad \frac16\ \text{on}\ \partial_{1}\partial_{\dot\alpha}c^{D}\,
+\partial^{\dot\alpha}c^{E}\ (\text{jet on the first letter}),
+\label{eq:ss:ad-bkweights}
+\end{align}
+exactly one half of our coefficients on both words. After the factor-two
+adjudication of Section~\ref{sec:ht} --- the printed Appendix-B branch
+of~\cite{BK} is uniformly smaller by the factor $2=\Gamma(3)$
+of~\eqref{eq:ss:feynman} --- the corrected weights $(\tfrac13,\tfrac23)$
+coincide with~\eqref{eq:ss:ad-bdc}. The reversed ordering
+$(\partial_{\dot\alpha}c,b)$ is not printed in~\cite{BK} at all; it follows
+from their recursion (their eq.~(B.1)),
+$Q_{1}(\partial_{\dot\alpha}fg)
+=\partial_{\dot\alpha}Q_{1}(fg)-Q_{1}(f\,\partial_{\dot\alpha}g)$, applied to
+$(f,g)=(c,b)$, the unprinted orderings being identified with the printed ones
+by supercommutativity of the letters (no sign, since $|c||b|=0$). On our side
+the same law is the Leibniz distribution on the formal ghost slot: the seed
+distributes one unit of weight on each output word, $(1,1)$, and
+$(1,1)-(\tfrac13,\tfrac23)=(\tfrac23,\tfrac13)$, exactly the swap
+between~\eqref{eq:ss:ad-bdc} and~\eqref{eq:ss:ad-dcb}. Both dotted rows agree
+word by word with the twist computation (Section~\ref{sec:ht}).
+
+\begin{remark}[Status of the ghost-slot recursion]\label{rem:ss:ad-Uslot}
+The recursion anchor involves the formal odd slot of the twist dictionary (the
+ghost placeholder, of parity $1$), whose identification with project
+quantities is conditional; the physical
+rows~\eqref{eq:ss:ad-bdc}--\eqref{eq:ss:ad-dcb} are derived independently in
+steps 1--7 and are unaffected. The comparison of this subsection is a
+cross-check, not a derivation input, and not a completeness proof of the graph
+census (Section~\ref{sec:ht}).
+\end{remark}

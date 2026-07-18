@@ -1,0 +1,429 @@
+% sec07: comparison with the holomorphic twist (Budzik--Kulp). Body only.
+% Notation per NOTATION.md: K has no repository superscript; T^{HT,...} is
+% used only inside this section, where the comparison is defined.
+\section{Comparison with the holomorphic twist}\label{sec:ht}
+
+The one-loop coefficients of Section~\ref{sec:superspace} were derived,
+validated, and sealed before the holomorphic-twist literature for this problem
+was consulted. The present section compares that sealed result with the
+independent prediction of Budzik and Kulp~\cite{BK}, who compute the one-loop
+correction to the supersymmetry algebra of the holomorphic twist of
+$\mathcal N=4$ super-Yang--Mills theory. The comparison is an external
+cross-check: no coefficient of~\cite{BK} enters the derivation of
+Section~\ref{sec:superspace}, and everything concluded here is collected in
+the admissibility statement of Subsection~\ref{subsec:ht:verdict}.
+
+\subsection{The external target}\label{subsec:ht:target}
+
+In the holomorphic twist~\cite{BK,Costello} the $\mathcal N=1$ vector
+multiplet becomes a holomorphic $bc$ system and each chiral multiplet a
+holomorphic $\beta\gamma$ system on $\mathbb C^{2}$. The Batalin--Vilkovisky
+fields are
+\begin{equation}\label{eq:ht:fields}
+\begin{aligned}
+b &= b^{(0)}+b^{(1)}+b^{(2)} \in
+\Omega^{0,\bullet}(\mathbb C^{2},\mathfrak g^{\vee}) \ , &
+c &= c^{(0)}+c^{(1)}+c^{(2)} \in
+\Omega^{0,\bullet}(\mathbb C^{2},\mathfrak g)[1] \ , \\
+\beta_{I} &= \beta_{I}^{(0)}+\beta_{I}^{(1)}+\beta_{I}^{(2)} \in
+\Omega^{0,\bullet}(\mathbb C^{2},R^{\vee})[1] \ , &
+\gamma^{I} &= \gamma^{I(0)}+\gamma^{I(1)}+\gamma^{I(2)} \in
+\Omega^{0,\bullet}(\mathbb C^{2},R) \ ,
+\end{aligned}
+\end{equation}
+with action (their eq.~(3.1))
+\begin{equation}\label{eq:ht:action}
+S_{\mathrm{BV}}=\int_{\mathbb C^{2}}d^{2}z\,
+\Big\{\Tr\Big[b\Big(\bar\partial c+\frac12[c,c]\Big)\Big]
++\beta_{I}\big(\bar\partial\gamma^{I}+c\,\gamma^{I}\big)
++W[\gamma]\Big\} \ .
+\end{equation}
+The tree differential acts as
+\begin{equation}\label{eq:ht:Q0fields}
+\begin{aligned}
+Q_{0}\,c &= \frac12\,[c,c] \ , &
+Q_{0}\,b &= [c,b]-\mu(\beta,\gamma) \ , \\
+Q_{0}\,\gamma^{I} &= c\,\gamma^{I} \ , &
+Q_{0}\,\beta_{I} &= \beta_{I}\,c+\partial_{\gamma^{I}}W \ ,
+\end{aligned}
+\end{equation}
+with $\mu(\beta,\gamma)$ the moment map. The letter gradings are
+$|b|=|\gamma|=0$ and $|c|=|\beta|=1$ mod $2$, and normal ordering is
+supercommutative on letters. The untwisted identifications are
+$\gamma\sim\bar\phi$, $\beta\sim\psi_{+}$,
+$\partial_{\dot\alpha}c\sim\bar\lambda_{\dot\alpha}$, $b\sim F_{++}$, and
+$\partial_{\dot\alpha}\sim D_{+\dot\alpha}$, consistent with the component
+table of Section~\ref{sec:component}. The Lie algebra is normalized as (their
+eq.~(3.11))
+\begin{equation}\label{eq:ht:lie}
+[t_{A},t_{B}]=f_{AB}{}^{C}\,t_{C} \ ,\qquad
+\Tr(t_{A}t_{B})=\kappa_{H}\,\delta_{AB} \ ,\qquad
+\Tr(t_{A}[t_{B},t_{C}])=\kappa_{H}\,f_{ABC} \ ,
+\end{equation}
+with $\kappa_{H}$ the dual Coxeter number; the missing factor of $i$ relative
+to our convention $[T_{A},T_{B}]=if_{AB}{}^{C}T_{C}$ is supplied by the frame
+map \eqref{eq:ht:frames} below. For the $\mathcal N=4$ theory the matter
+representation is $R=\mathfrak g\otimes\mathbb C^{3}$, the superpotential is
+$W[\gamma]=\Tr\,\gamma^{1}[\gamma^{2},\gamma^{3}]
+=\frac{1}{3!}\,\varepsilon_{IJK}\kappa_{H}f_{ABC}\,
+\gamma^{IA}\gamma^{JB}\gamma^{KC}$, the twisting supercharge is $Q^{4}_{-}$,
+and $\gamma^{I}\sim\Phi^{4I}$, $\beta_{I}\sim\Psi_{I+}$,
+$\partial_{\dot\alpha}c\sim\bar\Psi^{4}_{\dot\alpha}$, $b\sim F_{++}$. The
+$1/16$-BPS fields assemble into a single superfield on $\mathbb C^{2|3}$
+(their eq.~(3.56)),
+\begin{equation}\label{eq:ht:C}
+C=c+\theta_{I}\gamma^{I}
++\frac12\,\varepsilon^{IJK}\theta_{I}\theta_{J}\beta_{K}
++\theta_{1}\theta_{2}\theta_{3}\,b \ ,
+\end{equation}
+in terms of which the action is a holomorphic Chern--Simons theory,
+\begin{equation}\label{eq:ht:hcs}
+S_{\mathrm{BV}}=\frac12\int_{\mathbb C^{2|3}}d^{2}z\,d^{3}\theta\,
+\Tr\Big[C\Big(\bar\partial C+\frac13[C,C]\Big)\Big] \ .
+\end{equation}
+The classical supercharge obeys the tree identity (their eq.~(1.9))
+\begin{equation}\label{eq:ht:Q0C}
+Q_{0}\,C(\theta)=\frac12\,[C(\theta),C(\theta)] \ .
+\end{equation}
+Their one-loop result is a compact prediction for the loop-corrected
+supercharge $Q_{1}$ (their eqs.~(1.10) and~(3.69)),
+\begin{equation}\label{eq:ht:Q1C}
+Q_{1}\big(C^{A}(\theta)\,C^{B}(\theta')\big)
+=-\kappa_{H}^{2}\,f_{ACD}f_{BCE}\,
+(\theta_{1}-\theta_{1}')(\theta_{2}-\theta_{2}')(\theta_{3}-\theta_{3}')\,
+\partial_{\dot\alpha}C^{D}(\theta)\,
+\partial^{\dot\alpha}C^{E}(\theta') \ .
+\end{equation}
+(The introduction of~\cite{BK} prints the coefficient $-1/4$ where its main
+text prints $-\kappa_{H}^{2}$; this is the second source inconsistency, see
+Subsection~\ref{subsec:ht:conflicts}.) Expanded in the components of
+\eqref{eq:ht:C}, the prediction reads (their eqs.~(3.63)--(3.68))
+\begin{equation}\label{eq:ht:componentpairs}
+\begin{aligned}
+Q_{1}(b^{A}c^{B})
+&=\kappa_{H}^{2}f_{ACD}f_{BCE}\,
+\partial_{\dot\alpha}c^{D}\partial^{\dot\alpha}c^{E} \ ,\\
+Q_{1}(b^{A}b^{B})
+&=\kappa_{H}^{2}f_{ACD}f_{BCE}
+\big[\partial_{\dot\alpha}c^{D}\partial^{\dot\alpha}b^{E}
+-\partial_{\dot\alpha}b^{D}\partial^{\dot\alpha}c^{E}
++\partial_{\dot\alpha}\beta_{I}^{D}\partial^{\dot\alpha}\gamma^{IE}
+-\partial_{\dot\alpha}\gamma^{ID}\partial^{\dot\alpha}\beta_{I}^{E}\big] \ ,\\
+Q_{1}(\beta_{I}^{A}\gamma^{JB})
+&=\kappa_{H}^{2}\delta_{I}{}^{J}f_{ACD}f_{BCE}\,
+\partial_{\dot\alpha}c^{D}\partial^{\dot\alpha}c^{E} \ ,\\
+Q_{1}(\beta_{I}^{A}\beta_{J}^{B})
+&=\kappa_{H}^{2}\varepsilon_{IJK}f_{ACD}f_{BCE}
+\big[\partial_{\dot\alpha}c^{D}\partial^{\dot\alpha}\gamma^{KE}
+-\partial_{\dot\alpha}\gamma^{KD}\partial^{\dot\alpha}c^{E}\big] \ ,\\
+Q_{1}(b^{A}\gamma^{IB})
+&=\kappa_{H}^{2}f_{ACD}f_{BCE}
+\big[\partial_{\dot\alpha}c^{D}\partial^{\dot\alpha}\gamma^{IE}
+-\partial_{\dot\alpha}\gamma^{ID}\partial^{\dot\alpha}c^{E}\big] \ ,\\
+Q_{1}(\beta_{I}^{A}b^{B})
+&=\kappa_{H}^{2}f_{ACD}f_{BCE}
+\big[\partial_{\dot\alpha}\beta_{I}^{D}\partial^{\dot\alpha}c^{E}
++\partial_{\dot\alpha}c^{D}\partial^{\dot\alpha}\beta_{I}^{E}
++\varepsilon_{IJK}\partial_{\dot\alpha}\gamma^{JD}
+\partial^{\dot\alpha}\gamma^{KE}\big] \ ,
+\end{aligned}
+\end{equation}
+while $Q_{1}(cc)=Q_{1}(\gamma\gamma)=Q_{1}(\gamma c)=Q_{1}(\beta c)=0$.
+In the $L_{\infty}$ language of~\cite{BK} the $(\ell+2)$-ary bracket is the
+$\ell$-loop correction, with $\{\mathcal I,\cdot\}_{0}=Q_{0}$ and
+$\frac{1}{2!}\{\mathcal I,\mathcal I,\cdot\}_{0}=Q_{1}$; the Maurer--Cartan
+identities give $\{Q_{0},Q_{1}\}=0$ and $Q_{1}^{2}+\{Q_{0},Q_{2}\}=0$. Hence
+$Q_{1}$ is nilpotent only on $Q_{0}$-cohomology and higher corrections
+$Q_{n}$ are necessarily present: the construction of~\cite{BK} is not
+one-loop exact, and the comparison below concerns its one-loop operation
+$Q_{1}$.
+
+\subsection{The dictionary}\label{subsec:ht:dictionary}
+
+Let $R_{A}{}^{P}$ be a color frame, $U_{I}{}^{r}$ a flavor frame,
+$S_{\dot a}{}^{\dot b}$ a dotted-spin frame, and $\rho\neq0$ an overall
+scale. The exact map between the letters
+$b,\beta_{r},\gamma^{r},\partial_{\dot\alpha}c$ of
+Section~\ref{sec:superspace} and the alphabet of~\cite{BK} is
+\begin{equation}\label{eq:ht:dictionary}
+\begin{aligned}
+b^{A}&\longmapsto\rho\,R_{A}{}^{P}\,b^{P} \ ,\\
+\beta_{I}^{A}&\longmapsto\rho\,R_{A}{}^{P}U_{I}{}^{r}\,
+\beta_{r}^{P} \ ,\\
+\gamma^{IA}&\longmapsto\rho\,R_{A}{}^{P}(U^{-1})_{r}{}^{I}\,
+\gamma^{rP} \ ,\\
+\partial_{\dot a}c^{A}&\longmapsto\rho\,R_{A}{}^{P}
+S_{\dot a}{}^{\dot b}\,\partial_{\dot b}c^{P} \ ,
+\end{aligned}
+\end{equation}
+where the left-hand sides are the fields of \eqref{eq:ht:fields} and the
+right-hand sides use the letters of Section~\ref{sec:superspace}. Every row
+carries the common scale $\rho$: the factors $-i/\sqrt2$ and $1/\sqrt2$
+familiar from the raw superfield composites are precisely those absorbed
+into the letter definitions of Definition~\ref{def:ss:letters}, so that in
+the letters of this paper the map is uniform. The $\gamma$ row carries the
+inverse flavor frame and the $\partial c$ row the spin frame. At $\rho=1$
+with identity frames the map reduces to the identity,
+$b\mapsto b$, $\beta_{I}\mapsto\beta_{r}\delta_{I}{}^{r}$,
+$\gamma^{I}\mapsto\gamma^{r}\delta^{I}{}_{r}$, and
+$\partial_{\dot a}c\mapsto\partial_{\dot a}c$. The frames enter the color
+and trace relations through
+\begin{equation}\label{eq:ht:frames}
+R_{A}{}^{P}R_{B}{}^{Q}\,\delta_{PQ}=\delta_{AB} \ ,\qquad
+t_{A}=-i\,R_{A}{}^{P}T_{P} \ ,\qquad
+f_{AB}{}^{C}=R_{A}{}^{P}R_{B}{}^{Q}f_{PQ}{}^{R}(R^{-1})_{R}{}^{C} \ ,\qquad
+\Tr_{H}=-\kappa_{H}\Tr \ ,
+\end{equation}
+where $\Tr_{H}$ is the trace of \eqref{eq:ht:lie} and $\Tr$ ours, with
+$\kappa_{AB}=\delta_{AB}$. Applied to \eqref{eq:ht:C}, the map sends
+\begin{equation}\label{eq:ht:Cimage}
+C(\theta)\;\longmapsto\;
+\rho\Big[c+\theta_{r}\gamma^{r}
++\frac{1}{2}\,\varepsilon_{rst}\theta_{r}\theta_{s}\beta_{t}
++\theta_{1}\theta_{2}\theta_{3}\,b\Big] \ ;
+\end{equation}
+the first entry is the ghost (the formal ghost placeholder of the letter
+algebra), which takes part in the twisted theory but not in the physical
+letter pairs compared below. Matching the one-loop coefficients of the two
+formalisms on the gaugino ($\cW_{+}$) component gives the loop-scale relation
+\begin{equation}\label{eq:ht:loopscale}
+\h_{\mathrm{HT}}\,\kappa_{H}^{2}
+=\frac{\h\,g^{2}}{32\sqrt2\,\pi^{2}}
+=\frac{1}{2\sqrt2}\,\frac{\h g^{2}}{16\pi^{2}} \ .
+\end{equation}
+
+\begin{remark}[conditional status of \eqref{eq:ht:loopscale}]\label{rem:ht:conditional}
+The relation \eqref{eq:ht:loopscale} is obtained under a conditional
+total-differential scale in the dictionary analysis; it is a conditional
+dictionary entry, not a theorem proved in this paper. The four physical
+letter rows of \eqref{eq:ht:dictionary} are independent of this
+conditionality, and the comparison of Subsection~\ref{subsec:ht:results} is
+performed on output words only. A single $\kappa_{H}$ presupposes a simple
+gauge algebra; for a general reductive gauge algebra the trace relations hold
+factorwise.
+\end{remark}
+
+\subsection{Comparison results}\label{subsec:ht:results}
+
+The comparison proceeds word by word. Each ordered pair of the nine letters
+$(b,\beta_{r},\gamma^{r},\partial_{\dot a}c)$ is mapped by
+\eqref{eq:ht:dictionary}; the predicted output monomials are translated into
+the letters of Section~\ref{sec:superspace}; and the result is compared with
+the sealed coefficient table over $\mathbb Q(i,\sqrt2)$. With the
+identification $Q_{0}\leftrightarrow-\tfrac12\nabla_{-}$ of
+Section~\ref{sec:superspace}, the quantity compared with $Q_{1}(XY)$ is the
+one-loop anomalous variation $\nabla_{-}(XY)|_{\text{1-loop}}$, normalized by
+\eqref{eq:ht:loopscale}.
+
+\begin{proposition}[ordered-word comparison]\label{thm:ht:81}
+For every ordered pair of letters, the sealed coefficient word of
+Section~\ref{sec:superspace}, its independent expansion, and the translated
+holomorphic-twist word agree exactly:
+\begin{equation}\label{eq:ht:81}
+N_{\mathrm{pairs}}=81 \ ,\qquad
+N_{\mathrm{agree}}=81 \ ,\qquad
+N_{\mathrm{disagree}}=0 \ ,\qquad
+81=29_{\mathrm{nonzero}}+52_{\mathrm{zero}} \ .
+\end{equation}
+The nonzero census decomposes as
+\begin{equation}\label{eq:ht:29}
+29=\underset{(b,b)}{1}
++\underset{(b,\beta_{r}),(\beta_{r},b)}{6}
++\underset{(b,\gamma^{r}),(\gamma^{r},b)}{6}
++\underset{(\beta_{r},\beta_{s}),\,r\neq s}{6}
++\underset{(\beta_{r},\gamma^{r}),(\gamma^{r},\beta_{r})}{6}
++\underset{(b,\partial_{\dot a}c),(\partial_{\dot a}c,b)}{4} \ ,
+\end{equation}
+comprising $8+6\cdot4+6\cdot2+6\cdot2+6\cdot1+4\cdot2=70$ nonzero output
+words; the remaining $52$ ordered pairs vanish on both sides.
+\end{proposition}
+
+The mixed rows $(b,\partial_{\dot a}c)$ and $(\partial_{\dot a}c,b)$ display
+the intrinsic split $K_{(e_{\dot a});0}=\tfrac23$ and
+$K_{(e_{\dot a});(e_{\dot a})}=\tfrac13$ for a unit dotted derivative
+$e_{\dot a}$, the two orderings being exchanged by the Leibniz rule; this is
+the $\tfrac13$--$\tfrac23$ distribution already recorded in the channel table
+of Section~\ref{sec:superspace}. At arbitrary derivative order the comparison
+uses the Appendix-B tower of~\cite{BK} (their eq.~(B.5)),
+\begin{equation}\label{eq:ht:Cmn}
+m!\,n!\,C_{mn}
+=\frac{1}{m+n+2}\sum_{k=0}^{m}\sum_{\ell=0}^{n}
+\frac{1}{k+\ell+1}\binom{m}{k}\binom{n}{\ell}\,
+(p_{1})_{1}^{k}(p_{1})_{2}^{\ell}\,
+(p_{2})_{1}^{m-k}(p_{2})_{2}^{n-\ell} \ ,
+\end{equation}
+whose component formulas (their eqs.~(B.6)--(B.11)) multiply this tower by
+$\kappa_{H}^{2}f_{ACD}f_{BCE}$ with the same flavor structures as the
+zero-derivative pairs \eqref{eq:ht:componentpairs}; we write their holomorphic
+form variables as $p_{i}$, $p_{1}+p_{2}+p_{3}=0$, to avoid a clash of
+notation.
+
+\begin{proposition}[all-orders kernel identity]\label{thm:ht:kernel}
+For all $m,n\in\mathbb Z_{\ge0}$ and $0\le k\le m$, $0\le\ell\le n$,
+\begin{equation}\label{eq:ht:kernel}
+K_{m,n;k,\ell}
+=\frac{2\,\binom{m}{k}\binom{n}{\ell}}{(m+n+2)\,(k+\ell+1)}
+=2\,T^{\mathrm{HT,printed}}_{m,n;k,\ell}
+=T^{\mathrm{HT,corrected}}_{m,n;k,\ell} \ ,
+\end{equation}
+where $K_{m,n;k,\ell}$ is the derivative kernel of the one-loop variation of
+Section~\ref{sec:superspace},
+\begin{equation}\label{eq:ht:Tprinted}
+T^{\mathrm{HT,printed}}_{m,n;k,\ell}
+=\frac{\binom{m}{k}\binom{n}{\ell}}{(m+n+2)\,(k+\ell+1)}
+\end{equation}
+is the coefficient tower of \eqref{eq:ht:Cmn}, and
+$T^{\mathrm{HT,corrected}}:=2\,T^{\mathrm{HT,printed}}$. At the origin
+$T^{\mathrm{HT,printed}}_{0,0;0,0}=\tfrac12$ while $K_{0,0;0,0}=1$.
+\end{proposition}
+
+The factor $2$ in \eqref{eq:ht:kernel} is the $\Gamma(3)=2$ of the triangle
+Feynman parametrization,
+\begin{equation}\label{eq:ht:feynman}
+\frac{1}{D_{0}D_{1}D_{2}}
+=2\int_{\Delta_{2}}\frac{1}{(r^{2}+\Delta)^{3}} \ ,
+\qquad 2\int_{\Delta_{2}}1=1 \ ,
+\end{equation}
+not an orientation multiplicity. The triangle operator of~\cite{BK} (their
+eq.~(3.8)), with $\partial=(\partial_{1},\partial_{2})$ the holomorphic
+derivative on $\mathbb C^{2}$,
+\begin{equation}\label{eq:ht:dtri}
+\mathcal D^{\triangle}_{w,z}(f,g)
+:=\sum_{m,n=0}^{\infty}\frac{1}{(n+m+2)!}\,
+e^{z\cdot\partial}\big((w-z)\cdot\partial\big)^{n}\,
+\partial_{\dot\alpha}f(y)\,
+e^{w\cdot\partial}\big((z-w)\cdot\partial\big)^{m}\,
+\partial^{\dot\alpha}g(y)\,\Big|_{y=0} \ ,
+\end{equation}
+generates the generic shifted pairs, each $Q_{1}$ pair action being
+$\kappa_{H}^{2}f_{ACD}f_{BCE}$ times the corresponding
+$\mathcal D^{\triangle}$ bilinear; its printed zero-shift value (their
+eq.~(3.9)),
+\begin{equation}\label{eq:ht:dtri00}
+\mathcal D^{\triangle}_{0,0}(f,g)
+=\frac12\,\partial_{\dot\alpha}f\,\partial^{\dot\alpha}g \ ,
+\end{equation}
+misses precisely the prefactor $2$ of \eqref{eq:ht:feynman}, while the
+printed component formulas \eqref{eq:ht:componentpairs} carry the
+complete-amplitude normalization (see
+Subsection~\ref{subsec:ht:conflicts}). The identity \eqref{eq:ht:kernel} is
+proved symbolically for all $m,n\ge0$ and checked coefficient by coefficient
+on the finite rectangle $0\le m,n\le8$:
+\begin{equation}\label{eq:ht:2025}
+\sum_{m=0}^{8}\sum_{n=0}^{8}(m+1)(n+1)
+=\Big(\sum_{j=1}^{9}j\Big)^{2}=45^{2}=2025
+\quad\text{kernel checks, all passing }(2025/2025)\ .
+\end{equation}
+Multiplication by the $70$ nonzero base output words lifts this to the full
+derivative tower,
+\begin{equation}\label{eq:ht:141750}
+2025\times70=141750
+\quad\text{lifted coefficient checks, all passing }(141750/141750)\ ,
+\end{equation}
+while the $52$ vanishing rows remain zero at every derivative order. The
+independent physical verification suite accepts the physical one-loop anomaly
+sector with $33/33$ checks passed and $0$ failed.
+
+\subsection{Two source-internal inconsistencies and their adjudication}\label{subsec:ht:conflicts}
+
+The source~\cite{BK} contains two internal normalization conflicts. Both are
+quarantined as matters of source provenance: the coefficients of this paper
+are derived independently in Section~\ref{sec:superspace}, and the comparison
+above uses only output words, so no contested normalization of~\cite{BK} is
+imported.
+
+\paragraph{The factor two.} Printed inside~\cite{BK} are: the zero-shift
+kernel \eqref{eq:ht:dtri00}, carrying $1/2=1/\Gamma(3)$; the shifted-pair
+formulas multiplying $\mathcal D^{\triangle}$ by $\kappa_{H}^{2}$, hence
+$\kappa_{H}^{2}/2$ at $z=w=0$; the zero-shift component formulas
+\eqref{eq:ht:componentpairs}, printing $\kappa_{H}^{2}$ times the derivative
+bilinears; and the tower \eqref{eq:ht:Cmn}, printing
+$\kappa_{H}^{2}/(m+n+2)=\kappa_{H}^{2}/2$ at $m=n=0$. The evaluated branches
+give
+\begin{equation}\label{eq:ht:branches}
+\mathcal I_{\triangle}[p;0]
+=\mathcal D^{\triangle}_{0,0}
+=C_{00}
+=\frac12 \ ,
+\qquad
+\frac{c_{\mathrm{component}}}{c_{\mathrm{triangle}}}
+=\frac{c_{\mathrm{compact}}}{c_{\mathrm{triangle}}}
+=2 \ ,
+\end{equation}
+with $\mathcal I_{\triangle}[p;0]=\tfrac12\,p_{1}\wedge p_{2}$ the zero-shift
+master triangle (their eqs.~(2.35) and~(2.39)). The adjudication selects the
+complete-amplitude branch: the zero-shift component block and the compact
+block of~\cite{BK} carry the complete normalization, while its
+master-integral, generic shifted-pair, and Appendix-B branches are uniformly
+smaller by the factor $2$ and must be multiplied by $2$ before comparison
+with the complete amplitude, consistently with \eqref{eq:ht:kernel} holding
+at every derivative degree. The conflict remains unresolved inside the
+source: the classification recorded here repairs nothing in~\cite{BK} and
+changes no relative coefficient of Section~\ref{sec:superspace}.
+
+\paragraph{The compact coefficient.} The introduction of~\cite{BK} prints
+the compact prediction \eqref{eq:ht:Q1C} with coefficient $-1/4$; its main
+text prints $-\kappa_{H}^{2}$. The two displays agree only if
+\begin{equation}\label{eq:ht:conflict2}
+\kappa_{H}^{2}=\frac14 \ .
+\end{equation}
+The independently fixed coefficient of Section~\ref{sec:superspace} selects
+the main-text branch $-\kappa_{H}^{2}$ and rejects the introductory display
+unless $\kappa_{H}^{2}=1/4$; again this classifies the conflict without
+repairing the source.
+
+\subsection{The admissibility verdict}\label{subsec:ht:verdict}
+
+\begin{theorem}[admissibility of the holomorphic-twist comparison]\label{thm:ht:verdict}
+Under the dictionary \eqref{eq:ht:dictionary}, the identification
+$Q_{0}\leftrightarrow-\tfrac12\nabla_{-}$ of
+Section~\ref{sec:superspace}, and the loop-scale relation
+\eqref{eq:ht:loopscale}, the direct superspace calculation of
+Section~\ref{sec:superspace} exactly reproduces the holomorphic-twist
+prediction for the one-loop semi-chiral anomaly: the $81$ ordered output
+words agree as in \eqref{eq:ht:81} ($29$ nonzero, $52$ zero), and the
+derivative kernels agree to all orders,
+\begin{equation}\label{eq:ht:verdict}
+K_{m,n;k,\ell}=T^{\mathrm{HT,corrected}}_{m,n;k,\ell}
+\qquad\text{for all }m,n\ge0 \ ,
+\end{equation}
+i.e.\ the sealed one-loop coefficient table coincides with the
+factor-two-corrected one-loop supercharge $Q_{1}$ of~\cite{BK} on every
+output word, with no mismatch.
+\end{theorem}
+
+\begin{remark}[agreement of totals is not an absence proof]\label{rem:ht:cr23}
+Theorem~\ref{thm:ht:verdict} compares total coefficients. Writing
+$C_{\mathrm{complete}}=C_{\mathrm{tabulated}}+\sum_{j\in\mathcal O}c_{j}$ for
+the contributions $c_{j}$ of any set $\mathcal O$ of omitted Wick routings,
+\begin{equation}\label{eq:ht:cr23}
+C_{\mathrm{tabulated}}=C_{\mathrm{HT}}
+\quad\text{does not imply}\quad
+\mathcal O=\varnothing
+\ \text{or}\ c_{j}=0\ \text{for every }j \ :
+\end{equation}
+cancellations such as $c_{1}=t$, $c_{2}=-t$ with $t\neq0$ leave the total
+unchanged. Equality of the total coefficient with the holomorphic-twist
+prediction therefore does not prove termwise absence of omitted Wick
+routings; the agreement is a final cross-check, not a target-blind absence
+proof.
+\end{remark}
+
+\begin{remark}[the adversarial census remains open]\label{rem:ht:open}
+The completeness question for the graph census is not settled by
+Theorem~\ref{thm:ht:verdict} and carries the status
+\texttt{OPEN\_FINAL\_CENSUS\_17\_CANDIDATES}: the
+ghost--Nielsen--Kallosh sector has not run, the zero/cut-orbit sector has not
+run, the automated three-lens refutation has not run, and four
+physics-relevant Wick routings remain deferred to a future per-routing
+derivation from the locked action, without reading the target.
+\end{remark}
+
+\begin{remark}[the accepted coefficients are unchanged]\label{rem:ht:sealed}
+The accepted coefficient table of Section~\ref{sec:superspace} rests on the
+target-blind Schwinger-cut derivation presented there; it was read,
+validated, and sealed (SHA-256 \texttt{ec77327d\ldots b3016d}) before the
+source of~\cite{BK} was consulted, and it is unaffected by the open census:
+within the physical one-loop anomaly sector no coefficient row is
+unresolved.
+\end{remark}

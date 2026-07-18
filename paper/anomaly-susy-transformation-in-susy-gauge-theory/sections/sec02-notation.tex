@@ -1,0 +1,504 @@
+% ----------------------------------------------------------------------
+% Section 2: Conventions -- spinors, superspace and superfields
+% Writer: Writer_Notation. Sources: extract-01-spinor-superspace.md (primary),
+% extract-02-action-bv.md [only for (3A.31)-(3A.32), same repo source step-03a],
+% extract-03-extended-grammar.md (notation dictionary cross-check).
+% Pure body LaTeX per NOTATION.md: one \section, no \newcommand.
+% ----------------------------------------------------------------------
+\section{Conventions: spinors, superspace and superfields}\label{sec:notation}
+
+We use two-component Weyl spinors throughout, in both Lorentzian and Euclidean
+signature; textbook references for the superspace conventions are
+\cite{GGRS,WeinbergIII}. Lorentzian vector indices are $\mu,\nu,\rho=0,1,2,3$,
+Euclidean vector indices are $m,n,r=1,2,3,4$, undotted spinor indices are
+$\alpha,\beta,\gamma=1,2$, and dotted spinor indices are
+$\dot\alpha,\dot\beta,\dot\gamma=\dot1,\dot2$. The index alphabet already
+distinguishes the two signatures; where confusion is possible we add the label
+$L$ (Lorentzian) or $E$ (Euclidean) explicitly. All commutators are graded,
+$[A,B\}:=AB-(-1)^{|A||B|}BA$, with $|X|\in\{0,1\}$ the Grassmann parity.
+
+\subsection{Lorentzian spinors}\label{sec:notation:lorentzian}
+
+We use the mostly-plus metric and the orientation
+\begin{equation}
+\eta_{\mu\nu}=\operatorname{diag}(-1,+1,+1,+1),\qquad
+v_\mu=\eta_{\mu\nu}v^\nu,\qquad
+\epsilon^{0123}=+1 .
+\label{eq:2:metric}
+\end{equation}
+The two-component epsilon tensors and index raising and lowering are
+\begin{equation}
+\epsilon^{12}=\epsilon^{\dot1\dot2}=+1,\qquad
+\epsilon_{12}=\epsilon_{\dot1\dot2}=-1,\qquad
+\psi^\alpha=\epsilon^{\alpha\beta}\psi_\beta,\qquad
+\bar\psi^{\dot\alpha}=\epsilon^{\dot\alpha\dot\beta}\bar\psi_{\dot\beta},
+\label{eq:2:epsilon}
+\end{equation}
+with $\epsilon^{\alpha\beta}\epsilon_{\beta\gamma}=\delta^\alpha{}_\gamma$,
+$\epsilon_{\alpha\beta}\epsilon^{\beta\gamma}=\delta_\alpha{}^\gamma$, and the
+same relations with dotted indices. Spinor contractions follow the
+\emph{asymmetric} summation convention: undotted indices are contracted from
+upper left to lower right, dotted indices from lower left to upper right,
+\begin{equation}
+\xi\chi:=\xi^\alpha\chi_\alpha,\qquad
+\bar\xi\bar\chi:=\bar\xi_{\dot\alpha}\bar\chi^{\dot\alpha},\qquad
+\xi^\alpha\chi_\alpha=-\,\xi_\alpha\chi^\alpha,\qquad
+\bar\xi^{\dot\alpha}\bar\chi_{\dot\alpha}
+=-\,\bar\xi_{\dot\alpha}\bar\chi^{\dot\alpha}.
+\label{eq:2:contraction}
+\end{equation}
+For Grassmann-odd spinors this gives $\xi\chi=\chi\xi$ and
+$\bar\xi\bar\chi=\bar\chi\bar\xi$. With $\sigma^1,\sigma^2,\sigma^3$ the
+standard Pauli matrices, the sigma matrices are
+\begin{equation}
+(\sigma^\mu)_{\alpha\dot\alpha}
+=(\mathbf 1_2,\sigma^1,\sigma^2,\sigma^3)_{\alpha\dot\alpha},\qquad
+(\bar\sigma^\mu)^{\dot\alpha\alpha}
+:=\epsilon^{\alpha\beta}\epsilon^{\dot\alpha\dot\beta}
+(\sigma^\mu)_{\beta\dot\beta}
+=(\mathbf 1_2,-\sigma^1,-\sigma^2,-\sigma^3)^{\dot\alpha\alpha},
+\label{eq:2:sigmaL}
+\end{equation}
+and obey the Clifford relations
+\begin{equation}
+(\sigma^\mu)_{\alpha\dot\alpha}(\bar\sigma^\nu)^{\dot\alpha\beta}
++(\sigma^\nu)_{\alpha\dot\alpha}(\bar\sigma^\mu)^{\dot\alpha\beta}
+=-2\eta^{\mu\nu}\delta_\alpha{}^\beta,\qquad
+(\bar\sigma^\mu)^{\dot\alpha\alpha}(\sigma^\nu)_{\alpha\dot\beta}
++(\bar\sigma^\nu)^{\dot\alpha\alpha}(\sigma^\mu)_{\alpha\dot\beta}
+=-2\eta^{\mu\nu}\delta^{\dot\alpha}{}_{\dot\beta}.
+\label{eq:2:cliffordL}
+\end{equation}
+The (anti-)self-dual Lorentz generators are
+\begin{equation}
+(\sigma^{\mu\nu})_\alpha{}^\beta
+:=\tfrac14\big[(\sigma^\mu)_{\alpha\dot\gamma}(\bar\sigma^\nu)^{\dot\gamma\beta}
+-(\sigma^\nu)_{\alpha\dot\gamma}(\bar\sigma^\mu)^{\dot\gamma\beta}\big],\qquad
+(\bar\sigma^{\mu\nu})^{\dot\alpha}{}_{\dot\beta}
+:=\tfrac14\big[(\bar\sigma^\mu)^{\dot\alpha\gamma}(\sigma^\nu)_{\gamma\dot\beta}
+-(\bar\sigma^\nu)^{\dot\alpha\gamma}(\sigma^\mu)_{\gamma\dot\beta}\big],
+\label{eq:2:sigmamunu}
+\end{equation}
+with components $\sigma^{0i}=-\tfrac12\sigma^i$,
+$\bar\sigma^{0i}=+\tfrac12\sigma^i$ and
+$\sigma^{ij}=\bar\sigma^{ij}=-\tfrac{i}{2}\epsilon^{ijk}\sigma^k$.
+
+\paragraph{Weyl versus Majorana spinors.} The formalism is strictly
+two-component. In Lorentzian signature the barred spinor is the Hermitian
+conjugate of the unbarred one,
+\begin{equation}
+\bar\chi^{\dot\alpha}:=(\chi^\alpha)^\dagger ;
+\label{eq:2:majorana}
+\end{equation}
+this is the Majorana reality condition: a Majorana four-spinor is the pair
+$(\chi_\alpha,\bar\chi^{\dot\alpha})$, while a Weyl spinor is half of this
+data and is the fundamental object here. In particular the Lorentzian
+supercharges obey $(Q_\alpha)^\dagger=\bar Q_{\dot\alpha}$.
+
+\subsection{Euclidean spinors}\label{sec:notation:euclidean}
+
+The Wick rotation keeps the spatial coordinates and the Grassmann coordinates
+fixed and rotates the time coordinate; the generators acquire phases,
+\begin{equation}
+x_E^i=x_L^i,\qquad x_E^4=ix_L^0,\qquad
+P^E_i=-iP^L_i,\qquad P^E_4=P_L^0=H,\qquad
+Q^E_\alpha=-iQ^L_\alpha,\qquad
+\bar Q^E_{\dot\alpha}=-i\bar Q^L_{\dot\alpha} .
+\label{eq:2:wick}
+\end{equation}
+The Euclidean sigma matrices and Clifford relations are
+\begin{equation}
+(\sigma^m)_{\alpha\dot\alpha}
+=(-i\sigma^1,-i\sigma^2,-i\sigma^3,\mathbf 1_2)_{\alpha\dot\alpha},\qquad
+(\bar\sigma^m)^{\dot\alpha\alpha}
+:=\epsilon^{\alpha\beta}\epsilon^{\dot\alpha\dot\beta}
+(\sigma^m)_{\beta\dot\beta}
+=(+i\sigma^1,+i\sigma^2,+i\sigma^3,\mathbf 1_2)^{\dot\alpha\alpha},
+\label{eq:2:sigmaE}
+\end{equation}
+\begin{equation}
+(\sigma^m)_{\alpha\dot\alpha}(\bar\sigma^n)^{\dot\alpha\beta}
++(\sigma^n)_{\alpha\dot\alpha}(\bar\sigma^m)^{\dot\alpha\beta}
+=2\delta^{mn}\delta_\alpha{}^\beta ,
+\label{eq:2:cliffordE}
+\end{equation}
+so that $(\bar\sigma^m)^{\dot\alpha\alpha}
+=\big((\sigma^m)_{\alpha\dot\alpha}\big)^\dagger$ as matrices. The
+(anti-)self-dual rotation generators $\sigma^{mn},\bar\sigma^{mn}$ are defined
+as in \eqref{eq:2:sigmamunu} with $\mu\to m$, and have components
+\begin{equation}
+\sigma^{ij}=\bar\sigma^{ij}=\frac{i}{2}\epsilon^{ijk}\sigma^k,\qquad
+\sigma^{4i}=+\frac{i}{2}\sigma^i,\qquad
+\bar\sigma^{4i}=-\frac{i}{2}\sigma^i .
+\label{eq:2:sigmamn}
+\end{equation}
+
+\paragraph{The $SO(4)\simeq SU(2)\times SU(2)$ structure.} In Euclidean
+signature the undotted index $\alpha$ and the dotted index $\dot\alpha$ are
+fundamental indices of two \emph{independent} $SU(2)$ factors:
+$(\sigma^{mn})_\alpha{}^\beta$ acts only on undotted spinors and
+$(\bar\sigma^{mn})^{\dot\alpha}{}_{\dot\beta}$ only on dotted ones. From
+\eqref{eq:2:sigmamn}, $\sigma^{mn}$ and $\bar\sigma^{mn}$ are the
+(anti-)self-dual generators of
+$\mathfrak{so}(4)=\mathfrak{su}(2)_+\oplus\mathfrak{su}(2)_-$, interchanged by
+$\sigma\leftrightarrow\bar\sigma$; the vector $(\sigma^m)_{\alpha\dot\alpha}$
+is the $(\mathbf 2,\mathbf 2)$.
+
+\paragraph{No Euclidean conjugation.} In Euclidean signature no dagger
+relation is imposed between $Q_\alpha$ and $\bar Q_{\dot\alpha}$: the two Weyl
+sectors are independent. Consequently the chiral and antichiral fields are
+independent Euclidean fields, not conjugates. This holds for the matter
+multiplets $(\Phi,\widetilde\Phi)$ and for the two gaugini
+$(\lambda_\alpha,\widetilde\lambda_{\dot\alpha})$ alike, and it is used
+throughout this paper: the superspace calculation of
+Section~\ref{sec:superspace} and the component reduction of
+Section~\ref{sec:component} treat untilded and tilded fields as independent
+integration variables.
+\begin{remark}\label{rem:2:noconjugation}
+Standing convention: \emph{no Euclidean conjugation relates $\Phi$ to
+$\widetilde\Phi$} (nor $\lambda$ to $\widetilde\lambda$). The Lorentzian
+identifications $\widetilde\Phi=\bar\Phi$,
+$\widetilde\lambda=\bar\lambda$ are Wick-transported relations only; no
+intrinsic Euclidean reality condition is imposed anywhere in this paper.
+\end{remark}
+
+\paragraph{The plus/minus frame.} In the Euclidean computation of
+Sections~\ref{sec:superspace}--\ref{sec:component} the undotted $SU(2)$ index
+is resolved in the frame $\alpha=(+,-)$: an undotted spinor $X_\alpha$ has
+components $X_\pm$, and correspondingly the gauge-covariant superspace
+derivatives $\nabla_\alpha$ (undotted) and $\widetilde\nabla_{\dot\alpha}$
+(dotted) have frame components
+\begin{equation}
+\nabla_\pm:=\nabla_{\alpha=\pm},\qquad
+\widetilde\nabla_{\dot\pm}:=\widetilde\nabla_{\dot\alpha=\dot\pm} .
+\label{eq:2:pmframe}
+\end{equation}
+Here $\nabla_\alpha$ carries the chiral gauge connection and
+$\widetilde\nabla_{\dot\alpha}$ the antichiral one, adapted to the independent
+Euclidean antichiral fields. In the one-loop calculation every remaining
+spinor index is written dotted, the undotted $SU(2)$ index being carried by
+the symbol $+$: the vector appears through the bispinor map
+$(\sigma^m)_{+\dot\alpha}$ and $(\sigma^{mn})_{++}$ generates the undotted
+(plus) $SU(2)$.
+\begin{remark}\label{rem:2:pmframe}
+Only the frame and the names $\nabla_\pm,\widetilde\nabla_{\dot\pm}$ are fixed
+here. The connection-level definitions of the gauge-covariant derivatives are
+deferred to Section~\ref{sec:gaugebv}, their use in the letter algebra to
+Section~\ref{sec:superspace}.
+\end{remark}
+
+\subsection{Flat $N=1$ superspace}\label{sec:notation:superspace}
+
+Flat $N=1$ superspace has coordinates
+$z=(x^m,\theta^\alpha,\bar\theta_{\dot\alpha})$ (or $(x^\mu,\theta,\bar\theta)$
+in Lorentzian signature); the odd coordinates are distinct from the
+supersymmetry transformation parameters $\varepsilon,\bar\varepsilon$. We
+write
+\begin{equation}
+\theta\sigma^m\bar\theta
+:=\theta^\alpha(\sigma^m)_{\alpha\dot\beta}\bar\theta^{\dot\beta},\qquad
+\theta\sigma^\mu\bar\theta
+:=\theta^\alpha(\sigma^\mu)_{\alpha\dot\beta}\bar\theta^{\dot\beta} .
+\label{eq:2:thetasigmabar}
+\end{equation}
+Odd derivatives are \emph{left} derivatives,
+$\partial_\alpha:=\vec\partial/\partial\theta^\alpha$,
+$\bar\partial^{\dot\alpha}:=\vec\partial/\partial\bar\theta_{\dot\alpha}$,
+$\bar\partial_{\dot\alpha}
+:=\epsilon_{\dot\alpha\dot\beta}\bar\partial^{\dot\beta}$, obeying the graded
+Leibniz rule and
+\begin{equation}
+\{\partial_\alpha,\theta^\beta\}=\delta_\alpha{}^\beta,\qquad
+\{\bar\partial^{\dot\alpha},\bar\theta_{\dot\beta}\}
+=\delta^{\dot\alpha}{}_{\dot\beta},\qquad
+\{\bar\partial_{\dot\alpha},\bar\theta^{\dot\beta}\}
+=-\,\delta_{\dot\alpha}{}^{\dot\beta}.
+\label{eq:2:grassmann}
+\end{equation}
+\begin{remark}\label{rem:2:barsign}
+The minus sign in the last anticommutator of \eqref{eq:2:grassmann} is a
+standard source of sign errors; it traces back to
+$\bar\partial_{\dot\alpha}=\epsilon_{\dot\alpha\dot\beta}\bar\partial^{\dot\beta}$
+with $\epsilon_{\dot1\dot2}=-1$.
+\end{remark}
+A supersymmetry transformation acts on the coordinates as
+\begin{equation}
+\theta'^\alpha=\theta^\alpha+\varepsilon^\alpha,\qquad
+\bar\theta'_{\dot\alpha}=\bar\theta_{\dot\alpha}+\bar\varepsilon_{\dot\alpha},
+\qquad
+x'^\mu=x^\mu
++i\varepsilon^\alpha(\sigma^\mu)_{\alpha\dot\beta}\bar\theta^{\dot\beta}
+-i\theta^\alpha(\sigma^\mu)_{\alpha\dot\beta}\bar\varepsilon^{\dot\beta} .
+\label{eq:2:susytransf}
+\end{equation}
+We use the same symbols for the Noether charges and for their realizations as
+differential operators on superspace, the difference being clear from context.
+With $P_\mu=-i\partial_\mu$ the Lorentzian supercharges and supersymmetric
+covariant derivatives are
+\begin{equation}
+Q_\alpha=-i\partial_\alpha
++(\sigma^\mu)_{\alpha\dot\beta}\bar\theta^{\dot\beta}\partial_\mu,\qquad
+\bar Q_{\dot\alpha}=-i\bar\partial_{\dot\alpha}
+-\theta^\beta(\sigma^\mu)_{\beta\dot\alpha}\partial_\mu ,
+\label{eq:2:QL}
+\end{equation}
+\begin{equation}
+\cD_\alpha=\partial_\alpha
+-i(\sigma^\mu)_{\alpha\dot\beta}\bar\theta^{\dot\beta}\partial_\mu,\qquad
+\bcD_{\dot\alpha}=\bar\partial_{\dot\alpha}
++i\theta^\beta(\sigma^\mu)_{\beta\dot\alpha}\partial_\mu ,
+\label{eq:2:DL}
+\end{equation}
+where $\cD_\alpha,\bcD_{\dot\alpha}$ anticommute with all supercharges. Their
+algebras are
+\begin{equation}
+\{Q_\alpha,\bar Q_{\dot\beta}\}
+=2i(\sigma^\mu)_{\alpha\dot\beta}\partial_\mu
+=-2(\sigma^\mu)_{\alpha\dot\beta}P_\mu,\qquad
+\{\cD_\alpha,\bcD_{\dot\beta}\}
+=2i(\sigma^\mu)_{\alpha\dot\beta}\partial_\mu
+=-2(\sigma^\mu)_{\alpha\dot\beta}P_\mu ,
+\label{eq:2:algebraL}
+\end{equation}
+with vanishing same-chirality anticommutators. The same relations hold for the
+Hilbert-space Noether charges; the normalization is fixed by Hamiltonian
+positivity, $\{Q_1,(Q_1)^\dagger\}+\{Q_2,(Q_2)^\dagger\}=4H$, and the central
+charge vanishes. The Lorentzian chiral coordinates are
+\begin{equation}
+y^\mu:=x^\mu-i\theta\sigma^\mu\bar\theta,\qquad
+\widetilde y^\mu:=x^\mu+i\theta\sigma^\mu\bar\theta \ (=\bar y^\mu),\qquad
+\bcD_{\dot\alpha}y^\mu=0,\qquad
+\cD_\alpha\widetilde y^\mu=0 .
+\label{eq:2:ychiralL}
+\end{equation}
+After Wick rotation the coordinate momentum is $P_m=-\partial_m$ and
+\begin{equation}
+\begin{aligned}
+Q_\alpha&=-\partial_\alpha
++(\sigma^m)_{\alpha\dot\beta}\bar\theta^{\dot\beta}\partial_m, &
+\bar Q_{\dot\alpha}&=-\bar\partial_{\dot\alpha}
+-\theta^\beta(\sigma^m)_{\beta\dot\alpha}\partial_m,\\
+\cD_\alpha&=\partial_\alpha
++(\sigma^m)_{\alpha\dot\beta}\bar\theta^{\dot\beta}\partial_m, &
+\bcD_{\dot\alpha}&=\bar\partial_{\dot\alpha}
+-\theta^\beta(\sigma^m)_{\beta\dot\alpha}\partial_m ,
+\end{aligned}
+\label{eq:2:QDE}
+\end{equation}
+with algebras
+\begin{equation}
+\{Q_\alpha,\bar Q_{\dot\beta}\}
+=+2(\sigma^m)_{\alpha\dot\beta}\partial_m
+=-2(\sigma^m)_{\alpha\dot\beta}P_m,\qquad
+\{\cD_\alpha,\bcD_{\dot\beta}\}
+=-2(\sigma^m)_{\alpha\dot\beta}\partial_m
+=+2(\sigma^m)_{\alpha\dot\beta}P_m .
+\label{eq:2:algebraE}
+\end{equation}
+Same-chirality anticommutators vanish in both signatures, all mixed
+$Q$-$\cD$ anticommutators vanish, and everything commutes with the momentum.
+The Euclidean chiral coordinates are
+\begin{equation}
+y^m:=x^m+\theta\sigma^m\bar\theta,\qquad
+\widetilde y^m:=x^m-\theta\sigma^m\bar\theta,\qquad
+\bcD_{\dot\alpha}y^m=0,\qquad
+\cD_\alpha\widetilde y^m=0 .
+\label{eq:2:ychiralE}
+\end{equation}
+\begin{remark}[Sign trap]\label{rem:2:signtrap}
+In Lorentzian signature the $Q$- and $\cD$-algebras coincide,
+$\{Q,\bar Q\}=\{\cD,\bcD\}=-2\sigma^\mu P_\mu$; in Euclidean signature they
+differ by a relative minus sign, $\{Q,\bar Q\}=-2\sigma^m P_m$ versus
+$\{\cD,\bcD\}=+2\sigma^m P_m$. All sign conventions of the loop computation in
+Sections~\ref{sec:superspace}--\ref{sec:component} are tied to
+\eqref{eq:2:algebraE}.
+\end{remark}
+
+\subsection{Theta expansions and superfields}\label{sec:notation:superfields}
+
+The basic monomials and their normalizations are
+\begin{equation}
+\theta^2:=\theta^\alpha\theta_\alpha=-2\theta^1\theta^2,\qquad
+\bar\theta^2:=\bar\theta_{\dot\alpha}\bar\theta^{\dot\alpha}
+=2\bar\theta_{\dot1}\bar\theta_{\dot2},\qquad
+\theta^\alpha\theta^\beta=-\tfrac12\epsilon^{\alpha\beta}\theta^2,\qquad
+\bar\theta_{\dot\alpha}\bar\theta_{\dot\beta}
+=-\tfrac12\epsilon_{\dot\alpha\dot\beta}\bar\theta^2 .
+\label{eq:2:theta2}
+\end{equation}
+With $\cD^2:=\cD^\alpha\cD_\alpha$ and
+$\bcD^2:=\bcD_{\dot\alpha}\bcD^{\dot\alpha}$ one has, in either signature,
+\begin{equation}
+\cD^2\theta^2=-4,\qquad \bcD^2\bar\theta^2=-4 .
+\label{eq:2:D2theta2}
+\end{equation}
+Writing $X|:=X|_{\theta=\bar\theta=0}$, the component projectors are
+\begin{equation}
+[X]_F:=-\tfrac14\cD^2X\big|,\qquad
+[\widetilde X]_{\widetilde F}:=-\tfrac14\bcD^2\widetilde X\big|,\qquad
+[Y]_D:=\tfrac1{16}\cD^2\bcD^2Y\big| \quad(\bcD^2\ \text{acts first}),
+\label{eq:2:projectors}
+\end{equation}
+and the full superspace measure is
+$\int d^4x\,d^4\theta\,Y:=\int d^4x\,[Y]_D$.
+\begin{remark}\label{rem:2:generalsf}
+A general (unconstrained) superfield enters this paper only through the
+projectors \eqref{eq:2:projectors}; its full fourteen-component expansion is
+never used. The vector multiplet is always reduced to Wess--Zumino gauge,
+\eqref{eq:2:wzE} below.
+\end{remark}
+A chiral superfield $\Phi$ and an antichiral superfield $\widetilde\Phi$ obey
+\begin{equation}
+\bcD_{\dot\alpha}\Phi=0,\qquad \cD_\alpha\widetilde\Phi=0 ,
+\label{eq:2:chirality}
+\end{equation}
+and have components $(\phi,\psi_\alpha,F)$ and
+$(\widetilde\phi,\widetilde\psi_{\dot\alpha},\widetilde F)$ given by
+\begin{equation}
+\phi:=\Phi\big|,\qquad
+\psi_\alpha:=\tfrac1{\sqrt2}\cD_\alpha\Phi\big|,\qquad
+F:=-\tfrac14\cD^2\Phi\big|;\qquad
+\widetilde\phi:=\widetilde\Phi\big|,\qquad
+\widetilde\psi_{\dot\alpha}
+:=\tfrac1{\sqrt2}\bcD_{\dot\alpha}\widetilde\Phi\big|,\qquad
+\widetilde F:=-\tfrac14\bcD^2\widetilde\Phi\big| .
+\label{eq:2:chiralcomponents}
+\end{equation}
+In Lorentzian signature $\widetilde\Phi=\bar\Phi$ and
+$(\widetilde\phi,\widetilde\psi,\widetilde F)=(\bar\phi,\bar\psi,\bar F)$; in
+Euclidean signature $\widetilde\Phi$ is independent of $\Phi$
+(Remark~\ref{rem:2:noconjugation}). Their chiral-coordinate expansions are
+\begin{equation}
+\Phi(y,\theta)=\phi(y)+\sqrt2\,\theta^\alpha\psi_\alpha(y)+\theta^2F(y),
+\qquad
+\widetilde\Phi(\widetilde y,\bar\theta)
+=\widetilde\phi(\widetilde y)
++\sqrt2\,\bar\theta_{\dot\alpha}\widetilde\psi^{\dot\alpha}(\widetilde y)
++\bar\theta^2\widetilde F(\widetilde y),
+\label{eq:2:chiralexpansion}
+\end{equation}
+with $y,\widetilde y$ from \eqref{eq:2:ychiralL} or \eqref{eq:2:ychiralE}.
+Expanding in $x$-space gives, in Euclidean signature,
+\begin{equation}
+\Phi=\phi+\sqrt2\,\theta\psi+\theta^2F
++\theta\sigma^m\bar\theta\,\partial_m\phi
+-\frac1{\sqrt2}\,\theta^2
+(\partial_m\psi^\alpha)(\sigma^m)_{\alpha\dot\beta}\bar\theta^{\dot\beta}
++\frac14\,\theta^2\bar\theta^2\,\partial^m\partial_m\phi ,
+\label{eq:2:chiralxE}
+\end{equation}
+\begin{equation}
+\widetilde\Phi=\widetilde\phi
++\sqrt2\,\bar\theta\widetilde\psi
++\bar\theta^2\widetilde F
+-\theta\sigma^m\bar\theta\,\partial_m\widetilde\phi
++\frac1{\sqrt2}\,\theta^\alpha(\sigma^m)_{\alpha\dot\beta}
+(\partial_m\widetilde\psi^{\dot\beta})\,\bar\theta^2
++\frac14\,\theta^2\bar\theta^2\,\partial^m\partial_m\widetilde\phi ,
+\label{eq:2:antichiralxE}
+\end{equation}
+where $\partial^m\partial_m$ is the Euclidean Laplacian; the Lorentzian
+counterparts follow from \eqref{eq:2:chiralexpansion} with
+\eqref{eq:2:ychiralL}.
+
+The vector multiplet is described by the prepotential $\cV=\cV^AT_A$ with
+$[T_A,T_B]=if_{AB}{}^CT_C$ in an orthonormal basis,
+$\kappa_{AB}=\delta_{AB}$. Wess--Zumino gauge is the residual gauge choice
+\begin{equation}
+\cV\big|=\theta\cV\big|=\bar\theta\cV\big|=0 ,
+\label{eq:2:wzcondition}
+\end{equation}
+in which the prepotential reduces to
+\begin{equation}
+\cV_{\rm WZ}=-2\theta\sigma^\mu\bar\theta\,A_\mu
++2i\theta^2\bar\theta_{\dot\alpha}\bar\lambda^{\dot\alpha}
+-2i\bar\theta^2\theta^\alpha\lambda_\alpha
++\theta^2\bar\theta^2 D
+\qquad\text{(Lorentzian)},
+\label{eq:2:wzL}
+\end{equation}
+\begin{equation}
+\cV_{\rm WZ}=-2i\theta\sigma^m\bar\theta\,A_m
++2i\theta^2\bar\theta_{\dot\alpha}\widetilde\lambda^{\dot\alpha}
+-2i\bar\theta^2\theta^\alpha\lambda_\alpha
++\theta^2\bar\theta^2 D
+\qquad\text{(Euclidean)},
+\label{eq:2:wzE}
+\end{equation}
+with component fields $(A_m,\lambda_\alpha,\widetilde\lambda_{\dot\alpha},D)$;
+note that the Euclidean prepotential contains the \emph{independent}
+antichiral gaugino $\widetilde\lambda_{\dot\alpha}$. The gauge field is the
+ordered-commutator projection
+\begin{equation}
+A_\mu=\frac18(\bar\sigma_\mu)^{\dot\beta\alpha}
+[\cD_\alpha,\bcD_{\dot\beta}]_{\rm ord}\cV\Big|
+\quad\text{(Lorentzian)},\qquad
+A_m=\frac{i}{8}(\bar\sigma_m)^{\dot\beta\alpha}
+[\cD_\alpha,\bcD_{\dot\beta}]_{\rm ord}\cV\Big|
+\quad\text{(Euclidean)},
+\label{eq:2:Aprojection}
+\end{equation}
+where $[\cdot,\cdot]_{\rm ord}$ keeps the spinor derivatives in the displayed
+order. The gaugino field-strength superfields are
+\begin{equation}
+\cW_\alpha:=-\frac18\,\bcD^2\big[e^{-\cV}(\cD_\alpha e^{\cV})\big],\qquad
+\bcW_{\dot\alpha}
+:=+\frac18\,\cD^2\big[e^{\cV}(\bcD_{\dot\alpha}e^{-\cV})\big],
+\label{eq:2:fieldstrengths}
+\end{equation}
+chiral and antichiral respectively, $\bcD_{\dot\alpha}\cW_\beta=0$,
+$\cD_\alpha\bcW_{\dot\beta}=0$, with component projections
+\begin{equation}
+\lambda_\alpha:=i\cW_\alpha\big|,\qquad
+\widetilde\lambda_{\dot\alpha}:=-i\bcW_{\dot\alpha}\big|,\qquad
+D:=-\frac12\cD^\alpha\cW_\alpha\big|
+=+\frac12\bcD^{\dot\alpha}\bcW_{\dot\alpha}\big| .
+\label{eq:2:vectorcomponents}
+\end{equation}
+In Lorentzian signature $\bcW_{\dot\alpha}=\bar\cW_{\dot\alpha}$ and
+$\widetilde\lambda_{\dot\alpha}=\bar\lambda_{\dot\alpha}$; in Euclidean
+signature $(\cW_\alpha,\bcW_{\dot\alpha})$ and
+$(\lambda_\alpha,\widetilde\lambda_{\dot\alpha})$ are independent.
+
+\subsection{Chiral and vector representations}\label{sec:notation:representations}
+
+Gauge transformations are generated by a chiral parameter $\Lambda$ and an
+independent antichiral parameter $\bar\Lambda$,
+\begin{equation}
+h:=e^{i\Lambda},\qquad \bar h:=e^{i\bar\Lambda},\qquad
+\bcD_{\dot\alpha}\Lambda=0,\qquad \cD_\alpha\bar\Lambda=0 .
+\label{eq:2:gaugeparams}
+\end{equation}
+In the \emph{chiral representation} superfields are functions of the chiral
+coordinates \eqref{eq:2:ychiralL}--\eqref{eq:2:ychiralE}, and
+\begin{equation}
+\Phi'=h\,\Phi,\qquad
+\widetilde\Phi'=\widetilde\Phi\,\bar h^{-1},\qquad
+(e^{\cV})'=\bar h\,e^{\cV}\,h^{-1} .
+\label{eq:2:chiralframe}
+\end{equation}
+Thus the bridge $e^{\cV}$ carries the entire gauge field in this frame: the
+combination $\widetilde\Phi\,e^{\cV}\,\Phi$ is gauge invariant, the gauge
+connection appears only through $e^{-\cV}(\cD_\alpha e^{\cV})$ in the undotted
+spinor derivative, and the field strengths \eqref{eq:2:fieldstrengths}
+transform homogeneously,
+\begin{equation}
+\cW'_\alpha=h\,\cW_\alpha\,h^{-1},\qquad
+\bcW'_{\dot\alpha}=\bar h\,\bcW_{\dot\alpha}\,\bar h^{-1} .
+\label{eq:2:Wtransform}
+\end{equation}
+In the \emph{vector representation} one works instead on the full
+$(x,\theta,\bar\theta)$ superspace: all superspace derivatives carry
+connections, the matter fields are covariantly chiral, and gauge
+transformations act by a single real group element, so that the complexified
+parameters $h,\bar h$ and the explicit bridge disappear from the
+transformation laws. The two representations are related by a factorization of
+the bridge $e^{\cV}$ and are physically equivalent; we use the chiral
+representation in what follows.
+\begin{remark}\label{rem:2:frames}
+This subsection states the two frames at the superfield level only. The
+connection-level definitions of the gauge-covariant derivatives
+$\nabla_\alpha,\widetilde\nabla_{\dot\alpha}$ of \eqref{eq:2:pmframe}, the
+bridge factorization, the gauge action, and the BV--BRST formulation are
+deferred to Section~\ref{sec:gaugebv}.
+\end{remark}
