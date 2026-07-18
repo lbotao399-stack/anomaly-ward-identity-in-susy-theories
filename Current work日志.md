@@ -1,5 +1,15 @@
 # Current Work
 
+## 2026-07-17 decision list — Step-0 unified notation convention (统一记号约定)
+
+Convention branch locks surfaced per the derivation-first law; none left as standing BLOCKED.
+
+- **Locked branches (LOCK):** mostly-plus $\eta_L=\operatorname{diag}(-1,+1,+1,+1)$ (0A.2); single-exponent bridge $\mathcal E=e^{\mathcal V}$ (0A.83); $\mathcal W_a=-\frac18\bar D^2(\mathcal E^{-1}D_a\mathcal E)$ (0A.84); i-ful BRST $\mathbf s\mathfrak c=i\mathfrak c^2$ (0A.106); Weyl primacy with the Majorana layer conditional; R-branch $r=-2\Delta/3$ (0A.132).
+- **P0 corrected pre-PR:** $\epsilon_{E,1234}=+1$ (was $-1$ in draft), derived by $\delta_E$-lowering of (0A.2); pinned by exact lowering sum in `scripts/verify_step00_unified_notation.py`.
+- **F-term arbitration:** exact $\mathbb Q(i)$ Grassmann engine verdict form (A) — $i(\sigma^{\mu\nu})_a{}^b\vartheta_bF_{\mu\nu}$ of (0A.77); lowered-index form (B) rejected.
+- **OUT_OF_SCOPE (nonblocking):** `OUT_OF_SCOPE_N2_N4_CLOSURE_CROSSCHECK`, `OUT_OF_SCOPE_WEINBERG_GAUGINO_PHASE`, `OUT_OF_SCOPE_DRED_MOMENTUM_LEDGER_LOR_CYCLE`, `OUT_OF_SCOPE_NK_BRANCH_TABLE`.
+- Acceptance of `CONTRACT-STEP-00-UNIFIED-NOTATION-001` happens by PR review; Notion mirror is post-merge only.
+
 ## Current Difficulty
 
 - **LATEST — `OPEN_FINAL_CENSUS_17_CANDIDATES`:** the final Claude census proposal did not run the ghost--Nielsen--Kallosh sector, the zero/cut-orbit sector, or the automated three-lens refutation, and deferred four physics-relevant Wick routings.  Holomorphic-twist agreement does not prove termwise absence.  The accepted coefficient ledger is unchanged.
