@@ -1246,6 +1246,62 @@ class RepositoryPolicyTest(unittest.TestCase):
             )
             self.assertEqual(len(task["candidate_claim_ids"]), 3)
             return
+        if task["id"] == "REFERENCE-IMPORT-BOOKS-NOTATION-COMPLETION-001":
+            exception = task["notion_reference_exception"]
+            self.assertTrue(exception["user_authorized"])
+            self.assertEqual(exception["search_status"], "FORBIDDEN_BY_TASK")
+            self.assertEqual(
+                exception["fetch_only_page_ids"],
+                [
+                    "34cee2b74b3f8195ae11f26879eb36e8",
+                    "34cee2b74b3f81cdac3ee015ade06e28",
+                    "34cee2b74b3f8128b81bd4c39137cb51",
+                    "34cee2b74b3f816da424ea67619cfa5f",
+                    "34cee2b74b3f81539884dcb60a7200cd",
+                    "34cee2b74b3f81cb89ddd43057494701",
+                    "34cee2b74b3f818696f8d1ced5602968",
+                    "34cee2b74b3f8122a5bbe9e798dd4afc",
+                    "34cee2b74b3f81879a50e2747ed85f8e",
+                    "96e8f1d39d3a40ea92e71c1a03e6f6fc",
+                    "bd6aa7a3c06c444783c6e4b9cb3a27f4",
+                    "e9e8aed2aafe45fcad9e5567ac407bff",
+                    "51a0dad3c8454b07a2087d974003aaf0",
+                    "bdf1ed056cb94d5ba1d9eb4e744e9c2c",
+                ],
+            )
+            self.assertEqual(
+                exception["book_root_page_ids"],
+                [
+                    "310ee2b74b3f8065a3acdbdac27f3b2b",
+                    "34fee2b74b3f80adaaa4e3113787083b",
+                ],
+            )
+            self.assertEqual(exception["translation_status"], "NOT_PERFORMED_IN_REFERENCE_IMPORT")
+            self.assertEqual(exception["default_boundary_after_task"], "GIT_TO_NOTION_ONLY")
+            external = [item for item in task["allowed_inputs"] if "://" in item]
+            self.assertEqual(external, [])
+            self.assertIn("references/books-notation-completion-source-ledger.json", task["allowed_inputs"])
+            self.assertIn(
+                "references/vendor/notion/weinberg/26-07-supercurrent-34cee2b74b3f816da424ea67619cfa5f.md",
+                task["allowed_inputs"],
+            )
+            self.assertIn(
+                "references/vendor/notion/srednicki/74-brst-symmetry-51a0dad3c8454b07a2087d974003aaf0.md",
+                task["allowed_inputs"],
+            )
+            ledger = json.loads(
+                (ROOT / "references/books-notation-completion-source-ledger.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(ledger["task"], task["id"])
+            self.assertEqual(len(ledger["notion_pages"]), 14)
+            for page in ledger["notion_pages"]:
+                self.assertEqual(page["role"], "REFERENCE_EVIDENCE_ONLY")
+                self.assertIn(page["page_id"], exception["fetch_only_page_ids"])
+                self.assertEqual(page["url"], f"https://app.notion.com/p/{page['page_id']}")
+                snapshot = ROOT / page["snapshot_path"]
+                self.assertTrue(snapshot.is_file(), page["snapshot_path"])
+                self.assertEqual(hashlib.sha256(snapshot.read_bytes()).hexdigest(), page["sha256"])
+            return
         self.fail(f"unreviewed reference-import task: {task['id']}")
 
     def test_superspace_1001_supergraph_reference_import(self) -> None:
@@ -2411,9 +2467,14 @@ class RepositoryPolicyTest(unittest.TestCase):
     def test_step5_core_theory_write_only_mirror_receipt(self) -> None:
         page_map = json.loads((ROOT / "mirror/page_map.yaml").read_text(encoding="utf-8"))
         receipt = json.loads((ROOT / "audits/notion_write_receipt.json").read_text(encoding="utf-8"))
-        task_path = ROOT / "tasks/CURRENT.yaml"
-        mirror_task = json.loads(task_path.read_text(encoding="utf-8"))
         ledger = json.loads((ROOT / "ledger/proof_obligations.json").read_text(encoding="utf-8"))
+        obligation = next(
+            item
+            for item in ledger["proof_obligations"]
+            if item["id"] == "MIRROR-STEP-05-CLAUDE-AUDIT-NOTION-001"
+        )
+        task_path = ROOT / obligation["task"]
+        mirror_task = json.loads(task_path.read_text(encoding="utf-8"))
 
         page_id = "PAPER-AWI-N4-ONE-LOOP-CORE-THEORY-001"
         page = next(item for item in page_map["pages"] if item["id"] == page_id)
@@ -2432,11 +2493,6 @@ class RepositoryPolicyTest(unittest.TestCase):
         self.assertEqual(receipt["central_log_write"]["write_response"], "succeeded")
         self.assertEqual(mirror_task["id"], "MIRROR-STEP-05-CLAUDE-AUDIT-NOTION-001")
         self.assertEqual(mirror_task["status"], "ACCEPTED")
-        obligation = next(
-            item
-            for item in ledger["proof_obligations"]
-            if item["id"] == "MIRROR-STEP-05-CLAUDE-AUDIT-NOTION-001"
-        )
         self.assertEqual(obligation["state"], "ACCEPTED")
         self.assertEqual(obligation["task_sha256"], hashlib.sha256(task_path.read_bytes()).hexdigest())
 
