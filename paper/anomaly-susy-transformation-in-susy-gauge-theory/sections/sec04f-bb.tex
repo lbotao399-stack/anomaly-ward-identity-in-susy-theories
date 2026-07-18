@@ -1,0 +1,522 @@
+% sec04f-bb.tex — Section 4 subsection: the (beta_r, beta_s) channel
+% Writer: 作家_BB (Writer_BB). Body LaTeX only; macros live in main.tex.
+
+\subsection{The channel $(\beta_r,\beta_s)$}\label{sec:superspace:bb}
+
+We now compute the $(\beta_r,\beta_s)$ family in full: the six ordered
+off-diagonal channels $r\ne s$ of the census~\eqref{eq:ss:29} and the three
+diagonal zeros. The result is the row~\eqref{eq:ss:ch-betabeta} of the channel
+table, derived here graph by graph. As in the seed channel
+(Section~\ref{sec:superspace:seed}), all graph weights are evaluated with
+unit-normalized letters
+\begin{equation}\label{eq:ss:bb-unit}
+B_r:=\sqrt2\,\beta_r,\qquad C^t:=\gamma^t,\qquad D_{\dot\alpha}:=-i\,\partial_{\dot\alpha}c,
+\end{equation}
+and the normalization of Definition~\ref{def:ss:letters} is restored at the
+end. In these letters the two ordered output carriers are
+\begin{equation}\label{eq:ss:bb-carriers}
+A_1:=\langle D^{\,D},C^{t\,E}\rangle,\qquad
+A_2:=\langle C^{t\,D},D^{\,E}\rangle,
+\end{equation}
+onto which every graph is projected without quotienting by total derivatives
+or exchanging the color indices $D,E$.
+
+\paragraph{1. The insertion and the descendant.} With the absorbed-frame
+scalings $\Phi_r=g\phi_r$, $\widetilde\Phi^r=g\widetilde\phi^r$ and the
+unit-normalized prepotential $u$, $\cV=\sqrt2 g\,u$, the gauge-covariant
+letter source expands as
+\begin{equation}\label{eq:ss:bb-resolvent}
+B_{r,c}=\cD_+\phi_r+g\sqrt2\,[\cD_+u,\phi_r]
++g^2\big[(\cD_+u)u-u(\cD_+u),\phi_r\big]+O(g^3),
+\end{equation}
+so the leading insertion of the channel is
+\begin{equation}\label{eq:ss:bb-insertion}
+\mathcal O^{(0),AB}_{B_rB_s}=g^{2}\,(\cD_+\phi_r)^{A}(\cD_+\phi_s)^{B}.
+\end{equation}
+The descendant of one letter follows from the tree
+system~\eqref{eq:ss:treeduction}:
+\begin{equation}\label{eq:ss:bb-descendant}
+\nabla_-B_r=-2\,\frac{\delta S}{\delta\widetilde\Phi^{r}}
+-\sqrt2\,\varepsilon_{rst}\,(C^{s}\times C^{t}),
+\qquad
+\frac{\delta S}{\delta\widetilde\Phi^{r}}
+=-\frac14\nabla^{2}\Phi_r-\frac{1}{\sqrt2}\,\varepsilon_{rst}\,(C^{s}\times C^{t}),
+\end{equation}
+with $(X\times Y)^A=f^{ABC}X^BY^C$ as in Section~\ref{sec:superspace:sd}.
+
+\begin{remark}[No pre-simplification before the occurrence census]%
+\label{rem:ss:bbnopresimplify}
+The two potential structures in~\eqref{eq:ss:bb-descendant} --- the
+Euler-potential piece $+\sqrt2\,\varepsilon_{rst}(C^s\times C^t)$ contained in
+$-2\,\delta S/\delta\widetilde\Phi^r$ and the explicit piece
+$-\sqrt2\,\varepsilon_{rst}(C^s\times C^t)$ --- carry opposite signs and equal
+regulated kernels, and they cancel only \emph{after} the regulated occurrence
+census of paragraph~7. It is not legitimate to pre-simplify
+\eqref{eq:ss:bb-descendant} to $\tfrac12\nabla^2\Phi_r$ before that census:
+doing so erases the Euler-potential occurrence and corrupts the pole
+bookkeeping of Remark~\ref{rem:ss:polebookkeeping}.
+\end{remark}
+
+\paragraph{2. Graph inventory.} The amputated ordered coefficient receives
+contributions from exactly three triangle parents. For $r\ne s$ with
+$\varepsilon_{rst}\ne0$ they are: the two-matter-vertex triangle (TMM, ports
+$(\phi_r,\phi_s)$), and the two matter/superpotential triangles (TMH), route
+002 with vertices $(M_r,H_-)$ and external ports $(u^D,\widetilde\phi^{tE})$,
+route 003 with vertices $(H_-,M_s)$ and ports $(\widetilde\phi^{tD},u^E)$.
+Route 003 is computed as an independent orientation --- reversed ports and
+graded source order --- never inferred from route 002 by reflection. All three
+internal lines of every triangle are matter lines
+$\langle\phi\widetilde\phi\rangle$; the external legs are one gauge leg $u^D$
+and one antichiral matter leg $\widetilde\phi^{tE}$, the residual external
+operators that the external map of paragraph~4 converts to the letters
+$\partial c$ and $\gamma^t$. The momentum routings are
+\begin{equation}\label{eq:ss:bb-routing}
+r_0=\ell,\quad r_1=\ell-p,\quad r_2=\ell-p-q;
+\qquad
+\rho_0=\ell,\quad \rho_1=\ell-q,\quad \rho_2=\ell-p-q,
+\end{equation}
+for routes 002 and 003 respectively, with the canonical loop rebase
+\begin{equation}\label{eq:ss:bb-rebase}
+k_0=-\rho_2,\qquad k_1=-\rho_1=k_0-p,\qquad k_2=-\rho_0=k_0-p-q,
+\end{equation}
+and the kinematic bookkeeping
+\begin{equation}\label{eq:ss:bb-kinematics}
+D_i=r_{i,d}^{2},\qquad \bar r_i^{\,2}=r_{i,d}^{2}+\mul^{2},\qquad \det r_i=-\bar r_i^{\,2},
+\end{equation}
+where $p$ is the external momentum at the matter vertex and $q$ the external
+momentum at $H_-$. The triangle of route 002 is displayed in
+Figure~\ref{fig:ss:bbtriangle}.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[scale=1.25]
+  \node[sinsert] (O) at (0,0) {};
+  \node[below=3pt of O, font=\small] {$\mathcal O_{B_rB_s}^{(0)}$};
+  \node[svertex] (M) at (-2.2,2.1) {};
+  \node[left=3pt of M, font=\small] {$M_r$};
+  \node[svertex] (H) at (2.2,2.1) {};
+  \node[right=3pt of H, font=\small] {$H_-$};
+  \draw[sV] (M) -- ++(-1.15,0.85) node[left, font=\small] {$u^{D}\ (p)$};
+  \draw[sPhit] (H) -- ++(1.15,0.85) node[right, font=\small] {$\widetilde\phi^{tE}\ (q)$};
+  \draw[sPhi] (O) -- node[pos=0.5, left, font=\small] {$r_0=\ell$} (M);
+  \draw[sPhi] (M) -- node[pos=0.5, above, font=\small] {$r_1=\ell-p$} (H);
+  \draw[sPhi] (H) -- node[pos=0.5, right, font=\small] {$r_2=\ell-p-q$} (O);
+\end{tikzpicture}
+\caption{The ordered triangle of route 002 for the $(\beta_r,\beta_s)$
+channel, $r\ne s$, drawn in the unit normalization~\eqref{eq:ss:bb-unit}. The
+composite insertion $\mathcal O_{B_rB_s}^{(0)}$ (filled node) attaches to the
+matter vertex $M_r$ and to the superpotential vertex $H_-$; the three internal
+lines are chiral--antichiral matter propagators with the displayed routing;
+the external legs are the unit prepotential $u^D$ (wavy) and the antichiral
+field $\widetilde\phi^{tE}$, converted to the letters $\partial c$ and
+$\gamma^t$ by the external map~\eqref{eq:ss:bb-extmap}. Route 003 is the
+independently oriented partner with reversed ports and the
+rebase~\eqref{eq:ss:bb-rebase}.}
+\label{fig:ss:bbtriangle}
+\end{figure}
+
+Beyond the triangles, the family contains: (a) two-point contact rows of
+bubble topology, the $\langle I_1S_{H_-}\rangle$ rows $T_2,T_4$ of paragraph~7,
+where $I_1$ is the $O(g)$ commutator term of~\eqref{eq:ss:bb-resolvent};
+(b) the Euler-kinetic cut rows of paragraph~7; (c) the Euler-potential and
+explicit-potential rows of Remark~\ref{rem:ss:bbnopresimplify}, which cancel
+each other before integration. Everything else vanishes exactly or is
+excluded: the twelve $I_2$ rows have no antichiral port; the $I_0S_4$ matter
+rows cannot absorb both flavors $r,s$, and $H_-$ has no quartic vertex; the
+gauge-fixing, ghost and auxiliary rows have no pair of matter-flavor ports;
+the coincident Jacobian contains $\delta_{rs}=0$ for $r\ne s$; and the four
+spectator double-bridge parents (vertex pairs $(H_-,H_+)$ or $(M,M)$ with one
+letter as spectator) all have the source edge as an articulation edge, so they
+are one-particle-reducible external self-energy attachments and do not enter
+the amputated coefficient.
+
+\paragraph{3. Wick contractions.} With the Euclidean exponent $e^{-S/\h}$ the
+vertex factors are $+\sqrt2 g/\h$ for $M_r$ and
+$-\sqrt2 g\,\varepsilon_{rst}/\h$ for $H_-$, and the propagators are
+\begin{equation}\label{eq:ss:bb-propagators}
+\langle u^{A}u^{B}\rangle=-\frac{\h\,\delta^{AB}}{p^{2}}\,\delta^{4}(\theta_{12}),
+\qquad
+\langle\phi_r^{A}\widetilde\phi^{sB}\rangle
+=\delta_r{}^{s}\,\frac{\h\,\delta^{AB}}{16\,p^{2}}\,
+\bcD_1^{2}\cD_1^{2}\,\delta^{4}(\theta_{12}),
+\end{equation}
+with the reversed chiral-line orientation derived explicitly rather than by
+reflection. The finite-Grassmann expansion of each triangle has two possible
+outer marks, according to which source edge carries the descendant
+$\nabla_-$-word of~\eqref{eq:ss:bb-descendant}. The marks are sparse:
+\begin{equation}\label{eq:ss:bb-marks}
+R_{001,L}=R_{001,R}=0,\qquad
+R_{002,L}=0,\quad R_{002,R}=128\,v(r_0),\qquad
+R_{003,R}=0,\quad R_{003,L}=-128\,v(\rho_2)=128\,v(k_0),
+\end{equation}
+where $v(k):=(-k_{+\dot2},\,k_{+\dot1})$ and the surviving mark of route 002
+sits on the $B_s$ source edge (selected edge $r_2$), that of route 003 on the
+$B_r$ source edge (selected edge $k_2$ after the
+rebase~\eqref{eq:ss:bb-rebase}). Explicitly, the raw parent word before the
+selected inverse-kernel square is removed is
+$R^{\dot1}=-1024\,r_{0,+\dot2}\det r_2$,
+$R^{\dot2}=+1024\,r_{0,+\dot1}\det r_2$, and removing the selected square
+leaves the residual word $128\,v(r_0)=(-128\,r_{0,+\dot2},128\,r_{0,+\dot1})$.
+The TMM route 001 has both marks zero and drops out. The contraction
+multiplicity is the Taylor/ordering factor
+\begin{equation}\label{eq:ss:bb-taylor}
+\frac{1}{2!}\,(1+1)=1,
+\end{equation}
+the second-order Taylor coefficient times the two vertex orderings. The color
+contraction of route 002 gives $+f^{ACD}f^{BCE}$, that of route 003 gives
+$-f^{ACD}f^{BCE}$; including the product Koszul and source-attachment signs,
+the net route signs are
+\begin{equation}\label{eq:ss:bb-routesigns}
+s_{002}=-i,\qquad s_{003}=+i .
+\end{equation}
+
+\begin{remark}[Sign bookkeeping]\label{rem:ss:bbsignchain}
+The color and sign outcomes~\eqref{eq:ss:bb-routesigns} are quoted at the
+granularity at which they were machine-verified (contraction value, ports,
+selected edge, net sign per route); we do not display an intermediate
+term-by-term sign chain.
+\end{remark}
+
+\paragraph{4. Prefactors and the external map.} Assembling the vertex factors,
+propagator numerators and the multiplicity~\eqref{eq:ss:bb-taylor}, the
+triangle and contact prefactors are
+\begin{equation}\label{eq:ss:bb-prefactors}
+P_\triangle
+=g^{2}\Big(\frac{\sqrt2 g}{\h}\Big)\Big(-\frac{\sqrt2 g}{\h}\Big)
+\Big(\frac{\h}{16}\Big)^{3}\frac{1}{2!}(1+1)
+=-\frac{\h g^{4}}{2048},
+\qquad
+P_{I_1H}
+=g^{2}(\sqrt2 g)\Big(-\frac{\sqrt2 g}{\h}\Big)\Big(\frac{\h}{16}\Big)^{2}
+=-\frac{\h g^{4}}{128}.
+\end{equation}
+The factors read: $g^2$ from the two source legs; one $M$ vertex and one $H_-$
+vertex; three chiral propagators $(\h/16)^3$ in the triangle; in $P_{I_1H}$
+the $O(g)$ commutator $\sqrt2[\cD_+u,\phi_r]$ of one insertion supplies
+$\sqrt2 g$, one $H_-$ vertex, and two chiral propagators. For the external
+legs, the source probe $u_{\dot\alpha}=\theta^+\theta^-\bar\theta_{\dot\alpha}$
+gives
+\begin{equation}\label{eq:ss:bb-extmap}
+\cD^{2}\bcD_{\dot\alpha}u_{\dot\alpha}\big|=-2,
+\qquad
+\cD^{2}\bcD_{\dot\alpha}u\big|=-\frac{4\sqrt2}{g}\,D_{\dot\alpha},
+\qquad
+C^{t}=g\,\widetilde\phi^{t},
+\qquad
+M_{\mathrm{ext}}=\frac{2\sqrt2}{g^{2}},
+\end{equation}
+i.e. the probe ratio $(-4\sqrt2/g)/(-2)=2\sqrt2/g$ expresses the gauge leg
+through the letter $D_{\dot\alpha}$, and $\widetilde\phi^t=g^{-1}C^t$
+expresses the antichiral leg through $C^t$. Each nonzero row then assembles as
+\begin{equation}\label{eq:ss:bb-assembly}
+\Gamma_{\mathrm{row}}
+=P\times N^{\mathrm{ev}}\times
+\int_{\ell}^{\mathrm{DRED}}\frac{\mul^{2}}{D_0D_1D_2}
+\times M_{\mathrm{ext}}\times\big(\pm f^{ACD}f^{BCE}\times s_{00n}\big),
+\end{equation}
+with $P\in\{P_\triangle,P_{I_1H}\}$, the evanescent word $N^{\mathrm{ev}}$ of
+paragraph~6, and the simplex weights decomposing the result onto the
+carriers~\eqref{eq:ss:bb-carriers}.
+
+\paragraph{5. $D$-algebra chain.} Let $\Pi_b$ be the bridge projector (edge
+$r_1$) and $\Pi_s$ the source-edge projector; both are Grassmann-even. Since
+$\cD^{2}=2\cD_-\cD_+$, the Leibniz rule gives the complete identity
+\begin{equation}\label{eq:ss:bb-productrule}
+\cD^{2}(\Pi_b\Pi_s)
+=(\cD^{2}\Pi_b)\Pi_s+\Pi_b(\cD^{2}\Pi_s)
++2(\cD_-\Pi_b)(\cD_+\Pi_s)-2(\cD_+\Pi_b)(\cD_-\Pi_s).
+\end{equation}
+In the ordered $(u,\widetilde\phi^{t})$ projection the first and third terms
+vanish,
+\begin{equation}\label{eq:ss:bb-survivors}
+(\cD^{2}\Pi_b)\Pi_s=0,\qquad 2(\cD_-\Pi_b)(\cD_+\Pi_s)=0,
+\end{equation}
+leaving the two survivors $\Pi_b(\cD^{2}\Pi_s)$ and
+$-2(\cD_+\Pi_b)(\cD_-\Pi_s)$. The pure-antichiral endpoint is
+\begin{equation}\label{eq:ss:bb-endpoint}
+\theta^{2}=-2\theta^{+}\theta^{-},
+\qquad
+\boxed{\;\cD^{2}\theta^{2}=-4\;}.
+\end{equation}
+For route 002 the direct core before the endpoint is
+$N_{\mathrm{core},002}^{\mathrm{dir}}=1024\,v(r_0)\det r_2$, and the two
+survivors collapse exactly to
+\begin{equation}\label{eq:ss:bb-route002}
+\Pi_b(\cD^{2}\Pi_s)\longmapsto(-4)\cdot1024\,v(r_0)\det r_2
+=4096\,v(r_0)\,\bar r_2^{2},
+\qquad
+-2(\cD_+\Pi_b)(\cD_-\Pi_s)\longmapsto-2048\,v(r_0)\det r_1
+=2048\,v(r_0)\,\bar r_1^{2},
+\end{equation}
+using $\det r_i=-\bar r_i^{\,2}$. Thus the channel has \emph{two occurrences}
+per oriented route: the direct occurrence on edge $e=2$ and the transported
+occurrence on the bridge edge $e=1$, with ratio
+\begin{equation}\label{eq:ss:bb-ratio}
+\frac{O^{\mathrm{tr}}}{O^{\mathrm{dir}}}=\frac{-2}{-4}=\frac12 .
+\end{equation}
+For route 003, computed in its independent orientation, the cores are
+\begin{equation}\label{eq:ss:bb-route003}
+N_{\mathrm{core},003}^{\mathrm{dir}}=-1024\,v(\rho_2)\det\rho_0
+=1024\,v(k_0)\det k_2,
+\qquad
+N_{\mathrm{core},003}^{\mathrm{tr}}=+2048\,v(\rho_2)\det\rho_1,
+\end{equation}
+and using $v(\rho_2)=-v(k_0)$ and $\det\rho_j=\det k_{2-j}$ the endpoint words
+are $4096\,v(k_0)\bar k_2^{2}$ (direct, edge $k_2$) and $2048\,v(k_0)\bar
+k_1^{2}$ (transported, edge $k_1$). The single-projector identity
+\begin{equation}\label{eq:ss:bb-projectorid}
+\cD^{2}\bcD^{2}\cD^{2}\delta^{4}=16\det(r)\,\cD^{2}\delta^{4}
+\end{equation}
+does not delete the neighboring occurrence, because
+\begin{equation}\label{eq:ss:bb-projectorid2}
+\cD_+\bcD^{2}\cD^{2}\delta^{4}
+=16\det(r)\,\cD_+\delta^{4}-\cD^{2}\bcD^{2}\cD_+\delta^{4}.
+\end{equation}
+
+\paragraph{6. Evanescent extraction and tensor reduction.} For every selected
+edge $e$, the full-$d$ Schwinger--Dyson pair cancels identically,
+\begin{equation}\label{eq:ss:bb-sdpair}
+\frac{r_{e,d}^{2}R_e}{D_0D_1D_2}-\frac{R_e}{\prod_{j\ne e}D_j}=0,
+\end{equation}
+and in DRED the cutting-failure identity~\eqref{eq:ss:cuttingfailure} leaves
+the universal remainder
+\begin{equation}\label{eq:ss:bb-dredremainder}
+\frac{\bar r_e^{\,2}R_e}{D_0D_1D_2}-\frac{R_e}{\prod_{j\ne e}D_j}
+=\frac{\mul^{2}R_e}{D_0D_1D_2}.
+\end{equation}
+The direct and transported evanescent words are therefore
+\begin{equation}\label{eq:ss:bb-evanescent}
+N^{\mathrm{ev}}_{\mathrm{dir}}=4096\,\mul^{2}v(r_0),
+\qquad
+N^{\mathrm{ev}}_{\mathrm{tr}}=2048\,\mul^{2}v(r_0),
+\end{equation}
+and identically on route 003 with $v(r_0)\to v(k_0)$ and edges $k_2,k_1$. The
+ordered-simplex moments with the $\Gamma(3)=2$ measure are
+\begin{equation}\label{eq:ss:bb-simplex}
+2\int_{\Sigma_2}1=1,\qquad 2\int_{\Sigma_2}y=\frac13,\qquad 2\int_{\Sigma_2}z=\frac13,
+\end{equation}
+and with $r_0=L+yp+z(p+q)$, respectively $k_0=L+yp+z(p+q)$ after the
+rebase~\eqref{eq:ss:bb-rebase},
+\begin{equation}\label{eq:ss:bb-shift}
+2\int_{\Sigma_2}r_0=\frac23\,p+\frac13\,q,
+\qquad
+2\int_{\Sigma_2}k_0=\frac23\,p+\frac13\,q .
+\end{equation}
+The rank-one numerator $v(r_0)$ thereby reduces onto the ordered
+carriers~\eqref{eq:ss:bb-carriers} as
+\begin{equation}\label{eq:ss:bb-carrierreduction}
+\text{route }002:\ \tfrac23 A_1+\tfrac13 A_2,
+\qquad
+\text{route }003:\ \tfrac13 A_1+\tfrac23 A_2,
+\end{equation}
+where the reversed ports of route 003 place $q/3$ on $A_1$ and $2p/3$ on
+$A_2$. No factor $p^{2},\bar p^{2},q^{2},\bar q^{2}$ multiplies these
+carriers, so no external-equation-of-motion admixture survives: the contact
+rows $E_1,E_2$ vanish by the external equations of motion
+($\bar q^{2}-q_d^{2}=0$, $\bar p^{2}-p_d^{2}=0$), and $T_1,T_3$ vanish by
+spinor-derivative nilpotence ($\cD_+^{2}=0$).
+
+\paragraph{7. Pole cancellation.} The transported occurrence cancels against
+the $\langle I_1S_{H_-}\rangle$ contact row of its own route. The prefactor
+arithmetic is
+\begin{equation}\label{eq:ss:bb-polecancel}
+P_\triangle(2048)+P_{I_1H}(-128)=-\h g^{4}+\h g^{4}=0,
+\end{equation}
+so the full-$d$ bubble pole cancels pointwise, before integration:
+\begin{equation}\label{eq:ss:bb-pointwise}
+P_\triangle\,\frac{2048\,r_{1,d}^{2}v(r_0)}{D_0D_1D_2}
++P_{I_1H}\,\frac{-128\,v(r_0)}{D_0D_2}=0,
+\end{equation}
+leaving only the evanescent remainder
+\begin{equation}\label{eq:ss:bb-tremainder}
+P_\triangle\,\frac{2048\,\mul^{2}v(r_0)}{D_0D_1D_2}.
+\end{equation}
+Indeed, writing $\bar r_1^{2}=r_{1,d}^{2}+\mul^{2}$ in the transported
+occurrence, the $r_{1,d}^{2}$ part cancels $D_1$ and lands exactly on the
+contact row $T_2=-128\,v(r_0)/(D_0D_2)$ with the matching
+prefactors~\eqref{eq:ss:bb-polecancel}; route 003 is identical with
+$T_4=-128\,v(k_0)/(K_0K_2)$ on the edge $k_1$. The two contact rows cannot be
+merged into one untagged polynomial: $T_2$ carries color $+if^{ACD}f^{BCE}$,
+ports $(u^D,C^{tE})$ and edge $r_1$, while $T_4$ carries $-if^{ACD}f^{BCE}$,
+ports $(C^{tD},u^E)$ and edge $k_1$; each cancels its own route's transported
+occurrence. For the direct occurrence, the full-$d$ pair~\eqref{eq:ss:bb-sdpair}
+applies with $R_e=4096\,v(r_0)$: the parent term
+$4096\,v(r_0)r_{2,d}^{2}/(D_0D_1D_2)$ is cancelled by the Euler-kinetic cut
+row, whose regulated word is
+\begin{equation}\label{eq:ss:bb-eulercut}
+-4096\,v(r_0)/(D_0D_1)\ \ \text{(route 002)},
+\qquad
+-4096\,v(k_0)/(K_0K_1)\ \ \text{(route 003)},
+\end{equation}
+an Euler-operator insertion collapsing its propagator by the cutting rule
+$KK^{-1}=\delta$ of Section~\ref{sec:superspace:cutting}, leaving the DRED
+remainder $4096\,\mul^{2}v(r_0)/(D_0D_1D_2)$. Finally, the Euler-potential and
+explicit-potential rows of Remark~\ref{rem:ss:bbnopresimplify} have identical
+regulated kernels and opposite signs,
+\begin{equation}\label{eq:ss:bb-potcancel}
+\big(+\sqrt2\,K_{\mathrm{potential}}\big)+\big(-\sqrt2\,K_{\mathrm{potential}}\big)=0,
+\end{equation}
+and cancel before integration.
+
+\begin{remark}[Granularity of the cut row]\label{rem:ss:bbeulercut}
+The Euler-kinetic cut is presented through the universal Schwinger--Dyson
+identity~\eqref{eq:ss:bb-sdpair} together with the recorded contact
+word~\eqref{eq:ss:bb-eulercut}; no standalone prefactor formula for this row
+exists in the underlying computation, and none is needed, since the cutting
+rule fixes the row up to the recorded word.
+\end{remark}
+
+\paragraph{8. Loop integral and the assembled rows.} With all bubble poles
+cancelled, the loop content is the finite master~\eqref{eq:ss:masterintegral},
+\begin{equation}\label{eq:ss:bb-master}
+\int_{\ell}^{\mathrm{DRED}}\frac{\mul^{2}}{D_0D_1D_2}=\frac{1}{32\pi^{2}}.
+\end{equation}
+The assembly~\eqref{eq:ss:bb-assembly} gives the magnitude checks
+\begin{equation}\label{eq:ss:bb-magnitude}
+\frac{\h g^{4}}{2048}\cdot4096\cdot\frac{1}{32\pi^{2}}\cdot\frac{2\sqrt2}{g^{2}}
+=2\sqrt2\,\frac{\h g^{2}}{16\pi^{2}}\ \ (\mathrm{direct}),
+\qquad
+\frac{\h g^{4}}{2048}\cdot2048\cdot\frac{1}{32\pi^{2}}\cdot\frac{2\sqrt2}{g^{2}}
+=\sqrt2\,\frac{\h g^{2}}{16\pi^{2}}\ \ (\mathrm{transported}).
+\end{equation}
+Including the carrier reduction~\eqref{eq:ss:bb-carrierreduction} and the
+signs~\eqref{eq:ss:bb-routesigns}, the direct rows are
+\begin{equation}\label{eq:ss:bb-rowsdir}
+\Gamma_{002}^{\mathrm{dir}}
+=-2i\sqrt2\,\frac{\h g^{2}}{16\pi^{2}}\,f^{ACD}f^{BCE}\Big(\frac23 A_1+\frac13 A_2\Big),
+\qquad
+\Gamma_{003}^{\mathrm{dir}}
+=+2i\sqrt2\,\frac{\h g^{2}}{16\pi^{2}}\,f^{ACD}f^{BCE}\Big(\frac13 A_1+\frac23 A_2\Big),
+\end{equation}
+hence
+\begin{equation}\label{eq:ss:bb-dirsum}
+\Gamma_{\mathrm{dir}}
+=\frac{\h g^{2}}{16\pi^{2}}\,f^{ACD}f^{BCE}
+\Big(-\frac{2i\sqrt2}{3}\,A_1+\frac{2i\sqrt2}{3}\,A_2\Big).
+\end{equation}
+The transported rows are half the direct ones by~\eqref{eq:ss:bb-ratio}:
+\begin{equation}\label{eq:ss:bb-rowstr}
+\Gamma_{002}^{\mathrm{tr}}
+=-i\sqrt2\,\frac{\h g^{2}}{16\pi^{2}}\,f^{ACD}f^{BCE}\Big(\frac23 A_1+\frac13 A_2\Big),
+\qquad
+\Gamma_{003}^{\mathrm{tr}}
+=+i\sqrt2\,\frac{\h g^{2}}{16\pi^{2}}\,f^{ACD}f^{BCE}\Big(\frac13 A_1+\frac23 A_2\Big),
+\end{equation}
+\begin{equation}\label{eq:ss:bb-trsum}
+\Gamma_{\mathrm{tr}}
+=\frac{\h g^{2}}{16\pi^{2}}\,f^{ACD}f^{BCE}
+\Big(-\frac{i\sqrt2}{3}\,A_1+\frac{i\sqrt2}{3}\,A_2\Big).
+\end{equation}
+Summing direct and transported,
+$-\tfrac{2i\sqrt2}{3}-\tfrac{i\sqrt2}{3}=-i\sqrt2$ and
+$\tfrac{2i\sqrt2}{3}+\tfrac{i\sqrt2}{3}=+i\sqrt2$, the $2:1$ split
+reconstructs an integer vector. The $SU(3)$ lift attaches
+$\varepsilon_{rst}$: for every ordered $r\ne s$,
+\begin{equation}\label{eq:ss:bb-unitresult}
+\boxed{\;
+\Gamma^{(1)}_{B_r>B_s}
+=\frac{\h g^{2}}{16\pi^{2}}\,f^{ACD}f^{BCE}\,\varepsilon_{rst}\,
+\big[-i\sqrt2\,A_1+i\sqrt2\,A_2\big]\; } .
+\end{equation}
+
+\paragraph{9. Letter normalization: the final result.} Restoring the letters
+of Definition~\ref{def:ss:letters}, the two insertions contribute
+$(1/\sqrt2)^{2}=\tfrac12$ by~\eqref{eq:ss:bb-unit}, while the carriers
+convert as
+\begin{equation}\label{eq:ss:bb-wordconversion}
+A_1=\langle D^{\,D},C^{t\,E}\rangle=-i\,\langle\partial c^{D},\gamma^{tE}\rangle,
+\qquad
+A_2=\langle C^{t\,D},D^{\,E}\rangle=-i\,\langle\gamma^{tD},\partial c^{E}\rangle .
+\end{equation}
+The net coefficient is therefore
+$\tfrac12\cdot(-i\sqrt2)(-i)\cdot\tfrac{\h g^{2}}{16\pi^{2}}
+=-\tfrac{1}{\sqrt2}\cdot\tfrac{\h g^{2}}{16\pi^{2}}
+=-\tfrac{\h g^{2}}{16\sqrt2\,\pi^{2}}$, and the unit-normalized
+result~\eqref{eq:ss:bb-unitresult} becomes
+\begin{equation}\label{eq:ss:bb-final}
+\boxed{\;
+\nabla_{-}\big(\beta_{r}^{A}\beta_{s}^{B}\big)\Big|_{\mathrm{1\text{-}loop}}
+=-\frac{\h g^{2}}{16\sqrt2\,\pi^{2}}\,f^{ACD}f^{BCE}\,\varepsilon_{rst}\,
+\big\{\langle\partial c,\gamma^{t}\rangle
+-\langle\gamma^{t},\partial c\rangle\big\}^{DE}\; },
+\end{equation}
+which is exactly the row~\eqref{eq:ss:ch-betabeta} of the channel table.
+
+\begin{remark}[The diagonal $(\beta_r,\beta_r)$ is an exact zero]%
+\label{rem:ss:bbdiagonal}
+For $r=s$ the only triangle topology is TMM, and its two marked words vanish
+by spinor-derivative nilpotence:
+\begin{equation}\label{eq:ss:bb-diagzero}
+K_L=\!\int\! d^{8}z_Ld^{8}z_R\,
+[\cD_-\cD_+\bcD^{2}\cD^{2}\delta_{SL}][\cD_+\bcD^{2}\cD^{2}\delta_{SR}]\,
+\delta_{LR}\,B_r(L)B_r(R)=0,
+\quad
+K_R=0,
+\end{equation}
+with $K_R$ the same expression with the two brackets exchanged, so
+$K_L-K_R=0$. Every $H_-$-routed graph dies on the repeated-index obstruction
+\begin{equation}\label{eq:ss:bb-repeatedindex}
+\varepsilon_{rtu}\,\delta_{rt}=\varepsilon_{rru}=0,
+\qquad
+\varepsilon_{rtu}\,\delta_{ru}=\varepsilon_{rtr}=0,
+\end{equation}
+a matter quartic cannot absorb two $B_r$ source legs, and all spectator
+parents are one-particle-reducible. Hence
+$\nabla_-(\beta_r^{A}\beta_r^{B})|_{\mathrm{1\text{-}loop}}=0$: class (iii) of
+Section~\ref{sec:superspace:selection}.
+\end{remark}
+
+\begin{remark}[Why these are the accepted weights]\label{rem:ss:bbgate1}
+An earlier independent evaluation of this family was rejected on three
+arithmetic grounds, and the displayed weights are the adjudicated ones:
+(i) its final-match claim summed the simplex weights as
+$-\sqrt2\,\tfrac23+\sqrt2\,\tfrac13=-\sqrt2$, which is false --- the sum is
+$-\sqrt2/3$, and the correct integer vector arises only from the two-route
+sum~\eqref{eq:ss:bb-dirsum}--\eqref{eq:ss:bb-trsum}; (ii) it multiplied the
+triangle prefactor by a spurious flavor-Wick factor $2$, obtaining
+$+\h g^{4}/1024$ instead of the $-\h g^{4}/2048$
+of~\eqref{eq:ss:bb-prefactors}; (iii) it dropped the
+$\langle I_1S_{H_-}\rangle$ contact rows, thereby missing the transported
+occurrence~\eqref{eq:ss:bb-route002} and the $2:1$
+split~\eqref{eq:ss:bb-ratio} whose full-$d$ pole cancels
+by~\eqref{eq:ss:bb-polecancel}.
+\end{remark}
+
+\paragraph{10. Comparison with the holomorphic twist.} Budzik and Kulp
+compute the same channel in the holomorphic twist \cite{BK}, their
+eq.~(3.66):
+\begin{equation}\label{eq:ss:bb-bkformula}
+Q_1\big((\beta_I)^{A}(\beta_J)^{B}\big)
+=\kappa^{2}\,\varepsilon_{IJK}\,f_{ACD}f_{BCE}\,
+\big[\partial_{\dot\alpha}c^{D}\,\partial^{\dot\alpha}(\gamma^{K})^{E}
+-\partial_{\dot\alpha}(\gamma^{K})^{D}\,\partial^{\dot\alpha}c^{E}\big].
+\end{equation}
+With $\langle X,Y\rangle=(\partial_{\dot\alpha}X)(\partial^{\dot\alpha}Y)$
+this is
+$\kappa^{2}\varepsilon_{IJK}f_{ACD}f_{BCE}
+\{\langle\partial c,\gamma^{K}\rangle-\langle\gamma^{K},\partial c\rangle\}^{DE}$
+--- word by word the bracket of~\eqref{eq:ss:bb-final}: the same antisymmetric
+$\partial c$--$\gamma$ pair, the same ordering, the same $\varepsilon$ and the
+same color tensor. On the prefactor, the kernel factor $2$ of
+Section~\ref{sec:superspace:tower} (the $\Gamma(3)$ of the triangle Feynman
+parametrization, absent from the printed twist kernel) and the correspondence
+$Q_0\leftrightarrow-\tfrac12\nabla_-$ of Remark~\ref{rem:ss:q0} map the
+coefficient $\kappa^{2}$ to
+\begin{equation}\label{eq:ss:bb-htprefactor}
+-2\kappa^{2}\h_{\mathrm{HT}}
+=-\frac{\h g^{2}}{16\sqrt2\,\pi^{2}},
+\end{equation}
+using the loop-scale identification
+$\h_{\mathrm{HT}}\kappa^{2}=\h g^{2}/(32\sqrt2\,\pi^{2})$. The diagonal
+vanishes on the twist side as well, since $\varepsilon_{IJK}$ requires
+$I\ne J$, matching Remark~\ref{rem:ss:bbdiagonal}.
+
+\begin{remark}[Status of the comparison]\label{rem:ss:bbhtstatus}
+The agreement above is a comparison against an external target \cite{BK}, not
+an internal completeness proof: the loop-scale identification entering
+\eqref{eq:ss:bb-htprefactor} is a conditional dictionary value, and the
+seventeen-candidate adversarial census of
+Remark~\ref{rem:ss:status} remains open. The channel
+result~\eqref{eq:ss:bb-final} itself is established independently of the
+twist, by the derivation of paragraphs~1--9.
+\end{remark}

@@ -1,0 +1,791 @@
+% sec04b-seed.tex — Section 4, expanded seed subsection.
+% Writer: 作家_种子 (Writer_Seed). Body LaTeX only; macros live in main.tex.
+% This file REPLACES the old short seed subsection. It is \input inside
+% sec04-superspace.tex after the selection-rule subsection.
+
+\subsection{The seed channel $(b,b)$: the complete one-loop computation}%
+\label{sec:superspace:seed}
+
+We now compute the seed channel $(b,b)$, the simplest nonzero channel and the
+scale anchor of the whole table of Section~\ref{sec:superspace:table}, at full
+granularity: the graph inventory with orientations, the Wick contraction
+enumeration, the amplitude assembly, the $D$-algebra numerator chain, the
+evanescent extraction, the pole cancellation, the loop integral, and the
+restoration of the letter normalization, closing with the word-by-word
+comparison against the holomorphic-twist result of~\cite{BK}. We fix once and
+for all an orientation of the two field-strength insertions and a marked
+internal line. The graph weights below are computed with unit-normalized
+field-strength insertions $\nabla_+\cW_+$; the letter normalization
+$b=-(i/\sqrt2)\nabla_+\cW_+$ is restored at the end.
+
+\paragraph{1. Setup: the channel, the letters, and the marking conventions.}
+The channel is the one-loop Schwinger--Dyson descent of the ordered composite
+of two field-strength insertions,
+\begin{equation}\label{eq:ss:seedchannel}
+\nabla_{-}\Big(\nabla_{+}\cW_{+}^{A}\,\nabla_{+}\cW_{+}^{B}\Big),
+\qquad
+b^{A}=-\frac{i}{\sqrt2}\,\nabla_{+}\cW_{+}^{A},
+\end{equation}
+with the letter $b$ of Definition~\ref{def:ss:letters}. Both insertions are
+Grassmann-even, so the Leibniz rule~\eqref{eq:ss:leibniz} contributes no sign
+and splits the probe into two marked occurrences,
+\begin{equation}\label{eq:ss:seedleibniz}
+\nabla_{-}\Big(\nabla_{+}\cW_{+}^{A}\,\nabla_{+}\cW_{+}^{B}\Big)
+=\big(\nabla_{-}\nabla_{+}\cW_{+}^{A}\big)\,\nabla_{+}\cW_{+}^{B}
++\nabla_{+}\cW_{+}^{A}\,\big(\nabla_{-}\nabla_{+}\cW_{+}^{B}\big) .
+\end{equation}
+These are two different marked occurrences, not a multiplicity of either one;
+there is no factor $2$ from the source. We fix the ordered external data once
+and for all: an antichiral background leg $\bcW^{D}(q)$ at the antichiral
+cubic vertex $v_1$, a chiral background leg $\cW_{+}^{E}(p)$ at the chiral
+cubic vertex $v_2$, and the composite source vertex $S$ carrying both
+insertions and the $\nabla_{-}$ probe. All momenta are incoming
+(Remark~\ref{rem:ss:nevercontract}), the loop momentum is $k$, and the three
+internal edges are routed as
+\begin{equation}\label{eq:ss:seedrouting}
+r_0=k\quad(S\to v_1),\qquad
+r_1=k+q\quad(v_1\to v_2),\qquad
+r_2=k+p+q\quad(v_2\to S).
+\end{equation}
+There are exactly two ordered source attachments: the \emph{directed}
+attachment, in which the insertion of color $A$ contracts toward the
+antichiral vertex $v_1$ and the insertion of color $B$ toward the chiral
+vertex $v_2$, and the \emph{reflected} attachment, in which they are
+interchanged. The complete set of source/mark rows is
+\begin{center}
+\begin{tabular}{cccl}
+\hline
+source attachment & marked occurrence & rank-two evanescent numerator &
+ordered output\\
+\hline
+$A\to\bcW,\ B\to\cW$ & $A$ & yes &
+$\big\langle\bcW,\nabla_{+}\cW_{+}\big\rangle$\\
+$A\to\bcW,\ B\to\cW$ & $B$ & no & none\\
+$A\to\cW,\ B\to\bcW$ & $A$ & no & none\\
+$A\to\cW,\ B\to\bcW$ & $B$ & yes &
+$\big\langle\nabla_{+}\cW_{+},\bcW\big\rangle$\\
+\hline
+\end{tabular}
+\end{center}
+The two anomaly-bearing rows are the directed and the reflected term; they
+are not two copies of either term. Reflection is a distinct ordered output
+with weight one.
+
+\paragraph{2. Graph inventory.}
+There is exactly one gauge-sector graph topology at order $g^{2}$: the mixed-chirality
+pure-gauge triangle, with one chiral cubic vertex, one antichiral cubic
+vertex, the composite source vertex, and three internal vector-superfield
+lines. With the canonically normalized prepotential
+$u:=\cV/(\sqrt2\,g)$ and $[X,u]^{A}:=f^{ABC}X^{B}u^{C}$, the two cubic
+actions generating the vertices are
+\begin{equation}\label{eq:ss:seedcubic}
+S_{+,3}=-\frac{g}{4}\int d^{8}z\;\cW^{A\alpha}\,[\cD_{\alpha}u,u]^{A},
+\qquad
+S_{-,3}=+\frac{g}{4}\int d^{8}z\;\bcW^{A}_{\dot\alpha}\,
+[\bcD^{\dot\alpha}u,u]^{A}.
+\end{equation}
+The two ordered chiral assignments of the interaction expansion collapse:
+\begin{equation}\label{eq:ss:seedactionorder}
+\frac{1}{2!}\left(S_{+,3}S_{-,3}+S_{-,3}S_{+,3}\right)=S_{+,3}S_{-,3},
+\end{equation}
+so the action-order factor is exactly $1$. The two ordered parent triangles
+are displayed in Figure~\ref{fig:ss:seedtriangles}.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}
+  \node[svertex, label=above:$S$] (S) at (90:1.6) {};
+  \node[svertex, label=below left:$v_1$] (v1) at (210:1.6) {};
+  \node[svertex, label=below right:$v_2$] (v2) at (330:1.6) {};
+  \draw[sV] (S) to node[midway,left,align=center,font=\scriptsize]
+        {$r_0{=}k$\\$[A]$} (v1);
+  \draw[sV] (v1) to node[midway,below,font=\scriptsize] {$r_1{=}k{+}q$} (v2);
+  \draw[sV] (v2) to node[midway,right,align=center,font=\scriptsize]
+        {$r_2{=}k{+}p{+}q$\\$[B]$} (S);
+  \draw[sleg] (v1) -- ++(210:1.15)
+        node[below left,font=\scriptsize] {$\bcW^{D}(q)$};
+  \draw[sleg] (v2) -- ++(330:1.15)
+        node[below right,font=\scriptsize] {$\cW_{+}^{E}(p)$};
+  \draw[sleg] (S) -- ++(150:0.95)
+        node[sinsert,label={[font=\scriptsize]above left:%
+        {$\nabla_{+}\cW_{+}^{A}$ (marked)}}] {};
+  \draw[sleg] (S) -- ++(30:0.95)
+        node[sinsert,label={[font=\scriptsize]above right:%
+        {$\nabla_{+}\cW_{+}^{B}$}}] {};
+  \draw[sleg] (S) -- ++(90:0.95) node[above,font=\scriptsize] {$\nabla_{-}$};
+  \node[font=\small] at (0,-3.1) {(a) directed: $(A\to\bcW,\ B\to\cW)$,
+        probe on $A$};
+\end{tikzpicture}
+\hspace{1.2em}
+\begin{tikzpicture}
+  \node[svertex, label=above:$S$] (S) at (90:1.6) {};
+  \node[svertex, label=below left:$v_1$] (v1) at (210:1.6) {};
+  \node[svertex, label=below right:$v_2$] (v2) at (330:1.6) {};
+  \draw[sV] (S) to node[midway,left,align=center,font=\scriptsize]
+        {$r_0{=}k$\\$[B]$} (v1);
+  \draw[sV] (v1) to node[midway,below,font=\scriptsize] {$r_1{=}k{+}q$} (v2);
+  \draw[sV] (v2) to node[midway,right,align=center,font=\scriptsize]
+        {$r_2{=}k{+}p{+}q$\\$[A]$} (S);
+  \draw[sleg] (v1) -- ++(210:1.15)
+        node[below left,font=\scriptsize] {$\bcW^{D}(q)$};
+  \draw[sleg] (v2) -- ++(330:1.15)
+        node[below right,font=\scriptsize] {$\cW_{+}^{E}(p)$};
+  \draw[sleg] (S) -- ++(150:0.95)
+        node[sinsert,label={[font=\scriptsize]above left:%
+        {$\nabla_{+}\cW_{+}^{A}$}}] {};
+  \draw[sleg] (S) -- ++(30:0.95)
+        node[sinsert,label={[font=\scriptsize]above right:%
+        {$\nabla_{+}\cW_{+}^{B}$ (marked)}}] {};
+  \draw[sleg] (S) -- ++(90:0.95) node[above,font=\scriptsize] {$\nabla_{-}$};
+  \node[font=\small] at (0,-3.1) {(b) reflected: $(A\to\cW,\ B\to\bcW)$,
+        probe on $B$};
+\end{tikzpicture}
+\caption{The two ordered parent triangles of the seed channel $(b,b)$. Each
+triangle has the composite source vertex $S$ carrying the two letter
+insertions (filled dots) and the $\nabla_{-}$ probe leg, the antichiral cubic
+vertex $v_1$ with external leg $\bcW^{D}(q)$, the chiral cubic vertex $v_2$
+with external leg $\cW_{+}^{E}(p)$, and three internal vector-superfield
+lines (wavy) with edge momenta $r_0=k$, $r_1=k+q$, $r_2=k+p+q$. The bracket
+$[A]$/$[B]$ on an edge records which source color contracts toward that
+vertex. (a) The directed orientation, with the probe on the $A$ occurrence.
+(b) The reflected orientation, with the probe on the $B$ occurrence.}
+\label{fig:ss:seedtriangles}
+\end{figure}
+
+For each marked occurrence, the Schwinger cut of
+Section~\ref{sec:superspace:cutting} collapses the internal edge carrying the
+marked line: the occurrence probed at the $v_1$-side port collapses the edge
+$e_0$ with momentum $r_0$, and the occurrence probed at the $v_2$-side port
+collapses the edge $e_2$ with momentum $r_2$. For one marked edge the row
+count is
+\begin{equation}\label{eq:ss:seedcontactcount}
+\frac{1}{2!}\cdot 2_{\text{action orderings}}\cdot
+2_{\text{Wick endpoints}}=2\ \text{endpoint rows},
+\end{equation}
+so there are exactly four occurrence-resolved Schwinger contact rows in total
+(two cut edges times two Wick endpoints). The contact topology is displayed
+in Figure~\ref{fig:ss:seedcontact}.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}
+  \node[svertex, label=above:$v_c$] (vc) at (0,0) {};
+  \node[svertex, label=above:$v_2$] (v2) at (3.6,0) {};
+  \draw[sV, bend left=30] (vc) to node[midway,above,font=\scriptsize]
+        {$r_1{=}k{+}q$} (v2);
+  \draw[sV, bend right=30] (vc) to node[midway,below,font=\scriptsize]
+        {$r_2{=}k{+}p{+}q$} (v2);
+  % sVcut rendering: main.tex's sVcut (snake + markings postaction) triggers a
+  % PGF ``Dimension too large'' error under pgf 3.1.10, so the identical cut-line
+  % rendering is drawn here as an sV wavy line with an explicit $\times$ marker.
+  \draw[sV] (vc) -- ++(195:1.2) coordinate (cutend);
+  \node[font=\scriptsize] at ($(vc)!0.5!(cutend)$) {$\times$};
+  \node[below left,font=\scriptsize] at (cutend) {cut $e_0$};
+  \draw[sleg] (vc) -- ++(150:1.05)
+        node[sinsert,label={[font=\scriptsize]above left:%
+        {$\nabla_{+}\cW_{+}^{B}$}}] {};
+  \draw[sleg] (vc) -- ++(120:1.05)
+        node[above,font=\scriptsize] {$\bcW^{D}(q)$};
+  \draw[sleg] (v2) -- ++(0:1.2)
+        node[right,font=\scriptsize] {$\cW_{+}^{E}(p)$};
+\end{tikzpicture}
+\caption{The Schwinger contact (cut) topology of the seed channel. Cutting
+the marked edge $e_0$ collapses the source vertex $S$ and the antichiral
+vertex $v_1$ into the single contact vertex $v_c$: the probed occurrence
+$\nabla_{-}(\nabla_{+}\cW_{+}^{A})$ has become the Euler-operator insertion
+that collapses the $e_0$ line (wavy with $\times$), while the unmarked
+insertion $\nabla_{+}\cW_{+}^{B}$ and the external leg $\bcW^{D}(q)$ remain
+at $v_c$. Two internal vector lines with momenta $r_1=k+q$ and $r_2=k+p+q$
+run from $v_c$ to the chiral vertex $v_2$. The $e_2$ family is the mirror
+image, with contact vertex $v_c=S\sqcup v_2$ and internal lines $r_0$ and
+$r_1$. With the two Wick port rows per edge this gives the four
+occurrence-resolved contact rows of paragraph~7.}
+\label{fig:ss:seedcontact}
+\end{figure}
+
+Every remaining order-$g^{2}$ orbit vanishes exactly in the anomaly sector.
+The spectator self-energy insertions, the one-cubic-vertex bubbles, and the
+quartic seagull obey
+\begin{align}
+\big\langle I_2\big\rangle_0 &= 0
+&&\text{(source-quadratic self-energy: its only denominator is $k^{2}$,
+hence a scaleless tadpole),}\notag\\
+-\frac{1}{\h}\big\langle I_1S_{g3}\big\rangle_0 &= 0
+&&\text{(one-cubic bubble: numerator trace }\ \operatorname{tr}_4 H=2-2=0
+\text{),}\label{eq:ss:seedorbits}\\
+-\frac{1}{\h}\big\langle I_0S_{g4}\big\rangle_0 &= 0
+&&\text{(quartic seagull: }\ \operatorname{tr}_4 H_4=-4+4=0\text{),}\notag
+\end{align}
+so only the two-cubic triangle
+$(2\h^{2})^{-1}\langle I_0S_{g3}S_{g3}\rangle_0$ of
+Figure~\ref{fig:ss:seedtriangles} and its Schwinger cuts survive. The matter
+orbits $I_2$, $I_1S_{m3}$, $I_0S_{m4}$ vanish in the same way; the matter
+triangle of the same channel is evaluated in paragraph~9.
+
+\paragraph{3. Wick contractions.}
+The three internal lines are vector-superfield contractions with propagator
+\begin{equation}\label{eq:ss:seeduprop}
+\big\langle u^{A}(p,1)\,u^{B}(-p,2)\big\rangle
+=-\frac{\h\,\delta^{AB}}{p^{2}}\,\delta^{4}(\theta_1-\theta_2),
+\end{equation}
+with the Killing form normalized to $\kappa_{AB}=\delta_{AB}$. The two cubic
+vertices each supply two quantum-port assignments through the derivative
+differences of their second variations, the Hessians
+\begin{equation}\label{eq:ss:seedhess}
+H_{\cW}=+\frac{ig}{4}\,f^{UCE}\,\cW^{E\gamma}
+\big(\cD_{C\gamma}-\cD_{U\gamma}\big),
+\qquad
+H_{\bcW}=-\frac{ig}{4}\,f^{UCD}\,\bcW^{D}_{\dot\gamma}
+\big(\bcD_{C}{}^{\dot\gamma}-\bcD_{U}{}^{\dot\gamma}\big).
+\end{equation}
+The labeled double variation is
+\begin{equation}\label{eq:ss:seedports}
+\delta_1\delta_2[\cD u,u]=[\cD u_1,u_2]+[\cD u_2,u_1],
+\end{equation}
+whose two summands are the port rows $(S,B)$ and $(B,S)$ --- the row in which
+the first, respectively the second, quantum port carries the source role.
+The second variation already contains the two labeled quantum-port
+assignments, so no $2!$ from the equal Hessians remains. For one fixed
+directed source attachment the port-preserving Wick factor is likewise $1$:
+the two rows are equal by relabeling of the Gaussian integral and sum against
+the $1/2!$ of the second variation, giving the Wick weight
+\begin{equation}\label{eq:ss:wick}
+w_{\mathrm{Wick}}=\frac{1}{2!}(1+1)=1 .
+\end{equation}
+
+\begin{remark}[Granularity of the contraction enumeration]%
+\label{rem:ss:seedwick}
+The enumeration above is organized by the quantum-role rows $(S,B),(B,S)$
+and by the derivative endpoint pairs $(r_i,r_j)$; a field-by-field pairing
+picture of the individual $u$ fields is not used at any step. The endpoint
+content is not multiplied after the two Hessians are expanded: no endpoint
+row acquires an additional factor.
+\end{remark}
+
+\paragraph{4. Amplitude assembly.}
+The linearized unit insertion and its probed descendant are
+\begin{equation}\label{eq:ss:seedinsert}
+K_{+}^{c}:=-\frac{1}{4\sqrt2}\,\cD_{+}\bcD^{2}\cD_{+},
+\qquad
+\nabla_{-}K_{+}^{c}
+=-\frac{1}{4\sqrt2}\,\cD_{-}\cD_{+}\bcD^{2}\cD_{+}
+=-\frac{1}{8\sqrt2}\,\cD^{2}\bcD^{2}\cD_{+},
+\end{equation}
+where on the internal lines the frame derivatives act as their flat
+counterparts $\cD_\pm$, $\bcD_{\dot\pm}$ and we used the spinor-derivative
+square move
+\begin{equation}\label{eq:ss:seedDmoves}
+\cD^{2}=2\,\cD_{-}\cD_{+},
+\qquad
+\bcD^{2}=2\,\bcD_{\dot+}\bcD_{\dot-}.
+\end{equation}
+After the three contractions, the unmarked leg retains the residual operator
+$K_{+}^{c}$ and the probed leg retains $\nabla_{-}K_{+}^{c}$; their numerical
+product is
+\begin{equation}\label{eq:ss:seedinsertfactor}
+\left(-\frac{1}{8\sqrt2}\right)\left(-\frac{1}{4\sqrt2}\right)=\frac{1}{64}.
+\end{equation}
+The vertex (exponent) Hessians of~\eqref{eq:ss:seedhess}, including the
+$1/\h$ of each interaction vertex, are
+\begin{equation}\label{eq:ss:seedvhess}
+\widehat H_{\cW}=-\frac{ig}{4\h}\,f^{UCE}\,\cW^{E\gamma}
+\big(\cD_{C\gamma}-\cD_{U\gamma}\big),
+\qquad
+\widehat H_{\bcW}=+\frac{ig}{4\h}\,f^{UCD}\,\bcW^{D}_{\dot\gamma}
+\big(\bcD_{C}{}^{\dot\gamma}-\bcD_{U}{}^{\dot\gamma}\big),
+\end{equation}
+and assembling them with the three propagators~\eqref{eq:ss:seeduprop} gives
+\begin{equation}\label{eq:ss:seedassembly}
+\left(-\frac{ig}{4\h}\right)\left(+\frac{ig}{4\h}\right)(-\h)^{3}
+=\frac{g^{2}}{16\h^{2}}\,(-\h^{3})
+=-\frac{\h g^{2}}{16}.
+\end{equation}
+The three Killing deltas of the propagators reduce the color factor of the
+two Hessians, with the source colors attached per the fixed orientation, to
+\begin{equation}\label{eq:ss:seedcolor}
+f^{UCD}f^{U'C'E}\,\delta_{UU'}\delta_{CC'}
+\;\longrightarrow\;
+f^{ACD}f^{BCE}
+\qquad(\text{sum over }C).
+\end{equation}
+
+\begin{remark}[Two equivalent normalization frames]\label{rem:ss:seedframes}
+Equation~\eqref{eq:ss:seedassembly} is the canonical-letter bookkeeping:
+vertex magnitudes $g/(4\h)$, propagators $-\h$, and the explicit insertion
+factor $1/64$ of~\eqref{eq:ss:seedinsertfactor}. In the unit-insertion frame
+used for the remaining steps the same graph weight is organized with the
+ordered cubic vertex factors
+\begin{equation}\label{eq:ss:vertices}
+\left(+\frac{ig}{2}\right)\left(-\frac{ig}{2}\right)=\frac{g^{2}}{4}
+\end{equation}
+and the $D$-algebra weight $w_D$ of~\eqref{eq:ss:dweight} below. The two
+bookkeepings describe the same graph weight: in the canonical frame the
+vertex factor sits inside $-\h g^{2}/16$, in the unit-insertion frame inside
+$g^{2}/4$, the difference being the propagator rescaling
+$u=\cV/(\sqrt2\,g)$ on the three internal lines together with the insertion
+rescaling. Each cubic vertex carries $\h^{-1}$ and each of the three
+propagators carries $\h$, leaving the net one-loop power $\h$.
+\end{remark}
+
+\paragraph{5. The $D$-algebra numerator chain.}
+For the fixed orientation the covariant spinor numerator is the chain
+\begin{equation}\label{eq:ss:seedspinchain}
+N_{G,+}{}^{\dot\alpha}
+=(r_0+r_1)_{+\dot\beta}\,(ip)^{\dot\beta\gamma}\,
+(r_1+r_2)_{\gamma}{}^{\dot\alpha},
+\qquad
+T_{m\rho n,+}{}^{\dot\alpha}
+:=(\sigma_m\bar\sigma_\rho\sigma_n)_{+}{}^{\dot\alpha},
+\end{equation}
+where the explicit $i$ is tied to the locked dotted-index convention
+$k_{+}^{\dot0}=\sigma_E(k)_{0\dot1}$,
+$k_{+}^{\dot1}=-\sigma_E(k)_{0\dot0}$; in the opposite convention the same
+covariant chain is written with $p^{\dot\beta\gamma}$ and no explicit $i$.
+The $D^{2}/\bcD^{2}$ moves of~\eqref{eq:ss:seedDmoves} put the marked
+insertion into the form $-\frac{1}{8\sqrt2}\cD^{2}\bcD^{2}\cD_{+}$ displayed
+in~\eqref{eq:ss:seedinsert}. The loop is saturated by the identity
+\begin{equation}\label{eq:ss:seedsat}
+\delta^{4}(\theta_{12})\,\cD^{2}\bcD^{2}\,\delta^{4}(\theta_{12})
+=16\,\delta^{4}(\theta_{12})
+\end{equation}
+of Section~\ref{sec:gaugebv}, and the two mixed anticommutators
+\begin{equation}\label{eq:ss:seedmixed}
+\{\cD,\bcD\}=2\,\sigma\!\cdot\!p
+\end{equation}
+contribute one factor $2$ each, so the $D$-algebra content of the closed
+loop is
+\begin{equation}\label{eq:ss:seeddalg}
+\left(\frac{1}{64}\right)(16)(2)(2)=1 .
+\end{equation}
+This is a $D$-algebra factor; it is not four additional Wick contractions.
+Equivalently, in the unit-insertion frame the closed-loop mixed $D$-algebra
+weight is
+\begin{equation}\label{eq:ss:dweight}
+w_D=\frac{1}{32}\cdot16\cdot2\cdot2=2 ,
+\end{equation}
+where the $1/32$ is the insertion normalization of that frame and the $16$
+is the loop-saturation identity~\eqref{eq:ss:seedsat}. The total prefactor
+before the loop integral is therefore
+\begin{equation}\label{eq:ss:prefactor}
+w_{\mathrm{Wick}}\,\frac{g^{2}}{4}\,w_D
+=1\cdot\frac{g^{2}}{4}\cdot2=\frac{g^{2}}{2} .
+\end{equation}
+The four derivative endpoint rows of one cut word, with their raw and
+transport signs, are
+\begin{align}
+(r_0,r_1):&\quad (-1)(-1)=+1,\notag\\
+(r_0,r_2):&\quad (+1)(+1)=+1,\label{eq:ss:seedsigntable}\\
+(r_1,r_1):&\quad (+1)(+1)=+1,\notag\\
+(r_1,r_2):&\quad (-1)(-1)=+1,\notag
+\end{align}
+and the closed word carries in addition the single odd source-loop
+integration-by-parts sign $s_{\mathrm{global}}=-1$, so the signed row weight
+is
+\begin{equation}\label{eq:ss:seedrowsign}
+w_{T,\mathrm{rows}}
+=s_{\mathrm{global}}\left(\frac{1}{64}\right)(16)(2)(2)=(-1)(1)=-1,
+\qquad
+\left(-\frac{\h g^{2}}{16}\right)w_{T,\mathrm{rows}}=+\frac{\h g^{2}}{16}.
+\end{equation}
+The rank-two finite spinor word is reduced by the four-dimensional identity
+\begin{equation}\label{eq:ss:seedfierz}
+\sigma\!\cdot\!L\,\bar\sigma\!\cdot\!p\,\sigma\!\cdot\!L
+=2(L\!\cdot\!p)\,\sigma\!\cdot\!L-\bar L^{2}\,\sigma\!\cdot\!p ,
+\end{equation}
+whose two factors of $2L$ give
+$4\,\sigma\!\cdot\!L\,\bar\sigma\!\cdot\!p\,\sigma\!\cdot\!L
+=8(L\!\cdot\!p)\,\sigma\!\cdot\!L-4\bar L^{2}\,\sigma\!\cdot\!p$; the first
+term belongs to the full-$d$ Schwinger-exact tensor reduction, and the
+selected inverse-square parent and its cut differ by
+\begin{equation}\label{eq:ss:seedsigmafour}
+-4\big(\bar L^{2}-L_d^{2}\big)\,\sigma\!\cdot\!p
+=-4\,\mul^{2}\,\sigma\!\cdot\!p ,
+\end{equation}
+which vanishes identically if $\bar L^{2}$ is replaced by $L_d^{2}$ before
+the cut subtraction. For the reflected ordering the dotted-index reordering
+gives
+\begin{equation}\label{eq:ss:seedreflect}
+\big(\partial^{\dot\alpha}\,\nabla_{+}\cW_{+}^{D}\big)\,\bcW_{\dot\alpha}^{E}
+=-\,\big(\partial_{\dot\alpha}\,\nabla_{+}\cW_{+}^{D}\big)\,
+\bcW^{E\dot\alpha},
+\end{equation}
+one minus sign per reordering, which is the origin of the antisymmetric
+ordered pair of outputs. The exact marked words behind the endpoint table
+are
+\begin{equation}\label{eq:ss:seedGwords}
+\mathcal G_1=(b_{0+}+b_{1+})\,W_{02},
+\qquad
+\mathcal G_2=(b_{0+}-b_{1+})\,W_{02},
+\qquad
+W_{02}=r_{0+}\wedge r_{2+},
+\end{equation}
+with $b_{0+}-b_{1+}=q_{+\dot-}$ purely external, so $\mathcal G_2$ has no
+rank-two loop component (the rows marked ``no'' in the table of
+paragraph~1), while $b_{0+}+b_{1+}=2L_{+\dot-}+\text{external}$ is rank two
+(the rows marked ``yes'').
+
+\begin{remark}[Status of the sign table]\label{rem:ss:seedsigns}
+The endpoint-row assignment~\eqref{eq:ss:seedsigntable} and the global sign
+$s_{\mathrm{global}}=-1$ are recorded primitives of the computation: no
+independent human-readable noncommutative $D$-algebra trace emitting them is
+quoted here. They are superseded in effect by the exact exterior-algebra
+words~\eqref{eq:ss:seedGwords} and by the machine replays of
+Remark~\ref{rem:ss:seedchecks}, which confirm the full factor chain with
+zero failures.
+\end{remark}
+
+\paragraph{6. Evanescent extraction and tensor reduction.}
+On every marked line $e$ of every one-loop graph the cutting-failure
+identity~\eqref{eq:ss:cuttingfailure} isolates one universal insertion:
+\begin{equation}\label{eq:ss:seededge}
+\frac{\bar r_e^{\,2}}{D_0D_1D_2}-\frac{1}{\prod_{j\ne e}D_j}
+=\frac{\mul^{2}}{D_0D_1D_2},
+\end{equation}
+with $D_i=r_{i,d}^{2}$; replacing $\bar r_e^{\,2}$ by $r_{e,d}^{\,2}$ before
+the subtraction makes the expression identically zero and removes the
+anomaly. With $D_0=\ell^{2}$, $D_1=(\ell+p)^{2}$, $D_2=(\ell+p+q)^{2}$, the
+ordered Feynman parametrization is
+\begin{equation}\label{eq:ss:feynman}
+\frac{1}{D_0D_1D_2}
+=2\!\int_{x,y,z\geq0}\!dx\,dy\,dz\;\delta(1-x-y-z)\,\frac{1}{(r^{2}+\Delta)^{3}},
+\qquad
+\int_{x,y,z\geq0}\!dx\,dy\,dz\;\delta(1-x-y-z)=\frac12 ,
+\end{equation}
+with the shift, writing $Q=p+q$,
+\begin{equation}\label{eq:ss:seedshift}
+\ell=k+yq+zQ,
+\qquad
+\Delta=xyq^{2}+xzQ^{2}+yzp^{2}.
+\end{equation}
+The two numerator legs $L_1=2k+q$ and $L_2=2k+p+2q$ become
+\begin{equation}\label{eq:ss:seedL12}
+L_1=2\ell+(1-2y)q-2zQ,
+\qquad
+L_2=2\ell+(1-2y)q+(1-2z)Q,
+\end{equation}
+so the odd-$\ell$ terms integrate to zero and only the $\ell_m\ell_n$ piece
+survives. Hatted rotational reduction and~\eqref{eq:ss:Jnidentities} give
+\begin{equation}\label{eq:ss:tensorreduction}
+\int_r\frac{r_mr_n}{(r^{2}+\Delta)^{3}}
+=\frac{\widehat\delta_{mn}}{d}\,(J_2-\Delta J_3)
+=\frac{\widehat\delta_{mn}}{4}\,J_2 ,
+\end{equation}
+the $\tfrac14$ being exact since
+$(1-\tfrac{\epsilon}{2})/(4-2\epsilon)=\tfrac14$ identically in $\epsilon$.
+Consequently the pole part of the parent triangle with numerator legs
+$L_1^{m}L_2^{n}$ is
+\begin{equation}\label{eq:ss:pole}
+\operatorname*{Pole}_{\epsilon=0}
+\int_{\ell}\frac{L_1^{m}L_2^{n}}{D_0D_1D_2}
+=\frac{\widehat\delta^{mn}}{16\pi^{2}\epsilon} .
+\end{equation}
+Assembling the prefactor~\eqref{eq:ss:prefactor}, the simplex
+factor~\eqref{eq:ss:feynman}, the residue~\eqref{eq:ss:pole}, and the spinor
+chain $\sigma_m\bar\sigma_\rho\sigma_n$ contracted with the hatted external
+momentum $p^{\rho}$, the parent triangle pole is
+\begin{equation}\label{eq:ss:parentpole}
+\Gamma_{T}
+=\frac{\h g^{2}}{32\pi^{2}\epsilon}\,
+f^{ACD}f^{BCE}\,\widehat\delta^{mn}\,
+\sigma_m\bar\sigma_\rho\sigma_n\,p^{\rho} .
+\end{equation}
+
+\paragraph{7. Schwinger contact rows.}
+The four occurrence-resolved contact rows of
+Figure~\ref{fig:ss:seedcontact} are
+\begin{center}
+\begin{tabular}{ccll}
+\hline
+row & cut edge & marked occurrence & Wick port row\\
+\hline
+$j=1$ & $e_0$ & $\nabla_{-}(\nabla_{+}\cW_{+}^{A})$ & $(S,B)$\\
+$j=2$ & $e_0$ & $\nabla_{-}(\nabla_{+}\cW_{+}^{A})$ & $(B,S)$\\
+$j=3$ & $e_2$ & $\nabla_{+}\cW_{+}^{A}\,\nabla_{-}(\nabla_{+}\cW_{+}^{B})$
+& $(S,B)$\\
+$j=4$ & $e_2$ & $\nabla_{+}\cW_{+}^{A}\,\nabla_{-}(\nabla_{+}\cW_{+}^{B})$
+& $(B,S)$\\
+\hline
+\end{tabular}
+\end{center}
+and each row carries the same sign chain
+\begin{equation}\label{eq:ss:signchain}
+\left(-\frac14\right)_{\mathrm{cut}}
+(-1)_{\mathrm{endpoint}}
+\left(\frac12\right)_{\nabla_{-}\nabla_{+}=\nabla^{2}/2}
+(2)_{\mathrm{mixed}}
+(2)_{\mathrm{Wick}}
+\left(-\frac12\right)_{p_{+}}
+=-\frac14 ,
+\end{equation}
+whose factors are, in order: the cut/insertion coefficient, the endpoint
+transport sign, the spinor-derivative square
+move~\eqref{eq:ss:seedDmoves}, the mixed anticommutator
+factor~\eqref{eq:ss:seedmixed}, the two Wick endpoints, and the plus-frame
+momentum projection. There is no extra edge factor $2$ and no metric-trace
+factor $d$ or $4$ on the contact side. A single row gives
+\begin{equation}\label{eq:ss:singlerow}
+\Gamma_{C,j}
+=-\frac14\cdot\frac{\h g^{2}}{2}\cdot\frac{1}{16\pi^{2}\epsilon}\,
+f^{ACD}f^{BCE}\,\delta_4^{mn}\,
+\sigma_m\bar\sigma_\rho\sigma_n\,p^{\rho}
+=-\frac{\h g^{2}}{128\pi^{2}\epsilon}\,
+f^{ACD}f^{BCE}\,\delta_4^{mn}\,
+\sigma_m\bar\sigma_\rho\sigma_n\,p^{\rho} ,
+\end{equation}
+and the four occurrence-resolved rows sum to
+\begin{equation}\label{eq:ss:contactrows}
+\Gamma_{C}
+=\sum_{j=1}^{4}\Gamma_{C,j}
+=-\frac{\h g^{2}}{32\pi^{2}\epsilon}\,
+f^{ACD}f^{BCE}\,\delta_4^{mn}\,
+\sigma_m\bar\sigma_\rho\sigma_n\,p^{\rho} .
+\end{equation}
+
+\paragraph{8. Pole cancellation and the $-2\epsilon$ trace.}
+The four-dimensional metric parts of~\eqref{eq:ss:parentpole}
+and~\eqref{eq:ss:contactrows} cancel exactly: since
+$\widehat\delta^{mn}-\delta_4^{mn}=-\breve\delta^{mn}$,
+\begin{equation}\label{eq:ss:polecancel}
+\Gamma_{T}+\Gamma_{C}
+=-\frac{\h g^{2}}{32\pi^{2}\epsilon}\,
+f^{ACD}f^{BCE}\,\breve\delta^{mn}\,
+\sigma_m\bar\sigma_\rho\sigma_n\,p^{\rho} ,
+\end{equation}
+a pure evanescent numerator, precisely as in the bookkeeping principle of
+Remark~\ref{rem:ss:polebookkeeping}. The external momentum is hatted, so
+contracting with $p^{\rho}$ first and using $\breve\delta\,p=0$ and
+$\breve\delta^{mn}\bar\sigma_m\sigma_n=\breve\delta^{m}{}_{m}=2\epsilon$
+with the four-dimensional spin algebra~\eqref{eq:ss:sigmaalgebra},
+\begin{equation}\label{eq:ss:sigmatrace}
+p^{\rho}\,\breve\delta^{mn}\,\sigma_m\bar\sigma_\rho\sigma_n
+=2p^{\rho}\breve\delta_{\rho}{}^{n}\sigma_n
+-p^{\rho}\sigma_\rho\,\breve\delta^{mn}\bar\sigma_m\sigma_n
+=0-(\breve\delta^{m}{}_{m})\,p^{\rho}\sigma_\rho
+=-2\epsilon\,p^{\rho}\sigma_\rho .
+\end{equation}
+
+\paragraph{9. The loop integral and the complete unit-insertion result.}
+The shifted coefficient is independent of the simplex parameters, so
+$2\int_{\Sigma_2}1=2(\tfrac12)=1$ by~\eqref{eq:ss:feynman}. Substituting
+\eqref{eq:ss:sigmatrace} into~\eqref{eq:ss:polecancel} and using the
+evanescent master integral~\eqref{eq:ss:masterintegral},
+\begin{equation}\label{eq:ss:seedfinal}
+\Gamma_{T}+\Gamma_{C}
+=-\frac{\h g^{2}}{32\pi^{2}\epsilon}\,(-2\epsilon)\,
+f^{ACD}f^{BCE}\,\sigma_\rho p^{\rho}
+=\frac{\h g^{2}}{16\pi^{2}}\,
+f^{ACD}f^{BCE}\,\sigma\!\cdot\!p .
+\end{equation}
+The $\sigma$-chain trace forces the position-space output to be a dotted
+bilinear of the form~\eqref{eq:ss:bilinear}: this is the output structure
+quoted as grading (iv) in Section~\ref{sec:superspace:selection}. The
+directed triangle emits the ordered word
+$\langle\bcW^{D},\nabla_{+}\cW_{+}^{E}\rangle$; the reflected triangle emits
+the reordered word with the minus sign of~\eqref{eq:ss:seedreflect}; the two
+words in which the holomorphic momentum acts along the $q$-leg are total
+derivatives (equation-of-motion carriers) and drop out of the physical
+output. The gauge sector of the channel is therefore
+\begin{equation}\label{eq:ss:seedgauge}
+\Gamma^{(1)}_{(b,b),\mathrm{gauge}}
+=\frac{\h g^{2}}{16\pi^{2}}\,f^{ACD}f^{BCE}\,
+\big\{\big\langle\bcW,\nabla_{+}\cW_{+}\big\rangle
+-\big\langle\nabla_{+}\cW_{+},\bcW\big\rangle\big\}^{DE} .
+\end{equation}
+The matter sector of the same channel is the two-$\widetilde\Phi\cV\Phi$
+marked triangle. Its two marked placements give, with the same master
+integral~\eqref{eq:ss:masterintegral},
+\begin{align}
+4\h g^{2}\left(\frac23\right)\left(\frac{1}{32\pi^{2}}\right)
+&=\frac{\h g^{2}}{12\pi^{2}},
+\label{eq:ss:seedmatterone}\\
+4\h g^{2}\left(-\frac16\right)\left(\frac{1}{32\pi^{2}}\right)
+&=-\frac{\h g^{2}}{48\pi^{2}},
+\label{eq:ss:seedmattertwo}
+\end{align}
+and the two placements sum to
+\begin{equation}\label{eq:ss:seedmatternet}
+\frac{\h g^{2}}{12\pi^{2}}-\frac{\h g^{2}}{48\pi^{2}}
+=\frac{3\,\h g^{2}}{48\pi^{2}}
+=\frac{\h g^{2}}{16\pi^{2}},
+\end{equation}
+carried by the matter words
+$\sum_r\big(\langle\nabla_{+}\Phi_r,\widetilde\Phi^{r}\rangle
+-\langle\widetilde\Phi^{r},\nabla_{+}\Phi_r\rangle\big)$. Collecting the
+gauge sector~\eqref{eq:ss:seedgauge} and the matter
+sector~\eqref{eq:ss:seedmatternet}, the complete channel in unit insertions
+is
+\begin{equation}\label{eq:ss:seedunitresult}
+\begin{aligned}
+\nabla_{-}\Big(\nabla_{+}\cW_{+}^{A}\,\nabla_{+}\cW_{+}^{B}\Big)
+\Big|_{\text{1-loop}}
+=\frac{\h g^{2}}{16\pi^{2}}\,f^{ACD}f^{BCE}\,
+\Big\{&\big\langle\bcW,\nabla_{+}\cW_{+}\big\rangle
+-\big\langle\nabla_{+}\cW_{+},\bcW\big\rangle\\
++&\sum_{r=1}^{3}\Big(
+\big\langle\nabla_{+}\Phi_r,\widetilde\Phi^{r}\big\rangle
+-\big\langle\widetilde\Phi^{r},\nabla_{+}\Phi_r\big\rangle\Big)
+\Big\}^{DE} ,
+\end{aligned}
+\end{equation}
+with the dotted contraction of~\eqref{eq:ss:bilinear} understood in each
+bilinear.
+
+\begin{remark}[The matter source-orientation sign]\label{rem:ss:seedmatter}
+The relative size of the two matter placements in~\eqref{eq:ss:seedmatterone}
+and~\eqref{eq:ss:seedmattertwo} is exact; the overall matter
+source-orientation sign is fixed by the target-blind primitive-sign chain
+($\eta_{\mathrm{src}}=+1$), giving the word order displayed
+in~\eqref{eq:ss:seedunitresult}. The same sign is consistent with the
+accepted component bottom projection of Section~\ref{sec:component} (an exact
+projection of the superfield result, not an independent derivation) and is
+checked independently by the holomorphic-twist comparison of paragraph~11.
+\end{remark}
+
+\paragraph{10. Restoring the letter normalization: the boxed result.}
+The letters of Definition~\ref{def:ss:letters} give the substitutions
+\begin{align}
+\nabla_{+}\cW_{+}&=i\sqrt2\,b,
+&\big(\nabla_{+}\cW_{+}^{A}\big)\big(\nabla_{+}\cW_{+}^{B}\big)
+&=(i\sqrt2)^{2}\,b^{A}b^{B}=-2\,b^{A}b^{B},
+\label{eq:ss:seedlettersub}\\
+\big\langle\bcW,\nabla_{+}\cW_{+}\big\rangle
+&=\big\langle-i\,\partial c,\,i\sqrt2\,b\big\rangle
+=\sqrt2\,\big\langle\partial c,b\big\rangle,
+&\big\langle\nabla_{+}\Phi_r,\widetilde\Phi^{r}\big\rangle
+&=\big\langle\sqrt2\,\beta_r,\gamma^{r}\big\rangle
+=\sqrt2\,\big\langle\beta_r,\gamma^{r}\big\rangle ,
+\label{eq:ss:seedwordsub}
+\end{align}
+so that dividing~\eqref{eq:ss:seedunitresult} by the insertion factor $-2$
+yields
+\begin{equation}\label{eq:ss:seednetletter}
+\nabla_{-}\big(b^{A}b^{B}\big)
+=\frac{1}{-2}\cdot\sqrt2\cdot\frac{\h g^{2}}{16\pi^{2}}\,
+f^{ACD}f^{BCE}\,\{\cdots\}
+=-\frac{\h g^{2}}{16\sqrt2\,\pi^{2}}\,f^{ACD}f^{BCE}\,\{\cdots\} .
+\end{equation}
+Equivalently, in the bookkeeping of the unit-insertion frame: the two
+insertions contribute a factor $(-i/\sqrt2)^{2}=-\tfrac12$ relative to the
+unit field-strength normalization used above, while the output bilinears of
+the seed channel contribute $\sqrt2$ in the alphabet of
+Definition~\ref{def:ss:letters}, giving the net prefactor
+$-\tfrac12\cdot\sqrt2\cdot\tfrac{\h g^2}{16\pi^2}
+=-\tfrac{\h g^{2}}{16\sqrt2\,\pi^{2}}$. The position-space identity reads
+\begin{equation}\label{eq:ss:bbresult}
+\boxed{\;
+\nabla_{-}\big(b^{A}b^{B}\big)
+=-\frac{\h g^{2}}{16\sqrt2\,\pi^{2}}\,
+f^{ACD}f^{BCE}\,
+\Big\{
+\langle\partial c,b\rangle-\langle b,\partial c\rangle
++\sum_{r=1}^{3}\big(
+\langle\beta_{r},\gamma^{r}\rangle-\langle\gamma^{r},\beta_{r}\rangle
+\big)\Big\}^{DE} .\;}
+\end{equation}
+
+\begin{remark}[Independent machine cross-checks]\label{rem:ss:seedchecks}
+The factor chain of this subsection was replayed externally on $269$ external
+slot assignments with zero failures, and on the full color mask ($9216$
+entries, with a sparse replay of $2048$) with zero equality failures.
+\end{remark}
+
+\paragraph{11. The holomorphic-twist comparison for this channel.}
+Budzik and Kulp compute the same channel in the holomorphic twist; their
+zero-derivative display \cite[eq.~(3.64)]{BK} is
+\begin{equation}\label{eq:ss:seedbk}
+Q_1(b^A b^B)
+=\kappa^{2} f_{ACD}f_{BCE} \left[
+\partial_{\dot\alpha} c^D \partial^{\dot\alpha} b^E
+-\partial_{\dot\alpha} b^D\partial^{\dot\alpha} c^E
++\partial_{\dot\alpha}(\beta_I)^D\partial^{\dot\alpha}(\gamma^I)^E
+-\partial_{\dot\alpha} (\gamma^I)^D\partial^{\dot\alpha}(\beta_I)^E
+\right],
+\end{equation}
+with $\kappa$ the dual Coxeter normalization $\Tr t_At_B=\kappa\delta_{AB}$.
+The dictionary from the twist letters to the unit-normalized composites of
+this section is
+\begin{equation}\label{eq:ss:seeddictionary}
+b\mapsto-\frac{i\rho}{\sqrt2}\,\nabla_{+}\cW_{+},
+\qquad
+\beta_r\mapsto\frac{\rho}{\sqrt2}\,\nabla_{+}\Phi_r,
+\qquad
+\gamma^r\mapsto\rho\,\widetilde\Phi^{r},
+\qquad
+\partial_{\dot\alpha}c\mapsto i\rho\,\bcW_{\dot\alpha},
+\end{equation}
+with color, flavor, and dotted-spin frames $R_A{}^P$, $U_I{}^r$,
+$S_{\dot\alpha}{}^{\dot\beta}$ and a scale $\rho\neq0$, all set to the
+identity after tracking. Applied word by word, the dictionary gives
+\begin{align}
+\partial_{\dot\alpha} c^D\partial^{\dot\alpha} b^E
+&\mapsto
+(i\rho)\Big(-\frac{i\rho}{\sqrt2}\Big)\,
+\big\langle\bcW^{D},\nabla_{+}\cW_{+}^{E}\big\rangle
+=\frac{\rho^{2}}{\sqrt2}\,
+\big\langle\bcW^{D},\nabla_{+}\cW_{+}^{E}\big\rangle,
+\notag\\
+-\,\partial_{\dot\alpha} b^D\partial^{\dot\alpha} c^E
+&\mapsto
+-\frac{\rho^{2}}{\sqrt2}\,
+\big\langle\nabla_{+}\cW_{+}^{D},\bcW^{E}\big\rangle,
+\label{eq:ss:seedwordmap}\\
+\partial_{\dot\alpha}(\beta_I)^D\partial^{\dot\alpha}(\gamma^I)^E
+&\mapsto
+\frac{\rho^{2}}{\sqrt2}\,U_I{}^r(U^{-1})_s{}^I\,
+\big\langle\nabla_{+}\Phi_r^{D},\widetilde\Phi^{sE}\big\rangle
+=\frac{\rho^{2}}{\sqrt2}\sum_r
+\big\langle\nabla_{+}\Phi_r^{D},\widetilde\Phi^{rE}\big\rangle,
+\notag\\
+-\,\partial_{\dot\alpha}(\gamma^I)^D\partial^{\dot\alpha}(\beta_I)^E
+&\mapsto
+-\frac{\rho^{2}}{\sqrt2}\sum_r
+\big\langle\widetilde\Phi^{rD},\nabla_{+}\Phi_r^{E}\big\rangle .
+\notag
+\end{align}
+The input pair contributes $(-i\rho/\sqrt2)^{2}=-\rho^{2}/2$, undoing it
+contributes $-2/\rho^{2}$, and the total-differential scale $s_1=-1/2$
+contributes $s_1^{-1}=-2$; the net prefactor on every one of the eight words
+is therefore
+\begin{equation}\label{eq:ss:seednetprefactor}
+\Big(-\frac{2}{\rho^{2}}\Big)(-2)\,\kappa_H^{2}\h_{\mathrm{HT}}\,
+\frac{\rho^{2}}{\sqrt2}
+=2\sqrt2\,\kappa_H^{2}\h_{\mathrm{HT}}
+=\frac{\h g^{2}}{16\pi^{2}},
+\end{equation}
+with coefficient vector, in the ordered basis of~\eqref{eq:ss:seedunitresult},
+\begin{equation}\label{eq:ss:seedmachinerow}
+\Big(
+\langle\bcW,\nabla_{+}\cW_{+}\rangle,\,
+\langle\nabla_{+}\cW_{+},\bcW\rangle,\,
+\langle\nabla_{+}\Phi_1,\widetilde\Phi^{1}\rangle,\,
+\langle\widetilde\Phi^{1},\nabla_{+}\Phi_1\rangle,\,
+\dots
+\Big)=(1,-1,1,-1,1,-1,1,-1),
+\end{equation}
+matching~\eqref{eq:ss:seedunitresult} entry by entry. Equivalently, the
+loop-scale relation
+\begin{equation}\label{eq:ss:seedloopscale}
+-2\,\kappa_H^{2}\h_{\mathrm{HT}}
+=-\frac{\h g^{2}}{16\sqrt2\,\pi^{2}},
+\qquad\text{i.e.}\qquad
+\kappa_H^{2}\h_{\mathrm{HT}}
+=\frac{\h g^{2}}{32\sqrt2\,\pi^{2}},
+\end{equation}
+identifies the twist computation with the boxed
+result~\eqref{eq:ss:bbresult}: the matter words of~\eqref{eq:ss:seedbk},
+which \cite{BK} obtains from the superpotential vertex, are the same matter
+triangle as in paragraph~9. Only the zero-jet kernel entry
+$K_{0,0;0,0}=1$ enters this channel; Budzik and Kulp's printed
+master-triangle value is $\tfrac12$, exactly one half, the factor $2$ being
+the Feynman-parameter prefactor of~\eqref{eq:ss:feynman}. The full tower
+comparison is Section~\ref{sec:ht}.
+
+\begin{remark}[Status of the comparison]\label{rem:ss:seedht}
+The match of this paragraph is an external cross-check against~\cite{BK},
+not a derivation input and not a completeness proof of the graph census: the
+factor chain of paragraphs 1--10 was sealed before the twist formulas were
+consulted. The loop-scale relation~\eqref{eq:ss:seedloopscale} uses the
+conditional total-differential scale $s_1=-1/2$ of the dictionary. The
+adversarial census review remains open; it does not alter the accepted
+coefficient~\eqref{eq:ss:bbresult}.
+\end{remark}

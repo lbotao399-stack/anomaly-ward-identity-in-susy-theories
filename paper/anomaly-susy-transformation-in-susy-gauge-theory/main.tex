@@ -6,6 +6,25 @@
 \usepackage[margin=2.6cm]{geometry}
 \usepackage{enumitem}
 \usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing,decorations.markings,positioning,calc}
+
+% ---- super-Feynman diagram styles (contract: all figures use these) ----
+\tikzset{
+  every picture/.style={line width=0.7pt},
+  sV/.style={decorate, decoration={snake, amplitude=0.8pt, segment length=5pt}},
+  sVcut/.style={sV},  % cut line: wavy; the × mark is added as a manual node
+                      % (auto-marking + snake overflows pgf on short/curved paths)
+  sPhi/.style={solid, postaction={decorate, decoration={markings,
+                  mark=at position 0.55 with {\arrow{>}}}}},
+  sPhit/.style={solid, postaction={decorate, decoration={markings,
+                  mark=at position 0.55 with {\arrow{<}}}}},
+  sghost/.style={dashed},
+  sleg/.style={solid},
+  sinsert/.style={circle, fill=black, inner sep=1.4pt},
+  svertex/.style={circle, fill=black, inner sep=1.1pt},
+  scaption/.style={font=\small},
+}
 
 \numberwithin{equation}{section}
 \theoremstyle{plain}
@@ -49,6 +68,14 @@ holomorphic-twist approaches}
 \input{sections/sec02-notation}
 \input{sections/sec03-gauge-bv}
 \input{sections/sec04-superspace}
+\input{sections/sec04a-rules}
+\input{sections/sec04b-seed}
+\input{sections/sec04c-ab}
+\input{sections/sec04d-bgamma}
+\input{sections/sec04e-ad}
+\input{sections/sec04f-bb}
+\input{sections/sec04g-bc}
+\input{sections/sec04h-table-tower}
 \input{sections/sec05-component}
 \input{sections/sec06-heatkernel}
 \input{sections/sec07-holomorphic-twist}
