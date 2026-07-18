@@ -1,0 +1,262 @@
+{
+  "schema": 1,
+  "task": "REFERENCE-IMPORT-BOOKS-NOTATION-COMPLETION-001",
+  "boundary_after_task": "GIT_TO_NOTION_ONLY",
+  "owner_authorization": "2026-07-17 session: \"结合我notion上的Srednicki和Weinberg的书籍\" — combine the Notion Srednicki and Weinberg books into the project's full notation dictionary.",
+  "source_classes": {
+    "project_contracts": "CANONICAL_PROJECT_AUTHORITY",
+    "book_snapshots": "REFERENCE_EVIDENCE_ONLY"
+  },
+  "snapshot_interpretation": {
+    "scope": "A snapshot proves the content of the cited live Notion page, not the authorship of every block on that page.",
+    "book_text_exclusions": [
+      "blocks explicitly labelled Codex supplement or Codex proof",
+      "translator or editor notes that explicitly replace the original book notation",
+      "synced annotations whose authorship is not the cited book"
+    ],
+    "later_audit_rule": "Classify excluded blocks as Notion editorial material; do not use them to assert Weinberg or Srednicki conventions.",
+    "render_nondeterminism_note": "Embedded image URLs carry per-fetch S3 signatures (X-Amz-* query parameters) that change between fetches; the book text itself is byte-stable. Each snapshot hash pins the exact bytes captured at its fetched_at timestamp."
+  },
+  "notion_pages": [
+    {
+      "id": "WEINBERG-NOTION-25-04-MASSLESS-SUPERMULTIPLETS",
+      "source": "WEINBERG",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "34cee2b74b3f8195ae11f26879eb36e8",
+      "title": "25.4 无质量粒子的超多重态",
+      "url": "https://app.notion.com/p/34cee2b74b3f8195ae11f26879eb36e8",
+      "fetched_at": "2026-07-18T01:01:28.040Z",
+      "snapshot_path": "references/vendor/notion/weinberg/25-04-massless-supermultiplets-34cee2b74b3f8195ae11f26879eb36e8.md",
+      "sha256": "6e80e814b25f84f6bab4fee91fc37b4344bb48370b6795f1c7950cbdcc06c9a0"
+    },
+    {
+      "id": "WEINBERG-NOTION-25-05-MASSIVE-SUPERMULTIPLETS",
+      "source": "WEINBERG",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "34cee2b74b3f81cdac3ee015ade06e28",
+      "title": "25.5 有质量粒子的超多重态",
+      "url": "https://app.notion.com/p/34cee2b74b3f81cdac3ee015ade06e28",
+      "fetched_at": "2026-07-18T01:01:31.067Z",
+      "snapshot_path": "references/vendor/notion/weinberg/25-05-massive-supermultiplets-34cee2b74b3f81cdac3ee015ade06e28.md",
+      "sha256": "d444ffdf8fcb6de17a87c045f665f8a708c8fa97fba6fc489458c226864fb2e5"
+    },
+    {
+      "id": "WEINBERG-NOTION-26-05-TREE-LEVEL-SUSY-BREAKING",
+      "source": "WEINBERG",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "34cee2b74b3f8128b81bd4c39137cb51",
+      "title": "26.5 树级近似下的自发超对称性破缺",
+      "url": "https://app.notion.com/p/34cee2b74b3f8128b81bd4c39137cb51",
+      "fetched_at": "2026-07-18T01:01:33.907Z",
+      "snapshot_path": "references/vendor/notion/weinberg/26-05-tree-level-susy-breaking-34cee2b74b3f8128b81bd4c39137cb51.md",
+      "sha256": "f8ee61511805c26f6bf2525d31c7d31fe7b6dc5ef35a68dd1e19f0de31e0fca8"
+    },
+    {
+      "id": "WEINBERG-NOTION-26-07-SUPERCURRENT",
+      "source": "WEINBERG",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "34cee2b74b3f816da424ea67619cfa5f",
+      "title": "26.7 超对称流",
+      "url": "https://app.notion.com/p/34cee2b74b3f816da424ea67619cfa5f",
+      "fetched_at": "2026-07-18T01:01:36.434Z",
+      "snapshot_path": "references/vendor/notion/weinberg/26-07-supercurrent-34cee2b74b3f816da424ea67619cfa5f.md",
+      "sha256": "c99821f3ed01f3c1fcd542f9d69f737d8ed96c9b58851cd5092204cdfe2fa745"
+    },
+    {
+      "id": "WEINBERG-NOTION-27-05-TREE-RESUMMATION-SUSY-BREAKING",
+      "source": "WEINBERG",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "34cee2b74b3f81539884dcb60a7200cd",
+      "title": "27.5 树级重求和中的超对称破缺",
+      "url": "https://app.notion.com/p/34cee2b74b3f81539884dcb60a7200cd",
+      "fetched_at": "2026-07-18T01:01:39.543Z",
+      "snapshot_path": "references/vendor/notion/weinberg/27-05-tree-resummation-susy-breaking-34cee2b74b3f81539884dcb60a7200cd.md",
+      "sha256": "1519267cd41f053aa7904bad396cba360c3d54ae616d66d064ce27f6af236d75"
+    },
+    {
+      "id": "WEINBERG-NOTION-27-06-PERTURBATIVE-NONRENORMALIZATION",
+      "source": "WEINBERG",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "34cee2b74b3f81cb89ddd43057494701",
+      "title": "27.6 微扰无重整定理",
+      "url": "https://app.notion.com/p/34cee2b74b3f81cb89ddd43057494701",
+      "fetched_at": "2026-07-18T01:01:42.167Z",
+      "snapshot_path": "references/vendor/notion/weinberg/27-06-perturbative-nonrenormalization-34cee2b74b3f81cb89ddd43057494701.md",
+      "sha256": "ed9b3313dbe00132a80863cf1f9f71a23772036685efb71322a69820fa2939ce"
+    },
+    {
+      "id": "WEINBERG-NOTION-27-07-SOFT-SUSY-BREAKING",
+      "source": "WEINBERG",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "34cee2b74b3f818696f8d1ced5602968",
+      "title": "27.7 超对称软破缺",
+      "url": "https://app.notion.com/p/34cee2b74b3f818696f8d1ced5602968",
+      "fetched_at": "2026-07-18T01:01:44.604Z",
+      "snapshot_path": "references/vendor/notion/weinberg/27-07-soft-susy-breaking-34cee2b74b3f818696f8d1ced5602968.md",
+      "sha256": "0d05b8b829eb83a16971d579de0cc4d58a26b59c4feaa08b8300462cff00701a"
+    },
+    {
+      "id": "WEINBERG-NOTION-27-08-GAUGE-INVARIANT-SUSY-TRANSFORMATIONS",
+      "source": "WEINBERG",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "34cee2b74b3f8122a5bbe9e798dd4afc",
+      "title": "27.8 另一种方法: 规范不变的超对称变换",
+      "url": "https://app.notion.com/p/34cee2b74b3f8122a5bbe9e798dd4afc",
+      "fetched_at": "2026-07-18T01:01:46.854Z",
+      "snapshot_path": "references/vendor/notion/weinberg/27-08-gauge-invariant-susy-transformations-34cee2b74b3f8122a5bbe9e798dd4afc.md",
+      "sha256": "30c095a220bef80460a3b25a81fcc171096b180ac48c2b2cc83b28f1964784e9"
+    },
+    {
+      "id": "WEINBERG-NOTION-27-09-EXTENDED-SUPERSYMMETRY-GAUGE-THEORIES",
+      "source": "WEINBERG",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "34cee2b74b3f81879a50e2747ed85f8e",
+      "title": "27.9 带有扩充超对称性的规范理论",
+      "url": "https://app.notion.com/p/34cee2b74b3f81879a50e2747ed85f8e",
+      "fetched_at": "2026-07-18T01:01:49.475Z",
+      "snapshot_path": "references/vendor/notion/weinberg/27-09-extended-supersymmetry-gauge-theories-34cee2b74b3f81879a50e2747ed85f8e.md",
+      "sha256": "ec70eeb465fcf1c5c39ba1a6f8e89ac0f30b345aee74e697d563d6c92db71e3e"
+    },
+    {
+      "id": "SREDNICKI-NOTION-42-FREE-FERMION-PROPAGATOR",
+      "source": "SREDNICKI",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "96e8f1d39d3a40ea92e71c1a03e6f6fc",
+      "title": "42. The free fermion propagator",
+      "url": "https://app.notion.com/p/96e8f1d39d3a40ea92e71c1a03e6f6fc",
+      "fetched_at": "2026-07-18T01:01:52.459Z",
+      "snapshot_path": "references/vendor/notion/srednicki/42-free-fermion-propagator-96e8f1d39d3a40ea92e71c1a03e6f6fc.md",
+      "sha256": "5e38fa5092f45040ea6f1e34b0d58ed23685d5e3dbccdb7ed959e89d0de9dd2f"
+    },
+    {
+      "id": "SREDNICKI-NOTION-43-PATH-INTEGRAL-FOR-FERMION-FIELDS",
+      "source": "SREDNICKI",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "bd6aa7a3c06c444783c6e4b9cb3a27f4",
+      "title": "43. The path integral for fermion fields",
+      "url": "https://app.notion.com/p/bd6aa7a3c06c444783c6e4b9cb3a27f4",
+      "fetched_at": "2026-07-18T01:01:54.991Z",
+      "snapshot_path": "references/vendor/notion/srednicki/43-path-integral-for-fermion-fields-bd6aa7a3c06c444783c6e4b9cb3a27f4.md",
+      "sha256": "9546c00477b204d4e07297159387b24c191566bfd843c9a1e975f66a99f25bc0"
+    },
+    {
+      "id": "SREDNICKI-NOTION-44-FORMAL-FERMIONIC-PATH-INTEGRALS",
+      "source": "SREDNICKI",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "e9e8aed2aafe45fcad9e5567ac407bff",
+      "title": "44. Formal development of fermionic path integrals",
+      "url": "https://app.notion.com/p/e9e8aed2aafe45fcad9e5567ac407bff",
+      "fetched_at": "2026-07-18T01:01:57.303Z",
+      "snapshot_path": "references/vendor/notion/srednicki/44-formal-fermionic-path-integrals-e9e8aed2aafe45fcad9e5567ac407bff.md",
+      "sha256": "79e22975a22fa2b9989e66b67aaa919cff7412fcb7b48f9b7246d11695b1497d"
+    },
+    {
+      "id": "SREDNICKI-NOTION-74-BRST-SYMMETRY",
+      "source": "SREDNICKI",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "51a0dad3c8454b07a2087d974003aaf0",
+      "title": "74. BRST symmetry",
+      "url": "https://app.notion.com/p/51a0dad3c8454b07a2087d974003aaf0",
+      "fetched_at": "2026-07-18T01:02:00.301Z",
+      "snapshot_path": "references/vendor/notion/srednicki/74-brst-symmetry-51a0dad3c8454b07a2087d974003aaf0.md",
+      "sha256": "12f109b435e20fbe820b6ebbd79d605470d6e0d9dfc49a4e9099866a0496a2b6"
+    },
+    {
+      "id": "SREDNICKI-NOTION-78-BACKGROUND-FIELD-GAUGE",
+      "source": "SREDNICKI",
+      "role": "REFERENCE_EVIDENCE_ONLY",
+      "page_id": "bdf1ed056cb94d5ba1d9eb4e744e9c2c",
+      "title": "78. Background field gauge",
+      "url": "https://app.notion.com/p/bdf1ed056cb94d5ba1d9eb4e744e9c2c",
+      "fetched_at": "2026-07-18T01:02:02.992Z",
+      "snapshot_path": "references/vendor/notion/srednicki/78-background-field-gauge-bdf1ed056cb94d5ba1d9eb4e744e9c2c.md",
+      "sha256": "f650284e0c6f456cbfe37a4e83981977d3d928fd2d778113c429146311049f76"
+    }
+  ],
+  "not_imported": {
+    "WEINBERG": [
+      {
+        "chapter": "28",
+        "title": "第 28 章 标准模型的超对称版",
+        "reason": "MSSM application/phenomenology chapter carrying no new primitive notation for the AWI notation system."
+      },
+      {
+        "chapter": "29",
+        "title": "第 29 章 超出微扰论",
+        "reason": "Beyond-perturbation-theory methods chapter carrying no new primitive notation for the AWI notation system."
+      },
+      {
+        "chapter": "31",
+        "title": "第 31 章 超引力",
+        "reason": "Supergravity application chapter outside the rigid d=4 N=1 scope of the AWI notation system."
+      },
+      {
+        "chapter": "32",
+        "title": "第 32 章 高维中的超对称代数",
+        "reason": "Higher-dimensional SUSY algebra chapter outside the d=4 scope of the AWI notation system."
+      }
+    ],
+    "SREDNICKI": [
+      {
+        "chapter": "37",
+        "title": "37. Canonical quantization of spinor fields I",
+        "reason": "Canonical-quantization machinery chapter carrying no new primitive notation for the AWI notation system."
+      },
+      {
+        "chapter": "39",
+        "title": "39. Canonical quantization of spinor fields II",
+        "reason": "Canonical-quantization machinery chapter carrying no new primitive notation for the AWI notation system."
+      },
+      {
+        "chapter": "41",
+        "title": "41. LSZ reduction for spin-one-half particles",
+        "reason": "S-matrix reduction formalism chapter carrying no new primitive notation for the AWI notation system."
+      },
+      {
+        "chapter": "45",
+        "title": "45. The Feynman rules for Dirac fields",
+        "reason": "Application chapter reusing already-vendored spinor notation; no new primitive notation."
+      },
+      {
+        "chapter": "46",
+        "title": "46. Spin sums",
+        "reason": "Computational technique chapter carrying no new primitive notation for the AWI notation system."
+      },
+      {
+        "chapter": "48",
+        "title": "48. Spin-averaged cross sections",
+        "reason": "Phenomenology application chapter carrying no new primitive notation for the AWI notation system."
+      },
+      {
+        "chapter": "50",
+        "title": "50. Massless particles and spinor helicity",
+        "reason": "Spinor-helicity methods chapter carrying no new primitive notation for the AWI notation system."
+      },
+      {
+        "chapter": "51",
+        "title": "51. Loop corrections in Yukawa theory",
+        "reason": "Application chapter carrying no new primitive notation for the AWI notation system."
+      },
+      {
+        "chapter": "52",
+        "title": "52. Beta functions in Yukawa theory",
+        "reason": "Renormalization application chapter carrying no new primitive notation for the AWI notation system."
+      },
+      {
+        "chapter": "53",
+        "title": "53. Functional determinants",
+        "reason": "Evaluation-methods chapter carrying no new primitive notation for the AWI notation system."
+      },
+      {
+        "chapter": "96",
+        "title": "96. The Minimal Supersymmetric Standard Model",
+        "reason": "MSSM phenomenology chapter carrying no new primitive notation for the AWI notation system."
+      },
+      {
+        "chapter": "97",
+        "title": "97. Grand unification",
+        "reason": "Grand-unification phenomenology chapter carrying no new primitive notation for the AWI notation system."
+      }
+    ]
+  }
+}

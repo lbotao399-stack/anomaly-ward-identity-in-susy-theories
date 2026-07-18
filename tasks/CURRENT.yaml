@@ -1,41 +1,71 @@
 {
-  "id": "MIRROR-STEP-05-CLAUDE-AUDIT-NOTION-001",
-  "type": "CONTRACT_CHANGE",
-  "status": "ACCEPTED",
-  "owner_authorization": "2026-07-16 session: owner requested strict review of the new Claude Code results followed by Notion synchronization and a human-readable frontier explanation.",
-  "outcome": "Published the post-audit Step-5 core-theory paper from verified origin/main commit d3d0ffdd4012d79c630d454c5211998541c66fda to the existing Notion core-paper page and appended the latest unresolved frontier first to the central parallel log, using write-only mutations without reading Notion content. A post-cutoff fetch also admitted the two-line archived-task test repair from 61f8c70. The corrected frontier memo e97e5c8 honestly narrows its tree result to a conditional scale relation and leaves the full box-plus-triangle graph assembly open, so it closes no accepted physics blocker.",
+  "id": "REFERENCE-IMPORT-BOOKS-NOTATION-COMPLETION-001",
+  "type": "REFERENCE_IMPORT",
+  "status": "SPECIFIED",
+  "owner_authorization": "2026-07-17 session: \"结合我notion上的Srednicki和Weinberg的书籍\" — combine the Notion Srednicki and Weinberg books into the project's full notation dictionary.",
+  "outcome": "Vendor verbatim snapshots of the 14 remaining notation-bearing Weinberg and Srednicki Notion book pages named by the owner authorization, register every snapshot with page id, URL, title, fetch timestamp and SHA-256 in references/manifest.yaml and references/books-notation-completion-source-ledger.json, and make no mathematical adjudication in this import task.",
   "allowed_inputs": [
     "AUTHORITY.md",
     "AGENTS.md",
-    "paper/awi-n4-one-loop.md",
-    "audits/claude-step5b-step5h-independent-review.md",
-    "contracts/foundations/step-05-euclidean-n4-awi-one-loop.md",
-    "mirror/page_map.yaml",
-    "mirror/status.json",
-    "scripts/build_notion_payload.py",
-    "audits/notion_write_receipt.json",
-    "Current work日志.md"
+    "references/manifest.yaml",
+    "references/books-notation-completion-source-ledger.json",
+    "tasks/archive/REFERENCE-IMPORT-WEINBERG-SREDNICKI-NOTATION-001.yaml",
+    "references/vendor/notion/weinberg/25-04-massless-supermultiplets-34cee2b74b3f8195ae11f26879eb36e8.md",
+    "references/vendor/notion/weinberg/25-05-massive-supermultiplets-34cee2b74b3f81cdac3ee015ade06e28.md",
+    "references/vendor/notion/weinberg/26-05-tree-level-susy-breaking-34cee2b74b3f8128b81bd4c39137cb51.md",
+    "references/vendor/notion/weinberg/26-07-supercurrent-34cee2b74b3f816da424ea67619cfa5f.md",
+    "references/vendor/notion/weinberg/27-05-tree-resummation-susy-breaking-34cee2b74b3f81539884dcb60a7200cd.md",
+    "references/vendor/notion/weinberg/27-06-perturbative-nonrenormalization-34cee2b74b3f81cb89ddd43057494701.md",
+    "references/vendor/notion/weinberg/27-07-soft-susy-breaking-34cee2b74b3f818696f8d1ced5602968.md",
+    "references/vendor/notion/weinberg/27-08-gauge-invariant-susy-transformations-34cee2b74b3f8122a5bbe9e798dd4afc.md",
+    "references/vendor/notion/weinberg/27-09-extended-supersymmetry-gauge-theories-34cee2b74b3f81879a50e2747ed85f8e.md",
+    "references/vendor/notion/srednicki/42-free-fermion-propagator-96e8f1d39d3a40ea92e71c1a03e6f6fc.md",
+    "references/vendor/notion/srednicki/43-path-integral-for-fermion-fields-bd6aa7a3c06c444783c6e4b9cb3a27f4.md",
+    "references/vendor/notion/srednicki/44-formal-fermionic-path-integrals-e9e8aed2aafe45fcad9e5567ac407bff.md",
+    "references/vendor/notion/srednicki/74-brst-symmetry-51a0dad3c8454b07a2087d974003aaf0.md",
+    "references/vendor/notion/srednicki/78-background-field-gauge-bdf1ed056cb94d5ba1d9eb4e744e9c2c.md"
   ],
-  "nonauthoritative_post_cutoff_handles": [
-    "61f8c70",
-    "e97e5c8"
-  ],
+  "notion_reference_exception": {
+    "user_authorized": true,
+    "search_status": "FORBIDDEN_BY_TASK",
+    "fetch_only_page_ids": [
+      "34cee2b74b3f8195ae11f26879eb36e8",
+      "34cee2b74b3f81cdac3ee015ade06e28",
+      "34cee2b74b3f8128b81bd4c39137cb51",
+      "34cee2b74b3f816da424ea67619cfa5f",
+      "34cee2b74b3f81539884dcb60a7200cd",
+      "34cee2b74b3f81cb89ddd43057494701",
+      "34cee2b74b3f818696f8d1ced5602968",
+      "34cee2b74b3f8122a5bbe9e798dd4afc",
+      "34cee2b74b3f81879a50e2747ed85f8e",
+      "96e8f1d39d3a40ea92e71c1a03e6f6fc",
+      "bd6aa7a3c06c444783c6e4b9cb3a27f4",
+      "e9e8aed2aafe45fcad9e5567ac407bff",
+      "51a0dad3c8454b07a2087d974003aaf0",
+      "bdf1ed056cb94d5ba1d9eb4e744e9c2c"
+    ],
+    "book_root_page_ids": [
+      "310ee2b74b3f8065a3acdbdac27f3b2b",
+      "34fee2b74b3f80adaaa4e3113787083b"
+    ],
+    "fetch_scope": "Only the 14 recorded page handles. Notion search is forbidden; the two book roots were already vendored under REFERENCE-IMPORT-WEINBERG-SREDNICKI-NOTATION-001 and are not re-fetched.",
+    "translation_status": "NOT_PERFORMED_IN_REFERENCE_IMPORT",
+    "default_boundary_after_task": "GIT_TO_NOTION_ONLY"
+  },
   "forbidden_inputs": [
-    "Notion content",
-    "Notion fetch, search, page read, block read, or content readback",
-    "unmerged branches as mathematical evidence",
-    "manual mathematical edits on the Notion side",
-    "publishing an unverified Git commit"
+    "Notion search, export, or copy-back of any kind",
+    "any Notion page outside the 14 recorded page handles and the two already-vendored book roots",
+    "treating a vendored snapshot as contract authority: a snapshot is a reference, not a contract, and cannot settle a project sign or normalization until a later reviewed CONTRACT_CHANGE derives the translation",
+    "web pages and external URLs",
+    "local textbook PDFs or exports",
+    "legacy repositories",
+    "mathematical correction or adoption of any book claim before a later CONTRACT_CHANGE"
   ],
   "acceptance": [
-    "the published source is exactly paper/awi-n4-one-loop.md at verified origin/main commit d3d0ffdd4012d79c630d454c5211998541c66fda with SHA-256 28a10afea877d668d0bd88294a5b465d8378cb48cb1070691b147fb36167a5d6",
-    "the payload contains the Git authority header, exact source path, commit, and SHA-256",
-    "the existing core-paper page is replaced through a private write while preserving child pages",
-    "the central log places OPEN and BLOCKED frontier items before accepted content",
-    "mirror page map and status record the exact source commit and SHA-256",
-    "write receipt records archived and appended block counts and content_readback_performed=false",
-    "the accepted task-rotation test reads Step-5A admissibility from its ledger obligation's archived packet",
-    "the Step-5J tree-scale result remains conditional on explicit dictionary and structure-constant normalizations",
-    "repository-policy passes after task and ledger rotation"
+    "all 14 named Notion pages are vendored verbatim in references/vendor/notion/ with page id, URL, title, fetch timestamp, and SHA-256 recorded",
+    "references/manifest.yaml registers every vendored snapshot and the source ledger",
+    "references/books-notation-completion-source-ledger.json records the owner authorization, the 14 page records, and the NOT_IMPORTED/OUT_OF_SCOPE chapter lists",
+    "no translation formula or convention decision is made in this import task",
+    "repository-policy passes and the task reaches verified origin/main"
   ]
 }
