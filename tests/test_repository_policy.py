@@ -1735,6 +1735,91 @@ class RepositoryPolicyTest(unittest.TestCase):
             self.assertEqual(manual["result"], "PASS_EXACT_PARTIAL_SCOPE")
             self.assertEqual(manual["post_resolution"], {"P0": [], "P1": []})
 
+    def test_step_00_unified_notation_contract(self) -> None:
+        relative = "contracts/foundations/step-00-unified-notation-convention.md"
+        path = ROOT / relative
+        text = path.read_text(encoding="utf-8")
+        tags = re.findall(r"\\tag\{(0A\.[^}]+)\}", text)
+        self.assertEqual(len(tags), len(set(tags)))
+        self.assertEqual(
+            {tag for tag in tags if tag[3:].isdigit()},
+            {f"0A.{number}" for number in range(1, 141)},
+        )
+        self.assertIn("0A.12a", tags)
+        self.assertEqual(text.count("$$") % 2, 0)
+        for token in (r"\sim", r"\approx", r"\propto"):
+            self.assertNotIn(token, text)
+        for character in text:
+            self.assertFalse(ord(character) < 32 and character not in "\n\t")
+        for required in (
+            r"\eta_L=\operatorname{diag}(-1,+1,+1,+1)",
+            r"\epsilon_{E,1234}=+1",
+            r"\mathcal E:=e^{\mathcal V}",
+            r"\mathcal W_a:=-\frac18\bar D^2\big[\mathcal E^{-1}(D_a\mathcal E)\big]",
+            r"D^2\vartheta^2=\bar D^2\bar\vartheta^2=-4",
+            r"\mathbf s\mathfrak c=i\mathfrak c^2",
+            r"r=-\frac{2\Delta}3",
+            r"\operatorname{gh}(X^\star)=-1-\operatorname{gh}(X)",
+            r"OUT_OF_SCOPE_N2_N4_CLOSURE_CROSSCHECK",
+            r"OUT_OF_SCOPE_WEINBERG_GAUGINO_PHASE",
+            r"OUT_OF_SCOPE_DRED_MOMENTUM_LEDGER_LOR_CYCLE",
+            r"OUT_OF_SCOPE_NK_BRANCH_TABLE",
+        ):
+            self.assertIn(required, text)
+
+        manifest = json.loads((ROOT / "contracts/manifest.yaml").read_text(encoding="utf-8"))
+        entry = next(
+            item
+            for item in manifest["contracts"]
+            if item["id"] == "FOUNDATION-UNIFIED-NOTATION-CONVENTION-000"
+        )
+        self.assertEqual(entry["path"], relative)
+        self.assertEqual(entry["status"], "DERIVED_UNFROZEN")
+        self.assertEqual(entry["sha256"], hashlib.sha256(path.read_bytes()).hexdigest())
+
+    def test_step_00_exact_verifier(self) -> None:
+        script = ROOT / "scripts/verify_step00_unified_notation.py"
+        audit_path = ROOT / "audits/step00-unified-notation-verification.json"
+        self.assertTrue(script.is_file())
+        self.assertTrue(audit_path.is_file())
+        expected = audit_path.read_text(encoding="utf-8")
+        subprocess.run(
+            [sys.executable, str(script)],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        self.assertEqual(audit_path.read_text(encoding="utf-8"), expected)
+        audit = json.loads(expected)
+        self.assertEqual(audit["status"], "PASS")
+        self.assertEqual(audit["totals"]["exact_checks"], 7)
+        self.assertEqual(audit["totals"]["failed_checks"], 0)
+        self.assertTrue(all(item["passed"] for item in audit["checks"]))
+        self.assertEqual(
+            audit["contract_sha256"],
+            hashlib.sha256(
+                (ROOT / "contracts/foundations/step-00-unified-notation-convention.md").read_bytes()
+            ).hexdigest(),
+        )
+
+    def test_step_00_audits(self) -> None:
+        for relative in (
+            "audits/step00-gap-audit.json",
+            "audits/step00-notation-ledger.json",
+            "audits/step00-independent-review.json",
+        ):
+            path = ROOT / relative
+            self.assertTrue(path.is_file(), relative)
+            audit = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(audit["result"], "PASS")
+            if "post_resolution" in audit:
+                self.assertEqual(audit["post_resolution"], {"P0": [], "P1": []})
+            elif "findings" in audit:
+                self.assertEqual(audit["findings"], {"P0": [], "P1": []})
+            else:
+                self.assertEqual(audit["verification"]["post_resolution_P0"], [])
+                self.assertEqual(audit["verification"]["post_resolution_P1"], [])
+
     def test_step_1_formula_surface(self) -> None:
         text = (ROOT / "contracts/foundations/step-01-supersymmetry-commutator.md").read_text(encoding="utf-8")
         tags = {int(value) for value in re.findall(r"\\tag\{1\.(\d+)\}", text)}
@@ -2411,7 +2496,7 @@ class RepositoryPolicyTest(unittest.TestCase):
     def test_step5_core_theory_write_only_mirror_receipt(self) -> None:
         page_map = json.loads((ROOT / "mirror/page_map.yaml").read_text(encoding="utf-8"))
         receipt = json.loads((ROOT / "audits/notion_write_receipt.json").read_text(encoding="utf-8"))
-        task_path = ROOT / "tasks/CURRENT.yaml"
+        task_path = ROOT / "tasks/archive/MIRROR-STEP-05-CLAUDE-AUDIT-NOTION-001.yaml"
         mirror_task = json.loads(task_path.read_text(encoding="utf-8"))
         ledger = json.loads((ROOT / "ledger/proof_obligations.json").read_text(encoding="utf-8"))
 

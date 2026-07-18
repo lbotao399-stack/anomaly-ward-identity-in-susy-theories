@@ -8,7 +8,9 @@ is updated whenever a proof obligation lands on `origin/main`; it duplicates no 
 the contracts remain the legal layer. Intended audience: a quantum field theorist. Intended
 Notion mirror: this file is the standing "core theory" page.
 
-Sources of authority: `contracts/foundations/step-01…step-05a` (conventions, actions,
+Sources of authority: `contracts/foundations/step-00-unified-notation-convention.md`
+(FOUNDATION-UNIFIED-NOTATION-CONVENTION-000, the shared notation lock),
+`contracts/foundations/step-01…step-05a` (conventions, actions,
 BV–BRST, supergraph grammar), `contracts/foundations/step-05-euclidean-n4-awi-one-loop.md`
 (the one-loop settlement), external target `references/vendor/arxiv/2512.07771v2` (Budzik–
 Kulp, *Loop Corrected Supercharges from Holomorphic Anomalies*, imported as
@@ -40,7 +42,7 @@ triangle's Feynman parametrization.
 ## 1. The objects and the statement
 
 Work in Euclidean $\mathcal N=1$ superspace with the Project conventions
-(step-01, step-02a): spinor indices $a=1,2$, $\dot a=\dot1,\dot2$,
+(step-00, step-01, step-02a): spinor indices $a=1,2$, $\dot a=\dot1,\dot2$,
 $\epsilon^{12}=\epsilon^{\dot1\dot2}=+1$; gauge algebra $[T_A,T_B]=ic_{AB}{}^CT_C$ with
 Killing form $\kappa_{AB}$ and totally antisymmetric $c_{ABC}$ (4C.1); absorbed coupling
 $h=g^{-2}$ (5A.2). In Euclidean signature the chiral and antichiral fields are independent
@@ -474,7 +476,8 @@ derivation is the target-blind Schwinger-cut construction above.
 
 ## References
 
-1. Project contracts: `contracts/foundations/step-01…step-05a`, and
+1. Project contracts: `contracts/foundations/step-00-unified-notation-convention.md`,
+   `contracts/foundations/step-01…step-05a`, and
    `contracts/foundations/step-05-euclidean-n4-awi-one-loop.md` (equation tags cited inline).
 2. K. Budzik, J. Kulp, *Loop Corrected Supercharges from Holomorphic Anomalies*,
    arXiv:2512.07771v2 — vendored at `references/vendor/arxiv/2512.07771v2`, admitted as

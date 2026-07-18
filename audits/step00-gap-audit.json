@@ -1,0 +1,156 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-00-UNIFIED-NOTATION-001",
+  "contract": "contracts/foundations/step-00-unified-notation-convention.md",
+  "contract_sha256": "1c1f53f30712710d7309f7b9b60dbea08ad0bc4ac0e789ffc16043c8e52093f1",
+  "scope": "All 141 tagged equation groups of the unified notation convention, checked against the accepted Project contracts step-01 through step-05a and the dictionaries they share",
+  "checked_equation_groups": 141,
+  "proof_obligations": [
+    {
+      "id": "SPACETIME_SIGNATURE_WICK_MAP",
+      "equations": "0A.1-0A.12a",
+      "result": "PASS"
+    },
+    {
+      "id": "WEYL_SPINOR_ALGEBRA",
+      "equations": "0A.13-0A.29",
+      "result": "PASS"
+    },
+    {
+      "id": "MAJORANA_FOUR_COMPONENT_LAYER",
+      "equations": "0A.30-0A.42",
+      "result": "PASS"
+    },
+    {
+      "id": "COVARIANT_DERIVATIVE_TIERS",
+      "equations": "0A.43-0A.69",
+      "result": "PASS"
+    },
+    {
+      "id": "THETA_EXPANSION_OF_SUPERFIELDS",
+      "equations": "0A.70-0A.81",
+      "result": "PASS"
+    },
+    {
+      "id": "VECTOR_VERSUS_CHIRAL_REPRESENTATION",
+      "equations": "0A.82-0A.94",
+      "result": "PASS"
+    },
+    {
+      "id": "ACTION_AND_COUPLING_CONVENTIONS",
+      "equations": "0A.95-0A.101",
+      "result": "PASS"
+    },
+    {
+      "id": "BV_BRST_PACKAGE",
+      "equations": "0A.102-0A.124",
+      "result": "PASS"
+    },
+    {
+      "id": "EXTENDED_SUSY_PACKAGING",
+      "equations": "0A.125-0A.133",
+      "result": "PASS"
+    },
+    {
+      "id": "REGULATOR_AND_MEASURE_NOTATION",
+      "equations": "0A.134-0A.140",
+      "result": "PASS"
+    }
+  ],
+  "spot_checks": [
+    {
+      "equations": "0A.46-0A.49",
+      "check": "recomputed the torsion anticommutator from the locked D and barD definitions on a generic test superfield in both signatures",
+      "result": "PASS"
+    },
+    {
+      "equations": "0A.23, 0A.43, 0A.44, 0A.51",
+      "check": "recomputed D^2 theta^2 and barD^2 thetabar^2 from the Grassmann primitives and the asymmetric square lock",
+      "result": "PASS"
+    },
+    {
+      "equations": "0A.75, 0A.77, 0A.84",
+      "check": "recomputed the Abelian W_a = -(1/8) barD^2 D_a V on the exact Grassmann engine; named slots (a=1,F_01) and (a=2,F_23) and the full theta-linear slice match form (A)",
+      "result": "PASS"
+    },
+    {
+      "equations": "0A.102-0A.104, 0A.111",
+      "check": "recomputed every antifield dimension and ghost number of the BV table from gh(X^star)=-1-gh(X) and [X^star]=d_Sigma-[X], and the ghost number, parity, and sign of every S_min term",
+      "result": "PASS"
+    },
+    {
+      "equations": "0A.2-0A.3",
+      "check": "recomputed epsilon_{L,0123} and epsilon_{E,1234} by explicit metric-lowering sums",
+      "result": "PASS"
+    }
+  ],
+  "gap_types_checked": [
+    "G-DEF",
+    "G-IDX",
+    "G-SIGN",
+    "G-ALG",
+    "G-OP",
+    "G-THM",
+    "G-PROJ",
+    "G-NORM",
+    "G-SCOPE"
+  ],
+  "resolved_findings": [
+    {
+      "id": "G1[G-SIGN]",
+      "priority": "P0",
+      "location": "0A.3",
+      "resolution": "the draft carried epsilon_{E,1234}=-1 inherited from Lorentzian lowering habit; the delta_E-lowering of (0A.2) forces +1, and the contract now derives the lowered Euclidean value explicitly with the exact lowering sum registered in the verifier",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "G2[G-DEF]",
+      "priority": "P1",
+      "location": "0A.23",
+      "resolution": "made the asymmetric theta^2/thetabar^2 sign lock explicit and recorded its propagation into the Srednicki dotted-derivative dictionary entry",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "G3[G-IDX]",
+      "priority": "P1",
+      "location": "0A.77",
+      "resolution": "fixed the field-strength F-term index form to (sigma^{mu nu})_a{}^b theta_b after exact Grassmann arbitration returned verdict form (A) and rejected the lowered-index form (B)",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "G4[G-NORM]",
+      "priority": "P1",
+      "location": "0A.83-0A.84",
+      "resolution": "restated the bridge as the single exponent e^{mathcal V} and the field-strength coefficient as -1/8 against the textbook e^{2V} and -1/4 conventions",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "G5[G-OP]",
+      "priority": "P1",
+      "location": "0A.104 and 0A.111",
+      "resolution": "tied the antifield dimension column to the d_Sigma values of (0A.103) and displayed the (-1)^epsilon signs of the minimal master action term by term",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "G6[G-SIGN]",
+      "priority": "P1",
+      "location": "0A.106",
+      "resolution": "locked the i-ful BRST differential s c = i c^2 with Hermitian generators against the i-less math-BRST convention",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "G7[G-SCOPE]",
+      "priority": "P1",
+      "location": "Section 14",
+      "resolution": "registered the four OUT_OF_SCOPE items explicitly so that no undecided branch masquerades as a locked convention",
+      "status": "RESOLVED"
+    }
+  ],
+  "verification": {
+    "exact_checks": 7,
+    "exact_failures": 0,
+    "post_resolution_P0": [],
+    "post_resolution_P1": []
+  },
+  "result": "PASS"
+}

@@ -1,0 +1,123 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-00-UNIFIED-NOTATION-001",
+  "contract": "contracts/foundations/step-00-unified-notation-convention.md",
+  "contract_sha256": "1c1f53f30712710d7309f7b9b60dbea08ad0bc4ac0e789ffc16043c8e52093f1",
+  "reviewer": "independent four-validator swarm (two component-exact, one representation, one reverse-order) plus final reverse-order audit",
+  "review_order": "0A.140 backward through 0A.1",
+  "allowed_evidence": [
+    "accepted Step-1 through Step-5A foundation contracts and the Step-5 settlement contract",
+    "contracts/dictionaries/weinberg-srednicki-project-notation-dictionary.md",
+    "contracts/dictionaries/step-04-extended-sym-weinberg-srednicki-dictionary.md",
+    "prior notation ledgers audits/step2a-notation-ledger.json through audits/step5a-notation-ledger.json"
+  ],
+  "review_results": [
+    {
+      "scope": "0A.140-0A.134: regulator, measure, DRED two-projector rule, and compliance surface",
+      "result": "PASS"
+    },
+    {
+      "scope": "0A.133-0A.125: extended-SUSY packaging, SU(2)_R and SU(4)_R, N=4 superpotential, and the r=-2 Delta/3 branch",
+      "result": "PASS"
+    },
+    {
+      "scope": "0A.124-0A.102: BV-BRST gradings, antifields, ghosts, i-ful BRST differential, antibracket, master actions, and Wick transport of BV data",
+      "result": "PASS"
+    },
+    {
+      "scope": "0A.101-0A.82: action and coupling conventions, bridge lock, field strengths, three frames, and source dictionaries",
+      "result": "PASS"
+    },
+    {
+      "scope": "0A.81-0A.70: theta-expansions of chiral, antichiral, and vector superfields and Wess-Zumino projections",
+      "result": "PASS"
+    },
+    {
+      "scope": "0A.69-0A.43: all covariant-derivative tiers, torsion, chiral coordinates, and super-gauge-covariant derivatives",
+      "result": "PASS"
+    },
+    {
+      "scope": "0A.42-0A.30: Majorana layer, S-form Dirac matrices, charge conjugation, Weinberg bridge, and the conditional register",
+      "result": "PASS"
+    },
+    {
+      "scope": "0A.29-0A.1: Weyl algebra, sigma matrices, Grassmann square lock, spacetime signature, Wick map, and spacetime Levi-Civita",
+      "result": "PASS"
+    }
+  ],
+  "validation_history": {
+    "swarm": "four independent validators on 2026-07-17",
+    "machine_checks": "47 contract-surface checks plus 27 exact Grassmann checks, all passing after resolution",
+    "fterm_arbitration": "the Abelian W_a F-term dispute was adjudicated on the exact Q(i) Grassmann engine; verdict form (A), i (sigma^{mu nu})_a{}^b theta_b F_{mu nu}, matches the locked (0A.77), and the lowered-index form (B) is rejected together with every single-sign-flip forensic variant",
+    "pre_pr_fixes": "one P0 (epsilon_{E,1234} corrected from -1 to +1 by the delta_E-lowering of (0A.2)) and six minor findings, all resolved before this pull request"
+  },
+  "exact_verification": {
+    "verifier": "scripts/verify_step00_unified_notation.py",
+    "verifier_sha256": "58a1114a1d0199e1bcd86017285dfde8a7c1f7ca066333c8f3760ea6337f231f",
+    "exact_checks": 7,
+    "failed_checks": 0,
+    "status": "PASS"
+  },
+  "resolved_history": [
+    {
+      "priority": "P0",
+      "equation": "0A.3",
+      "issue": "the draft stated epsilon_{E,1234}=-1 by analogy with the Lorentzian lowering, contradicting the delta_E-lowering of the locked epsilon_E^{1234}=+1",
+      "resolution": "corrected to epsilon_{E,1234}=+1, derived explicitly from (0A.2), and pinned by an exact metric-lowering sum in the byte-exact verifier",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equation": "0A.23",
+      "issue": "the asymmetric Grassmann square lock was stated without its propagation consequences",
+      "resolution": "displayed the -2/+1 asymmetry explicitly and registered the dotted-derivative dictionary propagation in Section 11",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equation": "0A.77",
+      "issue": "the F-term index placement was contested between the mixed and lowered sigma forms",
+      "resolution": "exact arbitration returned verdict form (A); the contract locks i (sigma^{mu nu})_a{}^b theta_b F_{mu nu}",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equation": "0A.83-0A.84",
+      "issue": "bridge and field-strength normalizations risked silent drift toward textbook e^{2V} conventions",
+      "resolution": "locked mathcal E=e^{mathcal V} and mathcal W_a=-(1/8) barD^2(mathcal E^{-1} D_a mathcal E) with the deviation recorded",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equation": "0A.104 and 0A.111",
+      "issue": "the antifield dimension column and the minimal-action signs were asserted rather than derived",
+      "resolution": "derived every entry from gh(X^star)=-1-gh(X), [X^star]=d_Sigma-[X], and the (-1)^epsilon term signs; the arithmetic is pinned in the verifier",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equation": "0A.106",
+      "issue": "BRST convention needed an explicit i-ful lock against the i-less alternative",
+      "resolution": "locked s c = i c^2 with Hermitian generators and recorded the fork in the deviation ledger",
+      "status": "RESOLVED"
+    },
+    {
+      "priority": "P1",
+      "equation": "Section 14",
+      "issue": "undecided branches could be mistaken for locked conventions",
+      "resolution": "registered OUT_OF_SCOPE_N2_N4_CLOSURE_CROSSCHECK, OUT_OF_SCOPE_WEINBERG_GAUGINO_PHASE, OUT_OF_SCOPE_DRED_MOMENTUM_LEDGER_LOR_CYCLE, and OUT_OF_SCOPE_NK_BRANCH_TABLE as nonblocking exclusions",
+      "status": "RESOLVED"
+    }
+  ],
+  "source_boundary": {
+    "admitted": "accepted Project contracts and dictionaries only; no textbook sign or normalization is quoted without a Project-side derivation",
+    "excluded": "textbook (+,-,-,-) metric, e^{2V} bridge normalization, i-less BRST, and OS/reflection Euclidean adjoints",
+    "project_normalization_authority": "accepted Project contracts step-01 through step-05a",
+    "result": "PASS"
+  },
+  "post_resolution": {
+    "P0": [],
+    "P1": []
+  },
+  "result": "PASS"
+}

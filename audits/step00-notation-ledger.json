@@ -1,0 +1,98 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-STEP-00-UNIFIED-NOTATION-001",
+  "contract": "contracts/foundations/step-00-unified-notation-convention.md",
+  "scope": "Unified notation convention shared by the foundation contracts step-01 through step-05a, the dictionaries, the four channels, and the paper: spacetime and Wick map, Weyl and Majorana spinors, covariant derivatives of every tier, theta-expansions, vector-versus-chiral gauge representation, action and coupling conventions, BV-BRST gradings and differentials, extended-SUSY packaging, and regulator notation",
+  "checks": [
+    {
+      "id": "SIGNATURE_AND_INDEX_DOMAINS",
+      "result": "PASS",
+      "locked": "eta_L=diag(-1,+1,+1,+1) mostly-plus and delta_E=diag(+1,+1,+1,+1); mu labels 0 through 3, m labels 1 through 4, a and dot a are Weyl indices; R in {L,E} is the sector label everywhere"
+    },
+    {
+      "id": "SPACETIME_LEVI_CIVITA",
+      "result": "PASS",
+      "locked": "epsilon_L^0123=+1 with epsilon_{L,0123}=-1 by eta-lowering; epsilon_E^1234=+1 with epsilon_{E,1234}=+1 by delta-lowering; the lowered Euclidean value +1 is derived, not asserted"
+    },
+    {
+      "id": "WICK_WEIGHT_PHASES",
+      "result": "PASS",
+      "locked": "tau_L=i/hbar and tau_E=-1/hbar with upsilon_L=+1, upsilon_E=-1 are reserved for path-integral weights; currents transport with the coordinate phase split of (0A.12a)"
+    },
+    {
+      "id": "GRASSMANN_GLYPH_SPLIT",
+      "result": "PASS",
+      "locked": "vartheta is the odd coordinate and varepsilon the SUSY parameter; the Step-1 theta-parameter naming is superseded project-wide and recorded in the deviation ledger"
+    },
+    {
+      "id": "SPINOR_METRIC_AND_SQUARES",
+      "result": "PASS",
+      "locked": "epsilon^12=+1 and epsilon_12=-1 with NW-SE contraction; the asymmetric square lock theta^2=-2 theta^1 theta^2 and thetabar^2=+2 thetabar_1dot thetabar_2dot is deliberate and propagates into the dotted-derivative dictionary"
+    },
+    {
+      "id": "FLAT_D_SIGN_AND_TORSION",
+      "result": "PASS",
+      "locked": "D_a=partial_a-i(sigma_L thetabar)partial and D_a^E=partial_a+(sigma_E thetabar)partial; torsion is +2i sigma_L partial in Lorentzian and -2 sigma_E partial in Euclidean signature, never the textbook opposite"
+    },
+    {
+      "id": "BEREZIN_PROJECTOR_NORMALIZATION",
+      "result": "PASS",
+      "locked": "D^2 theta^2 = barD^2 thetabar^2 = -4; F-projectors carry -1/4 D^2 and the D-projector carries +1/16 D^2 barD^2 with barD^2 acting first"
+    },
+    {
+      "id": "BRIDGE_SINGLE_EXPONENT",
+      "result": "PASS",
+      "locked": "the bridge is the single exponent mathcal E=e^{mathcal V}; the textbook e^{2V} occurs only inside dictionary tables and is never a project primitive"
+    },
+    {
+      "id": "FIELD_STRENGTH_NORMALIZATION",
+      "result": "PASS",
+      "locked": "mathcal W_a=-(1/8) barD^2(mathcal E^{-1} D_a mathcal E) with antichiral mirror +(1/8) D^2(mathcal E barD mathcal E^{-1}); the textbook -(1/4) e^{2V} coefficient is explicitly declined"
+    },
+    {
+      "id": "WZ_VECTOR_COEFFICIENT",
+      "result": "PASS",
+      "locked": "the gauge-field term of the WZ surface carries coefficient -2 (Euclidean -2i), twice the common textbook coefficient, as a corollary of the single-exponent bridge"
+    },
+    {
+      "id": "WEYL_PRIMACY_MAJORANA_LAYER",
+      "result": "PASS",
+      "locked": "two-component Weyl formalism is primary; the stacked Majorana spinor, S-form Dirac matrices, charge conjugation, and bilinear flips form a conditional layer whose residual branches stay in the conditional register"
+    },
+    {
+      "id": "BRST_I_CONVENTION",
+      "result": "PASS",
+      "locked": "s c = i c^2 with Hermitian generators and coupling absorbed; the i-less math-BRST convention is not used; antifield star never denotes complex conjugation"
+    },
+    {
+      "id": "BV_ANTIFIELD_GRADING",
+      "result": "PASS",
+      "locked": "for every homogeneous X, gh(X^star)=-1-gh(X) and [X^star]=d_Sigma-[X] with d_8=2 and d_+=d_-=3; every term of S_min carries ghost number 0 and parity 0"
+    },
+    {
+      "id": "R_CHARGE_BRANCH",
+      "result": "PASS",
+      "locked": "the R-normalization R vartheta^a = vartheta^a fixes r=-2 Delta/3 for chiral primaries; the opposite-sign branch is not used"
+    },
+    {
+      "id": "EUCLIDEAN_INDEPENDENCE",
+      "result": "PASS",
+      "locked": "no intrinsic adjoint relates Euclidean barred and tilded variables; dagger_W is defined only on the Wick contour; Lorentzian dagger relations are never imposed intrinsically in Euclidean signature"
+    },
+    {
+      "id": "SOURCE_PRIORITY_AND_DEVIATION_LEDGER",
+      "result": "PASS",
+      "locked": "where extraction reports disagreed, the foundation contracts override the paper and Steps 01-03d override Step-04/05 restatements; every deliberate fork is one row of the Section-11 deviation ledger"
+    },
+    {
+      "id": "STRICT_EQUALITY_NOTATION",
+      "result": "PASS",
+      "locked": "the contract contains no backslash-sim, backslash-approx, or backslash-propto relation"
+    }
+  ],
+  "findings": {
+    "P0": [],
+    "P1": []
+  },
+  "result": "PASS"
+}
