@@ -360,6 +360,20 @@
       "state": "SPECIFIED",
       "blocking_reason": null,
       "task_sha256": "36a78b5a4f53f0076415e561d5de041a650e975d400bd0b0f3e31860d867ec04",
+      "task": "tasks/archive/CONTRACT-STEP-00-UNIFIED-NOTATION-001.yaml"
+    },
+    {
+      "id": "REFERENCE-IMPORT-BOOKS-NOTATION-COMPLETION-001",
+      "state": "SPECIFIED",
+      "blocking_reason": null,
+      "task_sha256": "088c2ae3275b28f9045b284af0311d4cd3838c9a3ffddeb894018dda45e29a7f",
+      "task": "tasks/archive/REFERENCE-IMPORT-BOOKS-NOTATION-COMPLETION-001.yaml"
+    },
+    {
+      "id": "CONTRACT-FULL-NOTATION-DICTIONARY-001",
+      "state": "SPECIFIED",
+      "blocking_reason": null,
+      "task_sha256": "c1bd7a5682b37620d592853acd0beb5d8a557c988b496c13bf09e8da36fed8a3",
       "task": "tasks/CURRENT.yaml"
     }
   ]

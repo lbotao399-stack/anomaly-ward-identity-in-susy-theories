@@ -1,0 +1,1225 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-FULL-NOTATION-DICTIONARY-001",
+  "contract": "CONTRACT-WEINBERG-SREDNICKI-CODEX-DICTIONARY-001",
+  "section_range": {
+    "first": 12,
+    "last": 20,
+    "count": 9
+  },
+  "allowed_statuses": [
+    "VERIFIED",
+    "CORRECTED",
+    "FALSE",
+    "CONDITIONAL",
+    "SOURCE_INSUFFICIENT",
+    "NOT_DEFINED_IN_SOURCE"
+  ],
+  "verdict_source": "Compiled from the dictionary's tagged verdict continuation (D.10.56)-(D.10.181): single-row verdicts for D.12/D.13/D.19/D.20, section-range verdicts for D.14/D.15/D.16, item verdicts plus inline row-level statuses for D.17/D.18.",
+  "sections": [
+    {
+      "section": "D.12",
+      "title": "Srednicki spinor core completions",
+      "chapters": "Srednicki ch. 33-36, 38, 40, 47",
+      "verdict_rows": "D.10.56-D.10.95",
+      "row_count": 40,
+      "status_counts": {
+        "VERIFIED": 37,
+        "CORRECTED": 2,
+        "CONDITIONAL": 1
+      },
+      "rows": [
+        {
+          "row": "D.12.1",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.2",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.3",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.4",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.5",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.6",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.7",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.8",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.9",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.10",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.11",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.12",
+          "status": "CORRECTED"
+        },
+        {
+          "row": "D.12.13",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.14",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.15",
+          "status": "CONDITIONAL"
+        },
+        {
+          "row": "D.12.16",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.17",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.18",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.19",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.20",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.21",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.22",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.23",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.24",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.25",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.26",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.27",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.28",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.29",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.30",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.31",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.32",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.33",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.34",
+          "status": "CORRECTED"
+        },
+        {
+          "row": "D.12.35",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.36",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.37",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.38",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.39",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.12.40",
+          "status": "VERIFIED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "section": "D.13",
+      "title": "Srednicki fermion propagators and path integrals",
+      "chapters": "Srednicki ch. 42-44, 49",
+      "verdict_rows": "D.10.96-D.10.120",
+      "row_count": 25,
+      "status_counts": {
+        "VERIFIED": 22,
+        "CONDITIONAL": 3
+      },
+      "rows": [
+        {
+          "row": "D.13.1",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.13.2",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.13.3",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.13.4",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.13.5",
+          "status": "CONDITIONAL"
+        },
+        {
+          "row": "D.13.6",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.13.7",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.13.8",
+          "status": "CONDITIONAL"
+        },
+        {
+          "row": "D.13.9",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.13.10",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.13.11",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.13.12",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.13.13",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.13.14",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.13.15",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.13.16",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.13.17",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.13.18",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.13.19",
+          "status": "CONDITIONAL"
+        },
+        {
+          "row": "D.13.20",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.13.21",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.13.22",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.13.23",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.13.24",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.13.25",
+          "status": "VERIFIED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "section": "D.14",
+      "title": "Weinberg supersymmetry algebra and supermultiplets",
+      "chapters": "Weinberg 05.4, 25.1-25.5",
+      "verdict_rows": "D.10.150-D.10.155",
+      "row_count": 35,
+      "status_counts": {
+        "VERIFIED": 33,
+        "CONDITIONAL": 2
+      },
+      "rows": [
+        {
+          "row": "D.14.1",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.2",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.3",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.4",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.5",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.6",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.7",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.8",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.9",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.10",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.11",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.12",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.13",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.14",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.15",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.16",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.17",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.18",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.19",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.20",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.21",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.22",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.23",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.24",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.25",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.26",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.27",
+          "status": "CONDITIONAL"
+        },
+        {
+          "row": "D.14.28",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.29",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.30",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.31",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.32",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.33",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.14.34",
+          "status": "CONDITIONAL"
+        },
+        {
+          "row": "D.14.35",
+          "status": "VERIFIED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "section": "D.15",
+      "title": "Weinberg general and chiral superfields",
+      "chapters": "Weinberg 26.1-26.5",
+      "verdict_rows": "D.10.156-D.10.160",
+      "row_count": 39,
+      "status_counts": {
+        "VERIFIED": 38,
+        "CORRECTED": 1
+      },
+      "rows": [
+        {
+          "row": "D.15.1",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.2",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.3",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.4",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.5",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.6",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.7",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.8",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.9",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.10",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.11",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.12",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.13",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.14",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.15",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.16",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.17",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.18",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.19",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.20",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.21",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.22",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.23",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.24",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.25",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.26",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.27",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.28",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.29",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.30",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.31",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.32",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.33",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.34",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.35",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.36",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.37",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.38",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.15.39",
+          "status": "CORRECTED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "section": "D.16",
+      "title": "Weinberg superspace integrals, currents, and Kähler potential",
+      "chapters": "Weinberg 26.6-26.8",
+      "verdict_rows": "D.10.161-D.10.163",
+      "row_count": 30,
+      "status_counts": {
+        "VERIFIED": 28,
+        "CORRECTED": 2
+      },
+      "rows": [
+        {
+          "row": "D.16.1",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.16.2",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.16.3",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.16.4",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.16.5",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.16.6",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.16.7",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.16.8",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.16.9",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.16.10",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.16.11",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.16.12",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.16.13",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.16.14",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.16.15",
+          "status": "CORRECTED"
+        },
+        {
+          "row": "D.16.16",
+          "status": "CORRECTED"
+        },
+        {
+          "row": "D.16.17",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.16.18",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.16.19",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.16.20",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.16.21",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.16.22",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.16.23",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.16.24",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.16.25",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.16.26",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.16.27",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.16.28",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.16.29",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.16.30",
+          "status": "VERIFIED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "section": "D.17",
+      "title": "Weinberg supersymmetric gauge theories",
+      "chapters": "Weinberg 26.appendix, 27.1-27.9",
+      "verdict_rows": "D.10.164-D.10.181",
+      "row_count": 56,
+      "status_counts": {
+        "VERIFIED": 48,
+        "CORRECTED": 3,
+        "CONDITIONAL": 5
+      },
+      "rows": [
+        {
+          "row": "D.17.1",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.2",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.3",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.4",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.5",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.6",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.7",
+          "status": "CORRECTED"
+        },
+        {
+          "row": "D.17.8",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.9",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.10",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.11",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.12",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.13",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.14",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.15",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.16",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.17",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.18",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.19",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.20",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.21",
+          "status": "CONDITIONAL"
+        },
+        {
+          "row": "D.17.22",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.23",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.24",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.25",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.26",
+          "status": "CONDITIONAL"
+        },
+        {
+          "row": "D.17.27",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.28",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.29",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.30",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.31",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.32",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.33",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.34",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.35",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.36",
+          "status": "CONDITIONAL"
+        },
+        {
+          "row": "D.17.37",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.38",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.39",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.40",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.41",
+          "status": "CORRECTED"
+        },
+        {
+          "row": "D.17.42",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.43",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.44",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.45",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.46",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.47",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.48",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.49",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.50",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.51",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.52",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.53",
+          "status": "CONDITIONAL"
+        },
+        {
+          "row": "D.17.54",
+          "status": "CONDITIONAL"
+        },
+        {
+          "row": "D.17.55",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.17.56",
+          "status": "CORRECTED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "section": "D.18",
+      "title": "Weinberg supergraphs",
+      "chapters": "Weinberg 30.1-30.3",
+      "verdict_rows": "D.10.164-D.10.181",
+      "row_count": 13,
+      "status_counts": {
+        "VERIFIED": 8,
+        "CORRECTED": 1,
+        "CONDITIONAL": 4
+      },
+      "rows": [
+        {
+          "row": "D.18.1",
+          "status": "CONDITIONAL"
+        },
+        {
+          "row": "D.18.2",
+          "status": "CONDITIONAL"
+        },
+        {
+          "row": "D.18.3",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.18.4",
+          "status": "CORRECTED"
+        },
+        {
+          "row": "D.18.5",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.18.6",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.18.7",
+          "status": "CONDITIONAL"
+        },
+        {
+          "row": "D.18.8",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.18.9",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.18.10",
+          "status": "CONDITIONAL"
+        },
+        {
+          "row": "D.18.11",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.18.12",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.18.13",
+          "status": "VERIFIED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "section": "D.19",
+      "title": "Srednicki BRST symmetry and background field gauge",
+      "chapters": "Srednicki ch. 74, 78",
+      "verdict_rows": "D.10.121-D.10.137",
+      "row_count": 17,
+      "status_counts": {
+        "VERIFIED": 13,
+        "CONDITIONAL": 3,
+        "NOT_DEFINED_IN_SOURCE": 1
+      },
+      "rows": [
+        {
+          "row": "D.19.1",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.19.2",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.19.3",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.19.4",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.19.5",
+          "status": "CONDITIONAL"
+        },
+        {
+          "row": "D.19.6",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.19.7",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.19.8",
+          "status": "NOT_DEFINED_IN_SOURCE"
+        },
+        {
+          "row": "D.19.9",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.19.10",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.19.11",
+          "status": "CONDITIONAL"
+        },
+        {
+          "row": "D.19.12",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.19.13",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.19.14",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.19.15",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.19.16",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.19.17",
+          "status": "CONDITIONAL"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "section": "D.20",
+      "title": "Srednicki supersymmetry completions",
+      "chapters": "Srednicki ch. 95",
+      "verdict_rows": "D.10.138-D.10.149",
+      "row_count": 12,
+      "status_counts": {
+        "VERIFIED": 11,
+        "CORRECTED": 1
+      },
+      "rows": [
+        {
+          "row": "D.20.1",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.20.2",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.20.3",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.20.4",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.20.5",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.20.6",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.20.7",
+          "status": "CORRECTED"
+        },
+        {
+          "row": "D.20.8",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.20.9",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.20.10",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.20.11",
+          "status": "VERIFIED"
+        },
+        {
+          "row": "D.20.12",
+          "status": "VERIFIED"
+        }
+      ],
+      "result": "PASS"
+    }
+  ],
+  "errors": [],
+  "post_resolution": {
+    "P0": [],
+    "P1": []
+  },
+  "result": "PASS"
+}
