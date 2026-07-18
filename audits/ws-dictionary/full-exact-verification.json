@@ -1,0 +1,243 @@
+{
+  "schema": 1,
+  "task": "CONTRACT-FULL-NOTATION-DICTIONARY-001",
+  "contract": "contracts/dictionaries/weinberg-srednicki-project-notation-dictionary.md",
+  "contract_sha256": "8211bee322e2dd09fb7afe4ebf420555b16d72d1ede5aafffd9009c71a55f9d7",
+  "coefficient_field": "Q(i)",
+  "status": "PASS",
+  "totals": {
+    "exact_checks": 8,
+    "failed_checks": 0
+  },
+  "checks": [
+    {
+      "name": "FULL-DICT-TAG-SURFACE",
+      "rows": "(D.0.1)-(D.11.2), (D.10.56)-(D.10.181), (D.12.1)-(D.20.12)",
+      "passed": true,
+      "detail": {
+        "old_tags": 144,
+        "old_tags_missing": [],
+        "old_block_digest": "4fca01d7e79a4834073e69c64d328470e4b4344f9b9cb8c29906755faaca3c09",
+        "old_block_digest_expected": "4fca01d7e79a4834073e69c64d328470e4b4344f9b9cb8c29906755faaca3c09",
+        "duplicate_tags": [],
+        "new_ranges": {
+          "D.10": {
+            "expected": 126,
+            "missing": []
+          },
+          "D.12": {
+            "expected": 40,
+            "missing": []
+          },
+          "D.13": {
+            "expected": 25,
+            "missing": []
+          },
+          "D.14": {
+            "expected": 35,
+            "missing": []
+          },
+          "D.15": {
+            "expected": 39,
+            "missing": []
+          },
+          "D.16": {
+            "expected": 30,
+            "missing": []
+          },
+          "D.17": {
+            "expected": 56,
+            "missing": []
+          },
+          "D.18": {
+            "expected": 13,
+            "missing": []
+          },
+          "D.19": {
+            "expected": 17,
+            "missing": []
+          },
+          "D.20": {
+            "expected": 12,
+            "missing": []
+          }
+        },
+        "unexpected_tags": [],
+        "total_tags": 537
+      }
+    },
+    {
+      "name": "FULL-DICT-NO-DUP-ROWS",
+      "rows": "(D.17.2), (D.17.3), (D.17.6), (D.17.15), (D.17.16), (D.17.18), (D.17.20), (D.17.21), (D.17.25), (D.17.27), (D.17.30)",
+      "passed": true,
+      "detail": {
+        "stripped": {
+          "D.17.6": {
+            "bare_refs": true,
+            "locked_cores_absent": true
+          },
+          "D.17.15": {
+            "bare_refs": true,
+            "locked_cores_absent": true
+          },
+          "D.17.16": {
+            "bare_refs": true,
+            "locked_cores_absent": true
+          },
+          "D.17.18": {
+            "bare_refs": true,
+            "locked_cores_absent": true
+          },
+          "D.17.20": {
+            "bare_refs": true,
+            "locked_cores_absent": true
+          },
+          "D.17.21": {
+            "bare_refs": true,
+            "locked_cores_absent": true
+          },
+          "D.17.25": {
+            "bare_refs": true,
+            "locked_cores_absent": true
+          },
+          "D.17.27": {
+            "bare_refs": true,
+            "locked_cores_absent": true
+          },
+          "D.17.30": {
+            "bare_refs": true,
+            "locked_cores_absent": true
+          }
+        },
+        "crossref": {
+          "D.17.2": {
+            "bare_ref": true,
+            "table_core_absent": true
+          },
+          "D.17.3": {
+            "bare_ref": true,
+            "table_core_absent": true
+          }
+        },
+        "whole_block_collisions": [],
+        "intra_extension_collisions": []
+      }
+    },
+    {
+      "name": "FULL-DICT-GAMMA-BRIDGES",
+      "rows": "(D.3.1)-(D.3.5), (D.3.11)-(D.3.13a), (D.14.5)",
+      "passed": true,
+      "detail": {
+        "clifford_S_-2eta": true,
+        "clifford_W_+2eta": true,
+        "gamma5_bridge_minus": true,
+        "gamma5_squares_to_one": true,
+        "gamma5_anticommutes": true,
+        "C_transpose_dagger_inverse": true,
+        "C_gamma_transpose_minus": true,
+        "C_transpose_table_D14_5": true,
+        "epsilon4W_equals_minus_C_gamma5W": true,
+        "hermiticity_D3_11": true
+      }
+    },
+    {
+      "name": "FULL-DICT-GRASSMANN-FTERM",
+      "rows": "(D.9.14), (D.9.15), (D.17.16)",
+      "passed": true,
+      "detail": {
+        "W_lowest_component_-i_lambda": true,
+        "named_slot_a1_F01_-i_th1": true,
+        "full_form_A_i_sigma_mn_upper": true,
+        "form_B_lowered_rejected": true,
+        "form_B_mismatch_slots": 48,
+        "slots_checked": 24
+      }
+    },
+    {
+      "name": "FULL-DICT-BRST-SIGN-CHAIN",
+      "rows": "(D.19.1)-(D.19.5), (D.19.9)",
+      "passed": true,
+      "detail": {
+        "nilpotent_on_A": true,
+        "nilpotent_on_ghost": true,
+        "nilpotent_on_antighost": true,
+        "nilpotent_on_LN_field": true,
+        "ghost_law_bridge_0A107_to_D19_3": true,
+        "i_ful_covariant_derivative_sign": true,
+        "delta_B_G_equals_dDc": true,
+        "sPsi_equals_delta_B_O": true,
+        "parameters": {
+          "f": "su(2) eps_{abc}",
+          "g": 2,
+          "xi": 3
+        }
+      }
+    },
+    {
+      "name": "FULL-DICT-SUPERCURRENT-ROWS",
+      "rows": "(D.16.14)-(D.16.16), (D.16.20)",
+      "passed": true,
+      "detail": {
+        "corrected_26720_trace_6gammaomega": true,
+        "gamma_traceless_projection": true,
+        "book_usage_S_equals_-2omega": true,
+        "improvement_conserves_current": true,
+        "lambda_trace_commutator_identity": true
+      }
+    },
+    {
+      "name": "FULL-DICT-WICK-16BOX",
+      "rows": "(D.16.6)",
+      "passed": true,
+      "detail": {
+        "D2_theta2_barD2_thetabar2_-4": true,
+        "chiral_barD_Phi_0": true,
+        "barD2_D2_Phi_+16box_Phi_project_lock": true,
+        "projector_idempotent": true,
+        "bridge_0A92_factor_(-1)(-1)": true,
+        "D16_6_bridge_statement_registered": true,
+        "D10_178_conditional_fork_registered": true
+      }
+    },
+    {
+      "name": "FULL-DICT-VERDICT-CONSISTENCY",
+      "rows": "(D.10.56)-(D.10.181), (D.12.1)-(D.20.12)",
+      "passed": true,
+      "detail": {
+        "single_row_verdicts": {
+          "count": 94,
+          "mismatches": []
+        },
+        "section_verdicts": {
+          "count": 14,
+          "coverage_complete": true
+        },
+        "item_verdicts": {
+          "count": 18,
+          "refs": 26,
+          "refs_resolve": true
+        },
+        "row_coverage": {
+          "table_rows_complete": true,
+          "inline_D17_D18_complete": true
+        },
+        "status_vocabulary": {
+          "counts": {
+            "VERIFIED": 238,
+            "CORRECTED": 10,
+            "CONDITIONAL": 18,
+            "NOT_DEFINED_IN_SOURCE": 1
+          },
+          "expected": {
+            "VERIFIED": 238,
+            "CONDITIONAL": 18,
+            "CORRECTED": 10,
+            "NOT_DEFINED_IN_SOURCE": 1
+          }
+        },
+        "phantom_refs": []
+      }
+    }
+  ],
+  "failures": []
+}

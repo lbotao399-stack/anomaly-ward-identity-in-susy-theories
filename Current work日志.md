@@ -1,5 +1,15 @@
 # Current Work
 
+## 2026-07-17 — Full Project–Srednicki–Weinberg notation dictionary (全记号字典)
+
+`CONTRACT-FULL-NOTATION-DICTIONARY-001` establishes the full three-way notation dictionary: dict1 extended to full coverage of every vendored book chapter with **267 new rows** (D.12×40, D.13×25, D.14×35, D.15×39, D.16×30, D.17×56, D.18×13, D.19×17, D.20×12) and the tagged verdict continuation (D.10.56)–(D.10.181); all 144 pre-existing dict1 tags unchanged.
+
+- **Coverage (full):** Srednicki ch. 33–36, 38, 40, 42–44, 47, 49, 74, 78, 95; Weinberg 05.4, 25.1–25.5, 26.1–26.8 + appendix, 27.1–27.9, 30.1–30.3. **NOT_IMPORTED (out of scope):** Weinberg 28/29/31/32; Srednicki 37/39/41/45/46/48/50/51/52/53/96/97 — recorded in `references/books-notation-completion-source-ledger.json`.
+- **Maintainer-queue CONDITIONAL escalations (2):** D.17.36 — (27.6.1) PLUS vs D.9.28 MINUS, genuine book/rendering sign fork of the whole $[\delta WW]_{\mathcal F}$ term (MINUS anchored by D.9.25); D.17.53 — rendered (27.9.40) Majorana sign outlier vs the VERIFIED D.3.16 ($+\beta\mathcal C$). Registered as `OUT_OF_SCOPE_CONDITIONAL_BOOK_FORKS_MAINTAINER_QUEUE`.
+- **§11 relocation disclosure:** the D.10-ext continuation block is inserted before §11, so dict1's `## 11. Exact verification` (with (D.11.1), (D.11.2)) is relocated verbatim below it — no pre-existing content modified, renumbered, or deleted.
+- **Validation:** 4-validator swarm (D1 mechanical, D2 fidelity 90/90 + 20/20 book-verbatim, D3 physics, D4 compliance); all 26 findings resolved in `audits/ws-dictionary/full-independent-review.json`; 8 exact machine checks in `scripts/verify_full_notation_dictionary.py` reproduce `full-exact-verification.json` byte-identically. The exact engine proves the project-side projector identity $\bar D^2D^2\Phi=+16\Box\Phi$ (consistent with the (0A.54) lock and the "Project $+16\Box_E$" register at (D.10.178)); Weinberg's bridged $-16\Box_L$ reading of (D.16.6) carries the registered CONDITIONAL sign fork (D.10.178, maintainer queue).
+- **MERGE-ORDER DEPENDENCY:** this PR stacks on #76 (step-00) and includes #78 (books-notation-completion import); merge order **#76 → #78 → this PR**. Acceptance by PR review; Notion mirror is post-merge only.
+
 ## 2026-07-17 decision list — Step-0 unified notation convention (统一记号约定)
 
 Convention branch locks surfaced per the derivation-first law; none left as standing BLOCKED.
