@@ -246,12 +246,15 @@ whose two summands are the port rows $(S,B)$ and $(B,S)$ --- the row in which
 the first, respectively the second, quantum port carries the source role.
 The second variation already contains the two labeled quantum-port
 assignments, so no $2!$ from the equal Hessians remains. For one fixed
-directed source attachment the port-preserving Wick factor is likewise $1$:
-the two rows are equal by relabeling of the Gaussian integral and sum against
-the $1/2!$ of the second variation, giving the Wick weight
+directed source attachment the port-preserving Wick factor is likewise $1$,
+the two rows being equal by relabeling of the Gaussian integral. With the
+two labeled action-expansion assignments of paragraph~2 and their Taylor
+factor, the Wick weight is
 \begin{equation}\label{eq:ss:wick}
-w_{\mathrm{Wick}}=\frac{1}{2!}(1+1)=1 .
+w_{\mathrm{Wick}}=\frac{1}{2!}(1+1)=1 ,
 \end{equation}
+the same arithmetic as the action-order factor
+of~\eqref{eq:ss:seedactionorder}.
 
 \begin{remark}[Granularity of the contraction enumeration]%
 \label{rem:ss:seedwick}
@@ -285,8 +288,9 @@ product is
 \begin{equation}\label{eq:ss:seedinsertfactor}
 \left(-\frac{1}{8\sqrt2}\right)\left(-\frac{1}{4\sqrt2}\right)=\frac{1}{64}.
 \end{equation}
-The vertex (exponent) Hessians of~\eqref{eq:ss:seedhess}, including the
-$1/\h$ of each interaction vertex, are
+The exponent Hessians are the second variations of $e^{-S/\h}$, i.e.
+$\widehat H=-H/\h$ of~\eqref{eq:ss:seedhess} including the $1/\h$ of each
+interaction vertex:
 \begin{equation}\label{eq:ss:seedvhess}
 \widehat H_{\cW}=-\frac{ig}{4\h}\,f^{UCE}\,\cW^{E\gamma}
 \big(\cD_{C\gamma}-\cD_{U\gamma}\big),
@@ -303,28 +307,30 @@ and assembling them with the three propagators~\eqref{eq:ss:seeduprop} gives
 The three Killing deltas of the propagators reduce the color factor of the
 two Hessians, with the source colors attached per the fixed orientation, to
 \begin{equation}\label{eq:ss:seedcolor}
-f^{UCD}f^{U'C'E}\,\delta_{UU'}\delta_{CC'}
+f^{UCD}f^{U'C'E}\,\delta_{UA}\delta_{U'B}\delta_{CC'}
 \;\longrightarrow\;
 f^{ACD}f^{BCE}
 \qquad(\text{sum over }C).
 \end{equation}
 
 \begin{remark}[Two equivalent normalization frames]\label{rem:ss:seedframes}
-Equation~\eqref{eq:ss:seedassembly} is the canonical-letter bookkeeping:
-vertex magnitudes $g/(4\h)$, propagators $-\h$, and the explicit insertion
-factor $1/64$ of~\eqref{eq:ss:seedinsertfactor}. In the unit-insertion frame
-used for the remaining steps the same graph weight is organized with the
-ordered cubic vertex factors
+Equation~\eqref{eq:ss:seedassembly} is the canonical-frame bookkeeping:
+vertex magnitudes $g/(4\h)$, propagators $-\h\,\delta^{AB}p^{-2}$, and the
+explicit insertion factor $1/64$ of~\eqref{eq:ss:seedinsertfactor}. In the
+unit-insertion frame used for the remaining steps, the same graph weight is
+organized with the ordered cubic vertex factors
 \begin{equation}\label{eq:ss:vertices}
 \left(+\frac{ig}{2}\right)\left(-\frac{ig}{2}\right)=\frac{g^{2}}{4}
 \end{equation}
 and the $D$-algebra weight $w_D$ of~\eqref{eq:ss:dweight} below. The two
-bookkeepings describe the same graph weight: in the canonical frame the
-vertex factor sits inside $-\h g^{2}/16$, in the unit-insertion frame inside
-$g^{2}/4$, the difference being the propagator rescaling
-$u=\cV/(\sqrt2\,g)$ on the three internal lines together with the insertion
-rescaling. Each cubic vertex carries $\h^{-1}$ and each of the three
-propagators carries $\h$, leaving the net one-loop power $\h$.
+frames are related by the rescaling of~\eqref{eq:ss:rules-framecomp}: each of
+the two vertices gains $(\sqrt2)^{2}$, each of the two insertions gains
+$\sqrt2$ (the product $1/64\to1/32$, the $1/32$ appearing
+in~\eqref{eq:ss:dweight}), and each of the three internal lines loses $1/2$,
+a net factor $1$. Each cubic vertex carries $\h^{-1}$ and each of the three
+propagators carries $\h$, leaving the net one-loop power $\h$ in either
+frame. The signed endpoint-row weight of~\eqref{eq:ss:seedsigntable} is a
+property of the closed triangle word and applies to either completion route.
 \end{remark}
 
 \paragraph{5. The $D$-algebra numerator chain.}
@@ -370,8 +376,8 @@ before the loop integral is therefore
 w_{\mathrm{Wick}}\,\frac{g^{2}}{4}\,w_D
 =1\cdot\frac{g^{2}}{4}\cdot2=\frac{g^{2}}{2} .
 \end{equation}
-The four derivative endpoint rows of one cut word, with their raw and
-transport signs, are
+The four derivative endpoint rows of the closed (parent) triangle word, with
+their raw and transport signs, are
 \begin{align}
 (r_0,r_1):&\quad (-1)(-1)=+1,\notag\\
 (r_0,r_2):&\quad (+1)(+1)=+1,\label{eq:ss:seedsigntable}\\
@@ -443,7 +449,7 @@ identity~\eqref{eq:ss:cuttingfailure} isolates one universal insertion:
 \end{equation}
 with $D_i=r_{i,d}^{2}$; replacing $\bar r_e^{\,2}$ by $r_{e,d}^{\,2}$ before
 the subtraction makes the expression identically zero and removes the
-anomaly. With $D_0=\ell^{2}$, $D_1=(\ell+p)^{2}$, $D_2=(\ell+p+q)^{2}$, the
+anomaly. With $D_0=\ell^{2}$, $D_1=(\ell+q)^{2}$, $D_2=(\ell+p+q)^{2}$, the
 ordered Feynman parametrization is
 \begin{equation}\label{eq:ss:feynman}
 \frac{1}{D_0D_1D_2}
@@ -521,7 +527,10 @@ whose factors are, in order: the cut/insertion coefficient, the endpoint
 transport sign, the spinor-derivative square
 move~\eqref{eq:ss:seedDmoves}, the mixed anticommutator
 factor~\eqref{eq:ss:seedmixed}, the two Wick endpoints, and the plus-frame
-momentum projection. There is no extra edge factor $2$ and no metric-trace
+momentum projection. Like the endpoint-row signs of
+Remark~\ref{rem:ss:seedsigns}, this per-row chain is a recorded primitive of
+the underlying ledger, independently machine-verified row by row. There is no
+extra edge factor $2$ and no metric-trace
 factor $d$ or $4$ on the contact side. A single row gives
 \begin{equation}\label{eq:ss:singlerow}
 \Gamma_{C,j}

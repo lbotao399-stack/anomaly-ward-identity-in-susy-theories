@@ -47,17 +47,25 @@ The one-loop channels use four classes of vertices.
 +\frac{ig}{4\h}\,f^{UCD}\,\bcW^{D}_{\dot\gamma}\,
 \big(\bcD_{C}{}^{\dot\gamma}-\bcD_{U}{}^{\dot\gamma}\big) ,
 \end{equation}
-where the two slot labels record the marked quantum ports; the second variation already contains the two labeled port assignments, so no $2!$ remains. Stripping the per-line weight $\h$ (counted with the propagators below), the effective ordered vertex factors used in the channel computations are $\mp ig/2$ for the undotted and dotted cubics, so each ordered pair of cubic gauge vertices contributes
+where the two slot labels record the marked quantum ports; the second variation already contains the two labeled port assignments, so no $2!$ remains. Two bookkeeping frames appear in the channel computations, and they are never mixed within one graph weight. In the \emph{canonical frame} of~\eqref{eq:ss:rules-canonical} the vertices carry $\mp ig/(4\h)$, the internal lines carry $-\h\delta^{AB}p^{-2}$, and the insertion product is $(-1/(8\sqrt2))(-1/(4\sqrt2))=1/64$. In the \emph{unit-insertion frame} used in Sections~\ref{sec:superspace:seed}--\ref{sec:superspace:bc}, the insertions are the unit-normalized field strengths $\nabla_{+}\cW_{+}$: relative to the canonical frame, each of the two quantum legs of every cubic vertex rescales by $\sqrt2$, so the effective ordered vertex factors are $\mp ig/2$; each insertion rescales by $\sqrt2$, so the insertion product is $1/32$; and each internal line carries the rescaled propagator $-\h/(2p^{2})\,\delta^{4}(\theta_{12})$. The three effects compensate exactly,
+\begin{equation}\label{eq:ss:rules-framecomp}
+\underbrace{(\sqrt2)^{2}(\sqrt2)^{2}}_{\text{two vertices}}\;
+\underbrace{(\sqrt2)(\sqrt2)}_{\text{two insertions}}\;
+\underbrace{\Big(\frac12\Big)^{3}}_{\text{three lines}}
+=1 ,
+\end{equation}
+so every channel coefficient is frame-independent. In the unit-insertion frame each ordered pair of cubic gauge vertices therefore contributes
 \begin{equation}\label{eq:ss:rules-gaugepair}
 \left(+\frac{ig}{2}\right)\left(-\frac{ig}{2}\right)=\frac{g^{2}}{4} ,
 \end{equation}
 as used in equation~\eqref{eq:ss:vertices}.
-\emph{(b) Matter--gauge chain.} The first link of the matter chain is
+\emph{(b) Matter--gauge chain.} In the canonical frame ($u$, $\Phi_{c}=g^{-1}\Phi$) the first link of the matter chain is
 \begin{equation}\label{eq:ss:rules-mattervertex}
 S^{(1)}_{\mathrm{mat}}
 =-\sqrt2\,g\int d^{8}z\;
-\widetilde\Phi_{r}^{A}\,\cV^{U}\,(T_{U})^{B}{}_{C}\,\Phi_{r}^{C} ,
+\widetilde\Phi_{r}^{A}\,\cV^{U}\,(T_{U})^{B}{}_{C}\,\Phi_{r}^{C}
 \end{equation}
+(in the absorbed frame of Section~\ref{sec:gaugebv} the same link reads $-g^{-2}\int d^{8}z\,\widetilde\Phi\,\cV\,\Phi$),
 with the ordered adjoint color chain $(T_{A_{1}}\cdots T_{A_{n}})^{B}{}_{C}=i^{n}f^{A_{1}D_{1}B}f^{A_{2}D_{2}D_{1}}\cdots f^{A_{n}CD_{n-1}}$; the marked matter vertex carries port coefficient $+\sqrt2\,g/\h$ per generator, so the two matter vertices of a marked matter word give $2g^{2}/\h^{2}$, the three propagators give $\h^{3}$, and the ordered adjoint color route gives $f^{ACD}f^{BCE}$.
 \emph{(c) Superpotential cubics.} With $W=-\frac{\sqrt2}{6g^{2}}\,\varepsilon_{rst}f^{ABC}\,\Phi_{r}^{A}\Phi_{s}^{B}\Phi_{t}^{C}$, the chiral cubic vertex primitive is
 \begin{equation}\label{eq:ss:rules-superpot}

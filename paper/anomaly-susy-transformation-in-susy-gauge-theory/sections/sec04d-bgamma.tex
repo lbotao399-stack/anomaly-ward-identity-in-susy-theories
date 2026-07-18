@@ -44,8 +44,8 @@ shows the ordered triangle in the two-matter topology.
   \draw[sV]    (I)  -- (ML) node[midway,left=3pt]  {$r_{0}$};
   \draw[sPhi]  (ML) -- (MR) node[midway,below=3pt] {$r_{1}$};
   \draw[sPhit] (MR) -- (I)  node[midway,right=3pt] {$r_{2}$};
-  \draw[sleg]  (ML) -- ++(180:1.5) node[left]  {$\partial_{\dot\alpha}c\ (q)$};
-  \draw[sPhit] (MR) -- ++(0:1.5)   node[right] {$\widetilde\Phi^{r}\ (p)$};
+  \draw[sPhit] (ML) -- ++(180:1.5) node[left]  {$\widetilde\Phi^{r}\ (p)$};
+  \draw[sleg] (MR) -- ++(0:1.5)   node[right] {$\partial_{\dot\alpha}c\ (q)$};
   \node[sinsert,label={90:$\nabla_{-}\bigl(b^{A}\gamma^{rB}\bigr)$}] at (I) {};
   \node[svertex,label=below left:{$M_{r}$}]  at (ML) {};
   \node[svertex,label=below right:{$M_{r}$}] at (MR) {};
@@ -53,11 +53,13 @@ shows the ordered triangle in the two-matter topology.
 \caption{The ordered triangle of the $(b,\gamma^{r})$ family in the two-matter topology $T_{MM}^{(r,r)}$. The filled
 insertion node carries the letter operator $\nabla_{-}(b^{A}\gamma^{rB})$ with $b=-(i/\sqrt2)\nabla_{+}\cW_{+}$;
 the internal edges are the source-$b$ vector line $r_{0}$ (wavy), the chiral matter bridge $r_{1}$, and the
-source-$\gamma$ reversed-chiral line $r_{2}$, with $r_{1}-r_{0}=p$. The external legs are the antichiral letter
-$\gamma^{r}=\widetilde\Phi^{r}$ (momentum $p$) and the vector output letter $\partial_{\dot\alpha}c$ (momentum
-$q$). The gauge--matter topology $T_{GM}^{(r)}$ replaces the left matter vertex by the cubic gauge vertex $G$; its
-six ordered routings of $(r_{0},r_{1},r_{2})$ are the six permutation routes of the text, and the reversed channel
-$(\gamma^{r},b)$ has the same figure with the source attachments exchanged.}
+source-$\gamma$ reversed-chiral line $r_{2}$, with $r_{1}-r_{0}=p$. The external antichiral letter
+$\gamma^{r}=\widetilde\Phi^{r}$ (momentum $p$) enters at the left matter vertex, the vertex where the vector
+edge $r_{0}$ attaches (each matter cubic vertex has exactly one vector slot); the vector output letter
+$\partial_{\dot\alpha}c$ (momentum $q$) enters at the right matter vertex. The gauge--matter topology
+$T_{GM}^{(r)}$ replaces the left matter vertex by the cubic gauge vertex $G$ (the edges incident to $G$ are
+vector lines); its six ordered routings of $(r_{0},r_{1},r_{2})$ are the six permutation routes of the text, and
+the reversed channel $(\gamma^{r},b)$ has the same figure with the source attachments exchanged.}
 \label{fig:bg:triangle}
 \end{figure}
 
@@ -175,9 +177,9 @@ J_{\mu^{2}} :=\mu^{2\epsilon}\!\int\!\frac{d^{d}\ell}{(2\pi)^{d}}\, \frac{\mul^{
 \end{equation}
 For the two-matter route the contact sum rule and evanescent probe are
 \begin{equation}\label{eq:bg:sumrule}
-\mathcal F^{\mathrm{DRED}}_{b>\gamma} +\mathcal C^{(d)}_{0}+\mathcal C^{(d)}_{1} =8\mul^{2}\big(\mathcal J_{1}-\mathcal R_{0}\big) =-1024\,\mul^{2}\,\mathfrak b(p) ,
+\mathcal F^{\mathrm{DRED}}_{b>\gamma} +\mathcal C^{(d)}_{0}+\mathcal C^{(d)}_{1} =8\mul^{2}\big(\mathcal R_{0}-\mathcal J_{1}\big) =-1024\,\mul^{2}\,\mathfrak b(p) ,
 \end{equation}
-collapsing to $(-1024\,p_{\dot2},\,+1024\,p_{\dot1})$ on the two dotted spinor components (the sign convention of
+collapsing to $(-1024\,p_{\dot2},\,+1024\,p_{\dot1})$ on the two dotted spinor components (the ordering convention of
 the recorded orbit replay), with $r_{1}-r_{0}=p$ by momentum conservation, so that $\mathfrak b(r_{1})-\mathfrak
 b(r_{0})=\mathfrak b(p)$. The reversed direction gives $8\mul^{2}(\mathcal R_{2}-\mathcal R_{1})$ with probe
 $(-1024\,q_{\dot2},\,+1024\,q_{\dot1})$, and the zero-source-momentum check at $q=-p$ returns the same magnitude.
@@ -216,6 +218,8 @@ and edge tags are matched:
 \begin{equation}\label{eq:bg:current}
 E_{\mathrm{cur}}:\ +2i\ \text{on}\ D_{0}D_{1}, \qquad X_{\mathrm{cur}}:\ -2i\ \text{on}\ D_{0}D_{1}, \qquad (+2i-2i)\,K_{\mathrm{cur}}(k)=0 ,
 \end{equation}
+(the $\pm2i$ are quoted in the recorded machine units of the current rows,
+i.e. before the $\sqrt2$ of the letter normalization in the reduction above),
 with no marked inverse edge on either row (selected square $\varnothing$); this pairing vanishes before loop
 integration and does not produce the factor $1/2$ below.
 
@@ -237,8 +241,9 @@ the two surviving orbits of paragraph 6 sum to the independent coefficient pairs
 \begin{equation}\label{eq:bg:coeffs}
 \mathbf c_{b>\gamma^{r}}=(-1,+1), \qquad \mathbf c_{\gamma^{r}>b}=(-1,+1)
 \end{equation}
-in units of $(\h g^{2}/16\pi^{2})\,f^{ACD}f^{BCE}$: the two-matter orbit contributes $-1$ on $e_{1}$ and the
-gauge--matter orbit $+1$ on $e_{2}$. Equivalently, in the unit normalization $X=\nabla_{+}\cW_{+}$,
+in units of $(\h g^{2}/16\pi^{2})\,f^{ACD}f^{BCE}$: for the forward direction the two-matter orbit contributes
+$-1$ on $e_{1}$ and the gauge--matter orbit $+1$ on $e_{2}$; the reversed direction exchanges the orbit--word
+assignment and returns the same pair. Equivalently, in the unit normalization $X=\nabla_{+}\cW_{+}$,
 $Y=\widetilde\Phi^{r}$, $D_{\dot\alpha}=\bcW_{\dot\alpha}$ of paragraphs 1--6,
 \begin{equation}\label{eq:bg:unitresult}
 \nabla_{-}\big(X^{A}Y^{B}\big)\Big|_{\mathrm{1\text{-}loop}} =\frac{\h g^{2}}{16\pi^{2}}\,f^{ACD}f^{BCE}\, \Big[D_{\dot\alpha}^{D}\big(\partial^{\dot\alpha}Y\big)^{E} -\big(\partial_{\dot\alpha}Y\big)^{D}D^{E\dot\alpha}\Big] .
@@ -280,6 +285,7 @@ an internal completeness proof of the graph census.
 The sources record the stage outputs of the $D$-algebra --- traces, residuals, probes, and the table above --- but
 not the index-level intermediate spinor manipulations of the seven surviving routes; accordingly
 \eqref{eq:bg:tmmnum}--\eqref{eq:bg:sdcontact} display the recorded outputs of each step rather than unattributed
-intermediate lines, and Figure~\ref{fig:bg:triangle} is drawn from the recorded edge routings.
+intermediate lines, and Figure~\ref{fig:bg:triangle} is drawn from the recorded edge routings and the vertex
+slot structure.
 \end{remark}
 

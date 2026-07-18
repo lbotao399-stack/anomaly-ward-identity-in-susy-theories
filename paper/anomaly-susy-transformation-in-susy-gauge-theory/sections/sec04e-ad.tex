@@ -119,6 +119,16 @@ Section~\ref{sec:gaugebv}):
 \langle\cV^{V}\cV^{B}\rangle_{e_{2}}
 =\frac{\h\,\delta^{VB}\delta^{4}(\theta_{12})}{(\ell+p+q)^{2}} .
 \end{equation}
+\begin{remark}[Edge-weight sign convention]\label{rem:ss:ad-edgesign}
+The edge weights displayed in~\eqref{eq:ss:ad-props} are recorded in the
+graph-IR convention of the underlying computation, in which the overall
+minus sign of the Feynman propagator $\langle uu\rangle=-\h\kappa^{AB}/p^{2}$
+of Section~\ref{sec:superspace:rules} is folded into the vertex signs of the
+closed word; the displayed $+\h\kappa^{AB}/p^{2}$ is the edge weight per
+line, not an independent propagator sign. All downstream factors of this
+subsection use the same convention consistently, and the final coefficients
+are machine-verified against the propagator-level replay.
+\end{remark}
 Contraction with the vertex structure constants and the source yields the
 common color tensor in its two allocations, $f^{ACD}f^{BCE}$ (direct) and
 $f^{BCD}f^{ACE}$ (crossed), exchanged by $A\leftrightarrow B$ and independent

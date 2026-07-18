@@ -31,7 +31,7 @@ r_0=\ell,\qquad r_1=\ell-p,\qquad r_2=\ell-p-q,\qquad
 \node at (0,-2.2) {G2/G3: two matter lines, one vector line};
 \end{scope}
 \end{tikzpicture}
-\caption{The ordered triangles of the $(b,\beta_r)/(\beta_r,b)$ family in the routing~\eqref{eq:ss:ab:routing}: one $\nabla_+\cW_+$ and one $\nabla_+\Phi_r$ insertion (filled dots), residual external legs $\partial c(p)$, $\beta_r(q)$. G3 shares the G2 line content with one matter-cubic vertex replaced by the antichiral superpotential vertex.}
+\caption{The ordered triangles of the $(b,\beta_r)/(\beta_r,b)$ family in the routing~\eqref{eq:ss:ab:routing}: one $\nabla_+\cW_+$ and one $\nabla_+\Phi_r$ insertion (filled dots), residual external legs $\partial c(p)$, $\beta_r(q)$. The right panel shows the G2 line content (vector edge $r_1$, legs $\partial c,\beta_r$); the two G3 routings share the vertex structure with the vector edge on $r_0$ and the antichiral legs $\gamma^s,\gamma^t$ in place of $\partial c,\beta_r$, one matter-cubic vertex replaced by the antichiral superpotential vertex.}
 \label{fig:ss:ab:triangles}
 \end{figure}
 Excluded from the graph sum: the zero-square current bubbles $JE,JX,PE,PX$, which cancel in exact pairs ($I_{JE}+I_{JX}=0$, $I_{PE}+I_{PX}=0$) and contain no four-dimensional inverse square, so each DRED defect is zero; and the separately drawn source-resolvent bubbles, which are presentations of the same induced derivative-of-action contact and are not independent anomaly graphs.
@@ -137,7 +137,7 @@ and every G1 row obeys $F_A+C_{A,d}=-8R_A\,\mul^{2}$, $F_B+C_{B,d}=-8R_B\,\mul^{
 \lim_{\epsilon\to0}\int_{\ell}\frac{\mul^{2}\,W_{p0}}{D_0D_1D_2}
 =\frac{W(p,q)}{96\pi^{2}},
 \end{equation}
-from $2\int_{\Sigma_2}x_i\,dx_1dx_2=\tfrac13$ per coordinate. Applied graph by graph: G1 integrates to the mark coefficients $(\tfrac43,\tfrac23)$, $(\tfrac23,\tfrac43)$ in the two slot orderings, i.e.\ $2X_{\partial c\,\beta}+2E$, a pure total derivative ($2X+2E=2\,P^{\dot\alpha}(\beta_r\,\partial_{\dot\alpha}c)$) vanishing in the quotient; G2 integrates to the selected word $\tfrac23\,\beta_r(2p+q)^{\dot\alpha}\partial_{\dot\alpha}c$ plus the transported word $-\beta_r\,q^{\dot\alpha}\partial_{\dot\alpha}c$, i.e.\ $\tfrac13\,\beta_r(4p-q)^{\dot\alpha}\partial_{\dot\alpha}c$ with pair/equation-of-motion coefficients $(-\tfrac13,\tfrac43)$; G3 carries the marked simplex weights $\tfrac23,\tfrac13$ per mark and sums to the raw wedge coefficients $+2\sqrt2\,i$ ($G_{3,2}$) and $-2\sqrt2\,i$ ($G_{3,3}$) in units of $\h g^{2}/(16\pi^{2})$. Passing from the raw momentum wedge to the dotted bilinear flips the sign once, since with the locked phase $e^{ipx}$, $(ip)_+\wedge(iq)_+=-(p_+\wedge q_+)$.
+from $2\int_{\Sigma_2}x_i\,dx_1dx_2=\tfrac13$ per coordinate. Applied graph by graph: G1 integrates to the mark coefficients $(\tfrac43,\tfrac23)$, $(\tfrac23,\tfrac43)$ in the two slot orderings, i.e.\ the word $2(p+q)^{\dot\alpha}\beta_r\,\partial_{\dot\alpha}c=2\,P^{\dot\alpha}\bigl(\beta_r\,\partial_{\dot\alpha}c\bigr)$, a pure total derivative vanishing in the quotient; G2 integrates to the selected word $\tfrac23\,\beta_r(2p+q)^{\dot\alpha}\partial_{\dot\alpha}c$ plus the transported word $-\beta_r\,q^{\dot\alpha}\partial_{\dot\alpha}c$, i.e.\ $\tfrac13\,\beta_r(4p-q)^{\dot\alpha}\partial_{\dot\alpha}c$ with pair/equation-of-motion coefficients $(-\tfrac13,\tfrac43)$ on the graph-word placement (Remark~\ref{rem:ss:ab:slotmap}); G3 carries the marked simplex weights $\tfrac23,\tfrac13$ per mark and sums to the raw wedge coefficients $+2\sqrt2\,i$ ($G_{3,2}$) and $-2\sqrt2\,i$ ($G_{3,3}$) in units of $\h g^{2}/(16\pi^{2})$. Passing from the raw momentum wedge to the dotted bilinear flips the sign once, since with the locked phase $e^{ipx}$, $(ip)_+\wedge(iq)_+=-(p_+\wedge q_+)$.
 
 \paragraph{6. Pole cancellation.} No $1/\epsilon$ pole occurs anywhere in this family: every parent-plus-contact pair vanishes identically at $\mul^{2}=0$,
 \begin{align}
@@ -164,7 +164,21 @@ C_{st}:=\langle\gamma^{s},\gamma^{t}\rangle,
 \quad
 C_{ts}:=\langle\gamma^{t},\gamma^{s}\rangle,
 \end{equation}
-with $\varepsilon_{rst}=+1$ and $E$ the equation-of-motion composite of step 3, entering in both orderings. The total-derivative combinations are $T_{\partial c\,\beta}=X_{\partial c\,\beta}+E =P^{\dot\alpha}(\beta_r\,\partial_{\dot\alpha}c)$ and $T_{\beta\,\partial c}=-X_{\beta\,\partial c}+E$, so $aX_{\partial c\,\beta}+bE=(a-b)X_{\partial c\,\beta}+bT_{\partial c\,\beta}$ and $aX_{\beta\,\partial c}+bE=(a+b)X_{\beta\,\partial c}+bT_{\beta\,\partial c}$. The coefficient flow of the family is the aligned display
+with $\varepsilon_{rst}=+1$ and $E:=\beta_r\bigl(P^{\dot\alpha}\partial_{\dot\alpha}c\bigr)$ the equation-of-motion composite of step 3, entering in both orderings. The two pairings are a single carrier: the odd--odd Koszul swap ($|\partial c|=|\beta_r|=1$) and the dotted-index flip $\psi^{\dot\alpha}\chi_{\dot\alpha}=-\psi_{\dot\alpha}\chi^{\dot\alpha}$ of the locked convention cancel,
+\begin{equation}\label{eq:ss:ab:paireq}
+X_{\partial c\,\beta}=(\partial_{\dot\alpha}c)(\partial^{\dot\alpha}\beta_r)
+=-(\partial^{\dot\alpha}\beta_r)(\partial_{\dot\alpha}c)
+=(\partial_{\dot\alpha}\beta_r)(\partial^{\dot\alpha}c)
+=X_{\beta\,\partial c}=:X .
+\end{equation}
+There is accordingly one total-derivative identity, not two: the even derivation $P^{\dot\alpha}$ acting on the odd--odd product gives no Koszul sign, and the pair term enters with the index flip $(P^{\dot\alpha}\beta_r)\partial_{\dot\alpha}c=-\langle\beta_r,\partial c\rangle=-X$,
+\begin{equation}\label{eq:ss:ab:td}
+T:=P^{\dot\alpha}\bigl(\beta_r\,\partial_{\dot\alpha}c\bigr)
+=\bigl(P^{\dot\alpha}\beta_r\bigr)\partial_{\dot\alpha}c
++\beta_r\bigl(P^{\dot\alpha}\partial_{\dot\alpha}c\bigr)
+=-X+E ,
+\end{equation}
+so $aX+bE=(a+b)X+bT$ in either ordering. (Equivalently $P^{\dot\alpha}(\partial_{\dot\alpha}c\,\beta_r)=X-E=-T$: a single ray. The combination $X+E$ is not a total derivative, and $X$ itself is not one either.) The raw pair coefficients displayed below are quoted on the graph-word placement $X_{>}:=(\partial^{\dot\alpha}\beta_r)\partial_{\dot\alpha}c=-X$, where the same identity reads $T=X_{>}+E$, i.e.\ $aX_{>}+bE=(a-b)X_{>}+bT$: thus the G1 entries $(2,2)_{(X_{>},E)}=(0,2)_{(X_{>},T)}$ quotient to zero, and the G2 split and quotient are the machine-sealed replay values of Remark~\ref{rem:ss:ab:slotmap}. The coefficient flow of the family is the aligned display
 \begin{align}
 \text{raw graph carrier:}\quad
 &\bigl(2,\;2,\;-\tfrac13,\;\tfrac43,\;-2i\sqrt2,\;+2i\sqrt2\bigr)
@@ -182,7 +196,7 @@ with $\varepsilon_{rst}=+1$ and $E$ the equation-of-motion composite of step 3, 
 &\bigl(1,\;1,\;-i\sqrt2,\;+i\sqrt2\bigr) .
 \label{eq:ss:ab:flowren}
 \end{align}
-The shift is fixed by residual supersymmetry: acting with the $q_r$ of~\eqref{eq:ss:qaction} (stated with the channel table in Section~\ref{sec:superspace:table}) on a general vector $x=(x_1,x_2,x_3,x_4)$ in the four-component basis, the three Ward conditions $q_s[\,x\cdot(\text{basis})\,]=0$ read
+The shift is fixed by residual supersymmetry: acting with the $q_r$ of~\eqref{eq:ss:qaction} (stated with the channel table in Section~\ref{sec:superspace:table}) on a general vector $x=(x_1,x_2,x_3,x_4)$ in the four-component basis, the Ward conditions of the descendant system $q_s[\,x\cdot(\text{basis})\,]=i\delta_{sr}\,\Delta(b,b)$ of~\eqref{eq:ss:triplet} --- the homogeneous $s=2,3$ mixing plus the $s=1$ matching against the anchored $(b,b)$ singlet, restricted to this flavor ansatz --- read
 \begin{equation}\label{eq:ss:ab:ward}
 x_1-x_2=0,
 \qquad
@@ -201,7 +215,11 @@ The vector~\eqref{eq:ss:ab:flowshift} is a finite composite-source normal-produc
 Three ingredients are sealed at machine level and displayed here at the granularity of the extracted formulas: the full 192-row G1 $D$-word table (only test-point rows admit an analytic display; the row identities $F_A+C_{A,d}=-8R_A\mul^{2}$, $F_B+C_{B,d}=-8R_B\mul^{2}$ hold for every row), the replay producing the G2 raw residual, and the color-route phase $+i$ of the G3 coefficients. All quoted coefficients are the machine-checked ones.
 \end{remark}
 
-\paragraph{8. The final result.} Restoring the letter normalizations~\eqref{eq:ss:letters} --- the insertions contribute $(-i/\sqrt2)(1/\sqrt2)=-i/2$ and each dotted output pair contributes $i/\sqrt2$ --- the renormalized vector~\eqref{eq:ss:ab:flowren} becomes the channel-table row
+\begin{remark}[Placement sensitivity of the G2 slot map]\label{rem:ss:ab:slotmap}
+The decomposition of the G2 word $\tfrac13\beta_r(4p-q)^{\dot\alpha}\partial_{\dot\alpha}c$ is placement-sensitive: on the graph-word placement $(\partial^{\dot\alpha}\beta_r)\partial_{\dot\alpha}c$ the pair coefficient is $-\tfrac13$, while on the canonical pairing $\langle\beta_r,\partial c\rangle=-(\partial^{\dot\alpha}\beta_r)\partial_{\dot\alpha}c$ of~\eqref{eq:ss:ab:paireq} it is $+\tfrac13$, and the consistent md-level total-derivative quotient of the displayed word on the canonical carrier is $\tfrac53$. The intermediate slot-map displays mix the two placements (the typed slot map of the Omega-routing audit versus the identity $(P^{\dot a}B_1)D_{\dot a}=-\langle B_1,D\rangle$ of the external-divergence audit). The displayed G2 raw pair/EOM entries and the quotient value $+1$ in~\eqref{eq:ss:ab:flowtd} are therefore machine-sealed by the typed replay rather than derived at md level. The renormalized endpoint does not depend on this link: the Ward ray and its unit scale are anchored by the descendant identity~\eqref{eq:ss:triplet}, and the full renormalized vector matches the holomorphic-twist target word by word in the 81/81 machine round-trip.
+\end{remark}
+
+\paragraph{8. The final result.} Restoring the letter normalizations~\eqref{eq:ss:letters} --- the insertions contribute $(-i/\sqrt2)(1/\sqrt2)=-i/2$, each dotted output pair contributes $-i\sqrt2$, and the $\gamma$ pairs contribute $1$, so the unit-normalized vector is $-i\sqrt2$ times the bracket and $(-i/2)(-i\sqrt2)=-1/\sqrt2$ --- the renormalized vector~\eqref{eq:ss:ab:flowren} becomes the channel-table row
 \begin{equation}\label{eq:ss:ab:result}
 \boxed{\;
 \nabla_{-}\big(b^{A}\beta_r^{B}\big),\quad

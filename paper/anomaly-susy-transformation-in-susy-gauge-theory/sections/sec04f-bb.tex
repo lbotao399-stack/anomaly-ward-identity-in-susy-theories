@@ -164,8 +164,8 @@ multiplicity is the Taylor/ordering factor
 \end{equation}
 the second-order Taylor coefficient times the two vertex orderings. The color
 contraction of route 002 gives $+f^{ACD}f^{BCE}$, that of route 003 gives
-$-f^{ACD}f^{BCE}$; including the product Koszul and source-attachment signs,
-the net route signs are
+$-f^{ACD}f^{BCE}$; including the Koszul and source-attachment signs, the net
+route signs multiplying the common $+f^{ACD}f^{BCE}$ are
 \begin{equation}\label{eq:ss:bb-routesigns}
 s_{002}=-i,\qquad s_{003}=+i .
 \end{equation}
@@ -174,7 +174,10 @@ s_{002}=-i,\qquad s_{003}=+i .
 The color and sign outcomes~\eqref{eq:ss:bb-routesigns} are quoted at the
 granularity at which they were machine-verified (contraction value, ports,
 selected edge, net sign per route); we do not display an intermediate
-term-by-term sign chain.
+term-by-term sign chain. The quoted color outcomes and route signs are
+independent machine-checked rows, not a displayed factorization: the
+effective multiplier of the common $+f^{ACD}f^{BCE}$ is $s_{00n}$, with the
+color-contraction sign folded into it.
 \end{remark}
 
 \paragraph{4. Prefactors and the external map.} Assembling the vertex factors,
@@ -212,7 +215,7 @@ expresses the antichiral leg through $C^t$. Each nonzero row then assembles as
 \Gamma_{\mathrm{row}}
 =P\times N^{\mathrm{ev}}\times
 \int_{\ell}^{\mathrm{DRED}}\frac{\mul^{2}}{D_0D_1D_2}
-\times M_{\mathrm{ext}}\times\big(\pm f^{ACD}f^{BCE}\times s_{00n}\big),
+\times M_{\mathrm{ext}}\times\big(s_{00n}\,f^{ACD}f^{BCE}\big),
 \end{equation}
 with $P\in\{P_\triangle,P_{I_1H}\}$, the evanescent word $N^{\mathrm{ev}}$ of
 paragraph~6, and the simplex weights decomposing the result onto the

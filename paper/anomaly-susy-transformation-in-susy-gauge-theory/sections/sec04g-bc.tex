@@ -55,29 +55,35 @@ is fixed by the Schwinger orbit below.
 \coordinate (v0) at (90:1.6);
 \coordinate (v1) at (210:1.6);
 \coordinate (v2) at (330:1.6);
-\node[svertex] at (v0) {};
+\node[svertex,label=above:{\scriptsize composite source}] at (v0) {};
 \node[svertex] at (v1) {};
 \node[svertex] at (v2) {};
 \draw[sPhi] (v1) -- (v0) node[midway,left=3pt] {$r_{0}$};
 \draw[sPhi] (v2) -- (v1) node[midway,below=3pt] {$r_{1}$};
 \draw[sPhit] (v0) -- (v2) node[midway,right=3pt] {$r_{2}$};
-\draw[sleg] (v1) -- ++(210:1.25) node[pos=0.52,sinsert]{}
-  node[pos=1,below left=0pt] {$\nabla_{+}\Phi_{r}$};
-\draw[sleg] (v2) -- ++(330:1.25) node[pos=1,below right=0pt] {$\widetilde\Phi^{s}$};
-\draw[sV] (v0) -- ++(90:1.25) node[pos=1,above=1pt] {$\cV$};
-\node at (3.1,0) {$=\;0$};
+\draw[sleg] (v0) -- ++(125:1.35) node[pos=0.55,sinsert]{}
+  node[pos=1,above left=-2pt] {$\nabla_{+}\Phi_{r}$};
+\draw[sleg] (v0) -- ++(55:1.35)
+  node[pos=1,above right=-2pt] {$\widetilde\Phi^{s}$};
+\draw[sV] (v1) -- ++(210:1.3)
+  node[pos=1,below left=-2pt] {$\cV\ (\partial_{\dot\alpha}c)$};
+\draw[sV] (v2) -- ++(330:1.3)
+  node[pos=1,below right=-2pt] {$\cV\ (\partial_{\dot\alpha}c)$};
+\node at (3.5,0) {$=\;0$};
 \end{tikzpicture}
 \caption{The representative ordinary matter-triangle parent of the
 $(\beta_{r},\gamma^{s})$ family. The three edges are matter propagators with
-edge momenta $r_{0},r_{1},r_{2}$, denominators $D_{i}=r_{i,d}^{2}$; the two
-ordered sources are the marked insertion $\nabla_{+}\Phi_{r}$ (filled node)
-and the antichiral leg $\widetilde\Phi^{s}$; the external field-strength
-letters enter through the preimages
-$\bcW_{\dot\alpha}^{(1)}=-\tfrac18\cD^{2}\bcD_{\dot\alpha}\cV$ on the vector
-leg. Every ordinary parent of the family vanishes on the physical output word
-$\langle\partial c,\partial c\rangle$, as displayed; the kernels themselves
-are nonzero (Remark~\ref{rem:ss:bc:control}). The anomaly is instead the
-regulated coincident Euler Jacobian of the kinetic
+edge momenta $r_{0},r_{1},r_{2}$, denominators $D_{i}=r_{i,d}^{2}$. The two
+ordered sources sit at one composite-source vertex: the marked insertion
+$\nabla_{+}\Phi_{r}$ (filled node) and the antichiral leg
+$\widetilde\Phi^{s}$. The two output letters enter as the field-strength
+preimages $\bcW_{\dot\alpha}^{(1)}=-\tfrac18\cD^{2}\bcD_{\dot\alpha}\cV$ on
+the two vector legs at the two distinct remaining vertices (two distinct
+superspace points). Every ordinary parent of the family vanishes on the
+physical output word $\langle\partial c,\partial c\rangle$, as displayed;
+the kernels themselves are nonzero
+(Remark~\ref{rem:ss:bc:control}). The anomaly is instead the regulated
+coincident Euler Jacobian of the kinetic
 occurrence~\eqref{eq:ss:bc:kin}.}
 \label{fig:ss:bc-triangle}
 \end{figure}
@@ -269,14 +275,17 @@ is
 \begin{remark}[Two recorded conventions for the spinor-square identity]%
 \label{rem:ss:bc:detsign}
 The square $\cD^{2}\bcD^{2}\cD^{2}\delta^{4}=16\det(r)\,\cD^{2}\delta^{4}$ of
-Section~\ref{sec:superspace:bb} (equation~\eqref{eq:ss:bb-projectorid}) is
-displayed there with the local convention $\det r=-\bar r^{\,2}$, while the
-half square in~\eqref{eq:ss:bc:marked} is displayed as
-$8\,\bar r_{e}^{2}\,\cD^{2}\delta_{e}$. The two source audits record this
-$D$-algebra square in two sign conventions for the determinant factor; each
-convention is used consistently within its own subsection, the physical
-coefficients of both channels were machine-verified, and no result is
-affected.
+Section~\ref{sec:superspace:bb} (equation~\eqref{eq:ss:bb-projectorid}) and
+the half square $8\,\bar r_{e}^{2}\,\cD^{2}\delta_{e}$
+of~\eqref{eq:ss:bc:marked} are recorded with opposite signs relative to the
+same determinant $\det r=-\bar r^{\,2}$. The two verification engines use
+different superspace-derivative conventions --- one with real spinor
+derivatives, the other with $i$-loaded ones, under which the operator square
+scales by $i^{6}=-1$ --- and each machine-checks its own identity with its
+recorded sign ($+16\det(r)$, respectively $-16\det(r)$, for the full square).
+Each convention is used consistently within its own subsection, the physical
+coefficients of both channels were machine-verified independently, and no
+result is affected.
 \end{remark}
 The factor $2$ is the descendant factor of~\eqref{eq:ss:bc:descendant}; it is
 not an additional graph multiplicity.
